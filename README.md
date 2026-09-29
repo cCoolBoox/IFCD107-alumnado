@@ -228,7 +228,7 @@ Los últimos **18 días lectivos** (25/11 – 14/12) son para un proyecto de equ
 
 | Brief | Tipo de problema |
 |---|---|
-| 1 · Turismo | Predicción con datos de Canarias |
+| 1 · Demanda turística | Previsión de llegada de visitantes por isla y mes (series temporales) |
 | 2 · Cultivos | Clasificación de imágenes con CNN y *transfer learning* |
 | 3 · Orientación de FP | Asistente con LLM y RAG que cita sus fuentes |
 | 4 · Demanda eléctrica | Series temporales e integración de renovables |
