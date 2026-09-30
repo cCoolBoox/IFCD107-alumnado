@@ -29,30 +29,32 @@
 
 ## 2. Vista general
 
-| Sprint | Título | Módulos / UD | Horas | T | P | PBL | Fechas |
-|---|---|---|---|---|---|---|---|
-| **BLOQUE A · Sin Python (46 h)** | | | | | | | |
-| 0 | Arranque ágil | Scrum + Design Thinking | 7 | 3 | 2 | 2 | 16–19/10 |
-| 1 | Qué es la IA, cómo aprende y cómo usarla bien | M1a (UD 1–3) + M8 | 15 | 8 | 4 | 3 | 19–21/10 |
-| 2 | Las matemáticas y la estadística detrás | M1a (UD 4–6) | 10 | 5 | 3 | 2 | 21–23/10 |
-| 3 | Del dato al modelo en la nube | M6a + M7 | 14 | 5 | 5 | 4 | 23–27/10 |
-| **BLOQUE B · Python (121 h, bloque continuo)** | | | | | | | |
-| 4 | Python para IA | M1b (UD 1–4) | 10 | 3 | 5 | 2 | 27–29/10 |
-| 5 | Matemáticas y estadística en código | M1b (UD 5–7) + M6b | 13 | 4 | 6 | 3 | 29/10–3/11 |
-| 6 | Datos listos para modelar | M2 + M3 (UD 3.1–3.2) | 11 | 4 | 4 | 3 | 3–5/11 |
-| 7 | ML supervisado: regresión y clasificación | M3 (UD 3.3–3.5) | 12 | 4 | 5 | 3 | 5–9/11 |
-| 8 | Árboles, ensembles y SVM | M3 (UD 3.6–3.8) | 11 | 3 | 5 | 3 | 9–11/11 |
-| 9 | Segmentar, recomendar y aprender por refuerzo | M3 (UD 3.9–3.12) | 11 | 3 | 5 | 3 | 11–12/11 |
-| 10 | Redes neuronales bien entrenadas | M4 (UD 4.1–4.3) | 15 | 5 | 6 | 4 | 13–17/11 |
-| 11 | Visión por computador | M4 (UD 4.4–4.6) | 17 | 5 | 7 | 5 | 17–20/11 |
-| 12 | Lenguaje, secuencias y modelos generativos | M4 (UD 4.7–4.10) | 18 | 5 | 8 | 5 | 20–25/11 |
-| 13 | Contar lo que hace el modelo | M5 | 3 | 1 | 1 | 1 | 25/11 |
-| **BLOQUE C · Proyecto de cierre (63 h)** | | | | | | | |
-| 14 | Proyecto · Reto, equipo y datos | M9 | 19 | 1 | 3 | 15 | 25–30/11 |
-| 15 | Proyecto · Modelado y experimentos | M9 | 18 | 1 | 3 | 14 | 1–3/12 |
-| 16 | Proyecto · Evaluación, IA responsable y entrega | M9 | 18 | 1 | 3 | 14 | 4–10/12 |
-| 17 | Proyecto · Storytelling, ensayos y defensa | M9 + Storytelling | 8 | 1 | 2 | 5 | 11 y 14/12 |
-| | **Total** | | **230** | **62** | **77** | **91** | |
+| Sprint | Título | Módulos / UD | Horas | T | P | PBL | Inicio | Fin |
+|---|---|---|---|---|---|---|---|---|
+| **BLOQUE A · Sin Python (46 h)** |  |  |  |  |  |  |  |  |
+| 0 | Arranque ágil | Scrum + Design Thinking | 7 | 3 | 2 | 2 | vie 16/10 | lun 19/10 |
+| 1 | Qué es la IA, cómo aprende y cómo usarla bien | M1a (UD 1–3) + M8 | 15 | 8 | 4 | 3 | lun 19/10 | mié 21/10 |
+| 2 | Las matemáticas y la estadística detrás | M1a (UD 4–6) | 10 | 5 | 3 | 2 | mié 21/10 | vie 23/10 |
+| 3 | Del dato al modelo en la nube | M6a + M7 | 14 | 5 | 5 | 4 | vie 23/10 | mar 27/10 |
+| **BLOQUE B · Python (121 h, bloque continuo)** |  |  |  |  |  |  |  |  |
+| 4 | Python para IA | M1b (UD 1–4) | 10 | 3 | 5 | 2 | mar 27/10 | jue 29/10 |
+| 5 | Matemáticas y estadística en código | M1b (UD 5–7) + M6b | 13 | 4 | 6 | 3 | jue 29/10 | mar 3/11 |
+| 6 | Datos listos para modelar | M2 + M3 (UD 3.1–3.2) | 11 | 4 | 4 | 3 | mar 3/11 | jue 5/11 |
+| 7 | ML supervisado: regresión y clasificación | M3 (UD 3.3–3.5) | 12 | 4 | 5 | 3 | jue 5/11 | lun 9/11 |
+| 8 | Árboles, ensembles y SVM | M3 (UD 3.6–3.8) | 11 | 3 | 5 | 3 | lun 9/11 | mié 11/11 |
+| 9 | Segmentar, recomendar y aprender por refuerzo | M3 (UD 3.9–3.12) | 11 | 3 | 5 | 3 | mié 11/11 | jue 12/11 |
+| 10 | Redes neuronales bien entrenadas | M4 (UD 4.1–4.3) | 15 | 5 | 6 | 4 | vie 13/11 | mar 17/11 |
+| 11 | Visión por computador | M4 (UD 4.4–4.6) | 17 | 5 | 7 | 5 | mar 17/11 | vie 20/11 |
+| 12 | Lenguaje, secuencias y modelos generativos | M4 (UD 4.7–4.10) | 18 | 5 | 8 | 5 | vie 20/11 | mié 25/11 |
+| 13 | Contar lo que hace el modelo | M5 | 3 | 1 | 1 | 1 | mié 25/11 | mié 25/11 |
+| **BLOQUE C · Proyecto de cierre (63 h)** |  |  |  |  |  |  |  |  |
+| 14 | Proyecto · Reto, equipo y datos | M9 | 19 | 1 | 3 | 15 | mié 25/11 | lun 30/11 |
+| 15 | Proyecto · Modelado y experimentos | M9 | 18 | 1 | 3 | 14 | mar 1/12 | jue 3/12 |
+| 16 | Proyecto · Evaluación, IA responsable y entrega | M9 | 18 | 1 | 3 | 14 | vie 4/12 | jue 10/12 |
+| 17 | Proyecto · Storytelling, ensayos y defensa | M9 + Storytelling | 8 | 1 | 2 | 5 | vie 11/12 | lun 14/12 |
+| | **Total** | | **230** | **62** | **77** | **91** | | |
+
+*Los sprints consecutivos comparten el día de cambio (el relevo se hace a mitad de jornada). Días sin clase: lun 2/11, lun 7/12 y mar 8/12. Última sesión: lun 14/12, solo 2 h.*
 
 Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 = 55 h (Sprints 14–16) + 3 h de ensayos + 2 h de defensa = **60 h**. Storytelling = **3 h** (1 T + 2 P del Sprint 17). Softskills = 4 + 3 + 3 = 10 h.
 

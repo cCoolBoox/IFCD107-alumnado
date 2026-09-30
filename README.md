@@ -287,7 +287,7 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 | [`entregas/`](entregas) | Estructura recomendada para el repositorio de tu equipo |
 
 **Consejos para sacarle partido**
-1. Antes de cada sprint, lee su sección en [`material/calendario_sprints.md`](material/calendario_sprints.md).
+1. Antes de cada sprint, lee su sección en [`material/calendario_sprints.md`](material/calendario_sprints.md). Para seguir el curso día a día, descarga y abre [`material/calendario_sprints.html`](material/calendario_sprints.html): marca el sprint en curso con la fecha de tu dispositivo.
 2. Tras cada sesión, revisa el notebook del laboratorio y vuelve a ejecutarlo tú.
 3. Trabaja el reto con tu equipo desde el primer día del sprint, no el último.
 4. Haz commits a menudo: todos los integrantes deben aparecer en el historial.

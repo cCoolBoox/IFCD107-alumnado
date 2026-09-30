@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IFCD107 · Calendario de sprints</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1c2430;--mut:#5f6b7a;--line:#e3e7ec;--a:#2563eb;--b:#16a34a;--c:#ea580c;--t:#6366f1;--p:#0ea5e9;--pbl:#f59e0b;--now:#fff7d6}
+@media(prefers-color-scheme:dark){:root{--bg:#0f141a;--card:#171e27;--ink:#e8edf3;--mut:#98a4b3;--line:#2a3441;--a:#60a5fa;--b:#4ade80;--c:#fb923c;--t:#818cf8;--p:#38bdf8;--pbl:#fbbf24;--now:#3a3410}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.6rem;margin:0 0 4px}
+.sub{color:var(--mut);margin:0 0 20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.card b{display:block;font-size:1.35rem}
+.card span{color:var(--mut);font-size:.85rem}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;background:var(--a)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 12px;border-radius:99px;cursor:pointer;font:inherit;font-size:.9rem}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.legend{margin-left:auto;font-size:.85rem;color:var(--mut);display:flex;gap:12px;flex-wrap:wrap}
+.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:860px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);background:var(--card)}
+td.n{font-weight:700;width:44px}
+td.num,th.num{text-align:center;width:48px}
+td.d{white-space:nowrap}
+tr.blk td{font-weight:700;color:#fff;padding:8px 12px;border:0}
+tr.blk.A td{background:#2563eb}tr.blk.B td{background:#15803d}tr.blk.C td{background:#c2410c}
+tr.now td{background:var(--now)}
+tr.past td.tt{color:var(--mut)}
+.pill{font-size:.75rem;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.pill.now{background:var(--pbl);border-color:var(--pbl);color:#1c2430;font-weight:700}
+.pill.past{opacity:.7}
+.mix{display:flex;height:8px;border-radius:99px;overflow:hidden;width:90px;margin-top:4px;background:var(--line)}
+.mix i:nth-child(1){background:var(--t)}.mix i:nth-child(2){background:var(--p)}.mix i:nth-child(3){background:var(--pbl)}
+tfoot td{font-weight:700;background:var(--bg)}
+.note{color:var(--mut);font-size:.88rem;margin-top:14px}
+.sm{display:block;color:var(--mut);font-size:.82rem}
+@media(max-width:640px){.legend{margin-left:0}}
+@media print{body{background:#fff}.tools,.cards .bar{display:none}.tw{border:0;overflow:visible}table{min-width:0;font-size:11px}tr.blk td{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>IFCD107 · Especialista en Inteligencia Artificial</h1>
+<p class="sub">Calendario de sprints · 16/10/2026 – 14/12/2026 · 08:30–14:30 · 230 h · Acción 25-38/012242</p>
+<div class="cards" id="cards"></div>
+<div class="tools" id="tools">
+ <button class="chip" data-f="all" aria-pressed="true">Todos</button>
+ <button class="chip" data-f="A" aria-pressed="false">A · Sin Python</button>
+ <button class="chip" data-f="B" aria-pressed="false">B · Python</button>
+ <button class="chip" data-f="C" aria-pressed="false">C · Proyecto</button>
+ <span class="legend"><span><i class="dot" style="background:var(--t)"></i>T Teoría</span><span><i class="dot" style="background:var(--p)"></i>P Práctica</span><span><i class="dot" style="background:var(--pbl)"></i>PBL Reto</span></span>
+</div>
+<div class="tw">
+<table>
+<thead><tr><th>#</th><th>Sprint</th><th>Módulos / UD</th><th class="num">Horas</th><th class="num">T</th><th class="num">P</th><th class="num">PBL</th><th>Inicio</th><th>Fin</th><th>Estado</th></tr></thead>
+<tbody id="body"></tbody>
+<tfoot><tr><td></td><td>Total</td><td></td><td class="num">230</td><td class="num">62</td><td class="num">77</td><td class="num">91</td><td colspan="3"></td></tr></tfoot>
+</table>
+</div>
+<p class="note">Los sprints consecutivos comparten el día de cambio (el relevo se hace a mitad de jornada). <b>Días sin clase:</b> lun 2/11, lun 7/12 y mar 8/12. <b>Última sesión:</b> lun 14/12, solo 2 h (defensas). El estado se calcula con la fecha de tu dispositivo.</p>
+</div>
+<script>
+const S=[{"n": 0, "t": "Arranque ágil", "m": "Scrum + Design Thinking", "h": 7, "T": 3, "P": 2, "B": 2, "a": [2026, 10, 16], "b": [2026, 10, 19]}, {"n": 1, "t": "Qué es la IA, cómo aprende y cómo usarla bien", "m": "M1a (UD 1–3) + M8", "h": 15, "T": 8, "P": 4, "B": 3, "a": [2026, 10, 19], "b": [2026, 10, 21]}, {"n": 2, "t": "Las matemáticas y la estadística detrás", "m": "M1a (UD 4–6)", "h": 10, "T": 5, "P": 3, "B": 2, "a": [2026, 10, 21], "b": [2026, 10, 23]}, {"n": 3, "t": "Del dato al modelo en la nube", "m": "M6a + M7", "h": 14, "T": 5, "P": 5, "B": 4, "a": [2026, 10, 23], "b": [2026, 10, 27]}, {"n": 4, "t": "Python para IA", "m": "M1b (UD 1–4)", "h": 10, "T": 3, "P": 5, "B": 2, "a": [2026, 10, 27], "b": [2026, 10, 29]}, {"n": 5, "t": "Matemáticas y estadística en código", "m": "M1b (UD 5–7) + M6b", "h": 13, "T": 4, "P": 6, "B": 3, "a": [2026, 10, 29], "b": [2026, 11, 3]}, {"n": 6, "t": "Datos listos para modelar", "m": "M2 + M3 (UD 3.1–3.2)", "h": 11, "T": 4, "P": 4, "B": 3, "a": [2026, 11, 3], "b": [2026, 11, 5]}, {"n": 7, "t": "ML supervisado: regresión y clasificación", "m": "M3 (UD 3.3–3.5)", "h": 12, "T": 4, "P": 5, "B": 3, "a": [2026, 11, 5], "b": [2026, 11, 9]}, {"n": 8, "t": "Árboles, ensembles y SVM", "m": "M3 (UD 3.6–3.8)", "h": 11, "T": 3, "P": 5, "B": 3, "a": [2026, 11, 9], "b": [2026, 11, 11]}, {"n": 9, "t": "Segmentar, recomendar y aprender por refuerzo", "m": "M3 (UD 3.9–3.12)", "h": 11, "T": 3, "P": 5, "B": 3, "a": [2026, 11, 11], "b": [2026, 11, 12]}, {"n": 10, "t": "Redes neuronales bien entrenadas", "m": "M4 (UD 4.1–4.3)", "h": 15, "T": 5, "P": 6, "B": 4, "a": [2026, 11, 13], "b": [2026, 11, 17]}, {"n": 11, "t": "Visión por computador", "m": "M4 (UD 4.4–4.6)", "h": 17, "T": 5, "P": 7, "B": 5, "a": [2026, 11, 17], "b": [2026, 11, 20]}, {"n": 12, "t": "Lenguaje, secuencias y modelos generativos", "m": "M4 (UD 4.7–4.10)", "h": 18, "T": 5, "P": 8, "B": 5, "a": [2026, 11, 20], "b": [2026, 11, 25]}, {"n": 13, "t": "Contar lo que hace el modelo", "m": "M5", "h": 3, "T": 1, "P": 1, "B": 1, "a": [2026, 11, 25], "b": [2026, 11, 25]}, {"n": 14, "t": "Proyecto · Reto, equipo y datos", "m": "M9", "h": 19, "T": 1, "P": 3, "B": 15, "a": [2026, 11, 25], "b": [2026, 11, 30]}, {"n": 15, "t": "Proyecto · Modelado y experimentos", "m": "M9", "h": 18, "T": 1, "P": 3, "B": 14, "a": [2026, 12, 1], "b": [2026, 12, 3]}, {"n": 16, "t": "Proyecto · Evaluación, IA responsable y entrega", "m": "M9", "h": 18, "T": 1, "P": 3, "B": 14, "a": [2026, 12, 4], "b": [2026, 12, 10]}, {"n": 17, "t": "Proyecto · Storytelling, ensayos y defensa", "m": "M9 + Storytelling", "h": 8, "T": 1, "P": 2, "B": 5, "a": [2026, 12, 11], "b": [2026, 12, 14]}];
+const DOW=["dom","lun","mar","mié","jue","vie","sáb"];
+const blk=n=>n<=3?"A":n<=13?"B":"C";
+const BN={A:"BLOQUE A · Sin Python (46 h)",B:"BLOQUE B · Python, bloque continuo (121 h)",C:"BLOQUE C · Proyecto de cierre (63 h)"};
+const dt=a=>new Date(a[0],a[1]-1,a[2]);
+const fmt=a=>DOW[dt(a).getDay()]+" "+a[2]+"/"+a[1];
+let hoy=new Date();const q=new URLSearchParams(location.search).get("fecha");
+if(q&&/^\d{4}-\d{2}-\d{2}$/.test(q)){const p=q.split("-").map(Number);hoy=new Date(p[0],p[1]-1,p[2]);}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+const ini=dt(S[0].a),fin=dt(S[S.length-1].b),day=86400000;
+const state=s=>hoy<dt(s.a)?"next":hoy>dt(s.b)?"past":"now";
+function render(f){
+  const tb=document.getElementById("body");tb.innerHTML="";let last="";
+  S.forEach(s=>{
+    const b=blk(s.n);if(f!=="all"&&f!==b)return;
+    if(b!==last){last=b;const r=document.createElement("tr");r.className="blk "+b;r.innerHTML='<td colspan="10">'+BN[b]+"</td>";tb.appendChild(r);}
+    const st=state(s),r=document.createElement("tr");r.className=st;
+    const pill=st==="now"?'<span class="pill now">En curso</span>':st==="past"?'<span class="pill past">Hecho</span>':'<span class="pill">Próximo</span>';
+    const d=Math.round((dt(s.a)-hoy)/day);
+    const extra=st==="next"?'<span class="sm">'+(d===1?"mañana":"en "+d+" días")+"</span>":"";
+    r.innerHTML='<td class="n">'+s.n+'</td><td class="tt">'+s.t+'<div class="mix" title="T '+s.T+' h · P '+s.P+' h · PBL '+s.B+' h"><i style="width:'+s.T/s.h*100+'%"></i><i style="width:'+s.P/s.h*100+'%"></i><i style="width:'+s.B/s.h*100+'%"></i></div></td><td>'+s.m+'</td><td class="num">'+s.h+'</td><td class="num">'+s.T+'</td><td class="num">'+s.P+'</td><td class="num">'+s.B+'</td><td class="d">'+fmt(s.a)+'</td><td class="d">'+fmt(s.b)+'</td><td>'+pill+extra+"</td>";
+    tb.appendChild(r);
+  });
+}
+function cards(){
+  const c=document.getElementById("cards"),cur=S.filter(s=>state(s)==="now");let t1,t2;
+  if(hoy<ini){const d=Math.round((ini-hoy)/day);t1="Empieza el vie 16/10";t2=d===1?"mañana":"faltan "+d+" días";}
+  else if(hoy>fin){t1="Curso finalizado";t2="14/12/2026";}
+  else{t1=cur.length?"Sprint "+cur.map(s=>s.n).join(" / "):"Sin clase hoy";t2=cur.length?cur[0].t:"día no lectivo o fin de semana";}
+  const total=Math.round((fin-ini)/day)+1,el=Math.min(Math.max(Math.round((hoy-ini)/day)+1,0),total),pc=Math.round(el/total*100);
+  const rest=S.filter(s=>dt(s.b)>=hoy).length;
+  c.innerHTML='<div class="card"><span>Ahora</span><b>'+t1+'</b><span>'+t2+'</span></div>'+
+   '<div class="card"><span>Avance del calendario</span><b>'+pc+' %</b><div class="bar"><i style="width:'+pc+'%"></i></div></div>'+
+   '<div class="card"><span>Sprints por terminar</span><b>'+rest+' de 18</b></div>'+
+   '<div class="card"><span>Reparto de horas</span><b>62 · 77 · 91</b><span>Teoría · Práctica · Reto</span></div>';
+}
+document.getElementById("tools").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;
+  document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));render(b.dataset.f);});
+cards();render("all");
+</script>
+</body>
+</html>
