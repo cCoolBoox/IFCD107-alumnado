@@ -1,0 +1,1501 @@
+id_resena,texto,nota,sentimiento,temas
+1,"Escapada de fin de semana. La música del bar no nos dejó dormir. Vistas al mar increíbles. Estancia normal, sin más!",3,neutro,"ruido,ubicacion"
+2,Pasamos una semana aquí. Cobran extras por todo...,1,negativo,precio
+3,"En general, Buenos productos locales en el desayuno. Silencio total por las noches. Precio justo para lo que ofrece.",4,positivo,"desayuno,precio,ruido"
+4,El desayuno buffet es variado y delicioso.,4,positivo,desayuno
+5,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo. Está muy bien situado, cerca de todo. Trato excelente y muy cercano!",4,positivo,"personal,ruido,ubicacion"
+6,"Pasamos una semana aquí. Está muy bien situado, cerca de todo. Se duerme de maravilla, muy tranquilo. Las sábanas y toallas olían a limpio.",5,positivo,"limpieza,ruido,ubicacion"
+7,El desayuno merece la pena. El personal fue amabilísimo. Ni fu ni fa.,3,neutro,"desayuno,personal"
+8,"Fuimos por trabajo. Las sábanas y toallas olían a limpio. La ubicación es perfecta, a cinco minutos de la playa. El personal fue amabilísimo!",5,positivo,"limpieza,personal,ubicacion"
+9,Viajamos en familia. Trato excelente y muy cercano. Ni fu ni fa.,3,neutro,personal
+10,El desayuno merece la pena. Las sábanas y toallas olían a limpio.,4,positivo,"desayuno,limpieza"
+11,Viajamos en familia. No compensa el precio. Tardaron una hora en resolver un problema simple. Sin coche es imposible moverse.,1,negativo,"personal,precio,ubicacion"
+12,"En general, Cumple lo básico!",3,neutro,
+13,Viajamos en familia. La limpieza deja mucho que desear...,2,negativo,limpieza
+14,"En general, Sin coche es imposible moverse.",2,negativo,ubicacion
+15,"Escapada de fin de semana. Está muy bien situado, cerca de todo. Precio justo para lo que ofrece!",4,positivo,"precio,ubicacion"
+16,El desayuno merece la pena!,4,positivo,desayuno
+17,Pasamos una semana aquí. La habitación estaba sucia.,1,negativo,limpieza
+18,"Viajamos en familia. El desayuno merece la pena. Estancia normal, sin más.",3,neutro,desayuno
+19,Fuimos por trabajo. Todo estaba muy limpio. Repetiremos por lo que cuesta.,4,positivo,"limpieza,precio"
+20,Pasamos una semana aquí. Tardaron una hora en resolver un problema simple. Ruido constante por la noche. La habitación estaba sucia.,1,negativo,"limpieza,personal,ruido"
+21,Escapada de fin de semana. Repetiremos por lo que cuesta.,5,positivo,precio
+22,"La limpieza deja mucho que desear. No compensa el precio. Estancia normal, sin más.",3,neutro,"limpieza,precio"
+23,"En general, Muy buena relación calidad precio. La limpieza de la habitación era impecable. Estancia normal, sin más.",3,neutro,"limpieza,precio"
+24,Viajamos en familia. Cobran extras por todo. La música del bar no nos dejó dormir. La limpieza deja mucho que desear.,1,negativo,"limpieza,precio,ruido"
+25,Viajamos en familia. Muy buena relación calidad precio. Cumple lo básico!,3,neutro,precio
+26,Silencio total por las noches!,4,positivo,ruido
+27,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo. Trato excelente y muy cercano!",5,positivo,"personal,ruido"
+28,Pasamos una semana aquí. La limpieza deja mucho que desear. Sin coche es imposible moverse. Ni fu ni fa.,3,neutro,"limpieza,ubicacion"
+29,"En general, Precio justo para lo que ofrece.",4,positivo,precio
+30,Pasamos una semana aquí. Ruido constante por la noche. El café estaba frío y faltaba fruta. Cumple lo básico!,3,neutro,"desayuno,ruido"
+31,Fuimos por trabajo. Demasiado caro para lo que ofrece. La limpieza deja mucho que desear. El desayuno era escaso y repetitivo...,1,negativo,"desayuno,limpieza,precio"
+32,El personal fue borde.,2,negativo,personal
+33,Fuimos por trabajo. Cobran extras por todo. Ruido constante por la noche. Está muy lejos del centro...,1,negativo,"precio,ruido,ubicacion"
+34,Viajamos en familia. Las sábanas y toallas olían a limpio. Vistas al mar increíbles.,5,positivo,"limpieza,ubicacion"
+35,El café estaba frío y faltaba fruta. La habitación estaba sucia.,1,negativo,"desayuno,limpieza"
+36,Fuimos por trabajo. Colas enormes en el desayuno...,1,negativo,desayuno
+37,Viajamos en familia. El desayuno era escaso y repetitivo. La habitación estaba sucia.,2,negativo,"desayuno,limpieza"
+38,Pasamos una semana aquí. Colas enormes en el desayuno. Habitación correcta y sencilla.,3,neutro,desayuno
+39,Fuimos por trabajo. Demasiado caro para lo que ofrece. Está muy lejos del centro. La habitación estaba sucia...,1,negativo,"limpieza,precio,ubicacion"
+40,"En general, Precio justo para lo que ofrece.",5,positivo,precio
+41,Viajamos en familia. Todo estaba muy limpio.,5,positivo,limpieza
+42,Pasamos una semana aquí. Muy buena relación calidad precio.,5,positivo,precio
+43,"Fuimos por trabajo. Estancia normal, sin más!",3,neutro,
+44,Escapada de fin de semana. El desayuno era escaso y repetitivo. Trato excelente y muy cercano. Cumple lo básico.,3,neutro,"desayuno,personal"
+45,Fuimos por trabajo. La recepcionista nos ayudó con todo. El desayuno merece la pena. Repetiremos por lo que cuesta!,5,positivo,"desayuno,personal,precio"
+46,"En general, Ni fu ni fa.",3,neutro,
+47,Viajamos en familia. La zona es ruidosa y poco segura de noche. No compensa el precio. El desayuno era escaso y repetitivo.,1,negativo,"desayuno,precio,ubicacion"
+48,Escapada de fin de semana. La limpieza de la habitación era impecable. El desayuno merece la pena.,5,positivo,"desayuno,limpieza"
+49,Viajamos en familia. El desayuno buffet es variado y delicioso. Trato excelente y muy cercano.,4,positivo,"desayuno,personal"
+50,Viajamos en familia. Se oye todo de la habitación de al lado. Colas enormes en el desayuno. Demasiado caro para lo que ofrece.,1,negativo,"desayuno,precio,ruido"
+51,Fuimos por trabajo. Se oye todo de la habitación de al lado.,2,negativo,ruido
+52,Escapada de fin de semana. Todo estaba muy limpio. Buenos productos locales en el desayuno.,4,positivo,"desayuno,limpieza"
+53,"En general, Vistas al mar increíbles. Se duerme de maravilla, muy tranquilo.",4,positivo,"ruido,ubicacion"
+54,"Viajamos en familia. Colas enormes en el desayuno. La limpieza deja mucho que desear. Estancia normal, sin más.",3,neutro,"desayuno,limpieza"
+55,Escapada de fin de semana. El desayuno merece la pena.,5,positivo,desayuno
+56,Pasamos una semana aquí. Trato excelente y muy cercano. Buenos productos locales en el desayuno!,5,positivo,"desayuno,personal"
+57,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo!",4,positivo,ruido
+58,Fuimos por trabajo. Las sábanas y toallas olían a limpio.,4,positivo,limpieza
+59,"Se duerme de maravilla, muy tranquilo. Ni fu ni fa.",3,neutro,ruido
+60,Fuimos por trabajo. La habitación estaba sucia. Está muy lejos del centro. Se oye todo de la habitación de al lado.,1,negativo,"limpieza,ruido,ubicacion"
+61,"En general, El desayuno era escaso y repetitivo. Sin coche es imposible moverse. Cobran extras por todo.",2,negativo,"desayuno,precio,ubicacion"
+62,"Pasamos una semana aquí. Buenos productos locales en el desayuno. Se duerme de maravilla, muy tranquilo. Muy buena relación calidad precio.",5,positivo,"desayuno,precio,ruido"
+63,"En general, Encontramos pelos en el baño. Sin coche es imposible moverse. La música del bar no nos dejó dormir.",1,negativo,"limpieza,ruido,ubicacion"
+64,"Se duerme de maravilla, muy tranquilo!",4,positivo,ruido
+65,Escapada de fin de semana. El café estaba frío y faltaba fruta. Ruido constante por la noche. No compensa el precio.,2,negativo,"desayuno,precio,ruido"
+66,Fuimos por trabajo. Ruido constante por la noche...,1,negativo,ruido
+67,"Viajamos en familia. El desayuno merece la pena. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"desayuno,ubicacion"
+68,Pasamos una semana aquí. Silencio total por las noches. Todo estaba muy limpio. Muy buena relación calidad precio.,4,positivo,"limpieza,precio,ruido"
+69,La recepcionista nos ayudó con todo. Cumple lo básico.,3,neutro,personal
+70,Escapada de fin de semana. Muy buena relación calidad precio. Buenos productos locales en el desayuno. La limpieza de la habitación era impecable.,4,positivo,"desayuno,limpieza,precio"
+71,Viajamos en familia. Vistas al mar increíbles. Repetiremos por lo que cuesta. Silencio total por las noches.,4,positivo,"precio,ruido,ubicacion"
+72,Encontramos pelos en el baño. Ni fu ni fa.,3,neutro,limpieza
+73,Pasamos una semana aquí. Vistas al mar increíbles. Silencio total por las noches. El desayuno merece la pena!,4,positivo,"desayuno,ruido,ubicacion"
+74,"En general, Está muy lejos del centro. Encontramos pelos en el baño...",2,negativo,"limpieza,ubicacion"
+75,Escapada de fin de semana. El personal fue borde. Todo estaba muy limpio. Cumple lo básico.,3,neutro,"limpieza,personal"
+76,"Escapada de fin de semana. La ubicación es perfecta, a cinco minutos de la playa. Estancia normal, sin más.",3,neutro,ubicacion
+77,Pasamos una semana aquí. La habitación estaba sucia. Ruido constante por la noche. El desayuno era escaso y repetitivo.,2,negativo,"desayuno,limpieza,ruido"
+78,Fuimos por trabajo. El personal fue borde. Habitación correcta y sencilla!,3,neutro,personal
+79,"En general, Ruido constante por la noche. No compensa el precio...",1,negativo,"precio,ruido"
+80,Escapada de fin de semana. Buenos productos locales en el desayuno.,5,positivo,desayuno
+81,Escapada de fin de semana. Buenos productos locales en el desayuno.,4,positivo,desayuno
+82,"En general, El café estaba frío y faltaba fruta. Estancia normal, sin más!",3,neutro,desayuno
+83,"Fuimos por trabajo. Estancia normal, sin más.",3,neutro,
+84,Escapada de fin de semana. Vistas al mar increíbles. El desayuno buffet es variado y delicioso. Repetiremos por lo que cuesta!,5,positivo,"desayuno,precio,ubicacion"
+85,"En general, Se duerme de maravilla, muy tranquilo!",4,positivo,ruido
+86,Escapada de fin de semana. Sin coche es imposible moverse...,1,negativo,ubicacion
+87,"Escapada de fin de semana. El personal fue amabilísimo. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"personal,ubicacion"
+88,"En general, No compensa el precio. La limpieza deja mucho que desear. El desayuno era escaso y repetitivo...",2,negativo,"desayuno,limpieza,precio"
+89,"Se duerme de maravilla, muy tranquilo. Estancia normal, sin más.",3,neutro,ruido
+90,Escapada de fin de semana. Las sábanas y toallas olían a limpio. El personal fue amabilísimo. Silencio total por las noches!,4,positivo,"limpieza,personal,ruido"
+91,"En general, El desayuno buffet es variado y delicioso. Cobran extras por todo. Habitación correcta y sencilla.",3,neutro,"desayuno,precio"
+92,La habitación estaba sucia. Demasiado caro para lo que ofrece. Se oye todo de la habitación de al lado...,2,negativo,"limpieza,precio,ruido"
+93,Pasamos una semana aquí. Trato excelente y muy cercano. El desayuno merece la pena.,5,positivo,"desayuno,personal"
+94,"Se duerme de maravilla, muy tranquilo. El desayuno merece la pena. La recepcionista nos ayudó con todo.",5,positivo,"desayuno,personal,ruido"
+95,"Pasamos una semana aquí. Está muy bien situado, cerca de todo. El personal fue amabilísimo. Silencio total por las noches.",5,positivo,"personal,ruido,ubicacion"
+96,"La limpieza de la habitación era impecable. Estancia normal, sin más.",3,neutro,limpieza
+97,"Pasamos una semana aquí. Está muy bien situado, cerca de todo. Silencio total por las noches.",5,positivo,"ruido,ubicacion"
+98,"El desayuno buffet es variado y delicioso. Precio justo para lo que ofrece. Se duerme de maravilla, muy tranquilo.",4,positivo,"desayuno,precio,ruido"
+99,"Fuimos por trabajo. Muy buena relación calidad precio. El personal fue amabilísimo. Está muy bien situado, cerca de todo.",4,positivo,"personal,precio,ubicacion"
+100,Viajamos en familia. La limpieza deja mucho que desear. La zona es ruidosa y poco segura de noche...,1,negativo,"limpieza,ubicacion"
+101,"En general, Habitación correcta y sencilla.",3,neutro,
+102,Escapada de fin de semana. Repetiremos por lo que cuesta. El personal fue amabilísimo!,4,positivo,"personal,precio"
+103,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo.",4,positivo,"personal,ruido"
+104,El desayuno merece la pena. Vistas al mar increíbles.,5,positivo,"desayuno,ubicacion"
+105,Escapada de fin de semana. El desayuno era escaso y repetitivo. Cobran extras por todo...,2,negativo,"desayuno,precio"
+106,Pasamos una semana aquí. Silencio total por las noches. Todo estaba muy limpio. La recepcionista nos ayudó con todo.,5,positivo,"limpieza,personal,ruido"
+107,"Viajamos en familia. Estancia normal, sin más!",3,neutro,
+108,Viajamos en familia. El desayuno merece la pena. El personal fue amabilísimo. La limpieza de la habitación era impecable.,4,positivo,"desayuno,limpieza,personal"
+109,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo. Está muy bien situado, cerca de todo. Trato excelente y muy cercano.",5,positivo,"personal,ruido,ubicacion"
+110,Viajamos en familia. Silencio total por las noches.,4,positivo,ruido
+111,Silencio total por las noches.,5,positivo,ruido
+112,Pasamos una semana aquí. La recepcionista nos ayudó con todo. Repetiremos por lo que cuesta. Todo estaba muy limpio!,5,positivo,"limpieza,personal,precio"
+113,"Pasamos una semana aquí. Está muy bien situado, cerca de todo. Todo estaba muy limpio. Se duerme de maravilla, muy tranquilo!",5,positivo,"limpieza,ruido,ubicacion"
+114,"Fuimos por trabajo. Estancia normal, sin más.",3,neutro,
+115,Pasamos una semana aquí. Está muy lejos del centro. Nadie atendía en recepción.,2,negativo,"personal,ubicacion"
+116,Viajamos en familia. Demasiado caro para lo que ofrece. El personal fue borde. La zona es ruidosa y poco segura de noche.,1,negativo,"personal,precio,ubicacion"
+117,"Pasamos una semana aquí. Trato excelente y muy cercano. La ubicación es perfecta, a cinco minutos de la playa!",4,positivo,"personal,ubicacion"
+118,Escapada de fin de semana. Cobran extras por todo.,1,negativo,precio
+119,"Viajamos en familia. Se oye todo de la habitación de al lado. Estancia normal, sin más.",3,neutro,ruido
+120,Fuimos por trabajo. La limpieza de la habitación era impecable. Cumple lo básico.,3,neutro,limpieza
+121,Viajamos en familia. La música del bar no nos dejó dormir.,1,negativo,ruido
+122,"En general, Encontramos pelos en el baño. No compensa el precio. La música del bar no nos dejó dormir.",1,negativo,"limpieza,precio,ruido"
+123,"En general, El desayuno buffet es variado y delicioso. Silencio total por las noches.",5,positivo,"desayuno,ruido"
+124,Pasamos una semana aquí. Silencio total por las noches. Buenos productos locales en el desayuno!,5,positivo,"desayuno,ruido"
+125,Está muy lejos del centro. Ruido constante por la noche.,1,negativo,"ruido,ubicacion"
+126,Viajamos en familia. Trato excelente y muy cercano. Las sábanas y toallas olían a limpio. El desayuno merece la pena.,4,positivo,"desayuno,limpieza,personal"
+127,"Fuimos por trabajo. Está muy bien situado, cerca de todo. Las sábanas y toallas olían a limpio.",4,positivo,"limpieza,ubicacion"
+128,Pasamos una semana aquí. El desayuno buffet es variado y delicioso. Vistas al mar increíbles.,5,positivo,"desayuno,ubicacion"
+129,Nadie atendía en recepción...,1,negativo,personal
+130,"Fuimos por trabajo. Está muy bien situado, cerca de todo. Las sábanas y toallas olían a limpio. El desayuno buffet es variado y delicioso.",4,positivo,"desayuno,limpieza,ubicacion"
+131,"En general, Nadie atendía en recepción. Ruido constante por la noche...",2,negativo,"personal,ruido"
+132,"En general, La limpieza de la habitación era impecable.",5,positivo,limpieza
+133,"En general, El desayuno merece la pena. Trato excelente y muy cercano. Se duerme de maravilla, muy tranquilo. Habitación correcta y sencilla.",3,neutro,"desayuno,personal,ruido"
+134,Pasamos una semana aquí. Repetiremos por lo que cuesta. La limpieza de la habitación era impecable.,4,positivo,"limpieza,precio"
+135,Escapada de fin de semana. Nadie atendía en recepción. Ni fu ni fa!,3,neutro,personal
+136,"Fuimos por trabajo. Trato excelente y muy cercano. Se duerme de maravilla, muy tranquilo. El desayuno buffet es variado y delicioso.",5,positivo,"desayuno,personal,ruido"
+137,Todo estaba muy limpio. Silencio total por las noches.,5,positivo,"limpieza,ruido"
+138,Vistas al mar increíbles. Silencio total por las noches. Trato excelente y muy cercano.,4,positivo,"personal,ruido,ubicacion"
+139,"Escapada de fin de semana. Todo estaba muy limpio. La ubicación es perfecta, a cinco minutos de la playa. Silencio total por las noches!",4,positivo,"limpieza,ruido,ubicacion"
+140,"La ubicación es perfecta, a cinco minutos de la playa. Muy buena relación calidad precio. Las sábanas y toallas olían a limpio!",5,positivo,"limpieza,precio,ubicacion"
+141,"Escapada de fin de semana. La limpieza de la habitación era impecable. La ubicación es perfecta, a cinco minutos de la playa!",4,positivo,"limpieza,ubicacion"
+142,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. Precio justo para lo que ofrece.",4,positivo,"precio,ruido"
+143,Escapada de fin de semana. El desayuno buffet es variado y delicioso. Habitación correcta y sencilla.,3,neutro,desayuno
+144,Pasamos una semana aquí. La habitación estaba sucia. El café estaba frío y faltaba fruta. Se oye todo de la habitación de al lado.,1,negativo,"desayuno,limpieza,ruido"
+145,Fuimos por trabajo. La limpieza deja mucho que desear. El personal fue borde.,2,negativo,"limpieza,personal"
+146,"Pasamos una semana aquí. Silencio total por las noches. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"ruido,ubicacion"
+147,Pasamos una semana aquí. Colas enormes en el desayuno. La limpieza deja mucho que desear. La zona es ruidosa y poco segura de noche...,1,negativo,"desayuno,limpieza,ubicacion"
+148,"En general, El desayuno era escaso y repetitivo. Cumple lo básico.",3,neutro,desayuno
+149,Viajamos en familia. Vistas al mar increíbles!,5,positivo,ubicacion
+150,"Fuimos por trabajo. Está muy lejos del centro. Estancia normal, sin más!",3,neutro,ubicacion
+151,Habitación correcta y sencilla.,3,neutro,
+152,"Fuimos por trabajo. El desayuno era escaso y repetitivo. Estancia normal, sin más.",3,neutro,desayuno
+153,Pasamos una semana aquí. Las sábanas y toallas olían a limpio. Habitación correcta y sencilla!,3,neutro,limpieza
+154,Pasamos una semana aquí. Cobran extras por todo. Tardaron una hora en resolver un problema simple.,1,negativo,"personal,precio"
+155,Escapada de fin de semana. La limpieza deja mucho que desear. Sin coche es imposible moverse. El café estaba frío y faltaba fruta...,1,negativo,"desayuno,limpieza,ubicacion"
+156,"El desayuno merece la pena. Está muy bien situado, cerca de todo.",4,positivo,"desayuno,ubicacion"
+157,"Escapada de fin de semana. Silencio total por las noches. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"ruido,ubicacion"
+158,Viajamos en familia. Nadie atendía en recepción. Colas enormes en el desayuno.,1,negativo,"desayuno,personal"
+159,Fuimos por trabajo. Todo estaba muy limpio. Habitación correcta y sencilla.,3,neutro,limpieza
+160,Escapada de fin de semana. La limpieza deja mucho que desear.,2,negativo,limpieza
+161,Escapada de fin de semana. Vistas al mar increíbles. Repetiremos por lo que cuesta.,4,positivo,"precio,ubicacion"
+162,"Repetiremos por lo que cuesta. Se duerme de maravilla, muy tranquilo. Las sábanas y toallas olían a limpio.",5,positivo,"limpieza,precio,ruido"
+163,Viajamos en familia. Se oye todo de la habitación de al lado.,1,negativo,ruido
+164,Buenos productos locales en el desayuno.,5,positivo,desayuno
+165,Cobran extras por todo. El personal fue borde. Se oye todo de la habitación de al lado.,2,negativo,"personal,precio,ruido"
+166,Pasamos una semana aquí. No compensa el precio. El desayuno era escaso y repetitivo.,1,negativo,"desayuno,precio"
+167,Pasamos una semana aquí. Silencio total por las noches. Las sábanas y toallas olían a limpio!,5,positivo,"limpieza,ruido"
+168,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. Precio justo para lo que ofrece!",5,positivo,"precio,ruido"
+169,"Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo!",5,positivo,"personal,ruido"
+170,Escapada de fin de semana. Está muy lejos del centro.,2,negativo,ubicacion
+171,Viajamos en familia. Habitación correcta y sencilla.,3,neutro,
+172,Todo estaba muy limpio.,4,positivo,limpieza
+173,Fuimos por trabajo. La zona es ruidosa y poco segura de noche. El desayuno era escaso y repetitivo.,2,negativo,"desayuno,ubicacion"
+174,"En general, Colas enormes en el desayuno.",2,negativo,desayuno
+175,Se oye todo de la habitación de al lado. Demasiado caro para lo que ofrece. Sin coche es imposible moverse.,1,negativo,"precio,ruido,ubicacion"
+176,Pasamos una semana aquí. Nadie atendía en recepción...,2,negativo,personal
+177,Escapada de fin de semana. Nadie atendía en recepción...,1,negativo,personal
+178,Fuimos por trabajo. No compensa el precio. El desayuno era escaso y repetitivo...,1,negativo,"desayuno,precio"
+179,Escapada de fin de semana. No compensa el precio.,2,negativo,precio
+180,Fuimos por trabajo. Trato excelente y muy cercano. Habitación correcta y sencilla!,3,neutro,personal
+181,Pasamos una semana aquí. Las sábanas y toallas olían a limpio!,5,positivo,limpieza
+182,"Escapada de fin de semana. El desayuno merece la pena. La recepcionista nos ayudó con todo. La ubicación es perfecta, a cinco minutos de la playa!",4,positivo,"desayuno,personal,ubicacion"
+183,Pasamos una semana aquí. El personal fue amabilísimo. Las sábanas y toallas olían a limpio.,5,positivo,"limpieza,personal"
+184,"En general, Ruido constante por la noche. La limpieza deja mucho que desear. Está muy lejos del centro...",2,negativo,"limpieza,ruido,ubicacion"
+185,"La ubicación es perfecta, a cinco minutos de la playa!",4,positivo,ubicacion
+186,"En general, Demasiado caro para lo que ofrece. La habitación estaba sucia. Nadie atendía en recepción.",1,negativo,"limpieza,personal,precio"
+187,Pasamos una semana aquí. Nadie atendía en recepción. La zona es ruidosa y poco segura de noche...,2,negativo,"personal,ubicacion"
+188,"En general, Colas enormes en el desayuno.",1,negativo,desayuno
+189,Pasamos una semana aquí. Tardaron una hora en resolver un problema simple. El desayuno era escaso y repetitivo. Cumple lo básico!,3,neutro,"desayuno,personal"
+190,"Está muy bien situado, cerca de todo!",4,positivo,ubicacion
+191,"En general, El personal fue amabilísimo. Todo estaba muy limpio. Se duerme de maravilla, muy tranquilo.",4,positivo,"limpieza,personal,ruido"
+192,El desayuno merece la pena. La limpieza de la habitación era impecable.,4,positivo,"desayuno,limpieza"
+193,Viajamos en familia. La recepcionista nos ayudó con todo. Silencio total por las noches.,5,positivo,"personal,ruido"
+194,Fuimos por trabajo. El desayuno buffet es variado y delicioso!,4,positivo,desayuno
+195,Escapada de fin de semana. Trato excelente y muy cercano. El desayuno merece la pena.,5,positivo,"desayuno,personal"
+196,"En general, Cobran extras por todo. El café estaba frío y faltaba fruta...",2,negativo,"desayuno,precio"
+197,Escapada de fin de semana. El personal fue amabilísimo. La limpieza de la habitación era impecable.,4,positivo,"limpieza,personal"
+198,El desayuno merece la pena. Trato excelente y muy cercano!,4,positivo,"desayuno,personal"
+199,"En general, Ruido constante por la noche...",1,negativo,ruido
+200,"Se duerme de maravilla, muy tranquilo.",4,positivo,ruido
+201,Sin coche es imposible moverse. No compensa el precio...,2,negativo,"precio,ubicacion"
+202,Fuimos por trabajo. Vistas al mar increíbles. La limpieza de la habitación era impecable.,5,positivo,"limpieza,ubicacion"
+203,Escapada de fin de semana. Habitación correcta y sencilla.,3,neutro,
+204,Pasamos una semana aquí. Cobran extras por todo.,1,negativo,precio
+205,Viajamos en familia. Vistas al mar increíbles.,5,positivo,ubicacion
+206,Escapada de fin de semana. El personal fue borde. Se oye todo de la habitación de al lado. Está muy lejos del centro.,2,negativo,"personal,ruido,ubicacion"
+207,El café estaba frío y faltaba fruta. Está muy lejos del centro.,1,negativo,"desayuno,ubicacion"
+208,"El desayuno merece la pena. Se duerme de maravilla, muy tranquilo. El personal fue amabilísimo!",5,positivo,"desayuno,personal,ruido"
+209,Viajamos en familia. Trato excelente y muy cercano. Buenos productos locales en el desayuno.,5,positivo,"desayuno,personal"
+210,El personal fue amabilísimo!,5,positivo,personal
+211,Pasamos una semana aquí. El personal fue amabilísimo!,5,positivo,personal
+212,Pasamos una semana aquí. El personal fue borde.,2,negativo,personal
+213,Fuimos por trabajo. Habitación correcta y sencilla.,3,neutro,
+214,Fuimos por trabajo. Está muy lejos del centro.,2,negativo,ubicacion
+215,Viajamos en familia. Cumple lo básico!,3,neutro,
+216,Fuimos por trabajo. Precio justo para lo que ofrece.,5,positivo,precio
+217,"En general, Sin coche es imposible moverse. Ni fu ni fa.",3,neutro,ubicacion
+218,"En general, Ruido constante por la noche. Cumple lo básico.",3,neutro,ruido
+219,Pasamos una semana aquí. La música del bar no nos dejó dormir. Cobran extras por todo...,2,negativo,"precio,ruido"
+220,Escapada de fin de semana. Demasiado caro para lo que ofrece. Encontramos pelos en el baño...,1,negativo,"limpieza,precio"
+221,Viajamos en familia. Ruido constante por la noche. No compensa el precio. El café estaba frío y faltaba fruta...,1,negativo,"desayuno,precio,ruido"
+222,"Viajamos en familia. Está muy bien situado, cerca de todo. Silencio total por las noches.",4,positivo,"ruido,ubicacion"
+223,Escapada de fin de semana. La zona es ruidosa y poco segura de noche. Cobran extras por todo. La habitación estaba sucia.,1,negativo,"limpieza,precio,ubicacion"
+224,"En general, Ni fu ni fa.",3,neutro,
+225,Habitación correcta y sencilla.,3,neutro,
+226,Pasamos una semana aquí. La recepcionista nos ayudó con todo!,4,positivo,personal
+227,Viajamos en familia. El personal fue amabilísimo. La limpieza de la habitación era impecable.,5,positivo,"limpieza,personal"
+228,"Viajamos en familia. Muy buena relación calidad precio. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"precio,ubicacion"
+229,Pasamos una semana aquí. El desayuno merece la pena. La recepcionista nos ayudó con todo. Las sábanas y toallas olían a limpio.,5,positivo,"desayuno,limpieza,personal"
+230,Escapada de fin de semana. Demasiado caro para lo que ofrece. La música del bar no nos dejó dormir. El personal fue borde...,1,negativo,"personal,precio,ruido"
+231,Pasamos una semana aquí. Repetiremos por lo que cuesta.,5,positivo,precio
+232,"En general, Vistas al mar increíbles. Silencio total por las noches.",4,positivo,"ruido,ubicacion"
+233,Repetiremos por lo que cuesta.,4,positivo,precio
+234,Colas enormes en el desayuno. Sin coche es imposible moverse. La limpieza deja mucho que desear.,1,negativo,"desayuno,limpieza,ubicacion"
+235,Pasamos una semana aquí. Se oye todo de la habitación de al lado. Encontramos pelos en el baño. La zona es ruidosa y poco segura de noche.,2,negativo,"limpieza,ruido,ubicacion"
+236,Escapada de fin de semana. Trato excelente y muy cercano. Cumple lo básico.,3,neutro,personal
+237,"Fuimos por trabajo. El desayuno buffet es variado y delicioso. Las sábanas y toallas olían a limpio. Se duerme de maravilla, muy tranquilo!",4,positivo,"desayuno,limpieza,ruido"
+238,Pasamos una semana aquí. Repetiremos por lo que cuesta. Habitación correcta y sencilla.,3,neutro,precio
+239,Escapada de fin de semana. Muy buena relación calidad precio.,4,positivo,precio
+240,Viajamos en familia. Todo estaba muy limpio. Vistas al mar increíbles.,5,positivo,"limpieza,ubicacion"
+241,Escapada de fin de semana. Todo estaba muy limpio. El desayuno merece la pena. Trato excelente y muy cercano.,4,positivo,"desayuno,limpieza,personal"
+242,Fuimos por trabajo. Cumple lo básico!,3,neutro,
+243,Pasamos una semana aquí. Demasiado caro para lo que ofrece...,2,negativo,precio
+244,Pasamos una semana aquí. El personal fue amabilísimo. Repetiremos por lo que cuesta. Buenos productos locales en el desayuno!,5,positivo,"desayuno,personal,precio"
+245,"En general, La limpieza de la habitación era impecable!",5,positivo,limpieza
+246,"En general, Vistas al mar increíbles. Buenos productos locales en el desayuno.",5,positivo,"desayuno,ubicacion"
+247,Fuimos por trabajo. Encontramos pelos en el baño. La música del bar no nos dejó dormir. Sin coche es imposible moverse...,2,negativo,"limpieza,ruido,ubicacion"
+248,Viajamos en familia. La limpieza de la habitación era impecable.,4,positivo,limpieza
+249,Pasamos una semana aquí. La limpieza de la habitación era impecable. El desayuno merece la pena.,4,positivo,"desayuno,limpieza"
+250,Viajamos en familia. Precio justo para lo que ofrece. Ni fu ni fa.,3,neutro,precio
+251,Viajamos en familia. Demasiado caro para lo que ofrece. Ni fu ni fa.,3,neutro,precio
+252,"Fuimos por trabajo. El personal fue amabilísimo. La ubicación es perfecta, a cinco minutos de la playa. Repetiremos por lo que cuesta.",4,positivo,"personal,precio,ubicacion"
+253,"En general, El desayuno merece la pena. Muy buena relación calidad precio. Cumple lo básico.",3,neutro,"desayuno,precio"
+254,"Pasamos una semana aquí. Estancia normal, sin más!",3,neutro,
+255,Viajamos en familia. Encontramos pelos en el baño. Se oye todo de la habitación de al lado.,1,negativo,"limpieza,ruido"
+256,"Pasamos una semana aquí. Se duerme de maravilla, muy tranquilo. Todo estaba muy limpio!",4,positivo,"limpieza,ruido"
+257,Habitación correcta y sencilla.,3,neutro,
+258,"En general, Encontramos pelos en el baño. El personal fue borde. Cumple lo básico!",3,neutro,"limpieza,personal"
+259,Viajamos en familia. Sin coche es imposible moverse.,2,negativo,ubicacion
+260,Colas enormes en el desayuno. Está muy lejos del centro. El personal fue borde.,1,negativo,"desayuno,personal,ubicacion"
+261,"Pasamos una semana aquí. Se duerme de maravilla, muy tranquilo. Ni fu ni fa!",3,neutro,ruido
+262,"En general, Las sábanas y toallas olían a limpio. El desayuno merece la pena.",4,positivo,"desayuno,limpieza"
+263,Escapada de fin de semana. Se oye todo de la habitación de al lado. La limpieza deja mucho que desear. El desayuno era escaso y repetitivo...,2,negativo,"desayuno,limpieza,ruido"
+264,Viajamos en familia. Buenos productos locales en el desayuno.,4,positivo,desayuno
+265,"En general, La ubicación es perfecta, a cinco minutos de la playa. Habitación correcta y sencilla!",3,neutro,ubicacion
+266,Fuimos por trabajo. El personal fue amabilísimo. El desayuno buffet es variado y delicioso.,5,positivo,"desayuno,personal"
+267,"Escapada de fin de semana. Muy buena relación calidad precio. Está muy bien situado, cerca de todo. Las sábanas y toallas olían a limpio!",5,positivo,"limpieza,precio,ubicacion"
+268,El café estaba frío y faltaba fruta. Cumple lo básico.,3,neutro,desayuno
+269,Fuimos por trabajo. La zona es ruidosa y poco segura de noche. Colas enormes en el desayuno. Ni fu ni fa.,3,neutro,"desayuno,ubicacion"
+270,"Fuimos por trabajo. La ubicación es perfecta, a cinco minutos de la playa. Silencio total por las noches!",5,positivo,"ruido,ubicacion"
+271,Cobran extras por todo. La zona es ruidosa y poco segura de noche...,2,negativo,"precio,ubicacion"
+272,Fuimos por trabajo. La habitación estaba sucia...,2,negativo,limpieza
+273,Viajamos en familia. La limpieza de la habitación era impecable. El personal fue amabilísimo!,4,positivo,"limpieza,personal"
+274,Pasamos una semana aquí. Repetiremos por lo que cuesta. Vistas al mar increíbles.,4,positivo,"precio,ubicacion"
+275,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,ubicacion
+276,"En general, Habitación correcta y sencilla!",3,neutro,
+277,"En general, La ubicación es perfecta, a cinco minutos de la playa. El desayuno merece la pena.",4,positivo,"desayuno,ubicacion"
+278,Viajamos en familia. Buenos productos locales en el desayuno.,4,positivo,desayuno
+279,Viajamos en familia. Ni fu ni fa!,3,neutro,
+280,Escapada de fin de semana. La limpieza de la habitación era impecable. Precio justo para lo que ofrece!,5,positivo,"limpieza,precio"
+281,Escapada de fin de semana. Está muy lejos del centro. Colas enormes en el desayuno...,2,negativo,"desayuno,ubicacion"
+282,"Escapada de fin de semana. La ubicación es perfecta, a cinco minutos de la playa. Silencio total por las noches.",5,positivo,"ruido,ubicacion"
+283,Repetiremos por lo que cuesta. Las sábanas y toallas olían a limpio. El desayuno buffet es variado y delicioso.,4,positivo,"desayuno,limpieza,precio"
+284,"En general, Tardaron una hora en resolver un problema simple...",2,negativo,personal
+285,"En general, El café estaba frío y faltaba fruta.",2,negativo,desayuno
+286,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo. Precio justo para lo que ofrece!",5,positivo,"precio,ruido"
+287,Fuimos por trabajo. El café estaba frío y faltaba fruta...,1,negativo,desayuno
+288,Nadie atendía en recepción. Está muy lejos del centro. El café estaba frío y faltaba fruta...,1,negativo,"desayuno,personal,ubicacion"
+289,Viajamos en familia. Todo estaba muy limpio.,5,positivo,limpieza
+290,Escapada de fin de semana. Todo estaba muy limpio.,5,positivo,limpieza
+291,Viajamos en familia. Ruido constante por la noche. Cumple lo básico.,3,neutro,ruido
+292,Viajamos en familia. El personal fue borde. Encontramos pelos en el baño. El café estaba frío y faltaba fruta...,2,negativo,"desayuno,limpieza,personal"
+293,"En general, El desayuno buffet es variado y delicioso. Muy buena relación calidad precio. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"desayuno,precio,ubicacion"
+294,Viajamos en familia. Repetiremos por lo que cuesta. Buenos productos locales en el desayuno.,4,positivo,"desayuno,precio"
+295,"Escapada de fin de semana. La ubicación es perfecta, a cinco minutos de la playa. Las sábanas y toallas olían a limpio. Buenos productos locales en el desayuno.",5,positivo,"desayuno,limpieza,ubicacion"
+296,"En general, Repetiremos por lo que cuesta. El personal fue amabilísimo!",5,positivo,"personal,precio"
+297,Pasamos una semana aquí. El desayuno merece la pena.,5,positivo,desayuno
+298,Pasamos una semana aquí. La habitación estaba sucia.,1,negativo,limpieza
+299,Viajamos en familia. Repetiremos por lo que cuesta.,4,positivo,precio
+300,Viajamos en familia. El café estaba frío y faltaba fruta. El personal fue borde.,2,negativo,"desayuno,personal"
+301,Nadie atendía en recepción.,1,negativo,personal
+302,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. El desayuno buffet es variado y delicioso.",5,positivo,"desayuno,ruido"
+303,"Fuimos por trabajo. Muy buena relación calidad precio. Está muy bien situado, cerca de todo. La limpieza de la habitación era impecable.",4,positivo,"limpieza,precio,ubicacion"
+304,Pasamos una semana aquí. Muy buena relación calidad precio!,4,positivo,precio
+305,Pasamos una semana aquí. Muy buena relación calidad precio. Silencio total por las noches!,5,positivo,"precio,ruido"
+306,Escapada de fin de semana. El personal fue borde. Cobran extras por todo...,1,negativo,"personal,precio"
+307,Pasamos una semana aquí. El café estaba frío y faltaba fruta.,2,negativo,desayuno
+308,"En general, El personal fue borde. Silencio total por las noches. Habitación correcta y sencilla.",3,neutro,"personal,ruido"
+309,Escapada de fin de semana. No compensa el precio. El café estaba frío y faltaba fruta...,2,negativo,"desayuno,precio"
+310,Escapada de fin de semana. Nadie atendía en recepción...,2,negativo,personal
+311,La limpieza de la habitación era impecable. Ni fu ni fa.,3,neutro,limpieza
+312,Escapada de fin de semana. El personal fue borde.,2,negativo,personal
+313,Viajamos en familia. La limpieza de la habitación era impecable.,5,positivo,limpieza
+314,Está muy lejos del centro...,1,negativo,ubicacion
+315,Sin coche es imposible moverse. El personal fue borde.,2,negativo,"personal,ubicacion"
+316,Fuimos por trabajo. Buenos productos locales en el desayuno. Silencio total por las noches!,4,positivo,"desayuno,ruido"
+317,Pasamos una semana aquí. Las sábanas y toallas olían a limpio.,4,positivo,limpieza
+318,"En general, Está muy lejos del centro.",1,negativo,ubicacion
+319,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo. Muy buena relación calidad precio!",4,positivo,"personal,precio,ruido"
+320,Pasamos una semana aquí. La música del bar no nos dejó dormir.,2,negativo,ruido
+321,"Fuimos por trabajo. Buenos productos locales en el desayuno. Todo estaba muy limpio. Se duerme de maravilla, muy tranquilo!",5,positivo,"desayuno,limpieza,ruido"
+322,Viajamos en familia. La recepcionista nos ayudó con todo. Habitación correcta y sencilla.,3,neutro,personal
+323,"Se duerme de maravilla, muy tranquilo. Cumple lo básico!",3,neutro,ruido
+324,Trato excelente y muy cercano. Repetiremos por lo que cuesta. El desayuno buffet es variado y delicioso.,4,positivo,"desayuno,personal,precio"
+325,Cumple lo básico.,3,neutro,
+326,"Escapada de fin de semana. Precio justo para lo que ofrece. La ubicación es perfecta, a cinco minutos de la playa. Cumple lo básico.",3,neutro,"precio,ubicacion"
+327,Pasamos una semana aquí. Está muy lejos del centro...,2,negativo,ubicacion
+328,Viajamos en familia. Repetiremos por lo que cuesta. Cumple lo básico.,3,neutro,precio
+329,Escapada de fin de semana. El personal fue amabilísimo.,4,positivo,personal
+330,"En general, Está muy lejos del centro. Colas enormes en el desayuno.",2,negativo,"desayuno,ubicacion"
+331,"En general, Sin coche es imposible moverse. Cumple lo básico!",3,neutro,ubicacion
+332,"Viajamos en familia. Silencio total por las noches. Está muy bien situado, cerca de todo!",4,positivo,"ruido,ubicacion"
+333,"En general, Precio justo para lo que ofrece. Se duerme de maravilla, muy tranquilo. Todo estaba muy limpio.",4,positivo,"limpieza,precio,ruido"
+334,Las sábanas y toallas olían a limpio. Vistas al mar increíbles. Ni fu ni fa.,3,neutro,"limpieza,ubicacion"
+335,"Precio justo para lo que ofrece. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"precio,ubicacion"
+336,Escapada de fin de semana. Trato excelente y muy cercano.,5,positivo,personal
+337,Pasamos una semana aquí. Silencio total por las noches. Habitación correcta y sencilla.,3,neutro,ruido
+338,Escapada de fin de semana. Ruido constante por la noche. La limpieza deja mucho que desear...,1,negativo,"limpieza,ruido"
+339,Escapada de fin de semana. El desayuno merece la pena. No compensa el precio. Habitación correcta y sencilla.,3,neutro,"desayuno,precio"
+340,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo.",5,positivo,ruido
+341,"En general, Se duerme de maravilla, muy tranquilo!",4,positivo,ruido
+342,Pasamos una semana aquí. Encontramos pelos en el baño...,1,negativo,limpieza
+343,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. La ubicación es perfecta, a cinco minutos de la playa. La recepcionista nos ayudó con todo.",4,positivo,"personal,ruido,ubicacion"
+344,"En general, Vistas al mar increíbles.",5,positivo,ubicacion
+345,Viajamos en familia. La zona es ruidosa y poco segura de noche. Nadie atendía en recepción. No compensa el precio.,2,negativo,"personal,precio,ubicacion"
+346,"Fuimos por trabajo. El desayuno buffet es variado y delicioso. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"desayuno,ubicacion"
+347,Escapada de fin de semana. Silencio total por las noches. La limpieza de la habitación era impecable. Precio justo para lo que ofrece!,5,positivo,"limpieza,precio,ruido"
+348,Viajamos en familia. Encontramos pelos en el baño. Habitación correcta y sencilla!,3,neutro,limpieza
+349,Está muy lejos del centro. Nadie atendía en recepción. Cobran extras por todo.,1,negativo,"personal,precio,ubicacion"
+350,Viajamos en familia. Trato excelente y muy cercano. El desayuno merece la pena. Silencio total por las noches!,5,positivo,"desayuno,personal,ruido"
+351,Todo estaba muy limpio. Se oye todo de la habitación de al lado. Ni fu ni fa.,3,neutro,"limpieza,ruido"
+352,Nadie atendía en recepción. La limpieza deja mucho que desear...,2,negativo,"limpieza,personal"
+353,Fuimos por trabajo. Silencio total por las noches!,4,positivo,ruido
+354,Viajamos en familia. La habitación estaba sucia. El personal fue borde. Sin coche es imposible moverse.,1,negativo,"limpieza,personal,ubicacion"
+355,Escapada de fin de semana. Habitación correcta y sencilla.,3,neutro,
+356,Fuimos por trabajo. El desayuno buffet es variado y delicioso. El personal fue amabilísimo. La limpieza de la habitación era impecable.,5,positivo,"desayuno,limpieza,personal"
+357,Escapada de fin de semana. Silencio total por las noches.,4,positivo,ruido
+358,"Escapada de fin de semana. Está muy bien situado, cerca de todo. La recepcionista nos ayudó con todo. El desayuno merece la pena.",4,positivo,"desayuno,personal,ubicacion"
+359,"En general, Se duerme de maravilla, muy tranquilo. Trato excelente y muy cercano. Está muy bien situado, cerca de todo.",5,positivo,"personal,ruido,ubicacion"
+360,Viajamos en familia. Colas enormes en el desayuno. Cobran extras por todo.,2,negativo,"desayuno,precio"
+361,Pasamos una semana aquí. Trato excelente y muy cercano.,5,positivo,personal
+362,Silencio total por las noches. La recepcionista nos ayudó con todo. Precio justo para lo que ofrece!,5,positivo,"personal,precio,ruido"
+363,Pasamos una semana aquí. La zona es ruidosa y poco segura de noche...,2,negativo,ubicacion
+364,Fuimos por trabajo. Tardaron una hora en resolver un problema simple.,2,negativo,personal
+365,Viajamos en familia. Colas enormes en el desayuno. Precio justo para lo que ofrece. Cumple lo básico.,3,neutro,"desayuno,precio"
+366,"En general, El desayuno buffet es variado y delicioso.",4,positivo,desayuno
+367,Fuimos por trabajo. Las sábanas y toallas olían a limpio. El desayuno merece la pena!,4,positivo,"desayuno,limpieza"
+368,Viajamos en familia. La zona es ruidosa y poco segura de noche. Buenos productos locales en el desayuno. Cumple lo básico.,3,neutro,"desayuno,ubicacion"
+369,"En general, Ruido constante por la noche. No compensa el precio. Encontramos pelos en el baño.",1,negativo,"limpieza,precio,ruido"
+370,La recepcionista nos ayudó con todo.,4,positivo,personal
+371,Pasamos una semana aquí. El café estaba frío y faltaba fruta.,1,negativo,desayuno
+372,Nadie atendía en recepción. Ruido constante por la noche. No compensa el precio.,2,negativo,"personal,precio,ruido"
+373,Pasamos una semana aquí. Demasiado caro para lo que ofrece. El desayuno era escaso y repetitivo...,1,negativo,"desayuno,precio"
+374,Está muy lejos del centro. Ruido constante por la noche.,2,negativo,"ruido,ubicacion"
+375,Está muy lejos del centro. La habitación estaba sucia. Demasiado caro para lo que ofrece.,2,negativo,"limpieza,precio,ubicacion"
+376,Viajamos en familia. Precio justo para lo que ofrece.,4,positivo,precio
+377,"En general, Nadie atendía en recepción. La zona es ruidosa y poco segura de noche. Encontramos pelos en el baño.",1,negativo,"limpieza,personal,ubicacion"
+378,Viajamos en familia. Muy buena relación calidad precio. El personal fue amabilísimo!,4,positivo,"personal,precio"
+379,Escapada de fin de semana. La música del bar no nos dejó dormir...,2,negativo,ruido
+380,"Pasamos una semana aquí. La ubicación es perfecta, a cinco minutos de la playa. Habitación correcta y sencilla.",3,neutro,ubicacion
+381,"El desayuno merece la pena. El personal fue amabilísimo. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"desayuno,personal,ubicacion"
+382,La zona es ruidosa y poco segura de noche. La música del bar no nos dejó dormir...,1,negativo,"ruido,ubicacion"
+383,"Fuimos por trabajo. Trato excelente y muy cercano. El desayuno buffet es variado y delicioso. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"desayuno,personal,ubicacion"
+384,"En general, La música del bar no nos dejó dormir. Tardaron una hora en resolver un problema simple. La limpieza deja mucho que desear.",2,negativo,"limpieza,personal,ruido"
+385,"En general, Ruido constante por la noche. Habitación correcta y sencilla.",3,neutro,ruido
+386,Pasamos una semana aquí. Precio justo para lo que ofrece. Ni fu ni fa.,3,neutro,precio
+387,Fuimos por trabajo. La limpieza de la habitación era impecable. Silencio total por las noches.,4,positivo,"limpieza,ruido"
+388,"Escapada de fin de semana. La ubicación es perfecta, a cinco minutos de la playa. Buenos productos locales en el desayuno. Muy buena relación calidad precio.",5,positivo,"desayuno,precio,ubicacion"
+389,Sin coche es imposible moverse. Cumple lo básico.,3,neutro,ubicacion
+390,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo.",5,positivo,ruido
+391,"En general, Se oye todo de la habitación de al lado. Está muy lejos del centro...",2,negativo,"ruido,ubicacion"
+392,Pasamos una semana aquí. El desayuno era escaso y repetitivo. No compensa el precio. La limpieza deja mucho que desear.,1,negativo,"desayuno,limpieza,precio"
+393,"Escapada de fin de semana. Está muy bien situado, cerca de todo.",5,positivo,ubicacion
+394,Pasamos una semana aquí. Muy buena relación calidad precio. Todo estaba muy limpio.,4,positivo,"limpieza,precio"
+395,Escapada de fin de semana. Todo estaba muy limpio. Buenos productos locales en el desayuno.,4,positivo,"desayuno,limpieza"
+396,Pasamos una semana aquí. El café estaba frío y faltaba fruta.,2,negativo,desayuno
+397,"En general, Vistas al mar increíbles. Todo estaba muy limpio. Se duerme de maravilla, muy tranquilo!",4,positivo,"limpieza,ruido,ubicacion"
+398,Pasamos una semana aquí. Cobran extras por todo. Habitación correcta y sencilla.,3,neutro,precio
+399,Colas enormes en el desayuno. Sin coche es imposible moverse.,1,negativo,"desayuno,ubicacion"
+400,Escapada de fin de semana. Vistas al mar increíbles. La recepcionista nos ayudó con todo. Las sábanas y toallas olían a limpio.,5,positivo,"limpieza,personal,ubicacion"
+401,Viajamos en familia. El desayuno era escaso y repetitivo. La habitación estaba sucia. Cobran extras por todo...,2,negativo,"desayuno,limpieza,precio"
+402,Pasamos una semana aquí. Tardaron una hora en resolver un problema simple.,2,negativo,personal
+403,Fuimos por trabajo. La limpieza de la habitación era impecable. Muy buena relación calidad precio.,4,positivo,"limpieza,precio"
+404,Pasamos una semana aquí. El personal fue borde. La limpieza deja mucho que desear. La música del bar no nos dejó dormir.,1,negativo,"limpieza,personal,ruido"
+405,Viajamos en familia. Las sábanas y toallas olían a limpio. Repetiremos por lo que cuesta. Silencio total por las noches.,4,positivo,"limpieza,precio,ruido"
+406,Ruido constante por la noche.,1,negativo,ruido
+407,"Pasamos una semana aquí. Muy buena relación calidad precio. Está muy lejos del centro. Estancia normal, sin más.",3,neutro,"precio,ubicacion"
+408,"Viajamos en familia. Todo estaba muy limpio. Estancia normal, sin más.",3,neutro,limpieza
+409,"Pasamos una semana aquí. Está muy bien situado, cerca de todo. El personal fue amabilísimo.",5,positivo,"personal,ubicacion"
+410,Viajamos en familia. Colas enormes en el desayuno. La música del bar no nos dejó dormir...,2,negativo,"desayuno,ruido"
+411,"Viajamos en familia. Muy buena relación calidad precio. Está muy bien situado, cerca de todo.",4,positivo,"precio,ubicacion"
+412,"En general, Está muy bien situado, cerca de todo.",4,positivo,ubicacion
+413,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa. Precio justo para lo que ofrece. Buenos productos locales en el desayuno.",5,positivo,"desayuno,precio,ubicacion"
+414,"Escapada de fin de semana. Las sábanas y toallas olían a limpio. Trato excelente y muy cercano. Se duerme de maravilla, muy tranquilo.",4,positivo,"limpieza,personal,ruido"
+415,"Viajamos en familia. La limpieza de la habitación era impecable. Estancia normal, sin más.",3,neutro,limpieza
+416,Viajamos en familia. Vistas al mar increíbles. El personal fue amabilísimo. Ni fu ni fa.,3,neutro,"personal,ubicacion"
+417,Pasamos una semana aquí. Encontramos pelos en el baño. La zona es ruidosa y poco segura de noche. El desayuno era escaso y repetitivo.,1,negativo,"desayuno,limpieza,ubicacion"
+418,Fuimos por trabajo. Encontramos pelos en el baño. Colas enormes en el desayuno.,1,negativo,"desayuno,limpieza"
+419,"En general, Repetiremos por lo que cuesta.",5,positivo,precio
+420,"En general, El desayuno merece la pena. Ni fu ni fa.",3,neutro,desayuno
+421,Escapada de fin de semana. Ruido constante por la noche. Cumple lo básico.,3,neutro,ruido
+422,Escapada de fin de semana. Trato excelente y muy cercano.,4,positivo,personal
+423,Viajamos en familia. Todo estaba muy limpio!,4,positivo,limpieza
+424,Fuimos por trabajo. El desayuno era escaso y repetitivo...,1,negativo,desayuno
+425,Viajamos en familia. La limpieza de la habitación era impecable. Precio justo para lo que ofrece. La recepcionista nos ayudó con todo.,5,positivo,"limpieza,personal,precio"
+426,"Fuimos por trabajo. Está muy bien situado, cerca de todo.",5,positivo,ubicacion
+427,Viajamos en familia. Se oye todo de la habitación de al lado.,1,negativo,ruido
+428,Viajamos en familia. Repetiremos por lo que cuesta.,4,positivo,precio
+429,Pasamos una semana aquí. Buenos productos locales en el desayuno. Ni fu ni fa.,3,neutro,desayuno
+430,La habitación estaba sucia. El personal fue borde.,2,negativo,"limpieza,personal"
+431,Fuimos por trabajo. Sin coche es imposible moverse. Se oye todo de la habitación de al lado. Cobran extras por todo...,1,negativo,"precio,ruido,ubicacion"
+432,La limpieza deja mucho que desear. Sin coche es imposible moverse. La música del bar no nos dejó dormir.,1,negativo,"limpieza,ruido,ubicacion"
+433,"En general, Las sábanas y toallas olían a limpio. Se duerme de maravilla, muy tranquilo.",5,positivo,"limpieza,ruido"
+434,"Pasamos una semana aquí. La ubicación es perfecta, a cinco minutos de la playa. Precio justo para lo que ofrece. El personal fue amabilísimo.",4,positivo,"personal,precio,ubicacion"
+435,Escapada de fin de semana. Vistas al mar increíbles. Todo estaba muy limpio. Muy buena relación calidad precio.,4,positivo,"limpieza,precio,ubicacion"
+436,Pasamos una semana aquí. El personal fue amabilísimo!,4,positivo,personal
+437,"En general, La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,ubicacion
+438,Se oye todo de la habitación de al lado.,1,negativo,ruido
+439,El personal fue amabilísimo. Ni fu ni fa.,3,neutro,personal
+440,Escapada de fin de semana. Las sábanas y toallas olían a limpio.,4,positivo,limpieza
+441,"En general, Cobran extras por todo.",1,negativo,precio
+442,Viajamos en familia. La zona es ruidosa y poco segura de noche. La limpieza deja mucho que desear...,2,negativo,"limpieza,ubicacion"
+443,Fuimos por trabajo. Silencio total por las noches!,4,positivo,ruido
+444,Pasamos una semana aquí. Sin coche es imposible moverse. El café estaba frío y faltaba fruta. Cumple lo básico.,3,neutro,"desayuno,ubicacion"
+445,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo. Precio justo para lo que ofrece.",5,positivo,"precio,ruido"
+446,Viajamos en familia. Se oye todo de la habitación de al lado. La zona es ruidosa y poco segura de noche.,1,negativo,"ruido,ubicacion"
+447,"Fuimos por trabajo. Las sábanas y toallas olían a limpio. Se duerme de maravilla, muy tranquilo.",5,positivo,"limpieza,ruido"
+448,Pasamos una semana aquí. Habitación correcta y sencilla.,3,neutro,
+449,Escapada de fin de semana. La limpieza de la habitación era impecable!,4,positivo,limpieza
+450,"En general, El café estaba frío y faltaba fruta. Estancia normal, sin más!",3,neutro,desayuno
+451,Habitación correcta y sencilla!,3,neutro,
+452,Escapada de fin de semana. Está muy lejos del centro. Demasiado caro para lo que ofrece. Nadie atendía en recepción...,1,negativo,"personal,precio,ubicacion"
+453,Pasamos una semana aquí. Todo estaba muy limpio. Precio justo para lo que ofrece!,5,positivo,"limpieza,precio"
+454,Viajamos en familia. Vistas al mar increíbles.,5,positivo,ubicacion
+455,Ruido constante por la noche. Cobran extras por todo.,2,negativo,"precio,ruido"
+456,La limpieza de la habitación era impecable. Silencio total por las noches. Muy buena relación calidad precio!,4,positivo,"limpieza,precio,ruido"
+457,Fuimos por trabajo. Todo estaba muy limpio. Silencio total por las noches. Trato excelente y muy cercano!,4,positivo,"limpieza,personal,ruido"
+458,"En general, Muy buena relación calidad precio. Vistas al mar increíbles. Las sábanas y toallas olían a limpio.",4,positivo,"limpieza,precio,ubicacion"
+459,Pasamos una semana aquí. La recepcionista nos ayudó con todo!,5,positivo,personal
+460,Pasamos una semana aquí. Silencio total por las noches. Ni fu ni fa.,3,neutro,ruido
+461,"En general, Está muy bien situado, cerca de todo.",5,positivo,ubicacion
+462,"Fuimos por trabajo. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,ubicacion
+463,Vistas al mar increíbles. Silencio total por las noches. El desayuno buffet es variado y delicioso.,5,positivo,"desayuno,ruido,ubicacion"
+464,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo. Estancia normal, sin más.",3,neutro,ruido
+465,Fuimos por trabajo. Ruido constante por la noche. Cobran extras por todo. Tardaron una hora en resolver un problema simple...,1,negativo,"personal,precio,ruido"
+466,Silencio total por las noches.,4,positivo,ruido
+467,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo. Buenos productos locales en el desayuno!",4,positivo,"desayuno,ruido"
+468,"Fuimos por trabajo. Está muy bien situado, cerca de todo.",4,positivo,ubicacion
+469,Pasamos una semana aquí. Trato excelente y muy cercano. Vistas al mar increíbles. Repetiremos por lo que cuesta!,5,positivo,"personal,precio,ubicacion"
+470,Escapada de fin de semana. Trato excelente y muy cercano.,4,positivo,personal
+471,"En general, Trato excelente y muy cercano. Buenos productos locales en el desayuno.",5,positivo,"desayuno,personal"
+472,Escapada de fin de semana. El desayuno merece la pena. Cumple lo básico.,3,neutro,desayuno
+473,Fuimos por trabajo. El café estaba frío y faltaba fruta...,2,negativo,desayuno
+474,Viajamos en familia. La zona es ruidosa y poco segura de noche. Ruido constante por la noche. Cobran extras por todo...,2,negativo,"precio,ruido,ubicacion"
+475,"En general, La limpieza de la habitación era impecable. Precio justo para lo que ofrece.",5,positivo,"limpieza,precio"
+476,Escapada de fin de semana. Sin coche es imposible moverse. Cobran extras por todo. Tardaron una hora en resolver un problema simple.,1,negativo,"personal,precio,ubicacion"
+477,La habitación estaba sucia. El desayuno era escaso y repetitivo.,1,negativo,"desayuno,limpieza"
+478,"Escapada de fin de semana. El desayuno buffet es variado y delicioso. Se duerme de maravilla, muy tranquilo. Trato excelente y muy cercano!",5,positivo,"desayuno,personal,ruido"
+479,Pasamos una semana aquí. La habitación estaba sucia. Sin coche es imposible moverse...,1,negativo,"limpieza,ubicacion"
+480,"Fuimos por trabajo. Buenos productos locales en el desayuno. La ubicación es perfecta, a cinco minutos de la playa. Todo estaba muy limpio.",5,positivo,"desayuno,limpieza,ubicacion"
+481,"La música del bar no nos dejó dormir. Está muy lejos del centro. Estancia normal, sin más.",3,neutro,"ruido,ubicacion"
+482,Fuimos por trabajo. Las sábanas y toallas olían a limpio. Repetiremos por lo que cuesta.,5,positivo,"limpieza,precio"
+483,"Fuimos por trabajo. La zona es ruidosa y poco segura de noche. Tardaron una hora en resolver un problema simple. Estancia normal, sin más.",3,neutro,"personal,ubicacion"
+484,"Trato excelente y muy cercano. Precio justo para lo que ofrece. Está muy bien situado, cerca de todo.",5,positivo,"personal,precio,ubicacion"
+485,Pasamos una semana aquí. El desayuno era escaso y repetitivo. La zona es ruidosa y poco segura de noche. Se oye todo de la habitación de al lado...,2,negativo,"desayuno,ruido,ubicacion"
+486,Fuimos por trabajo. Trato excelente y muy cercano. Repetiremos por lo que cuesta. Silencio total por las noches!,4,positivo,"personal,precio,ruido"
+487,La recepcionista nos ayudó con todo!,4,positivo,personal
+488,"Fuimos por trabajo. Nadie atendía en recepción. Estancia normal, sin más!",3,neutro,personal
+489,"En general, Cumple lo básico!",3,neutro,
+490,Pasamos una semana aquí. Habitación correcta y sencilla.,3,neutro,
+491,"La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,ubicacion
+492,Viajamos en familia. La habitación estaba sucia. La zona es ruidosa y poco segura de noche. El desayuno era escaso y repetitivo.,2,negativo,"desayuno,limpieza,ubicacion"
+493,Fuimos por trabajo. La habitación estaba sucia. El café estaba frío y faltaba fruta. El personal fue borde...,2,negativo,"desayuno,limpieza,personal"
+494,Viajamos en familia. Las sábanas y toallas olían a limpio. Ni fu ni fa.,3,neutro,limpieza
+495,Pasamos una semana aquí. Ni fu ni fa.,3,neutro,
+496,"En general, Está muy bien situado, cerca de todo.",4,positivo,ubicacion
+497,"Se duerme de maravilla, muy tranquilo. Trato excelente y muy cercano. Buenos productos locales en el desayuno!",4,positivo,"desayuno,personal,ruido"
+498,Viajamos en familia. La habitación estaba sucia. Sin coche es imposible moverse. No compensa el precio...,1,negativo,"limpieza,precio,ubicacion"
+499,Pasamos una semana aquí. Tardaron una hora en resolver un problema simple. El desayuno era escaso y repetitivo.,2,negativo,"desayuno,personal"
+500,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo. El desayuno era escaso y repetitivo. El personal fue borde. Estancia normal, sin más!",3,neutro,"desayuno,personal,ruido"
+501,Pasamos una semana aquí. Ruido constante por la noche. Colas enormes en el desayuno. No compensa el precio.,2,negativo,"desayuno,precio,ruido"
+502,Viajamos en familia. Repetiremos por lo que cuesta.,4,positivo,precio
+503,Viajamos en familia. El desayuno merece la pena. La recepcionista nos ayudó con todo. Todo estaba muy limpio.,4,positivo,"desayuno,limpieza,personal"
+504,"En general, Tardaron una hora en resolver un problema simple...",1,negativo,personal
+505,"Viajamos en familia. La limpieza de la habitación era impecable. Está muy bien situado, cerca de todo. El desayuno buffet es variado y delicioso.",4,positivo,"desayuno,limpieza,ubicacion"
+506,"En general, El desayuno buffet es variado y delicioso. Silencio total por las noches. Está muy bien situado, cerca de todo!",5,positivo,"desayuno,ruido,ubicacion"
+507,Escapada de fin de semana. Las sábanas y toallas olían a limpio. Repetiremos por lo que cuesta. Buenos productos locales en el desayuno.,5,positivo,"desayuno,limpieza,precio"
+508,Escapada de fin de semana. El desayuno buffet es variado y delicioso. El personal fue amabilísimo. Precio justo para lo que ofrece!,4,positivo,"desayuno,personal,precio"
+509,La limpieza deja mucho que desear. Cobran extras por todo.,2,negativo,"limpieza,precio"
+510,Pasamos una semana aquí. Colas enormes en el desayuno. Cobran extras por todo. Tardaron una hora en resolver un problema simple.,1,negativo,"desayuno,personal,precio"
+511,Silencio total por las noches. Las sábanas y toallas olían a limpio.,4,positivo,"limpieza,ruido"
+512,Sin coche es imposible moverse. La limpieza deja mucho que desear. Demasiado caro para lo que ofrece.,1,negativo,"limpieza,precio,ubicacion"
+513,"El desayuno merece la pena. Estancia normal, sin más.",3,neutro,desayuno
+514,Silencio total por las noches. Habitación correcta y sencilla.,3,neutro,ruido
+515,Fuimos por trabajo. Habitación correcta y sencilla.,3,neutro,
+516,"En general, Tardaron una hora en resolver un problema simple. La limpieza deja mucho que desear. La zona es ruidosa y poco segura de noche.",1,negativo,"limpieza,personal,ubicacion"
+517,Pasamos una semana aquí. No compensa el precio.,2,negativo,precio
+518,"En general, Estancia normal, sin más.",3,neutro,
+519,Viajamos en familia. Ruido constante por la noche. El desayuno era escaso y repetitivo. Está muy lejos del centro.,2,negativo,"desayuno,ruido,ubicacion"
+520,Las sábanas y toallas olían a limpio. Precio justo para lo que ofrece.,4,positivo,"limpieza,precio"
+521,Escapada de fin de semana. El desayuno era escaso y repetitivo. Tardaron una hora en resolver un problema simple. Demasiado caro para lo que ofrece...,1,negativo,"desayuno,personal,precio"
+522,"Estancia normal, sin más.",3,neutro,
+523,"Viajamos en familia. Todo estaba muy limpio. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"limpieza,ubicacion"
+524,Pasamos una semana aquí. La recepcionista nos ayudó con todo!,4,positivo,personal
+525,La habitación estaba sucia...,1,negativo,limpieza
+526,Fuimos por trabajo. Vistas al mar increíbles.,5,positivo,ubicacion
+527,Viajamos en familia. Trato excelente y muy cercano. El desayuno merece la pena.,5,positivo,"desayuno,personal"
+528,"Fuimos por trabajo. Está muy bien situado, cerca de todo. Precio justo para lo que ofrece.",4,positivo,"precio,ubicacion"
+529,El personal fue borde. Está muy lejos del centro.,1,negativo,"personal,ubicacion"
+530,Fuimos por trabajo. Buenos productos locales en el desayuno. Trato excelente y muy cercano.,4,positivo,"desayuno,personal"
+531,Viajamos en familia. Las sábanas y toallas olían a limpio.,4,positivo,limpieza
+532,Fuimos por trabajo. La limpieza de la habitación era impecable. La recepcionista nos ayudó con todo. Muy buena relación calidad precio!,5,positivo,"limpieza,personal,precio"
+533,"En general, Vistas al mar increíbles. El desayuno merece la pena!",5,positivo,"desayuno,ubicacion"
+534,"En general, La zona es ruidosa y poco segura de noche.",2,negativo,ubicacion
+535,Escapada de fin de semana. Las sábanas y toallas olían a limpio.,4,positivo,limpieza
+536,"En general, Está muy lejos del centro.",1,negativo,ubicacion
+537,Muy buena relación calidad precio. Buenos productos locales en el desayuno. La recepcionista nos ayudó con todo!,5,positivo,"desayuno,personal,precio"
+538,Viajamos en familia. Demasiado caro para lo que ofrece...,1,negativo,precio
+539,Viajamos en familia. Vistas al mar increíbles. El desayuno merece la pena.,4,positivo,"desayuno,ubicacion"
+540,Fuimos por trabajo. Está muy lejos del centro. Encontramos pelos en el baño...,1,negativo,"limpieza,ubicacion"
+541,"En general, Las sábanas y toallas olían a limpio.",4,positivo,limpieza
+542,Escapada de fin de semana. Las sábanas y toallas olían a limpio. El desayuno merece la pena.,5,positivo,"desayuno,limpieza"
+543,Escapada de fin de semana. La habitación estaba sucia. La música del bar no nos dejó dormir.,2,negativo,"limpieza,ruido"
+544,"En general, Demasiado caro para lo que ofrece. Nadie atendía en recepción. Ruido constante por la noche...",2,negativo,"personal,precio,ruido"
+545,"En general, Se oye todo de la habitación de al lado. El personal fue borde. Está muy lejos del centro.",2,negativo,"personal,ruido,ubicacion"
+546,El desayuno merece la pena. Repetiremos por lo que cuesta.,4,positivo,"desayuno,precio"
+547,"En general, Encontramos pelos en el baño. Ni fu ni fa.",3,neutro,limpieza
+548,Viajamos en familia. Cumple lo básico!,3,neutro,
+549,Silencio total por las noches. Trato excelente y muy cercano. Todo estaba muy limpio.,4,positivo,"limpieza,personal,ruido"
+550,Viajamos en familia. El desayuno merece la pena. La recepcionista nos ayudó con todo. Todo estaba muy limpio!,4,positivo,"desayuno,limpieza,personal"
+551,El personal fue amabilísimo. Las sábanas y toallas olían a limpio!,5,positivo,"limpieza,personal"
+552,Silencio total por las noches. Buenos productos locales en el desayuno!,4,positivo,"desayuno,ruido"
+553,"Escapada de fin de semana. Precio justo para lo que ofrece. La ubicación es perfecta, a cinco minutos de la playa. Trato excelente y muy cercano.",5,positivo,"personal,precio,ubicacion"
+554,Escapada de fin de semana. Precio justo para lo que ofrece!,5,positivo,precio
+555,Fuimos por trabajo. El café estaba frío y faltaba fruta. Tardaron una hora en resolver un problema simple. No compensa el precio.,2,negativo,"desayuno,personal,precio"
+556,"Viajamos en familia. Estancia normal, sin más.",3,neutro,
+557,"Fuimos por trabajo. El desayuno merece la pena. Está muy bien situado, cerca de todo.",4,positivo,"desayuno,ubicacion"
+558,Pasamos una semana aquí. Precio justo para lo que ofrece.,5,positivo,precio
+559,La zona es ruidosa y poco segura de noche. Nadie atendía en recepción.,1,negativo,"personal,ubicacion"
+560,"En general, Todo estaba muy limpio. El personal fue amabilísimo. Buenos productos locales en el desayuno.",4,positivo,"desayuno,limpieza,personal"
+561,"Fuimos por trabajo. El desayuno buffet es variado y delicioso. Se duerme de maravilla, muy tranquilo. Muy buena relación calidad precio.",4,positivo,"desayuno,precio,ruido"
+562,Escapada de fin de semana. No compensa el precio. El desayuno era escaso y repetitivo...,1,negativo,"desayuno,precio"
+563,Pasamos una semana aquí. Buenos productos locales en el desayuno.,5,positivo,desayuno
+564,"Viajamos en familia. La limpieza de la habitación era impecable. Estancia normal, sin más.",3,neutro,limpieza
+565,Fuimos por trabajo. El personal fue borde. Colas enormes en el desayuno. La limpieza deja mucho que desear.,2,negativo,"desayuno,limpieza,personal"
+566,"Fuimos por trabajo. No compensa el precio. Estancia normal, sin más.",3,neutro,precio
+567,"Escapada de fin de semana. Está muy bien situado, cerca de todo!",5,positivo,ubicacion
+568,Viajamos en familia. Se oye todo de la habitación de al lado. Tardaron una hora en resolver un problema simple.,2,negativo,"personal,ruido"
+569,"Escapada de fin de semana. Está muy bien situado, cerca de todo!",4,positivo,ubicacion
+570,Escapada de fin de semana. El desayuno era escaso y repetitivo. Sin coche es imposible moverse. Ruido constante por la noche. Cumple lo básico.,3,neutro,"desayuno,ruido,ubicacion"
+571,Viajamos en familia. Cobran extras por todo. Encontramos pelos en el baño...,1,negativo,"limpieza,precio"
+572,Pasamos una semana aquí. Trato excelente y muy cercano. Silencio total por las noches.,4,positivo,"personal,ruido"
+573,"Pasamos una semana aquí. El desayuno era escaso y repetitivo. Todo estaba muy limpio. El personal fue amabilísimo. Estancia normal, sin más.",3,neutro,"desayuno,limpieza,personal"
+574,"En general, La limpieza deja mucho que desear. Cumple lo básico.",3,neutro,limpieza
+575,"Viajamos en familia. Vistas al mar increíbles. Se duerme de maravilla, muy tranquilo. Estancia normal, sin más.",3,neutro,"ruido,ubicacion"
+576,Fuimos por trabajo. Sin coche es imposible moverse...,2,negativo,ubicacion
+577,"En general, Demasiado caro para lo que ofrece. La limpieza deja mucho que desear. La zona es ruidosa y poco segura de noche.",2,negativo,"limpieza,precio,ubicacion"
+578,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo. La ubicación es perfecta, a cinco minutos de la playa!",4,positivo,"ruido,ubicacion"
+579,Pasamos una semana aquí. El desayuno era escaso y repetitivo. La habitación estaba sucia...,1,negativo,"desayuno,limpieza"
+580,"Pasamos una semana aquí. El café estaba frío y faltaba fruta. Se duerme de maravilla, muy tranquilo. Ni fu ni fa!",3,neutro,"desayuno,ruido"
+581,El café estaba frío y faltaba fruta. Tardaron una hora en resolver un problema simple. Cobran extras por todo...,1,negativo,"desayuno,personal,precio"
+582,Viajamos en familia. Encontramos pelos en el baño. Ni fu ni fa!,3,neutro,limpieza
+583,Pasamos una semana aquí. Cumple lo básico.,3,neutro,
+584,Pasamos una semana aquí. Las sábanas y toallas olían a limpio. Vistas al mar increíbles.,4,positivo,"limpieza,ubicacion"
+585,Fuimos por trabajo. Colas enormes en el desayuno. Ruido constante por la noche. La limpieza deja mucho que desear.,1,negativo,"desayuno,limpieza,ruido"
+586,"En general, Ni fu ni fa.",3,neutro,
+587,Repetiremos por lo que cuesta. Vistas al mar increíbles.,4,positivo,"precio,ubicacion"
+588,Pasamos una semana aquí. No compensa el precio. Ruido constante por la noche. Encontramos pelos en el baño...,2,negativo,"limpieza,precio,ruido"
+589,Escapada de fin de semana. El desayuno buffet es variado y delicioso.,4,positivo,desayuno
+590,"En general, El desayuno buffet es variado y delicioso. Precio justo para lo que ofrece. La ubicación es perfecta, a cinco minutos de la playa!",5,positivo,"desayuno,precio,ubicacion"
+591,Fuimos por trabajo. Colas enormes en el desayuno. Se oye todo de la habitación de al lado.,2,negativo,"desayuno,ruido"
+592,Muy buena relación calidad precio. Buenos productos locales en el desayuno.,5,positivo,"desayuno,precio"
+593,Viajamos en familia. No compensa el precio. Ruido constante por la noche. El desayuno era escaso y repetitivo.,2,negativo,"desayuno,precio,ruido"
+594,Viajamos en familia. La habitación estaba sucia. Nadie atendía en recepción. Está muy lejos del centro...,2,negativo,"limpieza,personal,ubicacion"
+595,El desayuno merece la pena. El personal fue amabilísimo. Muy buena relación calidad precio!,5,positivo,"desayuno,personal,precio"
+596,El personal fue borde. Cobran extras por todo. Se oye todo de la habitación de al lado...,1,negativo,"personal,precio,ruido"
+597,Escapada de fin de semana. Silencio total por las noches. Precio justo para lo que ofrece.,5,positivo,"precio,ruido"
+598,"Viajamos en familia. Silencio total por las noches. Estancia normal, sin más.",3,neutro,ruido
+599,"Estancia normal, sin más!",3,neutro,
+600,Todo estaba muy limpio. Silencio total por las noches.,5,positivo,"limpieza,ruido"
+601,El desayuno merece la pena. Silencio total por las noches!,5,positivo,"desayuno,ruido"
+602,"Escapada de fin de semana. Precio justo para lo que ofrece. Todo estaba muy limpio. Está muy bien situado, cerca de todo!",5,positivo,"limpieza,precio,ubicacion"
+603,"Viajamos en familia. Se duerme de maravilla, muy tranquilo.",5,positivo,ruido
+604,Viajamos en familia. Todo estaba muy limpio.,5,positivo,limpieza
+605,Escapada de fin de semana. La zona es ruidosa y poco segura de noche. Cobran extras por todo. Habitación correcta y sencilla.,3,neutro,"precio,ubicacion"
+606,Escapada de fin de semana. Se oye todo de la habitación de al lado. Cumple lo básico!,3,neutro,ruido
+607,Viajamos en familia. El café estaba frío y faltaba fruta. Nadie atendía en recepción. Se oye todo de la habitación de al lado...,2,negativo,"desayuno,personal,ruido"
+608,La habitación estaba sucia.,2,negativo,limpieza
+609,"En general, Silencio total por las noches. Muy buena relación calidad precio.",5,positivo,"precio,ruido"
+610,"Fuimos por trabajo. Muy buena relación calidad precio. Buenos productos locales en el desayuno. Se duerme de maravilla, muy tranquilo.",5,positivo,"desayuno,precio,ruido"
+611,"Escapada de fin de semana. Repetiremos por lo que cuesta. La recepcionista nos ayudó con todo. Se duerme de maravilla, muy tranquilo!",4,positivo,"personal,precio,ruido"
+612,Escapada de fin de semana. El desayuno buffet es variado y delicioso.,4,positivo,desayuno
+613,"En general, Cobran extras por todo. La música del bar no nos dejó dormir.",2,negativo,"precio,ruido"
+614,Pasamos una semana aquí. El personal fue borde. Colas enormes en el desayuno. Cobran extras por todo...,1,negativo,"desayuno,personal,precio"
+615,"En general, El café estaba frío y faltaba fruta. No compensa el precio. Ruido constante por la noche.",1,negativo,"desayuno,precio,ruido"
+616,Fuimos por trabajo. Tardaron una hora en resolver un problema simple. La habitación estaba sucia. El desayuno era escaso y repetitivo...,1,negativo,"desayuno,limpieza,personal"
+617,Pasamos una semana aquí. Las sábanas y toallas olían a limpio.,4,positivo,limpieza
+618,"En general, La música del bar no nos dejó dormir. El desayuno era escaso y repetitivo. El personal fue borde...",2,negativo,"desayuno,personal,ruido"
+619,Viajamos en familia. Sin coche es imposible moverse. El desayuno era escaso y repetitivo...,1,negativo,"desayuno,ubicacion"
+620,La limpieza de la habitación era impecable.,5,positivo,limpieza
+621,Viajamos en familia. La limpieza deja mucho que desear. No compensa el precio. Nadie atendía en recepción.,1,negativo,"limpieza,personal,precio"
+622,Fuimos por trabajo. Cobran extras por todo. La limpieza deja mucho que desear.,2,negativo,"limpieza,precio"
+623,Pasamos una semana aquí. Encontramos pelos en el baño.,1,negativo,limpieza
+624,Pasamos una semana aquí. Repetiremos por lo que cuesta. Cumple lo básico.,3,neutro,precio
+625,Silencio total por las noches. Vistas al mar increíbles. Repetiremos por lo que cuesta.,5,positivo,"precio,ruido,ubicacion"
+626,Demasiado caro para lo que ofrece.,2,negativo,precio
+627,"En general, Colas enormes en el desayuno. Nadie atendía en recepción. No compensa el precio.",2,negativo,"desayuno,personal,precio"
+628,"Viajamos en familia. Se duerme de maravilla, muy tranquilo!",5,positivo,ruido
+629,Escapada de fin de semana. Está muy lejos del centro. La habitación estaba sucia.,2,negativo,"limpieza,ubicacion"
+630,"Viajamos en familia. Se duerme de maravilla, muy tranquilo!",5,positivo,ruido
+631,Escapada de fin de semana. La zona es ruidosa y poco segura de noche. Ruido constante por la noche. El desayuno era escaso y repetitivo.,2,negativo,"desayuno,ruido,ubicacion"
+632,Fuimos por trabajo. Colas enormes en el desayuno.,2,negativo,desayuno
+633,Viajamos en familia. Precio justo para lo que ofrece. La recepcionista nos ayudó con todo. Todo estaba muy limpio.,4,positivo,"limpieza,personal,precio"
+634,Fuimos por trabajo. Precio justo para lo que ofrece. Habitación correcta y sencilla!,3,neutro,precio
+635,Fuimos por trabajo. Sin coche es imposible moverse.,2,negativo,ubicacion
+636,"Pasamos una semana aquí. El personal fue amabilísimo. La ubicación es perfecta, a cinco minutos de la playa. Todo estaba muy limpio.",4,positivo,"limpieza,personal,ubicacion"
+637,Habitación correcta y sencilla.,3,neutro,
+638,El personal fue borde. Cumple lo básico.,3,neutro,personal
+639,"Se duerme de maravilla, muy tranquilo!",5,positivo,ruido
+640,Fuimos por trabajo. La música del bar no nos dejó dormir. Está muy lejos del centro...,1,negativo,"ruido,ubicacion"
+641,"Escapada de fin de semana. Estancia normal, sin más.",3,neutro,
+642,Pasamos una semana aquí. Encontramos pelos en el baño...,1,negativo,limpieza
+643,Ruido constante por la noche. Demasiado caro para lo que ofrece.,2,negativo,"precio,ruido"
+644,Pasamos una semana aquí. Las sábanas y toallas olían a limpio. Silencio total por las noches!,4,positivo,"limpieza,ruido"
+645,"La ubicación es perfecta, a cinco minutos de la playa. Se duerme de maravilla, muy tranquilo. El desayuno buffet es variado y delicioso.",5,positivo,"desayuno,ruido,ubicacion"
+646,Fuimos por trabajo. Todo estaba muy limpio.,4,positivo,limpieza
+647,"En general, Las sábanas y toallas olían a limpio. Trato excelente y muy cercano. Se duerme de maravilla, muy tranquilo!",4,positivo,"limpieza,personal,ruido"
+648,La música del bar no nos dejó dormir. Encontramos pelos en el baño. Cobran extras por todo...,2,negativo,"limpieza,precio,ruido"
+649,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa. Muy buena relación calidad precio!",5,positivo,"precio,ubicacion"
+650,Las sábanas y toallas olían a limpio. El personal fue amabilísimo.,4,positivo,"limpieza,personal"
+651,Fuimos por trabajo. Sin coche es imposible moverse.,2,negativo,ubicacion
+652,"En general, Nadie atendía en recepción. Demasiado caro para lo que ofrece. Ruido constante por la noche.",1,negativo,"personal,precio,ruido"
+653,"Fuimos por trabajo. Estancia normal, sin más.",3,neutro,
+654,"En general, Ruido constante por la noche...",2,negativo,ruido
+655,Fuimos por trabajo. Todo estaba muy limpio. Silencio total por las noches.,4,positivo,"limpieza,ruido"
+656,Pasamos una semana aquí. Ruido constante por la noche. Demasiado caro para lo que ofrece. Tardaron una hora en resolver un problema simple.,2,negativo,"personal,precio,ruido"
+657,Viajamos en familia. Buenos productos locales en el desayuno.,4,positivo,desayuno
+658,Fuimos por trabajo. El desayuno merece la pena. Silencio total por las noches. Las sábanas y toallas olían a limpio!,5,positivo,"desayuno,limpieza,ruido"
+659,Pasamos una semana aquí. La música del bar no nos dejó dormir. Ni fu ni fa!,3,neutro,ruido
+660,Fuimos por trabajo. Silencio total por las noches. El desayuno merece la pena!,5,positivo,"desayuno,ruido"
+661,"En general, Todo estaba muy limpio. Se duerme de maravilla, muy tranquilo.",5,positivo,"limpieza,ruido"
+662,Pasamos una semana aquí. La habitación estaba sucia. Cobran extras por todo.,2,negativo,"limpieza,precio"
+663,Ruido constante por la noche.,2,negativo,ruido
+664,La limpieza de la habitación era impecable.,4,positivo,limpieza
+665,"Viajamos en familia. Está muy bien situado, cerca de todo.",5,positivo,ubicacion
+666,"En general, El desayuno era escaso y repetitivo. Ruido constante por la noche. Estancia normal, sin más.",3,neutro,"desayuno,ruido"
+667,Pasamos una semana aquí. Cobran extras por todo. Ni fu ni fa.,3,neutro,precio
+668,Escapada de fin de semana. Colas enormes en el desayuno. Encontramos pelos en el baño. La zona es ruidosa y poco segura de noche...,2,negativo,"desayuno,limpieza,ubicacion"
+669,"Trato excelente y muy cercano. Silencio total por las noches. Está muy bien situado, cerca de todo.",4,positivo,"personal,ruido,ubicacion"
+670,Pasamos una semana aquí. La limpieza deja mucho que desear. Habitación correcta y sencilla.,3,neutro,limpieza
+671,Pasamos una semana aquí. El desayuno era escaso y repetitivo.,1,negativo,desayuno
+672,"En general, Estancia normal, sin más.",3,neutro,
+673,Escapada de fin de semana. La limpieza deja mucho que desear...,2,negativo,limpieza
+674,Viajamos en familia. Muy buena relación calidad precio. El desayuno buffet es variado y delicioso. Todo estaba muy limpio.,5,positivo,"desayuno,limpieza,precio"
+675,"En general, Repetiremos por lo que cuesta. La limpieza deja mucho que desear. Ni fu ni fa!",3,neutro,"limpieza,precio"
+676,"Fuimos por trabajo. Está muy bien situado, cerca de todo. Muy buena relación calidad precio.",4,positivo,"precio,ubicacion"
+677,Fuimos por trabajo. La limpieza de la habitación era impecable. Trato excelente y muy cercano.,4,positivo,"limpieza,personal"
+678,Escapada de fin de semana. Ni fu ni fa.,3,neutro,
+679,La recepcionista nos ayudó con todo. Silencio total por las noches. Muy buena relación calidad precio!,5,positivo,"personal,precio,ruido"
+680,"Escapada de fin de semana. Estancia normal, sin más!",3,neutro,
+681,"Está muy bien situado, cerca de todo. La música del bar no nos dejó dormir. Cumple lo básico.",3,neutro,"ruido,ubicacion"
+682,Fuimos por trabajo. La música del bar no nos dejó dormir. No compensa el precio. Colas enormes en el desayuno...,2,negativo,"desayuno,precio,ruido"
+683,Pasamos una semana aquí. Encontramos pelos en el baño. Ruido constante por la noche...,2,negativo,"limpieza,ruido"
+684,Viajamos en familia. La zona es ruidosa y poco segura de noche. El café estaba frío y faltaba fruta...,2,negativo,"desayuno,ubicacion"
+685,"Escapada de fin de semana. Está muy bien situado, cerca de todo. Trato excelente y muy cercano. El desayuno merece la pena!",5,positivo,"desayuno,personal,ubicacion"
+686,Viajamos en familia. Vistas al mar increíbles. Precio justo para lo que ofrece. Buenos productos locales en el desayuno.,4,positivo,"desayuno,precio,ubicacion"
+687,"En general, Se duerme de maravilla, muy tranquilo. Buenos productos locales en el desayuno.",4,positivo,"desayuno,ruido"
+688,El personal fue amabilísimo.,4,positivo,personal
+689,"En general, Muy buena relación calidad precio. Silencio total por las noches. El personal fue amabilísimo.",5,positivo,"personal,precio,ruido"
+690,Fuimos por trabajo. Sin coche es imposible moverse. Demasiado caro para lo que ofrece...,2,negativo,"precio,ubicacion"
+691,"Escapada de fin de semana. La ubicación es perfecta, a cinco minutos de la playa. El personal fue amabilísimo.",5,positivo,"personal,ubicacion"
+692,Viajamos en familia. El desayuno era escaso y repetitivo. Sin coche es imposible moverse. Nadie atendía en recepción...,2,negativo,"desayuno,personal,ubicacion"
+693,"Viajamos en familia. Está muy bien situado, cerca de todo. La limpieza de la habitación era impecable!",5,positivo,"limpieza,ubicacion"
+694,Pasamos una semana aquí. La habitación estaba sucia.,2,negativo,limpieza
+695,Escapada de fin de semana. Precio justo para lo que ofrece. Todo estaba muy limpio.,4,positivo,"limpieza,precio"
+696,"Viajamos en familia. Estancia normal, sin más.",3,neutro,
+697,"En general, Está muy bien situado, cerca de todo. Estancia normal, sin más!",3,neutro,ubicacion
+698,Fuimos por trabajo. Vistas al mar increíbles.,4,positivo,ubicacion
+699,Escapada de fin de semana. Silencio total por las noches!,4,positivo,ruido
+700,Escapada de fin de semana. Buenos productos locales en el desayuno. Repetiremos por lo que cuesta.,4,positivo,"desayuno,precio"
+701,Encontramos pelos en el baño. Cumple lo básico!,3,neutro,limpieza
+702,Pasamos una semana aquí. La limpieza de la habitación era impecable. Silencio total por las noches. Buenos productos locales en el desayuno!,5,positivo,"desayuno,limpieza,ruido"
+703,Escapada de fin de semana. Se oye todo de la habitación de al lado.,1,negativo,ruido
+704,Pasamos una semana aquí. El café estaba frío y faltaba fruta. Cobran extras por todo. La habitación estaba sucia.,2,negativo,"desayuno,limpieza,precio"
+705,Buenos productos locales en el desayuno. Muy buena relación calidad precio.,4,positivo,"desayuno,precio"
+706,"Pasamos una semana aquí. El desayuno merece la pena. Está muy bien situado, cerca de todo.",5,positivo,"desayuno,ubicacion"
+707,"Fuimos por trabajo. Repetiremos por lo que cuesta. Se duerme de maravilla, muy tranquilo. Todo estaba muy limpio!",5,positivo,"limpieza,precio,ruido"
+708,Viajamos en familia. Precio justo para lo que ofrece. Vistas al mar increíbles.,4,positivo,"precio,ubicacion"
+709,Viajamos en familia. La limpieza deja mucho que desear. Demasiado caro para lo que ofrece...,2,negativo,"limpieza,precio"
+710,Viajamos en familia. Silencio total por las noches. Habitación correcta y sencilla!,3,neutro,ruido
+711,Escapada de fin de semana. Vistas al mar increíbles. Muy buena relación calidad precio. Todo estaba muy limpio.,5,positivo,"limpieza,precio,ubicacion"
+712,"Silencio total por las noches. Estancia normal, sin más.",3,neutro,ruido
+713,Escapada de fin de semana. No compensa el precio.,2,negativo,precio
+714,"En general, Ni fu ni fa.",3,neutro,
+715,Pasamos una semana aquí. Habitación correcta y sencilla.,3,neutro,
+716,Cobran extras por todo. Sin coche es imposible moverse. La música del bar no nos dejó dormir.,1,negativo,"precio,ruido,ubicacion"
+717,Escapada de fin de semana. Habitación correcta y sencilla.,3,neutro,
+718,Pasamos una semana aquí. Está muy lejos del centro. El desayuno era escaso y repetitivo. No compensa el precio.,2,negativo,"desayuno,precio,ubicacion"
+719,Escapada de fin de semana. El desayuno merece la pena. Precio justo para lo que ofrece. Las sábanas y toallas olían a limpio!,5,positivo,"desayuno,limpieza,precio"
+720,Pasamos una semana aquí. La habitación estaba sucia. Colas enormes en el desayuno. Cobran extras por todo.,1,negativo,"desayuno,limpieza,precio"
+721,"Viajamos en familia. Repetiremos por lo que cuesta. Se duerme de maravilla, muy tranquilo!",4,positivo,"precio,ruido"
+722,Pasamos una semana aquí. Encontramos pelos en el baño. Tardaron una hora en resolver un problema simple. Ruido constante por la noche...,2,negativo,"limpieza,personal,ruido"
+723,"En general, La zona es ruidosa y poco segura de noche...",1,negativo,ubicacion
+724,"En general, Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo!",5,positivo,"personal,ruido"
+725,"Pasamos una semana aquí. Repetiremos por lo que cuesta. Trato excelente y muy cercano. La ubicación es perfecta, a cinco minutos de la playa!",5,positivo,"personal,precio,ubicacion"
+726,"En general, El café estaba frío y faltaba fruta...",1,negativo,desayuno
+727,Pasamos una semana aquí. La recepcionista nos ayudó con todo. Precio justo para lo que ofrece.,4,positivo,"personal,precio"
+728,"En general, Se duerme de maravilla, muy tranquilo. Precio justo para lo que ofrece.",4,positivo,"precio,ruido"
+729,Pasamos una semana aquí. Muy buena relación calidad precio. Trato excelente y muy cercano. Cumple lo básico!,3,neutro,"personal,precio"
+730,Escapada de fin de semana. Demasiado caro para lo que ofrece.,2,negativo,precio
+731,"Escapada de fin de semana. Nadie atendía en recepción. Estancia normal, sin más.",3,neutro,personal
+732,Pasamos una semana aquí. Repetiremos por lo que cuesta. La habitación estaba sucia. Habitación correcta y sencilla.,3,neutro,"limpieza,precio"
+733,Pasamos una semana aquí. Ruido constante por la noche. La limpieza deja mucho que desear. Tardaron una hora en resolver un problema simple...,1,negativo,"limpieza,personal,ruido"
+734,Fuimos por trabajo. Vistas al mar increíbles. El personal fue amabilísimo. Silencio total por las noches!,4,positivo,"personal,ruido,ubicacion"
+735,"Fuimos por trabajo. Está muy bien situado, cerca de todo.",5,positivo,ubicacion
+736,Pasamos una semana aquí. Ruido constante por la noche.,1,negativo,ruido
+737,Escapada de fin de semana. Cumple lo básico.,3,neutro,
+738,Pasamos una semana aquí. Se oye todo de la habitación de al lado. El café estaba frío y faltaba fruta. La zona es ruidosa y poco segura de noche...,1,negativo,"desayuno,ruido,ubicacion"
+739,Escapada de fin de semana. Silencio total por las noches. Repetiremos por lo que cuesta. El desayuno merece la pena.,5,positivo,"desayuno,precio,ruido"
+740,Escapada de fin de semana. Demasiado caro para lo que ofrece...,1,negativo,precio
+741,Escapada de fin de semana. Buenos productos locales en el desayuno. Cumple lo básico.,3,neutro,desayuno
+742,Pasamos una semana aquí. El café estaba frío y faltaba fruta. Nadie atendía en recepción. No compensa el precio.,2,negativo,"desayuno,personal,precio"
+743,"En general, La zona es ruidosa y poco segura de noche. Todo estaba muy limpio. Precio justo para lo que ofrece. Estancia normal, sin más.",3,neutro,"limpieza,precio,ubicacion"
+744,"En general, Precio justo para lo que ofrece. Se duerme de maravilla, muy tranquilo.",4,positivo,"precio,ruido"
+745,Fuimos por trabajo. La limpieza de la habitación era impecable.,4,positivo,limpieza
+746,Fuimos por trabajo. La habitación estaba sucia. Nadie atendía en recepción...,2,negativo,"limpieza,personal"
+747,Escapada de fin de semana. El desayuno era escaso y repetitivo. Está muy lejos del centro. Encontramos pelos en el baño.,1,negativo,"desayuno,limpieza,ubicacion"
+748,"En general, Se oye todo de la habitación de al lado. Está muy lejos del centro...",2,negativo,"ruido,ubicacion"
+749,El personal fue borde...,2,negativo,personal
+750,Fuimos por trabajo. Está muy lejos del centro. La habitación estaba sucia. Se oye todo de la habitación de al lado...,2,negativo,"limpieza,ruido,ubicacion"
+751,Pasamos una semana aquí. El desayuno buffet es variado y delicioso!,5,positivo,desayuno
+752,"En general, Encontramos pelos en el baño.",1,negativo,limpieza
+753,"Repetiremos por lo que cuesta. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"precio,ubicacion"
+754,"En general, La limpieza de la habitación era impecable.",4,positivo,limpieza
+755,"En general, No compensa el precio.",2,negativo,precio
+756,"Pasamos una semana aquí. Todo estaba muy limpio. La ubicación es perfecta, a cinco minutos de la playa. Buenos productos locales en el desayuno.",5,positivo,"desayuno,limpieza,ubicacion"
+757,"La recepcionista nos ayudó con todo. Se duerme de maravilla, muy tranquilo. Ni fu ni fa!",3,neutro,"personal,ruido"
+758,"En general, El personal fue borde. Demasiado caro para lo que ofrece. Colas enormes en el desayuno.",1,negativo,"desayuno,personal,precio"
+759,Cobran extras por todo. La limpieza de la habitación era impecable. Ni fu ni fa.,3,neutro,"limpieza,precio"
+760,Viajamos en familia. No compensa el precio. Habitación correcta y sencilla.,3,neutro,precio
+761,Pasamos una semana aquí. El café estaba frío y faltaba fruta.,2,negativo,desayuno
+762,"Escapada de fin de semana. El desayuno merece la pena. Vistas al mar increíbles. Se duerme de maravilla, muy tranquilo.",4,positivo,"desayuno,ruido,ubicacion"
+763,Viajamos en familia. La limpieza deja mucho que desear. El café estaba frío y faltaba fruta...,2,negativo,"desayuno,limpieza"
+764,Escapada de fin de semana. Habitación correcta y sencilla.,3,neutro,
+765,Escapada de fin de semana. Demasiado caro para lo que ofrece.,1,negativo,precio
+766,"Escapada de fin de semana. Precio justo para lo que ofrece. Está muy bien situado, cerca de todo. Todo estaba muy limpio!",4,positivo,"limpieza,precio,ubicacion"
+767,"En general, El personal fue amabilísimo. La limpieza de la habitación era impecable. Buenos productos locales en el desayuno!",5,positivo,"desayuno,limpieza,personal"
+768,Fuimos por trabajo. Silencio total por las noches. Repetiremos por lo que cuesta.,5,positivo,"precio,ruido"
+769,Viajamos en familia. Cumple lo básico.,3,neutro,
+770,Escapada de fin de semana. Silencio total por las noches. Habitación correcta y sencilla!,3,neutro,ruido
+771,Viajamos en familia. La limpieza deja mucho que desear. Se oye todo de la habitación de al lado...,1,negativo,"limpieza,ruido"
+772,"En general, Estancia normal, sin más.",3,neutro,
+773,La limpieza de la habitación era impecable. Cumple lo básico.,3,neutro,limpieza
+774,Pasamos una semana aquí. La limpieza de la habitación era impecable.,5,positivo,limpieza
+775,Escapada de fin de semana. El café estaba frío y faltaba fruta. Encontramos pelos en el baño. Nadie atendía en recepción.,1,negativo,"desayuno,limpieza,personal"
+776,Silencio total por las noches!,4,positivo,ruido
+777,Pasamos una semana aquí. La limpieza deja mucho que desear...,1,negativo,limpieza
+778,Pasamos una semana aquí. Repetiremos por lo que cuesta. Silencio total por las noches!,5,positivo,"precio,ruido"
+779,Escapada de fin de semana. El personal fue amabilísimo. Vistas al mar increíbles.,5,positivo,"personal,ubicacion"
+780,Pasamos una semana aquí. Silencio total por las noches. El desayuno buffet es variado y delicioso. El personal fue amabilísimo.,5,positivo,"desayuno,personal,ruido"
+781,"En general, El desayuno buffet es variado y delicioso. Se duerme de maravilla, muy tranquilo. Todo estaba muy limpio.",5,positivo,"desayuno,limpieza,ruido"
+782,"La ubicación es perfecta, a cinco minutos de la playa. Trato excelente y muy cercano. Silencio total por las noches.",5,positivo,"personal,ruido,ubicacion"
+783,Pasamos una semana aquí. Ni fu ni fa.,3,neutro,
+784,"En general, Repetiremos por lo que cuesta. El desayuno merece la pena. Está muy bien situado, cerca de todo.",4,positivo,"desayuno,precio,ubicacion"
+785,"Pasamos una semana aquí. Se duerme de maravilla, muy tranquilo.",5,positivo,ruido
+786,"En general, Colas enormes en el desayuno. Cumple lo básico.",3,neutro,desayuno
+787,Escapada de fin de semana. Sin coche es imposible moverse. No compensa el precio. El desayuno era escaso y repetitivo...,2,negativo,"desayuno,precio,ubicacion"
+788,Escapada de fin de semana. Ruido constante por la noche. La zona es ruidosa y poco segura de noche. El desayuno era escaso y repetitivo.,1,negativo,"desayuno,ruido,ubicacion"
+789,Pasamos una semana aquí. Todo estaba muy limpio. Se oye todo de la habitación de al lado. Cobran extras por todo. Ni fu ni fa.,3,neutro,"limpieza,precio,ruido"
+790,Muy buena relación calidad precio. Vistas al mar increíbles.,5,positivo,"precio,ubicacion"
+791,Escapada de fin de semana. La zona es ruidosa y poco segura de noche. No compensa el precio.,1,negativo,"precio,ubicacion"
+792,"Pasamos una semana aquí. Silencio total por las noches. Muy buena relación calidad precio. La ubicación es perfecta, a cinco minutos de la playa!",5,positivo,"precio,ruido,ubicacion"
+793,Ni fu ni fa!,3,neutro,
+794,Colas enormes en el desayuno.,2,negativo,desayuno
+795,Escapada de fin de semana. Colas enormes en el desayuno. La limpieza deja mucho que desear.,2,negativo,"desayuno,limpieza"
+796,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. Buenos productos locales en el desayuno. La limpieza de la habitación era impecable!",5,positivo,"desayuno,limpieza,ruido"
+797,Fuimos por trabajo. Repetiremos por lo que cuesta. Buenos productos locales en el desayuno. Las sábanas y toallas olían a limpio.,5,positivo,"desayuno,limpieza,precio"
+798,El desayuno merece la pena. Silencio total por las noches.,5,positivo,"desayuno,ruido"
+799,"Fuimos por trabajo. El personal fue amabilísimo. Se duerme de maravilla, muy tranquilo!",5,positivo,"personal,ruido"
+800,"En general, Colas enormes en el desayuno. La zona es ruidosa y poco segura de noche...",1,negativo,"desayuno,ubicacion"
+801,"Escapada de fin de semana. El personal fue amabilísimo. Se duerme de maravilla, muy tranquilo. Todo estaba muy limpio.",4,positivo,"limpieza,personal,ruido"
+802,Escapada de fin de semana. El personal fue borde. Sin coche es imposible moverse...,2,negativo,"personal,ubicacion"
+803,"Pasamos una semana aquí. La ubicación es perfecta, a cinco minutos de la playa. Las sábanas y toallas olían a limpio.",4,positivo,"limpieza,ubicacion"
+804,Nadie atendía en recepción. Habitación correcta y sencilla.,3,neutro,personal
+805,Pasamos una semana aquí. Muy buena relación calidad precio. Todo estaba muy limpio.,5,positivo,"limpieza,precio"
+806,"En general, Está muy lejos del centro. Ruido constante por la noche. Colas enormes en el desayuno...",1,negativo,"desayuno,ruido,ubicacion"
+807,"Estancia normal, sin más!",3,neutro,
+808,"Se duerme de maravilla, muy tranquilo. Las sábanas y toallas olían a limpio.",4,positivo,"limpieza,ruido"
+809,Escapada de fin de semana. Buenos productos locales en el desayuno. La limpieza de la habitación era impecable. Trato excelente y muy cercano.,4,positivo,"desayuno,limpieza,personal"
+810,"Fuimos por trabajo. Silencio total por las noches. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"ruido,ubicacion"
+811,"Pasamos una semana aquí. Buenos productos locales en el desayuno. Está muy bien situado, cerca de todo.",4,positivo,"desayuno,ubicacion"
+812,Viajamos en familia. El desayuno buffet es variado y delicioso. Repetiremos por lo que cuesta.,4,positivo,"desayuno,precio"
+813,Pasamos una semana aquí. Las sábanas y toallas olían a limpio. Cumple lo básico.,3,neutro,limpieza
+814,Cobran extras por todo. El personal fue borde. Se oye todo de la habitación de al lado.,1,negativo,"personal,precio,ruido"
+815,"Escapada de fin de semana. Trato excelente y muy cercano. Estancia normal, sin más.",3,neutro,personal
+816,"Viajamos en familia. El desayuno era escaso y repetitivo. El personal fue amabilísimo. Se duerme de maravilla, muy tranquilo. Habitación correcta y sencilla!",3,neutro,"desayuno,personal,ruido"
+817,"Se duerme de maravilla, muy tranquilo. Repetiremos por lo que cuesta. Las sábanas y toallas olían a limpio!",5,positivo,"limpieza,precio,ruido"
+818,Trato excelente y muy cercano. Ni fu ni fa.,3,neutro,personal
+819,Pasamos una semana aquí. La limpieza de la habitación era impecable. La recepcionista nos ayudó con todo!,4,positivo,"limpieza,personal"
+820,"Viajamos en familia. Está muy bien situado, cerca de todo. Ni fu ni fa!",3,neutro,ubicacion
+821,Pasamos una semana aquí. La limpieza deja mucho que desear. Tardaron una hora en resolver un problema simple...,1,negativo,"limpieza,personal"
+822,"En general, Muy buena relación calidad precio. Colas enormes en el desayuno. Habitación correcta y sencilla.",3,neutro,"desayuno,precio"
+823,Viajamos en familia. Precio justo para lo que ofrece.,5,positivo,precio
+824,Viajamos en familia. Precio justo para lo que ofrece. El desayuno buffet es variado y delicioso.,4,positivo,"desayuno,precio"
+825,La limpieza deja mucho que desear...,1,negativo,limpieza
+826,Viajamos en familia. La limpieza deja mucho que desear. El personal fue borde.,2,negativo,"limpieza,personal"
+827,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo. Todo estaba muy limpio.",4,positivo,"limpieza,ruido"
+828,Viajamos en familia. Habitación correcta y sencilla!,3,neutro,
+829,"En general, Repetiremos por lo que cuesta. La ubicación es perfecta, a cinco minutos de la playa. El desayuno buffet es variado y delicioso.",5,positivo,"desayuno,precio,ubicacion"
+830,"En general, Todo estaba muy limpio.",5,positivo,limpieza
+831,Escapada de fin de semana. Nadie atendía en recepción.,1,negativo,personal
+832,Fuimos por trabajo. Repetiremos por lo que cuesta. El personal fue amabilísimo.,5,positivo,"personal,precio"
+833,Pasamos una semana aquí. Cumple lo básico.,3,neutro,
+834,Viajamos en familia. Repetiremos por lo que cuesta.,4,positivo,precio
+835,Pasamos una semana aquí. El desayuno buffet es variado y delicioso. La recepcionista nos ayudó con todo. Todo estaba muy limpio.,4,positivo,"desayuno,limpieza,personal"
+836,Viajamos en familia. El desayuno buffet es variado y delicioso.,5,positivo,desayuno
+837,"En general, Buenos productos locales en el desayuno. La recepcionista nos ayudó con todo.",5,positivo,"desayuno,personal"
+838,La recepcionista nos ayudó con todo. Todo estaba muy limpio. Ni fu ni fa.,3,neutro,"limpieza,personal"
+839,"Vistas al mar increíbles. Se duerme de maravilla, muy tranquilo. Muy buena relación calidad precio.",4,positivo,"precio,ruido,ubicacion"
+840,Escapada de fin de semana. La habitación estaba sucia.,2,negativo,limpieza
+841,Escapada de fin de semana. Buenos productos locales en el desayuno. Cumple lo básico.,3,neutro,desayuno
+842,Pasamos una semana aquí. Las sábanas y toallas olían a limpio. Precio justo para lo que ofrece.,5,positivo,"limpieza,precio"
+843,"En general, Cumple lo básico!",3,neutro,
+844,Viajamos en familia. La zona es ruidosa y poco segura de noche...,1,negativo,ubicacion
+845,Sin coche es imposible moverse. El personal fue borde. Se oye todo de la habitación de al lado...,1,negativo,"personal,ruido,ubicacion"
+846,Pasamos una semana aquí. Sin coche es imposible moverse. La música del bar no nos dejó dormir. El café estaba frío y faltaba fruta.,2,negativo,"desayuno,ruido,ubicacion"
+847,Viajamos en familia. La música del bar no nos dejó dormir.,1,negativo,ruido
+848,"Precio justo para lo que ofrece. Se duerme de maravilla, muy tranquilo!",5,positivo,"precio,ruido"
+849,"En general, Encontramos pelos en el baño.",1,negativo,limpieza
+850,Escapada de fin de semana. No compensa el precio. El personal fue borde. Ruido constante por la noche.,1,negativo,"personal,precio,ruido"
+851,"En general, La ubicación es perfecta, a cinco minutos de la playa. La recepcionista nos ayudó con todo. El desayuno buffet es variado y delicioso.",5,positivo,"desayuno,personal,ubicacion"
+852,Escapada de fin de semana. No compensa el precio. La limpieza deja mucho que desear.,1,negativo,"limpieza,precio"
+853,"En general, Silencio total por las noches. Buenos productos locales en el desayuno.",4,positivo,"desayuno,ruido"
+854,"En general, La zona es ruidosa y poco segura de noche.",1,negativo,ubicacion
+855,Pasamos una semana aquí. Ruido constante por la noche. La limpieza deja mucho que desear. La zona es ruidosa y poco segura de noche...,2,negativo,"limpieza,ruido,ubicacion"
+856,"Viajamos en familia. Estancia normal, sin más.",3,neutro,
+857,"En general, La zona es ruidosa y poco segura de noche. Ruido constante por la noche.",1,negativo,"ruido,ubicacion"
+858,Las sábanas y toallas olían a limpio!,4,positivo,limpieza
+859,Pasamos una semana aquí. Ni fu ni fa!,3,neutro,
+860,Pasamos una semana aquí. La música del bar no nos dejó dormir...,1,negativo,ruido
+861,Escapada de fin de semana. Silencio total por las noches. La limpieza de la habitación era impecable.,4,positivo,"limpieza,ruido"
+862,"En general, Todo estaba muy limpio. Vistas al mar increíbles. El desayuno buffet es variado y delicioso.",5,positivo,"desayuno,limpieza,ubicacion"
+863,El personal fue borde.,2,negativo,personal
+864,Silencio total por las noches. El desayuno merece la pena. Muy buena relación calidad precio.,5,positivo,"desayuno,precio,ruido"
+865,Viajamos en familia. La recepcionista nos ayudó con todo. Muy buena relación calidad precio.,4,positivo,"personal,precio"
+866,El personal fue borde. Demasiado caro para lo que ofrece. Sin coche es imposible moverse.,2,negativo,"personal,precio,ubicacion"
+867,"En general, Silencio total por las noches!",5,positivo,ruido
+868,"En general, Tardaron una hora en resolver un problema simple...",1,negativo,personal
+869,Fuimos por trabajo. Tardaron una hora en resolver un problema simple.,1,negativo,personal
+870,Silencio total por las noches. Cumple lo básico!,3,neutro,ruido
+871,"En general, La zona es ruidosa y poco segura de noche. Buenos productos locales en el desayuno. Nadie atendía en recepción. Cumple lo básico.",3,neutro,"desayuno,personal,ubicacion"
+872,Escapada de fin de semana. Cumple lo básico.,3,neutro,
+873,El personal fue borde.,1,negativo,personal
+874,"Fuimos por trabajo. Trato excelente y muy cercano. Estancia normal, sin más.",3,neutro,personal
+875,Viajamos en familia. Silencio total por las noches. El personal fue amabilísimo.,4,positivo,"personal,ruido"
+876,"En general, El desayuno merece la pena. Se duerme de maravilla, muy tranquilo. Muy buena relación calidad precio.",5,positivo,"desayuno,precio,ruido"
+877,Se oye todo de la habitación de al lado. Cumple lo básico.,3,neutro,ruido
+878,Pasamos una semana aquí. El personal fue borde. La habitación estaba sucia.,2,negativo,"limpieza,personal"
+879,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo. Vistas al mar increíbles.",4,positivo,"ruido,ubicacion"
+880,Muy buena relación calidad precio.,5,positivo,precio
+881,Fuimos por trabajo. Todo estaba muy limpio.,4,positivo,limpieza
+882,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,ubicacion
+883,Fuimos por trabajo. La limpieza deja mucho que desear.,1,negativo,limpieza
+884,Fuimos por trabajo. El personal fue amabilísimo. Habitación correcta y sencilla.,3,neutro,personal
+885,Todo estaba muy limpio. El desayuno merece la pena.,5,positivo,"desayuno,limpieza"
+886,"Viajamos en familia. El personal fue amabilísimo. Está muy bien situado, cerca de todo. Buenos productos locales en el desayuno!",5,positivo,"desayuno,personal,ubicacion"
+887,"En general, El café estaba frío y faltaba fruta. Tardaron una hora en resolver un problema simple. Habitación correcta y sencilla.",3,neutro,"desayuno,personal"
+888,Escapada de fin de semana. Demasiado caro para lo que ofrece.,1,negativo,precio
+889,Buenos productos locales en el desayuno. El personal fue amabilísimo.,5,positivo,"desayuno,personal"
+890,Viajamos en familia. El café estaba frío y faltaba fruta. Cobran extras por todo...,2,negativo,"desayuno,precio"
+891,Silencio total por las noches!,5,positivo,ruido
+892,"En general, La limpieza deja mucho que desear. El personal fue borde. Habitación correcta y sencilla.",3,neutro,"limpieza,personal"
+893,"Pasamos una semana aquí. Está muy bien situado, cerca de todo. Todo estaba muy limpio.",4,positivo,"limpieza,ubicacion"
+894,"En general, El desayuno era escaso y repetitivo. Cumple lo básico!",3,neutro,desayuno
+895,Cumple lo básico.,3,neutro,
+896,Fuimos por trabajo. La zona es ruidosa y poco segura de noche...,1,negativo,ubicacion
+897,Viajamos en familia. Nadie atendía en recepción. Demasiado caro para lo que ofrece. La habitación estaba sucia...,1,negativo,"limpieza,personal,precio"
+898,Fuimos por trabajo. Nadie atendía en recepción. La música del bar no nos dejó dormir...,2,negativo,"personal,ruido"
+899,"La ubicación es perfecta, a cinco minutos de la playa. La recepcionista nos ayudó con todo. Precio justo para lo que ofrece!",4,positivo,"personal,precio,ubicacion"
+900,Fuimos por trabajo. El café estaba frío y faltaba fruta.,1,negativo,desayuno
+901,"La ubicación es perfecta, a cinco minutos de la playa. La limpieza de la habitación era impecable. Silencio total por las noches.",5,positivo,"limpieza,ruido,ubicacion"
+902,El personal fue borde. El desayuno era escaso y repetitivo. La zona es ruidosa y poco segura de noche...,2,negativo,"desayuno,personal,ubicacion"
+903,Viajamos en familia. Repetiremos por lo que cuesta.,4,positivo,precio
+904,El personal fue borde...,2,negativo,personal
+905,"En general, Colas enormes en el desayuno. Demasiado caro para lo que ofrece.",2,negativo,"desayuno,precio"
+906,"La recepcionista nos ayudó con todo. La ubicación es perfecta, a cinco minutos de la playa. Colas enormes en el desayuno. Habitación correcta y sencilla!",3,neutro,"desayuno,personal,ubicacion"
+907,"La ubicación es perfecta, a cinco minutos de la playa. Muy buena relación calidad precio. El personal fue amabilísimo.",5,positivo,"personal,precio,ubicacion"
+908,Viajamos en familia. Trato excelente y muy cercano. Las sábanas y toallas olían a limpio. El desayuno merece la pena.,4,positivo,"desayuno,limpieza,personal"
+909,Pasamos una semana aquí. Buenos productos locales en el desayuno.,5,positivo,desayuno
+910,Escapada de fin de semana. Está muy lejos del centro. Cobran extras por todo. La música del bar no nos dejó dormir.,1,negativo,"precio,ruido,ubicacion"
+911,"En general, Trato excelente y muy cercano. Está muy bien situado, cerca de todo!",5,positivo,"personal,ubicacion"
+912,"Pasamos una semana aquí. La limpieza deja mucho que desear. Estancia normal, sin más!",3,neutro,limpieza
+913,"En general, El desayuno merece la pena. Muy buena relación calidad precio. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"desayuno,precio,ubicacion"
+914,Fuimos por trabajo. Las sábanas y toallas olían a limpio. Trato excelente y muy cercano.,4,positivo,"limpieza,personal"
+915,"En general, Se duerme de maravilla, muy tranquilo. Habitación correcta y sencilla.",3,neutro,ruido
+916,Vistas al mar increíbles. Silencio total por las noches. Todo estaba muy limpio.,4,positivo,"limpieza,ruido,ubicacion"
+917,"En general, Ruido constante por la noche. Demasiado caro para lo que ofrece. El desayuno era escaso y repetitivo.",1,negativo,"desayuno,precio,ruido"
+918,Silencio total por las noches. Cumple lo básico.,3,neutro,ruido
+919,Viajamos en familia. Se oye todo de la habitación de al lado. Está muy lejos del centro. La limpieza deja mucho que desear...,1,negativo,"limpieza,ruido,ubicacion"
+920,Escapada de fin de semana. Nadie atendía en recepción. Ruido constante por la noche. Demasiado caro para lo que ofrece.,1,negativo,"personal,precio,ruido"
+921,Escapada de fin de semana. No compensa el precio. Ni fu ni fa!,3,neutro,precio
+922,Escapada de fin de semana. El desayuno merece la pena!,5,positivo,desayuno
+923,Pasamos una semana aquí. La limpieza de la habitación era impecable. Trato excelente y muy cercano. Silencio total por las noches.,4,positivo,"limpieza,personal,ruido"
+924,"Viajamos en familia. Se duerme de maravilla, muy tranquilo.",5,positivo,ruido
+925,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa. El personal fue amabilísimo.",4,positivo,"personal,ubicacion"
+926,Pasamos una semana aquí. Silencio total por las noches. El desayuno merece la pena.,5,positivo,"desayuno,ruido"
+927,Pasamos una semana aquí. El café estaba frío y faltaba fruta. Tardaron una hora en resolver un problema simple. Habitación correcta y sencilla.,3,neutro,"desayuno,personal"
+928,"En general, Habitación correcta y sencilla!",3,neutro,
+929,Fuimos por trabajo. Cumple lo básico.,3,neutro,
+930,Pasamos una semana aquí. Vistas al mar increíbles.,5,positivo,ubicacion
+931,"Fuimos por trabajo. Todo estaba muy limpio. Se duerme de maravilla, muy tranquilo. Ni fu ni fa.",3,neutro,"limpieza,ruido"
+932,Pasamos una semana aquí. Encontramos pelos en el baño. Ruido constante por la noche. Tardaron una hora en resolver un problema simple...,2,negativo,"limpieza,personal,ruido"
+933,Viajamos en familia. Muy buena relación calidad precio. Buenos productos locales en el desayuno. La recepcionista nos ayudó con todo!,4,positivo,"desayuno,personal,precio"
+934,"En general, Las sábanas y toallas olían a limpio.",4,positivo,limpieza
+935,Cobran extras por todo.,2,negativo,precio
+936,"Viajamos en familia. Trato excelente y muy cercano. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"personal,ubicacion"
+937,Escapada de fin de semana. La habitación estaba sucia. Colas enormes en el desayuno. No compensa el precio.,1,negativo,"desayuno,limpieza,precio"
+938,"En general, La habitación estaba sucia. Ruido constante por la noche.",1,negativo,"limpieza,ruido"
+939,Escapada de fin de semana. Trato excelente y muy cercano. Vistas al mar increíbles. La limpieza de la habitación era impecable.,5,positivo,"limpieza,personal,ubicacion"
+940,Pasamos una semana aquí. Todo estaba muy limpio.,4,positivo,limpieza
+941,Fuimos por trabajo. Vistas al mar increíbles. El personal fue amabilísimo!,5,positivo,"personal,ubicacion"
+942,Viajamos en familia. La limpieza de la habitación era impecable. Buenos productos locales en el desayuno. Vistas al mar increíbles!,4,positivo,"desayuno,limpieza,ubicacion"
+943,"Viajamos en familia. La limpieza deja mucho que desear. Silencio total por las noches. Repetiremos por lo que cuesta. Estancia normal, sin más.",3,neutro,"limpieza,precio,ruido"
+944,"En general, El personal fue borde.",1,negativo,personal
+945,Viajamos en familia. Ni fu ni fa.,3,neutro,
+946,"La ubicación es perfecta, a cinco minutos de la playa. Todo estaba muy limpio.",5,positivo,"limpieza,ubicacion"
+947,"Está muy bien situado, cerca de todo. La limpieza de la habitación era impecable.",4,positivo,"limpieza,ubicacion"
+948,"En general, Las sábanas y toallas olían a limpio. El desayuno buffet es variado y delicioso.",5,positivo,"desayuno,limpieza"
+949,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo. Las sábanas y toallas olían a limpio. La recepcionista nos ayudó con todo.",5,positivo,"limpieza,personal,ruido"
+950,La zona es ruidosa y poco segura de noche. Encontramos pelos en el baño.,2,negativo,"limpieza,ubicacion"
+951,Escapada de fin de semana. Ruido constante por la noche. La zona es ruidosa y poco segura de noche. Cobran extras por todo.,2,negativo,"precio,ruido,ubicacion"
+952,Viajamos en familia. Está muy lejos del centro.,2,negativo,ubicacion
+953,Viajamos en familia. Repetiremos por lo que cuesta.,5,positivo,precio
+954,Escapada de fin de semana. Todo estaba muy limpio. Muy buena relación calidad precio. Vistas al mar increíbles!,4,positivo,"limpieza,precio,ubicacion"
+955,Escapada de fin de semana. Silencio total por las noches. Muy buena relación calidad precio.,4,positivo,"precio,ruido"
+956,Viajamos en familia. El café estaba frío y faltaba fruta. Ruido constante por la noche. La zona es ruidosa y poco segura de noche...,2,negativo,"desayuno,ruido,ubicacion"
+957,Fuimos por trabajo. Silencio total por las noches!,4,positivo,ruido
+958,"En general, Precio justo para lo que ofrece. Se duerme de maravilla, muy tranquilo. Buenos productos locales en el desayuno.",5,positivo,"desayuno,precio,ruido"
+959,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. Buenos productos locales en el desayuno. Precio justo para lo que ofrece!",5,positivo,"desayuno,precio,ruido"
+960,Viajamos en familia. La habitación estaba sucia. El desayuno era escaso y repetitivo.,2,negativo,"desayuno,limpieza"
+961,Pasamos una semana aquí. Precio justo para lo que ofrece.,4,positivo,precio
+962,Fuimos por trabajo. Muy buena relación calidad precio. El personal fue amabilísimo. El desayuno buffet es variado y delicioso.,4,positivo,"desayuno,personal,precio"
+963,"Escapada de fin de semana. Repetiremos por lo que cuesta. Está muy bien situado, cerca de todo. Silencio total por las noches.",5,positivo,"precio,ruido,ubicacion"
+964,Viajamos en familia. El desayuno merece la pena. Repetiremos por lo que cuesta!,4,positivo,"desayuno,precio"
+965,Pasamos una semana aquí. El desayuno era escaso y repetitivo. La limpieza deja mucho que desear. Nadie atendía en recepción...,2,negativo,"desayuno,limpieza,personal"
+966,"Escapada de fin de semana. El desayuno buffet es variado y delicioso. Estancia normal, sin más.",3,neutro,desayuno
+967,"En general, La habitación estaba sucia. Se oye todo de la habitación de al lado.",1,negativo,"limpieza,ruido"
+968,Viajamos en familia. El café estaba frío y faltaba fruta. El personal fue borde. Ruido constante por la noche.,2,negativo,"desayuno,personal,ruido"
+969,"Fuimos por trabajo. Está muy bien situado, cerca de todo. Se duerme de maravilla, muy tranquilo.",4,positivo,"ruido,ubicacion"
+970,Escapada de fin de semana. Silencio total por las noches.,5,positivo,ruido
+971,Viajamos en familia. El desayuno buffet es variado y delicioso.,5,positivo,desayuno
+972,El personal fue amabilísimo. Todo estaba muy limpio!,5,positivo,"limpieza,personal"
+973,"Fuimos por trabajo. La ubicación es perfecta, a cinco minutos de la playa. Buenos productos locales en el desayuno. La limpieza de la habitación era impecable.",5,positivo,"desayuno,limpieza,ubicacion"
+974,Fuimos por trabajo. Está muy lejos del centro. Nadie atendía en recepción. Cobran extras por todo.,2,negativo,"personal,precio,ubicacion"
+975,"Escapada de fin de semana. La recepcionista nos ayudó con todo. Todo estaba muy limpio. Se duerme de maravilla, muy tranquilo.",4,positivo,"limpieza,personal,ruido"
+976,"Pasamos una semana aquí. Muy buena relación calidad precio. El desayuno buffet es variado y delicioso. La ubicación es perfecta, a cinco minutos de la playa!",5,positivo,"desayuno,precio,ubicacion"
+977,Viajamos en familia. La limpieza deja mucho que desear. La zona es ruidosa y poco segura de noche. El café estaba frío y faltaba fruta...,2,negativo,"desayuno,limpieza,ubicacion"
+978,Buenos productos locales en el desayuno. Repetiremos por lo que cuesta!,4,positivo,"desayuno,precio"
+979,"En general, El desayuno era escaso y repetitivo. Cumple lo básico!",3,neutro,desayuno
+980,"Fuimos por trabajo. Nadie atendía en recepción. Estancia normal, sin más.",3,neutro,personal
+981,Silencio total por las noches. Las sábanas y toallas olían a limpio. Buenos productos locales en el desayuno.,4,positivo,"desayuno,limpieza,ruido"
+982,"Pasamos una semana aquí. Muy buena relación calidad precio. Está muy bien situado, cerca de todo. El desayuno merece la pena!",5,positivo,"desayuno,precio,ubicacion"
+983,"En general, La limpieza deja mucho que desear. El personal fue borde...",2,negativo,"limpieza,personal"
+984,"En general, Se duerme de maravilla, muy tranquilo. Vistas al mar increíbles. Repetiremos por lo que cuesta.",5,positivo,"precio,ruido,ubicacion"
+985,"Viajamos en familia. Estancia normal, sin más!",3,neutro,
+986,Fuimos por trabajo. El desayuno merece la pena. Ni fu ni fa.,3,neutro,desayuno
+987,Pasamos una semana aquí. La limpieza de la habitación era impecable!,4,positivo,limpieza
+988,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo!",4,positivo,ruido
+989,"Pasamos una semana aquí. Está muy bien situado, cerca de todo. El desayuno buffet es variado y delicioso.",5,positivo,"desayuno,ubicacion"
+990,"Está muy bien situado, cerca de todo. Se duerme de maravilla, muy tranquilo.",4,positivo,"ruido,ubicacion"
+991,"El desayuno buffet es variado y delicioso. Se duerme de maravilla, muy tranquilo.",4,positivo,"desayuno,ruido"
+992,Se oye todo de la habitación de al lado. Habitación correcta y sencilla!,3,neutro,ruido
+993,Fuimos por trabajo. La limpieza deja mucho que desear...,1,negativo,limpieza
+994,"En general, Estancia normal, sin más.",3,neutro,
+995,Pasamos una semana aquí. Demasiado caro para lo que ofrece. Ruido constante por la noche.,2,negativo,"precio,ruido"
+996,Fuimos por trabajo. La habitación estaba sucia...,1,negativo,limpieza
+997,"En general, Demasiado caro para lo que ofrece. Está muy lejos del centro...",2,negativo,"precio,ubicacion"
+998,"En general, Se duerme de maravilla, muy tranquilo. Estancia normal, sin más.",3,neutro,ruido
+999,"Fuimos por trabajo. Está muy bien situado, cerca de todo.",4,positivo,ubicacion
+1000,"Viajamos en familia. Las sábanas y toallas olían a limpio. Está muy bien situado, cerca de todo. Muy buena relación calidad precio.",5,positivo,"limpieza,precio,ubicacion"
+1001,Habitación correcta y sencilla.,3,neutro,
+1002,"Escapada de fin de semana. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,ubicacion
+1003,"El desayuno buffet es variado y delicioso. El personal fue amabilísimo. Se duerme de maravilla, muy tranquilo.",4,positivo,"desayuno,personal,ruido"
+1004,Escapada de fin de semana. Ni fu ni fa.,3,neutro,
+1005,Sin coche es imposible moverse. Demasiado caro para lo que ofrece. Ruido constante por la noche.,1,negativo,"precio,ruido,ubicacion"
+1006,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa. Habitación correcta y sencilla.",3,neutro,ubicacion
+1007,Trato excelente y muy cercano.,5,positivo,personal
+1008,"Viajamos en familia. Está muy bien situado, cerca de todo. Trato excelente y muy cercano. Ni fu ni fa.",3,neutro,"personal,ubicacion"
+1009,Encontramos pelos en el baño. La zona es ruidosa y poco segura de noche. Tardaron una hora en resolver un problema simple.,2,negativo,"limpieza,personal,ubicacion"
+1010,Viajamos en familia. El desayuno era escaso y repetitivo. Se oye todo de la habitación de al lado.,2,negativo,"desayuno,ruido"
+1011,Buenos productos locales en el desayuno!,5,positivo,desayuno
+1012,Viajamos en familia. Repetiremos por lo que cuesta. Silencio total por las noches. La limpieza de la habitación era impecable.,4,positivo,"limpieza,precio,ruido"
+1013,"En general, No compensa el precio. Sin coche es imposible moverse.",1,negativo,"precio,ubicacion"
+1014,"En general, La limpieza de la habitación era impecable. Habitación correcta y sencilla!",3,neutro,limpieza
+1015,Fuimos por trabajo. La habitación estaba sucia.,2,negativo,limpieza
+1016,Pasamos una semana aquí. Cumple lo básico.,3,neutro,
+1017,Pasamos una semana aquí. Todo estaba muy limpio. El desayuno merece la pena.,5,positivo,"desayuno,limpieza"
+1018,Viajamos en familia. Ni fu ni fa.,3,neutro,
+1019,Viajamos en familia. Colas enormes en el desayuno. No compensa el precio. Está muy lejos del centro...,1,negativo,"desayuno,precio,ubicacion"
+1020,Fuimos por trabajo. El desayuno buffet es variado y delicioso. La limpieza de la habitación era impecable. Repetiremos por lo que cuesta.,4,positivo,"desayuno,limpieza,precio"
+1021,"En general, Buenos productos locales en el desayuno. Cumple lo básico.",3,neutro,desayuno
+1022,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa. El desayuno merece la pena!",5,positivo,"desayuno,ubicacion"
+1023,"Viajamos en familia. Buenos productos locales en el desayuno. Se duerme de maravilla, muy tranquilo!",4,positivo,"desayuno,ruido"
+1024,"En general, Repetiremos por lo que cuesta!",4,positivo,precio
+1025,"Pasamos una semana aquí. Está muy bien situado, cerca de todo. La limpieza de la habitación era impecable!",5,positivo,"limpieza,ubicacion"
+1026,Escapada de fin de semana. Ni fu ni fa.,3,neutro,
+1027,Pasamos una semana aquí. Colas enormes en el desayuno. Cobran extras por todo...,1,negativo,"desayuno,precio"
+1028,Viajamos en familia. El desayuno buffet es variado y delicioso.,4,positivo,desayuno
+1029,"En general, Trato excelente y muy cercano.",5,positivo,personal
+1030,"En general, La limpieza deja mucho que desear.",2,negativo,limpieza
+1031,"En general, La limpieza deja mucho que desear. Se oye todo de la habitación de al lado. El personal fue borde...",1,negativo,"limpieza,personal,ruido"
+1032,"En general, La limpieza deja mucho que desear. Nadie atendía en recepción. Ruido constante por la noche...",1,negativo,"limpieza,personal,ruido"
+1033,Sin coche es imposible moverse...,1,negativo,ubicacion
+1034,Fuimos por trabajo. Precio justo para lo que ofrece. Cumple lo básico!,3,neutro,precio
+1035,"En general, Silencio total por las noches. Precio justo para lo que ofrece. El personal fue amabilísimo.",5,positivo,"personal,precio,ruido"
+1036,Fuimos por trabajo. Habitación correcta y sencilla.,3,neutro,
+1037,El desayuno merece la pena.,5,positivo,desayuno
+1038,"En general, Vistas al mar increíbles. El desayuno buffet es variado y delicioso. Repetiremos por lo que cuesta.",5,positivo,"desayuno,precio,ubicacion"
+1039,Fuimos por trabajo. El personal fue amabilísimo. Muy buena relación calidad precio. Buenos productos locales en el desayuno.,5,positivo,"desayuno,personal,precio"
+1040,"La ubicación es perfecta, a cinco minutos de la playa. Se duerme de maravilla, muy tranquilo. Precio justo para lo que ofrece.",4,positivo,"precio,ruido,ubicacion"
+1041,Fuimos por trabajo. El personal fue borde.,2,negativo,personal
+1042,Escapada de fin de semana. Está muy lejos del centro. No compensa el precio. Colas enormes en el desayuno...,1,negativo,"desayuno,precio,ubicacion"
+1043,"Escapada de fin de semana. Silencio total por las noches. Está muy bien situado, cerca de todo. El desayuno merece la pena.",5,positivo,"desayuno,ruido,ubicacion"
+1044,Viajamos en familia. Habitación correcta y sencilla.,3,neutro,
+1045,Escapada de fin de semana. La recepcionista nos ayudó con todo. Silencio total por las noches. El desayuno merece la pena.,5,positivo,"desayuno,personal,ruido"
+1046,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo!",4,positivo,ruido
+1047,Fuimos por trabajo. Precio justo para lo que ofrece. El desayuno era escaso y repetitivo. Habitación correcta y sencilla.,3,neutro,"desayuno,precio"
+1048,"Viajamos en familia. Estancia normal, sin más.",3,neutro,
+1049,Pasamos una semana aquí. Se oye todo de la habitación de al lado. El café estaba frío y faltaba fruta...,1,negativo,"desayuno,ruido"
+1050,"En general, No compensa el precio.",1,negativo,precio
+1051,"En general, Demasiado caro para lo que ofrece. Se oye todo de la habitación de al lado. El personal fue borde...",1,negativo,"personal,precio,ruido"
+1052,Viajamos en familia. No compensa el precio.,1,negativo,precio
+1053,Fuimos por trabajo. Sin coche es imposible moverse. Cumple lo básico.,3,neutro,ubicacion
+1054,Fuimos por trabajo. Nadie atendía en recepción. El café estaba frío y faltaba fruta...,2,negativo,"desayuno,personal"
+1055,"Viajamos en familia. Estancia normal, sin más.",3,neutro,
+1056,Pasamos una semana aquí. Colas enormes en el desayuno.,2,negativo,desayuno
+1057,Fuimos por trabajo. La zona es ruidosa y poco segura de noche. La habitación estaba sucia...,2,negativo,"limpieza,ubicacion"
+1058,Pasamos una semana aquí. Silencio total por las noches. Las sábanas y toallas olían a limpio. El desayuno merece la pena!,5,positivo,"desayuno,limpieza,ruido"
+1059,Escapada de fin de semana. El desayuno era escaso y repetitivo. Ruido constante por la noche...,2,negativo,"desayuno,ruido"
+1060,"En general, Repetiremos por lo que cuesta. Trato excelente y muy cercano. El desayuno merece la pena!",4,positivo,"desayuno,personal,precio"
+1061,Pasamos una semana aquí. No compensa el precio. Encontramos pelos en el baño.,2,negativo,"limpieza,precio"
+1062,Viajamos en familia. La zona es ruidosa y poco segura de noche. El café estaba frío y faltaba fruta.,2,negativo,"desayuno,ubicacion"
+1063,Viajamos en familia. Precio justo para lo que ofrece. La recepcionista nos ayudó con todo.,5,positivo,"personal,precio"
+1064,Escapada de fin de semana. Las sábanas y toallas olían a limpio. Trato excelente y muy cercano. El desayuno merece la pena.,5,positivo,"desayuno,limpieza,personal"
+1065,Escapada de fin de semana. La habitación estaba sucia. Ruido constante por la noche...,2,negativo,"limpieza,ruido"
+1066,Silencio total por las noches.,4,positivo,ruido
+1067,Escapada de fin de semana. La zona es ruidosa y poco segura de noche...,1,negativo,ubicacion
+1068,"En general, El desayuno era escaso y repetitivo. Demasiado caro para lo que ofrece.",1,negativo,"desayuno,precio"
+1069,"En general, El desayuno era escaso y repetitivo. Habitación correcta y sencilla.",3,neutro,desayuno
+1070,"En general, Cumple lo básico.",3,neutro,
+1071,Pasamos una semana aquí. Muy buena relación calidad precio. Vistas al mar increíbles. El desayuno merece la pena.,5,positivo,"desayuno,precio,ubicacion"
+1072,"En general, El personal fue amabilísimo.",4,positivo,personal
+1073,Silencio total por las noches. Trato excelente y muy cercano.,4,positivo,"personal,ruido"
+1074,"Pasamos una semana aquí. Está muy bien situado, cerca de todo. Las sábanas y toallas olían a limpio. Muy buena relación calidad precio!",5,positivo,"limpieza,precio,ubicacion"
+1075,Pasamos una semana aquí. Trato excelente y muy cercano. Repetiremos por lo que cuesta!,5,positivo,"personal,precio"
+1076,Pasamos una semana aquí. Repetiremos por lo que cuesta.,4,positivo,precio
+1077,Fuimos por trabajo. Muy buena relación calidad precio!,5,positivo,precio
+1078,"En general, La limpieza de la habitación era impecable. Silencio total por las noches. El desayuno buffet es variado y delicioso.",4,positivo,"desayuno,limpieza,ruido"
+1079,Viajamos en familia. Encontramos pelos en el baño.,1,negativo,limpieza
+1080,Pasamos una semana aquí. La zona es ruidosa y poco segura de noche...,2,negativo,ubicacion
+1081,"Pasamos una semana aquí. Está muy lejos del centro. Estancia normal, sin más.",3,neutro,ubicacion
+1082,"En general, Está muy bien situado, cerca de todo. El desayuno merece la pena. Se duerme de maravilla, muy tranquilo.",5,positivo,"desayuno,ruido,ubicacion"
+1083,Viajamos en familia. La recepcionista nos ayudó con todo!,5,positivo,personal
+1084,Escapada de fin de semana. El café estaba frío y faltaba fruta. Cumple lo básico.,3,neutro,desayuno
+1085,Fuimos por trabajo. Muy buena relación calidad precio.,5,positivo,precio
+1086,Viajamos en familia. Buenos productos locales en el desayuno.,4,positivo,desayuno
+1087,"Viajamos en familia. Se duerme de maravilla, muy tranquilo.",5,positivo,ruido
+1088,"Escapada de fin de semana. Las sábanas y toallas olían a limpio. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"limpieza,ubicacion"
+1089,"La limpieza de la habitación era impecable. Muy buena relación calidad precio. Se duerme de maravilla, muy tranquilo!",4,positivo,"limpieza,precio,ruido"
+1090,Escapada de fin de semana. Muy buena relación calidad precio. Las sábanas y toallas olían a limpio. El desayuno buffet es variado y delicioso!,5,positivo,"desayuno,limpieza,precio"
+1091,"Fuimos por trabajo. Las sábanas y toallas olían a limpio. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"limpieza,ubicacion"
+1092,"En general, Repetiremos por lo que cuesta!",4,positivo,precio
+1093,Escapada de fin de semana. Cumple lo básico.,3,neutro,
+1094,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,ubicacion
+1095,Viajamos en familia. La zona es ruidosa y poco segura de noche. Ni fu ni fa.,3,neutro,ubicacion
+1096,Escapada de fin de semana. Trato excelente y muy cercano. El desayuno merece la pena. Silencio total por las noches!,4,positivo,"desayuno,personal,ruido"
+1097,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo.",5,positivo,ruido
+1098,"Escapada de fin de semana. La ubicación es perfecta, a cinco minutos de la playa. Silencio total por las noches.",4,positivo,"ruido,ubicacion"
+1099,Nadie atendía en recepción. Cumple lo básico.,3,neutro,personal
+1100,Nadie atendía en recepción. La música del bar no nos dejó dormir.,1,negativo,"personal,ruido"
+1101,"Pasamos una semana aquí. La ubicación es perfecta, a cinco minutos de la playa. El personal fue amabilísimo. Precio justo para lo que ofrece.",5,positivo,"personal,precio,ubicacion"
+1102,Escapada de fin de semana. La recepcionista nos ayudó con todo.,5,positivo,personal
+1103,Escapada de fin de semana. Precio justo para lo que ofrece.,4,positivo,precio
+1104,Pasamos una semana aquí. Sin coche es imposible moverse. El café estaba frío y faltaba fruta.,2,negativo,"desayuno,ubicacion"
+1105,Vistas al mar increíbles. Ni fu ni fa!,3,neutro,ubicacion
+1106,Fuimos por trabajo. El café estaba frío y faltaba fruta. La zona es ruidosa y poco segura de noche.,1,negativo,"desayuno,ubicacion"
+1107,Escapada de fin de semana. La limpieza deja mucho que desear. Se oye todo de la habitación de al lado.,2,negativo,"limpieza,ruido"
+1108,"Se duerme de maravilla, muy tranquilo. El desayuno merece la pena.",4,positivo,"desayuno,ruido"
+1109,Fuimos por trabajo. Repetiremos por lo que cuesta. El personal fue amabilísimo. Silencio total por las noches!,5,positivo,"personal,precio,ruido"
+1110,Fuimos por trabajo. Muy buena relación calidad precio. El desayuno buffet es variado y delicioso!,4,positivo,"desayuno,precio"
+1111,Fuimos por trabajo. Está muy lejos del centro. Encontramos pelos en el baño. No compensa el precio...,2,negativo,"limpieza,precio,ubicacion"
+1112,"En general, Sin coche es imposible moverse. La habitación estaba sucia.",2,negativo,"limpieza,ubicacion"
+1113,"En general, El desayuno merece la pena. Cumple lo básico!",3,neutro,desayuno
+1114,"Muy buena relación calidad precio. Estancia normal, sin más.",3,neutro,precio
+1115,"En general, La limpieza de la habitación era impecable.",4,positivo,limpieza
+1116,Viajamos en familia. La limpieza deja mucho que desear. Ruido constante por la noche. La zona es ruidosa y poco segura de noche...,2,negativo,"limpieza,ruido,ubicacion"
+1117,Fuimos por trabajo. Se oye todo de la habitación de al lado. Está muy lejos del centro. Tardaron una hora en resolver un problema simple.,2,negativo,"personal,ruido,ubicacion"
+1118,Viajamos en familia. Demasiado caro para lo que ofrece. Nadie atendía en recepción. Ruido constante por la noche.,1,negativo,"personal,precio,ruido"
+1119,Pasamos una semana aquí. La habitación estaba sucia. Está muy lejos del centro...,2,negativo,"limpieza,ubicacion"
+1120,"En general, Todo estaba muy limpio. Está muy bien situado, cerca de todo. Se duerme de maravilla, muy tranquilo.",4,positivo,"limpieza,ruido,ubicacion"
+1121,Escapada de fin de semana. Repetiremos por lo que cuesta. Cumple lo básico!,3,neutro,precio
+1122,Demasiado caro para lo que ofrece. El café estaba frío y faltaba fruta...,1,negativo,"desayuno,precio"
+1123,"Se duerme de maravilla, muy tranquilo. Cumple lo básico.",3,neutro,ruido
+1124,Escapada de fin de semana. Se oye todo de la habitación de al lado. Está muy lejos del centro...,1,negativo,"ruido,ubicacion"
+1125,Pasamos una semana aquí. Demasiado caro para lo que ofrece. Tardaron una hora en resolver un problema simple. Ni fu ni fa!,3,neutro,"personal,precio"
+1126,Fuimos por trabajo. Colas enormes en el desayuno...,2,negativo,desayuno
+1127,Pasamos una semana aquí. Trato excelente y muy cercano!,4,positivo,personal
+1128,"Pasamos una semana aquí. Se duerme de maravilla, muy tranquilo. El personal fue amabilísimo.",5,positivo,"personal,ruido"
+1129,Viajamos en familia. La recepcionista nos ayudó con todo!,4,positivo,personal
+1130,Fuimos por trabajo. Tardaron una hora en resolver un problema simple. El café estaba frío y faltaba fruta...,1,negativo,"desayuno,personal"
+1131,Escapada de fin de semana. Cobran extras por todo. Encontramos pelos en el baño. Está muy lejos del centro.,1,negativo,"limpieza,precio,ubicacion"
+1132,Viajamos en familia. Buenos productos locales en el desayuno!,4,positivo,desayuno
+1133,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa. Muy buena relación calidad precio. Se duerme de maravilla, muy tranquilo.",4,positivo,"precio,ruido,ubicacion"
+1134,El personal fue amabilísimo. La zona es ruidosa y poco segura de noche. Ni fu ni fa!,3,neutro,"personal,ubicacion"
+1135,Viajamos en familia. Silencio total por las noches!,5,positivo,ruido
+1136,"En general, Encontramos pelos en el baño. La música del bar no nos dejó dormir...",2,negativo,"limpieza,ruido"
+1137,Se oye todo de la habitación de al lado. Ni fu ni fa.,3,neutro,ruido
+1138,"En general, El desayuno merece la pena. Repetiremos por lo que cuesta.",5,positivo,"desayuno,precio"
+1139,Viajamos en familia. Precio justo para lo que ofrece. Vistas al mar increíbles.,5,positivo,"precio,ubicacion"
+1140,Fuimos por trabajo. Todo estaba muy limpio. Cumple lo básico.,3,neutro,limpieza
+1141,Pasamos una semana aquí. El personal fue amabilísimo. Repetiremos por lo que cuesta!,5,positivo,"personal,precio"
+1142,"En general, Vistas al mar increíbles. Todo estaba muy limpio. La recepcionista nos ayudó con todo.",5,positivo,"limpieza,personal,ubicacion"
+1143,Pasamos una semana aquí. Cumple lo básico.,3,neutro,
+1144,La música del bar no nos dejó dormir. Habitación correcta y sencilla.,3,neutro,ruido
+1145,Pasamos una semana aquí. Trato excelente y muy cercano. Habitación correcta y sencilla.,3,neutro,personal
+1146,Fuimos por trabajo. Encontramos pelos en el baño...,1,negativo,limpieza
+1147,"En general, La recepcionista nos ayudó con todo. Muy buena relación calidad precio.",5,positivo,"personal,precio"
+1148,"En general, La zona es ruidosa y poco segura de noche.",1,negativo,ubicacion
+1149,Fuimos por trabajo. El café estaba frío y faltaba fruta. La zona es ruidosa y poco segura de noche. El personal fue borde.,2,negativo,"desayuno,personal,ubicacion"
+1150,"Escapada de fin de semana. El personal fue amabilísimo. Se duerme de maravilla, muy tranquilo. El desayuno merece la pena.",5,positivo,"desayuno,personal,ruido"
+1151,"En general, No compensa el precio. El personal fue borde...",2,negativo,"personal,precio"
+1152,Se oye todo de la habitación de al lado.,1,negativo,ruido
+1153,"En general, Sin coche es imposible moverse. Nadie atendía en recepción. Colas enormes en el desayuno.",1,negativo,"desayuno,personal,ubicacion"
+1154,"Escapada de fin de semana. Cobran extras por todo. Estancia normal, sin más!",3,neutro,precio
+1155,Escapada de fin de semana. Precio justo para lo que ofrece. El personal fue amabilísimo. El desayuno buffet es variado y delicioso.,4,positivo,"desayuno,personal,precio"
+1156,Fuimos por trabajo. Repetiremos por lo que cuesta!,5,positivo,precio
+1157,Escapada de fin de semana. El desayuno merece la pena. Muy buena relación calidad precio. La limpieza de la habitación era impecable.,5,positivo,"desayuno,limpieza,precio"
+1158,"Fuimos por trabajo. El desayuno buffet es variado y delicioso. Estancia normal, sin más.",3,neutro,desayuno
+1159,Viajamos en familia. La zona es ruidosa y poco segura de noche. Buenos productos locales en el desayuno. Cumple lo básico!,3,neutro,"desayuno,ubicacion"
+1160,Escapada de fin de semana. Silencio total por las noches. La recepcionista nos ayudó con todo.,4,positivo,"personal,ruido"
+1161,Encontramos pelos en el baño...,2,negativo,limpieza
+1162,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo.",5,positivo,"personal,ruido"
+1163,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo. Cumple lo básico!",3,neutro,ruido
+1164,Escapada de fin de semana. Vistas al mar increíbles. Ni fu ni fa.,3,neutro,ubicacion
+1165,Fuimos por trabajo. Vistas al mar increíbles. Trato excelente y muy cercano.,5,positivo,"personal,ubicacion"
+1166,"En general, Trato excelente y muy cercano. Repetiremos por lo que cuesta!",5,positivo,"personal,precio"
+1167,"Escapada de fin de semana. Repetiremos por lo que cuesta. Trato excelente y muy cercano. Se duerme de maravilla, muy tranquilo.",4,positivo,"personal,precio,ruido"
+1168,"Escapada de fin de semana. Nadie atendía en recepción. Estancia normal, sin más!",3,neutro,personal
+1169,"Fuimos por trabajo. El desayuno buffet es variado y delicioso. Está muy bien situado, cerca de todo!",5,positivo,"desayuno,ubicacion"
+1170,Escapada de fin de semana. Tardaron una hora en resolver un problema simple. La habitación estaba sucia. Cobran extras por todo.,1,negativo,"limpieza,personal,precio"
+1171,"Se duerme de maravilla, muy tranquilo. Está muy bien situado, cerca de todo. Buenos productos locales en el desayuno.",4,positivo,"desayuno,ruido,ubicacion"
+1172,Escapada de fin de semana. Habitación correcta y sencilla!,3,neutro,
+1173,"En general, La ubicación es perfecta, a cinco minutos de la playa. Repetiremos por lo que cuesta. Se duerme de maravilla, muy tranquilo!",4,positivo,"precio,ruido,ubicacion"
+1174,"Viajamos en familia. Estancia normal, sin más.",3,neutro,
+1175,Escapada de fin de semana. Muy buena relación calidad precio. Silencio total por las noches.,4,positivo,"precio,ruido"
+1176,"En general, Repetiremos por lo que cuesta. Las sábanas y toallas olían a limpio. El personal fue amabilísimo.",4,positivo,"limpieza,personal,precio"
+1177,"Trato excelente y muy cercano. Estancia normal, sin más!",3,neutro,personal
+1178,Pasamos una semana aquí. Está muy lejos del centro. No compensa el precio.,1,negativo,"precio,ubicacion"
+1179,"En general, Colas enormes en el desayuno. Encontramos pelos en el baño.",2,negativo,"desayuno,limpieza"
+1180,Viajamos en familia. El desayuno buffet es variado y delicioso.,4,positivo,desayuno
+1181,Escapada de fin de semana. El café estaba frío y faltaba fruta. Ruido constante por la noche. Sin coche es imposible moverse.,1,negativo,"desayuno,ruido,ubicacion"
+1182,Cumple lo básico.,3,neutro,
+1183,Fuimos por trabajo. La limpieza de la habitación era impecable. Buenos productos locales en el desayuno. Muy buena relación calidad precio!,4,positivo,"desayuno,limpieza,precio"
+1184,Fuimos por trabajo. La limpieza de la habitación era impecable. Ni fu ni fa.,3,neutro,limpieza
+1185,Pasamos una semana aquí. Nadie atendía en recepción.,2,negativo,personal
+1186,"En general, Sin coche es imposible moverse.",1,negativo,ubicacion
+1187,Pasamos una semana aquí. Trato excelente y muy cercano.,4,positivo,personal
+1188,Vistas al mar increíbles.,5,positivo,ubicacion
+1189,Escapada de fin de semana. Silencio total por las noches. Las sábanas y toallas olían a limpio!,5,positivo,"limpieza,ruido"
+1190,"Pasamos una semana aquí. Se duerme de maravilla, muy tranquilo. Las sábanas y toallas olían a limpio. Precio justo para lo que ofrece.",4,positivo,"limpieza,precio,ruido"
+1191,El personal fue borde. Habitación correcta y sencilla.,3,neutro,personal
+1192,Viajamos en familia. Trato excelente y muy cercano!,5,positivo,personal
+1193,"Escapada de fin de semana. La recepcionista nos ayudó con todo. Está muy bien situado, cerca de todo!",5,positivo,"personal,ubicacion"
+1194,Fuimos por trabajo. Vistas al mar increíbles.,4,positivo,ubicacion
+1195,"Fuimos por trabajo. Precio justo para lo que ofrece. Sin coche es imposible moverse. Estancia normal, sin más.",3,neutro,"precio,ubicacion"
+1196,Vistas al mar increíbles. Precio justo para lo que ofrece. Las sábanas y toallas olían a limpio.,5,positivo,"limpieza,precio,ubicacion"
+1197,Escapada de fin de semana. La habitación estaba sucia. Colas enormes en el desayuno...,2,negativo,"desayuno,limpieza"
+1198,Viajamos en familia. Nadie atendía en recepción. Demasiado caro para lo que ofrece.,1,negativo,"personal,precio"
+1199,Fuimos por trabajo. La limpieza de la habitación era impecable. Vistas al mar increíbles!,5,positivo,"limpieza,ubicacion"
+1200,"En general, Demasiado caro para lo que ofrece. Colas enormes en el desayuno. La limpieza deja mucho que desear.",2,negativo,"desayuno,limpieza,precio"
+1201,Viajamos en familia. Demasiado caro para lo que ofrece.,2,negativo,precio
+1202,Escapada de fin de semana. Silencio total por las noches. El personal fue amabilísimo. Las sábanas y toallas olían a limpio.,4,positivo,"limpieza,personal,ruido"
+1203,"Pasamos una semana aquí. Las sábanas y toallas olían a limpio. Se duerme de maravilla, muy tranquilo.",4,positivo,"limpieza,ruido"
+1204,Escapada de fin de semana. Tardaron una hora en resolver un problema simple. Colas enormes en el desayuno...,1,negativo,"desayuno,personal"
+1205,"En general, Precio justo para lo que ofrece. El desayuno merece la pena.",5,positivo,"desayuno,precio"
+1206,Fuimos por trabajo. Sin coche es imposible moverse. El café estaba frío y faltaba fruta.,1,negativo,"desayuno,ubicacion"
+1207,Fuimos por trabajo. Silencio total por las noches. Repetiremos por lo que cuesta!,5,positivo,"precio,ruido"
+1208,Pasamos una semana aquí. Las sábanas y toallas olían a limpio.,4,positivo,limpieza
+1209,"Fuimos por trabajo. Está muy bien situado, cerca de todo. Silencio total por las noches. Trato excelente y muy cercano!",5,positivo,"personal,ruido,ubicacion"
+1210,Pasamos una semana aquí. La limpieza deja mucho que desear.,1,negativo,limpieza
+1211,Fuimos por trabajo. Ni fu ni fa.,3,neutro,
+1212,Pasamos una semana aquí. La zona es ruidosa y poco segura de noche. El personal fue borde. Encontramos pelos en el baño.,2,negativo,"limpieza,personal,ubicacion"
+1213,"La recepcionista nos ayudó con todo. Está muy bien situado, cerca de todo!",4,positivo,"personal,ubicacion"
+1214,Escapada de fin de semana. Precio justo para lo que ofrece. Buenos productos locales en el desayuno. Silencio total por las noches.,5,positivo,"desayuno,precio,ruido"
+1215,El café estaba frío y faltaba fruta. Demasiado caro para lo que ofrece. El personal fue borde.,2,negativo,"desayuno,personal,precio"
+1216,Escapada de fin de semana. Cobran extras por todo.,2,negativo,precio
+1217,Viajamos en familia. Todo estaba muy limpio. Trato excelente y muy cercano.,5,positivo,"limpieza,personal"
+1218,Viajamos en familia. La habitación estaba sucia. El personal fue borde. Cobran extras por todo.,2,negativo,"limpieza,personal,precio"
+1219,Viajamos en familia. Todo estaba muy limpio. El desayuno era escaso y repetitivo. Ni fu ni fa!,3,neutro,"desayuno,limpieza"
+1220,"En general, Las sábanas y toallas olían a limpio. Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo!",5,positivo,"limpieza,personal,ruido"
+1221,Pasamos una semana aquí. Tardaron una hora en resolver un problema simple.,1,negativo,personal
+1222,Fuimos por trabajo. Todo estaba muy limpio. Silencio total por las noches.,5,positivo,"limpieza,ruido"
+1223,Fuimos por trabajo. El café estaba frío y faltaba fruta...,1,negativo,desayuno
+1224,Viajamos en familia. La música del bar no nos dejó dormir. Está muy lejos del centro...,1,negativo,"ruido,ubicacion"
+1225,"En general, Silencio total por las noches. El desayuno merece la pena!",5,positivo,"desayuno,ruido"
+1226,Fuimos por trabajo. Ni fu ni fa.,3,neutro,
+1227,Fuimos por trabajo. Ni fu ni fa.,3,neutro,
+1228,"La limpieza de la habitación era impecable. Se duerme de maravilla, muy tranquilo. Repetiremos por lo que cuesta.",5,positivo,"limpieza,precio,ruido"
+1229,Colas enormes en el desayuno...,2,negativo,desayuno
+1230,Viajamos en familia. La zona es ruidosa y poco segura de noche. La habitación estaba sucia. Colas enormes en el desayuno.,1,negativo,"desayuno,limpieza,ubicacion"
+1231,"La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,ubicacion
+1232,"En general, Las sábanas y toallas olían a limpio. Silencio total por las noches!",4,positivo,"limpieza,ruido"
+1233,"Escapada de fin de semana. Está muy bien situado, cerca de todo. La limpieza de la habitación era impecable. Precio justo para lo que ofrece!",4,positivo,"limpieza,precio,ubicacion"
+1234,"En general, No compensa el precio. Sin coche es imposible moverse. Encontramos pelos en el baño.",2,negativo,"limpieza,precio,ubicacion"
+1235,"Viajamos en familia. Trato excelente y muy cercano. Estancia normal, sin más!",3,neutro,personal
+1236,"En general, Precio justo para lo que ofrece. Las sábanas y toallas olían a limpio!",5,positivo,"limpieza,precio"
+1237,"En general, Vistas al mar increíbles. Repetiremos por lo que cuesta. Todo estaba muy limpio!",5,positivo,"limpieza,precio,ubicacion"
+1238,"Se duerme de maravilla, muy tranquilo. Cumple lo básico.",3,neutro,ruido
+1239,Fuimos por trabajo. Silencio total por las noches. La recepcionista nos ayudó con todo!,4,positivo,"personal,ruido"
+1240,"En general, La limpieza deja mucho que desear. Cumple lo básico.",3,neutro,limpieza
+1241,Escapada de fin de semana. Todo estaba muy limpio. Precio justo para lo que ofrece.,5,positivo,"limpieza,precio"
+1242,"Está muy bien situado, cerca de todo.",5,positivo,ubicacion
+1243,"En general, La ubicación es perfecta, a cinco minutos de la playa. Precio justo para lo que ofrece. Silencio total por las noches!",5,positivo,"precio,ruido,ubicacion"
+1244,"Estancia normal, sin más.",3,neutro,
+1245,"Escapada de fin de semana. Trato excelente y muy cercano. Estancia normal, sin más.",3,neutro,personal
+1246,Pasamos una semana aquí. La habitación estaba sucia. Colas enormes en el desayuno...,2,negativo,"desayuno,limpieza"
+1247,Escapada de fin de semana. Silencio total por las noches.,4,positivo,ruido
+1248,Pasamos una semana aquí. Demasiado caro para lo que ofrece. La habitación estaba sucia.,1,negativo,"limpieza,precio"
+1249,"Estancia normal, sin más.",3,neutro,
+1250,Pasamos una semana aquí. Colas enormes en el desayuno. Ni fu ni fa!,3,neutro,desayuno
+1251,"En general, No compensa el precio. Encontramos pelos en el baño...",1,negativo,"limpieza,precio"
+1252,Pasamos una semana aquí. El desayuno era escaso y repetitivo. No compensa el precio. Ruido constante por la noche...,2,negativo,"desayuno,precio,ruido"
+1253,"Escapada de fin de semana. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,ubicacion
+1254,"En general, Demasiado caro para lo que ofrece. Estancia normal, sin más!",3,neutro,precio
+1255,La zona es ruidosa y poco segura de noche.,1,negativo,ubicacion
+1256,Viajamos en familia. Ruido constante por la noche.,2,negativo,ruido
+1257,"En general, Tardaron una hora en resolver un problema simple...",2,negativo,personal
+1258,Escapada de fin de semana. El personal fue amabilísimo!,4,positivo,personal
+1259,Viajamos en familia. El desayuno era escaso y repetitivo...,2,negativo,desayuno
+1260,Silencio total por las noches. Trato excelente y muy cercano. Precio justo para lo que ofrece!,5,positivo,"personal,precio,ruido"
+1261,Pasamos una semana aquí. Se oye todo de la habitación de al lado.,2,negativo,ruido
+1262,Fuimos por trabajo. Ni fu ni fa.,3,neutro,
+1263,Escapada de fin de semana. No compensa el precio. La recepcionista nos ayudó con todo. Ni fu ni fa.,3,neutro,"personal,precio"
+1264,El desayuno merece la pena!,4,positivo,desayuno
+1265,Pasamos una semana aquí. Encontramos pelos en el baño.,2,negativo,limpieza
+1266,"Ruido constante por la noche. Estancia normal, sin más.",3,neutro,ruido
+1267,Pasamos una semana aquí. Ruido constante por la noche...,1,negativo,ruido
+1268,Pasamos una semana aquí. La zona es ruidosa y poco segura de noche. El personal fue borde. Cobran extras por todo.,2,negativo,"personal,precio,ubicacion"
+1269,Pasamos una semana aquí. Todo estaba muy limpio.,5,positivo,limpieza
+1270,"En general, Está muy lejos del centro. La habitación estaba sucia.",2,negativo,"limpieza,ubicacion"
+1271,Pasamos una semana aquí. Todo estaba muy limpio.,4,positivo,limpieza
+1272,Pasamos una semana aquí. Precio justo para lo que ofrece. El personal fue amabilísimo.,5,positivo,"personal,precio"
+1273,Fuimos por trabajo. Las sábanas y toallas olían a limpio.,5,positivo,limpieza
+1274,"Se duerme de maravilla, muy tranquilo. El desayuno merece la pena. La recepcionista nos ayudó con todo.",5,positivo,"desayuno,personal,ruido"
+1275,"Fuimos por trabajo. Repetiremos por lo que cuesta. Está muy bien situado, cerca de todo. El desayuno buffet es variado y delicioso!",4,positivo,"desayuno,precio,ubicacion"
+1276,"En general, Se duerme de maravilla, muy tranquilo. Está muy bien situado, cerca de todo. La limpieza de la habitación era impecable.",5,positivo,"limpieza,ruido,ubicacion"
+1277,El personal fue borde. El café estaba frío y faltaba fruta. La limpieza deja mucho que desear.,2,negativo,"desayuno,limpieza,personal"
+1278,Viajamos en familia. El desayuno era escaso y repetitivo. Ruido constante por la noche. No compensa el precio...,1,negativo,"desayuno,precio,ruido"
+1279,"En general, El desayuno merece la pena. Vistas al mar increíbles.",5,positivo,"desayuno,ubicacion"
+1280,Fuimos por trabajo. El desayuno era escaso y repetitivo...,1,negativo,desayuno
+1281,Fuimos por trabajo. El desayuno merece la pena. Todo estaba muy limpio. Trato excelente y muy cercano!,5,positivo,"desayuno,limpieza,personal"
+1282,"Viajamos en familia. Trato excelente y muy cercano. Se duerme de maravilla, muy tranquilo. Buenos productos locales en el desayuno!",5,positivo,"desayuno,personal,ruido"
+1283,Pasamos una semana aquí. El desayuno buffet es variado y delicioso!,4,positivo,desayuno
+1284,Fuimos por trabajo. Repetiremos por lo que cuesta. Silencio total por las noches.,5,positivo,"precio,ruido"
+1285,Fuimos por trabajo. El desayuno merece la pena!,5,positivo,desayuno
+1286,"En general, Las sábanas y toallas olían a limpio.",5,positivo,limpieza
+1287,Pasamos una semana aquí. La limpieza deja mucho que desear. Habitación correcta y sencilla!,3,neutro,limpieza
+1288,"Estancia normal, sin más.",3,neutro,
+1289,"En general, Muy buena relación calidad precio. El personal fue amabilísimo!",4,positivo,"personal,precio"
+1290,"Escapada de fin de semana. Todo estaba muy limpio. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"limpieza,ubicacion"
+1291,El desayuno buffet es variado y delicioso.,5,positivo,desayuno
+1292,Fuimos por trabajo. Demasiado caro para lo que ofrece. El personal fue borde...,2,negativo,"personal,precio"
+1293,"Pasamos una semana aquí. Todo estaba muy limpio. La ubicación es perfecta, a cinco minutos de la playa. Se duerme de maravilla, muy tranquilo!",5,positivo,"limpieza,ruido,ubicacion"
+1294,"Fuimos por trabajo. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,ubicacion
+1295,"En general, Colas enormes en el desayuno. La habitación estaba sucia. Cobran extras por todo.",1,negativo,"desayuno,limpieza,precio"
+1296,"Pasamos una semana aquí. La limpieza de la habitación era impecable. Se duerme de maravilla, muy tranquilo.",5,positivo,"limpieza,ruido"
+1297,"En general, Demasiado caro para lo que ofrece. Colas enormes en el desayuno...",1,negativo,"desayuno,precio"
+1298,"Viajamos en familia. La recepcionista nos ayudó con todo. Se duerme de maravilla, muy tranquilo. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"personal,ruido,ubicacion"
+1299,"En general, Colas enormes en el desayuno. Tardaron una hora en resolver un problema simple.",2,negativo,"desayuno,personal"
+1300,"En general, El personal fue amabilísimo. El desayuno merece la pena.",5,positivo,"desayuno,personal"
+1301,Fuimos por trabajo. Las sábanas y toallas olían a limpio. Precio justo para lo que ofrece.,5,positivo,"limpieza,precio"
+1302,Escapada de fin de semana. Encontramos pelos en el baño. El café estaba frío y faltaba fruta. La música del bar no nos dejó dormir.,2,negativo,"desayuno,limpieza,ruido"
+1303,"Escapada de fin de semana. Las sábanas y toallas olían a limpio. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"limpieza,ubicacion"
+1304,"Viajamos en familia. Ruido constante por la noche. Estancia normal, sin más.",3,neutro,ruido
+1305,Escapada de fin de semana. Precio justo para lo que ofrece. Todo estaba muy limpio. Vistas al mar increíbles.,5,positivo,"limpieza,precio,ubicacion"
+1306,"En general, La limpieza deja mucho que desear. El café estaba frío y faltaba fruta.",1,negativo,"desayuno,limpieza"
+1307,Viajamos en familia. El personal fue borde. El café estaba frío y faltaba fruta.,2,negativo,"desayuno,personal"
+1308,Fuimos por trabajo. Tardaron una hora en resolver un problema simple...,2,negativo,personal
+1309,Fuimos por trabajo. Colas enormes en el desayuno...,2,negativo,desayuno
+1310,"Se duerme de maravilla, muy tranquilo. El personal fue amabilísimo. Muy buena relación calidad precio.",5,positivo,"personal,precio,ruido"
+1311,Pasamos una semana aquí. Se oye todo de la habitación de al lado...,2,negativo,ruido
+1312,"En general, El desayuno merece la pena!",4,positivo,desayuno
+1313,"En general, La zona es ruidosa y poco segura de noche. Nadie atendía en recepción. Ruido constante por la noche.",1,negativo,"personal,ruido,ubicacion"
+1314,Viajamos en familia. Buenos productos locales en el desayuno!,5,positivo,desayuno
+1315,"Escapada de fin de semana. Trato excelente y muy cercano. Está muy bien situado, cerca de todo. Buenos productos locales en el desayuno.",5,positivo,"desayuno,personal,ubicacion"
+1316,Escapada de fin de semana. La música del bar no nos dejó dormir. Nadie atendía en recepción. Está muy lejos del centro...,1,negativo,"personal,ruido,ubicacion"
+1317,Fuimos por trabajo. La recepcionista nos ayudó con todo. Ni fu ni fa!,3,neutro,personal
+1318,Escapada de fin de semana. No compensa el precio. El personal fue borde...,1,negativo,"personal,precio"
+1319,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo. Vistas al mar increíbles.",5,positivo,"personal,ruido,ubicacion"
+1320,Repetiremos por lo que cuesta. El desayuno merece la pena. La recepcionista nos ayudó con todo.,4,positivo,"desayuno,personal,precio"
+1321,Viajamos en familia. Vistas al mar increíbles. El desayuno buffet es variado y delicioso!,5,positivo,"desayuno,ubicacion"
+1322,Escapada de fin de semana. No compensa el precio. Habitación correcta y sencilla.,3,neutro,precio
+1323,"Viajamos en familia. Sin coche es imposible moverse. Estancia normal, sin más.",3,neutro,ubicacion
+1324,"Fuimos por trabajo. Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo!",5,positivo,"personal,ruido"
+1325,Fuimos por trabajo. Silencio total por las noches.,5,positivo,ruido
+1326,"En general, Muy buena relación calidad precio.",4,positivo,precio
+1327,Pasamos una semana aquí. Todo estaba muy limpio. Ni fu ni fa!,3,neutro,limpieza
+1328,Escapada de fin de semana. Todo estaba muy limpio. Buenos productos locales en el desayuno.,5,positivo,"desayuno,limpieza"
+1329,Escapada de fin de semana. El desayuno buffet es variado y delicioso.,5,positivo,desayuno
+1330,Pasamos una semana aquí. Nadie atendía en recepción.,1,negativo,personal
+1331,Fuimos por trabajo. Trato excelente y muy cercano. El desayuno buffet es variado y delicioso.,4,positivo,"desayuno,personal"
+1332,Escapada de fin de semana. El desayuno buffet es variado y delicioso. Muy buena relación calidad precio. Todo estaba muy limpio.,5,positivo,"desayuno,limpieza,precio"
+1333,"Silencio total por las noches. Está muy bien situado, cerca de todo. La limpieza de la habitación era impecable.",4,positivo,"limpieza,ruido,ubicacion"
+1334,Escapada de fin de semana. Cumple lo básico.,3,neutro,
+1335,Viajamos en familia. Encontramos pelos en el baño. Cobran extras por todo...,1,negativo,"limpieza,precio"
+1336,"Pasamos una semana aquí. Buenos productos locales en el desayuno. La ubicación es perfecta, a cinco minutos de la playa. Repetiremos por lo que cuesta!",5,positivo,"desayuno,precio,ubicacion"
+1337,"Fuimos por trabajo. El desayuno era escaso y repetitivo. Estancia normal, sin más.",3,neutro,desayuno
+1338,"Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo. Todo estaba muy limpio!",5,positivo,"limpieza,personal,ruido"
+1339,Escapada de fin de semana. Muy buena relación calidad precio.,4,positivo,precio
+1340,Viajamos en familia. Sin coche es imposible moverse. Tardaron una hora en resolver un problema simple.,1,negativo,"personal,ubicacion"
+1341,Viajamos en familia. La música del bar no nos dejó dormir.,2,negativo,ruido
+1342,"En general, Está muy lejos del centro. La habitación estaba sucia. No compensa el precio.",2,negativo,"limpieza,precio,ubicacion"
+1343,Habitación correcta y sencilla.,3,neutro,
+1344,"Fuimos por trabajo. La ubicación es perfecta, a cinco minutos de la playa!",5,positivo,ubicacion
+1345,Escapada de fin de semana. El personal fue amabilísimo. Silencio total por las noches. El desayuno merece la pena.,5,positivo,"desayuno,personal,ruido"
+1346,Fuimos por trabajo. Colas enormes en el desayuno. El personal fue borde. Ruido constante por la noche...,1,negativo,"desayuno,personal,ruido"
+1347,Viajamos en familia. La limpieza de la habitación era impecable.,4,positivo,limpieza
+1348,Pasamos una semana aquí. El personal fue amabilísimo. La limpieza de la habitación era impecable.,5,positivo,"limpieza,personal"
+1349,"Fuimos por trabajo. Todo estaba muy limpio. Repetiremos por lo que cuesta. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"limpieza,precio,ubicacion"
+1350,"En general, Se oye todo de la habitación de al lado. Encontramos pelos en el baño...",1,negativo,"limpieza,ruido"
+1351,Nadie atendía en recepción.,1,negativo,personal
+1352,"Las sábanas y toallas olían a limpio. Muy buena relación calidad precio. Está muy bien situado, cerca de todo!",4,positivo,"limpieza,precio,ubicacion"
+1353,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa. Las sábanas y toallas olían a limpio.",4,positivo,"limpieza,ubicacion"
+1354,Viajamos en familia. La limpieza deja mucho que desear. Nadie atendía en recepción...,1,negativo,"limpieza,personal"
+1355,"En general, Está muy lejos del centro. Ruido constante por la noche.",2,negativo,"ruido,ubicacion"
+1356,"Vistas al mar increíbles. Trato excelente y muy cercano. Estancia normal, sin más.",3,neutro,"personal,ubicacion"
+1357,Pasamos una semana aquí. La música del bar no nos dejó dormir. Colas enormes en el desayuno.,2,negativo,"desayuno,ruido"
+1358,Viajamos en familia. Encontramos pelos en el baño. El café estaba frío y faltaba fruta...,1,negativo,"desayuno,limpieza"
+1359,"Pasamos una semana aquí. El desayuno merece la pena. Se duerme de maravilla, muy tranquilo. Precio justo para lo que ofrece.",5,positivo,"desayuno,precio,ruido"
+1360,Vistas al mar increíbles. Las sábanas y toallas olían a limpio. Muy buena relación calidad precio.,4,positivo,"limpieza,precio,ubicacion"
+1361,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa. La limpieza de la habitación era impecable. Precio justo para lo que ofrece.",4,positivo,"limpieza,precio,ubicacion"
+1362,"En general, Se duerme de maravilla, muy tranquilo. El personal fue amabilísimo.",4,positivo,"personal,ruido"
+1363,"Pasamos una semana aquí. El personal fue borde. Estancia normal, sin más.",3,neutro,personal
+1364,El desayuno era escaso y repetitivo.,1,negativo,desayuno
+1365,Las sábanas y toallas olían a limpio.,5,positivo,limpieza
+1366,Fuimos por trabajo. El personal fue amabilísimo. Repetiremos por lo que cuesta.,5,positivo,"personal,precio"
+1367,"En general, Muy buena relación calidad precio. Cumple lo básico.",3,neutro,precio
+1368,Escapada de fin de semana. Demasiado caro para lo que ofrece...,2,negativo,precio
+1369,"Pasamos una semana aquí. Muy buena relación calidad precio. La limpieza de la habitación era impecable. Está muy bien situado, cerca de todo.",4,positivo,"limpieza,precio,ubicacion"
+1370,Vistas al mar increíbles. Silencio total por las noches.,5,positivo,"ruido,ubicacion"
+1371,"La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,ubicacion
+1372,"En general, Las sábanas y toallas olían a limpio.",4,positivo,limpieza
+1373,Pasamos una semana aquí. Trato excelente y muy cercano.,5,positivo,personal
+1374,Pasamos una semana aquí. Encontramos pelos en el baño. Tardaron una hora en resolver un problema simple. La zona es ruidosa y poco segura de noche.,1,negativo,"limpieza,personal,ubicacion"
+1375,"Pasamos una semana aquí. Trato excelente y muy cercano. Precio justo para lo que ofrece. Se duerme de maravilla, muy tranquilo!",4,positivo,"personal,precio,ruido"
+1376,"Escapada de fin de semana. Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo. Precio justo para lo que ofrece!",5,positivo,"personal,precio,ruido"
+1377,Ni fu ni fa.,3,neutro,
+1378,Fuimos por trabajo. Buenos productos locales en el desayuno. La recepcionista nos ayudó con todo.,4,positivo,"desayuno,personal"
+1379,Viajamos en familia. Ruido constante por la noche.,1,negativo,ruido
+1380,Ruido constante por la noche...,2,negativo,ruido
+1381,"En general, Trato excelente y muy cercano!",4,positivo,personal
+1382,Pasamos una semana aquí. Cumple lo básico.,3,neutro,
+1383,"En general, La recepcionista nos ayudó con todo. Las sábanas y toallas olían a limpio.",5,positivo,"limpieza,personal"
+1384,Escapada de fin de semana. El personal fue amabilísimo. La limpieza deja mucho que desear. Ni fu ni fa.,3,neutro,"limpieza,personal"
+1385,Nadie atendía en recepción. Cumple lo básico.,3,neutro,personal
+1386,Viajamos en familia. La habitación estaba sucia...,1,negativo,limpieza
+1387,Viajamos en familia. El café estaba frío y faltaba fruta.,1,negativo,desayuno
+1388,Escapada de fin de semana. Ruido constante por la noche. Está muy lejos del centro. Cobran extras por todo.,1,negativo,"precio,ruido,ubicacion"
+1389,Escapada de fin de semana. El personal fue amabilísimo. Las sábanas y toallas olían a limpio.,5,positivo,"limpieza,personal"
+1390,Fuimos por trabajo. Trato excelente y muy cercano.,4,positivo,personal
+1391,Pasamos una semana aquí. La limpieza deja mucho que desear. Se oye todo de la habitación de al lado. Colas enormes en el desayuno.,2,negativo,"desayuno,limpieza,ruido"
+1392,Escapada de fin de semana. Colas enormes en el desayuno. Cobran extras por todo...,2,negativo,"desayuno,precio"
+1393,Escapada de fin de semana. Repetiremos por lo que cuesta. El desayuno buffet es variado y delicioso. La limpieza de la habitación era impecable!,4,positivo,"desayuno,limpieza,precio"
+1394,"En general, La zona es ruidosa y poco segura de noche...",2,negativo,ubicacion
+1395,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. El personal fue amabilísimo. Todo estaba muy limpio.",5,positivo,"limpieza,personal,ruido"
+1396,Viajamos en familia. Demasiado caro para lo que ofrece. La recepcionista nos ayudó con todo. La música del bar no nos dejó dormir. Ni fu ni fa.,3,neutro,"personal,precio,ruido"
+1397,Escapada de fin de semana. Encontramos pelos en el baño. La zona es ruidosa y poco segura de noche. El desayuno era escaso y repetitivo.,1,negativo,"desayuno,limpieza,ubicacion"
+1398,Silencio total por las noches!,4,positivo,ruido
+1399,Escapada de fin de semana. Todo estaba muy limpio. El desayuno merece la pena.,4,positivo,"desayuno,limpieza"
+1400,"En general, El desayuno buffet es variado y delicioso. Está muy bien situado, cerca de todo!",5,positivo,"desayuno,ubicacion"
+1401,"Viajamos en familia. La habitación estaba sucia. Silencio total por las noches. Está muy bien situado, cerca de todo. Ni fu ni fa!",3,neutro,"limpieza,ruido,ubicacion"
+1402,"Las sábanas y toallas olían a limpio. No compensa el precio. Buenos productos locales en el desayuno. Estancia normal, sin más.",3,neutro,"desayuno,limpieza,precio"
+1403,"Fuimos por trabajo. La limpieza de la habitación era impecable. Se duerme de maravilla, muy tranquilo. La recepcionista nos ayudó con todo.",4,positivo,"limpieza,personal,ruido"
+1404,Escapada de fin de semana. Todo estaba muy limpio. Habitación correcta y sencilla!,3,neutro,limpieza
+1405,Viajamos en familia. El café estaba frío y faltaba fruta. Se oye todo de la habitación de al lado.,2,negativo,"desayuno,ruido"
+1406,Pasamos una semana aquí. La música del bar no nos dejó dormir. La limpieza deja mucho que desear...,2,negativo,"limpieza,ruido"
+1407,Fuimos por trabajo. Se oye todo de la habitación de al lado. La limpieza deja mucho que desear.,2,negativo,"limpieza,ruido"
+1408,Pasamos una semana aquí. No compensa el precio. La habitación estaba sucia.,1,negativo,"limpieza,precio"
+1409,Escapada de fin de semana. El personal fue borde.,1,negativo,personal
+1410,Precio justo para lo que ofrece. La limpieza de la habitación era impecable. Buenos productos locales en el desayuno.,5,positivo,"desayuno,limpieza,precio"
+1411,Viajamos en familia. Nadie atendía en recepción. La habitación estaba sucia.,1,negativo,"limpieza,personal"
+1412,"En general, La ubicación es perfecta, a cinco minutos de la playa. Se duerme de maravilla, muy tranquilo.",5,positivo,"ruido,ubicacion"
+1413,"En general, Se oye todo de la habitación de al lado...",2,negativo,ruido
+1414,Pasamos una semana aquí. Cobran extras por todo. Colas enormes en el desayuno. Habitación correcta y sencilla.,3,neutro,"desayuno,precio"
+1415,"Se duerme de maravilla, muy tranquilo. Las sábanas y toallas olían a limpio.",5,positivo,"limpieza,ruido"
+1416,Escapada de fin de semana. El desayuno buffet es variado y delicioso.,5,positivo,desayuno
+1417,Fuimos por trabajo. Tardaron una hora en resolver un problema simple...,2,negativo,personal
+1418,"En general, La habitación estaba sucia. Tardaron una hora en resolver un problema simple. No compensa el precio.",1,negativo,"limpieza,personal,precio"
+1419,"La música del bar no nos dejó dormir. Estancia normal, sin más!",3,neutro,ruido
+1420,Repetiremos por lo que cuesta!,5,positivo,precio
+1421,"En general, Se oye todo de la habitación de al lado.",2,negativo,ruido
+1422,"Fuimos por trabajo. Las sábanas y toallas olían a limpio. Muy buena relación calidad precio. Está muy bien situado, cerca de todo.",4,positivo,"limpieza,precio,ubicacion"
+1423,Escapada de fin de semana. Buenos productos locales en el desayuno. Cumple lo básico.,3,neutro,desayuno
+1424,Encontramos pelos en el baño.,1,negativo,limpieza
+1425,Fuimos por trabajo. Cobran extras por todo...,1,negativo,precio
+1426,Escapada de fin de semana. Nadie atendía en recepción. Cobran extras por todo...,1,negativo,"personal,precio"
+1427,No compensa el precio. Ruido constante por la noche. Tardaron una hora en resolver un problema simple...,1,negativo,"personal,precio,ruido"
+1428,Fuimos por trabajo. Silencio total por las noches. Trato excelente y muy cercano. Muy buena relación calidad precio!,4,positivo,"personal,precio,ruido"
+1429,"Escapada de fin de semana. La limpieza de la habitación era impecable. Está muy bien situado, cerca de todo. El desayuno merece la pena.",5,positivo,"desayuno,limpieza,ubicacion"
+1430,Colas enormes en el desayuno. Demasiado caro para lo que ofrece...,2,negativo,"desayuno,precio"
+1431,Fuimos por trabajo. El desayuno buffet es variado y delicioso.,4,positivo,desayuno
+1432,Pasamos una semana aquí. Muy buena relación calidad precio.,4,positivo,precio
+1433,Viajamos en familia. Trato excelente y muy cercano. Cumple lo básico.,3,neutro,personal
+1434,"En general, El desayuno merece la pena.",5,positivo,desayuno
+1435,Viajamos en familia. Ni fu ni fa.,3,neutro,
+1436,Nadie atendía en recepción.,2,negativo,personal
+1437,Viajamos en familia. Tardaron una hora en resolver un problema simple. La zona es ruidosa y poco segura de noche.,1,negativo,"personal,ubicacion"
+1438,El desayuno era escaso y repetitivo.,2,negativo,desayuno
+1439,Fuimos por trabajo. El desayuno era escaso y repetitivo. Se oye todo de la habitación de al lado. Cobran extras por todo...,1,negativo,"desayuno,precio,ruido"
+1440,Fuimos por trabajo. Ruido constante por la noche. La zona es ruidosa y poco segura de noche.,1,negativo,"ruido,ubicacion"
+1441,Viajamos en familia. El personal fue borde. Cobran extras por todo. Habitación correcta y sencilla.,3,neutro,"personal,precio"
+1442,"Pasamos una semana aquí. El desayuno merece la pena. Todo estaba muy limpio. La ubicación es perfecta, a cinco minutos de la playa!",4,positivo,"desayuno,limpieza,ubicacion"
+1443,"En general, Habitación correcta y sencilla.",3,neutro,
+1444,"En general, Está muy bien situado, cerca de todo.",4,positivo,ubicacion
+1445,Escapada de fin de semana. El personal fue borde. No compensa el precio.,1,negativo,"personal,precio"
+1446,Pasamos una semana aquí. Se oye todo de la habitación de al lado. La limpieza deja mucho que desear.,1,negativo,"limpieza,ruido"
+1447,"En general, El desayuno buffet es variado y delicioso. Todo estaba muy limpio.",5,positivo,"desayuno,limpieza"
+1448,Viajamos en familia. Vistas al mar increíbles.,4,positivo,ubicacion
+1449,"Pasamos una semana aquí. Estancia normal, sin más!",3,neutro,
+1450,Fuimos por trabajo. El personal fue borde. Ni fu ni fa!,3,neutro,personal
+1451,"En general, Silencio total por las noches. La limpieza de la habitación era impecable!",5,positivo,"limpieza,ruido"
+1452,Escapada de fin de semana. Vistas al mar increíbles. La limpieza de la habitación era impecable!,5,positivo,"limpieza,ubicacion"
+1453,"Viajamos en familia. La ubicación es perfecta, a cinco minutos de la playa. Cumple lo básico!",3,neutro,ubicacion
+1454,"Viajamos en familia. Se duerme de maravilla, muy tranquilo!",5,positivo,ruido
+1455,"En general, Buenos productos locales en el desayuno. Silencio total por las noches.",5,positivo,"desayuno,ruido"
+1456,Fuimos por trabajo. Buenos productos locales en el desayuno. Muy buena relación calidad precio!,5,positivo,"desayuno,precio"
+1457,Pasamos una semana aquí. Encontramos pelos en el baño. Cobran extras por todo. La zona es ruidosa y poco segura de noche...,2,negativo,"limpieza,precio,ubicacion"
+1458,Encontramos pelos en el baño. Cumple lo básico.,3,neutro,limpieza
+1459,Fuimos por trabajo. Silencio total por las noches.,4,positivo,ruido
+1460,Fuimos por trabajo. Tardaron una hora en resolver un problema simple...,1,negativo,personal
+1461,Viajamos en familia. Demasiado caro para lo que ofrece. El café estaba frío y faltaba fruta. Ruido constante por la noche...,2,negativo,"desayuno,precio,ruido"
+1462,Escapada de fin de semana. Tardaron una hora en resolver un problema simple. Se oye todo de la habitación de al lado.,1,negativo,"personal,ruido"
+1463,Viajamos en familia. La limpieza de la habitación era impecable. Buenos productos locales en el desayuno. La recepcionista nos ayudó con todo.,4,positivo,"desayuno,limpieza,personal"
+1464,Escapada de fin de semana. La limpieza de la habitación era impecable. Vistas al mar increíbles. El personal fue amabilísimo.,5,positivo,"limpieza,personal,ubicacion"
+1465,La limpieza de la habitación era impecable.,4,positivo,limpieza
+1466,Fuimos por trabajo. Todo estaba muy limpio. Cumple lo básico.,3,neutro,limpieza
+1467,"Fuimos por trabajo. Muy buena relación calidad precio. Vistas al mar increíbles. Se duerme de maravilla, muy tranquilo!",4,positivo,"precio,ruido,ubicacion"
+1468,"Está muy bien situado, cerca de todo.",4,positivo,ubicacion
+1469,"En general, Trato excelente y muy cercano. Repetiremos por lo que cuesta. Vistas al mar increíbles.",5,positivo,"personal,precio,ubicacion"
+1470,Escapada de fin de semana. Se oye todo de la habitación de al lado. El personal fue borde. Habitación correcta y sencilla!,3,neutro,"personal,ruido"
+1471,Pasamos una semana aquí. Está muy lejos del centro...,1,negativo,ubicacion
+1472,Escapada de fin de semana. Las sábanas y toallas olían a limpio. Vistas al mar increíbles!,4,positivo,"limpieza,ubicacion"
+1473,Escapada de fin de semana. Vistas al mar increíbles. El desayuno buffet es variado y delicioso!,4,positivo,"desayuno,ubicacion"
+1474,"En general, Buenos productos locales en el desayuno. La ubicación es perfecta, a cinco minutos de la playa.",5,positivo,"desayuno,ubicacion"
+1475,Viajamos en familia. Encontramos pelos en el baño. No compensa el precio...,1,negativo,"limpieza,precio"
+1476,Fuimos por trabajo. El desayuno era escaso y repetitivo.,1,negativo,desayuno
+1477,"Fuimos por trabajo. El desayuno merece la pena. La limpieza de la habitación era impecable. Está muy bien situado, cerca de todo!",4,positivo,"desayuno,limpieza,ubicacion"
+1478,Viajamos en familia. Muy buena relación calidad precio. La recepcionista nos ayudó con todo. El desayuno merece la pena!,4,positivo,"desayuno,personal,precio"
+1479,Vistas al mar increíbles. Todo estaba muy limpio. Trato excelente y muy cercano!,4,positivo,"limpieza,personal,ubicacion"
+1480,Encontramos pelos en el baño. El desayuno buffet es variado y delicioso. Está muy lejos del centro. Habitación correcta y sencilla.,3,neutro,"desayuno,limpieza,ubicacion"
+1481,"En general, Está muy bien situado, cerca de todo. Muy buena relación calidad precio.",5,positivo,"precio,ubicacion"
+1482,Fuimos por trabajo. Muy buena relación calidad precio.,4,positivo,precio
+1483,"Escapada de fin de semana. Está muy bien situado, cerca de todo. El desayuno merece la pena. Trato excelente y muy cercano.",4,positivo,"desayuno,personal,ubicacion"
+1484,"Viajamos en familia. Se duerme de maravilla, muy tranquilo. Está muy bien situado, cerca de todo.",5,positivo,"ruido,ubicacion"
+1485,Precio justo para lo que ofrece.,5,positivo,precio
+1486,Pasamos una semana aquí. La recepcionista nos ayudó con todo.,4,positivo,personal
+1487,Pasamos una semana aquí. El desayuno merece la pena. Repetiremos por lo que cuesta. La limpieza de la habitación era impecable.,4,positivo,"desayuno,limpieza,precio"
+1488,"En general, La ubicación es perfecta, a cinco minutos de la playa. Muy buena relación calidad precio.",4,positivo,"precio,ubicacion"
+1489,"Está muy bien situado, cerca de todo.",4,positivo,ubicacion
+1490,Viajamos en familia. El desayuno buffet es variado y delicioso. Cumple lo básico!,3,neutro,desayuno
+1491,"La ubicación es perfecta, a cinco minutos de la playa. El desayuno merece la pena. El personal fue amabilísimo!",4,positivo,"desayuno,personal,ubicacion"
+1492,Escapada de fin de semana. Muy buena relación calidad precio. La limpieza de la habitación era impecable!,5,positivo,"limpieza,precio"
+1493,Pasamos una semana aquí. Precio justo para lo que ofrece. Ni fu ni fa.,3,neutro,precio
+1494,"Escapada de fin de semana. Encontramos pelos en el baño. Nadie atendía en recepción. Muy buena relación calidad precio. Estancia normal, sin más!",3,neutro,"limpieza,personal,precio"
+1495,Encontramos pelos en el baño. No compensa el precio. El café estaba frío y faltaba fruta.,1,negativo,"desayuno,limpieza,precio"
+1496,No compensa el precio. La música del bar no nos dejó dormir. Nadie atendía en recepción.,1,negativo,"personal,precio,ruido"
+1497,Fuimos por trabajo. Precio justo para lo que ofrece. El personal fue amabilísimo. Las sábanas y toallas olían a limpio!,4,positivo,"limpieza,personal,precio"
+1498,"Escapada de fin de semana. Trato excelente y muy cercano. Repetiremos por lo que cuesta. La ubicación es perfecta, a cinco minutos de la playa.",4,positivo,"personal,precio,ubicacion"
+1499,"En general, Está muy bien situado, cerca de todo. Trato excelente y muy cercano. Repetiremos por lo que cuesta.",5,positivo,"personal,precio,ubicacion"
+1500,"Escapada de fin de semana. Repetiremos por lo que cuesta. Se duerme de maravilla, muy tranquilo.",4,positivo,"precio,ruido"

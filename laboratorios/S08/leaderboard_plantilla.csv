@@ -1,0 +1,2 @@
+modelo,familia,auc_cv_media,auc_cv_desv,ap_cv_media,seg_ajuste,ms_pred_1000,tamano_kb,explicabilidad_1a5,notas,auc_test
+baseline,referencia,0.5,0.0,0.459,0.05,5.0,20.0,5,Ejemplo: predice la prevalencia (borra o sustituye esta fila),

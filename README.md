@@ -282,7 +282,8 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 | Carpeta | Qué encontrarás |
 |---|---|
 | [`material/`](material) | Calendario por sprints y temario detallado |
-| [`laboratorios/`](laboratorios) | Notebooks y guías de cada práctica (se publican sprint a sprint) |
+| [`laboratorios/`](laboratorios) | Guía, notebooks y plantillas de cada sprint |
+| [`datos/`](datos) | Datos sintéticos de TurisData Canarias |
 | [`proyecto-final/`](proyecto-final) | Briefs, requisitos y rúbrica |
 | [`entregas/`](entregas) | Estructura recomendada para el repositorio de tu equipo |
 

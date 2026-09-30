@@ -4,3 +4,6 @@ __pycache__/
 .env
 *.key
 .DS_Store
+datos_sinteticos/
+modelo/
+*.joblib

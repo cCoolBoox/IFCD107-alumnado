@@ -1,0 +1,5 @@
+tarifa,canal,reservas,cancelaciones
+flexible,directo,1000,300
+flexible,intermediaria,200,70
+no_reembolsable,directo,200,20
+no_reembolsable,intermediaria,1000,120
