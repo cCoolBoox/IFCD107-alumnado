@@ -2,7 +2,10 @@
 
 Una presentación (PDF) por unidad del temario, para repasar y consultar. El orden sigue el [calendario de sprints](../material/calendario_sprints.md): el número antes del punto es el sprint.
 
-Empieza por **[Cómo funciona el curso](00_Como_funciona_el_curso.pdf)**: explica los sprints, el cliente y cómo trabajamos con este repositorio.
+Empieza por estas dos:
+
+1. **[Cómo funciona el curso](00_Como_funciona_el_curso.pdf)**: los sprints, el cliente y cómo trabajamos con este repositorio.
+2. **[Primeros pasos con GitHub](01_Primeros_pasos_con_GitHub.pdf)**: crea tu cuenta y haz tu primer commit desde el navegador, sin instalar nada.
 
 | Código | Presentación |
 |---|---|

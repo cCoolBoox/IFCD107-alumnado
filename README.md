@@ -289,6 +289,7 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 | [`entregas/`](entregas) | Estructura recomendada para el repositorio de tu equipo |
 
 **Consejos para sacarle partido**
+0. Si nunca has usado GitHub, empieza por [`presentaciones/01_Primeros_pasos_con_GitHub.pdf`](presentaciones/01_Primeros_pasos_con_GitHub.pdf): incluye un primer ejercicio de 15 minutos.
 1. Antes de cada sprint, lee su sección en [`material/calendario_sprints.md`](material/calendario_sprints.md). Para seguir el curso día a día, descarga y abre [`material/calendario_sprints.html`](material/calendario_sprints.html): marca el sprint en curso con la fecha de tu dispositivo.
 2. Tras cada sesión, revisa el notebook del laboratorio y vuelve a ejecutarlo tú.
 3. Trabaja el reto con tu equipo desde el primer día del sprint, no el último.
