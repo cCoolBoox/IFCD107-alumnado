@@ -5,13 +5,14 @@
 
 Este documento es tu **mapa del curso**. En 10 minutos sabrás qué vamos a hacer, en qué orden, cómo se trabaja y cómo se evalúa.
 
-## 🚀 Empieza aquí (3 pasos, 30 minutos)
+## 🚀 Empieza aquí (4 pasos)
 
 | Paso | Qué haces | Dónde |
 |---|---|---|
 | **1** | Entiende cómo funciona el curso | [`material/00_Como_funciona_el_curso.pdf`](material/00_Como_funciona_el_curso.pdf) |
 | **2** | Crea tu cuenta de GitHub (si no tienes) | [`material/01_Primeros_pasos_con_GitHub.pdf`](material/01_Primeros_pasos_con_GitHub.pdf) |
-| **3** | Sigue tu ruta, sprint a sprint | [`material/mi_ruta_del_curso.md`](material/mi_ruta_del_curso.md) |
+| **3** | Tus dos primeros días, hora a hora | [`material/guia_primeros_dos_dias.md`](material/guia_primeros_dos_dias.md) |
+| **4** | Sigue tu ruta, sprint a sprint | [`material/mi_ruta_del_curso.md`](material/mi_ruta_del_curso.md) |
 
 **No necesitas instalar nada ni saber programar.** Todo se hace desde el navegador. Más abajo tienes el mapa completo del curso, para cuando quieras el detalle.
 
