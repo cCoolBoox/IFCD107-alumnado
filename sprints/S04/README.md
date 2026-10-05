@@ -66,7 +66,7 @@ En la carpeta **`sprint-04/` del repositorio de tu equipo**, con:
 
 ### Pasos sugeridos
 - **Día 1 (mitad del tiempo):** copiad la carpeta `reto_herramientas/`, ejecutad `python test_kpis.py`, implementad `leer_reservas` y las funciones de KPI una a una hasta que pasen las pruebas.
-- **Día 2:** `exportar_json` y `main`, ejecutad con el CSV real, escribid el README y y subid la carpeta al repositorio del equipo (*Upload files → Commit changes*). Opcional: versión pandas.
+- **Día 2:** `exportar_json` y `main`, ejecutad con el CSV real, escribid el README y subid la carpeta al repositorio del equipo (*Upload files → Commit changes*). Opcional: versión pandas.
 
 ### Qué se enseña en la review
 Una demo de 3–5 minutos: ejecutar el script con el CSV real, mostrar el JSON, provocar un error a propósito (fichero inexistente) y enseñar el mensaje, y mostrar las pruebas en verde. Explicad una decisión de diseño (por ejemplo, cómo definisteis la ocupación).
