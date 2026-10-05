@@ -14,6 +14,8 @@
 
 ## 2 · Tu primera semana (Sprint 0 · 16–19/10)
 
+> Hora a hora: [`guia_primeros_dos_dias.md`](guia_primeros_dos_dias.md)
+
 - [ ] Abre tu **issue «Hola, soy …»** con tu usuario de GitHub (ejercicio 1 de Primeros pasos)
 - [ ] Forma tu **equipo** (3–4 personas) y elegid el nombre de vuestra consultora
 - [ ] **Crea el repositorio del equipo** → [actividad del Sprint 0](../sprints/S00/actividad_repositorio_equipo.md)
