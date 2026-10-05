@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+__pycache__/
+.env
+*.key
+*.pem
+.DS_Store

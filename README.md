@@ -281,7 +281,7 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 
 | Carpeta | Qué encontrarás |
 |---|---|
-| [`material/`](material) | Cómo funciona el curso, primeros pasos con GitHub, calendario y temario |
+| [`material/`](material) | Cómo funciona el curso, primeros pasos con GitHub, plantilla del repo de equipo, calendario y temario |
 | [`sprints/`](sprints) | **Todo lo de cada sprint en su carpeta**: guía (README y PDF), presentaciones, notebooks y plantillas del reto |
 | [`datos/`](datos) | Datos sintéticos de TurisData Canarias |
 | [`proyecto-final/`](proyecto-final) | Briefs, requisitos y rúbrica |

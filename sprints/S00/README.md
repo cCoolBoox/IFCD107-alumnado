@@ -3,6 +3,7 @@
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_00.pdf`](Guia_Sprint_00.pdf)
+- 🗂️ **Actividad · Crea el repositorio de tu equipo:** [`actividad_repositorio_equipo.md`](actividad_repositorio_equipo.md) (plantilla: [`plantilla-equipo.zip`](../../material/plantilla-equipo.zip))
 - 🖥️ **S00.0 · Bienvenida y reglas del curso:** [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf)
 - 🖥️ **S00.1 · Agile y Scrum:** [`S00.1_Agile_y_Scrum.pdf`](presentaciones/S00.1_Agile_y_Scrum.pdf)
 - 🖥️ **S00.2 · Design Thinking:** [`S00.2_Design_Thinking.pdf`](presentaciones/S00.2_Design_Thinking.pdf)
