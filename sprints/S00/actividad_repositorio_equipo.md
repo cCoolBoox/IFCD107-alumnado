@@ -7,20 +7,22 @@
 
 ---
 
-## Parte 1 · Crear el repositorio (quien tenga el rol de responsable técnico)
+## Parte 1 · Crear el repositorio desde la plantilla (quien tenga el rol de responsable técnico)
 
-1. En GitHub, pulsa **+** (arriba a la derecha) → **New repository**.
-2. **Repository name:** `ifcd107-equipo-` + nombre de tu consultora, sin espacios ni tildes (ej. `ifcd107-equipo-atlantico`).
-3. Marca **Private** (privado) y **Add a README file**. Pulsa **Create repository**.
+1. Abre la plantilla: [github.com/cCoolBoox/ifcd107-equipo-plantilla](https://github.com/cCoolBoox/ifcd107-equipo-plantilla).
+2. Pulsa el botón verde **Use this template** → **Create a new repository**.
+3. **Repository name:** `ifcd107-equipo-` + nombre de tu consultora, sin espacios ni tildes (ej. `ifcd107-equipo-atlantico`).
+4. Marca **Private** (privado) y pulsa **Create repository**.
 
-## Parte 2 · Subir la estructura
+¡Ya tienes la estructura del curso! Comprueba que aparecen `README.md`, `requirements.txt` y las carpetas `sprint-01` … `sprint-17`, `data`, `notebooks`, `src` y `docs`.
 
-1. Descarga [`plantilla-equipo.zip`](../../material/plantilla-equipo.zip) y descomprímelo.
-2. En tu repositorio, pulsa **Add file → Upload files**.
-3. Arrastra **el contenido** de la carpeta descomprimida (no la carpeta `plantilla-equipo` en sí): `README.md`, `requirements.txt`, `.gitignore` y las carpetas `sprint-01` … `sprint-17`, `data`, `notebooks`, `src`, `docs`.
-4. Abajo, en *Commit changes*, escribe un mensaje claro: `Estructura inicial del equipo`. Pulsa **Commit changes**.
+> **Plan B si no ves el botón *Use this template*:** crea un repositorio vacío (**+ → New repository**, privado, con README), descarga [`plantilla-equipo.zip`](../../material/plantilla-equipo.zip), descomprímelo y en tu repositorio usa **Add file → Upload files** arrastrando **el contenido** de la carpeta (no la carpeta en sí). Escribe el mensaje `Estructura inicial del equipo` y pulsa **Commit changes**.
 
-> Si tu navegador no deja arrastrar carpetas, sube primero los archivos sueltos y después usa **Add file → Create new file**, escribiendo `sprint-01/README.md` (la barra `/` crea la carpeta).
+## Parte 2 · Personalizar el README
+
+1. Abre `README.md` → icono del lápiz ✏️.
+2. Sustituye `Nombre de la consultora` por el nombre de vuestra consultora.
+3. **Commit changes** con el mensaje `Nombre de la consultora`.
 
 ## Parte 3 · Invitar al equipo y al docente
 

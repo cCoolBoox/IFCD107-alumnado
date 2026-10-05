@@ -1,3 +1,0 @@
-# Añade aquí las bibliotecas que uses, una por línea. Ejemplo:
-# pandas
-# scikit-learn
