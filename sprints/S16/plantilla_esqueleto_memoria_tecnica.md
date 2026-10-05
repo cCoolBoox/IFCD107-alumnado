@@ -3,7 +3,7 @@
 > **Extensión: 10-15 páginas** (portada, índice, referencias y anexos no cuentan). Formato PDF, tipografía legible (11 pt), figuras con pie y numeradas.
 > Escribe **para el cliente y para un compañero técnico**: debe ser autocontenida. El presupuesto de páginas es orientativo (criterio H de la rúbrica: clara, con figuras y referencias; «Excelente» = autocontenida, concisa y con conclusiones accionables).
 
-**Equipo:** ______ · **Brief:** ______ · **Fecha:** 10/12/2026 · **Versión / etiqueta del repositorio:** v1.0-entrega
+**Equipo:** ______ · **Brief:** ______ · **Fecha:** 10/12/2026 · **Enlace al repositorio:** ______
 
 ---
 

@@ -14,7 +14,7 @@
 2. A crear **funciones** y **módulos** reutilizables, con documentación y pruebas.
 3. A manejar **listas, diccionarios, conjuntos** y comprensiones para representar datos reales.
 4. A leer y escribir **CSV y JSON** con la biblioteca estándar y a controlar errores con excepciones.
-5. A organizar tu código con clases, buenas prácticas y **Git básico**, y a entregar una herramienta con pruebas.
+5. A entregar una herramienta con pruebas y un README claro. *(Opcional: clases, buenas prácticas y Git desde terminal.)*
 
 ## Requisitos previos
 - Cuenta de Google para usar Colab (o Python 3.11 y Jupyter/VS Code en tu equipo).
@@ -22,7 +22,7 @@
 - Los datos (`reservas_turisdata.csv`) los descargan los cuadernos solos; para el reto los tendrás también en el repositorio.
 - Recuerda: los datos son **sintéticos** (no son estadísticas reales del turismo canario).
 
-## Prácticas (5 h)
+## Prácticas (4 h obligatorias + 1 h opcional)
 Ejecuta los cuadernos en orden. Cada ejercicio se **autocorrige**: si la celda de comprobación falla, lee el mensaje, corrige y vuelve a ejecutar.
 
 | Cuaderno | Tema | Tiempo | Colab |
@@ -31,7 +31,7 @@ Ejecuta los cuadernos en orden. Cada ejercicio se **autocorrige**: si la celda d
 | `S04_02_funciones_modulos` | Funciones, parámetros, `*args`, `lambda`, módulos | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/S04_02_funciones_modulos.ipynb) |
 | `S04_03_estructuras_datos` | Listas, tuplas, diccionarios, conjuntos, comprensiones | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/S04_03_estructuras_datos.ipynb) |
 | `S04_04_ficheros_excepciones` | CSV y JSON, `try`/`except`, lector robusto | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/S04_04_ficheros_excepciones.ipynb) |
-| `S04_05_poo_buenas_practicas` | Clases, herencia, buenas prácticas, Git básico | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/S04_05_poo_buenas_practicas.ipynb) |
+| `S04_05_poo_buenas_practicas` | **(Opcional)** Clases, herencia, buenas prácticas, Git básico | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/S04_05_poo_buenas_practicas.ipynb) |
 
 ---
 
@@ -66,7 +66,7 @@ En la carpeta **`sprint-04/` del repositorio de tu equipo**, con:
 
 ### Pasos sugeridos
 - **Día 1 (mitad del tiempo):** copiad la carpeta `reto_herramientas/`, ejecutad `python test_kpis.py`, implementad `leer_reservas` y las funciones de KPI una a una hasta que pasen las pruebas.
-- **Día 2:** `exportar_json` y `main`, ejecutad con el CSV real, escribid el README y haced los *commits* (`git init`, `git add`, `git commit`). Opcional: versión pandas.
+- **Día 2:** `exportar_json` y `main`, ejecutad con el CSV real, escribid el README y y subid la carpeta al repositorio del equipo (*Upload files → Commit changes*). Opcional: versión pandas.
 
 ### Qué se enseña en la review
 Una demo de 3–5 minutos: ejecutar el script con el CSV real, mostrar el JSON, provocar un error a propósito (fichero inexistente) y enseñar el mensaje, y mostrar las pruebas en verde. Explicad una decisión de diseño (por ejemplo, cómo definisteis la ocupación).
@@ -84,5 +84,4 @@ Una demo de 3–5 minutos: ejecutar el script con el CSV real, mostrar el JSON, 
 - Tutorial oficial de Python (en español): <https://docs.python.org/es/3/tutorial/>
 - Módulo `csv`: <https://docs.python.org/es/3/library/csv.html> · Módulo `json`: <https://docs.python.org/es/3/library/json.html>
 - PEP 8, guía de estilo (resumen): <https://peps.python.org/pep-0008/>
-- Git, guía básica: <https://git-scm.com/book/es/v2>
 - Google Colab, primeros pasos: <https://colab.research.google.com/>

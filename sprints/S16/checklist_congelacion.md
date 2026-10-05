@@ -6,18 +6,18 @@
 **Equipo:** ______ · **Persona que verifica:** ______ · **Hora de la verificación:** ______
 
 ## A. Repositorio
-- [ ] La rama principal contiene lo que queremos entregar; **etiqueta `v1.0-entrega`** creada y subida.
-- [ ] Hay commits de **todas** las personas (`git shortlog -sn`) y no hay un único commit gigante.
-- [ ] `.gitignore` correcto; **no hay claves, tokens ni datos personales** (`git log -p` revisado en busca de credenciales).
+- [ ] El repositorio del equipo contiene lo que queremos entregar, **todo subido** (nada se queda solo en un ordenador).
+- [ ] En la pestaña **Commits** aparecen aportaciones de **todas** las personas.
+- [ ] **No hay claves, tokens ni datos personales** en ningún archivo del repositorio.
 - [ ] `README.md` completo (problema, resultados, estructura, cómo reproducir, cómo lanzar la demo, datos y licencias, IA responsable, equipo).
 - [ ] `requirements.txt` con **versiones fijas** (`pip freeze` recortado a lo que se usa) y versión de Python indicada.
 - [ ] Datos incluidos (si pesan poco y la licencia lo permite) **o** script de descarga que funciona, con licencia citada.
 - [ ] Estructura de carpetas clara (`notebooks/`, `src/`, `experimentos/`, `modelo/`, `demostrador/`, `tests/`, `docs/`).
 
 ## B. Reproducibilidad (prueba en limpio)
-- [ ] `git clone` en una carpeta nueva → `python -m venv` → `pip install -r requirements.txt` sin errores.
+- [ ] Descargar el repositorio como ZIP (**Code → Download ZIP**) y abrir el notebook principal en Colab: se ejecuta sin errores siguiendo solo el README.
 - [ ] El script de datos / los notebooks se ejecutan **de arriba abajo** con semilla fija y dan los resultados de la memoria (tolerancia razonable).
-- [ ] `pytest -q` pasa.
+- [ ] Las pruebas (si las hay) pasan.
 - [ ] El tiempo total de reproducción está indicado en el README.
 - [ ] El modelo final se genera o se incluye con su `metadatos.json`.
 

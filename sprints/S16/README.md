@@ -59,7 +59,7 @@ El cliente (el docente) va a **recibir vuestro trabajo como si fuera un entregab
 7. **Coevaluación** individual (anexo B) rellenada por cada persona.
 
 ### Restricciones
-- **A las 14:30 del 10/12 se congela el repositorio y la memoria.** Se evaluará lo que haya en la rama principal en ese momento (etiqueta `v1.0-entrega`).
+- **A las 14:30 del 10/12 se congela el repositorio y la memoria.** Se evaluará lo que haya subido al repositorio del equipo en ese momento.
 - Memoria de **10 a 15 páginas** (los anexos no cuentan). Autocontenida y propia (no copiada).
 - El demostrador debe funcionar **desde cero** en otro equipo.
 - Sin datos personales, claves ni credenciales en el repositorio.
@@ -93,10 +93,10 @@ Demostración de 4 minutos del demostrador (con una entrada errónea a propósit
 - [ ] Rendimiento **por subgrupos** y medida de mitigación aplicada y medida.
 - [ ] Registro de riesgos cerrado; clasificación RGPD / AI Act justificada.
 - [ ] Demostrador funcionando desde cero, con entradas erróneas gestionadas y aviso de incertidumbre.
-- [ ] Pruebas (`pytest -q`) y vídeo plan B.
+- [ ] Pruebas (si las hay) y vídeo plan B.
 - [ ] `requirements.txt` con versiones; README reproducible probado por otra persona del equipo.
 - [ ] Model card y memoria (10-15 páginas) en PDF dentro de `docs/`.
-- [ ] Etiqueta `v1.0-entrega` creada antes de las 14:30 del 10/12.
+- [ ] Todo subido al repositorio del equipo antes de las 14:30 del 10/12.
 - [ ] Coevaluación entregada por **cada** integrante; retro hecha.
 
 ## Recursos

@@ -7,7 +7,7 @@
 |---|---|
 | Nombre y versión | |
 | Equipo / responsables | |
-| Fecha de entrenamiento y etiqueta del repositorio | |
+| Fecha de entrenamiento y enlace al repositorio | |
 | Tipo de modelo y librería (con versión) | *(p. ej. GRU en Keras 3.x; regresión logística en scikit-learn 1.x; RAG con modelo X)* |
 | Hiperparámetros principales | |
 | Semilla y cómo reproducirlo | |
