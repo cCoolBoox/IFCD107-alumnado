@@ -281,16 +281,15 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 
 | Carpeta | Qué encontrarás |
 |---|---|
-| [`material/`](material) | Calendario por sprints y temario detallado |
-| [`presentaciones/`](presentaciones) | Las presentaciones de cada unidad en PDF |
-| [`laboratorios/`](laboratorios) | Guía, notebooks y plantillas de cada sprint |
+| [`material/`](material) | Cómo funciona el curso, primeros pasos con GitHub, calendario y temario |
+| [`sprints/`](sprints) | **Todo lo de cada sprint en su carpeta**: guía (README y PDF), presentaciones, notebooks y plantillas del reto |
 | [`datos/`](datos) | Datos sintéticos de TurisData Canarias |
 | [`proyecto-final/`](proyecto-final) | Briefs, requisitos y rúbrica |
-| [`entregas/`](entregas) | Estructura recomendada para el repositorio de tu equipo |
+| [`entregas/`](entregas) | Cómo entrega tu equipo y la tabla con el repositorio de cada equipo |
 
 **Consejos para sacarle partido**
-0. Si nunca has usado GitHub, empieza por [`presentaciones/01_Primeros_pasos_con_GitHub.pdf`](presentaciones/01_Primeros_pasos_con_GitHub.pdf): incluye un primer ejercicio de 15 minutos.
-1. Antes de cada sprint, lee su sección en [`material/calendario_sprints.md`](material/calendario_sprints.md). Para seguir el curso día a día, descarga y abre [`material/calendario_sprints.html`](material/calendario_sprints.html): marca el sprint en curso con la fecha de tu dispositivo.
+0. Si nunca has usado GitHub, empieza por [`material/01_Primeros_pasos_con_GitHub.pdf`](material/01_Primeros_pasos_con_GitHub.pdf): incluye un primer ejercicio de 15 minutos.
+1. Antes de cada sprint, abre su carpeta en [`sprints/`](sprints) (empieza por el `README.md`) y lee su sección en [`material/calendario_sprints.md`](material/calendario_sprints.md). Para seguir el curso día a día, descarga y abre [`material/calendario_sprints.html`](material/calendario_sprints.html): marca el sprint en curso con la fecha de tu dispositivo.
 2. Tras cada sesión, revisa el notebook del laboratorio y vuelve a ejecutarlo tú.
 3. Trabaja el reto con tu equipo desde el primer día del sprint, no el último.
 4. Haz commits a menudo: todos los integrantes deben aparecer en el historial.
