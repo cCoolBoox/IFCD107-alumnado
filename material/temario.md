@@ -74,7 +74,7 @@ Este temario sigue el orden de impartición de `distribucion_historico.md`: Bloq
 ### UD 1a.6 · Ecosistema de software para IA (1 h)
 - Python, Jupyter, Colab; librerías (NumPy, pandas, scikit-learn), frameworks (TensorFlow/Keras, PyTorch), Hugging Face.
 - Hardware: CPU, GPU, TPU; local vs nube; costes.
-- **P:** alta en Colab, GitHub y cuentas necesarias (AWS antes del 22/10).
+- **P:** alta en Colab y cuentas necesarias (AWS antes del 22/10).
 
 ---
 

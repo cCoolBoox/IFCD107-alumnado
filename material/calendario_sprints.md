@@ -84,7 +84,7 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 **Pregunta guía:** ¿en qué se apoyan los modelos y cuándo no debemos fiarnos de un dato?
 
 - **Teoría (5 h):** UD 1a.4 álgebra lineal, derivadas y gradiente (2,5 h); UD 1a.5 estadística descriptiva, probabilidad, Bayes, muestreo y sesgo (2 h); UD 1a.6 ecosistema de software (0,5 h).
-- **Práctica (3 h):** ejercicios en papel y con Desmos/GeoGebra; interpretación de estadísticas engañosas; alta en Colab, GitHub y cuentas AWS (antes del 22/10).
+- **Práctica (3 h):** ejercicios en papel y con Desmos/GeoGebra; interpretación de estadísticas engañosas; alta en Colab y cuentas AWS (antes del 22/10).
 - **PBL (2 h) · Reto: "¿Nos fiamos de este informe?".** Auditar un informe del cliente con errores estadísticos (correlación frente a causalidad, paradoja de Simpson, muestreo sesgado) y rehacer los cálculos.
 - **Entregable:** dictamen de auditoría + hoja de ejercicios.
 - **Evaluación:** test corto de M1a (conceptos, mates, estadística).

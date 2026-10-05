@@ -5,7 +5,17 @@
 
 Este documento es tu **mapa del curso**. En 10 minutos sabrás qué vamos a hacer, en qué orden, cómo se trabaja y cómo se evalúa.
 
-**Índice:** [1. La idea en una frase](#1-la-idea-en-una-frase) · [2. El viaje completo](#2-el-viaje-completo) · [3. Calendario](#3-calendario-de-un-vistazo) · [4. Cómo es un sprint](#4-cómo-es-un-sprint) · [5. Los 18 sprints](#5-los-18-sprints) · [6. El cliente](#6-el-cliente-turisdata-canarias) · [7. El proyecto final](#7-el-proyecto-final) · [8. Evaluación](#8-cómo-se-evalúa) · [9. Herramientas](#9-herramientas) · [10. Este repositorio](#10-cómo-usar-este-repositorio)
+## 🚀 Empieza aquí (3 pasos, 30 minutos)
+
+| Paso | Qué haces | Dónde |
+|---|---|---|
+| **1** | Entiende cómo funciona el curso | [`material/00_Como_funciona_el_curso.pdf`](material/00_Como_funciona_el_curso.pdf) |
+| **2** | Crea tu cuenta de GitHub (si no tienes) | [`material/01_Primeros_pasos_con_GitHub.pdf`](material/01_Primeros_pasos_con_GitHub.pdf) |
+| **3** | Sigue tu ruta, sprint a sprint | [`material/mi_ruta_del_curso.md`](material/mi_ruta_del_curso.md) |
+
+**No necesitas instalar nada ni saber programar.** Todo se hace desde el navegador. Más abajo tienes el mapa completo del curso, para cuando quieras el detalle.
+
+**Índice del mapa:** [1. La idea en una frase](#1-la-idea-en-una-frase) · [2. El viaje completo](#2-el-viaje-completo) · [3. Calendario](#3-calendario-de-un-vistazo) · [4. Cómo es un sprint](#4-cómo-es-un-sprint) · [5. Los 18 sprints](#5-los-18-sprints) · [6. El cliente](#6-el-cliente-turisdata-canarias) · [7. El proyecto final](#7-el-proyecto-final) · [8. Evaluación](#8-cómo-se-evalúa) · [9. Herramientas](#9-herramientas) · [10. Este repositorio](#10-cómo-usar-este-repositorio)
 
 ---
 
@@ -287,10 +297,7 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 | [`proyecto-final/`](proyecto-final) | Briefs, requisitos y rúbrica |
 | [`entregas/`](entregas) | Cómo entrega tu equipo y la tabla con el repositorio de cada equipo |
 
-**👉 ¿Primera vez aquí? Lee [`material/mi_ruta_del_curso.md`](material/mi_ruta_del_curso.md): una sola página con todo lo que tienes que hacer, de principio a fin.**
-
 **Consejos para sacarle partido**
-0. Si nunca has usado GitHub, empieza por [`material/01_Primeros_pasos_con_GitHub.pdf`](material/01_Primeros_pasos_con_GitHub.pdf): incluye un primer ejercicio de 15 minutos.
 1. Antes de cada sprint, abre su carpeta en [`sprints/`](sprints) (empieza por el `README.md`) y lee su sección en [`material/calendario_sprints.md`](material/calendario_sprints.md). Para seguir el curso día a día, descarga y abre [`material/calendario_sprints.html`](material/calendario_sprints.html): marca el sprint en curso con la fecha de tu dispositivo.
 2. Tras cada sesión, revisa el notebook del laboratorio y vuelve a ejecutarlo tú.
 3. Trabaja el reto con tu equipo desde el primer día del sprint, no el último.

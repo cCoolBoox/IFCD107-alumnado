@@ -41,7 +41,7 @@ Ejecuta los cuadernos en orden. Cada ejercicio se **autocorrige**: si la celda d
 El equipo de reservas de *TurisData Canarias* calcula cada semana sus cifras a mano en una hoja de cálculo: es lento y cada persona lo hace un poco distinto. Os pide una **herramienta interna**: un script que lea el CSV de reservas, calcule tres KPIs, avise con claridad si el fichero está mal y deje los resultados en un JSON que otros sistemas puedan leer.
 
 ### Qué tenéis que entregar
-Un **repositorio Git** con:
+En la carpeta **`sprint-04/` del repositorio de tu equipo**, con:
 - `kpis.py`: el script (funciones + `main`), solo con la biblioteca estándar (`csv`, `json`...).
 - `test_kpis.py`: las pruebas con `assert` (os damos una base; podéis añadir las vuestras).
 - `README.md`: cómo se ejecuta, cómo se prueba, definición de cada KPI y decisiones (plantilla en `reto_herramientas/README_PLANTILLA.md`).
@@ -60,7 +60,7 @@ Un **repositorio Git** con:
 | Criterio | Qué se mirará en este reto |
 |---|---|
 | **Corrección técnica** | Las pruebas pasan, los KPIs coinciden con los esperados, los errores están controlados. |
-| **Reproducibilidad** | Otra persona clona el repositorio, sigue el README y obtiene el mismo JSON. |
+| **Reproducibilidad** | Otra persona abre la carpeta, sigue el README y obtiene el mismo JSON. |
 | **Análisis y comunicación al cliente** | El README y el JSON se entienden sin ser programador; cada KPI está definido y sus límites explicados (por qué la ocupación es solo un proxy). |
 | **IA responsable** | Se explica qué parte se ha hecho con ayuda de IA y qué se ha revisado; se mencionan los límites de datos sintéticos y del proxy. |
 
@@ -77,7 +77,7 @@ Una demo de 3–5 minutos: ejecutar el script con el CSV real, mostrar el JSON, 
 - [ ] El script informa con un mensaje claro si falta el fichero o una columna, y descarta y cuenta las filas defectuosas.
 - [ ] Todas las funciones tienen docstring y siguen PEP 8 (nombres, sangría).
 - [ ] El README explica cómo ejecutar, cómo probar y las definiciones de los KPIs.
-- [ ] El repositorio tiene al menos 3 *commits* con mensajes claros y no contiene claves ni datos personales.
+- [ ] La carpeta `sprint-04/` está subida al repositorio del equipo con mensajes de *commit* claros (al menos 3 *commits*) y no contiene claves ni datos personales.
 - [ ] Alguien del grupo ha revisado el código con la rúbrica.
 
 ## Recursos

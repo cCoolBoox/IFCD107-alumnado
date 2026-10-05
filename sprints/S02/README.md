@@ -31,7 +31,7 @@ Sprint 1 terminado. Matemáticas de secundaria (fracciones, potencias, porcentaj
 
 | Material | Contenido | Tiempo | Cuándo |
 |---|---|---|---|
-| [`alta_cuentas.md`](alta_cuentas.md) | Alta en Colab y GitHub (checklist) | 1 h | Práctica (mié 21/10, **antes del 22/10**) |
+| [`alta_cuentas.md`](alta_cuentas.md) | Alta en Colab (checklist) | 1 h | Práctica (mié 21/10, **antes del 22/10**) |
 | [`ejercicios_algebra_calculo.md`](ejercicios_algebra_calculo.md) | 12 ejercicios: vectores, matrices, derivadas, gradiente (papel y Desmos/GeoGebra) | 1 h en clase + resto en el equipo | Práctica |
 | [`ejercicios_estadistica.md`](ejercicios_estadistica.md) | 14 ejercicios: estadística, probabilidad, Bayes, muestreo, sesgo, Simpson | dentro de la teoría y en el equipo | Práctica |
 | [`estadisticas_enganosas.md`](estadisticas_enganosas.md) | 9 casos de estadísticas engañosas | 40-60 min | Práctica |
@@ -112,7 +112,7 @@ Cada entregable se evalúa de 0 a 4 en los cuatro criterios de la rúbrica de re
 - [ ] Hoja de ejercicios con el mínimo exigido
 - [ ] Revisión cruzada, subido a Git, tablero actualizado
 - [ ] Autoevaluación y coevaluación rellenadas
-- [ ] Alta en Colab y GitHub hecha ( **antes del 22/10**)
+- [ ] Alta en Colab hecha (**antes del 22/10**)
 
 ## Preguntas de la retrospectiva
 1. ¿Cómo repartimos las seis afirmaciones? ¿Fue justo?

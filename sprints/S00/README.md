@@ -25,7 +25,7 @@
 5. Montar una consultora de IA: equipo, acuerdo de trabajo, tablero, Definition of Done y backlog.
 
 ## Requisitos previos
-Ninguno. Solo ganas de trabajar en equipo. Necesitarás un correo electrónico para crear la cuenta gratuita de Trello (o la herramienta de tablero equivalente que decidáis).
+Ninguno. Solo ganas de trabajar en equipo. Antes del primer día, crea tu **cuenta de GitHub** siguiendo [`Primeros pasos con GitHub`](../../material/01_Primeros_pasos_con_GitHub.pdf) (15 minutos). Necesitarás un correo electrónico para crear la cuenta gratuita de Trello (o la herramienta de tablero equivalente que decidáis).
 
 ## Materiales del sprint
 
