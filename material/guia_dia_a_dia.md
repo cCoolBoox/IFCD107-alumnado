@@ -1,0 +1,158 @@
+# 📆 El curso día a día · 39 sesiones
+
+**Una línea por día (39 sesiones).** Mira la fecha de hoy, abre el README del sprint y sigue la fila. Horario general: **08:30–14:30** con descanso de 30 min. Los dos primeros días, con más detalle, en [`guia_primeros_dos_dias.md`](guia_primeros_dos_dias.md).
+
+> **Es orientativo:** el docente puede mover bloques de un día a otro. Los cambios de sprint ocurren a mitad de jornada. Cada sprint termina con **entrega en `sprint-XX/` de tu repositorio de equipo + autoevaluación y coevaluación**.
+> **Cada día:** *daily* de 10 min (¿qué hice? ¿qué haré? ¿qué me bloquea?) y, si hoy hay review, 5 min de demo por equipo.
+
+Leyenda: 🖥️ teoría · 🧪 práctica (notebook en Colab) · 👥 reto en equipo · 📤 entrega · 🔁 review y retro
+
+---
+
+## 🅰️ Etapa A · Entender (sin Python)
+
+### Sprint 0 · Arranque ágil · [README](../sprints/S00/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 1 · vie 16/10 | Presentaciones y firmas (1 h) · 🖥️ reglas del curso, Agile y Scrum · 🧪 simulación de un sprint · 👥 formar equipos y nombre |
+| 2 · lun 19/10 | 🖥️ Design Thinking · 🧪 mapa de empatía y «How might we» · entrevista al cliente · 👥 repo del equipo, tablero y acuerdo de trabajo · 📤🔁 review |
+
+### Sprint 1 · Qué es la IA y cómo usarla bien · [README](../sprints/S01/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 2 · lun 19/10 (tarde) | 🖥️ Introducción a la IA: conceptos, modalidades, casos de uso. Planning del reto |
+| 3 · mar 20/10 | 🖥️ Algoritmos y CRISP-DM · 🧪 tarjetas: elegir familia de algoritmos · 🖥️ tipos de aprendizaje y sobreajuste · 🧪 clasificar «a mano» · 🖥️ ética y sesgo |
+| 4 · mié 21/10 (mañana) | 🖥️ RGPD y AI Act · 🧪 debate de casos éticos · 👥 informe de oportunidades + checklist ético · 📤🔁 |
+
+### Sprint 2 · Mates y estadística detrás · [README](../sprints/S02/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 4 · mié 21/10 (tarde) | 🖥️ Herramientas (Python, Colab) · **alta en Colab y plataforma AutoML** · planning del reto |
+| 5 · jue 22/10 | 🖥️ Álgebra lineal, derivadas y gradiente · 🧪 ejercicios con Desmos · 🖥️ estadística y probabilidad · 👥 empezar el reto |
+| 6 · vie 23/10 (mañana) | 🧪 estadísticas engañosas · **test corto de M1a** · 👥 dictamen · 📤🔁 |
+
+### Sprint 3 · Del dato al modelo en la nube · [README](../sprints/S03/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 6 · vie 23/10 (resto) | 🖥️ Bases de datos relacionales y SQL · planning del reto |
+| 7 · lun 26/10 | 🧪 Scripts SQL 01–06 · 🖥️ NoSQL · 🧪 MongoDB (opcional) |
+| 8 · mar 27/10 (mañana) | 🖥️ AutoML y MLOps · 🧪 experimento AutoML · 👥 reto · 📤 informe del modelo, llamada a la API y **recursos cerrados** · 🔁 |
+
+---
+
+## 🅱️ Etapa B · Construir (con Python)
+
+### Sprint 4 · Python para IA · [README](../sprints/S04/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 8 · mar 27/10 (tarde) | 🖥️ Entorno y fundamentos de Python · 🧪 `S04_01` |
+| 9 · mié 28/10 | 🧪 `S04_02` funciones · `S04_03` estructuras · `S04_04` ficheros y errores · (`S04_05` POO: **opcional**) |
+| 10 · jue 29/10 (mañana) | 👥 reto «Herramientas internas» · 📤🔁 |
+
+### Sprint 5 · Matemáticas y estadística en código · [README](../sprints/S05/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 10 · jue 29/10 (resto) | 🖥️ NumPy y álgebra lineal · 🧪 `S05_01`–`02` |
+| 11 · vie 30/10 | 🖥️ Gradiente y estadística · 🧪 `S05_03`–`06` (incluye CRUD desde Python) |
+| — · lun 2/11 | **Sin clase** |
+| 12 · mar 3/11 (mañana) | 👥 reto «¿La ocupación depende de esto?» · 📤🔁 |
+
+### Sprint 6 · Datos listos para modelar · [README](../sprints/S06/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 12 · mar 3/11 (tarde) | 🖥️ pandas y visualización · 🧪 `S06_01` · empezar el inventario de defectos |
+| 13 · mié 4/11 | 🖥️ Limpieza y pipelines · 🧪 `S06_02`–`03` · 👥 función de limpieza |
+| 14 · jue 5/11 (mañana) | 🖥️ Métricas y validación · 🧪 `S06_04` · 👥 informe · 📤🔁 |
+
+### Sprint 7 · ML supervisado · [README](../sprints/S07/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 14 · jue 5/11 (resto) | 🖥️ Regresión lineal, Ridge y Lasso · 🧪 `S07_01`–`02` |
+| 15 · vie 6/11 | 🖥️ Regresión logística, k-NN y Naive Bayes · 🧪 `S07_03`–`05` · 👥 reto |
+| 16 · lun 9/11 (mañana) | 👥 umbral e informe · 📤🔁 |
+
+### Sprint 8 · Árboles, ensembles y SVM · [README](../sprints/S08/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 16 · lun 9/11 (resto) | 🖥️ Árboles y Random Forest · 🧪 `S08_01`–`02` · 👥 *leaderboard* |
+| 17 · mar 10/11 | 🖥️ Boosting y SVM · 🧪 `S08_03`–`05` · 👥 búsqueda de hiperparámetros |
+| 18 · mié 11/11 (mañana) | 👥 campeón, *model card* · 📤🔁 |
+
+### Sprint 9 · Segmentar, recomendar y aprender por refuerzo · [README](../sprints/S09/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 18 · mié 11/11 (resto) | 🖥️ Clustering y PCA · 🧪 `S09_01`–`02` · 👥 arranque del reto |
+| 19 · jue 12/11 | 🖥️ Recomendadores y refuerzo · 🧪 `S09_03`–`04` · 👥 ficha de segmentos · 📤🔁 |
+
+### Sprint 10 · Redes neuronales bien entrenadas · [README](../sprints/S10/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 20 · vie 13/11 | 🖥️ La neurona y el entrenamiento · 🧪 `S10_01`–`02` |
+| 21 · lun 16/11 | 🧪 `S10_03` sobreajuste y regularización · `S10_04` · 👥 reto |
+| 22 · mar 17/11 (mañana) | 👥 «¿Vale la pena la red?» · 📤🔁 |
+
+### Sprint 11 · Visión por computador · [README](../sprints/S11/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 22 · mar 17/11 (tarde) | 🖥️ La imagen y las CNN · 🧪 `S11_01` |
+| 23 · mié 18/11 | 🧪 `S11_02` transfer learning · `S11_03` detección |
+| 24 · jue 19/11 | 🧪 `S11_04` · 👥 reto «Visión artificial para el cliente» |
+| 25 · vie 20/11 (mañana) | 👥 análisis de errores y demostrador · 📤🔁 |
+
+### Sprint 12 · Lenguaje, secuencias y generativos · [README](../sprints/S12/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 25 · vie 20/11 (resto) | 🖥️ Series temporales · 🧪 `S12_01`–`02` |
+| 26 · lun 23/11 | 🖥️ Lenguaje natural y embeddings · 🧪 `S12_03`–`04` |
+| 27 · mar 24/11 | 🖥️ Transformers · 🧪 `S12_05` · `S12_06` mini RAG · `S12_07` generativos |
+| 28 · mié 25/11 (primera hora) | 👥 «Escuchar al cliente» · 📤🔁 |
+
+### Sprint 13 · Contar lo que hace el modelo · [README](../sprints/S13/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 28 · mié 25/11 | 🖥️ Visualizar resultados · 🧪 `S13_01` · 👥 informe visual de una página · 📤 |
+
+---
+
+## 🅲 Etapa C · Demostrar (proyecto final)
+
+### Sprint 14 · Reto, equipo y datos · [README](../sprints/S14/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 28 · mié 25/11 (tarde) | 🖥️ Cómo formular un proyecto de IA · taller: briefs candidatos |
+| 29 · jue 26/11 | **Elección de brief (10:00)** · validar los datos · backlog · ficha del proyecto |
+| 30 · vie 27/11 | El docente da el **«go / no-go»** de tu ficha · EDA y calidad del dato · primer modelo de referencia |
+| 31 · lun 30/11 | Modelo de referencia, README y plan ético · 📤🔁 |
+
+### Sprint 15 · Modelado y experimentos · [README](../sprints/S15/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 32 · mar 1/12 | 🖥️ Registrar experimentos · 🧪 `S15_01` · 👥 modelo de referencia y primer modelo |
+| 33 · mié 2/12 | 👥 Modelos (clásico, red o LLM/RAG) · **tutoría técnica de 20 min por equipo** |
+| 34 · jue 3/12 | 👥 Comparativa, elegir el candidato, evaluación única en test · 📤🔁 |
+
+### Sprint 16 · Evaluación, IA responsable y entrega · [README](../sprints/S16/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 35 · vie 4/12 | 🖥️ Despliegue y documentación · 🧪 `S16_01` · **tutoría de sesgos y visualización** |
+| — · lun 7 y mar 8/12 | **Sin clase** |
+| 36 · mié 9/12 | Mitigar sesgos · demostrador · *model card* · memoria |
+| 37 · jue 10/12 | Memoria y verificación en limpio · vídeo de reserva · 🔒 **Congelación a las 14:30** · 📤🔁 |
+
+### Sprint 17 · Storytelling, ensayos y defensa · [README](../sprints/S17/README.md)
+| Día | Qué hacemos |
+|---|---|
+| 38 · vie 11/12 | 🖥️ Storytelling · tu historia y *pitch* de 3 min · ensayos con preguntas · ensayo general |
+| 39 · lun 14/12 · **2 h** | 🎤 **Defensa ante el tribunal** + coevaluación entre equipos · fin del curso |
+
+---
+
+### Las fechas que no puedes olvidar
+| Fecha | Qué |
+|---|---|
+| 16/10 · 19/10 | Equipo + repo + tablero (Sprint 0) |
+| **antes del 22/10** | Cuentas de Colab y plataforma AutoML operativas |
+| 23–27/10 | Primer modelo en la nube: **apaga los recursos al terminar** |
+| 26/11 | Elección del brief (10:00) |
+| **10/12 · 14:30** | **Congelación** de la entrega final |
+| **14/12** | Defensa |
