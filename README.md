@@ -281,11 +281,13 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 
 | Carpeta | Qué encontrarás |
 |---|---|
-| [`material/`](material) | Cómo funciona el curso, primeros pasos con GitHub, plantilla del repo de equipo, calendario y temario |
+| [`material/`](material) | **Mi ruta del curso**, cómo funciona el curso, primeros pasos con GitHub, plantilla del repo de equipo, calendario y temario |
 | [`sprints/`](sprints) | **Todo lo de cada sprint en su carpeta**: guía (README y PDF), presentaciones, notebooks y plantillas del reto |
 | [`datos/`](datos) | Datos sintéticos de TurisData Canarias |
 | [`proyecto-final/`](proyecto-final) | Briefs, requisitos y rúbrica |
 | [`entregas/`](entregas) | Cómo entrega tu equipo y la tabla con el repositorio de cada equipo |
+
+**👉 ¿Primera vez aquí? Lee [`material/mi_ruta_del_curso.md`](material/mi_ruta_del_curso.md): una sola página con todo lo que tienes que hacer, de principio a fin.**
 
 **Consejos para sacarle partido**
 0. Si nunca has usado GitHub, empieza por [`material/01_Primeros_pasos_con_GitHub.pdf`](material/01_Primeros_pasos_con_GitHub.pdf): incluye un primer ejercicio de 15 minutos.
