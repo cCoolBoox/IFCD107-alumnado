@@ -1,3 +1,5 @@
+![IFCD107 · Especialista en Inteligencia Artificial](material/img/banner.png)
+
 # 🧠 IFCD107 · Especialista en Inteligencia Artificial
 
 > **230 horas · 16 de octubre – 14 de diciembre de 2026 · de 08:30 a 14:30**
