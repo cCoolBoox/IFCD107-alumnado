@@ -1,0 +1,23 @@
+Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)
+
+Copyright (c) 2026 Soultech Labs (cCoolBoox)
+
+El material de este repositorio (textos, presentaciones, cuadernos, plantillas,
+guías y tests del curso IFCD107 «Especialista en Inteligencia Artificial») se
+publica bajo la licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
+Internacional.
+
+Resumen (no sustituye al texto legal):
+  - Puedes compartir y adaptar el material.
+  - Debes dar crédito a Soultech Labs e indicar si has hecho cambios.
+  - No puedes usarlo con fines comerciales.
+  - Si lo adaptas, debes difundirlo con la misma licencia.
+
+Texto legal completo:
+  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.es
+Resumen oficial:
+  https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es
+
+Los conjuntos de datos de la carpeta datos/ pueden tener su propia licencia, indicada
+junto a cada uno. Las herramientas de terceros (Python, bibliotecas, Google Colab, etc.)
+mantienen sus propias licencias.

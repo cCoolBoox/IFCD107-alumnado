@@ -1,0 +1,19 @@
+name: "🆘 Tengo una duda o un problema"
+description: "Algo no funciona o no entiendo un paso del material"
+title: "Duda: "
+labels: ["duda"]
+body:
+  - type: input
+    id: donde
+    attributes:
+      label: ¿Dónde estás? (sprint y archivo)
+      placeholder: "Ej.: Sprint 4, S04_02_funciones_modulos"
+    validations:
+      required: true
+  - type: textarea
+    id: que
+    attributes:
+      label: ¿Qué querías hacer y qué ha pasado?
+      description: "Si hay un mensaje de error, cópialo o pega una captura de pantalla."
+    validations:
+      required: true

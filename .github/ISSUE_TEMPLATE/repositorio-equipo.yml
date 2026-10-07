@@ -1,0 +1,46 @@
+name: "📦 Repositorio de mi equipo"
+description: "Avisa al docente de que tu equipo ya tiene repositorio (Sprint 0)"
+title: "Repositorio del equipo <nombre de la consultora>"
+labels: ["equipo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Rellena este formulario **una sola vez por equipo** cuando hayas creado vuestro repositorio. El docente lo añadirá a la lista de equipos.
+  - type: input
+    id: consultora
+    attributes:
+      label: Nombre de la consultora (equipo)
+      placeholder: "Ej.: DataIsla Consulting"
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Enlace al repositorio del equipo
+      description: "Copia la dirección desde la barra del navegador, estando dentro de vuestro repositorio."
+      placeholder: "https://github.com/usuario/nombre-del-repo"
+    validations:
+      required: true
+  - type: textarea
+    id: integrantes
+    attributes:
+      label: Usuarios de GitHub de todas las personas del equipo
+      description: "Uno por línea, con el símbolo @."
+      placeholder: |
+        @usuario1
+        @usuario2
+        @usuario3
+    validations:
+      required: true
+  - type: checkboxes
+    id: comprobaciones
+    attributes:
+      label: Comprobaciones
+      options:
+        - label: El repositorio es **privado**.
+          required: true
+        - label: He añadido al docente como colaborador.
+          required: true
+        - label: Existen las carpetas `sprint-01` … `sprint-17`.
+          required: true

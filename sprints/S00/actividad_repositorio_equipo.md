@@ -40,7 +40,7 @@
 
 ## Parte 5 · Registrar el repositorio
 
-Abre un *issue* en el repositorio del curso (pestaña **Issues → New issue**):
+Abre un *issue* en el repositorio del curso (pestaña **Issues → New issue → 📦 Repositorio de mi equipo**) y rellena el formulario:
 
 - **Título:** `Repositorio del equipo <nombre de la consultora>`
 - **Texto:** enlace al repositorio y usuarios de GitHub de todas las personas.

@@ -317,6 +317,9 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 2. Tras cada sesión, revisa el notebook del laboratorio y vuelve a ejecutarlo tú.
 3. Trabaja el reto con tu equipo desde el primer día del sprint, no el último.
 4. Haz commits a menudo: todos los integrantes deben aparecer en el historial.
-5. Si algo no funciona, abre un *issue* o pregunta en clase.
+5. Si algo no funciona, abre un *issue* (**Issues → New issue → 🆘 Tengo una duda o un problema**) o pregunta en clase.
 
 *Las soluciones no se publican.*
+
+---
+📄 **Licencia:** material bajo [CC BY-NC-SA 4.0](LICENSE): puedes compartirlo y adaptarlo citando a Soultech Labs, sin uso comercial y con la misma licencia.
