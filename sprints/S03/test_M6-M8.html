@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test del bloque M6–M8 · SQL, AutoML e IA responsable</title>
+<style>
+:root{--bg:#f7f7fb;--fg:#1c1c28;--card:#fff;--mut:#5b5b70;--ac:#4f46e5;--ok:#15803d;--ko:#b91c1c;--bd:#d9d9e6}
+@media (prefers-color-scheme:dark){:root{--bg:#14141c;--fg:#ececf4;--card:#1e1e2a;--mut:#a3a3b8;--ac:#8b85ff;--ok:#4ade80;--ko:#f87171;--bd:#34344a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}h1{font-size:1.4rem;margin:.2em 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin:14px 0}
+.mut{color:var(--mut)}.tag{font-size:.8rem;color:var(--ac);font-weight:600}
+label.o{display:block;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;margin:6px 0;cursor:pointer}
+label.o:hover{border-color:var(--ac)}input[type=radio]{margin-right:8px}
+button{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:10px 18px;font-size:1rem;cursor:pointer}
+button.sec{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+input[type=text]{width:100%;padding:9px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--fg);font-size:1rem}
+.ok{border-color:var(--ok)}.ko{border-color:var(--ko)}.res-ok{color:var(--ok);font-weight:600}.res-ko{color:var(--ko);font-weight:600}
+.big{font-size:2rem;font-weight:700}
+</style></head><body><main>
+<h1 id="t"></h1><div id="app"></div>
+<script>
+const C={"titulo": "Test del bloque M6–M8 · SQL, AutoML e IA responsable", "fecha": "2026-10-27", "salt": "479ef552d04e953c", "tok": "ac307b762b9096f94e2118ca7773ee311a4594042eaa1fbe8a31ddf4173880c5", "qs": [{"id": 1, "tag": "M6a", "q": "Quieres saber cuántas reservas tiene cada hotel. ¿Qué cláusula necesitas junto con `COUNT(*)`?", "o": ["`ORDER BY`", "`GROUP BY`", "`LIMIT`", "`DISTINCT` solamente"], "h": "8a32e5ece27e5b44c28b6d3149818598b8fda416ea6f110fa81f32f1f75011af"}, {"id": 2, "tag": "M6a", "q": "Quieres listar todos los hoteles, incluso los que no tienen ninguna reserva. ¿Qué `JOIN` usas con `hoteles` a la izquierda?", "o": ["`INNER JOIN`", "`CROSS JOIN`", "`LEFT JOIN`", "`UNION`"], "h": "fc09bfd11bb05e49ae2f1063fab53b18bcb5f5d476b97b03789bbcc1f010fbf0"}, {"id": 3, "tag": "M6a", "q": "¿Cuál es la diferencia entre `WHERE` y `HAVING`?", "o": ["`WHERE` filtra filas antes de agrupar y `HAVING` filtra grupos después de agrupar", "Son idénticos", "`HAVING` solo sirve con `JOIN`", "`WHERE` filtra grupos y `HAVING` filas"], "h": "0f25e192f32cbb7718c051998510e7f83300698e17b3af484c6fbb5e7b9282c0"}, {"id": 4, "tag": "M6a", "q": "¿Cuándo es razonable elegir una base NoSQL de documentos (como MongoDB)?", "o": ["Cuando los datos son muy estructurados y todas las filas tienen las mismas columnas", "Cuando se necesita sí o sí `JOIN` entre muchas tablas", "Cuando cada registro puede tener una forma distinta (por ejemplo, reseñas con campos variables)", "Nunca, SQL siempre es mejor"], "h": "5feb0647a0c8e57cb8f88b6c514999bad700368a24da26f438cb21893e7c532b"}, {"id": 5, "tag": "M6a", "q": "¿Para qué sirve un índice en una tabla SQL?", "o": ["Para acelerar las búsquedas por esa columna, a costa de algo de espacio y de escrituras algo más lentas", "Para borrar duplicados automáticamente", "Para cifrar la columna", "Para evitar tener que usar claves primarias"], "h": "f480dedb1e33128044545cb5e52ceabd68457c5501d379b0eaf2f96d436b6461"}, {"id": 6, "tag": "M7", "q": "¿Qué hace una herramienta de AutoML como AutoGluon?", "o": ["Entiende el negocio del cliente por ti", "Prueba automáticamente varios algoritmos y combinaciones y ordena los resultados en un *leaderboard*", "Garantiza que los datos no tienen errores", "Sustituye la validación del modelo"], "h": "2b5483e680a2a3ad8d3e45fe132ffeabf573e46375f2639dfabc6b0f9d901360"}, {"id": 7, "tag": "M7", "q": "Entrenas con AutoML y el mejor modelo del *leaderboard* tiene 99 % de acierto. ¿Qué debes sospechar primero?", "o": ["Que el ordenador ha ido muy rápido", "Que el modelo es perfecto y se puede desplegar ya", "Que hay que cambiar de navegador", "Que puede haber fuga de datos (una columna que revela la respuesta) o que no se ha evaluado con datos nuevos"], "h": "536d1cded9bfb0c30746c72f9ecefac6441d2fac090327d7367053231e1a0667"}, {"id": 8, "tag": "M7", "q": "Un modelo en producción empieza a fallar porque los clientes de hoy se comportan distinto a los de entrenamiento. ¿Cómo se llama este fenómeno?", "o": ["Deriva de datos (*data drift*)", "Sobreajuste", "Normalización", "Regularización"], "h": "b658fec69366ad657ee93e89cef122fdf4d3fcd5d535d1c1062cdb6b76e93b6c"}, {"id": 9, "tag": "M8", "q": "Un modelo acierta un 90 % en total, pero solo un 60 % en un grupo concreto de clientes. ¿Qué conviene hacer?", "o": ["Nada: el acierto global es lo que cuenta", "Medir el rendimiento por subgrupos, buscar la causa y documentar o mitigar el sesgo", "Eliminar a ese grupo de los datos", "Subir el umbral hasta que no se note"], "h": "5e99c9ba33d69141c6aba6cc0ebac78a573ded42930a8df022d36c608efb765d"}, {"id": 10, "tag": "M8", "q": "¿Qué exige el principio de minimización de datos del RGPD?", "o": ["Guardar todos los datos posibles por si acaso", "Usar solo los datos personales necesarios para la finalidad concreta", "Borrar los datos después de cada consulta", "Compartir los datos solo con la competencia"], "h": "5edc7cbe3c374d62b43c641e53aeb276c8c973b02ba210d9a15e82dc20aba849"}], "minutos": 17, "sprint": "S03"};
+const $=s=>document.querySelector(s);
+const sha=async s=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(b=>b.toString(16).padStart(2,'0')).join('');
+const hoy=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Atlantic/Canary'}).format(new Date());
+const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+$('#t').textContent=C.titulo;
+(async()=>{
+ const abrir=new URLSearchParams(location.search).get('abrir');
+ const docente=abrir&&(await sha(abrir))===C.tok;
+ const h=hoy();
+ if(!docente&&h!==C.fecha){
+  $('#app').innerHTML=`<div class="card"><p class="big">🔒</p><p>${h<C.fecha?'Este test todavía no está abierto.':'Este test ya no está abierto.'}</p><p class="mut">Solo se puede hacer el <b>${fmt(C.fecha)}</b>, en clase. Si te lo perdiste, díselo al docente.</p></div>`;return}
+ start(docente)})();
+function start(docente){
+ const qs=C.qs.map(q=>({...q,idx:shuffle(q.o.map((_,i)=>i))}));
+ let html=`<div class="card"><p class="mut">${C.qs.length} preguntas · unos ${C.minutos} minutos · una respuesta correcta por pregunta. Sin penalización por fallo. ${docente?'<b>(modo docente)</b>':''}</p><label>Tu nombre<input type="text" id="nom" placeholder="Nombre y apellidos" autocomplete="off"></label></div><form id="f">`;
+ qs.forEach((q,i)=>{html+=`<div class="card" id="q${i}"><div class="tag">${i+1}${q.tag?' · '+q.tag:''}</div><p><b>${esc(q.q)}</b></p>`+q.idx.map((k,j)=>`<label class="o"><input type="radio" name="q${i}" value="${k}">${esc(q.o[k])}</label>`).join('')+`<div class="r mut"></div></div>`});
+ html+=`<button type="submit">Terminar y ver mi nota</button></form><div id="res"></div>`;
+ $('#app').innerHTML=html;
+ $('#f').onsubmit=async e=>{e.preventDefault();
+  const sin=qs.filter((q,i)=>!document.querySelector(`input[name=q${i}]:checked`)).length;
+  if(sin&&!confirm(`Te quedan ${sin} sin responder. ¿Terminar igualmente?`))return;
+  let ok=0;
+  for(let i=0;i<qs.length;i++){const q=qs[i];const sel=document.querySelector(`input[name=q${i}]:checked`);
+   let corr=-1;for(let k=0;k<4;k++){if(await sha(`${C.salt}|${q.id}|${q.o[k]}`)===q.h)corr=k}
+   const acierto=sel&&+sel.value===corr;if(acierto)ok++;
+   const box=$('#q'+i);box.classList.add(acierto?'ok':'ko');
+   box.querySelector('.r').innerHTML=acierto?'<span class="res-ok">✔ Correcta</span>':`<span class="res-ko">✘ ${sel?'Incorrecta':'Sin responder'}.</span> Correcta: ${esc(q.o[corr])}`;}
+  document.querySelectorAll('input[type=radio]').forEach(x=>x.disabled=true);$('#f button').remove();
+  const n=qs.length,p=Math.round(ok/n*100),nom=($('#nom').value||'(sin nombre)').trim();
+  const txt=`${nom} · ${C.titulo} · ${ok}/${n} (${p} %) · ${h()}`;
+  $('#res').innerHTML=`<div class="card"><p class="big">${ok} / ${n}</p><p>${p>=60?'✅ Apto':'⚠️ Por debajo del 60 %'} (se aprueba con el 60 %).</p><p class="mut">Copia tu resultado y envíaselo al docente:</p><input type="text" readonly value="${esc(txt)}" id="cp"><p><button class="sec" id="cb" type="button">Copiar resultado</button></p></div>`;
+  $('#cb').onclick=()=>{$('#cp').select();navigator.clipboard&&navigator.clipboard.writeText(txt);$('#cb').textContent='¡Copiado!'};
+  scrollTo({top:document.body.scrollHeight,behavior:'smooth'});};
+ function h(){return hoy()}
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+</script></main></body></html>

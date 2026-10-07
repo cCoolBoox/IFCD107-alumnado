@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test de M3 · UD 3.3 a 3.5</title>
+<style>
+:root{--bg:#f7f7fb;--fg:#1c1c28;--card:#fff;--mut:#5b5b70;--ac:#4f46e5;--ok:#15803d;--ko:#b91c1c;--bd:#d9d9e6}
+@media (prefers-color-scheme:dark){:root{--bg:#14141c;--fg:#ececf4;--card:#1e1e2a;--mut:#a3a3b8;--ac:#8b85ff;--ok:#4ade80;--ko:#f87171;--bd:#34344a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}h1{font-size:1.4rem;margin:.2em 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin:14px 0}
+.mut{color:var(--mut)}.tag{font-size:.8rem;color:var(--ac);font-weight:600}
+label.o{display:block;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;margin:6px 0;cursor:pointer}
+label.o:hover{border-color:var(--ac)}input[type=radio]{margin-right:8px}
+button{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:10px 18px;font-size:1rem;cursor:pointer}
+button.sec{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+input[type=text]{width:100%;padding:9px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--fg);font-size:1rem}
+.ok{border-color:var(--ok)}.ko{border-color:var(--ko)}.res-ok{color:var(--ok);font-weight:600}.res-ko{color:var(--ko);font-weight:600}
+.big{font-size:2rem;font-weight:700}
+</style></head><body><main>
+<h1 id="t"></h1><div id="app"></div>
+<script>
+const C={"titulo": "Test de M3 · UD 3.3 a 3.5", "fecha": "2026-11-09", "salt": "a97dd94892cd59e8", "tok": "ac307b762b9096f94e2118ca7773ee311a4594042eaa1fbe8a31ddf4173880c5", "qs": [{"id": 1, "tag": "UD 3.3", "q": "¿Qué diferencia esencial hay entre Ridge (L2) y Lasso (L1)?", "o": ["Ridge sirve para clasificación y Lasso para regresión.", "Lasso no necesita escalar las variables.", "Lasso puede llevar coeficientes exactamente a cero (selecciona variables); Ridge solo los encoge.", "Ridge aumenta la complejidad del modelo y Lasso la reduce."], "h": "b28be8a071b5c67edb18d5bf3b323fd4594a65ccc94716bc5778ed930d04b7c7"}, {"id": 2, "tag": "UD 3.3", "q": "En una regresión lineal de `precio_noche`, el coeficiente de `tipo_habitacion_suite` es 100 (la referencia es `estandar`). ¿Cómo se interpreta?", "o": ["Una suite cuesta siempre exactamente 100 €.", "El 100 % de las reservas de suites son caras.", "La suite se reserva 100 veces más que la estándar.", "Con el resto de variables iguales, una suite cuesta de media unos 100 € más que una habitación estándar."], "h": "3d0cfe5154c1a40cc12bc24dd49b0ed781aac1417d0afc0526e1e18953d4a54b"}, {"id": 3, "tag": "UD 3.4", "q": "El *odds ratio* de `tarifa_no_reembolsable` en una regresión logística de cancelación es 0,44. ¿Qué significa?", "o": ["Los *odds* de cancelar se multiplican por 0,44: esa tarifa se asocia a menos riesgo de cancelar.", "El 44 % de las reservas con esa tarifa se cancela.", "La tarifa provoca (causa) exactamente un 44 % menos de cancelaciones.", "La variable es irrelevante porque es menor que 1."], "h": "4131c80ae237d220a4aaebc03bfd47e84221ac744b97e099a51501c1a68ebc14"}, {"id": 4, "tag": "UD 3.4", "q": "Al bajar el umbral de decisión de 0,5 a 0,3 en un clasificador, lo habitual es que…", "o": ["Suban la precisión y el recall.", "Suba el recall y baje la precisión (más alertas, más falsas alarmas).", "Baje el recall y suba la precisión.", "No cambie nada, porque el umbral no afecta al modelo."], "h": "2b9bec6b1d5fe3d221708b3335176b6fb626276c0ab49da7e14a68047b1e8546"}, {"id": 5, "tag": "UD 3.5", "q": "¿Por qué es imprescindible escalar las variables antes de usar k-NN?", "o": ["Porque k-NN solo admite valores entre 0 y 1.", "Para que el modelo se ajuste más rápido.", "Porque elimina los nulos.", "Porque usa distancias: una variable con valores grandes dominaría a las demás."], "h": "8a08ab4dacc5e965bdbefa0e94ce2adc9907d1356f90c18f5430d2d1ebc054ab"}, {"id": 6, "tag": "UD 3.5", "q": "¿Qué significa que Naive Bayes sea «ingenuo»?", "o": ["Que solo funciona con datos sin ruido.", "Que ignora la probabilidad a priori de cada clase.", "Que supone que las variables son independientes entre sí dada la clase.", "Que no usa el teorema de Bayes."], "h": "8f1d586cb7eb3241d04daae066993d5f5ee838148ba8c9500468d0ad4af91b41"}], "minutos": 10, "sprint": "S07"};
+const $=s=>document.querySelector(s);
+const sha=async s=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(b=>b.toString(16).padStart(2,'0')).join('');
+const hoy=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Atlantic/Canary'}).format(new Date());
+const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+$('#t').textContent=C.titulo;
+(async()=>{
+ const abrir=new URLSearchParams(location.search).get('abrir');
+ const docente=abrir&&(await sha(abrir))===C.tok;
+ const h=hoy();
+ if(!docente&&h!==C.fecha){
+  $('#app').innerHTML=`<div class="card"><p class="big">🔒</p><p>${h<C.fecha?'Este test todavía no está abierto.':'Este test ya no está abierto.'}</p><p class="mut">Solo se puede hacer el <b>${fmt(C.fecha)}</b>, en clase. Si te lo perdiste, díselo al docente.</p></div>`;return}
+ start(docente)})();
+function start(docente){
+ const qs=C.qs.map(q=>({...q,idx:shuffle(q.o.map((_,i)=>i))}));
+ let html=`<div class="card"><p class="mut">${C.qs.length} preguntas · unos ${C.minutos} minutos · una respuesta correcta por pregunta. Sin penalización por fallo. ${docente?'<b>(modo docente)</b>':''}</p><label>Tu nombre<input type="text" id="nom" placeholder="Nombre y apellidos" autocomplete="off"></label></div><form id="f">`;
+ qs.forEach((q,i)=>{html+=`<div class="card" id="q${i}"><div class="tag">${i+1}${q.tag?' · '+q.tag:''}</div><p><b>${esc(q.q)}</b></p>`+q.idx.map((k,j)=>`<label class="o"><input type="radio" name="q${i}" value="${k}">${esc(q.o[k])}</label>`).join('')+`<div class="r mut"></div></div>`});
+ html+=`<button type="submit">Terminar y ver mi nota</button></form><div id="res"></div>`;
+ $('#app').innerHTML=html;
+ $('#f').onsubmit=async e=>{e.preventDefault();
+  const sin=qs.filter((q,i)=>!document.querySelector(`input[name=q${i}]:checked`)).length;
+  if(sin&&!confirm(`Te quedan ${sin} sin responder. ¿Terminar igualmente?`))return;
+  let ok=0;
+  for(let i=0;i<qs.length;i++){const q=qs[i];const sel=document.querySelector(`input[name=q${i}]:checked`);
+   let corr=-1;for(let k=0;k<4;k++){if(await sha(`${C.salt}|${q.id}|${q.o[k]}`)===q.h)corr=k}
+   const acierto=sel&&+sel.value===corr;if(acierto)ok++;
+   const box=$('#q'+i);box.classList.add(acierto?'ok':'ko');
+   box.querySelector('.r').innerHTML=acierto?'<span class="res-ok">✔ Correcta</span>':`<span class="res-ko">✘ ${sel?'Incorrecta':'Sin responder'}.</span> Correcta: ${esc(q.o[corr])}`;}
+  document.querySelectorAll('input[type=radio]').forEach(x=>x.disabled=true);$('#f button').remove();
+  const n=qs.length,p=Math.round(ok/n*100),nom=($('#nom').value||'(sin nombre)').trim();
+  const txt=`${nom} · ${C.titulo} · ${ok}/${n} (${p} %) · ${h()}`;
+  $('#res').innerHTML=`<div class="card"><p class="big">${ok} / ${n}</p><p>${p>=60?'✅ Apto':'⚠️ Por debajo del 60 %'} (se aprueba con el 60 %).</p><p class="mut">Copia tu resultado y envíaselo al docente:</p><input type="text" readonly value="${esc(txt)}" id="cp"><p><button class="sec" id="cb" type="button">Copiar resultado</button></p></div>`;
+  $('#cb').onclick=()=>{$('#cp').select();navigator.clipboard&&navigator.clipboard.writeText(txt);$('#cb').textContent='¡Copiado!'};
+  scrollTo({top:document.body.scrollHeight,behavior:'smooth'});};
+ function h(){return hoy()}
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+</script></main></body></html>
