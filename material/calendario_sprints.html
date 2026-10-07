@@ -41,6 +41,7 @@ tr.past td.tt{color:var(--mut)}
 .mix i:nth-child(1){background:var(--t)}.mix i:nth-child(2){background:var(--p)}.mix i:nth-child(3){background:var(--pbl)}
 tfoot td{font-weight:700;background:var(--bg)}
 .note{color:var(--mut);font-size:.88rem;margin-top:14px}
+.tst{display:block;margin-top:3px;font-size:.82rem;color:var(--a);text-decoration:none;font-weight:600}.tst:hover{text-decoration:underline}
 .sm{display:block;color:var(--mut);font-size:.82rem}
 @media(max-width:640px){.legend{margin-left:0}}
 @media print{body{background:#fff}.tools,.cards .bar{display:none}.tw{border:0;overflow:visible}table{min-width:0;font-size:11px}tr.blk td{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
@@ -56,7 +57,7 @@ tfoot td{font-weight:700;background:var(--bg)}
  <button class="chip" data-f="A" aria-pressed="false">A · Sin Python</button>
  <button class="chip" data-f="B" aria-pressed="false">B · Python</button>
  <button class="chip" data-f="C" aria-pressed="false">C · Proyecto</button>
- <span class="legend"><span><i class="dot" style="background:var(--t)"></i>T Teoría</span><span><i class="dot" style="background:var(--p)"></i>P Práctica</span><span><i class="dot" style="background:var(--pbl)"></i>PBL Reto</span></span>
+ <span class="legend"><span><i class="dot" style="background:var(--t)"></i>T Teoría</span><span><i class="dot" style="background:var(--p)"></i>P Práctica</span><span><i class="dot" style="background:var(--pbl)"></i>PBL Reto</span><span>📝 Test (se abre solo ese día)</span></span>
 </div>
 <div class="tw">
 <table>
@@ -69,6 +70,7 @@ tfoot td{font-weight:700;background:var(--bg)}
 </div>
 <script>
 const S=[{"n": 0, "t": "Arranque ágil", "m": "Scrum + Design Thinking", "h": 7, "T": 3, "P": 2, "B": 2, "a": [2026, 10, 16], "b": [2026, 10, 19]}, {"n": 1, "t": "Qué es la IA, cómo aprende y cómo usarla bien", "m": "M1a (UD 1–3) + M8", "h": 15, "T": 8, "P": 4, "B": 3, "a": [2026, 10, 19], "b": [2026, 10, 21]}, {"n": 2, "t": "Las matemáticas y la estadística detrás", "m": "M1a (UD 4–6)", "h": 10, "T": 5, "P": 3, "B": 2, "a": [2026, 10, 21], "b": [2026, 10, 23]}, {"n": 3, "t": "Del dato al modelo en la nube", "m": "M6a + M7", "h": 14, "T": 5, "P": 5, "B": 4, "a": [2026, 10, 23], "b": [2026, 10, 27]}, {"n": 4, "t": "Python para IA", "m": "M1b (UD 1–4)", "h": 10, "T": 3, "P": 5, "B": 2, "a": [2026, 10, 27], "b": [2026, 10, 29]}, {"n": 5, "t": "Matemáticas y estadística en código", "m": "M1b (UD 5–7) + M6b", "h": 13, "T": 4, "P": 6, "B": 3, "a": [2026, 10, 29], "b": [2026, 11, 3]}, {"n": 6, "t": "Datos listos para modelar", "m": "M2 + M3 (UD 3.1–3.2)", "h": 11, "T": 4, "P": 4, "B": 3, "a": [2026, 11, 3], "b": [2026, 11, 5]}, {"n": 7, "t": "ML supervisado: regresión y clasificación", "m": "M3 (UD 3.3–3.5)", "h": 12, "T": 4, "P": 5, "B": 3, "a": [2026, 11, 5], "b": [2026, 11, 9]}, {"n": 8, "t": "Árboles, ensembles y SVM", "m": "M3 (UD 3.6–3.8)", "h": 11, "T": 3, "P": 5, "B": 3, "a": [2026, 11, 9], "b": [2026, 11, 11]}, {"n": 9, "t": "Segmentar, recomendar y aprender por refuerzo", "m": "M3 (UD 3.9–3.12)", "h": 11, "T": 3, "P": 5, "B": 3, "a": [2026, 11, 11], "b": [2026, 11, 12]}, {"n": 10, "t": "Redes neuronales bien entrenadas", "m": "M4 (UD 4.1–4.3)", "h": 15, "T": 5, "P": 6, "B": 4, "a": [2026, 11, 13], "b": [2026, 11, 17]}, {"n": 11, "t": "Visión por computador", "m": "M4 (UD 4.4–4.6)", "h": 17, "T": 5, "P": 7, "B": 5, "a": [2026, 11, 17], "b": [2026, 11, 20]}, {"n": 12, "t": "Lenguaje, secuencias y modelos generativos", "m": "M4 (UD 4.7–4.10)", "h": 18, "T": 5, "P": 8, "B": 5, "a": [2026, 11, 20], "b": [2026, 11, 25]}, {"n": 13, "t": "Contar lo que hace el modelo", "m": "M5", "h": 3, "T": 1, "P": 1, "B": 1, "a": [2026, 11, 25], "b": [2026, 11, 25]}, {"n": 14, "t": "Proyecto · Reto, equipo y datos", "m": "M9", "h": 19, "T": 1, "P": 3, "B": 15, "a": [2026, 11, 25], "b": [2026, 11, 30]}, {"n": 15, "t": "Proyecto · Modelado y experimentos", "m": "M9", "h": 18, "T": 1, "P": 3, "B": 14, "a": [2026, 12, 1], "b": [2026, 12, 3]}, {"n": 16, "t": "Proyecto · Evaluación, IA responsable y entrega", "m": "M9", "h": 18, "T": 1, "P": 3, "B": 14, "a": [2026, 12, 4], "b": [2026, 12, 10]}, {"n": 17, "t": "Proyecto · Storytelling, ensayos y defensa", "m": "M9 + Storytelling", "h": 8, "T": 1, "P": 2, "B": 5, "a": [2026, 12, 11], "b": [2026, 12, 14]}];
+const TESTS={2:["M1a","vie 23/10","S02/test_M1a"],3:["M6–M8","mar 27/10","S03/test_M6-M8"],7:["M3 · parte 1","lun 9/11","S07/test_M3_parte1"],8:["M3 · parte 2","mié 11/11","S08/test_M3_parte2"],12:["M4","mié 25/11","S12/test_M4"]};
 const DOW=["dom","lun","mar","mié","jue","vie","sáb"];
 const blk=n=>n<=3?"A":n<=13?"B":"C";
 const BN={A:"BLOQUE A · Sin Python (46 h)",B:"BLOQUE B · Python, bloque continuo (121 h)",C:"BLOQUE C · Proyecto de cierre (63 h)"};
@@ -88,7 +90,7 @@ function render(f){
     const pill=st==="now"?'<span class="pill now">En curso</span>':st==="past"?'<span class="pill past">Hecho</span>':'<span class="pill">Próximo</span>';
     const d=Math.round((dt(s.a)-hoy)/day);
     const extra=st==="next"?'<span class="sm">'+(d===1?"mañana":"en "+d+" días")+"</span>":"";
-    r.innerHTML='<td class="n">'+s.n+'</td><td class="tt">'+s.t+'<div class="mix" title="T '+s.T+' h · P '+s.P+' h · PBL '+s.B+' h"><i style="width:'+s.T/s.h*100+'%"></i><i style="width:'+s.P/s.h*100+'%"></i><i style="width:'+s.B/s.h*100+'%"></i></div></td><td>'+s.m+'</td><td class="num">'+s.h+'</td><td class="num">'+s.T+'</td><td class="num">'+s.P+'</td><td class="num">'+s.B+'</td><td class="d">'+fmt(s.a)+'</td><td class="d">'+fmt(s.b)+'</td><td>'+pill+extra+"</td>";
+    r.innerHTML='<td class="n">'+s.n+'</td><td class="tt">'+s.t+(TESTS[s.n]?'<a class="tst" href="../sprints/'+TESTS[s.n][2]+'.html" title="Solo se abre ese día">📝 Test '+TESTS[s.n][0]+' · '+TESTS[s.n][1]+'</a>':'')+'<div class="mix" title="T '+s.T+' h · P '+s.P+' h · PBL '+s.B+' h"><i style="width:'+s.T/s.h*100+'%"></i><i style="width:'+s.P/s.h*100+'%"></i><i style="width:'+s.B/s.h*100+'%"></i></div></td><td>'+s.m+'</td><td class="num">'+s.h+'</td><td class="num">'+s.T+'</td><td class="num">'+s.P+'</td><td class="num">'+s.B+'</td><td class="d">'+fmt(s.a)+'</td><td class="d">'+fmt(s.b)+'</td><td>'+pill+extra+"</td>";
     tb.appendChild(r);
   });
 }

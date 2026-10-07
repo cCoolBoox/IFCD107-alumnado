@@ -3,6 +3,8 @@
 
 **Acción 25-38/012242 · 16/10/2026 – 14/12/2026 · 08:30–14:30 (6 h/día) · 230 h**
 
+🔗 **Versión interactiva online** (marca el sprint en curso y enlaza los tests): <https://ccoolboox.github.io/IFCD107-alumnado/material/calendario_sprints.html>
+
 
 ---
 

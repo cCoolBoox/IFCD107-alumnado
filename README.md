@@ -146,7 +146,7 @@ gantt
     S17 Storytelling y defensa        :c17, 2026-12-11, 4d
 ```
 
-**Días sin clase:** 2/11, 7/12 y 8/12. **Última sesión:** 14/12, solo 2 h (defensas finales). Calendario con horas exactas: [`material/calendario_sprints.md`](material/calendario_sprints.md).
+**Días sin clase:** 2/11, 7/12 y 8/12. **Última sesión:** 14/12, solo 2 h (defensas finales). Calendario con horas exactas: [`material/calendario_sprints.md`](material/calendario_sprints.md). **Calendario interactivo online** (marca el sprint en curso y enlaza los tests): <https://ccoolboox.github.io/IFCD107-alumnado/material/calendario_sprints.html>.
 
 ---
 
@@ -311,7 +311,7 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 | [`entregas/`](entregas) | Cómo entrega tu equipo y la tabla con el repositorio de cada equipo |
 
 **Consejos para sacarle partido**
-1. Antes de cada sprint, abre su carpeta en [`sprints/`](sprints) (empieza por el `README.md`) y lee su sección en [`material/calendario_sprints.md`](material/calendario_sprints.md). Para seguir el curso día a día, descarga y abre [`material/calendario_sprints.html`](material/calendario_sprints.html): marca el sprint en curso con la fecha de tu dispositivo.
+1. Antes de cada sprint, abre su carpeta en [`sprints/`](sprints) (empieza por el `README.md`) y lee su sección en [`material/calendario_sprints.md`](material/calendario_sprints.md). Para seguir el curso día a día, abre el [calendario interactivo online](https://ccoolboox.github.io/IFCD107-alumnado/material/calendario_sprints.html) (también en [`material/calendario_sprints.html`](material/calendario_sprints.html)): marca el sprint en curso con la fecha de tu dispositivo.
 2. Tras cada sesión, revisa el notebook del laboratorio y vuelve a ejecutarlo tú.
 3. Trabaja el reto con tu equipo desde el primer día del sprint, no el último.
 4. Haz commits a menudo: todos los integrantes deben aparecer en el historial.
