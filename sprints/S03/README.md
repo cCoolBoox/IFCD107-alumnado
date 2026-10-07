@@ -32,7 +32,7 @@
 |---|---|---|
 | [`NoSQL_MongoDB.md`](NoSQL_MongoDB.md) + `S03_01_nosql_mongomock` (opcional) | Reservas como documentos en MongoDB | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/S03_01_nosql_mongomock.ipynb) |
 
-**Bloque B · AutoML.** Sigue la **[guía de laboratorio AutoML con AutoGluon](Guia_AutoML_AutoGluon.pdf)** (en Colab, sin coste); tu docente te dirá si se usa otra plataforma.
+**Bloque B · AutoML.** Sigue la **[guía de laboratorio AutoML con AutoGluon](Guia_AutoML_AutoGluon.pdf)** (en Colab, sin coste, sin crear más cuentas). Tu docente además hará una **demostración con Amazon SageMaker** como referencia profesional.
 
 ## Reto · «Primer modelo en producción»
 **Contexto:** TurisData Canarias quiere avisar de las reservas con más riesgo de cancelarse y consultarlo desde otra aplicación. Vosotros lo ponéis en marcha, del dato al servicio.

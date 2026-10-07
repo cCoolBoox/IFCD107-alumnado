@@ -84,7 +84,7 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 **Pregunta guía:** ¿en qué se apoyan los modelos y cuándo no debemos fiarnos de un dato?
 
 - **Teoría (5 h):** UD 1a.4 álgebra lineal, derivadas y gradiente (2,5 h); UD 1a.5 estadística descriptiva, probabilidad, Bayes, muestreo y sesgo (2 h); UD 1a.6 ecosistema de software (0,5 h).
-- **Práctica (3 h):** ejercicios en papel y con Desmos/GeoGebra; interpretación de estadísticas engañosas; alta en Colab y cuentas AWS (antes del 22/10).
+- **Práctica (3 h):** ejercicios en papel y con Desmos/GeoGebra; interpretación de estadísticas engañosas; alta en Colab (antes del 22/10).
 - **PBL (2 h) · Reto: "¿Nos fiamos de este informe?".** Auditar un informe del cliente con errores estadísticos (correlación frente a causalidad, paradoja de Simpson, muestreo sesgado) y rehacer los cálculos.
 - **Entregable:** dictamen de auditoría + hoja de ejercicios.
 - **Evaluación:** test corto de M1a (conceptos, mates, estadística).
@@ -96,7 +96,7 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 - **Práctica (5 h):** consultas SQL y CRUD en SQLite/PostgreSQL; mismo dato en MongoDB; carga y exploración de datos en SageMaker (UD 7.2); lanzar un experimento AutoML (UD 7.3).
 - **PBL (4 h) · Reto: "Primer modelo en producción".** El cliente entrega un dataset de reservas y cancelaciones. Modelarlo en una BD, entrenar un modelo AutoML de **predicción de cancelaciones**, desplegar un endpoint, consumirlo por API y **apagar los recursos**.
 - **Entregable:** informe del mejor modelo + evidencia de la llamada al endpoint + informe de costes.
-- **Requisito:** cuentas AWS con SageMaker operativas antes del 22/10 y presupuesto de costes controlado.
+- **Requisito:** Colab operativo antes del 22/10. El AutoML se hace con AutoGluon en Colab; el docente muestra Amazon SageMaker en demostración (no hace falta cuenta AWS).
 
 ---
 

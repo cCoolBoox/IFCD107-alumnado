@@ -74,7 +74,7 @@ Este temario sigue el orden de impartición de `distribucion_historico.md`: Bloq
 ### UD 1a.6 · Ecosistema de software para IA (1 h)
 - Python, Jupyter, Colab; librerías (NumPy, pandas, scikit-learn), frameworks (TensorFlow/Keras, PyTorch), Hugging Face.
 - Hardware: CPU, GPU, TPU; local vs nube; costes.
-- **P:** alta en Colab y cuentas necesarias (AWS antes del 22/10).
+- **P:** alta en Colab (antes del 22/10).
 
 ---
 
@@ -99,7 +99,7 @@ Este temario sigue el orden de impartición de `distribucion_historico.md`: Bloq
 
 ## M7 · Auto Machine Learning (10 h)
 **Objetivo:** generar, entrenar y probar modelos con herramientas AutoML; conocer los principios de MLOps.
-**Requisito:** cuentas AWS con SageMaker operativas antes del 22/10 y presupuesto de costes controlado.
+**Requisito:** Colab operativo antes del 22/10. AutoML con AutoGluon en Colab; Amazon SageMaker se muestra en demostración docente (sin cuenta AWS del alumnado).
 
 ### UD 7.1 · Introducción a AutoML y MLOps (2 h)
 - Qué es AutoML; beneficios y límites frente al ML tradicional.

@@ -8,10 +8,9 @@
 - [ ] Ejecutar una celda `print("Hola, TurisData")` (basta una línea, sin más Python: aprenderemos en el Sprint 4).
 - [ ] Guardar el cuaderno en Drive con el nombre `prueba_[tu nombre]`.
 
-## 2. Plataforma de AutoML del Sprint 3 (según indique el docente)
-El docente confirmará **antes del miércoles 21/10** qué plataforma usaremos para el laboratorio de AutoML del Sprint 3 y si hace falta una cuenta.
-- [ ] **No crees ninguna cuenta ni facilites datos de pago** hasta que el docente lo indique en clase.
-- [ ] Si hace falta una cuenta, sigue las instrucciones que se publicarán aquí. Activa siempre la **verificación en dos pasos** y guarda las credenciales en un gestor de contraseñas.
+## 2. AutoML del Sprint 3: no necesitas ninguna cuenta más
+El laboratorio de AutoML se hace en **Google Colab con AutoGluon** (código abierto, sin coste). Con la cuenta del paso 1 es suficiente.
+- [ ] **No crees cuentas en servicios de nube ni facilites datos de pago.** Tu docente hará una **demostración en directo con Amazon SageMaker** para que veas cómo se hace en una plataforma profesional.
 - [ ] **Regla de oro** para cualquier servicio en la nube: todo lo que se lance se **apaga** al terminar.
 
 ## 3. Comprobación final
