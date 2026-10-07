@@ -40,7 +40,15 @@ Mínimo de ejercicios: **8 de 12** de la hoja 1 (M7, M10 y M11 obligatorios) y *
 - Si usáis IA, declarad dónde y comprobad a mano las afirmaciones 2 y 6; nunca datos personales.
 **Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable (qué pasaría al entrenar con estos datos), más nombrar cada error (muestreo, Simpson...).
 
+## 📝 Test de conocimientos · vie 23/10
+**Test corto de M1a · Fundamentos de IA** · 12 preguntas · unos 20 min · individual, en el navegador, sin penalización por fallo. Cubre M1a (conceptos, matemáticas y estadística).
+
+👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/test_M1a.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/test_M1a.html`)
+
+**Solo se abre el día vie 23/10** (hora de Canarias). Al terminar, copia tu resultado y envíaselo al docente. Cuenta para el 30 % de «tests de conocimientos».
+
 ## ✅ Antes de cerrar el sprint
+- [ ] Test de conocimientos hecho el vie 23/10
 - [ ] Dictamen con las 6 afirmaciones y su veredicto
 - [ ] Cálculos rehechos (1, 2 y 6) y recomendación sobre el canal
 - [ ] Hoja de ejercicios con el mínimo exigido

@@ -46,7 +46,15 @@
 - Evitad la fuga de datos: solo información disponible al hacer la reserva.
 **Se valora:** corrección técnica, reproducibilidad, comunicación al cliente (qué hacer con una alerta) e IA responsable (falsas alertas, sesgos por país o canal), más umbral y fuga de datos bien justificados.
 
+## 📝 Test de conocimientos · mar 27/10
+**Test del bloque M6–M8 · SQL, AutoML e IA responsable** · 10 preguntas · unos 15 min · individual, en el navegador, sin penalización por fallo. Cubre M6–M8 (SQL/NoSQL, AutoML e IA responsable).
+
+👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/test_M6-M8.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/test_M6-M8.html`)
+
+**Solo se abre el día mar 27/10** (hora de Canarias). Al terminar, copia tu resultado y envíaselo al docente. Cuenta para el 30 % de «tests de conocimientos».
+
 ## ✅ Antes de cerrar el sprint
+- [ ] Test de conocimientos hecho el mar 27/10
 - [ ] Informe con las tres partes, en 4 páginas o menos
 - [ ] Métrica y umbral justificados en lenguaje de negocio, y variables excluidas por fuga explicadas
 - [ ] Llamada a la API probada, sin credenciales

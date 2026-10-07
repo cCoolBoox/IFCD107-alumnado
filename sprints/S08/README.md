@@ -11,7 +11,7 @@
 - 🖥️ **S08.3 · Maquinas de vectores de soporte:** [`S08.3_Maquinas_de_vectores_de_soporte.pdf`](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf)
 
 **Contenidos:** M3 UD 3.6 (árboles de decisión), UD 3.7 (Random Forest, Gradient Boosting, XGBoost y LightGBM) y UD 3.8 (SVM), más ajuste de hiperparámetros (`GridSearchCV`, `RandomizedSearchCV`).
-**Evaluación:** test de M3 (primera parte) y reto PBL «Duelo de modelos».
+**Evaluación:** test de M3 (parte 2, el 11/11) y reto PBL «Duelo de modelos».
 
 ## Qué aprenderás
 - Entrenar y podar un **árbol de decisión**; entender bosques aleatorios y *boosting* (XGBoost, LightGBM).
@@ -47,7 +47,15 @@ Las cinco primeras son prácticas guiadas; la sexta es la plantilla del reto. Lo
 
 **Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable (usos no previstos, deriva, país de origen), más campeón justificado con rendimiento, explicabilidad y coste.
 
+## 📝 Test de conocimientos · mié 11/11
+**Test de M3 · parte 2** · 10 preguntas · unos 20 min · individual, en el navegador, sin penalización por fallo. Cubre M3, UD 3.5 a 3.8 (k-NN y Naive Bayes, árboles, ensembles y SVM).
+
+👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/test_M3_parte2.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/test_M3_parte2.html`)
+
+**Solo se abre el día mié 11/11** (hora de Canarias). Al terminar, copia tu resultado y envíaselo al docente. Cuenta para el 30 % de «tests de conocimientos».
+
 ## ✅ Antes de cerrar el sprint
+- [ ] Test de conocimientos hecho el mié 11/11
 - [ ] Notebook ejecutable de principio a fin (`Restart & Run all`)
 - [ ] Leaderboard con ≥ 6 modelos de al menos 4 familias
 - [ ] Hiperparámetros buscados con validación cruzada en train para dos familias

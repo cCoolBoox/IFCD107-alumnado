@@ -45,7 +45,15 @@ Plantilla en esta carpeta: [`plantilla_informe_cliente.md`](plantilla_informe_cl
 - Se presenta en la *review* (5 min por equipo).
 **Se valora:** corrección técnica, reproducibilidad (`SEMILLA = 42`), comunicación al cliente e IA responsable (0–4 cada uno).
 
+## 📝 Test de conocimientos · mié 25/11
+**Test de M4 · Redes neuronales** · 12 preguntas · unos 20 min · individual, en el navegador, sin penalización por fallo. Cubre M4 (redes densas, CNN, series, lenguaje y Transformers).
+
+👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/test_M4.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/test_M4.html`)
+
+**Solo se abre el día mié 25/11** (hora de Canarias). Al terminar, copia tu resultado y envíaselo al docente. Cuenta para el 30 % de «tests de conocimientos».
+
 ## ✅ Antes de cerrar el sprint
+- [ ] Test de conocimientos hecho el mié 25/11
 - [ ] Serie partida **por fecha** y con **baseline** en la tabla.
 - [ ] Escalado y vectorización ajustados solo con entrenamiento.
 - [ ] El asistente cita la fuente y responde «No consta…» cuando no sabe.

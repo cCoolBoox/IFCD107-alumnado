@@ -45,7 +45,15 @@ Los ejercicios se autocorrigen con `assert`. Los datos (`reservas_turisdata.csv`
 
 **Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable (¿se penaliza a algún país o canal?), más costes razonados y sensibilidad.
 
+## 📝 Test de conocimientos · lun 9/11
+**Test de M3 · parte 1** · 10 preguntas · unos 20 min · individual, en el navegador, sin penalización por fallo. Cubre M3, UD 3.1 a 3.4 (preprocesado, métricas, regresión y clasificación).
+
+👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/test_M3_parte1.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/test_M3_parte1.html`)
+
+**Solo se abre el día lun 9/11** (hora de Canarias). Al terminar, copia tu resultado y envíaselo al docente. Cuenta para el 30 % de «tests de conocimientos».
+
 ## ✅ Antes de cerrar el sprint
+- [ ] Test de conocimientos hecho el lun 9/11
 - [ ] Notebook ejecutable de principio a fin (`Restart & Run all`)
 - [ ] Regresión (MAE, RMSE, R²) y clasificación (matriz de confusión, AUC/AP) con *baseline*
 - [ ] Costes de error explicitados, umbral justificado y recomendación con cifras

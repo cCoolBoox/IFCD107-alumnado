@@ -87,7 +87,7 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 - **Práctica (3 h):** ejercicios en papel y con Desmos/GeoGebra; interpretación de estadísticas engañosas; alta en Colab (antes del 22/10).
 - **PBL (2 h) · Reto: "¿Nos fiamos de este informe?".** Auditar un informe del cliente con errores estadísticos (correlación frente a causalidad, paradoja de Simpson, muestreo sesgado) y rehacer los cálculos.
 - **Entregable:** dictamen de auditoría + hoja de ejercicios.
-- **Evaluación:** test corto de M1a (conceptos, mates, estadística).
+- **Evaluación:** test corto de M1a (conceptos, mates, estadística) el 23/10.
 
 ## Sprint 3 · Del dato al modelo en la nube (14 h · 23–27/10)
 **Pregunta guía:** ¿podemos tener un primer modelo funcionando, sin programar?
@@ -101,6 +101,7 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 ---
 
 # BLOQUE B · PYTHON (121 h continuas)
+- **Evaluación:** test del bloque M6–M8 el 27/10.
 
 ## Sprint 4 · Python para IA (10 h · 27–29/10)
 **Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?
@@ -134,6 +135,7 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 - **Práctica (5 h):** un laboratorio por algoritmo con scikit-learn; interpretación de coeficientes; matriz de confusión y curvas ROC.
 - **PBL (3 h) · Reto: "Precio y cancelación".** Construir un modelo de **regresión** (precio por noche u ocupación) y otro de **clasificación** (cancelación), comparar métricas y traducir el resultado a una recomendación de negocio.
 - **Entregable:** informe de modelado con recomendación.
+- **Evaluación:** test de M3 (parte 1, UD 3.1 a 3.4) el 9/11.
 
 ## Sprint 8 · Árboles, ensembles y SVM (11 h · 9–11/11)
 **Pregunta guía:** ¿cuál es el mejor modelo y cuánto nos cuesta mantenerlo?
@@ -142,7 +144,7 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 - **Práctica (5 h):** laboratorios con ajuste de hiperparámetros; importancia de variables; comparación en el mismo dataset.
 - **PBL (3 h) · Reto: "Duelo de modelos".** Comparar árboles, RF, boosting y SVM con `GridSearchCV`; elegir un **modelo campeón** justificando rendimiento, explicabilidad y coste.
 - **Entregable:** *leaderboard* interno + ficha del modelo (*model card*).
-- **Evaluación:** test de M3 (primera parte).
+- **Evaluación:** test de M3 (parte 2, UD 3.5 a 3.8) el 11/11.
 
 ## Sprint 9 · Segmentar, recomendar y aprender por refuerzo (11 h · 11–12/11)
 **Pregunta guía:** ¿qué tipos de cliente tenemos y qué les ofrecemos?
@@ -151,7 +153,6 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 - **Práctica (5 h):** segmentación de un dataset de clientes; reducción de dimensionalidad; recomendador basado en contenido y colaborativo; Q-learning con Gymnasium.
 - **PBL (3 h) · Reto: "Conocer al huésped".** Segmentar a los huéspedes, interpretar los segmentos y prototipar un **recomendador de experiencias**.
 - **Entregable:** segmentos interpretados + prototipo de recomendador.
-- **Evaluación:** test de M3 (segunda parte).
 
 ## Sprint 10 · Redes neuronales bien entrenadas (15 h · 13–17/11)
 **Pregunta guía:** ¿una red neuronal mejora al ML clásico y a qué precio?
@@ -176,7 +177,7 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 - **Práctica (8 h):** predicción de una serie temporal; análisis de sentimiento y temas en reseñas; uso de LLM por API; mini RAG.
 - **PBL (5 h) · Reto: "Escuchar al cliente".** Análisis de reseñas (sentimiento y temas), predicción de ocupación con una serie temporal y prototipo de **asistente con RAG** sobre la política del alojamiento.
 - **Entregable:** informe de reseñas + modelo de serie temporal + demo del asistente.
-- **Evaluación:** test de M4.
+- **Evaluación:** test de M4 el 25/11.
 
 ## Sprint 13 · Contar lo que hace el modelo (3 h · 25/11)
 **Pregunta guía:** ¿cómo enseñamos y defendemos los resultados de un modelo?
@@ -236,7 +237,7 @@ Comprobaciones: Python continuo del 27/10 al 25/11 (Sprints 4–13) = 121 h. M9 
 ## 4. Evaluación por sprint (Apto / No Apto)
 
 - **Entregables PBL de los Sprints 1–13:** evaluados con la misma rúbrica de 4 criterios (corrección técnica, reproducibilidad, análisis y comunicación al cliente, IA responsable). Su media alimenta el bloque de "ejercicios y entregas".
-- **Tests:** Sprint 2 (M1a), Sprint 8 y 9 (M3), Sprint 12 (M4) y un test breve de M6–M8 en el Sprint 3.
+- **Tests:** Sprint 2 (M1a, 23/10), Sprint 3 (bloque M6–M8, 27/10), Sprint 7 y 8 (M3 en dos partes, 9/11 y 11/11) y Sprint 12 (M4, 25/11). Cada test es una página web que solo se abre su día; el enlace está en el README del sprint.
 - **Trabajo en equipo:** coevaluación y retrospectiva de cada sprint.
 - **Proyecto final (Sprints 14–17):** rúbrica de entregables, memoria y defensa.
 - Pesos y umbrales orientativos, a validar con los requisitos de la entidad y del SEPE.

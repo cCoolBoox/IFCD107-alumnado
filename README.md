@@ -264,10 +264,21 @@ El resultado final es **Apto / No Apto**. Se evalúa con cuatro instrumentos:
 
 | Instrumento | Cuándo | Peso orientativo |
 |---|---|---|
-| Tests de conocimientos | Al cierre de M1a, M3, M4 y del bloque M6–M8 | **30 %** |
+| Tests de conocimientos | Al cierre de M1a, M3 (en dos partes), M4 y del bloque M6–M8 | **30 %** |
 | Ejercicios y entregas prácticas | Continua (cada reto) | **30 %** |
 | Participación y trabajo en equipo | Continua y en el proyecto | **10 %** |
 | Proyecto final: entrega + defensa | 11–14/12 | **30 %** |
+
+**Los 5 tests (cada uno se abre solo su día; el enlace está también en el README del sprint):**
+
+| Test | Día | Sprint | Enlace |
+|---|---|---|---|
+| M1a · Fundamentos de IA | vie 23/10 | S02 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/test_M1a.html) |
+| Bloque M6–M8 · SQL, AutoML e IA responsable | mar 27/10 | S03 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/test_M6-M8.html) |
+| M3 · parte 1 (UD 3.1–3.4) | lun 9/11 | S07 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/test_M3_parte1.html) |
+| M3 · parte 2 (UD 3.5–3.8) | mié 11/11 | S08 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/test_M3_parte2.html) |
+| M4 · Redes neuronales | mié 25/11 | S12 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/test_M4.html) |
+
 
 - La **evaluación inicial** de la primera sesión no puntúa: sirve para saber desde dónde partimos.
 - Para ser *Apto* hay que superar cada instrumento con **al menos el 50 %** y cumplir la asistencia mínima de la acción.
