@@ -9,6 +9,7 @@
 - 🖥️ **S12.2 · NLP clasico y embeddings:** [`S12.2_NLP_clasico_y_embeddings.pdf`](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf)
 - 🖥️ **S12.3 · Transformers y LLM:** [`S12.3_Transformers_y_LLM.pdf`](presentaciones/S12.3_Transformers_y_LLM.pdf)
 - 🖥️ **S12.4 · Autoencoders y modelos generativos:** [`S12.4_Autoencoders_y_modelos_generativos.pdf`](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf)
+- 🤖 **¿Tu proyecto usará un modelo de lenguaje por internet?** Guía de acceso gratuito: [`Acceso_modelos_de_lenguaje.md`](../../material/Acceso_modelos_de_lenguaje.md)
 
 ## Qué aprenderás
 - A **predecir una serie temporal** (la ocupación) y comprobar si gana a un método simple (*baseline*).

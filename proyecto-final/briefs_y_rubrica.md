@@ -72,7 +72,7 @@ Los cambios de alcance después del 27/11 se negocian en la review del sprint co
 **Pregunta guía:** ¿puede un asistente basado en LLM responder con datos fiables sin inventar, y cómo lo medimos?
 
 - **Datos candidatos (a validar licencia y uso):** catálogo oficial de títulos de FP y normativa publicados por organismos oficiales; preguntas frecuentes del propio centro (proporcionadas por el docente).
-- **Tipo de problema:** NLP con **recuperación aumentada (RAG)**: chunking, *embeddings*, búsqueda semántica y generación con LLM (API o modelo abierto de Hugging Face).
+- **Tipo de problema:** NLP con **recuperación aumentada (RAG)**: chunking, *embeddings*, búsqueda semántica y generación con LLM (API o modelo abierto de Hugging Face). **Cómo conseguir y usar una clave gratuita:** [`material/Acceso_modelos_de_lenguaje.md`](../material/Acceso_modelos_de_lenguaje.md).
 - **Técnicas esperadas:** baseline por palabras clave (TF-IDF/BM25); *embeddings* + búsqueda vectorial; LLM con RAG; comparativa de configuraciones (tamaño de chunk, número de fragmentos, modelo).
 - **Entregable específico:** chat funcional con **citas a la fuente** de cada respuesta.
 - **Evaluación obligatoria:** conjunto de al menos **40 preguntas de referencia** creado por el equipo; medir aciertos, respuestas sin fuente y **alucinaciones** (respuestas no respaldadas por los documentos).

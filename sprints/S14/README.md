@@ -29,7 +29,7 @@ Este sprint no tiene notebooks: hay sesiones y plantillas (todas en esta carpeta
 - [`plantilla_backlog_y_sprints.md`](plantilla_backlog_y_sprints.md) · historias y objetivos por sprint.
 
 ## Entrega / Reto · «Proyecto final: definir, tener datos y un punto de partida»
-**Contexto:** sois una consultora de IA y el docente es el cliente. Elegís uno de los 4 briefs de `proyecto-final/briefs_y_rubrica.md` (demanda turística, salud de cultivos, asistente de FP, demanda eléctrica) o presentáis un brief libre (ficha antes del 26/11).
+**Contexto:** sois una consultora de IA y el docente es el cliente. Elegís uno de los 4 briefs de `proyecto-final/briefs_y_rubrica.md` (demanda turística, salud de cultivos, asistente de FP, demanda eléctrica) o presentáis un brief libre (ficha antes del 26/11). Si elegís el brief 3 (asistente con LLM), mirad antes la guía de acceso gratuito a modelos: [`material/Acceso_modelos_de_lenguaje.md`](../../material/Acceso_modelos_de_lenguaje.md).
 **Entregáis** (usad el repositorio del equipo, carpeta `sprint-14/`):
 - Ficha de proyecto de 1 página y plan de datos y licencias.
 - `notebooks/01_eda.ipynb` con informe de calidad del dato y `notebooks/02_baseline.ipynb` con su métrica.

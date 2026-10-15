@@ -300,6 +300,8 @@ El resultado final es **Apto / No Apto**. Se evalúa con cuatro instrumentos:
 
 Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni claves a un repositorio.**
 
+👉 **Lista completa, explicada fácil y sprint a sprint:** [`material/Herramientas_del_curso.md`](material/Herramientas_del_curso.md). Si tu proyecto usa un modelo de lenguaje: [`material/Acceso_modelos_de_lenguaje.md`](material/Acceso_modelos_de_lenguaje.md).
+
 ---
 
 ## 10. Cómo usar este repositorio
