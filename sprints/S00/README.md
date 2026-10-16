@@ -3,6 +3,8 @@
 **Fechas:** vie 16/10 – lun 19/10 · **Horas:** 7 h (3 h teoría · 2 h práctica · 2 h reto) · Bloque A, sin Python
 **Cliente:** TurisData Canarias (empresa ficticia de alojamiento y experiencias turísticas)
 
+> 📖 **¿Cómo abro el material?** Desde el navegador: [ccoolboox.github.io/IFCD107-alumnado](https://ccoolboox.github.io/IFCD107-alumnado/). Es público y no hace falta cuenta. También tienes **Code → Download ZIP** en [GitHub](https://github.com/cCoolBoox/IFCD107-alumnado).
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_00.pdf`](Guia_Sprint_00.pdf)

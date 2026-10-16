@@ -306,6 +306,14 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 
 ## 10. Cómo usar este repositorio
 
+> ### 📖 Cómo consultar este repositorio
+> Es **público**: no hace falta invitación ni iniciar sesión para leerlo.
+> 1. **Por la web (lo más cómodo):** [ccoolboox.github.io/IFCD107-alumnado](https://ccoolboox.github.io/IFCD107-alumnado/). No instalas nada.
+> 2. **En GitHub:** [github.com/cCoolBoox/IFCD107-alumnado](https://github.com/cCoolBoox/IFCD107-alumnado). Navega por las carpetas y abre los archivos.
+> 3. **Sin conexión:** botón verde **Code → Download ZIP** y descomprime. Es una copia: si el material cambia, tendrás que volver a descargarla.
+>
+> No hace falta «clonar» ni hacer *Fork*. Tu repositorio **de equipo** es otro y se crea en la actividad del Sprint 0.
+
 | Carpeta | Qué encontrarás |
 |---|---|
 | [`material/`](material) | **Mi ruta del curso**, cómo funciona el curso, primeros pasos con GitHub, plantilla del repo de equipo, calendario y temario |
