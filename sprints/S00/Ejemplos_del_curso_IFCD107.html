@@ -1,0 +1,1422 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplos del curso IFCD107</title>
+<meta name="description" content="Demostraciones interactivas de todo lo que veremos en el curso Especialista en Inteligencia Artificial (IFCD107). Funciona sin internet.">
+<style>
+:root{
+  --bg:#f4f6f8;--surface:#ffffff;--surface2:#eef2f6;--ink:#13202f;--muted:#566377;--line:#dde3ea;
+  --accent:#0a7c76;--accent-ink:#ffffff;--accent-soft:#d8f0ee;--hot:#d9482b;
+  --c0:#2f6fdc;--c1:#e0562f;--ok:#26884f;--warn:#b87503;--bad:#c13737;
+  --shadow:0 1px 2px rgba(19,32,47,.06),0 4px 14px rgba(19,32,47,.05);
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0e1620;--surface:#16212e;--surface2:#1c2938;--ink:#e7edf5;--muted:#9aa8ba;--line:#283648;
+  --accent:#3dc4bb;--accent-ink:#06211f;--accent-soft:#123b39;--hot:#ff8a65;
+  --c0:#6ea2ff;--c1:#ff8f6b;--ok:#4cc27f;--warn:#e8b04a;--bad:#ff7a7a;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.25);}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.hero{padding:34px 0 22px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--surface) 0%,var(--bg) 100%)}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:clamp(26px,4.6vw,40px);line-height:1.12;margin:6px 0 10px;letter-spacing:-.02em}
+.lead{max-width:720px;color:var(--muted);margin:0 0 16px;font-size:17px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.facts li{background:var(--accent-soft);color:var(--ink);border-radius:999px;padding:4px 12px;font-size:14px}
+.howto{margin:18px 0 0;padding:12px 14px;border:1px solid var(--line);border-left:4px solid var(--accent);background:var(--surface);border-radius:8px;font-size:15px;color:var(--muted)}
+.howto b{color:var(--ink)}
+nav.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;gap:6px;overflow-x:auto;padding:8px 16px;scrollbar-width:thin;align-items:center}
+nav.top .blk{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);white-space:nowrap;margin:0 2px 0 10px}
+nav.top .blk:first-child{margin-left:0}
+nav.top a{white-space:nowrap;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600;padding:5px 10px;border-radius:8px;border:1px solid transparent}
+nav.top a:hover{background:var(--surface2)}
+nav.top a.on{background:var(--accent);color:var(--accent-ink)}
+main{padding:10px 0 60px}
+section.sprint{padding:34px 0 6px}
+.blockhead{margin:44px 0 0;padding:10px 14px;border-radius:10px;background:var(--ink);color:var(--bg);font-weight:700;font-size:15px;letter-spacing:.02em}
+.stag{display:inline-block;font:700 12px/1 var(--mono);background:var(--accent);color:var(--accent-ink);padding:5px 8px;border-radius:6px;margin-right:8px;vertical-align:middle}
+section.sprint h2{font-size:clamp(21px,3vw,28px);margin:0 0 4px;letter-spacing:-.01em;line-height:1.2}
+.meta{color:var(--muted);font-size:14px;margin:0 0 6px}
+.q{font-style:italic;color:var(--ink);margin:2px 0 14px;padding-left:12px;border-left:3px solid var(--hot)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);min-width:0}
+.card.wide{grid-column:1/-1}
+.card h3{margin:0 0 2px;font-size:18px;line-height:1.25}
+.card .desc{margin:0 0 12px;color:var(--muted);font-size:14.5px}
+.card .course{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted)}
+.card .course b{color:var(--accent)}
+.row{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:8px 0}
+.ctl{display:flex;align-items:center;gap:8px;font-size:14px;flex:1 1 220px;min-width:0}
+.ctl span{white-space:nowrap;color:var(--muted)}
+.ctl input[type=range]{flex:1;min-width:70px;accent-color:var(--accent)}
+.ctl output{font:600 13px var(--mono);min-width:3.2em;text-align:right}
+.btn{font:600 14px/1 inherit;font-family:inherit;border:1px solid var(--line);background:var(--surface2);color:var(--ink);border-radius:8px;padding:9px 12px;cursor:pointer;min-height:38px}
+.btn:hover{border-color:var(--accent)}
+.btn:focus-visible,.seg button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.sm{padding:6px 9px;min-height:30px;font-size:13px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;flex-wrap:wrap}
+.seg button{font:600 13.5px inherit;font-family:inherit;background:var(--surface);color:var(--ink);border:0;border-right:1px solid var(--line);padding:8px 11px;cursor:pointer;min-height:36px}
+.seg button:last-child{border-right:0}
+.seg button.on{background:var(--accent);color:var(--accent-ink)}
+.seg button.c0.on{background:var(--c0);color:#fff}.seg button.c1.on{background:var(--c1);color:#fff}
+canvas{display:block;width:100%;max-width:560px;height:auto;border-radius:10px;border:1px solid var(--line);background:var(--surface2);touch-action:none}
+canvas.pix{image-rendering:pixelated}
+.split{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.split .vis{min-width:0}
+.split .vis canvas+canvas{margin-top:10px}
+@media (min-width:820px){.split{grid-template-columns:minmax(0,1fr) minmax(0,500px)}.split .vis{order:2}}
+select,textarea,input[type=text],input[type=number]{font:inherit;font-size:14.5px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;max-width:100%}
+textarea{width:100%;resize:vertical;font-family:var(--mono);font-size:13px;line-height:1.45}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px}
+table.t th,table.t td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+table.t th{background:var(--surface2);font-weight:700;position:sticky;top:0}
+table.t td.num,table.t th.num{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{overflow:auto;max-height:340px;border:1px solid var(--line);border-radius:8px}
+.scroll table.t{border:0}
+.bad{background:color-mix(in srgb,var(--bad) 20%,transparent)}
+.good{background:color-mix(in srgb,var(--ok) 18%,transparent)}
+.kpis{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.kpi{flex:1 1 110px;background:var(--surface2);border-radius:10px;padding:8px 10px;min-width:0}
+.kpi small{display:block;color:var(--muted);font-size:12px}
+.kpi b{font-size:20px;font-variant-numeric:tabular-nums}
+.note{font-size:13.5px;color:var(--muted);margin:6px 0}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12.5px;font-weight:700;background:var(--surface2)}
+.pill.ok{background:color-mix(in srgb,var(--ok) 22%,transparent);color:var(--ok)}
+.pill.warn{background:color-mix(in srgb,var(--warn) 22%,transparent);color:var(--warn)}
+.pill.bad{background:color-mix(in srgb,var(--bad) 22%,transparent);color:var(--bad)}
+pre.code{margin:0;background:#101a26;color:#dbe7f5;border-radius:10px;padding:12px;font:12.5px/1.5 var(--mono);overflow:auto;max-height:340px;tab-size:4}
+pre.code .k{color:#ff9a76}.c{color:#7e92aa}.s{color:#9be29b}.n{color:#8fc2ff}
+.bar{height:10px;background:var(--surface2);border-radius:999px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--accent);border-radius:999px;transition:width .25s}
+.lb{display:grid;grid-template-columns:130px 1fr 66px;gap:8px;align-items:center;margin:5px 0;font-size:14px}
+.kan{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.kan .col{background:var(--surface2);border-radius:10px;padding:8px;min-height:150px}
+.kan h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.kan .tk{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 8px;margin:0 0 6px;font-size:13px;display:flex;flex-direction:column;gap:5px}
+.kan .tk .acts{display:flex;justify-content:space-between;align-items:center}
+.kan .tk .acts button{border:1px solid var(--line);background:var(--surface2);color:var(--ink);border-radius:6px;cursor:pointer;min-width:30px;min-height:28px;font-size:14px}
+.pts{font:700 11px var(--mono);background:var(--accent-soft);color:var(--ink);border-radius:5px;padding:1px 5px}
+.quiz .qi{margin:0 0 12px;padding:10px;border:1px solid var(--line);border-radius:10px}
+.quiz .qi p{margin:0 0 8px;font-weight:600;font-size:14.5px}
+.quiz .fb{margin-top:6px;font-size:13.5px}
+.chip{display:inline-block;border:1px solid var(--line);background:var(--surface2);border-radius:999px;padding:4px 10px;font-size:13px;cursor:pointer;margin:2px 4px 2px 0;color:var(--ink)}
+.chip:hover{border-color:var(--accent)}
+.hl{background:color-mix(in srgb,var(--accent) 22%,transparent);border-radius:3px;padding:0 2px}
+.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.empat{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.empat textarea{font-family:inherit;font-size:13.5px;min-height:70px}
+.empat label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.timer{font:700 44px/1 var(--mono);text-align:center;margin:8px 0;font-variant-numeric:tabular-nums}
+.beat{display:flex;justify-content:space-between;padding:8px 10px;border-radius:8px;border:1px solid var(--line);margin:5px 0;font-size:14.5px}
+.beat.cur{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.beat.done{opacity:.5}
+footer{padding:26px 0 50px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line)}
+@media (max-width:560px){
+  .kan{grid-template-columns:1fr 1fr}
+  .lb{grid-template-columns:100px 1fr 60px}
+  .ctl span{white-space:normal;max-width:42%}
+  .ctl{flex-basis:100%}
+  .empat{grid-template-columns:1fr}
+  .card{padding:13px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar>i{transition:none}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">IFCD107 · Especialista en Inteligencia Artificial</div>
+  <h1>Todo lo que veremos en el curso, en ejemplos que puedes tocar</h1>
+  <p class="lead">Una demostración por cada tema, en el mismo orden de los 18 sprints. No hace falta saber nada: mueve los controles, pulsa los botones y mira qué pasa. Aquí lo hacemos en el navegador; en clase lo haremos con Python.</p>
+  <ul class="facts"><li>18 sprints</li><li>230 horas</li><li>9 módulos</li><li>Cliente: TurisData Canarias</li><li>Datos 100&nbsp;% ficticios</li></ul>
+  <p class="howto"><b>Cómo usarlo:</b> funciona sin internet y sin instalar nada. Cada recuadro tiene una demo y, debajo, una línea <b>«En el curso»</b> que dice con qué herramienta lo haremos de verdad. Para saltar a un sprint, usa la barra de arriba.</p>
+</div></header>
+<nav class="top" aria-label="Sprints"><div class="wrap" id="nav"></div></nav>
+<main><div class="wrap" id="content"></div></main>
+<footer><div class="wrap">Ejemplos didácticos y simplificados, con datos inventados para TurisData Canarias. Los modelos de esta página se entrenan en tu navegador con muy pocos datos: sirven para entender la idea, no para tomar decisiones reales. Curso IFCD107 · acción 25-38/012242 · 16/10–14/12/2026.</div></footer>
+<script>
+'use strict';
+/* ========== utilidades ========== */
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function gauss(r){let u=0;while(!u)u=r();const v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+function h(tag,attrs,...kids){
+  const e=document.createElement(tag);
+  for(const [k,v] of Object.entries(attrs||{})){
+    if(v===false||v==null)continue;
+    if(k==='class')e.className=v;
+    else if(k==='html')e.innerHTML=v;
+    else if(k.startsWith('on'))e.addEventListener(k.slice(2),v);
+    else e.setAttribute(k,v===true?'':v);
+  }
+  for(const k of kids.flat(2)){ if(k===false||k==null)continue; e.append(k.nodeType?k:document.createTextNode(String(k))); }
+  return e;
+}
+const fmt=(v,d=2)=>Number(v).toLocaleString('es-ES',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct=(v,d=0)=>fmt(v*100,d)+' %';
+const sigmoid=z=>1/(1+Math.exp(-z));
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const cssv=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function rgb(c){c=c.trim();if(c[0]==='#'){if(c.length===4)c='#'+[...c.slice(1)].map(x=>x+x).join('');const n=parseInt(c.slice(1),16);return[n>>16&255,n>>8&255,n&255]}const m=c.match(/\d+/g);return m?m.slice(0,3).map(Number):[128,128,128]}
+const themeHooks=[];
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>setTimeout(()=>themeHooks.forEach(f=>f()),30));
+function onTheme(f){themeHooks.push(f)}
+function norm(s){return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+
+/* ===== controles ===== */
+function slider(label,min,max,step,val,on,f){
+  f=f||(v=>v);
+  const out=h('output',{},f(val));
+  const inp=h('input',{type:'range',min,max,step,value:val,'aria-label':label});
+  inp.addEventListener('input',()=>{out.textContent=f(+inp.value);on&&on(+inp.value)});
+  const el=h('label',{class:'ctl'},h('span',{},label),inp,out);
+  return{el,get:()=>+inp.value,set:v=>{inp.value=v;out.textContent=f(+inp.value)}};
+}
+function btn(t,on,cls){return h('button',{class:'btn '+(cls||''),type:'button',onclick:on},t)}
+function seg(opts,val,on){
+  const wrap=h('div',{class:'seg',role:'group'});
+  const map={};
+  opts.forEach(o=>{
+    const [v,l,c]=o;
+    const b=h('button',{type:'button',class:(v===val?'on ':'')+(c||''),onclick:()=>{set(v);on&&on(v)}},l);
+    map[v]=b;wrap.append(b);
+  });
+  function set(v){Object.entries(map).forEach(([k,b])=>b.classList.toggle('on',k===String(v)))}
+  return{el:wrap,set};
+}
+function mkCanvas(w,hh,cls){const c=h('canvas',{width:w,height:hh,class:cls||''});return c}
+function ptr(e,cv){const r=cv.getBoundingClientRect();return[(e.clientX-r.left)*cv.width/r.width,(e.clientY-r.top)*cv.height/r.height]}
+function table(cols,rows,opt){
+  opt=opt||{};
+  const th=h('tr',{},cols.map(c=>h('th',{class:c.num?'num':''},c.label)));
+  const trs=rows.map(r=>h('tr',{class:r._cls||''},cols.map(c=>{
+    const v=typeof c.get==='function'?c.get(r):r[c.key];
+    const bad=opt.cell&&opt.cell(r,c);
+    return h('td',{class:(c.num?'num ':'')+(bad||'')},v==null?'':v);
+  })));
+  return h('table',{class:'t'},h('thead',{},th),h('tbody',{},trs));
+}
+function kpi(label,val){return h('div',{class:'kpi'},h('small',{},label),h('b',{},val))}
+
+/* ===== registro global de experimentos (S15) ===== */
+const RUNS=[];const runHooks=[];
+function logRun(r){r.id=RUNS.length+1;RUNS.push(r);runHooks.forEach(f=>f())}
+
+/* ===== quiz genérico ===== */
+function Quiz(root,{items,options}){
+  let score=0,answered=0;
+  const head=h('div',{class:'note'},'Elige una respuesta en cada caso.');
+  const box=h('div',{class:'quiz'});
+  items.forEach(it=>{
+    const fb=h('div',{class:'fb'});
+    const sel=h('div',{class:'seg'});
+    const bs=options.map(o=>h('button',{type:'button',onclick:()=>{
+      if(it.done)return;it.done=true;answered++;
+      const ok=o===it.a;if(ok)score++;
+      bs.forEach(b=>{b.disabled=true;if(b.textContent===it.a)b.classList.add('on')});
+      fb.innerHTML=(ok?'<span class="pill ok">Correcto</span> ':'<span class="pill bad">Casi: era '+esc(it.a)+'</span> ')+esc(it.why);
+      head.textContent='Aciertos: '+score+' de '+answered+(answered===items.length?' · ¡terminado!':'');
+    }},o));
+    bs.forEach(b=>sel.append(b));
+    box.append(h('div',{class:'qi'},h('p',{},it.q),sel,fb));
+  });
+  root.append(head,box);
+}
+/* ========== mini biblioteca de aprendizaje automático (en el navegador) ========== */
+const ML={};
+/* Escalado: devuelve función que estandariza */
+ML.scaler=X=>{
+  const d=X[0].length,m=Array(d).fill(0),s=Array(d).fill(0);
+  X.forEach(x=>x.forEach((v,j)=>m[j]+=v/X.length));
+  X.forEach(x=>x.forEach((v,j)=>s[j]+=(v-m[j])**2/X.length));
+  for(let j=0;j<d;j++)s[j]=Math.sqrt(s[j])||1;
+  return x=>x.map((v,j)=>(v-m[j])/s[j]);
+};
+/* Regresión logística (con expansión polinómica opcional en 2D) */
+ML.logistic=(X,y,o)=>{
+  o=Object.assign({degree:1,lr:0.5,iters:500,l2:0.001},o);
+  const expand=x=>{
+    if(x.length!==2||o.degree<2)return x;
+    const f=[];for(let d=1;d<=o.degree;d++)for(let i=0;i<=d;i++)f.push(Math.pow(x[0]-.5,d-i)*Math.pow(x[1]-.5,i));
+    return f;
+  };
+  const E=X.map(expand);const sc=ML.scaler(E);const Z=E.map(sc).map(z=>[1,...z]);
+  const p=Z[0].length,w=Array(p).fill(0);
+  for(let it=0;it<o.iters;it++){
+    const g=Array(p).fill(0);
+    for(let i=0;i<Z.length;i++){
+      let s=0;for(let j=0;j<p;j++)s+=w[j]*Z[i][j];
+      const e=sigmoid(s)-y[i];for(let j=0;j<p;j++)g[j]+=e*Z[i][j];
+    }
+    for(let j=0;j<p;j++)w[j]-=o.lr*(g[j]/Z.length+(j?o.l2*w[j]:0));
+  }
+  const predict=x=>{const z=[1,...sc(expand(x))];let s=0;for(let j=0;j<p;j++)s+=w[j]*z[j];return sigmoid(s)};
+  predict.w=w;predict.scale=sc;
+  return predict;
+};
+/* k vecinos más cercanos */
+ML.knn=(X,y,o)=>{
+  const k=Math.min((o&&o.k)||5,X.length);const sc=ML.scaler(X);const Z=X.map(sc);
+  return x=>{
+    const z=sc(x);
+    const d=Z.map((q,i)=>{let s=0;for(let j=0;j<q.length;j++)s+=(q[j]-z[j])**2;return[s,i]});
+    d.sort((a,b)=>a[0]-b[0]);
+    let s=0;for(let i=0;i<k;i++)s+=y[d[i][1]];
+    return s/k;
+  };
+};
+/* Árbol de decisión (CART, impureza de Gini) */
+ML.treeBuild=(X,y,o)=>{
+  o=Object.assign({maxDepth:3,minLeaf:1,mtry:0,rng:Math.random},o);
+  const d=X[0].length;
+  const gini=p=>2*p*(1-p);
+  function build(idx,depth){
+    const n=idx.length;let pos=0;for(const i of idx)pos+=y[i];
+    const p=pos/n;
+    if(depth>=o.maxDepth||n<2*o.minLeaf||pos===0||pos===n)return{p};
+    let feats=[...Array(d).keys()];
+    if(o.mtry&&o.mtry<d){feats.sort(()=>o.rng()-.5);feats=feats.slice(0,o.mtry)}
+    let best=null;
+    for(const f of feats){
+      const s=idx.slice().sort((a,b)=>X[a][f]-X[b][f]);
+      let lp=0;
+      for(let k=0;k<n-1;k++){
+        lp+=y[s[k]];
+        const a=X[s[k]][f],b=X[s[k+1]][f];
+        if(a===b)continue;
+        const nl=k+1,nr=n-nl;
+        if(nl<o.minLeaf||nr<o.minLeaf)continue;
+        const g=(nl*gini(lp/nl)+nr*gini((pos-lp)/nr))/n;
+        if(!best||g<best.g)best={g,f,t:(a+b)/2};
+      }
+    }
+    if(!best)return{p};
+    const L=[],R=[];
+    for(const i of idx)(X[i][best.f]<=best.t?L:R).push(i);
+    return{f:best.f,t:best.t,l:build(L,depth+1),r:build(R,depth+1),p};
+  }
+  return build([...Array(X.length).keys()],0);
+};
+ML.treePredict=(node,x)=>{while(node.l)node=x[node.f]<=node.t?node.l:node.r;return node.p};
+ML.tree=(X,y,o)=>{const t=ML.treeBuild(X,y,o);const f=x=>ML.treePredict(t,x);f.root=t;return f};
+/* Random Forest */
+ML.forest=(X,y,o)=>{
+  o=Object.assign({trees:25,maxDepth:6,seed:42},o);
+  const rng=mulberry32(o.seed),d=X[0].length,mtry=d<=2?1:Math.ceil(Math.sqrt(d));
+  const ts=[];
+  for(let t=0;t<o.trees;t++){
+    const idx=Array.from({length:X.length},()=>Math.floor(rng()*X.length));
+    ts.push(ML.treeBuild(idx.map(i=>X[i]),idx.map(i=>y[i]),{maxDepth:o.maxDepth,mtry,rng}));
+  }
+  return x=>{let s=0;for(const t of ts)s+=ML.treePredict(t,x);return s/ts.length};
+};
+/* SVM (Pegasos), lineal o RBF aproximado con características de Fourier aleatorias (solo 2D) */
+ML.svm=(X,y,o)=>{
+  o=Object.assign({kernel:'rbf',lambda:0.005,gamma:8,epochs:80,seed:3},o);
+  const rng=mulberry32(o.seed),D=90,W=[],B=[];
+  if(o.kernel==='rbf')for(let j=0;j<D;j++){W.push([gauss(rng)*Math.sqrt(2*o.gamma),gauss(rng)*Math.sqrt(2*o.gamma)]);B.push(rng()*2*Math.PI)}
+  const z=x=>o.kernel==='rbf'?[1,...W.map((w,j)=>Math.sqrt(2/D)*Math.cos(w[0]*x[0]+w[1]*x[1]+B[j]))]:[1,(x[0]-.5)*2,(x[1]-.5)*2];
+  const Z=X.map(z),p=Z[0].length,w=Array(p).fill(0);
+  let t=0;const order=[...Array(X.length).keys()];
+  for(let ep=0;ep<o.epochs;ep++){
+    order.sort(()=>rng()-.5);
+    for(const i of order){
+      t++;const eta=1/(o.lambda*(t+10));const s=y[i]?1:-1;
+      let m=0;for(let j=0;j<p;j++)m+=w[j]*Z[i][j];
+      for(let j=0;j<p;j++)w[j]*=1-eta*o.lambda;
+      if(s*m<1)for(let j=0;j<p;j++)w[j]+=eta*s*Z[i][j];
+    }
+  }
+  return x=>{const q=z(x);let s=0;for(let j=0;j<p;j++)s+=w[j]*q[j];return sigmoid(3*s)};
+};
+/* Métricas */
+ML.accuracy=(f,X,y)=>{if(!X.length)return NaN;let ok=0;X.forEach((x,i)=>{if((f(x)>=.5?1:0)===y[i])ok++});return ok/X.length};
+ML.confusion=(f,X,y,thr)=>{thr=thr==null?.5:thr;const c={tp:0,fp:0,tn:0,fn:0};X.forEach((x,i)=>{const p=f(x)>=thr?1:0;if(p&&y[i])c.tp++;else if(p)c.fp++;else if(y[i])c.fn++;else c.tn++});return c};
+ML.roc=(scores,y)=>{
+  const idx=scores.map((s,i)=>i).sort((a,b)=>scores[b]-scores[a]);
+  const P=y.reduce((a,b)=>a+b,0),N=y.length-P;let tp=0,fp=0;const pts=[[0,0]];let auc=0,prev=[0,0];
+  for(const i of idx){if(y[i])tp++;else fp++;const pt=[fp/N,tp/P];auc+=(pt[0]-prev[0])*(pt[1]+prev[1])/2;prev=pt;pts.push(pt)}
+  return{pts,auc};
+};
+/* Datos 2D de juguete en [0,1]^2 */
+ML.make2d=(name,n,noise,seed)=>{
+  const r=mulberry32(seed),pts=[];
+  const add=(x,y,c)=>pts.push({x:clamp(x,.02,.98),y:clamp(y,.02,.98),c,test:r()<.3});
+  for(let i=0;i<n;i++){
+    const c=i%2;
+    if(name==='blobs'){const s=.05+noise*.22;add((c?.68:.32)+gauss(r)*s,(c?.66:.34)+gauss(r)*s,c)}
+    else if(name==='moons'){const t=r()*Math.PI,s=noise*.16;
+      const x=c?1-Math.cos(t):Math.cos(t),y=c?.5-Math.sin(t):Math.sin(t);
+      add(.27+x*.23+gauss(r)*s,.3+y*.42+.1+gauss(r)*s,c)}
+    else if(name==='circles'){const t=r()*2*Math.PI,R=c?.38:.17,s=noise*.12;add(.5+Math.cos(t)*R+gauss(r)*s,.5+Math.sin(t)*R+gauss(r)*s,c)}
+    else if(name==='xor'){const a=r()<.5?1:0,b=r()<.5?1:0,s=.05+noise*.15;add(.28+a*.44+gauss(r)*s,.28+b*.44+gauss(r)*s,a^b)}
+    else if(name==='spiral'){const t=.25+r()*.75,a=t*3.2*Math.PI+c*Math.PI,R=t*.44,s=noise*.05;add(.5+Math.cos(a)*R+gauss(r)*s,.5+Math.sin(a)*R+gauss(r)*s,c)}
+  }
+  return pts;
+};
+/* Dibujo de frontera de decisión */
+function drawBoundary(cv,predict,pts,o){
+  o=o||{};
+  const ctx=cv.getContext('2d'),W=cv.width,H=cv.height,res=o.res||44;
+  const bg=rgb(cssv('--surface2')),c0=rgb(cssv('--c0')),c1=rgb(cssv('--c1'));
+  ctx.clearRect(0,0,W,H);
+  if(predict){
+    const off=document.createElement('canvas');off.width=off.height=res;
+    const oc=off.getContext('2d'),im=oc.createImageData(res,res);
+    for(let j=0;j<res;j++)for(let i=0;i<res;i++){
+      const p=predict([(i+.5)/res,1-(j+.5)/res]);
+      const c=p<.5?c0:c1,a=.12+.55*Math.abs(2*p-1),k=(j*res+i)*4;
+      im.data[k]=bg[0]*(1-a)+c[0]*a;im.data[k+1]=bg[1]*(1-a)+c[1]*a;im.data[k+2]=bg[2]*(1-a)+c[2]*a;im.data[k+3]=255;
+    }
+    oc.putImageData(im,0,0);ctx.imageSmoothingEnabled=true;ctx.drawImage(off,0,0,W,H);
+  }else{ctx.fillStyle=cssv('--surface2');ctx.fillRect(0,0,W,H)}
+  const surf=cssv('--surface');
+  for(const p of pts){
+    const x=p.x*W,y=(1-p.y)*H;
+    ctx.beginPath();
+    if(p.test){ctx.rect(x-5,y-5,10,10)}else ctx.arc(x,y,5,0,7);
+    ctx.fillStyle=p.c?cssv('--c1'):cssv('--c0');ctx.fill();
+    ctx.lineWidth=1.6;ctx.strokeStyle=surf;ctx.stroke();
+  }
+}
+/* ========== BLOQUE A · SIN PYTHON (S0–S3) ========== */
+const DEMOS={};
+
+/* ---------- S0 · Tablero Scrum ---------- */
+DEMOS.kanban=root=>{
+  const CAP=10;
+  const cards=[
+    {t:'Acuerdo de equipo y roles',p:2,c:0},{t:'Crear el tablero (Trello)',p:1,c:0},
+    {t:'Mapa de empatía de TurisData',p:3,c:0},{t:'Entrevista de descubrimiento',p:3,c:0},
+    {t:'Definition of Done',p:2,c:0},{t:'Backlog inicial del curso',p:3,c:0},{t:'Prototipo de avión de papel',p:5,c:0}
+  ];
+  const cols=['Backlog','Sprint','En curso','Hecho'];
+  const board=h('div',{class:'kan'});
+  const info=h('div',{class:'kpis'});
+  const warn=h('div',{class:'note'});
+  const bar=h('div',{class:'bar'},h('i'));
+  function render(){
+    board.innerHTML='';
+    cols.forEach((n,ci)=>{
+      const col=h('div',{class:'col'},h('h4',{},n));
+      cards.filter(c=>c.c===ci).forEach(c=>col.append(h('div',{class:'tk'},
+        h('span',{},c.t),
+        h('div',{class:'acts'},
+          h('button',{type:'button','aria-label':'Mover a la izquierda',onclick:()=>{if(c.c>0){c.c--;render()}}},'◀'),
+          h('span',{class:'pts'},c.p+' pt'),
+          h('button',{type:'button','aria-label':'Mover a la derecha',onclick:()=>{if(c.c<3){c.c++;render()}}},'▶')))));
+      board.append(col);
+    });
+    const comp=cards.filter(c=>c.c>=1).reduce((a,c)=>a+c.p,0),done=cards.filter(c=>c.c===3).reduce((a,c)=>a+c.p,0);
+    info.innerHTML='';info.append(kpi('Comprometido en el sprint',comp+' pt'),kpi('Capacidad del equipo',CAP+' pt'),kpi('Hecho',done+' pt'));
+    bar.firstChild.style.width=(comp?done/comp*100:0)+'%';
+    warn.innerHTML=comp>CAP?'<span class="pill warn">Ojo</span> Habéis comprometido más de lo que cabe. En el planning se negocia: ¿qué sale del sprint?':comp===0?'Mueve tarjetas del Backlog al Sprint para hacer el planning.':'<span class="pill ok">Bien</span> El sprint cabe en la capacidad. Ahora mueve las tarjetas hasta «Hecho».';
+  }
+  render();
+  root.append(board,info,bar,warn);
+};
+
+/* ---------- S0 · Mapa de empatía y «How might we» ---------- */
+DEMOS.empatia=root=>{
+  const f={piensa:'Quiero ocupar más habitaciones sin bajar precios.',siente:'Le preocupa que las reseñas malas espanten reservas.',dice:'«No sé qué clientes se van a cancelar».',hace:'Revisa Excel cada lunes a mano.'};
+  const tas={};
+  const grid=h('div',{class:'empat'});
+  [['piensa','Piensa'],['siente','Siente'],['dice','Dice'],['hace','Hace']].forEach(([k,l])=>{
+    tas[k]=h('textarea',{rows:3,id:'em_'+k});tas[k].value=f[k];
+    grid.append(h('div',{},h('label',{for:'em_'+k},l),tas[k]));
+  });
+  const u=h('input',{type:'text',value:'la responsable de reservas',style:'width:100%'}),
+        n=h('input',{type:'text',value:'saber qué reservas se van a cancelar',style:'width:100%'}),
+        o=h('input',{type:'text',value:'revisar cientos de filas a mano',style:'width:100%'});
+  const out=h('div',{class:'q'});
+  const upd=()=>out.textContent='¿Cómo podríamos ayudar a '+u.value+' a '+n.value+' sin '+o.value+'?';
+  [u,n,o].forEach(i=>i.addEventListener('input',upd));upd();
+  root.append(grid,h('p',{class:'note'},'Rellena el usuario, su necesidad y el obstáculo. Así nace la pregunta «How might we»:'),
+    h('div',{class:'two'},h('label',{},'Usuario',u),h('label',{},'Necesidad',n),h('label',{},'Obstáculo',o)),out);
+};
+
+/* ---------- S1 · Sobreajuste (polinomios) ---------- */
+function solve(A,b){const n=b.length;for(let i=0;i<n;i++){let m=i;for(let r=i+1;r<n;r++)if(Math.abs(A[r][i])>Math.abs(A[m][i]))m=r;[A[i],A[m]]=[A[m],A[i]];[b[i],b[m]]=[b[m],b[i]];for(let r=i+1;r<n;r++){const f=A[r][i]/A[i][i];for(let c=i;c<n;c++)A[r][c]-=f*A[i][c];b[r]-=f*b[i]}}const x=Array(n).fill(0);for(let i=n-1;i>=0;i--){let s=b[i];for(let c=i+1;c<n;c++)s-=A[i][c]*x[c];x[i]=s/A[i][i]}return x}
+function polyfit(xs,ys,d){const n=d+1,A=Array.from({length:n},()=>Array(n).fill(0)),b=Array(n).fill(0);xs.forEach((x,k)=>{const p=[];for(let i=0;i<n;i++)p.push(Math.pow(x,i));for(let i=0;i<n;i++){b[i]+=p[i]*ys[k];for(let j=0;j<n;j++)A[i][j]+=p[i]*p[j]}});for(let i=0;i<n;i++)A[i][i]+=1e-9;return solve(A,b)}
+const polyval=(c,x)=>c.reduce((s,v,i)=>s+v*Math.pow(x,i),0);
+DEMOS.overfit=root=>{
+  let seed=5,tr,te;
+  const f=x=>Math.sin(2.4*x);
+  function gen(){const r=mulberry32(seed);tr=Array.from({length:12},(_,i)=>{const x=-0.95+1.9*i/11+(r()-.5)*.08;return[x,f(x)+gauss(r)*.22]});te=Array.from({length:40},()=>{const x=-1+2*r();return[x,f(x)+gauss(r)*.22]})}
+  gen();
+  const cv=mkCanvas(560,300),ctx=cv.getContext('2d');
+  const out=h('div',{class:'kpis'}),msg=h('div',{class:'note'});
+  const sl=slider('Complejidad (grado)',1,11,1,1,()=>draw());
+  const X=x=>40+(x+1)/2*(cv.width-60),Y=y=>cv.height-30-(y+1.7)/3.4*(cv.height-50);
+  function draw(){
+    const d=sl.get(),c=polyfit(tr.map(p=>p[0]),tr.map(p=>p[1]),d);
+    ctx.clearRect(0,0,cv.width,cv.height);ctx.lineWidth=1;ctx.strokeStyle=cssv('--line');
+    ctx.beginPath();ctx.moveTo(X(-1),Y(0));ctx.lineTo(X(1),Y(0));ctx.stroke();
+    ctx.setLineDash([5,5]);ctx.strokeStyle=cssv('--muted');ctx.beginPath();for(let i=0;i<=100;i++){const x=-1+i/50;i?ctx.lineTo(X(x),Y(f(x))):ctx.moveTo(X(x),Y(f(x)))}ctx.stroke();ctx.setLineDash([]);
+    ctx.strokeStyle=cssv('--accent');ctx.lineWidth=3;ctx.beginPath();let st=false;
+    for(let i=0;i<=200;i++){const x=-1+i/100,y=clamp(polyval(c,x),-1.65,1.65);st?ctx.lineTo(X(x),Y(y)):ctx.moveTo(X(x),Y(y));st=true}ctx.stroke();
+    te.forEach(p=>{ctx.fillStyle=cssv('--muted');ctx.globalAlpha=.45;ctx.beginPath();ctx.arc(X(p[0]),Y(p[1]),3,0,7);ctx.fill()});ctx.globalAlpha=1;
+    tr.forEach(p=>{ctx.fillStyle=cssv('--hot');ctx.strokeStyle=cssv('--surface');ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(X(p[0]),Y(p[1]),5.5,0,7);ctx.fill();ctx.stroke()});
+    const rm=a=>Math.sqrt(a.reduce((s,p)=>s+(polyval(c,p[0])-p[1])**2,0)/a.length);
+    const e1=rm(tr),e2=rm(te);
+    out.innerHTML='';out.append(kpi('Error con los datos de entrenamiento',fmt(e1)),kpi('Error con datos nuevos',e2>9?'>9':fmt(e2)));
+    msg.innerHTML=d<=2?'<span class="pill warn">Se queda corto</span> El modelo es demasiado simple: falla también con los datos que ve (<i>underfitting</i>).':d<=5?'<span class="pill ok">Buen equilibrio</span> Sigue la tendencia sin memorizar el ruido.':'<span class="pill bad">Sobreajuste</span> Clava los puntos de entrenamiento (error casi 0) pero falla con datos nuevos: ha memorizado el ruido.';
+  }
+  root.append(h('div',{class:'note'},'● puntos de entrenamiento (naranja) · ● datos nuevos (gris) · línea discontinua: la realidad · línea verde: el modelo'),cv,sl.el,h('div',{class:'row'},btn('Generar otros datos',()=>{seed++;gen();draw()})),out,msg);
+  draw();onTheme(draw);
+};
+
+/* ---------- S1 · Quiz de familias de algoritmos y AI Act ---------- */
+DEMOS.quizFamilias=root=>Quiz(root,{options:['Regresión','Clasificación','Clustering','Recomendación','Refuerzo','Generativa'],items:[
+  {q:'Predecir cuánto se cobrará por noche el próximo fin de semana.',a:'Regresión',why:'La salida es un número continuo (euros).'},
+  {q:'Saber si una reserva se cancelará (sí / no).',a:'Clasificación',why:'La salida es una categoría con etiquetas conocidas.'},
+  {q:'Agrupar a los huéspedes parecidos sin etiquetas previas.',a:'Clustering',why:'Aprendizaje no supervisado: no hay respuesta correcta de antemano.'},
+  {q:'Sugerir a cada cliente la próxima excursión.',a:'Recomendación',why:'Se apoya en gustos de ese cliente y de clientes parecidos.'},
+  {q:'Un agente que aprende a moverse por ensayo y error, ganando puntos por acertar.',a:'Refuerzo',why:'Aprende por recompensas, no por ejemplos etiquetados.'},
+  {q:'Redactar respuestas a las reseñas de los huéspedes.',a:'Generativa',why:'Crea texto nuevo: es el terreno de los modelos de lenguaje (LLM).'}]});
+DEMOS.quizAct=root=>Quiz(root,{options:['Prohibido','Alto riesgo','Transparencia','Riesgo mínimo'],items:[
+  {q:'Puntuar a las personas por su comportamiento social para negarles servicios públicos.',a:'Prohibido',why:'La puntuación social es una práctica prohibida.'},
+  {q:'Un chatbot que atiende dudas de los clientes del alojamiento.',a:'Transparencia',why:'Permitido, pero hay que avisar de que se habla con una IA.'},
+  {q:'El filtro de spam del correo del hotel.',a:'Riesgo mínimo',why:'Sin obligaciones específicas.'},
+  {q:'Una IA que ordena los CV para contratar personal.',a:'Alto riesgo',why:'El empleo es un ámbito de alto riesgo: exige documentación, datos de calidad y supervisión humana.'},
+  {q:'Detectar las emociones de los empleados durante su jornada.',a:'Prohibido',why:'Reconocer emociones en el trabajo está prohibido, salvo motivos médicos o de seguridad.'},
+  {q:'Generar con IA fotos realistas de «huéspedes» para la publicidad.',a:'Transparencia',why:'El contenido sintético debe etiquetarse como tal.'},
+  {q:'Un recomendador de excursiones según los gustos del cliente.',a:'Riesgo mínimo',why:'En general, riesgo mínimo si no decide nada sensible.'}]});
+
+/* ---------- S2 · Descenso del gradiente en una dimensión ---------- */
+DEMOS.gd1d=root=>{
+  const f=x=>x**4/4-x*x+.2*x,g=x=>x**3-2*x+.2;
+  let x=-0.2,steps=0,path=[],timer=null;
+  const cv=mkCanvas(560,260),ctx=cv.getContext('2d');
+  const info=h('div',{class:'kpis'}),msg=h('div',{class:'note'});
+  const X=v=>20+(v+2.4)/4.8*(cv.width-40),Y=v=>cv.height-24-(v+1.5)/3.6*(cv.height-44);
+  const lr=slider('Tamaño del paso (lr)',0.01,0.9,0.01,0.1,null,v=>fmt(v));
+  function reset(sx){stop();x=sx==null?x0():sx;steps=0;path=[x];draw()}
+  let x0v=-0.2;const x0=()=>x0v;
+  function draw(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    ctx.strokeStyle=cssv('--line');ctx.beginPath();ctx.moveTo(X(-2.4),Y(0));ctx.lineTo(X(2.4),Y(0));ctx.stroke();
+    ctx.strokeStyle=cssv('--ink');ctx.lineWidth=2.5;ctx.beginPath();for(let i=0;i<=200;i++){const v=-2.4+i*4.8/200;i?ctx.lineTo(X(v),Y(f(v))):ctx.moveTo(X(v),Y(f(v)))}ctx.stroke();
+    ctx.lineWidth=1.5;ctx.strokeStyle=cssv('--hot');ctx.beginPath();path.forEach((p,i)=>{const px=X(clamp(p,-2.4,2.4)),py=Y(clamp(f(clamp(p,-2.4,2.4)),-1.5,2.1));i?ctx.lineTo(px,py):ctx.moveTo(px,py)});ctx.stroke();
+    path.forEach(p=>{ctx.fillStyle=cssv('--hot');ctx.beginPath();ctx.arc(X(clamp(p,-2.4,2.4)),Y(clamp(f(clamp(p,-2.4,2.4)),-1.5,2.1)),3,0,7);ctx.fill()});
+    const bx=clamp(x,-2.4,2.4);ctx.fillStyle=cssv('--accent');ctx.strokeStyle=cssv('--surface');ctx.lineWidth=2;ctx.beginPath();ctx.arc(X(bx),Y(clamp(f(bx),-1.5,2.1)),8,0,7);ctx.fill();ctx.stroke();
+    info.innerHTML='';info.append(kpi('Posición x',fmt(x,3)),kpi('Pendiente',fmt(g(x),3)),kpi('Pasos',steps));
+    msg.innerHTML=Math.abs(x)>6?'<span class="pill bad">Se ha disparado</span> Con pasos tan grandes el modelo «se pasa de largo» y diverge. Baja el tamaño del paso.':Math.abs(g(x))<.01?'<span class="pill ok">Convergido</span> Ha llegado a un mínimo (pendiente ≈ 0). ¿Es el mejor? Cambia el punto de partida pinchando en la curva.':'Pulsa «Dar un paso» o «Auto». Pincha en la curva para cambiar el punto de salida.';
+  }
+  function step(){x-=lr.get()*g(x);steps++;path.push(x);if(path.length>60)path.shift();draw();if(Math.abs(x)>6||Math.abs(g(x))<.01)stop()}
+  function stop(){if(timer){clearInterval(timer);timer=null}auto.textContent='Auto'}
+  const auto=btn('Auto',()=>{if(timer){stop();return}auto.textContent='Parar';timer=setInterval(step,120)});
+  cv.addEventListener('pointerdown',e=>{const[px]=ptr(e,cv);x0v=clamp((px-20)/(cv.width-40)*4.8-2.4,-2.2,2.2);reset(x0v)});
+  root.append(cv,lr.el,h('div',{class:'row'},btn('Dar un paso',step),auto,btn('Reiniciar',()=>reset())),info,msg);
+  reset();onTheme(draw);
+};
+
+/* ---------- S2 · Paradoja de Simpson ---------- */
+DEMOS.simpson=root=>{
+  const D={'Web propia':[[81,87],[192,263]],'Portal externo':[[234,270],[55,80]]};
+  const tipos=['Escapadas cortas','Estancias largas'];
+  let split=false;
+  const out=h('div'),msg=h('div',{class:'note'});
+  function row(l,r,n,k){return h('div',{class:'lb'},h('span',{},l),h('div',{class:'bar'},h('i',{style:'width:'+(r*100)+'%;background:'+k})),h('b',{},pct(r)+(n?' ('+n+')':'')))}
+  function draw(){
+    out.innerHTML='';
+    if(!split){
+      Object.entries(D).forEach(([k,v],i)=>{const a=v[0][0]+v[1][0],b=v[0][1]+v[1][1];out.append(row(k,a/b,a+'/'+b,i?'var(--c1)':'var(--c0)'))});
+      msg.innerHTML='<b>Mirando todo junto,</b> el Portal externo parece mejor (menos cancelaciones). ¿Seguro?';
+    }else{
+      tipos.forEach((s,j)=>{out.append(h('div',{class:'note'},h('b',{},s)));Object.entries(D).forEach(([k,v],i)=>out.append(row(k,v[j][0]/v[j][1],v[j][0]+'/'+v[j][1],i?'var(--c1)':'var(--c0)')))});
+      msg.innerHTML='<b>Separando por tipo de estancia,</b> la Web propia gana en los dos grupos. La conclusión se invierte: la mezcla de clientes engaña. Esto es la <b>paradoja de Simpson</b>.';
+    }
+  }
+  root.append(h('div',{class:'note'},'Porcentaje de reservas que NO se cancelan, según el canal (datos ficticios).'),h('div',{class:'row'},seg0()),out,msg);
+  function seg0(){const s=seg([['a','Todo junto'],['b','Separar por tipo de estancia']],'a',v=>{split=v==='b';draw()});return s.el}
+  draw();
+};
+
+/* ---------- S2 · Teorema de Bayes ---------- */
+DEMOS.bayes=root=>{
+  const p=slider('Reseñas falsas en total',1,50,1,5,upd,v=>v+' %'),s=slider('El detector acierta si es falsa',50,99,1,90,upd,v=>v+' %'),e=slider('El detector acierta si es verdadera',50,99,1,90,upd,v=>v+' %');
+  const out=h('div',{class:'kpis'}),msg=h('div',{class:'note'});
+  function upd(){
+    const pr=p.get()/100,se=s.get()/100,sp=e.get()/100,N=1000;
+    const fal=N*pr,tp=fal*se,fp=(N-fal)*(1-sp),post=tp/(tp+fp||1);
+    out.innerHTML='';out.append(kpi('Falsas de cada 1000',fmt(fal,0)),kpi('Marcadas y falsas',fmt(tp,0)),kpi('Marcadas pero verdaderas',fmt(fp,0)),kpi('Si marca «falsa», lo es con prob.',pct(post)));
+    msg.innerHTML='De las '+fmt(tp+fp,0)+' reseñas que marca el detector, solo '+fmt(tp,0)+' son realmente falsas. <b>Un detector con 90&nbsp;% de acierto no significa que, cuando salta, acierte el 90&nbsp;%.</b> Depende de cuánto abunda lo que buscas.';
+  }
+  root.append(p.el,s.el,e.el,out,msg);upd();
+};
+
+/* ---------- S3 · SQL en vivo ---------- */
+function genReservasSQL(){
+  const r=mulberry32(21);
+  const A=[['Hotel Teide','Tenerife',140],['Finca Anaga','Tenerife',95],['Casa Garajonay','La Gomera',80],['Apartamento Timanfaya','Lanzarote',110],['Bungalow Maspalomas','Gran Canaria',120],['Villa Betancuria','Fuerteventura',130]];
+  return Array.from({length:40},(_,i)=>{const a=A[Math.floor(r()*A.length)],c=r()<.55?'web':'portal';return{id:i+1,alojamiento:a[0],isla:a[1],canal:c,noches:1+Math.floor(r()*9),precio_noche:Math.round(a[2]*(.85+r()*.35)),cancelada:r()<(c==='portal'?.32:.14)?1:0}});
+}
+function runSQL(sql,db){
+  sql=sql.trim().replace(/;+\s*$/,'');let m;
+  const cond=w=>{
+    if(!w)return()=>true;
+    const parts=w.split(/\s+(and|or)\s+/i),tests=[];
+    for(let i=0;i<parts.length;i+=2){
+      const mm=parts[i].trim().match(/^(\w+)\s*(=|!=|<>|>=|<=|>|<|like)\s*(.+)$/i);
+      if(!mm)throw new Error('No entiendo la condición: '+parts[i]);
+      const col=mm[1],op=mm[2].toLowerCase();let v=mm[3].trim();
+      if(/^'.*'$/.test(v))v=v.slice(1,-1);else if(!isNaN(v))v=Number(v);else throw new Error('Los textos van entre comillas simples: '+v);
+      tests.push({link:i?parts[i-1].toLowerCase():null,fn:row=>{
+        if(!(col in row))throw new Error('No existe la columna «'+col+'»');
+        const a=row[col];
+        if(op==='=')return a==v;if(op==='!='||op==='<>')return a!=v;if(op==='>')return a>v;if(op==='<')return a<v;if(op==='>=')return a>=v;if(op==='<=')return a<=v;
+        return new RegExp('^'+String(v).replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/%/g,'.*')+'$','i').test(a);
+      }});
+    }
+    return row=>{let res=tests[0].fn(row);for(let i=1;i<tests.length;i++)res=tests[i].link==='and'?(res&&tests[i].fn(row)):(res||tests[i].fn(row));return res};
+  };
+  const T=n=>{if(n.toLowerCase()!=='reservas')throw new Error('Solo existe la tabla «reservas»');return db};
+  if(m=sql.match(/^select\s+(.+?)\s+from\s+(\w+)(?:\s+where\s+(.+?))?(?:\s+group\s+by\s+(\w+))?(?:\s+order\s+by\s+(\w+)(?:\s+(asc|desc))?)?(?:\s+limit\s+(\d+))?$/i)){
+    let rows=T(m[2]).filter(cond(m[3]));
+    const sel=m[1].split(',').map(s=>s.trim());
+    const items=sel.map(s=>{const a=s.match(/^(count|avg|sum|min|max)\s*\(\s*(\*|\w+)\s*\)(?:\s+as\s+(\w+))?$/i);if(a)return{agg:a[1].toLowerCase(),col:a[2],name:a[3]||(a[1].toLowerCase()+'_'+(a[2]==='*'?'filas':a[2]))};if(s==='*')return{star:true};const b=s.match(/^(\w+)(?:\s+as\s+(\w+))?$/i);if(!b)throw new Error('No entiendo «'+s+'»');return{col:b[1],name:b[2]||b[1]}});
+    const aggregate=g=>{const o={};items.forEach(it=>{if(it.agg){
+        const vals=it.col==='*'?g:g.map(r=>r[it.col]);
+        if(it.col!=='*'&&g.length&&!(it.col in g[0]))throw new Error('No existe la columna «'+it.col+'»');
+        o[it.name]=it.agg==='count'?g.length:it.agg==='sum'?vals.reduce((a,b)=>a+b,0):it.agg==='avg'?Math.round(vals.reduce((a,b)=>a+b,0)/(vals.length||1)*100)/100:it.agg==='min'?Math.min(...vals):Math.max(...vals);
+      }else if(!it.star){if(g.length&&!(it.col in g[0]))throw new Error('No existe la columna «'+it.col+'»');o[it.name]=g.length?g[0][it.col]:null}});return o};
+    let out;
+    if(m[4]){const gr={};rows.forEach(r=>{(gr[r[m[4]]]=gr[r[m[4]]]||[]).push(r)});out=Object.values(gr).map(aggregate)}
+    else if(items.some(i=>i.agg))out=[aggregate(rows)];
+    else if(items[0]&&items[0].star)out=rows.map(r=>({...r}));
+    else out=rows.map(r=>{const o={};items.forEach(it=>{if(!(it.col in r))throw new Error('No existe la columna «'+it.col+'»');o[it.name]=r[it.col]});return o});
+    if(m[5]){const k=m[5],d=(m[6]||'asc').toLowerCase()==='desc'?-1:1;out.sort((a,b)=>(a[k]>b[k]?1:a[k]<b[k]?-1:0)*d)}
+    if(m[7])out=out.slice(0,+m[7]);
+    return{rows:out};
+  }
+  if(m=sql.match(/^update\s+(\w+)\s+set\s+(\w+)\s*=\s*(.+?)(?:\s+where\s+(.+))?$/i)){
+    const t=T(m[1]),c=cond(m[4]);let v=m[3].trim();if(/^'.*'$/.test(v))v=v.slice(1,-1);else if(!isNaN(v))v=Number(v);else throw new Error('Valor no válido');
+    let n=0;t.forEach(r=>{if(c(r)){if(!(m[2] in r))throw new Error('No existe la columna «'+m[2]+'»');r[m[2]]=v;n++}});return{msg:n+' fila(s) modificada(s).'};
+  }
+  if(m=sql.match(/^delete\s+from\s+(\w+)(?:\s+where\s+(.+))?$/i)){
+    const t=T(m[1]),c=cond(m[2]);let n=0;for(let i=t.length-1;i>=0;i--)if(c(t[i])){t.splice(i,1);n++}return{msg:n+' fila(s) borrada(s).'};
+  }
+  if(m=sql.match(/^insert\s+into\s+(\w+)\s*\(([^)]+)\)\s*values\s*\(([^)]+)\)$/i)){
+    const t=T(m[1]),cols=m[2].split(',').map(s=>s.trim()),vals=m[3].split(',').map(s=>{s=s.trim();return/^'.*'$/.test(s)?s.slice(1,-1):Number(s)});
+    if(cols.length!==vals.length)throw new Error('Columnas y valores no coinciden');
+    const o={id:Math.max(0,...t.map(r=>r.id))+1,alojamiento:null,isla:null,canal:null,noches:null,precio_noche:null,cancelada:0};
+    cols.forEach((c,i)=>{if(!(c in o))throw new Error('No existe la columna «'+c+'»');o[c]=vals[i]});t.push(o);return{msg:'1 fila insertada (id '+o.id+').'};
+  }
+  throw new Error('Solo entiendo SELECT, INSERT, UPDATE y DELETE sobre la tabla reservas.');
+}
+DEMOS.sql=root=>{
+  let db=genReservasSQL();
+  const ex=[
+    ['Todo (primeras 5)','SELECT * FROM reservas LIMIT 5'],
+    ['Reservas canceladas','SELECT id, alojamiento, canal FROM reservas WHERE cancelada = 1 LIMIT 8'],
+    ['Precio medio por isla','SELECT isla, AVG(precio_noche) AS precio_medio, COUNT(*) AS reservas FROM reservas GROUP BY isla ORDER BY precio_medio DESC'],
+    ['¿Qué canal cancela más?','SELECT canal, AVG(cancelada) AS tasa_cancelacion FROM reservas GROUP BY canal'],
+    ['Actualizar (U)','UPDATE reservas SET precio_noche = 150 WHERE id = 1'],
+    ['Borrar (D)','DELETE FROM reservas WHERE noches = 1'],
+    ['Insertar (C)',"INSERT INTO reservas (alojamiento, isla, canal, noches, precio_noche) VALUES ('Hotel Teide','Tenerife','web',3,160)"]
+  ];
+  const ta=h('textarea',{rows:3,'aria-label':'Consulta SQL'});ta.value=ex[2][1];
+  const out=h('div'),cnt=h('div',{class:'note'});
+  function run(){
+    out.innerHTML='';
+    try{
+      const r=runSQL(ta.value,db);
+      if(r.msg){out.append(h('p',{},h('span',{class:'pill ok'},'Hecho'),' '+r.msg))}
+      else{
+        const rows=r.rows;
+        if(!rows.length){out.append(h('p',{class:'note'},'Sin resultados.'))}
+        else{const cols=Object.keys(rows[0]).map(k=>({label:k,key:k,num:typeof rows[0][k]==='number'}));out.append(h('div',{class:'scroll'},table(cols,rows.slice(0,15))));if(rows.length>15)out.append(h('p',{class:'note'},'… y '+(rows.length-15)+' filas más.'))}
+      }
+    }catch(e){out.append(h('p',{},h('span',{class:'pill bad'},'Error'),' '+e.message))}
+    cnt.textContent='La tabla «reservas» tiene ahora '+db.length+' filas.';
+  }
+  root.append(h('div',{class:'row'},ex.map(([l,q])=>h('button',{type:'button',class:'chip',onclick:()=>{ta.value=q;run()}},l))),ta,
+    h('div',{class:'row'},btn('Ejecutar',run,'pri'),btn('Restaurar datos',()=>{db=genReservasSQL();run()})),out,cnt,
+    h('p',{class:'note'},'Columnas: id, alojamiento, isla, canal, noches, precio_noche, cancelada (1 = sí). Admite WHERE con AND/OR (sin paréntesis), GROUP BY, ORDER BY y LIMIT.'));
+  run();
+};
+
+/* ---------- S3 · AutoML y despliegue (simulado) ---------- */
+function genReservasML(n,seed){
+  const r=mulberry32(seed),X=[],y=[];
+  for(let i=0;i<n;i++){
+    const ant=Math.round(r()*120),precio=Math.round(60+r()*160),noches=1+Math.floor(r()*10),portal=r()<.45?1:0;
+    const z=-1.7+0.026*ant+0.011*(precio-130)-0.13*noches+0.75*portal;
+    X.push([ant,precio,noches,portal]);y.push(r()<sigmoid(z)?1:0);
+  }
+  return{X,y,names:['antelación (días)','precio por noche','noches','canal portal']};
+}
+let _auto=null;
+function getAuto(){
+  if(_auto)return _auto;
+  const D=genReservasML(600,11),cut=Math.floor(D.X.length*.7);
+  const Xtr=D.X.slice(0,cut),ytr=D.y.slice(0,cut),Xte=D.X.slice(cut),yte=D.y.slice(cut);
+  const models=[
+    ['Regresión logística',ML.logistic(Xtr,ytr)],
+    ['k-NN (k = 9)',ML.knn(Xtr,ytr,{k:9})],
+    ['Árbol (prof. 4)',ML.tree(Xtr,ytr,{maxDepth:4,minLeaf:5})],
+    ['Random Forest',ML.forest(Xtr,ytr,{trees:30,maxDepth:5})]
+  ].map(([n,f])=>({n,f,acc:ML.accuracy(f,Xte,yte),tr:ML.accuracy(f,Xtr,ytr)}));
+  models.sort((a,b)=>b.acc-a.acc);
+  const base=1-yte.reduce((a,b)=>a+b,0)/yte.length;
+  _auto={D,Xtr,ytr,Xte,yte,models,best:models[0],base};
+  return _auto;
+}
+DEMOS.automl=root=>{
+  const A=getAuto();
+  const lb=h('div'),msg=h('div',{class:'note'});
+  const dep=h('div',{style:'display:none'});
+  let running=false;
+  function run(){
+    if(running)return;running=true;lb.innerHTML='';msg.textContent='Entrenando modelos…';dep.style.display='none';
+    const list=A.models.slice();let i=0;
+    const tick=()=>{
+      if(i>=list.length){msg.innerHTML='<span class="pill ok">Campeón</span> '+list[0].n+' con '+pct(list[0].acc)+' de acierto en datos que no vio. Si siempre dijéramos «no se cancela» acertaríamos '+pct(A.base)+': ese es el mínimo a superar.';dep.style.display='';running=false;return}
+      const m=list[i++];
+      lb.append(h('div',{class:'lb'},h('span',{},(i)+'. '+m.n),h('div',{class:'bar'},h('i',{style:'width:'+m.acc*100+'%'})),h('b',{},pct(m.acc))));
+      setTimeout(tick,450);
+    };
+    tick();
+  }
+  /* endpoint */
+  const sA=slider('Antelación (días)',0,120,1,45,upd),sP=slider('Precio por noche (€)',60,220,1,140,upd),sN=slider('Noches',1,10,1,3,upd);
+  let portal=0;const sc=seg([['0','Web propia'],['1','Portal externo']],'0',v=>{portal=+v;upd()});
+  const json=h('pre',{class:'code'});
+  const state=h('div',{class:'kpis'});let on=true,cost=0,t0=null;
+  const power=btn('Apagar endpoint',()=>{on=!on;power.textContent=on?'Apagar endpoint':'Encender endpoint';upd();clearInterval(t0);if(on)t0=setInterval(()=>{cost+=.12;upd()},1000)},'sm');
+  function upd(){
+    const x=[sA.get(),sP.get(),sN.get(),portal],p=A.best.f(x);
+    json.textContent=on?'POST /predict\n{ "antelacion": '+x[0]+', "precio": '+x[1]+', "noches": '+x[2]+', "portal": '+x[3]+' }\n\n200 OK\n{ "modelo": "'+A.best.n+'",\n  "prob_cancelacion": '+fmt(p,2).replace(',','.')+',\n  "prediccion": "'+(p>=.5?'se cancela':'se mantiene')+'" }':'POST /predict\n\n503 Service Unavailable\nEl endpoint está apagado. No hay coste, pero tampoco servicio.';
+    state.innerHTML='';state.append(kpi('Estado',on?'Encendido':'Apagado'),kpi('Coste simulado',fmt(cost)+' €'));
+  }
+  t0=setInterval(()=>{if(on){cost+=.12;upd()}},1000);
+  dep.append(h('h4',{style:'margin:14px 0 6px'},'Desplegar y consumir por API'),h('div',{class:'note'},'Cada segundo cuenta como una hora de endpoint encendido (coste inventado de 0,12 €/h): por eso el reto exige apagarlo.'),sA.el,sP.el,sN.el,h('div',{class:'row'},sc.el,power),json,state);
+  root.append(h('p',{class:'note'},'600 reservas ficticias con antelación, precio, noches y canal. El 70 % entrena y el 30 % se guarda para examinar.'),h('div',{class:'row'},btn('Lanzar AutoML',run,'pri')),lb,msg,dep);
+  upd();
+};
+/* ========== BLOQUE B · PYTHON (S4–S9) ========== */
+
+/* ---------- S4 · Script de KPIs ---------- */
+DEMOS.kpisPy=root=>{
+  const code=`import csv, json
+
+def leer_reservas(ruta):
+    filas, errores = [], []
+    with open(ruta, newline="", encoding="utf-8") as f:
+        for n, fila in enumerate(csv.DictReader(f), start=2):
+            try:
+                fila["noches"] = int(fila["noches"])
+                fila["precio_noche"] = float(fila["precio_noche"])
+                filas.append(fila)
+            except ValueError:
+                errores.append(f"línea {n}: dato no válido")
+    return filas, errores
+
+def kpis(filas):
+    ok = [f for f in filas if f["estado"] == "confirmada"]
+    ingreso = sum(f["noches"] * f["precio_noche"] for f in ok)
+    return {
+        "reservas": len(filas),
+        "tasa_cancelacion": round(1 - len(ok) / len(filas), 2),
+        "ingreso_total": ingreso,
+        "ingreso_medio": round(ingreso / len(ok), 2),
+    }
+
+filas, errores = leer_reservas("reservas.csv")
+print(json.dumps({"kpis": kpis(filas), "errores": errores}, indent=2))`;
+  const ta=h('textarea',{rows:9,'aria-label':'Contenido de reservas.csv'});
+  ta.value='id,alojamiento,noches,precio_noche,estado\n1,Hotel Teide,3,140,confirmada\n2,Finca Anaga,2,95,cancelada\n3,Casa Garajonay,5,80,confirmada\n4,Hotel Teide,2,abc,confirmada\n5,Villa Betancuria,4,130,confirmada\n6,Finca Anaga,1,95,cancelada\n7,Hotel Teide,6,150,confirmada';
+  const out=h('pre',{class:'code'});
+  function run(){
+    const lines=ta.value.trim().split(/\n/),head=lines.shift().split(',');
+    const filas=[],errores=[];
+    lines.forEach((l,i)=>{
+      const c=l.split(','),f={};head.forEach((k,j)=>f[k]=(c[j]||'').trim());
+      const n=Number(f.noches),p=Number(f.precio_noche);
+      if(!Number.isInteger(n)||isNaN(p)||f.precio_noche===''){errores.push('línea '+(i+2)+': dato no válido');return}
+      f.noches=n;f.precio_noche=p;filas.push(f);
+    });
+    const ok=filas.filter(f=>f.estado==='confirmada'),ing=ok.reduce((a,f)=>a+f.noches*f.precio_noche,0);
+    const r={kpis:{reservas:filas.length,tasa_cancelacion:filas.length?Math.round((1-ok.length/filas.length)*100)/100:null,ingreso_total:ing,ingreso_medio:ok.length?Math.round(ing/ok.length*100)/100:null},errores};
+    out.textContent=JSON.stringify(r,null,2);
+  }
+  ta.addEventListener('input',run);run();
+  root.append(h('div',{class:'two'},h('div',{},h('b',{},'Script en Python'),h('pre',{class:'code',style:'margin-top:6px'},code)),
+    h('div',{},h('b',{},'reservas.csv (edítalo)'),h('div',{style:'margin-top:6px'},ta),h('b',{style:'display:block;margin-top:10px'},'Salida del script'),h('div',{style:'margin-top:6px'},out))),
+    h('p',{class:'note'},'Prueba a cambiar un precio por una letra o a borrar una fila: el script no se rompe, anota el error y sigue. Eso es «gestionar excepciones». Aquí el código Python se muestra tal cual; la salida la calcula el navegador con la misma lógica.'));
+};
+
+/* ---------- S5 · Regresión desde cero con descenso del gradiente ---------- */
+DEMOS.gdReg=root=>{
+  const r=mulberry32(4),N=30,xs=[],ys=[];
+  for(let i=0;i<N;i++){const x=r();xs.push(x);ys.push(.2+.6*x+gauss(r)*.07)}
+  const mx=xs.reduce((a,b)=>a+b)/N,my=ys.reduce((a,b)=>a+b)/N;
+  let sxy=0,sxx=0;xs.forEach((x,i)=>{sxy+=(x-mx)*(ys[i]-my);sxx+=(x-mx)**2});
+  const wE=sxy/sxx,bE=my-wE*mx;
+  let w,b,hist,timer=null;
+  const cv=mkCanvas(300,260),cl=mkCanvas(300,260),c1=cv.getContext('2d'),c2=cl.getContext('2d');
+  const lr=slider('Tamaño del paso (lr)',0.05,1.3,0.05,0.4,null,v=>fmt(v));
+  const info=h('div',{class:'kpis'}),msg=h('div',{class:'note'});
+  const mse=()=>xs.reduce((s,x,i)=>s+(w*x+b-ys[i])**2,0)/N;
+  function reset(){stop();w=-.5;b=.9;hist=[mse()];draw()}
+  function step(){
+    let gw=0,gb=0;xs.forEach((x,i)=>{const e=w*x+b-ys[i];gw+=2*e*x/N;gb+=2*e/N});
+    w-=lr.get()*gw;b-=lr.get()*gb;hist.push(mse());if(hist.length>400)hist.shift();draw();
+    if(!isFinite(w)||hist[hist.length-1]>1e6||(hist.length>5&&Math.abs(hist[hist.length-1]-hist[hist.length-2])<1e-9))stop();
+  }
+  function stop(){if(timer){clearInterval(timer);timer=null}auto.textContent='Auto'}
+  const auto=btn('Auto',()=>{if(timer){stop();return}auto.textContent='Parar';timer=setInterval(()=>{for(let i=0;i<2;i++)step()},60)});
+  function draw(){
+    const W=cv.width,H=cv.height,X=x=>20+x*(W-40),Y=y=>H-20-y*(H-40);
+    c1.clearRect(0,0,W,H);c1.strokeStyle=cssv('--accent');c1.setLineDash([5,5]);c1.lineWidth=2;c1.beginPath();c1.moveTo(X(0),Y(bE));c1.lineTo(X(1),Y(wE+bE));c1.stroke();c1.setLineDash([]);
+    xs.forEach((x,i)=>{c1.fillStyle=cssv('--muted');c1.beginPath();c1.arc(X(x),Y(ys[i]),4,0,7);c1.fill()});
+    c1.strokeStyle=cssv('--hot');c1.lineWidth=3;c1.beginPath();c1.moveTo(X(0),Y(clamp(b,-5,5)));c1.lineTo(X(1),Y(clamp(w+b,-5,5)));c1.stroke();
+    const Wl=cl.width,Hl=cl.height;c2.clearRect(0,0,Wl,Hl);
+    const m=Math.max(...hist.filter(isFinite).slice(0,40),.001);
+    c2.strokeStyle=cssv('--ink');c2.lineWidth=2;c2.beginPath();hist.forEach((v,i)=>{const px=20+i/Math.max(hist.length-1,30)*(Wl-40),py=Hl-20-clamp(v/m,0,1.05)*(Hl-40);i?c2.lineTo(px,py):c2.moveTo(px,py)});c2.stroke();
+    c2.fillStyle=cssv('--muted');c2.font='12px system-ui';c2.fillText('error (MSE) en cada paso',24,16);
+    info.innerHTML='';info.append(kpi('Recta actual',fmt(w,2)+'·x + '+fmt(b,2)),kpi('Recta exacta',fmt(wE,2)+'·x + '+fmt(bE,2)),kpi('Error (MSE)',hist[hist.length-1]>1e4?'∞':fmt(hist[hist.length-1],4)));
+    msg.innerHTML=hist[hist.length-1]>1e3?'<span class="pill bad">Diverge</span> El paso es demasiado grande: el error crece en vez de bajar.':hist.length>3&&Math.abs(w-wE)<.02?'<span class="pill ok">Encontrada</span> El descenso del gradiente llega a la misma recta que la fórmula exacta.':'Recta naranja = la del modelo. Línea discontinua = la solución exacta. Pulsa «Auto».';
+  }
+  root.append(h('div',{class:'row'},cv,cl),lr.el,h('div',{class:'row'},btn('Un paso',step),auto,btn('Reiniciar',reset)),info,msg);
+  reset();onTheme(draw);
+};
+
+/* ---------- S5 · Monte Carlo ---------- */
+DEMOS.monte=root=>{
+  const cv=mkCanvas(300,300),ctx=cv.getContext('2d');let n=0,ins=0,r=mulberry32(99);
+  const info=h('div',{class:'kpis'});
+  function clear(){n=0;ins=0;ctx.clearRect(0,0,300,300);frame();upd()}
+  function frame(){ctx.strokeStyle=cssv('--ink');ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(0,300,300,-Math.PI/2,0);ctx.stroke()}
+  function throwN(k){
+    for(let i=0;i<k;i++){const x=r(),y=r(),inn=x*x+y*y<=1;n++;if(inn)ins++;if(n<=4000){ctx.fillStyle=inn?cssv('--accent'):cssv('--hot');ctx.fillRect(x*300-1,300-y*300-1,2.4,2.4)}}
+    frame();upd();
+  }
+  function upd(){const est=n?4*ins/n:0;info.innerHTML='';info.append(kpi('Puntos lanzados',n),kpi('Estimación de π',n?fmt(est,4):'—'),kpi('Error',n?fmt(Math.abs(est-Math.PI),4):'—'))}
+  root.append(h('div',{class:'note'},'Lanzamos puntos al azar en un cuadrado. La fracción que cae dentro del cuarto de círculo es π/4. Más puntos, más precisión.'),cv,
+    h('div',{class:'row'},btn('Lanzar 100',()=>throwN(100)),btn('Lanzar 5.000',()=>throwN(5000)),btn('Lanzar 100.000',()=>throwN(100000)),btn('Reiniciar',clear)),info);
+  clear();onTheme(()=>{ctx.clearRect(0,0,300,300);n=0;ins=0;frame();upd()});
+};
+
+/* ---------- S6 · Limpieza de datos ---------- */
+DEMOS.limpieza=root=>{
+  const RAW=[
+    {id:1,alojamiento:'Hotel Teide',noches:3,precio:140,valoracion:8.5},
+    {id:2,alojamiento:'hotel teide',noches:2,precio:150,valoracion:9},
+    {id:3,alojamiento:'Finca Anaga',noches:'cuatro',precio:95,valoracion:7.5},
+    {id:4,alojamiento:'Casa Garajonay',noches:5,precio:null,valoracion:8},
+    {id:5,alojamiento:'Villa Betancuria',noches:4,precio:9999,valoracion:9.5},
+    {id:6,alojamiento:'Finca Anaga',noches:2,precio:98,valoracion:null},
+    {id:1,alojamiento:'Hotel Teide',noches:3,precio:140,valoracion:8.5},
+    {id:7,alojamiento:'Hotel Teide',noches:-2,precio:145,valoracion:8},
+    {id:8,alojamiento:'Casa Garajonay',noches:6,precio:82,valoracion:7},
+    {id:9,alojamiento:'Bungalow Maspalomas',noches:3,precio:118,valoracion:8.2}];
+  const steps=[
+    ['dup','Quitar filas duplicadas'],['txt','Unificar mayúsculas del texto'],['tipo','Convertir textos a números'],
+    ['imp','Marcar valores imposibles como nulos'],['med','Rellenar nulos con la mediana'],['esc','Estandarizar el precio (z-score)']];
+  const on={};const box=h('div',{class:'row'});
+  const num=['noches','precio','valoracion'];
+  const med=a=>{const s=a.filter(v=>typeof v==='number'&&isFinite(v)).sort((x,y)=>x-y);return s.length?s[Math.floor((s.length-1)/2)]:null};
+  function pipe(){
+    let rows=RAW.map(r=>({...r}));
+    if(on.dup){const seen=new Set();rows=rows.filter(r=>{const k=JSON.stringify(r);if(seen.has(k))return false;seen.add(k);return true})}
+    if(on.txt)rows.forEach(r=>r.alojamiento=r.alojamiento.replace(/\b\w/g,c=>c.toUpperCase()));
+    if(on.tipo)rows.forEach(r=>{if(typeof r.noches==='string')r.noches=({cuatro:4,tres:3,dos:2}[r.noches]??null)});
+    if(on.imp)rows.forEach(r=>{if(r.noches<=0)r.noches=null;if(r.precio>1000)r.precio=null});
+    if(on.med){const m={};num.forEach(k=>m[k]=med(rows.map(r=>r[k])));rows.forEach(r=>num.forEach(k=>{if(r[k]==null)r[k]=m[k]}))}
+    if(on.esc){const v=rows.map(r=>r.precio).filter(x=>typeof x==='number'),mu=v.reduce((a,b)=>a+b,0)/v.length,sd=Math.sqrt(v.reduce((a,b)=>a+(b-mu)**2,0)/v.length)||1;rows.forEach(r=>r.precio_z=typeof r.precio==='number'?Math.round((r.precio-mu)/sd*100)/100:null)}
+    return rows;
+  }
+  const out=h('div'),kp=h('div',{class:'kpis'});
+  function flag(r,c){const v=r[c.key];if(c.key==='alojamiento')return/^[a-z]/.test(v)?'bad':'';if(!num.includes(c.key))return'';if(v==null||typeof v==='string')return'bad';if(c.key==='noches'&&v<=0)return'bad';if(c.key==='precio'&&v>1000)return'bad';return''}
+  function draw(){
+    const rows=pipe(),keys=['id','alojamiento','noches','precio','valoracion'].concat(on.esc?['precio_z']:[]);
+    const seen=new Set();let dups=0;rows.forEach(r=>{const k=JSON.stringify(r);if(seen.has(k)){dups++;r._cls='bad'}seen.add(k)});
+    let bad=0;rows.forEach(r=>keys.forEach(k=>{if(k!=='id'&&k!=='precio_z'&&flag(r,{key:k}))bad++}));
+    out.innerHTML='';out.append(h('div',{class:'scroll'},table(keys.map(k=>({label:k,key:k,num:k!=='alojamiento'})),rows,{cell:flag})));
+    kp.innerHTML='';kp.append(kpi('Filas',rows.length),kpi('Celdas con problema',bad),kpi('Filas duplicadas',dups));
+  }
+  steps.forEach(([k,l])=>box.append(h('label',{class:'chip'},h('input',{type:'checkbox',onchange:e=>{on[k]=e.target.checked;draw()}}),' '+l)));
+  root.append(h('div',{class:'note'},'Un dataset de reservas con defectos reales (en rojo). Activa los pasos uno a uno y mira qué arregla cada uno. El orden importa: prueba a rellenar nulos antes de marcar los imposibles.'),box,kp,out);
+  draw();
+};
+
+/* ---------- S7 y S8 · Laboratorio de modelos 2D ---------- */
+const MODELDEF={
+  logistic:{label:'Regresión logística',params:[{k:'degree',l:'Grado polinómico',min:1,max:4,step:1,v:1}],fit:(X,y,p)=>ML.logistic(X,y,{degree:p.degree})},
+  knn:{label:'k-NN',params:[{k:'k',l:'Vecinos (k)',min:1,max:25,step:1,v:5}],fit:(X,y,p)=>ML.knn(X,y,{k:p.k})},
+  tree:{label:'Árbol de decisión',params:[{k:'depth',l:'Profundidad',min:1,max:12,step:1,v:3}],fit:(X,y,p)=>ML.tree(X,y,{maxDepth:p.depth})},
+  forest:{label:'Random Forest',params:[{k:'trees',l:'Nº de árboles',min:1,max:60,step:1,v:25},{k:'depth',l:'Profundidad',min:1,max:12,step:1,v:6}],fit:(X,y,p)=>ML.forest(X,y,{trees:p.trees,maxDepth:p.depth})},
+  svm:{label:'SVM',choice:{k:'kernel',opts:[['lineal','Lineal'],['rbf','RBF (curvo)']],v:'rbf'},params:[{k:'C',l:'Penalización C',min:1,max:100,step:1,v:20},{k:'gamma',l:'Curvatura (gamma)',min:1,max:40,step:1,v:8}],fit:(X,y,p)=>ML.svm(X,y,{kernel:p.kernel,lambda:1/(p.C*X.length),gamma:p.gamma})}
+};
+function Playground(root,{models,sprint,ds0}){
+  const S={ds:ds0||'moons',noise:.35,seed:1,model:models[0],cls:0,pts:[],p:{}};
+  Object.entries(MODELDEF).forEach(([k,d])=>{S.p[k]={};(d.params||[]).forEach(q=>S.p[k][q.k]=q.v);if(d.choice)S.p[k][d.choice.k]=d.choice.v});
+  const okm=h('span',{class:'note'});
+  const cv=mkCanvas(480,480),pm=h('div'),kp=h('div',{class:'kpis'}),cm=h('div'),msg=h('div',{class:'note'});
+  let pred=null,trA=NaN,teA=NaN;
+  function gen(){S.pts=ML.make2d(S.ds,110,S.noise,S.seed*13+7)}
+  function fit(){
+    const tr=S.pts.filter(p=>!p.test),te=S.pts.filter(p=>p.test);
+    const X=tr.map(p=>[p.x,p.y]),y=tr.map(p=>p.c);
+    if(tr.length<4||!y.some(v=>v)||!y.some(v=>!v)){pred=null;trA=teA=NaN}
+    else{pred=MODELDEF[S.model].fit(X,y,S.p[S.model]);trA=ML.accuracy(pred,X,y);teA=ML.accuracy(pred,te.map(p=>[p.x,p.y]),te.map(p=>p.c))}
+    drawAll(te);
+  }
+  function drawAll(te){
+    drawBoundary(cv,pred,S.pts);
+    kp.innerHTML='';kp.append(kpi('Acierto en entrenamiento (●)',isNaN(trA)?'—':pct(trA)),kpi('Acierto en prueba (■)',isNaN(teA)?'—':pct(teA)));
+    cm.innerHTML='';
+    if(pred&&te.length){
+      const c=ML.confusion(pred,te.map(p=>[p.x,p.y]),te.map(p=>p.c));
+      cm.append(h('table',{class:'t'},h('thead',{},h('tr',{},h('th',{},'Matriz de confusión (prueba)'),h('th',{class:'num'},'Predice azul'),h('th',{class:'num'},'Predice naranja'))),
+        h('tbody',{},h('tr',{},h('td',{},'Era azul'),h('td',{class:'num good'},c.tn),h('td',{class:'num bad'},c.fp)),h('tr',{},h('td',{},'Era naranja'),h('td',{class:'num bad'},c.fn),h('td',{class:'num good'},c.tp)))));
+    }
+    const gap=trA-teA;
+    msg.innerHTML=isNaN(trA)?'Pon al menos unos puntos de cada color.':gap>.15?'<span class="pill bad">Sobreajuste</span> Acierta mucho más en entrenamiento que en prueba: está memorizando.':teA<.75?'<span class="pill warn">Se queda corto</span> Prueba otro modelo o más complejidad.':'<span class="pill ok">Buen ajuste</span> Acierta bien con datos que no ha visto.';
+  }
+  const dsSeg=seg([['blobs','Dos grupos'],['moons','Lunas'],['circles','Círculos'],['xor','XOR']],S.ds,v=>{S.ds=v;gen();fit()});
+  const noise=slider('Ruido en los datos',0,1,0.05,S.noise,v=>{S.noise=v;gen();fit()},v=>fmt(v));
+  const modelSel=h('select',{'aria-label':'Modelo',onchange:e=>{S.model=e.target.value;buildParams();fit()}},models.map(m=>h('option',{value:m},MODELDEF[m].label)));
+  function buildParams(){
+    pm.innerHTML='';const d=MODELDEF[S.model];
+    if(d.choice){const s=seg(d.choice.opts,S.p[S.model][d.choice.k],v=>{S.p[S.model][d.choice.k]=v;fit()});pm.append(h('div',{class:'row'},s.el))}
+    (d.params||[]).forEach(q=>pm.append(slider(q.l,q.min,q.max,q.step,S.p[S.model][q.k],v=>{S.p[S.model][q.k]=v;fit()}).el));
+  }
+  const paint=seg([[0,'Pintar azul','c0'],[1,'Pintar naranja','c1']],0,v=>S.cls=+v);
+  cv.addEventListener('pointerdown',e=>{const[px,py]=ptr(e,cv);S.pts.push({x:px/cv.width,y:1-py/cv.height,c:S.cls,test:Math.random()<.3});fit()});
+  root.append(h('div',{class:'split'},h('div',{class:'vis'},cv),h('div',{},
+    h('div',{class:'row'},dsSeg.el),noise.el,
+    h('div',{class:'row'},h('label',{},'Modelo: ',modelSel)),pm,
+    h('div',{class:'note'},'Pincha en el cuadro para añadir tus propios puntos. ● entrenan el modelo · ■ son de prueba (no los ve al aprender). El color de fondo es lo que predice el modelo en cada zona.'),
+    h('div',{class:'row'},paint.el,btn('Vaciar',()=>{S.pts=[];fit()},'sm'),btn('Nuevos datos',()=>{S.seed++;gen();fit()},'sm')),
+    kp,cm,msg,
+    h('div',{class:'row'},btn('Registrar este experimento',()=>{
+      if(isNaN(trA))return;const d=MODELDEF[S.model],P=S.p[S.model];
+      logRun({sprint,modelo:d.label+' · '+S.ds,params:Object.entries(P).map(([k,v])=>k+'='+v).join(', '),train:trA,test:teA});
+      okm.textContent='Registrado: míralo en el Sprint 15.';setTimeout(()=>okm.textContent='',2500);
+    },'sm'),okm))));
+  gen();buildParams();fit();onTheme(fit);
+}
+DEMOS.lab7=root=>Playground(root,{models:['logistic','knn'],sprint:'S7',ds0:'blobs'});
+DEMOS.lab8=root=>Playground(root,{models:['tree','forest','svm'],sprint:'S8',ds0:'moons'});
+
+/* ---------- S9 · k-means ---------- */
+const PAL=['#2f6fdc','#e0562f','#26a269','#a347ba','#d4a017','#14a3a3','#c2185b','#6d7b8d'];
+DEMOS.kmeans=root=>{
+  let seed=3,pts,cents,asg,phase='assign',iters=0,K=4;
+  const cv=mkCanvas(480,360),ctx=cv.getContext('2d');
+  const kp=h('div',{class:'kpis'}),el=h('div'),msg=h('div',{class:'note'});
+  function gen(){const r=mulberry32(seed*17),C=[[.2,.25],[.75,.2],[.3,.75],[.78,.72]];pts=Array.from({length:120},(_,i)=>{const c=C[i%4];return[clamp(c[0]+gauss(r)*.07,.02,.98),clamp(c[1]+gauss(r)*.07,.02,.98)]});elbow();init()}
+  function lloyd(k,rs,full){const c=Array.from({length:k},()=>pts[Math.floor(rs()*pts.length)].slice());let a=[];for(let it=0;it<40;it++){a=pts.map(p=>{let b=0,bd=1e9;c.forEach((q,j)=>{const d=(p[0]-q[0])**2+(p[1]-q[1])**2;if(d<bd){bd=d;b=j}});return b});c.forEach((q,j)=>{const m=pts.filter((p,i)=>a[i]===j);if(m.length){q[0]=m.reduce((s,p)=>s+p[0],0)/m.length;q[1]=m.reduce((s,p)=>s+p[1],0)/m.length}})}return a.reduce((s,j,i)=>s+(pts[i][0]-c[j][0])**2+(pts[i][1]-c[j][1])**2,0)}
+  let el_in=[];function elbow(){el_in=[];for(let k=1;k<=8;k++){let best=1e9;for(let t=0;t<6;t++)best=Math.min(best,lloyd(k,mulberry32(seed*100+k*7+t)));el_in.push(best)}}
+  function init(){const r=mulberry32(seed*31+K);cents=Array.from({length:K},()=>pts[Math.floor(r()*pts.length)].slice());asg=pts.map(()=>-1);phase='assign';iters=0;draw()}
+  function inertia(){return asg[0]<0?NaN:asg.reduce((s,j,i)=>s+(pts[i][0]-cents[j][0])**2+(pts[i][1]-cents[j][1])**2,0)}
+  function step(){
+    if(phase==='assign'){asg=pts.map(p=>{let b=0,bd=1e9;cents.forEach((q,j)=>{const d=(p[0]-q[0])**2+(p[1]-q[1])**2;if(d<bd){bd=d;b=j}});return b});phase='update'}
+    else{cents.forEach((q,j)=>{const m=pts.filter((p,i)=>asg[i]===j);if(m.length){q[0]=m.reduce((s,p)=>s+p[0],0)/m.length;q[1]=m.reduce((s,p)=>s+p[1],0)/m.length}});phase='assign';iters++}
+    draw();
+  }
+  function draw(){
+    const W=cv.width,H=cv.height;ctx.clearRect(0,0,W,H);
+    pts.forEach((p,i)=>{ctx.fillStyle=asg[i]<0?cssv('--muted'):PAL[asg[i]%8];ctx.beginPath();ctx.arc(p[0]*W,(1-p[1])*H,5,0,7);ctx.fill()});
+    cents.forEach((q,j)=>{ctx.fillStyle=PAL[j%8];ctx.strokeStyle=cssv('--ink');ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(q[0]*W-9,(1-q[1])*H-9);ctx.lineTo(q[0]*W+9,(1-q[1])*H+9);ctx.moveTo(q[0]*W+9,(1-q[1])*H-9);ctx.lineTo(q[0]*W-9,(1-q[1])*H+9);ctx.stroke();ctx.beginPath();ctx.arc(q[0]*W,(1-q[1])*H,7,0,7);ctx.fill();ctx.stroke()});
+    kp.innerHTML='';kp.append(kpi('Grupos (k)',K),kpi('Rondas',iters),kpi('Dispersión interna',isNaN(inertia())?'—':fmt(inertia(),2)));
+    msg.textContent=phase==='assign'?'Siguiente paso: cada punto se asigna al centro más cercano.':'Siguiente paso: cada centro se mueve al medio de sus puntos.';
+    el.innerHTML='';const mx=Math.max(...el_in);el.append(h('div',{class:'note'},'Método del codo: cuánto baja la dispersión al añadir grupos. Aquí el «codo» está en k = 4.'));
+    el_in.forEach((v,i)=>el.append(h('div',{class:'lb'},h('span',{},'k = '+(i+1)),h('div',{class:'bar'},h('i',{style:'width:'+v/mx*100+'%;background:'+(i+1===K?'var(--hot)':'var(--accent)')})),h('b',{},fmt(v,1)))));
+  }
+  const ks=slider('Número de grupos (k)',2,8,1,4,v=>{K=v;init()});
+  root.append(ks.el,cv,h('div',{class:'row'},btn('Siguiente paso',step,'pri'),btn('Hasta converger',()=>{for(let i=0;i<60;i++)step()}),btn('Otro inicio',()=>{seed+=0;K=ks.get();cents=null;const r=mulberry32(Math.random()*1e9);cents=Array.from({length:K},()=>pts[Math.floor(r()*pts.length)].slice());asg=pts.map(()=>-1);phase='assign';iters=0;draw()},'sm'),btn('Nuevos datos',()=>{seed++;gen()},'sm')),kp,msg,el);
+  gen();onTheme(draw);
+};
+
+/* ---------- S9 · Recomendador ---------- */
+DEMOS.recom=root=>{
+  const F=['aventura','cultura','relax','gastronomía','naturaleza'];
+  const I=[['Teide al amanecer',[.8,.2,.2,0,1]],['Ruta del vino en La Geria',[.1,.5,.5,1,.5]],['Spa con vistas al mar',[0,0,1,.3,.3]],['Casco histórico de La Laguna',[0,1,.4,.5,0]],['Kayak y snorkel con tortugas',[1,0,.3,0,.8]],['Senderismo en Anaga',[.7,.1,.3,0,1]],['Taller de cocina canaria',[0,.6,.3,1,0]],['Atardecer en velero',[.3,0,1,.4,.5]]];
+  const v=[8,2,3,2,7];const list=h('div');
+  const sl=F.map((f,i)=>slider('Me gusta: '+f,0,10,1,v[i],x=>{v[i]=x;draw()}));
+  const cos=(a,b)=>{let s=0,na=0,nb=0;a.forEach((x,i)=>{s+=x*b[i];na+=x*x;nb+=b[i]*b[i]});return na&&nb?s/Math.sqrt(na*nb):0};
+  function draw(){list.innerHTML='';I.map(([n,x])=>[n,cos(v,x)]).sort((a,b)=>b[1]-a[1]).forEach(([n,s],i)=>list.append(h('div',{class:'lb'},h('span',{},(i+1)+'. '+n),h('div',{class:'bar'},h('i',{style:'width:'+s*100+'%'})),h('b',{},pct(s)))))}
+  root.append(h('div',{class:'note'},'Cada excursión tiene un «perfil». El recomendador compara tu perfil con el de cada una (similitud del coseno) y las ordena.'),...sl.map(s=>s.el),list);draw();
+};
+
+/* ---------- S9 · Aprendizaje por refuerzo (Q-learning) ---------- */
+DEMOS.qlearn=root=>{
+  const R=5,C=7,A=[[-1,0],[0,1],[1,0],[0,-1]],AR=['▲','▶','▼','◀'];
+  const start=[4,0],goal=[4,6],cliff=c=>c[0]===4&&c[1]>=1&&c[1]<=5;
+  let Q,ep,last,showPath=false,rng=mulberry32(8);
+  const cv=mkCanvas(560,400),ctx=cv.getContext('2d');
+  const eps=slider('Exploración ε',0,1,0.05,0.2,null,v=>fmt(v)),al=slider('Aprendizaje α',0.05,1,0.05,0.5,null,v=>fmt(v)),ga=slider('Visión de futuro γ',0.5,1,0.01,0.95,null,v=>fmt(v));
+  const kp=h('div',{class:'kpis'});
+  function reset(){Q=Array.from({length:R},()=>Array.from({length:C},()=>[0,0,0,0]));ep=0;last=null;showPath=false;draw()}
+  function episode(){
+    let s=start.slice(),tot=0;
+    for(let t=0;t<200;t++){
+      let a;if(rng()<eps.get())a=Math.floor(rng()*4);else{const q=Q[s[0]][s[1]],m=Math.max(...q),b=q.map((v,i)=>v===m?i:-1).filter(i=>i>=0);a=b[Math.floor(rng()*b.length)]}
+      let n=[clamp(s[0]+A[a][0],0,R-1),clamp(s[1]+A[a][1],0,C-1)],r=-1,done=false;
+      if(cliff(n)){r=-50;n=start.slice()}else if(n[0]===goal[0]&&n[1]===goal[1]){r=20;done=true}
+      const mq=done?0:Math.max(...Q[n[0]][n[1]]);
+      Q[s[0]][s[1]][a]+=al.get()*(r+ga.get()*mq-Q[s[0]][s[1]][a]);
+      tot+=r;s=n;if(done)break;
+    }
+    ep++;last=tot;
+  }
+  function path(){const p=[start.slice()];let s=start.slice();for(let t=0;t<30;t++){const q=Q[s[0]][s[1]],m=Math.max(...q);if(m===0&&q.every(v=>v===0))break;const a=q.indexOf(m);s=[clamp(s[0]+A[a][0],0,R-1),clamp(s[1]+A[a][1],0,C-1)];p.push(s.slice());if(cliff(s)||(s[0]===goal[0]&&s[1]===goal[1]))break}return p}
+  function draw(){
+    const W=cv.width,H=cv.height,cw=W/C,ch=H/R;ctx.clearRect(0,0,W,H);
+    for(let r=0;r<R;r++)for(let c=0;c<C;c++){
+      const x=c*cw,y=r*ch,cl=cliff([r,c]),g=r===goal[0]&&c===goal[1],s=r===start[0]&&c===start[1];
+      ctx.fillStyle=cl?'rgba(224,86,47,.35)':g?'rgba(38,162,105,.4)':cssv('--surface2');ctx.fillRect(x,y,cw,ch);
+      ctx.strokeStyle=cssv('--line');ctx.strokeRect(x,y,cw,ch);
+      ctx.textAlign='center';ctx.textBaseline='middle';
+      if(cl){ctx.fillStyle=cssv('--ink');ctx.font='13px system-ui';ctx.fillText('volcán',x+cw/2,y+ch/2)}
+      else if(g){ctx.fillStyle=cssv('--ink');ctx.font='bold 16px system-ui';ctx.fillText('META',x+cw/2,y+ch/2)}
+      else{const q=Q[r][c],m=Math.max(...q);if(!q.every(v=>v===0)){const a=q.indexOf(m);ctx.fillStyle=cssv('--accent');ctx.globalAlpha=.9;ctx.font='26px system-ui';ctx.fillText(AR[a],x+cw/2,y+ch/2);ctx.globalAlpha=1}
+        if(s){ctx.fillStyle=cssv('--ink');ctx.font='bold 11px system-ui';ctx.fillText('SALIDA',x+cw/2,y+ch-9)}}
+    }
+    if(showPath){const p=path();ctx.strokeStyle=cssv('--hot');ctx.lineWidth=4;ctx.beginPath();p.forEach((q,i)=>{const x=q[1]*cw+cw/2,y=q[0]*ch+ch/2;i?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.stroke();ctx.lineWidth=1}
+    kp.innerHTML='';kp.append(kpi('Episodios',ep),kpi('Puntos del último',last==null?'—':last));
+  }
+  const train=n=>()=>{for(let i=0;i<n;i++)episode();draw()};
+  root.append(h('div',{class:'note'},'Un agente sale de «SALIDA» y debe llegar a «META». Cada paso resta 1 punto, caer en el volcán resta 50 y llegar suma 20. Nadie le dice el camino: lo aprende probando. Las flechas son su mejor acción conocida en cada casilla.'),cv,eps.el,al.el,ga.el,
+    h('div',{class:'row'},btn('Entrenar 10 episodios',train(10)),btn('Entrenar 300',train(300),'pri'),btn('Ver su recorrido',()=>{showPath=!showPath;draw()}),btn('Olvidar todo',reset,'sm')),kp);
+  reset();onTheme(draw);
+};
+/* ========== S10–S13 · Redes neuronales, visión, lenguaje y comunicación ========== */
+
+/* ---------- S10 · Red neuronal que se entrena delante de ti ---------- */
+class MLP{
+  constructor(sizes,act,seed){
+    const r=mulberry32(seed);this.act=act;this.W=[];this.b=[];
+    for(let l=0;l<sizes.length-1;l++){const n=sizes[l],m=sizes[l+1],s=Math.sqrt(2/(n+m))*(act==='relu'?1.5:1.7);
+      this.W.push(Array.from({length:m},()=>Array.from({length:n},()=>gauss(r)*s)));this.b.push(Array(m).fill(0))}
+  }
+  f(z){return this.act==='relu'?Math.max(0,z):Math.tanh(z)}
+  df(z,a){return this.act==='relu'?(z>0?1:0):1-a*a}
+  forward(x){
+    const A=[x],Z=[];let a=x;const L=this.W.length;
+    for(let l=0;l<L;l++){
+      const z=this.W[l].map((w,j)=>{let s=this.b[l][j];for(let i=0;i<w.length;i++)s+=w[i]*a[i];return s});
+      Z.push(z);a=l===L-1?z.map(sigmoid):z.map(v=>this.f(v));A.push(a);
+    }
+    return{A,Z};
+  }
+  predict(x){const o=this.forward(x).A;return o[o.length-1][0]}
+  train(X,Y,lr,l2){
+    const L=this.W.length,gW=this.W.map(w=>w.map(r=>r.map(()=>0))),gb=this.b.map(b=>b.map(()=>0));
+    for(let n=0;n<X.length;n++){
+      const{A,Z}=this.forward(X[n]);let d=[A[L][0]-Y[n]];
+      for(let l=L-1;l>=0;l--){
+        for(let j=0;j<d.length;j++){gb[l][j]+=d[j];for(let i=0;i<A[l].length;i++)gW[l][j][i]+=d[j]*A[l][i]}
+        if(l>0){const nd=Array(A[l].length).fill(0);
+          for(let i=0;i<nd.length;i++){let s=0;for(let j=0;j<d.length;j++)s+=this.W[l][j][i]*d[j];nd[i]=s*this.df(Z[l-1][i],A[l][i])}
+          d=nd}
+      }
+    }
+    for(let l=0;l<L;l++)for(let j=0;j<this.W[l].length;j++){
+      for(let i=0;i<this.W[l][j].length;i++)this.W[l][j][i]-=lr*(gW[l][j][i]/X.length+l2*this.W[l][j][i]);
+      this.b[l][j]-=lr*gb[l][j]/X.length;
+    }
+  }
+  loss(X,Y){let s=0;X.forEach((x,i)=>{const p=clamp(this.predict(x),1e-6,1-1e-6);s-=Y[i]*Math.log(p)+(1-Y[i])*Math.log(1-p)});return s/X.length}
+  acc(X,Y){let ok=0;X.forEach((x,i)=>{if((this.predict(x)>=.5?1:0)===Y[i])ok++});return ok/X.length}
+}
+DEMOS.mlp=root=>{
+  const S={ds:'circles',noise:.3,arch:'8,8',act:'tanh',seed:1,run:false,ep:0,net:null,tr:[],te:[],hist:[],best:null};
+  const cv=mkCanvas(420,420),cl=mkCanvas(420,200),cL=cl.getContext('2d');
+  const kp=h('div',{class:'kpis'}),msg=h('div',{class:'note'}),okm=h('span',{class:'note'});
+  let raf=null,lastDraw=0;
+  function data(){const p=ML.make2d(S.ds,130,S.noise,S.seed*5+2);S.tr=p.filter(q=>!q.test);S.te=p.filter(q=>q.test);S.pts=p}
+  function build(){stop();S.ep=0;S.hist=[];S.best=null;S.net=new MLP([2,...S.arch.split(',').map(Number),1],S.act,S.seed*3+1);redraw()}
+  const X=a=>a.map(p=>[p.x,p.y]),Y=a=>a.map(p=>p.c);
+  function step(n){
+    for(let i=0;i<n;i++){
+      S.net.train(X(S.tr),Y(S.tr),lr.get(),l2.get());S.ep++;
+      if(S.ep%5===0){
+        const a=S.net.loss(X(S.tr),Y(S.tr)),b=S.net.loss(X(S.te),Y(S.te));
+        S.hist.push([S.ep,a,b]);if(!S.best||b<S.best[1])S.best=[S.ep,b];
+      }
+    }
+  }
+  function redraw(){
+    drawBoundary(cv,x=>S.net.predict(x),S.pts,{res:40});
+    cL.clearRect(0,0,420,200);
+    if(S.hist.length>1){
+      const mx=Math.max(...S.hist.map(h=>Math.max(h[1],h[2])),.7),mxE=S.hist[S.hist.length-1][0];
+      const px=e=>30+e/mxE*(420-45),py=v=>185-clamp(v/mx,0,1)*165;
+      [[1,'--accent',[]],[2,'--hot',[5,4]]].forEach(([k,c,d])=>{cL.setLineDash(d);cL.strokeStyle=cssv(c);cL.lineWidth=2.4;cL.beginPath();S.hist.forEach((q,i)=>{i?cL.lineTo(px(q[0]),py(q[k])):cL.moveTo(px(q[0]),py(q[k]))});cL.stroke()});
+      cL.setLineDash([]);
+      if(S.best){cL.strokeStyle=cssv('--ink');cL.globalAlpha=.5;cL.beginPath();cL.moveTo(px(S.best[0]),10);cL.lineTo(px(S.best[0]),188);cL.stroke();cL.globalAlpha=1}
+    }
+    cL.fillStyle=cssv('--muted');cL.font='12px system-ui';cL.fillText('error · verde: entrenamiento · naranja: prueba',30,14);
+    const tl=S.net.loss(X(S.tr),Y(S.tr)),el=S.net.loss(X(S.te),Y(S.te));
+    kp.innerHTML='';kp.append(kpi('Época',S.ep),kpi('Acierto entrenamiento',pct(S.net.acc(X(S.tr),Y(S.tr)))),kpi('Acierto prueba',pct(S.net.acc(X(S.te),Y(S.te)))),kpi('Mejor época para parar',S.best?S.best[0]:'—'));
+    const last=S.hist[S.hist.length-1];
+    msg.innerHTML=!last?'Pulsa «Entrenar» y mira cómo la red va dibujando la frontera.':(S.best&&S.ep-S.best[0]>150&&last[2]>S.best[1]*1.12)?'<span class="pill bad">Sobreajuste</span> El error de prueba (naranja) ha empezado a subir mientras el de entrenamiento baja. <b>Early stopping:</b> habría que parar en la época '+S.best[0]+'.':last[1]>.55?'<span class="pill warn">Aprendiendo</span> Aún no ha encontrado la forma de los datos.':'<span class="pill ok">Va bien</span> Los dos errores bajan juntos.';
+  }
+  function loop(t){if(!S.run)return;step(6);if(t-lastDraw>60){redraw();lastDraw=t}if(S.ep>=4000){stop();redraw();return}raf=requestAnimationFrame(loop)}
+  function stop(){S.run=false;if(raf)cancelAnimationFrame(raf);raf=null;go.textContent='Entrenar'}
+  const go=btn('Entrenar',()=>{if(S.run){stop();redraw();return}S.run=true;go.textContent='Parar';raf=requestAnimationFrame(loop)},'pri');
+  const ds=seg([['circles','Círculos'],['xor','XOR'],['moons','Lunas'],['spiral','Espiral']],S.ds,v=>{S.ds=v;data();build()});
+  const noise=slider('Ruido en los datos',0,1,0.05,S.noise,v=>{S.noise=v;data();build()},v=>fmt(v));
+  const arch=h('select',{'aria-label':'Arquitectura',onchange:e=>{S.arch=e.target.value;build()}},[['4','1 capa · 4 neuronas'],['8','1 capa · 8 neuronas'],['16','1 capa · 16 neuronas'],['8,8','2 capas · 8 + 8'],['16,16','2 capas · 16 + 16'],['16,16,16','3 capas · 16 + 16 + 16']].map(([v,l])=>h('option',{value:v,selected:v===S.arch},l)));
+  const act=seg([['tanh','tanh'],['relu','ReLU']],S.act,v=>{S.act=v;build()});
+  const lr=slider('Tasa de aprendizaje',0.02,1,0.02,0.3,null,v=>fmt(v)),l2=slider('Regularización L2',0,0.1,0.005,0,null,v=>fmt(v,3));
+  root.append(h('div',{class:'split'},h('div',{class:'vis'},cv,cl),h('div',{},
+    h('div',{class:'row'},ds.el),noise.el,h('div',{class:'row'},h('label',{},'Red: ',arch),h('label',{},'Activación: '),act.el),lr.el,l2.el,
+    h('div',{class:'note'},'● entrenan · ■ prueba. Para ver el sobreajuste: espiral + red grande + L2 = 0, y deja entrenar un buen rato.'),
+    kp,msg,h('div',{class:'row'},go,btn('Reiniciar la red',build,'sm'),btn('Nuevos datos',()=>{S.seed++;data();build()},'sm'),
+      btn('Registrar experimento',()=>{const a=S.net.acc(X(S.tr),Y(S.tr)),b=S.net.acc(X(S.te),Y(S.te));logRun({sprint:'S10',modelo:'MLP · '+S.ds,params:'capas='+S.arch+', '+S.act+', lr='+fmt(lr.get())+', L2='+fmt(l2.get(),3)+', épocas='+S.ep,train:a,test:b});okm.textContent='Registrado en el Sprint 15.';setTimeout(()=>okm.textContent='',2500)},'sm'),okm))));
+  data();build();onTheme(redraw);
+};
+
+/* ---------- S11 · Convolución y pooling ---------- */
+DEMOS.conv=root=>{
+  const N=12;
+  const PRE={
+    '7':['............','.##########.','.##########.','.........##.','........##..','.......##...','......##....','.....##.....','....##......','...##.......','...##.......','............'],
+    '0':['............','...######...','..########..','.###....###.','.##......##.','.##......##.','.##......##.','.##......##.','.###....###.','..########..','...######...','............'],
+    'cuadrado':['............','............','..########..','..########..','..##....##..','..##....##..','..##....##..','..##....##..','..########..','..########..','............','............']};
+  let g=PRE['7'].map(r=>[...r].map(c=>c==='#'?1:0));
+  const KS={
+    'Bordes verticales':[[-1,0,1],[-2,0,2],[-1,0,1]],'Bordes horizontales':[[-1,-2,-1],[0,0,0],[1,2,1]],
+    'Desenfoque':[[1,1,1],[1,1,1],[1,1,1]].map(r=>r.map(v=>v/9)),'Nitidez':[[0,-1,0],[-1,5,-1],[0,-1,0]]};
+  let kn='Bordes verticales',relu=true,pool=false;
+  const c1=mkCanvas(240,240,'pix'),c2=mkCanvas(240,240,'pix'),kt=h('div',{class:'note'});
+  function conv(){const o=[];for(let i=0;i<N-2;i++){o.push([]);for(let j=0;j<N-2;j++){let s=0;for(let a=0;a<3;a++)for(let b=0;b<3;b++)s+=g[i+a][j+b]*KS[kn][a][b];o[i].push(relu?Math.max(0,s):s)}}return o}
+  function mp(o){const m=[];for(let i=0;i+1<o.length;i+=2){m.push([]);for(let j=0;j+1<o[0].length;j+=2)m[m.length-1].push(Math.max(o[i][j],o[i][j+1],o[i+1][j],o[i+1][j+1]))}return m}
+  function paint(cv,m,diverge){
+    const ctx=cv.getContext('2d'),n=m.length,cw=cv.width/n;ctx.clearRect(0,0,cv.width,cv.height);
+    const mx=Math.max(...m.flat().map(Math.abs),1e-6),ac=rgb(cssv('--accent')),hc=rgb(cssv('--hot')),bg=rgb(cssv('--surface2')),ink=rgb(cssv('--ink'));
+    m.forEach((row,i)=>row.forEach((v,j)=>{
+      let c;if(diverge){const a=Math.abs(v)/mx,t=v>=0?ac:hc;c=bg.map((b,k)=>b*(1-a)+t[k]*a)}else c=bg.map((b,k)=>b*(1-v)+ink[k]*v);
+      ctx.fillStyle='rgb('+c.map(Math.round)+')';ctx.fillRect(j*cw,i*cw,cw+.5,cw+.5);
+    }));
+  }
+  function draw(){
+    paint(c1,g,false);let o=conv();if(pool)o=mp(o);paint(c2,o,true);
+    kt.innerHTML='Filtro 3×3 «'+kn+'»:<br><code>'+KS[kn].map(r=>r.map(v=>fmt(v,v%1?2:0)).join('  ')).join('<br>')+'</code>';
+  }
+  let down=false;
+  const dot=e=>{const[px,py]=ptr(e,c1),j=Math.floor(px/c1.width*N),i=Math.floor(py/c1.height*N);if(i>=0&&j>=0&&i<N&&j<N){g[i][j]=e.shiftKey||e.button===2?0:1;draw()}};
+  c1.addEventListener('pointerdown',e=>{down=true;c1.setPointerCapture(e.pointerId);dot(e)});c1.addEventListener('pointermove',e=>{if(down)dot(e)});c1.addEventListener('pointerup',()=>down=false);
+  const ks=seg(Object.keys(KS).map(k=>[k,k]),kn,v=>{kn=v;draw()});
+  const opt=h('div',{class:'row'},h('label',{class:'chip'},h('input',{type:'checkbox',checked:true,onchange:e=>{relu=e.target.checked;draw()}}),' ReLU (quita lo negativo)'),h('label',{class:'chip'},h('input',{type:'checkbox',onchange:e=>{pool=e.target.checked;draw()}}),' Max pooling 2×2'));
+  root.append(h('div',{class:'note'},'Dibuja en la cuadrícula izquierda (arrastra). A la derecha, lo que «ve» un filtro de una red convolucional: verde = detecta, naranja = lo contrario.'),
+    h('div',{class:'row'},h('div',{style:'flex:1 1 200px;max-width:260px'},h('b',{},'Imagen 12×12'),c1),h('div',{style:'flex:1 1 200px;max-width:260px'},h('b',{},'Mapa de características'),c2)),
+    h('div',{class:'row'},...Object.keys(PRE).map(k=>btn('Cargar «'+k+'»',()=>{g=PRE[k].map(r=>[...r].map(c=>c==='#'?1:0));draw()},'sm')),btn('Borrar',()=>{g=g.map(r=>r.map(()=>0));draw()},'sm')),
+    ks.el,opt,kt);
+  draw();onTheme(draw);
+};
+
+/* ---------- S11 · Detección de objetos: IoU ---------- */
+DEMOS.iou=root=>{
+  const cv=mkCanvas(480,300),ctx=cv.getContext('2d'),gt={x:120,y:70,w:200,h:150};
+  const sx=slider('Caja predicha · x',0,400,5,150,draw),sy=slider('y',0,240,5,90,draw),sw=slider('ancho',40,300,5,180,draw),sh=slider('alto',40,240,5,150,draw);
+  const out=h('div',{class:'kpis'}),msg=h('div',{class:'note'});
+  function draw(){
+    const p={x:sx.get(),y:sy.get(),w:sw.get(),h:sh.get()};
+    const ix=Math.max(0,Math.min(gt.x+gt.w,p.x+p.w)-Math.max(gt.x,p.x)),iy=Math.max(0,Math.min(gt.y+gt.h,p.y+p.h)-Math.max(gt.y,p.y));
+    const inter=ix*iy,uni=gt.w*gt.h+p.w*p.h-inter,iou=uni?inter/uni:0;
+    ctx.clearRect(0,0,480,300);
+    ctx.fillStyle=cssv('--accent');ctx.globalAlpha=.3;ctx.fillRect(Math.max(gt.x,p.x),Math.max(gt.y,p.y),ix,iy);ctx.globalAlpha=1;
+    ctx.lineWidth=3;ctx.strokeStyle=cssv('--c0');ctx.strokeRect(gt.x,gt.y,gt.w,gt.h);ctx.strokeStyle=cssv('--hot');ctx.setLineDash([7,5]);ctx.strokeRect(p.x,p.y,p.w,p.h);ctx.setLineDash([]);
+    ctx.font='13px system-ui';ctx.fillStyle=cssv('--c0');ctx.fillText('real (etiquetada)',gt.x+4,gt.y-6);ctx.fillStyle=cssv('--hot');ctx.fillText('predicha por el modelo',p.x+4,p.y+p.h+16);
+    out.innerHTML='';out.append(kpi('Intersección',Math.round(inter)),kpi('Unión',Math.round(uni)),kpi('IoU = inter. / unión',fmt(iou,2)));
+    msg.innerHTML=iou>=.5?'<span class="pill ok">Acierto</span> Con IoU ≥ 0,5 se suele dar la detección por buena.':'<span class="pill bad">Fallo</span> La caja se solapa poco con la real (IoU &lt; 0,5).';
+  }
+  root.append(h('div',{class:'note'},'Un detector como YOLO dibuja cajas. Para saber si acierta se mide cuánto se solapa con la caja real (IoU). Mueve la caja predicha:'),cv,sx.el,sy.el,sw.el,sh.el,out,msg);
+  draw();onTheme(draw);
+};
+
+/* ---------- S12 · Reseñas: sentimiento y temas ---------- */
+DEMOS.resenas=root=>{
+  const POS='excelente genial perfecto perfecta limpio limpia amable agradable bonito bonita precioso preciosa maravilloso maravillosa recomendable recomiendo comodo comoda tranquilo tranquila rico deliciosa delicioso fantastico fantastica encantado encantada increible volveremos mejor buenisimo buena bueno estupendo estupenda espectacular atento atenta'.split(' ');
+  const NEG='sucio sucia ruido ruidoso ruidosa caro cara malo mala pesimo pesima lento lenta frio fria incomodo incomoda decepcionante horrible desagradable problema problemas queja roto rota olor peor estafa mal antiguo vieja'.split(' ');
+  const TOP={limpieza:['limpio','limpia','sucio','sucia','limpieza','olor'],personal:['amable','atento','atenta','personal','recepcion'],ubicacion:['ubicacion','vistas','playa','centro','cerca'],ruido:['ruido','ruidoso','ruidosa','silencio','tranquilo','tranquila'],precio:['caro','cara','precio','barato'],comida:['desayuno','comida','cena','restaurante'],habitacion:['habitacion','cama','bano','aire','wifi']};
+  const ta=h('textarea',{rows:7,'aria-label':'Reseñas, una por línea'});
+  ta.value='Habitación muy limpia y personal amable. Las vistas al Teide son espectaculares.\nEl desayuno era malo y el wifi muy lento. No volveremos.\nUbicación perfecta, cerca de la playa, pero hay ruido por la noche.\nPrecio caro para lo que ofrece, la cama incómoda.\nTodo estupendo, volveremos. Recomiendo el restaurante.\nEl baño estaba sucio y no funcionaba el aire acondicionado.';
+  const out=h('div'),tp=h('div');
+  function score(t){
+    const w=norm(t).replace(/[^a-z0-9ñ ]/g,' ').split(/\s+/).filter(Boolean);let s=0,neg=0;
+    w.forEach((x,i)=>{let v=POS.includes(x)?1:NEG.includes(x)?-1:0;if(!v)return;const prev=w.slice(Math.max(0,i-2),i);if(prev.some(p=>['no','nunca','ni','tampoco'].includes(p)))v=-v;if(prev.some(p=>['muy','super'].includes(p)))v*=1.5;s+=v});
+    return{s,w};
+  }
+  function run(){
+    const lines=ta.value.split(/\n/).map(x=>x.trim()).filter(Boolean),rows=lines.map(l=>({l,...score(l)}));
+    out.innerHTML='';
+    out.append(h('div',{class:'scroll'},table([{label:'Reseña',key:'l'},{label:'Puntos',num:true,get:r=>fmt(r.s,1)},{label:'Etiqueta',get:r=>h('span',{class:'pill '+(r.s>0?'ok':r.s<0?'bad':'')},r.s>0?'positiva':r.s<0?'negativa':'neutra')}],rows)));
+    const T={};Object.keys(TOP).forEach(k=>T[k]={n:0,s:0});
+    rows.forEach(r=>Object.entries(TOP).forEach(([k,ws])=>{if(r.w.some(x=>ws.includes(x))){T[k].n++;T[k].s+=r.s}}));
+    tp.innerHTML='';tp.append(h('div',{class:'note'},'Temas que aparecen y su tono medio:'));
+    Object.entries(T).filter(([k,v])=>v.n).sort((a,b)=>b[1].n-a[1].n).forEach(([k,v])=>tp.append(h('div',{class:'lb'},h('span',{},k+' ('+v.n+')'),h('div',{class:'bar'},h('i',{style:'width:'+clamp(50+v.s/v.n*25,5,100)+'%;background:'+(v.s>=0?'var(--ok)':'var(--bad)')})),h('b',{},v.s>=0?'+':'−'))));
+  }
+  ta.addEventListener('input',run);run();
+  root.append(h('div',{class:'note'},'Escribe una reseña por línea. Este análisis usa un diccionario de palabras (la forma clásica de hacerlo). En el curso lo haremos también con un modelo preentrenado que entiende el contexto.'),ta,out,tp);
+};
+
+/* ---------- S12 · Mini RAG ---------- */
+DEMOS.rag=root=>{
+  const DOCS=[
+    ['Cancelación','Cancelación gratuita hasta 7 días antes de la llegada. Entre 7 y 2 días se cobra el 50 % de la primera noche. Con menos de 48 horas no hay reembolso.'],
+    ['Entrada y salida','La entrada (check-in) es de 15:00 a 20:00 y la salida (check-out) hasta las 11:00. Para llegar después de las 20:00 hay que avisar a recepción.'],
+    ['Mascotas','Se admiten perros de hasta 15 kg con un suplemento de 10 € por noche. No se permiten animales en la zona de piscina.'],
+    ['Desayuno','El desayuno buffet se sirve de 7:30 a 10:30 y cuesta 12 € por persona. Incluye opciones sin gluten y veganas bajo petición.'],
+    ['Aparcamiento','El aparcamiento es gratuito y limitado a 20 plazas por orden de llegada. Hay un punto de carga para coches eléctricos con coste aparte.'],
+    ['Niños','Los menores de 3 años se alojan gratis en cuna. Los niños de 3 a 12 años pagan un 50 % en cama supletoria.'],
+    ['Piscina','La piscina abre de 9:00 a 21:00. Es obligatorio ducharse antes y no se permite vidrio en la zona.'],
+    ['Wi-Fi','El wifi es gratuito en todo el alojamiento. La clave se entrega en el check-in.']];
+  const STOP=new Set('el la los las de del y a en un una que es se por con para al hay puedo puede pueden lo mi mis como cuanto cuando donde son esta este'.split(' '));
+  const SYN={cancelar:'cancelacion',cancelo:'cancelacion',anular:'cancelacion',cancelacion:'cancelacion',perro:'mascota',perros:'mascota',gato:'mascota',gatos:'mascota',animal:'mascota',animales:'mascota',mascotas:'mascota',aparcar:'aparcamiento',parking:'aparcamiento',coche:'aparcamiento',coches:'aparcamiento',desayunar:'desayuno',entrada:'checkin',llegar:'checkin',llegada:'checkin',salida:'checkout',nino:'menor',ninos:'menor',nina:'menor',bebe:'menor',cuna:'menor',menores:'menor',wi:'wifi',internet:'wifi',precio:'coste',cuesta:'coste',pagar:'coste',gratis:'gratuito'};
+  const tok=t=>norm(t).replace(/check-in/g,'checkin').replace(/check-out/g,'checkout').replace(/[^a-z0-9 ]/g,' ').split(/\s+/).filter(w=>w&&!STOP.has(w)).map(w=>SYN[w]||w);
+  const dt=DOCS.map(d=>tok(d[0]+' '+d[1])),idf={};
+  new Set(dt.flat()).forEach(w=>idf[w]=Math.log(1+DOCS.length/(1+dt.filter(d=>d.includes(w)).length)));
+  const vec=t=>{const v={};t.forEach(w=>v[w]=(v[w]||0)+(idf[w]||Math.log(1+DOCS.length)));return v};
+  const cos=(a,b)=>{let s=0,na=0,nb=0;for(const k in a){na+=a[k]*a[k];if(b[k])s+=a[k]*b[k]}for(const k in b)nb+=b[k]*b[k];return na&&nb?s/Math.sqrt(na*nb):0};
+  const dv=dt.map(vec);
+  const q=h('input',{type:'text',value:'¿Puedo cancelar sin coste?',style:'width:100%','aria-label':'Pregunta del cliente'});
+  const out=h('div');
+  function run(){
+    const qv=vec(tok(q.value)),sc=dv.map((v,i)=>[i,cos(qv,v)]).sort((a,b)=>b[1]-a[1]).slice(0,3);
+    out.innerHTML='';
+    out.append(h('div',{class:'note'},'1) Se busca en la base de conocimiento los fragmentos más parecidos a la pregunta:'));
+    sc.forEach(([i,s],k)=>out.append(h('div',{class:'lb'},h('span',{},DOCS[i][0]),h('div',{class:'bar'},h('i',{style:'width:'+clamp(s*100,0,100)+'%'})),h('b',{},fmt(s,2)))));
+    const top=sc[0];
+    out.append(h('div',{class:'note'},'2) Se le pasan al modelo de lenguaje como contexto, junto con la pregunta:'),
+      h('pre',{class:'code'},top[1]<.12?'(sin fragmentos suficientemente parecidos)':'Contesta SOLO con el contexto. Si no está, di que no lo sabes.\n\nContexto:\n'+sc.filter(x=>x[1]>=.12).map(([i],k)=>'['+(k+1)+'] '+DOCS[i][1]).join('\n')+'\n\nPregunta: '+q.value));
+    out.append(h('div',{class:'note'},'3) Respuesta del asistente:'),
+      h('p',{style:'margin:0;padding:10px;border-radius:10px;background:var(--accent-soft)'},top[1]<.12?'No tengo información sobre eso en las políticas del alojamiento. Te paso con recepción.':DOCS[top[0]][1]));
+    out.append(h('p',{class:'note'},top[1]<.12?'Así evitamos que el modelo se invente una respuesta: si no hay contexto, debe reconocerlo.':'Aquí mostramos el fragmento tal cual; en el curso un LLM redactará la respuesta usando solo ese contexto.'));
+  }
+  q.addEventListener('input',run);
+  root.append(h('div',{class:'note'},'Base de conocimiento ficticia de «Finca Anaga» (8 fragmentos). Pregunta como un cliente:'),q,
+    h('div',{class:'row'},['¿Puedo cancelar sin coste?','¿Aceptan perros?','¿A qué hora es el desayuno?','¿Hay parking?','¿Cuánto cuesta una cuna para el bebé?','¿Tenéis gimnasio?'].map(x=>h('button',{type:'button',class:'chip',onclick:()=>{q.value=x;run()}},x))),out,
+    h('p',{class:'note'},'Para buscar usamos coincidencia de palabras con un pequeño diccionario de sinónimos. En el curso lo haremos con embeddings, que comparan significados y no solo palabras.'));
+  run();
+};
+
+/* ---------- S12 · Series temporales ---------- */
+DEMOS.serie=root=>{
+  const r=mulberry32(12),SE=[10,8,5,0,-6,-10,-5,4,2,-4,0,12],N=36,T=24,y=[];
+  for(let t=0;t<N;t++)y.push(clamp(60+.25*t+SE[t%12]+gauss(r)*2.2,20,99));
+  const tr=y.slice(0,T);
+  const mt=(a)=>a.reduce((s,v)=>s+v,0)/a.length;
+  const tm=mt(tr.map((_,i)=>i)),ym=mt(tr);let sxy=0,sxx=0;tr.forEach((v,i)=>{sxy+=(i-tm)*(v-ym);sxx+=(i-tm)**2});const sl=sxy/sxx,ic=ym-sl*tm;
+  const si=Array.from({length:12},(_,m)=>mt(tr.filter((_,i)=>i%12===m).map((v,k)=>v-(ic+sl*(m+12*k)))));
+  const F={
+    'Media móvil (3 meses)':t=>mt(tr.slice(-3)),
+    'Mismo mes del año anterior':t=>y[t-12],
+    'Tendencia + estacionalidad':t=>ic+sl*t+si[t%12]};
+  const mae=f=>mt(Array.from({length:N-T},(_,k)=>Math.abs(f(T+k)-y[T+k])));
+  let sel='Tendencia + estacionalidad';
+  const cv=mkCanvas(560,260),ctx=cv.getContext('2d'),res=h('div');
+  const MES='ene feb mar abr may jun jul ago sep oct nov dic'.split(' ');
+  function draw(){
+    const W=560,H=260,X=t=>34+t/(N-1)*(W-50),Y=v=>H-26-(v-30)/70*(H-46);
+    ctx.clearRect(0,0,W,H);ctx.strokeStyle=cssv('--line');ctx.fillStyle=cssv('--muted');ctx.font='11px system-ui';
+    [40,60,80,100].forEach(v=>{ctx.beginPath();ctx.moveTo(34,Y(v));ctx.lineTo(W-14,Y(v));ctx.stroke();ctx.fillText(v+'%',4,Y(v)+4)});
+    [0,12,24].forEach(t=>ctx.fillText(MES[0]+' '+(2023+t/12),X(t)-12,H-8));
+    ctx.fillStyle=cssv('--accent-soft');ctx.globalAlpha=.6;ctx.fillRect(X(T-.5),8,X(N-1)-X(T-.5)+6,H-34);ctx.globalAlpha=1;
+    ctx.fillStyle=cssv('--muted');ctx.fillText('lo que el modelo no ve',X(T)+4,20);
+    ctx.strokeStyle=cssv('--ink');ctx.lineWidth=2.4;ctx.beginPath();y.forEach((v,t)=>t?ctx.lineTo(X(t),Y(v)):ctx.moveTo(X(t),Y(v)));ctx.stroke();
+    ctx.strokeStyle=cssv('--hot');ctx.setLineDash([6,4]);ctx.beginPath();for(let t=T;t<N;t++){const v=F[sel](t);t>T?ctx.lineTo(X(t),Y(v)):ctx.moveTo(X(t),Y(v))}ctx.stroke();ctx.setLineDash([]);
+    res.innerHTML='';const ms=Object.keys(F).map(k=>[k,mae(F[k])]),mx=Math.max(...ms.map(m=>m[1]));
+    ms.forEach(([k,v])=>res.append(h('div',{class:'lb'},h('span',{},k),h('div',{class:'bar'},h('i',{style:'width:'+v/mx*100+'%;background:'+(k===sel?'var(--hot)':'var(--accent)')})),h('b',{},fmt(v,1)+' pt'))));
+  }
+  const sg=seg(Object.keys(F).map(k=>[k,k]),sel,v=>{sel=v;draw()});
+  root.append(h('div',{class:'note'},'Ocupación mensual ficticia de 3 años. El modelo solo ve los 2 primeros y debe predecir el tercero (zona sombreada). Línea negra = realidad, naranja = predicción.'),sg.el,cv,h('div',{class:'note'},'Error medio por método (puntos de ocupación; menos es mejor):'),res);
+  draw();onTheme(draw);
+};
+
+/* ---------- S13 · Contar lo que hace el modelo ---------- */
+DEMOS.metricas=root=>{
+  const A=getAuto(),f=A.best.f,sc=A.Xte.map(f);
+  const R=ML.roc(sc,A.yte);
+  let thr=.5;
+  const cv=mkCanvas(300,300),ctx=cv.getContext('2d'),cm=h('div'),kp=h('div',{class:'kpis'}),imp=h('div'),msg=h('div',{class:'note'});
+  const th=slider('Umbral para decir «se cancela»',0.05,0.95,0.01,.5,v=>{thr=v;draw()},v=>fmt(v));
+  const rs=mulberry32(5),base=ML.accuracy(f,A.Xte,A.yte);
+  const I=A.D.names.map((n,j)=>{let d=0;for(let k=0;k<6;k++){const idx=A.Xte.map((_,i)=>i).sort(()=>rs()-.5);const Xs=A.Xte.map((x,i)=>{const c=x.slice();c[j]=A.Xte[idx[i]][j];return c});d+=base-ML.accuracy(f,Xs,A.yte)}return[n,Math.max(0,d/6)]}).sort((a,b)=>b[1]-a[1]);
+  function draw(){
+    const W=300,H=300,X=v=>30+v*(W-45),Y=v=>H-26-v*(H-45);
+    ctx.clearRect(0,0,W,H);ctx.strokeStyle=cssv('--line');ctx.strokeRect(X(0),Y(1),W-45,H-45);ctx.setLineDash([4,4]);ctx.beginPath();ctx.moveTo(X(0),Y(0));ctx.lineTo(X(1),Y(1));ctx.stroke();ctx.setLineDash([]);
+    ctx.strokeStyle=cssv('--accent');ctx.lineWidth=3;ctx.beginPath();R.pts.forEach((p,i)=>i?ctx.lineTo(X(p[0]),Y(p[1])):ctx.moveTo(X(p[0]),Y(p[1])));ctx.stroke();
+    const c=ML.confusion(f,A.Xte,A.yte,thr),tpr=c.tp/(c.tp+c.fn||1),fpr=c.fp/(c.fp+c.tn||1);
+    ctx.fillStyle=cssv('--hot');ctx.strokeStyle=cssv('--surface');ctx.lineWidth=2;ctx.beginPath();ctx.arc(X(fpr),Y(tpr),7,0,7);ctx.fill();ctx.stroke();
+    ctx.fillStyle=cssv('--muted');ctx.font='11px system-ui';ctx.fillText('falsas alarmas →',X(.55),H-8);ctx.save();ctx.translate(12,Y(.3));ctx.rotate(-Math.PI/2);ctx.fillText('cancelaciones detectadas →',0,0);ctx.restore();
+    const pr=c.tp/(c.tp+c.fp||1),rc=tpr,f1=pr+rc?2*pr*rc/(pr+rc):0;
+    cm.innerHTML='';cm.append(h('table',{class:'t'},h('thead',{},h('tr',{},h('th',{},'Matriz de confusión'),h('th',{class:'num'},'Predice se mantiene'),h('th',{class:'num'},'Predice se cancela'))),
+      h('tbody',{},h('tr',{},h('td',{},'Se mantuvo'),h('td',{class:'num good'},c.tn),h('td',{class:'num bad'},c.fp)),h('tr',{},h('td',{},'Se canceló'),h('td',{class:'num bad'},c.fn),h('td',{class:'num good'},c.tp)))));
+    kp.innerHTML='';kp.append(kpi('Precisión',pct(pr)),kpi('Exhaustividad',pct(rc)),kpi('F1',fmt(f1,2)),kpi('AUC (área ROC)',fmt(R.auc,2)));
+    msg.innerHTML=thr<.3?'Umbral bajo: avisamos de casi todas las cancelaciones, pero con muchas <b>falsas alarmas</b>.':thr>.7?'Umbral alto: solo avisamos cuando estamos muy seguros, pero <b>se nos escapan</b> cancelaciones.':'Umbral intermedio. El umbral correcto depende de lo que cueste cada error para el negocio.';
+  }
+  imp.append(h('div',{class:'note'},'Importancia de cada variable (cuánto empeora el modelo si la «barajamos»):'));
+  const mx=Math.max(...I.map(i=>i[1]),.001);I.forEach(([n,v])=>imp.append(h('div',{class:'lb'},h('span',{},n),h('div',{class:'bar'},h('i',{style:'width:'+v/mx*100+'%'})),h('b',{},fmt(v*100,1)+' pt'))));
+  root.append(h('div',{class:'note'},'Modelo campeón del Sprint 3 ('+A.best.n+'), evaluado con las '+A.Xte.length+' reservas de prueba.'),h('div',{class:'two'},h('div',{},cv),h('div',{},th.el,cm,kp,msg)),imp);
+  draw();onTheme(draw);
+};
+/* ========== BLOQUE C · PROYECTO (S14–S17) ========== */
+
+/* ---------- S14 · Canvas de proyecto + checklist ético ---------- */
+DEMOS.canvas=root=>{
+  const F=[['problema','Problema que queremos resolver','Predecir qué reservas se cancelarán con 7 días de margen.'],['cliente','¿Quién lo usa y para qué decisión?','Responsable de reservas: decidir a quién llamar para confirmar.'],['datos','Datos disponibles','Reservas de 3 años con canal, antelación, precio y estado.'],['exito','Métrica de éxito','Detectar al menos el 70 % de las cancelaciones con menos de un 30 % de falsas alarmas.'],['base','¿Qué se hace hoy? (baseline)','Llamar a todos los de portal externo.'],['riesgo','Riesgos y límites','Datos de solo dos temporadas; no usar la nacionalidad como variable.']];
+  const tas={},prev=h('div'),bar=h('div',{class:'bar'},h('i'));
+  const grid=h('div');
+  F.forEach(([k,l,p])=>{tas[k]=h('textarea',{rows:2,id:'cv_'+k,placeholder:p,style:'font-family:inherit;font-size:14px;margin-bottom:6px'});tas[k].addEventListener('input',upd);grid.append(h('label',{for:'cv_'+k,style:'font-size:13px;font-weight:700;color:var(--muted)'},l),tas[k])});
+  function upd(){
+    const filled=F.filter(([k])=>tas[k].value.trim().length>=10).length;
+    bar.firstChild.style.width=filled/F.length*100+'%';
+    prev.innerHTML='';prev.append(h('div',{class:'note'},'Ficha completada: '+filled+' de '+F.length+(filled===F.length?' · lista para el planning':'')));
+  }
+  const CK=['¿Hay datos personales? ¿Tenemos base legal y usamos solo los necesarios?','¿Los datos representan a todos los grupos a los que afecta el modelo?','¿Hemos medido si el modelo funciona igual de bien para cada grupo?','¿Podemos explicar a una persona por qué el modelo decidió eso?','¿Hay una persona que revisa las decisiones importantes?','¿Se avisa a los usuarios de que interactúan con una IA?','¿Sabemos qué cuesta cada tipo de error (falsa alarma y omisión)?','¿Hay un plan para revisar el modelo y retirarlo si falla?'];
+  const res=h('div'),chk=CK.map(t=>h('input',{type:'checkbox',onchange:upd2}));
+  function upd2(){const n=chk.filter(c=>c.checked).length;res.innerHTML=n===8?'<span class="pill ok">8 de 8</span> Listo para presentar el plan ético.':n>=5?'<span class="pill warn">'+n+' de 8</span> Casi: revisad lo que falta antes de modelar.':'<span class="pill bad">'+n+' de 8</span> Hay riesgos sin analizar: mejor resolverlos antes de empezar.'}
+  upd();upd2();
+  root.append(h('div',{class:'two'},h('div',{},h('h4',{style:'margin:0 0 8px'},'Canvas del proyecto'),grid,bar,prev),
+    h('div',{},h('h4',{style:'margin:0 0 8px'},'Checklist ético'),CK.map((t,i)=>h('label',{style:'display:flex;gap:8px;align-items:flex-start;margin:0 0 8px;font-size:14px'},chk[i],t)),res)));
+};
+
+/* ---------- S15 · Registro de experimentos ---------- */
+DEMOS.tracker=root=>{
+  const box=h('div'),info=h('div',{class:'note'});
+  let sortBy='test';
+  function draw(){
+    box.innerHTML='';
+    if(!RUNS.length){box.append(h('p',{class:'note'},'Todavía no hay experimentos. Ve a los Sprints 7, 8 o 10, entrena un modelo y pulsa «Registrar experimento», o carga unos de ejemplo.'));return}
+    const rows=RUNS.slice().sort((a,b)=>sortBy==='test'?b.test-a.test:a.id-b.id),best=Math.max(...RUNS.map(r=>r.test));
+    rows.forEach(r=>r._cls=r.test===best?'good':'');
+    box.append(h('div',{class:'scroll'},table([{label:'#',key:'id',num:true},{label:'Sprint',key:'sprint'},{label:'Modelo',key:'modelo'},{label:'Parámetros',key:'params'},{label:'Entren.',num:true,get:r=>pct(r.train)},{label:'Prueba',num:true,get:r=>pct(r.test)},{label:'Diferencia',num:true,get:r=>h('span',{class:'pill '+(r.train-r.test>.15?'bad':'ok')},fmt((r.train-r.test)*100,0)+' pt')}],rows)));
+    info.textContent='Fila verde = mejor resultado en prueba. Una diferencia grande entre entrenamiento y prueba indica sobreajuste. Sin este registro no se puede reproducir ni defender la elección del modelo.';
+  }
+  runHooks.push(draw);
+  const ej=[['S7','Regresión logística · blobs','degree=1',.94,.93],['S8','Árbol de decisión · moons','depth=10',1,.82],['S8','Random Forest · moons','trees=25, depth=6',.97,.9],['S10','MLP · spiral','capas=16,16, tanh, lr=0,30, L2=0,000, épocas=1500',.99,.88]];
+  root.append(h('div',{class:'row'},btn('Cargar experimentos de ejemplo',()=>{ej.forEach(e=>logRun({sprint:e[0],modelo:e[1],params:e[2],train:e[3],test:e[4]}))},'sm'),btn('Vaciar',()=>{RUNS.length=0;draw()},'sm')),box,info);
+  draw();
+};
+
+/* ---------- S16 · Sesgo entre grupos ---------- */
+DEMOS.sesgo=root=>{
+  const r=mulberry32(77),D=[];
+  ['A','B'].forEach(g=>{for(let i=0;i<300;i++){const y=r()<.4?1:0;D.push({g,y,s:clamp((y?(g==='A'?.66:.52):.34)+gauss(r)*.15,0,1)})}});
+  let tA=.5,tB=.5,sep=false;
+  const out=h('div'),msg=h('div',{class:'note'});
+  const sa=slider('Umbral para invitar (grupo A)',0.2,0.8,0.01,.5,v=>{tA=v;if(!sep){tB=v;sbS.set(v)}draw()},v=>fmt(v));
+  const sbS=slider('Umbral para el grupo B',0.2,0.8,0.01,.5,v=>{tB=v;draw()},v=>fmt(v));
+  const ck=h('input',{type:'checkbox',onchange:e=>{sep=e.target.checked;sbS.el.style.display=sep?'':'none';if(!sep){tB=tA;sbS.set(tA)}draw()}});
+  sbS.el.style.display='none';
+  function M(g,t){const d=D.filter(x=>x.g===g),sel=d.filter(x=>x.s>=t),pos=d.filter(x=>x.y),neg=d.filter(x=>!x.y);return{sr:sel.length/d.length,tpr:pos.filter(x=>x.s>=t).length/pos.length,fpr:neg.filter(x=>x.s>=t).length/neg.length}}
+  function bar(l,v,c){return h('div',{class:'lb'},h('span',{},l),h('div',{class:'bar'},h('i',{style:'width:'+v*100+'%;background:'+c})),h('b',{},pct(v)))}
+  function draw(){
+    const a=M('A',tA),b=M('B',tB);out.innerHTML='';
+    out.append(h('div',{class:'note'},h('b',{},'Porcentaje de clientes a los que el modelo invita al programa de fidelización')),bar('Grupo A',a.sr,'var(--c0)'),bar('Grupo B',b.sr,'var(--c1)'),
+      h('div',{class:'note',style:'margin-top:10px'},h('b',{},'De los que SÍ se habrían quedado, ¿a cuántos invita?')),bar('Grupo A',a.tpr,'var(--c0)'),bar('Grupo B',b.tpr,'var(--c1)'));
+    const ratio=b.sr/(a.sr||1);
+    msg.innerHTML=(ratio<.8?'<span class="pill bad">Alerta</span> ':'<span class="pill ok">Equilibrado</span> ')+'El grupo B recibe '+pct(ratio)+' de las invitaciones del grupo A (regla orientativa: por debajo del 80 % hay que investigar). '+(ratio<.8?'El modelo da puntuaciones más bajas al grupo B aunque se habrían quedado igual: ese es el sesgo.':'Ojo: igualar invitaciones no basta; mira también a quién se invita de verdad.');
+  }
+  root.append(h('div',{class:'note'},'Un modelo puntúa a 600 clientes ficticios de dos grupos (por ejemplo, menores de 55 años y mayores) y se invita a quienes superan el umbral. El problema: el modelo da puntuaciones más bajas al grupo B incluso entre quienes sí se habrían quedado.'),sa.el,h('label',{class:'chip'},ck,' Usar un umbral distinto para el grupo B'),sbS.el,out,msg,
+    h('p',{class:'note'},'Corregir con umbrales por grupo es solo una de las medidas posibles (y a veces discutible). Lo importante es medirlo: sin mirar por grupos el sesgo pasa inadvertido.'));
+  draw();
+};
+
+/* ---------- S17 · Pitch de 3 minutos ---------- */
+DEMOS.pitch=root=>{
+  const B=[['Contexto: ¿quién es el cliente?',30],['Problema: qué duele hoy',30],['Solución: qué hace el modelo',40],['Resultados: números claros',40],['Impacto y riesgos',25],['Siguiente paso',15]];
+  const tot=B.reduce((a,b)=>a+b[1],0);let el=0,timer=null;
+  const clock=h('div',{class:'timer'}),bar=h('div',{class:'bar'},h('i')),list=h('div');
+  function draw(){
+    const rem=Math.max(0,tot-el),m=Math.floor(rem/60),s=Math.floor(rem%60);clock.textContent=m+':'+String(s).padStart(2,'0');
+    clock.style.color=rem<=0?'var(--bad)':'';bar.firstChild.style.width=clamp(el/tot*100,0,100)+'%';
+    let acc=0;list.innerHTML='';B.forEach(([n,t])=>{const cur=el>=acc&&el<acc+t,done=el>=acc+t;acc+=t;list.append(h('div',{class:'beat '+(cur?'cur':done?'done':'')},h('span',{},n),h('b',{},t+' s')))});
+  }
+  const go=btn('Empezar',()=>{if(timer){clearInterval(timer);timer=null;go.textContent='Seguir';return}go.textContent='Pausa';timer=setInterval(()=>{el+=.25;if(el>=tot+10){clearInterval(timer);timer=null;go.textContent='Empezar'}draw()},250)},'pri');
+  root.append(h('div',{class:'note'},'Cada equipo tiene 3 minutos. Una historia con principio, nudo y final convence más que una lista de modelos.'),clock,bar,go,btn('Reiniciar',()=>{clearInterval(timer);timer=null;el=0;go.textContent='Empezar';draw()}),list);
+  draw();
+};
+
+/* ========== PÁGINA ========== */
+const PAGE=[
+ {block:'Bloque A · Sin Python · 46 h',items:[
+  {id:'s0',tag:'S0',title:'Arranque ágil',meta:'16–19/10 · Scrum + Design Thinking · 7 h',q:'¿Cómo vamos a trabajar y con quién?',demos:[
+    {id:'kanban',title:'Tu primer tablero y planning de sprint',desc:'Mueve las tarjetas con ◀ ▶. En el planning el equipo decide qué cabe en el sprint según su capacidad.',course:'Trello (o similar) con tu equipo, daily de 10 minutos, review y retrospectiva.'},
+    {id:'empatia',title:'Mapa de empatía y «How might we»',desc:'Antes de resolver, hay que entender a quién le duele el problema.',course:'Entrevista al cliente (el docente) y mapa de empatía de TurisData.'}]},
+  {id:'s1',tag:'S1',title:'Qué es la IA, cómo aprende y cómo usarla bien',meta:'19–21/10 · M1a UD 1–3 + M8 · 15 h',q:'¿Dónde puede ayudar la IA al cliente y qué riesgos tiene?',demos:[
+    {id:'overfit',title:'Sobreajuste: aprender de memoria',desc:'Sube la complejidad del modelo y mira qué pasa con los datos nuevos.',course:'Clasificación «a mano» con tarjetas y la idea de entrenamiento, validación y prueba.'},
+    {id:'quizFamilias',title:'¿Qué familia de algoritmo es?',desc:'Seis problemas del cliente, seis familias de IA.',course:'Panorama de algoritmos y CRISP-DM.'},
+    {id:'quizAct',title:'Clasifica el riesgo (AI Act europeo)',desc:'Resumen didáctico de las categorías de riesgo del reglamento europeo de IA.',course:'Debate guiado de casos con roles y checklist ético. El calendario de aplicación se verifica en clase.',wide:true}]},
+  {id:'s2',tag:'S2',title:'Las matemáticas y la estadística detrás',meta:'21–23/10 · M1a UD 4–6 · 10 h',q:'¿En qué se apoyan los modelos y cuándo no debemos fiarnos de un dato?',demos:[
+    {id:'gd1d',title:'Descenso del gradiente',desc:'Así «aprende» un modelo: bajar poco a poco por la curva del error. Cambia el tamaño del paso y el punto de salida.',course:'Papel, Desmos y GeoGebra; luego lo programamos en el Sprint 5.'},
+    {id:'simpson',title:'La paradoja de Simpson',desc:'Un mismo dato puede contar dos historias opuestas.',course:'Reto «¿Nos fiamos de este informe?»: auditar un informe con errores estadísticos.'},
+    {id:'bayes',title:'Teorema de Bayes sin fórmulas',desc:'Por qué un detector «muy bueno» puede acertar poco cuando salta.',course:'Probabilidad, Bayes, muestreo y sesgo.'}]},
+  {id:'s3',tag:'S3',title:'Del dato al modelo en la nube',meta:'23–27/10 · M6a + M7 · 14 h',q:'¿Podemos tener un primer modelo funcionando, sin programar?',demos:[
+    {id:'sql',title:'SQL y CRUD en vivo',desc:'Consulta, inserta, modifica y borra en una tabla de reservas ficticias. Prueba los botones y luego edita la consulta.',course:'SQLite con DB Browser, PostgreSQL y MongoDB.',wide:true},
+    {id:'automl',title:'AutoML y despliegue de un modelo',desc:'El sistema prueba varios modelos por ti, elige el campeón y lo publica como API. Los modelos se entrenan aquí de verdad; el coste es de mentira.',course:'AutoML con AutoGluon en Colab, un modelo servido por API y control de costes.',wide:true}]}]},
+ {block:'Bloque B · Python · 121 h',items:[
+  {id:'s4',tag:'S4',title:'Python para IA',meta:'27–29/10 · M1b UD 1–4 · 10 h',q:'¿Cómo automatizamos lo que hemos hecho a mano?',demos:[
+    {id:'kpisPy',title:'Un script que calcula los KPIs del cliente',desc:'Lee un CSV, gestiona errores y exporta un JSON. Cambia los datos y mira la salida.',course:'Python, VS Code, Jupyter y Git. Autocorrección con asserts.',wide:true}]},
+  {id:'s5',tag:'S5',title:'Matemáticas y estadística en código',meta:'29/10–3/11 · M1b UD 5–7 + M6b · 13 h',q:'¿Podemos demostrar con código lo que vimos en teoría?',demos:[
+    {id:'gdReg',title:'Regresión lineal desde cero',desc:'Una recta aprende sola con el descenso del gradiente, y llega a la misma que da la fórmula exacta.',course:'NumPy, pandas y SciPy: la regresión se programa a mano y se contrasta con una librería.',wide:true},
+    {id:'monte',title:'Simulación Monte Carlo',desc:'Estimar π lanzando puntos al azar.',course:'Simulación, Bayes en código y contrastes de hipótesis.'}]},
+  {id:'s6',tag:'S6',title:'Datos listos para modelar',meta:'3–5/11 · M2 + M3 UD 3.1–3.2 · 11 h',q:'¿Están los datos en condiciones de entrenar algo fiable?',demos:[
+    {id:'limpieza',title:'Limpieza de datos paso a paso',desc:'Un dataset sucio de reservas. Activa cada paso del pipeline y mira qué arregla.',course:'pandas, visualización exploratoria y pipelines de scikit-learn; validación cruzada y GridSearchCV.',wide:true}]},
+  {id:'s7',tag:'S7',title:'ML supervisado: regresión y clasificación',meta:'5–9/11 · M3 UD 3.3–3.5 · 12 h',q:'¿Podemos predecir el precio o la cancelación?',demos:[
+    {id:'lab7',title:'Laboratorio de clasificación',desc:'Cambia de modelo, pinta tus propios puntos y mira la frontera de decisión y la matriz de confusión.',course:'scikit-learn: regresión lineal, Ridge y Lasso, regresión logística, k-NN y Naive Bayes; curvas ROC.',wide:true}]},
+  {id:'s8',tag:'S8',title:'Árboles, ensembles y SVM',meta:'9–11/11 · M3 UD 3.6–3.8 · 11 h',q:'¿Cuál es el mejor modelo y cuánto nos cuesta mantenerlo?',demos:[
+    {id:'lab8',title:'Duelo de modelos',desc:'Un árbol profundo memoriza; un bosque promedia muchos árboles; una SVM curva la frontera. Compara acierto en entrenamiento y en prueba.',course:'scikit-learn, XGBoost y LightGBM con búsqueda de hiperparámetros y ficha del modelo (model card).',wide:true}]},
+  {id:'s9',tag:'S9',title:'Segmentar, recomendar y aprender por refuerzo',meta:'11–12/11 · M3 UD 3.9–3.12 · 11 h',q:'¿Qué tipos de cliente tenemos y qué les ofrecemos?',demos:[
+    {id:'kmeans',title:'Segmentar con k-means',desc:'Sin etiquetas, el algoritmo encuentra grupos. Avanza paso a paso.',course:'k-means, clustering jerárquico, DBSCAN y PCA con scikit-learn.'},
+    {id:'recom',title:'Recomendador de experiencias',desc:'Ajusta tus gustos y mira cómo cambia el ranking.',course:'Recomendadores por contenido y colaborativos.'},
+    {id:'qlearn',title:'Aprendizaje por refuerzo (Q-learning)',desc:'Un agente aprende a cruzar la zona del volcán por ensayo y error.',course:'Q-learning con Gymnasium.',wide:true}]},
+  {id:'s10',tag:'S10',title:'Redes neuronales bien entrenadas',meta:'13–17/11 · M4 UD 4.1–4.3 · 15 h',q:'¿Una red neuronal mejora al ML clásico y a qué precio?',demos:[
+    {id:'mlp',title:'Una red neuronal entrenándose en directo',desc:'Elige datos y arquitectura, pulsa Entrenar y mira cómo se dibuja la frontera. Observa cuándo empieza el sobreajuste y para a tiempo.',course:'Red en NumPy desde cero y MLP con Keras; regularización, early stopping y TensorBoard.',wide:true}]},
+  {id:'s11',tag:'S11',title:'Visión por computador',meta:'17–20/11 · M4 UD 4.4–4.6 · 17 h',q:'¿Podemos aprovechar las imágenes del cliente?',demos:[
+    {id:'conv',title:'Cómo «ve» una red convolucional',desc:'Dibuja y aplica filtros: así se detectan bordes y formas.',course:'CNN con Keras, transfer learning con un modelo preentrenado y análisis de errores.'},
+    {id:'iou',title:'Detección de objetos: ¿acierta la caja?',desc:'La métrica IoU compara la caja predicha con la real.',course:'Detección con YOLO (ultralytics) en Colab.'}]},
+  {id:'s12',tag:'S12',title:'Lenguaje, secuencias y modelos generativos',meta:'20–25/11 · M4 UD 4.7–4.10 · 18 h',q:'¿Qué dicen los clientes y qué pasará mañana?',demos:[
+    {id:'resenas',title:'Reseñas: sentimiento y temas',desc:'Escribe reseñas y mira cómo se etiquetan y de qué hablan.',course:'NLP clásico, embeddings y modelos de Hugging Face.'},
+    {id:'rag',title:'Asistente con RAG (mini)',desc:'Pregunta como un cliente: el asistente busca en las políticas del alojamiento y solo responde con lo que encuentra.',course:'LLM por API (Gemini, Groq u OpenRouter) y RAG con embeddings en Colab.'},
+    {id:'serie',title:'Predecir la ocupación (serie temporal)',desc:'Tres formas de predecir el año que viene y su error.',course:'Series temporales con RNN, LSTM y GRU, y modelos clásicos.',wide:true}]},
+  {id:'s13',tag:'S13',title:'Contar lo que hace el modelo',meta:'25/11 · M5 · 3 h',q:'¿Cómo enseñamos y defendemos los resultados de un modelo?',demos:[
+    {id:'metricas',title:'Métricas, ROC e importancia de variables',desc:'Mueve el umbral y mira cómo cambian aciertos, falsas alarmas y omisiones. El mejor umbral depende del negocio.',course:'matplotlib y seaborn, curvas ROC/PR, SHAP y Grad-CAM; informe visual de una página.',wide:true}]}]},
+ {block:'Bloque C · Proyecto de cierre · 63 h',items:[
+  {id:'s14',tag:'S14',title:'Proyecto · Reto, equipo y datos',meta:'25–30/11 · M9 · 19 h',q:'¿Qué problema real vamos a resolver y con qué datos?',demos:[
+    {id:'canvas',title:'Canvas del proyecto y checklist ético',desc:'Rellena la ficha de tu proyecto y repasa el checklist de IA responsable.',course:'Cada equipo elige uno de los briefs sectoriales y entrega definición, EDA, backlog y modelo baseline.',wide:true}]},
+  {id:'s15',tag:'S15',title:'Proyecto · Modelado y experimentos',meta:'1–3/12 · M9 · 18 h',q:'¿Qué modelo elegimos y cómo lo demostramos?',demos:[
+    {id:'tracker',title:'Registro de experimentos',desc:'Todos los experimentos que registres en los Sprints 7, 8 y 10 aparecen aquí.',course:'Seguimiento de experimentos (por ejemplo MLflow) y versionado de datos y modelos.',wide:true}]},
+  {id:'s16',tag:'S16',title:'Proyecto · Evaluación, IA responsable y entrega',meta:'4–10/12 · M9 · 18 h',q:'¿Funciona igual de bien para todos?',demos:[
+    {id:'sesgo',title:'Auditoría de sesgo por grupos',desc:'Mueve el umbral y comprueba si el modelo trata igual a los dos grupos.',course:'Análisis de sesgos y riesgos, demostrador (Streamlit o API) y memoria técnica.',wide:true}]},
+  {id:'s17',tag:'S17',title:'Proyecto · Storytelling, ensayos y defensa',meta:'11 y 14/12 · M9 + Storytelling · 8 h',q:'¿Cómo contamos el proyecto en 3 minutos?',demos:[
+    {id:'pitch',title:'Cronómetro de pitch',desc:'Seis momentos para una defensa clara.',course:'Ensayos con el docente y defensa final de cada equipo.'}]}]}
+];
+(function build(){
+  const nav=document.getElementById('nav'),cont=document.getElementById('content');
+  PAGE.forEach(b=>{
+    nav.append(h('span',{class:'blk'},b.block.split(' · ')[0].replace('Bloque ','Bl. ')));
+    cont.append(h('div',{class:'blockhead'},b.block));
+    b.items.forEach(s=>{
+      nav.append(h('a',{href:'#'+s.id,'data-id':s.id},s.tag));
+      const grid=h('div',{class:'grid'});
+      s.demos.forEach(d=>{
+        const body=h('div');
+        const card=h('div',{class:'card'+(d.wide?' wide':'')},h('h3',{},d.title),h('p',{class:'desc'},d.desc),body,h('p',{class:'course'},h('b',{},'En el curso: '),d.course));
+        try{DEMOS[d.id](body)}catch(e){body.append(h('p',{class:'note'},'No se pudo cargar esta demo ('+e.message+').'));console.error(d.id,e)}
+        grid.append(card);
+      });
+      cont.append(h('section',{class:'sprint',id:s.id},h('h2',{},h('span',{class:'stag'},s.tag),s.title),h('p',{class:'meta'},s.meta),h('p',{class:'q'},s.q),grid));
+    });
+  });
+  const links=[...nav.querySelectorAll('a')],io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.dataset.id===e.target.id));const a=nav.querySelector('a.on');if(a&&a.scrollIntoView)a.scrollIntoView({inline:'center',block:'nearest'})}})},{rootMargin:'-20% 0px -70% 0px'});
+  document.querySelectorAll('section.sprint').forEach(s=>io.observe(s));
+})();
+</script>
+</body>
+</html>
