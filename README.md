@@ -7,7 +7,7 @@
 
 Este documento es tu **mapa del curso**. En 10 minutos sabrás qué vamos a hacer, en qué orden, cómo se trabaja y cómo se evalúa.
 
-## 🚀 Empieza aquí (5 pasos)
+## 🚀 Empieza aquí (6 pasos)
 
 | Paso | Qué haces | Dónde |
 |---|---|---|
@@ -16,6 +16,7 @@ Este documento es tu **mapa del curso**. En 10 minutos sabrás qué vamos a hace
 | **3** | Tus dos primeros días, hora a hora | [`material/guia_primeros_dos_dias.md`](material/2.%20Guia_primeros_dos_dias.md) |
 | **4** | Sigue tu ruta, sprint a sprint | [`material/mi_ruta_del_curso.md`](material/1.%20Mi_ruta_del_curso.md) |
 | **5** | Consulta qué toca cada día | [`material/guia_dia_a_dia.md`](material/3.%20Guia_dia_a_dia.md) |
+| **6** | Aprende cómo se trabaja un reto (léelo antes del Sprint 0) | [`material/4. Como_se_trabaja_un_reto.md`](material/4.%20Como_se_trabaja_un_reto.md) |
 
 **No necesitas instalar nada ni saber programar.** Todo se hace desde el navegador. Más abajo tienes el mapa completo del curso, para cuando quieras el detalle.
 
@@ -320,7 +321,7 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 
 | Carpeta | Qué encontrarás |
 |---|---|
-| [`material/`](material) | **Mi ruta del curso**, cómo funciona el curso, primeros pasos con GitHub, plantilla del repo de equipo, calendario y temario |
+| [`material/`](material) | **Mi ruta del curso**, **cómo se trabaja un reto**, cómo funciona el curso, primeros pasos con GitHub, plantilla del repo de equipo, calendario y temario |
 | [`sprints/`](sprints) | **Todo lo de cada sprint en su carpeta**: guía (README y PDF), presentaciones, notebooks y plantillas del reto |
 | [`datos/`](datos) | Datos sintéticos de TurisData Canarias |
 | [`proyecto-final/`](proyecto-final) | Briefs, requisitos y rúbrica |

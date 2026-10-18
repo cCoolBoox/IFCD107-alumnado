@@ -3,16 +3,19 @@
 **Pregunta guía:** ¿están los datos en condiciones de entrenar algo fiable?
 **Fechas:** 3–5 de noviembre · **Horas:** 11 h (4 h teoría · 4 h práctica guiada · 3 h PBL)
 
+> 🎯 **Reto de este sprint: «Datos sucios, cliente impaciente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_06.md) · [PDF de la guía](guia/Guia_Sprint_06.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_06.pdf`](guia/Guia_Sprint_06.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_06_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_06.md`](guia/Reto_Sprint_06.md)
 - 🖥️ **S06.1 · Datos pandas y visualizacion exploratoria:** [`S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf`](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf)
 - 🖥️ **S06.2 · Limpieza y preprocesado:** [`S06.2_Limpieza_y_preprocesado.pdf`](presentaciones/S06.2_Limpieza_y_preprocesado.pdf)
 - 🖥️ **S06.3 · scikit learn metricas y validacion:** [`S06.3_scikit_learn_metricas_y_validacion.pdf`](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf)
 
 **Contenidos:** M2 (rol del Data Scientist, pandas, visualización, limpieza y preprocesado) y M3 UD 3.1–3.2 (flujo con scikit-learn, pipelines, métricas y validación).
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - Explorar una tabla con pandas y encontrar sus defectos (nulos, duplicados, *outliers*, fechas y categorías mal formadas).
@@ -31,6 +34,9 @@
 Cada notebook tiene ejercicios con `assert`: si la celda de comprobación no da error, vas bien. Los datos se descargan solos.
 
 ## Reto · «Datos sucios, cliente impaciente»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_06.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** TurisData Canarias nos envía `reservas_sucio.csv`, exportado a mano desde varios sistemas. Quieren un primer modelo de cancelaciones, pero el gerente no se fía de los datos. Pide un informe corto de qué está mal y por qué, y un proceso que deje los datos listos cada vez.
 
 **Entregáis** (carpeta `sprint-06/` del repositorio del equipo):

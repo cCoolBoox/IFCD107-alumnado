@@ -3,9 +3,12 @@
 **Pregunta guía:** ¿cuál es el mejor modelo y cuánto nos cuesta mantenerlo?
 **Fechas:** 9–11 de noviembre · **Horas:** 11 h (3 h teoría · 5 h práctica guiada · 3 h PBL)
 
+> 🎯 **Reto de este sprint: «Duelo de modelos».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_08.md) · [PDF de la guía](guia/Guia_Sprint_08.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_08.pdf`](guia/Guia_Sprint_08.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_08_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_08.md`](guia/Reto_Sprint_08.md)
 - 🖥️ **S08.1 · Arboles de decision:** [`S08.1_Arboles_de_decision.pdf`](presentaciones/S08.1_Arboles_de_decision.pdf)
 - 🖥️ **S08.2 · Ensembles Random Forest y Boosting:** [`S08.2_Ensembles_Random_Forest_y_Boosting.pdf`](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf)
 - 🖥️ **S08.3 · Maquinas de vectores de soporte:** [`S08.3_Maquinas_de_vectores_de_soporte.pdf`](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf)
@@ -13,7 +16,7 @@
 **Contenidos:** M3 UD 3.6 (árboles de decisión), UD 3.7 (Random Forest, Gradient Boosting, XGBoost y LightGBM) y UD 3.8 (SVM), más ajuste de hiperparámetros (`GridSearchCV`, `RandomizedSearchCV`).
 **Evaluación:** test de M3 (parte 2, el 11/11) y reto PBL «Duelo de modelos».
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto · [`tests/`](tests/) test de conocimientos
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto · [`tests/`](tests/) test de conocimientos
 
 ## Qué aprenderás
 - Entrenar y podar un **árbol de decisión**; entender bosques aleatorios y *boosting* (XGBoost, LightGBM).
@@ -34,6 +37,9 @@
 Las cinco primeras son prácticas guiadas; la sexta es la plantilla del reto. Los ejercicios se autocorrigen con `assert`.
 
 ## Reto · «Duelo de modelos»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_08.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** TurisData ya sabe predecir cancelaciones y ahora quiere saber qué modelo poner en producción: ¿el más preciso, el más comprensible o el más barato de mantener? Enfrentáis árboles, bosques, *boosting* y SVM y elegís un campeón con argumentos.
 
 **Entregáis** (carpeta `sprint-08/` del repositorio del equipo):

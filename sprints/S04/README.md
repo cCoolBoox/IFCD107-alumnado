@@ -2,13 +2,16 @@
 **Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?
 **Fechas:** 27–29/10 · **Horas:** 10 h (3 h teoría · 5 h práctica · 2 h proyecto)
 
+> 🎯 **Reto de este sprint: «Herramientas internas».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_04.md) · [PDF de la guía](guia/Guia_Sprint_04.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_04.pdf`](guia/Guia_Sprint_04.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_04_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_04.md`](guia/Reto_Sprint_04.md)
 - 🖥️ **S04.1 · Python entorno y lenguaje:** [`S04.1_Python_entorno_y_lenguaje.pdf`](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf)
 - 🖥️ **S04.2 · Python estructuras funciones y POO:** [`S04.2_Python_estructuras_funciones_y_POO.pdf`](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo
 
 ## Qué aprenderás
 - Python básico en Colab: variables, decisiones y bucles. No hace falta saber programar (necesitas cuenta de Google).
@@ -28,6 +31,9 @@ Cuadernos en orden (4 h obligatorias + 1 h opcional). Cada ejercicio se autocorr
 | `S04_05_poo_buenas_practicas` | **(OPCIONAL)** Clases, buenas prácticas, Git básico | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_05_poo_buenas_practicas.ipynb) |
 
 ## Reto · «Herramientas internas»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_04.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** el equipo de reservas de TurisData Canarias calcula sus cifras a mano cada semana. Os pide un script que lea el CSV de reservas, calcule tres KPIs, avise si el fichero está mal y deje un JSON.
 **Entregáis** (en la carpeta `sprint-04/` del repositorio del equipo; base en [`reto_herramientas/`](recursos/reto_herramientas/)):
 - `kpis.py` (funciones + `main`) y `test_kpis.py` (pruebas con `assert`).

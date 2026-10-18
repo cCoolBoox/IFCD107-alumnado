@@ -3,14 +3,17 @@
 **Fechas:** mié 21/10 – vie 23/10 · **Horas:** 10 h (5 h teoría · 3 h práctica · 2 h reto)
 **Módulo:** M1a (UD 1a.4 a 1a.6) · Bloque A: sin Python (papel, calculadora, Desmos/GeoGebra)
 
+> 🎯 **Reto de este sprint: «¿Nos fiamos de este informe?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_02.md) · [PDF de la guía](guia/Guia_Sprint_02.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_02.pdf`](guia/Guia_Sprint_02.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_02_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_02.md`](guia/Reto_Sprint_02.md)
 - 🖥️ **S02.1 · Matematicas para IA:** [`S02.1_Matematicas_para_IA.pdf`](presentaciones/S02.1_Matematicas_para_IA.pdf)
 - 🖥️ **S02.2 · Estadistica y probabilidad:** [`S02.2_Estadistica_y_probabilidad.pdf`](presentaciones/S02.2_Estadistica_y_probabilidad.pdf)
 - 🖥️ **S02.3 · Ecosistema de software para IA:** [`S02.3_Ecosistema_de_software_para_IA.pdf`](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`tests/`](tests/) test de conocimientos
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`tests/`](tests/) test de conocimientos
 
 ## Qué aprenderás
 - Vectores, matrices, derivadas y descenso del gradiente: cómo mejora un modelo.
@@ -31,6 +34,9 @@ Materiales `.md` para papel o pantalla (sin Colab):
 Mínimo de ejercicios: **8 de 12** de la hoja 1 (M7, M10 y M11 obligatorios) y **10 de 14** de la hoja 2 (E7, E8, E10 y E14 obligatorios). Escribid cómo lo habéis hecho.
 
 ## Reto · «¿Nos fiamos de este informe?»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_02.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** la dirección de TurisData Canarias va a presentar al consejo un borrador sobre cancelaciones y os pide revisarlo. Los datos están en `../../datos/informe_cliente.md` y `../../datos/informe_cliente.csv` (2.400 reservas por tarifa y canal).
 **Entregáis** (en la carpeta `sprint-02/` del repositorio del equipo):
 - Dictamen de 2-3 páginas: por cada una de las 6 afirmaciones, veredicto, error detectado, cálculo rehecho y redacción corregida.

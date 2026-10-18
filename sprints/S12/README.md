@@ -2,16 +2,19 @@
 **Pregunta guía:** ¿qué dicen los clientes y qué pasará mañana?
 **Fechas:** 20–25/11 · **Horas:** 18 h (5 T · 8 P · 5 reto PBL)
 
+> 🎯 **Reto de este sprint: «Escuchar al cliente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_12.md) · [PDF de la guía](guia/Guia_Sprint_12.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_12.pdf`](guia/Guia_Sprint_12.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_12_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_12.md`](guia/Reto_Sprint_12.md)
 - 🖥️ **S12.1 · RNN LSTM GRU y series temporales:** [`S12.1_RNN_LSTM_GRU_y_series_temporales.pdf`](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf)
 - 🖥️ **S12.2 · NLP clasico y embeddings:** [`S12.2_NLP_clasico_y_embeddings.pdf`](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf)
 - 🖥️ **S12.3 · Transformers y LLM:** [`S12.3_Transformers_y_LLM.pdf`](presentaciones/S12.3_Transformers_y_LLM.pdf)
 - 🖥️ **S12.4 · Autoencoders y modelos generativos:** [`S12.4_Autoencoders_y_modelos_generativos.pdf`](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf)
 - 🤖 **¿Tu proyecto usará un modelo de lenguaje por internet?** Guía de acceso gratuito: [`Acceso_modelos_de_lenguaje.md`](../../material/Acceso_modelos_de_lenguaje.md)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto · [`tests/`](tests/) test de conocimientos
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto · [`tests/`](tests/) test de conocimientos
 
 ## Qué aprenderás
 - A **predecir una serie temporal** (la ocupación) y comprobar si gana a un método simple (*baseline*).
@@ -35,6 +38,9 @@ Todo se ejecuta sin internet (las partes **OPCIONAL / NO VERIFICADO** se pueden 
 Plantilla en esta carpeta: [`plantilla_informe_cliente.md`](plantillas/plantilla_informe_cliente.md) (informe de reseñas).
 
 ## Entrega / Reto · «Escuchar al cliente»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_12.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** TurisData Canarias recibe decenas de reseñas y mensajes de huéspedes cada semana. Quiere saber qué opinan, prever la ocupación de la próxima semana y probar un asistente que responda con su política sin inventar nada. Los datos son sintéticos: dilo en el informe.
 **Entregáis** (carpeta `sprint-12/` del repositorio del equipo):
 - `informe_resenas.md` (o PDF), 2 páginas: sentimiento, 3 temas criticados y 3 valorados, 5 citas, 3 recomendaciones y límites.

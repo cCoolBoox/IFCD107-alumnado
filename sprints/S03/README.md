@@ -2,15 +2,18 @@
 **Pregunta guía:** ¿podemos tener un primer modelo funcionando, sin programar?
 **Fechas:** 23–27/10 · **Horas:** 14 h (5 h teoría · 5 h práctica · 4 h proyecto)
 
+> 🎯 **Reto de este sprint: «Primer modelo en producción».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_03.md) · [PDF de la guía](guia/Guia_Sprint_03.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_03.pdf`](guia/Guia_Sprint_03.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_03_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_03.md`](guia/Reto_Sprint_03.md)
 - 🧪 **Guía de laboratorio AutoML (AutoGluon):** [`Guia_AutoML_AutoGluon.pdf`](guia/Guia_AutoML_AutoGluon.pdf)
 - 🖥️ **S03.1 · Bases de datos relacionales y SQL:** [`S03.1_Bases_de_datos_relacionales_y_SQL.pdf`](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf)
 - 🖥️ **S03.2 · Bases de datos NoSQL:** [`S03.2_Bases_de_datos_NoSQL.pdf`](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf)
 - 🖥️ **S03.3 · AutoML y MLOps:** [`S03.3_AutoML_y_MLOps.pdf`](presentaciones/S03.3_AutoML_y_MLOps.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo · [`tests/`](tests/) test de conocimientos
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo · [`tests/`](tests/) test de conocimientos
 
 ## Qué aprenderás
 - Consultar y modificar una base de datos con SQL, y modelarla con claves e índices.
@@ -37,6 +40,9 @@
 **Bloque B · AutoML.** Sigue la **[guía de laboratorio AutoML con AutoGluon](guia/Guia_AutoML_AutoGluon.pdf)** (en Colab, sin coste, sin crear más cuentas). Tu docente además hará una **demostración con Amazon SageMaker** como referencia profesional.
 
 ## Reto · «Primer modelo en producción»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_03.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** TurisData Canarias quiere avisar de las reservas con más riesgo de cancelarse y consultarlo desde otra aplicación. Vosotros lo ponéis en marcha, del dato al servicio.
 **Entregáis** (un documento `.md` o PDF de máx. 4 páginas, en la carpeta `sprint-03/` del repositorio del equipo):
 - Informe del mejor modelo: modelos comparados, métrica, resultados en datos no vistos, umbral justificado y variables influyentes.

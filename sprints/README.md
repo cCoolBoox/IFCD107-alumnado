@@ -4,7 +4,7 @@ Cada carpeta `Sxx/` tiene **un `README.md`** (la guía del sprint con la ficha d
 
 | Subcarpeta | Qué contiene |
 |---|---|
-| `guia/` | La guía en PDF (`Guia_Sprint_XX.pdf`) y su versión `_ecofriendly` para imprimir con poca tinta |
+| `guia/` | La guía en PDF (`Guia_Sprint_XX.pdf`), su versión `_ecofriendly` para imprimir con poca tinta y el **reto explicado paso a paso** (`Reto_Sprint_XX.md`) |
 | `presentaciones/` | Diapositivas de cada sesión |
 | `notebooks/` | Prácticas para abrir en Google Colab |
 | `actividades/` | Material de las actividades y ejercicios |

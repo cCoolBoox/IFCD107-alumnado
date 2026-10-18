@@ -2,12 +2,15 @@
 **Pregunta guía:** ¿cómo contamos nuestro proyecto para que un público no técnico lo entienda, lo recuerde y confíe en él?
 **Fechas:** 11 y 14/12 · **Horas:** 8 h (1 T · 2 P · 5 PBL) · **Hitos:** 11/12 ensayo general · 14/12 defensa final
 
+> 🎯 **Reto de este sprint: «La defensa».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_17.md) · [PDF de la guía](guia/Guia_Sprint_17.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_17.pdf`](guia/Guia_Sprint_17.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_17_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_17.md`](guia/Reto_Sprint_17.md)
 - 🖥️ **S17.1 · Storytelling y defensa:** [`S17.1_Storytelling_y_defensa.pdf`](presentaciones/S17.1_Storytelling_y_defensa.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A estructurar un mensaje: primero la conclusión, luego argumentos y evidencias.
@@ -22,6 +25,9 @@ Este sprint no tiene notebooks. 11/12 (6 h): teoría de storytelling, práctica 
 - [`guion_defensa.md`](actividades/guion_defensa.md) · estructura de 10 minutos, reparto de voces, preguntas y plan B.
 
 ## Entrega / Reto · «La defensa»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_17.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** el tribunal (el docente y, si procede, personas invitadas) no es técnico. Debe salir sabiendo qué problema resolvéis, qué habéis encontrado, qué recomendáis y de qué no fiarse. Las preguntas pueden ir a cualquier integrante.
 **Entregáis** (carpeta `sprint-17/` del repositorio del equipo):
 - Presentación de máximo 12 diapositivas en PDF, antes de las 8:30 del 14/12 (la versión del ensayo se comparte el 11/12).

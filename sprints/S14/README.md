@@ -2,12 +2,15 @@
 **Pregunta guía:** ¿qué problema vamos a resolver, con qué datos y cómo sabremos que lo hemos resuelto?
 **Fechas:** 25–30/11 · **Horas:** 19 h (1 T · 3 P · 15 PBL) · **Hitos:** 26/11 elección de brief · 27/11 ficha aprobada (go / no-go)
 
+> 🎯 **Reto de este sprint: «Proyecto final: definir, tener datos y un punto de partida».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_14.md) · [PDF de la guía](guia/Guia_Sprint_14.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_14.pdf`](guia/Guia_Sprint_14.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_14_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_14.md`](guia/Reto_Sprint_14.md)
 - 🖥️ **S14.1 · Lanzamiento del proyecto final:** [`S14.1_Lanzamiento_del_proyecto_final.pdf`](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A **formular un proyecto de IA**: pregunta de negocio, decisión que apoya y métricas.
@@ -32,6 +35,9 @@ Este sprint no tiene notebooks: hay sesiones y plantillas (todas en esta carpeta
 - [`plantilla_backlog_y_sprints.md`](plantillas/plantilla_backlog_y_sprints.md) · historias y objetivos por sprint.
 
 ## Entrega / Reto · «Proyecto final: definir, tener datos y un punto de partida»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_14.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** sois una consultora de IA y el docente es el cliente. Elegís uno de los 4 briefs de `proyecto-final/briefs_y_rubrica.md` (demanda turística, salud de cultivos, asistente de FP, demanda eléctrica) o presentáis un brief libre (ficha antes del 26/11). Si elegís el brief 3 (asistente con LLM), mirad antes la guía de acceso gratuito a modelos: [`material/Acceso_modelos_de_lenguaje.md`](../../material/Acceso_modelos_de_lenguaje.md).
 **Entregáis** (usad el repositorio del equipo, carpeta `sprint-14/`):
 - Ficha de proyecto de 1 página y plan de datos y licencias.

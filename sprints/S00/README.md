@@ -5,16 +5,19 @@
 
 > 📖 **¿Cómo abro el material?** Desde el navegador: [ccoolboox.github.io/IFCD107-alumnado](https://ccoolboox.github.io/IFCD107-alumnado/). Es público y no hace falta cuenta. También tienes **Code → Download ZIP** en [GitHub](https://github.com/cCoolBoox/IFCD107-alumnado).
 
+> 🎯 **Reto de este sprint: «Constituir la consultora».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_00.md) · [PDF de la guía](guia/Guia_Sprint_00.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_00.pdf`](guia/Guia_Sprint_00.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_00_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_00.md`](guia/Reto_Sprint_00.md)
 - 🧪 **Ejemplos interactivos de todo el curso:** [abrir online](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S00/recursos/Ejemplos_del_curso_IFCD107.html) · archivo: [`Ejemplos_del_curso_IFCD107.html`](recursos/Ejemplos_del_curso_IFCD107.html) (opcional, 10 minutos para curiosear; funciona sin internet si lo descargas)
 - 🗂️ **Actividad · Crea el repositorio de tu equipo:** [`actividad_repositorio_equipo.md`](actividades/actividad_repositorio_equipo.md) (plantilla: [ifcd107-equipo-plantilla](https://github.com/cCoolBoox/ifcd107-equipo-plantilla))
 - 🖥️ **S00.0 · Bienvenida y reglas del curso:** [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf)
 - 🖥️ **S00.1 · Agile y Scrum:** [`S00.1_Agile_y_Scrum.pdf`](presentaciones/S00.1_Agile_y_Scrum.pdf)
 - 🖥️ **S00.2 · Design Thinking:** [`S00.2_Design_Thinking.pdf`](presentaciones/S00.2_Design_Thinking.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto · [`recursos/`](recursos/) scripts y ficheros de apoyo
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto · [`recursos/`](recursos/) scripts y ficheros de apoyo
 
 ## Qué aprenderás
 - Qué es trabajar de forma ágil (Scrum) y por qué encaja en proyectos de datos e IA.
@@ -34,6 +37,9 @@ Un material por actividad (todos son `.md`):
 | [`entrevista_descubrimiento.md`](actividades/entrevista_descubrimiento.md) | Guion y notas de la entrevista al cliente (reto) |
 
 ## Reto · «Constituir la consultora»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_00.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** TurisData Canarias quiere incorporar IA, pero no sabe por dónde empezar. Vosotros sois una de las consultoras del concurso y el docente hace de cliente. Antes de tocar datos, demostrad que sabéis organizaros y escuchar.
 **Entregáis** (un paquete por equipo, en la carpeta `sprint-00/` del repositorio del equipo):
 - Tablero (Trello o similar) con columnas, etiquetas, roles y backlog; enlace de invitación al docente.

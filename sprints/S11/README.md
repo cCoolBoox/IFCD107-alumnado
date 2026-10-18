@@ -3,14 +3,17 @@
 **Pregunta guía:** ¿podemos aprovechar las imágenes del cliente?
 **Fechas:** 17–20 de noviembre · **Horas:** 17 h (5 h teoría · 7 h práctica · 5 h PBL) · **Módulo 4, UD 4.4–4.6**
 
+> 🎯 **Reto de este sprint: «Visión artificial para el cliente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_11.md) · [PDF de la guía](guia/Guia_Sprint_11.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_11.pdf`](guia/Guia_Sprint_11.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_11_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_11.md`](guia/Reto_Sprint_11.md)
 - 🖥️ **S11.1 · Redes convolucionales CNN:** [`S11.1_Redes_convolucionales_CNN.pdf`](presentaciones/S11.1_Redes_convolucionales_CNN.pdf)
 - 🖥️ **S11.2 · Transfer learning y fine tuning:** [`S11.2_Transfer_learning_y_fine_tuning.pdf`](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf)
 - 🖥️ **S11.3 · Deteccion de objetos y segmentacion:** [`S11.3_Deteccion_de_objetos_y_segmentacion.pdf`](presentaciones/S11.3_Deteccion_de_objetos_y_segmentacion.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo
 
 ## Qué aprenderás
 - Cómo «ve» una red: convolución, *pooling* y CNN; *data augmentation*.
@@ -29,6 +32,9 @@
 Extra: `generar_dataset_sintetico.py` crea el mini dataset de alojamientos (una carpeta por clase): `python generar_dataset_sintetico.py`.
 
 ## Reto · «Visión artificial para el cliente»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_11.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** TurisData Canarias recibe cientos de fotos de alojamientos cada semana y las clasifica una persona a mano. Quiere saber si un modelo puede pre-clasificarlas y, sobre todo, en qué se equivoca, para decidir qué fotos revisar a mano.
 
 **Entregáis** (carpeta `sprint-11/` del repositorio del equipo):

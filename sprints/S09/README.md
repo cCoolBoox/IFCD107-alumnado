@@ -4,14 +4,17 @@
 **Fechas:** 11 y 12 de noviembre · **Horas:** 11 h (3 h teoría · 5 h práctica · 3 h PBL)
 **Módulo:** M3, unidades 3.9 a 3.12 · **Evaluación:** test de M3 (segunda parte)
 
+> 🎯 **Reto de este sprint: «Conocer al huésped».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_09.md) · [PDF de la guía](guia/Guia_Sprint_09.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_09.pdf`](guia/Guia_Sprint_09.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_09_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_09.md`](guia/Reto_Sprint_09.md)
 - 🖥️ **S09.1 · Clustering y PCA:** [`S09.1_Clustering_y_PCA.pdf`](presentaciones/S09.1_Clustering_y_PCA.pdf)
 - 🖥️ **S09.2 · Sistemas de recomendacion:** [`S09.2_Sistemas_de_recomendacion.pdf`](presentaciones/S09.2_Sistemas_de_recomendacion.pdf)
 - 🖥️ **S09.3 · Aprendizaje por refuerzo:** [`S09.3_Aprendizaje_por_refuerzo.pdf`](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - Agrupar clientes con **k-means, jerárquico y DBSCAN** y elegir `k` con la silueta.
@@ -30,6 +33,9 @@
 Cada notebook tiene comprobaciones automáticas (✔). Trabaja en orden: no pases al siguiente hasta que los `assert` pasen. Los datos se descargan solos.
 
 ## Reto · «Conocer al huésped»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_09.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** Lucía, directora comercial de TurisData Canarias, envía la misma newsletter a sus 1 200 huéspedes y vende 25 experiencias con los mismos banners. Pide: «Decidme quiénes son mis clientes, cómo los llamo y qué le enseño a cada uno».
 
 **Entregáis** (carpeta `sprint-09/` del repositorio del equipo):

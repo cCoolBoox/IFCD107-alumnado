@@ -3,12 +3,15 @@
 **Fechas:** 4–10/12 (clases 4, 9 y 10/12; no hay clase el 7 y el 8) · **Horas:** 18 h (1 T · 3 P · 14 PBL)
 **Hito: 10/12 a las 14:30 · congelación del repositorio y de la memoria**
 
+> 🎯 **Reto de este sprint: «Entrega final: evaluar, demostrar y documentar».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_16.md) · [PDF de la guía](guia/Guia_Sprint_16.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_16.pdf`](guia/Guia_Sprint_16.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_16_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_16.md`](guia/Reto_Sprint_16.md)
 - 🖥️ **S16.1 · Pildora demostrador y documentacion:** [`S16.1_Pildora_demostrador_y_documentacion.pdf`](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A **evaluar a fondo** el modelo candidato: errores, gráficos e incertidumbre.
@@ -28,6 +31,9 @@
 - [`plantillas/demostrador/`](plantillas/demostrador/) · `logica.py`, `app.py`, `api.py`, `requirements.txt` y `README_demostrador.md`.
 
 ## Entrega / Reto · «Entrega final: evaluar, demostrar y documentar»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_16.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** el cliente (el docente) recibirá vuestro trabajo como un entregable real: clonará el repositorio, seguirá el README, probará el demostrador y leerá la memoria. **La congelación es lo que esté subido al repositorio del equipo a las 14:30 del 10/12.**
 **Entregáis** (carpeta `sprint-16/` del repositorio del equipo):
 - `notebooks/04_evaluacion.ipynb`: evaluación final en test, gráficos y análisis de errores.

@@ -2,14 +2,17 @@
 **Pregunta guía:** ¿podemos demostrar con código lo que vimos en teoría?
 **Fechas:** 29/10–3/11 · **Horas:** 13 h (4 h teoría · 6 h práctica, incluye 1 h de CRUD · 3 h proyecto)
 
+> 🎯 **Reto de este sprint: «¿La ocupación depende de esto?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_05.md) · [PDF de la guía](guia/Guia_Sprint_05.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_05.pdf`](guia/Guia_Sprint_05.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_05_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_05.md`](guia/Reto_Sprint_05.md)
 - 🖥️ **S05.1 · NumPy y algebra lineal:** [`S05.1_NumPy_y_algebra_lineal.pdf`](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf)
 - 🖥️ **S05.2 · Descenso del gradiente y regresion desde cero:** [`S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf`](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf)
 - 🖥️ **S05.3 · Estadistica con Python y CRUD:** [`S05.3_Estadistica_con_Python_y_CRUD.pdf`](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab
 
 ## Qué aprenderás
 - Datos numéricos con NumPy y álgebra lineal.
@@ -30,6 +33,9 @@ Cuadernos en orden (6 h). Cada ejercicio se autocorrige con un `assert`: si fall
 | `S05_06_crud_python` | CRUD con `sqlite3` y `mongomock` | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_06_crud_python.ipynb) |
 
 ## Reto · «¿La ocupación depende de esto?»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_05.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** TurisData Canarias quiere saber cuánto cambia la ocupación con la temperatura y los festivos, y con cuánta seguridad. Tenéis su serie diaria de tres años (`ocupacion_diaria.csv`).
 **Entregáis** (en la carpeta `sprint-05/` del repositorio del equipo):
 - El cuaderno `S05_07_reto_ocupacion` (plantilla: [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb)), ejecutado de arriba abajo.

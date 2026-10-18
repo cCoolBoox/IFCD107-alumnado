@@ -3,15 +3,18 @@
 **Fechas:** lun 19/10 – mié 21/10 · **Horas:** 15 h (8 h teoría · 4 h práctica · 3 h reto)
 **Módulos:** M1a (UD 1a.1 a 1a.3) + M8 IA responsable · Bloque A: sin Python ni notebooks
 
+> 🎯 **Reto de este sprint: «Auditoría de oportunidades de IA».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_01.md) · [PDF de la guía](guia/Guia_Sprint_01.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_01.pdf`](guia/Guia_Sprint_01.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_01_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_01.md`](guia/Reto_Sprint_01.md)
 - 🖥️ **S01.1 · Introduccion a la IA:** [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf)
 - 🖥️ **S01.2 · Panorama de algoritmos y CRISP DM:** [`S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf`](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf)
 - 🖥️ **S01.3 · Tipos de aprendizaje:** [`S01.3_Tipos_de_aprendizaje.pdf`](presentaciones/S01.3_Tipos_de_aprendizaje.pdf)
 - 🖥️ **S01.4 · IA responsable etica sesgo y normativa:** [`S01.4_IA_responsable_etica_sesgo_y_normativa.pdf`](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - Qué es la IA y en qué se diferencian machine learning, deep learning e IA generativa.
@@ -30,6 +33,9 @@ Materiales `.md` imprimibles (sin Colab):
 | [`ejemplo_clasificacion_caso.md`](actividades/ejemplo_clasificacion_caso.md) | Ejemplo resuelto de ficha de caso (para el reto) |
 
 ## Reto · «Auditoría de oportunidades de IA»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_01.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** la directora de TurisData Canarias quiere saber qué 5 cosas podría hacer con IA, cuáles primero, qué datos necesita y qué riesgos corre. Tiene un piloto limitado (hasta 15.000 €).
 **Entregáis** (en la carpeta `sprint-01/` del repositorio del equipo):
 - Informe de oportunidades de 2-3 páginas (`.md` o PDF): resumen, tabla de 5 casos, priorización, riesgos y recomendación.

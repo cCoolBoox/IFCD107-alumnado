@@ -2,12 +2,15 @@
 **Pregunta guía:** ¿qué modelo es el mejor para nuestro problema y cómo lo demostramos sin engañarnos?
 **Fechas:** 1–3/12 · **Horas:** 18 h (1 T · 3 P · 14 PBL) · **Hito:** 3/12 modelo candidato elegido
 
+> 🎯 **Reto de este sprint: «El mejor modelo, demostrado».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_15.md) · [PDF de la guía](guia/Guia_Sprint_15.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_15.pdf`](guia/Guia_Sprint_15.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_15_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_15.md`](guia/Reto_Sprint_15.md)
 - 🖥️ **S15.1 · Pildora seguimiento de experimentos:** [`S15.1_Pildora_seguimiento_de_experimentos.pdf`](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A **comparar modelos con rigor**: baseline, ≥ 3 modelos, validación cruzada y test reservado.
@@ -25,6 +28,9 @@
 Sesiones: 1/12 planning, píldora y primeras iteraciones · 2/12 tutorías de 15 min por equipo y modelos · 3/12 comparativa final, **modelo candidato**, review y retro.
 
 ## Entrega / Reto · «El mejor modelo, demostrado»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_15.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** el cliente (el docente) quiere saber qué modelo recomendáis y por qué. No basta «el que tiene mejor número»: ¿la mejora sobre el baseline justifica el coste? ¿Generaliza? ¿Se puede repetir?
 **Entregáis** (carpeta `sprint-15/` del repositorio del equipo):
 - Baseline + ≥ 3 modelos comparados con la misma partición, uno al menos neuronal (o LLM/RAG en el brief 3).

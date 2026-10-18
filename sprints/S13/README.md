@@ -2,12 +2,15 @@
 **Pregunta guía:** ¿cómo enseñamos y defendemos los resultados de un modelo?
 **Fechas:** 25/11 · **Horas:** 3 h (1 T · 1 P · 1 PBL)
 
+> 🎯 **Reto de este sprint: «Informe visual para dirección».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_13.md) · [PDF de la guía](guia/Guia_Sprint_13.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_13.pdf`](guia/Guia_Sprint_13.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_13_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_13.md`](guia/Reto_Sprint_13.md)
 - 🖥️ **S13.1 · Visualizar y comunicar resultados:** [`S13.1_Visualizar_y_comunicar_resultados.pdf`](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A dibujar e interpretar la **matriz de confusión**, la curva **ROC** y la curva **precisión-exhaustividad**.
@@ -24,6 +27,9 @@
 Plantilla en esta carpeta: [`plantilla_informe_visual.md`](plantillas/plantilla_informe_visual.md) (texto del informe de una página).
 
 ## Entrega / Reto · «Informe visual para dirección»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_13.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** Marcos, director de TurisData Canarias, tiene 10 minutos y no sabe qué es un AUC. Pide: *«Una página. ¿Puedo fiarme del modelo, qué mueve las cancelaciones y qué hago el lunes?»*
 **Entregáis** (carpeta `sprint-13/` del repositorio del equipo):
 - `informe_visual.md` con el PNG del panel (o PDF de una página), siguiendo la plantilla: titular-decisión, 4 gráficos, 3 viñetas y pie con datos y responsables.

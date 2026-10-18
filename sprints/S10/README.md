@@ -3,14 +3,17 @@
 **Pregunta guía:** ¿una red neuronal mejora al aprendizaje automático clásico y a qué precio?
 **Fechas:** 13–17 de noviembre · **Horas:** 15 h (5 h teoría · 6 h práctica · 4 h PBL) · **Módulo 4, UD 4.1–4.3**
 
+> 🎯 **Reto de este sprint: «¿Vale la pena la red?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_10.md) · [PDF de la guía](guia/Guia_Sprint_10.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_10.pdf`](guia/Guia_Sprint_10.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_10_ecofriendly.pdf)
+- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_10.md`](guia/Reto_Sprint_10.md)
 - 🖥️ **S10.1 · Fundamentos de redes neuronales:** [`S10.1_Fundamentos_de_redes_neuronales.pdf`](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf)
 - 🖥️ **S10.2 · Redes densas con Keras:** [`S10.2_Redes_densas_con_Keras.pdf`](presentaciones/S10.2_Redes_densas_con_Keras.pdf)
 - 🖥️ **S10.3 · Entrenamiento y regularizacion:** [`S10.3_Entrenamiento_y_regularizacion.pdf`](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab
 
 ## Qué aprenderás
 - Cómo funciona por dentro una red: neurona, capas, activación y *backprop*.
@@ -29,6 +32,9 @@
 Cada notebook tiene ejercicios con `assert`: si saltan, el mensaje te dice qué revisar.
 
 ## Reto · «¿Vale la pena la red?»
+
+👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_10.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+
 **Contexto:** la dirección de TurisData Canarias oye hablar de redes neuronales y pregunta si debe sustituir su modelo de cancelaciones. No quiere una opinión: quiere evidencias, coste incluido.
 
 **Entregáis** (carpeta `sprint-10/` del repositorio del equipo):
