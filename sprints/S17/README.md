@@ -4,8 +4,10 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_17.pdf`](Guia_Sprint_17.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_17_ecofriendly.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_17.pdf`](guia/Guia_Sprint_17.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_17_ecofriendly.pdf)
 - 🖥️ **S17.1 · Storytelling y defensa:** [`S17.1_Storytelling_y_defensa.pdf`](presentaciones/S17.1_Storytelling_y_defensa.pdf)
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A estructurar un mensaje: primero la conclusión, luego argumentos y evidencias.
@@ -16,8 +18,8 @@
 ## Prácticas
 Este sprint no tiene notebooks. 11/12 (6 h): teoría de storytelling, práctica del relato y ensayos con feedback. 14/12 (2 h): **defensa final** (10 min de cambios de equipo; el resto se reparte: 60 % relato, 20 % demo, 20 % preguntas).
 
-- [`plantilla_storytelling.md`](plantilla_storytelling.md) · pirámide, mensaje único, arco narrativo y storyboard.
-- [`guion_defensa.md`](guion_defensa.md) · estructura de 10 minutos, reparto de voces, preguntas y plan B.
+- [`plantilla_storytelling.md`](plantillas/plantilla_storytelling.md) · pirámide, mensaje único, arco narrativo y storyboard.
+- [`guion_defensa.md`](actividades/guion_defensa.md) · estructura de 10 minutos, reparto de voces, preguntas y plan B.
 
 ## Entrega / Reto · «La defensa»
 **Contexto:** el tribunal (el docente y, si procede, personas invitadas) no es técnico. Debe salir sabiendo qué problema resolvéis, qué habéis encontrado, qué recomendáis y de qué no fiarse. Las preguntas pueden ir a cualquier integrante.

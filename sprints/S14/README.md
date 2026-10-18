@@ -4,8 +4,10 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_14.pdf`](Guia_Sprint_14.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_14_ecofriendly.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_14.pdf`](guia/Guia_Sprint_14.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_14_ecofriendly.pdf)
 - 🖥️ **S14.1 · Lanzamiento del proyecto final:** [`S14.1_Lanzamiento_del_proyecto_final.pdf`](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf)
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A **formular un proyecto de IA**: pregunta de negocio, decisión que apoya y métricas.
@@ -23,11 +25,11 @@ Este sprint no tiene notebooks: hay sesiones y plantillas (todas en esta carpeta
 | 27/11 | **Go / no-go** de la ficha; EDA con informe de calidad; empezar el baseline. |
 | 30/11 | Baseline, plan ético, backlog y README; review y retrospectiva. |
 
-- [`plantilla_ficha_proyecto.md`](plantilla_ficha_proyecto.md) · ficha de 1 página.
-- [`plantilla_plan_datos_licencias.md`](plantilla_plan_datos_licencias.md) · fuentes, licencias y linaje.
-- [`plantilla_registro_riesgos_eticos.md`](plantilla_registro_riesgos_eticos.md) · riesgos éticos y RGPD / AI Act.
-- [`plantilla_README_repositorio.md`](plantilla_README_repositorio.md) · README del repositorio.
-- [`plantilla_backlog_y_sprints.md`](plantilla_backlog_y_sprints.md) · historias y objetivos por sprint.
+- [`plantilla_ficha_proyecto.md`](plantillas/plantilla_ficha_proyecto.md) · ficha de 1 página.
+- [`plantilla_plan_datos_licencias.md`](plantillas/plantilla_plan_datos_licencias.md) · fuentes, licencias y linaje.
+- [`plantilla_registro_riesgos_eticos.md`](plantillas/plantilla_registro_riesgos_eticos.md) · riesgos éticos y RGPD / AI Act.
+- [`plantilla_README_repositorio.md`](plantillas/plantilla_README_repositorio.md) · README del repositorio.
+- [`plantilla_backlog_y_sprints.md`](plantillas/plantilla_backlog_y_sprints.md) · historias y objetivos por sprint.
 
 ## Entrega / Reto · «Proyecto final: definir, tener datos y un punto de partida»
 **Contexto:** sois una consultora de IA y el docente es el cliente. Elegís uno de los 4 briefs de `proyecto-final/briefs_y_rubrica.md` (demanda turística, salud de cultivos, asistente de FP, demanda eléctrica) o presentáis un brief libre (ficha antes del 26/11). Si elegís el brief 3 (asistente con LLM), mirad antes la guía de acceso gratuito a modelos: [`material/Acceso_modelos_de_lenguaje.md`](../../material/Acceso_modelos_de_lenguaje.md).

@@ -5,10 +5,12 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_02.pdf`](Guia_Sprint_02.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_02_ecofriendly.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_02.pdf`](guia/Guia_Sprint_02.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_02_ecofriendly.pdf)
 - 🖥️ **S02.1 · Matematicas para IA:** [`S02.1_Matematicas_para_IA.pdf`](presentaciones/S02.1_Matematicas_para_IA.pdf)
 - 🖥️ **S02.2 · Estadistica y probabilidad:** [`S02.2_Estadistica_y_probabilidad.pdf`](presentaciones/S02.2_Estadistica_y_probabilidad.pdf)
 - 🖥️ **S02.3 · Ecosistema de software para IA:** [`S02.3_Ecosistema_de_software_para_IA.pdf`](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf)
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`tests/`](tests/) test de conocimientos
 
 ## Qué aprenderás
 - Vectores, matrices, derivadas y descenso del gradiente: cómo mejora un modelo.
@@ -21,10 +23,10 @@ Materiales `.md` para papel o pantalla (sin Colab):
 
 | Material | Contenido |
 |---|---|
-| [`alta_cuentas.md`](alta_cuentas.md) | Alta en Colab (**antes del 22/10**) |
-| [`ejercicios_algebra_calculo.md`](ejercicios_algebra_calculo.md) | 12 ejercicios de vectores, matrices, derivadas y gradiente |
-| [`ejercicios_estadistica.md`](ejercicios_estadistica.md) | 14 ejercicios de estadística, probabilidad, Bayes, sesgo y Simpson |
-| [`estadisticas_enganosas.md`](estadisticas_enganosas.md) | 9 casos de estadísticas engañosas |
+| [`alta_cuentas.md`](actividades/alta_cuentas.md) | Alta en Colab (**antes del 22/10**) |
+| [`ejercicios_algebra_calculo.md`](actividades/ejercicios_algebra_calculo.md) | 12 ejercicios de vectores, matrices, derivadas y gradiente |
+| [`ejercicios_estadistica.md`](actividades/ejercicios_estadistica.md) | 14 ejercicios de estadística, probabilidad, Bayes, sesgo y Simpson |
+| [`estadisticas_enganosas.md`](actividades/estadisticas_enganosas.md) | 9 casos de estadísticas engañosas |
 
 Mínimo de ejercicios: **8 de 12** de la hoja 1 (M7, M10 y M11 obligatorios) y **10 de 14** de la hoja 2 (E7, E8, E10 y E14 obligatorios). Escribid cómo lo habéis hecho.
 
@@ -43,7 +45,7 @@ Mínimo de ejercicios: **8 de 12** de la hoja 1 (M7, M10 y M11 obligatorios) y *
 ## 📝 Test de conocimientos · vie 23/10
 **Test corto de M1a · Fundamentos de IA** · 12 preguntas · unos 20 min · individual, en el navegador, sin penalización por fallo. Cubre M1a (conceptos, matemáticas y estadística).
 
-👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/test_M1a.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/test_M1a.html`)
+👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html`)
 
 **Solo se abre el día vie 23/10** (hora de Canarias). Al terminar, copia tu resultado y envíaselo al docente. Cuenta para el 30 % de «tests de conocimientos».
 

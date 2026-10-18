@@ -317,11 +317,11 @@ Estructura provisional (el diseño detallado del proyecto está pendiente):
 
 | Test | Día | Sprint | Enlace |
 |---|---|---|---|
-| M1a · Fundamentos de IA | vie 23/10 | S02 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/test_M1a.html) |
-| Bloque M6–M8 · SQL, AutoML e IA responsable | mar 27/10 | S03 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/test_M6-M8.html) |
-| M3 · parte 1 (UD 3.1–3.4) | lun 9/11 | S07 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/test_M3_parte1.html) |
-| M3 · parte 2 (UD 3.5–3.8) | mié 11/11 | S08 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/test_M3_parte2.html) |
-| M4 · Redes neuronales | mié 25/11 | S12 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/test_M4.html) |
+| M1a · Fundamentos de IA | vie 23/10 | S02 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) |
+| Bloque M6–M8 · SQL, AutoML e IA responsable | mar 27/10 | S03 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) |
+| M3 · parte 1 (UD 3.1–3.4) | lun 9/11 | S07 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) |
+| M3 · parte 2 (UD 3.5–3.8) | mié 11/11 | S08 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) |
+| M4 · Redes neuronales | mié 25/11 | S12 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) |
 
 
 Criterio de "Apto": superar cada instrumento con un mínimo del 50 % y asistir al mínimo exigido por la normativa de la acción.

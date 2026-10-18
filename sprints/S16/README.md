@@ -5,8 +5,10 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_16.pdf`](Guia_Sprint_16.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_16_ecofriendly.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_16.pdf`](guia/Guia_Sprint_16.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_16_ecofriendly.pdf)
 - 🖥️ **S16.1 · Pildora demostrador y documentacion:** [`S16.1_Pildora_demostrador_y_documentacion.pdf`](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf)
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A **evaluar a fondo** el modelo candidato: errores, gráficos e incertidumbre.
@@ -17,12 +19,12 @@
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S16_01_demostrador` | Demostrador: modelo + metadatos, lógica separada, pruebas, Streamlit, widgets y API (opcional) | 1 h 15 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/S16_01_demostrador.ipynb) |
+| `S16_01_demostrador` | Demostrador: modelo + metadatos, lógica separada, pruebas, Streamlit, widgets y API (opcional) | 1 h 15 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb) |
 
-- [`plantilla_esqueleto_memoria_tecnica.md`](plantilla_esqueleto_memoria_tecnica.md) · memoria de 10-15 páginas.
-- [`plantilla_model_card.md`](plantilla_model_card.md) · tarjeta del modelo.
-- [`plantilla_coevaluacion.md`](plantilla_coevaluacion.md) · coevaluación individual.
-- [`checklist_congelacion.md`](checklist_congelacion.md) · lo que debe estar hecho antes del 10/12 a las 14:30.
+- [`plantilla_esqueleto_memoria_tecnica.md`](plantillas/plantilla_esqueleto_memoria_tecnica.md) · memoria de 10-15 páginas.
+- [`plantilla_model_card.md`](plantillas/plantilla_model_card.md) · tarjeta del modelo.
+- [`plantilla_coevaluacion.md`](plantillas/plantilla_coevaluacion.md) · coevaluación individual.
+- [`checklist_congelacion.md`](plantillas/checklist_congelacion.md) · lo que debe estar hecho antes del 10/12 a las 14:30.
 - [`plantillas/demostrador/`](plantillas/demostrador/) · `logica.py`, `app.py`, `api.py`, `requirements.txt` y `README_demostrador.md`.
 
 ## Entrega / Reto · «Entrega final: evaluar, demostrar y documentar»

@@ -6,10 +6,12 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_09.pdf`](Guia_Sprint_09.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_09_ecofriendly.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_09.pdf`](guia/Guia_Sprint_09.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_09_ecofriendly.pdf)
 - 🖥️ **S09.1 · Clustering y PCA:** [`S09.1_Clustering_y_PCA.pdf`](presentaciones/S09.1_Clustering_y_PCA.pdf)
 - 🖥️ **S09.2 · Sistemas de recomendacion:** [`S09.2_Sistemas_de_recomendacion.pdf`](presentaciones/S09.2_Sistemas_de_recomendacion.pdf)
 - 🖥️ **S09.3 · Aprendizaje por refuerzo:** [`S09.3_Aprendizaje_por_refuerzo.pdf`](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf)
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - Agrupar clientes con **k-means, jerárquico y DBSCAN** y elegir `k` con la silueta.
@@ -20,10 +22,10 @@
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S09_01_clustering` | Segmentar huéspedes: escalado, k-means, silueta, jerárquico, DBSCAN | 1 h 30 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/S09_01_clustering.ipynb) |
-| `S09_02_pca` | PCA: varianza explicada, mapa 2D, cargas, mención a t-SNE | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/S09_02_pca.ipynb) |
-| `S09_03_recomendadores` | Popularidad, contenido, colaborativo, factorización; RMSE y precision@k | 1 h 30 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/S09_03_recomendadores.ipynb) |
-| `S09_04_q_learning` | Q-learning en el hotel (numpy): recompensas, epsilon-greedy, política | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/S09_04_q_learning.ipynb) |
+| `S09_01_clustering` | Segmentar huéspedes: escalado, k-means, silueta, jerárquico, DBSCAN | 1 h 30 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_01_clustering.ipynb) |
+| `S09_02_pca` | PCA: varianza explicada, mapa 2D, cargas, mención a t-SNE | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_02_pca.ipynb) |
+| `S09_03_recomendadores` | Popularidad, contenido, colaborativo, factorización; RMSE y precision@k | 1 h 30 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) |
+| `S09_04_q_learning` | Q-learning en el hotel (numpy): recompensas, epsilon-greedy, política | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_04_q_learning.ipynb) |
 
 Cada notebook tiene comprobaciones automáticas (✔). Trabaja en orden: no pases al siguiente hasta que los `assert` pasen. Los datos se descargan solos.
 
@@ -32,7 +34,7 @@ Cada notebook tiene comprobaciones automáticas (✔). Trabaja en orden: no pase
 
 **Entregáis** (carpeta `sprint-09/` del repositorio del equipo):
 - `reto_S09_conocer_al_huesped.ipynb`: segmentación de `huespedes.csv` (`k` con silueta y criterio de negocio), mapa 2D con PCA y `recomendar(id_usuario, n)`.
-- Ficha de segmentos (1 página): nombre, tamaño, perfil, una acción y una experiencia estrella por segmento. Plantilla: [`plantilla_ficha_segmentos.md`](plantilla_ficha_segmentos.md).
+- Ficha de segmentos (1 página): nombre, tamaño, perfil, una acción y una experiencia estrella por segmento. Plantilla: [`plantilla_ficha_segmentos.md`](plantillas/plantilla_ficha_segmentos.md).
 - Nota de IA responsable (5 líneas) dentro de la ficha.
 
 **Reglas:**

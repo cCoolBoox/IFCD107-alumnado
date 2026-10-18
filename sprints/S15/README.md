@@ -4,8 +4,10 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_15.pdf`](Guia_Sprint_15.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_15_ecofriendly.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_15.pdf`](guia/Guia_Sprint_15.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_15_ecofriendly.pdf)
 - 🖥️ **S15.1 · Pildora seguimiento de experimentos:** [`S15.1_Pildora_seguimiento_de_experimentos.pdf`](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf)
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A **comparar modelos con rigor**: baseline, ≥ 3 modelos, validación cruzada y test reservado.
@@ -16,7 +18,7 @@
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S15_01_seguimiento_experimentos` | Semillas, registro en CSV, validación cruzada, fuga de datos, MLflow local *(opcional)* | 1 h 15 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/S15_01_seguimiento_experimentos.ipynb) |
+| `S15_01_seguimiento_experimentos` | Semillas, registro en CSV, validación cruzada, fuga de datos, MLflow local *(opcional)* | 1 h 15 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) |
 
 - [`plantillas/registro_experimentos_plantilla.csv`](plantillas/registro_experimentos_plantilla.csv) · cabecera del registro; copiadla a `experimentos/registro.csv` en vuestro repositorio.
 

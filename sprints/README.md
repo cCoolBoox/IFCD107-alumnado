@@ -1,8 +1,19 @@
 # Material por sprint
 
-Cada carpeta `Sxx/` reúne **todo lo del sprint**: la **guía** (`README.md` con la ficha del reto y `Guia_Sprint_XX.pdf`, y `Guia_Sprint_XX_ecofriendly.pdf` para imprimir con poca tinta), las **presentaciones** de cada sesión (`presentaciones/`), los **notebooks** de práctica y las plantillas del reto.
-Empieza siempre por el `README.md` del sprint: tiene la sección *📎 Material del sprint* con todos los enlaces.
-Los notebooks se abren en **Google Colab** con la insignia de la primera celda; los datos se descargan solos desde la carpeta [`../datos`](../datos).
+Cada carpeta `Sxx/` tiene **un `README.md`** (la guía del sprint con la ficha del reto) y **subcarpetas** con el resto:
+
+| Subcarpeta | Qué contiene |
+|---|---|
+| `guia/` | La guía en PDF (`Guia_Sprint_XX.pdf`) y su versión `_ecofriendly` para imprimir con poca tinta |
+| `presentaciones/` | Diapositivas de cada sesión |
+| `notebooks/` | Prácticas para abrir en Google Colab |
+| `actividades/` | Material de las actividades y ejercicios |
+| `plantillas/` | Plantillas para el reto y los entregables |
+| `recursos/` | Scripts y ficheros de apoyo |
+| `tests/` | Test de conocimientos (solo se abre el día indicado) |
+
+Un sprint solo tiene las subcarpetas que necesita. Empieza siempre por el `README.md` del sprint: tiene la sección *📎 Material del sprint* con todos los enlaces.
+Los notebooks se abren en **Google Colab** con la insignia de la primera celda de cada uno; los datos se descargan solos desde la carpeta [`../datos`](../datos).
 
 | Sprint | Tema | Fechas | Notebooks | Guía |
 |---|---|---|---|---|

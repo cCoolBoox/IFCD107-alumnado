@@ -4,8 +4,10 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_13.pdf`](Guia_Sprint_13.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_13_ecofriendly.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_13.pdf`](guia/Guia_Sprint_13.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_13_ecofriendly.pdf)
 - 🖥️ **S13.1 · Visualizar y comunicar resultados:** [`S13.1_Visualizar_y_comunicar_resultados.pdf`](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf)
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 ## Qué aprenderás
 - A dibujar e interpretar la **matriz de confusión**, la curva **ROC** y la curva **precisión-exhaustividad**.
@@ -16,10 +18,10 @@
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S13_01_visualizacion_resultados` | Matriz de confusión, ROC/PR, importancia, umbral y coste, buenas prácticas | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/S13_01_visualizacion_resultados.ipynb) |
-| `S13_02_plantilla_informe_visual` | Plantilla ejecutable del panel de una página (para el reto) | 1 h (dentro del PBL) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/S13_02_plantilla_informe_visual.ipynb) |
+| `S13_01_visualizacion_resultados` | Matriz de confusión, ROC/PR, importancia, umbral y coste, buenas prácticas | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) |
+| `S13_02_plantilla_informe_visual` | Plantilla ejecutable del panel de una página (para el reto) | 1 h (dentro del PBL) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) |
 
-Plantilla en esta carpeta: [`plantilla_informe_visual.md`](plantilla_informe_visual.md) (texto del informe de una página).
+Plantilla en esta carpeta: [`plantilla_informe_visual.md`](plantillas/plantilla_informe_visual.md) (texto del informe de una página).
 
 ## Entrega / Reto · «Informe visual para dirección»
 **Contexto:** Marcos, director de TurisData Canarias, tiene 10 minutos y no sabe qué es un AUC. Pide: *«Una página. ¿Puedo fiarme del modelo, qué mueve las cancelaciones y qué hago el lunes?»*

@@ -7,12 +7,14 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_00.pdf`](Guia_Sprint_00.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_00_ecofriendly.pdf)
-- 🧪 **Ejemplos interactivos de todo el curso:** [abrir online](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S00/Ejemplos_del_curso_IFCD107.html) · archivo: [`Ejemplos_del_curso_IFCD107.html`](Ejemplos_del_curso_IFCD107.html) (opcional, 10 minutos para curiosear; funciona sin internet si lo descargas)
-- 🗂️ **Actividad · Crea el repositorio de tu equipo:** [`actividad_repositorio_equipo.md`](actividad_repositorio_equipo.md) (plantilla: [ifcd107-equipo-plantilla](https://github.com/cCoolBoox/ifcd107-equipo-plantilla))
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_00.pdf`](guia/Guia_Sprint_00.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_00_ecofriendly.pdf)
+- 🧪 **Ejemplos interactivos de todo el curso:** [abrir online](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S00/recursos/Ejemplos_del_curso_IFCD107.html) · archivo: [`Ejemplos_del_curso_IFCD107.html`](recursos/Ejemplos_del_curso_IFCD107.html) (opcional, 10 minutos para curiosear; funciona sin internet si lo descargas)
+- 🗂️ **Actividad · Crea el repositorio de tu equipo:** [`actividad_repositorio_equipo.md`](actividades/actividad_repositorio_equipo.md) (plantilla: [ifcd107-equipo-plantilla](https://github.com/cCoolBoox/ifcd107-equipo-plantilla))
 - 🖥️ **S00.0 · Bienvenida y reglas del curso:** [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf)
 - 🖥️ **S00.1 · Agile y Scrum:** [`S00.1_Agile_y_Scrum.pdf`](presentaciones/S00.1_Agile_y_Scrum.pdf)
 - 🖥️ **S00.2 · Design Thinking:** [`S00.2_Design_Thinking.pdf`](presentaciones/S00.2_Design_Thinking.pdf)
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto · [`recursos/`](recursos/) scripts y ficheros de apoyo
 
 ## Qué aprenderás
 - Qué es trabajar de forma ágil (Scrum) y por qué encaja en proyectos de datos e IA.
@@ -25,11 +27,11 @@ Un material por actividad (todos son `.md`):
 
 | Material | Para qué sirve |
 |---|---|
-| [`simulacion_sprint_alumnado.md`](simulacion_sprint_alumnado.md) | Simulación de un sprint corto (práctica 1) |
-| [`empatia_hmw_plantillas.md`](empatia_hmw_plantillas.md) | Mapa de empatía y «How might we» (práctica 2 y reto) |
-| [`plantillas_equipo.md`](plantillas_equipo.md) | Acuerdo de trabajo, Definition of Done y backlog (reto) |
-| [`guia_tablero_trello.md`](guia_tablero_trello.md) | Cómo montar el tablero (reto) |
-| [`entrevista_descubrimiento.md`](entrevista_descubrimiento.md) | Guion y notas de la entrevista al cliente (reto) |
+| [`simulacion_sprint_alumnado.md`](actividades/simulacion_sprint_alumnado.md) | Simulación de un sprint corto (práctica 1) |
+| [`empatia_hmw_plantillas.md`](plantillas/empatia_hmw_plantillas.md) | Mapa de empatía y «How might we» (práctica 2 y reto) |
+| [`plantillas_equipo.md`](plantillas/plantillas_equipo.md) | Acuerdo de trabajo, Definition of Done y backlog (reto) |
+| [`guia_tablero_trello.md`](actividades/guia_tablero_trello.md) | Cómo montar el tablero (reto) |
+| [`entrevista_descubrimiento.md`](actividades/entrevista_descubrimiento.md) | Guion y notas de la entrevista al cliente (reto) |
 
 ## Reto · «Constituir la consultora»
 **Contexto:** TurisData Canarias quiere incorporar IA, pero no sabe por dónde empezar. Vosotros sois una de las consultoras del concurso y el docente hace de cliente. Antes de tocar datos, demostrad que sabéis organizaros y escuchar.

@@ -4,12 +4,14 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_12.pdf`](Guia_Sprint_12.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_12_ecofriendly.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_12.pdf`](guia/Guia_Sprint_12.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_12_ecofriendly.pdf)
 - 🖥️ **S12.1 · RNN LSTM GRU y series temporales:** [`S12.1_RNN_LSTM_GRU_y_series_temporales.pdf`](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf)
 - 🖥️ **S12.2 · NLP clasico y embeddings:** [`S12.2_NLP_clasico_y_embeddings.pdf`](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf)
 - 🖥️ **S12.3 · Transformers y LLM:** [`S12.3_Transformers_y_LLM.pdf`](presentaciones/S12.3_Transformers_y_LLM.pdf)
 - 🖥️ **S12.4 · Autoencoders y modelos generativos:** [`S12.4_Autoencoders_y_modelos_generativos.pdf`](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf)
 - 🤖 **¿Tu proyecto usará un modelo de lenguaje por internet?** Guía de acceso gratuito: [`Acceso_modelos_de_lenguaje.md`](../../material/Acceso_modelos_de_lenguaje.md)
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto · [`tests/`](tests/) test de conocimientos
 
 ## Qué aprenderás
 - A **predecir una serie temporal** (la ocupación) y comprobar si gana a un método simple (*baseline*).
@@ -22,15 +24,15 @@ Todo se ejecuta sin internet (las partes **OPCIONAL / NO VERIFICADO** se pueden 
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S12_01_series_temporales` | Serie temporal: baselines, descomposición, ARIMA/SARIMAX | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/S12_01_series_temporales.ipynb) |
-| `S12_02_redes_recurrentes` | RNN, LSTM y GRU en Keras vs. baseline | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/S12_02_redes_recurrentes.ipynb) |
-| `S12_03_nlp_clasico` | Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas | 1 h 10 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/S12_03_nlp_clasico.ipynb) |
-| `S12_04_embeddings_lsa` | Embeddings con LSA y buscador de reseñas parecidas | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/S12_04_embeddings_lsa.ipynb) |
-| `S12_05_transformers_atencion` | Tokens, atención paso a paso, temperatura (+ Hugging Face opcional) | 1 h 10 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/S12_05_transformers_atencion.ipynb) |
-| `S12_06_mini_rag` | Mini RAG con la política, evaluación y seguridad | 1 h 30 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/S12_06_mini_rag.ipynb) |
-| `S12_07_autoencoder_generativos` | Autoencoder para anomalías; idea de GAN y difusión | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/S12_07_autoencoder_generativos.ipynb) |
+| `S12_01_series_temporales` | Serie temporal: baselines, descomposición, ARIMA/SARIMAX | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) |
+| `S12_02_redes_recurrentes` | RNN, LSTM y GRU en Keras vs. baseline | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) |
+| `S12_03_nlp_clasico` | Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas | 1 h 10 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) |
+| `S12_04_embeddings_lsa` | Embeddings con LSA y buscador de reseñas parecidas | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_04_embeddings_lsa.ipynb) |
+| `S12_05_transformers_atencion` | Tokens, atención paso a paso, temperatura (+ Hugging Face opcional) | 1 h 10 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) |
+| `S12_06_mini_rag` | Mini RAG con la política, evaluación y seguridad | 1 h 30 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) |
+| `S12_07_autoencoder_generativos` | Autoencoder para anomalías; idea de GAN y difusión | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_07_autoencoder_generativos.ipynb) |
 
-Plantilla en esta carpeta: [`plantilla_informe_cliente.md`](plantilla_informe_cliente.md) (informe de reseñas).
+Plantilla en esta carpeta: [`plantilla_informe_cliente.md`](plantillas/plantilla_informe_cliente.md) (informe de reseñas).
 
 ## Entrega / Reto · «Escuchar al cliente»
 **Contexto:** TurisData Canarias recibe decenas de reseñas y mensajes de huéspedes cada semana. Quiere saber qué opinan, prever la ocupación de la próxima semana y probar un asistente que responda con su política sin inventar nada. Los datos son sintéticos: dilo en el informe.
@@ -49,7 +51,7 @@ Plantilla en esta carpeta: [`plantilla_informe_cliente.md`](plantilla_informe_cl
 ## 📝 Test de conocimientos · mié 25/11
 **Test de M4 · Redes neuronales** · 12 preguntas · unos 20 min · individual, en el navegador, sin penalización por fallo. Cubre M4 (redes densas, CNN, series, lenguaje y Transformers).
 
-👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/test_M4.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/test_M4.html`)
+👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html`)
 
 **Solo se abre el día mié 25/11** (hora de Canarias). Al terminar, copia tu resultado y envíaselo al docente. Cuenta para el 30 % de «tests de conocimientos».
 

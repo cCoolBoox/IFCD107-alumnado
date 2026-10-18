@@ -5,12 +5,14 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_07.pdf`](Guia_Sprint_07.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_07_ecofriendly.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_07.pdf`](guia/Guia_Sprint_07.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_07_ecofriendly.pdf)
 - 🖥️ **S07.1 · Regresion lineal polinomica y regularizacion:** [`S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf`](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf)
 - 🖥️ **S07.2 · Regresion logistica y clasificacion:** [`S07.2_Regresion_logistica_y_clasificacion.pdf`](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf)
 - 🖥️ **S07.3 · k NN y Naive Bayes:** [`S07.3_k_NN_y_Naive_Bayes.pdf`](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf)
 
 **Contenidos:** M3 UD 3.3 (regresión lineal, polinómica, Ridge y Lasso), UD 3.4 (regresión logística y clasificación) y UD 3.5 (k-NN y Naive Bayes).
+
+**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto · [`tests/`](tests/) test de conocimientos
 
 ## Qué aprenderás
 - Ajustar regresiones lineales y polinómicas e **interpretar los coeficientes** en euros.
@@ -21,11 +23,11 @@
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S07_01_regresion_lineal_polinomica` | Regresión lineal, coeficientes, residuos, interacciones y polinomios | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/S07_01_regresion_lineal_polinomica.ipynb) |
-| `S07_02_ridge_lasso` | Regularización: Ridge, Lasso y elección de `alpha` | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/S07_02_ridge_lasso.ipynb) |
-| `S07_03_regresion_logistica` | Regresión logística, *odds ratios*, umbral, matriz de confusión y coste | 70 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/S07_03_regresion_logistica.ipynb) |
-| `S07_04_roc_pr_desbalance` | ROC, precisión–recall y clases desbalanceadas | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/S07_04_roc_pr_desbalance.ipynb) |
-| `S07_05_knn_naive_bayes` | k-NN y Naive Bayes; comparativa de modelos | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/S07_05_knn_naive_bayes.ipynb) |
+| `S07_01_regresion_lineal_polinomica` | Regresión lineal, coeficientes, residuos, interacciones y polinomios | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_01_regresion_lineal_polinomica.ipynb) |
+| `S07_02_ridge_lasso` | Regularización: Ridge, Lasso y elección de `alpha` | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_02_ridge_lasso.ipynb) |
+| `S07_03_regresion_logistica` | Regresión logística, *odds ratios*, umbral, matriz de confusión y coste | 70 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_03_regresion_logistica.ipynb) |
+| `S07_04_roc_pr_desbalance` | ROC, precisión–recall y clases desbalanceadas | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_04_roc_pr_desbalance.ipynb) |
+| `S07_05_knn_naive_bayes` | k-NN y Naive Bayes; comparativa de modelos | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_05_knn_naive_bayes.ipynb) |
 
 Los ejercicios se autocorrigen con `assert`. Los datos (`reservas_turisdata.csv`) se descargan solos.
 
@@ -33,7 +35,7 @@ Los ejercicios se autocorrigen con `assert`. Los datos (`reservas_turisdata.csv`
 **Contexto:** TurisData Canarias quiere una tarifa de referencia por noche y un aviso de riesgo de cancelación para decidir el *overbooking*. El gerente no quiere oír hablar de «AUC»: quiere saber cuánto dinero se juega si el modelo falla.
 
 **Entregáis** (carpeta `sprint-07/` del repositorio del equipo):
-- `informe_modelado.md` (2–3 páginas) con comparativa de métricas y recomendación de negocio en euros. Plantilla: [`informe_modelado_plantilla.md`](informe_modelado_plantilla.md).
+- `informe_modelado.md` (2–3 páginas) con comparativa de métricas y recomendación de negocio en euros. Plantilla: [`informe_modelado_plantilla.md`](plantillas/informe_modelado_plantilla.md).
 - `reto_S07.ipynb`: regresión para `precio_noche` y clasificación para `cancelada`, cada una con *baseline*.
 - Hipótesis de coste de cada error, umbral elegido y análisis de sensibilidad.
 - `README.md` para reproducirlo (semilla, versiones).
@@ -48,7 +50,7 @@ Los ejercicios se autocorrigen con `assert`. Los datos (`reservas_turisdata.csv`
 ## 📝 Test de conocimientos · lun 9/11
 **Test de M3 · parte 1** · 10 preguntas · unos 20 min · individual, en el navegador, sin penalización por fallo. Cubre M3, UD 3.1 a 3.4 (preprocesado, métricas, regresión y clasificación).
 
-👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/test_M3_parte1.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/test_M3_parte1.html`)
+👉 **[Abrir el test](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html)** (`https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html`)
 
 **Solo se abre el día lun 9/11** (hora de Canarias). Al terminar, copia tu resultado y envíaselo al docente. Cuenta para el 30 % de «tests de conocimientos».
 
