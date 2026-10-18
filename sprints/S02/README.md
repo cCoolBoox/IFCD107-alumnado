@@ -15,6 +15,35 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`tests/`](tests/) test de conocimientos
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Miércoles 21/10 (desde las 12:30)**
+
+1. 📖 **Teoría**: [Ecosistema de software para IA: Python, Colab, librerías y GPU](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) · _30 min_
+2. 💻 **Práctica**: [Alta en Colab, GitHub y AWS (las cuentas AWS tienen que estar listas antes del 22/10)](actividades/alta_cuentas.md) · _1 h_
+3. 🎯 **Reto**: [Planning: leer el informe del cliente y repartir las 6 afirmaciones (paso 1)](guia/Reto_Sprint_02.md) · _30 min_
+
+**Jueves 22/10**
+
+4. 📖 **Teoría**: [Matemáticas para IA: álgebra lineal, derivadas y gradiente](presentaciones/S02.1_Matematicas_para_IA.pdf) · _2 h 30 min_
+5. 💻 **Práctica**: [Ejercicios de matemáticas (hoja 1)](actividades/ejercicios_algebra_calculo.md) · _1 h_
+6. 📖 **Teoría**: [Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) · _2 h_
+7. 🎯 **Reto**: [Primera lectura del informe con la lista de control (paso 2)](guia/Reto_Sprint_02.md) · _30 min_
+
+**Viernes 23/10 (hasta las 10:30)**
+
+8. 💻 **Práctica**: [Estadísticas engañosas](actividades/estadisticas_enganosas.md) (9 casos) y [hoja 2 de ejercicios](actividades/ejercicios_estadistica.md) · _40 min_
+9. 💻 **Práctica**: Test corto de matemáticas y estadística (M1a) · _20 min_
+10. 🎯 **Reto**: [Rehacer los cálculos, dictamen y recomendación (pasos 3 y 4)](guia/Reto_Sprint_02.md) · _30 min_
+11. 🔔 **Ceremonia**: Review y retrospectiva · _30 min_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - Vectores, matrices, derivadas y descenso del gradiente: cómo mejora un modelo.
 - Media, mediana, desviación, probabilidad condicionada y Bayes.

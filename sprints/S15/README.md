@@ -12,6 +12,29 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**1/12**
+
+1. 📖 **Teoría**: [Píldora: seguimiento de experimentos](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) · _1 h_
+2. 💻 **Práctica**: [Semillas, registro de experimentos, validación cruzada y fuga de datos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) · _1 h 15 min_
+3. 🎯 **Reto**: [Preparar el terreno y el registro de experimentos (paso 1)](plantillas/registro_experimentos_plantilla.csv) · _resto de la jornada_
+
+**2/12**
+
+4. 🎯 **Reto**: [Modelos clásicos y red neuronal (paso 2) → comprobar que no hay fugas de datos, **antes de elegir** (paso 3)](guia/Reto_Sprint_15.md) · _jornada completa_
+
+**3/12 · hito: modelo candidato elegido**
+
+5. 🎯 **Reto**: [Elegir el candidato (paso 4) → test **una sola vez** y explicación (paso 5)](guia/Reto_Sprint_15.md) · _jornada completa_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - A **comparar modelos con rigor**: baseline, ≥ 3 modelos, validación cruzada y test reservado.
 - A **registrar experimentos** (semillas, versiones, hiperparámetros, métricas) para poder repetirlos.

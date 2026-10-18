@@ -15,6 +15,29 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Prácticas, en este orden**
+
+1. 📖 **Teoría**: [Fundamentos de redes neuronales](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) · _1 h 30 min_
+2. 💻 **Práctica**: [Una red neuronal con solo NumPy](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) · _1 h 15 min_
+3. 📖 **Teoría**: [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) · _1 h 30 min_
+4. 💻 **Práctica**: [MLP en Keras: clasificación y regresión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) · _1 h 30 min_
+5. 📖 **Teoría**: [Entrenamiento y regularización](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) · _1 h 30 min_
+6. 💻 **Práctica**: [Sobreajuste, L2, *dropout*, parada temprana y *callbacks*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) · _1 h 45 min_
+7. 💻 **Práctica**: [Esqueleto del reto: MLP frente a boosting (arranque del reto)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) · _1 h 30 min_
+
+**Reto «¿Vale la pena la red?»**
+
+8. 🎯 **Reto**: [Elegir el problema y reproducir la referencia (paso 1) → primera red (2) → variantes (3) → diagnosticar el sobreajuste (4) → comparación justa (5) → informe y presentación (6)](guia/Reto_Sprint_10.md) · _4 h_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - Cómo funciona por dentro una red: neurona, capas, activación y *backprop*.
 - Entrenar un MLP con Keras (cancelaciones y `precio_noche`).

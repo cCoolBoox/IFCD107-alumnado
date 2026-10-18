@@ -18,6 +18,38 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto · [`tests/`](tests/) test de conocimientos
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Sesión 1**
+
+1. 🔔 **Ceremonia**: Planning del reto y pesos de los criterios (la «voz del cliente») · _30 min_
+2. 📖 **Teoría**: [Árboles de decisión](presentaciones/S08.1_Arboles_de_decision.pdf) · _45 min_
+3. 📖 **Teoría**: [Ensembles: Random Forest (primera parte)](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) · _45 min_
+4. 💻 **Práctica**: [Árbol de decisión: reglas, poda e importancia](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) · _55 min_
+5. 💻 **Práctica**: [Random Forest: bagging, OOB e importancia por permutación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) · _55 min_
+6. 🎯 **Reto**: [Primeros modelos en el *leaderboard* (*baseline*, logística, árbol y bosque; pasos 1–2)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) · _resto de la sesión_
+
+**Sesión 2**
+
+7. 📖 **Teoría**: [Ensembles: *boosting*](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) · _45 min_
+8. 📖 **Teoría**: [Máquinas de vectores de soporte (SVM)](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) · _45 min_
+9. 💻 **Práctica**: [Gradient Boosting, XGBoost y LightGBM](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) · _65 min_
+10. 💻 **Práctica**: [SVM: margen, kernels, `C` y `gamma`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) · _55 min_
+11. 💻 **Práctica**: [`GridSearchCV` y `RandomizedSearchCV`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) · _60 min_
+12. 🎯 **Reto**: [Búsqueda de hiperparámetros para dos familias (paso 3)](guia/Reto_Sprint_08.md) · _resto de la sesión_
+
+**Sesión 3**
+
+13. 🎯 **Reto**: [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](guia/Reto_Sprint_08.md) · _2 h_
+14. 🔔 **Ceremonia**: Review y retrospectiva · _última hora_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - Entrenar y podar un **árbol de decisión**; entender bosques aleatorios y *boosting* (XGBoost, LightGBM).
 - Ajustar una **SVM** y buscar hiperparámetros con `GridSearchCV` y `RandomizedSearchCV`.

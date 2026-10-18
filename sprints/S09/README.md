@@ -16,6 +16,31 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Sesión 1 · 11/11**
+
+1. 📖 **Teoría**: [Clustering y PCA](presentaciones/S09.1_Clustering_y_PCA.pdf) · _2 h_
+2. 💻 **Práctica**: [Segmentar huéspedes: k-means, silueta, jerárquico y DBSCAN](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_01_clustering.ipynb) · _1 h 30 min_
+3. 💻 **Práctica**: [PCA: varianza explicada y mapa en 2D](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_02_pca.ipynb) · _1 h_
+4. 🎯 **Reto**: [Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3)](guia/Reto_Sprint_09.md) · _1 h_
+
+**Sesión 2 · 12/11**
+
+5. 📖 **Teoría**: [Sistemas de recomendación](presentaciones/S09.2_Sistemas_de_recomendacion.pdf) · _30 min_
+6. 📖 **Teoría**: [Aprendizaje por refuerzo (visión conceptual)](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf) · _30 min_
+7. 💻 **Práctica**: [Recomendadores: popularidad, contenido, colaborativo y factorización](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) · _1 h 30 min_
+8. 💻 **Práctica**: [Q-learning en el hotel](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_04_q_learning.ipynb) · _1 h_
+9. 🎯 **Reto**: [Recomendador, ficha de segmentos, IA responsable y ensayo (pasos 4–5)](guia/Reto_Sprint_09.md) · _1 h 30 min_
+10. 🔔 **Ceremonia**: Review (3 min por equipo) y retrospectiva · _30 min_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - Agrupar clientes con **k-means, jerárquico y DBSCAN** y elegir `k` con la silueta.
 - Reducir dimensiones con **PCA** y construir recomendadores (popularidad, contenido, colaborativo).

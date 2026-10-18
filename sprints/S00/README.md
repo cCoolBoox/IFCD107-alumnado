@@ -19,6 +19,31 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto · [`recursos/`](recursos/) scripts y ficheros de apoyo
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Viernes 16/10**
+
+1. 📖 **Teoría**: [Bienvenida y reglas del curso](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf) · _30 min_
+2. 📖 **Teoría**: [Agile y Scrum: roles, artefactos y ceremonias](presentaciones/S00.1_Agile_y_Scrum.pdf) · _1 h 30 min_
+3. 💻 **Práctica**: [Simulación de un sprint corto](actividades/simulacion_sprint_alumnado.md) · _1 h_
+4. 📖 **Teoría**: [Design Thinking: fases, empatizar y «How might we»](presentaciones/S00.2_Design_Thinking.pdf) · _1 h_
+5. 🎯 **Reto**: [Planning: conoceros, repartir roles y fijar el cliente (paso 1)](guia/Reto_Sprint_00.md) · _30 min_
+6. 🎯 **Reto**: [Acuerdo de trabajo y lista de «terminado» (paso 2)](plantillas/plantillas_equipo.md) · _30 min_
+7. 🎯 **Reto**: Montar el [tablero](actividades/guia_tablero_trello.md) (paso 3) y, si da tiempo, el [repositorio del equipo](actividades/actividad_repositorio_equipo.md) · _30 min_
+8. 🎯 **Reto**: [Entrevista de descubrimiento al cliente (paso 4)](actividades/entrevista_descubrimiento.md) · _20 min, en grupo grande_
+
+**Lunes 19/10 (primera hora)**
+
+9. 💻 **Práctica**: [Mapa de empatía y «How might we» (usuario ficticio y TurisData)](plantillas/empatia_hmw_plantillas.md) · _30 min_
+10. 🎯 **Reto**: [Preparar la review y hacer la retro (paso 5)](guia/Reto_Sprint_00.md) · _30 min_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - Qué es trabajar de forma ágil (Scrum) y por qué encaja en proyectos de datos e IA.
 - Los roles, artefactos y ceremonias de Scrum.

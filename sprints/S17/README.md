@@ -12,6 +12,29 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Viernes 11/12**
+
+1. 📖 **Teoría**: [Storytelling y defensa](presentaciones/S17.1_Storytelling_y_defensa.pdf) · _1 h_
+2. 💻 **Práctica**: [Construir el relato: audiencia, mensaje único, pirámide, *storyboard* y reparto de voces](plantillas/plantilla_storytelling.md) · _2 h_
+3. 🎯 **Reto**: [Tres rondas de ensayo con cronómetro, demo y preguntas (paso 3); ensayo general en la última](guia/Reto_Sprint_17.md) · _3 h_
+
+**Antes de las 8:30 del lunes 14/12**
+
+4. 🎯 **Reto**: [Subir la presentación en PDF (≤ 12 diapositivas) al repositorio (paso 4)](guia/Reto_Sprint_17.md)
+
+**Lunes 14/12 · defensa**
+
+5. 🎯 **Reto**: [Defensa en directo con demo y plan B; respuestas a las preguntas más probables (paso 5)](actividades/guion_defensa.md) · _2 h_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - A estructurar un mensaje: primero la conclusión, luego argumentos y evidencias.
 - A formular un **mensaje único** y un arco narrativo para público no técnico.

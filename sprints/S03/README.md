@@ -15,6 +15,32 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo · [`tests/`](tests/) test de conocimientos
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Bloque A · Bases de datos relacionales**
+
+1. 📖 **Teoría**: [Modelo relacional, SQL, CRUD y nociones de administración](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) · _3 h_
+2. 💻 **Práctica**: Scripts SQL 01–04 en DB Browser, en este orden: [`SELECT`](recursos/sql/01_select_where.sql), [`JOIN`](recursos/sql/02_join.sql), [`GROUP BY`](recursos/sql/03_group_by.sql) y [subconsultas](recursos/sql/04_subconsultas.sql) · _1 h 25 min_
+3. 💻 **Práctica**: Scripts SQL 05–06: [CRUD sobre una copia](recursos/sql/05_crud.sql) y [modelado e índices](recursos/sql/06_modelado_indices.sql) · _45 min_
+
+**Bloque B · NoSQL**
+
+4. 📖 **Teoría**: [Bases de datos NoSQL](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) · _1 h_
+5. 💻 **Práctica**: [NoSQL con documentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) (o, si usáis MongoDB Compass, la [guía de MongoDB](guia/NoSQL_MongoDB.md)) · _1 h_
+
+**Bloque C · AutoML y reto**
+
+6. 📖 **Teoría**: [Introducción a AutoML y MLOps](presentaciones/S03.3_AutoML_y_MLOps.pdf) · _1 h_
+7. 💻 **Práctica**: [Carga y exploración de datos y primer experimento de AutoML (guía de laboratorio)](guia/Guia_AutoML_AutoGluon.pdf) · _1 h 50 min_
+8. 🎯 **Reto**: [Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6)](guia/Reto_Sprint_03.md) · _4 h_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - Consultar y modificar una base de datos con SQL, y modelarla con claves e índices.
 - Guardar datos como documentos en MongoDB y decidir cuándo usar SQL o NoSQL.

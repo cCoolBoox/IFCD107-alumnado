@@ -12,6 +12,34 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`plantillas/`](plantillas/) plantillas para el reto
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**25/11**
+
+1. 📖 **Teoría**: [Lanzamiento del proyecto final](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf) · _1 h_
+2. 🎯 **Reto**: [Leer las reglas, planning y taller (pasos previos y 1)](guia/Reto_Sprint_14.md) · _resto de la jornada_
+
+**26/11**
+
+3. 🎯 **Reto**: [Elegir el brief](guia/Reto_Sprint_14.md) (antes de las 10:00) y buscar y validar datos (pasos 2–3; plan de datos: [plantilla](plantillas/plantilla_plan_datos_licencias.md)) · _mañana_
+4. 🎯 **Reto**: [Ficha del proyecto y entrega **antes de las 14:30** (paso 4)](plantillas/plantilla_ficha_proyecto.md) · _hasta las 14:30_
+
+**27/11 · hito: ficha aprobada (go / no-go)**
+
+5. 🎯 **Reto**: [EDA, calidad del dato y *baseline* (paso 5)](guia/Reto_Sprint_14.md) · _jornada completa_
+
+**30/11**
+
+6. 🎯 **Reto**: [Backlog y sprints](plantillas/plantilla_backlog_y_sprints.md), [registro de riesgos éticos](plantillas/plantilla_registro_riesgos_eticos.md) y [README del repositorio](plantillas/plantilla_README_repositorio.md) (paso 6) · _mañana_
+7. 🔔 **Ceremonia**: Review (paso 7) · _última hora_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - A **formular un proyecto de IA**: pregunta de negocio, decisión que apoya y métricas.
 - A **documentar datos reales** (fuente, licencia, calidad) y hacer un EDA y un *baseline*.

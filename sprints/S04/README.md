@@ -13,6 +13,32 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Sesión 1**
+
+1. 📖 **Teoría**: [Python: entorno (venv, pip, Jupyter, Git) y lenguaje](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) · _1 h 30 min_
+2. 💻 **Práctica**: [Entorno, variables, tipos, `if`, `for` y `while`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) · _1 h_
+3. 💻 **Práctica**: [Funciones, `*args`, `lambda` y módulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) · _1 h_
+
+**Sesión 2**
+
+4. 📖 **Teoría**: [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) · _1 h 30 min_
+5. 💻 **Práctica**: [Listas, tuplas, diccionarios y conjuntos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) · _1 h_
+6. 💻 **Práctica**: [CSV, JSON y `try`/`except` (prepara `leer_reservas`)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_04_ficheros_excepciones.ipynb) · _1 h_
+7. 💻 **Práctica**: [*(Opcional)* Clases, buenas prácticas y Git básico](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_05_poo_buenas_practicas.ipynb) · _1 h_
+
+**Reto «Herramientas internas»**
+
+8. 🎯 **Reto**: [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](guia/Reto_Sprint_04.md) · _2 h_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - Python básico en Colab: variables, decisiones y bucles. No hace falta saber programar (necesitas cuenta de Google).
 - Funciones, módulos y estructuras de datos (listas, diccionarios, conjuntos).

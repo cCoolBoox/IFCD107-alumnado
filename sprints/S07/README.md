@@ -17,6 +17,36 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto · [`tests/`](tests/) test de conocimientos
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Sesión 1**
+
+1. 🔔 **Ceremonia**: Planning del reto y reparto de roles · _30 min_
+2. 📖 **Teoría**: [Regresión lineal, polinómica y regularización (Ridge y Lasso)](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) · _2 h_
+3. 💻 **Práctica**: [Regresión lineal y polinómica](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_01_regresion_lineal_polinomica.ipynb) · _60 min_
+4. 💻 **Práctica**: [Ridge y Lasso](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_02_ridge_lasso.ipynb) · _50 min_
+
+**Sesión 2**
+
+5. 📖 **Teoría**: [Regresión logística y clasificación](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf) · _1 h_
+6. 💻 **Práctica**: [Regresión logística](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_03_regresion_logistica.ipynb) · _70 min_
+7. 💻 **Práctica**: [ROC, PR y datos desbalanceados](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_04_roc_pr_desbalance.ipynb) · _60 min_
+8. 🎯 **Reto**: [Acordar las hipótesis de coste y hacer la regresión del precio (pasos 1–2)](guia/Reto_Sprint_07.md) · _1 h_
+
+**Sesión 3 (última)**
+
+9. 📖 **Teoría**: [k-NN y Naive Bayes](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf) · _1 h_
+10. 💻 **Práctica**: [k-NN y Naive Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_05_knn_naive_bayes.ipynb) · _55 min_
+11. 🎯 **Reto**: [Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5)](guia/Reto_Sprint_07.md) · _2 h_
+12. 🔔 **Ceremonia**: Review y retrospectiva · _última hora_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - Ajustar regresiones lineales y polinómicas e **interpretar los coeficientes** en euros.
 - Usar **Ridge y Lasso** contra el sobreajuste y entrenar una regresión logística (umbral, matriz de confusión).

@@ -12,6 +12,21 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Una sola sesión · 25/11**
+
+1. 📖 **Teoría**: [Visualizar y comunicar resultados](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) · _1 h_
+2. 💻 **Práctica**: [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) · _1 h_
+3. 🎯 **Reto**: [Reto](guia/Reto_Sprint_13.md): elegir el modelo y los costes → cuatro gráficos → titular y viñetas → revisión con otro equipo. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](plantillas/plantilla_informe_visual.md) · _1 h_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - A dibujar e interpretar la **matriz de confusión**, la curva **ROC** y la curva **precisión-exhaustividad**.
 - A explicar **qué variables pesan** en un modelo (importancia por permutación).

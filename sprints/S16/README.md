@@ -13,6 +13,31 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**4/12**
+
+1. 📖 **Teoría**: [Píldora: demostrador y documentación](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) · _1 h_
+2. 🎯 **Reto**: [Evaluación final y análisis de errores (paso 1)](guia/Reto_Sprint_16.md) · _resto de la jornada_
+
+**9/12 (no hay clase el 7 y el 8)**
+
+3. 💻 **Práctica**: [Demostrador](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb) (carpeta [`plantillas/demostrador/`](plantillas/demostrador/)) · _1 h 15 min_
+4. 🎯 **Reto**: [Mitigación de sesgos, demostrador, pruebas, ficha del modelo y borrador de la memoria (paso 2)](plantillas/plantilla_model_card.md) · _resto de la jornada_
+
+**10/12 · congelación a las 14:30**
+
+5. 🎯 **Reto**: [Memoria completa de 10–15 páginas, prueba de reproducibilidad y vídeo plan B (paso 3)](plantillas/plantilla_esqueleto_memoria_tecnica.md) · _mañana_
+6. 🎯 **Reto**: [Lista de congelación y etiqueta `v1.0-entrega` **antes de las 14:30**](plantillas/checklist_congelacion.md) · _antes de las 14:30_
+7. 🎯 **Reto**: [Coevaluación individual (cada persona entrega la suya)](plantillas/plantilla_coevaluacion.md) · _antes de las 14:30_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - A **evaluar a fondo** el modelo candidato: errores, gráficos e incertidumbre.
 - A **analizar sesgos** por subgrupos y a medir una medida de mitigación.

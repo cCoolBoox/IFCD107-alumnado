@@ -17,6 +17,36 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Sesión 1 · 3/11**
+
+1. 🔔 **Ceremonia**: Planning del reto y reparto de roles · _30 min_
+2. 📖 **Teoría**: [Datos, pandas y visualización exploratoria](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) · _1 h_
+3. 💻 **Práctica**: [pandas, EDA y primer chequeo de calidad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) · _60 min_
+4. 🎯 **Reto**: [Arrancar el inventario de defectos del fichero sucio (pasos 1–2)](guia/Reto_Sprint_06.md) · _resto de la sesión_
+
+**Sesión 2 · 4/11**
+
+5. 📖 **Teoría**: [Limpieza y preprocesado](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) · _1 h 30 min_
+6. 💻 **Práctica**: [Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) · _70 min_
+7. 💻 **Práctica**: [Escalado, codificación, `ColumnTransformer` y `Pipeline`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) · _55 min_
+8. 🎯 **Reto**: [Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4)](guia/Reto_Sprint_06.md) · _1 h 30 min_
+
+**Sesión 3 · 5/11**
+
+9. 📖 **Teoría**: [scikit-learn: métricas y validación](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) · _1 h 30 min_
+10. 💻 **Práctica**: [*Baseline*, métricas, validación cruzada y fuga de datos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) · _65 min_
+11. 🎯 **Reto**: [Informe, README y ensayo (paso 5)](guia/Reto_Sprint_06.md) · _1 h_
+12. 🔔 **Ceremonia**: Review y retrospectiva · _última hora_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - Explorar una tabla con pandas y encontrar sus defectos (nulos, duplicados, *outliers*, fechas y categorías mal formadas).
 - Construir un **pipeline** reproducible (`ColumnTransformer` + `Pipeline`) sin fuga de datos.

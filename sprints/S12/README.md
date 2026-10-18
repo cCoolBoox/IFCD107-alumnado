@@ -16,6 +16,39 @@
 
 **📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto · [`tests/`](tests/) test de conocimientos
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
+
+**Bloque 1 · Series temporales**
+
+1. 📖 **Teoría**: [RNN, LSTM, GRU y series temporales](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) · _1 h 30 min_
+2. 💻 **Práctica**: [Series temporales: *baselines*, descomposición y SARIMAX](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) · _1 h_
+3. 💻 **Práctica**: [RNN, LSTM y GRU frente al *baseline*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) · _1 h_
+
+**Bloque 2 · Texto**
+
+4. 📖 **Teoría**: [NLP clásico y embeddings](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) · _1 h_
+5. 💻 **Práctica**: [Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) · _1 h 10 min_
+6. 💻 **Práctica**: [Embeddings con LSA y buscador de reseñas parecidas](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_04_embeddings_lsa.ipynb) · _50 min_
+
+**Bloque 3 · Transformers y LLM**
+
+7. 📖 **Teoría**: [Transformers y LLM](presentaciones/S12.3_Transformers_y_LLM.pdf) · _1 h 30 min_
+8. 💻 **Práctica**: [Tokens, atención paso a paso y temperatura](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) · _1 h 10 min_
+9. 💻 **Práctica**: [Mini RAG con la política, evaluación y seguridad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) · _1 h 30 min_
+
+**Bloque 4 · Generativos y reto**
+
+10. 📖 **Teoría**: [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) · _1 h_
+11. 💻 **Práctica**: [Autoencoder para anomalías; idea de GAN y difusión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_07_autoencoder_generativos.ipynb) · _50 min_
+12. 🎯 **Reto**: [Reparto y plan (hora 1) → datos y modelos (horas 2–3) → evaluación y seguridad del asistente (hora 4) → cierre (hora 5)](guia/Reto_Sprint_12.md) · _5 h_
+
+<!--orden:fin-->
+
 ## Qué aprenderás
 - A **predecir una serie temporal** (la ocupación) y comprobar si gana a un método simple (*baseline*).
 - A **leer reseñas con Python**: sentimiento y temas de queja o elogio.
