@@ -127,19 +127,50 @@ footer{padding:26px 0 50px;color:var(--muted);font-size:13.5px;border-top:1px so
   .empat{grid-template-columns:1fr}
   .card{padding:13px}
 }
+
+.tiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin:14px 0 4px}
+.tile{display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow);min-height:118px}
+.tile:hover,.tile:focus-visible{border-color:var(--accent);transform:translateY(-1px)}
+.tile b{font-size:15.5px;line-height:1.25}
+.tile small{color:var(--muted);font-size:13px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.crumb{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 0 6px}
+.pos{font-size:13px;color:var(--muted)}
+.vt{font-size:clamp(21px,3vw,28px);margin:6px 0 4px;letter-spacing:-.01em;line-height:1.2}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.pill2{text-decoration:none;color:var(--ink);font-size:14px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+.pill2:hover{border-color:var(--accent)}
+.pill2.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.pager{display:flex;justify-content:space-between;gap:12px;margin:18px 0 6px;flex-wrap:wrap}
+.pager .btn{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-decoration:none;flex:1 1 220px;max-width:100%;padding:11px 14px;line-height:1.25;font-size:15px}
+.pager .btn:last-child{align-items:flex-end;text-align:right}
+.pager .btn small{font-size:12px;font-weight:600;opacity:.8}
+.keys{text-align:center;margin-top:14px}
+kbd{font:600 12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 6px;background:var(--surface2)}
+@media (max-width:560px){.keys{display:none}}
+[hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar>i{transition:none}}
 </style>
 </head>
 <body>
-<header class="hero"><div class="wrap">
+<header class="hero" id="hero"><div class="wrap">
   <div class="eyebrow">IFCD107 · Especialista en Inteligencia Artificial</div>
   <h1>Todo lo que veremos en el curso, en ejemplos que puedes tocar</h1>
   <p class="lead">Una demostración por cada tema, en el mismo orden de los 18 sprints. No hace falta saber nada: mueve los controles, pulsa los botones y mira qué pasa. Aquí lo hacemos en el navegador; en clase lo haremos con Python.</p>
   <ul class="facts"><li>18 sprints</li><li>230 horas</li><li>9 módulos</li><li>Cliente: TurisData Canarias</li><li>Datos 100&nbsp;% ficticios</li></ul>
-  <p class="howto"><b>Cómo usarlo:</b> funciona sin internet y sin instalar nada. Cada recuadro tiene una demo y, debajo, una línea <b>«En el curso»</b> que dice con qué herramienta lo haremos de verdad. Para saltar a un sprint, usa la barra de arriba.</p>
+  <p class="howto"><b>Cómo usarlo:</b> funciona sin internet y sin instalar nada. Cada recuadro tiene una demo y, debajo, una línea <b>«En el curso»</b> que dice con qué herramienta lo haremos de verdad. Elige un ejemplo de la lista de abajo o un sprint en la barra de arriba: verás <b>un ejemplo cada vez</b>, con los botones «Anterior» y «Siguiente» para avanzar en orden.</p>
 </div></header>
-<nav class="top" aria-label="Sprints"><div class="wrap" id="nav"></div></nav>
-<main><div class="wrap" id="content"></div></main>
+<nav class="top" aria-label="Ejemplos"><div class="wrap" id="nav"></div></nav>
+<main><div class="wrap">
+  <div id="home"></div>
+  <div id="view" hidden>
+    <div class="crumb"><button type="button" class="btn sm" id="back">← Todos los ejemplos</button><span id="pos" class="pos"></span></div>
+    <h2 class="vt" id="vt"></h2><p class="meta" id="vmeta"></p><p class="q" id="vq"></p>
+    <div class="pills" id="pills"></div>
+    <div id="stage"></div>
+    <div class="pager" id="pager"></div>
+    <p class="note keys">Consejo: con el teclado, <kbd>←</kbd> y <kbd>→</kbd> cambian de ejemplo y <kbd>Esc</kbd> vuelve al inicio.</p>
+  </div>
+</div></main>
 <footer><div class="wrap">Ejemplos didácticos y simplificados, con datos inventados para TurisData Canarias. Los modelos de esta página se entrenan en tu navegador con muy pocos datos: sirven para entender la idea, no para tomar decisiones reales. Curso IFCD107 · acción 25-38/012242 · 16/10–14/12/2026.</div></footer>
 <script>
 'use strict';
@@ -513,6 +544,7 @@ DEMOS.gd1d=root=>{
   function step(){x-=lr.get()*g(x);steps++;path.push(x);if(path.length>60)path.shift();draw();if(Math.abs(x)>6||Math.abs(g(x))<.01)stop()}
   function stop(){if(timer){clearInterval(timer);timer=null}auto.textContent='Auto'}
   const auto=btn('Auto',()=>{if(timer){stop();return}auto.textContent='Parar';timer=setInterval(step,120)});
+  root.addEventListener('pausa',stop);
   cv.addEventListener('pointerdown',e=>{const[px]=ptr(e,cv);x0v=clamp((px-20)/(cv.width-40)*4.8-2.4,-2.2,2.2);reset(x0v)});
   root.append(cv,lr.el,h('div',{class:'row'},btn('Dar un paso',step),auto,btn('Reiniciar',()=>reset())),info,msg);
   reset();onTheme(draw);
@@ -774,6 +806,7 @@ DEMOS.gdReg=root=>{
   }
   function stop(){if(timer){clearInterval(timer);timer=null}auto.textContent='Auto'}
   const auto=btn('Auto',()=>{if(timer){stop();return}auto.textContent='Parar';timer=setInterval(()=>{for(let i=0;i<2;i++)step()},60)});
+  root.addEventListener('pausa',stop);
   function draw(){
     const W=cv.width,H=cv.height,X=x=>20+x*(W-40),Y=y=>H-20-y*(H-40);
     c1.clearRect(0,0,W,H);c1.strokeStyle=cssv('--accent');c1.setLineDash([5,5]);c1.lineWidth=2;c1.beginPath();c1.moveTo(X(0),Y(bE));c1.lineTo(X(1),Y(wE+bE));c1.stroke();c1.setLineDash([]);
@@ -1067,6 +1100,7 @@ DEMOS.mlp=root=>{
   function loop(t){if(!S.run)return;step(6);if(t-lastDraw>60){redraw();lastDraw=t}if(S.ep>=4000){stop();redraw();return}raf=requestAnimationFrame(loop)}
   function stop(){S.run=false;if(raf)cancelAnimationFrame(raf);raf=null;go.textContent='Entrenar'}
   const go=btn('Entrenar',()=>{if(S.run){stop();redraw();return}S.run=true;go.textContent='Parar';raf=requestAnimationFrame(loop)},'pri');
+  root.addEventListener('pausa',()=>{if(S.run){stop();redraw()}});
   const ds=seg([['circles','Círculos'],['xor','XOR'],['moons','Lunas'],['spiral','Espiral']],S.ds,v=>{S.ds=v;data();build()});
   const noise=slider('Ruido en los datos',0,1,0.05,S.noise,v=>{S.noise=v;data();build()},v=>fmt(v));
   const arch=h('select',{'aria-label':'Arquitectura',onchange:e=>{S.arch=e.target.value;build()}},[['4','1 capa · 4 neuronas'],['8','1 capa · 8 neuronas'],['16','1 capa · 16 neuronas'],['8,8','2 capas · 8 + 8'],['16,16','2 capas · 16 + 16'],['16,16,16','3 capas · 16 + 16 + 16']].map(([v,l])=>h('option',{value:v,selected:v===S.arch},l)));
@@ -1339,6 +1373,7 @@ DEMOS.pitch=root=>{
     let acc=0;list.innerHTML='';B.forEach(([n,t])=>{const cur=el>=acc&&el<acc+t,done=el>=acc+t;acc+=t;list.append(h('div',{class:'beat '+(cur?'cur':done?'done':'')},h('span',{},n),h('b',{},t+' s')))});
   }
   const go=btn('Empezar',()=>{if(timer){clearInterval(timer);timer=null;go.textContent='Seguir';return}go.textContent='Pausa';timer=setInterval(()=>{el+=.25;if(el>=tot+10){clearInterval(timer);timer=null;go.textContent='Empezar'}draw()},250)},'pri');
+  root.addEventListener('pausa',()=>{if(timer){clearInterval(timer);timer=null;go.textContent='Seguir'}});
   root.append(h('div',{class:'note'},'Cada equipo tiene 3 minutos. Una historia con principio, nudo y final convence más que una lista de modelos.'),clock,bar,go,btn('Reiniciar',()=>{clearInterval(timer);timer=null;el=0;go.textContent='Empezar';draw()}),list);
   draw();
 };
@@ -1398,24 +1433,69 @@ const PAGE=[
     {id:'pitch',title:'Cronómetro de pitch',desc:'Seis momentos para una defensa clara.',course:'Ensayos con el docente y defensa final de cada equipo.'}]}]}
 ];
 (function build(){
-  const nav=document.getElementById('nav'),cont=document.getElementById('content');
+  const nav=document.getElementById('nav'),home=document.getElementById('home'),view=document.getElementById('view'),hero=document.getElementById('hero');
+  const stage=document.getElementById('stage'),pills=document.getElementById('pills'),pager=document.getElementById('pager'),vt=document.getElementById('vt'),vmeta=document.getElementById('vmeta'),vq=document.getElementById('vq'),pos=document.getElementById('pos');
+  const ALL=[];            // lista plana de ejemplos, en orden
+  const bySprint={};       // id de sprint -> primer ejemplo
+  PAGE.forEach(b=>b.items.forEach(s=>s.demos.forEach(d=>{const e={d,s,i:ALL.length};ALL.push(e);if(!bySprint[s.id])bySprint[s.id]=e})));
+  const byId={};ALL.forEach(e=>byId[e.d.id]=e);
+  const panes={};
+  /* barra superior: Inicio + un botón por sprint */
+  nav.append(h('a',{href:'#inicio','data-id':'inicio',class:'on'},'Inicio'));
   PAGE.forEach(b=>{
     nav.append(h('span',{class:'blk'},b.block.split(' · ')[0].replace('Bloque ','Bl. ')));
-    cont.append(h('div',{class:'blockhead'},b.block));
-    b.items.forEach(s=>{
-      nav.append(h('a',{href:'#'+s.id,'data-id':s.id},s.tag));
-      const grid=h('div',{class:'grid'});
-      s.demos.forEach(d=>{
-        const body=h('div');
-        const card=h('div',{class:'card'+(d.wide?' wide':'')},h('h3',{},d.title),h('p',{class:'desc'},d.desc),body,h('p',{class:'course'},h('b',{},'En el curso: '),d.course));
-        try{DEMOS[d.id](body)}catch(e){body.append(h('p',{class:'note'},'No se pudo cargar esta demo ('+e.message+').'));console.error(d.id,e)}
-        grid.append(card);
-      });
-      cont.append(h('section',{class:'sprint',id:s.id},h('h2',{},h('span',{class:'stag'},s.tag),s.title),h('p',{class:'meta'},s.meta),h('p',{class:'q'},s.q),grid));
-    });
+    b.items.forEach(s=>nav.append(h('a',{href:'#'+bySprint[s.id].d.id,'data-id':s.id},s.tag)));
   });
-  const links=[...nav.querySelectorAll('a')],io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.dataset.id===e.target.id));const a=nav.querySelector('a.on');if(a&&a.scrollIntoView)a.scrollIntoView({inline:'center',block:'nearest'})}})},{rootMargin:'-20% 0px -70% 0px'});
-  document.querySelectorAll('section.sprint').forEach(s=>io.observe(s));
+  /* portada: una ficha por ejemplo */
+  PAGE.forEach(b=>{
+    home.append(h('div',{class:'blockhead'},b.block));
+    const g=h('div',{class:'tiles'});
+    b.items.forEach(s=>s.demos.forEach(d=>g.append(h('a',{class:'tile',href:'#'+d.id},h('span',{class:'stag'},s.tag),h('b',{},d.title),h('small',{},d.desc)))));
+    home.append(g);
+  });
+  function pane(e){
+    if(panes[e.d.id])return panes[e.d.id];
+    const body=h('div');
+    const card=h('div',{class:'card'},h('h3',{},e.d.title),h('p',{class:'desc'},e.d.desc),body,h('p',{class:'course'},h('b',{},'En el curso: '),e.d.course));
+    try{DEMOS[e.d.id](body)}catch(err){body.append(h('p',{class:'note'},'No se pudo cargar esta demo ('+err.message+').'));console.error(e.d.id,err)}
+    card.hidden=true;stage.append(card);
+    return panes[e.d.id]={card,body};
+  }
+  let actual=null;
+  function marcar(id){[...nav.querySelectorAll('a')].forEach(l=>l.classList.toggle('on',l.dataset.id===id));const a=nav.querySelector('a.on');if(a&&a.scrollIntoView)a.scrollIntoView({inline:'center',block:'nearest'})}
+  function irA(hash){
+    const id=decodeURIComponent((hash||'').replace(/^#/,''));
+    if(actual){actual.body.dispatchEvent(new Event('pausa'));actual.card.hidden=true;actual=null}
+    const e=byId[id]||(bySprint[id]&&bySprint[id])||null;
+    if(!e){
+      hero.hidden=false;home.hidden=false;view.hidden=true;marcar('inicio');document.title='Ejemplos del curso IFCD107';
+      window.scrollTo({top:0,behavior:'auto'});return;
+    }
+    hero.hidden=true;home.hidden=true;view.hidden=false;
+    const p=pane(e);p.card.hidden=false;actual=p;
+    vt.replaceChildren(h('span',{class:'stag'},e.s.tag),e.s.title);vmeta.textContent=e.s.meta;vq.textContent=e.s.q;
+    pos.textContent='Ejemplo '+(e.i+1)+' de '+ALL.length;
+    pills.replaceChildren();
+    if(e.s.demos.length>1)e.s.demos.forEach(d=>pills.append(h('a',{class:'pill2'+(d.id===e.d.id?' on':''),href:'#'+d.id},d.title)));
+    pager.replaceChildren();
+    const pv=ALL[e.i-1],nx=ALL[e.i+1];
+    pager.append(pv?h('a',{class:'btn',href:'#'+pv.d.id,rel:'prev'},h('small',{},'← Anterior'),pv.d.title):h('span'),
+                 nx?h('a',{class:'btn pri',href:'#'+nx.d.id,rel:'next'},h('small',{},'Siguiente →'),nx.d.title):h('a',{class:'btn',href:'#inicio'},h('small',{},'Has llegado al final'),'Volver al inicio'));
+    marcar(e.s.id);document.title=e.s.tag+' · '+e.d.title+' · Ejemplos IFCD107';
+    window.scrollTo({top:0,behavior:'auto'});
+  }
+  addEventListener('hashchange',()=>irA(location.hash));
+  addEventListener('keydown',ev=>{
+    if(ev.ctrlKey||ev.metaKey||ev.altKey)return;
+    const t=ev.target&&ev.target.tagName;if(/^(INPUT|SELECT|TEXTAREA)$/.test(t))return;
+    if(ev.key==='Escape'&&actual){location.hash='#inicio';return}
+    if(!actual)return;
+    const cur=ALL.find(x=>panes[x.d.id]===actual);if(!cur)return;
+    const n=ev.key==='ArrowRight'?ALL[cur.i+1]:ev.key==='ArrowLeft'?ALL[cur.i-1]:null;
+    if(n){location.hash='#'+n.d.id;ev.preventDefault()}
+  });
+  document.getElementById('back').addEventListener('click',()=>{location.hash='#inicio'});
+  irA(location.hash);
 })();
 </script>
 </body>
