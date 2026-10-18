@@ -14,13 +14,13 @@
 **Este reto no trata de entrenar mejores modelos**, sino de **comunicar**. Muchos proyectos de IA fracasan no porque el modelo sea malo, sino porque nadie con capacidad de decidir entiende lo que dice. Aquí aprenderéis a convertir un modelo en **una página que se entiende en 30 segundos**.
 
 **Qué vais a hacer, en cinco pasos:**
-1. **Elegir vuestro mejor modelo del curso** y cargarlo en la plantilla (`S13_02_plantilla_informe_visual`).
+1. **Elegir vuestro mejor modelo del curso** y cargarlo en la plantilla ([`S13_02_plantilla_informe_visual`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb)).
 2. **Acordar el coste de los errores** (¿cuánto cuesta una habitación vacía?).
 3. **Ajustar 4 gráficos**, cada uno con un título que **diga una conclusión**.
 4. **Escribir el titular-decisión y 3 viñetas** sin jerga.
 5. **Probar el informe con otro equipo:** ¿entienden la decisión en 30 segundos?
 
-**Qué vais a entregar:** un informe visual de **una sola página** (`informe_visual.md` con el PNG del panel, o un PDF de una página) y el cuaderno adaptado, guardados en el repositorio del equipo. **Será la semilla de la memoria técnica** del proyecto final.
+**Qué vais a entregar:** un informe visual de **una sola página** ([plantilla](../plantillas/plantilla_informe_visual.md); `informe_visual.md` con el PNG del panel, o un PDF de una página) y el cuaderno adaptado, guardados en el repositorio del equipo. **Será la semilla de la memoria técnica** del proyecto final.
 
 **Qué vais a aprender haciéndolo:** a **comunicar datos a una persona sin formación técnica**: escribir titulares que sean decisiones, hacer gráficos honestos y eliminar la jerga.
 
@@ -44,8 +44,8 @@
 Marcos, director general de **TurisData Canarias**, tiene 10 minutos antes de la reunión de ingresos. No sabe qué es un AUC y no quiere saberlo. Pide: *«Una página. ¿Puedo fiarme del modelo, qué mueve las cancelaciones y qué hago el lunes?»*
 
 ### Qué se entrega y en qué formato
-1. **Informe visual de una página** (`informe_visual.md` con el PNG del panel, o un PDF de una página) siguiendo `plantilla_informe_visual.md`: titular-decisión, 4 gráficos, 3 viñetas, pie con datos y responsables.
-2. El **notebook** `S13_02_plantilla_informe_visual` adaptado a **vuestro mejor modelo del curso**, ejecutable de arriba abajo.
+1. **Informe visual de una página** (`informe_visual.md` con el PNG del panel, o un PDF de una página) siguiendo [`plantilla_informe_visual.md`](../plantillas/plantilla_informe_visual.md): titular-decisión, 4 gráficos, 3 viñetas, pie con datos y responsables.
+2. El **notebook** [`S13_02_plantilla_informe_visual`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) adaptado a **vuestro mejor modelo del curso**, ejecutable de arriba abajo.
 3. Es la **semilla de la memoria técnica** del proyecto final: guardadlo en el repositorio del equipo.
 
 ### Restricciones

@@ -9,7 +9,7 @@
 
 ### En pocas palabras (léelo primero)
 
-**Qué os pide el cliente.** TurisData os envía por correo un fichero de reservas exportado **a mano desde varios sistemas** (`reservas_sucio.csv`). El gerente quiere un primer modelo de cancelaciones «para ayer», pero **no se fía de los datos** (con razón). Os pide dos cosas:
+**Qué os pide el cliente.** TurisData os envía por correo un fichero de reservas exportado **a mano desde varios sistemas** ([`reservas_sucio.csv`](../../../datos/reservas_sucio.csv)). El gerente quiere un primer modelo de cancelaciones «para ayer», pero **no se fía de los datos** (con razón). Os pide dos cosas:
 1. Un **informe corto** que diga **qué está mal en los datos y por qué**.
 2. Un **proceso automático** que deje los datos listos cada vez que le llegue un fichero así, con un primer modelo sencillo de referencia (un *baseline*).
 
@@ -45,10 +45,10 @@
 | **Validación cruzada** | Entrenar y evaluar varias veces con particiones distintas para tener una medida más fiable |
 | **Reproducible** | Que otra persona pueda ejecutar el cuaderno de arriba abajo y obtener lo mismo |
 
-**Contexto del cliente.** TurisData Canarias nos manda por correo un fichero exportado a mano desde varios sistemas: `reservas_sucio.csv`. Quieren un primer modelo de cancelaciones "para ayer", pero el gerente no se fía de los datos. Nos pide **un informe corto que le diga qué está mal y por qué**, y **un proceso que deje los datos listos cada vez que le llegue un fichero así**, con un modelo de referencia (*baseline*).
+**Contexto del cliente.** TurisData Canarias nos manda por correo un fichero exportado a mano desde varios sistemas: [`reservas_sucio.csv`](../../../datos/reservas_sucio.csv). Quieren un primer modelo de cancelaciones "para ayer", pero el gerente no se fía de los datos. Nos pide **un informe corto que le diga qué está mal y por qué**, y **un proceso que deje los datos listos cada vez que le llegue un fichero así**, con un modelo de referencia (*baseline*).
 
 **Qué se entrega** (un repositorio o carpeta con):
-1. `informe_calidad.md` (o PDF), 1–2 páginas: tabla de defectos (qué, dónde, cuántas filas, causa probable, tratamiento y su justificación) y las preguntas que haríais al cliente. Plantilla en `plantillas/informe_calidad_plantilla.md`.
+1. `informe_calidad.md` (o PDF), 1–2 páginas: tabla de defectos (qué, dónde, cuántas filas, causa probable, tratamiento y su justificación) y las preguntas que haríais al cliente. Plantilla en [`plantillas/informe_calidad_plantilla.md`](../plantillas/informe_calidad_plantilla.md).
 2. `reto_S06.ipynb`: notebook con el EDA, la función de limpieza y el **pipeline** de preprocesado + un modelo baseline evaluado con validación cruzada.
 3. `README.md` con instrucciones para reproducirlo (versiones de librerías, cómo ejecutar).
 
@@ -82,7 +82,7 @@
 3. Decidid quién empieza cada una, sabiendo que **todo el equipo** debe entender todo.
 
 #### Paso 2 · Inventario de defectos (día 1, 90 minutos)
-1. Cargad `reservas_sucio.csv` y ejecutad la función `resumen_calidad` de las prácticas. Mirad: tipos de columnas, nulos, duplicados, valores mínimos y máximos.
+1. Cargad [`reservas_sucio.csv`](../../../datos/reservas_sucio.csv) y ejecutad la función `resumen_calidad` de las prácticas. Mirad: tipos de columnas, nulos, duplicados, valores mínimos y máximos.
 2. Haced gráficos (histogramas, conteo por categoría). A veces el defecto se ve mejor dibujado.
 3. **Por cada defecto, rellenad una fila en la tabla del informe** ([`informe_calidad_plantilla.md`](../plantillas/informe_calidad_plantilla.md)):
 

@@ -19,7 +19,7 @@
 **Qué vais a hacer, en cinco pasos:**
 1. **Preparar el terreno:** semillas fijas, estructura del registro de experimentos, y repetir el baseline dentro del registro.
 2. **Probar al menos 3 modelos** (clásicos) y **al menos uno neuronal** (o LLM/RAG si vuestro brief es el 3), con la misma partición.
-3. **Anotar cada prueba** en `experimentos/registro.csv` (≥ 12 filas, **de todas las personas**).
+3. **Anotar cada prueba** en `experimentos/registro.csv` ([plantilla](../plantillas/registro_experimentos_plantilla.csv); cuaderno de ayuda [`S15_01_seguimiento_experimentos`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb)) (≥ 12 filas, **de todas las personas**).
 4. **Elegir el modelo candidato** comparando con media ± desviación, **sin tocar el test**.
 5. **Evaluar en el test una sola vez** y preparar una primera explicación del modelo.
 
@@ -84,7 +84,7 @@ Rúbrica del proyecto (100 puntos, sección 5 de los briefs). En este sprint pes
 
 #### Paso 1 · Preparar el terreno (1/12)
 1. **Fijad una semilla** (por ejemplo, 42) y anotad las versiones de librerías.
-2. **Cread `experimentos/registro.csv`** con estas columnas (o similares): *id · fecha · persona · modelo · hiperparámetros · partición · métrica_validación · desviación · tiempo · notas*.
+2. **Cread `experimentos/registro.csv`** (partid de la [plantilla](../plantillas/registro_experimentos_plantilla.csv)) con estas columnas (o similares): *id · fecha · persona · modelo · hiperparámetros · partición · métrica_validación · desviación · tiempo · notas*.
 3. **Repetid el baseline y anotadlo como primera fila del registro.**
 4. **Definid la partición** que usará todo el equipo (temporal si hay series; por grupos si hay fotos del mismo objeto). **No la cambiéis.**
 5. **Definid antes qué vais a probar y por qué** (por ejemplo, regresión logística, bosque, boosting y una red). No es válido «probar 200 combinaciones y quedarse con la mejor».

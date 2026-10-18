@@ -16,13 +16,13 @@
 **No hace falta tener experiencia previa de programación.** Os damos una **base casi hecha** (una plantilla con funciones vacías y pruebas) y vuestro trabajo es **rellenarla paso a paso**, funcionando cada vez que una prueba pasa de rojo a verde.
 
 **Qué vais a hacer, en cinco pasos:**
-1. **Copiar la carpeta de la plantilla** (`recursos/reto_herramientas/`) y ejecutar las pruebas (al principio fallan; es lo normal).
+1. **Copiar la carpeta de la plantilla** ([`recursos/reto_herramientas/`](../recursos/reto_herramientas/)) y ejecutar las pruebas (al principio fallan; es lo normal).
 2. **Rellenar las funciones** una a una hasta que sus pruebas pasen.
 3. **Ejecutar el programa con el fichero real** y comprobar el resultado.
 4. **Provocar errores a propósito** (fichero que no existe, columna que falta) y ver que el programa **informa con claridad** en vez de romperse.
 5. **Escribir el README** y subirlo todo a Git con varios *commits*.
 
-**Qué vais a entregar:** un repositorio Git con `kpis.py`, `test_kpis.py`, `README.md` y un `salida.json` generado con el CSV real.
+**Qué vais a entregar:** un repositorio Git con [`kpis.py`](../recursos/reto_herramientas/kpis.py), [`test_kpis.py`](../recursos/reto_herramientas/test_kpis.py), `README.md` y un `salida.json` generado con el CSV real.
 
 **Qué vais a aprender haciéndolo:** a convertir un trabajo manual en una herramienta **repetible**, a **probar** vuestro código y a usar **Git**.
 
@@ -32,7 +32,7 @@
 
 | Palabra | Qué significa, en sencillo |
 |---|---|
-| **Script** | Un programa corto escrito en un fichero (aquí, `kpis.py`) |
+| **Script** | Un programa corto escrito en un fichero (aquí, [`kpis.py`](../recursos/reto_herramientas/kpis.py)) |
 | **Función** | Un bloque de código con un nombre que hace una tarea concreta y se puede reutilizar |
 | **CSV** | Un fichero de texto con una tabla, con los valores separados por comas |
 | **JSON** | Otro formato de texto para guardar datos, muy usado para que se entiendan distintos programas |
@@ -49,9 +49,9 @@ El equipo de reservas de *TurisData Canarias* calcula cada semana sus cifras a m
 
 ### Qué tenéis que entregar
 Un **repositorio Git** con:
-- `kpis.py`: el script (funciones + `main`), solo con la biblioteca estándar (`csv`, `json`...).
-- `test_kpis.py`: las pruebas con `assert` (os damos una base; podéis añadir las vuestras).
-- `README.md`: cómo se ejecuta, cómo se prueba, definición de cada KPI y decisiones (plantilla en `recursos/reto_herramientas/README_PLANTILLA.md`).
+- [`kpis.py`](../recursos/reto_herramientas/kpis.py): el script (funciones + `main`), solo con la biblioteca estándar (`csv`, `json`...).
+- [`test_kpis.py`](../recursos/reto_herramientas/test_kpis.py): las pruebas con `assert` (os damos una base; podéis añadir las vuestras).
+- `README.md`: cómo se ejecuta, cómo se prueba, definición de cada KPI y decisiones (plantilla en [`recursos/reto_herramientas/README_PLANTILLA.md`](../recursos/reto_herramientas/README_PLANTILLA.md)).
 - Un `salida.json` generado con el CSV real.
 - *(Opcional)* `kpis_pandas.py`: la misma lógica con pandas.
 
@@ -72,13 +72,13 @@ Un **repositorio Git** con:
 | **IA responsable** | Se explica qué parte se ha hecho con ayuda de IA y qué se ha revisado; se mencionan los límites de datos sintéticos y del proxy. |
 
 ### Pasos sugeridos
-- **Día 1 (mitad del tiempo):** copiad la carpeta `recursos/reto_herramientas/`, ejecutad `python test_kpis.py`, implementad `leer_reservas` y las funciones de KPI una a una hasta que pasen las pruebas.
+- **Día 1 (mitad del tiempo):** copiad la carpeta [`recursos/reto_herramientas/`](../recursos/reto_herramientas/), ejecutad `python test_kpis.py`, implementad `leer_reservas` y las funciones de KPI una a una hasta que pasen las pruebas.
 - **Día 2:** `exportar_json` y `main`, ejecutad con el CSV real, escribid el README y haced los *commits* (`git init`, `git add`, `git commit`). Opcional: versión pandas.
 
 ### Guía paso a paso para principiantes
 
 #### Paso 1 · Preparar la carpeta y ver que las pruebas fallan (día 1, 20 minutos)
-1. Descargad la carpeta `recursos/reto_herramientas/` (viene con `kpis.py`, `test_kpis.py` y `README_PLANTILLA.md`) y el fichero `reservas_turisdata.csv` (carpeta `datos/` del repositorio del curso). Dejadlos en la misma carpeta.
+1. Descargad la carpeta [`recursos/reto_herramientas/`](../recursos/reto_herramientas/) (viene con [`kpis.py`](../recursos/reto_herramientas/kpis.py), [`test_kpis.py`](../recursos/reto_herramientas/test_kpis.py) y [`README_PLANTILLA.md`](../recursos/reto_herramientas/README_PLANTILLA.md)) y el fichero [`reservas_turisdata.csv`](../../../datos/reservas_turisdata.csv) (carpeta [`datos/`](../../../datos/) del repositorio del curso). Dejadlos en la misma carpeta.
 2. Abrid una terminal o un cuaderno de Colab en esa carpeta y ejecutad `python test_kpis.py`.
 3. **Veréis errores o «pruebas no superadas».** Es normal: las funciones están vacías.
 4. Repartid las funciones entre las personas del equipo: cada una trabaja una y, cuando pasa, otra la revisa.
@@ -107,10 +107,10 @@ Provocad errores **a propósito** y comprobad que el programa **da un mensaje cl
 Un mensaje bueno: *«No se encuentra el fichero reservas.csv»*. Un mensaje malo: *«Traceback (most recent call last)…»*.
 
 #### Paso 5 · README y Git (día 2, 30 minutos)
-1. Copiad `README_PLANTILLA.md` como `README.md` y rellenad: qué hace, cómo se ejecuta, cómo se prueba, definición de cada KPI y decisiones (**por qué la ocupación es solo un proxy**).
+1. Copiad [`README_PLANTILLA.md`](../recursos/reto_herramientas/README_PLANTILLA.md) como `README.md` y rellenad: qué hace, cómo se ejecuta, cómo se prueba, definición de cada KPI y decisiones (**por qué la ocupación es solo un proxy**).
 2. En la terminal: `git init`, `git add .`, `git commit -m "Primera versión"`. Haced **al menos 3 commits con mensajes claros** (por ejemplo, «Añade lectura del CSV», «Añade KPIs», «Añade README»). Cada persona debe hacer alguno.
 3. Si lo subís a GitHub, hacedlo en la carpeta `sprint-04/` de vuestro repositorio de equipo.
-4. *(Opcional)* Creád `kpis_pandas.py` con la misma lógica usando pandas y comparad.
+4. *(Opcional)* Creád `kpis_pandas.py` con la misma lógica usando pandas y comparad (tenéis un punto de partida en [`plantilla_kpis_pandas.py`](../recursos/reto_herramientas/plantilla_kpis_pandas.py)).
 
 ### Cómo usar la IA en este reto
 
@@ -125,7 +125,7 @@ La IA puede ahorrar mucho tiempo en programación, pero **hay una trampa**: te d
 
 **Reglas del reto:**
 - **Todo lo que la IA os dé, lo ejecutáis y lo entendéis.** Si el docente os pregunta por una línea, tenéis que saber explicarla.
-- **Las pruebas (`test_kpis.py`) mandan:** si el código de la IA no las pasa, no vale.
+- **Las pruebas ([`test_kpis.py`](../recursos/reto_herramientas/test_kpis.py)) mandan:** si el código de la IA no las pasa, no vale.
 - **Declarad el uso** en la sección «Uso de IA y límites» del README: *qué le pedisteis y qué revisasteis*.
 - No peguéis **datos personales ni claves** en una IA.
 
@@ -170,9 +170,9 @@ La IA puede ahorrar mucho tiempo en programación, pero **hay una trampa**: te d
 
 ### Si os atascáis
 
-- **No sabemos por dónde empezar con Python:** repasad el cuaderno `S04_04_ficheros_excepciones` (lectura de CSV y excepciones).
+- **No sabemos por dónde empezar con Python:** repasad el cuaderno [`S04_04_ficheros_excepciones`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_04_ficheros_excepciones.ipynb) (lectura de CSV y excepciones).
 - **Una prueba falla y no entendemos por qué:** leed el mensaje de la prueba (dice qué esperaba y qué recibió) y probad la función en una celda con un ejemplo pequeño.
-- **Git no nos funciona:** repasad el último cuaderno (`S04_05`) o pedid ayuda al docente; podéis subir los ficheros desde la web de GitHub.
+- **Git no nos funciona:** repasad el último cuaderno ([`S04_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_05_poo_buenas_practicas.ipynb)) o pedid ayuda al docente; podéis subir los ficheros desde la web de GitHub.
 - Más ayuda: [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 
 ### Qué se enseña en la review

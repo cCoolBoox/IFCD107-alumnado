@@ -13,12 +13,12 @@
 
 **Qué vais a hacer, en cinco pasos:**
 1. **Formar el equipo** (3 o 4 personas), elegir un nombre de consultora y repartir los dos roles del sprint.
-2. **Escribir cómo vais a trabajar juntos** (el *acuerdo de trabajo*).
-3. **Decidir cuándo se considera terminada una tarea** (la *Definition of Done* de vuestro equipo).
-4. **Montar un tablero** (en Trello, gratuito) y cargar en él la lista de tareas del curso.
-5. **Entrevistar al cliente** (el docente) y, con lo que cuente, rellenar un *mapa de empatía* y escribir **3 preguntas «¿Cómo podríamos…?»**.
+2. **Escribir cómo vais a trabajar juntos** (el *acuerdo de trabajo*; plantilla en [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md)).
+3. **Decidir cuándo se considera terminada una tarea** (la *Definition of Done* de vuestro equipo; también en [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md)).
+4. **Montar un tablero** (en Trello, gratuito; guía en [`guia_tablero_trello.md`](../actividades/guia_tablero_trello.md)) y cargar en él la lista de tareas del curso (el backlog está en [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md)).
+5. **Entrevistar al cliente** (el docente; guion en [`entrevista_descubrimiento.md`](../actividades/entrevista_descubrimiento.md)) y, con lo que cuente, rellenar un *mapa de empatía* y escribir **3 preguntas «¿Cómo podríamos…?»** (plantillas en [`empatia_hmw_plantillas.md`](../plantillas/empatia_hmw_plantillas.md)).
 
-**Qué vais a entregar:** un tablero, un acuerdo de trabajo (1 página), una Definition of Done (6–8 puntos) y un mapa de empatía con 3 preguntas HMW.
+**Qué vais a entregar:** un tablero, un acuerdo de trabajo (1 página), una Definition of Done (6–8 puntos; plantillas en [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md)) y un mapa de empatía con 3 preguntas HMW ([`empatia_hmw_plantillas.md`](../plantillas/empatia_hmw_plantillas.md)).
 
 **Qué vais a aprender haciéndolo:** a trabajar con Scrum de verdad (no solo a leer sobre ello) y a escuchar a un cliente antes de ofrecerle soluciones.
 
@@ -96,7 +96,7 @@ Las ceremonias cuentan dentro de las horas del sprint: no son horas extra.
 5. **Dividid el trabajo** en los pasos 2, 3 y 4 de esta guía. Todas las personas participan en todos; el reparto solo dice quién *empieza* cada cosa.
 
 #### Paso 2 · Acuerdo de trabajo y lista de «terminado» (30 minutos)
-**El acuerdo de trabajo** es una hoja con las reglas que os ponéis a vosotros mismos. Una página, sin florituras. Debe responder a estas preguntas:
+**El acuerdo de trabajo** (plantilla en [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md)) es una hoja con las reglas que os ponéis a vosotros mismos. Una página, sin florituras. Debe responder a estas preguntas:
 - ¿Cómo y cuándo nos comunicamos? (grupo de mensajería, horario de respuesta).
 - ¿Qué hacemos si alguien no puede venir o llega tarde?
 - ¿Cómo tomamos las decisiones? (por ejemplo, votación a mano alzada; si hay empate, decide el Scrum Master).
@@ -107,7 +107,7 @@ Ejemplos de reglas buenas: *«Nadie se burla de una pregunta»*, *«Cada decisi�
 
 Al final, **todas las personas escriben su nombre** debajo: es un compromiso.
 
-**La Definition of Done** parte de la del curso (reproducible, README, subido a Git, autoevaluación y coevaluación). Añadid entre 2 y 4 puntos propios, por ejemplo:
+**La Definition of Done** (plantilla en [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md)) parte de la del curso (reproducible, README, subido a Git, autoevaluación y coevaluación). Añadid entre 2 y 4 puntos propios, por ejemplo:
 - «Otra persona lo ha revisado».
 - «Está en el tablero, en la columna Hecho».
 - «No contiene datos personales ni claves».
@@ -120,7 +120,7 @@ Lo monta **el Scrum Master con el equipo mirando** (compartid pantalla o proyect
 1. Crear el tablero `IFCD107 · [nombre de la consultora]` y **no hacerlo público**.
 2. Crear siete columnas en este orden: *Información · Backlog del curso · Sprint backlog · En curso · En revisión · Hecho · Impedimentos*.
 3. Crear las etiquetas (Reto PBL, IA responsable, Cliente, Bloqueado, etc.).
-4. Cargar el **backlog del curso** (está en `plantillas_equipo.md`): al menos los Sprints 1 a 3 con detalle.
+4. Cargar el **backlog del curso** (está en [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md)): al menos los Sprints 1 a 3 con detalle.
 5. **Invitar al docente** con el correo que os indique.
 
 Regla de oro del tablero: **una tarjeta, una persona responsable**; máximo **2 tarjetas en curso por persona**.
@@ -128,7 +128,7 @@ Regla de oro del tablero: **una tarjeta, una persona responsable**; máximo **2 
 #### Paso 4 · Entrevista al cliente y mapa de empatía (30 minutos)
 1. **Antes de la entrevista (10 min):** elegid las **6 preguntas más importantes** del guion ([`entrevista_descubrimiento.md`](../actividades/entrevista_descubrimiento.md)) y repartid roles: quién pregunta, quién anota y quién vigila el tiempo.
 2. **Durante la entrevista (unos 20 minutos para toda la clase):** haced **preguntas abiertas** («¿Cómo…?», «¿Qué pasó la última vez que…?»), pedid **ejemplos y cifras**, y **anotad frases textuales** entre comillas. **No ofrezcáis soluciones todavía**: solo escuchad.
-3. **Después (20 min):** rellenad el **mapa de empatía** de TurisData con lo que habéis oído. Lo que *supongáis* pero no hayáis oído se marca con **(?)** y se convierte en una pregunta para la siguiente conversación.
+3. **Después (20 min):** rellenad el **mapa de empatía** de TurisData ([plantilla](../plantillas/empatia_hmw_plantillas.md)) con lo que habéis oído. Lo que *supongáis* pero no hayáis oído se marca con **(?)** y se convierte en una pregunta para la siguiente conversación.
 4. Subrayad **dos dolores y dos ganancias**, escribid el **punto de vista** («[Persona] necesita [verbo] porque [descubrimiento]») y de ahí, **3 preguntas HMW**.
 
 Ejemplo de HMW **mala**: *«¿Cómo podríamos hacer una app de reservas?»* (ya incluye la solución).
@@ -186,7 +186,7 @@ Poneos una nota de 1 a 4 en cada fila (mirad la tabla de criterios más arriba).
 
 ### Si os atascáis
 
-- **No sabemos qué poner en el acuerdo:** copiad el ejemplo de `plantillas_equipo.md` y cambiad lo que no os encaje.
+- **No sabemos qué poner en el acuerdo:** copiad el ejemplo de [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md) y cambiad lo que no os encaje.
 - **No sabemos qué preguntar al cliente:** empezad por «¿Cuál fue la última vez que algo salió mal con una reserva?».
 - **Trello nos da problemas:** podéis usar una pizarra o papel esta primera sesión y pasar a Trello después; avisad al docente.
 - **Alguien del equipo no participa:** es normal al principio. Pedid su opinión por su nombre: *«¿Tú qué piensas?»*.

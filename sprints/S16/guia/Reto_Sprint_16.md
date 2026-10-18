@@ -22,8 +22,8 @@
 2. **Analizar sesgos** por subgrupos y **aplicar y medir una medida de mitigación**.
 3. **Cerrar el registro de riesgos** y clasificar el sistema según RGPD y AI Act.
 4. **Construir un demostrador ejecutable** que no se rompa con entradas erróneas, avise de la incertidumbre y tenga **plan B en vídeo**.
-5. **Documentar:** model card, README reproducible y **memoria técnica de 10–15 páginas**.
-6. **Congelar** (etiqueta `v1.0-entrega`) y entregar la **coevaluación individual**.
+5. **Documentar:** [model card](../plantillas/plantilla_model_card.md), README reproducible y **memoria técnica de 10–15 páginas** ([esqueleto](../plantillas/plantilla_esqueleto_memoria_tecnica.md)).
+6. **Congelar** (etiqueta `v1.0-entrega`; [lista de congelación](../plantillas/checklist_congelacion.md)) y entregar la **coevaluación individual** ([formulario](../plantillas/plantilla_coevaluacion.md)).
 
 **Qué vais a aprender haciéndolo:** a **cerrar un proyecto de IA de forma profesional**: evaluar con honestidad, medir sesgos, construir una demo robusta y documentar para que otra persona lo reproduzca.
 
@@ -84,37 +84,37 @@ Rúbrica del proyecto (100 puntos). En este sprint pesan:
 ### Pasos sugeridos
 | Cuándo | Paso |
 |---|---|
-| 4/12 | Evaluación final en test (una sola vez). Gráficos de la plantilla `S13_02` adaptados. Métricas por subgrupos. Lista de errores más frecuentes con ejemplos. |
-| 9/12 | Mitigación de sesgos + medición del efecto. Demostrador funcionando con la plantilla de `S16_01`. Model card. Borrador de la memoria (secciones 1-6). |
+| 4/12 | Evaluación final en test (una sola vez). Gráficos de la plantilla [`S13_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) adaptados. Métricas por subgrupos. Lista de errores más frecuentes con ejemplos. |
+| 9/12 | Mitigación de sesgos + medición del efecto. Demostrador funcionando con la plantilla de [`S16_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb). Model card. Borrador de la memoria (secciones 1-6). |
 | 10/12 | Memoria completa; **prueba de reproducibilidad en un ordenador limpio**; vídeo plan B; checklist de congelación; coevaluación; retro. |
 
 ### Guía paso a paso para principiantes
 
 #### Paso 1 · Evaluación final y errores (4/12)
 1. **Evaluad en el test, una sola vez**, el modelo candidato del Sprint 15. Anotad las métricas con su incertidumbre.
-2. Usad los **gráficos de la plantilla `S13_02`** (adaptadlos): matriz de confusión, curvas, importancia de variables, SHAP o Grad-CAM.
+2. Usad los **gráficos de la plantilla [`S13_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb)** (adaptadlos): matriz de confusión, curvas, importancia de variables, SHAP o Grad-CAM.
 3. **Análisis de errores:** sacad una lista de los casos donde falla más y mirad ejemplos reales. ¿Qué tienen en común?
 4. **Métricas por subgrupos:** calculad el rendimiento para cada subgrupo relevante (por canal, país, tipo de imagen…). Si hay diferencias grandes, hay un sesgo.
 5. Guardad todo en `notebooks/04_evaluacion.ipynb`.
 
 #### Paso 2 · Mitigación de sesgos y demostrador (9/12)
 1. **Elegid una medida de mitigación** de un sesgo detectado (por ejemplo, reponderar datos, ajustar el umbral por grupo, añadir datos del grupo infrarrepresentado, o limitar el uso del modelo). **Aplicadla y medid su efecto**: ¿mejora el subgrupo? ¿empeora algo?
-2. **Demostrador:** partid de la plantilla del cuaderno `S16_01` (carpeta `plantillas/demostrador/`: `logica.py`, `app.py`, `api.py`, `requirements.txt`, `README_demostrador.md`). Debe:
+2. **Demostrador:** partid de la plantilla del cuaderno [`S16_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb) (carpeta [`plantillas/demostrador/`](../plantillas/demostrador/): [`logica.py`](../plantillas/demostrador/logica.py), [`app.py`](../plantillas/demostrador/app.py), [`api.py`](../plantillas/demostrador/api.py), `requirements.txt`, [`README_demostrador.md`](../plantillas/demostrador/README_demostrador.md)). Debe:
    - **validar las entradas del usuario** (si pone un dato imposible, avisar con un mensaje claro),
    - **avisar de la incertidumbre** («confianza: media»),
    - funcionar **desde cero en otro ordenador**.
 3. **Pruebas automáticas** con `pytest -q` para la lógica.
-4. **Model card** con la plantilla `plantilla_model_card.md`.
+4. **Model card** con la plantilla [`plantilla_model_card.md`](../plantillas/plantilla_model_card.md).
 5. **Borrador de la memoria** (secciones 1–6).
 
 #### Paso 3 · Cierre y congelación (10/12, antes de las 14:30)
-1. **Memoria completa** (10–15 páginas, sin contar anexos) en PDF dentro de `docs/`. Usad `plantilla_esqueleto_memoria_tecnica.md`: tiene un presupuesto de páginas y un mapa de los requisitos R1–R11.
+1. **Memoria completa** (10–15 páginas, sin contar anexos) en PDF dentro de `docs/`. Usad [`plantilla_esqueleto_memoria_tecnica.md`](../plantillas/plantilla_esqueleto_memoria_tecnica.md): tiene un presupuesto de páginas y un mapa de los requisitos R1–R11.
 2. **Prueba de reproducibilidad en un ordenador limpio** (o un Colab nuevo): otra persona del equipo sigue el README y comprueba que funciona. **Corregid lo que falle.**
 3. **Vídeo plan B** del demostrador (1–2 minutos).
 4. **Cerrad el registro de riesgos** y la clasificación RGPD / AI Act.
 5. Pasad el [`checklist_congelacion.md`](../plantillas/checklist_congelacion.md).
 6. **Cread la etiqueta `v1.0-entrega`** en Git **antes de las 14:30**.
-7. **Cada integrante entrega su coevaluación individual** (anexo B, `plantilla_coevaluacion.md`).
+7. **Cada integrante entrega su coevaluación individual** (anexo B, [`plantilla_coevaluacion.md`](../plantillas/plantilla_coevaluacion.md)).
 8. Review (4 minutos de demostrador) y retro.
 
 ### Cómo usar la IA en este reto

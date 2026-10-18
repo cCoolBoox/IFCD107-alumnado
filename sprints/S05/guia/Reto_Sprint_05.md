@@ -44,10 +44,10 @@
 | **Semilla** | Número que fija el azar para que los resultados se repitan |
 
 ### Contexto del cliente
-*TurisData Canarias* quiere planificar personal y precios de su alojamiento de referencia. Le han dicho que «cuando hace calor se llena menos» y que «los festivos llenan». Antes de tomar decisiones quiere saber **cuánto** cambia la ocupación diaria con la temperatura y con los festivos, y **con cuánta seguridad** podemos decirlo. Tenéis su serie diaria de tres años (`ocupacion_diaria.csv`).
+*TurisData Canarias* quiere planificar personal y precios de su alojamiento de referencia. Le han dicho que «cuando hace calor se llena menos» y que «los festivos llenan». Antes de tomar decisiones quiere saber **cuánto** cambia la ocupación diaria con la temperatura y con los festivos, y **con cuánta seguridad** podemos decirlo. Tenéis su serie diaria de tres años ([`ocupacion_diaria.csv`](../../../datos/ocupacion_diaria.csv)).
 
 ### Qué tenéis que entregar
-Un **cuaderno** (`S05_07_reto_ocupacion`, con la plantilla) y una **base de datos** con:
+Un **cuaderno** ([`S05_07_reto_ocupacion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb), con la plantilla) y una **base de datos** con:
 1. La serie diaria **cargada en una base SQLite** (`turisdata_reto.db`) y leída desde Python con SQL.
 2. La **regresión lineal implementada desde cero** con descenso del gradiente (modelo simple y modelo con control de la estacionalidad).
 3. La **comparación con una librería** (`statsmodels`).
@@ -76,8 +76,8 @@ Un **cuaderno** (`S05_07_reto_ocupacion`, con la plantilla) y una **base de dato
 ### Guía paso a paso para principiantes
 
 #### Paso 1 · Cargar los datos en una base de datos (día 1, 30 minutos)
-1. Abrid la plantilla `S05_07_reto_ocupacion` en Colab (enlace en la ficha del reto).
-2. Cargad `ocupacion_diaria.csv`. Debe tener **1096 filas** (tres años de días).
+1. Abrid la plantilla [`S05_07_reto_ocupacion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb) en Colab (enlace en la ficha del reto).
+2. Cargad [`ocupacion_diaria.csv`](../../../datos/ocupacion_diaria.csv). Debe tener **1096 filas** (tres años de días).
 3. Creád `turisdata_reto.db` con una tabla `ocupacion_diaria`, y volved a leerla desde Python con una consulta SQL (`SELECT ... FROM ocupacion_diaria`). Comprobad que siguen siendo 1096 filas.
 
 #### Paso 2 · Mirar los datos (día 1, 30 minutos)
@@ -156,7 +156,7 @@ Fijaos: **cifra con incertidumbre, recomendación concreta, límites explícitos
 
 ### Si os atascáis
 
-- **No entendemos el gradiente:** repasad `S05_03_gradiente_regresion` con calma; el ejemplo de una sola variable es el mismo que usaréis aquí.
+- **No entendemos el gradiente:** repasad [`S05_03_gradiente_regresion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_03_gradiente_regresion.ipynb) con calma; el ejemplo de una sola variable es el mismo que usaréis aquí.
 - **La base de datos no se crea:** comprobad que usáis `sqlite3.connect("turisdata_reto.db")` y que habéis hecho `commit` al guardar.
 - **No sabemos interpretar el p-valor:** en una frase: *«¿sería raro ver esto si no hubiera efecto?»*. Si sí es raro (p pequeño), hay probable efecto.
 - Más ayuda: [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).

@@ -14,13 +14,13 @@
 **Importante: en este reto no se programa ni se calcula nada.** Es un trabajo de **pensar, comparar y escribir**. Se parece a lo que hace una persona asesora cuando propone un plan antes de gastar dinero.
 
 **Qué vais a hacer, en cinco pasos:**
-1. **Buscar ideas** (unas 8) usando las tarjetas de casos de uso de la práctica.
+1. **Buscar ideas** (unas 8) usando las [tarjetas de casos de uso](../actividades/tarjetas_casos_uso.md) de la práctica.
 2. **Quedaros con 5**, de las que al menos 2 tienen que ser inventadas por vosotros.
-3. **Describir cada una** en una ficha: qué problema resuelve, con qué tipo de dato, qué tipo de aprendizaje y qué algoritmo podría servir.
-4. **Ordenarlas** por «cuánto ayuda» y «lo fácil que es» (matriz de priorización) y **pasarles un checklist ético**.
+3. **Describir cada una** en una ficha (hay un [ejemplo resuelto](../actividades/ejemplo_clasificacion_caso.md)): qué problema resuelve, con qué tipo de dato, qué tipo de aprendizaje y qué algoritmo podría servir.
+4. **Ordenarlas** por «cuánto ayuda» y «lo fácil que es» (matriz de priorización) y **pasarles un [checklist ético](../plantillas/checklist_etico_v1.md)**.
 5. **Escribir el informe** de 2–3 páginas con una recomendación.
 
-**Qué vais a entregar:** el informe (7 apartados) y el checklist ético relleno.
+**Qué vais a entregar:** el informe (7 apartados) y el [checklist ético](../plantillas/checklist_etico_v1.md) relleno.
 
 **Qué vais a aprender haciéndolo:** a **distinguir** los tipos de IA y de aprendizaje con ejemplos reales, y a **detectar riesgos** (datos personales, sesgos, decisiones automáticas) *antes* de construir nada.
 

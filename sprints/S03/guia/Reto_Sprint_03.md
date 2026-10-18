@@ -14,7 +14,7 @@
 **Este es vuestro primer modelo.** No hace falta saber programar: usaréis una plataforma de **AutoML** (una herramienta que prueba varios modelos por vosotros y os muestra los resultados). Vuestro trabajo es **entender lo que hace**, **elegir bien** y **explicárselo al cliente**.
 
 **Qué vais a hacer, en seis pasos:**
-1. **Mirar los datos** con SQL (las consultas que habéis practicado) y decidir qué se quiere predecir.
+1. **Mirar los datos** con SQL (los [scripts de práctica](../recursos/sql/)) y decidir qué se quiere predecir.
 2. **Quitar las columnas «trampa»** que no se conocen en el momento de reservar (eso se llama *fuga de datos*).
 3. **Lanzar un experimento** de AutoML y comparar los modelos que salgan.
 4. **Elegir un umbral** (cuándo decimos «esta reserva tiene riesgo alto») pensando en dinero, no en números sueltos.
@@ -77,11 +77,11 @@ Un único documento (Markdown o PDF, máximo 4 páginas) con tres partes:
 
 #### Paso 1 · Entender el problema y los datos (día 1)
 1. Releed la escena del cliente y respondeos con una frase: *«Queremos predecir ______ para que el equipo de reservas pueda ______»*.
-2. Abrid `turisdata.db` en DB Browser for SQLite y mirad la tabla `reservas` con un `SELECT * ... LIMIT 20`. ¿Qué columnas hay?
+2. Abrid [`turisdata.db`](../../../datos/turisdata.db) en DB Browser for SQLite y mirad la tabla `reservas` con un `SELECT * ... LIMIT 20`. ¿Qué columnas hay?
 3. Con `GROUP BY` calculad el **porcentaje de cancelaciones** por canal. Es una forma útil de empezar a conocer el dato.
 4. **Decidid la variable objetivo** (la columna `cancelada`, sí/no).
 5. **Quitad las columnas trampa.** Pregunta clave para cada columna: **«¿La conoceríamos en el momento de hacer la reserva?»** Si la respuesta es no (por ejemplo, un dato que solo existe después de cancelar), no puede entrar en el modelo. Anotad cuáles habéis excluido y por qué: **es parte del informe**.
-6. Preparad la plataforma que indique el docente (leed la guía de AutoML de la ruta elegida: en esta carpeta tenéis `Guia_AutoML_AutoGluon.pdf` como ejemplo del flujo).
+6. Preparad la plataforma que indique el docente (leed la guía de AutoML de la ruta elegida: en esta carpeta tenéis [`Guia_AutoML_AutoGluon.pdf`](Guia_AutoML_AutoGluon.pdf) como ejemplo del flujo).
 
 #### Paso 2 · Lanzar el experimento y comparar modelos (día 2, mañana)
 1. **Partid los datos por fecha:** las reservas antiguas para entrenar, las más recientes para evaluar. (Si barajáis las filas al azar, el modelo «ve el futuro» y los resultados parecen mejores de lo que serían en la realidad.)

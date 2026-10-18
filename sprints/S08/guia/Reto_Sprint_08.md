@@ -21,7 +21,7 @@
 5. **Evaluar el campeón en el test, una sola vez.**
 6. **Escribir la *model card*** (la «ficha técnica» del modelo) y el README.
 
-**Qué vais a entregar:** `leaderboard_S08.csv`, `model_card.md`, el cuaderno `reto_S08.ipynb` y `README.md`.
+**Qué vais a entregar:** `leaderboard_S08.csv` ([plantilla](../plantillas/leaderboard_plantilla.csv)), `model_card.md` ([plantilla](../plantillas/model_card_plantilla.md)), el cuaderno `reto_S08.ipynb` y `README.md`.
 
 **Qué vais a aprender haciéndolo:** a comparar modelos de forma **justa**, a **ajustar hiperparámetros sin hacer trampas**, y a **documentar un modelo** como se hace en las empresas.
 
@@ -48,8 +48,8 @@
 **Contexto del cliente.** TurisData ya sabe que puede predecir cancelaciones (Sprint 7). Ahora quiere saber **qué modelo poner en producción**. El gerente pregunta: «¿el más preciso? ¿el que puedo entender? ¿el más barato de mantener?». Vuestro equipo compite consigo mismo: tenéis que enfrentar **árboles, bosques, boosting y SVM**, y **elegir un campeón** con argumentos.
 
 **Qué se entrega.**
-1. **Leaderboard**: `leaderboard_S08.csv` con al menos **6 modelos** (baseline y logística incluidos) medidos igual. Se rellena con el notebook `S08_06_leaderboard_plantilla` (plantilla del CSV: `plantillas/leaderboard_plantilla.csv`).
-2. **Model card** del campeón: `model_card.md` siguiendo `plantillas/model_card_plantilla.md` (1–2 páginas).
+1. **Leaderboard**: `leaderboard_S08.csv` con al menos **6 modelos** (baseline y logística incluidos) medidos igual. Se rellena con el notebook [`S08_06_leaderboard_plantilla`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) (plantilla del CSV: [`plantillas/leaderboard_plantilla.csv`](../plantillas/leaderboard_plantilla.csv)).
+2. **Model card** del campeón: `model_card.md` siguiendo [`plantillas/model_card_plantilla.md`](../plantillas/model_card_plantilla.md) (1–2 páginas).
 3. `reto_S08.ipynb` con la comparación reproducible y la búsqueda de hiperparámetros de, al menos, **dos** familias.
 4. `README.md` para reproducirlo (versiones, semilla, orden de ejecución).
 
@@ -91,7 +91,7 @@
 Los pesos son vuestros; lo importante es que estén **justificados** y que luego probéis cómo cambia la decisión si cambian.
 
 #### Paso 2 · Primeros modelos en el leaderboard (día 1, 90 minutos)
-1. Abrid `S08_06_leaderboard_plantilla` (el cuaderno ya garantiza **mismos datos, mismos folds y misma métrica** para todos).
+1. Abrid [`S08_06_leaderboard_plantilla`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) (el cuaderno ya garantiza **mismos datos, mismos folds y misma métrica** para todos).
 2. Registrad el **modelo de referencia (baseline)**, la **regresión logística**, un **árbol podado** y un **bosque**.
 3. Cada fila del leaderboard: modelo, familia, AUC medio ± desviación, tiempo de entrenamiento y nota de explicabilidad.
 

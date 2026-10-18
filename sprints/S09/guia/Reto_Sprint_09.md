@@ -20,7 +20,7 @@
 4. **Construir un recomendador** de experiencias (comparando al menos dos métodos) y una función `recomendar(id_usuario, n)`.
 5. **Escribir una nota de IA responsable** (5 líneas).
 
-**Qué vais a entregar:** un cuaderno, una ficha de segmentos de 1 página y una nota de IA responsable (dentro de la ficha).
+**Qué vais a entregar:** un cuaderno, una [ficha de segmentos](../plantillas/plantilla_ficha_segmentos.md) de 1 página y una nota de IA responsable (dentro de la ficha).
 
 **Qué vais a aprender haciéndolo:** a **segmentar sin etiquetas**, a **traducir grupos matemáticos a clientes con nombre**, a **comparar recomendadores** y a ver los riesgos de personalizar (discriminación, sesgo de popularidad, privacidad).
 
@@ -48,9 +48,9 @@ Lucía, directora comercial de **TurisData Canarias**, envía la misma newslette
 
 ### Qué se entrega y en qué formato
 1. **Notebook** `reto_S09_conocer_al_huesped.ipynb` (versión ejecutable de arriba abajo, con semillas fijas) con:
-   - Segmentación de `huespedes.csv` (método justificado, `k` elegido con silueta y con criterio de negocio) y un **mapa 2D con PCA**.
+   - Segmentación de [`huespedes.csv`](../../../datos/huespedes.csv) (método justificado, `k` elegido con silueta y con criterio de negocio) y un **mapa 2D con PCA**.
    - Prototipo de **recomendador de experiencias** (mínimo dos métodos comparados con RMSE y precision@3) y la función `recomendar(id_usuario, n)`.
-2. **Ficha de segmentos (1 página, Markdown o PDF)** usando `plantilla_ficha_segmentos.md`: por cada segmento, nombre, tamaño, perfil en una frase, **una acción comercial** y **una experiencia estrella** de las que recomienda tu prototipo.
+2. **Ficha de segmentos (1 página, Markdown o PDF)** usando [`plantilla_ficha_segmentos.md`](../plantillas/plantilla_ficha_segmentos.md): por cada segmento, nombre, tamaño, perfil en una frase, **una acción comercial** y **una experiencia estrella** de las que recomienda tu prototipo.
 3. **Nota de IA responsable (5 líneas)** dentro de la ficha: qué riesgos tiene segmentar y recomendar (discriminación, sesgo de popularidad, privacidad).
 
 ### Restricciones
@@ -77,8 +77,8 @@ Lucía, directora comercial de **TurisData Canarias**, envía la misma newslette
 ### Guía paso a paso para principiantes
 
 #### Paso 1 · Preparación y datos (11/11, tras las prácticas 01 y 02)
-1. Abrid un cuaderno nuevo (o el `reto_S09_conocer_al_huesped`) con `huespedes.csv` y `valoraciones_experiencias.csv`.
-2. **Revisad las columnas** de `huespedes.csv` (edad, gasto, antelación, etc.). ¿Cuáles son números y cuáles categorías?
+1. Abrid un cuaderno nuevo (o el `reto_S09_conocer_al_huesped`) con [`huespedes.csv`](../../../datos/huespedes.csv) y [`valoraciones_experiencias.csv`](../../../datos/valoraciones_experiencias.csv).
+2. **Revisad las columnas** de [`huespedes.csv`](../../../datos/huespedes.csv) (edad, gasto, antelación, etc.). ¿Cuáles son números y cuáles categorías?
 3. **Escalad** las variables numéricas. Si no, el algoritmo dará más peso a las columnas con números grandes.
 
 #### Paso 2 · Segmentar y elegir k (11/11, 1 hora)

@@ -24,7 +24,7 @@
 4. **Ensayar** (3 rondas el 11/12) con cronómetro, con demo y con preguntas.
 5. **Defender el 14/12**, con la demo en directo y un **plan B grabado**.
 
-**Qué vais a entregar:** la presentación en PDF (≤ 12 diapositivas, en el repositorio **antes de las 8:30 del 14/12**), la defensa en directo y, opcionalmente, un guion con respuestas a las preguntas más probables.
+**Qué vais a entregar:** la presentación en PDF (≤ 12 diapositivas, en el repositorio **antes de las 8:30 del 14/12**), la defensa en directo y, opcionalmente, un [guion](../actividades/guion_defensa.md) con respuestas a las preguntas más probables.
 
 **Qué vais a aprender haciéndolo:** a **comunicar un proyecto técnico a un público no técnico**, a **gestionar el tiempo** y a **responder preguntas** con datos y reconociendo los límites.
 
@@ -75,7 +75,7 @@ Además, la defensa aporta evidencia sobre los criterios **A** (valor de negocio
 | Cuándo | Paso |
 |---|---|
 | 11/12 · 1.ª hora | Teoría: estructura y elementos del storytelling. |
-| 11/12 · 2 h | Rellenad `plantilla_storytelling.md` (audiencia, mensaje único, pirámide, arco) y el storyboard de 12 diapositivas. Ensayad el pitch de 3 min. |
+| 11/12 · 2 h | Rellenad [`plantilla_storytelling.md`](../plantillas/plantilla_storytelling.md) (audiencia, mensaje único, pirámide, arco) y el storyboard de 12 diapositivas. Ensayad el pitch de 3 min. |
 | 11/12 · 3 h de ensayos | Ronda 1: cronometrada con demo. Ronda 2: con preguntas de otro equipo. Ronda 3 (**ensayo general**): como el día real. Anotad qué cambiáis. |
 | 14/12 | Llegad 15 min antes, probad el proyector y la demo, tened el plan B abierto. Defensa. |
 

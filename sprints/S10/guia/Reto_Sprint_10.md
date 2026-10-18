@@ -21,7 +21,7 @@
 5. **Comparar de forma justa** con el modelo clásico (varias semillas, con incertidumbre).
 6. **Escribir un informe** de 1–2 páginas con una recomendación: «Recomendamos… porque…».
 
-**Qué vais a entregar:** un cuaderno ejecutable (basado en `S10_04`) y un informe comparativo *ML clásico frente a MLP*.
+**Qué vais a entregar:** un cuaderno ejecutable (basado en [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb)) y un informe comparativo *ML clásico frente a MLP*.
 
 **Qué vais a aprender haciéndolo:** a **entrenar una red sin que memorice**, a leer **curvas de aprendizaje**, y a **comparar con honestidad** (que un número sea mayor no basta).
 
@@ -50,7 +50,7 @@ merece la pena el cambio.
 
 **Qué se entrega y en qué formato**
 
-1. **Notebook** ejecutable de principio a fin (basado en `S10_04`), con semillas fijas.
+1. **Notebook** ejecutable de principio a fin (basado en [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb)), con semillas fijas.
 2. **Informe comparativo** de 1–2 páginas (PDF o Markdown) *ML clásico frente a MLP*: tabla de resultados, curvas de aprendizaje y recomendación.
 
 **Restricciones**
@@ -72,7 +72,7 @@ merece la pena el cambio.
 
 **Pasos sugeridos**
 
-- **Día 1:** ejecuta `S10_04`, entiende cada bloque y elige el problema. Reproduce tu modelo de referencia.
+- **Día 1:** ejecuta [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb), entiende cada bloque y elige el problema. Reproduce tu modelo de referencia.
 - **Día 2:** entrena el MLP, prueba 2–3 variantes (tamaño, *dropout*, L2, tasa) mirando **solo la validación**.
 - **Día 3:** diagnostica el sobreajuste con curvas y compara con la referencia (varias semillas, intervalo de confianza).
 - **Día 4:** redacta el informe y prepara la presentación de 5 minutos.
@@ -81,7 +81,7 @@ merece la pena el cambio.
 
 #### Paso 1 · Elegir el problema y reproducir la referencia (día 1)
 1. Elegid **un problema**: cancelaciones (`cancelada`) **o** precio (`precio_noche`). El otro es opcional.
-2. Abrid `S10_04_reto_vale_la_pena` y ejecutadlo bloque a bloque, **entendiendo cada uno** (si no lo entendéis, preguntad antes de seguir).
+2. Abrid [`S10_04_reto_vale_la_pena`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y ejecutadlo bloque a bloque, **entendiendo cada uno** (si no lo entendéis, preguntad antes de seguir).
 3. **Reproducid el modelo de referencia** (vuestro campeón del Sprint 8 o el boosting que trae el cuaderno) y anotad su métrica.
 4. **Fijad la partición** entrenamiento / validación / prueba y no la cambiéis nunca más. **La prueba se usa una sola vez.**
 
@@ -166,7 +166,7 @@ Informe de 1–2 páginas:
 
 - **La red no aprende (la pérdida no baja):** revisad que los datos estén escalados y probad una tasa de aprendizaje menor.
 - **Las curvas son ruidosas:** es normal en datos pequeños; usad varias semillas y promediad.
-- **No entendemos las curvas:** repasad `S10_03_regularizacion`, que tiene un ejemplo comentado.
+- **No entendemos las curvas:** repasad [`S10_03_regularizacion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb), que tiene un ejemplo comentado.
 - Más ayuda: [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 
 **Qué se enseña en la *review*.** La tabla comparativa, una curva de aprendizaje comentada y la recomendación en una frase

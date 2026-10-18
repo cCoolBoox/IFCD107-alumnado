@@ -51,7 +51,7 @@ Y hay un detalle importante: **el gerente no quiere oír hablar de «AUC»**. Qu
 **Contexto del cliente.** TurisData Canarias quiere dos cosas: (1) una **tarifa de referencia** que le diga cuánto debería costar una noche según el tipo de habitación y la época, y (2) un **aviso de riesgo de cancelación** para decidir cuándo vender por encima de su capacidad (*overbooking*). El gerente no quiere oír hablar de "AUC": quiere saber **cuánto dinero se juega** si el modelo se equivoca en un sentido o en otro.
 
 **Qué se entrega.**
-1. `informe_modelado.md` (o PDF), 2–3 páginas. Plantilla: `plantillas/informe_modelado_plantilla.md`. Debe incluir la comparativa de métricas de los dos modelos y una **recomendación de negocio** (con euros).
+1. `informe_modelado.md` (o PDF), 2–3 páginas. Plantilla: [`plantillas/informe_modelado_plantilla.md`](../plantillas/informe_modelado_plantilla.md). Debe incluir la comparativa de métricas de los dos modelos y una **recomendación de negocio** (con euros).
 2. `reto_S07.ipynb`: un modelo de **regresión** para `precio_noche` y otro de **clasificación** para `cancelada`, cada uno con su *baseline*, validación y métricas.
 3. `README.md` para reproducirlo (semilla, versiones).
 

@@ -72,7 +72,7 @@ sobre todo, **en qué se equivoca**, para decidir cuánto puede fiarse de él y 
 
 **Pasos sugeridos**
 
-- **Día 1:** ejecuta `S11_04`, revisa la estructura del dataset (`contar_por_clase`) y decide si usarás el sintético o uno propio.
+- **Día 1:** ejecuta [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb), revisa la estructura del dataset (`contar_por_clase`) y decide si usarás el sintético o uno propio.
 - **Día 2:** entrena el modelo con *transfer learning* y una referencia desde cero; mide en validación.
 - **Día 3:** evalúa en prueba y haz el análisis de errores (matriz de confusión, ejemplos, hipótesis).
 - **Día 4:** demostrador y umbral de confianza (cobertura frente a precisión).
@@ -81,8 +81,8 @@ sobre todo, **en qué se equivoca**, para decidir cuánto puede fiarse de él y 
 ### Guía paso a paso para principiantes
 
 #### Paso 1 · Preparar los datos (día 1)
-1. Abrid `S11_04_reto_vision_cliente` en Colab.
-2. Decidid: ¿**dataset sintético** (lo genera `generar_dataset_sintetico.py`) o **uno propio**?
+1. Abrid [`S11_04_reto_vision_cliente`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) en Colab.
+2. Decidid: ¿**dataset sintético** (lo genera [`generar_dataset_sintetico.py`](../recursos/generar_dataset_sintetico.py)) o **uno propio**?
    - Si es propio: fotos tomadas por vosotros o con **licencia abierta**; guardad **autor y licencia**; **sin personas reconocibles**.
 3. Estructura: **una carpeta por clase**, con **mínimo 30 imágenes por clase** (mejor 100 o más). Usad `contar_por_clase` para comprobarlo.
 4. **Mirad las fotos** de cada clase. ¿Hay etiquetas dudosas? Anotadlas.

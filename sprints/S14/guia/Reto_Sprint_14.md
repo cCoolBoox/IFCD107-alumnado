@@ -14,13 +14,13 @@
 **Qué es este sprint (el primero de los cuatro).** Aquí **no se entrena todavía el mejor modelo**. Se decide **qué** vais a hacer y **cómo vais a demostrar que funciona**. Lo que decidáis ahora condiciona los otros tres sprints, así que **conviene dedicar tiempo a pensar y no tener prisa por programar**. Al final tendréis: un problema bien definido, datos reales con licencia, un primer análisis y un modelo de referencia (*baseline*).
 
 **Qué vais a hacer, en siete pasos:**
-1. **Elegir un brief** (de los cuatro propuestos o uno propio) y escribir una **ficha de proyecto de una página**.
-2. **Encontrar datos reales** que podáis usar legalmente y documentar su fuente y licencia.
+1. **Elegir un brief** (de los cuatro propuestos o uno propio) y escribir una **[ficha de proyecto](../plantillas/plantilla_ficha_proyecto.md) de una página**.
+2. **Encontrar datos reales** que podáis usar legalmente y documentar su fuente y licencia ([plan de datos y licencias](../plantillas/plantilla_plan_datos_licencias.md)).
 3. **Hacer el EDA** (análisis exploratorio) y un **informe de calidad del dato**.
 4. **Construir un baseline**: el modelo más sencillo posible, con una métrica definida **antes** de ver resultados.
-5. **Planificar con Scrum**: backlog de 10–15 historias y objetivos para cada sprint.
-6. **Anticipar riesgos éticos y legales** (plan ético, RGPD y AI Act).
-7. **Montar el repositorio** con README y commits de todas las personas.
+5. **Planificar con Scrum**: [backlog](../plantillas/plantilla_backlog_y_sprints.md) de 10–15 historias y objetivos para cada sprint.
+6. **Anticipar riesgos éticos y legales** ([plan ético](../plantillas/plantilla_registro_riesgos_eticos.md), RGPD y AI Act).
+7. **Montar el repositorio** con [README](../plantillas/plantilla_README_repositorio.md) y commits de todas las personas.
 
 **Hitos que no se pueden perder:**
 - **26/11:** elección de brief (antes de las 10:00) y **entrega de la ficha antes de las 14:30**.
@@ -154,7 +154,7 @@ Rellenad [`plantilla_ficha_proyecto.md`](../plantillas/plantilla_ficha_proyecto.
 
 #### Paso 6 · Backlog, plan ético y repositorio (30/11)
 1. **Backlog** con [`plantilla_backlog_y_sprints.md`](../plantillas/plantilla_backlog_y_sprints.md): entre 10 y 15 historias con objetivos para los sprints 15, 16 y 17. Cargadlas en el tablero.
-2. **Plan ético:** actualizad el checklist del Sprint 1 y rellenad [`plantilla_registro_riesgos_eticos.md`](../plantillas/plantilla_registro_riesgos_eticos.md) con **al menos 5 riesgos específicos** de vuestro proyecto (no genéricos), y una primera clasificación RGPD / AI Act.
+2. **Plan ético:** actualizad el [checklist del Sprint 1](../../S01/plantillas/checklist_etico_v1.md) y rellenad [`plantilla_registro_riesgos_eticos.md`](../plantillas/plantilla_registro_riesgos_eticos.md) con **al menos 5 riesgos específicos** de vuestro proyecto (no genéricos), y una primera clasificación RGPD / AI Act.
 3. **Repositorio:** README con [`plantilla_README_repositorio.md`](../plantillas/plantilla_README_repositorio.md), `requirements.txt`, notebooks, datos o script de descarga. **Commits de todas las personas.**
 4. **Coevaluación breve** de la primera semana.
 

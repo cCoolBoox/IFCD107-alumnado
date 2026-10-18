@@ -12,18 +12,18 @@
 **Qué os pide el cliente.** La dirección de TurisData ha escrito un borrador de informe con **seis afirmaciones** sobre cancelaciones y lo va a presentar al consejo. Antes, os pide que lo reviséis como lo haría una persona auditora: *«Decidme si nos podemos fiar de cada frase; y si no, cómo debería decirse»*. Una de las afirmaciones (la 2) influye en una decisión importante: a qué canal de venta dar prioridad.
 
 **Qué vais a hacer, en cuatro pasos:**
-1. **Leer** el informe y comprobar si las **cuentas** de cada frase salen de los datos.
+1. **Leer** el [informe del cliente](../../../datos/informe_cliente.md) y comprobar si las **cuentas** de cada frase salen de los datos.
 2. **Detectar el error** de cada una (cada frase tiene un problema distinto) y ponerle nombre.
-3. **Rehacer los cálculos** bien, con una calculadora u hoja de cálculo.
+3. **Rehacer los cálculos** bien, con una calculadora u hoja de cálculo (los datos están en [`informe_cliente.csv`](../../../datos/informe_cliente.csv)).
 4. **Escribir un dictamen** (2–3 páginas) con el veredicto de cada afirmación y una recomendación para la dirección.
 
 **No se programa.** Basta una calculadora o una hoja de cálculo (Excel, Calc, Google Sheets).
 
-**Qué vais a entregar:** el dictamen de auditoría, la recomendación sobre el canal y la hoja de ejercicios del sprint (con el mínimo exigido).
+**Qué vais a entregar:** el dictamen de auditoría, la recomendación sobre el canal y la hoja de ejercicios del sprint ([álgebra y cálculo](../actividades/ejercicios_algebra_calculo.md) y [estadística](../actividades/ejercicios_estadistica.md), con el mínimo exigido).
 
 **Qué vais a aprender haciéndolo:** a **no creerse una estadística solo porque salga en un informe**. Es la habilidad más útil antes de entrenar cualquier modelo, porque **un modelo entrenado con datos mal interpretados aprende mal**.
 
-**Cuánto tiempo:** 2 horas de reto, entre el miércoles 21/10 y el viernes 23/10. Además, recordad dar de alta vuestra cuenta de Colab y GitHub **antes del 22/10**.
+**Cuánto tiempo:** 2 horas de reto, entre el miércoles 21/10 y el viernes 23/10. Además, recordad dar de alta vuestra cuenta de Colab y GitHub **antes del 22/10** (guía en [`alta_cuentas.md`](../actividades/alta_cuentas.md)).
 
 ### Palabras que van a aparecer en este reto
 
@@ -53,8 +53,8 @@ La dirección de *TurisData Canarias* ha preparado un **borrador de informe** so
 3. **La hoja de ejercicios** del sprint, con el mínimo exigido en el README del sprint (8 de 12 de la hoja 1 y 10 de 14 de la hoja 2).
 
 ### Datos y recursos
-- **`informe_cliente.md`** (carpeta `datos/` del repositorio): el borrador del informe con las seis afirmaciones.
-- **`informe_cliente.csv`** (carpeta `datos/` del repositorio): datos de **2.400 reservas**, agrupadas por `tarifa` y `canal`, con columnas `reservas` y `cancelaciones`. El archivo tiene 4 filas (una por combinación de tarifa y canal).
+- **[`informe_cliente.md`](../../../datos/informe_cliente.md)** (carpeta [`datos/`](../../../datos/) del repositorio): el borrador del informe con las seis afirmaciones.
+- **[`informe_cliente.csv`](../../../datos/informe_cliente.csv)** (carpeta [`datos/`](../../../datos/) del repositorio): datos de **2.400 reservas**, agrupadas por `tarifa` y `canal`, con columnas `reservas` y `cancelaciones`. El archivo tiene 4 filas (una por combinación de tarifa y canal).
 - Vuestras hojas de ejercicios, la lista de control de [`estadisticas_enganosas.md`](../actividades/estadisticas_enganosas.md) y una calculadora u hoja de cálculo. **No hace falta Python.**
 
 ### Restricciones
@@ -191,7 +191,7 @@ Fijaos en que cada parte responde a **una pregunta concreta** y se entiende sin 
 
 - **No sabemos si una afirmación es buena o mala:** probad a **formularla de otra manera** (con números absolutos, con otra base de comparación) y mirad si la conclusión cambia.
 - **Los números no nos cuadran:** revisad si estáis dividiendo por el total correcto (reservas del grupo, no reservas totales).
-- **No sabemos cómo se llama el error:** la lista de control de `estadisticas_enganosas.md` tiene todos los nombres.
+- **No sabemos cómo se llama el error:** la lista de control de [`estadisticas_enganosas.md`](../actividades/estadisticas_enganosas.md) tiene todos los nombres.
 - Más ayuda: [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 
 ### Qué se enseña en la review (5 min por equipo)
