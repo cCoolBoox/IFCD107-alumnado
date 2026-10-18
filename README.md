@@ -313,6 +313,10 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 > 3. **Sin conexión:** botón verde **Code → Download ZIP** y descomprime. Es una copia: si el material cambia, tendrás que volver a descargarla.
 >
 > No hace falta «clonar» ni hacer *Fork*. Tu repositorio **de equipo** es otro y se crea en la actividad del Sprint 0.
+>
+> 📱 **Desde el móvil:** escanea el código con la cámara.
+>
+> <img src="material/img/qr_curso.png" alt="Código QR a la web del curso IFCD107" width="220">
 
 | Carpeta | Qué encontrarás |
 |---|---|
