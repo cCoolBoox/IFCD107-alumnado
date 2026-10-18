@@ -18,6 +18,8 @@ Este documento es tu **mapa del curso**. En 10 minutos sabrás qué vamos a hace
 | **5** | Consulta qué toca cada día | [`material/guia_dia_a_dia.md`](material/3.%20Guia_dia_a_dia.md) |
 | **6** | Aprende cómo se trabaja un reto (léelo antes del Sprint 0) | [`material/4. Como_se_trabaja_un_reto.md`](material/4.%20Como_se_trabaja_un_reto.md) |
 
+> 💡 **Consejo sobre los PDF:** dentro de GitHub, la vista previa de un PDF **no abre sus enlaces**. Pulsa **Download** (descargar) y ábrelo con tu lector de PDF (Chrome, Edge, Adobe o el del móvil): ahí todos los enlaces funcionan.
+
 **No necesitas instalar nada ni saber programar.** Todo se hace desde el navegador. Más abajo tienes el mapa completo del curso, para cuando quieras el detalle.
 
 **Índice del mapa:** [1. La idea en una frase](#1-la-idea-en-una-frase) · [2. El viaje completo](#2-el-viaje-completo) · [3. Calendario](#3-calendario-de-un-vistazo) · [4. Cómo es un sprint](#4-cómo-es-un-sprint) · [5. Los 18 sprints](#5-los-18-sprints) · [6. El cliente](#6-el-cliente-turisdata-canarias) · [7. El proyecto final](#7-el-proyecto-final) · [8. Evaluación](#8-cómo-se-evalúa) · [9. Herramientas](#9-herramientas) · [10. Este repositorio](#10-cómo-usar-este-repositorio)

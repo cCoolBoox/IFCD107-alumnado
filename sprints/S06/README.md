@@ -5,6 +5,8 @@
 
 > 🎯 **Reto de este sprint: «Datos sucios, cliente impaciente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_06.md) · [Reto en PDF](guia/Reto_Sprint_06.pdf) ([ecofriendly](guia/Reto_Sprint_06_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_06.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
+📄 **Este README en PDF:** [a color](README_Sprint_06.pdf) · [ecofriendly, para imprimir](README_Sprint_06_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_06.pdf`](guia/Guia_Sprint_06.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_06_ecofriendly.pdf)
@@ -84,7 +86,6 @@ Cada notebook tiene ejercicios con `assert`: si la celda de comprobación no da 
 ## ✅ Antes de cerrar el sprint
 - [ ] Notebook ejecutable de principio a fin (`Restart & Run all`)
 - [ ] El informe recoge cada defecto con causa probable y tratamiento
-- [ ] El notebook se ejecuta de principio a fin (`Restart & Run all`)
 - [ ] Hay *baseline* (`DummyClassifier`) y un modelo, comparados con validación cruzada
 - [ ] Entregable subido a la carpeta `sprint-06/` del repositorio del equipo
 - [ ] Autoevaluación y coevaluación rellenadas

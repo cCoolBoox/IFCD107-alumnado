@@ -1,6 +1,6 @@
 # Material por sprint
 
-Cada carpeta `Sxx/` tiene **un `README.md`** (la guía del sprint con la ficha del reto) y **subcarpetas** con el resto:
+Cada carpeta `Sxx/` tiene **un `README.md`** (la guía del sprint con la ficha del reto), que también está en PDF (`README_Sprint_XX.pdf`, a color, y `README_Sprint_XX_ecofriendly.pdf`, para imprimir) y **subcarpetas** con el resto:
 
 | Subcarpeta | Qué contiene |
 |---|---|
@@ -34,3 +34,5 @@ Los notebooks se abren en **Google Colab** con la insignia de la primera celda d
 | 14–17 | Proyecto final | 25/11–14/12 | 2 | [S14](S14) · [S15](S15) · [S16](S16) · [S17](S17) |
 
 **Cómo trabajar un notebook:** ábrelo en Colab, ejecuta la primera celda, completa los huecos marcados con `# TODO` (sustituye `...`) y ejecuta las celdas de comprobación (`assert`): si fallan, te dicen qué revisar. Las soluciones no se publican.
+
+> 💡 **Los PDF, descargados:** la vista previa de GitHub no abre los enlaces de un PDF. Descárgalo (**Download**) y ábrelo con tu lector de PDF para que funcionen.

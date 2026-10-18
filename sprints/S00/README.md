@@ -7,6 +7,8 @@
 
 > 🎯 **Reto de este sprint: «Constituir la consultora».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_00.md) · [Reto en PDF](guia/Reto_Sprint_00.pdf) ([ecofriendly](guia/Reto_Sprint_00_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_00.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
+📄 **Este README en PDF:** [a color](README_Sprint_00.pdf) · [ecofriendly, para imprimir](README_Sprint_00_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
+
 ## 📎 Material del sprint
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_00.pdf`](guia/Guia_Sprint_00.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_00_ecofriendly.pdf)
