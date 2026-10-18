@@ -5,7 +5,7 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_02.pdf`](Guia_Sprint_02.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_02.pdf`](Guia_Sprint_02.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_02_ecofriendly.pdf)
 - 🖥️ **S02.1 · Matematicas para IA:** [`S02.1_Matematicas_para_IA.pdf`](presentaciones/S02.1_Matematicas_para_IA.pdf)
 - 🖥️ **S02.2 · Estadistica y probabilidad:** [`S02.2_Estadistica_y_probabilidad.pdf`](presentaciones/S02.2_Estadistica_y_probabilidad.pdf)
 - 🖥️ **S02.3 · Ecosistema de software para IA:** [`S02.3_Ecosistema_de_software_para_IA.pdf`](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf)

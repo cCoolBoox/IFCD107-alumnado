@@ -6,7 +6,7 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_09.pdf`](Guia_Sprint_09.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_09.pdf`](Guia_Sprint_09.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_09_ecofriendly.pdf)
 - 🖥️ **S09.1 · Clustering y PCA:** [`S09.1_Clustering_y_PCA.pdf`](presentaciones/S09.1_Clustering_y_PCA.pdf)
 - 🖥️ **S09.2 · Sistemas de recomendacion:** [`S09.2_Sistemas_de_recomendacion.pdf`](presentaciones/S09.2_Sistemas_de_recomendacion.pdf)
 - 🖥️ **S09.3 · Aprendizaje por refuerzo:** [`S09.3_Aprendizaje_por_refuerzo.pdf`](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf)

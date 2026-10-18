@@ -4,6 +4,7 @@
 
 ## 📎 Material del sprint
 
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_14.pdf`](Guia_Sprint_14.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_14_ecofriendly.pdf)
 - 🖥️ **S14.1 · Lanzamiento del proyecto final:** [`S14.1_Lanzamiento_del_proyecto_final.pdf`](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf)
 
 ## Qué aprenderás

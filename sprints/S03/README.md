@@ -4,7 +4,7 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_03.pdf`](Guia_Sprint_03.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_03.pdf`](Guia_Sprint_03.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_03_ecofriendly.pdf)
 - 🧪 **Guía de laboratorio AutoML (AutoGluon):** [`Guia_AutoML_AutoGluon.pdf`](Guia_AutoML_AutoGluon.pdf)
 - 🖥️ **S03.1 · Bases de datos relacionales y SQL:** [`S03.1_Bases_de_datos_relacionales_y_SQL.pdf`](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf)
 - 🖥️ **S03.2 · Bases de datos NoSQL:** [`S03.2_Bases_de_datos_NoSQL.pdf`](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf)

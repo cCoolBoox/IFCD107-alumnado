@@ -4,6 +4,7 @@
 
 ## 📎 Material del sprint
 
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_15.pdf`](Guia_Sprint_15.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_15_ecofriendly.pdf)
 - 🖥️ **S15.1 · Pildora seguimiento de experimentos:** [`S15.1_Pildora_seguimiento_de_experimentos.pdf`](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf)
 
 ## Qué aprenderás

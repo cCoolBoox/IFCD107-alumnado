@@ -4,7 +4,7 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_04.pdf`](Guia_Sprint_04.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_04.pdf`](Guia_Sprint_04.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_04_ecofriendly.pdf)
 - 🖥️ **S04.1 · Python entorno y lenguaje:** [`S04.1_Python_entorno_y_lenguaje.pdf`](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf)
 - 🖥️ **S04.2 · Python estructuras funciones y POO:** [`S04.2_Python_estructuras_funciones_y_POO.pdf`](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf)
 

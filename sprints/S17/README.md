@@ -4,6 +4,7 @@
 
 ## 📎 Material del sprint
 
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_17.pdf`](Guia_Sprint_17.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_17_ecofriendly.pdf)
 - 🖥️ **S17.1 · Storytelling y defensa:** [`S17.1_Storytelling_y_defensa.pdf`](presentaciones/S17.1_Storytelling_y_defensa.pdf)
 
 ## Qué aprenderás

@@ -5,6 +5,7 @@
 
 ## 📎 Material del sprint
 
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_16.pdf`](Guia_Sprint_16.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_16_ecofriendly.pdf)
 - 🖥️ **S16.1 · Pildora demostrador y documentacion:** [`S16.1_Pildora_demostrador_y_documentacion.pdf`](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf)
 
 ## Qué aprenderás

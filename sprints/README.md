@@ -1,6 +1,6 @@
 # Material por sprint
 
-Cada carpeta `Sxx/` reúne **todo lo del sprint**: la **guía** (`README.md` con la ficha del reto y `Guia_Sprint_XX.pdf`), las **presentaciones** de cada sesión (`presentaciones/`), los **notebooks** de práctica y las plantillas del reto.
+Cada carpeta `Sxx/` reúne **todo lo del sprint**: la **guía** (`README.md` con la ficha del reto y `Guia_Sprint_XX.pdf`, y `Guia_Sprint_XX_ecofriendly.pdf` para imprimir con poca tinta), las **presentaciones** de cada sesión (`presentaciones/`), los **notebooks** de práctica y las plantillas del reto.
 Empieza siempre por el `README.md` del sprint: tiene la sección *📎 Material del sprint* con todos los enlaces.
 Los notebooks se abren en **Google Colab** con la insignia de la primera celda; los datos se descargan solos desde la carpeta [`../datos`](../datos).
 

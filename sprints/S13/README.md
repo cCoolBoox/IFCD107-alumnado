@@ -4,7 +4,7 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_13.pdf`](Guia_Sprint_13.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_13.pdf`](Guia_Sprint_13.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_13_ecofriendly.pdf)
 - 🖥️ **S13.1 · Visualizar y comunicar resultados:** [`S13.1_Visualizar_y_comunicar_resultados.pdf`](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf)
 
 ## Qué aprenderás

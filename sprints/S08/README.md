@@ -5,7 +5,7 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_08.pdf`](Guia_Sprint_08.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_08.pdf`](Guia_Sprint_08.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_08_ecofriendly.pdf)
 - 🖥️ **S08.1 · Arboles de decision:** [`S08.1_Arboles_de_decision.pdf`](presentaciones/S08.1_Arboles_de_decision.pdf)
 - 🖥️ **S08.2 · Ensembles Random Forest y Boosting:** [`S08.2_Ensembles_Random_Forest_y_Boosting.pdf`](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf)
 - 🖥️ **S08.3 · Maquinas de vectores de soporte:** [`S08.3_Maquinas_de_vectores_de_soporte.pdf`](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf)

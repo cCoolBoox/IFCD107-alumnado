@@ -7,7 +7,7 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_00.pdf`](Guia_Sprint_00.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_00.pdf`](Guia_Sprint_00.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_00_ecofriendly.pdf)
 - 🧪 **Ejemplos interactivos de todo el curso:** [abrir online](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S00/Ejemplos_del_curso_IFCD107.html) · archivo: [`Ejemplos_del_curso_IFCD107.html`](Ejemplos_del_curso_IFCD107.html) (opcional, 10 minutos para curiosear; funciona sin internet si lo descargas)
 - 🗂️ **Actividad · Crea el repositorio de tu equipo:** [`actividad_repositorio_equipo.md`](actividad_repositorio_equipo.md) (plantilla: [ifcd107-equipo-plantilla](https://github.com/cCoolBoox/ifcd107-equipo-plantilla))
 - 🖥️ **S00.0 · Bienvenida y reglas del curso:** [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf)

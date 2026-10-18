@@ -5,7 +5,7 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_10.pdf`](Guia_Sprint_10.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_10.pdf`](Guia_Sprint_10.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_10_ecofriendly.pdf)
 - 🖥️ **S10.1 · Fundamentos de redes neuronales:** [`S10.1_Fundamentos_de_redes_neuronales.pdf`](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf)
 - 🖥️ **S10.2 · Redes densas con Keras:** [`S10.2_Redes_densas_con_Keras.pdf`](presentaciones/S10.2_Redes_densas_con_Keras.pdf)
 - 🖥️ **S10.3 · Entrenamiento y regularizacion:** [`S10.3_Entrenamiento_y_regularizacion.pdf`](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf)

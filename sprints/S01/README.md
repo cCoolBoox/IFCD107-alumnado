@@ -5,7 +5,7 @@
 
 ## 📎 Material del sprint
 
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_01.pdf`](Guia_Sprint_01.pdf)
+- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_01.pdf`](Guia_Sprint_01.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_01_ecofriendly.pdf)
 - 🖥️ **S01.1 · Introduccion a la IA:** [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf)
 - 🖥️ **S01.2 · Panorama de algoritmos y CRISP DM:** [`S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf`](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf)
 - 🖥️ **S01.3 · Tipos de aprendizaje:** [`S01.3_Tipos_de_aprendizaje.pdf`](presentaciones/S01.3_Tipos_de_aprendizaje.pdf)
