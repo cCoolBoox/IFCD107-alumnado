@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿una red neuronal mejora al aprendizaje automático clásico y a qué precio?
 **Fechas:** 13–17 de noviembre · **Horas:** 15 h (5 h teoría · 6 h práctica · 4 h PBL) · **Módulo 4, UD 4.1–4.3**
 
-> 🎯 **Reto de este sprint: «¿Vale la pena la red?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_10.md) · [PDF de la guía](guia/Guia_Sprint_10.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «¿Vale la pena la red?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_10.md) · [Reto en PDF](guia/Reto_Sprint_10.pdf) ([ecofriendly](guia/Reto_Sprint_10_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_10.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

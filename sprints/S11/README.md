@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿podemos aprovechar las imágenes del cliente?
 **Fechas:** 17–20 de noviembre · **Horas:** 17 h (5 h teoría · 7 h práctica · 5 h PBL) · **Módulo 4, UD 4.4–4.6**
 
-> 🎯 **Reto de este sprint: «Visión artificial para el cliente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_11.md) · [PDF de la guía](guia/Guia_Sprint_11.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Visión artificial para el cliente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_11.md) · [Reto en PDF](guia/Reto_Sprint_11.pdf) ([ecofriendly](guia/Reto_Sprint_11_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_11.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

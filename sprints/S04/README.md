@@ -2,7 +2,7 @@
 **Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?
 **Fechas:** 27–29/10 · **Horas:** 10 h (3 h teoría · 5 h práctica · 2 h proyecto)
 
-> 🎯 **Reto de este sprint: «Herramientas internas».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_04.md) · [PDF de la guía](guia/Guia_Sprint_04.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Herramientas internas».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_04.md) · [Reto en PDF](guia/Reto_Sprint_04.pdf) ([ecofriendly](guia/Reto_Sprint_04_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_04.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

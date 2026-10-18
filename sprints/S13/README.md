@@ -2,7 +2,7 @@
 **Pregunta guía:** ¿cómo enseñamos y defendemos los resultados de un modelo?
 **Fechas:** 25/11 · **Horas:** 3 h (1 T · 1 P · 1 PBL)
 
-> 🎯 **Reto de este sprint: «Informe visual para dirección».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_13.md) · [PDF de la guía](guia/Guia_Sprint_13.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Informe visual para dirección».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_13.md) · [Reto en PDF](guia/Reto_Sprint_13.pdf) ([ecofriendly](guia/Reto_Sprint_13_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_13.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

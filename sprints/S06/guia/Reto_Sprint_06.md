@@ -4,6 +4,7 @@
 >
 > - Si es tu primer reto, lee antes [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 > - Volver al [README del sprint](../README.md) · [Guía del sprint en PDF](Guia_Sprint_06.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_06_ecofriendly.pdf).
+> - **Este reto en PDF:** [a color](Reto_Sprint_06.pdf) · [ecofriendly, para imprimir](Reto_Sprint_06_ecofriendly.pdf).
 
 ## Ficha del reto
 

@@ -3,7 +3,7 @@
 **Fechas:** 4–10/12 (clases 4, 9 y 10/12; no hay clase el 7 y el 8) · **Horas:** 18 h (1 T · 3 P · 14 PBL)
 **Hito: 10/12 a las 14:30 · congelación del repositorio y de la memoria**
 
-> 🎯 **Reto de este sprint: «Entrega final: evaluar, demostrar y documentar».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_16.md) · [PDF de la guía](guia/Guia_Sprint_16.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Entrega final: evaluar, demostrar y documentar».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_16.md) · [Reto en PDF](guia/Reto_Sprint_16.pdf) ([ecofriendly](guia/Reto_Sprint_16_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_16.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

@@ -2,7 +2,7 @@
 **Pregunta guía:** ¿qué problema vamos a resolver, con qué datos y cómo sabremos que lo hemos resuelto?
 **Fechas:** 25–30/11 · **Horas:** 19 h (1 T · 3 P · 15 PBL) · **Hitos:** 26/11 elección de brief · 27/11 ficha aprobada (go / no-go)
 
-> 🎯 **Reto de este sprint: «Proyecto final: definir, tener datos y un punto de partida».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_14.md) · [PDF de la guía](guia/Guia_Sprint_14.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Proyecto final: definir, tener datos y un punto de partida».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_14.md) · [Reto en PDF](guia/Reto_Sprint_14.pdf) ([ecofriendly](guia/Reto_Sprint_14_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_14.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

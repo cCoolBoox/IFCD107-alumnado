@@ -3,7 +3,7 @@
 **Fechas:** mié 21/10 – vie 23/10 · **Horas:** 10 h (5 h teoría · 3 h práctica · 2 h reto)
 **Módulo:** M1a (UD 1a.4 a 1a.6) · Bloque A: sin Python (papel, calculadora, Desmos/GeoGebra)
 
-> 🎯 **Reto de este sprint: «¿Nos fiamos de este informe?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_02.md) · [PDF de la guía](guia/Guia_Sprint_02.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «¿Nos fiamos de este informe?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_02.md) · [Reto en PDF](guia/Reto_Sprint_02.pdf) ([ecofriendly](guia/Reto_Sprint_02_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_02.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

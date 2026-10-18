@@ -2,7 +2,7 @@
 **Pregunta guía:** ¿cómo contamos nuestro proyecto para que un público no técnico lo entienda, lo recuerde y confíe en él?
 **Fechas:** 11 y 14/12 · **Horas:** 8 h (1 T · 2 P · 5 PBL) · **Hitos:** 11/12 ensayo general · 14/12 defensa final
 
-> 🎯 **Reto de este sprint: «La defensa».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_17.md) · [PDF de la guía](guia/Guia_Sprint_17.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «La defensa».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_17.md) · [Reto en PDF](guia/Reto_Sprint_17.pdf) ([ecofriendly](guia/Reto_Sprint_17_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_17.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

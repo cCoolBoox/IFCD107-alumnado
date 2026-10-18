@@ -2,7 +2,7 @@
 **Pregunta guía:** ¿qué modelo es el mejor para nuestro problema y cómo lo demostramos sin engañarnos?
 **Fechas:** 1–3/12 · **Horas:** 18 h (1 T · 3 P · 14 PBL) · **Hito:** 3/12 modelo candidato elegido
 
-> 🎯 **Reto de este sprint: «El mejor modelo, demostrado».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_15.md) · [PDF de la guía](guia/Guia_Sprint_15.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «El mejor modelo, demostrado».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_15.md) · [Reto en PDF](guia/Reto_Sprint_15.pdf) ([ecofriendly](guia/Reto_Sprint_15_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_15.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

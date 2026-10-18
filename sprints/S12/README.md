@@ -2,7 +2,7 @@
 **Pregunta guía:** ¿qué dicen los clientes y qué pasará mañana?
 **Fechas:** 20–25/11 · **Horas:** 18 h (5 T · 8 P · 5 reto PBL)
 
-> 🎯 **Reto de este sprint: «Escuchar al cliente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_12.md) · [PDF de la guía](guia/Guia_Sprint_12.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Escuchar al cliente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_12.md) · [Reto en PDF](guia/Reto_Sprint_12.pdf) ([ecofriendly](guia/Reto_Sprint_12_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_12.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

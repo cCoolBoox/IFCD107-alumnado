@@ -4,7 +4,7 @@
 **Fechas:** 11 y 12 de noviembre · **Horas:** 11 h (3 h teoría · 5 h práctica · 3 h PBL)
 **Módulo:** M3, unidades 3.9 a 3.12 · **Evaluación:** test de M3 (segunda parte)
 
-> 🎯 **Reto de este sprint: «Conocer al huésped».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_09.md) · [PDF de la guía](guia/Guia_Sprint_09.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Conocer al huésped».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_09.md) · [Reto en PDF](guia/Reto_Sprint_09.pdf) ([ecofriendly](guia/Reto_Sprint_09_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_09.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

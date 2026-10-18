@@ -3,7 +3,7 @@
 **Fechas:** lun 19/10 – mié 21/10 · **Horas:** 15 h (8 h teoría · 4 h práctica · 3 h reto)
 **Módulos:** M1a (UD 1a.1 a 1a.3) + M8 IA responsable · Bloque A: sin Python ni notebooks
 
-> 🎯 **Reto de este sprint: «Auditoría de oportunidades de IA».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_01.md) · [PDF de la guía](guia/Guia_Sprint_01.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Auditoría de oportunidades de IA».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_01.md) · [Reto en PDF](guia/Reto_Sprint_01.pdf) ([ecofriendly](guia/Reto_Sprint_01_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_01.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

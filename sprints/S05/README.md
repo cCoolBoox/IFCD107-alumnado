@@ -2,7 +2,7 @@
 **Pregunta guía:** ¿podemos demostrar con código lo que vimos en teoría?
 **Fechas:** 29/10–3/11 · **Horas:** 13 h (4 h teoría · 6 h práctica, incluye 1 h de CRUD · 3 h proyecto)
 
-> 🎯 **Reto de este sprint: «¿La ocupación depende de esto?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_05.md) · [PDF de la guía](guia/Guia_Sprint_05.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «¿La ocupación depende de esto?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_05.md) · [Reto en PDF](guia/Reto_Sprint_05.pdf) ([ecofriendly](guia/Reto_Sprint_05_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_05.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

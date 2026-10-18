@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿podemos predecir el precio o la cancelación?
 **Fechas:** 5–9 de noviembre · **Horas:** 12 h (4 h teoría · 5 h práctica guiada · 3 h PBL)
 
-> 🎯 **Reto de este sprint: «Precio y cancelación».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_07.md) · [PDF de la guía](guia/Guia_Sprint_07.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Precio y cancelación».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_07.md) · [Reto en PDF](guia/Reto_Sprint_07.pdf) ([ecofriendly](guia/Reto_Sprint_07_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_07.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

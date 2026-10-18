@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿están los datos en condiciones de entrenar algo fiable?
 **Fechas:** 3–5 de noviembre · **Horas:** 11 h (4 h teoría · 4 h práctica guiada · 3 h PBL)
 
-> 🎯 **Reto de este sprint: «Datos sucios, cliente impaciente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_06.md) · [PDF de la guía](guia/Guia_Sprint_06.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Datos sucios, cliente impaciente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_06.md) · [Reto en PDF](guia/Reto_Sprint_06.pdf) ([ecofriendly](guia/Reto_Sprint_06_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_06.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

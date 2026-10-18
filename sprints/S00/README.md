@@ -5,7 +5,7 @@
 
 > 📖 **¿Cómo abro el material?** Desde el navegador: [ccoolboox.github.io/IFCD107-alumnado](https://ccoolboox.github.io/IFCD107-alumnado/). Es público y no hace falta cuenta. También tienes **Code → Download ZIP** en [GitHub](https://github.com/cCoolBoox/IFCD107-alumnado).
 
-> 🎯 **Reto de este sprint: «Constituir la consultora».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_00.md) · [PDF de la guía](guia/Guia_Sprint_00.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Constituir la consultora».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_00.md) · [Reto en PDF](guia/Reto_Sprint_00.pdf) ([ecofriendly](guia/Reto_Sprint_00_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_00.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

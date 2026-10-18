@@ -2,7 +2,7 @@
 **Pregunta guía:** ¿podemos tener un primer modelo funcionando, sin programar?
 **Fechas:** 23–27/10 · **Horas:** 14 h (5 h teoría · 5 h práctica · 4 h proyecto)
 
-> 🎯 **Reto de este sprint: «Primer modelo en producción».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_03.md) · [PDF de la guía](guia/Guia_Sprint_03.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Primer modelo en producción».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_03.md) · [Reto en PDF](guia/Reto_Sprint_03.pdf) ([ecofriendly](guia/Reto_Sprint_03_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_03.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 

@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿cuál es el mejor modelo y cuánto nos cuesta mantenerlo?
 **Fechas:** 9–11 de noviembre · **Horas:** 11 h (3 h teoría · 5 h práctica guiada · 3 h PBL)
 
-> 🎯 **Reto de este sprint: «Duelo de modelos».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_08.md) · [PDF de la guía](guia/Guia_Sprint_08.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+> 🎯 **Reto de este sprint: «Duelo de modelos».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_08.md) · [Reto en PDF](guia/Reto_Sprint_08.pdf) ([ecofriendly](guia/Reto_Sprint_08_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_08.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 ## 📎 Material del sprint
 
