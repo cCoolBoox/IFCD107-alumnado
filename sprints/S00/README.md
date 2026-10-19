@@ -39,10 +39,11 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 7. 🎯 **Reto**: Montar el [tablero](actividades/guia_tablero_trello.md) (paso 3) y, si da tiempo, el [repositorio del equipo](actividades/actividad_repositorio_equipo.md) · _30 min_
 8. 🎯 **Reto**: [Entrevista de descubrimiento al cliente (paso 4)](actividades/entrevista_descubrimiento.md) · _20 min, en grupo grande_
 
-**Lunes 19/10 (primera hora)**
+**Lunes 19/10 (segunda jornada)**
 
 9. 💻 **Práctica**: [Mapa de empatía y «How might we» (usuario ficticio y TurisData)](plantillas/empatia_hmw_plantillas.md) · _30 min_
 10. 🎯 **Reto**: [Preparar la review y hacer la retro (paso 5)](guia/Reto_Sprint_00.md) · _30 min_
+11. 🔔 **Ceremonia**: Lo que no haya dado tiempo del reto (acuerdo, entrevista, mapa de empatía) pasa a la primera hora del Sprint 1, el martes 20/10
 
 <!--orden:fin-->
 

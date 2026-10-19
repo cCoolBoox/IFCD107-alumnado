@@ -1,7 +1,7 @@
 # Sprint 11 · Visión por computador
 
 **Pregunta guía:** ¿podemos aprovechar las imágenes del cliente?
-**Fechas:** 17–20 de noviembre · **Horas:** 17 h (5 h teoría · 7 h práctica · 5 h PBL) · **Módulo 4, UD 4.4–4.6**
+**Fechas:** 18–20 de noviembre · **Horas:** 18 h (4 h teoría · 7 h práctica · 7 h PBL)
 
 > 🎯 **Reto de este sprint: «Visión artificial para el cliente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_11.md) · [Reto en PDF](guia/Reto_Sprint_11.pdf) ([ecofriendly](guia/Reto_Sprint_11_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_11.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
@@ -24,19 +24,26 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**Prácticas, en este orden**
+**Miércoles 18/11**
 
-1. 📖 **Teoría**: [Redes convolucionales (CNN)](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) · _1 h 30 min_
-2. 💻 **Práctica**: [Convolución, pooling, CNN y *data augmentation*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_01_cnn.ipynb) · _1 h 45 min_
-3. 📖 **Teoría**: [Transfer learning y fine-tuning](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf) · _1 h 30 min_
-4. 💻 **Práctica**: [Transfer learning y fine-tuning](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) · _1 h 45 min_
-5. 📖 **Teoría**: [Detección de objetos y segmentación](presentaciones/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) · _1 h 30 min_
-6. 💻 **Práctica**: [IoU, NMS, mAP, detector con OpenCV y segmentación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) · _1 h 45 min_
-7. 💻 **Práctica**: [Esqueleto del reto: dataset por carpetas y análisis de errores (arranque del reto)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) · _1 h 45 min_
+1. 🔔 **Ceremonia**: Planning del reto «Visión artificial para el cliente» y reparto de roles · _15 min_
+2. 📖 **Teoría**: [Redes convolucionales (CNN)](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) · _1 h 15 min_
+3. 💻 **Práctica**: [Convolución, pooling, CNN y *data augmentation*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_01_cnn.ipynb) · _1 h 35 min_
+4. 📖 **Teoría**: [Transfer learning y fine-tuning](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf) · _1 h 15 min_
+5. 💻 **Práctica**: [Transfer learning y fine-tuning (primera parte)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) · _1 h_
 
-**Reto «Visión artificial para el cliente»**
+**Jueves 19/11**
 
-8. 🎯 **Reto**: [Preparar los datos (paso 1) → transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5)](guia/Reto_Sprint_11.md) · _5 h_
+6. 💻 **Práctica**: [Transfer learning y fine-tuning (final)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) · _35 min_
+7. 📖 **Teoría**: [Detección de objetos y segmentación](presentaciones/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) · _1 h 15 min_
+8. 💻 **Práctica**: [IoU, NMS, mAP, detector con OpenCV y segmentación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) · _1 h 30 min_
+9. 💻 **Práctica**: [Esqueleto del reto: dataset por carpetas y análisis de errores (arranque del reto)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) · _1 h 15 min_
+10. 🎯 **Reto**: [Preparar los datos (paso 1)](guia/Reto_Sprint_11.md) · _45 min_
+
+**Viernes 20/11**
+
+11. 🎯 **Reto**: [Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5)](guia/Reto_Sprint_11.md) · _4 h 20 min_
+12. 🔔 **Ceremonia**: Entrega en `sprint-11/`, autoevaluación y coevaluación, review y retrospectiva · _1 h_
 
 <!--orden:fin-->
 
@@ -49,10 +56,10 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S11_01_cnn` | Convolución, pooling y CNN en Keras (dígitos 8×8); *data augmentation* | 1 h 45 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_01_cnn.ipynb) |
-| `S11_02_transfer_learning` | Transfer learning y fine-tuning (con preentrenamiento propio y MobileNetV2 en Colab) | 1 h 45 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) |
-| `S11_03_deteccion_segmentacion` | IoU, NMS, mAP, detector con OpenCV, segmentación (y YOLO opcional) | 1 h 45 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) |
-| `S11_04_reto_vision_cliente` | Esqueleto del reto: dataset por carpetas, transfer learning, análisis de errores | 1 h 45 (+ trabajo PBL) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) |
+| `S11_01_cnn` | Convolución, pooling y CNN en Keras (dígitos 8×8); *data augmentation* | 95 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_01_cnn.ipynb) |
+| `S11_02_transfer_learning` | Transfer learning y fine-tuning (con preentrenamiento propio y MobileNetV2 en Colab) | 95 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) |
+| `S11_03_deteccion_segmentacion` | IoU, NMS, mAP, detector con OpenCV, segmentación (y YOLO opcional) | 90 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) |
+| `S11_04_reto_vision_cliente` | Esqueleto del reto: dataset por carpetas, transfer learning, análisis de errores | 75 min (+ reto) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) |
 
 Extra: `generar_dataset_sintetico.py` crea el mini dataset de alojamientos (una carpeta por clase): `python generar_dataset_sintetico.py`.
 
@@ -69,7 +76,7 @@ Extra: `generar_dataset_sintetico.py` crea el mini dataset de alojamientos (una 
 - Origen y licencia de los datos.
 
 **Reglas:**
-- 5 h en equipo; dataset sintético o propio con licencia clara, sin personas reconocibles, una carpeta por clase (≥ 30 imágenes).
+- Unas 5 h de reto en equipo; dataset sintético o propio con licencia clara, sin personas reconocibles, una carpeta por clase (≥ 30 imágenes).
 - Partición fija; prueba usada una sola vez; debe ejecutarse en CPU en pocos minutos.
 - Nunca claves ni datos personales.
 

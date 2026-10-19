@@ -27,7 +27,7 @@
 
 **Qué vais a aprender haciéndolo:** a convertir un trabajo manual en una herramienta **repetible**, a **probar** vuestro código y a usar **Git**.
 
-**Cuánto tiempo:** 2 horas dentro del sprint (27–29/10).
+**Cuánto tiempo:** unas 3 horas y media entre el planning, el reto y la entrega (28 y 29/10). Las cuatro primeras prácticas ya os dejan hechas las piezas de `leer_reservas`.
 
 ### Palabras que van a aparecer en este reto
 
@@ -59,7 +59,7 @@ Un **repositorio Git** con:
 **KPIs:** ocupación aproximada (*proxy*), ingreso medio por reserva y tasa de cancelación por canal. Las definiciones exactas están en los docstrings de la plantilla.
 
 ### Restricciones
-- **Tiempo:** 2 h dentro del sprint.
+- **Tiempo:** unas 3 h 30 min dentro del sprint (12 h), con el planning y la entrega.
 - Versión principal solo con la **biblioteca estándar**; pandas solo en la parte opcional.
 - El script **no puede romperse** con un fichero inexistente, con columnas que faltan o con filas defectuosas: debe informar.
 - Sin datos personales reales ni claves en el repositorio.
@@ -73,18 +73,18 @@ Un **repositorio Git** con:
 | **IA responsable** | Se explica qué parte se ha hecho con ayuda de IA y qué se ha revisado; se mencionan los límites de datos sintéticos y del proxy. |
 
 ### Pasos sugeridos
-- **Día 1 (mitad del tiempo):** copiad la carpeta [`recursos/reto_herramientas/`](../recursos/reto_herramientas/), ejecutad `python test_kpis.py`, implementad `leer_reservas` y las funciones de KPI una a una hasta que pasen las pruebas.
-- **Día 2:** `exportar_json` y `main`, ejecutad con el CSV real, escribid el README y haced los *commits* (`git init`, `git add`, `git commit`). Opcional: versión pandas.
+- **Miércoles 28/10:** planning (15 min); las prácticas 1–4 dejan listos `leer_reservas` y las ideas para los KPI.
+- **Jueves 29/10 (2 h 40 min de reto):** copiad la carpeta [`recursos/reto_herramientas/`](../recursos/reto_herramientas/), ejecutad `python test_kpis.py`, rellenad las funciones de KPI una a una hasta que pasen las pruebas; después `exportar_json` y `main`, ejecutad con el CSV real, escribid el README y haced los *commits*. Opcional: versión pandas.
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Preparar la carpeta y ver que las pruebas fallan (día 1, 20 minutos)
+#### Paso 1 · Preparar la carpeta y ver que las pruebas fallan (jueves 29/10, 20 minutos)
 1. Descargad la carpeta [`recursos/reto_herramientas/`](../recursos/reto_herramientas/) (viene con [`kpis.py`](../recursos/reto_herramientas/kpis.py), [`test_kpis.py`](../recursos/reto_herramientas/test_kpis.py) y [`README_PLANTILLA.md`](../recursos/reto_herramientas/README_PLANTILLA.md)) y el fichero [`reservas_turisdata.csv`](../../../datos/reservas_turisdata.csv) (carpeta [`datos/`](../../../datos/) del repositorio del curso). Dejadlos en la misma carpeta.
 2. Abrid una terminal o un cuaderno de Colab en esa carpeta y ejecutad `python test_kpis.py`.
 3. **Veréis errores o «pruebas no superadas».** Es normal: las funciones están vacías.
 4. Repartid las funciones entre las personas del equipo: cada una trabaja una y, cuando pasa, otra la revisa.
 
-#### Paso 2 · Rellenar las funciones, de una en una (día 1, 60–70 minutos)
+#### Paso 2 · Rellenar las funciones, de una en una (jueves 29/10, 65 minutos)
 Orden recomendado:
 1. `leer_reservas(ruta)`: lee el CSV y devuelve la lista de reservas y los avisos. Debe **descartar y contar las filas defectuosas** (por ejemplo, un precio que no es un número) y guardar un aviso por cada una. No debe romperse.
 2. `tasa_cancelacion_por_canal(reservas)`: para cada canal, `cancelaciones ÷ reservas × 100`, con 1 decimal.
@@ -93,13 +93,13 @@ Orden recomendado:
 
 **Método de trabajo (muy importante):** programad **una función**, ejecutad `python test_kpis.py`, mirad qué prueba falla, corregid, repetid. Es lo que hacen los profesionales: se llama trabajar «guiado por pruebas».
 
-#### Paso 3 · Exportar el resultado y hacer funcionar el programa entero (día 2, 30 minutos)
+#### Paso 3 · Exportar el resultado y hacer funcionar el programa entero (jueves 29/10, 30 minutos)
 1. `exportar_json(datos, ruta)`: guarda el resultado en un fichero JSON con codificación UTF-8 y sangría de 2 espacios.
 2. `main(...)`: lo une todo. Ejecutad:
    `python kpis.py reservas_turisdata.csv salida.json --capacidad 40`
 3. Abrid `salida.json` y comprobad que contiene los tres KPIs y la sección `calidad` (con las filas descartadas).
 
-#### Paso 4 · Probar que no se rompe (día 2, 15 minutos)
+#### Paso 4 · Probar que no se rompe (jueves 29/10, 20 minutos)
 Provocad errores **a propósito** y comprobad que el programa **da un mensaje claro** y no un montón de texto rojo:
 - Un fichero que no existe.
 - Un CSV al que le falta una columna (haced una copia y quitadla).
@@ -107,7 +107,7 @@ Provocad errores **a propósito** y comprobad que el programa **da un mensaje cl
 
 Un mensaje bueno: *«No se encuentra el fichero reservas.csv»*. Un mensaje malo: *«Traceback (most recent call last)…»*.
 
-#### Paso 5 · README y Git (día 2, 30 minutos)
+#### Paso 5 · README y Git (jueves 29/10, 25 minutos)
 1. Copiad [`README_PLANTILLA.md`](../recursos/reto_herramientas/README_PLANTILLA.md) como `README.md` y rellenad: qué hace, cómo se ejecuta, cómo se prueba, definición de cada KPI y decisiones (**por qué la ocupación es solo un proxy**).
 2. En la terminal: `git init`, `git add .`, `git commit -m "Primera versión"`. Haced **al menos 3 commits con mensajes claros** (por ejemplo, «Añade lectura del CSV», «Añade KPIs», «Añade README»). Cada persona debe hacer alguno.
 3. Si lo subís a GitHub, hacedlo en la carpeta `sprint-04/` de vuestro repositorio de equipo.

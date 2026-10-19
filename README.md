@@ -125,27 +125,26 @@ Detalle completo, unidad por unidad, en [`material/temario.md`](material/temario
 
 ```mermaid
 gantt
-    title Los 18 sprints del curso
+    title Los sprints del curso (el 13 va dentro del 12)
     dateFormat  YYYY-MM-DD
     axisFormat  %d/%m
     section Etapa A · Entender
     S0 Arranque ágil                  :a0, 2026-10-16, 4d
-    S1 Qué es la IA                   :a1, 2026-10-19, 3d
-    S2 Mates y estadística            :a2, 2026-10-21, 3d
-    S3 Del dato al modelo             :a3, 2026-10-23, 5d
+    S1 Qué es la IA                   :a1, 2026-10-20, 2d
+    S2 Mates y estadística            :a2, 2026-10-22, 2d
+    S3 Del dato al modelo             :a3, 2026-10-26, 2d
     section Etapa B · Construir
-    S4 Python para IA                 :b4, 2026-10-27, 3d
-    S5 Mates en código                :b5, 2026-10-29, 6d
-    S6 Datos listos para modelar      :b6, 2026-11-03, 3d
-    S7 ML supervisado                 :b7, 2026-11-05, 5d
-    S8 Árboles, ensembles y SVM       :b8, 2026-11-09, 3d
-    S9 Segmentar y recomendar         :b9, 2026-11-11, 2d
-    S10 Redes neuronales              :b10, 2026-11-13, 5d
-    S11 Visión por computador         :b11, 2026-11-17, 4d
-    S12 Lenguaje y series             :b12, 2026-11-20, 6d
-    S13 Contar resultados             :b13, 2026-11-25, 1d
+    S4 Python para IA                 :b4, 2026-10-28, 2d
+    S5 Mates en código                :b5, 2026-10-30, 5d
+    S6 Datos listos para modelar      :b6, 2026-11-04, 2d
+    S7 ML supervisado                 :b7, 2026-11-06, 4d
+    S8 Árboles, ensembles y SVM       :b8, 2026-11-10, 2d
+    S9 Segmentar y recomendar         :b9, 2026-11-12, 2d
+    S10 Redes neuronales              :b10, 2026-11-16, 2d
+    S11 Visión por computador         :b11, 2026-11-18, 3d
+    S12 Lenguaje, series y S13           :b12, 2026-11-23, 3d
     section Etapa C · Demostrar
-    S14 Reto, equipo y datos          :c14, 2026-11-25, 6d
+    S14 Reto, equipo y datos          :c14, 2026-11-26, 5d
     S15 Modelado y experimentos       :c15, 2026-12-01, 3d
     S16 Evaluación y entrega          :c16, 2026-12-04, 7d
     S17 Storytelling y defensa        :c17, 2026-12-11, 4d
@@ -192,30 +191,30 @@ Cada sprint responde a **una pregunta del cliente** y termina en **un reto**.
 | # | Fechas | Pregunta del cliente | Reto que entregas |
 |---|---|---|---|
 | **0** | 16–19/10 | ¿Cómo vamos a trabajar y con quién? | Constituir la consultora |
-| **1** | 19–21/10 | ¿Dónde puede ayudar la IA y qué riesgos tiene? | Auditoría de oportunidades de IA |
-| **2** | 21–23/10 | ¿En qué se apoyan los modelos y cuándo no fiarnos de un dato? | ¿Nos fiamos de este informe? |
-| **3** | 23–27/10 | ¿Podemos tener un primer modelo funcionando sin programar? | Primer modelo en producción |
+| **1** | 20–21/10 | ¿Dónde puede ayudar la IA y qué riesgos tiene? | Auditoría de oportunidades de IA |
+| **2** | 22–23/10 | ¿En qué se apoyan los modelos y cuándo no fiarnos de un dato? | ¿Nos fiamos de este informe? |
+| **3** | 26–27/10 | ¿Podemos tener un primer modelo funcionando sin programar? | Primer modelo en producción |
 
 ### 🟩 Etapa B · Construir
 
 | # | Fechas | Pregunta del cliente | Reto que entregas |
 |---|---|---|---|
-| **4** | 27–29/10 | ¿Cómo automatizamos lo que hicimos a mano? | Herramientas internas |
-| **5** | 29/10–3/11 | ¿Podemos demostrar con código lo que vimos en teoría? | ¿La ocupación depende de esto? |
-| **6** | 3–5/11 | ¿Están los datos en condiciones de entrenar algo fiable? | Datos sucios, cliente impaciente |
-| **7** | 5–9/11 | ¿Podemos predecir el precio o la cancelación? | Precio y cancelación |
-| **8** | 9–11/11 | ¿Cuál es el mejor modelo y cuánto cuesta mantenerlo? | Duelo de modelos |
-| **9** | 11–12/11 | ¿Qué tipos de cliente tenemos y qué les ofrecemos? | Conocer al huésped |
-| **10** | 13–17/11 | ¿Una red neuronal mejora al ML clásico y a qué precio? | ¿Vale la pena la red? |
-| **11** | 17–20/11 | ¿Podemos aprovechar las imágenes del cliente? | Visión artificial para el cliente |
-| **12** | 20–25/11 | ¿Qué dicen los clientes y qué pasará mañana? | Escuchar al cliente |
-| **13** | 25/11 | ¿Cómo enseñamos y defendemos los resultados? | Informe visual para dirección |
+| **4** | 28–29/10 | ¿Cómo automatizamos lo que hicimos a mano? | Herramientas internas |
+| **5** | 30/10 y 3/11 | ¿Podemos demostrar con código lo que vimos en teoría? | ¿La ocupación depende de esto? |
+| **6** | 4–5/11 | ¿Están los datos en condiciones de entrenar algo fiable? | Datos sucios, cliente impaciente |
+| **7** | 6 y 9/11 | ¿Podemos predecir el precio o la cancelación? | Precio y cancelación |
+| **8** | 10–11/11 | ¿Cuál es el mejor modelo y cuánto cuesta mantenerlo? | Duelo de modelos |
+| **9** | 12–13/11 | ¿Qué tipos de cliente tenemos y qué les ofrecemos? | Conocer al huésped |
+| **10** | 16–17/11 | ¿Una red neuronal mejora al ML clásico y a qué precio? | ¿Vale la pena la red? |
+| **11** | 18–20/11 | ¿Podemos aprovechar las imágenes del cliente? | Visión artificial para el cliente |
+| **12** | 23–25/11 | ¿Qué dicen los clientes y qué pasará mañana? | Escuchar al cliente |
+| **13** | 25/11 (dentro del 12) | ¿Cómo enseñamos y defendemos los resultados? | Informe visual para dirección |
 
 ### 🟧 Etapa C · Demostrar (proyecto final)
 
 | # | Fechas | Foco | Entregable |
 |---|---|---|---|
-| **14** | 25–30/11 | Reto, equipo y datos | Ficha de proyecto (antes del 27/11) |
+| **14** | 26–30/11 | Reto, equipo y datos | Ficha de proyecto (antes del 27/11) |
 | **15** | 1–3/12 | Modelado y experimentos | Baseline y modelos comparados |
 | **16** | 4–10/12 | Evaluación, IA responsable y entrega | Demostrador + memoria técnica |
 | **17** | 11 y 14/12 | Storytelling, ensayos y defensa | Defensa ante el tribunal |
@@ -241,7 +240,7 @@ Cada reto añade una pieza. Al llegar al proyecto final ya habrás resuelto prob
 
 ## 7. El proyecto final
 
-Los últimos **18 días lectivos** (25/11 – 14/12) son para un proyecto de equipo. Eliges entre **cuatro briefs** o propones uno libre:
+Las últimas jornadas (26/11 – 14/12) son para un proyecto de equipo. Eliges entre **cuatro briefs** o propones uno libre:
 
 | Brief | Tipo de problema |
 |---|---|
@@ -254,7 +253,7 @@ Los últimos **18 días lectivos** (25/11 – 14/12) son para un proyecto de equ
 
 ```mermaid
 flowchart LR
-    F14["25/11 Arranca<br/>el proyecto"] --> F27["27/11 Ficha<br/>go / no-go"]
+    F14["26/11 Arranca<br/>el proyecto"] --> F27["27/11 Ficha<br/>go / no-go"]
     F27 --> F10["10/12 Congelación<br/>del código"]
     F10 --> F14D["11–14/12 Defensa"]
 ```

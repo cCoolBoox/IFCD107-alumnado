@@ -1,6 +1,6 @@
 # Sprint 4 · Python para IA
 **Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?
-**Fechas:** 27–29/10 · **Horas:** 10 h (3 h teoría · 5 h práctica · 2 h proyecto)
+**Fechas:** 28–29/10 · **Horas:** 12 h (3 h teoría · 5 h práctica · 4 h PBL)
 
 > 🎯 **Reto de este sprint: «Herramientas internas».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_04.md) · [Reto en PDF](guia/Reto_Sprint_04.pdf) ([ecofriendly](guia/Reto_Sprint_04_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_04.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
@@ -22,22 +22,21 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**Sesión 1**
+**Miércoles 28/10**
 
-1. 📖 **Teoría**: [Python: entorno (venv, pip, Jupyter, Git) y lenguaje](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) · _1 h 30 min_
-2. 💻 **Práctica**: [Entorno, variables, tipos, `if`, `for` y `while`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) · _1 h_
-3. 💻 **Práctica**: [Funciones, `*args`, `lambda` y módulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) · _1 h_
-
-**Sesión 2**
-
-4. 📖 **Teoría**: [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) · _1 h 30 min_
-5. 💻 **Práctica**: [Listas, tuplas, diccionarios y conjuntos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) · _1 h_
+1. 🔔 **Ceremonia**: Planning del reto «Herramientas internas» · _15 min_
+2. 📖 **Teoría**: [Python: entorno (venv, pip, Jupyter, Git) y lenguaje](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) · _1 h 30 min_
+3. 💻 **Práctica**: [Entorno, variables, tipos, `if`, `for` y `while`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) · _50 min_
+4. 💻 **Práctica**: [Funciones, `*args`, `lambda` y módulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) · _55 min_
+5. 💻 **Práctica**: [Listas, tuplas, diccionarios y conjuntos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) · _50 min_
 6. 💻 **Práctica**: [CSV, JSON y `try`/`except` (prepara `leer_reservas`)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_04_ficheros_excepciones.ipynb) · _1 h_
-7. 💻 **Práctica**: [*(Opcional)* Clases, buenas prácticas y Git básico](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_05_poo_buenas_practicas.ipynb) · _1 h_
 
-**Reto «Herramientas internas»**
+**Jueves 29/10**
 
-8. 🎯 **Reto**: [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](guia/Reto_Sprint_04.md) · _2 h_
+7. 📖 **Teoría**: [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) · _1 h 15 min_
+8. 💻 **Práctica**: [*(Opcional)* Clases, buenas prácticas y Git básico](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_05_poo_buenas_practicas.ipynb) · _45 min_
+9. 🎯 **Reto**: [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](guia/Reto_Sprint_04.md) · _2 h 40 min_
+10. 🔔 **Ceremonia**: Entrega en `sprint-04/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
 
 <!--orden:fin-->
 
@@ -48,7 +47,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - Entregar una herramienta con pruebas y un README claro.
 
 ## Prácticas
-Cuadernos en orden (4 h obligatorias + 1 h opcional). Cada ejercicio se autocorrige: si falla la celda de comprobación, lee el mensaje y corrige. Los datos son sintéticos.
+Cuadernos en orden (3 h 35 min obligatorias + 45 min opcionales). Cada ejercicio se autocorrige: si falla la celda de comprobación, lee el mensaje y corrige. Los datos son sintéticos.
 
 | Cuaderno | Tema | Colab |
 |---|---|---|
@@ -68,7 +67,7 @@ Cuadernos en orden (4 h obligatorias + 1 h opcional). Cada ejercicio se autocorr
 - `README.md` con cómo ejecutar, cómo probar y definición de cada KPI (plantilla: [`README_PLANTILLA.md`](recursos/reto_herramientas/README_PLANTILLA.md)).
 - `salida.json` generado con el CSV real; opcional: `kpis_pandas.py`.
 **Reglas:**
-- 2 h de reto; solo biblioteca estándar (pandas solo en la parte opcional).
+- Unas 3 h 30 min de reto; solo biblioteca estándar (pandas solo en la parte opcional).
 - El script no se rompe con fichero inexistente, columnas que faltan o filas defectuosas: informa.
 - Nunca claves ni datos personales en el repositorio.
 **Se valora:** corrección técnica (pruebas en verde), reproducibilidad, comunicación al cliente (KPIs definidos, ocupación solo como proxy) e IA responsable (qué hizo la IA y qué revisasteis).

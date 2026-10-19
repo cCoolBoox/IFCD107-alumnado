@@ -1,7 +1,7 @@
 # Sprint 9 · Segmentar, recomendar y aprender por refuerzo
 
 **Pregunta guía:** ¿qué tipos de cliente tenemos y qué les ofrecemos?
-**Fechas:** 11 y 12 de noviembre · **Horas:** 11 h (3 h teoría · 5 h práctica · 3 h PBL)
+**Fechas:** 12 y 13 de noviembre · **Horas:** 12 h (3 h teoría · 5 h práctica · 4 h PBL)
 **Módulo:** M3, unidades 3.9 a 3.12 · **Evaluación:** test de M3 (segunda parte)
 
 > 🎯 **Reto de este sprint: «Conocer al huésped».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_09.md) · [Reto en PDF](guia/Reto_Sprint_09.pdf) ([ecofriendly](guia/Reto_Sprint_09_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_09.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
@@ -25,21 +25,22 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**Sesión 1 · 11/11**
+**Jueves 12/11**
 
-1. 📖 **Teoría**: [Clustering y PCA](presentaciones/S09.1_Clustering_y_PCA.pdf) · _2 h_
-2. 💻 **Práctica**: [Segmentar huéspedes: k-means, silueta, jerárquico y DBSCAN](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_01_clustering.ipynb) · _1 h 30 min_
-3. 💻 **Práctica**: [PCA: varianza explicada y mapa en 2D](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_02_pca.ipynb) · _1 h_
-4. 🎯 **Reto**: [Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3)](guia/Reto_Sprint_09.md) · _1 h_
+1. 🔔 **Ceremonia**: Planning del reto «Conocer al huésped» y reparto de roles · _15 min_
+2. 📖 **Teoría**: [Clustering y PCA](presentaciones/S09.1_Clustering_y_PCA.pdf) · _1 h 50 min_
+3. 💻 **Práctica**: [Segmentar huéspedes: k-means, silueta, jerárquico y DBSCAN](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_01_clustering.ipynb) · _1 h 20 min_
+4. 💻 **Práctica**: [PCA: varianza explicada y mapa en 2D](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_02_pca.ipynb) · _55 min_
+5. 🎯 **Reto**: [Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3)](guia/Reto_Sprint_09.md) · _1 h_
 
-**Sesión 2 · 12/11**
+**Viernes 13/11**
 
-5. 📖 **Teoría**: [Sistemas de recomendación](presentaciones/S09.2_Sistemas_de_recomendacion.pdf) · _30 min_
-6. 📖 **Teoría**: [Aprendizaje por refuerzo (visión conceptual)](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf) · _30 min_
-7. 💻 **Práctica**: [Recomendadores: popularidad, contenido, colaborativo y factorización](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) · _1 h 30 min_
-8. 💻 **Práctica**: [Q-learning en el hotel](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_04_q_learning.ipynb) · _1 h_
-9. 🎯 **Reto**: [Recomendador, ficha de segmentos, IA responsable y ensayo (pasos 4–5)](guia/Reto_Sprint_09.md) · _1 h 30 min_
-10. 🔔 **Ceremonia**: Review (3 min por equipo) y retrospectiva · _30 min_
+6. 📖 **Teoría**: [Sistemas de recomendación](presentaciones/S09.2_Sistemas_de_recomendacion.pdf) · _30 min_
+7. 📖 **Teoría**: [Aprendizaje por refuerzo (visión conceptual)](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf) · _30 min_
+8. 💻 **Práctica**: [Recomendadores: popularidad, contenido, colaborativo y factorización](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) · _1 h 20 min_
+9. 💻 **Práctica**: [Q-learning en el hotel](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_04_q_learning.ipynb) · _55 min_
+10. 🎯 **Reto**: [Recomendador, ficha de segmentos, IA responsable y ensayo (pasos 4–5)](guia/Reto_Sprint_09.md) · _1 h 25 min_
+11. 🔔 **Ceremonia**: Entrega en `sprint-09/`, autoevaluación y coevaluación, review (3 min por equipo) y retrospectiva · _40 min_
 
 <!--orden:fin-->
 
@@ -52,10 +53,10 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S09_01_clustering` | Segmentar huéspedes: escalado, k-means, silueta, jerárquico, DBSCAN | 1 h 30 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_01_clustering.ipynb) |
-| `S09_02_pca` | PCA: varianza explicada, mapa 2D, cargas, mención a t-SNE | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_02_pca.ipynb) |
-| `S09_03_recomendadores` | Popularidad, contenido, colaborativo, factorización; RMSE y precision@k | 1 h 30 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) |
-| `S09_04_q_learning` | Q-learning en el hotel (numpy): recompensas, epsilon-greedy, política | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_04_q_learning.ipynb) |
+| `S09_01_clustering` | Segmentar huéspedes: escalado, k-means, silueta, jerárquico, DBSCAN | 80 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_01_clustering.ipynb) |
+| `S09_02_pca` | PCA: varianza explicada, mapa 2D, cargas, mención a t-SNE | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_02_pca.ipynb) |
+| `S09_03_recomendadores` | Popularidad, contenido, colaborativo, factorización; RMSE y precision@k | 80 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) |
+| `S09_04_q_learning` | Q-learning en el hotel (numpy): recompensas, epsilon-greedy, política | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_04_q_learning.ipynb) |
 
 Cada notebook tiene comprobaciones automáticas (✔). Trabaja en orden: no pases al siguiente hasta que los `assert` pasen. Los datos se descargan solos.
 
@@ -71,7 +72,7 @@ Cada notebook tiene comprobaciones automáticas (✔). Trabaja en orden: no pase
 - Nota de IA responsable (5 líneas) dentro de la ficha.
 
 **Reglas:**
-- 3 h en equipos de 3-4; solo numpy, pandas, matplotlib/seaborn y scikit-learn. Todas las personas deben poder explicar cualquier parte.
+- Unas 3 h 20 min en equipos de 3-4; solo numpy, pandas, matplotlib/seaborn y scikit-learn. Todas las personas deben poder explicar cualquier parte.
 - Mínimo dos recomendadores comparados con RMSE y precision@3; `recomendar` no propone lo ya valorado.
 - Nunca claves ni datos personales. Review: 3 min por equipo.
 

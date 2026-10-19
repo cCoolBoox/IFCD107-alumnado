@@ -26,7 +26,7 @@
 
 **Qué vais a aprender haciéndolo:** a **entrenar una red sin que memorice**, a leer **curvas de aprendizaje**, y a **comparar con honestidad** (que un número sea mayor no basta).
 
-**Cuánto tiempo:** 4 horas de proyecto (13 al 17/11).
+**Cuánto tiempo:** unas 4 horas entre el planning, el reto (≈ 3 h 10 min) y la entrega (16 y 17/11). El reto se hace en la segunda jornada, con el esqueleto del cuaderno [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y lo practicado el lunes.
 
 ### Palabras que van a aparecer en este reto
 
@@ -73,30 +73,30 @@ merece la pena el cambio.
 
 **Pasos sugeridos**
 
-- **Día 1:** ejecuta [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb), entiende cada bloque y elige el problema. Reproduce tu modelo de referencia.
-- **Día 2:** entrena el MLP, prueba 2–3 variantes (tamaño, *dropout*, L2, tasa) mirando **solo la validación**.
-- **Día 3:** diagnostica el sobreajuste con curvas y compara con la referencia (varias semillas, intervalo de confianza).
-- **Día 4:** redacta el informe y prepara la presentación de 5 minutos.
+- **Lunes 16/11:** planning (15 min); las prácticas 01–03 os dan la red base, el MLP en Keras y la regularización.
+- **Martes 17/11 (3 h 10 min de reto):** ejecuta [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb), entiende cada bloque, elige el problema y reproduce tu modelo de referencia; entrena el MLP y prueba 2 variantes (tamaño, *dropout*, L2 o tasa) mirando **solo la validación**.
+- **También el martes:** diagnostica el sobreajuste con curvas y compara con la referencia (3 semillas, media ± desviación).
+- **Cierre del martes:** informe de una página y presentación de 5 minutos; entrega, autoevaluación y coevaluación; **review + retrospectiva** (última hora).
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Elegir el problema y reproducir la referencia (día 1)
+#### Paso 1 · Elegir el problema y reproducir la referencia (martes 17/11, 20 minutos)
 1. Elegid **un problema**: cancelaciones (`cancelada`) **o** precio (`precio_noche`). El otro es opcional.
 2. Abrid [`S10_04_reto_vale_la_pena`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y ejecutadlo bloque a bloque, **entendiendo cada uno** (si no lo entendéis, preguntad antes de seguir).
 3. **Reproducid el modelo de referencia** (vuestro campeón del Sprint 8 o el boosting que trae el cuaderno) y anotad su métrica.
 4. **Fijad la partición** entrenamiento / validación / prueba y no la cambiéis nunca más. **La prueba se usa una sola vez.**
 
-#### Paso 2 · Primera red (día 2, mañana)
+#### Paso 2 · Primera red (martes 17/11, 35 minutos)
 1. Escalad los datos **ajustando el escalador solo con el entrenamiento** (si no, hay fuga).
-2. Entrenad un MLP pequeño (por ejemplo, 2 capas ocultas de 32 neuronas), **máximo 40 épocas**. Se ejecuta en CPU en pocos minutos.
+2. Entrenad un MLP pequeño (por ejemplo, 2 capas ocultas de 32 neuronas), **máximo 30 épocas**. Se ejecuta en CPU en pocos minutos.
 3. Dibujad la **curva de aprendizaje**: error en entrenamiento y en validación.
 
-#### Paso 3 · Variantes (día 2, tarde)
-1. Probad **2 o 3 variantes**: más o menos neuronas, *dropout*, L2, otra tasa de aprendizaje, *early stopping*.
+#### Paso 3 · Variantes (martes 17/11, 30 minutos)
+1. Probad **2 variantes**: más o menos neuronas, *dropout*, L2, otra tasa de aprendizaje, *early stopping*.
 2. **Compararlas mirando solo la validación.** El test no se toca.
 3. Anotad qué ha mejorado y qué no. Una tabla pequeña basta: *variante · error en entrenamiento · error en validación*.
 
-#### Paso 4 · Diagnosticar el sobreajuste (día 3)
+#### Paso 4 · Diagnosticar el sobreajuste (martes 17/11, 25 minutos)
 Mirad vuestras curvas:
 - **Entrenamiento baja y validación sube:** la red memoriza (sobreajuste). Soluciones: más regularización, menos neuronas, parar antes.
 - **Las dos curvas están altas y juntas:** la red es demasiado simple (subajuste).
@@ -104,15 +104,15 @@ Mirad vuestras curvas:
 
 Escribid **una frase de diagnóstico** para vuestra mejor red.
 
-#### Paso 5 · Comparación justa (día 3)
-1. **Repetid el entrenamiento con varias semillas** (por ejemplo, 5) para el MLP y para el modelo clásico.
+#### Paso 5 · Comparación justa (martes 17/11, 35 minutos)
+1. **Repetid el entrenamiento con varias semillas** (por ejemplo, 3) para el MLP y para el modelo clásico.
 2. Calculad **media ± desviación** (o un intervalo) de la métrica.
 3. Comparad: **si los intervalos se solapan, no podéis decir que uno sea mejor**.
 4. Evaluad en el test **una sola vez**, con el MLP elegido y con el modelo clásico, y registrad ambos.
 5. Añadid el **coste**: tiempo de entrenamiento, complejidad, explicabilidad. Una red puede mejorar un 1 % pero tardar 20 veces más y ser opaca.
 
-#### Paso 6 · Informe y presentación (día 4)
-Informe de 1–2 páginas:
+#### Paso 6 · Informe y presentación (martes 17/11, 45 minutos)
+Informe de 1 página:
 1. **Pregunta y respuesta en una frase** («Recomendamos mantener el boosting porque…»).
 2. **Tabla de resultados** (media ± desviación) de ambos enfoques.
 3. **Curva de aprendizaje comentada.**

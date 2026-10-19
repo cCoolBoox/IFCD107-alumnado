@@ -28,7 +28,7 @@ Y hay un detalle importante: **el gerente no quiere oír hablar de «AUC»**. Qu
 
 **Qué vais a aprender haciéndolo:** a elegir métricas según el problema, a **evitar la fuga de datos**, a **traducir un modelo a dinero** y a defender una decisión con hipótesis claras.
 
-**Cuánto tiempo:** 3 horas en equipo (5 al 9/11).
+**Cuánto tiempo:** unas 3 horas en equipo entre el planning, el reto y la entrega (6 y 9/11). El reto se hace sobre todo el lunes 9/11, con lo aprendido el viernes.
 
 ### Palabras que van a aparecer en este reto
 
@@ -76,13 +76,13 @@ Y hay un detalle importante: **el gerente no quiere oír hablar de «AUC»**. Qu
 *Pista de IA responsable:* ¿quién sufre los falsos positivos (un cliente reubicado)? ¿Se penaliza a algún país o canal? ¿Qué pasa si el modelo se usa para pedir depósitos solo a ciertos clientes?
 
 **Pasos sugeridos.**
-- **Día 1 (5–6/11):** *planning* (30 min); acordar las hipótesis de coste; regresión: baseline, lineal y una mejora (interacciones o Lasso); métricas en euros.
-- **Día 2 (7–8/11):** clasificación: baseline y logística (más un segundo modelo si queréis); curva ROC/PR, elección del umbral con validación cruzada; coste total en test.
-- **Día 3 (9/11):** análisis de sensibilidad, informe con la recomendación, README, autoevaluación y coevaluación; **review + retrospectiva** (última hora).
+- **Viernes 6/11:** *planning* (20 min); las prácticas de regresión y de regresión logística preparan los modelos del reto.
+- **Lunes 9/11 (2 h 15 min):** acordar las hipótesis de coste (15 min); regresión: baseline, lineal y una mejora, con métricas en euros (30 min); clasificación: baseline y logística, curva ROC/PR, elección del umbral con validación cruzada y coste total en test (45 min).
+- **Cierre del lunes:** análisis de sensibilidad (15 min), informe con la recomendación y README (30 min), autoevaluación y coevaluación; **review + retrospectiva** (última hora).
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Planning y acordar las hipótesis de coste (día 1, 30–45 minutos)
+#### Paso 1 · Acordar las hipótesis de coste (lunes 9/11, 15 minutos; el planning fue el viernes)
 1. Roles del sprint y tareas en el tablero.
 2. **La pregunta central del informe:** *¿qué cuesta más, una cancelación no prevista (habitación vacía) o una falsa alarma (un cliente llega y no hay sitio)?*
 3. **Proponed una hipótesis de coste para cada error**, razonada con una frase. Ejemplos:
@@ -90,24 +90,24 @@ Y hay un detalle importante: **el gerente no quiere oír hablar de «AUC»**. Qu
    - Una falsa alarma cuesta **una noche de compensación** (alojamiento en otro hotel + disculpa).
 4. Escribidlas en el cuaderno como variables (`COSTE_FN`, `COSTE_FP`) para poder cambiarlas luego.
 
-#### Paso 2 · Regresión del precio (día 1, 90 minutos)
+#### Paso 2 · Regresión del precio (lunes 9/11, 30 minutos)
 1. Elegid las variables que **se conocen al reservar** (tipo de habitación, mes, antelación, canal…). **`cancelada` no puede usarse para predecir el precio** (es fuga).
 2. Modelo de referencia: predecir siempre el precio medio de entrenamiento. Medid MAE y RMSE.
 3. Regresión lineal. Medid MAE, RMSE y R². ¿Mejora al modelo de referencia?
 4. Una mejora (añadir interacciones o regularización tipo Lasso). ¿Compensa la complejidad?
 5. Expresad el resultado **en euros**: «nos equivocamos de media en X € por noche».
 
-#### Paso 3 · Clasificación de la cancelación (día 2, 90 minutos)
+#### Paso 3 · Clasificación de la cancelación (lunes 9/11, 45 minutos)
 1. Partid los datos (train/test) y **no toquéis el test hasta el final**.
 2. Modelo de referencia (por ejemplo, el que siempre dice «no cancela»). Regresión logística. Opcional: un segundo modelo.
 3. Dibujad la **matriz de confusión** y las curvas ROC y PR. Calculad AUC y AP.
 4. **Elegid el umbral con validación cruzada sobre train**: probad muchos umbrales y calculad el coste total de cada uno con vuestras hipótesis: `coste = FN × COSTE_FN + FP × COSTE_FP`. El mejor umbral es el que **minimiza el coste**.
 5. **Usad el test una sola vez**, al final, para dar el coste esperado.
 
-#### Paso 4 · Análisis de sensibilidad (día 3, 30 minutos)
+#### Paso 4 · Análisis de sensibilidad (lunes 9/11, 15 minutos)
 Preguntaos: *¿y si una noche vacía costara el doble? ¿y si la compensación costara la mitad?* Variad los costes y mirad **cómo cambia el umbral óptimo** y el coste total. Mostradlo en una tabla o gráfico. La conclusión es del tipo: *«con estos costes recomendamos un umbral de 0,35; si el coste de una falsa alarma sube al doble, el umbral sube a 0,45»*.
 
-#### Paso 5 · Informe y README (día 3, 45 minutos)
+#### Paso 5 · Informe y README (lunes 9/11, 30 minutos)
 Seguid la plantilla [`informe_modelado_plantilla.md`](../plantillas/informe_modelado_plantilla.md):
 1. **Resumen para el gerente** (5 líneas, con euros).
 2. Tabla comparativa de métricas de los dos modelos.

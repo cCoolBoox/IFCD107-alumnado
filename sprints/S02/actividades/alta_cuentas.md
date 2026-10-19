@@ -1,6 +1,6 @@
 # Alta de cuentas: Colab y plataforma de AutoML
 
-**Cuándo:** práctica del **miércoles 21/10**. **Colab debe estar operativo antes del 22/10.** (La cuenta de GitHub y el repositorio del equipo ya se hicieron en el Sprint 0.) Si alguna verificación tarda, avisad al docente **hoy mismo**. Las pantallas de estos servicios cambian: seguid las indicaciones del docente y de la ayuda oficial.
+**Cuándo:** primera práctica del Sprint 2, el **jueves 22/10 a primera hora, en clase**. **Colab debe quedar operativo antes del lunes 26/10** (el Sprint 3 lo usa). (La cuenta de GitHub y el repositorio del equipo ya se hicieron en el Sprint 0.) Si alguna verificación tarda, avisad al docente **hoy mismo**. Las pantallas de estos servicios cambian: seguid las indicaciones del docente y de la ayuda oficial.
 
 ## 1. Google Colab (10 min)
 - [ ] Tener una **cuenta de Google** (la personal sirve).

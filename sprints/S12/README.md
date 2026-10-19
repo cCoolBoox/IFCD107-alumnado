@@ -1,6 +1,6 @@
 # Sprint 12 · Lenguaje, secuencias y modelos generativos
 **Pregunta guía:** ¿qué dicen los clientes y qué pasará mañana?
-**Fechas:** 20–25/11 · **Horas:** 18 h (5 T · 8 P · 5 reto PBL)
+**Fechas:** 23–25/11 · **Horas:** 18 h (5 h teoría · 6 h práctica · 7 h PBL, con el Sprint 13 integrado en el último día)
 
 > 🎯 **Reto de este sprint: «Escuchar al cliente».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_12.md) · [Reto en PDF](guia/Reto_Sprint_12.pdf) ([ecofriendly](guia/Reto_Sprint_12_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_12.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
@@ -25,29 +25,31 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**Bloque 1 · Series temporales**
+**Lunes 23/11**
 
-1. 📖 **Teoría**: [RNN, LSTM, GRU y series temporales](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) · _1 h 30 min_
-2. 💻 **Práctica**: [Series temporales: *baselines*, descomposición y SARIMAX](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) · _1 h_
-3. 💻 **Práctica**: [RNN, LSTM y GRU frente al *baseline*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) · _1 h_
+1. 🔔 **Ceremonia**: Planning del reto «Escuchar al cliente» y reparto de las cinco áreas · _25 min_
+2. 📖 **Teoría**: [RNN, LSTM, GRU y series temporales](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) · _1 h 20 min_
+3. 💻 **Práctica**: [Series temporales: *baselines*, descomposición y SARIMAX](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) · _50 min_
+4. 💻 **Práctica**: [RNN, LSTM y GRU frente al *baseline*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) · _50 min_
+5. 📖 **Teoría**: [NLP clásico y embeddings](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) · _55 min_
+6. 💻 **Práctica**: [Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) · _1 h_
 
-**Bloque 2 · Texto**
+**Martes 24/11**
 
-4. 📖 **Teoría**: [NLP clásico y embeddings](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) · _1 h_
-5. 💻 **Práctica**: [Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) · _1 h 10 min_
-6. 💻 **Práctica**: [Embeddings con LSA y buscador de reseñas parecidas](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_04_embeddings_lsa.ipynb) · _50 min_
+7. 📖 **Teoría**: [Transformers y LLM](presentaciones/S12.3_Transformers_y_LLM.pdf) · _1 h 20 min_
+8. 💻 **Práctica**: [Tokens, atención paso a paso y temperatura](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) · _50 min_
+9. 💻 **Práctica**: [Mini RAG con la política, evaluación y seguridad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) · _1 h 10 min_
+10. 📖 **Teoría**: [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) · _35 min_
+11. 🎯 **Reto**: [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](guia/Reto_Sprint_12.md) · _1 h 25 min_
 
-**Bloque 3 · Transformers y LLM**
+**Miércoles 25/11**
 
-7. 📖 **Teoría**: [Transformers y LLM](presentaciones/S12.3_Transformers_y_LLM.pdf) · _1 h 30 min_
-8. 💻 **Práctica**: [Tokens, atención paso a paso y temperatura](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) · _1 h 10 min_
-9. 💻 **Práctica**: [Mini RAG con la política, evaluación y seguridad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) · _1 h 30 min_
-
-**Bloque 4 · Generativos y reto**
-
-10. 📖 **Teoría**: [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) · _1 h_
-11. 💻 **Práctica**: [Autoencoder para anomalías; idea de GAN y difusión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_07_autoencoder_generativos.ipynb) · _50 min_
-12. 🎯 **Reto**: [Reparto y plan (hora 1) → datos y modelos (horas 2–3) → evaluación y seguridad del asistente (hora 4) → cierre (hora 5)](guia/Reto_Sprint_12.md) · _5 h_
+12. 🎯 **Reto**: [Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4)](guia/Reto_Sprint_12.md) · _2 h 25 min_
+13. 📝 **Test**: [**Test de M4** (redes neuronales), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) · _30 min_
+14. 📖 **Teoría**: [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) · _20 min_
+15. 💻 **Práctica**: [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) · _40 min_
+16. 🎯 **Reto**: [Reto del Sprint 13](../S13/guia/Reto_Sprint_13.md): elegir el modelo y los costes → cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/plantillas/plantilla_informe_visual.md) · _40 min_
+17. 🔔 **Ceremonia**: Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva · _45 min_
 
 <!--orden:fin-->
 
@@ -62,13 +64,13 @@ Todo se ejecuta sin internet (las partes **OPCIONAL / NO VERIFICADO** se pueden 
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S12_01_series_temporales` | Serie temporal: baselines, descomposición, ARIMA/SARIMAX | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) |
-| `S12_02_redes_recurrentes` | RNN, LSTM y GRU en Keras vs. baseline | 1 h | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) |
-| `S12_03_nlp_clasico` | Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas | 1 h 10 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) |
-| `S12_04_embeddings_lsa` | Embeddings con LSA y buscador de reseñas parecidas | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_04_embeddings_lsa.ipynb) |
-| `S12_05_transformers_atencion` | Tokens, atención paso a paso, temperatura (+ Hugging Face opcional) | 1 h 10 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) |
-| `S12_06_mini_rag` | Mini RAG con la política, evaluación y seguridad | 1 h 30 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) |
-| `S12_07_autoencoder_generativos` | Autoencoder para anomalías; idea de GAN y difusión | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_07_autoencoder_generativos.ipynb) |
+| `S12_01_series_temporales` | Serie temporal: baselines, descomposición, ARIMA/SARIMAX | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) |
+| `S12_02_redes_recurrentes` | RNN, LSTM y GRU en Keras vs. baseline | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) |
+| `S12_03_nlp_clasico` | Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) |
+| `S12_04_embeddings_lsa` | Embeddings con LSA y buscador de reseñas parecidas | 50 min (ampliación, en casa) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_04_embeddings_lsa.ipynb) |
+| `S12_05_transformers_atencion` | Tokens, atención paso a paso, temperatura (+ Hugging Face opcional) | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) |
+| `S12_06_mini_rag` | Mini RAG con la política, evaluación y seguridad | 70 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) |
+| `S12_07_autoencoder_generativos` | Autoencoder para anomalías; idea de GAN y difusión | 50 min (ampliación, en casa) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_07_autoencoder_generativos.ipynb) |
 
 Plantilla en esta carpeta: [`plantilla_informe_cliente.md`](plantillas/plantilla_informe_cliente.md) (informe de reseñas).
 

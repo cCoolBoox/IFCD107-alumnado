@@ -1,6 +1,6 @@
 # Sprint 1 · Qué es la IA, cómo aprende y cómo usarla bien
 **Pregunta guía:** ¿dónde puede ayudar la IA al cliente y qué riesgos tiene?
-**Fechas:** lun 19/10 – mié 21/10 · **Horas:** 15 h (8 h teoría · 4 h práctica · 3 h reto)
+**Fechas:** mar 20/10 – mié 21/10 · **Horas:** 12 h (4 h teoría · 3 h práctica · 5 h PBL, con 1 h para cerrar el Sprint 0)
 **Módulos:** M1a (UD 1a.1 a 1a.3) + M8 IA responsable · Bloque A: sin Python ni notebooks
 
 > 🎯 **Reto de este sprint: «Auditoría de oportunidades de IA».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_01.md) · [Reto en PDF](guia/Reto_Sprint_01.pdf) ([ecofriendly](guia/Reto_Sprint_01_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_01.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
@@ -25,28 +25,24 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**Lunes 19/10**
-
-1. 🔔 **Ceremonia**: Planning del reto: leed la ficha y reparte roles · _30 min_
-2. 📖 **Teoría**: [Introducción a la IA: modalidades, casos de uso y mitos](presentaciones/S01.1_Introduccion_a_la_IA.pdf) · _2 h_
-3. 💻 **Práctica**: [Dinámica A: tarjetas de casos de uso](actividades/tarjetas_casos_uso.md) · _1 h_
-4. 📖 **Teoría**: [Panorama de algoritmos y CRISP-DM (primera parte)](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) · _1 h 30 min_
-
 **Martes 20/10**
 
-5. 📖 **Teoría**: [Panorama de algoritmos y CRISP-DM (final: datos, etiquetas y por qué fracasan los proyectos)](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) · _30 min_
-6. 💻 **Práctica**: Dinámica C: elegir la familia de algoritmos en 6 problemas (con el docente) · _1 h_
-7. 📖 **Teoría**: [Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste](presentaciones/S01.3_Tipos_de_aprendizaje.pdf) · _2 h_
-8. 💻 **Práctica**: [Dinámica B: clasificación «a mano» (ejemplo de clasificación de un caso)](actividades/ejemplo_clasificacion_caso.md) · _1 h_
-9. 📖 **Teoría**: [IA responsable: ética, sesgo y gobernanza de datos](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) · _1 h_
-10. 🎯 **Reto**: [Lluvia de ideas y elección de casos (paso 2)](guia/Reto_Sprint_01.md) · _30 min_
+1. 🎯 **Reto**: **Cierre del Sprint 0** (lo que quedó pendiente del reto): [acuerdo de trabajo y lista de «terminado»](../S00/plantillas/plantillas_equipo.md), [entrevista al cliente](../S00/actividades/entrevista_descubrimiento.md) en grupo grande, [mapa de empatía de TurisData](../S00/plantillas/empatia_hmw_plantillas.md) y retro corta · _50 min_
+2. 🔔 **Ceremonia**: Planning del Sprint 1: leed la ficha del reto y repartid los 7 apartados del informe · _15 min_
+3. 📖 **Teoría**: [Introducción a la IA: modalidades, casos de uso y mitos](presentaciones/S01.1_Introduccion_a_la_IA.pdf) · _1 h_
+4. 💻 **Práctica**: [Dinámica A: tarjetas de casos de uso (11 tarjetas)](actividades/tarjetas_casos_uso.md) · _35 min_
+5. 📖 **Teoría**: [Panorama de algoritmos y CRISP-DM](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) · _45 min_
+6. 💻 **Práctica**: Dinámica C: elegir la familia de algoritmos en 3 de los 6 problemas (con el docente) · _30 min_
+7. 📖 **Teoría**: [Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste](presentaciones/S01.3_Tipos_de_aprendizaje.pdf) · _35 min_
+8. 💻 **Práctica**: [Dinámica B: clasificación «a mano» (demostración en la pizarra)](actividades/ejemplo_clasificacion_caso.md) · _15 min_
+9. 🎯 **Reto**: [Lluvia de ideas y elección de casos (paso 2)](guia/Reto_Sprint_01.md) · _35 min_
 
-**Miércoles 21/10 (hasta las 12:30)**
+**Miércoles 21/10**
 
-11. 📖 **Teoría**: [IA responsable: RGPD, AI Act y lista de comprobación ética](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) · _1 h_
-12. 💻 **Práctica**: [Debate de casos éticos con roles](actividades/casos_debate_ia_responsable.md) · _1 h_
-13. 🎯 **Reto**: [Fichas de los 5 casos, lista de comprobación ética y priorización (pasos 3–5)](plantillas/checklist_etico_v1.md) · _1 h_
-14. 🔔 **Ceremonia**: Review y retrospectiva · _1 h_
+10. 📖 **Teoría**: [IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) · _1 h 30 min_
+11. 💻 **Práctica**: [Debate de casos éticos con roles (3 de los 5 casos)](actividades/casos_debate_ia_responsable.md) · _50 min_
+12. 🎯 **Reto**: [Fichas de los 5 casos, lista de comprobación ética (completa en los 2 casos priorizados), matriz de priorización y redacción (pasos 3–5)](plantillas/checklist_etico_v1.md) · _2 h_
+13. 🔔 **Ceremonia**: Entrega en `sprint-01/`, autoevaluación y coevaluación, review (5 min por equipo) y retrospectiva · _1 h_
 
 <!--orden:fin-->
 
@@ -76,7 +72,7 @@ Materiales `.md` imprimibles (sin Colab):
 - Checklist ético v1 de cada caso (completo en los 2 priorizados).
 - Declaración de dónde habéis usado IA generativa y qué habéis verificado.
 **Reglas:**
-- 3 h de reto; los 5 casos cubren 3 modalidades o más y al menos 2 son propios.
+- Unas 3 h de reto; los 5 casos cubren 3 modalidades o más y al menos 2 son propios.
 - Al menos 1 caso no necesita IA (o va mejor con reglas).
 - Nunca claves ni datos personales; no hay datos que analizar, solo ideas y riesgos.
 **Se valora:** corrección técnica, reproducibilidad (criterio de priorización claro), comunicación al cliente e IA responsable (riesgos por caso, AI Act con calendario verificado).

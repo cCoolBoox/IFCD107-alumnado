@@ -1381,49 +1381,49 @@ DEMOS.pitch=root=>{
 /* ========== PÁGINA ========== */
 const PAGE=[
  {block:'Bloque A · Sin Python · 46 h',items:[
-  {id:'s0',tag:'S0',title:'Arranque ágil',meta:'16–19/10 · Scrum + Design Thinking · 7 h',q:'¿Cómo vamos a trabajar y con quién?',demos:[
+  {id:'s0',tag:'S0',title:'Arranque ágil',meta:'16 y 19/10 · Scrum + Design Thinking · 12 h',q:'¿Cómo vamos a trabajar y con quién?',demos:[
     {id:'kanban',title:'Tu primer tablero y planning de sprint',desc:'Mueve las tarjetas con ◀ ▶. En el planning el equipo decide qué cabe en el sprint según su capacidad.',course:'Trello (o similar) con tu equipo, daily de 10 minutos, review y retrospectiva.'},
     {id:'empatia',title:'Mapa de empatía y «How might we»',desc:'Antes de resolver, hay que entender a quién le duele el problema.',course:'Entrevista al cliente (el docente) y mapa de empatía de TurisData.'}]},
-  {id:'s1',tag:'S1',title:'Qué es la IA, cómo aprende y cómo usarla bien',meta:'19–21/10 · M1a UD 1–3 + M8 · 15 h',q:'¿Dónde puede ayudar la IA al cliente y qué riesgos tiene?',demos:[
+  {id:'s1',tag:'S1',title:'Qué es la IA, cómo aprende y cómo usarla bien',meta:'20–21/10 · M1a UD 1–3 + M8 · 12 h',q:'¿Dónde puede ayudar la IA al cliente y qué riesgos tiene?',demos:[
     {id:'overfit',title:'Sobreajuste: aprender de memoria',desc:'Sube la complejidad del modelo y mira qué pasa con los datos nuevos.',course:'Clasificación «a mano» con tarjetas y la idea de entrenamiento, validación y prueba.'},
     {id:'quizFamilias',title:'¿Qué familia de algoritmo es?',desc:'Seis problemas del cliente, seis familias de IA.',course:'Panorama de algoritmos y CRISP-DM.'},
     {id:'quizAct',title:'Clasifica el riesgo (AI Act europeo)',desc:'Resumen didáctico de las categorías de riesgo del reglamento europeo de IA.',course:'Debate guiado de casos con roles y checklist ético. El calendario de aplicación se verifica en clase.',wide:true}]},
-  {id:'s2',tag:'S2',title:'Las matemáticas y la estadística detrás',meta:'21–23/10 · M1a UD 4–6 · 10 h',q:'¿En qué se apoyan los modelos y cuándo no debemos fiarnos de un dato?',demos:[
+  {id:'s2',tag:'S2',title:'Las matemáticas y la estadística detrás',meta:'22–23/10 · M1a UD 4–6 · 12 h',q:'¿En qué se apoyan los modelos y cuándo no debemos fiarnos de un dato?',demos:[
     {id:'gd1d',title:'Descenso del gradiente',desc:'Así «aprende» un modelo: bajar poco a poco por la curva del error. Cambia el tamaño del paso y el punto de salida.',course:'Papel, Desmos y GeoGebra; luego lo programamos en el Sprint 5.'},
     {id:'simpson',title:'La paradoja de Simpson',desc:'Un mismo dato puede contar dos historias opuestas.',course:'Reto «¿Nos fiamos de este informe?»: auditar un informe con errores estadísticos.'},
     {id:'bayes',title:'Teorema de Bayes sin fórmulas',desc:'Por qué un detector «muy bueno» puede acertar poco cuando salta.',course:'Probabilidad, Bayes, muestreo y sesgo.'}]},
-  {id:'s3',tag:'S3',title:'Del dato al modelo en la nube',meta:'23–27/10 · M6a + M7 · 14 h',q:'¿Podemos tener un primer modelo funcionando, sin programar?',demos:[
+  {id:'s3',tag:'S3',title:'Del dato al modelo en la nube',meta:'26–27/10 · M6a + M7 · 12 h',q:'¿Podemos tener un primer modelo funcionando, sin programar?',demos:[
     {id:'sql',title:'SQL y CRUD en vivo',desc:'Consulta, inserta, modifica y borra en una tabla de reservas ficticias. Prueba los botones y luego edita la consulta.',course:'SQLite con DB Browser, PostgreSQL y MongoDB.',wide:true},
     {id:'automl',title:'AutoML y despliegue de un modelo',desc:'El sistema prueba varios modelos por ti, elige el campeón y lo publica como API. Los modelos se entrenan aquí de verdad; el coste es de mentira.',course:'AutoML con AutoGluon en Colab, un modelo servido por API y control de costes.',wide:true}]}]},
  {block:'Bloque B · Python · 121 h',items:[
-  {id:'s4',tag:'S4',title:'Python para IA',meta:'27–29/10 · M1b UD 1–4 · 10 h',q:'¿Cómo automatizamos lo que hemos hecho a mano?',demos:[
+  {id:'s4',tag:'S4',title:'Python para IA',meta:'28–29/10 · M1b UD 1–4 · 12 h',q:'¿Cómo automatizamos lo que hemos hecho a mano?',demos:[
     {id:'kpisPy',title:'Un script que calcula los KPIs del cliente',desc:'Lee un CSV, gestiona errores y exporta un JSON. Cambia los datos y mira la salida.',course:'Python, VS Code, Jupyter y Git. Autocorrección con asserts.',wide:true}]},
-  {id:'s5',tag:'S5',title:'Matemáticas y estadística en código',meta:'29/10–3/11 · M1b UD 5–7 + M6b · 13 h',q:'¿Podemos demostrar con código lo que vimos en teoría?',demos:[
+  {id:'s5',tag:'S5',title:'Matemáticas y estadística en código',meta:'30/10 y 3/11 · M1b UD 5–7 + M6b · 12 h',q:'¿Podemos demostrar con código lo que vimos en teoría?',demos:[
     {id:'gdReg',title:'Regresión lineal desde cero',desc:'Una recta aprende sola con el descenso del gradiente, y llega a la misma que da la fórmula exacta.',course:'NumPy, pandas y SciPy: la regresión se programa a mano y se contrasta con una librería.',wide:true},
     {id:'monte',title:'Simulación Monte Carlo',desc:'Estimar π lanzando puntos al azar.',course:'Simulación, Bayes en código y contrastes de hipótesis.'}]},
-  {id:'s6',tag:'S6',title:'Datos listos para modelar',meta:'3–5/11 · M2 + M3 UD 3.1–3.2 · 11 h',q:'¿Están los datos en condiciones de entrenar algo fiable?',demos:[
+  {id:'s6',tag:'S6',title:'Datos listos para modelar',meta:'4–5/11 · M2 + M3 UD 3.1–3.2 · 12 h',q:'¿Están los datos en condiciones de entrenar algo fiable?',demos:[
     {id:'limpieza',title:'Limpieza de datos paso a paso',desc:'Un dataset sucio de reservas. Activa cada paso del pipeline y mira qué arregla.',course:'pandas, visualización exploratoria y pipelines de scikit-learn; validación cruzada y GridSearchCV.',wide:true}]},
-  {id:'s7',tag:'S7',title:'ML supervisado: regresión y clasificación',meta:'5–9/11 · M3 UD 3.3–3.5 · 12 h',q:'¿Podemos predecir el precio o la cancelación?',demos:[
+  {id:'s7',tag:'S7',title:'ML supervisado: regresión y clasificación',meta:'6 y 9/11 · M3 UD 3.3–3.5 · 12 h',q:'¿Podemos predecir el precio o la cancelación?',demos:[
     {id:'lab7',title:'Laboratorio de clasificación',desc:'Cambia de modelo, pinta tus propios puntos y mira la frontera de decisión y la matriz de confusión.',course:'scikit-learn: regresión lineal, Ridge y Lasso, regresión logística, k-NN y Naive Bayes; curvas ROC.',wide:true}]},
-  {id:'s8',tag:'S8',title:'Árboles, ensembles y SVM',meta:'9–11/11 · M3 UD 3.6–3.8 · 11 h',q:'¿Cuál es el mejor modelo y cuánto nos cuesta mantenerlo?',demos:[
+  {id:'s8',tag:'S8',title:'Árboles, ensembles y SVM',meta:'10–11/11 · M3 UD 3.6–3.8 · 12 h',q:'¿Cuál es el mejor modelo y cuánto nos cuesta mantenerlo?',demos:[
     {id:'lab8',title:'Duelo de modelos',desc:'Un árbol profundo memoriza; un bosque promedia muchos árboles; una SVM curva la frontera. Compara acierto en entrenamiento y en prueba.',course:'scikit-learn, XGBoost y LightGBM con búsqueda de hiperparámetros y ficha del modelo (model card).',wide:true}]},
-  {id:'s9',tag:'S9',title:'Segmentar, recomendar y aprender por refuerzo',meta:'11–12/11 · M3 UD 3.9–3.12 · 11 h',q:'¿Qué tipos de cliente tenemos y qué les ofrecemos?',demos:[
+  {id:'s9',tag:'S9',title:'Segmentar, recomendar y aprender por refuerzo',meta:'12–13/11 · M3 UD 3.9–3.12 · 12 h',q:'¿Qué tipos de cliente tenemos y qué les ofrecemos?',demos:[
     {id:'kmeans',title:'Segmentar con k-means',desc:'Sin etiquetas, el algoritmo encuentra grupos. Avanza paso a paso.',course:'k-means, clustering jerárquico, DBSCAN y PCA con scikit-learn.'},
     {id:'recom',title:'Recomendador de experiencias',desc:'Ajusta tus gustos y mira cómo cambia el ranking.',course:'Recomendadores por contenido y colaborativos.'},
     {id:'qlearn',title:'Aprendizaje por refuerzo (Q-learning)',desc:'Un agente aprende a cruzar la zona del volcán por ensayo y error.',course:'Q-learning con Gymnasium.',wide:true}]},
-  {id:'s10',tag:'S10',title:'Redes neuronales bien entrenadas',meta:'13–17/11 · M4 UD 4.1–4.3 · 15 h',q:'¿Una red neuronal mejora al ML clásico y a qué precio?',demos:[
+  {id:'s10',tag:'S10',title:'Redes neuronales bien entrenadas',meta:'16–17/11 · M4 UD 4.1–4.3 · 12 h',q:'¿Una red neuronal mejora al ML clásico y a qué precio?',demos:[
     {id:'mlp',title:'Una red neuronal entrenándose en directo',desc:'Elige datos y arquitectura, pulsa Entrenar y mira cómo se dibuja la frontera. Observa cuándo empieza el sobreajuste y para a tiempo.',course:'Red en NumPy desde cero y MLP con Keras; regularización, early stopping y TensorBoard.',wide:true}]},
-  {id:'s11',tag:'S11',title:'Visión por computador',meta:'17–20/11 · M4 UD 4.4–4.6 · 17 h',q:'¿Podemos aprovechar las imágenes del cliente?',demos:[
+  {id:'s11',tag:'S11',title:'Visión por computador',meta:'18–20/11 · M4 UD 4.4–4.6 · 18 h',q:'¿Podemos aprovechar las imágenes del cliente?',demos:[
     {id:'conv',title:'Cómo «ve» una red convolucional',desc:'Dibuja y aplica filtros: así se detectan bordes y formas.',course:'CNN con Keras, transfer learning con un modelo preentrenado y análisis de errores.'},
     {id:'iou',title:'Detección de objetos: ¿acierta la caja?',desc:'La métrica IoU compara la caja predicha con la real.',course:'Detección con YOLO (ultralytics) en Colab.'}]},
-  {id:'s12',tag:'S12',title:'Lenguaje, secuencias y modelos generativos',meta:'20–25/11 · M4 UD 4.7–4.10 · 18 h',q:'¿Qué dicen los clientes y qué pasará mañana?',demos:[
+  {id:'s12',tag:'S12',title:'Lenguaje, secuencias y modelos generativos',meta:'23–25/11 · M4 UD 4.7–4.10 + M5 · 18 h',q:'¿Qué dicen los clientes y qué pasará mañana?',demos:[
     {id:'resenas',title:'Reseñas: sentimiento y temas',desc:'Escribe reseñas y mira cómo se etiquetan y de qué hablan.',course:'NLP clásico, embeddings y modelos de Hugging Face.'},
     {id:'rag',title:'Asistente con RAG (mini)',desc:'Pregunta como un cliente: el asistente busca en las políticas del alojamiento y solo responde con lo que encuentra.',course:'LLM por API (Gemini, Groq u OpenRouter) y RAG con embeddings en Colab.'},
     {id:'serie',title:'Predecir la ocupación (serie temporal)',desc:'Tres formas de predecir el año que viene y su error.',course:'Series temporales con RNN, LSTM y GRU, y modelos clásicos.',wide:true}]},
-  {id:'s13',tag:'S13',title:'Contar lo que hace el modelo',meta:'25/11 · M5 · 3 h',q:'¿Cómo enseñamos y defendemos los resultados de un modelo?',demos:[
+  {id:'s13',tag:'S13',title:'Contar lo que hace el modelo',meta:'25/11 · M5 · integrado en el último día del Sprint 12 (≈ 1 h 40 min)',q:'¿Cómo enseñamos y defendemos los resultados de un modelo?',demos:[
     {id:'metricas',title:'Métricas, ROC e importancia de variables',desc:'Mueve el umbral y mira cómo cambian aciertos, falsas alarmas y omisiones. El mejor umbral depende del negocio.',course:'matplotlib y seaborn, curvas ROC/PR, SHAP y Grad-CAM; informe visual de una página.',wide:true}]}]},
  {block:'Bloque C · Proyecto de cierre · 63 h',items:[
-  {id:'s14',tag:'S14',title:'Proyecto · Reto, equipo y datos',meta:'25–30/11 · M9 · 19 h',q:'¿Qué problema real vamos a resolver y con qué datos?',demos:[
+  {id:'s14',tag:'S14',title:'Proyecto · Reto, equipo y datos',meta:'26–30/11 · M9 · 18 h',q:'¿Qué problema real vamos a resolver y con qué datos?',demos:[
     {id:'canvas',title:'Canvas del proyecto y checklist ético',desc:'Rellena la ficha de tu proyecto y repasa el checklist de IA responsable.',course:'Cada equipo elige uno de los briefs sectoriales y entrega definición, EDA, backlog y modelo baseline.',wide:true}]},
   {id:'s15',tag:'S15',title:'Proyecto · Modelado y experimentos',meta:'1–3/12 · M9 · 18 h',q:'¿Qué modelo elegimos y cómo lo demostramos?',demos:[
     {id:'tracker',title:'Registro de experimentos',desc:'Todos los experimentos que registres en los Sprints 7, 8 y 10 aparecen aquí.',course:'Seguimiento de experimentos (por ejemplo MLflow) y versionado de datos y modelos.',wide:true}]},

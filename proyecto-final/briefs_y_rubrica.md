@@ -1,7 +1,7 @@
 # IFCD107 · Proyecto final (M9)
 ## Briefs, requisitos, entregables y rúbrica
 
-**Acción 25-38/012242 · Sprints 14–17 · 25/11 – 14/12/2026 · 60 h + 3 h de Storytelling**
+**Acción 25-38/012242 · Sprints 14–17 · 26/11 – 14/12/2026 · 59 h + 3 h de Storytelling**
 
 ---
 
@@ -31,7 +31,7 @@
 
 | Sprint | Fechas | Entregable | Hito |
 |---|---|---|---|
-| 14 · Reto, equipo y datos | 25–30/11 | Ficha de proyecto (1 pág., anexo A) + datos + EDA + baseline + backlog + plan ético | **26/11:** elección de brief. **27/11:** ficha aprobada por el docente (go / no-go) |
+| 14 · Reto, equipo y datos | 26–30/11 | Ficha de proyecto (1 pág., anexo A) + datos + EDA + baseline + backlog + plan ético | **26/11:** elección de brief (antes del descanso) y ficha antes de las 14:30. **27/11:** ficha aprobada por el docente (go / no-go) |
 | 15 · Modelado y experimentos | 1–3/12 | ≥ 3 modelos comparados + registro de experimentos | 3/12: modelo candidato elegido |
 | 16 · Evaluación, IA responsable y entrega | 4–10/12 | Demostrador + evaluación + análisis de sesgos + **memoria** | **10/12, 14:30:** congelación de repositorio y memoria |
 | 17 · Storytelling, ensayos y defensa | 11 y 14/12 | Presentación (máx. 12 diapositivas) | **11/12:** ensayo general. **14/12:** defensa |
@@ -112,7 +112,7 @@ Un equipo puede proponer su propio proyecto si presenta la **ficha de proyecto (
 1. Pregunta de negocio clara con métrica de éxito.
 2. Datos **reales, accesibles y con licencia** ya identificados (no se aceptan proyectos "a la espera de datos").
 3. Cumple **todos los requisitos mínimos R1–R11**.
-4. Dificultad comparable a los briefs anteriores (se descartan problemas triviales o irrealizables en 55 h).
+4. Dificultad comparable a los briefs anteriores (se descartan problemas triviales o irrealizables en 54 h).
 5. No usa datos personales sensibles ni de terceros sin autorización (RGPD).
 
 El docente responde go / no-go el **27/11**.

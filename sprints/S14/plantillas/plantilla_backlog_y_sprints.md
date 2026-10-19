@@ -28,7 +28,7 @@
 ## 3. Objetivo de cada sprint (Sprint Goal)
 | Sprint | Fechas | Objetivo (una frase medible) | Hito |
 |---|---|---|---|
-| 14 | 25-30/11 | | 26/11 brief · 27/11 go / no-go |
+| 14 | 26-30/11 | | 26/11 brief · 27/11 go / no-go |
 | 15 | 1-3/12 | | 3/12 modelo candidato |
 | 16 | 4-10/12 | | 10/12 14:30 congelación |
 | 17 | 11 y 14/12 | | 11/12 ensayo · 14/12 defensa |

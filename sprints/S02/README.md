@@ -1,6 +1,6 @@
 # Sprint 2 · Las matemáticas y la estadística detrás
 **Pregunta guía:** ¿en qué se apoyan los modelos y cuándo no debemos fiarnos de un dato?
-**Fechas:** mié 21/10 – vie 23/10 · **Horas:** 10 h (5 h teoría · 3 h práctica · 2 h reto)
+**Fechas:** jue 22/10 – vie 23/10 · **Horas:** 12 h (5 h teoría · 4 h práctica · 3 h PBL)
 **Módulo:** M1a (UD 1a.4 a 1a.6) · Bloque A: sin Python (papel, calculadora, Desmos/GeoGebra)
 
 > 🎯 **Reto de este sprint: «¿Nos fiamos de este informe?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_02.md) · [Reto en PDF](guia/Reto_Sprint_02.pdf) ([ecofriendly](guia/Reto_Sprint_02_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_02.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
@@ -24,25 +24,23 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**Miércoles 21/10 (desde las 12:30)**
-
-1. 📖 **Teoría**: [Ecosistema de software para IA: Python, Colab, librerías y GPU](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) · _30 min_
-2. 💻 **Práctica**: [Alta en Colab, GitHub y AWS (las cuentas AWS tienen que estar listas antes del 22/10)](actividades/alta_cuentas.md) · _1 h_
-3. 🎯 **Reto**: [Planning: leer el informe del cliente y repartir las 6 afirmaciones (paso 1)](guia/Reto_Sprint_02.md) · _30 min_
-
 **Jueves 22/10**
 
-4. 📖 **Teoría**: [Matemáticas para IA: álgebra lineal, derivadas y gradiente](presentaciones/S02.1_Matematicas_para_IA.pdf) · _2 h 30 min_
-5. 💻 **Práctica**: [Ejercicios de matemáticas (hoja 1)](actividades/ejercicios_algebra_calculo.md) · _1 h_
-6. 📖 **Teoría**: [Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) · _2 h_
-7. 🎯 **Reto**: [Primera lectura del informe con la lista de control (paso 2)](guia/Reto_Sprint_02.md) · _30 min_
+1. 🔔 **Ceremonia**: Planning del reto: leed el informe del cliente y repartid las 6 afirmaciones (paso 1) · _25 min_
+2. 💻 **Práctica**: [Alta en Colab y GitHub, y primer cuaderno abierto](actividades/alta_cuentas.md) · _40 min_
+3. 📖 **Teoría**: [Ecosistema de software para IA: Python, Colab, librerías y GPU](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) · _25 min_
+4. 📖 **Teoría**: [Matemáticas para IA: álgebra lineal, derivadas y gradiente](presentaciones/S02.1_Matematicas_para_IA.pdf) · _2 h 20 min_
+5. 💻 **Práctica**: [Ejercicios de matemáticas (hoja 1) con Desmos o GeoGebra](actividades/ejercicios_algebra_calculo.md) · _50 min_
+6. 🎯 **Reto**: [Primera lectura del informe con la lista de control (paso 2)](guia/Reto_Sprint_02.md) · _40 min_
 
-**Viernes 23/10 (hasta las 10:30)**
+**Viernes 23/10**
 
-8. 💻 **Práctica**: [Estadísticas engañosas](actividades/estadisticas_enganosas.md) (9 casos) y [hoja 2 de ejercicios](actividades/ejercicios_estadistica.md) · _40 min_
-9. 💻 **Práctica**: Test corto de matemáticas y estadística (M1a) · _20 min_
-10. 🎯 **Reto**: [Rehacer los cálculos, dictamen y recomendación (pasos 3 y 4)](guia/Reto_Sprint_02.md) · _30 min_
-11. 🔔 **Ceremonia**: Review y retrospectiva · _30 min_
+7. 📖 **Teoría**: [Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) · _1 h 40 min_
+8. 💻 **Práctica**: [Estadísticas engañosas](actividades/estadisticas_enganosas.md) (9 casos) · _40 min_
+9. 💻 **Práctica**: [Hoja 2 de ejercicios de estadística](actividades/ejercicios_estadistica.md) · _40 min_
+10. 📝 **Test**: [**Test corto de M1a** (matemáticas y estadística), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) · _25 min_
+11. 🎯 **Reto**: [Rehacer los cálculos, dictamen y recomendación (pasos 3 y 4)](guia/Reto_Sprint_02.md) · _1 h 15 min_
+12. 🔔 **Ceremonia**: Entrega en `sprint-02/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
 
 <!--orden:fin-->
 
@@ -57,7 +55,7 @@ Materiales `.md` para papel o pantalla (sin Colab):
 
 | Material | Contenido |
 |---|---|
-| [`alta_cuentas.md`](actividades/alta_cuentas.md) | Alta en Colab (**antes del 22/10**) |
+| [`alta_cuentas.md`](actividades/alta_cuentas.md) | Alta en Colab y GitHub (**jueves 22/10, a primera hora, en clase**) |
 | [`ejercicios_algebra_calculo.md`](actividades/ejercicios_algebra_calculo.md) | 12 ejercicios de vectores, matrices, derivadas y gradiente |
 | [`ejercicios_estadistica.md`](actividades/ejercicios_estadistica.md) | 14 ejercicios de estadística, probabilidad, Bayes, sesgo y Simpson |
 | [`estadisticas_enganosas.md`](actividades/estadisticas_enganosas.md) | 9 casos de estadísticas engañosas |
@@ -74,7 +72,7 @@ Mínimo de ejercicios: **8 de 12** de la hoja 1 (M7, M10 y M11 obligatorios) y *
 - Recomendación sobre el canal (afirmación 2) con cautelas, y lista de datos que faltan.
 - La hoja de ejercicios con el mínimo exigido.
 **Reglas:**
-- 2 h de reto; no hace falta Python y cada cifra debe poder rehacerse con los datos.
+- Unas 2 h 30 min de reto; no hace falta Python y cada cifra debe poder rehacerse con los datos.
 - Si no hay datos, no inventéis números: decid qué faltaría.
 - Si usáis IA, declarad dónde y comprobad a mano las afirmaciones 2 y 6; nunca datos personales.
 **Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable (qué pasaría al entrenar con estos datos), más nombrar cada error (muestreo, Simpson...).
@@ -91,6 +89,6 @@ Mínimo de ejercicios: **8 de 12** de la hoja 1 (M7, M10 y M11 obligatorios) y *
 - [ ] Dictamen con las 6 afirmaciones y su veredicto
 - [ ] Cálculos rehechos (1, 2 y 6) y recomendación sobre el canal
 - [ ] Hoja de ejercicios con el mínimo exigido
-- [ ] Alta en Colab hecha (antes del 22/10)
+- [ ] Alta en Colab y GitHub hecha (jueves 22/10)
 - [ ] Entregable subido a la carpeta `sprint-02/` del repositorio del equipo
 - [ ] Autoevaluación y coevaluación rellenadas

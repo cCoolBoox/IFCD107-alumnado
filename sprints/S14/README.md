@@ -1,6 +1,6 @@
 # Sprint 14 · Proyecto · Reto, equipo y datos
 **Pregunta guía:** ¿qué problema vamos a resolver, con qué datos y cómo sabremos que lo hemos resuelto?
-**Fechas:** 25–30/11 · **Horas:** 19 h (1 T · 3 P · 15 PBL) · **Hitos:** 26/11 elección de brief · 27/11 ficha aprobada (go / no-go)
+**Fechas:** 26 al 30 de noviembre · **Horas:** 18 h (1 h teoría · 3 h práctica · 14 h PBL) · **Hitos:** 26/11 elección de brief · 27/11 ficha aprobada (go / no-go)
 
 > 🎯 **Reto de este sprint: «Proyecto final: definir, tener datos y un punto de partida».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_14.md) · [Reto en PDF](guia/Reto_Sprint_14.pdf) ([ecofriendly](guia/Reto_Sprint_14_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_14.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
@@ -21,24 +21,24 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**25/11**
+**Jueves 26/11**
 
-1. 📖 **Teoría**: [Lanzamiento del proyecto final](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf) · _1 h_
-2. 🎯 **Reto**: [Leer las reglas, planning y taller (pasos previos y 1)](guia/Reto_Sprint_14.md) · _resto de la jornada_
+1. 📖 **Teoría**: [Lanzamiento del proyecto final: cómo formular un proyecto de IA (canvas y criterios de éxito)](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf) · _45 min_
+2. 🔔 **Ceremonia**: Planning del sprint: leer las reglas y repartir roles · _20 min_
+3. 💻 **Práctica**: Taller de Design Thinking: empatía, «Cómo podríamos…», dos briefs candidatos y canvas borrador · _1 h_
+4. 🎯 **Reto**: [Elegir el brief](guia/Reto_Sprint_14.md) (**antes del descanso**, hito del día) · _25 min_
+5. 🎯 **Reto**: Buscar y validar datos (licencia, tamaño, acceso; plan de datos: [plantilla](plantillas/plantilla_plan_datos_licencias.md)) · _1 h 20 min_
+6. 🎯 **Reto**: [Ficha del proyecto y entrega **antes de las 14:30**](plantillas/plantilla_ficha_proyecto.md) · _1 h 30 min_
 
-**26/11**
+**Viernes 27/11 · hito: ficha aprobada (go / no-go)**
 
-3. 🎯 **Reto**: [Elegir el brief](guia/Reto_Sprint_14.md) (antes de las 10:00) y buscar y validar datos (pasos 2–3; plan de datos: [plantilla](plantillas/plantilla_plan_datos_licencias.md)) · _mañana_
-4. 🎯 **Reto**: [Ficha del proyecto y entrega **antes de las 14:30** (paso 4)](plantillas/plantilla_ficha_proyecto.md) · _hasta las 14:30_
+7. 🎯 **Reto**: [Leer el go / no-go del docente y, si hace falta, corregir la ficha](guia/Reto_Sprint_14.md) · _30 min_
+8. 🎯 **Reto**: [EDA, calidad del dato y *baseline* (paso 5)](guia/Reto_Sprint_14.md) · _4 h 50 min_
 
-**27/11 · hito: ficha aprobada (go / no-go)**
+**Lunes 30/11**
 
-5. 🎯 **Reto**: [EDA, calidad del dato y *baseline* (paso 5)](guia/Reto_Sprint_14.md) · _jornada completa_
-
-**30/11**
-
-6. 🎯 **Reto**: [Backlog y sprints](plantillas/plantilla_backlog_y_sprints.md), [registro de riesgos éticos](plantillas/plantilla_registro_riesgos_eticos.md) y [README del repositorio](plantillas/plantilla_README_repositorio.md) (paso 6) · _mañana_
-7. 🔔 **Ceremonia**: Review (paso 7) · _última hora_
+9. 🎯 **Reto**: [Backlog y sprints](plantillas/plantilla_backlog_y_sprints.md), [registro de riesgos éticos](plantillas/plantilla_registro_riesgos_eticos.md) y [README del repositorio](plantillas/plantilla_README_repositorio.md) (paso 6) · _4 h_
+10. 🔔 **Ceremonia**: Entrega en `sprint-14/`, autoevaluación y coevaluación, review (paso 7: 5 min por equipo) y retrospectiva · _1 h 20 min_
 
 <!--orden:fin-->
 
@@ -53,10 +53,9 @@ Este sprint no tiene notebooks: hay sesiones y plantillas (todas en esta carpeta
 
 | Fecha | Qué hacéis |
 |---|---|
-| 25/11 | Planning, píldora «cómo formular un proyecto de IA» y taller de Design Thinking. |
-| 26/11 | **Elección de brief (antes de las 10:00)**; datos y licencias; ficha **antes de las 14:30**. |
-| 27/11 | **Go / no-go** de la ficha; EDA con informe de calidad; empezar el baseline. |
-| 30/11 | Baseline, plan ético, backlog y README; review y retrospectiva. |
+| 26/11 | Planning, píldora «cómo formular un proyecto de IA» y taller de Design Thinking; **elección de brief (antes del descanso, hacia las 11:00)**; datos y licencias; ficha **antes de las 14:30**. |
+| 27/11 | **Go / no-go** de la ficha; EDA con informe de calidad; baseline terminado y registrado. |
+| 30/11 | Plan ético, backlog y README; entrega, review y retrospectiva (últimos 80 min). |
 
 - [`plantilla_ficha_proyecto.md`](plantillas/plantilla_ficha_proyecto.md) · ficha de 1 página.
 - [`plantilla_plan_datos_licencias.md`](plantillas/plantilla_plan_datos_licencias.md) · fuentes, licencias y linaje.

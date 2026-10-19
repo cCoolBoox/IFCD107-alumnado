@@ -1,6 +1,6 @@
 # Sprint 3 · Del dato al modelo en la nube
 **Pregunta guía:** ¿podemos tener un primer modelo funcionando, sin programar?
-**Fechas:** 23–27/10 · **Horas:** 14 h (5 h teoría · 5 h práctica · 4 h proyecto)
+**Fechas:** 26–27/10 · **Horas:** 12 h (4 h teoría · 4 h práctica · 4 h proyecto)
 
 > 🎯 **Reto de este sprint: «Primer modelo en producción».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_03.md) · [Reto en PDF](guia/Reto_Sprint_03.pdf) ([ecofriendly](guia/Reto_Sprint_03_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_03.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
@@ -24,22 +24,22 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**Bloque A · Bases de datos relacionales**
+**Lunes 26/10**
 
-1. 📖 **Teoría**: [Modelo relacional, SQL, CRUD y nociones de administración](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) · _3 h_
-2. 💻 **Práctica**: Scripts SQL 01–04 en DB Browser, en este orden: [`SELECT`](recursos/sql/01_select_where.sql), [`JOIN`](recursos/sql/02_join.sql), [`GROUP BY`](recursos/sql/03_group_by.sql) y [subconsultas](recursos/sql/04_subconsultas.sql) · _1 h 25 min_
-3. 💻 **Práctica**: Scripts SQL 05–06: [CRUD sobre una copia](recursos/sql/05_crud.sql) y [modelado e índices](recursos/sql/06_modelado_indices.sql) · _45 min_
+1. 🔔 **Ceremonia**: Planning del reto «Primer modelo en producción»: leed la ficha y repartid roles · _15 min_
+2. 📖 **Teoría**: [Modelo relacional, SQL, CRUD y nociones de administración](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) · _2 h 5 min_
+3. 💻 **Práctica**: Scripts SQL 01–04 en DB Browser, en este orden: [`SELECT`](recursos/sql/01_select_where.sql), [`JOIN`](recursos/sql/02_join.sql), [`GROUP BY`](recursos/sql/03_group_by.sql) y [subconsultas](recursos/sql/04_subconsultas.sql) · _1 h 10 min_
+4. 💻 **Práctica**: Scripts SQL 05–06: [CRUD sobre una copia](recursos/sql/05_crud.sql) y [modelado e índices](recursos/sql/06_modelado_indices.sql) · _35 min_
+5. 📖 **Teoría**: [Bases de datos NoSQL](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) · _35 min_
+6. 💻 **Práctica**: [NoSQL con documentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) (o, si usáis MongoDB Compass, la [guía de MongoDB](guia/NoSQL_MongoDB.md)) · _40 min_
 
-**Bloque B · NoSQL**
+**Martes 27/10**
 
-4. 📖 **Teoría**: [Bases de datos NoSQL](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) · _1 h_
-5. 💻 **Práctica**: [NoSQL con documentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) (o, si usáis MongoDB Compass, la [guía de MongoDB](guia/NoSQL_MongoDB.md)) · _1 h_
-
-**Bloque C · AutoML y reto**
-
-6. 📖 **Teoría**: [Introducción a AutoML y MLOps](presentaciones/S03.3_AutoML_y_MLOps.pdf) · _1 h_
-7. 💻 **Práctica**: [Carga y exploración de datos y primer experimento de AutoML (guía de laboratorio)](guia/Guia_AutoML_AutoGluon.pdf) · _1 h 50 min_
-8. 🎯 **Reto**: [Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6)](guia/Reto_Sprint_03.md) · _4 h_
+7. 📖 **Teoría**: [Introducción a AutoML y MLOps](presentaciones/S03.3_AutoML_y_MLOps.pdf) · _40 min_
+8. 💻 **Práctica**: [Carga y exploración de datos y primer experimento de AutoML (guía de laboratorio)](guia/Guia_AutoML_AutoGluon.pdf) · _1 h_
+9. 🎯 **Reto**: [Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6)](guia/Reto_Sprint_03.md) · _2 h 35 min_
+10. 📝 **Test**: [**Test del bloque M6–M8** (bases de datos, AutoML y responsabilidad), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) · _25 min_
+11. 🔔 **Ceremonia**: Entrega en `sprint-03/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
 
 <!--orden:fin-->
 
@@ -77,7 +77,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - Evidencia de una llamada real a la API, con su respuesta y sin claves visibles.
 - Informe de recursos y costes, con prueba de que todo se ha cerrado o eliminado.
 **Reglas:**
-- 4 h de proyecto; solo datos sintéticos de TurisData y el límite de uso que indique el docente.
+- Unas 3 h 30 min de proyecto; solo datos sintéticos de TurisData y el límite de uso que indique el docente.
 - Nunca claves, contraseñas ni cadenas de conexión en el informe ni en el repositorio.
 - Evitad la fuga de datos: solo información disponible al hacer la reserva.
 **Se valora:** corrección técnica, reproducibilidad, comunicación al cliente (qué hacer con una alerta) e IA responsable (falsas alertas, sesgos por país o canal), más umbral y fuga de datos bien justificados.

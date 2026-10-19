@@ -24,13 +24,13 @@
 7. **Montar el repositorio** con [README](../plantillas/plantilla_README_repositorio.md) y commits de todas las personas.
 
 **Hitos que no se pueden perder:**
-- **26/11:** elección de brief (antes de las 10:00) y **entrega de la ficha antes de las 14:30**.
+- **26/11:** elección de brief (antes del descanso (hacia las 11:00)) y **entrega de la ficha antes de las 14:30**.
 - **27/11:** **go / no-go** del docente sobre vuestra ficha.
 - **30/11:** review y retro.
 
 **Qué vais a aprender haciéndolo:** a **formular un proyecto de IA** (pregunta de negocio, decisión que apoya, métricas), a **documentar datos** y a **planificar** con Scrum.
 
-**Cuánto tiempo:** 19 horas (25 al 30/11), de las que 15 son de proyecto.
+**Cuánto tiempo:** 18 horas (26 al 30/11), de las que 14 son de proyecto.
 
 ### Palabras que van a aparecer en este reto
 
@@ -76,7 +76,7 @@ Al cierre del sprint (30/11), en el repositorio del equipo:
 7. **Repositorio** con README (plantilla), requisitos y commits de todas las personas.
 
 ### Restricciones
-- 19 h en total; ~55 h de proyecto en los 3 primeros sprints. Se descartan problemas triviales o irrealizables.
+- 18 h en total; ~54 h de proyecto en los 3 primeros sprints. Se descartan problemas triviales o irrealizables.
 - **Datos reales, accesibles y con licencia.** No se aceptan proyectos «a la espera de datos». No datos personales sensibles ni de terceros sin autorización.
 - Dos equipos pueden elegir el mismo brief, pero cada uno define **su propia pregunta y métrica**.
 - Equipos de 3-4 personas; los roles (Scrum Master, responsable técnico, de datos y de IA responsable) **rotan** cada sprint.
@@ -97,22 +97,21 @@ Además, para la nota de sprint se usan los cuatro criterios de los retos (corre
 ### Pasos sugeridos (resumen día a día)
 | Día | Paso |
 |---|---|
-| 25/11 | Planning; píldora; taller DT; 2 briefs candidatos; canvas borrador. |
-| 26/11 | Elegir brief; buscar y validar datos (¿licencia?, ¿descarga?, ¿tamaño?); rellenar ficha y plan de datos; **entregar la ficha antes de las 14:30**. |
-| 27/11 | Leer el go / no-go; corregir la ficha si hace falta; EDA con calidad del dato; primer baseline. |
-| 30/11 | Baseline registrado; plan ético; backlog completo; README; review y retro. |
+| 26/11 | Planning; píldora; taller DT; 2 briefs candidatos; canvas borrador; elegir brief (antes del descanso); buscar y validar datos (¿licencia?, ¿descarga?, ¿tamaño?); rellenar ficha y plan de datos; **entregar la ficha antes de las 14:30**. |
+| 27/11 | Leer el go / no-go; corregir la ficha si hace falta; EDA con calidad del dato; baseline terminado y registrado. |
+| 30/11 | Plan ético; backlog completo; README; entrega, review y retro. |
 
 ### Guía paso a paso para principiantes
 
 #### Antes de empezar: leed las reglas
 Leed [`briefs_y_rubrica.md`](../../../proyecto-final/briefs_y_rubrica.md): las reglas comunes, los **requisitos R1–R11**, la **rúbrica de 100 puntos** y los anexos A y B. Es el documento que dice qué se va a evaluar. **Subrayad** lo que no entendáis y llevadlo al planning.
 
-#### Paso 1 · Planning y taller (25/11)
+#### Paso 1 · Planning y taller (26/11 a primera hora, 125 minutos)
 1. Roles del sprint: Scrum Master, responsable técnico, **responsable de datos** y **responsable de IA responsable**. Rotan cada sprint.
 2. En la **píldora de teoría** aprenderéis a formular el proyecto con un *canvas* (un esquema de una página).
 3. En el **taller de Design Thinking** pensad: ¿qué problema real y cercano os interesa? ¿Quién lo sufre? Salid con **uno o dos briefs candidatos**.
 
-#### Paso 2 · Elegir el brief (26/11 por la mañana, antes de las 10:00)
+#### Paso 2 · Elegir el brief (26/11, antes del descanso, hacia las 11:00; 25 minutos)
 Los cuatro briefs:
 
 | Brief | Pregunta guía | Pensad en… |
@@ -124,7 +123,7 @@ Los cuatro briefs:
 
 **Cómo elegir:** el brief que os interese, para el que haya **datos reales accesibles** y que se pueda terminar en el tiempo que hay. **Dos equipos pueden elegir el mismo brief**, pero cada uno define **su propia pregunta y métrica**. También podéis proponer un **brief libre**, con ficha antes del 26/11 y cumpliendo R1–R11.
 
-#### Paso 3 · Buscar y validar datos (26/11)
+#### Paso 3 · Buscar y validar datos (26/11, 80 minutos)
 Para cada fuente candidata, responded:
 - **¿Tiene licencia que permita usarla?** (si no está clara, no se usa).
 - **¿Se puede descargar?** Y ¿podemos repetir la descarga con un enlace o un script?
@@ -136,7 +135,7 @@ Rellenad la plantilla [`plantilla_plan_datos_licencias.md`](../plantillas/planti
 
 **No se aceptan proyectos «a la espera de datos».** Los datos han de estar identificados y accesibles.
 
-#### Paso 4 · Ficha del proyecto y entrega (26/11, antes de las 14:30)
+#### Paso 4 · Ficha del proyecto y entrega (26/11, 90 minutos, antes de las 14:30)
 Rellenad [`plantilla_ficha_proyecto.md`](../plantillas/plantilla_ficha_proyecto.md) (anexo A del documento de briefs), con:
 1. **Pregunta de negocio** y **decisión que apoyará** el proyecto.
 2. **Métricas** (de negocio y técnica).
@@ -147,19 +146,19 @@ Rellenad [`plantilla_ficha_proyecto.md`](../plantillas/plantilla_ficha_proyecto.
 
 **Entregadla antes de las 14:30 del 26/11.** El docente responderá con el **go / no-go** al día siguiente por la mañana.
 
-#### Paso 5 · EDA, calidad del dato y baseline (27/11)
+#### Paso 5 · EDA, calidad del dato y baseline (27/11, jornada completa)
 1. **Leed el go / no-go** y corregid la ficha si hace falta.
 2. En `notebooks/01_eda.ipynb`: describid los datos, buscad nulos, duplicados, valores raros y **sesgos de muestreo** (¿quién o qué falta en los datos?). Terminad con un **informe de calidad del dato**.
 3. **Definid la partición** de datos (temporal si hay series) y la **métrica técnica ANTES de mirar resultados**.
 4. En `notebooks/02_baseline.ipynb`: construid el **modelo más simple posible** (por ejemplo, «predecir lo mismo que ayer», la media, o la clase más frecuente) y calculad su métrica. Es el **suelo** que vais a intentar superar.
 
-#### Paso 6 · Backlog, plan ético y repositorio (30/11)
+#### Paso 6 · Backlog, plan ético y repositorio (30/11, 4 horas)
 1. **Backlog** con [`plantilla_backlog_y_sprints.md`](../plantillas/plantilla_backlog_y_sprints.md): entre 10 y 15 historias con objetivos para los sprints 15, 16 y 17. Cargadlas en el tablero.
 2. **Plan ético:** actualizad el [checklist del Sprint 1](../../S01/plantillas/checklist_etico_v1.md) y rellenad [`plantilla_registro_riesgos_eticos.md`](../plantillas/plantilla_registro_riesgos_eticos.md) con **al menos 5 riesgos específicos** de vuestro proyecto (no genéricos), y una primera clasificación RGPD / AI Act.
 3. **Repositorio:** README con [`plantilla_README_repositorio.md`](../plantillas/plantilla_README_repositorio.md), `requirements.txt`, notebooks, datos o script de descarga. **Commits de todas las personas.**
 4. **Coevaluación breve** de la primera semana.
 
-#### Paso 7 · Review (30/11)
+#### Paso 7 · Review (30/11, últimos 80 minutos con la entrega)
 5 minutos por equipo: (1) pregunta de negocio y decisión que apoyará; (2) datos y **un hallazgo del EDA que cambia el enfoque**; (3) baseline y su métrica; (4) tres riesgos éticos; (5) backlog de los próximos sprints. Después, retro de 15 minutos.
 
 ### Cómo usar la IA en este reto

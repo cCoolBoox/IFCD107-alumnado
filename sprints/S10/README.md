@@ -1,7 +1,7 @@
 # Sprint 10 · Redes neuronales bien entrenadas
 
 **Pregunta guía:** ¿una red neuronal mejora al aprendizaje automático clásico y a qué precio?
-**Fechas:** 13–17 de noviembre · **Horas:** 15 h (5 h teoría · 6 h práctica · 4 h PBL) · **Módulo 4, UD 4.1–4.3**
+**Fechas:** 16–17 de noviembre · **Horas:** 12 h (4 h teoría · 4 h práctica · 4 h PBL)
 
 > 🎯 **Reto de este sprint: «¿Vale la pena la red?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_10.md) · [Reto en PDF](guia/Reto_Sprint_10.pdf) ([ecofriendly](guia/Reto_Sprint_10_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_10.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
@@ -24,19 +24,21 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**Prácticas, en este orden**
+**Lunes 16/11**
 
-1. 📖 **Teoría**: [Fundamentos de redes neuronales](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) · _1 h 30 min_
-2. 💻 **Práctica**: [Una red neuronal con solo NumPy](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) · _1 h 15 min_
-3. 📖 **Teoría**: [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) · _1 h 30 min_
-4. 💻 **Práctica**: [MLP en Keras: clasificación y regresión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) · _1 h 30 min_
-5. 📖 **Teoría**: [Entrenamiento y regularización](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) · _1 h 30 min_
-6. 💻 **Práctica**: [Sobreajuste, L2, *dropout*, parada temprana y *callbacks*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) · _1 h 45 min_
-7. 💻 **Práctica**: [Esqueleto del reto: MLP frente a boosting (arranque del reto)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) · _1 h 30 min_
+1. 🔔 **Ceremonia**: Planning del reto «¿Vale la pena la red?» y reparto de roles · _15 min_
+2. 📖 **Teoría**: [Fundamentos de redes neuronales](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) · _1 h 10 min_
+3. 💻 **Práctica**: [Una red neuronal con solo NumPy](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) · _50 min_
+4. 📖 **Teoría**: [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) · _1 h 5 min_
+5. 💻 **Práctica**: [MLP en Keras: clasificación y regresión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) · _1 h 20 min_
+6. 📖 **Teoría**: [Entrenamiento y regularización (primera parte)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) · _40 min_
 
-**Reto «¿Vale la pena la red?»**
+**Martes 17/11**
 
-8. 🎯 **Reto**: [Elegir el problema y reproducir la referencia (paso 1) → primera red (2) → variantes (3) → diagnosticar el sobreajuste (4) → comparación justa (5) → informe y presentación (6)](guia/Reto_Sprint_10.md) · _4 h_
+7. 📖 **Teoría**: [Entrenamiento y regularización (final: parada temprana y *callbacks*)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) · _25 min_
+8. 💻 **Práctica**: [Sobreajuste, L2, *dropout*, parada temprana y *callbacks*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) · _1 h 5 min_
+9. 🎯 **Reto**: Esqueleto [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb): elegir el problema y reproducir la referencia (paso 1) → primera red (2) → diagnosticar el sobreajuste (3) → comparación justa (4) → informe y presentación (5) · _3 h 10 min_
+10. 🔔 **Ceremonia**: Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
 
 <!--orden:fin-->
 
@@ -49,9 +51,9 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S10_01_red_desde_cero` | Una red neuronal con solo NumPy: neurona, activación, *backprop*, entrenamiento | 1 h 15 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) |
-| `S10_02_mlp_keras` | MLP en Keras: cancelaciones (clasificación) y `precio_noche` (regresión) | 1 h 30 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) |
-| `S10_03_regularizacion` | Curvas, sobreajuste, L2, *dropout*, parada temprana, lote, tasa, *callbacks*, guardar modelo | 1 h 45 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) |
+| `S10_01_red_desde_cero` | Una red neuronal con solo NumPy: neurona, activación, *backprop*, entrenamiento | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) |
+| `S10_02_mlp_keras` | MLP en Keras: cancelaciones (clasificación) y `precio_noche` (regresión) | 80 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) |
+| `S10_03_regularizacion` | Curvas, sobreajuste, L2, *dropout*, parada temprana, lote, tasa, *callbacks*, guardar modelo | 65 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) |
 | `S10_04_reto_vale_la_pena` | Esqueleto del reto: MLP frente a boosting con incertidumbre y diagnóstico | 1 h 30 (+ trabajo PBL) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) |
 
 Cada notebook tiene ejercicios con `assert`: si saltan, el mensaje te dice qué revisar.
@@ -67,7 +69,7 @@ Cada notebook tiene ejercicios con `assert`: si saltan, el mensaje te dice qué 
 - Informe comparativo de 1–2 páginas (PDF o Markdown) «ML clásico frente a MLP»: tabla de resultados, curvas de aprendizaje y recomendación.
 
 **Reglas:**
-- 4 h en equipo; un solo problema (`cancelada` **o** `precio_noche`), misma partición para todos y prueba usada una sola vez.
+- Unas 4 h en equipo; un solo problema (`cancelada` **o** `precio_noche`), misma partición para todos y prueba usada una sola vez.
 - Referencia: tu campeón del Sprint 8; máx. 40 épocas; el escalador se ajusta solo con entrenamiento.
 - Nunca claves ni datos personales.
 

@@ -25,7 +25,7 @@
 
 **Qué vais a aprender haciéndolo:** a **comunicar datos a una persona sin formación técnica**: escribir titulares que sean decisiones, hacer gráficos honestos y eliminar la jerga.
 
-**Cuánto tiempo:** 1 hora. Es corto, así que **llegad con el modelo elegido**.
+**Cuánto tiempo:** 40 minutos dentro del último día del Sprint 12. Es corto, así que **llegad con el modelo elegido**.
 
 ### Palabras que van a aparecer en este reto
 
@@ -67,10 +67,10 @@ Marcos, director general de **TurisData Canarias**, tiene 10 minutos antes de la
 ### Pasos sugeridos
 | Minutos | Qué hacer |
 |---|---|
-| 0-10 | Elegid el modelo y confirmad que se carga en la plantilla. Fijad costes de FN y FP con el cliente (¿cuánto cuesta una habitación vacía?). |
-| 10-30 | Ajustad los cuatro gráficos y su título-conclusión. |
-| 30-50 | Redactad el titular y las 3 viñetas; comprobad cifras. |
-| 50-60 | Revisión cruzada con otro equipo: *«¿Entiendes la decisión en 30 segundos?»* |
+| 0-5 | Elegid el modelo y confirmad que se carga en la plantilla. Fijad costes de FN y FP con el cliente (¿cuánto cuesta una habitación vacía?). |
+| 5-20 | Ajustad los cuatro gráficos y su título-conclusión. |
+| 20-35 | Redactad el titular y las 3 viñetas; comprobad cifras. |
+| 35-40 | Revisión cruzada con otro equipo: *«¿Entiendes la decisión en 30 segundos?»* |
 
 ### Guía paso a paso para principiantes
 

@@ -25,7 +25,7 @@
 
 **Qué vais a aprender haciéndolo:** a **distinguir** los tipos de IA y de aprendizaje con ejemplos reales, y a **detectar riesgos** (datos personales, sesgos, decisiones automáticas) *antes* de construir nada.
 
-**Cuánto tiempo:** 3 horas de reto, entre el lunes 19/10 y el miércoles 21/10. La review es el último rato del miércoles.
+**Cuánto tiempo:** unas 3 horas de reto, entre el martes 20/10 y el miércoles 21/10, más el planning y la review (última hora del miércoles).
 
 ### Palabras que van a aparecer en este reto
 
@@ -66,7 +66,7 @@ Tras la entrevista del Sprint 0, la directora de *TurisData Canarias* os pide un
 - No hay datos que analizar todavía: esta auditoría es de **ideas y riesgos**, no de resultados.
 
 ### Restricciones
-- **Tiempo:** 3 h de reto en clase (dentro de las 15 h del sprint).
+- **Tiempo:** unas 3 h de reto en clase (dentro de las 12 h del sprint).
 - **Extensión:** 2-3 páginas de informe (sin contar el checklist).
 - **Presupuesto orientativo del cliente:** hasta 15.000 € para un piloto; nada de proyectos eternos.
 - **Los 5 casos** deben cubrir **al menos 3 modalidades** distintas y **al menos 1** no debe requerir IA (o debe resolverse mejor con reglas) para mostrar criterio.
@@ -82,25 +82,25 @@ Cada entregable se evalúa de 0 a 4 en los cuatro criterios de la rúbrica de re
 | **Análisis y comunicación al cliente** | Jerga sin explicar o lista de ideas sin priorizar | Ideas con interpretación básica | Recomendación clara y comprensible para la dirección | Recomendación accionable con próximos pasos, datos necesarios y límites explicados |
 | **IA responsable** | No se considera | Menciones genéricas ("hay que cumplir el RGPD") | Riesgos específicos por caso | Medidas concretas por caso y criterio para decidir el semáforo |
 
-### Pasos sugeridos (3 h de reto, repartidas por días)
+### Pasos sugeridos (unas 3 h de reto, repartidas por días)
 
 | Momento | Qué hacer |
 |---|---|
-| **Lunes 19/10 · planning (30 min)** | Leed la ficha, repartid el trabajo en el tablero, definid la estructura del informe |
-| **Martes 20/10 (30 min)** | Lluvia de ideas con las tarjetas y elección de 8 candidatos; descartad hasta quedaros con 5 casos (al menos 2 propios) |
-| **Miércoles 21/10 (1 h)** | Fichas de los 5 casos (usad el ejemplo resuelto), checklist ético v1 (completo en los 2 casos priorizados y resumido en el resto), matriz de priorización y redacción del informe; revisión cruzada y DoD. **Lo que no cabra, lo terminaréis dentro de vuestro tiempo de trabajo del equipo, antes del Sprint 2** |
+| **Martes 20/10 · planning (15 min)** | Leed la ficha, repartid el trabajo en el tablero, definid la estructura del informe |
+| **Martes 20/10 (35 min)** | Lluvia de ideas con las tarjetas y elección de 8 candidatos; descartad hasta quedaros con 5 casos (al menos 2 propios) |
+| **Miércoles 21/10 (2 h)** | Fichas de los 5 casos (usad el ejemplo resuelto), checklist ético v1 (completo en los 2 casos priorizados y resumido en el resto), matriz de priorización y redacción del informe; revisión cruzada y DoD. **Lo que no cabra, lo terminaréis dentro de vuestro tiempo de trabajo del equipo, antes del Sprint 2** |
 | **Miércoles 21/10 · última hora** | Review de 5 min por equipo y retro |
 
 Entre medias, aprovechad los ratos de las prácticas (mapa de casos, debate) para adelantar el informe: las tarjetas y el checklist son la materia prima.
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Planning y reparto (lunes 19/10, 30 minutos)
+#### Paso 1 · Planning y reparto (martes 20/10, 15 minutos)
 1. Leed la ficha entera. Una persona lee, el resto subraya lo que no entiende.
 2. **Repartid las partes del informe** (7 apartados). Una persona puede encargarse de 1 o 2 apartados, pero **todas leen todo al final**.
 3. Pasad al tablero las tareas: «Elegir 8 tarjetas», «Fichas de casos», «Matriz», «Checklist ético», «Redacción», «Revisión cruzada».
 
-#### Paso 2 · Lluvia de ideas (martes 20/10, 30 minutos)
+#### Paso 2 · Lluvia de ideas (martes 20/10, 35 minutos)
 1. Poned sobre la mesa las **22 tarjetas** de la dinámica A ([`tarjetas_casos_uso.md`](../actividades/tarjetas_casos_uso.md)).
 2. Cada persona elige 2 o 3 que le parezcan **útiles para TurisData** (no para cualquier empresa). Pensad en los dolores que contó el cliente en el Sprint 0.
 3. Quedaos con **8 candidatos** y luego **descartad hasta 5**. Apuntad **por qué** descartáis las otras tres: lo contaréis en la review.

@@ -26,7 +26,7 @@
 
 **Qué vais a aprender haciéndolo:** a comparar modelos de forma **justa**, a **ajustar hiperparámetros sin hacer trampas**, y a **documentar un modelo** como se hace en las empresas.
 
-**Cuánto tiempo:** 3 horas en equipo (9 al 11/11).
+**Cuánto tiempo:** unas 4 horas en equipo entre el planning, el reto y la entrega (10 y 11/11).
 
 ### Palabras que van a aparecer en este reto
 
@@ -73,13 +73,13 @@
 *Pistas de IA responsable (en la model card):* usos previstos y **no** previstos, qué variables sensibles hay (país de origen), qué pasa si el comportamiento de los clientes cambia (deriva), cómo se vigilará el modelo y quién revisa las decisiones.
 
 **Pasos sugeridos.**
-- **Día 1 (9/11):** *planning* (30 min); acordar los **pesos** de rendimiento/explicabilidad/coste con la «voz del cliente»; registrar baseline, logística, árbol podado y bosque en el leaderboard.
-- **Día 2 (10/11):** boosting y SVM; búsqueda de hiperparámetros (rejilla o aleatoria) para las dos familias más prometedoras; actualizar el leaderboard con los mejores modelos.
-- **Día 3 (11/11):** análisis de sensibilidad de los pesos, elección del campeón, evaluación en test **una vez**, *model card*, README, autoevaluación y coevaluación; **review + retrospectiva** (última hora).
+- **Martes 10/11:** *planning* (25 min); acordar los **pesos** de rendimiento/explicabilidad/coste con la «voz del cliente»; registrar baseline, logística, árbol podado y bosque en el leaderboard (40 min).
+- **Miércoles 11/11, por la mañana:** boosting y SVM en las prácticas; después, búsqueda de hiperparámetros (rejilla o aleatoria) para las dos familias más prometedoras y actualización del leaderboard (35 min).
+- **Cierre del miércoles:** sensibilidad de los pesos, elección del campeón, evaluación en test **una vez**, *model card* y README (105 min); autoevaluación y coevaluación; **review + retrospectiva** (última hora).
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Planning y pesos de los criterios (día 1, 30 minutos)
+#### Paso 1 · Planning y pesos de los criterios (martes 10/11, 25 minutos)
 1. Roles y tareas en el tablero.
 2. **Decidid los pesos** de los tres criterios, con una justificación («el gerente necesita entender por qué se avisa»):
 
@@ -91,22 +91,22 @@
 
 Los pesos son vuestros; lo importante es que estén **justificados** y que luego probéis cómo cambia la decisión si cambian.
 
-#### Paso 2 · Primeros modelos en el leaderboard (día 1, 90 minutos)
+#### Paso 2 · Primeros modelos en el leaderboard (martes 10/11, 40 minutos)
 1. Abrid [`S08_06_leaderboard_plantilla`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) (el cuaderno ya garantiza **mismos datos, mismos folds y misma métrica** para todos).
 2. Registrad el **modelo de referencia (baseline)**, la **regresión logística**, un **árbol podado** y un **bosque**.
 3. Cada fila del leaderboard: modelo, familia, AUC medio ± desviación, tiempo de entrenamiento y nota de explicabilidad.
 
-#### Paso 3 · Boosting, SVM y búsqueda de hiperparámetros (día 2, 120 minutos)
+#### Paso 3 · Boosting, SVM y búsqueda de hiperparámetros (miércoles 11/11, 35 minutos; los modelos salen de las prácticas)
 1. Añadid **boosting** y **SVM**.
 2. Para las **dos familias más prometedoras**, haced una búsqueda de hiperparámetros (rejilla o aleatoria) **solo sobre train**, con validación cruzada. Cada búsqueda no debe pasar de **5 minutos en Colab**.
 3. Actualizad el leaderboard con los mejores modelos. Máximo **8 modelos** en total.
 
-#### Paso 4 · Elegir el campeón (día 3, 45 minutos)
+#### Paso 4 · Elegir el campeón (miércoles 11/11, 60 minutos)
 1. Calculad la **puntuación ponderada** de cada modelo con los pesos del paso 1.
 2. **Análisis de sensibilidad:** cambiad los pesos (por ejemplo, 30/50/20 o 70/10/20) y mirad si **cambia el campeón**. Si cambia fácilmente, decidlo en el informe: la decisión depende de lo que el cliente valore.
 3. **Evaluad el campeón en el test, una sola vez.** Ese número va en la model card. No se evalúan los demás modelos en test.
 
-#### Paso 5 · Model card y README (día 3, 45 minutos)
+#### Paso 5 · Model card y README (miércoles 11/11, 45 minutos)
 Seguid [`model_card_plantilla.md`](../plantillas/model_card_plantilla.md). Incluye:
 1. **Usos previstos y no previstos.**
 2. **Datos** de entrenamiento y sus límites (sintéticos).
