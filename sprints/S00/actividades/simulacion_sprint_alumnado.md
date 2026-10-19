@@ -22,6 +22,19 @@
 - **Equipo:** todas las demás. Decidís entre todas cómo hacer el trabajo.
 - **Responsable de calidad** (una persona, puede ser la misma que ayuda al Scrum Master): comprueba la Definition of Done antes de llamar al Product Owner.
 
+## ¿Cuántos aviones hace cada equipo? ¿Y qué decide el Product Owner?
+
+**No hay un número de aviones fijo.** Lo que decide cada equipo en el *planning* no es «cuántos aviones», sino **qué historias (tarjetas) se compromete a terminar** y **cuántos puntos** suman. Después, el avión sale de ahí:
+
+- **Un mismo avión puede cumplir varias historias** a la vez (por ejemplo: H1 vuelo recto + H2 logo + H4 islas + H8 punta redondeada). En la review lo probáis con ese avión.
+- **Dos historias se contradicen:** H3 (aterrizar en la diana a 3 m) y H6 (volar 5 m o más). Un mismo avión no puede hacer las dos cosas. O elegís una, o hacéis **dos aviones distintos** y le decís al Product Owner cuál es cuál.
+- **H7 (pack de tres)** son **3 aviones iguales**, y los tres tienen que pasar la prueba de H1. **H5** no es un avión, es una **tarjeta de instrucciones**.
+- **El límite lo pone el material:** tenéis **12 folios para toda la hora** (los dos sprints). Un avión gasta 1 folio, y los intentos que salen mal también. Si os comprometéis con H7, gastáis 3 de golpe. Pensadlo al estimar.
+- En la review **decís qué avión cumple qué historia** y el Product Owner prueba esos.
+
+**El equipo decide** qué historias coge, cuántos puntos estima, cómo se reparte el trabajo y cómo fabrica el avión.
+**El Product Owner decide** el **orden de prioridad** de las historias (qué vale más para TurisData) y **si cada historia está hecha o no** (según sus criterios de aceptación). **No decide el cómo**, no estima por vosotras ni ayuda a plegar. Al empezar el *planning* os dirá el orden de prioridad; podéis discutírselo, pero la última palabra es suya.
+
 ## Definition of Done de la simulación
 Una historia está **hecha** solo si:
 1. Cumple **todos** sus criterios de aceptación.
