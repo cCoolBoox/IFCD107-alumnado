@@ -40,10 +40,10 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Miércoles 21/10**
 
-10. 📖 **Teoría**: [IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) · _55 min_
+10. 📖 **Teoría**: [IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) · _50 min_
 11. 💻 **Práctica**: [Debate de casos éticos con roles (2 de los 5 casos)](actividades/casos_debate_ia_responsable.md) · _30 min_
-12. 🎯 **Reto**: [Fichas de los 5 casos, lista de comprobación ética (completa en los 2 casos priorizados), matriz de priorización y redacción (pasos 3–5)](plantillas/checklist_etico_v1.md) · _1 h 50 min_
-13. 🔔 **Ceremonia**: Entrega en `sprint-01/`, autoevaluación y coevaluación, review (5 min por equipo) y retrospectiva · _55 min_
+12. 🎯 **Reto**: [Fichas de los 5 casos, lista de comprobación ética (completa en los 2 casos priorizados), matriz de priorización y redacción (pasos 3–5)](plantillas/checklist_etico_v1.md) · _2 h_
+13. 🔔 **Ceremonia**: Entrega en `sprint-01/`, autoevaluación y coevaluación, review (5 min por equipo) y retrospectiva · _50 min_
 
 <!--orden:fin-->
 
