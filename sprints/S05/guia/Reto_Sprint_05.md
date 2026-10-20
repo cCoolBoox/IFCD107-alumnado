@@ -26,7 +26,9 @@
 
 **Qué vais a aprender haciéndolo:** cómo «aprende» un modelo (ajustando números poco a poco), cómo medir **cuánta confianza** hay en un resultado y por qué **correlación no es causalidad**.
 
-**Cuánto tiempo:** unas 3 horas y 20 minutos entre el planning, el reto y la entrega (30/10 y 3/11). El paso 1 (cargar los datos en una base) coincide con la práctica de CRUD.
+**Cuánto tiempo:** unas 2 horas y 5 minutos entre el planning, el reto y la entrega (30/10 y 3/11). El paso 1 (cargar los datos en una base) coincide con la práctica de CRUD.
+
+**Núcleo y extra.** Núcleo: la regresión desde cero y la respuesta al cliente con su medida de confianza. Extra: la comparación con una librería y el CRUD ampliado.
 
 ### Palabras que van a aparecer en este reto
 
@@ -56,7 +58,7 @@ Un **cuaderno** ([`S05_07_reto_ocupacion`](https://colab.research.google.com/git
 5. Una **respuesta al cliente de máximo 150 palabras**: qué encontráis, qué recomendáis y qué no podéis afirmar.
 
 ### Restricciones
-- **Tiempo:** unas 3 h 20 min dentro del sprint (12 h), con el planning y la entrega.
+- **Tiempo:** unas 2 h 5 min dentro del sprint (12 h), con el planning y la entrega.
 - El descenso del gradiente lo escribís vosotros (sin `LinearRegression` en la implementación; la librería solo sirve para contrastar).
 - Datos sintéticos: no generalicéis a otros alojamientos ni al turismo real.
 - Semillas fijas y el cuaderno debe ejecutarse de arriba abajo sin errores.

@@ -23,9 +23,9 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Viernes 11/12**
 
-1. 📖 **Teoría**: [Storytelling y defensa](presentaciones/S17.1_Storytelling_y_defensa.pdf) · _1 h_
-2. 💻 **Práctica**: [Construir el relato: audiencia, mensaje único, pirámide, *storyboard* y reparto de voces](plantillas/plantilla_storytelling.md) · _2 h_
-3. 🎯 **Reto**: [Tres rondas de ensayo con cronómetro, demo y preguntas (paso 3); ensayo general en la última](guia/Reto_Sprint_17.md) · _3 h_
+1. 📖 **Teoría**: [Storytelling y defensa](presentaciones/S17.1_Storytelling_y_defensa.pdf) · _40 min_
+2. 💻 **Práctica**: [Construir el relato: audiencia, mensaje único, pirámide, *storyboard* y reparto de voces](plantillas/plantilla_storytelling.md) · _1 h 50 min_
+3. 🎯 **Reto**: [Tres rondas de ensayo con cronómetro, demo y preguntas (paso 3); ensayo general en la última](guia/Reto_Sprint_17.md) · _1 h 40 min_
 
 **Antes de las 8:30 del lunes 14/12**
 

@@ -15,7 +15,7 @@
 2. **Prever la ocupación de la próxima semana** para organizar personal y compras (serie temporal).
 3. **Probar un asistente** que responda con la política del alojamiento **sin inventar nada** (RAG).
 
-**Es el reto más largo de los de la parte técnica (5 horas) y tiene cuatro entregables.** Por eso se trabaja **repartido**: cada persona lidera una parte, pero todas entienden todas. Esto es lo que se hace en una consultora real.
+**Es un reto largo (unas 3 h 30 min) y tiene cuatro entregables.** Por eso se trabaja **repartido**: cada persona lidera una parte, pero todas entienden todas. Esto es lo que se hace en una consultora real.
 
 **Qué vais a hacer, en cinco bloques:**
 1. **Reseñas:** medir el sentimiento (positivo / negativo), sacar los temas más criticados y más valorados, con cifras, un gráfico y citas reales.
@@ -28,7 +28,9 @@
 
 **Qué vais a aprender haciéndolo:** a trabajar con **texto**, con **series temporales** y con **asistentes basados en modelos de lenguaje**, y a **evaluar y proteger** un asistente.
 
-**Cuánto tiempo:** unas 4 horas de reto (23 al 25/11), repartidas entre el martes y el miércoles, además de lo que avancéis en las prácticas y del informe visual del Sprint 13, que va dentro del último día.
+**Cuánto tiempo:** unas 3 horas y 30 minutos de reto (23 al 25/11), repartidas entre el martes y el miércoles, además de lo que avancéis en las prácticas y del informe visual del Sprint 13, que va dentro del último día.
+
+**Núcleo y extra.** Núcleo: dos de las tres partes técnicas (a elegir entre reseñas, ocupación y asistente) con su informe. Extra: la tercera parte y las prácticas de ampliación.
 
 ### Palabras que van a aparecer en este reto
 
@@ -69,7 +71,7 @@ Un `LEEME.md` de 5 líneas explica cómo ejecutar todo (versiones de librerías 
 [`datos/resenas.csv`](../../../datos/resenas.csv) · [`datos/ocupacion_diaria.csv`](../../../datos/ocupacion_diaria.csv) · [`datos/politica_alojamiento.md`](../../../datos/politica_alojamiento.md) · [`datos/preguntas_referencia.csv`](../../../datos/preguntas_referencia.csv) · tus notebooks S12_01 a S12_07. **Los datos son sintéticos**: dilo en el informe.
 
 ### Restricciones
-- **Tiempo:** unas 4 h de reto (más lo que avances en las prácticas). Se presenta en la *review* (5 min por equipo).
+- **Tiempo:** unas 3 h 30 min de reto (más lo que avances en las prácticas). Se presenta en la *review* (5 min por equipo).
 - **Herramientas:** Python y las librerías del curso. Todo debe poder ejecutarse **sin internet**. El LLM real (Ollama o API) es **opcional**: si lo usáis, indicad que no se ha podido verificar por el docente y **no incluyáis claves**.
 - **Presupuesto:** 0 €. Cuotas gratuitas solo si vuestro equipo lo decide y sin datos personales.
 - **Prohibido:** partir la serie al azar, escalar o vectorizar con todos los datos antes de partir, y dar cifras del informe que no salgan del código.

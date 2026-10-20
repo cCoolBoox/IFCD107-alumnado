@@ -25,7 +25,9 @@
 
 **Qué vais a aprender haciéndolo:** a **distinguir** los tipos de IA y de aprendizaje con ejemplos reales, y a **detectar riesgos** (datos personales, sesgos, decisiones automáticas) *antes* de construir nada.
 
-**Cuánto tiempo:** unas 3 horas de reto, entre el martes 20/10 y el miércoles 21/10, más el planning y la review (última hora del miércoles).
+**Cuánto tiempo:** unas 2 horas y cuarto de reto, entre el martes 20/10 y el miércoles 21/10, más el planning y la review (última hora del miércoles).
+
+**Núcleo y extra.** Si el tiempo aprieta, entregad fichas completas de 4 casos (el quinto, en versión breve) y la lista de comprobación ética completa en los 2 casos priorizados. Fichas y lista completas de los 5 casos son el extra.
 
 ### Palabras que van a aparecer en este reto
 
@@ -61,12 +63,12 @@ Tras la entrevista del Sprint 0, la directora de *TurisData Canarias* os pide un
 
 ### Datos y recursos
 - Notas de la entrevista y mapa de empatía del Sprint 0.
-- Las **22 tarjetas** de la dinámica A (podéis elegir de ahí, adaptar o inventar casos nuevos, **al menos 2 propios**).
+- Las **22 tarjetas** del banco de la dinámica A (11 las trabajasteis en clase; las otras 11 son nuevas) (podéis elegir de ahí, adaptar o inventar casos nuevos, **al menos 2 propios**).
 - [`ejemplo_clasificacion_caso.md`](../actividades/ejemplo_clasificacion_caso.md) y [`checklist_etico_v1.md`](../plantillas/checklist_etico_v1.md).
 - No hay datos que analizar todavía: esta auditoría es de **ideas y riesgos**, no de resultados.
 
 ### Restricciones
-- **Tiempo:** unas 3 h de reto en clase (dentro de las 12 h del sprint).
+- **Tiempo:** unas 2 h 15 min de reto en clase, más el planning y la review (dentro de las 12 h del sprint).
 - **Extensión:** 2-3 páginas de informe (sin contar el checklist).
 - **Presupuesto orientativo del cliente:** hasta 15.000 € para un piloto; nada de proyectos eternos.
 - **Los 5 casos** deben cubrir **al menos 3 modalidades** distintas y **al menos 1** no debe requerir IA (o debe resolverse mejor con reglas) para mostrar criterio.
@@ -82,7 +84,7 @@ Cada entregable se evalúa de 0 a 4 en los cuatro criterios de la rúbrica de re
 | **Análisis y comunicación al cliente** | Jerga sin explicar o lista de ideas sin priorizar | Ideas con interpretación básica | Recomendación clara y comprensible para la dirección | Recomendación accionable con próximos pasos, datos necesarios y límites explicados |
 | **IA responsable** | No se considera | Menciones genéricas ("hay que cumplir el RGPD") | Riesgos específicos por caso | Medidas concretas por caso y criterio para decidir el semáforo |
 
-### Pasos sugeridos (unas 3 h de reto, repartidas por días)
+### Pasos sugeridos (unas 2 h 15 min de reto, repartidas por días)
 
 | Momento | Qué hacer |
 |---|---|
@@ -101,7 +103,7 @@ Entre medias, aprovechad los ratos de las prácticas (mapa de casos, debate) par
 3. Pasad al tablero las tareas: «Elegir 8 tarjetas», «Fichas de casos», «Matriz», «Checklist ético», «Redacción», «Revisión cruzada».
 
 #### Paso 2 · Lluvia de ideas (martes 20/10, 35 minutos)
-1. Poned sobre la mesa las **22 tarjetas** de la dinámica A ([`tarjetas_casos_uso.md`](../actividades/tarjetas_casos_uso.md)).
+1. Poned sobre la mesa las **22 tarjetas** del banco de la dinámica A (11 las trabajasteis en clase; las otras 11 son nuevas) ([`tarjetas_casos_uso.md`](../actividades/tarjetas_casos_uso.md)).
 2. Cada persona elige 2 o 3 que le parezcan **útiles para TurisData** (no para cualquier empresa). Pensad en los dolores que contó el cliente en el Sprint 0.
 3. Quedaos con **8 candidatos** y luego **descartad hasta 5**. Apuntad **por qué** descartáis las otras tres: lo contaréis en la review.
 4. **Inventad al menos 2 casos propios.** Un truco: recordad una frustración del cliente («las reseñas son miles y nadie las lee») y preguntad «¿se podría ayudar con IA?».

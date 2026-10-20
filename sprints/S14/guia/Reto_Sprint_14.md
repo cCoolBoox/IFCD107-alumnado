@@ -32,6 +32,8 @@
 
 **Cuánto tiempo:** 18 horas (26 al 30/11), de las que 14 son de proyecto.
 
+**Núcleo y extra.** Núcleo: brief elegido, ficha aprobada, plan de datos y *baseline*. Extra: EDA ampliado y backlog más detallado.
+
 ### Palabras que van a aparecer en este reto
 
 | Palabra | Qué significa, en sencillo |

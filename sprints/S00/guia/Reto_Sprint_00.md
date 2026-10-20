@@ -58,7 +58,7 @@ El **entregable** del sprint (un único paquete por equipo, que se revisa en la 
 Formato: los documentos, en `.md` o PDF; el tablero, con enlace de invitación al docente.
 
 ### Restricciones
-- **Tiempo:** 2 h de reto en clase (más lo que decidáis dedicar dentro de la jornada). La review es de 5 minutos por equipo.
+- **Tiempo:** unas 7 h de reto y organización en clase (equipo, acuerdo, tablero, repositorio y entrevista, repartidas en las dos jornadas). La review es de 5 minutos por equipo.
 - **Herramientas:** Trello (gratuito) o similar; nada de pagar licencias.
 - **Entrevista:** el cliente responde durante un tiempo limitado (unos 20 minutos para toda la clase). Preparad las preguntas antes; no habrá segunda ronda hasta el Sprint 1.
 - **Equipos:** de 3 a 4 personas.
@@ -75,13 +75,13 @@ Cada entregable se evalúa de 0 a 4 en los cuatro criterios de la rúbrica de re
 
 Además, la evaluación del sprint es una **rúbrica de equipo**: roles, tablero y acuerdo.
 
-### Pasos sugeridos (2 h de reto)
+### Pasos sugeridos
 
 | Momento | Qué hacer |
 |---|---|
 | **Planning (30 min, inicio del sprint)** | Formad equipos, elegid nombre, repartid los roles del sprint y leed esta ficha |
 | **Bloque 1 (30 min)** | Redactad el acuerdo de trabajo y la Definition of Done |
-| **Bloque 2 (30 min)** | Montad el tablero y cargad el backlog del curso (sección 3 de `plantillas_equipo.md`) |
+| **Bloque 2 (30 min)** | Montad el tablero y cargad el backlog del curso (sección 3 de [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md)) |
 | **Bloque 3 (30 min)** | Preparad las preguntas, haced la entrevista de descubrimiento y rellenad el mapa de empatía con 3 HMW |
 | **Review + retro (última hora del sprint)** | 5 minutos por equipo: mostrad tablero, acuerdo y mapa. Cerrad con la retro |
 

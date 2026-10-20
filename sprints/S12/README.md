@@ -27,28 +27,28 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Lunes 23/11**
 
-1. 🔔 **Ceremonia**: Planning del reto «Escuchar al cliente» y reparto de las cinco áreas · _25 min_
-2. 📖 **Teoría**: [RNN, LSTM, GRU y series temporales](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) · _1 h 20 min_
-3. 💻 **Práctica**: [Series temporales: *baselines*, descomposición y SARIMAX](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) · _50 min_
-4. 💻 **Práctica**: [RNN, LSTM y GRU frente al *baseline*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) · _50 min_
-5. 📖 **Teoría**: [NLP clásico y embeddings](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) · _55 min_
-6. 💻 **Práctica**: [Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) · _1 h_
+1. 🔔 **Ceremonia**: Planning del reto «Escuchar al cliente» y reparto de las cinco áreas · _15 min_
+2. 📖 **Teoría**: [RNN, LSTM, GRU y series temporales](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) · _1 h_
+3. 💻 **Práctica**: [Series temporales: *baselines*, descomposición y SARIMAX](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) · _40 min_
+4. 💻 **Práctica**: [RNN, LSTM y GRU frente al *baseline*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) · _40 min_
+5. 📖 **Teoría**: [NLP clásico y embeddings](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) · _40 min_
+6. 💻 **Práctica**: [Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) · _55 min_
 
 **Martes 24/11**
 
-7. 📖 **Teoría**: [Transformers y LLM](presentaciones/S12.3_Transformers_y_LLM.pdf) · _1 h 20 min_
-8. 💻 **Práctica**: [Tokens, atención paso a paso y temperatura](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) · _50 min_
-9. 💻 **Práctica**: [Mini RAG con la política, evaluación y seguridad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) · _1 h 10 min_
-10. 📖 **Teoría**: [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) · _35 min_
-11. 🎯 **Reto**: [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](guia/Reto_Sprint_12.md) · _1 h 25 min_
+7. 📖 **Teoría**: [Transformers y LLM](presentaciones/S12.3_Transformers_y_LLM.pdf) · _55 min_
+8. 💻 **Práctica**: [Tokens, atención paso a paso y temperatura](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) · _40 min_
+9. 💻 **Práctica**: [Mini RAG con la política, evaluación y seguridad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) · _55 min_
+10. 📖 **Teoría**: [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) · _25 min_
+11. 🎯 **Reto**: [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](guia/Reto_Sprint_12.md) · _1 h 15 min_
 
 **Miércoles 25/11**
 
-12. 🎯 **Reto**: [Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4)](guia/Reto_Sprint_12.md) · _2 h 25 min_
+12. 🎯 **Reto**: [Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4)](guia/Reto_Sprint_12.md) · _1 h 45 min_
 13. 📝 **Test**: [**Test de M4** (redes neuronales), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) · _30 min_
-14. 📖 **Teoría**: [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) · _20 min_
-15. 💻 **Práctica**: [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) · _40 min_
-16. 🎯 **Reto**: [Reto del Sprint 13](../S13/guia/Reto_Sprint_13.md): elegir el modelo y los costes → cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/plantillas/plantilla_informe_visual.md) · _40 min_
+14. 📖 **Teoría**: [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) · _15 min_
+15. 💻 **Práctica**: [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) · _30 min_
+16. 🎯 **Reto**: [Reto del Sprint 13](../S13/guia/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/plantillas/plantilla_informe_visual.md) · _25 min_
 17. 🔔 **Ceremonia**: Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva · _45 min_
 
 <!--orden:fin-->

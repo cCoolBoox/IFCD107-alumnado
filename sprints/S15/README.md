@@ -23,8 +23,8 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **1/12**
 
-1. 📖 **Teoría**: [Píldora: seguimiento de experimentos](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) · _1 h_
-2. 💻 **Práctica**: [Semillas, registro de experimentos, validación cruzada y fuga de datos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) · _1 h 15 min_
+1. 📖 **Teoría**: [Píldora: seguimiento de experimentos](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) · _40 min_
+2. 💻 **Práctica**: [Semillas, registro de experimentos, validación cruzada y fuga de datos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) · _1 h_
 3. 🎯 **Reto**: [Preparar el terreno y el registro de experimentos (paso 1)](plantillas/registro_experimentos_plantilla.csv) · _resto de la jornada_
 
 **2/12**

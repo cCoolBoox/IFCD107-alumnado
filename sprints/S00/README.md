@@ -1,6 +1,6 @@
 # Sprint 0 · Arranque ágil
 **Pregunta guía:** ¿cómo vamos a trabajar y con quién?
-**Fechas:** vie 16/10 – lun 19/10 · **Horas:** 7 h (3 h teoría · 2 h práctica · 2 h reto) · Bloque A, sin Python
+**Fechas:** vie 16/10 – lun 19/10 · **Horas:** 12 h (3 h teoría · 2 h práctica · 7 h reto) · Bloque A, sin Python
 **Cliente:** TurisData Canarias (empresa ficticia de alojamiento y experiencias turísticas)
 
 > 📖 **¿Cómo abro el material?** Desde el navegador: [ccoolboox.github.io/IFCD107-alumnado](https://ccoolboox.github.io/IFCD107-alumnado/). Es público y no hace falta cuenta. También tienes **Code → Download ZIP** en [GitHub](https://github.com/cCoolBoox/IFCD107-alumnado).
@@ -76,7 +76,7 @@ Un material por actividad (todos son `.md`):
 - Definition of Done común (6–8 puntos).
 - Mapa de empatía de TurisData y 3 preguntas «How might we», con 1 priorizada.
 **Reglas:**
-- 2 h de reto en clase, equipos de 3 a 4 personas, review de 5 min por equipo.
+- Unas 7 h de reto y organización en clase, equipos de 3 a 4 personas, review de 5 min por equipo.
 - Herramientas gratuitas; la entrevista dura unos 20 min para toda la clase, así que preparad las preguntas.
 - Nunca claves ni datos personales en el tablero ni en el repositorio.
 **Se valora:** corrección técnica (roles, tablero, DoD), reproducibilidad, comunicación al cliente e IA responsable (p. ej. una medida sobre datos personales), más un backlog priorizado.

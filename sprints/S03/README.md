@@ -26,20 +26,19 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Lunes 26/10**
 
-1. 🔔 **Ceremonia**: Planning del reto «Primer modelo en producción»: leed la ficha y repartid roles · _15 min_
-2. 📖 **Teoría**: [Modelo relacional, SQL, CRUD y nociones de administración](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) · _2 h 5 min_
-3. 💻 **Práctica**: Scripts SQL 01–04 en DB Browser, en este orden: [`SELECT`](recursos/sql/01_select_where.sql), [`JOIN`](recursos/sql/02_join.sql), [`GROUP BY`](recursos/sql/03_group_by.sql) y [subconsultas](recursos/sql/04_subconsultas.sql) · _1 h 10 min_
-4. 💻 **Práctica**: Scripts SQL 05–06: [CRUD sobre una copia](recursos/sql/05_crud.sql) y [modelado e índices](recursos/sql/06_modelado_indices.sql) · _35 min_
-5. 📖 **Teoría**: [Bases de datos NoSQL](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) · _35 min_
-6. 💻 **Práctica**: [NoSQL con documentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) (o, si usáis MongoDB Compass, la [guía de MongoDB](guia/NoSQL_MongoDB.md)) · _40 min_
+1. 🔔 **Ceremonia**: Planning del reto «Primer modelo en producción»: leed la ficha y repartid roles · _10 min_
+2. 📖 **Teoría**: [Modelo relacional, SQL, CRUD y nociones de administración](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) · _1 h 30 min_
+3. 💻 **Práctica**: Scripts SQL 01–04 en DB Browser, en este orden: [`SELECT`](recursos/sql/01_select_where.sql), [`JOIN`](recursos/sql/02_join.sql), [`GROUP BY`](recursos/sql/03_group_by.sql) y [subconsultas](recursos/sql/04_subconsultas.sql). **Para casa:** [CRUD sobre una copia](recursos/sql/05_crud.sql) y [modelado e índices](recursos/sql/06_modelado_indices.sql) · _1 h 30 min_
+4. 📖 **Teoría**: [Bases de datos NoSQL (demostración corta)](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) · _30 min_
+5. 💻 **Práctica**: [NoSQL con documentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) (o, si usáis MongoDB Compass, la [guía de MongoDB](guia/NoSQL_MongoDB.md)) · _30 min_
 
 **Martes 27/10**
 
-7. 📖 **Teoría**: [Introducción a AutoML y MLOps](presentaciones/S03.3_AutoML_y_MLOps.pdf) · _40 min_
-8. 💻 **Práctica**: [Carga y exploración de datos y primer experimento de AutoML (guía de laboratorio)](guia/Guia_AutoML_AutoGluon.pdf) · _1 h_
-9. 🎯 **Reto**: [Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6)](guia/Reto_Sprint_03.md) · _2 h 35 min_
-10. 📝 **Test**: [**Test del bloque M6–M8** (bases de datos, AutoML y responsabilidad), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) · _25 min_
-11. 🔔 **Ceremonia**: Entrega en `sprint-03/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
+6. 📖 **Teoría**: [Introducción a AutoML y MLOps](presentaciones/S03.3_AutoML_y_MLOps.pdf) · _30 min_
+7. 💻 **Práctica**: [Carga y exploración de datos y primer experimento de AutoML (guía de laboratorio)](guia/Guia_AutoML_AutoGluon.pdf) · _45 min_
+8. 🎯 **Reto**: [Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6)](guia/Reto_Sprint_03.md) · _1 h 50 min_
+9. 📝 **Test**: [**Test del bloque M6–M8** (bases de datos, AutoML y responsabilidad), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) · _25 min_
+10. 🔔 **Ceremonia**: Entrega en `sprint-03/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
 
 <!--orden:fin-->
 

@@ -24,18 +24,18 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Miércoles 28/10**
 
-1. 🔔 **Ceremonia**: Planning del reto «Herramientas internas» · _15 min_
-2. 📖 **Teoría**: [Python: entorno (venv, pip, Jupyter, Git) y lenguaje](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) · _1 h 30 min_
-3. 💻 **Práctica**: [Entorno, variables, tipos, `if`, `for` y `while`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) · _50 min_
-4. 💻 **Práctica**: [Funciones, `*args`, `lambda` y módulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) · _55 min_
-5. 💻 **Práctica**: [Listas, tuplas, diccionarios y conjuntos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) · _50 min_
-6. 💻 **Práctica**: [CSV, JSON y `try`/`except` (prepara `leer_reservas`)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_04_ficheros_excepciones.ipynb) · _1 h_
+1. 🔔 **Ceremonia**: Planning del reto «Herramientas internas» · _10 min_
+2. 📖 **Teoría**: [Python: entorno (venv, pip, Jupyter, Git) y lenguaje](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) · _1 h_
+3. 💻 **Práctica**: [Entorno, variables, tipos, `if`, `for` y `while`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) · _45 min_
+4. 💻 **Práctica**: [Funciones, `*args`, `lambda` y módulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) · _45 min_
+5. 💻 **Práctica**: [Listas, tuplas, diccionarios y conjuntos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) · _45 min_
+6. 💻 **Práctica**: [CSV, JSON y `try`/`except` (prepara `leer_reservas`)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_04_ficheros_excepciones.ipynb) · _45 min_
 
 **Jueves 29/10**
 
-7. 📖 **Teoría**: [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) · _1 h 15 min_
-8. 💻 **Práctica**: [*(Opcional)* Clases, buenas prácticas y Git básico](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_05_poo_buenas_practicas.ipynb) · _45 min_
-9. 🎯 **Reto**: [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](guia/Reto_Sprint_04.md) · _2 h 40 min_
+7. 📖 **Teoría**: [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) · _45 min_
+8. 💻 **Práctica**: [*(Opcional)* Clases, buenas prácticas y Git básico](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_05_poo_buenas_practicas.ipynb) · _40 min_
+9. 🎯 **Reto**: [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](guia/Reto_Sprint_04.md) · _2 h 5 min_
 10. 🔔 **Ceremonia**: Entrega en `sprint-04/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
 
 <!--orden:fin-->

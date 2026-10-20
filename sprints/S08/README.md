@@ -29,21 +29,21 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Martes 10/11**
 
-1. 🔔 **Ceremonia**: Planning del reto «Duelo de modelos» y pesos de los criterios (la «voz del cliente») · _25 min_
-2. 📖 **Teoría**: [Árboles de decisión](presentaciones/S08.1_Arboles_de_decision.pdf) · _40 min_
-3. 💻 **Práctica**: [Árbol de decisión: reglas, poda e importancia](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) · _45 min_
-4. 📖 **Teoría**: [Ensembles: Random Forest y *boosting*](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) · _1 h 10 min_
-5. 💻 **Práctica**: [Random Forest: bagging, OOB e importancia por permutación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) · _45 min_
-6. 💻 **Práctica**: [Gradient Boosting, XGBoost y LightGBM](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) · _55 min_
+1. 🔔 **Ceremonia**: Planning del reto «Duelo de modelos» y pesos de los criterios (la «voz del cliente») · _15 min_
+2. 📖 **Teoría**: [Árboles de decisión](presentaciones/S08.1_Arboles_de_decision.pdf) · _30 min_
+3. 💻 **Práctica**: [Árbol de decisión: reglas, poda e importancia](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) · _35 min_
+4. 📖 **Teoría**: [Ensembles: Random Forest y *boosting*](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) · _50 min_
+5. 💻 **Práctica**: [Random Forest: bagging, OOB e importancia por permutación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) · _35 min_
+6. 💻 **Práctica**: [Gradient Boosting, XGBoost y LightGBM](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) · _45 min_
 7. 🎯 **Reto**: [Primeros modelos en el *leaderboard* (*baseline*, logística, árbol y bosque; pasos 1–2)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) · _40 min_
 
 **Miércoles 11/11**
 
-8. 📖 **Teoría**: [Máquinas de vectores de soporte (SVM)](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) · _30 min_
-9. 💻 **Práctica**: [SVM: margen, kernels, `C` y `gamma`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) · _40 min_
-10. 💻 **Práctica**: [`GridSearchCV` y `RandomizedSearchCV`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) · _45 min_
-11. 🎯 **Reto**: [Búsqueda de hiperparámetros para dos familias (paso 3)](guia/Reto_Sprint_08.md) · _35 min_
-12. 🎯 **Reto**: [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](guia/Reto_Sprint_08.md) · _1 h 45 min_
+8. 📖 **Teoría**: [Máquinas de vectores de soporte (SVM)](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) · _25 min_
+9. 💻 **Práctica**: [SVM: margen, kernels, `C` y `gamma`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) · _30 min_
+10. 💻 **Práctica**: [`GridSearchCV` y `RandomizedSearchCV`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) · _35 min_
+11. 🎯 **Reto**: [Búsqueda de hiperparámetros para una familia, la que elijáis (paso 3)](guia/Reto_Sprint_08.md) · _30 min_
+12. 🎯 **Reto**: [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](guia/Reto_Sprint_08.md) · _1 h 5 min_
 13. 📝 **Test**: [**Test de M3 (parte 2)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) · _25 min_
 14. 🔔 **Ceremonia**: Entrega en `sprint-08/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
 

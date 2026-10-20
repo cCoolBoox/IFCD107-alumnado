@@ -26,7 +26,9 @@
 
 **Qué vais a aprender haciéndolo:** a comparar modelos de forma **justa**, a **ajustar hiperparámetros sin hacer trampas**, y a **documentar un modelo** como se hace en las empresas.
 
-**Cuánto tiempo:** unas 4 horas en equipo entre el planning, el reto y la entrega (10 y 11/11).
+**Cuánto tiempo:** unas 3 horas y 10 minutos en equipo entre el planning, el reto y la entrega (10 y 11/11).
+
+**Núcleo y extra.** Núcleo: *leaderboard* con tres familias de modelos, pesos de los criterios, test una sola vez y ficha del modelo. Extra: más familias y búsqueda de hiperparámetros en varias.
 
 ### Palabras que van a aparecer en este reto
 

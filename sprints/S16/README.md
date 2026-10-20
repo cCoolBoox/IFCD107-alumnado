@@ -24,12 +24,12 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **4/12**
 
-1. 📖 **Teoría**: [Píldora: demostrador y documentación](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) · _1 h_
+1. 📖 **Teoría**: [Píldora: demostrador y documentación](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) · _40 min_
 2. 🎯 **Reto**: [Evaluación final y análisis de errores (paso 1)](guia/Reto_Sprint_16.md) · _resto de la jornada_
 
 **9/12 (no hay clase el 7 y el 8)**
 
-3. 💻 **Práctica**: [Demostrador](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb) (carpeta [`plantillas/demostrador/`](plantillas/demostrador/)) · _1 h 15 min_
+3. 💻 **Práctica**: [Demostrador](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb) (carpeta [`plantillas/demostrador/`](plantillas/demostrador/)) · _55 min_
 4. 🎯 **Reto**: [Mitigación de sesgos, demostrador, pruebas, ficha del modelo y borrador de la memoria (paso 2)](plantillas/plantilla_model_card.md) · _resto de la jornada_
 
 **10/12 · congelación a las 14:30**

@@ -28,7 +28,9 @@ Y hay un detalle importante: **el gerente no quiere oír hablar de «AUC»**. Qu
 
 **Qué vais a aprender haciéndolo:** a elegir métricas según el problema, a **evitar la fuga de datos**, a **traducir un modelo a dinero** y a defender una decisión con hipótesis claras.
 
-**Cuánto tiempo:** unas 3 horas en equipo entre el planning, el reto y la entrega (6 y 9/11). El reto se hace sobre todo el lunes 9/11, con lo aprendido el viernes.
+**Cuánto tiempo:** unas 2 horas y 10 minutos en equipo entre el planning, el reto y la entrega (6 y 9/11). El reto se hace sobre todo el lunes 9/11, con lo aprendido el viernes.
+
+**Núcleo y extra.** Núcleo: regresión del precio y clasificación de la cancelación con las hipótesis de coste. Extra: análisis de sensibilidad completo.
 
 ### Palabras que van a aparecer en este reto
 

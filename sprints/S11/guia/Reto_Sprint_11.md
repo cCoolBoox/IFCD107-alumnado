@@ -26,7 +26,9 @@
 
 **Qué vais a aprender haciéndolo:** a **reutilizar modelos preentrenados**, a **interpretar errores** de un modelo de visión y a decidir **qué se automatiza y qué se revisa a mano**.
 
-**Cuánto tiempo:** unas 5 horas de reto (jueves 19 y viernes 20/11), además del planning, el esqueleto del cuaderno [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) (que es una práctica) y la entrega.
+**Cuánto tiempo:** unas 4 horas de reto (jueves 19 y viernes 20/11), además del planning, el esqueleto del cuaderno [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) (que es una práctica) y la entrega.
+
+**Núcleo y extra.** Núcleo: un modelo de *transfer learning* bien evaluado, con análisis de errores y demostrador. Extra: *fine-tuning* y comparar más modelos.
 
 ### Palabras que van a aparecer en este reto
 

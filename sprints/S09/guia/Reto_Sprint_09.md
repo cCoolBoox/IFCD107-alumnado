@@ -25,7 +25,9 @@
 
 **Qué vais a aprender haciéndolo:** a **segmentar sin etiquetas**, a **traducir grupos matemáticos a clientes con nombre**, a **comparar recomendadores** y a ver los riesgos de personalizar (discriminación, sesgo de popularidad, privacidad).
 
-**Cuánto tiempo:** unas 3 horas y 20 minutos (12 y 13/11) entre el planning, el reto y la entrega, intercaladas con las prácticas.
+**Cuánto tiempo:** unas 3 horas y 15 minutos (12 y 13/11) entre el planning, el reto y la entrega, intercaladas con las prácticas.
+
+**Núcleo y extra.** Núcleo: segmentos con `k` justificado y su ficha, y un recomendador sencillo. Extra: otros algoritmos de agrupación y el aprendizaje por refuerzo (que se ve en demostración).
 
 ### Palabras que van a aparecer en este reto
 

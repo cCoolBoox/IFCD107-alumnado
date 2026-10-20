@@ -28,7 +28,9 @@
 
 **Qué vais a aprender haciéndolo:** a **desconfiar de los datos**, a limpiar de forma **reproducible** y a evitar la **fuga de información** del test al entrenamiento.
 
-**Cuánto tiempo:** unas 3 horas y 45 minutos en equipo entre el planning, el reto y la entrega (4 y 5/11).
+**Cuánto tiempo:** unas 3 horas en equipo entre el planning, el reto y la entrega (4 y 5/11).
+
+**Núcleo y extra.** Núcleo: inventario de defectos, función de limpieza y *baseline* con su *pipeline*. Extra: informe más detallado y comparativa de variantes de limpieza.
 
 ### Palabras que van a aparecer en este reto
 

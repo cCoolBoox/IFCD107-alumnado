@@ -26,7 +26,9 @@
 
 **Qué vais a aprender haciéndolo:** a **entrenar una red sin que memorice**, a leer **curvas de aprendizaje**, y a **comparar con honestidad** (que un número sea mayor no basta).
 
-**Cuánto tiempo:** unas 4 horas entre el planning, el reto (≈ 3 h 10 min) y la entrega (16 y 17/11). El reto se hace en la segunda jornada, con el esqueleto del cuaderno [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y lo practicado el lunes.
+**Cuánto tiempo:** unas 3 horas entre el planning, el reto (≈ 2 h 15 min) y la entrega (16 y 17/11). El reto se hace en la segunda jornada, con el esqueleto del cuaderno [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y lo practicado el lunes.
+
+**Núcleo y extra.** Núcleo: un único problema: reproducir la referencia y una mejora con la red, bien medida. Extra: más experimentos y las prácticas «en casa».
 
 ### Palabras que van a aparecer en este reto
 
@@ -74,7 +76,7 @@ merece la pena el cambio.
 **Pasos sugeridos**
 
 - **Lunes 16/11:** planning (15 min); las prácticas 01–03 os dan la red base, el MLP en Keras y la regularización.
-- **Martes 17/11 (3 h 10 min de reto):** ejecuta [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb), entiende cada bloque, elige el problema y reproduce tu modelo de referencia; entrena el MLP y prueba 2 variantes (tamaño, *dropout*, L2 o tasa) mirando **solo la validación**.
+- **Martes 17/11 (2 h 15 min de reto):** ejecuta [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb), entiende cada bloque, elige el problema y reproduce tu modelo de referencia; entrena el MLP y prueba 2 variantes (tamaño, *dropout*, L2 o tasa) mirando **solo la validación**.
 - **También el martes:** diagnostica el sobreajuste con curvas y compara con la referencia (3 semillas, media ± desviación).
 - **Cierre del martes:** informe de una página y presentación de 5 minutos; entrega, autoevaluación y coevaluación; **review + retrospectiva** (última hora).
 

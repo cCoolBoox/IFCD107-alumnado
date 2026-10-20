@@ -28,22 +28,22 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Viernes 6/11**
 
-1. 🔔 **Ceremonia**: Planning del reto «Precio y cancelación» y reparto de roles · _20 min_
-2. 📖 **Teoría**: [Regresión lineal, polinómica y regularización (Ridge y Lasso)](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) · _1 h 40 min_
-3. 💻 **Práctica**: [Regresión lineal y polinómica](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_01_regresion_lineal_polinomica.ipynb) · _55 min_
-4. 💻 **Práctica**: [Ridge y Lasso](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_02_ridge_lasso.ipynb) · _45 min_
-5. 📖 **Teoría**: [Regresión logística y clasificación](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf) · _40 min_
+1. 🔔 **Ceremonia**: Planning del reto «Precio y cancelación» y reparto de roles · _10 min_
+2. 📖 **Teoría**: [Regresión lineal, polinómica y regularización (Ridge y Lasso)](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) · _1 h 10 min_
+3. 💻 **Práctica**: [Regresión lineal y polinómica](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_01_regresion_lineal_polinomica.ipynb) · _45 min_
+4. 💻 **Práctica**: [Ridge y Lasso](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_02_ridge_lasso.ipynb) · _35 min_
+5. 📖 **Teoría**: [Regresión logística y clasificación](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf) · _30 min_
 6. 💻 **Práctica**: [Regresión logística](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_03_regresion_logistica.ipynb) · _1 h_
 
 **Lunes 9/11**
 
-7. 🎯 **Reto**: [Acordar las hipótesis de coste y hacer la regresión del precio (pasos 1–2)](guia/Reto_Sprint_07.md) · _45 min_
-8. 💻 **Práctica**: [ROC, PR y datos desbalanceados](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_04_roc_pr_desbalance.ipynb) · _50 min_
-9. 📖 **Teoría**: [k-NN y Naive Bayes](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf) · _40 min_
-10. 💻 **Práctica**: [k-NN y Naive Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_05_knn_naive_bayes.ipynb) · _45 min_
-11. 🎯 **Reto**: [Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5)](guia/Reto_Sprint_07.md) · _1 h 30 min_
+7. 🎯 **Reto**: [Acordar las hipótesis de coste y hacer la regresión del precio (pasos 1–2)](guia/Reto_Sprint_07.md) · _35 min_
+8. 💻 **Práctica**: [ROC, PR y datos desbalanceados](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_04_roc_pr_desbalance.ipynb) · _40 min_
+9. 📖 **Teoría**: [k-NN y Naive Bayes](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf) · _30 min_
+10. 💻 **Práctica**: [k-NN y Naive Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_05_knn_naive_bayes.ipynb) · _35 min_
+11. 🎯 **Reto**: [Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5)](guia/Reto_Sprint_07.md) · _1 h 5 min_
 12. 📝 **Test**: [**Test de M3 (parte 1)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) · _25 min_
-13. 🔔 **Ceremonia**: Entrega en `sprint-07/`, autoevaluación y coevaluación, review y retrospectiva · _25 min_
+13. 🔔 **Ceremonia**: Entrega en `sprint-07/`, autoevaluación y coevaluación, review y retrospectiva · _20 min_
 
 <!--orden:fin-->
 

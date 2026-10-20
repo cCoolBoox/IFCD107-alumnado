@@ -26,18 +26,18 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Lunes 16/11**
 
-1. 🔔 **Ceremonia**: Planning del reto «¿Vale la pena la red?» y reparto de roles · _15 min_
-2. 📖 **Teoría**: [Fundamentos de redes neuronales](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) · _1 h 10 min_
-3. 💻 **Práctica**: [Una red neuronal con solo NumPy](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) · _50 min_
-4. 📖 **Teoría**: [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) · _1 h 5 min_
-5. 💻 **Práctica**: [MLP en Keras: clasificación y regresión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) · _1 h 20 min_
+1. 🔔 **Ceremonia**: Planning del reto «¿Vale la pena la red?» y reparto de roles · _10 min_
+2. 📖 **Teoría**: [Fundamentos de redes neuronales](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) · _50 min_
+3. 💻 **Práctica**: [Una red neuronal con solo NumPy](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) · _40 min_
+4. 📖 **Teoría**: [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) · _45 min_
+5. 💻 **Práctica**: [MLP en Keras: clasificación y regresión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) · _1 h 5 min_
 6. 📖 **Teoría**: [Entrenamiento y regularización (primera parte)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) · _40 min_
 
 **Martes 17/11**
 
 7. 📖 **Teoría**: [Entrenamiento y regularización (final: parada temprana y *callbacks*)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) · _25 min_
-8. 💻 **Práctica**: [Sobreajuste, L2, *dropout*, parada temprana y *callbacks*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) · _1 h 5 min_
-9. 🎯 **Reto**: Esqueleto [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb): elegir el problema y reproducir la referencia (paso 1) → primera red (2) → diagnosticar el sobreajuste (3) → comparación justa (4) → informe y presentación (5) · _3 h 10 min_
+8. 💻 **Práctica**: [Sobreajuste, L2, *dropout*, parada temprana y *callbacks*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) · _50 min_
+9. 🎯 **Reto**: Esqueleto [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb): elegir el problema y reproducir la referencia (paso 1) → primera red (2) → diagnosticar el sobreajuste (3) → comparación justa (4) → informe y presentación (5) · _2 h 15 min_
 10. 🔔 **Ceremonia**: Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
 
 <!--orden:fin-->

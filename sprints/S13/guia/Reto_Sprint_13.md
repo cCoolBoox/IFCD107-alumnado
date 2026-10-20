@@ -25,7 +25,9 @@
 
 **Qué vais a aprender haciéndolo:** a **comunicar datos a una persona sin formación técnica**: escribir titulares que sean decisiones, hacer gráficos honestos y eliminar la jerga.
 
-**Cuánto tiempo:** 40 minutos dentro del último día del Sprint 12. Es corto, así que **llegad con el modelo elegido**.
+**Cuánto tiempo:** 25 minutos dentro del último día del Sprint 12. Es corto, así que **llegad con el modelo elegido**.
+
+**Núcleo y extra.** Núcleo: titular-decisión, tres gráficos con título-conclusión y tres viñetas. Extra: el cuarto gráfico.
 
 ### Palabras que van a aparecer en este reto
 
