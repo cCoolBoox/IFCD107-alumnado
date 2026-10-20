@@ -24,8 +24,8 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Miércoles 25/11 · última jornada del Sprint 12 (el Sprint 13 va dentro de ese día)**
 
-1. 📖 **Teoría**: [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) · _15 min_
-2. 💻 **Práctica**: [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) · _30 min_
+1. 📖 **Teoría**: [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) · _10 min_
+2. 💻 **Práctica**: [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) · _35 min_
 3. 🎯 **Reto**: [Reto del Sprint 13](guia/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/plantillas/plantilla_informe_visual.md) · _25 min_
 
 <!--orden:fin-->

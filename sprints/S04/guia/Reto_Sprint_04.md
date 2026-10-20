@@ -27,7 +27,7 @@
 
 **Qué vais a aprender haciéndolo:** a convertir un trabajo manual en una herramienta **repetible**, a **probar** vuestro código y a usar **Git**.
 
-**Cuánto tiempo:** unas 2 horas y 55 minutos entre el planning, el reto y la entrega (28 y 29/10). Las cuatro primeras prácticas ya os dejan hechas las piezas de `leer_reservas`.
+**Cuánto tiempo:** unas 3 horas entre el planning, el reto y la entrega (28 y 29/10). Las cuatro primeras prácticas ya os dejan hechas las piezas de `leer_reservas`.
 
 **Núcleo y extra.** Núcleo: las funciones obligatorias hasta que [`test_kpis.py`](../recursos/reto_herramientas/test_kpis.py) pase y el README. Extra: las partes opcionales (POO y Git básico).
 
@@ -61,7 +61,7 @@ Un **repositorio Git** con:
 **KPIs:** ocupación aproximada (*proxy*), ingreso medio por reserva y tasa de cancelación por canal. Las definiciones exactas están en los docstrings de la plantilla.
 
 ### Restricciones
-- **Tiempo:** unas 2 h 55 min dentro del sprint (12 h), con el planning y la entrega.
+- **Tiempo:** unas 3 h dentro del sprint (12 h), con el planning y la entrega.
 - Versión principal solo con la **biblioteca estándar**; pandas solo en la parte opcional.
 - El script **no puede romperse** con un fichero inexistente, con columnas que faltan o con filas defectuosas: debe informar.
 - Sin datos personales reales ni claves en el repositorio.

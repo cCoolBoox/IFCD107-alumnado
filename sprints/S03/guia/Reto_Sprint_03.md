@@ -26,7 +26,7 @@
 
 **Qué vais a aprender haciéndolo:** el recorrido completo de un proyecto de IA, **del dato al servicio**, incluida una parte que mucha gente olvida: **vigilar el coste y cerrar los recursos**.
 
-**Cuánto tiempo:** unas 2 horas y 40 minutos entre el planning, el reto y la entrega (26 y 27/10).
+**Cuánto tiempo:** unas 2 horas y 5 minutos entre el planning, el reto y la entrega (26 y 27/10).
 
 **Núcleo y extra.** Núcleo: el mejor modelo con su umbral, la llamada al servicio y el cierre y borrado de recursos (0 €). Extra: comparar más modelos en AutoML y los scripts SQL 05–06 de CRUD e índices (en casa).
 
@@ -57,7 +57,7 @@ Un único documento (Markdown o PDF, máximo 4 páginas) con tres partes:
 3. **Informe de recursos y costes:** qué recursos se han creado, cuánto tiempo y capacidad se han usado, cuánto ha costado o cuánto habría costado, y **prueba de que se han cerrado o eliminado** todos.
 
 ### Restricciones
-- **Tiempo:** unas 1 h 50 min de reto en clase, más la entrega y la review (dentro de las 12 h del sprint).
+- **Tiempo:** unas 1 h 25 min de reto en clase, más la entrega y la review (dentro de las 12 h del sprint).
 - **Datos:** solo los datos sintéticos de TurisData. No subáis datos personales reales.
 - **Recursos:** se trabaja con el límite de uso que indique el docente; todo recurso creado debe quedar cerrado o eliminado al terminar.
 - **Seguridad:** nunca pongáis claves, contraseñas ni cadenas de conexión en el informe ni en repositorios.
@@ -78,7 +78,7 @@ Un único documento (Markdown o PDF, máximo 4 páginas) con tres partes:
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Entender el problema y los datos (martes 27/10, 25 minutos)
+#### Paso 1 · Entender el problema y los datos (martes 27/10, 20 minutos)
 1. Releed la escena del cliente y respondeos con una frase: *«Queremos predecir ______ para que el equipo de reservas pueda ______»*.
 2. Abrid [`turisdata.db`](../../../datos/turisdata.db) en DB Browser for SQLite y mirad la tabla `reservas` con un `SELECT * ... LIMIT 20`. ¿Qué columnas hay?
 3. Con `GROUP BY` calculad el **porcentaje de cancelaciones** por canal. Es una forma útil de empezar a conocer el dato.
@@ -86,30 +86,30 @@ Un único documento (Markdown o PDF, máximo 4 páginas) con tres partes:
 5. **Quitad las columnas trampa.** Pregunta clave para cada columna: **«¿La conoceríamos en el momento de hacer la reserva?»** Si la respuesta es no (por ejemplo, un dato que solo existe después de cancelar), no puede entrar en el modelo. Anotad cuáles habéis excluido y por qué: **es parte del informe**.
 6. Preparad la plataforma que indique el docente (leed la guía de AutoML de la ruta elegida: en esta carpeta tenéis [`Guia_AutoML_AutoGluon.pdf`](Guia_AutoML_AutoGluon.pdf) como ejemplo del flujo).
 
-#### Paso 2 · Lanzar el experimento y comparar modelos (martes 27/10, 40 minutos)
+#### Paso 2 · Lanzar el experimento y comparar modelos (martes 27/10, 30 minutos)
 1. **Partid los datos por fecha:** las reservas antiguas para entrenar, las más recientes para evaluar. (Si barajáis las filas al azar, el modelo «ve el futuro» y los resultados parecen mejores de lo que serían en la realidad.)
 2. Lanzad el experimento con el límite de tiempo y de uso que indique el docente.
 3. Cuando termine, mirad la **tabla de modelos**. No elijáis solo por el número más alto: apuntad qué métrica usáis y **por qué es la adecuada para este problema** (por ejemplo: si solo hay un 20 % de cancelaciones, un modelo que dice «nadie cancela» acierta el 80 % y no sirve para nada).
 4. Mirad las **variables más influyentes** (explicabilidad). ¿Tienen sentido para el negocio?
 
-#### Paso 3 · Elegir el umbral con criterio de negocio (martes 27/10, 25 minutos)
+#### Paso 3 · Elegir el umbral con criterio de negocio (martes 27/10, 20 minutos)
 1. Pensad en las dos formas de equivocarse:
    - **Falsa alarma:** se actúa sobre una reserva que no se iba a cancelar (cuesta una llamada, o molestar a un cliente).
    - **Cancelación no detectada:** se pierde la oportunidad de revender la habitación (cuesta una noche vacía).
 2. Estimad **cuál cuesta más** (aunque sea con una hipótesis: «una noche vacía son 100 €, una llamada son 5 €») y elegid un umbral coherente. Explicadlo con una frase que entienda un directivo.
 3. Evaluad el modelo con el umbral elegido en los datos que **no ha visto**.
 
-#### Paso 4 · Publicar el servicio y hacer una llamada (martes 27/10, 25 minutos)
+#### Paso 4 · Publicar el servicio y hacer una llamada (martes 27/10, 20 minutos)
 1. Publicad el modelo siguiendo la guía (el modelo queda «escuchando» peticiones).
 2. Haced **una llamada real**: enviad los datos de una reserva ficticia y recibid la **probabilidad de cancelación** y la alerta.
 3. **Capturad la petición y la respuesta**, pero **sin claves ni contraseñas visibles**. Si aparece una clave en la captura, tapadla.
 
-#### Paso 5 · Cerrar y borrar (martes 27/10, 15 minutos; importante)
+#### Paso 5 · Cerrar y borrar (martes 27/10, 10 minutos; importante)
 1. **Parad y eliminad** el servicio publicado, el experimento y los datos subidos. Lo que se deja encendido **gasta cuota (o dinero)**.
 2. Anotad en el informe: qué recursos creasteis, cuánto tiempo y capacidad usaron, cuánto ha costado o **habría costado** y **la prueba de que se han cerrado** (captura de la lista vacía de recursos).
 3. Si algo no se puede borrar, **avisad al docente**.
 
-#### Paso 6 · Redactar el informe (25 minutos en clase y el resto en la entrega; 4 páginas máximo)
+#### Paso 6 · Redactar el informe (20 minutos en clase y el resto en la entrega; 4 páginas máximo)
 Estructura recomendada:
 1. **El problema y la métrica** (media página).
 2. **Qué modelos se compararon y cuál ganó**, con el umbral y su razón de negocio.

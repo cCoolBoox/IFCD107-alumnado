@@ -26,7 +26,7 @@
 
 **Qué vais a aprender haciéndolo:** a **reutilizar modelos preentrenados**, a **interpretar errores** de un modelo de visión y a decidir **qué se automatiza y qué se revisa a mano**.
 
-**Cuánto tiempo:** unas 4 horas de reto (jueves 19 y viernes 20/11), además del planning, el esqueleto del cuaderno [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) (que es una práctica) y la entrega.
+**Cuánto tiempo:** unas 3 horas y 20 minutos de reto (jueves 19 y viernes 20/11), además del planning, el esqueleto del cuaderno [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) (que es una práctica) y la entrega.
 
 **Núcleo y extra.** Núcleo: un modelo de *transfer learning* bien evaluado, con análisis de errores y demostrador. Extra: *fine-tuning* y comparar más modelos.
 
@@ -82,7 +82,7 @@ sobre todo, **en qué se equivoca**, para decidir cuánto puede fiarse de él y 
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Preparar los datos (jueves 19/11, 45 minutos)
+#### Paso 1 · Preparar los datos (jueves 19/11, 40 minutos)
 1. Abrid [`S11_04_reto_vision_cliente`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) en Colab.
 2. Decidid: ¿**dataset sintético** (lo genera [`generar_dataset_sintetico.py`](../recursos/generar_dataset_sintetico.py)) o **uno propio**?
    - Si es propio: fotos tomadas por vosotros o con **licencia abierta**; guardad **autor y licencia**; **sin personas reconocibles**.
@@ -90,14 +90,14 @@ sobre todo, **en qué se equivoca**, para decidir cuánto puede fiarse de él y 
 4. **Mirad las fotos** de cada clase. ¿Hay etiquetas dudosas? Anotadlas.
 5. **Fijad la partición** entrenamiento / validación / prueba. La prueba se usa **una sola vez**.
 
-#### Paso 2 · Entrenar con transfer learning y una referencia (viernes 20/11, 90 minutos)
+#### Paso 2 · Entrenar con transfer learning y una referencia (viernes 20/11, 75 minutos)
 1. Cargad la red preentrenada (en Colab, MobileNetV2 con ImageNet es opcional; si no, la que trae el cuaderno).
 2. **Congelad** las capas y entrenad solo la «cabeza» (las capas nuevas para vuestras clases).
 3. *(Opcional)* **Fine-tuning** con una tasa de aprendizaje muy baja.
 4. Entrenad también una **referencia «desde cero»** (una red pequeña sin preentrenar).
 5. Medid ambas en **validación** y anotad las diferencias. Debería verse que el *transfer learning* aprende más rápido y con menos fotos.
 
-#### Paso 3 · Evaluación y análisis de errores (viernes 20/11, 60 minutos)
+#### Paso 3 · Evaluación y análisis de errores (viernes 20/11, 50 minutos)
 1. Evaluad en el **test** (una sola vez) y calculad **métricas por clase**.
 2. Dibujad la **matriz de confusión**. ¿Qué clases se confunden más?
 3. Sacad las fotos mal clasificadas y **elegid al menos 6**. Para cada una anotad:
@@ -108,12 +108,12 @@ sobre todo, **en qué se equivoca**, para decidir cuánto puede fiarse de él y 
 
 4. Buscad patrones: ¿son fotos oscuras? ¿clases poco frecuentes? ¿etiquetas dudosas? ¿fondos parecidos?
 
-#### Paso 4 · Demostrador y umbral de confianza (viernes 20/11, 50 minutos)
+#### Paso 4 · Demostrador y umbral de confianza (viernes 20/11, 40 minutos)
 1. Escribid una función `clasificar(foto)` que devuelva **clase, confianza y una indicación «revisar a mano»** si la confianza es menor que un umbral.
 2. **Elegid el umbral** midiendo en validación: con cada umbral, ¿qué % de fotos decide el modelo solo (*cobertura*) y qué % de esas acierta? Un umbral alto → menos fotos automáticas pero más fiables.
 3. Probad con 2–3 fotos delante de vuestro equipo.
 
-#### Paso 5 · Informe y presentación (viernes 20/11, 60 minutos)
+#### Paso 5 · Informe y presentación (viernes 20/11, 50 minutos)
 Informe de 1–2 páginas:
 1. **Qué se ha hecho y con qué datos** (origen y licencia).
 2. **Resultados:** tabla de métricas por clase, comparación con la referencia.

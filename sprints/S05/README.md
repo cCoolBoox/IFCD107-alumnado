@@ -27,19 +27,19 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 **Viernes 30/10**
 
 1. 🔔 **Ceremonia**: Planning del reto «¿La ocupación depende de esto?» · _10 min_
-2. 📖 **Teoría**: [NumPy y álgebra lineal: vectorización y *broadcasting*](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) · _50 min_
+2. 📖 **Teoría**: [NumPy y álgebra lineal: vectorización y *broadcasting*](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) · _25 min_
 3. 💻 **Práctica**: [Arrays, vectorización y *broadcasting*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_01_numpy.ipynb) · _35 min_
 4. 💻 **Práctica**: [Matrices, sistemas y ecuación normal](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_02_algebra_lineal.ipynb) · _35 min_
-5. 📖 **Teoría**: [Descenso del gradiente y regresión desde cero](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) · _50 min_
+5. 📖 **Teoría**: [Descenso del gradiente y regresión desde cero](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) · _25 min_
 6. 💻 **Práctica**: [Descenso del gradiente y regresión desde cero](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_03_gradiente_regresion.ipynb) · _1 h 10 min_
 
 **Martes 3/11**
 
-7. 📖 **Teoría**: [Estadística con Python y CRUD](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) · _30 min_
-8. 💻 **Práctica**: [Descriptiva, Monte Carlo e intervalos de confianza](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_04_estadistica_descriptiva_ic.ipynb) · _40 min_
+7. 📖 **Teoría**: [Estadística con Python y CRUD](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) · _15 min_
+8. 💻 **Práctica**: [Descriptiva, Monte Carlo e intervalos de confianza](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_04_estadistica_descriptiva_ic.ipynb) · _35 min_
 9. 💻 **Práctica**: [Contrastes, causalidad, `statsmodels` y Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_05_contrastes_causalidad.ipynb) · _35 min_
 10. 💻 **Práctica**: [CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_06_crud_python.ipynb) · _30 min_
-11. 🎯 **Reto**: Cuaderno [`S05_07`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb): mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6) · _1 h 15 min_
+11. 🎯 **Reto**: Cuaderno [`S05_07`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb): mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6) · _45 min_
 12. 🔔 **Ceremonia**: Entrega en `sprint-05/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
 
 <!--orden:fin-->
@@ -73,7 +73,7 @@ Cuadernos en orden (5 h). Cada ejercicio se autocorrige con un `assert`: si fall
 - Regresión desde cero (simple y con estacionalidad), comparada con `statsmodels`.
 - Contraste, intervalos de confianza y p-valores, y una respuesta al cliente de máx. 150 palabras.
 **Reglas:**
-- Unas 3 h 20 min de reto; el descenso del gradiente lo escribís vosotros (la librería solo para contrastar).
+- Unas 2 h 30 min de reto; el descenso del gradiente lo escribís vosotros (la librería solo para contrastar).
 - Semillas fijas; datos sintéticos, sin generalizar al turismo real.
 - Nunca claves ni datos personales.
 **Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable, más cifras con su incertidumbre y distinguir correlación de causalidad.

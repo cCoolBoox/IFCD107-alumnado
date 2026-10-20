@@ -24,7 +24,7 @@
 
 **Qué vais a aprender haciéndolo:** a **no creerse una estadística solo porque salga en un informe**. Es la habilidad más útil antes de entrenar cualquier modelo, porque **un modelo entrenado con datos mal interpretados aprende mal**.
 
-**Cuánto tiempo:** unas 1 hora y 35 minutos de reto, entre el jueves 22/10 y el viernes 23/10. La cuenta de Colab y GitHub se da de alta **el jueves 22/10 a primera hora, en clase** (guía en [`alta_cuentas.md`](../actividades/alta_cuentas.md)).
+**Cuánto tiempo:** unas 1 hora y 25 minutos de reto, entre el jueves 22/10 y el viernes 23/10. La cuenta de Colab y GitHub se da de alta **el jueves 22/10 a primera hora, en clase** (guía en [`alta_cuentas.md`](../actividades/alta_cuentas.md)).
 
 **Núcleo y extra.** Núcleo: auditar a fondo 4 de las 6 afirmaciones y redactar el dictamen. Extra: las otras 2 afirmaciones (en clase si sobra tiempo, o en casa) y la hoja 2 de estadística.
 
@@ -61,7 +61,7 @@ La dirección de *TurisData Canarias* ha preparado un **borrador de informe** so
 - Vuestras hojas de ejercicios, la lista de control de [`estadisticas_enganosas.md`](../actividades/estadisticas_enganosas.md) y una calculadora u hoja de cálculo. **No hace falta Python.**
 
 ### Restricciones
-- **Tiempo:** unas 1 h 35 min de reto en clase, más la entrega y la review (dentro de las 12 h del sprint).
+- **Tiempo:** unas 1 h 25 min de reto en clase, más la entrega y la review (dentro de las 12 h del sprint).
 - **Extensión:** 2-3 páginas.
 - Cada cifra que aparezca en el dictamen debe poder **rehacerse** con los datos entregados (reproducibilidad).
 - Cuando no haya datos para comprobar una afirmación, **no inventéis números**: decid qué datos harían falta.
@@ -77,7 +77,7 @@ Cada entregable se evalúa de 0 a 4 en los cuatro criterios de la rúbrica de re
 | **Análisis y comunicación al cliente** | Solo dice "está mal" | Explica cada error de forma correcta pero técnica | Explica con lenguaje claro y propone redacciones corregidas | Recomendación accionable sobre el canal, con límites y datos a pedir |
 | **IA responsable** | No se considera | Menciona "cuidado con los sesgos" | Relaciona los errores con riesgos de entrenar o decidir con datos así (muestra sesgada, confusión) | Propone comprobaciones concretas antes de usar estos datos para un modelo |
 
-### Pasos sugeridos (unas 1 h 35 min de reto)
+### Pasos sugeridos (unas 1 h 25 min de reto)
 
 | Momento | Qué hacer |
 |---|---|
@@ -95,12 +95,12 @@ Cada entregable se evalúa de 0 a 4 en los cuatro criterios de la rúbrica de re
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Planning (jueves 22/10, 25 minutos)
+#### Paso 1 · Planning (jueves 22/10, 20 minutos)
 1. Leed el informe ([`informe_cliente.md`](../../../datos/informe_cliente.md)) **en voz alta**, afirmación por afirmación.
 2. Repartid las seis afirmaciones entre las personas del equipo (por ejemplo, de dos en dos). Cada afirmación tendrá **una persona responsable** y **una persona que la revisa**.
 3. Abrid la hoja de datos ([`informe_cliente.csv`](../../../datos/informe_cliente.csv)) en una hoja de cálculo y mirad qué columnas tiene: `tarifa`, `canal`, `reservas` y `cancelaciones`. Son solo **4 filas**.
 
-#### Paso 2 · Primera lectura con la lista de control (jueves 22/10, 40 minutos)
+#### Paso 2 · Primera lectura con la lista de control (jueves 22/10, 35 minutos)
 Usad la lista de [`estadisticas_enganosas.md`](../actividades/estadisticas_enganosas.md). Para **cada** afirmación, respondeos tres preguntas:
 1. **¿Qué afirma exactamente?** (con vuestras palabras).
 2. **¿Qué falla o qué falta?** Pensad en el tipo de error: ¿muestra pequeña o sesgada?, ¿correlación tomada por causa?, ¿comparación con otra base?, ¿cuentas mal hechas?, ¿resultado que cambia al separar por grupos?

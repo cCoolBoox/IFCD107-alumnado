@@ -29,20 +29,20 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Miércoles 4/11**
 
-1. 🔔 **Ceremonia**: Planning del reto «Datos sucios, cliente impaciente» y reparto de roles · _15 min_
-2. 📖 **Teoría**: [Datos, pandas y visualización exploratoria](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) · _40 min_
+1. 🔔 **Ceremonia**: Planning del reto «Datos sucios, cliente impaciente» y reparto de roles · _10 min_
+2. 📖 **Teoría**: [Datos, pandas y visualización exploratoria](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) · _30 min_
 3. 💻 **Práctica**: [pandas, EDA y primer chequeo de calidad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) · _45 min_
-4. 🎯 **Reto**: [Arrancar el inventario de defectos del fichero sucio (pasos 1–2)](guia/Reto_Sprint_06.md) · _50 min_
-5. 📖 **Teoría**: [Limpieza y preprocesado](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) · _45 min_
+4. 🎯 **Reto**: [Arrancar el inventario de defectos del fichero sucio (pasos 1–2)](guia/Reto_Sprint_06.md) · _30 min_
+5. 📖 **Teoría**: [Limpieza y preprocesado](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) · _30 min_
 6. 💻 **Práctica**: [Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) · _55 min_
 
 **Jueves 5/11**
 
 7. 💻 **Práctica**: [Escalado, codificación, `ColumnTransformer` y `Pipeline`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) · _40 min_
-8. 🎯 **Reto**: [Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4)](guia/Reto_Sprint_06.md) · _1 h_
-9. 📖 **Teoría**: [scikit-learn: métricas y validación](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) · _45 min_
+8. 🎯 **Reto**: [Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4)](guia/Reto_Sprint_06.md) · _35 min_
+9. 📖 **Teoría**: [scikit-learn: métricas y validación](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) · _25 min_
 10. 💻 **Práctica**: [*Baseline*, métricas, validación cruzada y fuga de datos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) · _45 min_
-11. 🎯 **Reto**: [Informe, README y ensayo (paso 5)](guia/Reto_Sprint_06.md) · _25 min_
+11. 🎯 **Reto**: [Informe, README y ensayo (paso 5)](guia/Reto_Sprint_06.md) · _20 min_
 12. 🔔 **Ceremonia**: Entrega en `sprint-06/`, autoevaluación y coevaluación, review y retrospectiva · _35 min_
 
 <!--orden:fin-->
@@ -56,10 +56,10 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S06_01_pandas_eda` | pandas, EDA y visualización exploratoria; primer chequeo de calidad | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) |
-| `S06_02_limpieza` | Limpieza: duplicados, tipos, fechas, categorías, imposibles, nulos | 65 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) |
-| `S06_03_preprocesado_pipeline` | Escalado, codificación, `ColumnTransformer` y `Pipeline` | 50 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) |
-| `S06_04_metricas_validacion` | Baseline, métricas, sobreajuste, validación cruzada, fuga y partición temporal | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) |
+| `S06_01_pandas_eda` | pandas, EDA y visualización exploratoria; primer chequeo de calidad | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) |
+| `S06_02_limpieza` | Limpieza: duplicados, tipos, fechas, categorías, imposibles, nulos | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) |
+| `S06_03_preprocesado_pipeline` | Escalado, codificación, `ColumnTransformer` y `Pipeline` | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) |
+| `S06_04_metricas_validacion` | Baseline, métricas, sobreajuste, validación cruzada, fuga y partición temporal | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) |
 
 Cada notebook tiene ejercicios con `assert`: si la celda de comprobación no da error, vas bien. Los datos se descargan solos.
 

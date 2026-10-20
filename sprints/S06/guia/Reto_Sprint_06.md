@@ -28,7 +28,7 @@
 
 **Qué vais a aprender haciéndolo:** a **desconfiar de los datos**, a limpiar de forma **reproducible** y a evitar la **fuga de información** del test al entrenamiento.
 
-**Cuánto tiempo:** unas 3 horas en equipo entre el planning, el reto y la entrega (4 y 5/11).
+**Cuánto tiempo:** unas 2 horas y 5 minutos en equipo entre el planning, el reto y la entrega (4 y 5/11).
 
 **Núcleo y extra.** Núcleo: inventario de defectos, función de limpieza y *baseline* con su *pipeline*. Extra: informe más detallado y comparativa de variantes de limpieza.
 
@@ -79,12 +79,12 @@
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Planning y reparto de roles (miércoles 4/11, 25 minutos)
+#### Paso 1 · Planning y reparto de roles (miércoles 4/11, 20 minutos)
 1. Elegid **Scrum Master y responsable técnico** de este sprint (no pueden repetir quienes lo fueron en el anterior).
 2. Pasad al tablero las tareas: inventario de defectos, función de limpieza, pipeline, baseline, informe, README.
 3. Decidid quién empieza cada una, sabiendo que **todo el equipo** debe entender todo.
 
-#### Paso 2 · Inventario de defectos (miércoles 4/11, 60 minutos)
+#### Paso 2 · Inventario de defectos (miércoles 4/11, 40 minutos)
 1. Cargad [`reservas_sucio.csv`](../../../datos/reservas_sucio.csv) y ejecutad la función `resumen_calidad` de las prácticas. Mirad: tipos de columnas, nulos, duplicados, valores mínimos y máximos.
 2. Haced gráficos (histogramas, conteo por categoría). A veces el defecto se ve mejor dibujado.
 3. **Por cada defecto, rellenad una fila en la tabla del informe** ([`informe_calidad_plantilla.md`](../plantillas/informe_calidad_plantilla.md)):
@@ -100,19 +100,19 @@
 
 Apuntad también las **preguntas que haríais al cliente** («¿qué significa un precio de 0 €? ¿es cortesía o un error?»).
 
-#### Paso 3 · Función de limpieza y separación train/test (jueves 5/11, 40 minutos)
+#### Paso 3 · Función de limpieza y separación train/test (jueves 5/11, 30 minutos)
 1. Escribid `limpiar_reservas(df)`: una función que recibe la tabla sucia y devuelve la tabla limpia aplicando **todos** vuestros tratamientos. **No toquéis el CSV a mano.**
 2. **Comprobad antes y después** (nulos, duplicados, rangos). Si una corrección no se nota, no sirve.
 3. **Separad train y test ANTES de calcular medianas, medias o categorías frecuentes.** Esos valores se aprenden **solo con train** y se aplican luego al test. Si calculáis la mediana con todos los datos, el test «se contamina» (fuga).
 4. **No descartéis ninguna fila sin justificarlo** en el informe.
 
-#### Paso 4 · Pipeline y baseline (jueves 5/11, 40 minutos)
+#### Paso 4 · Pipeline y baseline (jueves 5/11, 30 minutos)
 1. Construid un `Pipeline` de scikit-learn con tres pasos: **imputar** huecos, **escalar** números y **codificar** categorías.
 2. Añadid un **modelo de referencia** (por ejemplo, regresión logística).
 3. Evaluadlo con **validación cruzada** y comparadlo con un `DummyClassifier`. Si vuestro modelo no mejora al «tonto», algo falla.
 4. Pensad en la métrica: si solo se cancela el 20 %, un modelo que dice «nunca cancelan» acierta el 80 %. Por eso conviene mirar métricas que tengan en cuenta las cancelaciones (recall, F1…).
 
-#### Paso 5 · Informe, README y ensayo (jueves 5/11, 25 minutos)
+#### Paso 5 · Informe, README y ensayo (jueves 5/11, 20 minutos)
 1. Completad el informe (1–2 páginas): tabla de defectos, tratamientos justificados y preguntas al cliente.
 2. En `README.md`: cómo ejecutar el cuaderno, qué versiones de librerías usáis y en qué orden.
 3. Comprobad que **«Reiniciar y ejecutar todo»** funciona sin errores.

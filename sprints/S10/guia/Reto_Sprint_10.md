@@ -26,7 +26,7 @@
 
 **Qué vais a aprender haciéndolo:** a **entrenar una red sin que memorice**, a leer **curvas de aprendizaje**, y a **comparar con honestidad** (que un número sea mayor no basta).
 
-**Cuánto tiempo:** unas 3 horas entre el planning, el reto (≈ 2 h 15 min) y la entrega (16 y 17/11). El reto se hace en la segunda jornada, con el esqueleto del cuaderno [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y lo practicado el lunes.
+**Cuánto tiempo:** unas 2 horas y 15 minutos entre el planning, el reto (≈ 2 h 15 min) y la entrega (16 y 17/11). El reto se hace en la segunda jornada, con el esqueleto del cuaderno [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y lo practicado el lunes.
 
 **Núcleo y extra.** Núcleo: un único problema: reproducir la referencia y una mejora con la red, bien medida. Extra: más experimentos y las prácticas «en casa».
 
@@ -82,23 +82,23 @@ merece la pena el cambio.
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Elegir el problema y reproducir la referencia (martes 17/11, 20 minutos)
+#### Paso 1 · Elegir el problema y reproducir la referencia (martes 17/11, 15 minutos)
 1. Elegid **un problema**: cancelaciones (`cancelada`) **o** precio (`precio_noche`). El otro es opcional.
 2. Abrid [`S10_04_reto_vale_la_pena`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y ejecutadlo bloque a bloque, **entendiendo cada uno** (si no lo entendéis, preguntad antes de seguir).
 3. **Reproducid el modelo de referencia** (vuestro campeón del Sprint 8 o el boosting que trae el cuaderno) y anotad su métrica.
 4. **Fijad la partición** entrenamiento / validación / prueba y no la cambiéis nunca más. **La prueba se usa una sola vez.**
 
-#### Paso 2 · Primera red (martes 17/11, 35 minutos)
+#### Paso 2 · Primera red (martes 17/11, 25 minutos)
 1. Escalad los datos **ajustando el escalador solo con el entrenamiento** (si no, hay fuga).
 2. Entrenad un MLP pequeño (por ejemplo, 2 capas ocultas de 32 neuronas), **máximo 30 épocas**. Se ejecuta en CPU en pocos minutos.
 3. Dibujad la **curva de aprendizaje**: error en entrenamiento y en validación.
 
-#### Paso 3 · Variantes (martes 17/11, 30 minutos)
+#### Paso 3 · Variantes (martes 17/11, 25 minutos)
 1. Probad **2 variantes**: más o menos neuronas, *dropout*, L2, otra tasa de aprendizaje, *early stopping*.
 2. **Compararlas mirando solo la validación.** El test no se toca.
 3. Anotad qué ha mejorado y qué no. Una tabla pequeña basta: *variante · error en entrenamiento · error en validación*.
 
-#### Paso 4 · Diagnosticar el sobreajuste (martes 17/11, 25 minutos)
+#### Paso 4 · Diagnosticar el sobreajuste (martes 17/11, 20 minutos)
 Mirad vuestras curvas:
 - **Entrenamiento baja y validación sube:** la red memoriza (sobreajuste). Soluciones: más regularización, menos neuronas, parar antes.
 - **Las dos curvas están altas y juntas:** la red es demasiado simple (subajuste).
@@ -106,14 +106,14 @@ Mirad vuestras curvas:
 
 Escribid **una frase de diagnóstico** para vuestra mejor red.
 
-#### Paso 5 · Comparación justa (martes 17/11, 35 minutos)
+#### Paso 5 · Comparación justa (martes 17/11, 25 minutos)
 1. **Repetid el entrenamiento con varias semillas** (por ejemplo, 3) para el MLP y para el modelo clásico.
 2. Calculad **media ± desviación** (o un intervalo) de la métrica.
 3. Comparad: **si los intervalos se solapan, no podéis decir que uno sea mejor**.
 4. Evaluad en el test **una sola vez**, con el MLP elegido y con el modelo clásico, y registrad ambos.
 5. Añadid el **coste**: tiempo de entrenamiento, complejidad, explicabilidad. Una red puede mejorar un 1 % pero tardar 20 veces más y ser opaca.
 
-#### Paso 6 · Informe y presentación (martes 17/11, 45 minutos)
+#### Paso 6 · Informe y presentación (martes 17/11, 35 minutos)
 Informe de 1 página:
 1. **Pregunta y respuesta en una frase** («Recomendamos mantener el boosting porque…»).
 2. **Tabla de resultados** (media ± desviación) de ambos enfoques.

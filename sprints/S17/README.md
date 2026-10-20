@@ -24,17 +24,19 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Viernes 11/12**
 
-1. 📖 **Teoría**: [Storytelling y defensa](presentaciones/S17.1_Storytelling_y_defensa.pdf) · _40 min_
-2. 💻 **Práctica**: [Construir el relato: audiencia, mensaje único, pirámide, *storyboard* y reparto de voces](plantillas/plantilla_storytelling.md) · _1 h 50 min_
-3. 🎯 **Reto**: [Tres rondas de ensayo con cronómetro, demo y preguntas (paso 3); ensayo general en la última](guia/Reto_Sprint_17.md) · _1 h 40 min_
+1. 📖 **Teoría**: [**Storytelling**](presentaciones/S17.1_Storytelling_y_defensa.pdf) · _30 min_
+2. 💻 **Práctica**: **Tu historia:** [plantilla de storytelling](plantillas/plantilla_storytelling.md) (máx. 12 diapositivas) · _45 min_
+3. 💻 **Práctica**: **Pitch de 3 minutos** y guion de la defensa ([`guion_defensa.md`](actividades/guion_defensa.md)) · _40 min_
+4. 🎯 **Reto**: **Ensayos con preguntas** cruzadas entre equipos · _45 min_
+5. 🎯 **Reto**: **Ensayo general** con cronómetro: 10 min · _40 min_
 
 **Antes de las 8:30 del lunes 14/12**
 
-4. 🎯 **Reto**: [Subir la presentación en PDF (≤ 12 diapositivas) al repositorio (paso 4)](guia/Reto_Sprint_17.md)
+6. 🎯 **Reto**: [Subir la presentación en PDF (≤ 12 diapositivas) al repositorio (paso 4)](guia/Reto_Sprint_17.md)
 
 **Lunes 14/12 · defensa**
 
-5. 🎯 **Reto**: [Defensa en directo con demo y plan B; respuestas a las preguntas más probables (paso 5)](actividades/guion_defensa.md) · _2 h_
+7. 🎯 **Reto**: [Defensa en directo con demo y plan B; respuestas a las preguntas más probables (paso 5)](actividades/guion_defensa.md) · _2 h_
 
 <!--orden:fin-->
 

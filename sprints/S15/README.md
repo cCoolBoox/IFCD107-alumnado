@@ -22,19 +22,23 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**1/12**
+**Martes 1/12**
 
-1. 📖 **Teoría**: [Píldora: seguimiento de experimentos](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) · _40 min_
-2. 💻 **Práctica**: [Semillas, registro de experimentos, validación cruzada y fuga de datos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) · _1 h_
-3. 🎯 **Reto**: [Preparar el terreno y el registro de experimentos (paso 1)](plantillas/registro_experimentos_plantilla.csv) · _resto de la jornada_
+1. 📖 **Teoría**: [**Píldora: seguimiento de experimentos**](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) · _30 min_
+2. 💻 **Práctica**: [Práctica de seguimiento de experimentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) · _50 min_
+3. 🎯 **Reto**: **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el [registro de experimentos](plantillas/registro_experimentos_plantilla.csv) · _2 h_
 
-**2/12**
+**Miércoles 2/12**
 
-4. 🎯 **Reto**: [Modelos clásicos y red neuronal (paso 2) → comprobar que no hay fugas de datos, **antes de elegir** (paso 3)](guia/Reto_Sprint_15.md) · _jornada completa_
+4. 🎯 **Reto**: **Proyecto:** prueba modelos (clásico, red o LLM/RAG, según tu brief) · _1 h 40 min_
+5. 🎯 **Reto**: Continúa con los experimentos. **Tutoría técnica de 20 min por equipo** (el docente indica tu franja) · _1 h 40 min_
 
-**3/12 · hito: modelo candidato elegido**
+**Jueves 3/12**
 
-5. 🎯 **Reto**: [Elegir el candidato (paso 4) → test **una sola vez** y explicación (paso 5)](guia/Reto_Sprint_15.md) · _jornada completa_
+6. 🎯 **Reto**: **Comparativa** de modelos y elección del **candidato** · _1 h 10 min_
+7. 🎯 **Reto**: **Evaluación única en test:** una sola vez, con el candidato elegido · _40 min_
+8. 🔔 **Ceremonia**: Entrega en `sprint-15/` de tu repo + autoevaluación y coevaluación · _30 min_
+9. 🔔 **Ceremonia**: Review (5 min de demo por equipo) y retro: ¿qué mantenemos?, ¿qué cambiamos? · _1 h_
 
 <!--orden:fin-->
 

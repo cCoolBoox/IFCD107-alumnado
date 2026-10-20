@@ -26,7 +26,7 @@
 
 **Qué vais a aprender haciéndolo:** cómo «aprende» un modelo (ajustando números poco a poco), cómo medir **cuánta confianza** hay en un resultado y por qué **correlación no es causalidad**.
 
-**Cuánto tiempo:** unas 2 horas y 5 minutos entre el planning, el reto y la entrega (30/10 y 3/11). El paso 1 (cargar los datos en una base) coincide con la práctica de CRUD.
+**Cuánto tiempo:** unas 1 hora y 35 minutos entre el planning, el reto y la entrega (30/10 y 3/11). El paso 1 (cargar los datos en una base) coincide con la práctica de CRUD.
 
 **Núcleo y extra.** Núcleo: la regresión desde cero y la respuesta al cliente con su medida de confianza. Extra: la comparación con una librería y el CRUD ampliado.
 
@@ -58,7 +58,7 @@ Un **cuaderno** ([`S05_07_reto_ocupacion`](https://colab.research.google.com/git
 5. Una **respuesta al cliente de máximo 150 palabras**: qué encontráis, qué recomendáis y qué no podéis afirmar.
 
 ### Restricciones
-- **Tiempo:** unas 2 h 5 min dentro del sprint (12 h), con el planning y la entrega.
+- **Tiempo:** unas 1 h 35 min dentro del sprint (12 h), con el planning y la entrega.
 - El descenso del gradiente lo escribís vosotros (sin `LinearRegression` en la implementación; la librería solo sirve para contrastar).
 - Datos sintéticos: no generalicéis a otros alojamientos ni al turismo real.
 - Semillas fijas y el cuaderno debe ejecutarse de arriba abajo sin errores.
@@ -78,31 +78,31 @@ Un **cuaderno** ([`S05_07_reto_ocupacion`](https://colab.research.google.com/git
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Cargar los datos en una base de datos (martes 3/11, es la práctica de CRUD, 40 minutos)
+#### Paso 1 · Cargar los datos en una base de datos (martes 3/11, es la práctica de CRUD, 30 minutos)
 1. Abrid la plantilla [`S05_07_reto_ocupacion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb) en Colab (enlace en la ficha del reto).
 2. Cargad [`ocupacion_diaria.csv`](../../../datos/ocupacion_diaria.csv). Debe tener **1096 filas** (tres años de días).
 3. Creád `turisdata_reto.db` con una tabla `ocupacion_diaria`, y volved a leerla desde Python con una consulta SQL (`SELECT ... FROM ocupacion_diaria`). Comprobad que siguen siendo 1096 filas.
 
-#### Paso 2 · Mirar los datos (martes 3/11, 15 minutos)
+#### Paso 2 · Mirar los datos (martes 3/11, 10 minutos)
 1. Haced un gráfico de la ocupación a lo largo del tiempo y otro de la **media por mes**.
 2. Haced un gráfico de **ocupación frente a temperatura**. ¿Se ve una relación? ¿Hay estaciones que se repiten?
 3. **Anotad** lo que veáis (en palabras). Es la base de vuestra respuesta al cliente.
 
-#### Paso 3 · Regresión lineal desde cero (martes 3/11, 45 minutos)
+#### Paso 3 · Regresión lineal desde cero (martes 3/11, 35 minutos)
 1. Entended la idea con un ejemplo mínimo: si la ocupación fuera `a + b × temperatura`, ¿qué valores de `a` y `b` dan la mejor recta? El **error** es lo mal que se ajusta; el **gradiente** indica en qué dirección cambiar `a` y `b` para que el error baje.
 2. Seguid el cuaderno: programad el **descenso del gradiente** (vosotros, **sin** `LinearRegression`). Haced el **modelo simple** (solo temperatura).
 3. Pintad la **curva de aprendizaje**. Debe bajar y estabilizarse. Si «explota» (sube sin parar), la tasa de aprendizaje es demasiado grande: reducidla.
 4. Haced el **modelo con control**: añadid *festivo* y *mes* (para controlar la estacionalidad).
 
-#### Paso 4 · Comparar con una librería (martes 3/11, 15 minutos)
+#### Paso 4 · Comparar con una librería (martes 3/11, 10 minutos)
 Calculad la misma regresión con `statsmodels` y comparad los coeficientes con los vuestros. **Si coinciden (con una tolerancia razonable), vuestro código es correcto.** Si no, buscad el fallo: la causa más común es una tasa de aprendizaje inadecuada o pocas vueltas del algoritmo.
 
-#### Paso 5 · Medir la seguridad del resultado (martes 3/11, 15 minutos)
+#### Paso 5 · Medir la seguridad del resultado (martes 3/11, 10 minutos)
 1. Obtened de `statsmodels` el **p-valor** y el **intervalo de confianza** del efecto de la temperatura y del festivo.
 2. Calculad el **tamaño del efecto**: cuántos puntos de ocupación cambia con un grado más (o con un festivo).
 3. **Interpretad con palabras** cada cifra. Ejemplo (inventado): *«Con un grado más, la ocupación baja unos 0,8 puntos (intervalo de confianza entre 0,5 y 1,1)»*.
 
-#### Paso 6 · Responder al cliente en 150 palabras (martes 3/11, 15 minutos)
+#### Paso 6 · Responder al cliente en 150 palabras (martes 3/11, 10 minutos)
 La respuesta tiene que contestar **tres preguntas**:
 1. **¿Qué encontráis?** (con cifra e incertidumbre).
 2. **¿Qué recomendáis?** (algo que el cliente pueda hacer).

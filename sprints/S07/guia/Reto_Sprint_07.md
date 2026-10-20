@@ -28,7 +28,7 @@ Y hay un detalle importante: **el gerente no quiere oír hablar de «AUC»**. Qu
 
 **Qué vais a aprender haciéndolo:** a elegir métricas según el problema, a **evitar la fuga de datos**, a **traducir un modelo a dinero** y a defender una decisión con hipótesis claras.
 
-**Cuánto tiempo:** unas 2 horas y 10 minutos en equipo entre el planning, el reto y la entrega (6 y 9/11). El reto se hace sobre todo el lunes 9/11, con lo aprendido el viernes.
+**Cuánto tiempo:** unas 1 hora y 40 minutos en equipo entre el planning, el reto y la entrega (6 y 9/11). El reto se hace sobre todo el lunes 9/11, con lo aprendido el viernes.
 
 **Núcleo y extra.** Núcleo: regresión del precio y clasificación de la cancelación con las hipótesis de coste. Extra: análisis de sensibilidad completo.
 
@@ -84,7 +84,7 @@ Y hay un detalle importante: **el gerente no quiere oír hablar de «AUC»**. Qu
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Acordar las hipótesis de coste (lunes 9/11, 15 minutos; el planning fue el viernes)
+#### Paso 1 · Acordar las hipótesis de coste (lunes 9/11, 10 minutos; el planning fue el viernes)
 1. Roles del sprint y tareas en el tablero.
 2. **La pregunta central del informe:** *¿qué cuesta más, una cancelación no prevista (habitación vacía) o una falsa alarma (un cliente llega y no hay sitio)?*
 3. **Proponed una hipótesis de coste para cada error**, razonada con una frase. Ejemplos:
@@ -92,24 +92,24 @@ Y hay un detalle importante: **el gerente no quiere oír hablar de «AUC»**. Qu
    - Una falsa alarma cuesta **una noche de compensación** (alojamiento en otro hotel + disculpa).
 4. Escribidlas en el cuaderno como variables (`COSTE_FN`, `COSTE_FP`) para poder cambiarlas luego.
 
-#### Paso 2 · Regresión del precio (lunes 9/11, 30 minutos)
+#### Paso 2 · Regresión del precio (lunes 9/11, 25 minutos)
 1. Elegid las variables que **se conocen al reservar** (tipo de habitación, mes, antelación, canal…). **`cancelada` no puede usarse para predecir el precio** (es fuga).
 2. Modelo de referencia: predecir siempre el precio medio de entrenamiento. Medid MAE y RMSE.
 3. Regresión lineal. Medid MAE, RMSE y R². ¿Mejora al modelo de referencia?
 4. Una mejora (añadir interacciones o regularización tipo Lasso). ¿Compensa la complejidad?
 5. Expresad el resultado **en euros**: «nos equivocamos de media en X € por noche».
 
-#### Paso 3 · Clasificación de la cancelación (lunes 9/11, 45 minutos)
+#### Paso 3 · Clasificación de la cancelación (lunes 9/11, 35 minutos)
 1. Partid los datos (train/test) y **no toquéis el test hasta el final**.
 2. Modelo de referencia (por ejemplo, el que siempre dice «no cancela»). Regresión logística. Opcional: un segundo modelo.
 3. Dibujad la **matriz de confusión** y las curvas ROC y PR. Calculad AUC y AP.
 4. **Elegid el umbral con validación cruzada sobre train**: probad muchos umbrales y calculad el coste total de cada uno con vuestras hipótesis: `coste = FN × COSTE_FN + FP × COSTE_FP`. El mejor umbral es el que **minimiza el coste**.
 5. **Usad el test una sola vez**, al final, para dar el coste esperado.
 
-#### Paso 4 · Análisis de sensibilidad (lunes 9/11, 15 minutos)
+#### Paso 4 · Análisis de sensibilidad (lunes 9/11, 10 minutos)
 Preguntaos: *¿y si una noche vacía costara el doble? ¿y si la compensación costara la mitad?* Variad los costes y mirad **cómo cambia el umbral óptimo** y el coste total. Mostradlo en una tabla o gráfico. La conclusión es del tipo: *«con estos costes recomendamos un umbral de 0,35; si el coste de una falsa alarma sube al doble, el umbral sube a 0,45»*.
 
-#### Paso 5 · Informe y README (lunes 9/11, 30 minutos)
+#### Paso 5 · Informe y README (lunes 9/11, 25 minutos)
 Seguid la plantilla [`informe_modelado_plantilla.md`](../plantillas/informe_modelado_plantilla.md):
 1. **Resumen para el gerente** (5 líneas, con euros).
 2. Tabla comparativa de métricas de los dos modelos.

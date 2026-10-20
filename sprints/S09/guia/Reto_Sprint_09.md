@@ -25,7 +25,7 @@
 
 **Qué vais a aprender haciéndolo:** a **segmentar sin etiquetas**, a **traducir grupos matemáticos a clientes con nombre**, a **comparar recomendadores** y a ver los riesgos de personalizar (discriminación, sesgo de popularidad, privacidad).
 
-**Cuánto tiempo:** unas 3 horas y 15 minutos (12 y 13/11) entre el planning, el reto y la entrega, intercaladas con las prácticas.
+**Cuánto tiempo:** unas 2 horas y 20 minutos (12 y 13/11) entre el planning, el reto y la entrega, intercaladas con las prácticas.
 
 **Núcleo y extra.** Núcleo: segmentos con `k` justificado y su ficha, y un recomendador sencillo. Extra: otros algoritmos de agrupación y el aprendizaje por refuerzo (que se ve en demostración).
 
@@ -79,30 +79,30 @@ Lucía, directora comercial de **TurisData Canarias**, envía la misma newslette
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Preparación y datos (jueves 12/11, tras las prácticas 01 y 02, 15 minutos)
+#### Paso 1 · Preparación y datos (jueves 12/11, tras las prácticas 01 y 02, 10 minutos)
 1. Abrid un cuaderno nuevo (o el `reto_S09_conocer_al_huesped`) con [`huespedes.csv`](../../../datos/huespedes.csv) y [`valoraciones_experiencias.csv`](../../../datos/valoraciones_experiencias.csv).
 2. **Revisad las columnas** de [`huespedes.csv`](../../../datos/huespedes.csv) (edad, gasto, antelación, etc.). ¿Cuáles son números y cuáles categorías?
 3. **Escalad** las variables numéricas. Si no, el algoritmo dará más peso a las columnas con números grandes.
 
-#### Paso 2 · Segmentar y elegir k (jueves 12/11, 25 minutos)
+#### Paso 2 · Segmentar y elegir k (jueves 12/11, 20 minutos)
 1. Probad k-means con varios valores de `k` (por ejemplo, de 2 a 8).
 2. Calculad la **silueta** para cada `k` y dibujad la curva.
 3. **No elijáis `k` solo por la silueta.** Preguntaos también: *¿puede la directora actuar con ese número de grupos?* Entre 3 y 5 segmentos suele ser manejable; 12 serían inmanejables.
 4. Anotad la razón de vuestra elección en **una frase con las dos justificaciones** (técnica y de negocio).
 
-#### Paso 3 · Mapa PCA e interpretación (jueves 12/11, 20 minutos)
+#### Paso 3 · Mapa PCA e interpretación (jueves 12/11, 15 minutos)
 1. Aplicad **PCA** a 2 componentes y dibujad los huéspedes coloreados por segmento. Poned en los ejes el **% de varianza**.
 2. Para cada segmento, calculad el **perfil medio**: edad, gasto, antelación, composición del grupo, etc. Comparadlo con la media general.
 3. **Ponedle un nombre comercial y una frase** con cifras concretas. Ejemplo (inventado): *«Familias de larga estancia: 410 huéspedes (34 %); 9 de cada 10 viajan con niños, reservan con 110 días de antelación y gastan poco en actividades»*.
 4. Proponed **una acción comercial** para cada segmento (qué enseñar, cuándo, por qué canal).
 
-#### Paso 4 · Recomendador (viernes 13/11, tras las prácticas 03 y 04, 40 minutos)
+#### Paso 4 · Recomendador (viernes 13/11, tras las prácticas 03 y 04, 30 minutos)
 1. Montad al menos **dos métodos** (por ejemplo, popularidad y filtrado colaborativo por similitud).
 2. **Evaluad con una división de prueba:** esconded algunas valoraciones, dejad que el recomendador las prediga y comparad. Medid **RMSE** y **precision@3**.
 3. Programad `recomendar(id_usuario, n)` que devuelva las `n` mejores experiencias que **el usuario aún no ha valorado**.
 4. Probadla con **3 usuarios distintos** y comprobad que tiene sentido (¿le sugiere cosas parecidas a las que ya le gustaron?).
 
-#### Paso 5 · Ficha, IA responsable y ensayo (viernes 13/11, 45 minutos)
+#### Paso 5 · Ficha, IA responsable y ensayo (viernes 13/11, 30 minutos)
 1. Completad la [ficha de segmentos](../plantillas/plantilla_ficha_segmentos.md): por segmento, nombre, tamaño, perfil, **una acción** y **una experiencia estrella** (la que recomienda vuestro prototipo para ese grupo).
 2. Nota de IA responsable (5 líneas, al menos **2 riesgos específicos**), por ejemplo:
    - *Discriminar:* si se usa la edad o «viaja con niños» para fijar precios, se puede discriminar. Medida: usar la segmentación para comunicar, no para variar precios.

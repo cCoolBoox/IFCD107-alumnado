@@ -23,21 +23,30 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
 
-**4/12**
+**Viernes 4/12**
 
-1. 📖 **Teoría**: [Píldora: demostrador y documentación](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) · _40 min_
-2. 🎯 **Reto**: [Evaluación final y análisis de errores (paso 1)](guia/Reto_Sprint_16.md) · _resto de la jornada_
+1. 🔔 **Ceremonia**: **Planning del Sprint 16:** lee el [README del Sprint 16](README.md) y reparte tareas · _10 min_
+2. 📖 **Teoría**: [**Despliegue y documentación**](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) · _30 min_
+3. 💻 **Práctica**: [Práctica del demostrador](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb) · _45 min_
+4. 🎯 **Reto**: **Tutoría de sesgos y visualización** (franja por equipo) · _40 min_
+5. 🎯 **Reto**: **Memoria técnica:** [esqueleto](plantillas/plantilla_esqueleto_memoria_tecnica.md) y [*model card*](plantillas/plantilla_model_card.md) · _1 h 15 min_
 
-**9/12 (no hay clase el 7 y el 8)**
+**Miércoles 9/12**
 
-3. 💻 **Práctica**: [Demostrador](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb) (carpeta [`plantillas/demostrador/`](plantillas/demostrador/)) · _55 min_
-4. 🎯 **Reto**: [Mitigación de sesgos, demostrador, pruebas, ficha del modelo y borrador de la memoria (paso 2)](plantillas/plantilla_model_card.md) · _resto de la jornada_
+6. 🎯 **Reto**: **Mitigar sesgos** detectados y volver a medir · _1 h 5 min_
+7. 🎯 **Reto**: Anota los resultados en el registro de experimentos · _15 min_
+8. 🎯 **Reto**: **Demostrador:** pulir y probarlo en limpio · _40 min_
+9. 🎯 **Reto**: **Model card** del modelo final · _35 min_
+10. 🎯 **Reto**: **Memoria técnica** · _45 min_
 
-**10/12 · congelación a las 14:30**
+**Jueves 10/12**
 
-5. 🎯 **Reto**: [Memoria completa de 10–15 páginas, prueba de reproducibilidad y vídeo plan B (paso 3)](plantillas/plantilla_esqueleto_memoria_tecnica.md) · _mañana_
-6. 🎯 **Reto**: [Lista de congelación y etiqueta `v1.0-entrega` **antes de las 14:30**](plantillas/checklist_congelacion.md) · _antes de las 14:30_
-7. 🎯 **Reto**: [Coevaluación individual (cada persona entrega la suya)](plantillas/plantilla_coevaluacion.md) · _antes de las 14:30_
+11. 🎯 **Reto**: **Memoria y verificación en limpio:** clona tu repo en un Colab nuevo y comprueba que todo se ejecuta ([`checklist_congelacion.md`](plantillas/checklist_congelacion.md)) · _1 h_
+12. 🎯 **Reto**: Corrige lo que haya fallado · _20 min_
+13. 🎯 **Reto**: **Vídeo de reserva** de la demo (por si falla internet el día de la defensa) · _30 min_
+14. 🎯 **Reto**: **Checklist de congelación** y [coevaluación](plantillas/plantilla_coevaluacion.md) · _35 min_
+15. 🔔 **Ceremonia**: Review (5 min de demo por equipo) y retro: ¿qué mantenemos?, ¿qué cambiamos? · _35 min_
+16. 🔔 **Ceremonia**: 🔒 **Congelación a las 14:30:** último *push*. Lo que no esté subido, no cuenta (los 30 min finales son el margen) · _20 min_
 
 <!--orden:fin-->
 

@@ -30,23 +30,23 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Martes 10/11**
 
-1. 🔔 **Ceremonia**: Planning del reto «Duelo de modelos» y pesos de los criterios (la «voz del cliente») · _15 min_
-2. 📖 **Teoría**: [Árboles de decisión](presentaciones/S08.1_Arboles_de_decision.pdf) · _30 min_
+1. 🔔 **Ceremonia**: Planning del reto «Duelo de modelos» y pesos de los criterios (la «voz del cliente») · _10 min_
+2. 📖 **Teoría**: [Árboles de decisión](presentaciones/S08.1_Arboles_de_decision.pdf) · _20 min_
 3. 💻 **Práctica**: [Árbol de decisión: reglas, poda e importancia](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) · _35 min_
-4. 📖 **Teoría**: [Ensembles: Random Forest y *boosting*](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) · _50 min_
-5. 💻 **Práctica**: [Random Forest: bagging, OOB e importancia por permutación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) · _35 min_
+4. 📖 **Teoría**: [Ensembles: Random Forest y *boosting*](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) · _25 min_
+5. 💻 **Práctica**: [Random Forest: bagging, OOB e importancia por permutación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) · _40 min_
 6. 💻 **Práctica**: [Gradient Boosting, XGBoost y LightGBM](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) · _45 min_
-7. 🎯 **Reto**: [Primeros modelos en el *leaderboard* (*baseline*, logística, árbol y bosque; pasos 1–2)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) · _40 min_
+7. 🎯 **Reto**: [Primeros modelos en el *leaderboard* (*baseline*, logística, árbol y bosque; pasos 1–2)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) · _25 min_
 
 **Miércoles 11/11**
 
-8. 📖 **Teoría**: [Máquinas de vectores de soporte (SVM)](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) · _25 min_
+8. 📖 **Teoría**: [Máquinas de vectores de soporte (SVM)](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) · _15 min_
 9. 💻 **Práctica**: [SVM: margen, kernels, `C` y `gamma`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) · _30 min_
-10. 💻 **Práctica**: [`GridSearchCV` y `RandomizedSearchCV`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) · _35 min_
-11. 🎯 **Reto**: [Búsqueda de hiperparámetros para una familia, la que elijáis (paso 3)](guia/Reto_Sprint_08.md) · _30 min_
-12. 🎯 **Reto**: [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](guia/Reto_Sprint_08.md) · _1 h 5 min_
+10. 💻 **Práctica**: [`GridSearchCV` y `RandomizedSearchCV`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) · _30 min_
+11. 🎯 **Reto**: [Búsqueda de hiperparámetros para una familia, la que elijáis (paso 3)](guia/Reto_Sprint_08.md) · _25 min_
+12. 🎯 **Reto**: [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](guia/Reto_Sprint_08.md) · _40 min_
 13. 📝 **Test**: [**Test de M3 (parte 2)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) · _25 min_
-14. 🔔 **Ceremonia**: Entrega en `sprint-08/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
+14. 🔔 **Ceremonia**: Entrega en `sprint-08/`, autoevaluación y coevaluación, review y retrospectiva · _35 min_
 
 <!--orden:fin-->
 
@@ -59,11 +59,11 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 ## Prácticas
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
-| `S08_01_arboles_decision` | Árbol de decisión: reglas, sobreajuste, poda, importancia | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) |
-| `S08_02_random_forest` | Random Forest: bagging, OOB, importancia por permutación | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) |
-| `S08_03_boosting_xgboost_lightgbm` | Gradient Boosting, XGBoost, LightGBM y parada temprana | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) |
-| `S08_04_svm` | SVM: margen, kernels, `C`, `gamma`, escalado y coste | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) |
-| `S08_05_busqueda_hiperparametros` | `GridSearchCV`, `RandomizedSearchCV`, `cv_results_`, test final | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) |
+| `S08_01_arboles_decision` | Árbol de decisión: reglas, sobreajuste, poda, importancia | 35 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) |
+| `S08_02_random_forest` | Random Forest: bagging, OOB, importancia por permutación | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) |
+| `S08_03_boosting_xgboost_lightgbm` | Gradient Boosting, XGBoost, LightGBM y parada temprana | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) |
+| `S08_04_svm` | SVM: margen, kernels, `C`, `gamma`, escalado y coste | 30 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) |
+| `S08_05_busqueda_hiperparametros` | `GridSearchCV`, `RandomizedSearchCV`, `cv_results_`, test final | 30 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) |
 | `S08_06_leaderboard_plantilla` | **Herramienta del reto**: leaderboard para rellenar | dentro del reto | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) |
 
 Las cinco primeras son prácticas guiadas; la sexta es la plantilla del reto. Los ejercicios se autocorrigen con `assert`.
