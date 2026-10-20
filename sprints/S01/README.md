@@ -27,7 +27,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Martes 20/10**
 
-1. 🎯 **Reto**: **Cierre del Sprint 0** (lo que quedó pendiente del reto): [acuerdo de trabajo y lista de «terminado»](../S00/plantillas/plantillas_equipo.md), [entrevista al cliente](../S00/actividades/entrevista_descubrimiento.md) en grupo grande, [mapa de empatía de TurisData](../S00/plantillas/empatia_hmw_plantillas.md) y retro corta · _50 min_
+1. 🎯 **Reto**: **Cierre del Sprint 0** (lo que quedó pendiente del reto): [acuerdo de trabajo y lista de «terminado»](../S00/plantillas/plantillas_equipo.md), [entrevista al cliente](../S00/actividades/entrevista_descubrimiento.md) en grupo grande (antes, 10 min en equipo para preparar las preguntas con la plantilla del mapa a la vista), después el [mapa de empatía de TurisData](../S00/plantillas/empatia_hmw_plantillas.md) con lo oído y retro corta · _50 min_
 2. 🔔 **Ceremonia**: Planning del Sprint 1: leed la ficha del reto y repartid los 7 apartados del informe · _15 min_
 3. 📖 **Teoría**: [Introducción a la IA: modalidades, casos de uso y mitos](presentaciones/S01.1_Introduccion_a_la_IA.pdf) · _1 h_
 4. 💻 **Práctica**: [Dinámica A: tarjetas de casos de uso (11 tarjetas)](actividades/tarjetas_casos_uso.md) · _35 min_
