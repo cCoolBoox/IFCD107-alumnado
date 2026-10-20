@@ -50,7 +50,7 @@
 ### Qué tenéis que entregar
 El **entregable** del sprint (un único paquete por equipo, que se revisa en la review del lunes):
 
-1. **Tablero** (Trello o similar) con las columnas, etiquetas y roles descritos en la guía del tablero, y el backlog del curso cargado.
+1. **Tablero** (Trello o similar) con las columnas, etiquetas y roles descritos en la guía del tablero, y el backlog del curso cargado (tabla en [`plantillas_equipo.md`, sección 3](../plantillas/plantillas_equipo.md)).
 2. **Acuerdo de trabajo del equipo** (1 página, `.md` o el formato que prefiráis), firmado por todas las personas.
 3. **Definition of Done común** del equipo (checklist de 6–8 puntos, partiendo de la del curso).
 4. **Mapa de empatía de TurisData**, hecho a partir de la entrevista de descubrimiento, más **3 preguntas "How might we"** priorizadas.
@@ -81,7 +81,7 @@ Además, la evaluación del sprint es una **rúbrica de equipo**: roles, tablero
 |---|---|
 | **Planning (30 min, inicio del sprint)** | Formad equipos, elegid nombre, repartid los roles del sprint y leed esta ficha |
 | **Bloque 1 (30 min)** | Redactad el acuerdo de trabajo y la Definition of Done |
-| **Bloque 2 (30 min)** | Montad el tablero y cargad el backlog del curso |
+| **Bloque 2 (30 min)** | Montad el tablero y cargad el backlog del curso (sección 3 de `plantillas_equipo.md`) |
 | **Bloque 3 (30 min)** | Preparad las preguntas, haced la entrevista de descubrimiento y rellenad el mapa de empatía con 3 HMW |
 | **Review + retro (última hora del sprint)** | 5 minutos por equipo: mostrad tablero, acuerdo y mapa. Cerrad con la retro |
 
@@ -121,7 +121,7 @@ Lo monta **el Scrum Master con el equipo mirando** (compartid pantalla o proyect
 1. Crear el tablero `IFCD107 · [nombre de la consultora]` y **no hacerlo público**.
 2. Crear siete columnas en este orden: *Información · Backlog del curso · Sprint backlog · En curso · En revisión · Hecho · Impedimentos*.
 3. Crear las etiquetas (Reto PBL, IA responsable, Cliente, Bloqueado, etc.).
-4. Cargar el **backlog del curso** (está en [`plantillas_equipo.md`](../plantillas/plantillas_equipo.md)): al menos los Sprints 1 a 3 con detalle.
+4. Cargar el **backlog del curso** (está en [`plantillas_equipo.md`, sección 3](../plantillas/plantillas_equipo.md): una tarjeta por sprint): al menos los Sprints 1 a 3 con detalle.
 5. **Invitar al docente** con el correo que os indique.
 
 Regla de oro del tablero: **una tarjeta, una persona responsable**; máximo **2 tarjetas en curso por persona**.
@@ -207,7 +207,7 @@ Si queda una casilla sin marcar, **el reto no está terminado**.
 - [ ] Acuerdo de trabajo completo y firmado por todas las personas
 - [ ] Definition of Done propia (6–8 puntos) escrita en el tablero
 - [ ] Tablero creado, con columnas y etiquetas, y compartido con el docente
-- [ ] Backlog del curso cargado y con al menos los Sprints 1–3 detallados
+- [ ] Backlog del curso cargado (sección 3 de `plantillas_equipo.md`) y con al menos los Sprints 1–3 detallados
 - [ ] Notas de la entrevista y mapa de empatía de TurisData completos
 - [ ] 3 preguntas HMW redactadas y 1 priorizada
 - [ ] Autoevaluación y coevaluación rellenadas
