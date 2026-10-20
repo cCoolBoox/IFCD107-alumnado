@@ -10,12 +10,13 @@
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_03.pdf`](guia/Guia_Sprint_03.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_03_ecofriendly.pdf)
 - 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_03.md`](guia/Reto_Sprint_03.md)
+- 🖼️ **Infografías del reto (2 láminas: el reto de un vistazo y cómo se trabaja y se evalúa):** [`infografias/`](infografias/)
 - 🧪 **Guía de laboratorio AutoML (AutoGluon):** [`Guia_AutoML_AutoGluon.pdf`](guia/Guia_AutoML_AutoGluon.pdf)
 - 🖥️ **S03.1 · Bases de datos relacionales y SQL:** [`S03.1_Bases_de_datos_relacionales_y_SQL.pdf`](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf)
 - 🖥️ **S03.2 · Bases de datos NoSQL:** [`S03.2_Bases_de_datos_NoSQL.pdf`](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf)
 - 🖥️ **S03.3 · AutoML y MLOps:** [`S03.3_AutoML_y_MLOps.pdf`](presentaciones/S03.3_AutoML_y_MLOps.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo · [`tests/`](tests/) test de conocimientos
+**📁 En esta carpeta:** [`infografias/`](infografias/) láminas ilustradas del reto · [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`recursos/`](recursos/) scripts y ficheros de apoyo · [`tests/`](tests/) test de conocimientos
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint

@@ -10,9 +10,10 @@
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_15.pdf`](guia/Guia_Sprint_15.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_15_ecofriendly.pdf)
 - 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_15.md`](guia/Reto_Sprint_15.md)
+- 🖼️ **Infografías del reto (2 láminas: el reto de un vistazo y cómo se trabaja y se evalúa):** [`infografias/`](infografias/)
 - 🖥️ **S15.1 · Pildora seguimiento de experimentos:** [`S15.1_Pildora_seguimiento_de_experimentos.pdf`](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`infografias/`](infografias/) láminas ilustradas del reto · [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab · [`plantillas/`](plantillas/) plantillas para el reto
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint

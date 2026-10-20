@@ -11,11 +11,12 @@
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_02.pdf`](guia/Guia_Sprint_02.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_02_ecofriendly.pdf)
 - 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_02.md`](guia/Reto_Sprint_02.md)
+- 🖼️ **Infografías del reto (2 láminas: el reto de un vistazo y cómo se trabaja y se evalúa):** [`infografias/`](infografias/)
 - 🖥️ **S02.1 · Matematicas para IA:** [`S02.1_Matematicas_para_IA.pdf`](presentaciones/S02.1_Matematicas_para_IA.pdf)
 - 🖥️ **S02.2 · Estadistica y probabilidad:** [`S02.2_Estadistica_y_probabilidad.pdf`](presentaciones/S02.2_Estadistica_y_probabilidad.pdf)
 - 🖥️ **S02.3 · Ecosistema de software para IA:** [`S02.3_Ecosistema_de_software_para_IA.pdf`](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`tests/`](tests/) test de conocimientos
+**📁 En esta carpeta:** [`infografias/`](infografias/) láminas ilustradas del reto · [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`tests/`](tests/) test de conocimientos
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint
