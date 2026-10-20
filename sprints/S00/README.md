@@ -13,13 +13,14 @@
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_00.pdf`](guia/Guia_Sprint_00.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_00_ecofriendly.pdf)
 - 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_00.md`](guia/Reto_Sprint_00.md)
+- 🖼️ **Infografías del reto (6 láminas: el sprint de un vistazo, Scrum, Design Thinking, el tablero, el acuerdo de trabajo y la evaluación):** [`infografias/`](infografias/)
 - 🧪 **Ejemplos interactivos de todo el curso:** [abrir online](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S00/recursos/Ejemplos_del_curso_IFCD107.html) · archivo: [`Ejemplos_del_curso_IFCD107.html`](recursos/Ejemplos_del_curso_IFCD107.html) (opcional, 10 minutos para curiosear; funciona sin internet si lo descargas)
 - 🗂️ **Actividad · Crea el repositorio de tu equipo:** [`actividad_repositorio_equipo.md`](actividades/actividad_repositorio_equipo.md) (plantilla: [ifcd107-equipo-plantilla](https://github.com/cCoolBoox/ifcd107-equipo-plantilla))
 - 🖥️ **S00.0 · Bienvenida y reglas del curso:** [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf)
 - 🖥️ **S00.1 · Agile y Scrum:** [`S00.1_Agile_y_Scrum.pdf`](presentaciones/S00.1_Agile_y_Scrum.pdf)
 - 🖥️ **S00.2 · Design Thinking:** [`S00.2_Design_Thinking.pdf`](presentaciones/S00.2_Design_Thinking.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto · [`recursos/`](recursos/) scripts y ficheros de apoyo
+**📁 En esta carpeta:** [`infografias/`](infografias/) láminas ilustradas del reto · [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto · [`recursos/`](recursos/) scripts y ficheros de apoyo
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint

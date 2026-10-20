@@ -11,12 +11,13 @@
 
 - 📘 **Guía del sprint (PDF):** [`Guia_Sprint_01.pdf`](guia/Guia_Sprint_01.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_01_ecofriendly.pdf)
 - 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_01.md`](guia/Reto_Sprint_01.md)
+- 🖼️ **Infografías del reto (3 láminas: qué pide el cliente y cómo se hace, ética e informe, IA, errores y entrega):** [`infografias/`](infografias/)
 - 🖥️ **S01.1 · Introduccion a la IA:** [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf)
 - 🖥️ **S01.2 · Panorama de algoritmos y CRISP DM:** [`S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf`](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf)
 - 🖥️ **S01.3 · Tipos de aprendizaje:** [`S01.3_Tipos_de_aprendizaje.pdf`](presentaciones/S01.3_Tipos_de_aprendizaje.pdf)
 - 🖥️ **S01.4 · IA responsable etica sesgo y normativa:** [`S01.4_IA_responsable_etica_sesgo_y_normativa.pdf`](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf)
 
-**📁 En esta carpeta:** [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto
+**📁 En esta carpeta:** [`infografias/`](infografias/) láminas ilustradas del reto · [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`actividades/`](actividades/) material de las actividades y ejercicios · [`plantillas/`](plantillas/) plantillas para el reto
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint
