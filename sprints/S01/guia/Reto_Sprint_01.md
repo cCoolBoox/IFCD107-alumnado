@@ -100,7 +100,7 @@ Entre medias, aprovechad los ratos de las prácticas (mapa de casos, debate) par
 #### Paso 1 · Planning y reparto (martes 20/10, 10 minutos)
 1. Leed la ficha entera. Una persona lee, el resto subraya lo que no entiende.
 2. **Repartid las partes del informe** (7 apartados). Una persona puede encargarse de 1 o 2 apartados, pero **todas leen todo al final**.
-3. Pasad al tablero las tareas: «Elegir 8 tarjetas», «Fichas de casos», «Matriz», «Checklist ético», «Redacción», «Revisión cruzada».
+3. Pasad al tablero las tareas: «Elegir 8 tarjetas», «Fichas de casos», «Matriz», «Checklist ético», «Redacción», «Revisión cruzada». ¿Aún no tenéis tablero? Montadlo en 15 min con la [guía rápida de Trello](../actividades/guia_rapida_tablero_trello.md).
 
 #### Paso 2 · Lluvia de ideas (martes 20/10, 25 minutos)
 1. Poned sobre la mesa las **22 tarjetas** del banco de la dinámica A (11 las trabajasteis en clase; las otras 11 son nuevas) ([`tarjetas_casos_uso.md`](../actividades/tarjetas_casos_uso.md)).

@@ -41,6 +41,7 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 | [`casos_debate_ia_responsable.md`](actividades/casos_debate_ia_responsable.md) | Debate de casos éticos con roles (2 de los 5) | 25 min | Práctica 4 (M8, UD 8.4) |
 | [`checklist_etico_v1.md`](plantillas/checklist_etico_v1.md) | Checklist de IA responsable (versión 1) | en el reto | Reto |
 | [`ejemplo_clasificacion_caso.md`](actividades/ejemplo_clasificacion_caso.md) | Ejemplo resuelto de ficha de caso de uso | consulta | Reto |
+| [`guia_rapida_tablero_trello.md`](actividades/guia_rapida_tablero_trello.md) | Montar el tablero de Trello del equipo (listas y tareas del Sprint 1 para copiar y pegar) | 15 min | Si aún no hay tablero |
 
 *(Como no hay notebooks en este bloque, no hay enlaces a Colab. Los materiales son `.md` imprimibles.)*
 
@@ -53,7 +54,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 1 | 🎯 Reto | **Cierre del Sprint 0** (lo que quedó pendiente del reto): [acuerdo de trabajo y lista de «terminado»](../S00/plantillas/plantillas_equipo.md), [entrevista al cliente](../S00/actividades/entrevista_descubrimiento.md) en grupo grande (antes, 10 min en equipo para preparar las preguntas con la plantilla del mapa a la vista), después el [mapa de empatía de TurisData](../S00/plantillas/empatia_hmw_plantillas.md) con lo oído y retro corta | 40 min |
+| 1 | 🎯 Reto | **Cierre del Sprint 0** (lo que quedó pendiente del reto): [acuerdo de trabajo y lista de «terminado»](../S00/plantillas/plantillas_equipo.md), [entrevista al cliente](../S00/actividades/entrevista_descubrimiento.md) en grupo grande (antes, 10 min en equipo para preparar las preguntas con la plantilla del mapa a la vista), después el [mapa de empatía de TurisData](../S00/plantillas/empatia_hmw_plantillas.md) con lo oído y retro corta. **Si aún no tenéis tablero**, montadlo con la [guía rápida de Trello](actividades/guia_rapida_tablero_trello.md) (15 min, en casa o en este bloque) | 40 min |
 | 2 | 🔔 Ceremonia | Planning del Sprint 1: leed la ficha del reto y repartid los 7 apartados del informe | 10 min |
 | 3 | 📖 Teoría | [Introducción a la IA: modalidades, casos de uso y mitos](presentaciones/S01.1_Introduccion_a_la_IA.pdf) | 25 min |
 | 4 | 💻 Práctica | [Dinámica A: tarjetas de casos de uso (11 tarjetas)](actividades/tarjetas_casos_uso.md) | 25 min |
