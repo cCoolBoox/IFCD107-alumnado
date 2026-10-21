@@ -6,7 +6,7 @@ Tres actividades de práctica (repartidas entre las sesiones del sprint). Se imp
 |---|---|---|
 | A · Mapa de casos de uso | 25 min | Modalidad, tipo de aprendizaje y datos de 11 casos de IA (de un banco de 22) |
 | B · Clasificación "a mano" | 10 min (demostración) | Cómo se aprende de ejemplos, el **sobreajuste** y por qué existe el conjunto de test |
-| C · ¿Qué familia de algoritmos? | 15 min | Elegir una familia de algoritmos en 3 de los 6 problemas (con el docente) |
+| C · ¿Qué familia de algoritmos? | 15 min | Elegir el enfoque (reglas, supervisado, no supervisado…) en 3 de los 6 problemas (con el docente) |
 
 ---
 
@@ -292,7 +292,7 @@ Tenéis 8 minutos. Buscad **una regla** que clasifique bien el mayor número pos
 
 # Dinámica C · ¿Qué familia de algoritmos elegimos?
 
-Para cada problema, decid: **1)** ¿es predicción de un número, de una categoría, agrupación, recomendación, generación…? **2)** ¿qué familia de algoritmos usaríais (reglas, regresión, clasificación, clustering, árboles, ensembles, redes neuronales)? **3)** ¿qué datos necesitáis? **4)** ¿os importa poder **explicar** la decisión?
+Para cada problema, decid: **1)** ¿es predicción de un número, de una categoría, agrupación, recomendación, generación…? **2)** ¿qué enfoque usaríais, con lo visto hasta ahora: **reglas simples**, aprendizaje **supervisado** (clasificación o regresión), **no supervisado** (agrupar), **por refuerzo** o un **modelo preentrenado**? (Los nombres concretos de algoritmos —Ridge, k-means, *ensembles*, *transfer learning*— se verán en los sprints 3 y 4: aquí no hacen falta.) **3)** ¿qué datos necesitáis? **4)** ¿os importa poder **explicar** la decisión?
 
 | Nº | Problema de TurisData |
 |---|---|
@@ -305,7 +305,7 @@ Para cada problema, decid: **1)** ¿es predicción de un número, de una categor
 
 ## Tabla de respuestas
 
-| Nº | Tipo de problema | Familia elegida | Datos necesarios | ¿Explicabilidad importante? ¿Por qué? |
+| Nº | Tipo de problema | Familia o enfoque | Datos necesarios | ¿Explicabilidad importante? ¿Por qué? |
 |---|---|---|---|---|
 | P1 | | | | |
 | P2 | | | | |
