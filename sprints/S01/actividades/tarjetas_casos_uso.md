@@ -29,31 +29,30 @@ Tres actividades de práctica (repartidas entre las sesiones del sprint). Se imp
 
 ## Tabla de respuestas (hoja para el equipo)
 
-| Nº | Modalidad | Tipo de aprendizaje | Datos necesarios | ¿Hace falta IA? |
-|---|---|---|---|---|
-| C01 | | | | |
-| C02 | | | | |
-| C03 | | | | |
-| C04 | | | | |
-| C05 | | | | |
-| C06 | | | | |
-| C07 | | | | |
-| C08 | | | | |
-| C09 | | | | |
-| C10 | | | | |
-| C11 | | | | |
-| C12 | | | | |
-| C13 | | | | |
-| C14 | | | | |
-| C15 | | | | |
-| C16 | | | | |
-| C17 | | | | |
-| C18 | | | | |
-| C19 | | | | |
-| C20 | | | | |
-| C21 | | | | |
-| C22 | | | | |
-
+| Nº | Caso | Modalidad | Tipo de aprendizaje | Datos necesarios | ¿Hace falta IA? |
+|---|---|---|---|---|---|
+| C01 | Predecir cancelaciones | | | | |
+| C02 | Segmentar huéspedes | | | | |
+| C03 | Recomendar experiencias | | | | |
+| C04 | Sentimiento de las reseñas | | | | |
+| C05 | Temas de las quejas | | | | |
+| C06 | Asistente sobre la política | | | | |
+| C07 | Clasificar fotos de alojamientos | | | | |
+| C08 | Contar personas en una excursión | | | | |
+| C09 | Prever la ocupación | | | | |
+| C10 | Precio dinámico | | | | |
+| C11 | Traducción automática | | | | |
+| C12 | Transcribir llamadas | | | | |
+| C13 | Detectar reservas anómalas | | | | |
+| C14 | Redactar descripciones | | | | |
+| C15 | Qué oferta mostrar | | | | |
+| C16 | Enviar un recordatorio | | | | |
+| C17 | Imágenes promocionales | | | | |
+| C18 | Check-in con reconocimiento facial | | | | |
+| C19 | Puntuar el riesgo del cliente | | | | |
+| C20 | Clasificar el correo entrante | | | | |
+| C21 | Robot de equipajes | | | | |
+| C22 | Calcular el IVA de la factura | | | | |
 ## Tarjetas (recortar por las líneas)
 
 ```
