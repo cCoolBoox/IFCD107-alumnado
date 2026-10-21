@@ -2,6 +2,8 @@
 
 **Práctica de M8 (UD 8.4)** · Casos **ficticios** ambientados en TurisData Canarias, inspirados en problemas reales que han aparecido en empresas y administraciones de todo el mundo. **Duración:** unos 60-75 minutos con un caso por grupo (o dos casos, según tiempo).
 
+> **En la sesión S01.4 (25 min):** se trabajan solo los **casos 1 y 2**, con esta versión corta: leer caso y rol (3 min) · preparar 3 argumentos (5) · debate (10) · decisión de 5 líneas (4) · puesta en común (3). Los casos 3, 4 y 5 y la versión larga de abajo quedan para el reto y para ampliar el debate.
+
 ## Cómo funciona el debate
 
 | Fase | Tiempo | Qué se hace |
