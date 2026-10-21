@@ -26,7 +26,7 @@
 
 **Qué vais a aprender haciéndolo:** el recorrido completo de un proyecto de IA, **del dato al servicio**, incluida una parte que mucha gente olvida: **vigilar el coste y cerrar los recursos**.
 
-**Cuánto tiempo:** unas 2 horas y 5 minutos entre el planning, el reto y la entrega (26 y 27/10).
+**Cuánto tiempo:** unas 2 horas y 10 minutos entre el planning, el reto y la entrega (26 y 27/10).
 
 **Núcleo y extra.** Núcleo: el mejor modelo con su umbral, la llamada al servicio y el cierre y borrado de recursos (0 €). Extra: comparar más modelos en AutoML y los scripts SQL 05–06 de CRUD e índices (en casa).
 
@@ -57,7 +57,7 @@ Un único documento (Markdown o PDF, máximo 4 páginas) con tres partes:
 3. **Informe de recursos y costes:** qué recursos se han creado, cuánto tiempo y capacidad se han usado, cuánto ha costado o cuánto habría costado, y **prueba de que se han cerrado o eliminado** todos.
 
 ### Restricciones
-- **Tiempo:** unas 1 h 25 min de reto en clase, más la entrega y la review (dentro de las 12 h del sprint).
+- **Tiempo:** unas 1 h 30 min de reto en clase, más la entrega y la review (dentro de las 12 h del sprint).
 - **Datos:** solo los datos sintéticos de TurisData. No subáis datos personales reales.
 - **Recursos:** se trabaja con el límite de uso que indique el docente; todo recurso creado debe quedar cerrado o eliminado al terminar.
 - **Seguridad:** nunca pongáis claves, contraseñas ni cadenas de conexión en el informe ni en repositorios.
