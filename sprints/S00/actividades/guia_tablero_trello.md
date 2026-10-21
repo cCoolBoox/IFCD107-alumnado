@@ -4,6 +4,8 @@ Trello es gratuito para lo que necesitamos. Si el equipo prefiere otra herramien
 
 **Tiempo estimado:** 30 minutos. Lo hace **el Scrum Master** con el equipo a la vista (proyectando o compartiendo pantalla).
 
+> **Atajo:** hay un [tablero plantilla ya montado](https://trello.com/b/Jx9M0hmv/ifcd107-plantilla-de-tablero-del-equipo) (listas, backlog del curso y tarjetas de información). Copiadlo con **Menú → Más → Copiar tablero** y saltad a los pasos 3 y 5; el resto ya viene hecho. Ver también la [guía rápida](../../S01/actividades/guia_rapida_tablero_trello.md).
+
 ## Paso 1 · Crear el tablero
 1. Entrad en trello.com con vuestra cuenta (o creadla).
 2. Pulsad **Crear tablero**. Nombre: `IFCD107 · [Nombre de la consultora]`.

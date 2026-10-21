@@ -8,6 +8,19 @@
 
 ---
 
+## ⚡ Opción más rápida: copiar la plantilla (3 min)
+
+Hay un **tablero plantilla ya montado** (las 7 listas, el backlog del curso, las tareas del reto del Sprint 1 y las tarjetas de información): [**IFCD107 · Plantilla de tablero del equipo**](https://trello.com/b/Jx9M0hmv/ifcd107-plantilla-de-tablero-del-equipo).
+
+1. Abrid el enlace con vuestra cuenta de Trello.
+2. **Menú → Más → Copiar tablero** (o *Crear tablero a partir de esta plantilla*).
+3. Nombre: `IFCD107 · [nombre de vuestra consultora]`. Visibilidad: **Espacio de trabajo o privado, nunca público**.
+4. Invitad al equipo y al docente, y seguid en el **Paso 3 (etiquetas)** y el **Paso 6 (roles)**. Los pasos 1, 2, 4 y 5 ya los trae hecha la copia.
+
+Si el enlace no se abre o no os deja copiarlo, seguid con los pasos de abajo: el resultado es el mismo.
+
+---
+
 ## Paso 1 · Crear el tablero (2 min)
 1. Entrad en trello.com y pulsad **Crear tablero**.
 2. Nombre: `IFCD107 · [nombre de vuestra consultora]`.
