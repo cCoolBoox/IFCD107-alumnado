@@ -59,13 +59,13 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 4 | 📖 Teoría | [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | 20 min |
 | 5 | 💻 Práctica | [MLP en Keras: clasificación y regresión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) | 1 h |
 | 6 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 30 min |
-| 7 | 📖 Teoría | [Entrenamiento y regularización (primera parte)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 20 min |
+| 7 | 📖 Teoría | [Entrenamiento y regularización (primera parte: diapositivas 1–3)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 20 min |
 
 **Martes 17/11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 8 | 📖 Teoría | [Entrenamiento y regularización (final: parada temprana y *callbacks*)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 15 min |
+| 8 | 📖 Teoría | [Entrenamiento y regularización (final: parada temprana y *callbacks*, diapositivas 4–5; las 6–7 son del reto)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 15 min |
 | 9 | 💻 Práctica | [Sobreajuste, L2, *dropout*, parada temprana y *callbacks*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) | 55 min |
 | 10 | 🎯 Reto | Esqueleto [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb): elegir el problema y reproducir la referencia (paso 1) → primera red (2) → diagnosticar el sobreajuste (3) → comparación justa (4) → informe y presentación (5) | 1 h 30 min |
 | 11 | 🔔 Ceremonia | Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
