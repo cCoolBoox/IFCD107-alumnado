@@ -28,9 +28,9 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_09.md) · [PDF](guia/Reto_Sprint_09.pdf) · [ecofriendly](guia/Reto_Sprint_09_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S09.1_Clustering_y_PCA.pdf`](presentaciones/S09.1_Clustering_y_PCA.pdf) | Clustering y PCA | 45 min | Teoría · jueves 12/11 |
-| [`S09.2_Sistemas_de_recomendacion.pdf`](presentaciones/S09.2_Sistemas_de_recomendacion.pdf) | Sistemas de recomendación | 15 min | Teoría · viernes 13/11 |
-| [`S09.3_Aprendizaje_por_refuerzo.pdf`](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf) | Aprendizaje por refuerzo (visión conceptual) | 15 min | Teoría · viernes 13/11 |
+| [`S09.1_Clustering_y_PCA.pdf`](presentaciones/S09.1_Clustering_y_PCA.pdf) | Clustering y PCA | 30 min | Teoría · jueves 12/11 |
+| [`S09.2_Sistemas_de_recomendacion.pdf`](presentaciones/S09.2_Sistemas_de_recomendacion.pdf) | Sistemas de recomendación | 10 min | Teoría · viernes 13/11 |
+| [`S09.3_Aprendizaje_por_refuerzo.pdf`](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf) | Aprendizaje por refuerzo (visión conceptual) | 10 min | Teoría · viernes 13/11 |
 
 **Material de las actividades**
 
@@ -53,21 +53,23 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Conocer al huésped» y reparto de roles | 10 min |
-| 2 | 📖 Teoría | [Clustering y PCA](presentaciones/S09.1_Clustering_y_PCA.pdf) | 45 min |
+| 2 | 📖 Teoría | [Clustering y PCA](presentaciones/S09.1_Clustering_y_PCA.pdf) | 30 min |
 | 3 | 💻 Práctica | [Segmentar huéspedes: k-means, silueta, jerárquico y DBSCAN](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_01_clustering.ipynb) | 55 min |
 | 4 | 💻 Práctica | [PCA: varianza explicada y mapa en 2D](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_02_pca.ipynb) | 40 min |
-| 5 | 🎯 Reto | [Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3)](guia/Reto_Sprint_09.md) | 50 min |
+| 5 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 15 min |
+| 6 | 🎯 Reto | [Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3)](guia/Reto_Sprint_09.md) | 50 min |
 
 **Viernes 13/11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 6 | 📖 Teoría | [Sistemas de recomendación](presentaciones/S09.2_Sistemas_de_recomendacion.pdf) | 15 min |
-| 7 | 📖 Teoría | [Aprendizaje por refuerzo (visión conceptual)](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf) | 15 min |
-| 8 | 💻 Práctica | [Recomendadores: popularidad, contenido, colaborativo y factorización](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) | 1 h |
-| 9 | 💻 Práctica | [Q-learning en el hotel (demostración guiada)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_04_q_learning.ipynb) | 30 min |
-| 10 | 🎯 Reto | [Recomendador, ficha de segmentos, IA responsable y ensayo (pasos 4–5)](guia/Reto_Sprint_09.md) | 40 min |
-| 11 | 🔔 Ceremonia | Entrega en `sprint-09/`, autoevaluación y coevaluación, review (3 min por equipo) y retrospectiva | 40 min |
+| 7 | 📖 Teoría | [Sistemas de recomendación](presentaciones/S09.2_Sistemas_de_recomendacion.pdf) | 10 min |
+| 8 | 📖 Teoría | [Aprendizaje por refuerzo (visión conceptual)](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf) | 10 min |
+| 9 | 💻 Práctica | [Recomendadores: popularidad, contenido, colaborativo y factorización](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) | 1 h |
+| 10 | 💻 Práctica | [Q-learning en el hotel (demostración guiada)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_04_q_learning.ipynb) | 30 min |
+| 11 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
+| 12 | 🎯 Reto | [Recomendador, ficha de segmentos, IA responsable y ensayo (pasos 4–5)](guia/Reto_Sprint_09.md) | 40 min |
+| 13 | 🔔 Ceremonia | Entrega en `sprint-09/`, autoevaluación y coevaluación, review (3 min por equipo) y retrospectiva | 40 min |
 
 <!--orden:fin-->
 

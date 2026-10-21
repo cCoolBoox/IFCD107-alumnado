@@ -27,7 +27,7 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_15.md) · [PDF](guia/Reto_Sprint_15.pdf) · [ecofriendly](guia/Reto_Sprint_15_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S15.1_Pildora_seguimiento_de_experimentos.pdf`](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) | Píldora: seguimiento de experimentos | 30 min | Teoría · martes 1/12 |
+| [`S15.1_Pildora_seguimiento_de_experimentos.pdf`](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) | Píldora: seguimiento de experimentos | 20 min | Teoría · martes 1/12 |
 
 **Material de las actividades**
 
@@ -48,9 +48,9 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 1 | 📖 Teoría | [**Píldora: seguimiento de experimentos**](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) | 30 min |
+| 1 | 📖 Teoría | [**Píldora: seguimiento de experimentos**](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) | 20 min |
 | 2 | 💻 Práctica | [Práctica de seguimiento de experimentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) | 50 min |
-| 3 | 🎯 Reto | **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el [registro de experimentos](plantillas/registro_experimentos_plantilla.csv) | 2 h |
+| 3 | 🎯 Reto | **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el [registro de experimentos](plantillas/registro_experimentos_plantilla.csv) | 2 h 10 min |
 
 **Miércoles 2/12**
 

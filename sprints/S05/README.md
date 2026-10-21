@@ -27,8 +27,8 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_05.md) · [PDF](guia/Reto_Sprint_05.pdf) · [ecofriendly](guia/Reto_Sprint_05_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S05.1_NumPy_y_algebra_lineal.pdf`](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | NumPy y álgebra lineal: vectorización y *broadcasting* | 25 min | Teoría · viernes 30/10 |
-| [`S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf`](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | Descenso del gradiente y regresión desde cero | 25 min | Teoría · viernes 30/10 |
+| [`S05.1_NumPy_y_algebra_lineal.pdf`](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | NumPy y álgebra lineal: vectorización y *broadcasting* | 15 min | Teoría · viernes 30/10 |
+| [`S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf`](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | Descenso del gradiente y regresión desde cero | 20 min | Teoría · viernes 30/10 |
 | [`S05.3_Estadistica_con_Python_y_CRUD.pdf`](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) | Estadística con Python y CRUD | 15 min | Teoría · martes 3/11 |
 
 **Material de las actividades**
@@ -54,22 +54,23 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «¿La ocupación depende de esto?» | 10 min |
-| 2 | 📖 Teoría | [NumPy y álgebra lineal: vectorización y *broadcasting*](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | 25 min |
+| 2 | 📖 Teoría | [NumPy y álgebra lineal: vectorización y *broadcasting*](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | 15 min |
 | 3 | 💻 Práctica | [Arrays, vectorización y *broadcasting*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_01_numpy.ipynb) | 35 min |
 | 4 | 💻 Práctica | [Matrices, sistemas y ecuación normal](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_02_algebra_lineal.ipynb) | 35 min |
-| 5 | 📖 Teoría | [Descenso del gradiente y regresión desde cero](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | 25 min |
+| 5 | 📖 Teoría | [Descenso del gradiente y regresión desde cero](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | 20 min |
 | 6 | 💻 Práctica | [Descenso del gradiente y regresión desde cero](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_03_gradiente_regresion.ipynb) | 1 h 10 min |
+| 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 15 min |
 
 **Martes 3/11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 7 | 📖 Teoría | [Estadística con Python y CRUD](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) | 15 min |
-| 8 | 💻 Práctica | [Descriptiva, Monte Carlo e intervalos de confianza](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_04_estadistica_descriptiva_ic.ipynb) | 35 min |
-| 9 | 💻 Práctica | [Contrastes, causalidad, `statsmodels` y Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_05_contrastes_causalidad.ipynb) | 35 min |
-| 10 | 💻 Práctica | [CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_06_crud_python.ipynb) | 30 min |
-| 11 | 🎯 Reto | Cuaderno [`S05_07`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb): mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6) | 45 min |
-| 12 | 🔔 Ceremonia | Entrega en `sprint-05/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
+| 8 | 📖 Teoría | [Estadística con Python y CRUD](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) | 15 min |
+| 9 | 💻 Práctica | [Descriptiva, Monte Carlo e intervalos de confianza](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_04_estadistica_descriptiva_ic.ipynb) | 35 min |
+| 10 | 💻 Práctica | [Contrastes, causalidad, `statsmodels` y Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_05_contrastes_causalidad.ipynb) | 35 min |
+| 11 | 💻 Práctica | [CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_06_crud_python.ipynb) | 30 min |
+| 12 | 🎯 Reto | Cuaderno [`S05_07`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb): mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6) | 45 min |
+| 13 | 🔔 Ceremonia | Entrega en `sprint-05/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
 
 <!--orden:fin-->
 

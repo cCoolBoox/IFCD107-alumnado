@@ -27,7 +27,7 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_17.md) · [PDF](guia/Reto_Sprint_17.pdf) · [ecofriendly](guia/Reto_Sprint_17_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S17.1_Storytelling_y_defensa.pdf`](presentaciones/S17.1_Storytelling_y_defensa.pdf) | Storytelling | 30 min | Teoría · viernes 11/12 |
+| [`S17.1_Storytelling_y_defensa.pdf`](presentaciones/S17.1_Storytelling_y_defensa.pdf) | Storytelling | 20 min | Teoría · viernes 11/12 |
 
 **Material de las actividades**
 
@@ -45,10 +45,10 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 1 | 📖 Teoría | [**Storytelling**](presentaciones/S17.1_Storytelling_y_defensa.pdf) | 30 min |
+| 1 | 📖 Teoría | [**Storytelling**](presentaciones/S17.1_Storytelling_y_defensa.pdf) | 20 min |
 | 2 | 💻 Práctica | **Tu historia:** [plantilla de storytelling](plantillas/plantilla_storytelling.md) (máx. 12 diapositivas) | 45 min |
 | 3 | 💻 Práctica | **Pitch de 3 minutos** y guion de la defensa ([`guion_defensa.md`](actividades/guion_defensa.md)) | 40 min |
-| 4 | 🎯 Reto | **Ensayos con preguntas** cruzadas entre equipos | 45 min |
+| 4 | 🎯 Reto | **Ensayos con preguntas** cruzadas entre equipos | 55 min |
 | 5 | 🎯 Reto | **Ensayo general** con cronómetro: 10 min | 40 min |
 
 **Antes de las 8:30 del lunes 14/12**

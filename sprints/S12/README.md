@@ -27,10 +27,10 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_12.md) · [PDF](guia/Reto_Sprint_12.pdf) · [ecofriendly](guia/Reto_Sprint_12_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S12.1_RNN_LSTM_GRU_y_series_temporales.pdf`](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | RNN, LSTM, GRU y series temporales | 25 min | Teoría · lunes 23/11 |
-| [`S12.2_NLP_clasico_y_embeddings.pdf`](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) | NLP clásico y embeddings | 20 min | Teoría · lunes 23/11 |
-| [`S12.3_Transformers_y_LLM.pdf`](presentaciones/S12.3_Transformers_y_LLM.pdf) | Transformers y LLM | 35 min | Teoría · martes 24/11 |
-| [`S12.4_Autoencoders_y_modelos_generativos.pdf`](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | Autoencoders y modelos generativos | 15 min | Teoría · martes 24/11 |
+| [`S12.1_RNN_LSTM_GRU_y_series_temporales.pdf`](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | RNN, LSTM, GRU y series temporales | 20 min | Teoría · lunes 23/11 |
+| [`S12.2_NLP_clasico_y_embeddings.pdf`](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) | NLP clásico y embeddings | 15 min | Teoría · lunes 23/11 |
+| [`S12.3_Transformers_y_LLM.pdf`](presentaciones/S12.3_Transformers_y_LLM.pdf) | Transformers y LLM | 30 min | Teoría · martes 24/11 |
+| [`S12.4_Autoencoders_y_modelos_generativos.pdf`](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | Autoencoders y modelos generativos | 10 min | Teoría · martes 24/11 |
 | [`S13.1_Visualizar_y_comunicar_resultados.pdf`](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · miércoles 25/11 |
 | [`Acceso_modelos_de_lenguaje.md`](../../material/Acceso_modelos_de_lenguaje.md) | ¿Tu proyecto usará un modelo de lenguaje por internet? Guía de acceso gratuito | — | Si tu proyecto usa un modelo de lenguaje |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | Test de M4 · Redes neuronales · 12 preguntas · individual, en el navegador, sin penalización por fallo. | 20 min | Solo se abre el mié 25/11 (hora de Canarias) |
@@ -61,32 +61,34 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Escuchar al cliente» y reparto de las cinco áreas | 10 min |
-| 2 | 📖 Teoría | [RNN, LSTM, GRU y series temporales](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | 25 min |
+| 2 | 📖 Teoría | [RNN, LSTM, GRU y series temporales](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | 20 min |
 | 3 | 💻 Práctica | [Series temporales: *baselines*, descomposición y SARIMAX](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) | 45 min |
 | 4 | 💻 Práctica | [RNN, LSTM y GRU frente al *baseline*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) | 45 min |
-| 5 | 📖 Teoría | [NLP clásico y embeddings](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) | 20 min |
+| 5 | 📖 Teoría | [NLP clásico y embeddings](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) | 15 min |
 | 6 | 💻 Práctica | [Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) | 55 min |
+| 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
 
 **Martes 24/11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 7 | 📖 Teoría | [Transformers y LLM](presentaciones/S12.3_Transformers_y_LLM.pdf) | 35 min |
-| 8 | 💻 Práctica | [Tokens, atención paso a paso y temperatura](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) | 40 min |
-| 9 | 💻 Práctica | [Mini RAG con la política, evaluación y seguridad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) | 45 min |
-| 10 | 📖 Teoría | [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | 15 min |
-| 11 | 🎯 Reto | [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](guia/Reto_Sprint_12.md) | 1 h 5 min |
+| 8 | 📖 Teoría | [Transformers y LLM](presentaciones/S12.3_Transformers_y_LLM.pdf) | 30 min |
+| 9 | 💻 Práctica | [Tokens, atención paso a paso y temperatura](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) | 40 min |
+| 10 | 💻 Práctica | [Mini RAG con la política, evaluación y seguridad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) | 45 min |
+| 11 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
+| 12 | 📖 Teoría | [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | 10 min |
+| 13 | 🎯 Reto | [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](guia/Reto_Sprint_12.md) | 1 h 5 min |
 
 **Miércoles 25/11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 12 | 🎯 Reto | [Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4)](guia/Reto_Sprint_12.md) | 1 h 5 min |
-| 13 | 📝 Test | [**Test de M4** (redes neuronales), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 min |
-| 14 | 📖 Teoría | [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | 10 min |
-| 15 | 💻 Práctica | [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) | 35 min |
-| 16 | 🎯 Reto | [Reto del Sprint 13](../S13/guia/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/plantillas/plantilla_informe_visual.md) | 25 min |
-| 17 | 🔔 Ceremonia | Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva | 35 min |
+| 14 | 🎯 Reto | [Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4)](guia/Reto_Sprint_12.md) | 1 h 5 min |
+| 15 | 📝 Test | [**Test de M4** (redes neuronales), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 min |
+| 16 | 📖 Teoría | [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | 10 min |
+| 17 | 💻 Práctica | [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) | 35 min |
+| 18 | 🎯 Reto | [Reto del Sprint 13](../S13/guia/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/plantillas/plantilla_informe_visual.md) | 25 min |
+| 19 | 🔔 Ceremonia | Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva | 35 min |
 
 <!--orden:fin-->
 

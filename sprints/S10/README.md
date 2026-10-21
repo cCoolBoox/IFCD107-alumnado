@@ -29,9 +29,9 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_10.md) · [PDF](guia/Reto_Sprint_10.pdf) · [ecofriendly](guia/Reto_Sprint_10_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S10.1_Fundamentos_de_redes_neuronales.pdf`](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | Fundamentos de redes neuronales | 30 min | Teoría · lunes 16/11 |
-| [`S10.2_Redes_densas_con_Keras.pdf`](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | Redes densas con Keras | 25 min | Teoría · lunes 16/11 |
-| [`S10.3_Entrenamiento_y_regularizacion.pdf`](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | Entrenamiento y regularización (primera parte) | 50 min | Teoría · lunes 16/11 y martes 17/11 |
+| [`S10.1_Fundamentos_de_redes_neuronales.pdf`](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | Fundamentos de redes neuronales | 20 min | Teoría · lunes 16/11 |
+| [`S10.2_Redes_densas_con_Keras.pdf`](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | Redes densas con Keras | 20 min | Teoría · lunes 16/11 |
+| [`S10.3_Entrenamiento_y_regularizacion.pdf`](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | Entrenamiento y regularización (primera parte) | 35 min | Teoría · lunes 16/11 y martes 17/11 |
 
 **Material de las actividades**
 
@@ -54,20 +54,21 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «¿Vale la pena la red?» y reparto de roles | 10 min |
-| 2 | 📖 Teoría | [Fundamentos de redes neuronales](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | 30 min |
+| 2 | 📖 Teoría | [Fundamentos de redes neuronales](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | 20 min |
 | 3 | 💻 Práctica | [Una red neuronal con solo NumPy](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) | 40 min |
-| 4 | 📖 Teoría | [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | 25 min |
+| 4 | 📖 Teoría | [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | 20 min |
 | 5 | 💻 Práctica | [MLP en Keras: clasificación y regresión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) | 1 h |
-| 6 | 📖 Teoría | [Entrenamiento y regularización (primera parte)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 35 min |
+| 6 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 30 min |
+| 7 | 📖 Teoría | [Entrenamiento y regularización (primera parte)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 20 min |
 
 **Martes 17/11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 7 | 📖 Teoría | [Entrenamiento y regularización (final: parada temprana y *callbacks*)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 15 min |
-| 8 | 💻 Práctica | [Sobreajuste, L2, *dropout*, parada temprana y *callbacks*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) | 55 min |
-| 9 | 🎯 Reto | Esqueleto [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb): elegir el problema y reproducir la referencia (paso 1) → primera red (2) → diagnosticar el sobreajuste (3) → comparación justa (4) → informe y presentación (5) | 1 h 30 min |
-| 10 | 🔔 Ceremonia | Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
+| 8 | 📖 Teoría | [Entrenamiento y regularización (final: parada temprana y *callbacks*)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 15 min |
+| 9 | 💻 Práctica | [Sobreajuste, L2, *dropout*, parada temprana y *callbacks*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) | 55 min |
+| 10 | 🎯 Reto | Esqueleto [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb): elegir el problema y reproducir la referencia (paso 1) → primera red (2) → diagnosticar el sobreajuste (3) → comparación justa (4) → informe y presentación (5) | 1 h 30 min |
+| 11 | 🔔 Ceremonia | Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
 
 <!--orden:fin-->
 

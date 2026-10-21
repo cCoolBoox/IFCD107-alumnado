@@ -29,7 +29,7 @@
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S04.1_Python_entorno_y_lenguaje.pdf`](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) | Python: entorno (venv, pip, Jupyter, Git) y lenguaje | 20 min | Teoría · miércoles 28/10 |
-| [`S04.2_Python_estructuras_funciones_y_POO.pdf`](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | Estructuras de datos, funciones, ficheros, excepciones y POO | 30 min | Teoría · jueves 29/10 |
+| [`S04.2_Python_estructuras_funciones_y_POO.pdf`](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | Estructuras de datos, funciones, ficheros, excepciones y POO | 20 min | Teoría · jueves 29/10 |
 
 **Material de las actividades**
 
@@ -63,9 +63,10 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 7 | 📖 Teoría | [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | 30 min |
-| 8 | 🎯 Reto | [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](guia/Reto_Sprint_04.md) | 2 h 10 min |
-| 9 | 🔔 Ceremonia | Entrega en `sprint-04/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
+| 7 | 📖 Teoría | [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | 20 min |
+| 8 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
+| 9 | 🎯 Reto | [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](guia/Reto_Sprint_04.md) | 2 h 10 min |
+| 10 | 🔔 Ceremonia | Entrega en `sprint-04/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
 
 <!--orden:fin-->
 

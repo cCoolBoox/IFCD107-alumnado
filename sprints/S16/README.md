@@ -28,7 +28,7 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_16.md) · [PDF](guia/Reto_Sprint_16.pdf) · [ecofriendly](guia/Reto_Sprint_16_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S16.1_Pildora_demostrador_y_documentacion.pdf`](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) | Despliegue y documentación | 30 min | Teoría · viernes 4/12 |
+| [`S16.1_Pildora_demostrador_y_documentacion.pdf`](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) | Despliegue y documentación | 20 min | Teoría · viernes 4/12 |
 
 **Material de las actividades**
 
@@ -52,10 +52,10 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | **Planning del Sprint 16:** lee el [README del Sprint 16](README.md) y reparte tareas | 10 min |
-| 2 | 📖 Teoría | [**Despliegue y documentación**](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) | 30 min |
+| 2 | 📖 Teoría | [**Despliegue y documentación**](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) | 20 min |
 | 3 | 💻 Práctica | [Práctica del demostrador](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb) | 45 min |
 | 4 | 🎯 Reto | **Tutoría de sesgos y visualización** (franja por equipo) | 40 min |
-| 5 | 🎯 Reto | **Memoria técnica:** [esqueleto](plantillas/plantilla_esqueleto_memoria_tecnica.md) y [*model card*](plantillas/plantilla_model_card.md) | 1 h 15 min |
+| 5 | 🎯 Reto | **Memoria técnica:** [esqueleto](plantillas/plantilla_esqueleto_memoria_tecnica.md) y [*model card*](plantillas/plantilla_model_card.md) | 1 h 25 min |
 
 **Miércoles 9/12**
 

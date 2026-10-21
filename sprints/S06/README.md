@@ -27,9 +27,9 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_06.md) · [PDF](guia/Reto_Sprint_06.pdf) · [ecofriendly](guia/Reto_Sprint_06_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf`](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | Datos, pandas y visualización exploratoria | 30 min | Teoría · miércoles 4/11 |
-| [`S06.2_Limpieza_y_preprocesado.pdf`](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | Limpieza y preprocesado | 30 min | Teoría · miércoles 4/11 |
-| [`S06.3_scikit_learn_metricas_y_validacion.pdf`](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | scikit-learn: métricas y validación | 25 min | Teoría · jueves 5/11 |
+| [`S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf`](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | Datos, pandas y visualización exploratoria | 15 min | Teoría · miércoles 4/11 |
+| [`S06.2_Limpieza_y_preprocesado.pdf`](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | Limpieza y preprocesado | 20 min | Teoría · miércoles 4/11 |
+| [`S06.3_scikit_learn_metricas_y_validacion.pdf`](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | scikit-learn: métricas y validación | 15 min | Teoría · jueves 5/11 |
 
 **Material de las actividades**
 
@@ -52,22 +52,24 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Datos sucios, cliente impaciente» y reparto de roles | 10 min |
-| 2 | 📖 Teoría | [Datos, pandas y visualización exploratoria](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 30 min |
+| 2 | 📖 Teoría | [Datos, pandas y visualización exploratoria](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 15 min |
 | 3 | 💻 Práctica | [pandas, EDA y primer chequeo de calidad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) | 45 min |
 | 4 | 🎯 Reto | [Arrancar el inventario de defectos del fichero sucio (pasos 1–2)](guia/Reto_Sprint_06.md) | 30 min |
-| 5 | 📖 Teoría | [Limpieza y preprocesado](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | 30 min |
+| 5 | 📖 Teoría | [Limpieza y preprocesado](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | 20 min |
 | 6 | 💻 Práctica | [Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) | 55 min |
+| 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 25 min |
 
 **Jueves 5/11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 7 | 💻 Práctica | [Escalado, codificación, `ColumnTransformer` y `Pipeline`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) | 40 min |
-| 8 | 🎯 Reto | [Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4)](guia/Reto_Sprint_06.md) | 35 min |
-| 9 | 📖 Teoría | [scikit-learn: métricas y validación](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | 25 min |
-| 10 | 💻 Práctica | [*Baseline*, métricas, validación cruzada y fuga de datos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) | 45 min |
-| 11 | 🎯 Reto | [Informe, README y ensayo (paso 5)](guia/Reto_Sprint_06.md) | 20 min |
-| 12 | 🔔 Ceremonia | Entrega en `sprint-06/`, autoevaluación y coevaluación, review y retrospectiva | 35 min |
+| 8 | 💻 Práctica | [Escalado, codificación, `ColumnTransformer` y `Pipeline`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) | 40 min |
+| 9 | 🎯 Reto | [Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4)](guia/Reto_Sprint_06.md) | 35 min |
+| 10 | 📖 Teoría | [scikit-learn: métricas y validación](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | 15 min |
+| 11 | 💻 Práctica | [*Baseline*, métricas, validación cruzada y fuga de datos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) | 45 min |
+| 12 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
+| 13 | 🎯 Reto | [Informe, README y ensayo (paso 5)](guia/Reto_Sprint_06.md) | 20 min |
+| 14 | 🔔 Ceremonia | Entrega en `sprint-06/`, autoevaluación y coevaluación, review y retrospectiva | 35 min |
 
 <!--orden:fin-->
 

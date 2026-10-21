@@ -27,8 +27,8 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_08.md) · [PDF](guia/Reto_Sprint_08.pdf) · [ecofriendly](guia/Reto_Sprint_08_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S08.1_Arboles_de_decision.pdf`](presentaciones/S08.1_Arboles_de_decision.pdf) | Árboles de decisión | 20 min | Teoría · martes 10/11 |
-| [`S08.2_Ensembles_Random_Forest_y_Boosting.pdf`](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | Ensembles: Random Forest y *boosting* | 25 min | Teoría · martes 10/11 |
+| [`S08.1_Arboles_de_decision.pdf`](presentaciones/S08.1_Arboles_de_decision.pdf) | Árboles de decisión | 15 min | Teoría · martes 10/11 |
+| [`S08.2_Ensembles_Random_Forest_y_Boosting.pdf`](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | Ensembles: Random Forest y *boosting* | 20 min | Teoría · martes 10/11 |
 | [`S08.3_Maquinas_de_vectores_de_soporte.pdf`](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) | Máquinas de vectores de soporte (SVM) | 15 min | Teoría · miércoles 11/11 |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | Test de M3 · parte 2 · 10 preguntas · individual, en el navegador, sin penalización por fallo.5 a 3.8 (k-NN y Naive Bayes, árboles, ensembles y SVM). | 20 min | Solo se abre el mié 11/11 (hora de Canarias) |
 
@@ -55,24 +55,25 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Duelo de modelos» y pesos de los criterios (la «voz del cliente») | 10 min |
-| 2 | 📖 Teoría | [Árboles de decisión](presentaciones/S08.1_Arboles_de_decision.pdf) | 20 min |
+| 2 | 📖 Teoría | [Árboles de decisión](presentaciones/S08.1_Arboles_de_decision.pdf) | 15 min |
 | 3 | 💻 Práctica | [Árbol de decisión: reglas, poda e importancia](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) | 35 min |
-| 4 | 📖 Teoría | [Ensembles: Random Forest y *boosting*](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | 25 min |
+| 4 | 📖 Teoría | [Ensembles: Random Forest y *boosting*](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | 20 min |
 | 5 | 💻 Práctica | [Random Forest: bagging, OOB e importancia por permutación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) | 40 min |
 | 6 | 💻 Práctica | [Gradient Boosting, XGBoost y LightGBM](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) | 45 min |
-| 7 | 🎯 Reto | [Primeros modelos en el *leaderboard* (*baseline*, logística, árbol y bosque; pasos 1–2)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) | 25 min |
+| 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
+| 8 | 🎯 Reto | [Primeros modelos en el *leaderboard* (*baseline*, logística, árbol y bosque; pasos 1–2)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) | 25 min |
 
 **Miércoles 11/11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 8 | 📖 Teoría | [Máquinas de vectores de soporte (SVM)](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) | 15 min |
-| 9 | 💻 Práctica | [SVM: margen, kernels, `C` y `gamma`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) | 30 min |
-| 10 | 💻 Práctica | [`GridSearchCV` y `RandomizedSearchCV`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) | 30 min |
-| 11 | 🎯 Reto | [Búsqueda de hiperparámetros para una familia, la que elijáis (paso 3)](guia/Reto_Sprint_08.md) | 25 min |
-| 12 | 🎯 Reto | [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](guia/Reto_Sprint_08.md) | 40 min |
-| 13 | 📝 Test | [**Test de M3 (parte 2)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | 25 min |
-| 14 | 🔔 Ceremonia | Entrega en `sprint-08/`, autoevaluación y coevaluación, review y retrospectiva | 35 min |
+| 9 | 📖 Teoría | [Máquinas de vectores de soporte (SVM)](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) | 15 min |
+| 10 | 💻 Práctica | [SVM: margen, kernels, `C` y `gamma`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) | 30 min |
+| 11 | 💻 Práctica | [`GridSearchCV` y `RandomizedSearchCV`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) | 30 min |
+| 12 | 🎯 Reto | [Búsqueda de hiperparámetros para una familia, la que elijáis (paso 3)](guia/Reto_Sprint_08.md) | 25 min |
+| 13 | 🎯 Reto | [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](guia/Reto_Sprint_08.md) | 40 min |
+| 14 | 📝 Test | [**Test de M3 (parte 2)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | 25 min |
+| 15 | 🔔 Ceremonia | Entrega en `sprint-08/`, autoevaluación y coevaluación, review y retrospectiva | 35 min |
 
 <!--orden:fin-->
 
