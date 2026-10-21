@@ -26,9 +26,9 @@ Sprint 1 terminado. Matemáticas de secundaria (fracciones, potencias, porcentaj
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_02.md) · [PDF](guia/Reto_Sprint_02.pdf) · [ecofriendly](guia/Reto_Sprint_02_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S02.3_Ecosistema_de_software_para_IA.pdf`](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) | Ecosistema de software para IA: Python, Colab, librerías y GPU | 10 min | Teoría · jueves 22/10 |
-| [`S02.1_Matematicas_para_IA.pdf`](presentaciones/S02.1_Matematicas_para_IA.pdf) | Matemáticas para IA: álgebra lineal, derivadas y gradiente | 1 h 15 min | Teoría · jueves 22/10 |
-| [`S02.2_Estadistica_y_probabilidad.pdf`](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) | Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson | 55 min | Teoría · viernes 23/10 |
+| [`S02.3_Ecosistema_de_software_para_IA.pdf`](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) | Ecosistema de software para IA: Python, Colab, librerías y GPU | 5 min | Teoría · jueves 22/10 |
+| [`S02.1_Matematicas_para_IA.pdf`](presentaciones/S02.1_Matematicas_para_IA.pdf) | Matemáticas para IA: álgebra lineal, derivadas y gradiente | 45 min | Teoría · jueves 22/10 |
+| [`S02.2_Estadistica_y_probabilidad.pdf`](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) | Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson | 35 min | Teoría · viernes 23/10 |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) | Test corto de M1a · Fundamentos de IA · 12 preguntas · individual, en el navegador, sin penalización por fallo. | 20 min | Solo se abre el vie 23/10 (hora de Canarias) |
 
 **Material de las actividades**
@@ -55,19 +55,19 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto: leed el informe del cliente y repartid las 6 afirmaciones (paso 1) | 10 min |
 | 2 | 💻 Práctica | [Alta en Colab y GitHub, y primer cuaderno abierto](actividades/alta_cuentas.md) | 25 min |
-| 3 | 📖 Teoría | [Ecosistema de software para IA: Python, Colab, librerías y GPU](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) | 10 min |
-| 4 | 📖 Teoría | [Matemáticas para IA: álgebra lineal, derivadas y gradiente](presentaciones/S02.1_Matematicas_para_IA.pdf) | 1 h 15 min |
-| 5 | 💻 Práctica | [Ejercicios de matemáticas (hoja 1) con Desmos o GeoGebra](actividades/ejercicios_algebra_calculo.md) | 40 min |
-| 6 | 🎯 Reto | [Primera lectura del informe con la lista de control (paso 2)](guia/Reto_Sprint_02.md) | 40 min |
+| 3 | 📖 Teoría | [Ecosistema de software para IA: Python, Colab, librerías y GPU](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) | 5 min |
+| 4 | 📖 Teoría | [Matemáticas para IA: álgebra lineal, derivadas y gradiente](presentaciones/S02.1_Matematicas_para_IA.pdf) | 45 min |
+| 5 | 💻 Práctica | [Ejercicios de matemáticas (hoja 1) con Desmos o GeoGebra](actividades/ejercicios_algebra_calculo.md) | 55 min |
+| 6 | 🎯 Reto | [Primera lectura del informe con la lista de control (paso 2)](guia/Reto_Sprint_02.md) | 1 h |
 
 **Viernes 23/10**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 7 | 📖 Teoría | [Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) | 55 min |
-| 8 | 💻 Práctica | [Estadísticas engañosas](actividades/estadisticas_enganosas.md) (3 de los 9 casos en clase). **Para casa:** el resto y la [hoja 2 de ejercicios de estadística](actividades/ejercicios_estadistica.md) | 35 min |
+| 7 | 📖 Teoría | [Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) | 35 min |
+| 8 | 💻 Práctica | [Estadísticas engañosas](actividades/estadisticas_enganosas.md) (4 de los 9 casos en clase). **Para casa:** el resto y la [hoja 2 de ejercicios de estadística](actividades/ejercicios_estadistica.md) | 45 min |
 | 9 | 📝 Test | [**Test corto de M1a** (matemáticas y estadística), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) | 25 min |
-| 10 | 🎯 Reto | [Rehacer los cálculos, dictamen y recomendación (pasos 3 y 4)](guia/Reto_Sprint_02.md) | 45 min |
+| 10 | 🎯 Reto | [Rehacer los cálculos, dictamen y recomendación (pasos 3 y 4)](guia/Reto_Sprint_02.md) | 55 min |
 | 11 | 🔔 Ceremonia | Entrega en `sprint-02/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
 
 <!--orden:fin-->
