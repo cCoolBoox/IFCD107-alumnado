@@ -1,22 +1,25 @@
 # Dinámicas con tarjetas · Sprint 1
 
-Tres actividades de práctica (4 h de práctica del sprint, repartidas entre las sesiones). Se imprimen y se recortan; **no hace falta ordenador**. Trabajad en parejas o en grupos de 3-4. Las soluciones las tiene el docente.
+Tres actividades de práctica (repartidas entre las sesiones del sprint). Se imprimen y se recortan; **no hace falta ordenador**. Trabajad en parejas o en grupos de 3-4. Las soluciones las tiene el docente.
 
 | Dinámica | Tiempo | Qué practicáis |
 |---|---|---|
-| A · Mapa de casos de uso | 35 min | Modalidad, tipo de aprendizaje y datos de 11 casos de IA (de un banco de 22) |
-| B · Clasificación "a mano" | 15 min (demostración) | Cómo se aprende de ejemplos, el **sobreajuste** y por qué existe el conjunto de test |
-| C · ¿Qué familia de algoritmos? | 20 min | Elegir una familia de algoritmos en 3 de los 6 problemas (con el docente) |
+| A · Mapa de casos de uso | 25 min | Modalidad, tipo de aprendizaje y datos de 11 casos de IA (de un banco de 22) |
+| B · Clasificación "a mano" | 10 min (demostración) | Cómo se aprende de ejemplos, el **sobreajuste** y por qué existe el conjunto de test |
+| C · ¿Qué familia de algoritmos? | 15 min | Elegir una familia de algoritmos en 3 de los 6 problemas (con el docente) |
 
 ---
 
 # Dinámica A · Mapa de casos de uso de IA
 
 ## Instrucciones
+
+> **Antes de empezar (1 minuto, lo cuenta el docente): «preentrenado + ajuste».** Algunos modelos no se entrenan desde cero. Una empresa los **preentrena** con enormes cantidades de datos sin etiquetas (por ejemplo, textos de internet) y después se **ajustan** a una tarea concreta, o se usan tal cual (resumir reseñas, responder preguntas). Ese preentrenamiento es **autosupervisado**: el modelo se inventa sus propias etiquetas, como adivinar la palabra que falta (diapositiva 7 de S01.3). Si un caso usa un asistente de texto o un modelo ya hecho, marcad **«preentrenado + ajuste»**. Si hay que entrenar con datos vuestros ya etiquetados, será **«supervisado»**.
+
 1. Recortad **solo las 11 tarjetas que marque el docente** (**C01, C02, C03, C04, C06, C07, C09, C13, C16, C18 y C22**; incluyen las dos «trampa»). Las otras 11 son el **banco de ideas** del reto: guardadlas para el paso 2.
 2. Para cada tarjeta, rellenad los cuatro campos **a lápiz** (podéis usar los apuntes de la teoría):
    - **Modalidad:** visión · lenguaje (texto) · voz · recomendación · datos tabulares/series · generativa (texto, imagen) · robótica.
-   - **Tipo de aprendizaje:** supervisado · no supervisado · por refuerzo · preentrenado + ajuste (autosupervisado).
+   - **Tipo de aprendizaje:** supervisado · no supervisado · por refuerzo · preentrenado + ajuste (autosupervisado; mirad el recuadro de arriba).
    - **Datos necesarios:** qué datos concretos harían falta y si tienen que estar **etiquetados**.
    - **¿Hace falta IA?** Sí / No / Quizá (dos de las 11, **C16 y C22**, son "trampa": se resuelven mejor con reglas sencillas).
 3. Después, ordenad las tarjetas en una **matriz** de dos ejes: *impacto para TurisData* (bajo-alto) y *facilidad de conseguir los datos* (difícil-fácil). Marcad las 5 candidatas a "primer proyecto".
