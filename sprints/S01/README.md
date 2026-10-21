@@ -26,6 +26,7 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_01.md) · [PDF](guia/Reto_Sprint_01.pdf) · [ecofriendly](guia/Reto_Sprint_01_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
+| [Cómo subir vuestras respuestas a GitHub](../../material/5.%20Como_entregar_en_GitHub.md) | Entregar archivos en el repositorio del equipo, desde el navegador | 10 min | Antes de entregar el reto |
 | [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf) | Introducción a la IA: modalidades, casos de uso y mitos | 25 min | Teoría · martes 20/10 |
 | [`S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf`](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) | Panorama de algoritmos y CRISP-DM | 25 min | Teoría · martes 20/10 |
 | [`S01.3_Tipos_de_aprendizaje.pdf`](presentaciones/S01.3_Tipos_de_aprendizaje.pdf) | Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste | 25 min | Teoría · martes 20/10 |

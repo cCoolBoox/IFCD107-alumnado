@@ -50,7 +50,7 @@ Tras la entrevista del Sprint 0, la directora de *TurisData Canarias* os pide un
 
 ### Qué tenéis que entregar
 1. **Informe de oportunidades** (2-3 páginas, en `.md` o PDF) con la estructura de abajo.
-2. **Checklist ético (versión 1)** rellenado para **cada uno de los 5 casos** (o completo para los 2 casos priorizados y resumido para los otros 3).
+2. **Checklist ético (versión 1)** rellenado para **cada uno de los 5 casos** (o completo para los 2 casos priorizados y resumido para los otros 3). Para subirlos al repositorio del equipo: [Cómo subir vuestras respuestas a GitHub](../../../material/5.%20Como_entregar_en_GitHub.md).
 
 #### Estructura del informe (2-3 páginas)
 1. **Resumen ejecutivo** (5-6 líneas): las 5 oportunidades y cuál recomendáis empezar.

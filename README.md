@@ -7,7 +7,7 @@
 
 Este documento es tu **mapa del curso**. En 10 minutos sabrás qué vamos a hacer, en qué orden, cómo se trabaja y cómo se evalúa.
 
-## 🚀 Empieza aquí (6 pasos)
+## 🚀 Empieza aquí (7 pasos)
 
 | Paso | Qué haces | Dónde |
 |---|---|---|
@@ -17,6 +17,7 @@ Este documento es tu **mapa del curso**. En 10 minutos sabrás qué vamos a hace
 | **4** | Sigue tu ruta, sprint a sprint | [`material/mi_ruta_del_curso.md`](material/1.%20Mi_ruta_del_curso.md) |
 | **5** | Consulta qué toca cada día | [`material/guia_dia_a_dia.md`](material/3.%20Guia_dia_a_dia.md) |
 | **6** | Aprende cómo se trabaja un reto (léelo antes del Sprint 0) | [`material/4. Como_se_trabaja_un_reto.md`](material/4.%20Como_se_trabaja_un_reto.md) |
+| **7** | Aprende a subir tus respuestas a GitHub (cada entrega) | [`material/5. Como_entregar_en_GitHub.md`](material/5.%20Como_entregar_en_GitHub.md) |
 
 > 💡 **Consejo sobre los PDF:** dentro de GitHub, la vista previa de un PDF **no abre sus enlaces**. Pulsa **Download** (descargar) y ábrelo con tu lector de PDF (Chrome, Edge, Adobe o el del móvil): ahí todos los enlaces funcionan.
 
