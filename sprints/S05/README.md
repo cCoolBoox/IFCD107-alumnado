@@ -1,56 +1,38 @@
-# Sprint 5 · Matemáticas y estadística en código
+# README Sprint S05 · Matemáticas y estadística en código
+
 **Pregunta guía:** ¿podemos demostrar con código lo que vimos en teoría?
 **Fechas:** 30/10 y 3/11 · **Horas:** 12 h (3 h teoría · 6 h práctica, incluye 1 h de CRUD · 3 h PBL)
 
-> 🎯 **Reto de este sprint: «¿La ocupación depende de esto?».** 👉 [**Ver el reto completo, explicado paso a paso**](guia/Reto_Sprint_05.md) · [Reto en PDF](guia/Reto_Sprint_05.pdf) ([ecofriendly](guia/Reto_Sprint_05_ecofriendly.pdf)) · [PDF de la guía](guia/Guia_Sprint_05.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
-
 📄 **Este README en PDF:** [a color](README_Sprint_05.pdf) · [ecofriendly, para imprimir](README_Sprint_05_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
-## 📎 Material del sprint
-
-- 📘 **Guía del sprint (PDF):** [`Guia_Sprint_05.pdf`](guia/Guia_Sprint_05.pdf) · [versión ecofriendly para imprimir](guia/Guia_Sprint_05_ecofriendly.pdf)
-- 🎯 **Reto completo, paso a paso:** [`Reto_Sprint_05.md`](guia/Reto_Sprint_05.md)
-- 🖼️ **Infografías del reto (2 láminas: el reto de un vistazo y cómo se trabaja y se evalúa):** [`infografias/`](infografias/)
-- 🖥️ **S05.1 · NumPy y algebra lineal:** [`S05.1_NumPy_y_algebra_lineal.pdf`](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf)
-- 🖥️ **S05.2 · Descenso del gradiente y regresion desde cero:** [`S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf`](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf)
-- 🖥️ **S05.3 · Estadistica con Python y CRUD:** [`S05.3_Estadistica_con_Python_y_CRUD.pdf`](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf)
-
-**📁 En esta carpeta:** [`infografias/`](infografias/) láminas ilustradas del reto · [`guia/`](guia/) PDF de la guía (normal y para imprimir) y el reto explicado paso a paso · [`presentaciones/`](presentaciones/) diapositivas de cada sesión · [`notebooks/`](notebooks/) prácticas para abrir en Colab
-
-<!--orden:ini-->
-## 🧭 Orden de trabajo del sprint
-
-Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
-
-📖 teoría (diapositivas) · 💻 práctica (cuaderno de Colab o actividad) · 🎯 reto en equipo · 🔔 ceremonia de Scrum
-
-**Viernes 30/10**
-
-1. 🔔 **Ceremonia**: Planning del reto «¿La ocupación depende de esto?» · _10 min_
-2. 📖 **Teoría**: [NumPy y álgebra lineal: vectorización y *broadcasting*](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) · _25 min_
-3. 💻 **Práctica**: [Arrays, vectorización y *broadcasting*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_01_numpy.ipynb) · _35 min_
-4. 💻 **Práctica**: [Matrices, sistemas y ecuación normal](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_02_algebra_lineal.ipynb) · _35 min_
-5. 📖 **Teoría**: [Descenso del gradiente y regresión desde cero](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) · _25 min_
-6. 💻 **Práctica**: [Descenso del gradiente y regresión desde cero](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_03_gradiente_regresion.ipynb) · _1 h 10 min_
-
-**Martes 3/11**
-
-7. 📖 **Teoría**: [Estadística con Python y CRUD](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) · _15 min_
-8. 💻 **Práctica**: [Descriptiva, Monte Carlo e intervalos de confianza](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_04_estadistica_descriptiva_ic.ipynb) · _35 min_
-9. 💻 **Práctica**: [Contrastes, causalidad, `statsmodels` y Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_05_contrastes_causalidad.ipynb) · _35 min_
-10. 💻 **Práctica**: [CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_06_crud_python.ipynb) · _30 min_
-11. 🎯 **Reto**: Cuaderno [`S05_07`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb): mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6) · _45 min_
-12. 🔔 **Ceremonia**: Entrega en `sprint-05/`, autoevaluación y coevaluación, review y retrospectiva · _40 min_
-
-<!--orden:fin-->
-
 ## Qué aprenderás
-- Datos numéricos con NumPy y álgebra lineal.
-- Entrenar una regresión lineal desde cero con descenso del gradiente.
-- Estadística con Python: intervalos de confianza, contrastes, p-valores y correlación frente a causalidad.
-- CRUD desde Python sobre SQLite y MongoDB. Requisito: Sprint 4; los datos (sintéticos) se descargan solos.
+1. A manejar **datos numéricos con NumPy**: arrays, vectorización, *broadcasting* y álgebra lineal.
+2. A **entrenar un modelo desde cero**: entender el gradiente y programar la regresión lineal con descenso del gradiente.
+3. A hacer **estadística con Python**: describir datos, usar distribuciones, simular (Monte Carlo) y construir intervalos de confianza.
+4. A **contrastar hipótesis** e interpretar p-valores, tamaños de efecto y la diferencia entre **correlación y causalidad**.
+5. A hacer **CRUD desde Python** sobre SQLite y MongoDB y a dejar una base de datos poblada.
 
-## Prácticas
+## Requisitos previos
+- Haber hecho el Sprint 4 (Python básico, funciones, ficheros).
+- Colab o Jupyter con Python 3.11. Los cuadernos usan `numpy`, `pandas`, `matplotlib`, `scipy`, `statsmodels`, `scikit-learn`, `sqlite3` y `mongomock`.
+- Los datos (`ocupacion_diaria.csv`, `reservas_turisdata.csv`, `turisdata.db`) se descargan solos. Son **sintéticos**: sirven para practicar, no son estadísticas reales del turismo canario.
+
+## 📎 Materiales del sprint
+
+**Documentos del curso** (PDF y .md; las actividades van en la tabla siguiente)
+
+| Material | Tema | Tiempo | Cuándo |
+|---|---|---|---|
+| [Guía del sprint (PDF)](guia/Guia_Sprint_05.pdf) · [ecofriendly](guia/Guia_Sprint_05_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
+| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_05.md) · [PDF](guia/Reto_Sprint_05.pdf) · [ecofriendly](guia/Reto_Sprint_05_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
+| [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
+| [`S05.1_NumPy_y_algebra_lineal.pdf`](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | NumPy y álgebra lineal: vectorización y *broadcasting* | 25 min | Teoría · viernes 30/10 |
+| [`S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf`](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | Descenso del gradiente y regresión desde cero | 25 min | Teoría · viernes 30/10 |
+| [`S05.3_Estadistica_con_Python_y_CRUD.pdf`](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) | Estadística con Python y CRUD | 15 min | Teoría · martes 3/11 |
+
+**Material de las actividades**
+
 Cuadernos en orden (5 h). Cada ejercicio se autocorrige con un `assert`: si falla, lee el mensaje y corrige.
 
 | Cuaderno | Tema | Colab |
@@ -62,20 +44,55 @@ Cuadernos en orden (5 h). Cada ejercicio se autocorrige con un `assert`: si fall
 | `S05_05_contrastes_causalidad` | Contrastes, causalidad, `statsmodels`, Bayes | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_05_contrastes_causalidad.ipynb) |
 | `S05_06_crud_python` | CRUD con `sqlite3` y `mongomock` | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_06_crud_python.ipynb) |
 
+<!--orden:ini-->
+## 🧭 Orden de trabajo del sprint
+
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+
+**Viernes 30/10**
+
+| Nº | Tipo | Qué se hace | Tiempo |
+|---|---|---|---|
+| 1 | 🔔 Ceremonia | Planning del reto «¿La ocupación depende de esto?» | 10 min |
+| 2 | 📖 Teoría | [NumPy y álgebra lineal: vectorización y *broadcasting*](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | 25 min |
+| 3 | 💻 Práctica | [Arrays, vectorización y *broadcasting*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_01_numpy.ipynb) | 35 min |
+| 4 | 💻 Práctica | [Matrices, sistemas y ecuación normal](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_02_algebra_lineal.ipynb) | 35 min |
+| 5 | 📖 Teoría | [Descenso del gradiente y regresión desde cero](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | 25 min |
+| 6 | 💻 Práctica | [Descenso del gradiente y regresión desde cero](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_03_gradiente_regresion.ipynb) | 1 h 10 min |
+
+**Martes 3/11**
+
+| Nº | Tipo | Qué se hace | Tiempo |
+|---|---|---|---|
+| 7 | 📖 Teoría | [Estadística con Python y CRUD](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) | 15 min |
+| 8 | 💻 Práctica | [Descriptiva, Monte Carlo e intervalos de confianza](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_04_estadistica_descriptiva_ic.ipynb) | 35 min |
+| 9 | 💻 Práctica | [Contrastes, causalidad, `statsmodels` y Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_05_contrastes_causalidad.ipynb) | 35 min |
+| 10 | 💻 Práctica | [CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_06_crud_python.ipynb) | 30 min |
+| 11 | 🎯 Reto | Cuaderno [`S05_07`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb): mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6) | 45 min |
+| 12 | 🔔 Ceremonia | Entrega en `sprint-05/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
+
+<!--orden:fin-->
+
 ## Reto · «¿La ocupación depende de esto?»
+
+📄 [Reto en PDF](guia/Reto_Sprint_05.pdf) · [ecofriendly](guia/Reto_Sprint_05_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
 👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_05.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
+
 **Contexto:** TurisData Canarias quiere saber cuánto cambia la ocupación con la temperatura y los festivos, y con cuánta seguridad. Tenéis su serie diaria de tres años (`ocupacion_diaria.csv`).
+
 **Entregáis** (en la carpeta `sprint-05/` del repositorio del equipo):
 - El cuaderno `S05_07_reto_ocupacion` (plantilla: [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb)), ejecutado de arriba abajo.
 - La base `turisdata_reto.db` con la serie cargada y leída con SQL.
 - Regresión desde cero (simple y con estacionalidad), comparada con `statsmodels`.
 - Contraste, intervalos de confianza y p-valores, y una respuesta al cliente de máx. 150 palabras.
+
 **Reglas:**
 - Unas 2 h 30 min de reto; el descenso del gradiente lo escribís vosotros (la librería solo para contrastar).
 - Semillas fijas; datos sintéticos, sin generalizar al turismo real.
 - Nunca claves ni datos personales.
+
 **Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable, más cifras con su incertidumbre y distinguir correlación de causalidad.
 
 ## ✅ Antes de cerrar el sprint

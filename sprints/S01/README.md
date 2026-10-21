@@ -22,9 +22,9 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
-| [Guía del sprint (PDF)](guia/Guia_Sprint_01.pdf) · [ecofriendly](guia/Guia_Sprint_01_ecofriendly.pdf) | Hoja de seguimiento: casillas por días y franjas, con lo que te llevas y lo que hay que entregar | 2 páginas | Todo el sprint |
+| [Guía del sprint (PDF)](guia/Guia_Sprint_01.pdf) · [ecofriendly](guia/Guia_Sprint_01_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_01.md) · [PDF](guia/Reto_Sprint_01.pdf) · [ecofriendly](guia/Reto_Sprint_01_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
-| [Infografías del reto](infografias/) | 3 láminas: qué pide el cliente y cómo se hace, ética e informe, IA, errores y entrega | — | Reto |
+| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf) | Introducción a la IA: modalidades, casos de uso y mitos | 25 min | Teoría · martes 20/10 |
 | [`S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf`](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) | Panorama de algoritmos y CRISP-DM | 25 min | Teoría · martes 20/10 |
@@ -47,7 +47,7 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint
 
-Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden. Las horas exactas de cada tramo están en la guía del sprint.
+Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
 **Martes 20/10**
 
@@ -81,17 +81,25 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_01.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
+
+
 **Contexto:** la directora de TurisData Canarias quiere saber qué 5 cosas podría hacer con IA, cuáles primero, qué datos necesita y qué riesgos corre. Tiene un piloto limitado (hasta 15.000 €).
+
+
 
 **Entregáis** (en la carpeta `sprint-01/` del repositorio del equipo):
 - Informe de oportunidades de 2-3 páginas (`.md` o PDF): resumen, tabla de 5 casos, priorización, riesgos y recomendación.
 - Checklist ético v1 de cada caso (completo en los 2 priorizados).
 - Declaración de dónde habéis usado IA generativa y qué habéis verificado.
 
+
+
 **Reglas:**
 - Unas 1 h 40 min de reto, más el planning y la review; los 5 casos cubren 3 modalidades o más y al menos 2 son propios.
 - Al menos 1 caso no necesita IA (o va mejor con reglas).
 - Nunca claves ni datos personales; no hay datos que analizar, solo ideas y riesgos.
+
+
 
 **Se valora:** corrección técnica, reproducibilidad (criterio de priorización claro), comunicación al cliente e IA responsable (riesgos por caso, AI Act con calendario verificado).
 
