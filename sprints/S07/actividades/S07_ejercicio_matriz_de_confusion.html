@@ -113,7 +113,8 @@ html[data-modo="1"] .m7{display:none!important}html[data-modo="7"] .m1{display:n
 <section id="p1">
   <span class="step">PASO 1</span>
   <h2>Clasifica las 20 reservas con umbral 0,50</h2>
-  <p>Ya sabemos qué pasó de verdad con 20 reservas (columna <b>Realidad</b>) y qué probabilidad dio el modelo. Para cada una pulsa lo que <b>diría el modelo con umbral 0,50</b>. Al elegir, verás qué tipo de resultado es (VP, VN, FP o FN).</p>
+  <p>Son <b>20 reservas ya pasadas</b>, que el modelo <b>no vio al aprender</b>. Para cada una tenemos dos datos: lo que el modelo <b>calculó antes de la estancia</b> (la <b>probabilidad de cancelar</b>) y lo que <b>ocurrió de verdad</b> después (columna <b>Realidad</b>). Así es como se <b>evalúa</b> un modelo: se compara lo que dijo con lo que pasó.</p>
+  <p>Tu tarea: aplica el umbral a cada probabilidad y pulsa lo que <b>diría el modelo con umbral 0,50</b>. Al elegir, verás si acertó o qué tipo de error cometió (VP, VN, FP o FN).</p>
   <div class="tablewrap"><table id="tabla"><thead><tr><th>Reserva</th><th>Tarifa</th><th>Prob. de cancelar</th><th>Realidad</th><th>El modelo dice…</th><th>Resultado</th></tr></thead><tbody></tbody></table></div>
   <div class="actions"><button type="button" id="b1">Comprobar</button><button type="button" class="ghost" id="b1auto">Rellenar por mí</button></div>
   <div class="fb" id="f1" role="status" aria-live="polite"></div>
