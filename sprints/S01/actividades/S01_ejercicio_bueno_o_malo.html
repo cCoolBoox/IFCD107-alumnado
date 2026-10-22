@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>¿Bueno o malo? · Ejercicio interactivo de métricas</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F1E8;--ink:#1D2433;--mute:#566073;--line:#D9D2C0;--acc:#C23B1F;--teal:#0F7F7F;--mint:#D5ECEA;--pink:#F7DDD4;--sand:#EFE7D2;--sky:#DCE6F5;--ok:#1B7F4B;--bad:#B3261E;--card:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque','Public Sans',system-ui,sans-serif;letter-spacing:-.01em}
+.wrap{max-width:980px;margin:0 auto;padding:28px 18px 80px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+h1{margin:6px 0 8px;font-size:clamp(30px,5vw,48px);line-height:1.05;font-weight:800}
+.lead{font-size:19px;color:var(--mute);margin:0 0 14px;max-width:780px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.pill{background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px;font-weight:600;color:var(--mute)}
+.progress{position:sticky;top:0;z-index:10;background:var(--bg);padding:10px 0;border-bottom:2px solid var(--line);margin-bottom:22px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.progress a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:4px 10px;font-size:14px;font-weight:700}
+.progress a.done{background:var(--mint);border-color:var(--teal);color:#0A5555}
+.progress a.done::before{content:"✓"}
+.progress .reset{margin-left:auto;background:none;border:none;color:var(--mute);font:600 14px 'Public Sans',sans-serif;cursor:pointer;text-decoration:underline}
+section{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:22px 22px 24px;margin:0 0 22px}
+section>h2{margin:0 0 4px;font-size:26px;font-weight:800}
+.step{display:inline-block;background:var(--ink);color:#fff;border-radius:8px;padding:2px 9px;font-size:13px;font-weight:700;letter-spacing:.08em;margin-bottom:8px}
+.tag{float:right;font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--mute);background:var(--bg);border:1.5px solid var(--line);border-radius:8px;padding:4px 8px}
+p{margin:8px 0}
+.box{border-radius:12px;padding:12px 16px;margin:12px 0}
+.mint{background:var(--mint)}.pink{background:var(--pink)}.sand{background:var(--sand)}.sky{background:var(--sky)}
+.box b.t{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.mint b.t{color:var(--teal)}.pink b.t{color:var(--acc)}.sand b.t,.sky b.t{color:var(--mute)}
+code,.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background:rgba(29,36,51,.07);padding:1px 6px;border-radius:5px}
+button,.btn{font:700 15px 'Public Sans',sans-serif;border-radius:10px;border:2px solid var(--ink);background:var(--ink);color:#fff;padding:8px 16px;cursor:pointer}
+button.ghost{background:#fff;color:var(--ink)}
+button:hover{filter:brightness(1.15)}button:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #4A6FA5;outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px;align-items:center}
+.fb{margin:10px 0 0;padding:10px 14px;border-radius:10px;font-weight:600;display:none}
+.fb.show{display:block}.fb.ok{background:#DDF1E6;color:#0E5B34}.fb.no{background:#FBE0DD;color:#8C1D18}.fb.info{background:var(--sky);color:#1D2433}
+.tablewrap{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:6px 8px;border-bottom:1.5px solid var(--line);text-align:left}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);background:var(--bg)}
+td.num{font-variant-numeric:tabular-nums}
+.mx{display:grid;grid-template-columns:54px 1fr 1fr;gap:5px;max-width:300px}
+.mx .h{font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15}
+.mx .c{border-radius:10px;padding:8px 4px;text-align:center}
+.mx .c.g{background:var(--mint)}.mx .c.r{background:var(--pink)}
+.mx .c small{display:block;font-size:10.5px;font-weight:800;color:var(--mute);letter-spacing:.06em}
+.mx .c b{font:800 24px 'Bricolage Grotesque',sans-serif;line-height:1.05}
+.datos{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;margin:10px 0}
+.mets{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:8px;flex:1;min-width:260px}
+.met{background:var(--sand);border-radius:12px;padding:8px 12px}.met .k{font-size:11.5px;font-weight:800;letter-spacing:.06em;color:var(--mute);text-transform:uppercase}.met .v{font:800 26px 'Bricolage Grotesque',sans-serif;line-height:1.1}
+.met .f{font-size:12.5px;color:var(--mute)}
+.mets.c4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:620px){.mets.c4{grid-template-columns:repeat(2,1fr)}}
+.dg{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;align-items:end;height:104px;margin:8px 0}
+.dg div{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;font-size:12px;font-weight:700;color:var(--mute)}
+.dg i{display:block;width:100%;background:#7FC4BE;border-radius:5px 5px 0 0}.dg i.lo{background:#E49A84}
+.dg b{font-family:'Bricolage Grotesque',sans-serif;font-size:17px;color:var(--ink)}
+.qrow{margin:14px 0;padding-top:12px;border-top:1.5px dashed var(--line)}
+.q{font-weight:600}
+.radio{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+.radio label{border:2px solid var(--line);border-radius:10px;padding:6px 12px;cursor:pointer;font-weight:600;background:#fff;display:flex;gap:6px;align-items:flex-start}
+.radio.col{flex-direction:column}
+.radio input{margin-top:5px;accent-color:var(--acc)}
+.ctx{color:#3b4252}
+.gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:8px 0}
+.gl div{background:var(--bg);border-radius:10px;padding:8px 12px;font-size:14.5px;line-height:1.4}
+.gl b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:17px}
+.gl i{display:block;font-style:normal;font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--teal)}
+.q5{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:10px 0}
+.q5 div{background:var(--ink);color:#F5F1E8;border-radius:12px;padding:10px 14px;font-size:15px;line-height:1.35}
+.q5 b{display:block;font:800 26px 'Bricolage Grotesque',sans-serif;color:#F2B5A5;line-height:1.1}
+details{border:2px solid var(--line);border-radius:12px;padding:8px 14px;margin:10px 0;background:#fff}
+details summary{cursor:pointer;font-weight:700}
+details[open]{background:var(--bg)}
+.expl{display:none}.expl.show{display:block}
+.ver{font-weight:800}.ver.b{color:var(--teal)}.ver.r{color:#9A6B00}.ver.m{color:var(--acc)}
+.fin{background:var(--ink);color:#F5F1E8;border-radius:16px;padding:22px;display:none;margin-bottom:22px}
+.fin.show{display:block}.fin h2{margin:0 0 6px;font-size:28px}
+.foot{font-size:14px;color:var(--mute);margin-top:30px}
+@media(max-width:620px){section{padding:16px}.tag{float:none;display:inline-block;margin-bottom:6px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">S01 · Evaluar un modelo · Después de S01.4</div>
+  <h1>¿Bueno o malo? Lee las métricas y decide</h1>
+  <p class="lead">Siete modelos con resultados <b>reales</b>, calculados sobre datos reales. Para cada uno, mira las métricas, decide si el modelo es <b>bueno, regular o malo</b> y di en qué te has fijado. Ningún número decide solo.</p>
+  <div class="meta"><span class="pill">⏱ 25–30 min</span><span class="pill">👥 En parejas</span><span class="pill">Sin Python</span><span class="pill">Datos reales</span></div>
+</header>
+
+<nav class="progress" aria-label="Progreso del ejercicio" id="prog">
+  <a href="#p0">Antes</a>
+  <span id="navcasos" style="display:contents"></span>
+  <a href="#pf" data-s="f">Cierre</a>
+  <button class="reset" type="button" onclick="location.reload()">Empezar de nuevo</button>
+</nav>
+
+<section id="p0">
+  <h2>Antes de empezar</h2>
+  <p>Un modelo no es bueno por tener un número alto. Para decidir, hazte estas <b>cinco preguntas</b> en cada caso:</p>
+  <div class="q5">
+    <div><b>1</b>¿Gana a la <b style="display:inline;font-size:inherit;color:#fff">referencia</b>? Si no, no aporta nada.</div>
+    <div><b>2</b>¿Qué error <b style="display:inline;font-size:inherit;color:#fff">cuesta más</b>? Eso decide entre recall y precisión.</div>
+    <div><b>3</b>¿Es <b style="display:inline;font-size:inherit;color:#fff">rara</b> la clase que importa? Entonces la exactitud engaña.</div>
+    <div><b>4</b>¿Train y test dan <b style="display:inline;font-size:inherit;color:#fff">parecido</b>? Si no, memoriza.</div>
+    <div><b>5</b>¿Tiene <b style="display:inline;font-size:inherit;color:#fff">sentido</b> para el negocio y para quien sufre el error?</div>
+  </div>
+  <div class="box sky"><b class="t">La referencia</b>Es el modelo más tonto posible: en clasificación, decir <b>siempre la clase más frecuente</b>; en regresión, predecir <b>siempre la media</b>. Un modelo que no le gana no sirve de nada. En las matrices, las <b>filas</b> son la <b>realidad</b> y las <b>columnas</b> lo que <b>dice el modelo</b>; el positivo es el caso que buscamos.</div>
+  <details><summary>Diccionario de métricas (ábrelo cuando lo necesites)</summary>
+    <div class="gl">
+      <div><i>CLASIFICACIÓN</i><b>Exactitud</b>Aciertos / total. Engaña si una clase es rara.</div>
+      <div><i>CLASIFICACIÓN</i><b>Precisión</b>De los que el modelo avisa, cuántos eran ciertos. Importa si avisar cuesta.</div>
+      <div><i>CLASIFICACIÓN</i><b>Recall</b>De los casos reales, cuántos detecta. Importa si perder uno es grave.</div>
+      <div><i>CLASIFICACIÓN</i><b>Especificidad</b>De los casos «no», cuántos deja pasar bien: VN / (VN + FP).</div>
+      <div><i>CLASIFICACIÓN</i><b>F1</b>Nota única de precisión y recall. Baja si cualquiera de los dos es baja.</div>
+      <div><i>CLASIFICACIÓN</i><b>AUC</b>0,5 = azar, 1 = perfecto. Mide si ordena bien, sin fijar umbral.</div>
+      <div><i>REGRESIÓN</i><b>MAE</b>Error medio en las unidades del dato. Compáralo con la media y con la referencia.</div>
+      <div><i>REGRESIÓN</i><b>RMSE</b>Como el MAE, pero castiga más los errores grandes.</div>
+      <div><i>REGRESIÓN</i><b>R²</b>1 = perfecto; 0 = no mejora a predecir la media; puede ser negativo.</div>
+      <div><i>AGRUPACIÓN</i><b>Silueta</b>De −1 a 1: cuanto más alta, grupos más separados. No dice si tienen sentido.</div>
+      <div><i>AGRUPACIÓN</i><b>ARI</b>Coincidencia con grupos conocidos (1 = idénticos). Solo se puede calcular si se conocen.</div>
+      <div><i>HONESTIDAD</i><b>Train frente a test</b>Si acierta con lo que ya vio y falla con lo nuevo, memoriza (sobreajuste).</div>
+    </div>
+  </details>
+</section>
+
+<div id="casos"></div>
+
+<section id="pf">
+  <h2>Cierre</h2>
+  <div id="resumen"><p>Resuelve los siete casos para ver tu resumen.</p></div>
+</section>
+
+<div class="fin" id="fin"><h2 class="disp">¡Ejercicio completo!</h2><div id="fint"></div></div>
+
+<p class="foot">IFCD107 · Especialista en Inteligencia Artificial · S01 · Datos reales incluidos en scikit-learn (cáncer de mama de Wisconsin, diabetes, dígitos escritos a mano, iris). Los casos 2, 4 y 6 se han preparado a propósito (clase rara, pocos datos de entrenamiento, etiquetas mezcladas). Misma actividad que la lámina «¿Bueno o malo?» (S01_06).</p>
+</div>
+
+<script>
+"use strict";
+const R={"1": {"vn": 103, "fp": 4, "fn": 4, "vp": 60, "n": 171, "acc": 0.9532163742690059, "pre": 0.9375, "rec": 0.9375, "esp": 0.9626168224299065, "f1": 0.9375, "auc": 0.9916764018691588, "base": 0.6257309941520468, "total": 569, "malignos": 212}, "2": {"vn": 107, "fp": 0, "fn": 6, "vp": 0, "n": 113, "acc": 0.9469026548672567, "pre": 0.0, "rec": 0.0, "esp": 1.0, "f1": 0.0, "auc": 0.8333333333333334, "base": 0.9469026548672567, "total": 376, "malignos": 19}, "3": {"mae": 44.61759529676318, "rmse": 55.651766938926656, "r2": 0.39289927216962905, "mae0": 59.52870039175608, "media": 152.1654135338346, "total": 442}, "4": {"vn": 319, "fp": 13, "fn": 82, "vp": 115, "n": 529, "acc": 0.8204158790170132, "pre": 0.8984375, "rec": 0.583756345177665, "esp": 0.9608433734939759, "f1": 0.7076923076923077, "auc": 0.7722998593358203, "base": 0.6275992438563327, "train": 1.0, "ntrain": 40}, "5": {"rc": [1.0, 1.0, 1.0, 0.9818181818181818, 0.9629629629629629, 1.0, 1.0, 1.0, 0.9423076923076923, 0.9629629629629629], "acc": 0.9851851851851852, "f1m": 0.9851954451789835, "peor": 0.9423076923076923, "peord": 8, "par": [8, 1, 2], "n": 540, "total": 1797}, "6": {"vn": 103, "fp": 4, "fn": 58, "vp": 6, "n": 171, "acc": 0.6374269005847953, "pre": 0.6, "rec": 0.09375, "esp": 0.9626168224299065, "f1": 0.16216216216216217, "auc": 0.5570969626168225, "base": 0.6257309941520468}, "7": {"2": {"sil": 0.6810461692117462, "ari": 0.5399218294207123}, "3": {"sil": 0.5528190123564095, "ari": 0.7302382722834697}}};
+const $=id=>document.getElementById(id);
+const dec=(x,d=0)=>x.toFixed(d).replace('.',',');
+const pc=x=>Math.round(100*x)+' %';
+const done=new Set(), primera={}, auto=new Set(), fallos={};
+const r1=R[1],r2=R[2],r3=R[3],r4=R[4],r5=R[5],r6=R[6],r7=R[7];
+const mediaPct=pc(r3.mae/r3.media);
+
+function mini(r){return '<div class="mx"><div class="h"></div><div class="h">dice<br>«no»</div><div class="h">dice<br>«sí»</div>'+
+ '<div class="h">real<br>no</div><div class="c g"><small>VN</small><b>'+r.vn+'</b></div><div class="c r"><small>FP</small><b>'+r.fp+'</b></div>'+
+ '<div class="h">real<br>sí</div><div class="c r"><small>FN</small><b>'+r.fn+'</b></div><div class="c g"><small>VP</small><b>'+r.vp+'</b></div></div>'}
+const met=(k,v,f='')=>'<div class="met"><div class="k">'+k+'</div><div class="v">'+v+'</div>'+(f?'<div class="f">'+f+'</div>':'')+'</div>';
+function datosClasif(r){return '<div class="datos">'+mini(r)+'<div class="mets c4">'+met('Exactitud',pc(r.acc))+met('Referencia*',pc(r.base),'siempre «no»')+met('Precisión',pc(r.pre))+met('Recall',pc(r.rec))+met('Especificidad',pc(r.esp))+met('F1',dec(r.f1,2))+met('AUC',dec(r.auc,2),'0,5 = azar')+'</div></div><div class="f" style="font-size:13px;color:var(--mute)">* Referencia: decir siempre «no». Evaluado con '+r.n+' casos que el modelo no vio.</div>'}
+const [pi,pj,pn]=r5.par;
+
+// Cada caso: ctx, datos, veredicto (opciones, correcta, pistas), q2 (pregunta, opciones [texto, correcta, pista]), explicación
+const VER=['Bueno','Regular','Malo'];
+const CASOS=[
+ {t:'Detectar tumores malignos',tipo:'CLASIFICACIÓN',
+  ctx:'Regresión logística con 30 medidas de cada tumor: <b>'+r1.total+'</b> pacientes reales, <b>'+r1.malignos+'</b> malignos. Positivo = maligno.',
+  datos:datosClasif(r1),
+  vq:'¿Es bueno, regular o malo este modelo?',vopt:VER,vok:'Bueno',
+  vh:{Regular:'Compara con la referencia: '+pc(r1.acc)+' frente a '+pc(r1.base)+', y recall y precisión rondan el '+pc(r1.rec)+'. Es bastante más que «regular».',Malo:'Un modelo malo no gana a la referencia ni detecta casos. Este gana por mucho y detecta el '+pc(r1.rec)+' de los malignos.'},
+  q2:'¿Qué error te preocupa más en este caso?',
+  ropt:[['El <b>FN</b>: un maligno que el modelo deja pasar',true,''],['El <b>FP</b>, una falsa alarma que lleva a más pruebas',false,'Una falsa alarma cuesta pruebas y un susto; un maligno sin detectar puede costar mucho más. Piensa en quién sufre cada error.'],['Los dos pesan igual',false,'Casi nunca pesan igual. En salud, no detectar un tumor es mucho más grave que repetir una prueba.']],
+  expl:'<b>Bueno.</b> Exactitud '+pc(r1.acc)+' frente a '+pc(r1.base)+' de la referencia; recall '+pc(r1.rec)+', precisión '+pc(r1.pre)+' y AUC '+dec(r1.auc,2)+'. Aun así se escapan '+r1.fn+' malignos (FN): en salud se bajaría el umbral para subir el recall, aceptando más falsas alarmas.'},
+ {t:'El mismo problema, con tumores raros',tipo:'CLASIFICACIÓN',
+  ctx:'Mismos datos, pero con solo un <b>5 %</b> de malignos (<b>'+r2.malignos+'</b> de '+r2.total+') y solo 3 medidas poco informativas. Preparado a propósito.',
+  datos:datosClasif(r2),
+  vq:'¿Es bueno, regular o malo este modelo?',vopt:VER,vok:'Malo',
+  vh:{Bueno:'Mira la referencia: '+pc(r2.acc)+' es lo mismo que decir siempre «no maligno». ¿Qué dice el recall?',Regular:'Un recall del '+pc(r2.rec)+' no es «regular»: no detecta ni un solo maligno.'},
+  q2:'¿Qué dato destapa el problema?',
+  ropt:[['El <b>recall del '+pc(r2.rec)+'</b>: no detecta ningún maligno',true,''],['La <b>exactitud del '+pc(r2.acc)+'</b>',false,'Es justo el número que engaña: coincide con la referencia, porque casi todos los pacientes son benignos.'],['La <b>especificidad del '+pc(r2.esp)+'</b>',false,'Una especificidad perfecta solo dice que no da falsas alarmas… porque nunca avisa.']],
+  expl:'<b>Malo.</b> '+pc(r2.acc)+' de exactitud, <b>igual que la referencia</b>; recall '+pc(r2.rec)+': no detecta ningún maligno (los '+r2.fn+' FN son todos). La exactitud engaña con clases raras.'},
+ {t:'Predecir la progresión de la diabetes',tipo:'REGRESIÓN',
+  ctx:'Regresión lineal con 10 datos clínicos de <b>'+r3.total+'</b> pacientes reales. Predice un índice de progresión de la enfermedad (media: <b>'+dec(r3.media)+'</b> puntos).',
+  datos:'<div class="mets">'+met('MAE',dec(r3.mae,1),'puntos de error medio')+met('RMSE',dec(r3.rmse,1))+met('R²',dec(r3.r2,2))+met('MAE referencia*',dec(r3.mae0,1),'siempre la media')+'</div><div class="f" style="font-size:13px;color:var(--mute)">* Referencia: predecir siempre la media. El error medio es el <b>'+mediaPct+'</b> de la media.</div>',
+  vq:'¿Es bueno, regular o malo este modelo?',vopt:VER,vok:'Regular',
+  vh:{Bueno:'El error medio es casi un tercio de la media ('+mediaPct+'). ¿Te fiarías para decidir un tratamiento?',Malo:'Sí mejora la referencia (MAE '+dec(r3.mae,1)+' frente a '+dec(r3.mae0,1)+') y R² es positivo: algo aprende, aunque poco.'},
+  q2:'¿Con qué comparas el MAE para valorarlo?',
+  ropt:[['Con la <b>media de los datos</b> y con el <b>MAE de la referencia</b>',true,''],['Con <b>cero</b>: si el error es bajo, es bueno',false,'«Bajo» no significa nada sin una escala. Un error de 45 puntos sobre una media de 152 no es pequeño.'],['Con el <b>R²</b>: si es positivo, ya es bueno',false,'R² positivo solo dice que supera a la media; 0,39 sigue siendo flojo.']],
+  expl:'<b>Regular.</b> Mejora la referencia (MAE '+dec(r3.mae,1)+' frente a '+dec(r3.mae0,1)+'; R² '+dec(r3.r2,2)+') pero se equivoca de media un '+mediaPct+'. Sirve de orientación, no para decidir solo con él.'},
+ {t:'Muy buena nota… en lo que ya vio',tipo:'CLASIFICACIÓN',
+  ctx:'Árbol de decisión sin límite, entrenado con solo <b>'+r4.ntrain+'</b> pacientes y probado con <b>'+r4.n+'</b> nuevos.',
+  datos:'<div class="datos">'+mini(r4)+'<div class="mets">'+met('Exactitud en train',pc(r4.train),'lo que ya vio')+met('Exactitud en test',pc(r4.acc),'lo nuevo')+met('Recall en test',pc(r4.rec))+met('Precisión en test',pc(r4.pre))+'</div></div>',
+  vq:'¿Es bueno, regular o malo este modelo?',vopt:VER,vok:'Malo',
+  vh:{Bueno:'La nota de train no cuenta, porque son datos que el modelo ya vio. Mira el test ('+pc(r4.acc)+') y el recall ('+pc(r4.rec)+').',Regular:'Un '+pc(r4.acc)+' suena a «regular», pero deja escapar '+Math.round(100*(1-r4.rec))+' de cada 100 malignos y la nota de train engaña: es un modelo que memoriza.'},
+  q2:'¿Qué nota te crees del modelo?',
+  ropt:[['La de <b>test</b> ('+pc(r4.acc)+'): son datos que no había visto',true,''],['La de <b>train</b> ('+pc(r4.train)+'): es la más alta',false,'Es la nota de los datos que ya conocía. Un modelo que memoriza saca 100 % en train y falla con lo nuevo.'],['La <b>media</b> de las dos',false,'Mezclar las dos infla el resultado. Lo que importa es cómo se comporta con casos nuevos: el test.']],
+  expl:'<b>Malo.</b> Sobreajuste: '+pc(r4.train)+' en train frente a '+pc(r4.acc)+' en test y recall '+pc(r4.rec)+'. La nota del train es una ilusión: se mira siempre el test.'},
+ {t:'Leer dígitos escritos a mano',tipo:'CLASIFICACIÓN · 10 CLASES',
+  ctx:'k-NN sobre imágenes de <b>'+r5.total+'</b> dígitos reales (del 0 al 9). Se prueba con <b>'+r5.n+'</b> imágenes nuevas.',
+  datos:'<div class="mets">'+met('Exactitud',pc(r5.acc))+met('F1 medio',dec(r5.f1m,2),'las 10 clases')+met('Peor clase (el '+r5.peord+')',pc(r5.peor),'su recall')+met('Confusión más frecuente',pi+' → '+pj,pn+' veces')+'</div>'+
+    '<p style="margin:8px 0 0;font-size:14px;color:var(--mute)">Recall de cada dígito (la barra roja es la clase más floja):</p><div class="dg">'+r5.rc.map((v,k)=>'<div>'+dec(100*v)+'<i class="'+(k===r5.peord?'lo':'')+'" style="height:'+Math.round(64*v)+'px"></i><b>'+k+'</b></div>').join('')+'</div>',
+  vq:'¿Es bueno, regular o malo este modelo?',vopt:VER,vok:'Bueno',
+  vh:{Regular:pc(r5.acc)+' de exactitud, F1 medio '+dec(r5.f1m,2)+' y hasta el peor dígito llega al '+pc(r5.peor)+': eso es mucho mejor que «regular».',Malo:'Mira la gráfica: todas las clases están por encima del '+pc(r5.peor)+'. No hay ninguna abandonada.'},
+  q2:'¿Qué te dice la gráfica por dígito?',
+  ropt:[['Que ninguna clase está abandonada: hasta la peor ('+r5.peord+') llega al '+pc(r5.peor),true,''],['Que la exactitud engaña y hay que repetir el entrenamiento',false,'Aquí las clases están equilibradas y todas puntúan alto: la exactitud no engaña.'],['Que el modelo solo sabe leer algunos dígitos',false,'Mira las barras: están todas altas, con el '+r5.peord+' como el más flojo, pero aun así sobre el '+pc(r5.peor)+'.']],
+  expl:'<b>Muy bueno.</b> Exactitud '+pc(r5.acc)+' y F1 medio '+dec(r5.f1m,2)+'. La clase más floja (el '+r5.peord+') aún alcanza '+pc(r5.peor)+' y se confunde sobre todo con el '+pj+'. Con 10 clases se mira el recall de cada una, no una sola matriz 2×2.'},
+ {t:'Un modelo que no ha aprendido nada',tipo:'CLASIFICACIÓN',
+  ctx:'Los datos del caso 1, pero con las etiquetas <b>mezcladas al azar</b>: el modelo no puede encontrar relación.',
+  datos:datosClasif(r6),
+  vq:'¿Es bueno, regular o malo este modelo?',vopt:VER,vok:'Malo',
+  vh:{Bueno:'Compara '+pc(r6.acc)+' con la referencia ('+pc(r6.base)+') y mira el AUC ('+dec(r6.auc,2)+'): no mejora nada.',Regular:'No es «regular»: no supera al modelo que dice siempre «no» y el AUC es casi el del azar.'},
+  q2:'¿Qué señal prueba que no ha aprendido nada?',
+  ropt:[['AUC '+dec(r6.auc,2)+' (casi azar) y exactitud ≈ referencia',true,''],['La <b>especificidad</b> del '+pc(r6.esp),false,'Esa cifra es alta porque casi nunca avisa; no demuestra que aprenda.'],['La <b>precisión</b> del '+pc(r6.pre),false,'Con solo '+(r6.fp+r6.vp)+' avisos, ese 60 % no dice nada fiable. Compara siempre con la referencia y el recall.']],
+  expl:'<b>Malo.</b> Exactitud '+pc(r6.acc)+' ≈ referencia '+pc(r6.base)+'; AUC '+dec(r6.auc,2)+' (0,5 = azar) y recall '+pc(r6.rec)+'. No ha aprendido nada.'},
+ {t:'Agrupar flores sin decir la especie',tipo:'AGRUPACIÓN',
+  ctx:'K-means sobre <b>150</b> flores iris reales (4 medidas de cada una). Aquí no hay «acierto»: se mide la separación (silueta) y, como en este conjunto sí conocemos las 3 especies, cuánto coinciden los grupos con ellas (ARI).',
+  datos:'<div class="mets">'+met('Silueta, 2 grupos',dec(r7[2].sil,2))+met('Silueta, 3 grupos',dec(r7[3].sil,2))+met('ARI, 2 grupos',dec(r7[2].ari,2))+met('ARI, 3 grupos',dec(r7[3].ari,2))+'</div>',
+  vq:'¿Cuántos grupos eliges?',vopt:['2 grupos: tiene la silueta más alta','3 grupos: coincide con las especies','La silueta sola no basta para decidir'],vok:'La silueta sola no basta para decidir',
+  vh:{'2 grupos: tiene la silueta más alta':'Con 2 grupos la silueta es mayor ('+dec(r7[2].sil,2)+'), pero con 3 coincide mucho mejor con las especies (ARI '+dec(r7[3].ari,2)+'). Un número solo no decide.','3 grupos: coincide con las especies':'Aquí sabemos las especies, pero en un problema real no las tendrías. ¿Qué harías entonces? La silueta sola va en otra dirección.'},
+  q2:'En un proyecto real, sin especies conocidas, ¿qué haces?',
+  ropt:[['Pruebo varios <b>k</b>, miro los grupos con quien conoce el negocio y veo si tienen <b>sentido</b>',true,''],['Elijo el <b>k de mayor silueta</b> y ya',false,'Con las flores la silueta más alta (2 grupos) no coincidía con las 3 especies. Es un dato más, no la decisión.'],['Dejo <b>k = 3</b> siempre',false,'No hay un k universal: depende de los datos y de para qué se quieran los grupos.']],
+  expl:'<b>Depende.</b> Con 2 grupos la silueta es mayor ('+dec(r7[2].sil,2)+'), pero con 3 coincide mejor con las especies (ARI '+dec(r7[3].ari,2)+'). Sin etiquetas, la silueta no basta: hay que contrastar con quien conoce el dominio.'}
+];
+const VSOL=['Bueno','Malo','Regular','Malo','Bueno','Malo','Depende'];
+
+// ---------- construir los casos
+const cont=$('casos'),nav=$('navcasos');
+CASOS.forEach((c,i)=>{
+  const n=i+1;
+  const a=document.createElement('a');a.href='#c'+n;a.dataset.s=n;a.textContent=n;a.title='Caso '+n;nav.appendChild(a);
+  const s=document.createElement('section');s.id='c'+n;
+  const rv=c.vopt.map(o=>'<label><input type="radio" name="v'+n+'" value="'+o.replace(/"/g,'&quot;')+'">'+o+'</label>').join('');
+  const rr=c.ropt.map((o,k)=>'<label><input type="radio" name="r'+n+'" value="'+k+'"><span>'+o[0]+'</span></label>').join('');
+  s.innerHTML='<span class="step">CASO '+n+'</span><span class="tag">'+c.tipo+'</span><h2>'+c.t+'</h2><p class="ctx">'+c.ctx+'</p>'+c.datos+
+   '<div class="qrow"><div class="q">'+c.vq+'</div><div class="radio">'+rv+'</div></div>'+
+   '<div class="qrow"><div class="q">'+c.q2+'</div><div class="radio col">'+rr+'</div></div>'+
+   '<div class="actions"><button type="button" data-ck="'+n+'">Comprobar</button><button type="button" class="ghost" data-au="'+n+'">Rellenar por mí</button></div>'+
+   '<div class="fb" id="f'+n+'" role="status" aria-live="polite"></div>'+
+   '<div class="box mint expl" id="x'+n+'"><b class="t">Por qué</b>'+c.expl+'</div>';
+  cont.appendChild(s);
+});
+cont.addEventListener('click',e=>{
+  const ck=e.target.closest('[data-ck]'),au=e.target.closest('[data-au]');
+  if(ck)comprobar(+ck.dataset.ck);
+  if(au)rellenar(+au.dataset.au);
+});
+function fb(id,cls,msg){const e=$(id);e.className='fb show '+cls;e.innerHTML=msg}
+function sel(n,k){const r=document.querySelector('input[name="'+k+n+'"]:checked');return r?r.value:null}
+function rellenar(n){
+  const c=CASOS[n-1];auto.add(n);
+  document.querySelector('input[name="v'+n+'"][value="'+c.vok.replace(/"/g,'\\"')+'"]').checked=true;
+  const k=c.ropt.findIndex(o=>o[1]);document.querySelector('input[name="r'+n+'"][value="'+k+'"]').checked=true;
+  fb('f'+n,'info','Rellenado. Pulsa <b>Comprobar</b> y lee por qué: la clave es entender el razonamiento, no solo el veredicto.');
+}
+function comprobar(n){
+  const c=CASOS[n-1],v=sel(n,'v'),r=sel(n,'r');
+  if(v===null||r===null){fb('f'+n,'no','Contesta <b>las dos</b> preguntas.');return}
+  const vg=v===c.vok,ro=c.ropt[+r],rg=ro[1],m=[];
+  if(!vg)m.push('<b>Veredicto:</b> '+(c.vh[v]||'Vuelve a mirar los números.'));
+  if(!rg)m.push('<b>Razón:</b> '+ro[2]);
+  if(vg&&rg){
+    $('x'+n).classList.add('show');
+    fb('f'+n,'ok','¡Correcto! '+(auto.has(n)?'':'Lo has razonado tú.'));
+    if(!done.has(n)){done.add(n);primera[n]=!fallos[n]&&!auto.has(n);marcar(n)}
+  }else{
+    fallos[n]=(fallos[n]||0)+1;
+    fb('f'+n,'no',m.join('<br>'));
+  }
+}
+function marcar(n){
+  document.querySelectorAll('#prog a[data-s="'+n+'"]').forEach(a=>a.classList.add('done'));
+  if(done.size===CASOS.length){document.querySelector('#prog a[data-s="f"]').classList.add('done');cierre()}
+}
+function cierre(){
+  const pr=Object.values(primera).filter(Boolean).length;
+  const filas=CASOS.map((c,i)=>'<tr><td><b>'+(i+1)+'</b> · '+c.t+'</td><td class="ver '+(VSOL[i]==='Malo'?'m':VSOL[i]==='Regular'||VSOL[i]==='Depende'?'r':'b')+'">'+VSOL[i].toUpperCase()+'</td><td>'+(primera[i+1]?'✓ a la primera':'✓ con ayuda')+'</td></tr>').join('');
+  const cl=[r1,r2,r4,r6];
+  const fila2=(nom,r)=>'<tr><td>'+nom+'</td><td class="num">'+pc(r.acc)+'</td><td class="num">'+pc(r.base)+'</td><td class="num">'+pc(r.rec)+'</td><td class="num">'+pc(r.pre)+'</td><td class="num">'+dec(r.f1,2)+'</td><td class="num">'+dec(r.auc,2)+'</td></tr>';
+  $('resumen').innerHTML='<div class="tablewrap"><table><thead><tr><th>Caso</th><th>Veredicto</th><th>Tu resultado</th></tr></thead><tbody>'+filas+'</tbody></table></div>'+
+   '<h3 style="margin:18px 0 4px">Los cuatro modelos de clasificación, juntos</h3><p>¿Qué columna los distingue mejor? La <b>exactitud</b> pone igual los casos 1 y 2 ('+pc(r1.acc)+' los dos), pero el <b>recall</b> ('+pc(r1.rec)+' frente a '+pc(r2.rec)+') los separa del todo.</p>'+
+   '<div class="tablewrap"><table><thead><tr><th>Modelo</th><th>Exactitud</th><th>Referencia</th><th>Recall</th><th>Precisión</th><th>F1</th><th>AUC</th></tr></thead><tbody>'+
+   fila2('1 · Tumores (bueno)',r1)+fila2('2 · Tumores raros (malo)',r2)+fila2('4 · Memoriza, en test (malo)',r4)+fila2('6 · Sin aprender (malo)',r6)+'</tbody></table></div>';
+  $('fint').innerHTML='<p>Has juzgado siete modelos: <b>'+pr+' de '+CASOS.length+'</b> a la primera y sin ayuda. Lo que te llevas:</p><p>Ninguna métrica decide sola. Compara siempre con la <b>referencia</b>, mira la <b>matriz</b>, elige la métrica según <b>qué error cuesta más</b>, desconfía de la nota en <b>train</b> y pregunta qué significa el número para <b>quien sufre el error</b>. Esa decisión es de personas, no del modelo.</p><p>En el Sprint 7 repetirás esto con Python: ejercicio completo de la matriz de confusión y cuaderno S07_03.</p>';
+  $('fin').classList.add('show');
+}
+</script>
+</body>
+</html>
