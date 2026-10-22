@@ -134,7 +134,7 @@ html[data-modo="1"] .m7{display:none!important}html[data-modo="7"] .m1{display:n
     <div class="cell r"><span class="nm">FN · no prevista</span><input type="number" min="0" max="20" id="c_fn" aria-label="Falsos negativos"><span class="sm">Canceló y no lo vimos venir</span></div>
     <div class="cell g"><span class="nm">VP · acierto</span><input type="number" min="0" max="20" id="c_vp" aria-label="Verdaderos positivos"><span class="sm">Canceló y lo avisamos</span></div>
   </div>
-  <div class="actions"><button type="button" id="b2">Comprobar</button><button type="button" class="ghost" id="b2h">Pista</button></div>
+  <div class="actions"><button type="button" id="b2">Comprobar</button><button type="button" class="ghost" id="b2auto">Rellenar por mí</button><button type="button" class="ghost" id="b2h">Pista</button></div>
   <div class="fb" id="f2" role="status" aria-live="polite"></div>
   <div class="box sky" id="x2" style="display:none"><b class="t">Cómo se lee</b>La <b>diagonal</b> (VN y VP) son los aciertos. Las otras dos casillas son los <b>dos errores</b>, y <b>no son iguales</b>: una <b>falsa alarma</b> molesta a un cliente que iba a venir; una <b>cancelación no prevista</b> deja una habitación vacía que se podía haber vendido.</div>
 </section>
@@ -156,7 +156,7 @@ html[data-modo="1"] .m7{display:none!important}html[data-modo="7"] .m1{display:n
     <p><b>Precisión</b> = VP / (VP + FP) → de las que <i>avisamos</i> como cancelación, ¿cuántas cancelaron de verdad?</p>
     <p><b>Recall</b> = VP / (VP + FN) → de las que <i>cancelaron de verdad</i>, ¿cuántas avisamos?</p>
   </details>
-  <div class="actions"><button type="button" id="b3">Comprobar</button></div>
+  <div class="actions"><button type="button" id="b3">Comprobar</button><button type="button" class="ghost" id="b3auto">Rellenar por mí</button></div>
   <div class="fb" id="f3" role="status" aria-live="polite"></div>
   <div class="box mint x3" id="x3" style="display:none"><b class="t">Traducido para el gerente</b><span id="x3t"></span></div>
 </section>
@@ -185,7 +185,7 @@ html[data-modo="1"] .m7{display:none!important}html[data-modo="7"] .m1{display:n
     <div class="q">¿Y a la <b>exactitud</b>? <span style="font-weight:400;color:var(--mute)">(mira el deslizador antes de contestar)</span></div>
     <div class="radio"><label><input type="radio" name="q_acc" value="sube">Sube</label><label><input type="radio" name="q_acc" value="baja">Baja</label><label><input type="radio" name="q_acc" value="igual">Se queda igual</label></div>
   </div>
-  <div class="actions"><button type="button" id="b4">Comprobar mis predicciones</button></div>
+  <div class="actions"><button type="button" id="b4">Comprobar mis predicciones</button><button type="button" class="ghost" id="b4auto">Rellenar por mí</button></div>
   <div class="fb" id="f4" role="status" aria-live="polite"></div>
   <div class="box pink x4 m1" style="display:none"><b class="t">La lección</b>Con 0,50 y con 0,30 el modelo acierta lo mismo (<b>14 de 20, un 70 %</b>), pero la matriz es <b>muy distinta</b>: con 0,30 avisa más cancelaciones (de 4 a 6 de las 8), a cambio de <b>más falsas alarmas</b> (de 2 a 4). <b>La exactitud no te cuenta nada de esto</b>: por eso miramos la matriz. Y decidir cuántas falsas alarmas aceptamos para no perder cancelaciones es una decisión <b>de negocio</b>, no del modelo.</div>
   <div class="box pink x4 m7" id="x4" style="display:none"><b class="t">La lección</b>Con 0,50 y con 0,30 la exactitud es la <b>misma (70 %)</b>, pero la matriz es <b>muy distinta</b>: con 0,30 detectas más cancelaciones (recall sube de 50 % a 75 %) a cambio de más falsas alarmas (la precisión baja de 67 % a 60 %). <b>La exactitud no te dice nada de esto.</b> Por eso miramos la matriz y no un solo número.</div>
@@ -204,7 +204,7 @@ html[data-modo="1"] .m7{display:none!important}html[data-modo="7"] .m1{display:n
       <select id="kbest"><option value="">elige…</option></select></label>
   </div>
   <p style="color:var(--mute);font-size:15px"><b>Pista:</b> usa el deslizador del paso 4 para ver FN y FP de cada umbral y calcula el coste. Prueba varios umbrales hasta encontrar el menor.</p>
-  <div class="actions"><button type="button" id="b5">Comprobar</button></div>
+  <div class="actions"><button type="button" id="b5">Comprobar</button><button type="button" class="ghost" id="b5auto">Rellenar por mí</button></div>
   <div class="fb" id="f5" role="status" aria-live="polite"></div>
   <div id="x5" style="display:none">
     <svg class="chart" id="chart" viewBox="0 0 640 250" role="img" aria-label="Coste total según el umbral"></svg>
@@ -238,7 +238,7 @@ html[data-modo="1"] .m7{display:none!important}html[data-modo="7"] .m1{display:n
     <label>Exactitud (%)<input type="number" id="t1_acc" min="0" max="100"></label>
     <label>Cancelaciones avisadas (de las 5 reales)<input type="number" id="t1_av" min="0" max="5" style="width:120px"></label>
   </div>
-  <div class="actions"><button type="button" id="b6">Comprobar</button></div>
+  <div class="actions"><button type="button" id="b6">Comprobar</button><button type="button" class="ghost" id="b6auto">Rellenar por mí</button></div>
   <div class="fb" id="f6" role="status" aria-live="polite"></div>
   <div class="box pink x6 m1" style="display:none"><b class="t">Qué pasa</b>Exactitud del <b>95 %</b> y <b>0 de 5</b> cancelaciones avisadas: el modelo <b>no sirve para nada</b>, aunque «acierte» casi siempre. Cuando lo que importa es raro (pocas cancelaciones, pocos fraudes, pocas averías), la exactitud se infla con la clase mayoritaria. Por eso en S01.3 vimos que hay que mirar la <b>matriz de confusión</b> y comparar siempre con un <b>modelo de referencia</b> muy simple.</div>
   <div class="box pink x6 m7" id="x6" style="display:none"><b class="t">Qué pasa</b>Exactitud del <b>95 %</b> y recall del <b>0 %</b>: el modelo <b>no avisa de ninguna cancelación</b> y no sirve para nada. Cuando una clase es rara (<i>desbalance</i>), la exactitud se infla con la clase mayoritaria. Por eso en este curso <b>miramos siempre la matriz, el recall y la precisión</b>, y la curva PR cuando hay desbalance (cuaderno S07_04).</div>
@@ -248,6 +248,7 @@ html[data-modo="1"] .m7{display:none!important}html[data-modo="7"] .m1{display:n
 <section id="p7">
   <span class="step"><span class="m7">PASO 7</span><span class="m1">PASO 6</span></span>
   <h2>Para cerrar</h2>
+  <div class="actions"><button type="button" class="ghost" id="b7auto">Rellenar por mí (desplegar las respuestas)</button></div>
   <div class="m1">
   <p>Tres preguntas para discutir en pareja o en la puesta en común. Pensad la respuesta y <b>después</b> desplegadla.</p>
   <details><summary>1. En el hotel, ¿qué error es peor: una falsa alarma o una cancelación no detectada? ¿De qué depende?</summary>
@@ -506,6 +507,36 @@ $('b6').onclick=()=>{
   if(g&&ga&&gr){fb('f6','ok','¡Correcto! Si siempre dice «se mantiene»: VN = 95, FP = 0, FN = 5, VP = 0. Exactitud = 95/100 = <b>95 %</b>; '+(MODO===1?'avisa <b>0 de las 5</b> cancelaciones.':'recall = 0/(0+5) = <b>0 %</b>.'));document.querySelectorAll('.x6').forEach(e=>e.style.display='block');mark(6)}
   else fb('f6','no',(g?'':'Piensa: el modelo nunca dice «cancela», así que <b>no hay ningún positivo predicho</b> (VP = 0 y FP = 0). Las 95 que vinieron son VN y las 5 que cancelaron son FN. ')+(ga&&gr?'':(MODO===1?'Exactitud = aciertos/100; cancelaciones avisadas = VP.':'Exactitud = (VP+VN)/100; recall = VP/(VP+FN).')));
 };
+// ---------- «Rellenar por mí» (pasos 2 a 7): rellena la respuesta correcta; luego hay que pulsar Comprobar
+function limpiar(ids){ids.forEach(i=>{const e=$(i);if(e)e.classList.remove('ok','bad')})}
+$('b2auto').onclick=()=>{
+  for(const k of ['vn','fp','fn','vp'])$('c_'+k).value=C0[k];
+  limpiar(['c_vn','c_fp','c_fn','c_vp']);
+  fb('f2','info','Rellenado con la matriz correcta. Pulsa <b>Comprobar</b> y repasa por qué sale cada número en la columna <b>Resultado</b> del paso 1.');
+};
+$('b3auto').onclick=()=>{
+  for(const k of ['vn','fp','fn','vp'])$('r_'+k).textContent=C0[k];
+  if(MODO===1){$('m1_acc').value=Math.round(MET.acc);$('m1_vp').value=C0.vp;limpiar(['m1_acc','m1_vp'])}
+  else{$('m_acc').value=Math.round(MET.acc);$('m_pre').value=Math.round(MET.pre);$('m_rec').value=Math.round(MET.rec);limpiar(['m_acc','m_pre','m_rec'])}
+  fb('f3','info','Rellenado. Pulsa <b>Comprobar</b> y rehaz la cuenta con las fórmulas del recordatorio para ver que sale lo mismo.');
+};
+$('b4auto').onclick=()=>{
+  for(const k of ['rec','pre','acc']){const r=document.querySelector('input[name="q_'+k+'"][value="'+EXP4[k][0]+'"]');if(r)r.checked=true}
+  $('umb').value=30;upd4();
+  fb('f4','info','Rellenado, y el deslizador está en <b>0,30</b> para que veas la matriz. Pulsa <b>Comprobar mis predicciones</b> y compáralo con 0,50.');
+};
+$('b5auto').onclick=()=>{
+  let mn=1e9,t0=0;for(let t=5;t<=95;t+=5){const v=coste(t,3);if(v<mn){mn=v;t0=t}}
+  $('k50').value=coste(50,3);$('k30').value=coste(30,3);sel.value=t0;limpiar(['k50','k30']);sel.classList.remove('ok','bad');
+  fb('f5','info','Rellenado. Pulsa <b>Comprobar</b> y fíjate en cómo cambian FN y FP en el deslizador del paso 4.');
+};
+$('b6auto').onclick=()=>{
+  const E={vn:95,fp:0,fn:5,vp:0};for(const k in E)$('t_'+k).value=E[k];
+  if(MODO===1){$('t1_acc').value=95;$('t1_av').value=0}else{$('t_acc').value=95;$('t_rec').value=0}
+  limpiar(['t_vn','t_fp','t_fn','t_vp','t_acc','t_rec','t1_acc','t1_av']);
+  fb('f6','info','Rellenado. Pulsa <b>Comprobar</b> y piensa: si el modelo nunca dice «cancela», ¿dónde caen las 5 cancelaciones?');
+};
+$('b7auto').onclick=()=>{document.querySelectorAll('#p7 details').forEach(d=>d.open=true);$('b7auto').textContent='Respuestas desplegadas'};
 upd5();
 </script>
 </body>
