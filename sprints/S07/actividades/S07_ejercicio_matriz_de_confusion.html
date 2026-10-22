@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Matriz de confusión · Ejercicio interactivo</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F1E8;--ink:#1D2433;--mute:#566073;--line:#D9D2C0;--acc:#C23B1F;--teal:#0F7F7F;--mint:#D5ECEA;--pink:#F7DDD4;--sand:#EFE7D2;--sky:#DCE6F5;--ok:#1B7F4B;--bad:#B3261E;--card:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque','Public Sans',system-ui,sans-serif;letter-spacing:-.01em}
+.wrap{max-width:980px;margin:0 auto;padding:28px 18px 80px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+h1{margin:6px 0 8px;font-size:clamp(30px,5vw,48px);line-height:1.05;font-weight:800}
+.lead{font-size:19px;color:var(--mute);margin:0 0 14px;max-width:760px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.pill{background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px;font-weight:600;color:var(--mute)}
+.progress{position:sticky;top:0;z-index:10;background:var(--bg);padding:10px 0;border-bottom:2px solid var(--line);margin-bottom:22px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.progress a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:4px 10px;font-size:14px;font-weight:700}
+.progress a.done{background:var(--mint);border-color:var(--teal);color:#0A5555}
+.progress a.done::before{content:"✓"}
+.progress .reset{margin-left:auto;background:none;border:none;color:var(--mute);font:600 14px 'Public Sans',sans-serif;cursor:pointer;text-decoration:underline}
+section{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:22px 22px 24px;margin:0 0 22px}
+section>h2{margin:0 0 4px;font-size:26px;font-weight:800}
+.step{display:inline-block;background:var(--ink);color:#fff;border-radius:8px;padding:2px 9px;font-size:13px;font-weight:700;letter-spacing:.08em;margin-bottom:8px}
+.q{font-weight:600}
+p{margin:8px 0}
+.box{border-radius:12px;padding:12px 16px;margin:12px 0}
+.mint{background:var(--mint)}.pink{background:var(--pink)}.sand{background:var(--sand)}.sky{background:var(--sky)}
+.box b.t{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.mint b.t{color:var(--teal)}.pink b.t{color:var(--acc)}.sand b.t,.sky b.t{color:var(--mute)}
+code,.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background:rgba(29,36,51,.07);padding:1px 6px;border-radius:5px}
+pre.code{background:var(--ink);color:#F5F1E8;border-radius:12px;padding:14px 16px;overflow:auto;font:14px/1.5 ui-monospace,Menlo,Consolas,monospace;margin:10px 0}
+button,.btn{font:700 15px 'Public Sans',sans-serif;border-radius:10px;border:2px solid var(--ink);background:var(--ink);color:#fff;padding:8px 16px;cursor:pointer}
+button.ghost{background:#fff;color:var(--ink)}
+button:hover{filter:brightness(1.15)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #4A6FA5;outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px;align-items:center}
+.fb{margin:10px 0 0;padding:10px 14px;border-radius:10px;font-weight:600;display:none}
+.fb.show{display:block}.fb.ok{background:#DDF1E6;color:#0E5B34}.fb.no{background:#FBE0DD;color:#8C1D18}.fb.info{background:var(--sky);color:#1D2433}
+input[type=number],select{font:600 18px 'Public Sans',sans-serif;border:2px solid var(--line);border-radius:10px;padding:6px 10px;width:96px;background:#fff;color:var(--ink)}
+select{width:auto}
+input.ok{border-color:var(--ok);background:#EAF7EF}input.bad{border-color:var(--bad);background:#FDECEA}
+.tablewrap{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:6px 7px;border-bottom:1.5px solid var(--line);text-align:left;white-space:nowrap}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);background:var(--bg);position:sticky;top:0}
+td.num{font-variant-numeric:tabular-nums}
+.pbar{display:inline-block;height:8px;border-radius:4px;background:var(--acc);vertical-align:middle;margin-left:6px;opacity:.85}
+.tog{display:inline-flex;gap:4px}
+.tog button{padding:3px 10px;font-size:13px;background:#fff;color:var(--ink);border-width:2px;border-color:var(--line)}
+.tog button.sel{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip{display:inline-block;border-radius:8px;padding:2px 8px;font-size:13px;font-weight:800;text-align:center}
+.chip.vp,.chip.vn{background:var(--mint);color:#0A5555}.chip.fp,.chip.fn{background:var(--pink);color:#8C2A12}
+tr.revisar td{background:#FFF4D6}
+.matrix{display:grid;grid-template-columns:110px 1fr 1fr;gap:6px;max-width:620px;margin:14px 0}
+.matrix .h{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 2px}
+.matrix .cell{border-radius:12px;padding:12px 10px;text-align:center;border:2px solid transparent}
+.matrix .cell.g{background:var(--mint);border-color:#9FD2CE}.matrix .cell.r{background:var(--pink);border-color:#EDB5A3}
+.matrix .cell .nm{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;margin-bottom:4px}
+.matrix .cell .big{font:800 34px 'Bricolage Grotesque',sans-serif;line-height:1}
+.matrix .cell .sm{display:block;font-size:12.5px;color:#3b4252;margin-top:5px;line-height:1.3}
+.matrix .corner{grid-row:1}
+.mets{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:10px 0}
+.met{background:var(--sand);border-radius:12px;padding:10px 14px}.met .k{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--mute);text-transform:uppercase}.met .v{font:800 28px 'Bricolage Grotesque',sans-serif}
+.met .f{font-size:13px;color:var(--mute)}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.slider{display:flex;gap:14px;align-items:center;margin:10px 0}.slider output{font:800 30px 'Bricolage Grotesque',sans-serif;min-width:70px;color:var(--acc)}
+.radio{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+.radio label{border:2px solid var(--line);border-radius:10px;padding:5px 12px;cursor:pointer;font-weight:600;background:#fff}
+.radio input{margin-right:6px;accent-color:var(--acc)}
+.qrow{margin:14px 0;padding-top:12px;border-top:1.5px dashed var(--line)}
+.fields{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end;margin:10px 0}
+.fields label{display:flex;flex-direction:column;gap:3px;font-weight:600;font-size:14px}
+details{border:2px solid var(--line);border-radius:12px;padding:8px 14px;margin:10px 0;background:#fff}
+details summary{cursor:pointer;font-weight:700}
+details[open]{background:var(--bg)}
+.chart{width:100%;height:auto;display:block;margin:8px 0}
+.fin{background:var(--ink);color:#F5F1E8;border-radius:16px;padding:22px;display:none;margin-bottom:22px}
+.fin.show{display:block}.fin h2{margin:0 0 6px;font-size:28px}
+.foot{font-size:14px;color:var(--mute);margin-top:30px}
+@media(max-width:620px){section{padding:16px}.matrix{grid-template-columns:70px 1fr 1fr}.matrix .cell .big{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">S07 · Regresión logística · Clasificación</div>
+  <h1>Matriz de confusión: ¿qué reservas se van a cancelar?</h1>
+  <p class="lead">Ejercicio completo, paso a paso: construyes la matriz a mano, calculas las métricas, mueves el umbral y descubres por qué la <b>exactitud engaña</b> y por qué el umbral lo decide el <b>coste</b>.</p>
+  <div class="meta"><span class="pill">⏱ 25–30 min</span><span class="pill">👤 Individual o en parejas</span><span class="pill">📓 Antes del cuaderno S07_03</span><span class="pill">Datos ficticios</span></div>
+</header>
+
+<nav class="progress" aria-label="Progreso del ejercicio" id="prog">
+  <a href="#p1" data-s="1">1 Clasificar</a><a href="#p2" data-s="2">2 Matriz</a><a href="#p3" data-s="3">3 Métricas</a><a href="#p4" data-s="4">4 Umbral</a><a href="#p5" data-s="5">5 Coste</a><a href="#p6" data-s="6">6 La trampa</a><a href="#p7">7 Cierre</a>
+  <button class="reset" type="button" onclick="location.reload()">Empezar de nuevo</button>
+</nav>
+
+<section id="p0">
+  <h2>El caso</h2>
+  <p>El equipo de reservas de <b>TurisData Canarias</b> tiene un modelo (una regresión logística) que da, para cada reserva, la <b>probabilidad de que se cancele</b>. Con esa probabilidad hay que <b>decidir</b>: ¿avisamos a ese cliente (pedir un depósito, enviar un recordatorio) o no?</p>
+  <div class="box sky"><b class="t">Cómo se decide</b>El <b>umbral</b> convierte la probabilidad en decisión: si la probabilidad es <b>mayor o igual</b> que el umbral, el modelo dice <b>«cancela»</b> (es el caso <b>positivo</b>); si no, dice <b>«se mantiene»</b>.</div>
+  <div class="box mint"><b class="t">Convenio de este curso</b>Positivo = <b>cancela</b>. Las <b>filas</b> de la matriz son la <b>realidad</b> y las <b>columnas</b> lo que <b>predijo el modelo</b>. Los cuatro resultados posibles: <b>VP</b> (verdadero positivo), <b>VN</b> (verdadero negativo), <b>FP</b> (falsa alarma) y <b>FN</b> (cancelación no prevista).</div>
+</section>
+
+<!-- PASO 1 -->
+<section id="p1">
+  <span class="step">PASO 1</span>
+  <h2>Clasifica las 20 reservas con umbral 0,50</h2>
+  <p>Ya sabemos qué pasó de verdad con 20 reservas (columna <b>Realidad</b>) y qué probabilidad dio el modelo. Para cada una pulsa lo que <b>diría el modelo con umbral 0,50</b>. Al elegir, verás qué tipo de resultado es (VP, VN, FP o FN).</p>
+  <div class="tablewrap"><table id="tabla"><thead><tr><th>Reserva</th><th>Tarifa</th><th>Prob. de cancelar</th><th>Realidad</th><th>El modelo dice…</th><th>Resultado</th></tr></thead><tbody></tbody></table></div>
+  <div class="actions"><button type="button" id="b1">Comprobar</button><button type="button" class="ghost" id="b1auto">Rellenar por mí</button></div>
+  <div class="fb" id="f1" role="status" aria-live="polite"></div>
+</section>
+
+<!-- PASO 2 -->
+<section id="p2">
+  <span class="step">PASO 2</span>
+  <h2>Construye la matriz de confusión</h2>
+  <p>Cuenta las reservas de cada tipo con la columna <b>Resultado</b> del paso 1 y escribe el número en cada casilla. Deben sumar <b>20</b>.</p>
+  <div class="matrix" id="m2">
+    <div class="h corner"></div><div class="h">Predicho:<br>se mantiene</div><div class="h">Predicho:<br>cancela</div>
+    <div class="h">Real:<br>se mantiene</div>
+    <div class="cell g"><span class="nm">VN · acierto</span><input type="number" min="0" max="20" id="c_vn" aria-label="Verdaderos negativos"><span class="sm">Vino y dijimos «se mantiene»</span></div>
+    <div class="cell r"><span class="nm">FP · falsa alarma</span><input type="number" min="0" max="20" id="c_fp" aria-label="Falsos positivos"><span class="sm">Vino, pero avisamos como cancelación</span></div>
+    <div class="h">Real:<br>cancela</div>
+    <div class="cell r"><span class="nm">FN · no prevista</span><input type="number" min="0" max="20" id="c_fn" aria-label="Falsos negativos"><span class="sm">Canceló y no lo vimos venir</span></div>
+    <div class="cell g"><span class="nm">VP · acierto</span><input type="number" min="0" max="20" id="c_vp" aria-label="Verdaderos positivos"><span class="sm">Canceló y lo avisamos</span></div>
+  </div>
+  <div class="actions"><button type="button" id="b2">Comprobar</button><button type="button" class="ghost" id="b2h">Pista</button></div>
+  <div class="fb" id="f2" role="status" aria-live="polite"></div>
+  <div class="box sky" id="x2" style="display:none"><b class="t">Cómo se lee</b>La <b>diagonal</b> (VN y VP) son los aciertos. Las otras dos casillas son los <b>dos errores</b>, y <b>no son iguales</b>: una <b>falsa alarma</b> molesta a un cliente que iba a venir; una <b>cancelación no prevista</b> deja una habitación vacía que se podía haber vendido.</div>
+</section>
+
+<!-- PASO 3 -->
+<section id="p3">
+  <span class="step">PASO 3</span>
+  <h2>Calcula las tres métricas básicas</h2>
+  <p>Con tu matriz (VN = <b id="r_vn">·</b>, FP = <b id="r_fp">·</b>, FN = <b id="r_fn">·</b>, VP = <b id="r_vp">·</b>) calcula, en <b>porcentaje</b> y redondeado a números enteros:</p>
+  <div class="fields">
+    <label>Exactitud (%)<input type="number" id="m_acc" min="0" max="100"></label>
+    <label>Precisión (%)<input type="number" id="m_pre" min="0" max="100"></label>
+    <label>Recall (%)<input type="number" id="m_rec" min="0" max="100"></label>
+  </div>
+  <details><summary>Recordatorio de fórmulas</summary>
+    <p><b>Exactitud</b> = (VP + VN) / total → de <i>todas</i> las reservas, ¿cuántas acertamos?</p>
+    <p><b>Precisión</b> = VP / (VP + FP) → de las que <i>avisamos</i> como cancelación, ¿cuántas cancelaron de verdad?</p>
+    <p><b>Recall</b> = VP / (VP + FN) → de las que <i>cancelaron de verdad</i>, ¿cuántas avisamos?</p>
+  </details>
+  <div class="actions"><button type="button" id="b3">Comprobar</button></div>
+  <div class="fb" id="f3" role="status" aria-live="polite"></div>
+  <div class="box mint" id="x3" style="display:none"><b class="t">Traducido para el gerente</b><span id="x3t"></span></div>
+</section>
+
+<!-- PASO 4 -->
+<section id="p4">
+  <span class="step">PASO 4</span>
+  <h2>Mueve el umbral y mira qué cambia</h2>
+  <p>El umbral lo <b>elegimos nosotros</b>; no tiene por qué ser 0,50. Mueve el deslizador y mira cómo se reparten las 20 reservas.</p>
+  <div class="slider"><label for="umb" class="disp" style="font-weight:700">Umbral</label><input type="range" id="umb" min="5" max="95" step="5" value="50"><output id="umbv" for="umb">0,50</output></div>
+  <div class="matrix" id="m4"></div>
+  <div class="mets" id="mets4"></div>
+  <p class="q">Antes de comprobarlo con el deslizador, <u>predice</u>: si <b>bajas</b> el umbral de 0,50 a 0,30…</p>
+  <div class="qrow" data-q="rec" data-ans="sube">
+    <div class="q">¿Qué le pasa al <b>recall</b>?</div>
+    <div class="radio"><label><input type="radio" name="q_rec" value="sube">Sube</label><label><input type="radio" name="q_rec" value="baja">Baja</label><label><input type="radio" name="q_rec" value="igual">Se queda igual</label></div>
+  </div>
+  <div class="qrow" data-q="pre" data-ans="baja">
+    <div class="q">¿Y a la <b>precisión</b>?</div>
+    <div class="radio"><label><input type="radio" name="q_pre" value="sube">Sube</label><label><input type="radio" name="q_pre" value="baja">Baja</label><label><input type="radio" name="q_pre" value="igual">Se queda igual</label></div>
+  </div>
+  <div class="qrow" data-q="acc" data-ans="igual">
+    <div class="q">¿Y a la <b>exactitud</b>? <span style="font-weight:400;color:var(--mute)">(mira el deslizador antes de contestar)</span></div>
+    <div class="radio"><label><input type="radio" name="q_acc" value="sube">Sube</label><label><input type="radio" name="q_acc" value="baja">Baja</label><label><input type="radio" name="q_acc" value="igual">Se queda igual</label></div>
+  </div>
+  <div class="actions"><button type="button" id="b4">Comprobar mis predicciones</button></div>
+  <div class="fb" id="f4" role="status" aria-live="polite"></div>
+  <div class="box pink" id="x4" style="display:none"><b class="t">La lección</b>Con 0,50 y con 0,30 la exactitud es la <b>misma (70 %)</b>, pero la matriz es <b>muy distinta</b>: con 0,30 detectas más cancelaciones (recall sube de 50 % a 75 %) a cambio de más falsas alarmas (la precisión baja de 67 % a 60 %). <b>La exactitud no te dice nada de esto.</b> Por eso miramos la matriz y no un solo número.</div>
+</section>
+
+<!-- PASO 5 -->
+<section id="p5">
+  <span class="step">PASO 5</span>
+  <h2>Elige el umbral con el coste, no por costumbre</h2>
+  <p>El equipo de reservas calcula que <b>una cancelación no prevista (FN) cuesta el triple que una falsa alarma (FP)</b>: coste FN = <b>3</b>, coste FP = <b>1</b> (unidades relativas).</p>
+  <p class="mono" style="display:inline-block">coste total = 3 × FN + 1 × FP</p>
+  <div class="fields">
+    <label>Coste con umbral 0,50<input type="number" id="k50" min="0"></label>
+    <label>Coste con umbral 0,30<input type="number" id="k30" min="0"></label>
+    <label>Umbral con el menor coste
+      <select id="kbest"><option value="">elige…</option></select></label>
+  </div>
+  <p style="color:var(--mute);font-size:15px"><b>Pista:</b> usa el deslizador del paso 4 para ver FN y FP de cada umbral y calcula el coste. Prueba varios umbrales hasta encontrar el menor.</p>
+  <div class="actions"><button type="button" id="b5">Comprobar</button></div>
+  <div class="fb" id="f5" role="status" aria-live="polite"></div>
+  <div id="x5" style="display:none">
+    <svg class="chart" id="chart" viewBox="0 0 640 250" role="img" aria-label="Coste total según el umbral"></svg>
+    <div class="box mint"><b class="t">La regla teórica</b>El umbral óptimo es <span class="mono">coste_FP / (coste_FP + coste_FN)</span> = 1 / (1 + 3) = <b>0,25</b>. Con solo 20 reservas coincide justo; con datos reales se comprueba con validación cruzada <b>sobre train</b>, nunca con el test.</div>
+    <h3 style="margin:16px 0 4px">Pruébalo tú: ¿y si el error FN costara otra cosa?</h3>
+    <div class="slider"><label for="cfn" style="font-weight:700">Coste FN</label><input type="range" id="cfn" min="1" max="10" step="1" value="3"><output id="cfnv" for="cfn">3</output></div>
+    <div class="mets" id="mets5"></div>
+    <p style="color:var(--mute);font-size:15px">Cuanto más caro es no ver una cancelación, <b>más bajo</b> es el mejor umbral: conviene ser más «alarmista». Con pocas reservas el mínimo de los datos puede desviarse un poco de la regla teórica.</p>
+  </div>
+</section>
+
+<!-- PASO 6 -->
+<section id="p6">
+  <span class="step">PASO 6</span>
+  <h2>La trampa de la exactitud</h2>
+  <p>Otro hotel tiene <b>100 reservas</b>: solo <b>5 se cancelan</b> y las otras 95 vienen. Un ingeniero presume de modelo: <i>«¡95 % de exactitud!»</i>. Averiguas que su modelo <b>dice siempre «se mantiene»</b>, a todas.</p>
+  <div class="matrix" id="m6">
+    <div class="h corner"></div><div class="h">Predicho:<br>se mantiene</div><div class="h">Predicho:<br>cancela</div>
+    <div class="h">Real:<br>se mantiene</div>
+    <div class="cell g"><span class="nm">VN</span><input type="number" min="0" max="100" id="t_vn" aria-label="VN"></div>
+    <div class="cell r"><span class="nm">FP</span><input type="number" min="0" max="100" id="t_fp" aria-label="FP"></div>
+    <div class="h">Real:<br>cancela</div>
+    <div class="cell r"><span class="nm">FN</span><input type="number" min="0" max="100" id="t_fn" aria-label="FN"></div>
+    <div class="cell g"><span class="nm">VP</span><input type="number" min="0" max="100" id="t_vp" aria-label="VP"></div>
+  </div>
+  <div class="fields">
+    <label>Exactitud (%)<input type="number" id="t_acc" min="0" max="100"></label>
+    <label>Recall (%)<input type="number" id="t_rec" min="0" max="100"></label>
+  </div>
+  <div class="actions"><button type="button" id="b6">Comprobar</button></div>
+  <div class="fb" id="f6" role="status" aria-live="polite"></div>
+  <div class="box pink" id="x6" style="display:none"><b class="t">Qué pasa</b>Exactitud del <b>95 %</b> y recall del <b>0 %</b>: el modelo <b>no avisa de ninguna cancelación</b> y no sirve para nada. Cuando una clase es rara (<i>desbalance</i>), la exactitud se infla con la clase mayoritaria. Por eso en este curso <b>miramos siempre la matriz, el recall y la precisión</b>, y la curva PR cuando hay desbalance (cuaderno S07_04).</div>
+</section>
+
+<!-- PASO 7 -->
+<section id="p7">
+  <span class="step">PASO 7</span>
+  <h2>Para cerrar</h2>
+  <p>Tres preguntas para pensar. Contéstalas en voz alta o con tu pareja y <b>después</b> despliega la respuesta.</p>
+  <details><summary>1. El hotel solo puede llamar a 5 clientes esta semana. ¿Te importa más la precisión o el recall?</summary>
+    <p>La <b>precisión</b>: si solo puedes hacer 5 llamadas, quieres que sean a gente que <i>de verdad</i> iba a cancelar. Si, en cambio, el aviso es un SMS que no cuesta nada, importa más el <b>recall</b>. <b>La métrica correcta depende del coste de cada error</b>, no del gusto del analista.</p></details>
+  <details><summary>2. ¿Quién debería fijar el coste de FN y de FP: el equipo de datos o el gerente?</summary>
+    <p>El <b>gerente</b> (el negocio): sabe cuánto vale una habitación vacía y cuánto cuesta molestar a un cliente. El equipo de datos <b>pregunta, calcula y propone</b>; no inventa los costes.</p></details>
+  <details><summary>3. ¿Por qué el umbral se elige con validación cruzada sobre <i>train</i> y no con el test?</summary>
+    <p>Porque si eliges el umbral mirando el test, <b>ese test ya no es independiente</b>: tu nota final es optimista. El test se usa <b>una sola vez</b>, al final, para contar la verdad.</p></details>
+
+  <h3 style="margin:18px 0 6px">Resumen de bolsillo</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Métrica</th><th>Fórmula</th><th>Responde a</th><th>Cuidado con</th></tr>
+    <tr><td><b>Exactitud</b></td><td class="mono">(VP+VN)/total</td><td>¿Cuántas acierto en total?</td><td>Engaña con clases raras</td></tr>
+    <tr><td><b>Precisión</b></td><td class="mono">VP/(VP+FP)</td><td>De mis avisos, ¿cuántos eran ciertos?</td><td>Sube al subir el umbral</td></tr>
+    <tr><td><b>Recall</b></td><td class="mono">VP/(VP+FN)</td><td>De las cancelaciones reales, ¿cuántas veo?</td><td>Sube al bajar el umbral</td></tr>
+  </table></div>
+
+  <h3 style="margin:18px 0 6px">Y en Python (cuaderno S07_03)</h3>
+  <pre class="code">from sklearn.metrics import confusion_matrix
+
+pred = (proba_test &gt;= 0.30).astype(int)        # umbral 0,30
+vn, fp, fn, vp = confusion_matrix(y_test, pred).ravel()
+coste = 3 * fn + 1 * fp</pre>
+  <div class="box pink"><b class="t">Ojo con el orden</b>scikit-learn devuelve la matriz con las <b>filas = realidad</b> y las <b>columnas = predicción</b>, y con la clase <b>0 primero</b>. Por eso <span class="mono">.ravel()</span> da <b>VN, FP, FN, VP</b> y no VP primero. Es el mismo orden que la matriz de este ejercicio.</div>
+  <div class="actions"><a class="btn" href="https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_03_regresion_logistica.ipynb" target="_blank" rel="noopener">Abrir el cuaderno S07_03 en Colab</a>
+  <a class="btn" style="background:#fff;color:var(--ink)" href="../presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf">Presentación S07.2 (PDF)</a></div>
+</section>
+
+<div class="fin" id="fin"><h2 class="disp">¡Ejercicio completo!</h2><p>Has construido una matriz, calculado exactitud, precisión y recall, visto cómo el umbral cambia los errores, elegido un umbral con el coste y desmontado la trampa de la exactitud. Ahora lo repites con Python en el cuaderno <b>S07_03</b>.</p></div>
+
+<p class="foot">IFCD107 · Especialista en Inteligencia Artificial · S07 · Datos ficticios creados para este ejercicio.</p>
+</div>
+
+<script>
+"use strict";
+// [probabilidad en %, real: 1 = cancela]
+const D=[[66,0],[92,1],[15,0],[47,1],[3,0],[81,1],[33,0],[58,1],[9,0],[29,1],[55,0],[22,0],[74,1],[12,0],[8,1],[42,0],[38,1],[19,0],[27,0],[5,0]];
+const N=D.length, T0=50;
+const $=id=>document.getElementById(id);
+const fmt=p=>(p/100).toFixed(2).replace('.',',');
+const num=id=>{const v=$(id).value.trim().replace(',','.');return v===''?NaN:parseFloat(v)};
+const done=new Set();
+function conf(t){let vn=0,fp=0,fn=0,vp=0;for(const[p,r]of D){const pr=p>=t?1:0;if(r&&pr)vp++;else if(r)fn++;else if(pr)fp++;else vn++}return{vn,fp,fn,vp}}
+function tipo(real,pred){return real&&pred?'vp':real?'fn':pred?'fp':'vn'}
+const NOM={vp:'VP · acierto',vn:'VN · acierto',fp:'FP · falsa alarma',fn:'FN · no prevista'};
+function fb(id,cls,msg){const e=$(id);e.className='fb show '+cls;e.innerHTML=msg}
+function mark(s){done.add(s);const a=document.querySelector('#prog a[data-s="'+s+'"]');if(a)a.classList.add('done');if([1,2,3,4,5,6].every(x=>done.has(x)))$('fin').classList.add('show')}
+function ok(id,good){const e=$(id);e.classList.remove('ok','bad');if(good!==null)e.classList.add(good?'ok':'bad')}
+function pct(a,b){return b?100*a/b:NaN}
+const near=(a,b,tol=1)=>Math.abs(a-b)<=tol;
+
+// ---------- Paso 1
+const pred=Array(N).fill(null);
+const tb=document.querySelector('#tabla tbody');
+D.forEach(([p,r],i)=>{
+  const tr=document.createElement('tr');tr.id='r'+i;
+  const tar=(p>=35||i%3===0)?'Flexible':'No reemb.';
+  tr.innerHTML='<td><b>R'+String(i+1).padStart(2,'0')+'</b></td><td>'+tar+'</td>'+
+    '<td class="num"><b>'+fmt(p)+'</b><span class="pbar" style="width:'+Math.round(p*0.6)+'px"></span></td>'+
+    '<td>'+(r?'<b>Canceló</b>':'Vino')+'</td>'+
+    '<td><span class="tog" role="group" aria-label="Predicción de la reserva '+(i+1)+'"><button type="button" data-i="'+i+'" data-v="0">Se mantiene</button><button type="button" data-i="'+i+'" data-v="1">Cancela</button></span></td>'+
+    '<td id="res'+i+'"></td>';
+  tb.appendChild(tr);
+});
+tb.addEventListener('click',e=>{const b=e.target.closest('button[data-i]');if(!b)return;setPred(+b.dataset.i,+b.dataset.v)});
+function setPred(i,v){
+  pred[i]=v;
+  document.querySelectorAll('#r'+i+' .tog button').forEach(b=>b.classList.toggle('sel',+b.dataset.v===v));
+  const [p,r]=D[i], t=tipo(r,v);
+  $('res'+i).innerHTML='<span class="chip '+t+'">'+NOM[t]+'</span>';
+  $('r'+i).classList.remove('revisar');
+}
+$('b1auto').onclick=()=>{D.forEach(([p],i)=>setPred(i,p>=T0?1:0));fb('f1','info','Rellenado. Mira la columna <b>Resultado</b> y pasa al paso 2 a contar.');};
+$('b1').onclick=()=>{
+  const faltan=pred.filter(x=>x===null).length;
+  if(faltan){fb('f1','no','Te faltan <b>'+faltan+'</b> reservas por clasificar.');return}
+  const mal=[];D.forEach(([p],i)=>{if(pred[i]!==(p>=T0?1:0)){mal.push(i);$('r'+i).classList.add('revisar')}});
+  if(mal.length){
+    const i=mal[0],p=D[i][0];
+    fb('f1','no','Hay <b>'+mal.length+'</b> reserva(s) por revisar (resaltadas). Por ejemplo, la <b>R'+String(i+1).padStart(2,'0')+'</b> tiene probabilidad '+fmt(p)+': como '+fmt(p)+(p>=T0?' ≥ 0,50 el modelo dice «cancela»':' &lt; 0,50 el modelo dice «se mantiene»')+'. <b>La regla: probabilidad ≥ umbral → cancela.</b>');
+  }else{fb('f1','ok','¡Todas bien! Fíjate en que el modelo <b>no es perfecto</b>: hay reservas en rosa (errores). Ahora cuéntalas en el paso 2.');mark(1)}
+};
+
+// ---------- Paso 2
+const C0=conf(T0);
+const LBL={vn:'VN (vino y dijimos «se mantiene»)',fp:'FP (falsa alarma)',fn:'FN (cancelación no prevista)',vp:'VP (canceló y lo avisamos)'};
+$('b2').onclick=()=>{
+  let todos=true,vacios=false,suma=0;const malas=[];
+  for(const k of ['vn','fp','fn','vp']){
+    const v=num('c_'+k);
+    if(isNaN(v)){vacios=true;ok('c_'+k,null);todos=false;continue}
+    suma+=v;const g=v===C0[k];ok('c_'+k,g);if(!g){todos=false;malas.push(k)}
+  }
+  if(vacios){fb('f2','no','Rellena las <b>cuatro casillas</b>.');return}
+  if(todos){
+    fb('f2','ok','¡Correcto! VN = '+C0.vn+', FP = '+C0.fp+', FN = '+C0.fn+', VP = '+C0.vp+' (suman '+N+').');
+    $('x2').style.display='block';
+    for(const k of ['vn','fp','fn','vp'])$('r_'+k).textContent=C0[k];
+    mark(2);
+  }else{
+    let m='Revisa '+malas.map(k=>'<b>'+k.toUpperCase()+'</b>').join(', ')+'.';
+    if(suma!==N)m+=' Ahora suman <b>'+suma+'</b> y deben sumar <b>'+N+'</b>.';
+    m+=' Cuenta en la columna <b>Resultado</b> del paso 1 los chips «'+NOM[tipo(malas[0]==='vp'||malas[0]==='fn'?1:0,malas[0]==='vp'||malas[0]==='fp'?1:0)]+'».';
+    fb('f2','no',m);
+  }
+};
+$('b2h').onclick=()=>fb('f2','info','<b>Pista:</b> la <b>diagonal</b> son los aciertos (VN: vino y dijiste «se mantiene»; VP: canceló y avisaste). Las otras dos casillas son los errores: <b>FP</b> = vino pero avisaste; <b>FN</b> = canceló y no avisaste.');
+for(const k of ['vn','fp','fn','vp'])for(const p of ['r_'])$('r_'+k).textContent='·';
+
+// ---------- Paso 3
+const MET={acc:pct(C0.vp+C0.vn,N),pre:pct(C0.vp,C0.vp+C0.fp),rec:pct(C0.vp,C0.vp+C0.fn)};
+$('b3').onclick=()=>{
+  const a=num('m_acc'),p=num('m_pre'),r=num('m_rec');
+  if([a,p,r].some(isNaN)){fb('f3','no','Rellena las <b>tres</b> métricas.');return}
+  const ga=near(a,MET.acc),gp=near(p,MET.pre),gr=near(r,MET.rec);
+  ok('m_acc',ga);ok('m_pre',gp);ok('m_rec',gr);
+  if(ga&&gp&&gr){
+    fb('f3','ok','¡Correcto! Exactitud '+Math.round(MET.acc)+' %, precisión '+Math.round(MET.pre)+' %, recall '+Math.round(MET.rec)+' %.');
+    $('x3').style.display='block';
+    $('x3t').innerHTML='«De las <b>'+(C0.vp+C0.fp)+'</b> reservas que marcamos como riesgo, <b>'+C0.vp+'</b> cancelaron de verdad (precisión). Pero solo detectamos <b>'+C0.vp+' de las '+(C0.vp+C0.fn)+'</b> cancelaciones reales (recall): <b>la mitad se nos escapa</b>.»';
+    mark(3);
+  }else{
+    let m='';
+    if(near(p,MET.rec)&&near(r,MET.pre))m='Has <b>intercambiado</b> precisión y recall. La precisión divide por lo que <b>avisamos</b> (VP + FP); el recall, por lo que <b>canceló de verdad</b> (VP + FN).';
+    else{
+      const e=[];if(!ga)e.push('la <b>exactitud</b> es (VP + VN) / '+N);if(!gp)e.push('la <b>precisión</b> es VP / (VP + FP)');if(!gr)e.push('el <b>recall</b> es VP / (VP + FN)');
+      m='Revisa: '+e.join('; ')+'. Recuerda que van <b>en porcentaje</b> (×100).';
+    }
+    fb('f3','no',m);
+  }
+};
+
+// ---------- Paso 4
+function matrixHTML(c){
+  return '<div class="h corner"></div><div class="h">Predicho:<br>se mantiene</div><div class="h">Predicho:<br>cancela</div>'+
+  '<div class="h">Real:<br>se mantiene</div><div class="cell g"><span class="nm">VN</span><span class="big">'+c.vn+'</span></div><div class="cell r"><span class="nm">FP · falsa alarma</span><span class="big">'+c.fp+'</span></div>'+
+  '<div class="h">Real:<br>cancela</div><div class="cell r"><span class="nm">FN · no prevista</span><span class="big">'+c.fn+'</span></div><div class="cell g"><span class="nm">VP</span><span class="big">'+c.vp+'</span></div>';
+}
+function metHTML(c){
+  const a=pct(c.vp+c.vn,N),p=pct(c.vp,c.vp+c.fp),r=pct(c.vp,c.vp+c.fn);
+  const f=x=>isNaN(x)?'—':Math.round(x)+' %';
+  return '<div class="met"><div class="k">Exactitud</div><div class="v">'+f(a)+'</div><div class="f">(VP+VN)/'+N+'</div></div>'+
+    '<div class="met"><div class="k">Precisión</div><div class="v">'+f(p)+'</div><div class="f">VP/(VP+FP)</div></div>'+
+    '<div class="met"><div class="k">Recall</div><div class="v">'+f(r)+'</div><div class="f">VP/(VP+FN)</div></div>'+
+    '<div class="met"><div class="k">Coste (FN×3 + FP×1)</div><div class="v">'+(3*c.fn+c.fp)+'</div><div class="f">menor = mejor</div></div>';
+}
+function upd4(){const t=+$('umb').value;$('umbv').textContent=fmt(t);const c=conf(t);$('m4').innerHTML=matrixHTML(c);$('mets4').innerHTML=metHTML(c)}
+$('umb').addEventListener('input',upd4);upd4();
+const EXP4={rec:['sube','El <b>recall sube</b> (50 % → 75 %): al bajar el umbral, más reservas pasan a «cancela», y entre ellas hay más de las cancelaciones reales.'],
+  pre:['baja','La <b>precisión baja</b> (67 % → 60 %): también entran más reservas que iban a venir (falsas alarmas).'],
+  acc:['igual','La <b>exactitud no cambia</b> (70 % → 70 %): lo que ganas en VP lo pierdes en VN. Mismo número, matriz muy distinta.']};
+$('b4').onclick=()=>{
+  let all=true,sinR=false,msg=[];
+  for(const k of ['rec','pre','acc']){
+    const sel=document.querySelector('input[name="q_'+k+'"]:checked');
+    if(!sel){sinR=true;continue}
+    const g=sel.value===EXP4[k][0];if(!g)all=false;
+    msg.push((g?'✓ ':'✗ ')+EXP4[k][1]);
+  }
+  if(sinR){fb('f4','no','Contesta las <b>tres</b> preguntas.');return}
+  fb('f4',all?'ok':'no',(all?'¡Las tres bien! ':'Mira cada una y comprueba con el deslizador: ')+'<br>'+msg.join('<br>'));
+  $('x4').style.display='block';
+  if(all)mark(4);else{/* se deja repetir */}
+};
+
+// ---------- Paso 5
+const sel=$('kbest');for(let t=5;t<=95;t+=5){const o=document.createElement('option');o.value=t;o.textContent=fmt(t);sel.appendChild(o)}
+function coste(t,cfn){const c=conf(t);return cfn*c.fn+c.fp}
+function chart(cfn){
+  const W=640,H=250,L=40,B=34,Tp=14,vals=[];for(let t=5;t<=95;t+=5)vals.push([t,coste(t,cfn)]);
+  const mx=Math.max(...vals.map(v=>v[1])),mn=Math.min(...vals.map(v=>v[1])),bw=(W-L-10)/vals.length;
+  let s='<line x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-6)+'" y2="'+(H-B)+'" stroke="#B9B29E" stroke-width="2"/>';
+  for(const g of [0,.5,1]){const y=(H-B)-g*(H-B-Tp),v=Math.round(g*mx);s+='<text x="'+(L-6)+'" y="'+(y+4)+'" font-size="11" text-anchor="end" fill="#566073">'+v+'</text><line x1="'+L+'" y1="'+y+'" x2="'+(W-6)+'" y2="'+y+'" stroke="#E5DFCE"/>'}
+  vals.forEach(([t,v],i)=>{const h=v/mx*(H-B-Tp),x=L+i*bw+3,m=v===mn;
+    s+='<rect x="'+x+'" y="'+(H-B-h)+'" width="'+(bw-6)+'" height="'+h+'" rx="3" fill="'+(m?'#C23B1F':'#9AA7BD')+'"/>';
+    s+='<text x="'+(x+(bw-6)/2)+'" y="'+(H-B-h-4)+'" font-size="10" text-anchor="middle" fill="#1D2433" font-weight="700">'+v+'</text>';
+    if(i%2===0)s+='<text x="'+(x+(bw-6)/2)+'" y="'+(H-B+14)+'" font-size="10.5" text-anchor="middle" fill="#566073">'+fmt(t)+'</text>'});
+  s+='<text x="'+(W/2)+'" y="'+(H-2)+'" font-size="11" text-anchor="middle" fill="#566073">Umbral</text>';
+  $('chart').innerHTML=s;
+}
+function upd5(){
+  const cfn=+$('cfn').value;$('cfnv').textContent=cfn;chart(cfn);
+  let mn=1e9,best=[];for(let t=5;t<=95;t+=5){const v=coste(t,cfn);if(v<mn){mn=v;best=[t]}else if(v===mn)best.push(t)}
+  const teo=100/(1+cfn);
+  $('mets5').innerHTML='<div class="met"><div class="k">Mejor umbral (datos)</div><div class="v">'+best.map(fmt).join(' / ')+'</div><div class="f">coste mínimo '+mn+'</div></div>'+
+    '<div class="met"><div class="k">Regla teórica</div><div class="v">'+(teo/100).toFixed(2).replace('.',',')+'</div><div class="f">1 / (1 + '+cfn+')</div></div>';
+}
+$('cfn').addEventListener('input',upd5);
+$('b5').onclick=()=>{
+  const a=num('k50'),b=num('k30'),k=sel.value;
+  if(isNaN(a)||isNaN(b)||k===''){fb('f5','no','Rellena los <b>tres</b> campos.');return}
+  const c50=coste(50,3),c30=coste(30,3);
+  ok('k50',a===c50);ok('k30',b===c30);
+  const best=(()=>{let mn=1e9,t0=0;for(let t=5;t<=95;t+=5){const v=coste(t,3);if(v<mn){mn=v;t0=t}}return t0})();
+  const gk=+k===best;sel.classList.remove('ok','bad');sel.classList.add(gk?'ok':'bad');
+  if(a===c50&&b===c30&&gk){
+    fb('f5','ok','¡Correcto! Con 0,50 el coste es <b>'+c50+'</b> (FN = '+C0.fn+' → '+3*C0.fn+', FP = '+C0.fp+'); con 0,30 baja a <b>'+c30+'</b>; y el mínimo es <b>'+coste(best,3)+'</b> con umbral <b>'+fmt(best)+'</b>.');
+    $('x5').style.display='block';upd5();mark(5);
+  }else{
+    let m='';
+    if(a!==c50)m+='Coste con 0,50: pon el deslizador en 0,50, mira FN y FP y calcula <b>3 × FN + FP</b>. ';
+    if(b!==c30)m+='Coste con 0,30: igual, con el deslizador en 0,30. ';
+    if(!gk)m+='Sigue probando umbrales: busca el que da <b>menor coste</b> (acuérdate de que cada FN pesa 3).';
+    fb('f5','no',m);
+  }
+};
+
+// ---------- Paso 6
+$('b6').onclick=()=>{
+  const E={vn:95,fp:0,fn:5,vp:0};let g=true;
+  for(const k in E){const v=num('t_'+k);if(isNaN(v)){fb('f6','no','Rellena <b>todo</b>.');return}const x=v===E[k];ok('t_'+k,x);if(!x)g=false}
+  const a=num('t_acc'),r=num('t_rec');if(isNaN(a)||isNaN(r)){fb('f6','no','Rellena la exactitud y el recall.');return}
+  const ga=near(a,95),gr=near(r,0);ok('t_acc',ga);ok('t_rec',gr);
+  if(g&&ga&&gr){fb('f6','ok','¡Correcto! Si siempre dice «se mantiene»: VN = 95, FP = 0, FN = 5, VP = 0. Exactitud = 95/100 = <b>95 %</b>; recall = 0/(0+5) = <b>0 %</b>.');$('x6').style.display='block';mark(6)}
+  else fb('f6','no',(g?'':'Piensa: el modelo nunca dice «cancela», así que <b>no hay ningún positivo predicho</b> (VP = 0 y FP = 0). Las 95 que vinieron son VN y las 5 que cancelaron son FN. ')+(ga&&gr?'':'Exactitud = (VP+VN)/100; recall = VP/(VP+FN).'));
+};
+upd5();
+</script>
+</body>
+</html>

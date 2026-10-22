@@ -29,6 +29,7 @@
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf`](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) | Regresión lineal, polinómica y regularización (Ridge y Lasso) | 25 min | Teoría · viernes 6/11 |
 | [`S07.2_Regresion_logistica_y_clasificacion.pdf`](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf) | Regresión logística y clasificación | 15 min | Teoría · viernes 6/11 |
+| [Ejercicio interactivo: matriz de confusión](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/actividades/S07_ejercicio_matriz_de_confusion.html) · [`.html`](actividades/S07_ejercicio_matriz_de_confusion.html) | Construye la matriz a mano, calcula métricas, mueve el umbral y elige con el coste (datos ficticios) | 25–30 min | Antes del cuaderno S07_03 (refuerzo) |
 | [`S07.3_k_NN_y_Naive_Bayes.pdf`](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf) | k-NN y Naive Bayes | 10 min | Teoría · lunes 9/11 |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | Test de M3 · parte 1 · 10 preguntas · individual, en el navegador, sin penalización por fallo.1 a 3.4 (preprocesado, métricas, regresión y clasificación). | 20 min | Solo se abre el lun 9/11 (hora de Canarias) |
 
