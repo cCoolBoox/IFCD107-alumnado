@@ -26,6 +26,7 @@
 | [Guía del sprint (PDF)](guia/Guia_Sprint_08.pdf) · [ecofriendly](guia/Guia_Sprint_08_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_08.md) · [PDF](guia/Reto_Sprint_08.pdf) · [ecofriendly](guia/Reto_Sprint_08_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
+| [Atlas de algoritmos](infografias/S08_03_atlas_arboles_ensembles_y_svm.png) | Atlas de algoritmos del sprint: árbol, Random Forest, boosting, SVM y ajuste de hiperparámetros | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S08.1_Arboles_de_decision.pdf`](presentaciones/S08.1_Arboles_de_decision.pdf) | Árboles de decisión | 15 min | Teoría · martes 10/11 |
 | [`S08.2_Ensembles_Random_Forest_y_Boosting.pdf`](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | Ensembles: Random Forest y *boosting* | 20 min | Teoría · martes 10/11 |

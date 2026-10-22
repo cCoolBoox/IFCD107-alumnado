@@ -26,6 +26,7 @@
 | [Guía del sprint (PDF)](guia/Guia_Sprint_12.pdf) · [ecofriendly](guia/Guia_Sprint_12_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_12.md) · [PDF](guia/Reto_Sprint_12.pdf) · [ecofriendly](guia/Reto_Sprint_12_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
+| [Atlas de algoritmos](infografias/S12_03_atlas_series_lenguaje_y_generativa.png) | Atlas de algoritmos del sprint: series, RNN/LSTM/GRU, NLP, Transformers/LLM y autoencoders | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S12.1_RNN_LSTM_GRU_y_series_temporales.pdf`](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | RNN, LSTM, GRU y series temporales | 20 min | Teoría · lunes 23/11 |
 | [`S12.2_NLP_clasico_y_embeddings.pdf`](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) | NLP clásico y embeddings | 15 min | Teoría · lunes 23/11 |

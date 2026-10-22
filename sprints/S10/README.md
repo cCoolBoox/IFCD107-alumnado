@@ -28,6 +28,7 @@
 | [Guía del sprint (PDF)](guia/Guia_Sprint_10.pdf) · [ecofriendly](guia/Guia_Sprint_10_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_10.md) · [PDF](guia/Reto_Sprint_10.pdf) · [ecofriendly](guia/Reto_Sprint_10_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
+| [Atlas de algoritmos](infografias/S10_03_atlas_redes_neuronales_y_vision.png) | Atlas de algoritmos (S10–S11): MLP, regularización, CNN, transfer learning y detección | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S10.1_Fundamentos_de_redes_neuronales.pdf`](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | Fundamentos de redes neuronales | 20 min | Teoría · lunes 16/11 |
 | [`S10.2_Redes_densas_con_Keras.pdf`](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | Redes densas con Keras | 20 min | Teoría · lunes 16/11 |

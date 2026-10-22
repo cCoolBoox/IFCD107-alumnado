@@ -25,6 +25,7 @@
 | [Guía del sprint (PDF)](guia/Guia_Sprint_07.pdf) · [ecofriendly](guia/Guia_Sprint_07_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_07.md) · [PDF](guia/Reto_Sprint_07.pdf) · [ecofriendly](guia/Reto_Sprint_07_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
+| [Atlas de algoritmos](infografias/S07_03_atlas_regresion_y_clasificacion.png) | Atlas de algoritmos del sprint: regresión lineal, Ridge/Lasso, logística, k-NN y Naive Bayes | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf`](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) | Regresión lineal, polinómica y regularización (Ridge y Lasso) | 25 min | Teoría · viernes 6/11 |
 | [`S07.2_Regresion_logistica_y_clasificacion.pdf`](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf) | Regresión logística y clasificación | 15 min | Teoría · viernes 6/11 |

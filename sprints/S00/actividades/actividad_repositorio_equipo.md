@@ -30,6 +30,8 @@
 2. Añade a cada integrante y a tu docente (usuario que te dará en clase).
 3. Cada persona acepta la invitación (llega por correo y en github.com/notifications).
 
+> Paso a paso con detalle y problemas habituales: [Cómo subir vuestras respuestas a GitHub, apartado 3](../../../material/5.%20Como_entregar_en_GitHub.md).
+
 ## Parte 4 · Cada persona hace su primer commit
 
 1. Abre `README.md` → icono del lápiz ✏️.
