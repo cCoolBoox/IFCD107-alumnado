@@ -16,6 +16,7 @@
 - Equipos formados en el Sprint 0 (pueden reajustarse **una sola vez, hasta el 26/11**).
 - Haber leído `proyecto-final/briefs_y_rubrica.md` (reglas comunes, requisitos R1-R11, rúbrica y anexos A y B).
 - Checklist ético del Sprint 1 y mapa de empatía del Sprint 0 (los retomaréis).
+- Haber hecho (o leído) la guía [«¿Cuántos sprints tiene el proyecto?»](../S13/plantillas/guia_cuantos_sprints_tiene_el_proyecto.md): son 4 sprints fijos (14–17) y lo que se decide es qué cabe en ellos.
 - Repositorio Git y tablero (Trello o similar) del equipo creados. Si no están, es lo primero.
 
 ## 📎 Materiales del sprint

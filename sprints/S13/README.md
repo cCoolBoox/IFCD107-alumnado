@@ -28,6 +28,7 @@
 | [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S13.1_Visualizar_y_comunicar_resultados.pdf`](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · miércoles 25/11 |
+| [`guia_cuantos_sprints_tiene_el_proyecto.md`](plantillas/guia_cuantos_sprints_tiene_el_proyecto.md) | ¿Cuántos sprints tiene el proyecto? Capacidad, tallas y qué cabe en los Sprints 14–17 | 25–30 min | Al cerrar el 25/11 o antes del planning del 26/11 |
 
 **Material de las actividades**
 
