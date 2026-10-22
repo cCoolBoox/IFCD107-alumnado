@@ -30,6 +30,7 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 | [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf) | Introducción a la IA: modalidades, casos de uso y mitos | 25 min | Teoría · martes 20/10 |
 | [`S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf`](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) | Panorama de algoritmos y CRISP-DM | 25 min | Teoría · martes 20/10 |
 | [`S01.3_Tipos_de_aprendizaje.pdf`](presentaciones/S01.3_Tipos_de_aprendizaje.pdf) | Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste | 25 min | Teoría · martes 20/10 |
+| [Ejercicio interactivo: matriz de confusión](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S01/actividades/S01_ejercicio_matriz_de_confusion.html) · [`.html`](actividades/S01_ejercicio_matriz_de_confusion.html) | Sin código: construye la matriz a mano, mira qué esconde la exactitud y qué cambia con el umbral (datos ficticios) | 20 min | Después de S01.3 (refuerzo) |
 | [`S01.4_IA_responsable_etica_sesgo_y_normativa.pdf`](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) | IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética | 50 min | Teoría · miércoles 21/10 |
 
 **Material de las actividades**

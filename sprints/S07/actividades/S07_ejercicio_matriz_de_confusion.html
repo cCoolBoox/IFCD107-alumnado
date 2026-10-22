@@ -47,7 +47,7 @@ input.ok{border-color:var(--ok);background:#EAF7EF}input.bad{border-color:var(--
 table{border-collapse:collapse;width:100%;font-size:15px}
 th,td{padding:6px 7px;border-bottom:1.5px solid var(--line);text-align:left;white-space:nowrap}
 th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);background:var(--bg);position:sticky;top:0}
-td.num{font-variant-numeric:tabular-nums}
+td.num{font-variant-numeric:tabular-nums}table.wrap td,table.wrap th{white-space:normal}
 .pbar{display:inline-block;height:8px;border-radius:4px;background:var(--acc);vertical-align:middle;margin-left:6px;opacity:.85}
 .tog{display:inline-flex;gap:4px}
 .tog button{padding:3px 10px;font-size:13px;background:#fff;color:var(--ink);border-width:2px;border-color:var(--line)}
@@ -82,25 +82,29 @@ details[open]{background:var(--bg)}
 .fin.show{display:block}.fin h2{margin:0 0 6px;font-size:28px}
 .foot{font-size:14px;color:var(--mute);margin-top:30px}
 @media(max-width:620px){section{padding:16px}.matrix{grid-template-columns:70px 1fr 1fr}.matrix .cell .big{font-size:26px}}
+html[data-modo="1"] .m7{display:none!important}html[data-modo="7"] .m1{display:none!important}
 </style>
+<script>document.documentElement.dataset.modo=(new URLSearchParams(location.search).get('sprint')==='1'||/S01_ejercicio/.test(location.pathname))?'1':'7';</script>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <div class="kicker">S07 · Regresión logística · Clasificación</div>
+  <div class="kicker"><span class="m7">S07 · Regresión logística · Clasificación</span><span class="m1">S01 · Tipos de aprendizaje · Evaluar un modelo</span></div>
   <h1>Matriz de confusión: ¿qué reservas se van a cancelar?</h1>
-  <p class="lead">Ejercicio completo, paso a paso: construyes la matriz a mano, calculas las métricas, mueves el umbral y descubres por qué la <b>exactitud engaña</b> y por qué el umbral lo decide el <b>coste</b>.</p>
-  <div class="meta"><span class="pill">⏱ 25–30 min</span><span class="pill">👤 Individual o en parejas</span><span class="pill">📓 Antes del cuaderno S07_03</span><span class="pill">Datos ficticios</span></div>
+  <p class="lead m1">Ejercicio sin código, de 20 minutos: construyes la matriz de confusión a mano, ves qué cambia al mover el umbral y descubres por qué <b>acertar mucho no significa servir para algo</b>.</p>
+  <p class="lead m7">Ejercicio completo, paso a paso: construyes la matriz a mano, calculas las métricas, mueves el umbral y descubres por qué la <b>exactitud engaña</b> y por qué el umbral lo decide el <b>coste</b>.</p>
+  <div class="meta m1"><span class="pill">⏱ 20 min</span><span class="pill">👥 En parejas</span><span class="pill">Sin Python</span><span class="pill">Después de S01.3</span><span class="pill">Datos ficticios</span></div>
+  <div class="meta m7"><span class="pill">⏱ 25–30 min</span><span class="pill">👤 Individual o en parejas</span><span class="pill">📓 Antes del cuaderno S07_03</span><span class="pill">Datos ficticios</span></div>
 </header>
 
 <nav class="progress" aria-label="Progreso del ejercicio" id="prog">
-  <a href="#p1" data-s="1">1 Clasificar</a><a href="#p2" data-s="2">2 Matriz</a><a href="#p3" data-s="3">3 Métricas</a><a href="#p4" data-s="4">4 Umbral</a><a href="#p5" data-s="5">5 Coste</a><a href="#p6" data-s="6">6 La trampa</a><a href="#p7">7 Cierre</a>
+  <a href="#p1" data-s="1">1 Clasificar</a><a href="#p2" data-s="2">2 Matriz</a><a href="#p3" data-s="3"><span class="m7">3 Métricas</span><span class="m1">3 Exactitud</span></a><a href="#p4" data-s="4">4 Umbral</a><a class="m7" href="#p5" data-s="5">5 Coste</a><a href="#p6" data-s="6"><span class="m7">6 La trampa</span><span class="m1">5 La trampa</span></a><a href="#p7"><span class="m7">7 Cierre</span><span class="m1">6 Cierre</span></a>
   <button class="reset" type="button" onclick="location.reload()">Empezar de nuevo</button>
 </nav>
 
 <section id="p0">
   <h2>El caso</h2>
-  <p>El equipo de reservas de <b>TurisData Canarias</b> tiene un modelo (una regresión logística) que da, para cada reserva, la <b>probabilidad de que se cancele</b>. Con esa probabilidad hay que <b>decidir</b>: ¿avisamos a ese cliente (pedir un depósito, enviar un recordatorio) o no?</p>
+  <p>El equipo de reservas de <b>TurisData Canarias</b> tiene un modelo<span class="m7"> (una regresión logística)</span><span class="m1"> de IA</span> que da, para cada reserva, la <b>probabilidad de que se cancele</b>. Con esa probabilidad hay que <b>decidir</b>: ¿avisamos a ese cliente (pedir un depósito, enviar un recordatorio) o no?</p>
   <div class="box sky"><b class="t">Cómo se decide</b>El <b>umbral</b> convierte la probabilidad en decisión: si la probabilidad es <b>mayor o igual</b> que el umbral, el modelo dice <b>«cancela»</b> (es el caso <b>positivo</b>); si no, dice <b>«se mantiene»</b>.</div>
   <div class="box mint"><b class="t">Convenio de este curso</b>Positivo = <b>cancela</b>. Las <b>filas</b> de la matriz son la <b>realidad</b> y las <b>columnas</b> lo que <b>predijo el modelo</b>. Los cuatro resultados posibles: <b>VP</b> (verdadero positivo), <b>VN</b> (verdadero negativo), <b>FP</b> (falsa alarma) y <b>FN</b> (cancelación no prevista).</div>
 </section>
@@ -137,21 +141,23 @@ details[open]{background:var(--bg)}
 <!-- PASO 3 -->
 <section id="p3">
   <span class="step">PASO 3</span>
-  <h2>Calcula las tres métricas básicas</h2>
-  <p>Con tu matriz (VN = <b id="r_vn">·</b>, FP = <b id="r_fp">·</b>, FN = <b id="r_fn">·</b>, VP = <b id="r_vp">·</b>) calcula, en <b>porcentaje</b> y redondeado a números enteros:</p>
-  <div class="fields">
+  <h2 class="m7">Calcula las tres métricas básicas</h2><h2 class="m1">Calcula la exactitud y mira qué se escapa</h2>
+  <p>Con tu matriz (VN = <b id="r_vn">·</b>, FP = <b id="r_fp">·</b>, FN = <b id="r_fn">·</b>, VP = <b id="r_vp">·</b>) calcula<span class="m7">, en <b>porcentaje</b> y redondeado a números enteros</span><span class="m1"> la exactitud (en <b>porcentaje</b>, número entero) y cuenta cuántas cancelaciones reales avisó el modelo</span>:</p>
+  <div class="fields m1"><label>Exactitud (%)<input type="number" id="m1_acc" min="0" max="100"></label><label>Cancelaciones que el modelo avisó (de las 8 reales)<input type="number" id="m1_vp" min="0" max="20" style="width:120px"></label></div>
+  <details class="m1"><summary>Recordatorio</summary><p><b>Exactitud</b> = aciertos / total. Los aciertos son la <b>diagonal</b> (VN + VP).</p><p><b>Cancelaciones avisadas</b>: de las reservas que <i>cancelaron de verdad</i> (fila «Real: cancela»), cuántas marcó el modelo como «cancela».</p></details>
+  <div class="fields m7">
     <label>Exactitud (%)<input type="number" id="m_acc" min="0" max="100"></label>
     <label>Precisión (%)<input type="number" id="m_pre" min="0" max="100"></label>
     <label>Recall (%)<input type="number" id="m_rec" min="0" max="100"></label>
   </div>
-  <details><summary>Recordatorio de fórmulas</summary>
+  <details class="m7"><summary>Recordatorio de fórmulas</summary>
     <p><b>Exactitud</b> = (VP + VN) / total → de <i>todas</i> las reservas, ¿cuántas acertamos?</p>
     <p><b>Precisión</b> = VP / (VP + FP) → de las que <i>avisamos</i> como cancelación, ¿cuántas cancelaron de verdad?</p>
     <p><b>Recall</b> = VP / (VP + FN) → de las que <i>cancelaron de verdad</i>, ¿cuántas avisamos?</p>
   </details>
   <div class="actions"><button type="button" id="b3">Comprobar</button></div>
   <div class="fb" id="f3" role="status" aria-live="polite"></div>
-  <div class="box mint" id="x3" style="display:none"><b class="t">Traducido para el gerente</b><span id="x3t"></span></div>
+  <div class="box mint x3" id="x3" style="display:none"><b class="t">Traducido para el gerente</b><span id="x3t"></span></div>
 </section>
 
 <!-- PASO 4 -->
@@ -163,25 +169,29 @@ details[open]{background:var(--bg)}
   <div class="matrix" id="m4"></div>
   <div class="mets" id="mets4"></div>
   <p class="q">Antes de comprobarlo con el deslizador, <u>predice</u>: si <b>bajas</b> el umbral de 0,50 a 0,30…</p>
-  <div class="qrow" data-q="rec" data-ans="sube">
+  <div class="qrow m1"><div class="q">¿Qué pasa con las <b>cancelaciones que el modelo avisa</b>?</div><div class="radio"><label><input type="radio" name="q_rec" value="sube">Aumentan</label><label><input type="radio" name="q_rec" value="baja">Disminuyen</label><label><input type="radio" name="q_rec" value="igual">Igual</label></div></div>
+  <div class="qrow m1"><div class="q">¿Y con las <b>falsas alarmas</b>?</div><div class="radio"><label><input type="radio" name="q_pre" value="sube">Aumentan</label><label><input type="radio" name="q_pre" value="baja">Disminuyen</label><label><input type="radio" name="q_pre" value="igual">Igual</label></div></div>
+  <div class="qrow m1"><div class="q">¿Y con la <b>exactitud</b>? <span style="font-weight:400;color:var(--mute)">(mira el deslizador antes de contestar)</span></div><div class="radio"><label><input type="radio" name="q_acc" value="sube">Aumenta</label><label><input type="radio" name="q_acc" value="baja">Disminuye</label><label><input type="radio" name="q_acc" value="igual">Igual</label></div></div>
+  <div class="qrow m7" data-q="rec" data-ans="sube">
     <div class="q">¿Qué le pasa al <b>recall</b>?</div>
     <div class="radio"><label><input type="radio" name="q_rec" value="sube">Sube</label><label><input type="radio" name="q_rec" value="baja">Baja</label><label><input type="radio" name="q_rec" value="igual">Se queda igual</label></div>
   </div>
-  <div class="qrow" data-q="pre" data-ans="baja">
+  <div class="qrow m7" data-q="pre" data-ans="baja">
     <div class="q">¿Y a la <b>precisión</b>?</div>
     <div class="radio"><label><input type="radio" name="q_pre" value="sube">Sube</label><label><input type="radio" name="q_pre" value="baja">Baja</label><label><input type="radio" name="q_pre" value="igual">Se queda igual</label></div>
   </div>
-  <div class="qrow" data-q="acc" data-ans="igual">
+  <div class="qrow m7" data-q="acc" data-ans="igual">
     <div class="q">¿Y a la <b>exactitud</b>? <span style="font-weight:400;color:var(--mute)">(mira el deslizador antes de contestar)</span></div>
     <div class="radio"><label><input type="radio" name="q_acc" value="sube">Sube</label><label><input type="radio" name="q_acc" value="baja">Baja</label><label><input type="radio" name="q_acc" value="igual">Se queda igual</label></div>
   </div>
   <div class="actions"><button type="button" id="b4">Comprobar mis predicciones</button></div>
   <div class="fb" id="f4" role="status" aria-live="polite"></div>
-  <div class="box pink" id="x4" style="display:none"><b class="t">La lección</b>Con 0,50 y con 0,30 la exactitud es la <b>misma (70 %)</b>, pero la matriz es <b>muy distinta</b>: con 0,30 detectas más cancelaciones (recall sube de 50 % a 75 %) a cambio de más falsas alarmas (la precisión baja de 67 % a 60 %). <b>La exactitud no te dice nada de esto.</b> Por eso miramos la matriz y no un solo número.</div>
+  <div class="box pink x4 m1" style="display:none"><b class="t">La lección</b>Con 0,50 y con 0,30 el modelo acierta lo mismo (<b>14 de 20, un 70 %</b>), pero la matriz es <b>muy distinta</b>: con 0,30 avisa más cancelaciones (de 4 a 6 de las 8), a cambio de <b>más falsas alarmas</b> (de 2 a 4). <b>La exactitud no te cuenta nada de esto</b>: por eso miramos la matriz. Y decidir cuántas falsas alarmas aceptamos para no perder cancelaciones es una decisión <b>de negocio</b>, no del modelo.</div>
+  <div class="box pink x4 m7" id="x4" style="display:none"><b class="t">La lección</b>Con 0,50 y con 0,30 la exactitud es la <b>misma (70 %)</b>, pero la matriz es <b>muy distinta</b>: con 0,30 detectas más cancelaciones (recall sube de 50 % a 75 %) a cambio de más falsas alarmas (la precisión baja de 67 % a 60 %). <b>La exactitud no te dice nada de esto.</b> Por eso miramos la matriz y no un solo número.</div>
 </section>
 
 <!-- PASO 5 -->
-<section id="p5">
+<section id="p5" class="m7">
   <span class="step">PASO 5</span>
   <h2>Elige el umbral con el coste, no por costumbre</h2>
   <p>El equipo de reservas calcula que <b>una cancelación no prevista (FN) cuesta el triple que una falsa alarma (FP)</b>: coste FN = <b>3</b>, coste FP = <b>1</b> (unidades relativas).</p>
@@ -207,7 +217,7 @@ details[open]{background:var(--bg)}
 
 <!-- PASO 6 -->
 <section id="p6">
-  <span class="step">PASO 6</span>
+  <span class="step"><span class="m7">PASO 6</span><span class="m1">PASO 5</span></span>
   <h2>La trampa de la exactitud</h2>
   <p>Otro hotel tiene <b>100 reservas</b>: solo <b>5 se cancelan</b> y las otras 95 vienen. Un ingeniero presume de modelo: <i>«¡95 % de exactitud!»</i>. Averiguas que su modelo <b>dice siempre «se mantiene»</b>, a todas.</p>
   <div class="matrix" id="m6">
@@ -219,19 +229,46 @@ details[open]{background:var(--bg)}
     <div class="cell r"><span class="nm">FN</span><input type="number" min="0" max="100" id="t_fn" aria-label="FN"></div>
     <div class="cell g"><span class="nm">VP</span><input type="number" min="0" max="100" id="t_vp" aria-label="VP"></div>
   </div>
-  <div class="fields">
+  <div class="fields m7">
     <label>Exactitud (%)<input type="number" id="t_acc" min="0" max="100"></label>
     <label>Recall (%)<input type="number" id="t_rec" min="0" max="100"></label>
   </div>
+  <div class="fields m1">
+    <label>Exactitud (%)<input type="number" id="t1_acc" min="0" max="100"></label>
+    <label>Cancelaciones avisadas (de las 5 reales)<input type="number" id="t1_av" min="0" max="5" style="width:120px"></label>
+  </div>
   <div class="actions"><button type="button" id="b6">Comprobar</button></div>
   <div class="fb" id="f6" role="status" aria-live="polite"></div>
-  <div class="box pink" id="x6" style="display:none"><b class="t">Qué pasa</b>Exactitud del <b>95 %</b> y recall del <b>0 %</b>: el modelo <b>no avisa de ninguna cancelación</b> y no sirve para nada. Cuando una clase es rara (<i>desbalance</i>), la exactitud se infla con la clase mayoritaria. Por eso en este curso <b>miramos siempre la matriz, el recall y la precisión</b>, y la curva PR cuando hay desbalance (cuaderno S07_04).</div>
+  <div class="box pink x6 m1" style="display:none"><b class="t">Qué pasa</b>Exactitud del <b>95 %</b> y <b>0 de 5</b> cancelaciones avisadas: el modelo <b>no sirve para nada</b>, aunque «acierte» casi siempre. Cuando lo que importa es raro (pocas cancelaciones, pocos fraudes, pocas averías), la exactitud se infla con la clase mayoritaria. Por eso en S01.3 vimos que hay que mirar la <b>matriz de confusión</b> y comparar siempre con un <b>modelo de referencia</b> muy simple.</div>
+  <div class="box pink x6 m7" id="x6" style="display:none"><b class="t">Qué pasa</b>Exactitud del <b>95 %</b> y recall del <b>0 %</b>: el modelo <b>no avisa de ninguna cancelación</b> y no sirve para nada. Cuando una clase es rara (<i>desbalance</i>), la exactitud se infla con la clase mayoritaria. Por eso en este curso <b>miramos siempre la matriz, el recall y la precisión</b>, y la curva PR cuando hay desbalance (cuaderno S07_04).</div>
 </section>
 
 <!-- PASO 7 -->
 <section id="p7">
-  <span class="step">PASO 7</span>
+  <span class="step"><span class="m7">PASO 7</span><span class="m1">PASO 6</span></span>
   <h2>Para cerrar</h2>
+  <div class="m1">
+  <p>Tres preguntas para discutir en pareja o en la puesta en común. Pensad la respuesta y <b>después</b> desplegadla.</p>
+  <details><summary>1. En el hotel, ¿qué error es peor: una falsa alarma o una cancelación no detectada? ¿De qué depende?</summary>
+    <p>Depende del <b>coste</b> de cada error. Una cancelación no detectada deja una habitación vacía que ya no se puede vender; una falsa alarma molesta a un cliente que sí iba a venir o le pide un depósito sin necesidad. Si avisar es barato (un SMS), conviene avisar más; si es caro, menos. <b>Lo decide el negocio, no el modelo.</b> En el Sprint 7 lo pondrás en números.</p></details>
+  <details><summary>2. Imagina un modelo que decide a quién entrevistar para un empleo. ¿Qué sería aquí una falsa alarma y qué una cancelación no detectada? ¿Quién paga cada error?</summary>
+    <p>Depende de cómo definas el «positivo». Si el positivo es «candidato apto»: un <b>falso positivo</b> es entrevistar a quien no encaja (lo paga la empresa, con tiempo); un <b>falso negativo</b> es descartar a quien sí valía (lo paga la persona, que pierde una oportunidad y <b>nadie lo ve</b>). Por eso la ética se pregunta <b>quién soporta cada error</b>.</p></details>
+  <details><summary>3. El modelo acierta un 90 % en total. ¿Cómo comprobarías que no falla mucho más con un grupo de clientes, por ejemplo por país de origen?</summary>
+    <p>Haciendo <b>una matriz de confusión por grupo</b> y comparándolas. La exactitud global puede esconder que en un grupo pequeño el modelo falla mucho más. Es la «evaluación por grupos» de la lista de comprobación ética (S01.4).</p></details>
+
+  <h3 style="margin:18px 0 6px">Resumen de bolsillo</h3>
+  <div class="tablewrap"><table class="wrap">
+    <tr><th>Palabra</th><th>Qué es</th><th>Ejemplo en el hotel</th></tr>
+    <tr><td><b>Acierto</b> (VN, VP)</td><td>El modelo y la realidad coinciden</td><td>Dijo «cancela» y canceló; dijo «se mantiene» y vino</td></tr>
+    <tr><td><b>Falsa alarma</b> (FP)</td><td>Avisa, pero no pasa</td><td>Pedimos depósito a un cliente que iba a venir</td></tr>
+    <tr><td><b>Cancelación no detectada</b> (FN)</td><td>Pasa, pero no avisa</td><td>Habitación vacía sin vender</td></tr>
+    <tr><td><b>Exactitud</b></td><td>Aciertos / total</td><td>Engaña cuando lo importante es raro</td></tr>
+  </table></div>
+
+  <div class="box mint"><b class="t">Conéctalo con tu reto</b>En la ficha de cada caso de uso y en el checklist ético del reto de este sprint, apuntad: <i>¿qué sería en nuestro caso una falsa alarma? ¿Y un caso no detectado? ¿Quién sufre cada error?</i></div>
+  <div class="box sky"><b class="t">Lo que viene</b>En el Sprint 7 repetirás este ejercicio con más métricas (precisión y recall), con el coste de cada error y con Python. <a href="../../S07/actividades/S07_ejercicio_matriz_de_confusion.html">Ver la versión del Sprint 7</a>.</div>
+  </div>
+  <div class="m7">
   <p>Tres preguntas para pensar. Contéstalas en voz alta o con tu pareja y <b>después</b> despliega la respuesta.</p>
   <details><summary>1. El hotel solo puede llamar a 5 clientes esta semana. ¿Te importa más la precisión o el recall?</summary>
     <p>La <b>precisión</b>: si solo puedes hacer 5 llamadas, quieres que sean a gente que <i>de verdad</i> iba a cancelar. Si, en cambio, el aviso es un SMS que no cuesta nada, importa más el <b>recall</b>. <b>La métrica correcta depende del coste de cada error</b>, no del gusto del analista.</p></details>
@@ -241,7 +278,7 @@ details[open]{background:var(--bg)}
     <p>Porque si eliges el umbral mirando el test, <b>ese test ya no es independiente</b>: tu nota final es optimista. El test se usa <b>una sola vez</b>, al final, para contar la verdad.</p></details>
 
   <h3 style="margin:18px 0 6px">Resumen de bolsillo</h3>
-  <div class="tablewrap"><table>
+  <div class="tablewrap"><table class="wrap">
     <tr><th>Métrica</th><th>Fórmula</th><th>Responde a</th><th>Cuidado con</th></tr>
     <tr><td><b>Exactitud</b></td><td class="mono">(VP+VN)/total</td><td>¿Cuántas acierto en total?</td><td>Engaña con clases raras</td></tr>
     <tr><td><b>Precisión</b></td><td class="mono">VP/(VP+FP)</td><td>De mis avisos, ¿cuántos eran ciertos?</td><td>Sube al subir el umbral</td></tr>
@@ -257,18 +294,20 @@ coste = 3 * fn + 1 * fp</pre>
   <div class="box pink"><b class="t">Ojo con el orden</b>scikit-learn devuelve la matriz con las <b>filas = realidad</b> y las <b>columnas = predicción</b>, y con la clase <b>0 primero</b>. Por eso <span class="mono">.ravel()</span> da <b>VN, FP, FN, VP</b> y no VP primero. Es el mismo orden que la matriz de este ejercicio.</div>
   <div class="actions"><a class="btn" href="https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_03_regresion_logistica.ipynb" target="_blank" rel="noopener">Abrir el cuaderno S07_03 en Colab</a>
   <a class="btn" style="background:#fff;color:var(--ink)" href="../presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf">Presentación S07.2 (PDF)</a></div>
+
+  </div>
 </section>
 
-<div class="fin" id="fin"><h2 class="disp">¡Ejercicio completo!</h2><p>Has construido una matriz, calculado exactitud, precisión y recall, visto cómo el umbral cambia los errores, elegido un umbral con el coste y desmontado la trampa de la exactitud. Ahora lo repites con Python en el cuaderno <b>S07_03</b>.</p></div>
+<div class="fin" id="fin"><h2 class="disp">¡Ejercicio completo!</h2><p class="m7">Has construido una matriz, calculado exactitud, precisión y recall, visto cómo el umbral cambia los errores, elegido un umbral con el coste y desmontado la trampa de la exactitud. Ahora lo repites con Python en el cuaderno <b>S07_03</b>.</p><p class="m1">Has construido una matriz de confusión, visto qué esconde la exactitud, cómo el umbral cambia los errores y por qué acertar mucho no basta. Ahora piensa en tu reto: <b>¿qué error sería el peor en vuestros casos y quién lo sufriría?</b></p></div>
 
-<p class="foot">IFCD107 · Especialista en Inteligencia Artificial · S07 · Datos ficticios creados para este ejercicio.</p>
+<p class="foot">IFCD107 · Especialista en Inteligencia Artificial · <span class="m7">S07</span><span class="m1">S01</span> · Datos ficticios creados para este ejercicio.</p>
 </div>
 
 <script>
 "use strict";
 // [probabilidad en %, real: 1 = cancela]
 const D=[[66,0],[92,1],[15,0],[47,1],[3,0],[81,1],[33,0],[58,1],[9,0],[29,1],[55,0],[22,0],[74,1],[12,0],[8,1],[42,0],[38,1],[19,0],[27,0],[5,0]];
-const N=D.length, T0=50;
+const N=D.length, T0=50, MODO=document.documentElement.dataset.modo==='1'?1:7;
 const $=id=>document.getElementById(id);
 const fmt=p=>(p/100).toFixed(2).replace('.',',');
 const num=id=>{const v=$(id).value.trim().replace(',','.');return v===''?NaN:parseFloat(v)};
@@ -277,7 +316,7 @@ function conf(t){let vn=0,fp=0,fn=0,vp=0;for(const[p,r]of D){const pr=p>=t?1:0;i
 function tipo(real,pred){return real&&pred?'vp':real?'fn':pred?'fp':'vn'}
 const NOM={vp:'VP · acierto',vn:'VN · acierto',fp:'FP · falsa alarma',fn:'FN · no prevista'};
 function fb(id,cls,msg){const e=$(id);e.className='fb show '+cls;e.innerHTML=msg}
-function mark(s){done.add(s);const a=document.querySelector('#prog a[data-s="'+s+'"]');if(a)a.classList.add('done');if([1,2,3,4,5,6].every(x=>done.has(x)))$('fin').classList.add('show')}
+function mark(s){done.add(s);document.querySelectorAll('#prog a[data-s="'+s+'"]').forEach(a=>a.classList.add('done'));if((MODO===1?[1,2,3,4,6]:[1,2,3,4,5,6]).every(x=>done.has(x)))$('fin').classList.add('show')}
 function ok(id,good){const e=$(id);e.classList.remove('ok','bad');if(good!==null)e.classList.add(good?'ok':'bad')}
 function pct(a,b){return b?100*a/b:NaN}
 const near=(a,b,tol=1)=>Math.abs(a-b)<=tol;
@@ -343,6 +382,21 @@ for(const k of ['vn','fp','fn','vp'])for(const p of ['r_'])$('r_'+k).textContent
 // ---------- Paso 3
 const MET={acc:pct(C0.vp+C0.vn,N),pre:pct(C0.vp,C0.vp+C0.fp),rec:pct(C0.vp,C0.vp+C0.fn)};
 $('b3').onclick=()=>{
+  if(MODO===1){
+    const a=num('m1_acc'),v=num('m1_vp');
+    if(isNaN(a)||isNaN(v)){fb('f3','no','Rellena <b>las dos</b> casillas.');return}
+    const ga=near(a,MET.acc),gv=v===C0.vp;ok('m1_acc',ga);ok('m1_vp',gv);
+    if(ga&&gv){
+      fb('f3','ok','¡Correcto! Exactitud <b>'+Math.round(MET.acc)+' %</b> ('+(C0.vp+C0.vn)+' aciertos de '+N+') y el modelo avisó <b>'+C0.vp+'</b> de las <b>'+(C0.vp+C0.fn)+'</b> cancelaciones reales.');
+      document.querySelectorAll('.x3').forEach(e=>e.style.display='block');
+      $('x3t').innerHTML='«Acertamos <b>'+(C0.vp+C0.vn)+' de '+N+'</b> reservas (un '+Math.round(MET.acc)+' %), pero <b>solo vimos venir '+C0.vp+' de las '+(C0.vp+C0.fn)+' cancelaciones</b>: la mitad se nos escapa.» Un 70 % de aciertos suena bien; la matriz cuenta lo que ese número esconde.';
+      mark(3);
+    }else{
+      const e=[];if(!ga)e.push('la <b>exactitud</b> es aciertos / total: suma la <b>diagonal</b> (VN + VP) y divide entre '+N);if(!gv)e.push('las cancelaciones avisadas son las de la fila «Real: cancela» que el modelo marcó como «cancela» (<b>VP</b>)');
+      fb('f3','no','Revisa: '+e.join('; ')+'.');
+    }
+    return;
+  }
   const a=num('m_acc'),p=num('m_pre'),r=num('m_rec');
   if([a,p,r].some(isNaN)){fb('f3','no','Rellena las <b>tres</b> métricas.');return}
   const ga=near(a,MET.acc),gp=near(p,MET.pre),gr=near(r,MET.rec);
@@ -370,6 +424,7 @@ function matrixHTML(c){
   '<div class="h">Real:<br>cancela</div><div class="cell r"><span class="nm">FN · no prevista</span><span class="big">'+c.fn+'</span></div><div class="cell g"><span class="nm">VP</span><span class="big">'+c.vp+'</span></div>';
 }
 function metHTML(c){
+  if(MODO===1)return '<div class="met"><div class="k">Exactitud</div><div class="v">'+Math.round(pct(c.vp+c.vn,N))+' %</div><div class="f">'+(c.vp+c.vn)+' aciertos de '+N+'</div></div><div class="met"><div class="k">Cancelaciones avisadas</div><div class="v">'+c.vp+' de '+(c.vp+c.fn)+'</div><div class="f">VP de las reales</div></div><div class="met"><div class="k">Falsas alarmas</div><div class="v">'+c.fp+'</div><div class="f">avisos que no se cumplen</div></div>';
   const a=pct(c.vp+c.vn,N),p=pct(c.vp,c.vp+c.fp),r=pct(c.vp,c.vp+c.fn);
   const f=x=>isNaN(x)?'—':Math.round(x)+' %';
   return '<div class="met"><div class="k">Exactitud</div><div class="v">'+f(a)+'</div><div class="f">(VP+VN)/'+N+'</div></div>'+
@@ -379,7 +434,10 @@ function metHTML(c){
 }
 function upd4(){const t=+$('umb').value;$('umbv').textContent=fmt(t);const c=conf(t);$('m4').innerHTML=matrixHTML(c);$('mets4').innerHTML=metHTML(c)}
 $('umb').addEventListener('input',upd4);upd4();
-const EXP4={rec:['sube','El <b>recall sube</b> (50 % → 75 %): al bajar el umbral, más reservas pasan a «cancela», y entre ellas hay más de las cancelaciones reales.'],
+const EXP4=MODO===1?{rec:['sube','Las <b>cancelaciones avisadas aumentan</b> (de 4 a 6 de las 8): al bajar el umbral, el modelo avisa más a menudo.'],
+  pre:['sube','Las <b>falsas alarmas aumentan</b> (de 2 a 4): también avisa a reservas que iban a venir.'],
+  acc:['igual','La <b>exactitud no cambia</b> (14 de 20 → 14 de 20): lo que ganas en un lado lo pierdes en el otro. Mismo número, matriz muy distinta.']}:
+  {rec:['sube','El <b>recall sube</b> (50 % → 75 %): al bajar el umbral, más reservas pasan a «cancela», y entre ellas hay más de las cancelaciones reales.'],
   pre:['baja','La <b>precisión baja</b> (67 % → 60 %): también entran más reservas que iban a venir (falsas alarmas).'],
   acc:['igual','La <b>exactitud no cambia</b> (70 % → 70 %): lo que ganas en VP lo pierdes en VN. Mismo número, matriz muy distinta.']};
 $('b4').onclick=()=>{
@@ -392,7 +450,7 @@ $('b4').onclick=()=>{
   }
   if(sinR){fb('f4','no','Contesta las <b>tres</b> preguntas.');return}
   fb('f4',all?'ok':'no',(all?'¡Las tres bien! ':'Mira cada una y comprueba con el deslizador: ')+'<br>'+msg.join('<br>'));
-  $('x4').style.display='block';
+  document.querySelectorAll('.x4').forEach(e=>e.style.display='block');
   if(all)mark(4);else{/* se deja repetir */}
 };
 
@@ -442,10 +500,10 @@ $('b5').onclick=()=>{
 $('b6').onclick=()=>{
   const E={vn:95,fp:0,fn:5,vp:0};let g=true;
   for(const k in E){const v=num('t_'+k);if(isNaN(v)){fb('f6','no','Rellena <b>todo</b>.');return}const x=v===E[k];ok('t_'+k,x);if(!x)g=false}
-  const a=num('t_acc'),r=num('t_rec');if(isNaN(a)||isNaN(r)){fb('f6','no','Rellena la exactitud y el recall.');return}
-  const ga=near(a,95),gr=near(r,0);ok('t_acc',ga);ok('t_rec',gr);
-  if(g&&ga&&gr){fb('f6','ok','¡Correcto! Si siempre dice «se mantiene»: VN = 95, FP = 0, FN = 5, VP = 0. Exactitud = 95/100 = <b>95 %</b>; recall = 0/(0+5) = <b>0 %</b>.');$('x6').style.display='block';mark(6)}
-  else fb('f6','no',(g?'':'Piensa: el modelo nunca dice «cancela», así que <b>no hay ningún positivo predicho</b> (VP = 0 y FP = 0). Las 95 que vinieron son VN y las 5 que cancelaron son FN. ')+(ga&&gr?'':'Exactitud = (VP+VN)/100; recall = VP/(VP+FN).'));
+  const a=num(MODO===1?'t1_acc':'t_acc'),r=num(MODO===1?'t1_av':'t_rec');if(isNaN(a)||isNaN(r)){fb('f6','no',MODO===1?'Rellena la exactitud y las cancelaciones avisadas.':'Rellena la exactitud y el recall.');return}
+  const ga=near(a,95),gr=near(r,0);ok(MODO===1?'t1_acc':'t_acc',ga);ok(MODO===1?'t1_av':'t_rec',gr);
+  if(g&&ga&&gr){fb('f6','ok','¡Correcto! Si siempre dice «se mantiene»: VN = 95, FP = 0, FN = 5, VP = 0. Exactitud = 95/100 = <b>95 %</b>; '+(MODO===1?'avisa <b>0 de las 5</b> cancelaciones.':'recall = 0/(0+5) = <b>0 %</b>.'));document.querySelectorAll('.x6').forEach(e=>e.style.display='block');mark(6)}
+  else fb('f6','no',(g?'':'Piensa: el modelo nunca dice «cancela», así que <b>no hay ningún positivo predicho</b> (VP = 0 y FP = 0). Las 95 que vinieron son VN y las 5 que cancelaron son FN. ')+(ga&&gr?'':(MODO===1?'Exactitud = aciertos/100; cancelaciones avisadas = VP.':'Exactitud = (VP+VN)/100; recall = VP/(VP+FN).')));
 };
 upd5();
 </script>
