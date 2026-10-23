@@ -25,7 +25,8 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 | [Guía del sprint (PDF)](guia/Guia_Sprint_01.pdf) · [ecofriendly](guia/Guia_Sprint_01_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_01.md) · [PDF](guia/Reto_Sprint_01.pdf) · [ecofriendly](guia/Reto_Sprint_01_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S01_00_resumen_del_sprint.png) | Lámina con la pregunta del cliente, los pasos, lo que se entrega y lo que se aprende | — | Antes del planning |
-| [Infografías del reto](infografias/) | 7 láminas ilustradas del reto | — | Reto |
+| [Esquema del contenido y su relación con el reto](infografias/S01_07_esquema_contenido_y_reto.png) | Qué sesión prepara cada paso del reto y cada apartado del informe, con el material que no entra en el informe | — | Antes del planning y como guía durante el reto |
+| [Infografías del reto](infografias/) | 8 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [Cómo subir vuestras respuestas a GitHub](../../material/5.%20Como_entregar_en_GitHub.md) | Entregar archivos en el repositorio del equipo, desde el navegador | 10 min | Antes de entregar el reto |
 | [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf) | Introducción a la IA: modalidades, casos de uso y mitos | 25 min | Teoría · martes 20/10 |
