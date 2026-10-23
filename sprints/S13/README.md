@@ -25,7 +25,8 @@
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_13.pdf) · [ecofriendly](guia/Guia_Sprint_13_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_13.md) · [PDF](guia/Reto_Sprint_13.pdf) · [ecofriendly](guia/Reto_Sprint_13_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
-| [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
+| [Resumen del sprint en una página](infografias/S13_00_resumen_del_sprint.png) | Lámina con la pregunta del cliente, los pasos, lo que se entrega y lo que se aprende | — | Antes del planning |
+| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S13.1_Visualizar_y_comunicar_resultados.pdf`](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · miércoles 25/11 |
 | [`guia_cuantos_sprints_tiene_el_proyecto.md`](plantillas/guia_cuantos_sprints_tiene_el_proyecto.md) | ¿Cuántos sprints tiene el proyecto? Capacidad, tallas y qué cabe en los Sprints 14–17 | 25–30 min | Al cerrar el 25/11 o antes del planning del 26/11 |

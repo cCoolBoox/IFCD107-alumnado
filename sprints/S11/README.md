@@ -28,7 +28,8 @@
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_11.pdf) · [ecofriendly](guia/Guia_Sprint_11_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_11.md) · [PDF](guia/Reto_Sprint_11.pdf) · [ecofriendly](guia/Reto_Sprint_11_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
-| [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
+| [Resumen del sprint en una página](infografias/S11_00_resumen_del_sprint.png) | Lámina con la pregunta del cliente, los pasos, lo que se entrega y lo que se aprende | — | Antes del planning |
+| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Atlas de algoritmos](infografias/../S10/infografias/S10_03_atlas_redes_neuronales_y_vision.png) | Atlas de algoritmos (S10–S11): CNN, transfer learning y detección, junto al MLP | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S11.1_Redes_convolucionales_CNN.pdf`](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) | Redes convolucionales (CNN) | 25 min | Teoría · miércoles 18/11 |

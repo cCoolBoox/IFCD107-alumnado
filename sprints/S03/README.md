@@ -26,7 +26,8 @@
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_03.pdf) · [ecofriendly](guia/Guia_Sprint_03_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_03.md) · [PDF](guia/Reto_Sprint_03.pdf) · [ecofriendly](guia/Reto_Sprint_03_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
-| [Infografías del reto](infografias/) | 2 láminas ilustradas del reto | — | Reto |
+| [Resumen del sprint en una página](infografias/S03_00_resumen_del_sprint.png) | Lámina con la pregunta del cliente, los pasos, lo que se entrega y lo que se aprende | — | Antes del planning |
+| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S03.1_Bases_de_datos_relacionales_y_SQL.pdf`](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) | Modelo relacional, SQL, CRUD y nociones de administración | 40 min | Teoría · lunes 26/10 |
 | [`S03.2_Bases_de_datos_NoSQL.pdf`](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) | Bases de datos NoSQL (demostración corta) | 15 min | Teoría · lunes 26/10 |
