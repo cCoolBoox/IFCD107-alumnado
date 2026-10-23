@@ -7,7 +7,7 @@
 
 Este documento es tu **mapa del curso**. En 10 minutos sabrás qué vamos a hacer, en qué orden, cómo se trabaja y cómo se evalúa.
 
-## 🚀 Empieza aquí (8 pasos)
+## 🚀 Empieza aquí (9 pasos)
 
 | Paso | Qué haces | Dónde |
 |---|---|---|
@@ -19,6 +19,7 @@ Este documento es tu **mapa del curso**. En 10 minutos sabrás qué vamos a hace
 | **6** | Aprende cómo se trabaja un reto (léelo antes del Sprint 0) | [`material/4. Como_se_trabaja_un_reto.md`](material/4.%20Como_se_trabaja_un_reto.md) |
 | **7** | Aprende a subir tus respuestas a GitHub (cada entrega) | [`material/5. Como_entregar_en_GitHub.md`](material/5.%20Como_entregar_en_GitHub.md) |
 | **8** | Elige modelo con el atlas de algoritmos (S7–S12) | [`material/6. Atlas_de_algoritmos.md`](material/6.%20Atlas_de_algoritmos.md) |
+| **9** | Mira qué vas a construir: el proyecto final y cada sprint | [`material/7. Que_construiras_en_el_curso.md`](material/7.%20Que_construiras_en_el_curso.md) |
 
 > 💡 **Consejo sobre los PDF:** dentro de GitHub, la vista previa de un PDF **no abre sus enlaces**. Pulsa **Download** (descargar) y ábrelo con tu lector de PDF (Chrome, Edge, Adobe o el del móvil): ahí todos los enlaces funcionan.
 
