@@ -1,8 +1,33 @@
 # Checklist de IA responsable · versión 1
 
-**Se rellena por cada caso de uso** del informe de oportunidades (M8, UD 8.5). Es la **versión 1**: **se reutiliza y se actualiza en el proyecto final** (Sprints 14-16, requisito R6). Guardadla en el repositorio del equipo con un control de versiones (`checklist_etico_v1.md`, luego `v2`…).
+**Se rellena por cada caso de uso** del informe de oportunidades (M8, UD 8.5). Es la **versión 1**: **se reutiliza y se actualiza en el proyecto final** (Sprints 14-16, requisito R6). Guardadla en la carpeta del Sprint 1 del repositorio del equipo como `sprint-01/checklist_etico.md` (así se indica en la guía «Cómo entregar en GitHub»). Al actualizarla en el proyecto final, el historial de Git conserva esta versión 1; si queréis, guardad la nueva con otro nombre (`checklist_etico_v2.md`).
 
 **Caso de uso evaluado:** ______________________ · **Equipo:** __________ · **Fecha:** ____ · **Revisado por (otra persona):** __________
+
+## De dónde sale este checklist
+
+**Es una herramienta propia de este curso, no un formulario oficial.** No hay un «checklist ético de la IA» que la ley exija rellenar. Este se ha construido para el curso a partir de lo que se trabaja en el **módulo M8 · IA responsable** (UD 8.1 a 8.5) y, en concreto, en la presentación **S01.4 · IA responsable: ética, sesgo y normativa**. Convierte en preguntas comprobables lo que allí se explica, para que se pueda aplicar a un caso concreto antes de construir nada.
+
+**La idea de partida.** Los casos que salieron mal (COMPAS, la selección de CV de Amazon, el reconocimiento facial) comparten las mismas causas: datos históricos sesgados, nadie midió la equidad antes de desplegar y no había revisión humana. Un checklist sirve para **hacerse esas preguntas a tiempo**, caso por caso, en vez de descubrir los problemas cuando el sistema ya está en marcha.
+
+**Cada apartado sale de una parte del módulo:**
+
+| Apartado del checklist | De dónde sale (S01.4 y módulo M8) |
+|---|---|
+| 0. Ficha rápida · 1. Propósito y proporcionalidad | Los **cuatro pilares éticos**: beneficencia (beneficio real y medible) y no maleficencia (minimizar daños) |
+| 2. Datos y privacidad | **Gobernanza de datos** y principios del **RGPD y la LOPDGDD**: limitación de finalidad, minimización, derechos de las personas |
+| 3. Sesgo y equidad | **Fuentes de sesgo** en datos y modelos, y **equidad** (hay varias definiciones; se elige según el contexto) |
+| 4. Transparencia y explicabilidad | **Transparencia y explicabilidad (XAI)**; obligaciones de transparencia del **AI Act** |
+| 5. Supervisión humana | **Autonomía** (sin manipulación) y **art. 22 del RGPD** (no decidir solo con automatización efectos relevantes) |
+| 6. Robustez, seguridad y calidad | Evaluar con **datos que el modelo no ha visto** (train y test, métricas: S01.3) y vigilar el sistema tras ponerlo en marcha |
+| 7. Impacto social y ambiental | **Justicia** (beneficios y riesgos repartidos con equidad) |
+| 8. Normativa | **RGPD/LOPDGDD** (evaluación de impacto) y los **cuatro niveles de riesgo del AI Act** |
+| 9. Gobernanza y responsabilidad | «**¿Quién responde cuando falla?**»: la cadena de actores es larga y la responsabilidad no puede acabar siendo de nadie |
+| 10. Resultado | Tabla de riesgos y semáforo, para **decidir** y dejar constancia; un caso puede salir «no recomendable», y eso también es un buen resultado |
+
+**Qué no es.** No sustituye el asesoramiento legal ni la opinión de un delegado de protección de datos: el apartado 8 es solo una **orientación**, y los plazos del AI Act son escalonados (**consultad siempre el calendario vigente**). Tampoco es un trámite: su valor está en las **evidencias y acciones** que escribís, no en marcar casillas.
+
+**Dónde se usa en el curso:** Sprint 1 (esta versión 1, en el reto de auditoría de oportunidades) → **Sprint 14** (plan ético del proyecto final: se actualiza este checklist) → entrega final (**requisito R6**: «checklist ético del Sprint 1 actualizado», con análisis de sesgos, limitaciones y clasificación de riesgo).
 
 ## Cómo se usa
 1. Respondéis a cada punto con **Sí / No / No aplica / No lo sé**.
