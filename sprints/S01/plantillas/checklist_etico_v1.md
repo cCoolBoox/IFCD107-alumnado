@@ -1,6 +1,15 @@
 # Checklist de IA responsable · versión 1
 
-**Se rellena por cada caso de uso** del informe de oportunidades (M8, UD 8.5). Es la **versión 1**: **se reutiliza y se actualiza en el proyecto final** (Sprints 14-16, requisito R6). Guardadla en la carpeta del Sprint 1 del repositorio del equipo como `sprint-01/checklist_etico.md` (así se indica en la guía «Cómo entregar en GitHub»). Al actualizarla en el proyecto final, el historial de Git conserva esta versión 1; si queréis, guardad la nueva con otro nombre (`checklist_etico_v2.md`).
+## Cuándo y para qué se rellena
+
+En el reto del Sprint 1 (**Auditoría de oportunidades de IA**) vuestro equipo propone **5 casos de uso**: ideas concretas de cómo podría ayudar la IA a TurisData Canarias. Las recogéis en el **informe de oportunidades**, y este checklist es la parte que **revisa los riesgos éticos y legales de esos casos antes de construir nada** (en el temario del curso: módulo 8 «IA responsable», unidad 8.5 «Evaluación ética de un proyecto»).
+
+- **Para los 2 casos que priorizáis** (los de arriba a la derecha en la matriz impacto × facilidad): rellenad el checklist **completo**, con una copia de esta plantilla por caso.
+- **Para los otros 3 casos**: una versión **resumida**. Como mínimo, la ficha rápida (apartado 0), las preguntas marcadas con **(★)** y el semáforo con una línea de justificación.
+
+**Dónde se guarda.** Todo va en un solo fichero del repositorio del equipo, `sprint-01/checklist_etico.md` (como indica la guía «Cómo entregar en GitHub»): un bloque por caso, cada uno con el nombre del caso como título.
+
+**Es la versión 1:** se reutiliza y se actualiza en el proyecto final (Sprints 14-16, requisito R6). Al actualizarla, el historial de Git conserva esta versión; si queréis, guardad la nueva con otro nombre (`checklist_etico_v2.md`).
 
 **Caso de uso evaluado:** ______________________ · **Equipo:** __________ · **Fecha:** ____ · **Revisado por (otra persona):** __________
 
