@@ -26,7 +26,8 @@
 | [Guía del sprint (PDF)](guia/Guia_Sprint_08.pdf) · [ecofriendly](guia/Guia_Sprint_08_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_08.md) · [PDF](guia/Reto_Sprint_08.pdf) · [ecofriendly](guia/Reto_Sprint_08_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S08_00_resumen_del_sprint.png) | Lámina con la pregunta del cliente, los pasos, lo que se entrega y lo que se aprende | — | Antes del planning |
-| [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
+| [Esquema del contenido y su relación con el reto](infografias/S08_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
+| [Infografías del reto](infografias/) | 5 láminas ilustradas del reto | — | Reto |
 | [Atlas de algoritmos](infografias/S08_03_atlas_arboles_ensembles_y_svm.png) | Atlas de algoritmos del sprint: árbol, Random Forest, boosting, SVM y ajuste de hiperparámetros | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S08.1_Arboles_de_decision.pdf`](presentaciones/S08.1_Arboles_de_decision.pdf) | Árboles de decisión | 15 min | Teoría · martes 10/11 |

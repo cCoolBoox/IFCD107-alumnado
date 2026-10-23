@@ -27,7 +27,8 @@ Ninguno. Solo ganas de trabajar en equipo. Necesitarás un correo electrónico p
 | [Guía del sprint (PDF)](guia/Guia_Sprint_00.pdf) · [ecofriendly](guia/Guia_Sprint_00_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_00.md) · [PDF](guia/Reto_Sprint_00.pdf) · [ecofriendly](guia/Reto_Sprint_00_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S00_00_resumen_del_sprint.png) | Lámina con la pregunta del cliente, los pasos, lo que se entrega y lo que se aprende | — | Antes del planning |
-| [Infografías del reto](infografias/) | 7 láminas ilustradas del reto | — | Reto |
+| [Esquema del contenido y su relación con el reto](infografias/S00_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
+| [Infografías del reto](infografias/) | 8 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf) | Bienvenida y reglas del curso | 30 min | Teoría · viernes 16/10 |
 | [`S00.1_Agile_y_Scrum.pdf`](presentaciones/S00.1_Agile_y_Scrum.pdf) | Agile y Scrum: roles, artefactos y ceremonias | 1 h 30 min | Teoría · viernes 16/10 |
