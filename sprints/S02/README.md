@@ -23,7 +23,7 @@ Sprint 1 terminado. Matemáticas de secundaria (fracciones, potencias, porcentaj
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_02.pdf) · [ecofriendly](guia/Guia_Sprint_02_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_02.md) · [PDF](guia/Reto_Sprint_02.pdf) · [ecofriendly](guia/Reto_Sprint_02_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_02.md) · [PDF](guia/Reto_Sprint_02.pdf) · [ecofriendly](guia/Reto_Sprint_02_ecofriendly.pdf) | Qué pide el cliente, pasos, ayudas y errores frecuentes (la rúbrica va aparte) | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S02_00_resumen_del_sprint.png) | Lámina con la pregunta del cliente, los pasos, lo que se entrega y lo que se aprende | — | Antes del planning |
 | [Esquema del contenido y su relación con el reto](infografias/S02_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
@@ -44,6 +44,7 @@ Materiales `.md` para papel o pantalla (sin Colab):
 | [`ejercicios_estadistica.md`](actividades/ejercicios_estadistica.md) | 14 ejercicios de estadística, probabilidad, Bayes, sesgo y Simpson |
 | [`estadisticas_enganosas.md`](actividades/estadisticas_enganosas.md) | 9 casos de estadísticas engañosas |
 | [`plantilla_dictamen.md`](plantillas/plantilla_dictamen.md) | Plantilla del dictamen del reto, con la afirmación 1 resuelta como modelo |
+| [`rubrica_dictamen.md`](plantillas/rubrica_dictamen.md) | Rúbrica del reto: 4 criterios, de 1 a 4 |
 
 Mínimo de ejercicios: **M1, M2 y M7** de la hoja 1 y **E1, E2, E6, E8 y E10** de la hoja 2. El resto son extra (si queréis ir más allá, M10 y M11 sobre el descenso del gradiente son los más recomendables). Escribid cómo lo habéis hecho.
 
