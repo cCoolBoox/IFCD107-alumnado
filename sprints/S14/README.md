@@ -16,7 +16,7 @@
 - Equipos formados en el Sprint 0 (pueden reajustarse **una sola vez, hasta el 26/11**).
 - Haber leído `proyecto-final/briefs_y_rubrica.md` (reglas comunes, requisitos R1-R11, rúbrica y anexos A y B).
 - Checklist ético del Sprint 1 y mapa de empatía del Sprint 0 (los retomaréis).
-- Haber hecho (o leído) la guía [«¿Cuántos sprints tiene el proyecto?»](../S13/plantillas/guia_cuantos_sprints_tiene_el_proyecto.md): son 4 sprints fijos (14–17) y lo que se decide es qué cabe en ellos.
+- Haber hecho (o leído) la guía [«¿Cuántos sprints tiene el proyecto?»](../S13/Reto_S13/guia_cuantos_sprints_tiene_el_proyecto.md): son 4 sprints fijos (14–17) y lo que se decide es qué cabe en ellos.
 - Repositorio Git y tablero (Trello o similar) del equipo creados. Si no están, es lo primero.
 
 ## 📎 Materiales del sprint
@@ -26,10 +26,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_14.pdf) · [ecofriendly](guia/Guia_Sprint_14_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_14.md) · [PDF](guia/Reto_Sprint_14.pdf) · [ecofriendly](guia/Reto_Sprint_14_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S14/`**](Reto_S14/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S14/Reto_Sprint_14.md) · [PDF](Reto_S14/Reto_Sprint_14.pdf) · [ecofriendly](Reto_S14/Reto_Sprint_14_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S14_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S14/S14_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S14/S14_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S14_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S14.1_Lanzamiento_del_proyecto_final.pdf`](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf) | Lanzamiento del proyecto final: cómo formular un proyecto de IA (canvas y criterios de éxito) | 25 min | Teoría · día 1 del S14 |
 
@@ -43,11 +45,11 @@ Este sprint no tiene notebooks: hay sesiones y plantillas (todas en esta carpeta
 | 27/11 | **Go / no-go** de la ficha; EDA con informe de calidad; baseline terminado y registrado. |
 | 30/11 | Plan ético, backlog y README; entrega, review y retrospectiva (últimos 80 min). |
 
-- [`plantilla_ficha_proyecto.md`](plantillas/plantilla_ficha_proyecto.md) · ficha de 1 página.
-- [`plantilla_plan_datos_licencias.md`](plantillas/plantilla_plan_datos_licencias.md) · fuentes, licencias y linaje.
-- [`plantilla_registro_riesgos_eticos.md`](plantillas/plantilla_registro_riesgos_eticos.md) · riesgos éticos y RGPD / AI Act.
-- [`plantilla_README_repositorio.md`](plantillas/plantilla_README_repositorio.md) · README del repositorio.
-- [`plantilla_backlog_y_sprints.md`](plantillas/plantilla_backlog_y_sprints.md) · historias y objetivos por sprint.
+- [`plantilla_ficha_proyecto.md`](Reto_S14/plantilla_ficha_proyecto.md) · ficha de 1 página.
+- [`plantilla_plan_datos_licencias.md`](Reto_S14/plantilla_plan_datos_licencias.md) · fuentes, licencias y linaje.
+- [`plantilla_registro_riesgos_eticos.md`](Reto_S14/plantilla_registro_riesgos_eticos.md) · riesgos éticos y RGPD / AI Act.
+- [`plantilla_README_repositorio.md`](Reto_S14/plantilla_README_repositorio.md) · README del repositorio.
+- [`plantilla_backlog_y_sprints.md`](Reto_S14/plantilla_backlog_y_sprints.md) · historias y objetivos por sprint.
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint
@@ -61,31 +63,31 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 1 | 📖 Teoría | [Lanzamiento del proyecto final: cómo formular un proyecto de IA (canvas y criterios de éxito)](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf) | 25 min |
 | 2 | 🔔 Ceremonia | Planning del sprint: leer las reglas y repartir roles | 10 min |
 | 3 | 💻 Práctica | Taller de Design Thinking: empatía, «Cómo podríamos…», dos briefs candidatos y canvas borrador | 40 min |
-| 4 | 🎯 Reto | [Elegir el brief](guia/Reto_Sprint_14.md) (**antes del descanso**, hito del día) | 15 min |
-| 5 | 🎯 Reto | Buscar y validar datos (licencia, tamaño, acceso; plan de datos: [plantilla](plantillas/plantilla_plan_datos_licencias.md)) | 1 h |
-| 6 | 🎯 Reto | [Ficha del proyecto y entrega **antes de las 14:30**](plantillas/plantilla_ficha_proyecto.md) | 50 min |
+| 4 | 🎯 Reto | [Elegir el brief](Reto_S14/Reto_Sprint_14.md) (**antes del descanso**, hito del día) | 15 min |
+| 5 | 🎯 Reto | Buscar y validar datos (licencia, tamaño, acceso; plan de datos: [plantilla](Reto_S14/plantilla_plan_datos_licencias.md)) | 1 h |
+| 6 | 🎯 Reto | [Ficha del proyecto y entrega **antes de las 14:30**](Reto_S14/plantilla_ficha_proyecto.md) | 50 min |
 
 **Día 2 del S14 · hito: ficha aprobada (go / no-go)**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 7 | 🎯 Reto | [Leer el go / no-go del docente y, si hace falta, corregir la ficha](guia/Reto_Sprint_14.md) | 20 min |
-| 8 | 🎯 Reto | [EDA, calidad del dato y *baseline* (paso 5)](guia/Reto_Sprint_14.md) | 3 h |
+| 7 | 🎯 Reto | [Leer el go / no-go del docente y, si hace falta, corregir la ficha](Reto_S14/Reto_Sprint_14.md) | 20 min |
+| 8 | 🎯 Reto | [EDA, calidad del dato y *baseline* (paso 5)](Reto_S14/Reto_Sprint_14.md) | 3 h |
 
 **Día 3 del S14**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 9 | 🎯 Reto | [Backlog y sprints](plantillas/plantilla_backlog_y_sprints.md), [registro de riesgos éticos](plantillas/plantilla_registro_riesgos_eticos.md) y [README del repositorio](plantillas/plantilla_README_repositorio.md) (paso 6) | 2 h 20 min |
+| 9 | 🎯 Reto | [Backlog y sprints](Reto_S14/plantilla_backlog_y_sprints.md), [registro de riesgos éticos](Reto_S14/plantilla_registro_riesgos_eticos.md) y [README del repositorio](Reto_S14/plantilla_README_repositorio.md) (paso 6) | 2 h 20 min |
 | 10 | 🔔 Ceremonia | Entrega en `sprint-14/`, autoevaluación y coevaluación, review (paso 7: 5 min por equipo) y retrospectiva | 1 h |
 
 <!--orden:fin-->
 
 ## Entrega / Reto · «Proyecto final: definir, tener datos y un punto de partida»
 
-📄 [Reto en PDF](guia/Reto_Sprint_14.pdf) · [ecofriendly](guia/Reto_Sprint_14_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S14/Reto_Sprint_14.pdf) · [ecofriendly](Reto_S14/Reto_Sprint_14_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_14.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S14/Reto_Sprint_14.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** sois una consultora de IA y el docente es el cliente. Elegís uno de los 4 briefs de `proyecto-final/briefs_y_rubrica.md` (demanda turística, salud de cultivos, asistente de FP, demanda eléctrica) o presentáis un brief libre (ficha antes del 26/11). Si elegís el brief 3 (asistente con LLM), mirad antes la guía de acceso gratuito a modelos: [`material/Acceso_modelos_de_lenguaje.md`](../../material/Acceso_modelos_de_lenguaje.md).
@@ -110,3 +112,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Backlog de 10-15 historias y tablero actualizado.
 - [ ] Registro de riesgos con ≥ 5 riesgos específicos.
 - [ ] Entregable subido a la carpeta `sprint-14/` del repositorio del equipo.
+- [ ] [Autoevaluación y coevaluación](Reto_S14/autoevaluacion_y_coevaluacion.md) rellenadas

@@ -4,11 +4,11 @@ Cada carpeta `Sxx/` tiene **un `README.md`** (la guía del sprint con la ficha d
 
 | Subcarpeta | Qué contiene |
 |---|---|
-| `guia/` | La guía en PDF (`Guia_Sprint_XX.pdf`), su versión `_ecofriendly` para imprimir con poca tinta y el **reto explicado paso a paso** (`Reto_Sprint_XX.md`) |
+| `Reto_SXX/` | **Todo el material del reto junto**: la ficha del reto explicada paso a paso (`Reto_Sprint_XX.md` y PDF), las plantillas, la hoja de `autoevaluacion_y_coevaluacion.md` y las láminas del reto (`SXX_02_…`, `SXX_03_reto_paso_a_paso`) |
+| `guia/` | La guía del sprint en PDF (`Guia_Sprint_XX.pdf`) y su versión `_ecofriendly` para imprimir con poca tinta |
 | `presentaciones/` | Diapositivas de cada sesión |
 | `notebooks/` | Prácticas para abrir en Google Colab |
 | `actividades/` | Material de las actividades y ejercicios |
-| `plantillas/` | Plantillas para el reto y los entregables |
 | `recursos/` | Scripts y ficheros de apoyo |
 | `tests/` | Test de conocimientos (solo se abre el día indicado) |
 

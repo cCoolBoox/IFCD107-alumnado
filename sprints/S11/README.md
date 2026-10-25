@@ -27,11 +27,13 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_11.pdf) · [ecofriendly](guia/Guia_Sprint_11_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_11.md) · [PDF](guia/Reto_Sprint_11.pdf) · [ecofriendly](guia/Reto_Sprint_11_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S11/`**](Reto_S11/) | Todo el material del reto junto: ficha (.md y PDF), hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S11/Reto_Sprint_11.md) · [PDF](Reto_S11/Reto_Sprint_11.pdf) · [ecofriendly](Reto_S11/Reto_Sprint_11_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S11_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S11/S11_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S11/S11_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S11_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
-| [Atlas de algoritmos](infografias/../S10/infografias/S10_03_atlas_redes_neuronales_y_vision.png) | Atlas de algoritmos (S10–S11): CNN, transfer learning y detección, junto al MLP | — | Teoría y práctica; consulta cuando elijas modelo |
+| [Infografías del sprint](infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
+| [Atlas de algoritmos](../S10/infografias/S10_03_atlas_redes_neuronales_y_vision.png) | Atlas de algoritmos (S10–S11): CNN, transfer learning y detección, junto al MLP | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S11.1_Redes_convolucionales_CNN.pdf`](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) | Redes convolucionales (CNN) | 25 min | Teoría · día 1 del S11 |
 | [`S11.2_Transfer_learning_y_fine_tuning.pdf`](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf) | Transfer learning y fine-tuning | 20 min | Teoría · día 1 del S11 |
@@ -73,22 +75,22 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 9 | 💻 Práctica | [IoU, NMS, mAP, detector con OpenCV y segmentación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) | 45 min |
 | 10 | 💻 Práctica | [Esqueleto del reto: dataset por carpetas y análisis de errores (arranque del reto)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) | 1 h |
 | 11 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
-| 12 | 🎯 Reto | [Preparar los datos (paso 1)](guia/Reto_Sprint_11.md) | 45 min |
+| 12 | 🎯 Reto | [Preparar los datos (paso 1)](Reto_S11/Reto_Sprint_11.md) | 45 min |
 
 **Día 3 del S11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 13 | 🎯 Reto | [Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5)](guia/Reto_Sprint_11.md) | 2 h 20 min |
+| 13 | 🎯 Reto | [Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5)](Reto_S11/Reto_Sprint_11.md) | 2 h 20 min |
 | 14 | 🔔 Ceremonia | Entrega en `sprint-11/`, autoevaluación y coevaluación, review y retrospectiva | 1 h |
 
 <!--orden:fin-->
 
 ## Reto · «Visión artificial para el cliente»
 
-📄 [Reto en PDF](guia/Reto_Sprint_11.pdf) · [ecofriendly](guia/Reto_Sprint_11_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S11/Reto_Sprint_11.pdf) · [ecofriendly](Reto_S11/Reto_Sprint_11_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_11.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S11/Reto_Sprint_11.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** TurisData Canarias recibe cientos de fotos de alojamientos cada semana y las clasifica una persona a mano. Quiere saber si un modelo puede pre-clasificarlas y, sobre todo, en qué se equivoca, para decidir qué fotos revisar a mano.
@@ -115,4 +117,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Métricas por clase, matriz de confusión y ≥ 6 errores analizados
 - [ ] Demostrador con umbral de confianza y opción «revisar a mano»
 - [ ] Entregable subido a la carpeta `sprint-11/` del repositorio del equipo
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S11/autoevaluacion_y_coevaluacion.md) rellenadas

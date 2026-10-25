@@ -25,10 +25,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_03.pdf) · [ecofriendly](guia/Guia_Sprint_03_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_03.md) · [PDF](guia/Reto_Sprint_03.pdf) · [ecofriendly](guia/Reto_Sprint_03_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S03/`**](Reto_S03/) | Todo el material del reto junto: ficha (.md y PDF), hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S03/Reto_Sprint_03.md) · [PDF](Reto_S03/Reto_Sprint_03.pdf) · [ecofriendly](Reto_S03/Reto_Sprint_03_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S03_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S03/S03_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S03/S03_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S03_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S03.1_Bases_de_datos_relacionales_y_SQL.pdf`](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) | Modelo relacional, SQL, CRUD y nociones de administración | 40 min | Teoría · día 1 del S03 |
 | [`S03.2_Bases_de_datos_NoSQL.pdf`](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) | Bases de datos NoSQL (demostración corta) | 15 min | Teoría · día 1 del S03 |
@@ -76,7 +78,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 |---|---|---|---|
 | 6 | 📖 Teoría | [Introducción a AutoML y MLOps](presentaciones/S03.3_AutoML_y_MLOps.pdf) | 20 min |
 | 7 | 💻 Práctica | [Carga y exploración de datos y primer experimento de AutoML (guía de laboratorio)](guia/Guia_AutoML_AutoGluon.pdf) | 35 min |
-| 8 | 🎯 Reto | [Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6)](guia/Reto_Sprint_03.md) | 1 h 20 min |
+| 8 | 🎯 Reto | [Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6)](Reto_S03/Reto_Sprint_03.md) | 1 h 20 min |
 | 9 | 📝 Test | [**Test del bloque M6–M8** (bases de datos, AutoML y responsabilidad), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | 25 min |
 | 10 | 🔔 Ceremonia | Entrega en `sprint-03/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
 
@@ -84,9 +86,9 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 ## Reto · «Primer modelo en producción»
 
-📄 [Reto en PDF](guia/Reto_Sprint_03.pdf) · [ecofriendly](guia/Reto_Sprint_03_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S03/Reto_Sprint_03.pdf) · [ecofriendly](Reto_S03/Reto_Sprint_03_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_03.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S03/Reto_Sprint_03.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** TurisData Canarias quiere avisar de las reservas con más riesgo de cancelarse y consultarlo desde otra aplicación. Vosotros lo ponéis en marcha, del dato al servicio.
@@ -110,4 +112,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Llamada a la API probada, sin credenciales
 - [ ] Recursos cerrados o eliminados, con prueba
 - [ ] Entregable subido a la carpeta `sprint-03/` del repositorio del equipo
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S03/autoevaluacion_y_coevaluacion.md) rellenadas

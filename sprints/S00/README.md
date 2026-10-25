@@ -25,10 +25,12 @@ Ninguno. Solo ganas de trabajar en equipo. Necesitarás un correo electrónico p
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_00.pdf) · [ecofriendly](guia/Guia_Sprint_00_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_00.md) · [PDF](guia/Reto_Sprint_00.pdf) · [ecofriendly](guia/Reto_Sprint_00_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S00/`**](Reto_S00/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S00/Reto_Sprint_00.md) · [PDF](Reto_S00/Reto_Sprint_00.pdf) · [ecofriendly](Reto_S00/Reto_Sprint_00_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S00_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S00/S00_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S00/S00_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S00_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 8 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 7 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf) | Bienvenida y reglas del curso | 30 min | Teoría · día 1 del S00 |
 | [`S00.1_Agile_y_Scrum.pdf`](presentaciones/S00.1_Agile_y_Scrum.pdf) | Agile y Scrum: roles, artefactos y ceremonias | 1 h 30 min | Teoría · día 1 del S00 |
@@ -42,8 +44,8 @@ Un material por actividad (todos son `.md`):
 | Material | Para qué sirve |
 |---|---|
 | [`simulacion_sprint_alumnado.md`](actividades/simulacion_sprint_alumnado.md) | Simulación de un sprint corto (práctica 1) |
-| [`empatia_hmw_plantillas.md`](plantillas/empatia_hmw_plantillas.md) | Mapa de empatía y «How might we» (práctica 2 y reto) |
-| [`plantillas_equipo.md`](plantillas/plantillas_equipo.md) | Acuerdo de trabajo, Definition of Done y backlog (reto) |
+| [`empatia_hmw_plantillas.md`](Reto_S00/empatia_hmw_plantillas.md) | Mapa de empatía y «How might we» (práctica 2 y reto) |
+| [`plantillas_equipo.md`](Reto_S00/plantillas_equipo.md) | Acuerdo de trabajo, Definition of Done y backlog (reto) |
 | [`guia_tablero_trello.md`](actividades/guia_tablero_trello.md) | Cómo montar el tablero (reto) |
 | [`entrevista_descubrimiento.md`](actividades/entrevista_descubrimiento.md) | Guion y notas de la entrevista al cliente (reto) |
 | [`actividad_repositorio_equipo.md`](actividades/actividad_repositorio_equipo.md) | Crea el repositorio del equipo (plantilla: [ifcd107-equipo-plantilla](https://github.com/cCoolBoox/ifcd107-equipo-plantilla)) (reto) |
@@ -61,8 +63,8 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 2 | 📖 Teoría | [Agile y Scrum: roles, artefactos y ceremonias](presentaciones/S00.1_Agile_y_Scrum.pdf) | 1 h 30 min |
 | 3 | 💻 Práctica | [Simulación de un sprint corto](actividades/simulacion_sprint_alumnado.md) | 1 h |
 | 4 | 📖 Teoría | [Design Thinking: fases, empatizar y «How might we»](presentaciones/S00.2_Design_Thinking.pdf) | 1 h |
-| 5 | 🎯 Reto | [Planning: conoceros, repartir roles y fijar el cliente (paso 1)](guia/Reto_Sprint_00.md) | 30 min |
-| 6 | 🎯 Reto | [Acuerdo de trabajo y lista de «terminado» (paso 2)](plantillas/plantillas_equipo.md) | 30 min |
+| 5 | 🎯 Reto | [Planning: conoceros, repartir roles y fijar el cliente (paso 1)](Reto_S00/Reto_Sprint_00.md) | 30 min |
+| 6 | 🎯 Reto | [Acuerdo de trabajo y lista de «terminado» (paso 2)](Reto_S00/plantillas_equipo.md) | 30 min |
 | 7 | 🎯 Reto | Montar el [tablero](actividades/guia_tablero_trello.md) (paso 3) y, si da tiempo, el [repositorio del equipo](actividades/actividad_repositorio_equipo.md) | 30 min |
 | 8 | 🎯 Reto | [Entrevista de descubrimiento al cliente (paso 4)](actividades/entrevista_descubrimiento.md) | 20 min, en grupo grande |
 
@@ -70,17 +72,17 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 9 | 💻 Práctica | [Mapa de empatía y «How might we» (usuario ficticio y TurisData)](plantillas/empatia_hmw_plantillas.md) | 30 min |
-| 10 | 🎯 Reto | [Preparar la review y hacer la retro (paso 5)](guia/Reto_Sprint_00.md) | 30 min |
+| 9 | 💻 Práctica | [Mapa de empatía y «How might we» (usuario ficticio y TurisData)](Reto_S00/empatia_hmw_plantillas.md) | 30 min |
+| 10 | 🎯 Reto | [Preparar la review y hacer la retro (paso 5)](Reto_S00/Reto_Sprint_00.md) | 30 min |
 | 11 | 🔔 Ceremonia | Lo que no haya dado tiempo del reto (acuerdo, entrevista, mapa de empatía) pasa a la primera hora del Sprint 1, el martes 20/10 |  |
 
 <!--orden:fin-->
 
 ## Reto · «Constituir la consultora»
 
-📄 [Reto en PDF](guia/Reto_Sprint_00.pdf) · [ecofriendly](guia/Reto_Sprint_00_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S00/Reto_Sprint_00.pdf) · [ecofriendly](Reto_S00/Reto_Sprint_00_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_00.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S00/Reto_Sprint_00.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** TurisData Canarias quiere incorporar IA, pero no sabe por dónde empezar. Vosotros sois una de las consultoras del concurso y el docente hace de cliente. Antes de tocar datos, demostrad que sabéis organizaros y escuchar.
@@ -104,4 +106,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Tablero creado, con backlog, y compartido con el docente
 - [ ] Mapa de empatía y 3 preguntas HMW (1 priorizada)
 - [ ] Entregable subido a la carpeta `sprint-00/` del repositorio del equipo
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S00/autoevaluacion_y_coevaluacion.md) rellenadas

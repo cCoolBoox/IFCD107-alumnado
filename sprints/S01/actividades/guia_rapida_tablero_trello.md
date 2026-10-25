@@ -76,7 +76,7 @@ Sprint 13 · Informe visual para dirección
 Sprints 14–17 · Proyecto de cierre
 ```
 
-Detallar cada una no hace falta ahora: la descripción de la tarjeta se completa cuando llega su sprint (el entregable está en la [tabla del backlog](../../S00/plantillas/plantillas_equipo.md), sección 3).
+Detallar cada una no hace falta ahora: la descripción de la tarjeta se completa cuando llega su sprint (el entregable está en la [tabla del backlog](../../S00/Reto_S00/plantillas_equipo.md), sección 3).
 
 ## Paso 5 · Las tareas del reto del Sprint 1 (3 min)
 En **Sprint backlog** (y a **En curso** las que ya estéis haciendo), pegad:

@@ -75,7 +75,7 @@ Con un equipo de 4 personas basta una rotación circular: si las personas son A,
 - *Responsable técnico:* decide con el equipo herramientas y estructura, revisa que el entregable se ejecute desde cero y que el README esté completo.
 
 ## Paso 6 · Cargar el backlog del curso
-Copiad la tabla del **backlog del curso** ([`plantillas_equipo.md`](../plantillas/plantillas_equipo.md), sección 3) en la columna 2: **una tarjeta por sprint**, con el título del reto y el entregable en la descripción. Los sprints 1–3 se detallan en tarjetas de historias (usad las de ejemplo).
+Copiad la tabla del **backlog del curso** ([`plantillas_equipo.md`](../Reto_S00/plantillas_equipo.md), sección 3) en la columna 2: **una tarjeta por sprint**, con el título del reto y el entregable en la descripción. Los sprints 1–3 se detallan en tarjetas de historias (usad las de ejemplo).
 
 ## Paso 7 · Añadir las ceremonias como tarjetas recurrentes
 En la columna *Información*, una tarjeta **"Calendario de ceremonias"** con:

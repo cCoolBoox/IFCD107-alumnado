@@ -26,10 +26,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_10.pdf) · [ecofriendly](guia/Guia_Sprint_10_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_10.md) · [PDF](guia/Reto_Sprint_10.pdf) · [ecofriendly](guia/Reto_Sprint_10_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S10/`**](Reto_S10/) | Todo el material del reto junto: ficha (.md y PDF), hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S10/Reto_Sprint_10.md) · [PDF](Reto_S10/Reto_Sprint_10.pdf) · [ecofriendly](Reto_S10/Reto_Sprint_10_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S10_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S10/S10_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S10/S10_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S10_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 3 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Atlas de algoritmos](infografias/S10_03_atlas_redes_neuronales_y_vision.png) | Atlas de algoritmos (S10–S11): MLP, regularización, CNN, transfer learning y detección | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S10.1_Fundamentos_de_redes_neuronales.pdf`](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | Fundamentos de redes neuronales | 20 min | Teoría · día 1 del S10 |
@@ -77,9 +79,9 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 ## Reto · «¿Vale la pena la red?»
 
-📄 [Reto en PDF](guia/Reto_Sprint_10.pdf) · [ecofriendly](guia/Reto_Sprint_10_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S10/Reto_Sprint_10.pdf) · [ecofriendly](Reto_S10/Reto_Sprint_10_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_10.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S10/Reto_Sprint_10.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** la dirección de TurisData Canarias oye hablar de redes neuronales y pregunta si debe sustituir su modelo de cancelaciones. No quiere una opinión: quiere evidencias, coste incluido.
@@ -104,4 +106,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] MLP y modelo de árboles/boosting comparados con incertidumbre
 - [ ] Curvas de aprendizaje y recomendación concreta con coste y límites
 - [ ] Entregable subido a la carpeta `sprint-10/` del repositorio del equipo
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S10/autoevaluacion_y_coevaluacion.md) rellenadas

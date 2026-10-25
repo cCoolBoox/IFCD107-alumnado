@@ -24,10 +24,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_15.pdf) · [ecofriendly](guia/Guia_Sprint_15_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_15.md) · [PDF](guia/Reto_Sprint_15.pdf) · [ecofriendly](guia/Reto_Sprint_15_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S15/`**](Reto_S15/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S15/Reto_Sprint_15.md) · [PDF](Reto_S15/Reto_Sprint_15.pdf) · [ecofriendly](Reto_S15/Reto_Sprint_15_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S15_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S15/S15_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S15/S15_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S15_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S15.1_Pildora_seguimiento_de_experimentos.pdf`](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) | Píldora: seguimiento de experimentos | 20 min | Teoría · día 1 del S15 |
 
@@ -37,7 +39,7 @@
 |---|---|---|---|
 | `S15_01_seguimiento_experimentos` | Semillas, registro en CSV, validación cruzada, fuga de datos, MLflow local *(opcional)* | 1 h 15 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) |
 
-- [`plantillas/registro_experimentos_plantilla.csv`](plantillas/registro_experimentos_plantilla.csv) · cabecera del registro; copiadla a `experimentos/registro.csv` en vuestro repositorio.
+- [`Reto_S15/registro_experimentos_plantilla.csv`](Reto_S15/registro_experimentos_plantilla.csv) · cabecera del registro; copiadla a `experimentos/registro.csv` en vuestro repositorio.
 
 Sesiones: 1/12 planning, píldora y primeras iteraciones · 2/12 tutorías de 15 min por equipo y modelos · 3/12 comparativa final, **modelo candidato**, review y retro.
 
@@ -52,7 +54,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 |---|---|---|---|
 | 1 | 📖 Teoría | [**Píldora: seguimiento de experimentos**](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) | 20 min |
 | 2 | 💻 Práctica | [Práctica de seguimiento de experimentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) | 50 min |
-| 3 | 🎯 Reto | **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el [registro de experimentos](plantillas/registro_experimentos_plantilla.csv) | 2 h 10 min |
+| 3 | 🎯 Reto | **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el [registro de experimentos](Reto_S15/registro_experimentos_plantilla.csv) | 2 h 10 min |
 
 **Día 2 del S15**
 
@@ -74,9 +76,9 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 ## Entrega / Reto · «El mejor modelo, demostrado»
 
-📄 [Reto en PDF](guia/Reto_Sprint_15.pdf) · [ecofriendly](guia/Reto_Sprint_15_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S15/Reto_Sprint_15.pdf) · [ecofriendly](Reto_S15/Reto_Sprint_15_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_15.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S15/Reto_Sprint_15.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** el cliente (el docente) quiere saber qué modelo recomendáis y por qué. No basta «el que tiene mejor número»: ¿la mejora sobre el baseline justifica el coste? ¿Generaliza? ¿Se puede repetir?
@@ -102,3 +104,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Modelo candidato elegido y justificado; test evaluado una sola vez.
 - [ ] Roles rotados, tablero actualizado y retro con acción concreta.
 - [ ] Entregable subido a la carpeta `sprint-15/` del repositorio del equipo.
+- [ ] [Autoevaluación y coevaluación](Reto_S15/autoevaluacion_y_coevaluacion.md) rellenadas

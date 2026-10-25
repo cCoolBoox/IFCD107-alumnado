@@ -23,10 +23,12 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_01.pdf) · [ecofriendly](guia/Guia_Sprint_01_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_01.md) · [PDF](guia/Reto_Sprint_01.pdf) · [ecofriendly](guia/Reto_Sprint_01_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S01/`**](Reto_S01/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S01/Reto_Sprint_01.md) · [PDF](Reto_S01/Reto_Sprint_01.pdf) · [ecofriendly](Reto_S01/Reto_Sprint_01_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S01_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S01/S01_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S01/S01_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S01_07_esquema_contenido_y_reto.png) | Qué sesión prepara cada paso del reto y cada apartado del informe, con el material que no entra en el informe | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 8 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 7 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [Cómo subir vuestras respuestas a GitHub](../../material/5.%20Como_entregar_en_GitHub.md) | Entregar archivos en el repositorio del equipo, desde el navegador | 10 min | Antes de entregar el reto |
 | [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf) | Introducción a la IA: modalidades, casos de uso y mitos | 25 min | Teoría · día 1 del S01 |
@@ -47,7 +49,7 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 | [`tarjetas_casos_uso.md`](actividades/tarjetas_casos_uso.md) · Dinámica B | Clasificación "a mano" y sobreajuste | 10 min (demostración) | Práctica 2 |
 | [`tarjetas_casos_uso.md`](actividades/tarjetas_casos_uso.md) · Dinámica C | ¿Qué familia de algoritmos? (6 problemas) | 15 min (3 de los 6 problemas, en gran grupo) | Práctica 3 |
 | [`casos_debate_ia_responsable.md`](actividades/casos_debate_ia_responsable.md) | Debate de casos éticos con roles (2 de los 5) | 25 min | Práctica 4 (M8, UD 8.4) |
-| [`checklist_etico_v1.md`](plantillas/checklist_etico_v1.md) | Checklist de IA responsable (versión 1) | en el reto | Reto |
+| [`checklist_etico_v1.md`](Reto_S01/checklist_etico_v1.md) | Checklist de IA responsable (versión 1) | en el reto | Reto |
 | [`ejemplo_clasificacion_caso.md`](actividades/ejemplo_clasificacion_caso.md) | Ejemplo resuelto de ficha de caso de uso | consulta | Reto |
 | [`guia_rapida_tablero_trello.md`](actividades/guia_rapida_tablero_trello.md) | Montar el tablero de Trello del equipo (listas y tareas del Sprint 1 para copiar y pegar) | 15 min | Si aún no hay tablero |
 
@@ -62,7 +64,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 1 | 🎯 Reto | **Cierre del Sprint 0** (lo que quedó pendiente del reto): [acuerdo de trabajo y lista de «terminado»](../S00/plantillas/plantillas_equipo.md), [entrevista al cliente](../S00/actividades/entrevista_descubrimiento.md) en grupo grande (antes, 10 min en equipo para preparar las preguntas con la plantilla del mapa a la vista), después el [mapa de empatía de TurisData](../S00/plantillas/empatia_hmw_plantillas.md) con lo oído y retro corta. **Si aún no tenéis tablero**, montadlo con la [guía rápida de Trello](actividades/guia_rapida_tablero_trello.md) (15 min, en casa o en este bloque) | 40 min |
+| 1 | 🎯 Reto | **Cierre del Sprint 0** (lo que quedó pendiente del reto): [acuerdo de trabajo y lista de «terminado»](../S00/Reto_S00/plantillas_equipo.md), [entrevista al cliente](../S00/actividades/entrevista_descubrimiento.md) en grupo grande (antes, 10 min en equipo para preparar las preguntas con la plantilla del mapa a la vista), después el [mapa de empatía de TurisData](../S00/Reto_S00/empatia_hmw_plantillas.md) con lo oído y retro corta. **Si aún no tenéis tablero**, montadlo con la [guía rápida de Trello](actividades/guia_rapida_tablero_trello.md) (15 min, en casa o en este bloque) | 40 min |
 | 2 | 🔔 Ceremonia | Planning del Sprint 1: leed la ficha del reto y repartid los 7 apartados del informe | 10 min |
 | 3 | 📖 Teoría | [Introducción a la IA: modalidades, casos de uso y mitos](presentaciones/S01.1_Introduccion_a_la_IA.pdf) | 25 min |
 | 4 | 💻 Práctica | [Dinámica A: tarjetas de casos de uso (11 tarjetas)](actividades/tarjetas_casos_uso.md) | 25 min |
@@ -70,7 +72,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 6 | 💻 Práctica | Dinámica C: elegir la familia de algoritmos en 3 de los 6 problemas (con el docente) | 15 min |
 | 7 | 📖 Teoría | [Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste](presentaciones/S01.3_Tipos_de_aprendizaje.pdf) | 25 min |
 | 8 | 💻 Práctica | [Dinámica B: clasificación «a mano» (demostración en la pizarra)](actividades/ejemplo_clasificacion_caso.md) | 10 min |
-| 9 | 🎯 Reto | [Lluvia de ideas y elección de casos (paso 2)](guia/Reto_Sprint_01.md) | 25 min |
+| 9 | 🎯 Reto | [Lluvia de ideas y elección de casos (paso 2)](Reto_S01/Reto_Sprint_01.md) | 25 min |
 
 **Día 2 del S01**
 
@@ -78,16 +80,16 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 |---|---|---|---|
 | 10 | 📖 Teoría | [IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) | 50 min |
 | 11 | 💻 Práctica | [Debate de casos éticos con roles (2 de los 5 casos)](actividades/casos_debate_ia_responsable.md) | 25 min |
-| 12 | 🎯 Reto | [Fichas de 4 casos (el 5.º, en versión breve), lista de comprobación ética (completa en los 2 casos priorizados), matriz de priorización y redacción (pasos 3–5)](plantillas/checklist_etico_v1.md) | 1 h 15 min |
+| 12 | 🎯 Reto | [Fichas de 4 casos (el 5.º, en versión breve), lista de comprobación ética (completa en los 2 casos priorizados), matriz de priorización y redacción (pasos 3–5)](Reto_S01/checklist_etico_v1.md) | 1 h 15 min |
 | 13 | 🔔 Ceremonia | Entrega en `sprint-01/`, autoevaluación y coevaluación, review (5 min por equipo) y retrospectiva | 50 min |
 
 <!--orden:fin-->
 
 ## Reto · «Auditoría de oportunidades de IA»
 
-📄 [Reto en PDF](guia/Reto_Sprint_01.pdf) · [ecofriendly](guia/Reto_Sprint_01_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S01/Reto_Sprint_01.pdf) · [ecofriendly](Reto_S01/Reto_Sprint_01_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_01.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S01/Reto_Sprint_01.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 
@@ -118,4 +120,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Revisado por otra persona y declaración de uso de IA hecha
 - [ ] Entregable subido a la carpeta `sprint-01/` del repositorio del equipo
 - [ ] Tablero actualizado
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S01/autoevaluacion_y_coevaluacion.md) rellenadas

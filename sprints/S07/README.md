@@ -23,10 +23,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_07.pdf) · [ecofriendly](guia/Guia_Sprint_07_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_07.md) · [PDF](guia/Reto_Sprint_07.pdf) · [ecofriendly](guia/Reto_Sprint_07_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S07/`**](Reto_S07/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S07/Reto_Sprint_07.md) · [PDF](Reto_S07/Reto_Sprint_07.pdf) · [ecofriendly](Reto_S07/Reto_Sprint_07_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S07_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S07/S07_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S07/S07_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S07_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 5 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 4 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Atlas de algoritmos](infografias/S07_03_atlas_regresion_y_clasificacion.png) | Atlas de algoritmos del sprint: regresión lineal, Ridge/Lasso, logística, k-NN y Naive Bayes | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf`](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) | Regresión lineal, polinómica y regularización (Ridge y Lasso) | 25 min | Teoría · día 1 del S07 |
@@ -70,12 +72,12 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 8 | 🎯 Reto | [Acordar las hipótesis de coste y hacer la regresión del precio (pasos 1–2)](guia/Reto_Sprint_07.md) | 30 min |
+| 8 | 🎯 Reto | [Acordar las hipótesis de coste y hacer la regresión del precio (pasos 1–2)](Reto_S07/Reto_Sprint_07.md) | 30 min |
 | 9 | 💻 Práctica | [ROC, PR y datos desbalanceados](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_04_roc_pr_desbalance.ipynb) | 40 min |
 | 10 | 📖 Teoría | [k-NN y Naive Bayes](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf) | 10 min |
 | 11 | 💻 Práctica | [k-NN y Naive Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_05_knn_naive_bayes.ipynb) | 25 min |
 | 12 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
-| 13 | 🎯 Reto | [Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5)](guia/Reto_Sprint_07.md) | 40 min |
+| 13 | 🎯 Reto | [Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5)](Reto_S07/Reto_Sprint_07.md) | 40 min |
 | 14 | 📝 Test | [**Test de M3 (parte 1)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | 25 min |
 | 15 | 🔔 Ceremonia | Entrega en `sprint-07/`, autoevaluación y coevaluación, review y retrospectiva | 20 min |
 
@@ -83,16 +85,16 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 ## Reto · «Precio y cancelación»
 
-📄 [Reto en PDF](guia/Reto_Sprint_07.pdf) · [ecofriendly](guia/Reto_Sprint_07_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S07/Reto_Sprint_07.pdf) · [ecofriendly](Reto_S07/Reto_Sprint_07_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_07.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S07/Reto_Sprint_07.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** TurisData Canarias quiere una tarifa de referencia por noche y un aviso de riesgo de cancelación para decidir el *overbooking*. El gerente no quiere oír hablar de «AUC»: quiere saber cuánto dinero se juega si el modelo falla.
 
 
 **Entregáis** (carpeta `sprint-07/` del repositorio del equipo):
-- `informe_modelado.md` (2–3 páginas) con comparativa de métricas y recomendación de negocio en euros. Plantilla: [`informe_modelado_plantilla.md`](plantillas/informe_modelado_plantilla.md).
+- `informe_modelado.md` (2–3 páginas) con comparativa de métricas y recomendación de negocio en euros. Plantilla: [`informe_modelado_plantilla.md`](Reto_S07/informe_modelado_plantilla.md).
 - `reto_S07.ipynb`: regresión para `precio_noche` y clasificación para `cancelada`, cada una con *baseline*.
 - Hipótesis de coste de cada error, umbral elegido y análisis de sensibilidad.
 - `README.md` para reproducirlo (semilla, versiones).
@@ -113,4 +115,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Costes de error explicitados, umbral justificado y recomendación con cifras
 - [ ] Sin fuga de datos; test usado una sola vez
 - [ ] Entregable subido a la carpeta `sprint-07/` del repositorio del equipo
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S07/autoevaluacion_y_coevaluacion.md) rellenadas

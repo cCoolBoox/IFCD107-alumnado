@@ -25,10 +25,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_04.pdf) · [ecofriendly](guia/Guia_Sprint_04_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_04.md) · [PDF](guia/Reto_Sprint_04.pdf) · [ecofriendly](guia/Reto_Sprint_04_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S04/`**](Reto_S04/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S04/Reto_Sprint_04.md) · [PDF](Reto_S04/Reto_Sprint_04.pdf) · [ecofriendly](Reto_S04/Reto_Sprint_04_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S04_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S04/S04_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S04/S04_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S04_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S04.1_Python_entorno_y_lenguaje.pdf`](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) | Python: entorno (venv, pip, Jupyter, Git) y lenguaje | 20 min | Teoría · día 1 del S04 |
 | [`S04.2_Python_estructuras_funciones_y_POO.pdf`](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | Estructuras de datos, funciones, ficheros, excepciones y POO | 20 min | Teoría · día 2 del S04 |
@@ -67,23 +69,23 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 |---|---|---|---|
 | 7 | 📖 Teoría | [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | 20 min |
 | 8 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
-| 9 | 🎯 Reto | [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](guia/Reto_Sprint_04.md) | 2 h 10 min |
+| 9 | 🎯 Reto | [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](Reto_S04/Reto_Sprint_04.md) | 2 h 10 min |
 | 10 | 🔔 Ceremonia | Entrega en `sprint-04/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
 
 <!--orden:fin-->
 
 ## Reto · «Herramientas internas»
 
-📄 [Reto en PDF](guia/Reto_Sprint_04.pdf) · [ecofriendly](guia/Reto_Sprint_04_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S04/Reto_Sprint_04.pdf) · [ecofriendly](Reto_S04/Reto_Sprint_04_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_04.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S04/Reto_Sprint_04.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** el equipo de reservas de TurisData Canarias calcula sus cifras a mano cada semana. Os pide un script que lea el CSV de reservas, calcule tres KPIs, avise si el fichero está mal y deje un JSON.
 
-**Entregáis** (en la carpeta `sprint-04/` del repositorio del equipo; base en [`reto_herramientas/`](recursos/reto_herramientas/)):
+**Entregáis** (en la carpeta `sprint-04/` del repositorio del equipo; base en [`reto_herramientas/`](Reto_S04/reto_herramientas/)):
 - `kpis.py` (funciones + `main`) y `test_kpis.py` (pruebas con `assert`).
-- `README.md` con cómo ejecutar, cómo probar y definición de cada KPI (plantilla: [`README_PLANTILLA.md`](recursos/reto_herramientas/README_PLANTILLA.md)).
+- `README.md` con cómo ejecutar, cómo probar y definición de cada KPI (plantilla: [`README_PLANTILLA.md`](Reto_S04/reto_herramientas/README_PLANTILLA.md)).
 - `salida.json` generado con el CSV real; opcional: `kpis_pandas.py`.
 
 **Reglas:**
@@ -99,4 +101,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Funciones con docstring y README con las definiciones de los KPIs
 - [ ] Entregable subido a la carpeta `sprint-04/` del repositorio del equipo (al menos 3 *commits*)
 - [ ] Alguien del grupo ha revisado el código con la rúbrica
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S04/autoevaluacion_y_coevaluacion.md) rellenadas

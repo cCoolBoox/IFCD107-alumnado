@@ -24,10 +24,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_08.pdf) · [ecofriendly](guia/Guia_Sprint_08_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_08.md) · [PDF](guia/Reto_Sprint_08.pdf) · [ecofriendly](guia/Reto_Sprint_08_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S08/`**](Reto_S08/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S08/Reto_Sprint_08.md) · [PDF](Reto_S08/Reto_Sprint_08.pdf) · [ecofriendly](Reto_S08/Reto_Sprint_08_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S08_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S08/S08_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S08/S08_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S08_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 3 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Atlas de algoritmos](infografias/S08_03_atlas_arboles_ensembles_y_svm.png) | Atlas de algoritmos del sprint: árbol, Random Forest, boosting, SVM y ajuste de hiperparámetros | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S08.1_Arboles_de_decision.pdf`](presentaciones/S08.1_Arboles_de_decision.pdf) | Árboles de decisión | 15 min | Teoría · día 1 del S08 |
@@ -73,8 +75,8 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 9 | 📖 Teoría | [Máquinas de vectores de soporte (SVM)](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) | 15 min |
 | 10 | 💻 Práctica | [SVM: margen, kernels, `C` y `gamma`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) | 30 min |
 | 11 | 💻 Práctica | [`GridSearchCV` y `RandomizedSearchCV`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) | 30 min |
-| 12 | 🎯 Reto | [Búsqueda de hiperparámetros para una familia, la que elijáis (paso 3)](guia/Reto_Sprint_08.md) | 25 min |
-| 13 | 🎯 Reto | [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](guia/Reto_Sprint_08.md) | 40 min |
+| 12 | 🎯 Reto | [Búsqueda de hiperparámetros para una familia, la que elijáis (paso 3)](Reto_S08/Reto_Sprint_08.md) | 25 min |
+| 13 | 🎯 Reto | [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](Reto_S08/Reto_Sprint_08.md) | 40 min |
 | 14 | 📝 Test | [**Test de M3 (parte 2)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | 25 min |
 | 15 | 🔔 Ceremonia | Entrega en `sprint-08/`, autoevaluación y coevaluación, review y retrospectiva | 35 min |
 
@@ -82,17 +84,17 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 ## Reto · «Duelo de modelos»
 
-📄 [Reto en PDF](guia/Reto_Sprint_08.pdf) · [ecofriendly](guia/Reto_Sprint_08_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S08/Reto_Sprint_08.pdf) · [ecofriendly](Reto_S08/Reto_Sprint_08_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_08.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S08/Reto_Sprint_08.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** TurisData ya sabe predecir cancelaciones y ahora quiere saber qué modelo poner en producción: ¿el más preciso, el más comprensible o el más barato de mantener? Enfrentáis árboles, bosques, *boosting* y SVM y elegís un campeón con argumentos.
 
 
 **Entregáis** (carpeta `sprint-08/` del repositorio del equipo):
-- `leaderboard_S08.csv` con ≥ 6 modelos (*baseline* y logística incluidos). Plantilla: [`leaderboard_plantilla.csv`](plantillas/leaderboard_plantilla.csv).
-- `model_card.md` del campeón (1–2 páginas). Plantilla: [`model_card_plantilla.md`](plantillas/model_card_plantilla.md).
+- `leaderboard_S08.csv` con ≥ 6 modelos (*baseline* y logística incluidos). Plantilla: [`leaderboard_plantilla.csv`](Reto_S08/leaderboard_plantilla.csv).
+- `model_card.md` del campeón (1–2 páginas). Plantilla: [`model_card_plantilla.md`](Reto_S08/model_card_plantilla.md).
 - `reto_S08.ipynb` con la comparación y la búsqueda de hiperparámetros de al menos dos familias.
 - `README.md` (versiones, semilla, orden de ejecución).
 
@@ -112,4 +114,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Hiperparámetros buscados con validación cruzada en train para dos familias
 - [ ] AUC de test calculado una sola vez y `model_card.md` completa
 - [ ] Entregable subido a la carpeta `sprint-08/` del repositorio del equipo
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S08/autoevaluacion_y_coevaluacion.md) rellenadas

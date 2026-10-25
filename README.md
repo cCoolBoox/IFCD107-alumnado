@@ -261,7 +261,7 @@ flowchart LR
     F10 --> F14D["11–14/12 Defensa"]
 ```
 
-Toda la información en [`proyecto-final/briefs_y_rubrica.md`](proyecto-final/briefs_y_rubrica.md). ¿Cuántos sprints tiene? Son 4 (14–17); en [esta guía](sprints/S13/plantillas/guia_cuantos_sprints_tiene_el_proyecto.md) aprendes a decidir qué cabe en ellos.
+Toda la información en [`proyecto-final/briefs_y_rubrica.md`](proyecto-final/briefs_y_rubrica.md). ¿Cuántos sprints tiene? Son 4 (14–17); en [esta guía](sprints/S13/Reto_S13/guia_cuantos_sprints_tiene_el_proyecto.md) aprendes a decidir qué cabe en ellos.
 
 ---
 

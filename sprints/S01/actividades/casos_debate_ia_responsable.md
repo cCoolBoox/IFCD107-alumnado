@@ -13,7 +13,7 @@
 | 3. Debate | 20 min | Rondas: exposición (1 min por rol), réplicas y propuesta de medidas |
 | 4. Decisión | 5 min | El grupo redacta una **decisión de 5 líneas**: qué se hace, qué no, qué condiciones |
 | 5. Puesta en común | 10 min | Un portavoz cuenta la decisión al resto |
-| 6. Cierre | 5 min | Rellenad la **checklist ética v1** ([`checklist_etico_v1.md`](../plantillas/checklist_etico_v1.md)) con el caso |
+| 6. Cierre | 5 min | Rellenad la **checklist ética v1** ([`checklist_etico_v1.md`](../Reto_S01/checklist_etico_v1.md)) con el caso |
 
 **Roles** (adaptad según el nº de personas; si hay 4, quitad el 5):
 1. **Dirección de TurisData:** quiere resultados y ahorrar costes.

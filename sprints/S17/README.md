@@ -24,10 +24,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_17.pdf) · [ecofriendly](guia/Guia_Sprint_17_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_17.md) · [PDF](guia/Reto_Sprint_17.pdf) · [ecofriendly](guia/Reto_Sprint_17_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S17/`**](Reto_S17/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S17/Reto_Sprint_17.md) · [PDF](Reto_S17/Reto_Sprint_17.pdf) · [ecofriendly](Reto_S17/Reto_Sprint_17_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S17_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S17/S17_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S17/S17_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S17_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S17.1_Storytelling_y_defensa.pdf`](presentaciones/S17.1_Storytelling_y_defensa.pdf) | Storytelling | 20 min | Teoría · día 1 del S17 |
 
@@ -35,7 +37,7 @@
 
 Este sprint no tiene notebooks. 11/12 (6 h): teoría de storytelling, práctica del relato y ensayos con feedback. 14/12 (2 h): **defensa final** (10 min de cambios de equipo; el resto se reparte: 60 % relato, 20 % demo, 20 % preguntas).
 
-- [`plantilla_storytelling.md`](plantillas/plantilla_storytelling.md) · pirámide, mensaje único, arco narrativo y storyboard.
+- [`plantilla_storytelling.md`](Reto_S17/plantilla_storytelling.md) · pirámide, mensaje único, arco narrativo y storyboard.
 - [`guion_defensa.md`](actividades/guion_defensa.md) · estructura de 10 minutos, reparto de voces, preguntas y plan B.
 
 <!--orden:ini-->
@@ -48,7 +50,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 📖 Teoría | [**Storytelling**](presentaciones/S17.1_Storytelling_y_defensa.pdf) | 20 min |
-| 2 | 💻 Práctica | **Tu historia:** [plantilla de storytelling](plantillas/plantilla_storytelling.md) (máx. 12 diapositivas) | 45 min |
+| 2 | 💻 Práctica | **Tu historia:** [plantilla de storytelling](Reto_S17/plantilla_storytelling.md) (máx. 12 diapositivas) | 45 min |
 | 3 | 💻 Práctica | **Pitch de 3 minutos** y guion de la defensa ([`guion_defensa.md`](actividades/guion_defensa.md)) | 40 min |
 | 4 | 🎯 Reto | **Ensayos con preguntas** cruzadas entre equipos | 55 min |
 | 5 | 🎯 Reto | **Ensayo general** con cronómetro: 10 min | 40 min |
@@ -57,7 +59,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 6 | 🎯 Reto | [Subir la presentación en PDF (≤ 12 diapositivas) al repositorio (paso 4)](guia/Reto_Sprint_17.md) |  |
+| 6 | 🎯 Reto | [Subir la presentación en PDF (≤ 12 diapositivas) al repositorio (paso 4)](Reto_S17/Reto_Sprint_17.md) |  |
 
 **Día 2 del S17 · defensa**
 
@@ -69,9 +71,9 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 ## Entrega / Reto · «La defensa»
 
-📄 [Reto en PDF](guia/Reto_Sprint_17.pdf) · [ecofriendly](guia/Reto_Sprint_17_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S17/Reto_Sprint_17.pdf) · [ecofriendly](Reto_S17/Reto_Sprint_17_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_17.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S17/Reto_Sprint_17.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** el tribunal (el docente y, si procede, personas invitadas) no es técnico. Debe salir sabiendo qué problema resolvéis, qué habéis encontrado, qué recomendáis y de qué no fiarse. Las preguntas pueden ir a cualquier integrante.
@@ -96,3 +98,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Demo probada el 11/12 y plan B en vídeo; ensayo general dentro del tiempo.
 - [ ] 10 preguntas probables con respuesta y quién responde; cifras iguales a la memoria.
 - [ ] Entregable subido a la carpeta `sprint-17/` del repositorio del equipo.
+- [ ] [Autoevaluación y coevaluación](Reto_S17/autoevaluacion_y_coevaluacion.md) rellenadas

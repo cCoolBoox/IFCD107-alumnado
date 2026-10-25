@@ -25,10 +25,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_09.pdf) · [ecofriendly](guia/Guia_Sprint_09_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_09.md) · [PDF](guia/Reto_Sprint_09.pdf) · [ecofriendly](guia/Reto_Sprint_09_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S09/`**](Reto_S09/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S09/Reto_Sprint_09.md) · [PDF](Reto_S09/Reto_Sprint_09.pdf) · [ecofriendly](Reto_S09/Reto_Sprint_09_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S09_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S09/S09_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S09/S09_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S09_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 3 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Atlas de algoritmos](infografias/S09_03_atlas_no_supervisado_y_refuerzo.png) | Atlas de algoritmos del sprint: k-means, jerárquico, DBSCAN, PCA, recomendadores y Q-learning | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S09.1_Clustering_y_PCA.pdf`](presentaciones/S09.1_Clustering_y_PCA.pdf) | Clustering y PCA | 30 min | Teoría · día 1 del S09 |
@@ -60,7 +62,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 3 | 💻 Práctica | [Segmentar huéspedes: k-means, silueta, jerárquico y DBSCAN](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_01_clustering.ipynb) | 55 min |
 | 4 | 💻 Práctica | [PCA: varianza explicada y mapa en 2D](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_02_pca.ipynb) | 40 min |
 | 5 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 15 min |
-| 6 | 🎯 Reto | [Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3)](guia/Reto_Sprint_09.md) | 50 min |
+| 6 | 🎯 Reto | [Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3)](Reto_S09/Reto_Sprint_09.md) | 50 min |
 
 **Día 2 del S09**
 
@@ -71,16 +73,16 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 9 | 💻 Práctica | [Recomendadores: popularidad, contenido, colaborativo y factorización](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) | 1 h |
 | 10 | 💻 Práctica | [Q-learning en el hotel (demostración guiada)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_04_q_learning.ipynb) | 30 min |
 | 11 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
-| 12 | 🎯 Reto | [Recomendador, ficha de segmentos, IA responsable y ensayo (pasos 4–5)](guia/Reto_Sprint_09.md) | 40 min |
+| 12 | 🎯 Reto | [Recomendador, ficha de segmentos, IA responsable y ensayo (pasos 4–5)](Reto_S09/Reto_Sprint_09.md) | 40 min |
 | 13 | 🔔 Ceremonia | Entrega en `sprint-09/`, autoevaluación y coevaluación, review (3 min por equipo) y retrospectiva | 40 min |
 
 <!--orden:fin-->
 
 ## Reto · «Conocer al huésped»
 
-📄 [Reto en PDF](guia/Reto_Sprint_09.pdf) · [ecofriendly](guia/Reto_Sprint_09_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S09/Reto_Sprint_09.pdf) · [ecofriendly](Reto_S09/Reto_Sprint_09_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_09.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S09/Reto_Sprint_09.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** Lucía, directora comercial de TurisData Canarias, envía la misma newsletter a sus 1 200 huéspedes y vende 25 experiencias con los mismos banners. Pide: «Decidme quiénes son mis clientes, cómo los llamo y qué le enseño a cada uno».
@@ -88,7 +90,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Entregáis** (carpeta `sprint-09/` del repositorio del equipo):
 - `reto_S09_conocer_al_huesped.ipynb`: segmentación de `huespedes.csv` (`k` con silueta y criterio de negocio), mapa 2D con PCA y `recomendar(id_usuario, n)`.
-- Ficha de segmentos (1 página): nombre, tamaño, perfil, una acción y una experiencia estrella por segmento. Plantilla: [`plantilla_ficha_segmentos.md`](plantillas/plantilla_ficha_segmentos.md).
+- Ficha de segmentos (1 página): nombre, tamaño, perfil, una acción y una experiencia estrella por segmento. Plantilla: [`plantilla_ficha_segmentos.md`](Reto_S09/plantilla_ficha_segmentos.md).
 - Nota de IA responsable (5 líneas) dentro de la ficha.
 
 
@@ -106,4 +108,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Recomendador evaluado con RMSE y precision@3 frente a la popularidad
 - [ ] Cada persona del equipo ha hecho *commit* de su parte
 - [ ] Entregable subido a la carpeta `sprint-09/` del repositorio del equipo
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S09/autoevaluacion_y_coevaluacion.md) rellenadas

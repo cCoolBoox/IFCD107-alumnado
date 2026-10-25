@@ -24,10 +24,12 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_12.pdf) · [ecofriendly](guia/Guia_Sprint_12_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [Reto completo, paso a paso (.md)](guia/Reto_Sprint_12.md) · [PDF](guia/Reto_Sprint_12.pdf) · [ecofriendly](guia/Reto_Sprint_12_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
+| [**Carpeta del reto: `Reto_S12/`**](Reto_S12/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [Reto completo, paso a paso (.md)](Reto_S12/Reto_Sprint_12.md) · [PDF](Reto_S12/Reto_Sprint_12.pdf) · [ecofriendly](Reto_S12/Reto_Sprint_12_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S12_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
+| [El reto paso a paso](Reto_S12/S12_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S12/S12_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](infografias/S12_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
+| [Infografías del sprint](infografias/) | 3 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Atlas de algoritmos](infografias/S12_03_atlas_series_lenguaje_y_generativa.png) | Atlas de algoritmos del sprint: series, RNN/LSTM/GRU, NLP, Transformers/LLM y autoencoders | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S12.1_RNN_LSTM_GRU_y_series_temporales.pdf`](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | RNN, LSTM, GRU y series temporales | 20 min | Teoría · día 1 del S12 |
@@ -52,7 +54,7 @@ Todo se ejecuta sin internet (las partes **OPCIONAL / NO VERIFICADO** se pueden 
 | `S12_06_mini_rag` | Mini RAG con la política, evaluación y seguridad | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) |
 | `S12_07_autoencoder_generativos` | Autoencoder para anomalías; idea de GAN y difusión | 50 min (opcional, en casa) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_07_autoencoder_generativos.ipynb) |
 
-Plantilla en esta carpeta: [`plantilla_informe_cliente.md`](plantillas/plantilla_informe_cliente.md) (informe de reseñas).
+Plantilla en esta carpeta: [`plantilla_informe_cliente.md`](Reto_S12/plantilla_informe_cliente.md) (informe de reseñas).
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint
@@ -80,26 +82,26 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 10 | 💻 Práctica | [Mini RAG con la política, evaluación y seguridad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) | 45 min |
 | 11 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
 | 12 | 📖 Teoría | [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | 10 min |
-| 13 | 🎯 Reto | [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](guia/Reto_Sprint_12.md) | 1 h 5 min |
+| 13 | 🎯 Reto | [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](Reto_S12/Reto_Sprint_12.md) | 1 h 5 min |
 
 **Día 3 del S12**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 14 | 🎯 Reto | [Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4)](guia/Reto_Sprint_12.md) | 1 h 5 min |
+| 14 | 🎯 Reto | [Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4)](Reto_S12/Reto_Sprint_12.md) | 1 h 5 min |
 | 15 | 📝 Test | [**Test de M4** (redes neuronales), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 min |
 | 16 | 📖 Teoría | [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | 10 min |
 | 17 | 💻 Práctica | [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) | 35 min |
-| 18 | 🎯 Reto | [Reto del Sprint 13](../S13/guia/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/plantillas/plantilla_informe_visual.md) | 25 min |
+| 18 | 🎯 Reto | [Reto del Sprint 13](../S13/Reto_S13/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/Reto_S13/plantilla_informe_visual.md) | 25 min |
 | 19 | 🔔 Ceremonia | Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva | 35 min |
 
 <!--orden:fin-->
 
 ## Entrega / Reto · «Escuchar al cliente»
 
-📄 [Reto en PDF](guia/Reto_Sprint_12.pdf) · [ecofriendly](guia/Reto_Sprint_12_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+📄 [Reto en PDF](Reto_S12/Reto_Sprint_12.pdf) · [ecofriendly](Reto_S12/Reto_Sprint_12_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](guia/Reto_Sprint_12.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+👉 **[Ver el reto completo, explicado paso a paso](Reto_S12/Reto_Sprint_12.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
 
 **Contexto:** TurisData Canarias recibe decenas de reseñas y mensajes de huéspedes cada semana. Quiere saber qué opinan, prever la ocupación de la próxima semana y probar un asistente que responda con su política sin inventar nada. Los datos son sintéticos: dilo en el informe.
@@ -127,3 +129,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Ninguna clave en el código ni en el repositorio.
 - [ ] Todo se ejecuta de arriba abajo, sin errores y sin internet.
 - [ ] Entregable subido a la carpeta `sprint-12/` del repositorio del equipo.
+- [ ] [Autoevaluación y coevaluación](Reto_S12/autoevaluacion_y_coevaluacion.md) rellenadas

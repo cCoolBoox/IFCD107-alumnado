@@ -3,7 +3,7 @@
 **Cuándo:** reto del Sprint 0 (2 h de PBL). **Quién responde:** el docente, en el papel de *Directora/Director general* de TurisData (persona ficticia). **Duración:** unos 20 minutos para toda la clase, con una ronda de preguntas por equipo. **Objetivo:** entender el negocio y el dolor del cliente **antes de proponer nada**. Es la fase *Empatizar* del Design Thinking.
 
 ## Antes de la entrevista (10 min, en equipo)
-1. Leed la [plantilla del mapa de empatía](../plantillas/empatia_hmw_plantillas.md) **sin rellenarla todavía**: sirve para saber qué datos tenéis que conseguir. La rellenaréis **después** de la entrevista, con lo que oigáis.
+1. Leed la [plantilla del mapa de empatía](../Reto_S00/empatia_hmw_plantillas.md) **sin rellenarla todavía**: sirve para saber qué datos tenéis que conseguir. La rellenaréis **después** de la entrevista, con lo que oigáis.
 2. Repartíos roles: **quien pregunta** (una persona por bloque), **quien toma notas** (rotad) y **quien vigila el tiempo**.
 3. Elegid **las 6 preguntas más importantes** del guion de abajo (o inventad las vuestras) y una **pregunta trampa de control** (¿de verdad es eso lo que pide?).
 
