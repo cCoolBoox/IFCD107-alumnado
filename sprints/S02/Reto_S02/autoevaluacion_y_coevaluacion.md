@@ -5,10 +5,14 @@
 
 **Cómo se rellena y se sube (sin instalar nada):** cada persona entrega **su propio archivo**, con su cuenta de GitHub. Es el mismo procedimiento que el del dictamen ([guía completa: cómo subir a GitHub](../../../material/5.%20Como_entregar_en_GitHub.md)).
 
-1. Abre este archivo en GitHub y pulsa el icono **Copy raw file** (dos cuadraditos, arriba a la derecha) para copiar todo el texto.
-2. Entra en el repositorio de tu equipo → carpeta `sprint-02/` → **Add file → Create new file**.
-3. En el nombre escribe `autoevaluacion_nombre.md` (con tu nombre, en minúsculas, sin espacios ni tildes; por ejemplo `autoevaluacion_marta.md`) y pega el texto.
-4. Sustituye los `……` por tus respuestas **sin borrar las barras `|` de las tablas**. Para probar cómo queda, pulsa **Preview**.
+1. **Consigue el texto de este archivo.** Elige una de las dos formas:
+   - **Copiar:** en la página del archivo pulsa el botón **Raw** (arriba a la derecha, junto a los iconos del archivo). Se abre el texto sin formato: pulsa `Ctrl + A` (seleccionar todo) y `Ctrl + C` (copiar).
+   - **Descargar:** pulsa los **tres puntos ⋯** (arriba a la derecha) → **Download**. Cambia el nombre del archivo descargado a `autoevaluacion_nombre.md` (ver el paso 3) y salta al paso 2b.
+2. Entra en el repositorio de tu equipo → carpeta `sprint-02/` y, según lo que hayas hecho en el paso 1:
+   - **2a (copiado):** **Add file → Create new file**, escribe el nombre (paso 3) y pega el texto con `Ctrl + V`.
+   - **2b (descargado):** **Add file → Upload files**, arrastra tu archivo ya renombrado y pulsa **Commit changes**. Después ábrelo y pulsa el lápiz ✏️ para rellenarlo.
+3. **Nombre del archivo:** `autoevaluacion_nombre.md`, con tu nombre, en minúsculas, sin espacios ni tildes (por ejemplo `autoevaluacion_marta.md`). Si dos personas usan el mismo nombre, la segunda borra lo de la primera.
+4. Sustituye los `……` por tus respuestas **sin borrar las barras `|` de las tablas**. Para ver cómo queda, pulsa **Preview**.
 5. Pulsa **Commit changes**, escribe un mensaje corto («Subo mi autoevaluación») y confirma. **Sin ese botón no se guarda nada.**
 6. Para completarlo en otro momento: abre tu archivo → lápiz ✏️ → cambia → **Commit changes**.
 
