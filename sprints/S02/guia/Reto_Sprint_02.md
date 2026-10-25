@@ -49,7 +49,7 @@ Se entrega todo en `sprint-02/` de vuestro repositorio:
 
 #### Paso 1 · Planning (10 minutos)
 1. Leed el informe ([`informe_cliente.md`](../../../datos/informe_cliente.md)) **en voz alta**.
-2. **La 1 y la 2 las hacéis todos juntos**, con el docente. De la **3 a la 6**, cada persona elige una (si sois menos, algunas hacen dos).
+2. **Repartid las afirmaciones:** la 1 y la 2 se hacen todos juntos, con el docente (pasos 2 y 3). De la **3 a la 6**, cada persona elige una (si sois menos, algunas hacen dos).
 3. Abrid [`informe_cliente.csv`](../../../datos/informe_cliente.csv) en una hoja de cálculo: solo 4 filas (`tarifa`, `canal`, `reservas`, `cancelaciones`).
 4. Copiad la [plantilla del dictamen](../plantillas/plantilla_dictamen.md) a `sprint-02/` de vuestro repositorio.
 
