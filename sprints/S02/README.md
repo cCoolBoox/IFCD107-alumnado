@@ -26,7 +26,7 @@ Sprint 1 terminado. Matemáticas de secundaria (fracciones, potencias, porcentaj
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_02.md) · [PDF](guia/Reto_Sprint_02.pdf) · [ecofriendly](guia/Reto_Sprint_02_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S02_00_resumen_del_sprint.png) | Lámina con la pregunta del cliente, los pasos, lo que se entrega y lo que se aprende | — | Antes del planning |
 | [Esquema del contenido y su relación con el reto](infografias/S02_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
+| [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S02.3_Ecosistema_de_software_para_IA.pdf`](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) | Ecosistema de software para IA: Python, Colab, librerías y GPU | 5 min | Teoría · jueves 22/10 |
 | [`S02.1_Matematicas_para_IA.pdf`](presentaciones/S02.1_Matematicas_para_IA.pdf) | Matemáticas para IA: álgebra lineal, derivadas y gradiente | 45 min | Teoría · jueves 22/10 |

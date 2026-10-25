@@ -27,7 +27,7 @@
 | [Reto completo, paso a paso (.md)](guia/Reto_Sprint_12.md) · [PDF](guia/Reto_Sprint_12.pdf) · [ecofriendly](guia/Reto_Sprint_12_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S12_00_resumen_del_sprint.png) | Lámina con la pregunta del cliente, los pasos, lo que se entrega y lo que se aprende | — | Antes del planning |
 | [Esquema del contenido y su relación con el reto](infografias/S12_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del reto](infografias/) | 5 láminas ilustradas del reto | — | Reto |
+| [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
 | [Atlas de algoritmos](infografias/S12_03_atlas_series_lenguaje_y_generativa.png) | Atlas de algoritmos del sprint: series, RNN/LSTM/GRU, NLP, Transformers/LLM y autoencoders | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S12.1_RNN_LSTM_GRU_y_series_temporales.pdf`](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | RNN, LSTM, GRU y series temporales | 20 min | Teoría · lunes 23/11 |
