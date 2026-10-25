@@ -43,8 +43,9 @@ Materiales `.md` para papel o pantalla (sin Colab):
 | [`ejercicios_algebra_calculo.md`](actividades/ejercicios_algebra_calculo.md) | 12 ejercicios de vectores, matrices, derivadas y gradiente |
 | [`ejercicios_estadistica.md`](actividades/ejercicios_estadistica.md) | 14 ejercicios de estadística, probabilidad, Bayes, sesgo y Simpson |
 | [`estadisticas_enganosas.md`](actividades/estadisticas_enganosas.md) | 9 casos de estadísticas engañosas |
+| [`plantilla_dictamen.md`](plantillas/plantilla_dictamen.md) | Plantilla del dictamen del reto, con la afirmación 1 resuelta como modelo |
 
-Mínimo de ejercicios: **8 de 12** de la hoja 1 (M7, M10 y M11 obligatorios) y **10 de 14** de la hoja 2 (E7, E8, E10 y E14 obligatorios). Escribid cómo lo habéis hecho.
+Mínimo de ejercicios: **M1, M2 y M7** de la hoja 1 y **E1, E2, E6, E8 y E10** de la hoja 2. El resto son extra (si queréis ir más allá, M10 y M11 sobre el descenso del gradiente son los más recomendables). Escribid cómo lo habéis hecho.
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint
@@ -83,23 +84,25 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Contexto:** la dirección de TurisData Canarias va a presentar al consejo un borrador sobre cancelaciones y os pide revisarlo. Los datos están en `../../datos/informe_cliente.md` y `../../datos/informe_cliente.csv` (2.400 reservas por tarifa y canal).
 
+**Reto guiado:** tenéis 6 «cartas de error» (con una pregunta para reconocer cada una), la afirmación 1 resuelta como modelo, la afirmación 2 paso a paso con la hoja de cálculo y una [plantilla del dictamen](plantillas/plantilla_dictamen.md) con frases para completar.
+
 **Entregáis** (en la carpeta `sprint-02/` del repositorio del equipo):
-- Dictamen de 2-3 páginas: por cada una de las 6 afirmaciones, veredicto, error detectado, cálculo rehecho y redacción corregida.
-- Recomendación sobre el canal (afirmación 2) con cautelas, y lista de datos que faltan.
-- La hoja de ejercicios con el mínimo exigido.
+- Dictamen de 1-2 páginas con **al menos 4 de las 6 afirmaciones** (la 1, la 2 y dos más): carta del error, veredicto, cálculo rehecho y frase corregida.
+- Recomendación de tres líneas sobre el canal (afirmación 2) y una frase de IA responsable.
+- La hoja de ejercicios con el mínimo básico.
 
 **Reglas:**
-- Unas 2 h 10 min de reto; no hace falta Python y cada cifra debe poder rehacerse con los datos.
-- Si no hay datos, no inventéis números: decid qué faltaría.
+- Unas 2 h de reto en dos sesiones (el núcleo cabe en 1 h 30 min); no hace falta Python y cada cifra debe poder rehacerse con los datos.
+- Si no hay datos, no inventéis números: decid que no se puede saber y qué faltaría.
 - Si usáis IA, declarad dónde y comprobad a mano las afirmaciones 2 y 6; nunca datos personales.
 
-**Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable (qué pasaría al entrenar con estos datos), más nombrar cada error (muestreo, Simpson...).
+**Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable (qué pasaría al entrenar con estos datos).
 
 ## ✅ Antes de cerrar el sprint
 - [ ] Test de conocimientos hecho el vie 23/10
-- [ ] Dictamen con las 6 afirmaciones y su veredicto
-- [ ] Cálculos rehechos (1, 2 y 6) y recomendación sobre el canal
-- [ ] Hoja de ejercicios con el mínimo exigido
+- [ ] Dictamen con al menos 4 afirmaciones (la 1, la 2 y dos más), cada una con su carta y su veredicto
+- [ ] Cálculos rehechos (1 y 2) y recomendación de tres líneas sobre el canal
+- [ ] Hoja de ejercicios con el mínimo básico (M1, M2, M7, E1, E2, E6, E8, E10)
 - [ ] Alta en Colab y GitHub hecha (jueves 22/10)
 - [ ] Entregable subido a la carpeta `sprint-02/` del repositorio del equipo
 - [ ] Autoevaluación y coevaluación rellenadas
