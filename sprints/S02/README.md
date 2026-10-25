@@ -56,12 +56,12 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 1 | 🔔 Ceremonia | Planning del reto: leed el informe del cliente y repartid las 6 afirmaciones (paso 1) | 10 min |
+| 1 | 🔔 Ceremonia | Planning del reto: leed el informe y repartid las afirmaciones 3 a 6 (paso 1) | 10 min |
 | 2 | 💻 Práctica | [Alta en Colab y GitHub, y primer cuaderno abierto](actividades/alta_cuentas.md) | 25 min |
 | 3 | 📖 Teoría | [Ecosistema de software para IA: Python, Colab, librerías y GPU](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) | 5 min |
 | 4 | 📖 Teoría | [Matemáticas para IA: álgebra lineal, derivadas y gradiente](presentaciones/S02.1_Matematicas_para_IA.pdf) | 45 min |
 | 5 | 💻 Práctica | [Ejercicios de matemáticas (hoja 1) con Desmos o GeoGebra](actividades/ejercicios_algebra_calculo.md) | 55 min |
-| 6 | 🎯 Reto | [Primera lectura del informe con la lista de control (paso 2)](guia/Reto_Sprint_02.md) | 1 h |
+| 6 | 🎯 Reto | [Cartas de error, afirmaciones 1 y 2 guiadas y la vuestra (pasos 2 a 4)](guia/Reto_Sprint_02.md) | 1 h |
 
 **Viernes 23/10**
 
@@ -70,7 +70,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 7 | 📖 Teoría | [Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) | 35 min |
 | 8 | 💻 Práctica | [Estadísticas engañosas](actividades/estadisticas_enganosas.md) (4 de los 9 casos en clase). **Para casa:** el resto y la [hoja 2 de ejercicios de estadística](actividades/ejercicios_estadistica.md) | 45 min |
 | 9 | 📝 Test | [**Test corto de M1a** (matemáticas y estadística), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) | 25 min |
-| 10 | 🎯 Reto | [Rehacer los cálculos, dictamen y recomendación (pasos 3 y 4)](guia/Reto_Sprint_02.md) | 55 min |
+| 10 | 🎯 Reto | [Dictamen, frase de IA responsable y revisión cruzada (paso 5)](guia/Reto_Sprint_02.md) | 55 min |
 | 11 | 🔔 Ceremonia | Entrega en `sprint-02/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
 
 <!--orden:fin-->
