@@ -12,7 +12,15 @@
 
 **Qué os pide el cliente.** La dirección de TurisData ha escrito un borrador de informe con **seis afirmaciones** sobre cancelaciones y lo va a presentar al consejo. Os pide que lo reviséis como una persona auditora (revisar el trabajo de otra persona y dar vuestra opinión razonada en un **dictamen**): *«Decidme si nos podemos fiar de cada frase; y si no, cómo debería decirse»*. La afirmación 2 decide a qué canal de venta dar prioridad.
 
-**Va guiado.** No partís de una hoja en blanco: tenéis **8 cartas de error** (con una pregunta para reconocer cada una), **una afirmación resuelta** como modelo, **una plantilla** del dictamen con frases para completar y **fórmulas** para la hoja de cálculo. Vuestro trabajo es reconocer qué carta encaja con cada afirmación, comprobar las cuentas y explicarlo con claridad.
+**Va guiado.** No partís de una hoja en blanco. Tenéis a mano:
+- **Cartas de error** (paso 2): los 8 errores posibles, cada uno con una pregunta para reconocerlo y una frase para el dictamen.
+- **Afirmación 1 resuelta** (paso 2): el modelo de cómo queda cada bloque del dictamen.
+- **Fórmulas para la hoja de cálculo** (paso 3), con pistas y cifras para comprobar vuestros cálculos.
+- [**Plantilla del dictamen**](../plantillas/plantilla_dictamen.md): el documento que entregáis, con huecos y frases para completar.
+- [**Rúbrica del dictamen**](../plantillas/rubrica_dictamen.md): cómo se evalúa (corrección técnica, reproducibilidad, comunicación al cliente e IA responsable, de 1 a 4); sirve para revisar vuestro trabajo antes de entregarlo.
+- **Datos:** [`informe_cliente.md`](../../../datos/informe_cliente.md) (las seis afirmaciones) e [`informe_cliente.csv`](../../../datos/informe_cliente.csv) (2.400 reservas por tarifa y canal).
+
+Vuestro trabajo es reconocer qué carta encaja con cada afirmación, comprobar las cuentas y explicarlo con claridad.
 
 **Qué vais a hacer, en cuatro pasos:**
 1. **Entender** las cartas de error y ver juntos la afirmación 1 resuelta.
@@ -25,13 +33,15 @@
 **Tiempo y reparto.** Unas 2 horas entre el planning, el día 1 y el día 2; el núcleo cabe en 1 h 30 min. **Núcleo:** afirmaciones 1 y 2 (guiadas) y dos más de la 3 a la 6, con la recomendación y el dictamen. **Extra:** las otras dos afirmaciones y los ejercicios que sobren. El alta en Colab y GitHub se hace el día 1, a primera hora (guía en [`alta_cuentas.md`](../actividades/alta_cuentas.md)).
 
 ### Qué tenéis que entregar
-1. **Dictamen de auditoría** (1-2 páginas en `.md` o PDF, con la [plantilla](../plantillas/plantilla_dictamen.md)) con **al menos cuatro de las seis afirmaciones** (la 1, la 2 y dos más): la **carta** (nombre del error), el **veredicto** (*fiable · parcialmente fiable · no fiable · no se puede saber*), el **cálculo rehecho** si hay datos, **cómo debería decirse** y **qué datos faltan**.
-2. **Recomendación de tres líneas** sobre el canal (afirmación 2), con una cautela, y **una frase de IA responsable**.
-3. **La hoja de ejercicios**, con el **mínimo básico**: M1, M2 y M7 (hoja 1) y E1, E2, E6, E8 y E10 (hoja 2).
+Se entrega todo en `sprint-02/` de vuestro repositorio:
+1. **Dictamen de auditoría**, escrito sobre la [plantilla del dictamen](../plantillas/plantilla_dictamen.md) (1-2 páginas, en `.md` o PDF), con **al menos cuatro de las seis afirmaciones**: la 1, la 2 y dos más.
+2. **Recomendación de tres líneas y frase de IA responsable.** No son archivos aparte: son los dos últimos apartados de la misma plantilla («Recomendación sobre el canal» e «IA responsable»).
+3. **Ejercicios del sprint**, con el **mínimo básico**. Salen de las dos hojas de práctica que se trabajan en las clases del sprint: M1, M2 y M7 de la [hoja 1, álgebra y cálculo](../actividades/ejercicios_algebra_calculo.md), y E1, E2, E6, E8 y E10 de la [hoja 2, estadística](../actividades/ejercicios_estadistica.md).
 
-**Datos:** [`informe_cliente.md`](../../../datos/informe_cliente.md) (las seis afirmaciones) e [`informe_cliente.csv`](../../../datos/informe_cliente.csv) (2.400 reservas por `tarifa` y `canal`, 4 filas), en la carpeta [`datos/`](../../../datos/) del repositorio. No hace falta Python.
-
-**Cómo se evalúa:** con la [rúbrica del dictamen](../plantillas/rubrica_dictamen.md): 4 criterios (corrección técnica, reproducibilidad, comunicación al cliente e IA responsable), de 1 a 4.
+**Cada afirmación del dictamen lleva:**
+- la **carta** (el nombre del error) y el **veredicto**,
+- el **cálculo rehecho**, si hay datos,
+- **cómo debería decirse** y **qué datos faltan**.
 
 **Reglas:** cada cifra debe poder rehacerse con los datos; si no hay datos, no inventéis números y decid qué faltaría; si usáis IA, declarad dónde y comprobad a mano las afirmaciones 2 y 6.
 
@@ -58,7 +68,11 @@ Cada afirmación tiene **un problema distinto**. Estas son las cartas entre las 
 | 7. Eje truncado *(trampa)* | ¿Hay un gráfico con el eje cortado? | — |
 | 8. Sesgo de supervivencia *(trampa)* | ¿Solo se mira a quien «llegó hasta el final»? | — |
 
-**Veredictos:** *fiable* (cuenta y conclusión bien) · *parcialmente fiable* (la cuenta sale, la conclusión no se sigue) · *no fiable* · *no se puede saber* (faltan datos; es una respuesta válida y honrada, no inventéis números).
+**Veredictos** (elegid uno por afirmación):
+- **Fiable:** la cuenta y la conclusión están bien.
+- **Parcialmente fiable:** la cuenta sale, pero la conclusión no se sigue de ella.
+- **No fiable:** la cuenta o la conclusión fallan.
+- **No se puede saber:** faltan datos para comprobarlo. Es una respuesta válida y honrada: no inventéis números.
 
 **Ejemplo resuelto, con el docente: la afirmación 1.** Así debe quedar cada bloque del dictamen:
 
@@ -102,9 +116,17 @@ El informe dice que la web intermediaria cancela **menos** (15,8 %) que el canal
 
 #### Paso 4 · Vuestra afirmación (día 1, 20 minutos)
 
-Cada persona resuelve la que eligió (de la 3 a la 6) con esta receta, de arriba abajo: **copiad la frase** del informe → **elegid la carta** (las preguntas de la tabla os ayudan) → **elegid el veredicto** → **completad la frase** de la carta → **escribid cómo debería decirse** en una frase → **escribid qué datos faltan**.
+Cada persona resuelve la afirmación que eligió (de la 3 a la 6) con la plantilla. Seguid esta receta, de arriba abajo:
+1. **Copiad la frase** del informe.
+2. **Elegid la carta** que encaje (las preguntas de la tabla del paso 2 os ayudan).
+3. **Elegid el veredicto**.
+4. **Completad la frase** de la carta.
+5. **Escribid cómo debería decirse**, en una frase.
+6. **Escribid qué datos faltan**.
 
-Para la **afirmación 6** hay una cuenta: ¿sale la bajada del 25 %? `(30 − 40) ÷ 40`. Y después: ¿se pueden comparar un mes de 28 días de baja ocupación con otro de 31 días de alta ocupación? Las demás no necesitan cuentas: mirad **qué se compara y quién falta**.
+Según la afirmación:
+- **Afirmación 6:** hay una cuenta. ¿Sale la bajada del 25 %? `(30 − 40) ÷ 40`. Después preguntaos: ¿se pueden comparar un mes de 28 días de baja ocupación con otro de 31 días de alta ocupación?
+- **Afirmaciones 3, 4 y 5:** no necesitan cuentas. Mirad **qué se compara y quién falta**.
 
 #### Paso 5 · Dictamen y entrega (día 2, 55 minutos)
 
