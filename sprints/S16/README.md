@@ -30,7 +30,7 @@
 | [Esquema del contenido y su relación con el reto](infografias/S16_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S16.1_Pildora_demostrador_y_documentacion.pdf`](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) | Despliegue y documentación | 20 min | Teoría · viernes 4/12 |
+| [`S16.1_Pildora_demostrador_y_documentacion.pdf`](presentaciones/S16.1_Pildora_demostrador_y_documentacion.pdf) | Despliegue y documentación | 20 min | Teoría · día 1 del S16 |
 
 **Material de las actividades**
 
@@ -49,7 +49,7 @@
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Viernes 4/12**
+**Día 1 del S16**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -59,7 +59,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 4 | 🎯 Reto | **Tutoría de sesgos y visualización** (franja por equipo) | 40 min |
 | 5 | 🎯 Reto | **Memoria técnica:** [esqueleto](plantillas/plantilla_esqueleto_memoria_tecnica.md) y [*model card*](plantillas/plantilla_model_card.md) | 1 h 25 min |
 
-**Miércoles 9/12**
+**Día 2 del S16**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -69,7 +69,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 9 | 🎯 Reto | **Model card** del modelo final | 35 min |
 | 10 | 🎯 Reto | **Memoria técnica** | 45 min |
 
-**Jueves 10/12**
+**Día 3 del S16**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

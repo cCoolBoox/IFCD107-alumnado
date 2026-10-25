@@ -17,6 +17,7 @@
 - **Afirmación 1 resuelta** (paso 2): el modelo de cómo queda cada bloque del dictamen.
 - **Fórmulas para la hoja de cálculo** (paso 3), con pistas y cifras para comprobar vuestros cálculos.
 - [**Plantilla del dictamen**](plantilla_dictamen.md): el documento que entregáis, con huecos y frases para completar.
+- [**Autoevaluación y coevaluación**](autoevaluacion_y_coevaluacion.md): la hoja donde os puntuáis y puntuáis el dictamen de otra persona (parte de la entrega).
 - [**Rúbrica del dictamen**](rubrica_dictamen.md): cómo se evalúa (corrección técnica, reproducibilidad, comunicación al cliente e IA responsable, de 1 a 4); sirve para revisar vuestro trabajo antes de entregarlo.
 - **Datos:** [`informe_cliente.md`](informe_cliente.md) (las seis afirmaciones) e [`informe_cliente.csv`](informe_cliente.csv) (2.400 reservas por tarifa y canal).
 
@@ -37,6 +38,7 @@ Se entrega todo en `sprint-02/` de vuestro repositorio:
 1. **Dictamen de auditoría**, escrito sobre la [plantilla del dictamen](plantilla_dictamen.md) (1-2 páginas, en `.md` o PDF), con **al menos cuatro de las seis afirmaciones**: la 1, la 2 y dos más.
 2. **Recomendación de tres líneas y frase de IA responsable.** No son archivos aparte: son los dos últimos apartados de la misma plantilla («Recomendación sobre el canal» e «IA responsable»).
 3. **Ejercicios del sprint**, con el **mínimo básico**. Salen de las dos hojas de práctica que se trabajan en las clases del sprint: M1, M2 y M7 de la [hoja 1, álgebra y cálculo](../actividades/ejercicios_algebra_calculo.md), y E1, E2, E6, E8 y E10 de la [hoja 2, estadística](../actividades/ejercicios_estadistica.md).
+4. **Autoevaluación y coevaluación**, en la hoja [autoevaluacion_y_coevaluacion.md](autoevaluacion_y_coevaluacion.md): la parte 1 la rellena cada persona sobre su trabajo; la parte 2, quien revisa vuestro dictamen en la revisión cruzada.
 
 **Cada afirmación del dictamen lleva:**
 - la **carta** (el nombre del error) y el **veredicto**,
@@ -132,8 +134,8 @@ Según la afirmación:
 
 1. **Completar (20 min):** la afirmación 2 con su tabla (por tarifa y canal) y la recomendación; vuestras afirmaciones.
 2. **Una frase de IA responsable (5 min)**, al final del dictamen: «*Si entrenáramos un modelo con ……, aprendería ……, porque ……*». Ejemplo inventado: «Si entrenáramos un modelo con las reseñas de quien se anima a escribir, aprendería solo la opinión de los extremos, porque las personas medianamente satisfechas casi no escriben».
-3. **Revisión cruzada (15 min):** intercambiad el dictamen con otra persona y comprobad que cada bloque tiene carta, veredicto, frase corregida y cuenta (si la hay).
-4. **Entrega (15 min):** subid a `sprint-02/`, actualizad el tablero, rellenad la autoevaluación y repasad la Definition of Done.
+3. **Revisión cruzada = coevaluación (15 min):** intercambiad el dictamen con otra persona, comprobad que cada bloque tiene carta, veredicto, frase corregida y cuenta (si la hay) y rellenad la parte 2 de la [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md).
+4. **Entrega (15 min):** subid a `sprint-02/` el dictamen y la [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md) (la parte 1 la rellena cada persona), actualizad el tablero y repasad la Definition of Done.
 
 **Si os atascáis:** contestad con vuestra afirmación la pregunta de la carta, o formulad la frase de otra manera (con números absolutos, con otra base) y mirad si la conclusión cambia. Si los números no cuadran, revisad que dividís por las reservas **del grupo**, no por el total. Más ayuda: [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 
@@ -166,5 +168,5 @@ Si queda una casilla sin marcar, **el reto no está terminado**.
 - [ ] Cálculos rehechos y visibles (afirmaciones 1 y 2, y la 6 si la hacéis) y tabla de la 2 por tarifa y canal
 - [ ] Recomendación de tres líneas con una cautela y una frase de **IA responsable**
 - [ ] Hoja de ejercicios con el mínimo básico (M1, M2, M7, E1, E2, E6, E8, E10)
-- [ ] Revisión cruzada, subido a Git, tablero actualizado, autoevaluación y coevaluación
+- [ ] Revisión cruzada, subido a Git, tablero actualizado, [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md) rellenadas
 - [ ] Alta en Colab y GitHub hecha (día 1, en clase)

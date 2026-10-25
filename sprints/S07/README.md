@@ -29,12 +29,12 @@
 | [Infografías del reto](infografias/) | 5 láminas ilustradas del reto | — | Reto |
 | [Atlas de algoritmos](infografias/S07_03_atlas_regresion_y_clasificacion.png) | Atlas de algoritmos del sprint: regresión lineal, Ridge/Lasso, logística, k-NN y Naive Bayes | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf`](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) | Regresión lineal, polinómica y regularización (Ridge y Lasso) | 25 min | Teoría · viernes 6/11 |
-| [`S07.2_Regresion_logistica_y_clasificacion.pdf`](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf) | Regresión logística y clasificación | 15 min | Teoría · viernes 6/11 |
+| [`S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf`](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) | Regresión lineal, polinómica y regularización (Ridge y Lasso) | 25 min | Teoría · día 1 del S07 |
+| [`S07.2_Regresion_logistica_y_clasificacion.pdf`](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf) | Regresión logística y clasificación | 15 min | Teoría · día 1 del S07 |
 | [Explicación sencilla: matriz de confusión (VN, FP, FN, VP)](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/actividades/S07_matriz_de_confusion_en_sencillo.html) · [`.html`](actividades/S07_matriz_de_confusion_en_sencillo.html) | Las cuatro casillas, cómo leer las siglas, por qué los errores no cuestan igual y mini-test | 10 min | Antes del ejercicio interactivo |
 | [Lámina: la matriz de confusión](infografias/S07_04_matriz_de_confusion.png) | Una página con las cuatro casillas, las métricas y el efecto del umbral (para tener a mano) | — | Consulta (junto al ejercicio) |
 | [Ejercicio interactivo: matriz de confusión](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/actividades/S07_ejercicio_matriz_de_confusion.html) · [`.html`](actividades/S07_ejercicio_matriz_de_confusion.html) | Construye la matriz a mano, calcula métricas, mueve el umbral y elige con el coste (datos ficticios) | 25–30 min | Antes del cuaderno S07_03 (refuerzo) |
-| [`S07.3_k_NN_y_Naive_Bayes.pdf`](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf) | k-NN y Naive Bayes | 10 min | Teoría · lunes 9/11 |
+| [`S07.3_k_NN_y_Naive_Bayes.pdf`](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf) | k-NN y Naive Bayes | 10 min | Teoría · día 2 del S07 |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | Test de M3 · parte 1 · 10 preguntas · individual, en el navegador, sin penalización por fallo.1 a 3.4 (preprocesado, métricas, regresión y clasificación). | 20 min | Solo se abre el lun 9/11 (hora de Canarias) |
 
 **Material de las actividades**
@@ -54,7 +54,7 @@ Los ejercicios se autocorrigen con `assert`. Los datos (`reservas_turisdata.csv`
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Viernes 6/11**
+**Día 1 del S07**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -66,7 +66,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 6 | 💻 Práctica | [Regresión logística](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_03_regresion_logistica.ipynb) | 55 min |
 | 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 20 min |
 
-**Lunes 9/11**
+**Día 2 del S07**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

@@ -29,7 +29,7 @@
 | [Esquema del contenido y su relación con el reto](infografias/S17_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S17.1_Storytelling_y_defensa.pdf`](presentaciones/S17.1_Storytelling_y_defensa.pdf) | Storytelling | 20 min | Teoría · viernes 11/12 |
+| [`S17.1_Storytelling_y_defensa.pdf`](presentaciones/S17.1_Storytelling_y_defensa.pdf) | Storytelling | 20 min | Teoría · día 1 del S17 |
 
 **Material de las actividades**
 
@@ -43,7 +43,7 @@ Este sprint no tiene notebooks. 11/12 (6 h): teoría de storytelling, práctica 
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Viernes 11/12**
+**Día 1 del S17**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -53,13 +53,13 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 4 | 🎯 Reto | **Ensayos con preguntas** cruzadas entre equipos | 55 min |
 | 5 | 🎯 Reto | **Ensayo general** con cronómetro: 10 min | 40 min |
 
-**Antes de las 8:30 del lunes 14/12**
+**Antes de las 8:30 del día de la defensa (entrega del PDF)**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 6 | 🎯 Reto | [Subir la presentación en PDF (≤ 12 diapositivas) al repositorio (paso 4)](guia/Reto_Sprint_17.md) |  |
 
-**Lunes 14/12 · defensa**
+**Día 2 del S17 · defensa**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

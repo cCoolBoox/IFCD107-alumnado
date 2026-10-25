@@ -29,7 +29,7 @@
 | [Esquema del contenido y su relación con el reto](infografias/S15_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S15.1_Pildora_seguimiento_de_experimentos.pdf`](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) | Píldora: seguimiento de experimentos | 20 min | Teoría · martes 1/12 |
+| [`S15.1_Pildora_seguimiento_de_experimentos.pdf`](presentaciones/S15.1_Pildora_seguimiento_de_experimentos.pdf) | Píldora: seguimiento de experimentos | 20 min | Teoría · día 1 del S15 |
 
 **Material de las actividades**
 
@@ -46,7 +46,7 @@ Sesiones: 1/12 planning, píldora y primeras iteraciones · 2/12 tutorías de 15
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Martes 1/12**
+**Día 1 del S15**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -54,14 +54,14 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 2 | 💻 Práctica | [Práctica de seguimiento de experimentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) | 50 min |
 | 3 | 🎯 Reto | **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el [registro de experimentos](plantillas/registro_experimentos_plantilla.csv) | 2 h 10 min |
 
-**Miércoles 2/12**
+**Día 2 del S15**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 4 | 🎯 Reto | **Proyecto:** prueba modelos (clásico, red o LLM/RAG, según tu brief) | 1 h 40 min |
 | 5 | 🎯 Reto | Continúa con los experimentos. **Tutoría técnica de 20 min por equipo** (el docente indica tu franja) | 1 h 40 min |
 
-**Jueves 3/12**
+**Día 3 del S15**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

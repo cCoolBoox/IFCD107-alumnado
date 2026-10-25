@@ -29,15 +29,15 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 | [Infografías del reto](infografias/) | 8 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [Cómo subir vuestras respuestas a GitHub](../../material/5.%20Como_entregar_en_GitHub.md) | Entregar archivos en el repositorio del equipo, desde el navegador | 10 min | Antes de entregar el reto |
-| [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf) | Introducción a la IA: modalidades, casos de uso y mitos | 25 min | Teoría · martes 20/10 |
-| [`S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf`](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) | Panorama de algoritmos y CRISP-DM | 25 min | Teoría · martes 20/10 |
-| [`S01.3_Tipos_de_aprendizaje.pdf`](presentaciones/S01.3_Tipos_de_aprendizaje.pdf) | Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste | 25 min | Teoría · martes 20/10 |
+| [`S01.1_Introduccion_a_la_IA.pdf`](presentaciones/S01.1_Introduccion_a_la_IA.pdf) | Introducción a la IA: modalidades, casos de uso y mitos | 25 min | Teoría · día 1 del S01 |
+| [`S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf`](presentaciones/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) | Panorama de algoritmos y CRISP-DM | 25 min | Teoría · día 1 del S01 |
+| [`S01.3_Tipos_de_aprendizaje.pdf`](presentaciones/S01.3_Tipos_de_aprendizaje.pdf) | Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste | 25 min | Teoría · día 1 del S01 |
 | [Explicación sencilla: matriz de confusión (VN, FP, FN, VP)](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S01/actividades/S01_matriz_de_confusion_en_sencillo.html) · [`.html`](actividades/S01_matriz_de_confusion_en_sencillo.html) | Las cuatro casillas, cómo leer las siglas, por qué los errores no cuestan igual y mini-test | 10 min | Antes del ejercicio interactivo |
 | [Lámina: la matriz de confusión](infografias/S01_05_matriz_de_confusion.png) | Una página con las cuatro casillas, las métricas y el efecto del umbral (para tener a mano) | — | Consulta (junto al ejercicio) |
 | [Lámina: ¿bueno o malo? Lee las métricas y decide](infografias/S01_06_bueno_o_malo_metricas.png) | Siete modelos con resultados reales (cáncer de mama, diabetes, dígitos, iris…): lee las métricas y marca bueno, regular o malo | 20–30 min | Al terminar S01.4 (actividad en parejas) |
 | [Ejercicio interactivo: ¿bueno o malo? Lee las métricas y decide](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S01/actividades/S01_ejercicio_bueno_o_malo.html) · [`.html`](actividades/S01_ejercicio_bueno_o_malo.html) | La misma actividad en pantalla: siete modelos con resultados reales; decide bueno, regular o malo, razona y comprueba (con «Rellenar por mí») | 25–30 min | Al terminar S01.4 (actividad en parejas) |
 | [Ejercicio interactivo: matriz de confusión](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S01/actividades/S01_ejercicio_matriz_de_confusion.html) · [`.html`](actividades/S01_ejercicio_matriz_de_confusion.html) | Sin código: construye la matriz a mano, mira qué esconde la exactitud y qué cambia con el umbral (datos ficticios) | 20 min | Después de S01.3 (refuerzo) |
-| [`S01.4_IA_responsable_etica_sesgo_y_normativa.pdf`](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) | IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética | 50 min | Teoría · miércoles 21/10 |
+| [`S01.4_IA_responsable_etica_sesgo_y_normativa.pdf`](presentaciones/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) | IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética | 50 min | Teoría · día 2 del S01 |
 
 **Material de las actividades**
 
@@ -58,7 +58,7 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Martes 20/10**
+**Día 1 del S01**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -72,7 +72,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 8 | 💻 Práctica | [Dinámica B: clasificación «a mano» (demostración en la pizarra)](actividades/ejemplo_clasificacion_caso.md) | 10 min |
 | 9 | 🎯 Reto | [Lluvia de ideas y elección de casos (paso 2)](guia/Reto_Sprint_01.md) | 25 min |
 
-**Miércoles 21/10**
+**Día 2 del S01**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

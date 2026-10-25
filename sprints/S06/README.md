@@ -29,9 +29,9 @@
 | [Esquema del contenido y su relación con el reto](infografias/S06_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf`](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | Datos, pandas y visualización exploratoria | 15 min | Teoría · miércoles 4/11 |
-| [`S06.2_Limpieza_y_preprocesado.pdf`](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | Limpieza y preprocesado | 20 min | Teoría · miércoles 4/11 |
-| [`S06.3_scikit_learn_metricas_y_validacion.pdf`](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | scikit-learn: métricas y validación | 15 min | Teoría · jueves 5/11 |
+| [`S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf`](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | Datos, pandas y visualización exploratoria | 15 min | Teoría · día 1 del S06 |
+| [`S06.2_Limpieza_y_preprocesado.pdf`](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | Limpieza y preprocesado | 20 min | Teoría · día 1 del S06 |
+| [`S06.3_scikit_learn_metricas_y_validacion.pdf`](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | scikit-learn: métricas y validación | 15 min | Teoría · día 2 del S06 |
 
 **Material de las actividades**
 
@@ -49,7 +49,7 @@ Cada notebook tiene ejercicios con `assert`: si la celda de comprobación no da 
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Miércoles 4/11**
+**Día 1 del S06**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -61,7 +61,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 6 | 💻 Práctica | [Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) | 55 min |
 | 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 25 min |
 
-**Jueves 5/11**
+**Día 2 del S06**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

@@ -33,9 +33,9 @@
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Atlas de algoritmos](infografias/../S10/infografias/S10_03_atlas_redes_neuronales_y_vision.png) | Atlas de algoritmos (S10–S11): CNN, transfer learning y detección, junto al MLP | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S11.1_Redes_convolucionales_CNN.pdf`](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) | Redes convolucionales (CNN) | 25 min | Teoría · miércoles 18/11 |
-| [`S11.2_Transfer_learning_y_fine_tuning.pdf`](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf) | Transfer learning y fine-tuning | 20 min | Teoría · miércoles 18/11 |
-| [`S11.3_Deteccion_de_objetos_y_segmentacion.pdf`](presentaciones/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) | Detección de objetos y segmentación | 20 min | Teoría · jueves 19/11 |
+| [`S11.1_Redes_convolucionales_CNN.pdf`](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) | Redes convolucionales (CNN) | 25 min | Teoría · día 1 del S11 |
+| [`S11.2_Transfer_learning_y_fine_tuning.pdf`](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf) | Transfer learning y fine-tuning | 20 min | Teoría · día 1 del S11 |
+| [`S11.3_Deteccion_de_objetos_y_segmentacion.pdf`](presentaciones/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) | Detección de objetos y segmentación | 20 min | Teoría · día 2 del S11 |
 
 **Material de las actividades**
 
@@ -53,7 +53,7 @@ Extra: `generar_dataset_sintetico.py` crea el mini dataset de alojamientos (una 
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Miércoles 18/11**
+**Día 1 del S11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -64,7 +64,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 5 | 💻 Práctica | [Transfer learning y fine-tuning (primera parte)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) | 1 h |
 | 6 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 20 min |
 
-**Jueves 19/11**
+**Día 2 del S11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -75,7 +75,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 11 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
 | 12 | 🎯 Reto | [Preparar los datos (paso 1)](guia/Reto_Sprint_11.md) | 45 min |
 
-**Viernes 20/11**
+**Día 3 del S11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

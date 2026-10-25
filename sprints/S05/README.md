@@ -29,9 +29,9 @@
 | [Esquema del contenido y su relación con el reto](infografias/S05_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S05.1_NumPy_y_algebra_lineal.pdf`](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | NumPy y álgebra lineal: vectorización y *broadcasting* | 15 min | Teoría · viernes 30/10 |
-| [`S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf`](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | Descenso del gradiente y regresión desde cero | 20 min | Teoría · viernes 30/10 |
-| [`S05.3_Estadistica_con_Python_y_CRUD.pdf`](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) | Estadística con Python y CRUD | 15 min | Teoría · martes 3/11 |
+| [`S05.1_NumPy_y_algebra_lineal.pdf`](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | NumPy y álgebra lineal: vectorización y *broadcasting* | 15 min | Teoría · día 1 del S05 |
+| [`S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf`](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | Descenso del gradiente y regresión desde cero | 20 min | Teoría · día 1 del S05 |
+| [`S05.3_Estadistica_con_Python_y_CRUD.pdf`](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) | Estadística con Python y CRUD | 15 min | Teoría · día 2 del S05 |
 
 **Material de las actividades**
 
@@ -51,7 +51,7 @@ Cuadernos en orden (5 h). Cada ejercicio se autocorrige con un `assert`: si fall
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Viernes 30/10**
+**Día 1 del S05**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -63,7 +63,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 6 | 💻 Práctica | [Descenso del gradiente y regresión desde cero](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_03_gradiente_regresion.ipynb) | 1 h 10 min |
 | 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 15 min |
 
-**Martes 3/11**
+**Día 2 del S05**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

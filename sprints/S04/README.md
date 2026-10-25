@@ -30,8 +30,8 @@
 | [Esquema del contenido y su relación con el reto](infografias/S04_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S04.1_Python_entorno_y_lenguaje.pdf`](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) | Python: entorno (venv, pip, Jupyter, Git) y lenguaje | 20 min | Teoría · miércoles 28/10 |
-| [`S04.2_Python_estructuras_funciones_y_POO.pdf`](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | Estructuras de datos, funciones, ficheros, excepciones y POO | 20 min | Teoría · jueves 29/10 |
+| [`S04.1_Python_entorno_y_lenguaje.pdf`](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) | Python: entorno (venv, pip, Jupyter, Git) y lenguaje | 20 min | Teoría · día 1 del S04 |
+| [`S04.2_Python_estructuras_funciones_y_POO.pdf`](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | Estructuras de datos, funciones, ficheros, excepciones y POO | 20 min | Teoría · día 2 del S04 |
 
 **Material de las actividades**
 
@@ -50,7 +50,7 @@ Cuadernos en orden (3 h 35 min obligatorias + 45 min opcionales). Cada ejercicio
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Miércoles 28/10**
+**Día 1 del S04**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -61,7 +61,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 5 | 💻 Práctica | [Listas, tuplas, diccionarios y conjuntos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) | 45 min |
 | 6 | 💻 Práctica | [CSV, JSON y `try`/`except` (prepara `leer_reservas`)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_04_ficheros_excepciones.ipynb) | 35 min |
 
-**Jueves 29/10**
+**Día 2 del S04**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

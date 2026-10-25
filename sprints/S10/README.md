@@ -32,9 +32,9 @@
 | [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
 | [Atlas de algoritmos](infografias/S10_03_atlas_redes_neuronales_y_vision.png) | Atlas de algoritmos (S10–S11): MLP, regularización, CNN, transfer learning y detección | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S10.1_Fundamentos_de_redes_neuronales.pdf`](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | Fundamentos de redes neuronales | 20 min | Teoría · lunes 16/11 |
-| [`S10.2_Redes_densas_con_Keras.pdf`](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | Redes densas con Keras | 20 min | Teoría · lunes 16/11 |
-| [`S10.3_Entrenamiento_y_regularizacion.pdf`](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | Entrenamiento y regularización (primera parte) | 35 min | Teoría · lunes 16/11 y martes 17/11 |
+| [`S10.1_Fundamentos_de_redes_neuronales.pdf`](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | Fundamentos de redes neuronales | 20 min | Teoría · día 1 del S10 |
+| [`S10.2_Redes_densas_con_Keras.pdf`](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | Redes densas con Keras | 20 min | Teoría · día 1 del S10 |
+| [`S10.3_Entrenamiento_y_regularizacion.pdf`](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | Entrenamiento y regularización (primera parte) | 35 min | Teoría · día 1 del S10 y día 2 del S10 |
 
 **Material de las actividades**
 
@@ -52,7 +52,7 @@ Cada notebook tiene ejercicios con `assert`: si saltan, el mensaje te dice qué 
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Lunes 16/11**
+**Día 1 del S10**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -64,7 +64,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 6 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 30 min |
 | 7 | 📖 Teoría | [Entrenamiento y regularización (primera parte: diapositivas 1–3)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 20 min |
 
-**Martes 17/11**
+**Día 2 del S10**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

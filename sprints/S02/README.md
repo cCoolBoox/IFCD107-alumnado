@@ -30,9 +30,9 @@ Sprint 1 terminado. Matemáticas de secundaria (fracciones, potencias, porcentaj
 | [Esquema del contenido y su relación con el reto](infografias/S02_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del sprint](infografias/) | 2 láminas ilustradas | — | Antes del planning |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S02.3_Ecosistema_de_software_para_IA.pdf`](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) | Ecosistema de software para IA: Python, Colab, librerías y GPU | 5 min | Teoría · jueves 22/10 |
-| [`S02.1_Matematicas_para_IA.pdf`](presentaciones/S02.1_Matematicas_para_IA.pdf) | Matemáticas para IA: álgebra lineal, derivadas y gradiente | 45 min | Teoría · jueves 22/10 |
-| [`S02.2_Estadistica_y_probabilidad.pdf`](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) | Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson | 35 min | Teoría · viernes 23/10 |
+| [`S02.3_Ecosistema_de_software_para_IA.pdf`](presentaciones/S02.3_Ecosistema_de_software_para_IA.pdf) | Ecosistema de software para IA: Python, Colab, librerías y GPU | 5 min | Teoría · día 1 del S02 |
+| [`S02.1_Matematicas_para_IA.pdf`](presentaciones/S02.1_Matematicas_para_IA.pdf) | Matemáticas para IA: álgebra lineal, derivadas y gradiente | 45 min | Teoría · día 1 del S02 |
+| [`S02.2_Estadistica_y_probabilidad.pdf`](presentaciones/S02.2_Estadistica_y_probabilidad.pdf) | Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson | 35 min | Teoría · día 2 del S02 |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) | Test corto de M1a · Fundamentos de IA · 12 preguntas · individual, en el navegador, sin penalización por fallo. | 20 min | Solo se abre el vie 23/10 (hora de Canarias) |
 
 **Material de las actividades**
@@ -46,6 +46,7 @@ Materiales `.md` para papel o pantalla (sin Colab):
 | [`ejercicios_estadistica.md`](actividades/ejercicios_estadistica.md) | 14 ejercicios de estadística, probabilidad, Bayes, sesgo y Simpson |
 | [`estadisticas_enganosas.md`](actividades/estadisticas_enganosas.md) | 9 casos de estadísticas engañosas |
 | [`plantilla_dictamen.md`](Reto_S02/plantilla_dictamen.md) | Plantilla del dictamen del reto, con la afirmación 1 resuelta como modelo |
+| [`autoevaluacion_y_coevaluacion.md`](Reto_S02/autoevaluacion_y_coevaluacion.md) | Hoja de autoevaluación (cada persona) y coevaluación (quien revisa el dictamen en la revisión cruzada) |
 | [`rubrica_dictamen.md`](Reto_S02/rubrica_dictamen.md) | Rúbrica del reto: 4 criterios, de 1 a 4 |
 
 Mínimo de ejercicios: **M1, M2 y M7** de la hoja 1 y **E1, E2, E6, E8 y E10** de la hoja 2. El resto son extra (si queréis ir más allá, M10 y M11 sobre el descenso del gradiente son los más recomendables). Escribid cómo lo habéis hecho.
@@ -55,7 +56,7 @@ Mínimo de ejercicios: **M1, M2 y M7** de la hoja 1 y **E1, E2, E6, E8 y E10** d
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Jueves 22/10**
+**Día 1 del S02**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -66,7 +67,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 5 | 💻 Práctica | [Ejercicios de matemáticas (hoja 1) con Desmos o GeoGebra](actividades/ejercicios_algebra_calculo.md) | 55 min |
 | 6 | 🎯 Reto | [Cartas de error, afirmaciones 1 y 2 guiadas y la vuestra (pasos 2 a 4)](Reto_S02/Reto_Sprint_02.md) | 1 h |
 
-**Viernes 23/10**
+**Día 2 del S02**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -108,4 +109,4 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - [ ] Hoja de ejercicios con el mínimo básico (M1, M2, M7, E1, E2, E6, E8, E10)
 - [ ] Alta en Colab y GitHub hecha (jueves 22/10)
 - [ ] Entregable subido a la carpeta `sprint-02/` del repositorio del equipo
-- [ ] Autoevaluación y coevaluación rellenadas
+- [ ] [Autoevaluación y coevaluación](Reto_S02/autoevaluacion_y_coevaluacion.md) rellenadas

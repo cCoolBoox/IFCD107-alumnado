@@ -31,7 +31,7 @@
 | [Esquema del contenido y su relación con el reto](infografias/S14_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S14.1_Lanzamiento_del_proyecto_final.pdf`](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf) | Lanzamiento del proyecto final: cómo formular un proyecto de IA (canvas y criterios de éxito) | 25 min | Teoría · jueves 26/11 |
+| [`S14.1_Lanzamiento_del_proyecto_final.pdf`](presentaciones/S14.1_Lanzamiento_del_proyecto_final.pdf) | Lanzamiento del proyecto final: cómo formular un proyecto de IA (canvas y criterios de éxito) | 25 min | Teoría · día 1 del S14 |
 
 **Material de las actividades**
 
@@ -54,7 +54,7 @@ Este sprint no tiene notebooks: hay sesiones y plantillas (todas en esta carpeta
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Jueves 26/11**
+**Día 1 del S14**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -65,14 +65,14 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 5 | 🎯 Reto | Buscar y validar datos (licencia, tamaño, acceso; plan de datos: [plantilla](plantillas/plantilla_plan_datos_licencias.md)) | 1 h |
 | 6 | 🎯 Reto | [Ficha del proyecto y entrega **antes de las 14:30**](plantillas/plantilla_ficha_proyecto.md) | 50 min |
 
-**Viernes 27/11 · hito: ficha aprobada (go / no-go)**
+**Día 2 del S14 · hito: ficha aprobada (go / no-go)**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 7 | 🎯 Reto | [Leer el go / no-go del docente y, si hace falta, corregir la ficha](guia/Reto_Sprint_14.md) | 20 min |
 | 8 | 🎯 Reto | [EDA, calidad del dato y *baseline* (paso 5)](guia/Reto_Sprint_14.md) | 3 h |
 
-**Lunes 30/11**
+**Día 3 del S14**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

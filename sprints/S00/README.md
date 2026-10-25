@@ -30,9 +30,9 @@ Ninguno. Solo ganas de trabajar en equipo. Necesitarás un correo electrónico p
 | [Esquema del contenido y su relación con el reto](infografias/S00_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 8 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf) | Bienvenida y reglas del curso | 30 min | Teoría · viernes 16/10 |
-| [`S00.1_Agile_y_Scrum.pdf`](presentaciones/S00.1_Agile_y_Scrum.pdf) | Agile y Scrum: roles, artefactos y ceremonias | 1 h 30 min | Teoría · viernes 16/10 |
-| [`S00.2_Design_Thinking.pdf`](presentaciones/S00.2_Design_Thinking.pdf) | Design Thinking: fases, empatizar y «How might we» | 1 h | Teoría · viernes 16/10 |
+| [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf) | Bienvenida y reglas del curso | 30 min | Teoría · día 1 del S00 |
+| [`S00.1_Agile_y_Scrum.pdf`](presentaciones/S00.1_Agile_y_Scrum.pdf) | Agile y Scrum: roles, artefactos y ceremonias | 1 h 30 min | Teoría · día 1 del S00 |
+| [`S00.2_Design_Thinking.pdf`](presentaciones/S00.2_Design_Thinking.pdf) | Design Thinking: fases, empatizar y «How might we» | 1 h | Teoría · día 1 del S00 |
 | [`Ejemplos_del_curso_IFCD107.html`](recursos/Ejemplos_del_curso_IFCD107.html) · [abrir online](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S00/recursos/Ejemplos_del_curso_IFCD107.html) | Ejemplos interactivos de todo el curso | — | Cuando quieras ver cómo es cada tema |
 
 **Material de las actividades**
@@ -53,7 +53,7 @@ Un material por actividad (todos son `.md`):
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Viernes 16/10**
+**Día 1 del S00**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -66,7 +66,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 7 | 🎯 Reto | Montar el [tablero](actividades/guia_tablero_trello.md) (paso 3) y, si da tiempo, el [repositorio del equipo](actividades/actividad_repositorio_equipo.md) | 30 min |
 | 8 | 🎯 Reto | [Entrevista de descubrimiento al cliente (paso 4)](actividades/entrevista_descubrimiento.md) | 20 min, en grupo grande |
 
-**Lunes 19/10 (segunda jornada)**
+**Día 2 del S00**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

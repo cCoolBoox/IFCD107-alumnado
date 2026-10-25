@@ -31,9 +31,9 @@
 | [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
 | [Atlas de algoritmos](infografias/S09_03_atlas_no_supervisado_y_refuerzo.png) | Atlas de algoritmos del sprint: k-means, jerárquico, DBSCAN, PCA, recomendadores y Q-learning | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S09.1_Clustering_y_PCA.pdf`](presentaciones/S09.1_Clustering_y_PCA.pdf) | Clustering y PCA | 30 min | Teoría · jueves 12/11 |
-| [`S09.2_Sistemas_de_recomendacion.pdf`](presentaciones/S09.2_Sistemas_de_recomendacion.pdf) | Sistemas de recomendación | 10 min | Teoría · viernes 13/11 |
-| [`S09.3_Aprendizaje_por_refuerzo.pdf`](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf) | Aprendizaje por refuerzo (visión conceptual) | 10 min | Teoría · viernes 13/11 |
+| [`S09.1_Clustering_y_PCA.pdf`](presentaciones/S09.1_Clustering_y_PCA.pdf) | Clustering y PCA | 30 min | Teoría · día 1 del S09 |
+| [`S09.2_Sistemas_de_recomendacion.pdf`](presentaciones/S09.2_Sistemas_de_recomendacion.pdf) | Sistemas de recomendación | 10 min | Teoría · día 2 del S09 |
+| [`S09.3_Aprendizaje_por_refuerzo.pdf`](presentaciones/S09.3_Aprendizaje_por_refuerzo.pdf) | Aprendizaje por refuerzo (visión conceptual) | 10 min | Teoría · día 2 del S09 |
 
 **Material de las actividades**
 
@@ -51,7 +51,7 @@ Cada notebook tiene comprobaciones automáticas (✔). Trabaja en orden: no pase
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Jueves 12/11**
+**Día 1 del S09**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -62,7 +62,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 5 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 15 min |
 | 6 | 🎯 Reto | [Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3)](guia/Reto_Sprint_09.md) | 50 min |
 
-**Viernes 13/11**
+**Día 2 del S09**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

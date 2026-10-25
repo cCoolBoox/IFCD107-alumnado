@@ -30,9 +30,9 @@
 | [Esquema del contenido y su relación con el reto](infografias/S03_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S03.1_Bases_de_datos_relacionales_y_SQL.pdf`](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) | Modelo relacional, SQL, CRUD y nociones de administración | 40 min | Teoría · lunes 26/10 |
-| [`S03.2_Bases_de_datos_NoSQL.pdf`](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) | Bases de datos NoSQL (demostración corta) | 15 min | Teoría · lunes 26/10 |
-| [`S03.3_AutoML_y_MLOps.pdf`](presentaciones/S03.3_AutoML_y_MLOps.pdf) | Introducción a AutoML y MLOps | 20 min | Teoría · martes 27/10 |
+| [`S03.1_Bases_de_datos_relacionales_y_SQL.pdf`](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) | Modelo relacional, SQL, CRUD y nociones de administración | 40 min | Teoría · día 1 del S03 |
+| [`S03.2_Bases_de_datos_NoSQL.pdf`](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) | Bases de datos NoSQL (demostración corta) | 15 min | Teoría · día 1 del S03 |
+| [`S03.3_AutoML_y_MLOps.pdf`](presentaciones/S03.3_AutoML_y_MLOps.pdf) | Introducción a AutoML y MLOps | 20 min | Teoría · día 2 del S03 |
 | [`Guia_AutoML_AutoGluon.pdf`](guia/Guia_AutoML_AutoGluon.pdf) | Guía de laboratorio de AutoML con AutoGluon | — | AutoML (Bloque B) |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | Test del bloque M6–M8 · SQL, AutoML e IA responsable · 10 preguntas · individual, en el navegador, sin penalización por fallo. | 15 min | Solo se abre el mar 27/10 (hora de Canarias) |
 
@@ -60,7 +60,7 @@
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Lunes 26/10**
+**Día 1 del S03**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -70,7 +70,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 4 | 📖 Teoría | [Bases de datos NoSQL (demostración corta)](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) | 15 min |
 | 5 | 💻 Práctica | [NoSQL con documentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) (o, si usáis MongoDB Compass, la [guía de MongoDB](guia/NoSQL_MongoDB.md)) | 35 min |
 
-**Martes 27/10**
+**Día 2 del S03**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

@@ -29,7 +29,7 @@
 | [Esquema del contenido y su relación con el reto](infografias/S13_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del reto](infografias/) | 3 láminas ilustradas del reto | — | Reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S13.1_Visualizar_y_comunicar_resultados.pdf`](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · miércoles 25/11 |
+| [`S13.1_Visualizar_y_comunicar_resultados.pdf`](presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · dentro de la última jornada del S12 |
 | [`guia_cuantos_sprints_tiene_el_proyecto.md`](plantillas/guia_cuantos_sprints_tiene_el_proyecto.md) | ¿Cuántos sprints tiene el proyecto? Capacidad, tallas y qué cabe en los Sprints 14–17 | 25–30 min | Al cerrar el 25/11 o antes del planning del 26/11 |
 
 **Material de las actividades**
@@ -46,7 +46,7 @@ Plantilla en esta carpeta: [`plantilla_informe_visual.md`](plantillas/plantilla_
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Miércoles 25/11 · última jornada del Sprint 12 (el Sprint 13 va dentro de ese día)**
+**Dentro de la última jornada del S12**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

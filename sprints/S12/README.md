@@ -30,11 +30,11 @@
 | [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
 | [Atlas de algoritmos](infografias/S12_03_atlas_series_lenguaje_y_generativa.png) | Atlas de algoritmos del sprint: series, RNN/LSTM/GRU, NLP, Transformers/LLM y autoencoders | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S12.1_RNN_LSTM_GRU_y_series_temporales.pdf`](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | RNN, LSTM, GRU y series temporales | 20 min | Teoría · lunes 23/11 |
-| [`S12.2_NLP_clasico_y_embeddings.pdf`](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) | NLP clásico y embeddings | 15 min | Teoría · lunes 23/11 |
-| [`S12.3_Transformers_y_LLM.pdf`](presentaciones/S12.3_Transformers_y_LLM.pdf) | Transformers y LLM | 30 min | Teoría · martes 24/11 |
-| [`S12.4_Autoencoders_y_modelos_generativos.pdf`](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | Autoencoders y modelos generativos | 10 min | Teoría · martes 24/11 |
-| [`S13.1_Visualizar_y_comunicar_resultados.pdf`](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · miércoles 25/11 |
+| [`S12.1_RNN_LSTM_GRU_y_series_temporales.pdf`](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | RNN, LSTM, GRU y series temporales | 20 min | Teoría · día 1 del S12 |
+| [`S12.2_NLP_clasico_y_embeddings.pdf`](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) | NLP clásico y embeddings | 15 min | Teoría · día 1 del S12 |
+| [`S12.3_Transformers_y_LLM.pdf`](presentaciones/S12.3_Transformers_y_LLM.pdf) | Transformers y LLM | 30 min | Teoría · día 2 del S12 |
+| [`S12.4_Autoencoders_y_modelos_generativos.pdf`](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | Autoencoders y modelos generativos | 10 min | Teoría · día 2 del S12 |
+| [`S13.1_Visualizar_y_comunicar_resultados.pdf`](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · día 3 del S12 |
 | [`Acceso_modelos_de_lenguaje.md`](../../material/Acceso_modelos_de_lenguaje.md) | ¿Tu proyecto usará un modelo de lenguaje por internet? Guía de acceso gratuito | — | Si tu proyecto usa un modelo de lenguaje |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | Test de M4 · Redes neuronales · 12 preguntas · individual, en el navegador, sin penalización por fallo. | 20 min | Solo se abre el mié 25/11 (hora de Canarias) |
 
@@ -59,7 +59,7 @@ Plantilla en esta carpeta: [`plantilla_informe_cliente.md`](plantillas/plantilla
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Lunes 23/11**
+**Día 1 del S12**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -71,7 +71,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 6 | 💻 Práctica | [Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) | 55 min |
 | 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
 
-**Martes 24/11**
+**Día 2 del S12**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -82,7 +82,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 12 | 📖 Teoría | [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | 10 min |
 | 13 | 🎯 Reto | [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](guia/Reto_Sprint_12.md) | 1 h 5 min |
 
-**Miércoles 25/11**
+**Día 3 del S12**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|

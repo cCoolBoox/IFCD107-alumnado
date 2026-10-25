@@ -30,9 +30,9 @@
 | [Infografías del reto](infografias/) | 4 láminas ilustradas del reto | — | Reto |
 | [Atlas de algoritmos](infografias/S08_03_atlas_arboles_ensembles_y_svm.png) | Atlas de algoritmos del sprint: árbol, Random Forest, boosting, SVM y ajuste de hiperparámetros | — | Teoría y práctica; consulta cuando elijas modelo |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S08.1_Arboles_de_decision.pdf`](presentaciones/S08.1_Arboles_de_decision.pdf) | Árboles de decisión | 15 min | Teoría · martes 10/11 |
-| [`S08.2_Ensembles_Random_Forest_y_Boosting.pdf`](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | Ensembles: Random Forest y *boosting* | 20 min | Teoría · martes 10/11 |
-| [`S08.3_Maquinas_de_vectores_de_soporte.pdf`](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) | Máquinas de vectores de soporte (SVM) | 15 min | Teoría · miércoles 11/11 |
+| [`S08.1_Arboles_de_decision.pdf`](presentaciones/S08.1_Arboles_de_decision.pdf) | Árboles de decisión | 15 min | Teoría · día 1 del S08 |
+| [`S08.2_Ensembles_Random_Forest_y_Boosting.pdf`](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | Ensembles: Random Forest y *boosting* | 20 min | Teoría · día 1 del S08 |
+| [`S08.3_Maquinas_de_vectores_de_soporte.pdf`](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) | Máquinas de vectores de soporte (SVM) | 15 min | Teoría · día 2 del S08 |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | Test de M3 · parte 2 · 10 preguntas · individual, en el navegador, sin penalización por fallo.5 a 3.8 (k-NN y Naive Bayes, árboles, ensembles y SVM). | 20 min | Solo se abre el mié 11/11 (hora de Canarias) |
 
 **Material de las actividades**
@@ -53,7 +53,7 @@ Las cinco primeras son prácticas guiadas; la sexta es la plantilla del reto. Lo
 
 Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
 
-**Martes 10/11**
+**Día 1 del S08**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
@@ -66,7 +66,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
 | 8 | 🎯 Reto | [Primeros modelos en el *leaderboard* (*baseline*, logística, árbol y bosque; pasos 1–2)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) | 25 min |
 
-**Miércoles 11/11**
+**Día 2 del S08**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
