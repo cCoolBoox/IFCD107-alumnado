@@ -2,7 +2,7 @@
 
 **Equipo:** …… · **Fecha:** …… · **Personas:** ……
 
-> Copia este archivo a `sprint-02/dictamen.md` de tu repositorio y sustituye los `……`. Las cartas de error están en la [ficha del reto](../guia/Reto_Sprint_02.md) (paso 2).
+> Copia este archivo a `sprint-02/dictamen.md` de tu repositorio y sustituye los `……`. Las cartas de error están en la [ficha del reto](Reto_Sprint_02.md) (paso 2).
 > Cómo se evalúa: [rúbrica del dictamen](rubrica_dictamen.md).
 > **Veredictos:** fiable · parcialmente fiable · no fiable · no se puede saber. «No se puede saber» es válido: no inventes números.
 

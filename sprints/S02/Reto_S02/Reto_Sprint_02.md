@@ -3,7 +3,7 @@
 > **Esta es la ficha completa del reto, explicada paso a paso** para quien nunca ha trabajado con esta metodología ni con IA. Léela entera **antes de empezar** y vuelve a ella cuando tengas dudas.
 >
 > - Si es tu primer reto, lee antes [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
-> - Volver al [README del sprint](../README.md) · [Guía del sprint en PDF](Guia_Sprint_02.pdf) · [versión ecofriendly para imprimir](Guia_Sprint_02_ecofriendly.pdf).
+> - Volver al [README del sprint](../README.md) · [Guía del sprint en PDF](../guia/Guia_Sprint_02.pdf) · [versión ecofriendly para imprimir](../guia/Guia_Sprint_02_ecofriendly.pdf).
 > - **Este reto en PDF:** [a color](Reto_Sprint_02.pdf) · [ecofriendly, para imprimir](Reto_Sprint_02_ecofriendly.pdf).
 
 ## Ficha del reto
@@ -16,9 +16,9 @@
 - **Cartas de error** (paso 2): los 8 errores posibles, cada uno con una pregunta para reconocerlo y una frase para el dictamen.
 - **Afirmación 1 resuelta** (paso 2): el modelo de cómo queda cada bloque del dictamen.
 - **Fórmulas para la hoja de cálculo** (paso 3), con pistas y cifras para comprobar vuestros cálculos.
-- [**Plantilla del dictamen**](../plantillas/plantilla_dictamen.md): el documento que entregáis, con huecos y frases para completar.
-- [**Rúbrica del dictamen**](../plantillas/rubrica_dictamen.md): cómo se evalúa (corrección técnica, reproducibilidad, comunicación al cliente e IA responsable, de 1 a 4); sirve para revisar vuestro trabajo antes de entregarlo.
-- **Datos:** [`informe_cliente.md`](../../../datos/informe_cliente.md) (las seis afirmaciones) e [`informe_cliente.csv`](../../../datos/informe_cliente.csv) (2.400 reservas por tarifa y canal).
+- [**Plantilla del dictamen**](plantilla_dictamen.md): el documento que entregáis, con huecos y frases para completar.
+- [**Rúbrica del dictamen**](rubrica_dictamen.md): cómo se evalúa (corrección técnica, reproducibilidad, comunicación al cliente e IA responsable, de 1 a 4); sirve para revisar vuestro trabajo antes de entregarlo.
+- **Datos:** [`informe_cliente.md`](informe_cliente.md) (las seis afirmaciones) e [`informe_cliente.csv`](informe_cliente.csv) (2.400 reservas por tarifa y canal).
 
 Vuestro trabajo es reconocer qué carta encaja con cada afirmación, comprobar las cuentas y explicarlo con claridad.
 
@@ -34,7 +34,7 @@ Vuestro trabajo es reconocer qué carta encaja con cada afirmación, comprobar l
 
 ### Qué tenéis que entregar
 Se entrega todo en `sprint-02/` de vuestro repositorio:
-1. **Dictamen de auditoría**, escrito sobre la [plantilla del dictamen](../plantillas/plantilla_dictamen.md) (1-2 páginas, en `.md` o PDF), con **al menos cuatro de las seis afirmaciones**: la 1, la 2 y dos más.
+1. **Dictamen de auditoría**, escrito sobre la [plantilla del dictamen](plantilla_dictamen.md) (1-2 páginas, en `.md` o PDF), con **al menos cuatro de las seis afirmaciones**: la 1, la 2 y dos más.
 2. **Recomendación de tres líneas y frase de IA responsable.** No son archivos aparte: son los dos últimos apartados de la misma plantilla («Recomendación sobre el canal» e «IA responsable»).
 3. **Ejercicios del sprint**, con el **mínimo básico**. Salen de las dos hojas de práctica que se trabajan en las clases del sprint: M1, M2 y M7 de la [hoja 1, álgebra y cálculo](../actividades/ejercicios_algebra_calculo.md), y E1, E2, E6, E8 y E10 de la [hoja 2, estadística](../actividades/ejercicios_estadistica.md).
 
@@ -48,10 +48,10 @@ Se entrega todo en `sprint-02/` de vuestro repositorio:
 ### Guía paso a paso para principiantes
 
 #### Paso 1 · Planning (10 minutos)
-1. Leed el informe ([`informe_cliente.md`](../../../datos/informe_cliente.md)) **en voz alta**.
+1. Leed el informe ([`informe_cliente.md`](informe_cliente.md)) **en voz alta**.
 2. **Repartid las afirmaciones:** la 1 y la 2 se hacen todos juntos, con el docente (pasos 2 y 3). De la **3 a la 6**, cada persona elige una (si sois menos, algunas hacen dos).
-3. Abrid [`informe_cliente.csv`](../../../datos/informe_cliente.csv) en una hoja de cálculo: solo 4 filas (`tarifa`, `canal`, `reservas`, `cancelaciones`).
-4. Copiad la [plantilla del dictamen](../plantillas/plantilla_dictamen.md) a `sprint-02/` de vuestro repositorio.
+3. Abrid [`informe_cliente.csv`](informe_cliente.csv) en una hoja de cálculo: solo 4 filas (`tarifa`, `canal`, `reservas`, `cancelaciones`).
+4. Copiad la [plantilla del dictamen](plantilla_dictamen.md) a `sprint-02/` de vuestro repositorio.
 
 #### Paso 2 · Las cartas de error y un ejemplo resuelto (día 1, 15 minutos)
 

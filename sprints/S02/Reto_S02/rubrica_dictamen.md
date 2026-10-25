@@ -1,6 +1,6 @@
 # Cómo se evalúa el dictamen · «¿Nos fiamos de este informe?»
 
-Cada entregable se evalúa de 0 a 4 en los cuatro criterios de la rúbrica de retos. Úsala para revisar tu dictamen antes de entregarlo y en la revisión cruzada. Volver a la [ficha del reto](../guia/Reto_Sprint_02.md) · [plantilla del dictamen](plantilla_dictamen.md).
+Cada entregable se evalúa de 0 a 4 en los cuatro criterios de la rúbrica de retos. Úsala para revisar tu dictamen antes de entregarlo y en la revisión cruzada. Volver a la [ficha del reto](Reto_Sprint_02.md) · [plantilla del dictamen](plantilla_dictamen.md).
 
 | Criterio | 1 · Insuficiente | 2 · Suficiente | 3 · Bueno | 4 · Excelente |
 |---|---|---|---|---|
