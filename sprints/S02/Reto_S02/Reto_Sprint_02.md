@@ -38,7 +38,7 @@ Se entrega todo en `sprint-02/` de vuestro repositorio:
 1. **Dictamen de auditoría**, escrito sobre la [plantilla del dictamen](plantilla_dictamen.md) (1-2 páginas, en `.md` o PDF), con **al menos cuatro de las seis afirmaciones**: la 1, la 2 y dos más.
 2. **Recomendación de tres líneas y frase de IA responsable.** No son archivos aparte: son los dos últimos apartados de la misma plantilla («Recomendación sobre el canal» e «IA responsable»).
 3. **Ejercicios del sprint**, con el **mínimo básico**. Salen de las dos hojas de práctica que se trabajan en las clases del sprint: M1, M2 y M7 de la [hoja 1, álgebra y cálculo](../actividades/ejercicios_algebra_calculo.md), y E1, E2, E6, E8 y E10 de la [hoja 2, estadística](../actividades/ejercicios_estadistica.md).
-4. **Autoevaluación y coevaluación**, en la hoja [autoevaluacion_y_coevaluacion.md](autoevaluacion_y_coevaluacion.md): la parte 1 la rellena cada persona sobre su trabajo; la parte 2, quien revisa vuestro dictamen en la revisión cruzada.
+4. **Autoevaluación y coevaluación**, en la hoja [autoevaluacion_y_coevaluacion.md](autoevaluacion_y_coevaluacion.md): cada persona sube **su propio archivo** a `sprint-02/`: la parte 1 es la autoevaluación de su trabajo; la parte 2, la valoración del dictamen que ha revisado en la revisión cruzada.
 
 **Cada afirmación del dictamen lleva:**
 - la **carta** (el nombre del error) y el **veredicto**,
@@ -134,8 +134,8 @@ Según la afirmación:
 
 1. **Completar (20 min):** la afirmación 2 con su tabla (por tarifa y canal) y la recomendación; vuestras afirmaciones.
 2. **Una frase de IA responsable (5 min)**, al final del dictamen: «*Si entrenáramos un modelo con ……, aprendería ……, porque ……*». Ejemplo inventado: «Si entrenáramos un modelo con las reseñas de quien se anima a escribir, aprendería solo la opinión de los extremos, porque las personas medianamente satisfechas casi no escriben».
-3. **Revisión cruzada = coevaluación (15 min):** intercambiad el dictamen con otra persona, comprobad que cada bloque tiene carta, veredicto, frase corregida y cuenta (si la hay) y rellenad la parte 2 de la [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md).
-4. **Entrega (15 min):** subid a `sprint-02/` el dictamen y la [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md) (la parte 1 la rellena cada persona), actualizad el tablero y repasad la Definition of Done.
+3. **Revisión cruzada = coevaluación (15 min):** intercambiad el dictamen con otra persona, comprobad que cada bloque tiene carta, veredicto, frase corregida y cuenta (si la hay) y rellenad, en vuestro propio archivo, la parte 2 de la [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md) (la valoración del dictamen que habéis revisado).
+4. **Entrega (15 min):** subid a `sprint-02/` el dictamen y vuestro archivo de [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md) (cada persona sube el suyo; el archivo explica cómo), actualizad el tablero y repasad la Definition of Done.
 
 **Si os atascáis:** contestad con vuestra afirmación la pregunta de la carta, o formulad la frase de otra manera (con números absolutos, con otra base) y mirad si la conclusión cambia. Si los números no cuadran, revisad que dividís por las reservas **del grupo**, no por el total. Más ayuda: [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 
