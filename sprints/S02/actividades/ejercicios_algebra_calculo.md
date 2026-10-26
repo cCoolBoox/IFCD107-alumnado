@@ -1,6 +1,6 @@
 # Hoja de ejercicios 1 · Álgebra lineal, derivadas y gradiente (UD 1a.4)
 
-**Tiempo:** unos 90 minutos completa; en clase tenéis **1 h** (empezad por los ★ y ★★ y terminad en equipo) · **Cómo:** en **papel** (bolígrafo y calculadora sencilla) y, donde se indica, con **Desmos** (desmos.com/calculator) o **GeoGebra** (geogebra.org/classic). Trabajad en parejas; las soluciones las tiene el docente y las revisaremos juntos.
+**Tiempo:** unos 90 minutos completa; en clase tenéis **1 h** (empezad por los ★ y ★★ y terminad en equipo) · **Cómo:** en **papel** (bolígrafo y calculadora sencilla) y, donde se indica, con **Desmos** (desmos.com/calculator) o **GeoGebra** (geogebra.org/classic). Trabajad en parejas; las soluciones paso a paso están en [`soluciones_algebra_calculo.md`](soluciones_algebra_calculo.md). **Hacedla primero sin mirarlas** y corregid después con otro color.
 **Entregable del sprint:** esta hoja + la de estadística, con vuestras respuestas y, si os atascáis, **una nota de dónde**.
 
 > **No hace falta ser matemático.** Buscamos entender **qué significa** cada operación para un modelo de IA. Cada ejercicio está graduado: ★ básico, ★★ medio, ★★★ reto.

@@ -1,6 +1,6 @@
 # Hoja de ejercicios 2 · Estadística, probabilidad, Bayes, muestreo y sesgo (UD 1a.5)
 
-**Tiempo:** unos 100 minutos completa; se reparte entre los ratos de la teoría y el trabajo en equipo · **Cómo:** en papel y con calculadora. Los datos son **inventados** para practicar (no son estadísticas reales del turismo). Las soluciones las tiene el docente.
+**Tiempo:** unos 100 minutos completa; se reparte entre los ratos de la teoría y el trabajo en equipo · **Cómo:** en papel y con calculadora. Los datos son **inventados** para practicar (no son estadísticas reales del turismo). Las soluciones paso a paso están en [`soluciones_estadistica.md`](soluciones_estadistica.md): **hacedla primero sin mirarlas** y corregid después con otro color.
 Graduación: ★ básico · ★★ medio · ★★★ reto.
 
 > **Consejo:** en probabilidad, pasad todo a **frecuencias naturales** ("de cada 1.000 reservas…"). Se entiende mucho mejor que con fórmulas.
