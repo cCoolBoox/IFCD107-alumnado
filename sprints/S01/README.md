@@ -45,6 +45,7 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
+| [`apuntes_ia_conceptos_y_etica.md`](actividades/apuntes_ia_conceptos_y_etica.md) · [PDF](actividades/apuntes_ia_conceptos_y_etica.pdf) · [ecofriendly](actividades/apuntes_ia_conceptos_y_etica_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: qué es la IA, tipos de aprendizaje, sobreajuste, matriz de confusión, sesgo, RGPD y AI Act explicados paso a paso con ejemplos | — | Antes del sprint y cuando tengas dudas |
 | [`tarjetas_casos_uso.md`](actividades/tarjetas_casos_uso.md) · Dinámica A | Mapa de casos de uso: modalidad, aprendizaje y datos | 25 min (11 tarjetas) | Práctica 1 |
 | [`tarjetas_casos_uso.md`](actividades/tarjetas_casos_uso.md) · Dinámica B | Clasificación "a mano" y sobreajuste | 10 min (demostración) | Práctica 2 |
 | [`tarjetas_casos_uso.md`](actividades/tarjetas_casos_uso.md) · Dinámica C | ¿Qué familia de algoritmos? (6 problemas) | 15 min (3 de los 6 problemas, en gran grupo) | Práctica 3 |

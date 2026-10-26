@@ -41,6 +41,7 @@ Cuadernos en orden (5 h). Cada ejercicio se autocorrige con un `assert`: si fall
 
 | Cuaderno | Tema | Colab |
 |---|---|---|
+| [`apuntes_numpy_gradiente_y_estadistica.md`](actividades/apuntes_numpy_gradiente_y_estadistica.md) · [PDF](actividades/apuntes_numpy_gradiente_y_estadistica.pdf) · [ecofriendly](actividades/apuntes_numpy_gradiente_y_estadistica_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: NumPy, descenso del gradiente, intervalos de confianza, contrastes, correlación y causalidad, y CRUD en Python explicados paso a paso con ejemplos que puedes comprobar a mano | Cuando quieras repasar la teoría |
 | `S05_01_numpy` | Arrays, vectorización, *broadcasting* | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_01_numpy.ipynb) |
 | `S05_02_algebra_lineal` | Matrices, sistemas, ecuación normal | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_02_algebra_lineal.ipynb) |
 | `S05_03_gradiente_regresion` | Descenso del gradiente y regresión desde cero | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_03_gradiente_regresion.ipynb) |

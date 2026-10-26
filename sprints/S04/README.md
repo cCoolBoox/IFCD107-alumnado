@@ -41,6 +41,7 @@ Cuadernos en orden (3 h 35 min obligatorias + 45 min opcionales). Cada ejercicio
 
 | Cuaderno | Tema | Colab |
 |---|---|---|
+| [`apuntes_python_para_datos.md`](actividades/apuntes_python_para_datos.md) · [PDF](actividades/apuntes_python_para_datos.pdf) · [ecofriendly](actividades/apuntes_python_para_datos_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: variables, funciones, listas y diccionarios, CSV/JSON, excepciones y Git explicados paso a paso con ejemplos que puedes ejecutar | Cuando quieras repasar la teoría |
 | `S04_01_entorno_sintaxis` | Entorno, variables, tipos, `if`, `for`, `while` | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) |
 | `S04_02_funciones_modulos` | Funciones, `*args`, `lambda`, módulos | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) |
 | `S04_03_estructuras_datos` | Listas, tuplas, diccionarios, conjuntos | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) |

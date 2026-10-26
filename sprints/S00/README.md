@@ -43,6 +43,7 @@ Un material por actividad (todos son `.md`):
 
 | Material | Para qué sirve |
 |---|---|
+| [`apuntes_agile_scrum_y_design_thinking.md`](actividades/apuntes_agile_scrum_y_design_thinking.md) · [PDF](actividades/apuntes_agile_scrum_y_design_thinking.pdf) · [ecofriendly](actividades/apuntes_agile_scrum_y_design_thinking_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: Agile, Scrum (roles, tablero, Definition of Done) y Design Thinking (entrevista, mapa de empatía, «¿Cómo podríamos…?») explicados paso a paso con ejemplos de TurisData |
 | [`simulacion_sprint_alumnado.md`](actividades/simulacion_sprint_alumnado.md) | Simulación de un sprint corto (práctica 1) |
 | [`empatia_hmw_plantillas.md`](Reto_S00/empatia_hmw_plantillas.md) | Mapa de empatía y «How might we» (práctica 2 y reto) |
 | [`plantillas_equipo.md`](Reto_S00/plantillas_equipo.md) | Acuerdo de trabajo, Definition of Done y backlog (reto) |

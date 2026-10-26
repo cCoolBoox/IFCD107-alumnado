@@ -39,6 +39,7 @@
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_datos_limpieza_y_metricas.md`](actividades/apuntes_datos_limpieza_y_metricas.md) · [PDF](actividades/apuntes_datos_limpieza_y_metricas.pdf) · [ecofriendly](actividades/apuntes_datos_limpieza_y_metricas_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: EDA con pandas, limpieza, pipelines, métricas (precisión, recall, F1, AUC), validación cruzada y fuga de datos explicados paso a paso con ejemplos | — | Antes del sprint y cuando tengas dudas |
 | `S06_01_pandas_eda` | pandas, EDA y visualización exploratoria; primer chequeo de calidad | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) |
 | `S06_02_limpieza` | Limpieza: duplicados, tipos, fechas, categorías, imposibles, nulos | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) |
 | `S06_03_preprocesado_pipeline` | Escalado, codificación, `ColumnTransformer` y `Pipeline` | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) |

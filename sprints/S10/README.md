@@ -42,6 +42,7 @@
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_redes_neuronales.md`](actividades/apuntes_redes_neuronales.md) · [PDF](actividades/apuntes_redes_neuronales.pdf) · [ecofriendly](actividades/apuntes_redes_neuronales_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: la neurona, las capas, el entrenamiento, Keras, el sobreajuste y la regularización (L2, dropout, parada temprana) explicados con cuentas que puedes hacer a mano | — | Antes del sprint y cuando tengas dudas |
 | `S10_01_red_desde_cero` | Una red neuronal con solo NumPy: neurona, activación, *backprop*, entrenamiento | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) |
 | `S10_02_mlp_keras` | MLP en Keras: cancelaciones (clasificación) y `precio_noche` (regresión) | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) |
 | `S10_03_regularizacion` | Curvas, sobreajuste, L2, *dropout*, parada temprana, lote, tasa, *callbacks*, guardar modelo | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) |

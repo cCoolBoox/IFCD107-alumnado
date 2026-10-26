@@ -37,6 +37,7 @@
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_experimentos_y_reproducibilidad.md`](actividades/apuntes_experimentos_y_reproducibilidad.md) · [PDF](actividades/apuntes_experimentos_y_reproducibilidad.pdf) · [ecofriendly](actividades/apuntes_experimentos_y_reproducibilidad_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: semillas y reproducibilidad, registro de experimentos, fuga de datos, media ± desviación y ruido, elegir candidato y usar el test una sola vez, con ejemplos numéricos | — | Antes del sprint y cuando tengas dudas |
 | `S15_01_seguimiento_experimentos` | Semillas, registro en CSV, validación cruzada, fuga de datos, MLflow local *(opcional)* | 1 h 15 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/notebooks/S15_01_seguimiento_experimentos.ipynb) |
 
 - [`Reto_S15/registro_experimentos_plantilla.csv`](Reto_S15/registro_experimentos_plantilla.csv) · cabecera del registro; copiadla a `experimentos/registro.csv` en vuestro repositorio.

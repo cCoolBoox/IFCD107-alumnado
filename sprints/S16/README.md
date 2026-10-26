@@ -38,6 +38,7 @@
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_demostrador_sesgos_y_memoria.md`](actividades/apuntes_demostrador_sesgos_y_memoria.md) · [PDF](actividades/apuntes_demostrador_sesgos_y_memoria.pdf) · [ecofriendly](actividades/apuntes_demostrador_sesgos_y_memoria_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: evaluación final y análisis de errores, sesgos por subgrupos y mitigación medida, demostrador y pruebas, reproducibilidad, model card, memoria técnica y congelación, con ejemplos numéricos | — | Antes del sprint y cuando tengas dudas |
 | `S16_01_demostrador` | Demostrador: modelo + metadatos, lógica separada, pruebas, Streamlit, widgets y API (opcional) | 1 h 15 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb) |
 
 - [`plantilla_esqueleto_memoria_tecnica.md`](Reto_S16/plantilla_esqueleto_memoria_tecnica.md) · memoria de 10-15 páginas.

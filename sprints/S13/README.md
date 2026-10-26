@@ -38,6 +38,7 @@
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_comunicar_resultados.md`](actividades/apuntes_comunicar_resultados.md) · [PDF](actividades/apuntes_comunicar_resultados.pdf) · [ecofriendly](actividades/apuntes_comunicar_resultados_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: matriz de confusión, ROC/PR, importancia por permutación, umbral por coste y reglas para un informe visual de una página explicados con ejemplos | — | Antes del sprint y cuando tengas dudas |
 | `S13_01_visualizacion_resultados` | Matriz de confusión, ROC/PR, importancia, umbral y coste, buenas prácticas | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) |
 | `S13_02_plantilla_informe_visual` | Plantilla ejecutable del panel de una página (para el reto) | 40 min (dentro del reto) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) |
 

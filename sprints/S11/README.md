@@ -43,6 +43,7 @@
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_vision_por_computador.md`](actividades/apuntes_vision_por_computador.md) · [PDF](actividades/apuntes_vision_por_computador.pdf) · [ecofriendly](actividades/apuntes_vision_por_computador_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: convolución, pooling, CNN, transfer learning, detección (IoU, NMS, AP) y segmentación explicados con cuentas que puedes hacer a mano | — | Antes del sprint y cuando tengas dudas |
 | `S11_01_cnn` | Convolución, pooling y CNN en Keras (dígitos 8×8); *data augmentation* | 65 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_01_cnn.ipynb) |
 | `S11_02_transfer_learning` | Transfer learning y fine-tuning (con preentrenamiento propio y MobileNetV2 en Colab) | 80 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) |
 | `S11_03_deteccion_segmentacion` | IoU, NMS, mAP, detector con OpenCV, segmentación (y YOLO opcional) | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) |

@@ -49,6 +49,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
+| [`apuntes_storytelling_y_defensa.md`](actividades/apuntes_storytelling_y_defensa.md) · [PDF](actividades/apuntes_storytelling_y_defensa.pdf) · [ecofriendly](actividades/apuntes_storytelling_y_defensa_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: audiencia y mensaje único, pirámide y arco narrativo, guion de 10 minutos, diapositivas, demostración con plan B, preguntas del tribunal (método RESPONDE) y ensayos, con ejemplos antes/después | — | Antes del sprint y cuando tengas dudas |
 | 1 | 📖 Teoría | [**Storytelling**](presentaciones/S17.1_Storytelling_y_defensa.pdf) | 20 min |
 | 2 | 💻 Práctica | **Tu historia:** [plantilla de storytelling](Reto_S17/plantilla_storytelling.md) (máx. 12 diapositivas) | 45 min |
 | 3 | 💻 Práctica | **Pitch de 3 minutos** y guion de la defensa ([`guion_defensa.md`](actividades/guion_defensa.md)) | 40 min |

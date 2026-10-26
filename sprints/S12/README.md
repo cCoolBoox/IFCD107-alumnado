@@ -46,6 +46,7 @@ Todo se ejecuta sin internet (las partes **OPCIONAL / NO VERIFICADO** se pueden 
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_series_lenguaje_y_generativa.md`](actividades/apuntes_series_lenguaje_y_generativa.md) · [PDF](actividades/apuntes_series_lenguaje_y_generativa.pdf) · [ecofriendly](actividades/apuntes_series_lenguaje_y_generativa_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: series temporales, NLP (TF-IDF, embeddings), Transformers, RAG, prompt injection y autoencoders explicados con cuentas que puedes hacer a mano | — | Antes del sprint y cuando tengas dudas |
 | `S12_01_series_temporales` | Serie temporal: baselines, descomposición, ARIMA/SARIMAX | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) |
 | `S12_02_redes_recurrentes` | RNN, LSTM y GRU en Keras vs. baseline | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) |
 | `S12_03_nlp_clasico` | Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) |

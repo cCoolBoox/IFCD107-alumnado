@@ -43,6 +43,7 @@
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_regresion_y_clasificacion.md`](actividades/apuntes_regresion_y_clasificacion.md) · [PDF](actividades/apuntes_regresion_y_clasificacion.pdf) · [ecofriendly](actividades/apuntes_regresion_y_clasificacion_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: regresión lineal y polinómica, Ridge y Lasso, regresión logística, umbral por coste, ROC y PR, k-NN y Naive Bayes explicados con ejemplos que puedes comprobar a mano | — | Antes del sprint y cuando tengas dudas |
 | `S07_01_regresion_lineal_polinomica` | Regresión lineal, coeficientes, residuos, interacciones y polinomios | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_01_regresion_lineal_polinomica.ipynb) |
 | `S07_02_ridge_lasso` | Regularización: Ridge, Lasso y elección de `alpha` | 35 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_02_ridge_lasso.ipynb) |
 | `S07_03_regresion_logistica` | Regresión logística, *odds ratios*, umbral, matriz de confusión y coste | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_03_regresion_logistica.ipynb) |

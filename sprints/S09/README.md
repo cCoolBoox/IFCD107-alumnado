@@ -41,6 +41,7 @@
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_clustering_recomendadores_y_refuerzo.md`](actividades/apuntes_clustering_recomendadores_y_refuerzo.md) · [PDF](actividades/apuntes_clustering_recomendadores_y_refuerzo.pdf) · [ecofriendly](actividades/apuntes_clustering_recomendadores_y_refuerzo_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: k-means, silueta, DBSCAN, PCA, recomendadores (popularidad, contenido, colaborativo) y Q-learning explicados con ejemplos que puedes calcular a mano | — | Antes del sprint y cuando tengas dudas |
 | `S09_01_clustering` | Segmentar huéspedes: escalado, k-means, silueta, jerárquico, DBSCAN | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_01_clustering.ipynb) |
 | `S09_02_pca` | PCA: varianza explicada, mapa 2D, cargas, mención a t-SNE | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_02_pca.ipynb) |
 | `S09_03_recomendadores` | Popularidad, contenido, colaborativo, factorización; RMSE y precision@k | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/notebooks/S09_03_recomendadores.ipynb) |

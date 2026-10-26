@@ -41,6 +41,7 @@
 
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
+| [`apuntes_arboles_ensembles_y_svm.md`](actividades/apuntes_arboles_ensembles_y_svm.md) · [PDF](actividades/apuntes_arboles_ensembles_y_svm.pdf) · [ecofriendly](actividades/apuntes_arboles_ensembles_y_svm_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: árboles de decisión, Random Forest, boosting, SVM, hiperparámetros y cómo elegir un campeón (rendimiento, explicabilidad y coste) explicados con ejemplos que puedes calcular a mano | — | Antes del sprint y cuando tengas dudas |
 | `S08_01_arboles_decision` | Árbol de decisión: reglas, sobreajuste, poda, importancia | 35 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) |
 | `S08_02_random_forest` | Random Forest: bagging, OOB, importancia por permutación | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) |
 | `S08_03_boosting_xgboost_lightgbm` | Gradient Boosting, XGBoost, LightGBM y parada temprana | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) |

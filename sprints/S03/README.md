@@ -44,6 +44,7 @@
 
 | Script | Tema |
 |---|---|
+| [`apuntes_sql_nosql_y_automl.md`](actividades/apuntes_sql_nosql_y_automl.md) · [PDF](actividades/apuntes_sql_nosql_y_automl.pdf) · [ecofriendly](actividades/apuntes_sql_nosql_y_automl_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: SQL (SELECT, JOIN, GROUP BY, CRUD), NoSQL, AutoML, fuga de datos y umbral de negocio explicados con una mini-base de datos que puedes comprobar a mano |
 | [`sql/01_select_where.sql`](recursos/sql/01_select_where.sql) | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `NULL` |
 | [`sql/02_join.sql`](recursos/sql/02_join.sql) | `JOIN` y `LEFT JOIN` |
 | [`sql/03_group_by.sql`](recursos/sql/03_group_by.sql) | Agregaciones, `GROUP BY`, `HAVING` |

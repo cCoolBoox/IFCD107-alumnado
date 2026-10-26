@@ -41,6 +41,7 @@ Este sprint no tiene notebooks: hay sesiones y plantillas (todas en esta carpeta
 
 | Fecha | Qué hacéis |
 |---|---|
+| [`apuntes_formular_un_proyecto_de_ia.md`](actividades/apuntes_formular_un_proyecto_de_ia.md) · [PDF](actividades/apuntes_formular_un_proyecto_de_ia.pdf) · [ecofriendly](actividades/apuntes_formular_un_proyecto_de_ia_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: cómo formular un proyecto de IA (pregunta de negocio, métrica, baseline), documentar datos y licencias, backlog Scrum, plan ético y ficha de proyecto, con ejemplos |
 | 26/11 | Planning, píldora «cómo formular un proyecto de IA» y taller de Design Thinking; **elección de brief (antes del descanso, hacia las 11:00)**; datos y licencias; ficha **antes de las 14:30**. |
 | 27/11 | **Go / no-go** de la ficha; EDA con informe de calidad; baseline terminado y registrado. |
 | 30/11 | Plan ético, backlog y README; entrega, review y retrospectiva (últimos 80 min). |
