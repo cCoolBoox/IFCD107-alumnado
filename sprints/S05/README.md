@@ -37,7 +37,7 @@
 
 **Material de las actividades**
 
-Cuadernos en orden (5 h). Cada ejercicio se autocorrige con un `assert`: si falla, lee el mensaje y corrige.
+Cuadernos en orden (unas 4 h en clase). Cada ejercicio se autocorrige con un `assert`: si falla, lee el mensaje y corrige.
 
 | Cuaderno | Tema | Colab |
 |---|---|---|
@@ -95,7 +95,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - Contraste, intervalos de confianza y p-valores, y una respuesta al cliente de máx. 150 palabras.
 
 **Reglas:**
-- Unas 2 h 30 min de reto; el descenso del gradiente lo escribís vosotros (la librería solo para contrastar).
+- Unas 1 h 35 min entre el planning, el reto y la entrega; el descenso del gradiente lo escribís vosotros (la librería solo para contrastar).
 - Semillas fijas; datos sintéticos, sin generalizar al turismo real.
 - Nunca claves ni datos personales.
 

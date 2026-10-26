@@ -95,7 +95,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 
 **Reglas:**
-- Unas 3 h 45 min en equipo; solo librerías del curso. Nada de editar el CSV a mano: toda corrección va en código.
+- Unas 2 h 10 min en equipo (planning, reto y entrega); solo librerías del curso. Nada de editar el CSV a mano: toda corrección va en código.
 - Lo aprendido de los datos (medianas, categorías…) se ajusta **solo con train**. No se descarta ninguna fila sin justificarla.
 - Nunca claves ni datos personales. Review: 5 min por equipo (3 defectos graves y *pipeline* en marcha).
 

@@ -26,7 +26,7 @@
 
 **Qué vais a aprender haciéndolo:** a **entrenar una red sin que memorice**, a leer **curvas de aprendizaje**, y a **comparar con honestidad** (que un número sea mayor no basta).
 
-**Cuánto tiempo:** unas 2 horas y 15 minutos entre el planning, el reto (≈ 2 h 15 min) y la entrega (días 1 y 2). El reto se hace en la segunda jornada, con el esqueleto del cuaderno [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y lo practicado el lunes.
+**Cuánto tiempo:** unas 2 horas y 20 minutos entre el planning, el reto (≈ 1 h 30 min) y la entrega (días 1 y 2). El reto se hace en la segunda jornada, con el esqueleto del cuaderno [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb) y lo practicado el lunes.
 
 **Núcleo y extra.** Núcleo: un único problema: reproducir la referencia y una mejora con la red, bien medida. Extra: más experimentos y las prácticas «en casa».
 

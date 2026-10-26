@@ -94,7 +94,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 
 **Reglas:**
-- Unas 4 h en equipo; un solo problema (`cancelada` **o** `precio_noche`), misma partición para todos y prueba usada una sola vez.
+- Unas 2 h 20 min en equipo (planning, reto y entrega); un solo problema (`cancelada` **o** `precio_noche`), misma partición para todos y prueba usada una sola vez.
 - Referencia: tu campeón del Sprint 8; máx. 40 épocas; el escalador se ajusta solo con entrenamiento.
 - Nunca claves ni datos personales.
 

@@ -75,10 +75,10 @@ Además, la defensa aporta evidencia sobre los criterios **A** (valor de negocio
 ### Pasos sugeridos
 | Cuándo | Paso |
 |---|---|
-| 11/12 · 1.ª hora | Teoría: estructura y elementos del storytelling. |
-| 11/12 · 2 h | Rellenad [`plantilla_storytelling.md`](plantilla_storytelling.md) (audiencia, mensaje único, pirámide, arco) y el storyboard de 12 diapositivas. Ensayad el pitch de 3 min. |
-| 11/12 · 3 h de ensayos | Ronda 1: cronometrada con demo. Ronda 2: con preguntas de otro equipo. Ronda 3 (**ensayo general**): como el día real. Anotad qué cambiáis. |
-| 14/12 | Llegad 15 min antes, probad el proyector y la demo, tened el plan B abierto. Defensa. |
+| Día 1 · 1.ª hora | Teoría: estructura y elementos del storytelling. |
+| Día 1 · 2 h | Rellenad [`plantilla_storytelling.md`](plantilla_storytelling.md) (audiencia, mensaje único, pirámide, arco) y el storyboard de 12 diapositivas. Ensayad el pitch de 3 min. |
+| Día 1 · 3 h de ensayos | Ronda 1: cronometrada con demo. Ronda 2: con preguntas de otro equipo. Ronda 3 (**ensayo general**): como el día real. Anotad qué cambiáis. |
+| Día 2 | Llegad 15 min antes, probad el proyector y la demo, tened el plan B abierto. Defensa. |
 
 ### Guía paso a paso para principiantes
 

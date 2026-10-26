@@ -102,7 +102,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 
 **Reglas:**
-- Unas 3 h en equipo; máx. 3 modelos por problema (*baseline* incluido); `SEMILLA = 42`.
+- Unas 1 h 40 min en equipo (planning, reto y entrega); máx. 3 modelos por problema (*baseline* incluido); `SEMILLA = 42`.
 - Solo variables conocidas al reservar (sin fuga). El umbral se elige con validación cruzada y el test se usa una sola vez.
 - Nunca claves ni datos personales.
 

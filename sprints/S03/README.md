@@ -45,12 +45,12 @@
 | Script | Tema |
 |---|---|
 | [`apuntes_sql_nosql_y_automl.md`](actividades/apuntes_sql_nosql_y_automl.md) · [PDF](actividades/apuntes_sql_nosql_y_automl.pdf) · [ecofriendly](actividades/apuntes_sql_nosql_y_automl_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: SQL (SELECT, JOIN, GROUP BY, CRUD), NoSQL, AutoML, fuga de datos y umbral de negocio explicados con una mini-base de datos que puedes comprobar a mano |
-| [`sql/01_select_where.sql`](recursos/sql/01_select_where.sql) | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `NULL` |
-| [`sql/02_join.sql`](recursos/sql/02_join.sql) | `JOIN` y `LEFT JOIN` |
-| [`sql/03_group_by.sql`](recursos/sql/03_group_by.sql) | Agregaciones, `GROUP BY`, `HAVING` |
-| [`sql/04_subconsultas.sql`](recursos/sql/04_subconsultas.sql) | Subconsultas y `WITH` |
-| [`sql/05_crud.sql`](recursos/sql/05_crud.sql) | `INSERT`, `UPDATE`, `DELETE`, transacciones |
-| [`sql/06_modelado_indices.sql`](recursos/sql/06_modelado_indices.sql) | Claves, normalización e índices |
+| [`sql/01_select_where.sql`](actividades/sql/01_select_where.sql) | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `NULL` |
+| [`sql/02_join.sql`](actividades/sql/02_join.sql) | `JOIN` y `LEFT JOIN` |
+| [`sql/03_group_by.sql`](actividades/sql/03_group_by.sql) | Agregaciones, `GROUP BY`, `HAVING` |
+| [`sql/04_subconsultas.sql`](actividades/sql/04_subconsultas.sql) | Subconsultas y `WITH` |
+| [`sql/05_crud.sql`](actividades/sql/05_crud.sql) | `INSERT`, `UPDATE`, `DELETE`, transacciones |
+| [`sql/06_modelado_indices.sql`](actividades/sql/06_modelado_indices.sql) | Claves, normalización e índices |
 
 | Guía / cuaderno | Tema | Colab |
 |---|---|---|
@@ -69,7 +69,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Primer modelo en producción»: leed la ficha y repartid roles | 10 min |
 | 2 | 📖 Teoría | [Modelo relacional, SQL, CRUD y nociones de administración](presentaciones/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) | 40 min |
-| 3 | 💻 Práctica | Scripts SQL 01–06 en DB Browser, en este orden: [`SELECT`](recursos/sql/01_select_where.sql), [`JOIN`](recursos/sql/02_join.sql), [`GROUP BY`](recursos/sql/03_group_by.sql) y [subconsultas](recursos/sql/04_subconsultas.sql); después, [CRUD sobre una copia](recursos/sql/05_crud.sql) y [modelado e índices](recursos/sql/06_modelado_indices.sql) | 1 h 40 min |
+| 3 | 💻 Práctica | Scripts SQL 01–06 en DB Browser, en este orden: [`SELECT`](actividades/sql/01_select_where.sql), [`JOIN`](actividades/sql/02_join.sql), [`GROUP BY`](actividades/sql/03_group_by.sql) y [subconsultas](actividades/sql/04_subconsultas.sql); después, [CRUD sobre una copia](actividades/sql/05_crud.sql) y [modelado e índices](actividades/sql/06_modelado_indices.sql) | 1 h 40 min |
 | 4 | 📖 Teoría | [Bases de datos NoSQL (demostración corta)](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) | 15 min |
 | 5 | 💻 Práctica | [NoSQL con documentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) (o, si usáis MongoDB Compass, la [guía de MongoDB](guia/NoSQL_MongoDB.md)) | 35 min |
 
@@ -100,7 +100,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - Informe de recursos y costes, con prueba de que todo se ha cerrado o eliminado.
 
 **Reglas:**
-- Unas 3 h 30 min de proyecto; solo datos sintéticos de TurisData y el límite de uso que indique el docente.
+- Unas 2 h 10 min entre el planning, el reto y la entrega; solo datos sintéticos de TurisData y el límite de uso que indique el docente.
 - Nunca claves, contraseñas ni cadenas de conexión en el informe ni en el repositorio.
 - Evitad la fuga de datos: solo información disponible al hacer la reserva.
 

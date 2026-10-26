@@ -101,7 +101,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 
 **Reglas:**
-- Unas 4 h en equipo; máx. 8 modelos; cada búsqueda, 5 min como máximo en Colab; `SEMILLA = 42`.
+- Unas 2 h 15 min en equipo (planning, reto y entrega); máx. 8 modelos; cada búsqueda, 5 min como máximo en Colab; `SEMILLA = 42`.
 - Búsqueda solo sobre train; el test se usa una vez, solo con el campeón.
 - Nunca claves ni datos personales. Review: 5 min por equipo.
 

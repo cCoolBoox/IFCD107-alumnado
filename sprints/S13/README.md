@@ -1,7 +1,7 @@
 # README Sprint S13 · Contar lo que hace el modelo
 
 **Pregunta guía:** ¿cómo enseñamos y defendemos los resultados de un modelo?
-**Fecha:** 25/11, dentro del último día del Sprint 12 · **Tiempo:** ≈ 1 h 40 min (20 min de teoría · 40 de práctica · 40 de reto)
+**Fecha:** 25/11, dentro del último día del Sprint 12 · **Tiempo:** ≈ 1 h 10 min (10 min de teoría · 35 de práctica · 25 de reto)
 
 📄 **Este README en PDF:** [a color](README_Sprint_13.pdf) · [ecofriendly, para imprimir](README_Sprint_13_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
@@ -39,8 +39,8 @@
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
 | [`apuntes_comunicar_resultados.md`](actividades/apuntes_comunicar_resultados.md) · [PDF](actividades/apuntes_comunicar_resultados.pdf) · [ecofriendly](actividades/apuntes_comunicar_resultados_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: matriz de confusión, ROC/PR, importancia por permutación, umbral por coste y reglas para un informe visual de una página explicados con ejemplos | — | Antes del sprint y cuando tengas dudas |
-| `S13_01_visualizacion_resultados` | Matriz de confusión, ROC/PR, importancia, umbral y coste, buenas prácticas | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) |
-| `S13_02_plantilla_informe_visual` | Plantilla ejecutable del panel de una página (para el reto) | 40 min (dentro del reto) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) |
+| `S13_01_visualizacion_resultados` | Matriz de confusión, ROC/PR, importancia, umbral y coste, buenas prácticas | 35 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) |
+| `S13_02_plantilla_informe_visual` | Plantilla ejecutable del panel de una página (para el reto) | 25 min (dentro del reto) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) |
 
 Plantilla en esta carpeta: [`plantilla_informe_visual.md`](Reto_S13/plantilla_informe_visual.md) (texto del informe de una página).
 

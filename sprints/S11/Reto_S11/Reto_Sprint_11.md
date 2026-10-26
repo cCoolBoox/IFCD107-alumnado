@@ -26,7 +26,7 @@
 
 **Qué vais a aprender haciéndolo:** a **reutilizar modelos preentrenados**, a **interpretar errores** de un modelo de visión y a decidir **qué se automatiza y qué se revisa a mano**.
 
-**Cuánto tiempo:** unas 3 horas y 20 minutos de reto (días 2 y 3), además del planning, el esqueleto del cuaderno [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) (que es una práctica) y la entrega.
+**Cuánto tiempo:** unas 3 horas y 5 minutos de reto (días 2 y 3), además del planning, el esqueleto del cuaderno [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) (que es una práctica) y la entrega.
 
 **Núcleo y extra.** Núcleo: un modelo de *transfer learning* bien evaluado, con análisis de errores y demostrador. Extra: *fine-tuning* y comparar más modelos.
 
@@ -84,7 +84,7 @@ sobre todo, **en qué se equivoca**, para decidir cuánto puede fiarse de él y 
 
 #### Paso 1 · Preparar los datos (día 2, 40 minutos)
 1. Abrid [`S11_04_reto_vision_cliente`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) en Colab.
-2. Decidid: ¿**dataset sintético** (lo genera [`generar_dataset_sintetico.py`](../recursos/generar_dataset_sintetico.py)) o **uno propio**?
+2. Decidid: ¿**dataset sintético** (lo genera [`generar_dataset_sintetico.py`](generar_dataset_sintetico.py)) o **uno propio**?
    - Si es propio: fotos tomadas por vosotros o con **licencia abierta**; guardad **autor y licencia**; **sin personas reconocibles**.
 3. Estructura: **una carpeta por clase**, con **mínimo 30 imágenes por clase** (mejor 100 o más). Usad `contar_por_clase` para comprobarlo.
 4. **Mirad las fotos** de cada clase. ¿Hay etiquetas dudosas? Anotadlas.

@@ -15,7 +15,7 @@
 2. **Prever la ocupación de la próxima semana** para organizar personal y compras (serie temporal).
 3. **Probar un asistente** que responda con la política del alojamiento **sin inventar nada** (RAG).
 
-**Es un reto largo (unas 3 h 30 min) y tiene cuatro entregables.** Por eso se trabaja **repartido**: cada persona lidera una parte, pero todas entienden todas. Esto es lo que se hace en una consultora real.
+**Es un reto largo (unas 2 h 55 min) y tiene cuatro entregables.** Por eso se trabaja **repartido**: cada persona lidera una parte, pero todas entienden todas. Esto es lo que se hace en una consultora real.
 
 **Qué vais a hacer, en cinco bloques:**
 1. **Reseñas:** medir el sentimiento (positivo / negativo), sacar los temas más criticados y más valorados, con cifras, un gráfico y citas reales.
@@ -28,7 +28,7 @@
 
 **Qué vais a aprender haciéndolo:** a trabajar con **texto**, con **series temporales** y con **asistentes basados en modelos de lenguaje**, y a **evaluar y proteger** un asistente.
 
-**Cuánto tiempo:** unas 2 horas y 40 minutos de reto (a lo largo de los tres días del sprint) además de lo que avancéis en las prácticas y del informe visual del Sprint 13, que va dentro del último día.
+**Cuánto tiempo:** unas 2 horas y 55 minutos entre el planning, el reto y la entrega (a lo largo de los tres días del sprint) además de lo que avancéis en las prácticas y del informe visual del Sprint 13, que va dentro del último día.
 
 **Núcleo y extra.** Núcleo: dos de las tres partes técnicas (a elegir entre reseñas, ocupación y asistente) con su informe. Extra: la tercera parte y las prácticas de ampliación.
 
@@ -71,7 +71,7 @@ Un `LEEME.md` de 5 líneas explica cómo ejecutar todo (versiones de librerías 
 [`datos/resenas.csv`](../../../datos/resenas.csv) · [`datos/ocupacion_diaria.csv`](../../../datos/ocupacion_diaria.csv) · [`datos/politica_alojamiento.md`](../../../datos/politica_alojamiento.md) · [`datos/preguntas_referencia.csv`](../../../datos/preguntas_referencia.csv) · tus notebooks S12_01 a S12_07. **Los datos son sintéticos**: dilo en el informe.
 
 ### Restricciones
-- **Tiempo:** unas 2 h 40 min de reto (más lo que avances en las prácticas). Se presenta en la *review* (5 min por equipo).
+- **Tiempo:** unas 2 h 55 min entre el planning, el reto y la entrega (más lo que avances en las prácticas). Se presenta en la *review* (5 min por equipo).
 - **Herramientas:** Python y las librerías del curso. Todo debe poder ejecutarse **sin internet**. El LLM real (Ollama o API) es **opcional**: si lo usáis, indicad que no se ha podido verificar por el docente y **no incluyáis claves**.
 - **Presupuesto:** 0 €. Cuotas gratuitas solo si vuestro equipo lo decide y sin datos personales.
 - **Prohibido:** partir la serie al azar, escalar o vectorizar con todos los datos antes de partir, y dar cifras del informe que no salgan del código.
@@ -85,10 +85,10 @@ Un `LEEME.md` de 5 líneas explica cómo ejecutar todo (versiones de librerías 
 | **IA responsable** | Riesgos específicos (no genéricos): qué pasa con la pregunta sin respuesta, con datos personales en reseñas, con un texto que intenta manipular al asistente. Para un 4: medidas aplicadas y **medidas evaluadas** (p. ej. «el filtro bloqueó 3 de 3 ataques y ninguna frase legítima») |
 
 ### Pasos sugeridos
-- **Día 1 (planning) y día 2 (20 min) · Reparto y plan.** Roles (una persona por parte: reseñas, ocupación, asistente, IA responsable y coordinación). Repasad la rúbrica y decidid la pregunta de negocio de cada parte.
-- **Día 2 (65 min) y día 3 (40 min) · Datos y modelos.** Reseñas: sentimiento y temas, gráficos y citas. Ocupación: baseline y modelo, MAE por semana. Asistente: troceado, recuperación y umbral.
-- **Día 3 (55 min) · Evaluación y seguridad.** Evaluad el asistente con las 20 preguntas y vuestras 5; probad 3 ataques; anotad qué falla y qué arreglasteis.
-- **Día 3 (50 min) · Cierre.** Redactad el informe, la nota de IA responsable y el `LEEME.md`; ejecutad todo desde cero y ensayad los 5 minutos de presentación.
+- **Día 1 (planning) y día 2 (5 min) · Reparto y plan.** Roles (una persona por parte: reseñas, ocupación, asistente, IA responsable y coordinación). Repasad la rúbrica y decidid la pregunta de negocio de cada parte.
+- **Día 2 (50 min) y día 3 (30 min) · Datos y modelos.** Reseñas: sentimiento y temas, gráficos y citas. Ocupación: baseline y modelo, MAE por semana. Asistente: troceado, recuperación y umbral.
+- **Día 3 (40 min) · Evaluación y seguridad.** Evaluad el asistente con las 20 preguntas y vuestras 5; probad 3 ataques; anotad qué falla y qué arreglasteis.
+- **Día 3 (40 min) · Cierre.** Redactad el informe, la nota de IA responsable y el `LEEME.md`; ejecutad todo desde cero y ensayad los 5 minutos de presentación.
 
 ### Guía paso a paso para principiantes
 

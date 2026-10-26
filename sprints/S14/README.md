@@ -39,12 +39,13 @@
 
 Este sprint no tiene notebooks: hay sesiones y plantillas (todas en esta carpeta).
 
-| Fecha | Qué hacéis |
+- [`apuntes_formular_un_proyecto_de_ia.md`](actividades/apuntes_formular_un_proyecto_de_ia.md) · [PDF](actividades/apuntes_formular_un_proyecto_de_ia.pdf) · [ecofriendly](actividades/apuntes_formular_un_proyecto_de_ia_ecofriendly.pdf) · **Apuntes que complementan las diapositivas**: cómo formular un proyecto de IA (pregunta de negocio, métrica, baseline), documentar datos y licencias, backlog Scrum, plan ético y ficha de proyecto, con ejemplos
+
+| Día | Qué hacéis |
 |---|---|
-| [`apuntes_formular_un_proyecto_de_ia.md`](actividades/apuntes_formular_un_proyecto_de_ia.md) · [PDF](actividades/apuntes_formular_un_proyecto_de_ia.pdf) · [ecofriendly](actividades/apuntes_formular_un_proyecto_de_ia_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: cómo formular un proyecto de IA (pregunta de negocio, métrica, baseline), documentar datos y licencias, backlog Scrum, plan ético y ficha de proyecto, con ejemplos |
-| 26/11 | Planning, píldora «cómo formular un proyecto de IA» y taller de Design Thinking; **elección de brief (antes del descanso, hacia las 11:00)**; datos y licencias; ficha **antes de las 14:30**. |
-| 27/11 | **Go / no-go** de la ficha; EDA con informe de calidad; baseline terminado y registrado. |
-| 30/11 | Plan ético, backlog y README; entrega, review y retrospectiva (últimos 80 min). |
+| Día 1 del S14 | Planning, píldora «cómo formular un proyecto de IA» y taller de Design Thinking; **elección de brief (antes del descanso, hacia las 11:00)**; datos y licencias; ficha **antes de las 14:30**. |
+| Día 2 del S14 (hito: go / no-go) | **Go / no-go** de la ficha; EDA con informe de calidad; baseline terminado y registrado. |
+| Día 3 del S14 | Plan ético, backlog y README; entrega, review y retrospectiva (últimos 80 min). |
 
 - [`plantilla_ficha_proyecto.md`](Reto_S14/plantilla_ficha_proyecto.md) · ficha de 1 página.
 - [`plantilla_plan_datos_licencias.md`](Reto_S14/plantilla_plan_datos_licencias.md) · fuentes, licencias y linaje.

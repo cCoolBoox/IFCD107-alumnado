@@ -37,7 +37,7 @@
 
 **Material de las actividades**
 
-Cuadernos en orden (3 h 35 min obligatorias + 45 min opcionales). Cada ejercicio se autocorrige: si falla la celda de comprobación, lee el mensaje y corrige. Los datos son sintéticos.
+Cuadernos en orden (unas 2 h 50 min en clase; los apartados «en casa» y los opcionales, fuera de clase). Cada ejercicio se autocorrige: si falla la celda de comprobación, lee el mensaje y corrige. Los datos son sintéticos.
 
 | Cuaderno | Tema | Colab |
 |---|---|---|
@@ -90,7 +90,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - `salida.json` generado con el CSV real; opcional: `kpis_pandas.py`.
 
 **Reglas:**
-- Unas 3 h 35 min de reto; solo biblioteca estándar (pandas solo en la parte opcional).
+- Unas 3 h entre el planning, el reto y la entrega; solo biblioteca estándar (pandas solo en la parte opcional).
 - El script no se rompe con fichero inexistente, columnas que faltan o filas defectuosas: informa.
 - Nunca claves ni datos personales en el repositorio.
 

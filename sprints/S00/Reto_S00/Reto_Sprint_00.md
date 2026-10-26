@@ -23,7 +23,7 @@
 
 **Qué vais a aprender haciéndolo:** a trabajar con Scrum de verdad (no solo a leer sobre ello) y a escuchar a un cliente antes de ofrecerle soluciones.
 
-**Cuánto tiempo:** 2 horas de reto, repartidas entre los dos días de clase. La revisión (*review*) es el último día: 5 minutos por equipo.
+**Cuánto tiempo:** unas 3 horas de reto y organización, repartidas entre los dos días de clase. La revisión (*review*) es el último día: 5 minutos por equipo.
 
 **No hace falta saber nada de informática ni de IA para este reto.** Solo ganas de trabajar en equipo.
 
@@ -58,7 +58,7 @@ El **entregable** del sprint (un único paquete por equipo, que se revisa en la 
 Formato: los documentos, en `.md` o PDF; el tablero, con enlace de invitación al docente.
 
 ### Restricciones
-- **Tiempo:** unas 7 h de reto y organización en clase (equipo, acuerdo, tablero, repositorio y entrevista, repartidas en las dos jornadas). La review es de 5 minutos por equipo.
+- **Tiempo:** unas 3 h de reto y organización en clase (equipo, acuerdo, tablero, repositorio y entrevista, repartidas en las dos jornadas). La review es de 5 minutos por equipo.
 - **Herramientas:** Trello (gratuito) o similar; nada de pagar licencias.
 - **Entrevista:** el cliente responde durante un tiempo limitado (unos 20 minutos para toda la clase). Preparad las preguntas antes; no habrá segunda ronda hasta el Sprint 1.
 - **Equipos:** de 3 a 4 personas.

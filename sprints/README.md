@@ -8,8 +8,7 @@ Cada carpeta `Sxx/` tiene **un `README.md`** (la guía del sprint con la ficha d
 | `guia/` | La guía del sprint en PDF (`Guia_Sprint_XX.pdf`) y su versión `_ecofriendly` para imprimir con poca tinta |
 | `presentaciones/` | Diapositivas de cada sesión |
 | `notebooks/` | Prácticas para abrir en Google Colab |
-| `actividades/` | Material de las actividades y ejercicios |
-| `recursos/` | Scripts y ficheros de apoyo |
+| `actividades/` | Material de las actividades y ejercicios, con sus scripts y ficheros de apoyo |
 | `tests/` | Test de conocimientos (solo se abre el día indicado) |
 
 Un sprint solo tiene las subcarpetas que necesita. Empieza siempre por el `README.md` del sprint: tiene la sección *📎 Material del sprint* con todos los enlaces.

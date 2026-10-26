@@ -85,9 +85,9 @@ Rúbrica del proyecto (100 puntos). En este sprint pesan:
 ### Pasos sugeridos
 | Cuándo | Paso |
 |---|---|
-| 4/12 | Evaluación final en test (una sola vez). Gráficos de la plantilla [`S13_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) adaptados. Métricas por subgrupos. Lista de errores más frecuentes con ejemplos. |
-| 9/12 | Mitigación de sesgos + medición del efecto. Demostrador funcionando con la plantilla de [`S16_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb). Model card. Borrador de la memoria (secciones 1-6). |
-| 10/12 | Memoria completa; **prueba de reproducibilidad en un ordenador limpio**; vídeo plan B; checklist de congelación; coevaluación; retro. |
+| Día 1 | Evaluación final en test (una sola vez). Gráficos de la plantilla [`S13_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) adaptados. Métricas por subgrupos. Lista de errores más frecuentes con ejemplos. |
+| Día 2 | Mitigación de sesgos + medición del efecto. Demostrador funcionando con la plantilla de [`S16_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/notebooks/S16_01_demostrador.ipynb). Model card. Borrador de la memoria (secciones 1-6). |
+| Día 3 | Memoria completa; **prueba de reproducibilidad en un ordenador limpio**; vídeo plan B; checklist de congelación; coevaluación; retro. |
 
 ### Guía paso a paso para principiantes
 

@@ -96,7 +96,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 
 **Reglas:**
-- Unas 3 h 20 min en equipos de 3-4; solo numpy, pandas, matplotlib/seaborn y scikit-learn. Todas las personas deben poder explicar cualquier parte.
+- Unas 2 h 20 min en equipos de 3-4; solo numpy, pandas, matplotlib/seaborn y scikit-learn. Todas las personas deben poder explicar cualquier parte.
 - Mínimo dos recomendadores comparados con RMSE y precision@3; `recomendar` no propone lo ya valorado.
 - Nunca claves ni datos personales. Review: 3 min por equipo.
 

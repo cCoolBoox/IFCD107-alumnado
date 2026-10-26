@@ -24,9 +24,9 @@
 7. **Montar el repositorio** con [README](plantilla_README_repositorio.md) y commits de todas las personas.
 
 **Hitos que no se pueden perder:**
-- **26/11:** elección de brief (antes del descanso (hacia las 11:00)) y **entrega de la ficha antes de las 14:30**.
-- **27/11:** **go / no-go** del docente sobre vuestra ficha.
-- **30/11:** review y retro.
+- **Día 1:** elección de brief (antes del descanso (hacia las 11:00)) y **entrega de la ficha antes de las 14:30**.
+- **Día 2:** **go / no-go** del docente sobre vuestra ficha.
+- **Día 3:** review y retro.
 
 **Qué vais a aprender haciéndolo:** a **formular un proyecto de IA** (pregunta de negocio, decisión que apoya, métricas), a **documentar datos** y a **planificar** con Scrum.
 
@@ -99,9 +99,9 @@ Además, para la nota de sprint se usan los cuatro criterios de los retos (corre
 ### Pasos sugeridos (resumen día a día)
 | Día | Paso |
 |---|---|
-| 26/11 | Planning; píldora; taller DT; 2 briefs candidatos; canvas borrador; elegir brief (antes del descanso); buscar y validar datos (¿licencia?, ¿descarga?, ¿tamaño?); rellenar ficha y plan de datos; **entregar la ficha antes de las 14:30**. |
-| 27/11 | Leer el go / no-go; corregir la ficha si hace falta; EDA con calidad del dato; baseline terminado y registrado. |
-| 30/11 | Plan ético; backlog completo; README; entrega, review y retro. |
+| Día 1 | Planning; píldora; taller DT; 2 briefs candidatos; canvas borrador; elegir brief (antes del descanso); buscar y validar datos (¿licencia?, ¿descarga?, ¿tamaño?); rellenar ficha y plan de datos; **entregar la ficha antes de las 14:30**. |
+| Día 2 | Leer el go / no-go; corregir la ficha si hace falta; EDA con calidad del dato; baseline terminado y registrado. |
+| Día 3 | Plan ético; backlog completo; README; entrega, review y retro. |
 
 ### Guía paso a paso para principiantes
 

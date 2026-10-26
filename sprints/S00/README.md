@@ -35,7 +35,7 @@ Ninguno. Solo ganas de trabajar en equipo. Necesitarás un correo electrónico p
 | [`S00.0_Bienvenida_y_reglas_del_curso.pdf`](presentaciones/S00.0_Bienvenida_y_reglas_del_curso.pdf) | Bienvenida y reglas del curso | 30 min | Teoría · día 1 del S00 |
 | [`S00.1_Agile_y_Scrum.pdf`](presentaciones/S00.1_Agile_y_Scrum.pdf) | Agile y Scrum: roles, artefactos y ceremonias | 1 h 30 min | Teoría · día 1 del S00 |
 | [`S00.2_Design_Thinking.pdf`](presentaciones/S00.2_Design_Thinking.pdf) | Design Thinking: fases, empatizar y «How might we» | 1 h | Teoría · día 1 del S00 |
-| [`Ejemplos_del_curso_IFCD107.html`](recursos/Ejemplos_del_curso_IFCD107.html) · [abrir online](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S00/recursos/Ejemplos_del_curso_IFCD107.html) | Ejemplos interactivos de todo el curso | — | Cuando quieras ver cómo es cada tema |
+| [`Ejemplos_del_curso_IFCD107.html`](actividades/Ejemplos_del_curso_IFCD107.html) · [abrir online](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S00/actividades/Ejemplos_del_curso_IFCD107.html) | Ejemplos interactivos de todo el curso | — | Cuando quieras ver cómo es cada tema |
 
 **Material de las actividades**
 
@@ -95,7 +95,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 - Mapa de empatía de TurisData y 3 preguntas «How might we», con 1 priorizada.
 
 **Reglas:**
-- Unas 7 h de reto y organización en clase, equipos de 3 a 4 personas, review de 5 min por equipo.
+- Unas 3 h de reto y organización en clase, equipos de 3 a 4 personas, review de 5 min por equipo.
 - Herramientas gratuitas; la entrevista dura unos 20 min para toda la clase, así que preparad las preguntas.
 - Nunca claves ni datos personales en el tablero ni en el repositorio.
 

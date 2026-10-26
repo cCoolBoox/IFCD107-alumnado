@@ -15,7 +15,7 @@
 **Este es vuestro primer modelo.** No hace falta saber programar: usaréis una plataforma de **AutoML** (una herramienta que prueba varios modelos por vosotros y os muestra los resultados). Vuestro trabajo es **entender lo que hace**, **elegir bien** y **explicárselo al cliente**.
 
 **Qué vais a hacer, en seis pasos:**
-1. **Mirar los datos** con SQL (los [scripts de práctica](../recursos/sql/)) y decidir qué se quiere predecir.
+1. **Mirar los datos** con SQL (los [scripts de práctica](../actividades/sql/)) y decidir qué se quiere predecir.
 2. **Quitar las columnas «trampa»** que no se conocen en el momento de reservar (eso se llama *fuga de datos*).
 3. **Lanzar un experimento** de AutoML y comparar los modelos que salgan.
 4. **Elegir un umbral** (cuándo decimos «esta reserva tiene riesgo alto») pensando en dinero, no en números sueltos.

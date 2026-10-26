@@ -77,9 +77,9 @@ Rúbrica del proyecto (100 puntos, sección 5 de los briefs). En este sprint pes
 ### Pasos sugeridos
 | Cuándo | Paso |
 |---|---|
-| 1/12 | Fijar semillas y estructura del registro. Repetir el baseline con el registro. Entrenar el primer modelo clásico y anotar. |
-| 2/12 | Segundo y tercer modelo; red neuronal (o LLM/RAG); ajustar 1-2 hiperparámetros clave. Tutoría de 15 min: qué comparación estáis haciendo y qué fuga podría haber. |
-| 3/12 | Comparativa final con media ± desviación; **elegir el candidato** (sin tocar el test hasta este momento); evaluar en test **una vez**; preparar la review. |
+| Día 1 | Fijar semillas y estructura del registro. Repetir el baseline con el registro. Entrenar el primer modelo clásico y anotar. |
+| Día 2 | Segundo y tercer modelo; red neuronal (o LLM/RAG); ajustar 1-2 hiperparámetros clave. Tutoría de 15 min: qué comparación estáis haciendo y qué fuga podría haber. |
+| Día 3 | Comparativa final con media ± desviación; **elegir el candidato** (sin tocar el test hasta este momento); evaluar en test **una vez**; preparar la review. |
 
 ### Guía paso a paso para principiantes
 

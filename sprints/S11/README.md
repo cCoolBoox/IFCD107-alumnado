@@ -105,7 +105,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 
 **Reglas:**
-- Unas 4 h 10 min de reto en equipo; dataset sintético o propio con licencia clara, sin personas reconocibles, una carpeta por clase (≥ 30 imágenes).
+- Unas 3 h 5 min de reto en equipo (más el planning y la entrega); dataset sintético o propio con licencia clara, sin personas reconocibles, una carpeta por clase (≥ 30 imágenes).
 - Partición fija; prueba usada una sola vez; debe ejecutarse en CPU en pocos minutos.
 - Nunca claves ni datos personales.
 
