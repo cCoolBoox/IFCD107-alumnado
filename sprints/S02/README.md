@@ -41,6 +41,7 @@ Materiales `.md` para papel o pantalla (sin Colab):
 
 | Material | Contenido |
 |---|---|
+| [`apuntes_matematicas_y_estadistica.md`](actividades/apuntes_matematicas_y_estadistica.md) | **Apuntes que complementan las diapositivas**: vectores, matrices, derivadas, gradiente, estadística, Bayes, sesgos y Simpson, explicados paso a paso con ejemplos |
 | [`alta_cuentas.md`](actividades/alta_cuentas.md) | Alta en Colab y GitHub (**jueves 22/10, a primera hora, en clase**) |
 | [`ejercicios_algebra_calculo.md`](actividades/ejercicios_algebra_calculo.md) | 12 ejercicios de vectores, matrices, derivadas y gradiente |
 | [`ejercicios_estadistica.md`](actividades/ejercicios_estadistica.md) | 14 ejercicios de estadística, probabilidad, Bayes, sesgo y Simpson |
