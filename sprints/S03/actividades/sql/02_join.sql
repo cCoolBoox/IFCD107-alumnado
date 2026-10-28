@@ -5,6 +5,7 @@
 -- con claves. reservas.id_alojamiento apunta a alojamientos.id_alojamiento
 -- y reservas.id_cliente apunta a clientes.id_cliente.
 -- Las fechas son texto ISO (AAAA-MM-DD). Datos sintéticos.
+-- Esquema visual de tablas y campos: sprints/S03/actividades/esquema_turisdata/esquema_turisdata.md
 -- =====================================================================
 
 -- ---------- IDEA 1: INNER JOIN (solo filas con pareja en ambas tablas) ----------

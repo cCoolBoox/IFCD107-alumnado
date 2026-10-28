@@ -3,7 +3,7 @@
 **Para qué sirve:** os explica **cómo trabajar vosotros dos, paso a paso**, los seis scripts de SQL del Sprint 3, sin que nadie tenga que deciros qué hacer en cada momento.
 
 - **Tiempo en clase:** unos **100 minutos** (el trabajo recomendado está en la tabla de la sección 4). Los ejercicios que no os dé tiempo a hacer se pueden terminar en casa.
-- **Qué necesitáis:** **DB Browser for SQLite** instalado, el archivo [`turisdata.db`](../../../datos/turisdata.db) y los scripts [`sql/`](sql/). Un ordenador por pareja es suficiente.
+- **Qué necesitáis:** **DB Browser for SQLite** instalado, el [esquema de turisdata.db](../esquema_turisdata/esquema_turisdata.md), el archivo [`turisdata.db`](../../../../datos/turisdata.db) y los scripts [`sql/`](./). Un ordenador por pareja es suficiente.
 - **Qué no necesitáis:** saber programar. SQL se parece a **hacer preguntas en inglés muy sencillo** a una tabla.
 - **Datos:** son **sintéticos** (inventados). Sirven para practicar, no son estadísticas reales del turismo.
 
@@ -12,11 +12,11 @@
 ## 1. Antes de empezar (5 minutos)
 
 1. **Formad parejas** y decidid quién **conduce** primero (el otro **navega**; sección 2).
-2. **Conseguid y abrid la base de datos.** Descargad [`turisdata.db`](../../../datos/turisdata.db) desde GitHub con el botón **Download raw file** (icono de flecha hacia abajo, arriba a la derecha de la página del archivo), o descargad todo el repositorio con **Code → Download ZIP**. En DB Browser: *Abrir base de datos* (Ctrl+O) → `turisdata.db`.
+2. **Conseguid y abrid la base de datos.** Descargad [`turisdata.db`](../../../../datos/turisdata.db) desde GitHub con el botón **Download raw file** (icono de flecha hacia abajo, arriba a la derecha de la página del archivo), o descargad todo el repositorio con **Code → Download ZIP**. En DB Browser: *Abrir base de datos* (Ctrl+O) → `turisdata.db`.
     - **Comprobad el tamaño del archivo:** debe pesar **unos 800 KB (815.104 bytes)**. Si pesa 0 KB o solo unos pocos KB, **la descarga ha fallado** (por ejemplo, si habéis guardado la página web de GitHub en lugar del archivo). Volved a descargarlo.
-    - **Si se abre pero sale vacía:** mirad la pestaña *Estructura de la base de datos*. Deben aparecer **tres tablas** (`alojamientos`, `clientes`, `reservas`). Si no hay ninguna, usad la copia en texto: [`turisdata.sql`](../../../datos/turisdata.sql) (explicación en su primera línea): *Archivo → Nueva base de datos* (guardadla como `turisdata.db`, y **cancelad** el asistente de crear tabla) → *Archivo → Importar → Base de datos desde archivo SQL…* → `turisdata.sql`.
-3. **Mirad las tres tablas.** Pestaña *Estructura de la base de datos*: veréis `alojamientos`, `clientes` y `reservas`. Desplegad cada una y leed los nombres de las columnas.
-4. **Abrid el primer script en la pestaña *Ejecutar SQL*.** Los scripts están en la carpeta [`sql/`](sql/) (`01_select_where.sql` … `06_modelado_indices.sql`). Descargadlos igual que la base de datos (*Download raw file*) o con el ZIP del repositorio. Luego, en DB Browser: pestaña *Ejecutar SQL* → icono de la **carpeta** (*Abrir archivo SQL*) → elegid el script.
+    - **Si se abre pero sale vacía:** mirad la pestaña *Estructura de la base de datos*. Deben aparecer **tres tablas** (`alojamientos`, `clientes`, `reservas`). Si no hay ninguna, usad la copia en texto: [`turisdata.sql`](../../../../datos/turisdata.sql) (explicación en su primera línea): *Archivo → Nueva base de datos* (guardadla como `turisdata.db`, y **cancelad** el asistente de crear tabla) → *Archivo → Importar → Base de datos desde archivo SQL…* → `turisdata.sql`.
+3. **Mirad las tres tablas.** Pestaña *Estructura de la base de datos*: veréis `alojamientos`, `clientes` y `reservas`. Desplegad cada una y leed los nombres de las columnas. **Tened abierto el [esquema de turisdata.db](../esquema_turisdata/esquema_turisdata.md)**: dice qué campos tiene cada tabla y qué significan, para saber dónde buscar cada dato.
+4. **Abrid el primer script en la pestaña *Ejecutar SQL*.** Los scripts están en la carpeta [`sql/`](./) (`01_select_where.sql` … `06_modelado_indices.sql`). Descargadlos igual que la base de datos (*Download raw file*) o con el ZIP del repositorio. Luego, en DB Browser: pestaña *Ejecutar SQL* → icono de la **carpeta** (*Abrir archivo SQL*) → elegid el script.
     - **Dónde está el listado:** en [`listado_ejercicios_sql.md`](listado_ejercicios_sql.md) tenéis los 50 ejercicios en tablas, por script, con casilla para ir marcando.
     - **Dónde están los enunciados:** dentro del propio script. Cada ejercicio es un comentario que empieza por `-- EJERCICIO 1.1:` (con su `-- PISTA:` debajo) y una línea `-- (escribe aquí tu consulta)`. **Escribid vuestra consulta justo debajo** de su enunciado. En total son **50 ejercicios**: 10 en el script 01, 7 en el 02, 8 en el 03, 8 en el 04, 9 en el 05 y 8 en el 06.
     - Los ejemplos de arriba de cada script (las «IDEAS») ya están escritos: probadlos antes de empezar los ejercicios.
@@ -318,4 +318,4 @@ Copiadla y rellenadla mientras trabajáis (una por pareja).
 
 ## Para repasar la teoría
 
-Si algo de la guía no os suena, repasad los [apuntes del Sprint 3](apuntes_sql_nosql_y_automl.md), en especial las secciones **2 a 7** (de `SELECT` a modelado e índices) y la tabla de **errores frecuentes en SQL**.
+Si algo de la guía no os suena, repasad los [apuntes del Sprint 3](../apuntes_sql_nosql_y_automl.md), en especial las secciones **2 a 7** (de `SELECT` a modelado e índices) y la tabla de **errores frecuentes en SQL**.

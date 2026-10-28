@@ -6,7 +6,21 @@
 
 **Orden:** hay que hacerlos **de arriba abajo**. El ejercicio 5 **borra** documentos; la sección 5 vuelve a cargar la colección completa.
 
-**Archivo:** [`S03_01_nosql_mongomock.ipynb`](../notebooks/S03_01_nosql_mongomock.ipynb) · [Abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb)
+**Archivo:** [`S03_01_nosql_mongomock.ipynb`](../../notebooks/S03_01_nosql_mongomock.ipynb) · [Abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb)
+
+## Qué campos tiene cada documento
+
+Explicación completa en el [esquema de turisdata.db](../esquema_turisdata/esquema_turisdata.md) (apartado 5). Resumen:
+
+| Campo | Contenido |
+|---|---|
+| `_id` | Número de la reserva |
+| `fecha_reserva`, `fecha_llegada` | Fechas (texto `AAAA-MM-DD`) |
+| `noches`, `precio_noche` | Noches y euros por noche |
+| `canal`, `tarifa`, `deposito`, `tipo_habitacion` | Textos: `directo` / `agencia` / `empresa` / `web_intermediaria`; `flexible` / `no_reembolsable`; `sin_deposito` / `parcial` / `total`; `estandar` / `superior` / `familiar` / `suite` |
+| `cancelada` | **`True`** o **`False`** (no 1 / 0) |
+| `alojamiento` | Subdocumento: `alojamiento.id`, `.nombre`, `.isla`, `.categoria`, `.plazas` (se escribe **con punto**) |
+| `cliente` | Subdocumento: `cliente.id`, `cliente.pais` |
 
 ---
 

@@ -3,6 +3,7 @@
 **Para qué sirve:** os explica **cómo trabajar vosotros dos, paso a paso**, el cuaderno de NoSQL del Sprint 3 (`S03_01_nosql_mongomock`), sin que nadie tenga que deciros qué hacer en cada momento.
 
 - **Tiempo en clase:** unos **30 minutos** (hasta el ejercicio 5). Lo demás (ejercicios 6 y 7, mini-reto y preguntas) es **práctica para casa**.
+- **Qué campos tiene cada documento:** en el [esquema de turisdata.db](../esquema_turisdata/esquema_turisdata.md) (apartado 5).
 - **Qué necesitáis:** un navegador y una cuenta de Google (para ejecutar el cuaderno en **Colab**), o Python con Jupyter si preferís trabajar en local. **No hay que instalar MongoDB**: usamos `mongomock`, una imitación en memoria.
 - **Qué no necesitáis:** saber programar a fondo. Casi todo es **rellenar una línea** donde pone `...`.
 - **Datos:** son **sintéticos** (inventados). Son las mismas reservas de TurisData que en SQL, pero guardadas como **documentos**.
@@ -12,9 +13,9 @@
 ## 1. Antes de empezar (5 minutos)
 
 1. **Formad parejas** y decidid quién **conduce** primero (el otro **navega**; sección 2). Se trabaja en **una sola pantalla**.
-2. **Abrid el cuaderno.** Pulsad la insignia **Abrir en Colab** del [README del Sprint 3](../README.md) o abrid [este enlace directo](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb).
+2. **Abrid el cuaderno.** Pulsad la insignia **Abrir en Colab** del [README del Sprint 3](../../README.md) o abrid [este enlace directo](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb).
     - **Guardad una copia suya:** *Archivo → Guardar una copia en Drive*. Así no perdéis lo que escribáis.
-    - **En local:** descargad [el cuaderno](../notebooks/S03_01_nosql_mongomock.ipynb) y abridlo con Jupyter o VS Code.
+    - **En local:** descargad [el cuaderno](../../notebooks/S03_01_nosql_mongomock.ipynb) y abridlo con Jupyter o VS Code.
 3. **No hace falta descargar la base de datos.** La primera celda de código descarga `turisdata.db` ella sola (necesita internet).
 4. **Ejecutad las celdas de arriba abajo, de una en una** (Mayús+Intro ejecuta la celda y pasa a la siguiente). **No uséis «Ejecutar todo»:** los ejercicios llevan `...` y darían error hasta que los rellenéis.
 5. **Haced la prueba de arranque.** Tras ejecutar la celda de **«2 · Idea: insertar en una colección»** debe salir:
@@ -257,4 +258,4 @@ Copiadla y rellenadla mientras trabajáis (una por pareja).
 
 ## Para repasar la teoría
 
-Si algo de la guía no os suena, repasad los [apuntes del Sprint 3](apuntes_sql_nosql_y_automl.md) (**Día 2 · NoSQL** y la sección «¿SQL o NoSQL?»). Si queréis probar **MongoDB de verdad** (Compass o Atlas), seguid la [guía de MongoDB](../guia/NoSQL_MongoDB.md). Para comparar con SQL, tenéis la [guía de SQL en parejas](guia_sql_en_parejas.md).
+Si algo de la guía no os suena, repasad los [apuntes del Sprint 3](../apuntes_sql_nosql_y_automl.md) (**Día 2 · NoSQL** y la sección «¿SQL o NoSQL?»). Si queréis probar **MongoDB de verdad** (Compass o Atlas), seguid la [guía de MongoDB](../../guia/NoSQL_MongoDB.md). Para comparar con SQL, tenéis la [guía de SQL en parejas](../sql/guia_sql_en_parejas.md).

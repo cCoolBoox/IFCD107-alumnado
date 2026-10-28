@@ -12,6 +12,7 @@
 --                  deposito, precio_noche, peticiones_especiales,
 --                  cliente_repetidor, cancelaciones_previas, cancelada)
 -- Los datos son SINTÉTICOS: no son estadísticas reales del turismo canario.
+-- Esquema visual de tablas y campos: sprints/S03/actividades/esquema_turisdata/esquema_turisdata.md
 -- =====================================================================
 
 -- ---------- IDEA 1: SELECT elige columnas; FROM elige la tabla ----------

@@ -7,6 +7,7 @@
 -- hasta pulsar "Escribir cambios" (Ctrl+S). Si algo sale mal: "Revertir cambios".
 -- Regla de oro: antes de un UPDATE o DELETE, escribe el mismo WHERE en un
 -- SELECT y comprueba QUÉ filas vas a tocar. Sin WHERE se modifica TODO.
+-- Esquema visual de tablas y campos: sprints/S03/actividades/esquema_turisdata/esquema_turisdata.md
 -- =====================================================================
 
 -- ---------- PREPARACIÓN: una copia de trabajo con las reservas de 2025 ----------

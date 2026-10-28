@@ -3,6 +3,7 @@
 -- Tiempo estimado: 20 min (los ejercicios marcados "reto" son opcionales)
 -- Idea: una consulta dentro de otra. Sirve para comparar cada fila con un
 -- valor calculado (la media, el máximo...) o para trabajar por pasos.
+-- Esquema visual de tablas y campos: sprints/S03/actividades/esquema_turisdata/esquema_turisdata.md
 -- =====================================================================
 
 -- ---------- IDEA 1: subconsulta escalar (devuelve UN valor) ----------

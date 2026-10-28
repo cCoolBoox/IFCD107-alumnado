@@ -4,6 +4,7 @@
 -- Idea: agrupar filas y resumirlas con COUNT, SUM, AVG, MIN, MAX.
 -- Truco útil: 'cancelada' vale 0/1, así que AVG(cancelada) es la
 -- proporción de cancelaciones y SUM(cancelada) su número.
+-- Esquema visual de tablas y campos: sprints/S03/actividades/esquema_turisdata/esquema_turisdata.md
 -- =====================================================================
 
 -- ---------- IDEA 1: agregaciones sobre toda la tabla ----------

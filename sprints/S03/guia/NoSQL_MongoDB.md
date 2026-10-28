@@ -18,7 +18,7 @@ Guardar las reservas de *TurisData Canarias* como **documentos**, consultarlas, 
 1. Abre el cuaderno desde la tabla del `README` del sprint (insignia de Colab).
 2. Ejecútalo de arriba abajo: verás cómo se construyen los documentos, el CRUD, las agregaciones y la comparación con SQL.
 3. Completa los 7 ejercicios: cada uno se autocorrige con un mensaje de ayuda.
-4. Para trabajarlo **en pareja y sin perderte**, usa la [guía autoguiada](../actividades/guia_nosql_en_parejas.md); el [listado de ejercicios](../actividades/listado_ejercicios_nosql.md) y el [solucionario](../actividades/soluciones_nosql_paso_a_paso.md) están en la misma carpeta.
+4. Para trabajarlo **en pareja y sin perderte**, usa la [guía autoguiada](../actividades/nosql/guia_nosql_en_parejas.md); el [listado de ejercicios](../actividades/nosql/listado_ejercicios_nosql.md) y el [solucionario](../actividades/nosql/soluciones_nosql_paso_a_paso.md) están en la misma carpeta.
 
 ## Opción B · Compass con MongoDB local
 1. Instala **MongoDB Community Server** y **MongoDB Compass** desde la web oficial de MongoDB **[verificar la versión y el instalador de tu sistema]**.

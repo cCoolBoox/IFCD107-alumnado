@@ -10,6 +10,8 @@
 4. Por último, comparad con **el código**. Puede haber **más de una forma correcta**: si la vuestra pasa el `assert`, también vale.
 5. Anotad en la hoja de registro (apartado 8 de la guía) qué os ha costado.
 
+**Qué campos hay:** mirad el [esquema de turisdata.db](../esquema_turisdata/esquema_turisdata.md).
+
 **Los datos:** el cuaderno construye **6.000 documentos** (una reserva cada uno) a partir de `turisdata.db`. Cada documento lleva dentro un subdocumento `alojamiento` (con `nombre`, `isla`, `categoria`, `plazas`) y otro `cliente` (con `pais`). Son datos **sintéticos**.
 
 **Importante:** los ejercicios 1 a 5 se hacen **en orden**. El ejercicio 5 **borra** documentos; antes de las agregaciones, el propio cuaderno **vuelve a cargar** los 6.000.

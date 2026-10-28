@@ -9,6 +9,7 @@
 -- Trabajamos con tablas nuevas de práctica (prefijo p_) que se borran al final.
 -- En SQLite las claves foráneas hay que activarlas con PRAGMA foreign_keys = ON;
 -- (en DB Browser suele estar activo por defecto).
+-- Esquema visual de tablas y campos: sprints/S03/actividades/esquema_turisdata/esquema_turisdata.md
 -- =====================================================================
 PRAGMA foreign_keys = ON;
 

@@ -1,16 +1,28 @@
 # Listado de los 50 ejercicios SQL · S03
 
-> **Qué es:** el índice de todos los ejercicios de los scripts SQL, para saber **qué toca hacer** y **llevar la cuenta**. Los enunciados completos (con su pista) están **dentro de cada script** de [`sql/`](sql/): buscad `-- EJERCICIO n.m`. Cómo abrirlos: apartado 1 de la [guía en parejas](guia_sql_en_parejas.md).
+> **Qué es:** el índice de todos los ejercicios de los scripts SQL, para saber **qué toca hacer** y **llevar la cuenta**. Los enunciados completos (con su pista) están **dentro de cada script** de [`sql/`](./): buscad `-- EJERCICIO n.m`. Cómo abrirlos: apartado 1 de la [guía en parejas](guia_sql_en_parejas.md).
 
 **Cómo usarlo:** marcad la casilla cuando el resultado os cuadre (con la comprobación del paso 5 de la guía). Los marcados **(reto)** son opcionales: hacedlos si os sobra tiempo. Cuando acabéis cada ejercicio, podéis contrastar con el [solucionario paso a paso](soluciones_sql_paso_a_paso.md).
 
 **Orden:** hay que hacerlos **en orden dentro de cada script**. En especial, los del **05 y 06** dependen de los anteriores.
 
+## Qué campos tiene cada tabla
+
+Imagen y explicación completa en el [esquema de turisdata.db](../esquema_turisdata/esquema_turisdata.md). Resumen:
+
+| Tabla | Campos |
+|---|---|
+| `alojamientos` (20) | `id_alojamiento`, `nombre`, `isla`, `categoria`, `plazas` |
+| `clientes` (2.500) | `id_cliente`, `pais`, `email_hash`, `cliente_desde` |
+| `reservas` (6.000) | `id_reserva`, `id_cliente`, `id_alojamiento`, `fecha_reserva`, `fecha_llegada`, `antelacion_dias`, `noches`, `adultos`, `ninos`, `tipo_habitacion`, `regimen`, `canal`, `pais_origen`, `tarifa`, `deposito`, `precio_noche`, `peticiones_especiales`, `cliente_repetidor`, `cancelaciones_previas`, `cancelada` |
+
+**Se unen por:** `reservas.id_alojamiento = alojamientos.id_alojamiento` y `reservas.id_cliente = clientes.id_cliente`.
+
 ---
 
 ## Script 01 · Elegir columnas y filtrar filas
 
-**Temas:** `SELECT`, `WHERE`, `ORDER BY`, `LIMIT` · **Archivo:** [`01_select_where.sql`](sql/01_select_where.sql) · **10 ejercicios**
+**Temas:** `SELECT`, `WHERE`, `ORDER BY`, `LIMIT` · **Archivo:** [`01_select_where.sql`](01_select_where.sql) · **10 ejercicios**
 
 | ✓ | Nº | Qué piden |
 |---|---|---|
@@ -27,7 +39,7 @@
 
 ## Script 02 · Unir tablas con JOIN
 
-**Temas:** `JOIN`, `LEFT JOIN` · **Archivo:** [`02_join.sql`](sql/02_join.sql) · **7 ejercicios**
+**Temas:** `JOIN`, `LEFT JOIN` · **Archivo:** [`02_join.sql`](02_join.sql) · **7 ejercicios**
 
 | ✓ | Nº | Qué piden |
 |---|---|---|
@@ -41,7 +53,7 @@
 
 ## Script 03 · Resumir con GROUP BY
 
-**Temas:** `GROUP BY`, `HAVING`, funciones de agregación · **Archivo:** [`03_group_by.sql`](sql/03_group_by.sql) · **8 ejercicios**
+**Temas:** `GROUP BY`, `HAVING`, funciones de agregación · **Archivo:** [`03_group_by.sql`](03_group_by.sql) · **8 ejercicios**
 
 | ✓ | Nº | Qué piden |
 |---|---|---|
@@ -56,7 +68,7 @@
 
 ## Script 04 · Una consulta dentro de otra
 
-**Temas:** subconsultas y `WITH` · **Archivo:** [`04_subconsultas.sql`](sql/04_subconsultas.sql) · **8 ejercicios**
+**Temas:** subconsultas y `WITH` · **Archivo:** [`04_subconsultas.sql`](04_subconsultas.sql) · **8 ejercicios**
 
 | ✓ | Nº | Qué piden |
 |---|---|---|
@@ -71,7 +83,7 @@
 
 ## Script 05 · Crear, modificar y borrar (CRUD)
 
-**Temas:** `INSERT`, `UPDATE`, `DELETE`, transacciones · **Archivo:** [`05_crud.sql`](sql/05_crud.sql) · **9 ejercicios**
+**Temas:** `INSERT`, `UPDATE`, `DELETE`, transacciones · **Archivo:** [`05_crud.sql`](05_crud.sql) · **9 ejercicios**
 
 | ✓ | Nº | Qué piden |
 |---|---|---|
@@ -87,7 +99,7 @@
 
 ## Script 06 · Diseñar tablas con reglas e índices
 
-**Temas:** claves, `CHECK`, índices · **Archivo:** [`06_modelado_indices.sql`](sql/06_modelado_indices.sql) · **8 ejercicios**
+**Temas:** claves, `CHECK`, índices · **Archivo:** [`06_modelado_indices.sql`](06_modelado_indices.sql) · **8 ejercicios**
 
 | ✓ | Nº | Qué piden |
 |---|---|---|

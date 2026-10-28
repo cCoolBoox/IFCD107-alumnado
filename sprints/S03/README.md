@@ -41,14 +41,15 @@
 
 **Material de las actividades**
 
-**Bloque A · SQL.** Abre `turisdata.db` (datos sintéticos) en DB Browser for SQLite, pestaña *Ejecutar SQL*, y sigue los scripts en orden. Para hacerlo **en parejas y sin perderte**, usa la **[guía autoguiada](actividades/guia_sql_en_parejas.md)**:
+**Bloque A · SQL.** Abre `turisdata.db` (datos sintéticos) en DB Browser for SQLite, pestaña *Ejecutar SQL*, y sigue los scripts en orden. Para hacerlo **en parejas y sin perderte**, usa la **[guía autoguiada](actividades/sql/guia_sql_en_parejas.md)**:
 
 | Script | Tema |
 |---|---|
+| [`esquema_turisdata.md`](actividades/esquema_turisdata/esquema_turisdata.md) · [PDF](actividades/esquema_turisdata/esquema_turisdata.pdf) · [imagen](actividades/esquema_turisdata/esquema_turisdata.png) | **Esquema de `turisdata.db`**: tablas, campos, qué significa cada uno y dónde buscar cada dato. **Tenedlo abierto en los ejercicios** |
 | [`apuntes_sql_nosql_y_automl.md`](actividades/apuntes_sql_nosql_y_automl.md) · [PDF](actividades/apuntes_sql_nosql_y_automl.pdf) · [ecofriendly](actividades/apuntes_sql_nosql_y_automl_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: SQL (SELECT, JOIN, GROUP BY, CRUD), NoSQL, AutoML, fuga de datos y umbral de negocio explicados con una mini-base de datos que puedes comprobar a mano |
-| [`guia_sql_en_parejas.md`](actividades/guia_sql_en_parejas.md) · [PDF](actividades/guia_sql_en_parejas.pdf) · [ecofriendly](actividades/guia_sql_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar los scripts SQL en parejas**: roles, ciclo de cada ejercicio, plan de 100 min, errores y hoja de registro |
-| [`soluciones_sql_paso_a_paso.md`](actividades/soluciones_sql_paso_a_paso.md) | **Solucionario paso a paso** de los 50 ejercicios SQL, con el resultado que debe salir. Usadlo **después** de intentarlo en pareja |
-| [`listado_ejercicios_sql.md`](actividades/listado_ejercicios_sql.md) · [PDF](actividades/listado_ejercicios_sql.pdf) · [ecofriendly](actividades/listado_ejercicios_sql_ecofriendly.pdf) | **Listado de los 50 ejercicios SQL** por script, con casilla para marcar los que lleváis |
+| [`guia_sql_en_parejas.md`](actividades/sql/guia_sql_en_parejas.md) · [PDF](actividades/sql/guia_sql_en_parejas.pdf) · [ecofriendly](actividades/sql/guia_sql_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar los scripts SQL en parejas**: roles, ciclo de cada ejercicio, plan de 100 min, errores y hoja de registro |
+| [`listado_ejercicios_sql.md`](actividades/sql/listado_ejercicios_sql.md) · [PDF](actividades/sql/listado_ejercicios_sql.pdf) · [ecofriendly](actividades/sql/listado_ejercicios_sql_ecofriendly.pdf) | **Listado de los 50 ejercicios SQL** por script, con casilla para marcar los que lleváis |
+| [`soluciones_sql_paso_a_paso.md`](actividades/sql/soluciones_sql_paso_a_paso.md) | **Solucionario paso a paso** de los 50 ejercicios SQL, con el resultado que debe salir. Usadlo **después** de intentarlo en pareja |
 | [`sql/01_select_where.sql`](actividades/sql/01_select_where.sql) | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `NULL` |
 | [`sql/02_join.sql`](actividades/sql/02_join.sql) | `JOIN` y `LEFT JOIN` |
 | [`sql/03_group_by.sql`](actividades/sql/03_group_by.sql) | Agregaciones, `GROUP BY`, `HAVING` |
@@ -59,9 +60,9 @@
 | Guía / cuaderno | Tema | Colab |
 |---|---|---|
 | [`NoSQL_MongoDB.md`](guia/NoSQL_MongoDB.md) + `S03_01_nosql_mongomock` (opcional) | Reservas como documentos en MongoDB | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) |
-| [`guia_nosql_en_parejas.md`](actividades/guia_nosql_en_parejas.md) · [PDF](actividades/guia_nosql_en_parejas.pdf) · [ecofriendly](actividades/guia_nosql_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar el cuaderno de NoSQL en parejas**: roles, ciclo de cada ejercicio, plan de 30 min, errores y hoja de registro | |
-| [`listado_ejercicios_nosql.md`](actividades/listado_ejercicios_nosql.md) · [PDF](actividades/listado_ejercicios_nosql.pdf) · [ecofriendly](actividades/listado_ejercicios_nosql_ecofriendly.pdf) | **Listado de los ejercicios NoSQL** del cuaderno, con casilla para marcar los que lleváis | |
-| [`soluciones_nosql_paso_a_paso.md`](actividades/soluciones_nosql_paso_a_paso.md) | **Solucionario paso a paso** de los ejercicios NoSQL. Usadlo **después** de intentarlo en pareja | |
+| [`guia_nosql_en_parejas.md`](actividades/nosql/guia_nosql_en_parejas.md) · [PDF](actividades/nosql/guia_nosql_en_parejas.pdf) · [ecofriendly](actividades/nosql/guia_nosql_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar el cuaderno de NoSQL en parejas**: roles, ciclo de cada ejercicio, plan de 30 min, errores y hoja de registro | |
+| [`listado_ejercicios_nosql.md`](actividades/nosql/listado_ejercicios_nosql.md) · [PDF](actividades/nosql/listado_ejercicios_nosql.pdf) · [ecofriendly](actividades/nosql/listado_ejercicios_nosql_ecofriendly.pdf) | **Listado de los ejercicios NoSQL** del cuaderno, con casilla para marcar los que lleváis | |
+| [`soluciones_nosql_paso_a_paso.md`](actividades/nosql/soluciones_nosql_paso_a_paso.md) | **Solucionario paso a paso** de los ejercicios NoSQL. Usadlo **después** de intentarlo en pareja | |
 
 **Bloque B · AutoML.** Sigue la **[guía de laboratorio AutoML con AutoGluon](guia/Guia_AutoML_AutoGluon.pdf)** (en Colab, sin coste, sin crear más cuentas). Los archivos que usa (tres `.py`, `requirements.txt` y el CSV de reservas) están en **[`Reto_S03/laboratorio_automl/`](Reto_S03/laboratorio_automl/)**. Tu docente además hará una **demostración con Amazon SageMaker** como referencia profesional.
 

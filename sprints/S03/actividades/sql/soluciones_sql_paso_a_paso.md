@@ -12,6 +12,8 @@
 
 **Nota:** si en un ejercicio no se pide orden, la fila que sale primera puede cambiar de un programa a otro. Lo que debe coincidir es el **número de filas** y los **valores**.
 
+**Qué campos hay:** mirad el [esquema de turisdata.db](../esquema_turisdata/esquema_turisdata.md).
+
 **Los datos:** `turisdata.db` tiene 3 tablas: `alojamientos` (20), `clientes` (2.500) y `reservas` (6.000). Son datos **sintéticos**. Si vuestro número de filas es distinto, comprobad que habéis abierto el archivo correcto.
 
 ---
