@@ -41,11 +41,12 @@
 
 **Material de las actividades**
 
-**Bloque A · SQL.** Abre `turisdata.db` (datos sintéticos) en DB Browser for SQLite, pestaña *Ejecutar SQL*, y sigue los scripts en orden:
+**Bloque A · SQL.** Abre `turisdata.db` (datos sintéticos) en DB Browser for SQLite, pestaña *Ejecutar SQL*, y sigue los scripts en orden. Para hacerlo **en parejas y sin perderte**, usa la **[guía autoguiada](actividades/guia_sql_en_parejas.md)**:
 
 | Script | Tema |
 |---|---|
 | [`apuntes_sql_nosql_y_automl.md`](actividades/apuntes_sql_nosql_y_automl.md) · [PDF](actividades/apuntes_sql_nosql_y_automl.pdf) · [ecofriendly](actividades/apuntes_sql_nosql_y_automl_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: SQL (SELECT, JOIN, GROUP BY, CRUD), NoSQL, AutoML, fuga de datos y umbral de negocio explicados con una mini-base de datos que puedes comprobar a mano |
+| [`guia_sql_en_parejas.md`](actividades/guia_sql_en_parejas.md) | **Guía autoguiada para trabajar los scripts SQL en parejas**: roles, ciclo de cada ejercicio, plan de 100 min, errores y hoja de registro |
 | [`sql/01_select_where.sql`](actividades/sql/01_select_where.sql) | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `NULL` |
 | [`sql/02_join.sql`](actividades/sql/02_join.sql) | `JOIN` y `LEFT JOIN` |
 | [`sql/03_group_by.sql`](actividades/sql/03_group_by.sql) | Agregaciones, `GROUP BY`, `HAVING` |
