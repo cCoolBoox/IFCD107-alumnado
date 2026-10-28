@@ -36,6 +36,7 @@
 | [`S03.2_Bases_de_datos_NoSQL.pdf`](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) | Bases de datos NoSQL (demostración corta) | 15 min | Teoría · día 1 del S03 |
 | [`S03.3_AutoML_y_MLOps.pdf`](presentaciones/S03.3_AutoML_y_MLOps.pdf) | Introducción a AutoML y MLOps | 20 min | Teoría · día 2 del S03 |
 | [`Guia_AutoML_AutoGluon.pdf`](guia/Guia_AutoML_AutoGluon.pdf) | Guía de laboratorio de AutoML con AutoGluon | — | AutoML (Bloque B) |
+| [`Reto_S03/laboratorio_automl/`](Reto_S03/laboratorio_automl/) | Archivos del laboratorio de AutoML: 3 `.py`, `requirements.txt` y `reservas_turisdata.csv` | — | AutoML (Bloque B) |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | Test del bloque M6–M8 · SQL, AutoML e IA responsable · 10 preguntas · individual, en el navegador, sin penalización por fallo. | 15 min | Solo se abre el mar 27/10 (hora de Canarias) |
 
 **Material de las actividades**
@@ -56,7 +57,7 @@
 |---|---|---|
 | [`NoSQL_MongoDB.md`](guia/NoSQL_MongoDB.md) + `S03_01_nosql_mongomock` (opcional) | Reservas como documentos en MongoDB | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) |
 
-**Bloque B · AutoML.** Sigue la **[guía de laboratorio AutoML con AutoGluon](guia/Guia_AutoML_AutoGluon.pdf)** (en Colab, sin coste, sin crear más cuentas). Tu docente además hará una **demostración con Amazon SageMaker** como referencia profesional.
+**Bloque B · AutoML.** Sigue la **[guía de laboratorio AutoML con AutoGluon](guia/Guia_AutoML_AutoGluon.pdf)** (en Colab, sin coste, sin crear más cuentas). Los archivos que usa (tres `.py`, `requirements.txt` y el CSV de reservas) están en **[`Reto_S03/laboratorio_automl/`](Reto_S03/laboratorio_automl/)**. Tu docente además hará una **demostración con Amazon SageMaker** como referencia profesional.
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint

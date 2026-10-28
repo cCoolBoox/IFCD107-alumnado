@@ -1,0 +1,6 @@
+autogluon.tabular[lightgbm,xgboost,catboost]>=1.4
+pandas
+scikit-learn
+fastapi
+uvicorn
+httpx
