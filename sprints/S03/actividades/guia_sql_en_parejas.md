@@ -73,13 +73,14 @@ Repetid esto **en cada ejercicio**. Con la práctica os llevará menos de 3 minu
 - [ ] Si usáis filtros de texto: **¿está escrito exactamente igual** que en la tabla, con comillas **simples**?
 - [ ] Si habéis unido tablas (`JOIN`): **¿el número de filas es razonable?** Si sale una cifra enorme, el `ON` está mal.
 
-### Cómo saber si el resultado es correcto, **sin tener las soluciones**
+### Cómo saber si el resultado es correcto, **antes de mirar las soluciones**
 
 - **Probad una versión más fácil.** Antes de pedir «canceladas del canal directo de más de 5 noches», probad solo «canceladas».
 - **Contad.** `SELECT COUNT(*) ...` con el mismo `FROM` y `WHERE` os dice cuántas filas debería haber.
 - **Comprobad con otro camino.** Si resolvéis algo de dos formas distintas (por ejemplo, el ejercicio 2.5 y el 4.4 piden lo mismo), **tienen que dar lo mismo**.
 - **Sumad los grupos.** Si agrupáis con `GROUP BY` y sumáis los `COUNT`, **tiene que salir el total** (6.000 reservas en total).
 - **Mirad algunas filas a ojo** con `LIMIT 5` para ver si coinciden con lo que pedía el enunciado.
+- **Solo después**, abrid el [solucionario paso a paso](soluciones_sql_paso_a_paso.md) y comparad el número de filas y el valor que debe salir.
 
 ---
 
@@ -103,7 +104,7 @@ Repetid esto **en cada ejercicio**. Con la práctica os llevará menos de 3 minu
 
 ## 5. Cada script en una página
 
-> Aquí tenéis **la idea de cada script**, un **esqueleto** y **qué se suele hacer mal**. **No** están las soluciones: las construís vosotros.
+> Aquí tenéis **la idea de cada script**, un **esqueleto** y **qué se suele hacer mal**. **No** están las soluciones: las construís vosotros. Cuando hayáis terminado (o llevéis mucho rato atascados), podéis contrastar con el **[solucionario paso a paso](soluciones_sql_paso_a_paso.md)**.
 
 ### Script 01 · Elegir columnas y filtrar filas
 
