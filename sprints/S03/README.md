@@ -59,6 +59,9 @@
 | Guía / cuaderno | Tema | Colab |
 |---|---|---|
 | [`NoSQL_MongoDB.md`](guia/NoSQL_MongoDB.md) + `S03_01_nosql_mongomock` (opcional) | Reservas como documentos en MongoDB | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/notebooks/S03_01_nosql_mongomock.ipynb) |
+| [`guia_nosql_en_parejas.md`](actividades/guia_nosql_en_parejas.md) · [PDF](actividades/guia_nosql_en_parejas.pdf) · [ecofriendly](actividades/guia_nosql_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar el cuaderno de NoSQL en parejas**: roles, ciclo de cada ejercicio, plan de 30 min, errores y hoja de registro | |
+| [`listado_ejercicios_nosql.md`](actividades/listado_ejercicios_nosql.md) · [PDF](actividades/listado_ejercicios_nosql.pdf) · [ecofriendly](actividades/listado_ejercicios_nosql_ecofriendly.pdf) | **Listado de los ejercicios NoSQL** del cuaderno, con casilla para marcar los que lleváis | |
+| [`soluciones_nosql_paso_a_paso.md`](actividades/soluciones_nosql_paso_a_paso.md) | **Solucionario paso a paso** de los ejercicios NoSQL. Usadlo **después** de intentarlo en pareja | |
 
 **Bloque B · AutoML.** Sigue la **[guía de laboratorio AutoML con AutoGluon](guia/Guia_AutoML_AutoGluon.pdf)** (en Colab, sin coste, sin crear más cuentas). Los archivos que usa (tres `.py`, `requirements.txt` y el CSV de reservas) están en **[`Reto_S03/laboratorio_automl/`](Reto_S03/laboratorio_automl/)**. Tu docente además hará una **demostración con Amazon SageMaker** como referencia profesional.
 
