@@ -12,7 +12,9 @@
 ## 1. Antes de empezar (5 minutos)
 
 1. **Formad parejas** y decidid quién **conduce** primero (el otro **navega**; sección 2).
-2. **Abrid la base de datos.** En DB Browser: *Abrir base de datos* (Ctrl+O) → `turisdata.db`.
+2. **Conseguid y abrid la base de datos.** Descargad [`turisdata.db`](../../../datos/turisdata.db) desde GitHub con el botón **Download raw file** (icono de flecha hacia abajo, arriba a la derecha de la página del archivo), o descargad todo el repositorio con **Code → Download ZIP**. En DB Browser: *Abrir base de datos* (Ctrl+O) → `turisdata.db`.
+   - **Comprobad el tamaño del archivo:** debe pesar **unos 800 KB (815.104 bytes)**. Si pesa 0 KB o solo unos pocos KB, **la descarga ha fallado** (por ejemplo, si habéis guardado la página web de GitHub en lugar del archivo). Volved a descargarlo.
+   - **Si se abre pero sale vacía:** mirad la pestaña *Estructura de la base de datos*. Deben aparecer **tres tablas** (`alojamientos`, `clientes`, `reservas`). Si no hay ninguna, usad la copia en texto: [`turisdata.sql`](../../../datos/turisdata.sql) (explicación en su primera línea): *Archivo → Nueva base de datos* (guardadla como `turisdata.db`, y **cancelad** el asistente de crear tabla) → *Archivo → Importar → Base de datos desde archivo SQL…* → `turisdata.sql`.
 3. **Mirad las tres tablas.** Pestaña *Estructura de la base de datos*: veréis `alojamientos`, `clientes` y `reservas`. Desplegad cada una y leed los nombres de las columnas.
 4. **Abrid la pestaña *Ejecutar SQL*** y pegad o abrid ahí el primer script (`01_select_where.sql`).
 5. **Haced la prueba de arranque.** Escribid esta consulta, **seleccionadla con el ratón** y pulsad **Ctrl+Intro**:
@@ -256,6 +258,7 @@ CREATE TABLE p_ejemplo (
 | `FOREIGN KEY constraint failed` o `CHECK constraint failed` | **La regla ha funcionado.** En el script 06 es lo esperado | Leed qué regla es y apuntadlo |
 | `database is locked` | Hay otra consulta o ventana usando la base | Cerrad otras pestañas o ventanas con la base abierta y reintentad |
 | Habéis estropeado la base | Cambios sin querer | **Revertir cambios** (sin haberlos escrito) o volved a descargar `turisdata.db` |
+| La base se abre **vacía** (sin tablas) | Descarga incompleta o archivo equivocado | Mirad el tamaño (≈ 800 KB) y volved a descargarla con *Download raw file*; si sigue igual, importad `turisdata.sql` (paso 2 de la sección 1) |
 
 ---
 
