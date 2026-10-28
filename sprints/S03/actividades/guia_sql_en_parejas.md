@@ -13,20 +13,20 @@
 
 1. **Formad parejas** y decidid quién **conduce** primero (el otro **navega**; sección 2).
 2. **Conseguid y abrid la base de datos.** Descargad [`turisdata.db`](../../../datos/turisdata.db) desde GitHub con el botón **Download raw file** (icono de flecha hacia abajo, arriba a la derecha de la página del archivo), o descargad todo el repositorio con **Code → Download ZIP**. En DB Browser: *Abrir base de datos* (Ctrl+O) → `turisdata.db`.
-   - **Comprobad el tamaño del archivo:** debe pesar **unos 800 KB (815.104 bytes)**. Si pesa 0 KB o solo unos pocos KB, **la descarga ha fallado** (por ejemplo, si habéis guardado la página web de GitHub en lugar del archivo). Volved a descargarlo.
-   - **Si se abre pero sale vacía:** mirad la pestaña *Estructura de la base de datos*. Deben aparecer **tres tablas** (`alojamientos`, `clientes`, `reservas`). Si no hay ninguna, usad la copia en texto: [`turisdata.sql`](../../../datos/turisdata.sql) (explicación en su primera línea): *Archivo → Nueva base de datos* (guardadla como `turisdata.db`, y **cancelad** el asistente de crear tabla) → *Archivo → Importar → Base de datos desde archivo SQL…* → `turisdata.sql`.
+    - **Comprobad el tamaño del archivo:** debe pesar **unos 800 KB (815.104 bytes)**. Si pesa 0 KB o solo unos pocos KB, **la descarga ha fallado** (por ejemplo, si habéis guardado la página web de GitHub en lugar del archivo). Volved a descargarlo.
+    - **Si se abre pero sale vacía:** mirad la pestaña *Estructura de la base de datos*. Deben aparecer **tres tablas** (`alojamientos`, `clientes`, `reservas`). Si no hay ninguna, usad la copia en texto: [`turisdata.sql`](../../../datos/turisdata.sql) (explicación en su primera línea): *Archivo → Nueva base de datos* (guardadla como `turisdata.db`, y **cancelad** el asistente de crear tabla) → *Archivo → Importar → Base de datos desde archivo SQL…* → `turisdata.sql`.
 3. **Mirad las tres tablas.** Pestaña *Estructura de la base de datos*: veréis `alojamientos`, `clientes` y `reservas`. Desplegad cada una y leed los nombres de las columnas.
 4. **Abrid el primer script en la pestaña *Ejecutar SQL*.** Los scripts están en la carpeta [`sql/`](sql/) (`01_select_where.sql` … `06_modelado_indices.sql`). Descargadlos igual que la base de datos (*Download raw file*) o con el ZIP del repositorio. Luego, en DB Browser: pestaña *Ejecutar SQL* → icono de la **carpeta** (*Abrir archivo SQL*) → elegid el script.
-   - **Dónde están los enunciados:** dentro del propio script. Cada ejercicio es un comentario que empieza por `-- EJERCICIO 1.1:` (con su `-- PISTA:` debajo) y una línea `-- (escribe aquí tu consulta)`. **Escribid vuestra consulta justo debajo** de su enunciado. En total son **50 ejercicios**: 10 en el script 01, 7 en el 02, 8 en el 03, 8 en el 04, 9 en el 05 y 8 en el 06.
-   - Los ejemplos de arriba de cada script (las «IDEAS») ya están escritos: probadlos antes de empezar los ejercicios.
-   - Para ejecutar **un solo ejercicio**, seleccionad con el ratón solo su consulta y pulsad **Ctrl+Intro**. Si no seleccionáis nada, se ejecuta el script **entero**.
+    - **Dónde están los enunciados:** dentro del propio script. Cada ejercicio es un comentario que empieza por `-- EJERCICIO 1.1:` (con su `-- PISTA:` debajo) y una línea `-- (escribe aquí tu consulta)`. **Escribid vuestra consulta justo debajo** de su enunciado. En total son **50 ejercicios**: 10 en el script 01, 7 en el 02, 8 en el 03, 8 en el 04, 9 en el 05 y 8 en el 06.
+    - Los ejemplos de arriba de cada script (las «IDEAS») ya están escritos: probadlos antes de empezar los ejercicios.
+    - Para ejecutar **un solo ejercicio**, seleccionad con el ratón solo su consulta y pulsad **Ctrl+Intro**. Si no seleccionáis nada, se ejecuta el script **entero**.
 5. **Haced la prueba de arranque.** Escribid esta consulta, **seleccionadla con el ratón** y pulsad **Ctrl+Intro**:
 
-   ```sql
-   SELECT COUNT(*) FROM reservas;
-   ```
+```sql
+SELECT COUNT(*) FROM reservas;
+```
 
-   Debería salir **6000**. Si sale otro número o un error, parad y preguntad antes de seguir: algo no está bien abierto.
+Debería salir **6000**. Si sale otro número o un error, parad y preguntad antes de seguir: algo no está bien abierto.
 
 **Cifras de control** (para saber que estáis en la base correcta):
 
@@ -129,7 +129,7 @@ LIMIT 5;
 
 **Comentad en pareja:** *¿qué diferencia hay entre `WHERE` y `ORDER BY`?*
 
-### Script 02 · Unir tablas con `JOIN`
+### Script 02 · Unir tablas con JOIN
 
 **Idea clave:** cada dato vive **en una sola tabla**, y `JOIN` las **une por una clave** (el `id` que comparten).
 
@@ -149,7 +149,7 @@ WHERE a.isla = 'La Palma';
 
 **Comentad en pareja:** *¿cuándo usaríamos `LEFT JOIN` en lugar de `JOIN`?*
 
-### Script 03 · Resumir con `GROUP BY`
+### Script 03 · Resumir con GROUP BY
 
 **Idea clave:** **agrupar** filas y **resumirlas** con `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`. Como `cancelada` vale 0 o 1, **`AVG(cancelada)` es la proporción de canceladas**.
 

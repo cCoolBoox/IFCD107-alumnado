@@ -46,7 +46,7 @@
 | Script | Tema |
 |---|---|
 | [`apuntes_sql_nosql_y_automl.md`](actividades/apuntes_sql_nosql_y_automl.md) · [PDF](actividades/apuntes_sql_nosql_y_automl.pdf) · [ecofriendly](actividades/apuntes_sql_nosql_y_automl_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: SQL (SELECT, JOIN, GROUP BY, CRUD), NoSQL, AutoML, fuga de datos y umbral de negocio explicados con una mini-base de datos que puedes comprobar a mano |
-| [`guia_sql_en_parejas.md`](actividades/guia_sql_en_parejas.md) | **Guía autoguiada para trabajar los scripts SQL en parejas**: roles, ciclo de cada ejercicio, plan de 100 min, errores y hoja de registro |
+| [`guia_sql_en_parejas.md`](actividades/guia_sql_en_parejas.md) · [PDF](actividades/guia_sql_en_parejas.pdf) · [ecofriendly](actividades/guia_sql_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar los scripts SQL en parejas**: roles, ciclo de cada ejercicio, plan de 100 min, errores y hoja de registro |
 | [`soluciones_sql_paso_a_paso.md`](actividades/soluciones_sql_paso_a_paso.md) | **Solucionario paso a paso** de los 50 ejercicios SQL, con el resultado que debe salir. Usadlo **después** de intentarlo en pareja |
 | [`sql/01_select_where.sql`](actividades/sql/01_select_where.sql) | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `NULL` |
 | [`sql/02_join.sql`](actividades/sql/02_join.sql) | `JOIN` y `LEFT JOIN` |
