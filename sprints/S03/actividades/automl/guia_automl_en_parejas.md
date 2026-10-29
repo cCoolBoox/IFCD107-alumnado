@@ -82,6 +82,8 @@ Repetid esto **en cada celda del laboratorio**.
 | **Guardar y servir** | 8, 9 y 10 | 10 | El modelo guardado y una **llamada a la API** |
 | **Cerrar** | 11 | 10 | El informe de recursos y **la sesión cerrada** |
 
+**Cómo encaja en el plan del día (martes 27/10):** los pasos **0 a 5** son la práctica guiada (35 min) y los pasos **6 a 11** se hacen dentro del bloque del reto (80 min), que es donde se elige el umbral, se prueba la API y se cierran los recursos. Los 100 minutos de esta tabla son el total de ambos.
+
 **Si vais con prisa:** poned `LIMITE_TIEMPO = 15` en el paso 0 (el entrenamiento dura unos 15 segundos) y haced **los pasos 1 a 6 y el 10**. **Si vais sobrados:** probad otro umbral con otros costes e intentad explicar a otra pareja **por qué cambia la decisión**.
 
 ---
