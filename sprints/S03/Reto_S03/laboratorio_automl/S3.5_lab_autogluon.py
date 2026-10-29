@@ -87,6 +87,26 @@ print("\nMatriz de confusión (umbral 0.5):\n", confusion_matrix(y_real, (prob >
 print("\n", classification_report(y_real, (prob >= 0.5).astype(int), digits=3))
 # Pregunta de negocio: ¿qué cuesta más, una cancelación no prevista o una alerta falsa? ¿Qué umbral elegirías?
 
+# %% 6b. Elegir el umbral con costes (EJEMPLO: cambia los dos importes por los vuestros)
+COSTE_NO_PREVISTA = 100    # euros que cuesta una cancelación que no avisamos (noche vacía)
+COSTE_ALERTA_FALSA = 40    # euros que cuesta una alerta que no hacía falta (p. ej. un descuento regalado)
+y_array = y_real.to_numpy()
+filas = []
+for u in (0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7):
+    pred = (prob >= u).astype(int)
+    no_previstas = int(((pred == 0) & (y_array == 1)).sum())
+    falsas = int(((pred == 1) & (y_array == 0)).sum())
+    filas.append({"umbral": u, "alertas": int(pred.sum()), "no_previstas": no_previstas,
+                  "alertas_falsas": falsas, "coste_euros": COSTE_NO_PREVISTA * no_previstas + COSTE_ALERTA_FALSA * falsas})
+tabla_costes = pd.DataFrame(filas)
+print("\n", tabla_costes.to_string(index=False))
+print("\nUmbral con menos coste (de los probados):", tabla_costes.loc[tabla_costes["coste_euros"].idxmin(), "umbral"])
+print("Umbral teórico = alerta falsa / (alerta falsa + no prevista) =",
+      round(COSTE_ALERTA_FALSA / (COSTE_ALERTA_FALSA + COSTE_NO_PREVISTA), 2))
+print("Comparación: no avisar nunca =", COSTE_NO_PREVISTA * int(y_array.sum()), "euros · avisar a todos =",
+      COSTE_ALERTA_FALSA * int((y_array == 0).sum()), "euros")
+# Pregunta: ¿gana el modelo a «avisar a todos»? ¿Y si la alerta falsa costara 5 euros en vez de 40?
+
 # %% 7. Explicabilidad: importancia de variables
 importancia = predictor.feature_importance(prueba, num_shuffle_sets=3, subsample_size=1000, silent=True)
 print(importancia[["importance", "stddev"]].head(10))

@@ -36,7 +36,7 @@
 | [`S03.2_Bases_de_datos_NoSQL.pdf`](presentaciones/S03.2_Bases_de_datos_NoSQL.pdf) | Bases de datos NoSQL (demostración corta) | 15 min | Teoría · día 1 del S03 |
 | [`S03.3_AutoML_y_MLOps.pdf`](presentaciones/S03.3_AutoML_y_MLOps.pdf) | Introducción a AutoML y MLOps | 20 min | Teoría · día 2 del S03 |
 | [`Guia_AutoML_AutoGluon.pdf`](guia/Guia_AutoML_AutoGluon.pdf) | Guía de laboratorio de AutoML con AutoGluon | — | AutoML (Bloque B) |
-| [`Reto_S03/laboratorio_automl/`](Reto_S03/laboratorio_automl/) | Archivos del laboratorio de AutoML: 3 `.py`, `requirements.txt` y `reservas_turisdata.csv` | — | AutoML (Bloque B) |
+| [`Reto_S03/laboratorio_automl/`](Reto_S03/laboratorio_automl/) | Archivos del laboratorio de AutoML: cuaderno `.ipynb`, 3 `.py`, `requirements.txt` y `reservas_turisdata.csv` | — | AutoML (Bloque B) |
 | [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | Test del bloque M6–M8 · SQL, AutoML e IA responsable · 10 preguntas · individual, en el navegador, sin penalización por fallo. | 15 min | Solo se abre el mar 27/10 (hora de Canarias) |
 
 **Material de las actividades**
@@ -63,8 +63,12 @@
 | [`guia_nosql_en_parejas.md`](actividades/nosql/guia_nosql_en_parejas.md) · [PDF](actividades/nosql/guia_nosql_en_parejas.pdf) · [ecofriendly](actividades/nosql/guia_nosql_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar el cuaderno de NoSQL en parejas**: roles, ciclo de cada ejercicio, plan de 30 min, errores y hoja de registro | |
 | [`listado_ejercicios_nosql.md`](actividades/nosql/listado_ejercicios_nosql.md) · [PDF](actividades/nosql/listado_ejercicios_nosql.pdf) · [ecofriendly](actividades/nosql/listado_ejercicios_nosql_ecofriendly.pdf) | **Listado de los ejercicios NoSQL** del cuaderno, con casilla para marcar los que lleváis | |
 | [`soluciones_nosql_paso_a_paso.md`](actividades/nosql/soluciones_nosql_paso_a_paso.md) | **Solucionario paso a paso** de los ejercicios NoSQL. Usadlo **después** de intentarlo en pareja | |
+| [`S3.5_lab_autogluon.ipynb`](Reto_S03/laboratorio_automl/S3.5_lab_autogluon.ipynb) | **Cuaderno del laboratorio de AutoML** (AutoGluon): se ejecuta celda a celda, sin coste | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/Reto_S03/laboratorio_automl/S3.5_lab_autogluon.ipynb) |
+| [`guia_automl_en_parejas.md`](actividades/automl/guia_automl_en_parejas.md) · [PDF](actividades/automl/guia_automl_en_parejas.pdf) · [ecofriendly](actividades/automl/guia_automl_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar el laboratorio de AutoML en parejas**: roles, ciclo de cada paso, plan de 100 min, elección del umbral con costes, esqueleto del informe y hoja de registro | |
+| [`listado_pasos_automl.md`](actividades/automl/listado_pasos_automl.md) · [PDF](actividades/automl/listado_pasos_automl.pdf) · [ecofriendly](actividades/automl/listado_pasos_automl_ecofriendly.pdf) | **Listado de pasos y preguntas de AutoML**, con casilla para marcar los que lleváis | |
+| [`soluciones_automl_paso_a_paso.md`](actividades/automl/soluciones_automl_paso_a_paso.md) | **Solucionario paso a paso** de las preguntas de AutoML. Usadlo **después** de intentarlo en pareja | |
 
-**Bloque B · AutoML.** Sigue la **[guía de laboratorio AutoML con AutoGluon](guia/Guia_AutoML_AutoGluon.pdf)** (en Colab, sin coste, sin crear más cuentas). Los archivos que usa (tres `.py`, `requirements.txt` y el CSV de reservas) están en **[`Reto_S03/laboratorio_automl/`](Reto_S03/laboratorio_automl/)**. Tu docente además hará una **demostración con Amazon SageMaker** como referencia profesional.
+**Bloque B · AutoML.** Abre el **[cuaderno en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/Reto_S03/laboratorio_automl/S3.5_lab_autogluon.ipynb)** y trabaja con la **[guía en parejas](actividades/automl/guia_automl_en_parejas.md)** (sin coste, sin crear más cuentas). La [guía corta de laboratorio AutoML con AutoGluon](guia/Guia_AutoML_AutoGluon.pdf) es el resumen de una página. Los archivos que usa (el cuaderno, tres `.py`, `requirements.txt` y el CSV de reservas) están en **[`Reto_S03/laboratorio_automl/`](Reto_S03/laboratorio_automl/)**. Tu docente además hará una **demostración con Amazon SageMaker** como referencia profesional.
 
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint
@@ -86,7 +90,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 6 | 📖 Teoría | [Introducción a AutoML y MLOps](presentaciones/S03.3_AutoML_y_MLOps.pdf) | 20 min |
-| 7 | 💻 Práctica | [Carga y exploración de datos y primer experimento de AutoML (guía de laboratorio)](guia/Guia_AutoML_AutoGluon.pdf) | 35 min |
+| 7 | 💻 Práctica | [Carga y exploración de datos y primer experimento de AutoML (guía en parejas)](actividades/automl/guia_automl_en_parejas.md) · [cuaderno en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/Reto_S03/laboratorio_automl/S3.5_lab_autogluon.ipynb) | 35 min |
 | 8 | 🎯 Reto | [Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6)](Reto_S03/Reto_Sprint_03.md) | 1 h 20 min |
 | 9 | 📝 Test | [**Test del bloque M6–M8** (bases de datos, AutoML y responsabilidad), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | 25 min |
 | 10 | 🔔 Ceremonia | Entrega en `sprint-03/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
