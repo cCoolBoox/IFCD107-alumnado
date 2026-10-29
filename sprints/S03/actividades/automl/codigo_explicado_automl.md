@@ -236,7 +236,18 @@ print("\nResumen numérico:\n", datos.describe().T[["mean", "std", "min", "max"]
 - **Aun así, la exactitud engaña.** En las reservas de prueba, decir «nadie cancela» acertaría un **51,9 %** sin haber aprendido nada.
 - **Por eso se entrena con `roc_auc`** (el `eval_metric` del paso 4): mide si el modelo **ordena** bien las reservas de más a menos riesgo. Después, al elegir el umbral, se miran **precisión y recall** (paso 6).
 
-**Ojo con los nulos.** Que `pais_origen` tenga 138 datos vacíos **no es un error que haya que «arreglar» a mano**: significa que ese dato no se registró. AutoGluon los trata solo al entrenar. Lo importante es **saber que están** y apuntarlo en el informe.
+**Ojo con los nulos.** Que `pais_origen` tenga 138 datos vacíos **no es un error que haya que «arreglar» a mano**: significa que ese dato no se registró. Lo importante es **saber que están** y apuntarlo en el informe.
+
+**¿Qué hace AutoGluon con ellos?** No borra esas reservas ni se inventa un país. Deja el hueco como «dato que falta» y **cada tipo de modelo lo gestiona a su manera**:
+
+| Modelo | Qué hace con un `pais_origen` vacío |
+|---|---|
+| LightGBM y XGBoost | Lo entienden de serie: al construir sus árboles **aprenden hacia qué lado mandar** las reservas «sin dato» |
+| CatBoost | Lo convierte en **una categoría más**, llamada `__NaN__` («sin país») |
+| Random Forest y Extra Trees | Lo **rellenan con un 0** antes de entrenar |
+| Ensamblado | Combina a los anteriores; no hace nada especial |
+
+**Consecuencia:** el «país vacío» puede acabar siendo **información** para el modelo. En el CSV, las 138 reservas sin país se cancelan un **37,7 %**, frente al **46,1 %** de las demás. Con solo 138 reservas no se puede afirmar que sea una pauta real, pero ilustra por qué conviene **saber que los nulos están**. Si un día queréis tratarlos vosotros (por ejemplo, poner `"desconocido"`), es una decisión vuestra; aquí no hace falta.
 
 > *«¿Qué columnas podrían provocar fuga de datos (información posterior al desenlace)?»*
 
