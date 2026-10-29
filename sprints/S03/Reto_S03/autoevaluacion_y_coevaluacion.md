@@ -33,7 +33,7 @@ Volver a la [ficha del reto](Reto_Sprint_03.md).
 |---|---|
 | ¿El informe tiene las tres partes y cabe en 4 páginas? | …… |
 | ¿La métrica y el umbral están explicados en lenguaje de negocio? | …… |
-| ¿Hay evidencia de una llamada real a la API, sin credenciales? | …… |
+| ¿Hay evidencia de una llamada a la API (petición y respuesta), sin credenciales? | …… |
 | ¿Explicamos qué variables hemos excluido y por qué? | …… |
 | ¿Hemos cerrado y eliminado todos los recursos y lo demostramos? | …… |
 | ¿Hay al menos dos riesgos de IA responsable y una medida? | …… |

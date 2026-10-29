@@ -16,11 +16,13 @@
 
 **Qué vais a hacer, en seis pasos:**
 1. **Mirar los datos** con SQL (los [scripts de práctica](../actividades/sql/)) y decidir qué se quiere predecir.
-2. **Quitar las columnas «trampa»** que no se conocen en el momento de reservar (eso se llama *fuga de datos*).
+2. **Revisar las columnas** una a una: ¿se conocen en el momento de reservar? Si no, no pueden entrar (eso se llama *fuga de datos*).
 3. **Lanzar un experimento** de AutoML y comparar los modelos que salgan.
 4. **Elegir un umbral** (cuándo decimos «esta reserva tiene riesgo alto») pensando en dinero, no en números sueltos.
-5. **Publicar el modelo como servicio (API)**, hacer una llamada real, y **cerrar y borrar** todo lo que hayáis creado.
+5. **Publicar el modelo como servicio (API)**, hacer una llamada al servicio, y **cerrar y borrar** todo lo que hayáis creado.
 6. **Redactar el informe** (4 páginas máximo) con todo lo anterior.
+
+**El laboratorio de AutoML y este reto.** El [laboratorio de AutoML](../actividades/automl/guia_automl_en_parejas.md) os da la **parte técnica**: partición por fecha, modelos, métrica, umbral con costes, API y cierre de recursos. Lo que **añade el reto** y el cuaderno no hace: mirar los datos con SQL, razonar cada columna, poner **vuestros** costes, los riesgos de IA responsable, la recomendación al cliente y el informe de 4 páginas.
 
 **Qué vais a entregar:** un único documento de máximo 4 páginas con tres partes: informe del mejor modelo, evidencia de la llamada a la API e informe de recursos y costes.
 
@@ -28,7 +30,7 @@
 
 **Cuánto tiempo:** unas 2 horas y 10 minutos entre el planning, el reto y la entrega (días 1 y 2).
 
-**Núcleo y extra.** Núcleo: el mejor modelo con su umbral, la llamada al servicio y el cierre y borrado de recursos (0 €). Extra: comparar más modelos en AutoML y los scripts SQL 05–06 de CRUD e índices (en casa).
+**Núcleo y extra.** Núcleo: el mejor modelo con su umbral (con vuestros costes), la llamada al servicio, el cierre y borrado de recursos (0 €) y el informe con riesgos y recomendación. Extra: comparar más modelos en AutoML y los scripts SQL 05–06 de CRUD e índices (en casa).
 
 ### Palabras que van a aparecer en este reto
 
@@ -73,50 +75,54 @@ Un único documento (Markdown o PDF, máximo 4 páginas) con tres partes:
 
 ### Pasos sugeridos
 - **Día 1 (15 min):** planning del reto; el resto del día son las clases y las prácticas de SQL y NoSQL, que ya os dan el dato conocido.
-- **Día 2 (2 h 35 min):** revisad el dato (SQL), decidid la variable objetivo y las columnas que no se pueden usar (fuga); lanzad el experimento, comparad modelos, evaluad con una partición temporal y elegid el umbral; publicad el servicio, haced la llamada y cerrad todo.
+- **Día 2 (2 h 35 min):** revisad el dato (SQL), decidid la variable objetivo y revisad las columnas (¿se conocen al reservar?); lanzad el experimento, comparad modelos, evaluad con una partición temporal y elegid el umbral; publicad el servicio, haced la llamada y cerrad todo.
 - **Cierre del martes (40 min):** completad el informe de recursos, revisad con la rúbrica, entregad y haced la review y la retro. El informe se remata en casa esa tarde si hace falta.
 
 ### Guía paso a paso para principiantes
 
 #### Paso 1 · Entender el problema y los datos (día 2, 20 minutos)
 1. Releed la escena del cliente y respondeos con una frase: *«Queremos predecir ______ para que el equipo de reservas pueda ______»*.
-2. Abrid [`turisdata.db`](../../../datos/turisdata.db) en DB Browser for SQLite y mirad la tabla `reservas` con un `SELECT * ... LIMIT 20`. ¿Qué columnas hay?
-3. Con `GROUP BY` calculad el **porcentaje de cancelaciones** por canal. Es una forma útil de empezar a conocer el dato.
-4. **Decidid la variable objetivo** (la columna `cancelada`, sí/no).
-5. **Quitad las columnas trampa.** Pregunta clave para cada columna: **«¿La conoceríamos en el momento de hacer la reserva?»** Si la respuesta es no (por ejemplo, un dato que solo existe después de cancelar), no puede entrar en el modelo. Anotad cuáles habéis excluido y por qué: **es parte del informe**.
+2. Abrid [`turisdata.db`](../../../datos/turisdata.db) en DB Browser for SQLite, mirad `reservas` y calculad con `GROUP BY` el **% de cancelaciones** por canal.
+3. **Decidid la variable objetivo** (la columna `cancelada`, sí/no).
+4. **Revisad las columnas una a una** y respondeos para cada una: **¿la conoceríamos en el momento de hacer la reserva?** Si no (por ejemplo, un dato que solo existe después de cancelar), no puede entrar en el modelo.
+5. **Ojo:** en este CSV no existen columnas que delaten la cancelación (como `fecha_cancelacion`): lo normal es excluir solo `id_reserva`, un simple identificador. Aun así, **razonadlo columna a columna y anotadlo: es parte del informe**.
 6. Preparad la plataforma que indique el docente. Para el laboratorio con AutoGluon, abrid el [cuaderno en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/Reto_S03/laboratorio_automl/S3.5_lab_autogluon.ipynb) y seguid la [guía en parejas](../actividades/automl/guia_automl_en_parejas.md) (el resumen de una página es [`Guia_AutoML_AutoGluon.pdf`](../guia/Guia_AutoML_AutoGluon.pdf)). Los archivos del laboratorio (cuaderno, tres `.py`, `requirements.txt` y el CSV de reservas) están en [`laboratorio_automl/`](laboratorio_automl/).
 
-#### Paso 2 · Lanzar el experimento y comparar modelos (día 2, 30 minutos)
+#### Paso 2 · Lanzar el experimento y comparar modelos (día 2, 30 minutos; laboratorio AutoML)
 1. **Partid los datos por fecha:** las reservas antiguas para entrenar, las más recientes para evaluar. (Si barajáis las filas al azar, el modelo «ve el futuro» y los resultados parecen mejores de lo que serían en la realidad.)
-2. Lanzad el experimento con el límite de tiempo y de uso que indique el docente.
+2. Lanzad el experimento y **apuntad los ajustes** para poder repetirlo: versión, preset, límite de tiempo, semilla y partición.
 3. Cuando termine, mirad la **tabla de modelos**. No elijáis solo por el número más alto: apuntad qué métrica usáis y **por qué es la adecuada para este problema** (por ejemplo: si solo hay un 20 % de cancelaciones, un modelo que dice «nadie cancela» acierta el 80 % y no sirve para nada).
 4. Mirad las **variables más influyentes** (explicabilidad). ¿Tienen sentido para el negocio?
+5. Para el informe: la versión sale de `!pip show autogluon.tabular`; el cuaderno usa `medium_quality`, semilla 42 y partición 80/20 por fecha. Respetad el límite de tiempo y de uso que indique el docente y anotadlo.
 
-#### Paso 3 · Elegir el umbral con criterio de negocio (día 2, 20 minutos)
+#### Paso 3 · Elegir el umbral con criterio de negocio (día 2, 20 minutos; laboratorio AutoML)
 1. Pensad en las dos formas de equivocarse:
    - **Falsa alarma:** se actúa sobre una reserva que no se iba a cancelar (cuesta una llamada, o molestar a un cliente).
    - **Cancelación no detectada:** se pierde la oportunidad de revender la habitación (cuesta una noche vacía).
-2. Estimad **cuál cuesta más** (aunque sea con una hipótesis: «una noche vacía son 100 €, una llamada son 5 €») y elegid un umbral coherente. Explicadlo con una frase que entienda un directivo.
-3. Evaluad el modelo con el umbral elegido en los datos que **no ha visto**.
+2. Poned **vuestros importes** para cada error (los 100 € y 40 € del cuaderno son solo un ejemplo) y elegid un umbral. Explicadlo con una frase que entienda un directivo.
+3. Comparad con **«avisar a todos»** y **«no avisar nunca»**: si el modelo no los mejora, no compensa. Puede pasar si la falsa alarma cuesta muy poco.
+4. Evaluad el modelo con el umbral elegido en los datos que **no ha visto**.
 
-#### Paso 4 · Publicar el servicio y hacer una llamada (día 2, 20 minutos)
-1. Publicad el modelo siguiendo la guía (el modelo queda «escuchando» peticiones).
-2. Haced **una llamada real**: enviad los datos de una reserva ficticia y recibid la **probabilidad de cancelación** y la alerta.
-3. **Capturad la petición y la respuesta**, pero **sin claves ni contraseñas visibles**. Si aparece una clave en la captura, tapadla.
+#### Paso 4 · Publicar el servicio y hacer una llamada (día 2, 20 minutos; laboratorio AutoML)
+1. Publicad el modelo como servicio siguiendo la guía (en el laboratorio, una API con FastAPI).
+2. Haced **una llamada al servicio**: enviad los datos de una reserva ficticia y recibid la **probabilidad de cancelación** y la alerta.
+3. **Ojo:** en el cuaderno la llamada la hace `TestClient`, dentro del propio cuaderno y sin red. Preguntad al docente si vale como evidencia o si hay que levantar el servicio con `uvicorn`.
+4. **Capturad la petición y la respuesta**, pero **sin claves ni contraseñas visibles**. Si aparece una clave en la captura, tapadla.
 
-#### Paso 5 · Cerrar y borrar (día 2, 10 minutos; importante)
+#### Paso 5 · Cerrar y borrar (día 2, 10 minutos; importante, laboratorio AutoML)
 1. **Parad y eliminad** el servicio publicado, el experimento y los datos subidos. Lo que se deja encendido **gasta cuota (o dinero)**.
-2. Anotad en el informe: qué recursos creasteis, cuánto tiempo y capacidad usaron, cuánto ha costado o **habría costado** y **la prueba de que se han cerrado** (captura de la lista vacía de recursos).
-3. Si algo no se puede borrar, **avisad al docente**.
+2. En Colab: *Entorno de ejecución → Desconectar y eliminar entorno*, y capturad la pantalla como prueba.
+3. Anotad en el informe: qué recursos creasteis, cuánto tiempo y capacidad usaron, cuánto ha costado o **habría costado** y **la prueba de que se han cerrado** (captura de la lista vacía de recursos).
+4. Si algo no se puede borrar, **avisad al docente**.
 
 #### Paso 6 · Redactar el informe (20 minutos en clase y el resto en la entrega; 4 páginas máximo)
 Estructura recomendada:
-1. **El problema y la métrica** (media página).
-2. **Qué modelos se compararon y cuál ganó**, con el umbral y su razón de negocio.
-3. **Variables que pesan más** y **variables excluidas por fuga**.
+1. **El problema y la métrica** (media página), con las columnas **excluidas** y por qué.
+2. **Qué modelos se compararon y cuál ganó**, con el umbral y su razón de negocio (con **vuestros** importes).
+3. **Variables que pesan más** y **cómo repetirlo**: datos, versión, ajustes y semilla.
 4. **Evidencia de la llamada a la API.**
 5. **Informe de recursos y costes**, con la prueba de cierre.
-6. **Riesgos de IA responsable** (al menos dos) y **una medida** para cada uno.
+6. **Riesgos de IA responsable** (al menos dos: datos sintéticos, falsas alertas, sesgos por país o canal) y **una medida** para cada uno.
 7. **Recomendación al cliente:** qué hacer con una alerta y con qué límites.
 
 ### Cómo usar la IA en este reto
@@ -145,8 +151,9 @@ Estructura recomendada:
 
 ### Un buen resultado se parece a…
 
-- **Una frase de recomendación:** *«Recomendamos alertar cuando el riesgo supere el 55 %: así detectamos 7 de cada 10 cancelaciones y solo molestamos a 1 de cada 5 clientes que mantenían su reserva. Con una noche vacía valorada en 100 € y una llamada en 5 €, el sistema compensa.»* (Las cifras son un ejemplo.)
-- **Variables excluidas:** «Excluimos `fecha_cancelacion` y `estado_final` porque solo existen después de cancelar».
+- **Una frase de recomendación:** *«Recomendamos alertar cuando el riesgo supere el 30 %: así detectamos casi 9 de cada 10 cancelaciones, aunque algo más de 4 de cada 10 alertas serán falsas. Con una cancelación no detectada valorada en 100 € y una falsa alarma en 40 €, el coste baja a unos 22.300 €, frente a 24.920 € si avisamos a todos y 57.700 € si no avisamos nunca.»* (Son las cifras del ejemplo del cuaderno: las vuestras cambiarán con vuestros importes. Fijaos en que el ahorro frente a «avisar a todos» es pequeño; decidlo con honestidad, es un límite del modelo.)
+- **Columnas excluidas:** «Revisamos todas las columnas y solo excluimos `id_reserva`, que es un número de identificación y no explica nada. El resto se conoce al hacer la reserva».
+- **Cómo repetirlo:** «AutoGluon (versión …), `medium_quality`, 120 s, semilla 42; el 80 % más antiguo para entrenar y el 20 % más reciente para evaluar».
 - **Informe de recursos:** una tabla con *recurso · cuándo se creó · tiempo usado · coste · cerrado (sí/no) · prueba*.
 
 ### Antes de entregar: autoevaluación rápida
@@ -157,7 +164,7 @@ Repasad estas preguntas y rellenad después la hoja [autoevaluacion_y_coevaluaci
 |---|---|
 | ¿El informe tiene las tres partes y cabe en 4 páginas? | |
 | ¿La métrica y el umbral están explicados en lenguaje de negocio? | |
-| ¿Hay evidencia de una llamada real a la API, sin credenciales? | |
+| ¿Hay evidencia de una llamada a la API (petición y respuesta), sin credenciales? | |
 | ¿Explicamos qué variables hemos excluido y por qué? | |
 | ¿Hemos cerrado y eliminado todos los recursos y lo demostramos? | |
 | ¿Hay al menos dos riesgos de IA responsable y una medida? | |
@@ -166,7 +173,7 @@ Repasad estas preguntas y rellenad después la hoja [autoevaluacion_y_coevaluaci
 ### Si os atascáis
 
 - **El experimento falla o tarda mucho:** reducid el tamaño de los datos o el tiempo máximo, y avisad al docente.
-- **No sabemos qué columna es una trampa:** haced una lista con todas las columnas y, a su lado, «¿se conoce al reservar? sí/no». Discutidla en equipo.
+- **No sabemos qué columna es una trampa:** haced una lista con todas las columnas y, a su lado, «¿se conoce al reservar? sí/no». Discutidla en equipo (en este CSV lo normal es que solo sobre `id_reserva`).
 - **No encontramos cómo cerrar un recurso:** buscad en la plataforma «recursos» o «facturación»; si no lo veis, preguntad.
 - Más ayuda: [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 
@@ -179,8 +186,9 @@ Si queda una casilla sin marcar, **el reto no está terminado**.
 
 - [ ] El informe tiene las tres partes y cabe en 4 páginas.
 - [ ] La métrica y el umbral están justificados en lenguaje de negocio.
-- [ ] Hay evidencia de una llamada real a la API, sin credenciales.
-- [ ] Se explica qué variables se excluyeron por posible fuga de datos.
+- [ ] Hay evidencia de una llamada a la API (petición y respuesta), sin credenciales.
+- [ ] Se explica qué columnas se revisaron y cuáles se excluyeron (y por qué).
+- [ ] Se indica cómo repetir el experimento (versión, ajustes, semilla).
 - [ ] Todos los recursos creados están cerrados o eliminados y hay prueba.
 - [ ] Se mencionan al menos dos riesgos de IA responsable y una medida.
 - [ ] Otra persona del grupo ha revisado el informe con la rúbrica.

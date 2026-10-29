@@ -109,7 +109,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 **Entregáis** (un documento `.md` o PDF de máx. 4 páginas, en la carpeta `sprint-03/` del repositorio del equipo):
 - Informe del mejor modelo: modelos comparados, métrica, resultados en datos no vistos, umbral justificado y variables influyentes.
-- Evidencia de una llamada real a la API, con su respuesta y sin claves visibles.
+- Evidencia de una llamada a la API, con su petición y su respuesta y sin claves visibles.
 - Informe de recursos y costes, con prueba de que todo se ha cerrado o eliminado.
 
 **Reglas:**

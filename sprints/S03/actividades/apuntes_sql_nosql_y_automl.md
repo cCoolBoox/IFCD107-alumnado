@@ -359,10 +359,10 @@ Equivalencias: `$match` ≈ `WHERE` · `$group` ≈ `GROUP BY` · `$sort`/`$limi
 
 ```
 1. Datos → mirar el CSV con SQL y decidir qué predecir: «cancelada»
-2. Quitar columnas «trampa» (fuga de datos)
+2. Revisar las columnas: ¿se conocen al reservar? (fuga de datos)
 3. Experimento AutoML (AutoGluon) → ranking de modelos
 4. Umbral elegido por dinero, no por costumbre
-5. Servicio por API → una llamada real
+5. Servicio por API → una llamada al servicio
 6. Cerrar y borrar recursos → informe de coste 0 €
 ```
 
@@ -370,7 +370,7 @@ Equivalencias: `$match` ≈ `WHERE` · `$group` ≈ `GROUP BY` · `$sort`/`$limi
 
 **Fuga de datos (data leakage):** usar información que **no se conoce en el momento de decidir**. El modelo hace trampa y sus resultados parecen mejores de lo que son.
 
-**Ejemplo:** tienes una columna `fecha_cancelacion`. Solo tiene valor **si la reserva ya se canceló**. Si la dejas, el modelo «predice» perfecto: mira si hay fecha de cancelación y listo. Pero cuando queramos usarlo para una reserva **futura**, esa columna **no existirá todavía**.
+**Ejemplo:** tienes una columna `fecha_cancelacion`. Solo tiene valor **si la reserva ya se canceló**. Si la dejas, el modelo «predice» perfecto: mira si hay fecha de cancelación y listo. Pero cuando queramos usarlo para una reserva **futura**, esa columna **no existirá todavía**. (En el CSV de TurisData **no existe**: es solo un ejemplo de lo que sería fuga. Aun así, hay que revisar cada columna y razonarlo.)
 
 **Pregunta de control para cada columna:** *¿este dato lo tendría yo en el momento de hacer la predicción?* Si no, se elimina.
 
