@@ -236,6 +236,8 @@ print("\nResumen numérico:\n", datos.describe().T[["mean", "std", "min", "max"]
 - **Aun así, la exactitud engaña.** En las reservas de prueba, decir «nadie cancela» acertaría un **51,9 %** sin haber aprendido nada.
 - **Por eso se entrena con `roc_auc`** (el `eval_metric` del paso 4): mide si el modelo **ordena** bien las reservas de más a menos riesgo. Después, al elegir el umbral, se miran **precisión y recall** (paso 6).
 
+**Ojo con los nulos.** Que `pais_origen` tenga 138 datos vacíos **no es un error que haya que «arreglar» a mano**: significa que ese dato no se registró. AutoGluon los trata solo al entrenar. Lo importante es **saber que están** y apuntarlo en el informe.
+
 > *«¿Qué columnas podrían provocar fuga de datos (información posterior al desenlace)?»*
 
 Una **fuga de datos** es usar para predecir algo que **no sabríamos cuando hay que decidir**.
