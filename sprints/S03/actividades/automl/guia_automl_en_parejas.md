@@ -38,7 +38,7 @@ Si sale otro número o un error, parad y preguntad antes de seguir.
 | Proporción de reservas canceladas | **0,459** (el 45,9 %) |
 | Reservas para entrenar / para probar | **4.800** / **1.200** |
 
-**En local** (si preferís vuestro ordenador): descargad la carpeta [`laboratorio_automl/`](../../Reto_S03/laboratorio_automl/), instalad con `pip install -r requirements.txt` y ejecutad el cuaderno con Jupyter o VS Code, o el script `S3.5_lab_autogluon.py`. Con la variable `TIME_LIMIT=15` hacéis un ensayo rápido.
+**En local** (si preferís vuestro ordenador): descargad la carpeta [`laboratorio_automl/`](../../Reto_S03/laboratorio_automl/), instalad con `pip install -r requirements.txt` y ejecutad el cuaderno con Jupyter o VS Code, o el script `S3.5_lab_autogluon.py`. El CSV viene dentro de la carpeta. Para un ensayo rápido: `TIME_LIMIT=15` en el script, o `LIMITE_TIEMPO = 15` en el cuaderno.
 
 ### Las columnas del CSV
 
@@ -279,7 +279,7 @@ El reto pide un informe de **máximo 4 páginas** con tres partes. Todo número 
 |---|---|---|
 | `ModuleNotFoundError: autogluon` | La instalación no se ejecutó o el entorno se reinició | Ejecutad **otra vez** la celda de instalación y después las demás |
 | `NameError: name 'datos' is not defined` | Os saltasteis una celda | Ejecutad **desde el paso 0** hasta donde estabais |
-| Falla la descarga del CSV | Sin internet o enlace caído | Descargad `reservas_turisdata.csv` de [`datos/`](../../../../datos/) y subidlo al panel de archivos de Colab |
+| Falla la descarga automática del CSV (celda 0) | Sin internet o enlace caído | **Solo en este caso:** descargad `reservas_turisdata.csv` de [`datos/`](../../../../datos/) y subidlo al panel de archivos de Colab; la celda 0 lo detecta y no lo vuelve a descargar |
 | La celda del paso 4 «no acaba» | Es normal que tarde | Esperad hasta 2 minutos. Para un ensayo, poned `LIMITE_TIEMPO = 15` |
 | Colab se queda sin memoria | Sesión sobrecargada | *Entorno de ejecución → Reiniciar sesión* y ejecutad desde el paso 0 |
 | `FileNotFoundError: modelo_cancelaciones` | Falta el paso 8 o cambió la carpeta | Ejecutad los pasos 4 y 8 |

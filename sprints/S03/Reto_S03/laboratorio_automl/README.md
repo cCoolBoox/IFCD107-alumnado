@@ -16,7 +16,7 @@ Laboratorio de AutoML con AutoGluon. Flujo: dato → experimento AutoML → eval
 | `S3.5_lab_autogluon.py` | El mismo laboratorio por celdas (`# %%`), para ejecutar en local |
 | `api_cancelaciones.py` | API local con FastAPI |
 | `requirements.txt` | Dependencias (solo hace falta si lo ejecutáis en local) |
-| `reservas_turisdata.csv` | El CSV ya generado (6.000 reservas): **subidlo a Colab** y no hace falta ejecutar el generador |
+| `reservas_turisdata.csv` | El CSV ya generado (6.000 reservas). **El cuaderno lo descarga solo** (necesita internet): no hay que subirlo ni ejecutar el generador. Solo con el `.py` hace falta tenerlo en la misma carpeta |
 
 ## Requisitos
 - Colab (gratis) o Python 3.10–3.13 en local con 8 GB de RAM.
