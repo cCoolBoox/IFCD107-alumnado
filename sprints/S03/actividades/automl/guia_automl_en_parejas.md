@@ -90,7 +90,7 @@ Repetid esto **en cada celda del laboratorio**.
 
 ## 5. Cada paso en una página
 
-> En cada paso tenéis **qué hace**, **qué debe salir** (orientativo) y **qué se suele hacer mal**. Las respuestas a las preguntas están en el **[solucionario paso a paso](soluciones_automl_paso_a_paso.md)**: miradlo **después** de pensarlas vosotros. El listado de pasos con casillas está en [`listado_pasos_automl.md`](listado_pasos_automl.md).
+> En cada paso tenéis **qué hace**, **qué debe salir** (orientativo) y **qué se suele hacer mal**. Las respuestas a las preguntas están en el **[solucionario paso a paso](soluciones_automl_paso_a_paso.md)**: miradlo **después** de pensarlas vosotros. Si queréis entender **qué hace cada línea del código**, tenéis el **[código explicado paso a paso](codigo_explicado_automl.md)**. El listado de pasos con casillas está en [`listado_pasos_automl.md`](listado_pasos_automl.md).
 
 ### Palabras que van a salir
 

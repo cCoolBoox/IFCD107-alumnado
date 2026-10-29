@@ -1,6 +1,6 @@
 # Solucionario AutoML paso a paso · S03 (cuaderno `S3.5_lab_autogluon`)
 
-> **Para quién:** alumnado de IFCD107. **Qué es:** las respuestas a las preguntas del laboratorio de AutoML, explicadas **paso a paso**, con **lo que debe salir** y los errores más típicos. Va con la [guía en parejas](guia_automl_en_parejas.md) y el [listado de pasos](listado_pasos_automl.md).
+> **Para quién:** alumnado de IFCD107. **Qué es:** las respuestas a las preguntas del laboratorio de AutoML, explicadas **paso a paso**, con **lo que debe salir** y los errores más típicos. Va con la [guía en parejas](guia_automl_en_parejas.md) y el [listado de pasos](listado_pasos_automl.md). Para entender **el código** línea a línea, mirad el [código explicado](codigo_explicado_automl.md).
 
 ## Cómo usar este solucionario
 

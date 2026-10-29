@@ -4,7 +4,7 @@
 
 [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/Reto_S03/laboratorio_automl/S3.5_lab_autogluon.ipynb)
 
-**Cómo trabajarlo:** abrid el cuaderno en Colab y seguid la [guía en parejas](../../actividades/automl/guia_automl_en_parejas.md) (roles, plan de 100 min, informe del reto). Más material: [listado de pasos](../../actividades/automl/listado_pasos_automl.md) · [solucionario paso a paso](../../actividades/automl/soluciones_automl_paso_a_paso.md) · [guía corta en PDF](../../guia/Guia_AutoML_AutoGluon.pdf).
+**Cómo trabajarlo:** abrid el cuaderno en Colab y seguid la [guía en parejas](../../actividades/automl/guia_automl_en_parejas.md) (roles, plan de 100 min, informe del reto). Más material: [listado de pasos](../../actividades/automl/listado_pasos_automl.md) · [solucionario paso a paso](../../actividades/automl/soluciones_automl_paso_a_paso.md) · [código explicado línea a línea](../../actividades/automl/codigo_explicado_automl.md) · [guía corta en PDF](../../guia/Guia_AutoML_AutoGluon.pdf).
 
 Laboratorio de AutoML con AutoGluon. Flujo: dato → experimento AutoML → evaluación → explicabilidad → servicio por API → informe de recursos.
 

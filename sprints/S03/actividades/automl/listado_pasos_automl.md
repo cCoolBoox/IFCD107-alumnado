@@ -2,7 +2,7 @@
 
 > **Qué es:** el índice de todo lo que hay que hacer en el laboratorio de AutoML, para saber **qué toca** y **llevar la cuenta**. A diferencia de SQL y NoSQL, aquí **no hay celdas con `...` que rellenar**: el cuaderno ya trae el código y vuestro trabajo es **ejecutarlo, leer el resultado y responder**. Cómo abrirlo: apartado 1 de la [guía en parejas](guia_automl_en_parejas.md).
 
-**Cómo usarlo:** marcad la casilla cuando la celda haya terminado **y** tengáis anotado vuestro dato en la hoja de registro. Después podéis contrastar con el [solucionario paso a paso](soluciones_automl_paso_a_paso.md).
+**Cómo usarlo:** marcad la casilla cuando la celda haya terminado **y** tengáis anotado vuestro dato en la hoja de registro. Después podéis contrastar con el [solucionario paso a paso](soluciones_automl_paso_a_paso.md) (las respuestas) y con el [código explicado](codigo_explicado_automl.md) (qué hace cada línea).
 
 **Orden:** de arriba abajo, **una celda cada vez**. Si reiniciáis el entorno de Colab, volved a ejecutar desde el paso 0. Las cifras de la guía son orientativas: en el informe van **las vuestras**.
 
