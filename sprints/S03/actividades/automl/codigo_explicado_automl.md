@@ -10,6 +10,7 @@
 3. Leed **«Qué hace cada línea»** con el código delante. Si una palabra os suena rara, está en el [mini-glosario de Python](#1-el-python-que-aparece-mini-glosario).
 4. Haced **«Probad vosotros»**: cambiáis una cosa y comprobáis si pasa lo que esperabais. **Es la mejor manera de entender código.**
 5. Al terminar, la [comprobación final](#comprobación-final-siete-preguntas-de-código) tiene siete preguntas con su respuesta.
+6. Las **preguntas que plantea el propio cuaderno** (en los comentarios de los pasos 2, 5, 6, 6b, 7 y 10) están **con su respuesta** dentro de cada paso, en el apartado «Pregunta(s) del cuaderno», y juntas en el [resumen de preguntas](#todas-las-preguntas-del-cuaderno-de-un-vistazo).
 
 **Cómo se lee una línea de código.** Casi todo sigue la misma forma: `resultado = objeto.acción(opciones)`. Se lee de **derecha a izquierda**: *«coge este objeto, hazle esta acción con estas opciones, y guarda lo que salga en `resultado`»*.
 
@@ -227,6 +228,22 @@ print("\nResumen numérico:\n", datos.describe().T[["mean", "std", "min", "max"]
 - `Proporción de cancelaciones: 0.459` (el 45,9 %).
 - Una tabla con la media, desviación, mínimo y máximo de cada columna numérica.
 
+### Preguntas del cuaderno (comentarios al final de la celda)
+
+> *«¿Está desbalanceada la clase objetivo? ¿Qué métrica conviene?»*
+
+- **No está muy desbalanceada:** el 45,9 % de las reservas se cancela (2.754 de 6.000), casi mitad y mitad. No es como un fraude que ocurre una vez entre mil.
+- **Aun así, la exactitud engaña.** En las reservas de prueba, decir «nadie cancela» acertaría un **51,9 %** sin haber aprendido nada.
+- **Por eso se entrena con `roc_auc`** (el `eval_metric` del paso 4): mide si el modelo **ordena** bien las reservas de más a menos riesgo. Después, al elegir el umbral, se miran **precisión y recall** (paso 6).
+
+> *«¿Qué columnas podrían provocar fuga de datos (información posterior al desenlace)?»*
+
+Una **fuga de datos** es usar para predecir algo que **no sabríamos cuando hay que decidir**.
+
+- **En estos datos no hay fuga evidente:** todas las columnas se conocen **al reservar**. `antelacion_dias` es solo `fecha_llegada − fecha_reserva`, y `cancelaciones_previas` cuenta cancelaciones **anteriores**, no la de esta reserva.
+- **Serían fuga**, si existieran: `fecha_cancelacion`, `importe_reembolsado`, `motivo_cancelacion` o `estado_final`. Solo existen **después** de cancelar y harían que el modelo pareciera perfecto... y fuera inútil en la vida real.
+- **Truco:** preguntad por cada columna *«¿la tendría ya el día que quiero dar la alerta?»*. Si no, fuera.
+
 **Probad vosotros:** en una celda nueva escribid `datos["canal"].value_counts()`. *Cuenta las reservas de cada canal: `web_intermediaria` 3.020, `directo` 1.462, `agencia` 1.190 y `empresa` 328 (suman 6.000).*
 
 ---
@@ -355,6 +372,17 @@ print(clasificacion[["model", "score_test", "score_val", "fit_time"]].head(10))
 
 **Qué debe salir:** una tabla de unos 10 modelos. En nuestra ejecución, `WeightedEnsemble_L2` arriba con `score_test` ≈ 0,722 y `score_val` ≈ 0,779; después `CatBoost` (0,719), `XGBoost` (0,719) y `LightGBMXT` (0,717). Fijaos en la columna `fit_time`: `XGBoost` entrena en menos de 1 segundo.
 
+### Preguntas del cuaderno (comentario al final de la celda)
+
+> *«¿El mejor modelo es un ensamblado? ¿Cuánto tarda cada uno? ¿Merece la pena el coste de cómputo?»*
+
+- **¿Es un ensamblado?** Sí: `WeightedEnsemble_L2` **combina** varios modelos (en nuestra ejecución, sobre todo CatBoost y LightGBMXT, y algo de XGBoost) y reparte el voto entre ellos.
+- **¿Cuánto tarda cada uno?** Mirad `fit_time`: el ensamblado 10,3 s, CatBoost 7,5 s, LightGBMXT 2,1 s, XGBoost **0,7 s**.
+- **¿Merece la pena?** La ventaja es **mínima**: 0,722 frente a 0,719 de CatBoost y de XGBoost, unas milésimas que con 1.200 reservas de prueba **no son relevantes**. Y el ensamblado cuesta más: necesita **todos** sus componentes (tiempo y espacio). Si el servicio tuviera que ir en un servidor pequeño o responder muy rápido, **un modelo simple como XGBoost podría ser la mejor decisión**.
+- **Qué escribir en el informe:** «el ensamblado gana por muy poco; elegimos X porque…», justificado con tiempo, tamaño o sencillez, no solo con el número.
+
+*Una pregunta más, de la guía:* **¿por qué `score_val` (0,78) es mayor que `score_test` (0,72)?** Porque `score_val` se calcula con una parte de **las propias reservas de entrenamiento** (mismo periodo que lo que ha aprendido), y `score_test` usa el **futuro** (agosto–diciembre de 2025), que no se parece del todo al pasado. **La cifra honesta es `score_test`.**
+
 **Probad vosotros:** cambiad `.head(10)` por `.head(3)`. *Salen solo los tres primeros.* Y cambiad `"fit_time"` por `"pred_time_val"`: *aparece otra columna, la que mide cuánto tarda en predecir.*
 
 ---
@@ -423,6 +451,15 @@ ROC-AUC: 0.722
 
 más la matriz y el informe. Con el umbral **más bajo** (0,3) damos **más alertas**: detectamos más cancelaciones (recall sube de 0,60 a 0,88) pero con más alertas falsas (precisión baja de 0,64 a 0,57).
 
+### Pregunta del cuaderno (comentario al final de la celda)
+
+> *«Pregunta de negocio: ¿qué cuesta más, una cancelación no prevista o una alerta falsa? ¿Qué umbral elegirías?»*
+
+1. Una **cancelación no prevista** es una habitación vacía que no hemos intentado vender de nuevo: pérdida de ingreso.
+2. Una **alerta falsa** es haber actuado sin necesidad (llamar al cliente, ofrecer un descuento, sobrevender).
+3. Normalmente **la primera cuesta más**, así que conviene **bajar el umbral**: con 0,3 detectamos el **88 %** de las cancelaciones (frente al 60 % con 0,5), a cambio de una precisión algo menor (57 % frente a 64 %).
+4. **No hay un umbral «correcto» sin saber cuánto cuesta cada error.** Eso se calcula en el paso 6b.
+
 **Probad vosotros:** cambiad `(0.5, 0.3)` por `(0.5, 0.3, 0.1)`. *Con 0,1 casi todo es alerta: precisión ≈ 0,50 y recall ≈ 0,99.*
 
 ---
@@ -490,6 +527,25 @@ print("Comparación: no avisar nunca =", COSTE_NO_PREVISTA * int(y_array.sum()),
 
 Y debajo: umbral con menos coste **0,2**, umbral teórico **0,29**, «no avisar nunca» **57.700 €** y «avisar a todos» **24.920 €**.
 
+### Pregunta del cuaderno (comentario al final de la celda)
+
+> *«¿Gana el modelo a «avisar a todos»? ¿Y si la alerta falsa costara 5 euros en vez de 40?»*
+
+**Con 100 € y 40 €: sí, pero por poco.** El modelo en su mejor umbral cuesta **22.040 €**; avisar a todos, **24.920 €** (un 13 % más); no avisar nunca, 57.700 €.
+
+**Con 5 € por alerta falsa:**
+
+| Estrategia | Coste |
+|---|---|
+| Modelo con umbral 0,1 (el mejor probado) | 3.315 € |
+| Modelo con umbral 0,5 | 23.965 € |
+| **Avisar a todos** | **3.115 €** |
+| No avisar nunca | 57.700 € |
+
+- El umbral teórico baja a `5 ÷ (100 + 5) =` **0,05**: merece la pena avisar casi a cualquiera.
+- **Avisar a todos gana al modelo.** El modelo solo aporta algo cuando **la alerta es cara o la capacidad es limitada** (por ejemplo, el hotel solo puede llamar a 100 clientes al día: entonces hay que elegir **a quiénes**, y para eso sirve ordenar por riesgo).
+- **Lección para el reto:** comparad siempre el modelo con la **alternativa tonta** (avisar a todos o a nadie). Si no la mejora, no se justifica su coste.
+
 **Probad vosotros:**
 1. Poned `COSTE_ALERTA_FALSA = 5` y volved a ejecutar solo esta celda. *El umbral más barato pasa a ser **0,1** (3.315 €), el teórico baja a **0,05**, y «avisar a todos» cuesta **3.115 €**: **gana al modelo**.* Cuando la alerta casi no cuesta, avisar a todos es mejor.
 2. Cambiad la tupla de umbrales por `(0.25, 0.3)`. *Sale una tabla más corta, solo con esos dos.*
@@ -517,6 +573,23 @@ print(importancia[["importance", "stddev"]].head(10))
 | `importancia[["importance", "stddev"]].head(10)` | Se queda con 2 columnas: la **importancia** y cuánto **varía** (`stddev`) entre repeticiones, y con las **10 primeras filas** |
 
 **Qué debe salir:** arriba **`antelacion_dias`** (≈ 0,07), **`deposito`** (≈ 0,06), **`canal`** (≈ 0,04) y **`tarifa`** (≈ 0,02). El resto, casi 0. Como se usan solo 1.000 reservas elegidas al azar, **los decimales pueden cambiar** de una ejecución a otra; el orden, no.
+
+### Preguntas del cuaderno (comentario al final de la celda)
+
+> *«¿Tienen sentido las variables más importantes para el negocio? ¿Alguna sospechosa de fuga?»*
+
+**Sí tienen sentido.** Los datos del CSV lo confirman:
+
+| Si… | …cancela |
+|---|---|
+| Se reserva con más de 90 días de antelación | **60 %** (con menos de 15 días, **26 %**) |
+| No hay depósito | **54 %** (con depósito total, **26 %**) |
+| El canal es `web_intermediaria` | **54 %** (`directo`, **32 %**) |
+| La tarifa es `flexible` | **52 %** (`no_reembolsable`, **37 %**) |
+
+- Quien reserva con meses de antelación, sin pagar nada y con tarifa flexible **tiene muy poco que perder** al cancelar. Quien ha pagado un depósito que no puede recuperar, sí.
+- **Ninguna es sospechosa de fuga:** las cuatro se conocen al reservar. Sospechosa sería una que solo existe tras el desenlace.
+- **Matiz:** «importante» **no** es «causa». Que `canal` pese no demuestra que cambiar de canal evite cancelaciones; solo que **ayuda a predecir**.
 
 **Probad vosotros:** cambiad `num_shuffle_sets=3` por `num_shuffle_sets=1`. *Va más rápido y los números varían algo más entre ejecuciones.* Después cambiad `head(10)` por `head(18)` para ver todas las columnas.
 
@@ -666,6 +739,12 @@ El archivo [`api_cancelaciones.py`](../../Reto_S03/laboratorio_automl/api_cancel
 
 **Por qué responde 422 con `"noches": 0`:** la plantilla exige `noches ≥ 1`. FastAPI **rechaza la reserva antes** de llegar al modelo y responde **422** («datos no válidos») con el campo que falla. **No es un fallo del cuaderno: es la API protegiendo al modelo de datos imposibles.**
 
+### Pregunta del cuaderno (comentario al final de la celda)
+
+> *«Prueba también una reserva con datos imposibles (por ejemplo `"noches": 0`) y mira el error 422.»*
+
+La API responde **422** porque la plantilla `Reserva` exige `noches ≥ 1` (arriba, en «Las reglas de la plantilla»). FastAPI **rechaza la reserva antes** de llegar al modelo y dice qué campo falla. **No es un error del cuaderno**: es la API protegiendo al modelo de datos imposibles.
+
 **Probad vosotros:** copiad la reserva, cambiad `"noches": 5` por `"noches": 0` y volved a llamar a `cliente.post(...)`. *Sale `422` y un mensaje que dice `Input should be greater than or equal to 1`.* Probad también `"adultos": 0`, `"precio_noche": 0` o `"cliente_repetidor": 2`: *los tres dan 422 por la misma razón.*
 
 ---
@@ -710,6 +789,21 @@ Recursos que hay que cerrar: la sesión de Colab (Entorno de ejecución > Descon
 ```
 
 Los segundos y los MB pueden variar un poco en vuestro equipo. **La última línea no es decoración**: en Colab, cerrad con *Entorno de ejecución → Desconectar y eliminar entorno de ejecución* y haced una **captura** como prueba.
+
+---
+
+## Todas las preguntas del cuaderno de un vistazo
+
+| Paso | Pregunta del cuaderno | Respuesta corta |
+|---|---|---|
+| **2** | ¿Está desbalanceada la clase objetivo? ¿Qué métrica conviene? | No (45,9 % cancela). La exactitud engaña; se entrena con **ROC-AUC** y se mira precisión y recall al elegir el umbral |
+| **2** | ¿Qué columnas podrían provocar fuga de datos? | **Ninguna:** todas se conocen al reservar. Serían fuga `fecha_cancelacion`, `importe_reembolsado`, `motivo_cancelacion` o `estado_final` |
+| **5** | ¿El mejor modelo es un ensamblado? ¿Cuánto tarda cada uno? ¿Merece la pena el coste? | Sí, `WeightedEnsemble_L2`; de 0,7 s (XGBoost) a 10,3 s (ensamblado). Gana por **milésimas** y cuesta más: hay que justificar la elección |
+| **6** | ¿Qué cuesta más, una cancelación no prevista o una alerta falsa? ¿Qué umbral elegirías? | Normalmente la **no prevista** → bajar el umbral (0,3 detecta el 88 %). Pero **depende de los costes** (paso 6b) |
+| **6b** | ¿Gana el modelo a «avisar a todos»? | Con 100 € y 40 €, **sí, por poco** (22.040 € frente a 24.920 €) |
+| **6b** | ¿Y si la alerta falsa costara 5 € en vez de 40? | **No:** avisar a todos (3.115 €) gana al modelo (3.315 €). Umbral teórico 0,05 |
+| **7** | ¿Tienen sentido las variables más importantes? ¿Alguna sospechosa de fuga? | Sí (antelación, depósito, canal, tarifa: poco que perder al cancelar). **Ninguna** es fuga; importante no es causa |
+| **10** | Probad una reserva con datos imposibles (`"noches": 0`) | **422**: la plantilla exige `noches ≥ 1` y la API rechaza la reserva antes del modelo |
 
 ---
 
