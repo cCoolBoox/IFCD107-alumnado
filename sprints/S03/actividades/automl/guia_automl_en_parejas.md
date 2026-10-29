@@ -343,6 +343,12 @@ Copiadla y rellenadla mientras trabajáis (una por pareja).
 
 ---
 
+## Y en otras plataformas de AutoML
+
+Lo que hacéis aquí es el mismo flujo que en una plataforma de nube (SageMaker Canvas, Vertex AI, Azure AutoML…): subir el dato, lanzar el experimento, mirar los candidatos y las métricas, elegir el umbral, publicar un endpoint y **cerrar lo que cuesta dinero**. En clase no se crean cuentas de nube. La tabla que traduce cada paso del laboratorio a esas plataformas está en el [README del laboratorio](../../Reto_S03/laboratorio_automl/README.md#otras-plataformas-de-automl-por-ejemplo-amazon-sagemaker-canvas).
+
+---
+
 ## Para repasar
 
 Si algo de la guía no os suena, repasad los [apuntes del Sprint 3](../apuntes_sql_nosql_y_automl.md) (apartado de AutoML y fuga de datos) y la [ficha del reto](../../Reto_S03/Reto_Sprint_03.md). La [guía corta de AutoGluon](../../guia/Guia_AutoML_AutoGluon.pdf) es el resumen de una página de este laboratorio. Los archivos del laboratorio están en [`laboratorio_automl/`](../../Reto_S03/laboratorio_automl/).

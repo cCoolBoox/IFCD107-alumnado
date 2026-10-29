@@ -1,8 +1,8 @@
 # %% [markdown]
-# # S3.5 · Laboratorio alternativo: AutoML sin nube de pago (AutoGluon)
+# # S3.5 · Laboratorio de AutoML sin nube de pago (AutoGluon)
 # **Sprint 3 · Reto "Primer modelo en producción" · IFCD107**
 #
-# Equivale al laboratorio S3.4 (SageMaker), pero se ejecuta en Google Colab o en tu PC y **no tiene coste**.
+# Se ejecuta en Google Colab o en tu PC y **no tiene coste**.
 # Objetivo: predecir si una reserva de *TurisData Canarias* se cancelará.
 #
 # Uso en Colab: copia cada bloque `# %%` en una celda. La primera celda instala AutoGluon.
@@ -31,7 +31,7 @@ datos = pd.read_csv(RUTA_DATOS, parse_dates=["fecha_reserva", "fecha_llegada"])
 print(datos.shape)
 print(datos.head())
 
-# %% 2. Exploración y calidad del dato (equivale a "explorar el dataset" en SageMaker)
+# %% 2. Exploración y calidad del dato (en una plataforma de nube: "explorar el dataset")
 print("\nTipos de dato:\n", datos.dtypes)
 print("\nNulos por columna:\n", datos.isna().sum()[datos.isna().sum() > 0])
 print("\nProporción de cancelaciones:", round(datos[OBJETIVO].mean(), 3))

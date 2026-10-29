@@ -101,7 +101,7 @@ Este temario sigue el orden de impartición de `distribucion_historico.md`: Bloq
 
 ## M7 · Auto Machine Learning (10 h)
 **Objetivo:** generar, entrenar y probar modelos con herramientas AutoML; conocer los principios de MLOps.
-**Requisito:** Colab operativo al empezar el Sprint 3 (el alta se hace en clase el jueves 22/10). AutoML con AutoGluon en Colab; Amazon SageMaker se muestra en demostración docente (sin cuenta AWS del alumnado).
+**Requisito:** Colab operativo al empezar el Sprint 3 (el alta se hace en clase el jueves 22/10). AutoML con AutoGluon en Colab (sin cuenta de nube del alumnado).
 
 ### UD 7.1 · Introducción a AutoML y MLOps (2 h)
 - Qué es AutoML; beneficios y límites frente al ML tradicional.

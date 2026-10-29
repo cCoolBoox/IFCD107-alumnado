@@ -96,10 +96,10 @@ Comprobaciones: Python continuo del 28/10 al 25/11 (Sprints 4–13) = 120 h. Pro
 **Pregunta guía:** ¿podemos tener un primer modelo funcionando, sin programar?
 
 - **Teoría (4 h):** M6a modelo relacional, SQL y CRUD (2 h); nociones de DBA y buenas prácticas (1 h); NoSQL (1 h); M7 introducción a AutoML y MLOps (1 h, T de UD 7.1).
-- **Práctica (4 h):** consultas SQL y CRUD en SQLite/PostgreSQL; mismo dato en MongoDB; carga y exploración de datos en SageMaker (UD 7.2); lanzar un experimento AutoML (UD 7.3).
+- **Práctica (4 h):** consultas SQL y CRUD en SQLite/PostgreSQL; mismo dato en MongoDB; carga y exploración de datos para AutoML en Colab (UD 7.2); lanzar un experimento AutoML (UD 7.3).
 - **PBL (4 h) · Reto: "Primer modelo en producción".** El cliente entrega un dataset de reservas y cancelaciones. Modelarlo en una BD, entrenar un modelo AutoML de **predicción de cancelaciones**, desplegar un endpoint, consumirlo por API y **apagar los recursos**.
 - **Entregable:** informe del mejor modelo + evidencia de la llamada al endpoint + informe de costes.
-- **Requisito:** Colab operativo (el alta se hace en clase el jueves 22/10). El AutoML se hace con AutoGluon en Colab; el docente muestra Amazon SageMaker en demostración (no hace falta cuenta AWS).
+- **Requisito:** Colab operativo (el alta se hace en clase el jueves 22/10). El AutoML se hace con AutoGluon en Colab (no hace falta cuenta de nube).
 
 ---
 

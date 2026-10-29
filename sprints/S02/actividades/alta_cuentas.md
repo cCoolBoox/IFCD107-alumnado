@@ -10,7 +10,7 @@
 
 ## 2. AutoML del Sprint 3: no necesitas ninguna cuenta más
 El laboratorio de AutoML se hace en **Google Colab con AutoGluon** (código abierto, sin coste). Con la cuenta del paso 1 es suficiente.
-- [ ] **No crees cuentas en servicios de nube ni facilites datos de pago.** Tu docente hará una **demostración en directo con Amazon SageMaker** para que veas cómo se hace en una plataforma profesional.
+- [ ] **No crees cuentas en servicios de nube ni facilites datos de pago.** El AutoML del Sprint 3 se hace en Colab, sin coste y sin tarjeta.
 - [ ] **Regla de oro** para cualquier servicio en la nube: todo lo que se lance se **apaga** al terminar.
 
 ## 3. Comprobación final

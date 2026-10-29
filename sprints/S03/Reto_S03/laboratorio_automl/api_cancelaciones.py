@@ -1,5 +1,5 @@
 """
-API local del modelo de cancelaciones (equivale al endpoint de SageMaker).
+API local del modelo de cancelaciones (equivale al endpoint de una plataforma de nube).
 
 Ejecución:
     pip install fastapi uvicorn

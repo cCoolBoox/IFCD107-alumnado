@@ -36,14 +36,18 @@ Laboratorio de AutoML con AutoGluon. Flujo: dato → experimento AutoML → eval
 
 **Entregable del reto:** informe del mejor modelo (métricas, umbral elegido y justificación) + captura de la llamada a la API + informe de recursos.
 
-## Equivalencias con SageMaker
-| SageMaker | Este laboratorio |
+## Otras plataformas de AutoML (por ejemplo, Amazon SageMaker Canvas)
+
+El flujo de este laboratorio es el mismo que en las plataformas de nube (SageMaker Canvas o Autopilot, Vertex AI, Azure AutoML, H2O). Lo que cambia es **dónde se ejecuta y cuánto cuesta**: en la nube hay cuentas, permisos y facturación por uso, y todo lo que se deja encendido cuesta dinero. En clase **no se crean cuentas de nube**; esta tabla es para que sepáis traducir lo que hacéis aquí.
+
+| Plataforma de nube (ej. SageMaker) | Este laboratorio |
 |---|---|
 | Subir dataset a S3 | Cargar el CSV con pandas |
 | Explorar datos en Canvas | Celdas 1–2 |
 | Experimento AutoML (Canvas/Autopilot) | `TabularPredictor.fit` |
 | Lista de modelos candidatos | `leaderboard` |
 | Métricas y explicabilidad | Celdas 6–7 |
+| Elegir el umbral según el coste de cada error | Celda 6b (es la misma decisión en cualquier plataforma) |
 | Desplegar un endpoint | API local con FastAPI |
 | IAM, claves y seguridad | Concepto; en local no hay cuenta que proteger (explicar cómo sería) |
-| Informe de costes y borrar recursos | Informe de recursos; desconectar la sesión de Colab |
+| Informe de costes y borrar recursos (endpoints, sesión de Canvas abierta) | Informe de recursos; desconectar la sesión de Colab |
