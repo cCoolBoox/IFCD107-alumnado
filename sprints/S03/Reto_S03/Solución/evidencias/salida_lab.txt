@@ -1,0 +1,259 @@
+(6000, 18)
+   id_reserva fecha_reserva  ... cancelaciones_previas  cancelada
+0        5760    2024-01-01  ...                     0          1
+1        3674    2024-01-01  ...                     0          0
+2        1488    2024-01-01  ...                     0          1
+3        2259    2024-01-01  ...                     0          0
+4        2442    2024-01-01  ...                     0          0
+
+[5 rows x 18 columns]
+
+Tipos de dato:
+ id_reserva                        int64
+fecha_reserva            datetime64[ns]
+fecha_llegada            datetime64[ns]
+antelacion_dias                   int64
+noches                            int64
+adultos                           int64
+ninos                             int64
+tipo_habitacion                  object
+regimen                          object
+canal                            object
+pais_origen                      object
+tarifa                           object
+deposito                         object
+precio_noche                    float64
+peticiones_especiales             int64
+cliente_repetidor                 int64
+cancelaciones_previas             int64
+cancelada                         int64
+dtype: object
+
+Nulos por columna:
+ pais_origen    138
+dtype: int64
+
+Proporción de cancelaciones: 0.459
+
+Resumen numérico:
+                                              mean  ...                  max
+id_reserva                                 3000.5  ...               6000.0
+fecha_reserva          2024-12-29 16:58:19.200000  ...  2025-12-30 00:00:00
+fecha_llegada                 2025-03-29 14:25:12  ...  2026-12-04 00:00:00
+antelacion_dias                         89.893667  ...                400.0
+noches                                   5.522333  ...                 15.0
+adultos                                  2.201833  ...                  4.0
+ninos                                    0.496167  ...                  3.0
+precio_noche                           102.866493  ...               249.35
+peticiones_especiales                    0.582667  ...                  5.0
+cliente_repetidor                          0.1485  ...                  1.0
+cancelaciones_previas                    0.066833  ...                  3.0
+cancelada                                   0.459  ...                  1.0
+
+[12 rows x 4 columns]
+
+Entrenamiento: 4800 filas (2024-01-01 a 2025-08-06)
+Prueba:        1200 filas (2025-08-06 a 2025-12-30)
+Verbosity: 2 (Standard Logging)
+=================== System Info ===================
+AutoGluon Version:  1.6.3
+Python Version:     3.13.18
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC @0
+CPU Count:          2
+Pytorch Version:    Can't import torch
+CUDA Version:       Can't get cuda version from torch
+Memory Avail:       7.16 GB / 7.84 GB (91.4%)
+Disk Space Avail:   28.74 GB / 251.97 GB (11.4%)
+===================================================
+Presets specified: ['medium_quality']
+Using hyperparameters preset: hyperparameters='default'
+Beginning AutoGluon training ... Time limit = 120s
+AutoGluon will save models to "/tmp/claude-0/-home-claude/ac03701c-6d36-5990-9e43-077cc9fc2137/scratchpad/lab3b/modelo_cancelaciones"
+Train Data Rows:    4800
+Train Data Columns: 16
+Label Column:       cancelada
+Problem Type:       binary
+Preprocessing data...
+Selected class <--> label mapping:  class 1 = 1, class 0 = 0
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    7338.70 MB
+	Train Data (Original)  Memory Usage: 1.96 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+			Note: Converting 2 features to boolean dtype as they only contain 2 unique values.
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+		Fitting CategoryFeatureGenerator...
+			Fitting CategoryMemoryMinimizeFeatureGenerator...
+		Fitting DatetimeFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Stage 5 Generators:
+		Fitting DropDuplicatesFeatureGenerator...
+	Types of features in original data (raw dtype, special dtypes):
+		('datetime', []) : 2 | ['fecha_reserva', 'fecha_llegada']
+		('float', [])    : 1 | ['precio_noche']
+		('int', [])      : 7 | ['antelacion_dias', 'noches', 'adultos', 'ninos', 'peticiones_especiales', ...]
+		('object', [])   : 6 | ['tipo_habitacion', 'regimen', 'canal', 'pais_origen', 'tarifa', ...]
+	Types of features in processed data (raw dtype, special dtypes):
+		('category', [])             :  5 | ['tipo_habitacion', 'regimen', 'canal', 'pais_origen', 'deposito']
+		('float', [])                :  1 | ['precio_noche']
+		('int', [])                  :  6 | ['antelacion_dias', 'noches', 'adultos', 'ninos', 'peticiones_especiales', ...]
+		('int', ['bool'])            :  2 | ['tarifa', 'cliente_repetidor']
+		('int', ['datetime_as_int']) : 10 | ['fecha_reserva', 'fecha_reserva.year', 'fecha_reserva.month', 'fecha_reserva.day', 'fecha_reserva.dayofweek', ...]
+	0.1s = Fit runtime
+	16 features in original data used to generate 24 features in processed data.
+	Train Data (Processed) Memory Usage: 0.66 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 0.12s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'roc_auc'
+	This metric expects predicted probabilities rather than predicted class labels, so you'll need to use predict_proba() instead of predict()
+	To change this, specify the eval_metric parameter of Predictor()
+Automatically generating train/validation split with holdout_frac=0.1042, Train Rows: 4299, Val Rows: 501
+User-specified model hyperparameters to be fit:
+{
+	'NN_TORCH': [{}],
+	'GBM': [{'extra_trees': True, 'ag_args': {'name_suffix': 'XT'}}, {}, {'learning_rate': 0.03, 'num_leaves': 128, 'feature_fraction': 0.9, 'min_data_in_leaf': 3, 'ag_args': {'name_suffix': 'Large', 'priority': 0, 'hyperparameter_tune_kwargs': None}}],
+	'CAT': [{}],
+	'XGB': [{}],
+	'FASTAI': [{}],
+	'RF': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'XT': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+}
+Fitting 11 L1 models, fit_strategy="sequential" ...
+Fitting model: LightGBMXT ... Training model for up to 119.88s of the 119.88s of remaining time.
+	Fitting with cpus=2, gpus=0, mem=0.1/7.1 GB
+	0.7736	 = Validation score   (roc_auc)
+	0.76s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: LightGBM ... Training model for up to 119.09s of the 119.09s of remaining time.
+	Fitting with cpus=2, gpus=0, mem=0.1/7.1 GB
+	0.7632	 = Validation score   (roc_auc)
+	0.5s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: RandomForestGini ... Training model for up to 118.57s of the 118.57s of remaining time.
+	Fitting with cpus=2, gpus=0, mem=0.0/7.1 GB
+	0.7435	 = Validation score   (roc_auc)
+	1.38s	 = Training   runtime
+	0.09s	 = Validation runtime
+Fitting model: RandomForestEntr ... Training model for up to 117.03s of the 117.03s of remaining time.
+	Fitting with cpus=2, gpus=0, mem=0.0/7.1 GB
+	0.7397	 = Validation score   (roc_auc)
+	1.48s	 = Training   runtime
+	0.08s	 = Validation runtime
+Fitting model: CatBoost ... Training model for up to 115.43s of the 115.43s of remaining time.
+	Fitting with cpus=2, gpus=0
+	0.7766	 = Validation score   (roc_auc)
+	3.65s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: ExtraTreesGini ... Training model for up to 111.77s of the 111.76s of remaining time.
+	Fitting with cpus=2, gpus=0, mem=0.0/7.0 GB
+	0.7515	 = Validation score   (roc_auc)
+	0.99s	 = Training   runtime
+	0.11s	 = Validation runtime
+Fitting model: ExtraTreesEntr ... Training model for up to 110.57s of the 110.56s of remaining time.
+	Fitting with cpus=2, gpus=0, mem=0.0/7.0 GB
+	0.7521	 = Validation score   (roc_auc)
+	1.04s	 = Training   runtime
+	0.1s	 = Validation runtime
+Fitting model: NeuralNetFastAI ... Training model for up to 109.36s of the 109.36s of remaining time.
+	Fitting with cpus=2, gpus=0, mem=0.0/7.0 GB
+	Warning: Exception caused NeuralNetFastAI to fail during training (ImportError)... Skipping this model.
+		Import fastai failed. A quick tip is to install via `pip install autogluon.tabular[fastai]==1.6.3`. 
+Fitting model: XGBoost ... Training model for up to 109.26s of the 109.26s of remaining time.
+	Fitting with cpus=2, gpus=0
+	0.7571	 = Validation score   (roc_auc)
+	0.56s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: NeuralNetTorch ... Training model for up to 108.69s of the 108.69s of remaining time.
+	Fitting with cpus=2, gpus=0, mem=0.0/7.0 GB
+	Warning: Exception caused NeuralNetTorch to fail during training (ImportError)... Skipping this model.
+		Unable to import dependency torch
+A quick tip is to install via `pip install torch`.
+The minimum torch version is currently 2.10.
+Fitting model: LightGBMLarge ... Training model for up to 108.60s of the 108.60s of remaining time.
+	Fitting with cpus=2, gpus=0, mem=0.1/7.0 GB
+	0.7506	 = Validation score   (roc_auc)
+	1.27s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ... Training model for up to 119.88s of the 107.29s of remaining time.
+	Fitting 1 model on all data | Fitting with cpus=2, gpus=0, mem=0.0/7.0 GB
+	Ensemble Weights: {'CatBoost': 0.6, 'LightGBMXT': 0.4}
+	0.7792	 = Validation score   (roc_auc)
+	0.05s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 12.93s ... Best model: WeightedEnsemble_L2 | Estimated inference throughput: 23020.6 rows/s (501 batch size)
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("/tmp/claude-0/-home-claude/ac03701c-6d36-5990-9e43-077cc9fc2137/scratchpad/lab3b/modelo_cancelaciones")
+
+Tiempo de entrenamiento: 13 s
+                 model  score_test  score_val  fit_time
+0  WeightedEnsemble_L2    0.721335   0.779189  4.458035
+1             CatBoost    0.719310   0.776617  3.651954
+2           LightGBMXT    0.717048   0.773594  0.759892
+3             LightGBM    0.715486   0.763208  0.500921
+4              XGBoost    0.712605   0.757050  0.561592
+5       ExtraTreesEntr    0.704883   0.752074  1.037593
+6       ExtraTreesGini    0.704783   0.751527  0.991111
+7     RandomForestEntr    0.695675   0.739710  1.477353
+8        LightGBMLarge    0.694259   0.750603  1.269408
+9     RandomForestGini    0.691173   0.743464  1.380642
+
+Umbral 0.5: precisión=0.645 recall=0.607 F1=0.625
+
+Umbral 0.3: precisión=0.566 recall=0.880 F1=0.689
+
+ROC-AUC: 0.721
+
+Matriz de confusión (umbral 0.5):
+ [[430 193]
+ [227 350]]
+
+               precision    recall  f1-score   support
+
+           0      0.654     0.690     0.672       623
+           1      0.645     0.607     0.625       577
+
+    accuracy                          0.650      1200
+   macro avg      0.650     0.648     0.648      1200
+weighted avg      0.650     0.650     0.649      1200
+
+
+  umbral  alertas  no_previstas  alertas_falsas  coste_euros
+    0.1     1154             4             581        23640
+    0.2     1042            25             490        22100
+    0.3      898            69             390        22500
+    0.4      717           135             275        24500
+    0.5      543           227             193        30420
+    0.6      380           315             118        36220
+    0.7      240           391              54        41260
+
+Umbral con menos coste (de los probados): 0.2
+Umbral teórico = alerta falsa / (alerta falsa + no prevista) = 0.29
+Comparación: no avisar nunca = 57700 euros · avisar a todos = 24920 euros
+                       importance    stddev
+antelacion_dias          0.070408  0.008718
+deposito                 0.057597  0.013005
+canal                    0.038520  0.008764
+tarifa                   0.021260  0.001884
+noches                   0.004141  0.001713
+peticiones_especiales    0.004035  0.004524
+cancelaciones_previas    0.003703  0.000634
+tipo_habitacion          0.003085  0.002093
+regimen                  0.001231  0.001435
+ninos                    0.000959  0.001050
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("/tmp/claude-0/-home-claude/ac03701c-6d36-5990-9e43-077cc9fc2137/scratchpad/lab3b/modelo_cancelaciones")
+
+Modelo recargado. Probabilidades de ejemplo: [0.456, 0.64, 0.547, 0.354, 0.121]
+
+Ejemplo de predicción: {'probabilidad_cancelacion': 0.4563, 'alerta': False}
+
+--- Informe de recursos ---
+Tiempo de entrenamiento: 13 s (límite fijado: 120 s)
+Tamaño del modelo en disco: 225.6 MB
+Coste económico: 0 EUR (Colab gratuito o equipo local)
+Recursos que hay que cerrar: la sesión de Colab (Entorno de ejecución > Desconectar).

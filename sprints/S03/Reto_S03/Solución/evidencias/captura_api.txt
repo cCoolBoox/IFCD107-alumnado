@@ -1,0 +1,11 @@
+$ curl -s http://127.0.0.1:8077/salud
+{"estado":"ok","modelo":"modelo_cancelaciones"}
+
+$ curl -s -X POST http://127.0.0.1:8077/predecir -H "Content-Type: application/json" -d @reserva_alto_riesgo.json
+{"probabilidad_cancelacion":0.919,"alerta":true,"umbral":0.3}
+
+$ curl -s -X POST http://127.0.0.1:8077/predecir -H "Content-Type: application/json" -d @reserva_bajo_riesgo.json
+{"probabilidad_cancelacion":0.0372,"alerta":false,"umbral":0.3}
+
+$ curl -s -X POST http://127.0.0.1:8077/predecir -H "Content-Type: application/json" -d "{\"noches\":0}"   # datos mal formados
+HTTP 422

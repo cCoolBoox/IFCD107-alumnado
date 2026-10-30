@@ -1,0 +1,8 @@
+# 1) Parar el servicio (Ctrl+C en la terminal donde corre el servicio) y comprobar que ya no responde
+$ curl -s -o /dev/null -w "%{http_code}\n" --max-time 3 http://127.0.0.1:8077/salud   # 000 = nadie escucha
+000
+
+# 2) Borrar el modelo y los ficheros generados (el modelo ocupaba 216 MiB)
+$ rm -rf modelo_cancelaciones __pycache__
+$ ls modelo_cancelaciones
+ls: cannot access 'modelo_cancelaciones': No such file or directory
