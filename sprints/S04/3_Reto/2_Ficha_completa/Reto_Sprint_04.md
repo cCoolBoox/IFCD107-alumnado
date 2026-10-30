@@ -40,6 +40,8 @@ Este apartado responde a **dos preguntas distintas**, una tabla para cada una:
 
 **Tabla B · Los requisitos:** qué tiene que cumplir lo que entregáis y hasta dónde llegar (🟢 mínimo, 🟡 estándar, 🔴 extra). **Es lo que se evalúa.**
 
+**En total, al final del sprint se suben a `sprint-04/`:** **4 ficheros del equipo** (`kpis.py`, `test_kpis.py`, `README.md`, `salida.json`) **+ 1 autoevaluación y coevaluación por persona**, es decir, **4 + tantos ficheros como personas haya en el equipo** (un equipo de 3 sube 7). «El reto» no es un fichero aparte: son esos cuatro ficheros. Además, el CSV va a `data/` si aún no está, y los extras solo si los hacéis. La *review* y la *retro* se hacen de palabra: no se suben.
+
 #### Tabla A · Los ficheros: de dónde sale cada uno y cuáles se suben
 
 Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`), en la carpeta **`sprint-04/`**, salvo el CSV.
@@ -51,7 +53,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 | `README.md` | **Lo creáis a partir de una plantilla.** Os damos `README_PLANTILLA.md` con huecos | Copiarla como `README.md` y rellenarla | **Sí** · `sprint-04/` |
 | `salida.json` | **Lo genera el programa** al ejecutarlo con el CSV real | Ejecutar el programa; no se escribe a mano | **Sí** · `sprint-04/` |
 | `reservas_turisdata.csv` | **Ya hecho.** Los datos reales (sintéticos) | Nada: se copia junto a `kpis.py` sin cambiarlo | **Sí**, sin cambios · `data/` (si aún no está) |
-| Autoevaluación y coevaluación | **Ya hecha, en blanco** | Cada persona rellena la suya | **Sí**, una por persona · `sprint-04/` |
+| Autoevaluación y coevaluación (`autoevaluacion_nombre.md`) | **Ya hecha, en blanco** | Cada persona copia la plantilla con su nombre y la rellena; la coevaluación va **dentro del mismo fichero** | **Sí**, **una por persona** (no una por equipo) · `sprint-04/` |
 | `kpis_pandas.py` (extra) | **Lo modificáis.** Parte de `plantilla_kpis_pandas.py` | Solo si el equipo llega al nivel extra | Solo si lo hacéis · `sprint-04/` |
 | Pruebas propias (extra) | **Lo creáis vosotros**, en un fichero aparte | Solo si el equipo llega al nivel extra | Solo si lo hacéis · `sprint-04/` |
 | Copias de prueba del paso 4 (`sin_col.csv`…) | **Las creáis** para romper el programa a propósito | Usarlas y borrarlas | **No se suben** |
@@ -258,7 +260,7 @@ Son cinco pasos, de **100 minutos en total**. Cada uno dice **qué hacéis** (la
 - **Subir los ficheros (la vía del curso, desde el navegador).** Seguid [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md): (1) abrid el repositorio del equipo y **entrad primero en la carpeta `sprint-04`**; (2) *Add file → Upload files*; (3) arrastrad los ficheros; (4) escribid un mensaje corto y pulsad **Commit changes**. Cada subida es un *commit* con el nombre de quien la hace. Un reparto posible: la persona A sube `kpis.py` («Añado lectura del CSV y KPI»), la B sube `test_kpis.py` y `salida.json` («Añado pruebas y resultado»), la C sube `README.md` («Añado README»). Los nombres de archivo, **en minúsculas y sin espacios**. El CSV va a `data/` del repositorio solo si aún no está.
 - **Alternativa con Git en el terminal** (si ya lo habéis practicado en [`S04_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb)): `git add kpis.py test_kpis.py README.md salida.json`, `git commit -m "Añado lectura del CSV y KPI"` y `git push`. Cada persona lo hace con su propia cuenta.
 
-**Qué deberíais ver.** En la carpeta `sprint-04` del repositorio, los cuatro ficheros; y en el historial (el icono del reloj), al menos tres *commits* con nombres distintos.
+**Qué deberíais ver.** En la carpeta `sprint-04` del repositorio, los cuatro ficheros del equipo y una hoja de autoevaluación por persona (**4 + N**); y en el historial (el icono del reloj), al menos tres *commits* con nombres distintos.
 
 **Hecho cuando:** otra persona podría ejecutar el proyecto siguiendo solo el README, la sección «Revisión con la rúbrica» está rellena y los tres *commits* están en el repositorio.
 

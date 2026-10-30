@@ -1,9 +1,9 @@
 # Sprint 4 · Reto «Herramientas internas» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (glosario, uso de la IA, errores frecuentes, guía paso a paso) sigue en [Reto_Sprint_04.md](../2_Ficha_completa/Reto_Sprint_04.md); la plantilla de código está en [`reto_herramientas/`](../4_Plantillas_y_entrega/reto_herramientas/).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (glosario, uso de la IA, errores frecuentes, guía paso a paso) sigue en [Reto_Sprint_04.md](../2_Ficha_completa/Reto_Sprint_04.md); la plantilla de código está en [`reto_herramientas/`](../2_Ficha_completa/reto_herramientas/).
 
 **El cliente.** TurisData calcula cada semana sus cifras de reservas a mano. Quiere un programa que las calcule solo.
-**Qué entregáis (no cambia):** un repositorio Git con `kpis.py`, `test_kpis.py`, `README.md` y un `salida.json` generado con el CSV real.
+**Qué entregáis (no cambia):** un repositorio Git con `kpis.py`, `test_kpis.py`, `README.md` y un `salida.json` generado con el CSV real. **Al final del sprint se suben a `sprint-04/` del repositorio del equipo: 4 ficheros del equipo (esos cuatro) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
 **Tiempo en clase:** planning 10 min · reto 100 min · entrega 15 min. Lo que no quepa, a casa o a la 6.ª hora.
 
 ## Tres niveles: el equipo decide hasta dónde llega
@@ -35,4 +35,4 @@
 
 ## Antes de entregar
 - [ ] `python test_kpis.py` termina sin fallos · [ ] `salida.json` creado con el CSV real · [ ] ≥ 3 commits con mensaje claro
-- [ ] README con cómo ejecutar, cómo probar y los KPIs · [ ] [Autoevaluación y coevaluación](../4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md) rellenadas
+- [ ] README con cómo ejecutar, cómo probar y los KPIs · [ ] [Autoevaluación y coevaluación](../2_Ficha_completa/autoevaluacion_y_coevaluacion.md) rellenadas
