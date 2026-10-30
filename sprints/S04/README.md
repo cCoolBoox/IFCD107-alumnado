@@ -11,11 +11,6 @@
 
 Una hoja con los días del sprint, en orden, y lo que abres en cada momento. Con ella puedes trabajar todo el sprint; el resto de este README es para consultar.
 
-## Qué aprenderás
-1. Escribir **Python** básico en Colab (variables, decisiones, bucles) y crear **funciones y módulos** con pruebas.
-2. Representar datos con **listas, diccionarios y conjuntos**, y leer y escribir **CSV y JSON** controlando los errores.
-3. Entregar una herramienta con **pruebas y Git**: es lo que haréis en el reto «Herramientas internas».
-
 ## Requisitos previos
 - Cuenta de Google para usar Colab (o Python 3.11 y Jupyter/VS Code en tu equipo).
 - **No hace falta saber programar.** Si vienes de Java, en los cuadernos hay comparativas con Python.
@@ -56,7 +51,6 @@ Las carpetas están **numeradas en el orden en que las usas**: `0_Empieza_aqui` 
 
 ### 3 · Referencia (no hace falta abrirla el primer día)
 
-- [Guía del sprint (PDF)](4_Referencia/Guia_Sprint_04.pdf) · [ecofriendly](4_Referencia/Guia_Sprint_04_ecofriendly.pdf): resumen del sprint en 2 páginas.
 - [Resumen del sprint en una página](4_Referencia/infografias/S04_00_resumen_del_sprint.png): lámina con la pregunta guía y cómo se reparte el sprint.
 - [Esquema del contenido y su relación con el reto](4_Referencia/infografias/S04_07_esquema_contenido_y_reto.png): qué presentación prepara cada pieza del entregable.
 - [Infografías del sprint](4_Referencia/infografias/): láminas ilustradas del sprint.
