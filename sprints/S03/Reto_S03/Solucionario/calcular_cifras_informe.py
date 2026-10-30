@@ -6,8 +6,12 @@ Reproduce TODOS los números del informe a partir de:
   - la carpeta modelo_cancelaciones/ que crea el laboratorio S3.5 (S3.5_lab_autogluon.py)
 
 Uso (desde la carpeta donde ejecutaste el laboratorio):
-    python calcular_cifras_informe.py            # imprime todo
-    COSTE_NO_PREVISTA=100 COSTE_ALERTA_FALSA=40 UMBRAL=0.3 python calcular_cifras_informe.py
+    python calcular_cifras_informe.py            # imprime todo, con los importes del solucionario (225 € y 60 €)
+    COSTE_NO_PREVISTA=150 COSTE_ALERTA_FALSA=30 UMBRAL=0.2 python calcular_cifras_informe.py   # con vuestros importes
+
+Los importes del solucionario NO son los del cuaderno (100 € y 40 €): se razonan con el ingreso medio por reserva (consulta SQL
+«Ingreso medio por reserva», 568 €): 40 % de ese ingreso se pierde si la cancelación no se prevé (≈ 225 €) y la alerta falsa
+cuesta un 10 % de descuento (≈ 57 €) más 5 € de tiempo del equipo (≈ 60 €). Cada equipo debe razonar los suyos.
 """
 import os
 import sqlite3
@@ -18,9 +22,9 @@ from sklearn.metrics import confusion_matrix, precision_score, recall_score, roc
 
 CSV = os.environ.get("DATOS", "reservas_turisdata.csv")
 MODELO = os.environ.get("MODELO", "modelo_cancelaciones")
-C_NO_PREV = float(os.environ.get("COSTE_NO_PREVISTA", "100"))
-C_FALSA = float(os.environ.get("COSTE_ALERTA_FALSA", "40"))
-UMBRAL = float(os.environ.get("UMBRAL", "0.3"))
+C_NO_PREV = float(os.environ.get("COSTE_NO_PREVISTA", "225"))
+C_FALSA = float(os.environ.get("COSTE_ALERTA_FALSA", "60"))
+UMBRAL = float(os.environ.get("UMBRAL", "0.2"))
 
 
 def titulo(t):
@@ -40,6 +44,7 @@ consultas = {
     "% de cancelación por depósito": "SELECT deposito, COUNT(*) AS reservas, ROUND(100.0*AVG(cancelada),1) AS pct FROM reservas GROUP BY deposito ORDER BY pct DESC",
     "% de cancelación por tarifa": "SELECT tarifa, COUNT(*) AS reservas, ROUND(100.0*AVG(cancelada),1) AS pct FROM reservas GROUP BY tarifa ORDER BY pct DESC",
     "% de cancelación por antelación": "SELECT CASE WHEN antelacion_dias<30 THEN '1) menos de 30 días' WHEN antelacion_dias<90 THEN '2) 30 a 89 días' WHEN antelacion_dias<180 THEN '3) 90 a 179 días' ELSE '4) 180 días o más' END AS antelacion, COUNT(*) AS reservas, ROUND(100.0*AVG(cancelada),1) AS pct FROM reservas GROUP BY 1 ORDER BY 1",
+    "Ingreso medio por reserva (noches x precio_noche), base de los importes de coste": "SELECT ROUND(AVG(noches*precio_noche),1) AS ingreso_medio_reserva, ROUND(AVG(precio_noche),2) AS precio_noche_medio, ROUND(AVG(noches),2) AS noches_medias FROM reservas",
     "Nulos en pais_origen": "SELECT COUNT(*) AS sin_pais, ROUND(100.0*COUNT(*)/(SELECT COUNT(*) FROM reservas),1) AS pct FROM reservas WHERE pais_origen IS NULL",
 }
 for nombre, sql in consultas.items():
@@ -63,7 +68,7 @@ prueba = prueba.assign(prob=prob)
 # ---------------------------------------------------------------- C. Métricas
 titulo("C. Métricas en datos NO vistos (periodo de prueba)")
 print(f"ROC-AUC: {roc_auc_score(y, prob):.3f}")
-for u in (0.5, UMBRAL):
+for u in sorted({0.5, UMBRAL}):
     p = (prob >= u).astype(int)
     tn, fp, fn, tp = confusion_matrix(y, p).ravel()
     print(f"Umbral {u}: alertas={p.sum()}  aciertos de cancelación (TP)={tp}  no previstas (FN)={fn}  alertas falsas (FP)={fp}  "
@@ -75,7 +80,7 @@ titulo(f"D. Coste por umbral (no prevista={C_NO_PREV:.0f} €, alerta falsa={C_F
 
 def tabla_costes(c_np, c_f):
     filas = []
-    for u in (0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7):
+    for u in (0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7):
         p = (prob >= u).astype(int)
         fn = int(((p == 0) & (y == 1)).sum())
         fp = int(((p == 1) & (y == 0)).sum())
@@ -92,10 +97,16 @@ print(f"No avisar nunca: {nunca:.0f} €  ·  Avisar a todos: {todos:.0f} €  �
 ahorro = todos - t.loc[t.umbral == UMBRAL, "coste"].iloc[0]
 print(f"Ahorro frente a «avisar a todos»: {ahorro:.0f} € ({100*ahorro/todos:.1f} %) en {len(prueba)} reservas")
 
-titulo("D2. Sensibilidad: ¿y si la alerta falsa cuesta 5 €?")
-t5, nunca5, todos5 = tabla_costes(C_NO_PREV, 5)
-print(t5.to_string(index=False))
-print(f"No avisar nunca: {nunca5:.0f} €  ·  Avisar a todos: {todos5:.0f} €  ·  Umbral teórico {5/(5+C_NO_PREV):.2f}")
+titulo("D2. Sensibilidad: ¿cambia la conclusión si cambian los importes?")
+escenarios = [("Importes del solucionario", C_NO_PREV, C_FALSA),
+              ("Importes de ejemplo del cuaderno", 100, 40),
+              ("Alerta casi gratis (un correo)", C_NO_PREV, 5)]
+for nombre, c_np, c_f in escenarios:
+    tt, nunca_, todos_ = tabla_costes(c_np, c_f)
+    mejor = tt.loc[tt.coste.idxmin()]
+    print(f"\n-- {nombre}: no prevista={c_np:.0f} €, alerta falsa={c_f:.0f} € · umbral teórico {c_f/(c_np+c_f):.2f}")
+    print(f"   nunca={nunca_:.0f} € · todos={todos_:.0f} € · mejor umbral probado={mejor.umbral} ({mejor.coste:.0f} €) · "
+          f"ahorro frente a «todos»={todos_-mejor.coste:.0f} € ({100*(todos_-mejor.coste)/todos_:.1f} %)")
 
 # ---------------------------------------------------------------- E. Importancia
 titulo("E. Importancia de variables (permutación, 3 repeticiones)")

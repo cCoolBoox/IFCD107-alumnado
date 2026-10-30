@@ -28,6 +28,10 @@ SELECT CASE WHEN antelacion_dias<30 THEN '1) menos de 30 días' WHEN antelacion_
     2) 30 a 89 días      2740 39.1
    3) 90 a 179 días      1879 54.7
   4) 180 días o más       558 76.9
+-- Ingreso medio por reserva (noches x precio_noche), base de los importes de coste
+SELECT ROUND(AVG(noches*precio_noche),1) AS ingreso_medio_reserva, ROUND(AVG(precio_noche),2) AS precio_noche_medio, ROUND(AVG(noches),2) AS noches_medias FROM reservas
+ ingreso_medio_reserva  precio_noche_medio  noches_medias
+                 568.2              102.87           5.52
 -- Nulos en pais_origen
 SELECT COUNT(*) AS sin_pais, ROUND(100.0*COUNT(*)/(SELECT COUNT(*) FROM reservas),1) AS pct FROM reservas WHERE pais_origen IS NULL
  sin_pais  pct
@@ -38,32 +42,30 @@ Prueba:        1200 filas, 2025-08-06 a 2025-12-30, % cancelación 48.1
 Referencia «nadie cancela»: acierta el 51.9 % en la prueba
 ======== C. Métricas en datos NO vistos (periodo de prueba) ========
 ROC-AUC: 0.721
+Umbral 0.2: alertas=1042  aciertos de cancelación (TP)=552  no previstas (FN)=25  alertas falsas (FP)=490  precisión=0.530  recall=0.957
 Umbral 0.5: alertas=543  aciertos de cancelación (TP)=350  no previstas (FN)=227  alertas falsas (FP)=193  precisión=0.645  recall=0.607
-Umbral 0.3: alertas=898  aciertos de cancelación (TP)=508  no previstas (FN)=69  alertas falsas (FP)=390  precisión=0.566  recall=0.880
-======== D. Coste por umbral (no prevista=100 €, alerta falsa=40 €) ========
+======== D. Coste por umbral (no prevista=225 €, alerta falsa=60 €) ========
  umbral  alertas  no_previstas  alertas_falsas   coste
-   0.05     1188             1             612 24580.0
-   0.10     1154             4             581 23640.0
-   0.20     1042            25             490 22100.0
-   0.30      898            69             390 22500.0
-   0.40      717           135             275 24500.0
-   0.50      543           227             193 30420.0
-   0.60      380           315             118 36220.0
-   0.70      240           391              54 41260.0
-Umbral teórico = 40/(40+100) = 0.29
-No avisar nunca: 57700 €  ·  Avisar a todos: 24920 €  ·  Modelo con umbral 0.3: 22500 €
-Ahorro frente a «avisar a todos»: 2420 € (9.7 %) en 1200 reservas
-======== D2. Sensibilidad: ¿y si la alerta falsa cuesta 5 €? ========
- umbral  alertas  no_previstas  alertas_falsas   coste
-   0.05     1188             1             612  3160.0
-   0.10     1154             4             581  3305.0
-   0.20     1042            25             490  4950.0
-   0.30      898            69             390  8850.0
-   0.40      717           135             275 14875.0
-   0.50      543           227             193 23665.0
-   0.60      380           315             118 32090.0
-   0.70      240           391              54 39370.0
-No avisar nunca: 57700 €  ·  Avisar a todos: 3115 €  ·  Umbral teórico 0.05
+   0.05     1188             1             612 36945.0
+   0.10     1154             4             581 35760.0
+   0.15     1100            12             535 34800.0
+   0.20     1042            25             490 35025.0
+   0.25      965            48             436 36960.0
+   0.30      898            69             390 38925.0
+   0.40      717           135             275 46875.0
+   0.50      543           227             193 62655.0
+   0.60      380           315             118 77955.0
+   0.70      240           391              54 91215.0
+Umbral teórico = 60/(60+225) = 0.21
+No avisar nunca: 129825 €  ·  Avisar a todos: 37380 €  ·  Modelo con umbral 0.2: 35025 €
+Ahorro frente a «avisar a todos»: 2355 € (6.3 %) en 1200 reservas
+======== D2. Sensibilidad: ¿cambia la conclusión si cambian los importes? ========
+-- Importes del solucionario: no prevista=225 €, alerta falsa=60 € · umbral teórico 0.21
+   nunca=129825 € · todos=37380 € · mejor umbral probado=0.15 (34800 €) · ahorro frente a «todos»=2580 € (6.9 %)
+-- Importes de ejemplo del cuaderno: no prevista=100 €, alerta falsa=40 € · umbral teórico 0.29
+   nunca=57700 € · todos=24920 € · mejor umbral probado=0.2 (22100 €) · ahorro frente a «todos»=2820 € (11.3 %)
+-- Alerta casi gratis (un correo): no prevista=225 €, alerta falsa=5 € · umbral teórico 0.02
+   nunca=129825 € · todos=3115 € · mejor umbral probado=0.05 (3285 €) · ahorro frente a «todos»=-170 € (-5.5 %)
 ======== E. Importancia de variables (permutación, 3 repeticiones) ========
                        importance  stddev
 antelacion_dias            0.0704  0.0087
@@ -74,26 +76,26 @@ noches                     0.0041  0.0017
 peticiones_especiales      0.0040  0.0045
 cancelaciones_previas      0.0037  0.0006
 tipo_habitacion            0.0031  0.0021
-======== F. Revisión de sesgos con umbral 0.3: ¿se equivoca igual con todos? ========
+======== F. Revisión de sesgos con umbral 0.2: ¿se equivoca igual con todos? ========
 -- por canal
                    reservas  %_alertas  %_cancel_real  falsas_alarmas_%_de_no_canceladas  no_previstas_%_de_canceladas
 canal                                                                                                                 
-agencia               263.0       74.5           47.5                               64.5                          14.4
-directo               290.0       49.3           33.4                               40.4                          33.0
-empresa                56.0       64.3           48.2                               48.3                          18.5
-web_intermediaria     591.0       88.5           55.5                               79.5                           4.3
+agencia               263.0       89.7           47.5                               84.1                           4.0
+directo               290.0       66.2           33.4                               56.0                          13.4
+empresa                56.0       78.6           48.2                               72.4                          14.8
+web_intermediaria     591.0       96.4           55.5                               93.2                           0.9
 -- por pais_origen
              reservas  %_alertas  %_cancel_real  falsas_alarmas_%_de_no_canceladas  no_previstas_%_de_canceladas
 pais_origen                                                                                                     
-DE              174.0       70.1           46.6                               59.1                          17.3
-ES              325.0       74.8           45.8                               63.1                          11.4
-FR               43.0       65.1           46.5                               43.5                          10.0
-IT               56.0       82.1           60.7                               77.3                          14.7
-NL               66.0       71.2           43.9                               56.8                          10.3
-Nordicos         80.0       75.0           50.0                               60.0                          10.0
-UK              319.0       79.0           48.6                               67.7                           9.0
-otros           115.0       70.4           53.9                               52.8                          14.5
-sin_dato         22.0       86.4           31.8                               86.7                          14.3
+DE              174.0       82.8           46.6                               75.3                           8.6
+ES              325.0       87.7           45.8                               80.1                           3.4
+FR               43.0       81.4           46.5                               69.6                           5.0
+IT               56.0       89.3           60.7                               81.8                           5.9
+NL               66.0       81.8           43.9                               70.3                           3.4
+Nordicos         80.0       83.8           50.0                               75.0                           7.5
+UK              319.0       89.3           48.6                               82.3                           3.2
+otros           115.0       88.7           53.9                               75.5                           0.0
+sin_dato         22.0       90.9           31.8                               93.3                          14.3
 ======== G. Si el equipo solo puede contactar a una parte de las reservas: ¿a cuáles? ========
 Top 10 % con más riesgo (120 reservas): cancelan 84.2 % (media general 48.1 %) · capturamos 101 de 577 cancelaciones (18 %)
 Top 20 % con más riesgo (240 reservas): cancelan 77.5 % (media general 48.1 %) · capturamos 186 de 577 cancelaciones (32 %)
