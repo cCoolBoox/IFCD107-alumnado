@@ -5,6 +5,7 @@
 > - Si es tu primer reto, lee antes [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 > - Volver al [README del sprint](../README.md) · [Guía del sprint en PDF](../guia/Guia_Sprint_05.pdf) · [versión ecofriendly para imprimir](../guia/Guia_Sprint_05_ecofriendly.pdf).
 > - **Este reto en PDF:** [a color](Reto_Sprint_05.pdf) · [ecofriendly, para imprimir](Reto_Sprint_05_ecofriendly.pdf).
+> - **Empezad por aquí:** [el reto en una página](Reto_Sprint_05_una_pagina.md) (tres niveles: mínimo, estándar y extra) · [PDF](Reto_Sprint_05_una_pagina.pdf).
 
 ## Ficha del reto
 
@@ -74,7 +75,7 @@ Un **cuaderno** ([`S05_07_reto_ocupacion`](https://colab.research.google.com/git
 ### Pasos sugeridos
 - **Día 1:** planning (15 min); el descenso del gradiente y la regresión desde cero se practican en los cuadernos 02 y 03, que son la base del reto.
 - **Día 2 (con el cuaderno [`S05_07`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb)):** cargad los datos en la base (es la práctica de CRUD), mirad los datos, implementad el gradiente y el modelo con control (festivo y mes), contrastad con `statsmodels` y calculad p-valores e intervalos de confianza.
-- **Cierre del martes (40 min):** redactad la respuesta al cliente, revisad con la rúbrica, reiniciad y ejecutad todo, y preparad la demostración.
+- **Cierre del jueves 5/11 (40 min):** redactad la respuesta al cliente, revisad con la rúbrica, reiniciad y ejecutad todo, y preparad la demostración.
 
 ### Guía paso a paso para principiantes
 

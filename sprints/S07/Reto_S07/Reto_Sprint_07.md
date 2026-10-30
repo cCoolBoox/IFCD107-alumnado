@@ -5,6 +5,7 @@
 > - Si es tu primer reto, lee antes [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 > - Volver al [README del sprint](../README.md) · [Guía del sprint en PDF](../guia/Guia_Sprint_07.pdf) · [versión ecofriendly para imprimir](../guia/Guia_Sprint_07_ecofriendly.pdf).
 > - **Este reto en PDF:** [a color](Reto_Sprint_07.pdf) · [ecofriendly, para imprimir](Reto_Sprint_07_ecofriendly.pdf).
+> - **Empezad por aquí:** [el reto en una página](Reto_Sprint_07_una_pagina.md) (tres niveles: mínimo, estándar y extra) · [PDF](Reto_Sprint_07_una_pagina.pdf).
 
 ## Ficha del reto
 
@@ -80,11 +81,11 @@ Y hay un detalle importante: **el gerente no quiere oír hablar de «AUC»**. Qu
 **Pasos sugeridos.**
 - **Día 1:** *planning* (20 min); las prácticas de regresión y de regresión logística preparan los modelos del reto.
 - **Día 2 (2 h 15 min):** acordar las hipótesis de coste (15 min); regresión: baseline, lineal y una mejora, con métricas en euros (30 min); clasificación: baseline y logística, curva ROC/PR, elección del umbral con validación cruzada y coste total en test (45 min).
-- **Cierre del lunes:** análisis de sensibilidad (15 min), informe con la recomendación y README (30 min), autoevaluación y coevaluación; **review + retrospectiva** (última hora).
+- **Cierre del miércoles 11/11:** análisis de sensibilidad (15 min), informe con la recomendación y README (30 min), autoevaluación y coevaluación; **review + retrospectiva** (última hora).
 
 ### Guía paso a paso para principiantes
 
-#### Paso 1 · Acordar las hipótesis de coste (día 2, 10 minutos; el planning fue el viernes)
+#### Paso 1 · Acordar las hipótesis de coste (día 2, 10 minutos; el planning se hizo el martes 10/11)
 1. Roles del sprint y tareas en el tablero.
 2. **La pregunta central del informe:** *¿qué cuesta más, una cancelación no prevista (habitación vacía) o una falsa alarma (un cliente llega y no hay sitio)?*
 3. **Proponed una hipótesis de coste para cada error**, razonada con una frase. Ejemplos:

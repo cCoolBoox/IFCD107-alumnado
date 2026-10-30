@@ -24,7 +24,9 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_08.pdf) · [ecofriendly](guia/Guia_Sprint_08_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
+| [**Código explicado de los cuadernos**](codigo_explicado/) | Cada cuaderno explicado por escrito: recorrido de 10 minutos con el docente, glosario de sus palabras de código y qué hace cada celda y cada línea (para leerlo con calma, mientras o después de ejecutar) | A tu ritmo | Con cada cuaderno |
 | [**Carpeta del reto: `Reto_S08/`**](Reto_S08/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
+| [**Reto en una página** (.md)](Reto_S08/Reto_Sprint_08_una_pagina.md) · [PDF](Reto_S08/Reto_Sprint_08_una_pagina.pdf) · [ecofriendly](Reto_S08/Reto_Sprint_08_una_pagina_ecofriendly.pdf) | Lo esencial para trabajar con la ficha abierta: tres niveles (mínimo, estándar, extra), reparto del tiempo y frases para el informe | 1 página | Durante el reto |
 | [Reto completo, paso a paso (.md)](Reto_S08/Reto_Sprint_08.md) · [PDF](Reto_S08/Reto_Sprint_08.pdf) · [ecofriendly](Reto_S08/Reto_Sprint_08_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S08_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
 | [El reto paso a paso](Reto_S08/S08_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S08/S08_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |

@@ -24,6 +24,7 @@
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
 | [Guía del sprint (PDF)](guia/Guia_Sprint_13.pdf) · [ecofriendly](guia/Guia_Sprint_13_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
+| [**Código explicado de los cuadernos**](codigo_explicado/) | Cada cuaderno explicado por escrito: recorrido de 10 minutos con el docente, glosario de sus palabras de código y qué hace cada celda y cada línea (para leerlo con calma, mientras o después de ejecutar) | A tu ritmo | Con cada cuaderno |
 | [**Carpeta del reto: `Reto_S13/`**](Reto_S13/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
 | [Reto completo, paso a paso (.md)](Reto_S13/Reto_Sprint_13.md) · [PDF](Reto_S13/Reto_Sprint_13.pdf) · [ecofriendly](Reto_S13/Reto_Sprint_13_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](infografias/S13_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |

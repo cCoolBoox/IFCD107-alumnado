@@ -5,6 +5,7 @@
 > - Si es tu primer reto, lee antes [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 > - Volver al [README del sprint](../README.md) · [Guía del sprint en PDF](../guia/Guia_Sprint_10.pdf) · [versión ecofriendly para imprimir](../guia/Guia_Sprint_10_ecofriendly.pdf).
 > - **Este reto en PDF:** [a color](Reto_Sprint_10.pdf) · [ecofriendly, para imprimir](Reto_Sprint_10_ecofriendly.pdf).
+> - **Empezad por aquí:** [el reto en una página](Reto_Sprint_10_una_pagina.md) (tres niveles: mínimo, estándar y extra) · [PDF](Reto_Sprint_10_una_pagina.pdf).
 
 ## Ficha del reto
 
@@ -77,8 +78,8 @@ merece la pena el cambio.
 
 - **Día 1:** planning (15 min); las prácticas 01–03 os dan la red base, el MLP en Keras y la regularización.
 - **Día 2 (2 h 15 min de reto):** ejecuta [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb), entiende cada bloque, elige el problema y reproduce tu modelo de referencia; entrena el MLP y prueba 2 variantes (tamaño, *dropout*, L2 o tasa) mirando **solo la validación**.
-- **También el martes:** diagnostica el sobreajuste con curvas y compara con la referencia (3 semillas, media ± desviación).
-- **Cierre del martes:** informe de una página y presentación de 5 minutos; entrega, autoevaluación y coevaluación; **review + retrospectiva** (última hora).
+- **También el miércoles 18/11:** diagnostica el sobreajuste con curvas y compara con la referencia (3 semillas, media ± desviación).
+- **Cierre del miércoles 18/11:** informe de una página y presentación de 5 minutos; entrega, autoevaluación y coevaluación; **review + retrospectiva** (última hora).
 
 ### Guía paso a paso para principiantes
 

@@ -5,6 +5,7 @@
 > - Si es tu primer reto, lee antes [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 > - Volver al [README del sprint](../README.md) · [Guía del sprint en PDF](../guia/Guia_Sprint_08.pdf) · [versión ecofriendly para imprimir](../guia/Guia_Sprint_08_ecofriendly.pdf).
 > - **Este reto en PDF:** [a color](Reto_Sprint_08.pdf) · [ecofriendly, para imprimir](Reto_Sprint_08_ecofriendly.pdf).
+> - **Empezad por aquí:** [el reto en una página](Reto_Sprint_08_una_pagina.md) (tres niveles: mínimo, estándar y extra) · [PDF](Reto_Sprint_08_una_pagina.pdf).
 
 ## Ficha del reto
 
@@ -77,7 +78,7 @@
 **Pasos sugeridos.**
 - **Día 1:** *planning* (25 min); acordar los **pesos** de rendimiento/explicabilidad/coste con la «voz del cliente»; registrar baseline, logística, árbol podado y bosque en el leaderboard (40 min).
 - **Día 2, por la mañana:** boosting y SVM en las prácticas; después, búsqueda de hiperparámetros (rejilla o aleatoria) para las dos familias más prometedoras y actualización del leaderboard (35 min).
-- **Cierre del miércoles:** sensibilidad de los pesos, elección del campeón, evaluación en test **una vez**, *model card* y README (105 min); autoevaluación y coevaluación; **review + retrospectiva** (última hora).
+- **Cierre del jueves 12/11:** sensibilidad de los pesos, elección del campeón, evaluación en test **una vez**, *model card* y README (105 min); autoevaluación y coevaluación; **review + retrospectiva** (última hora).
 
 ### Guía paso a paso para principiantes
 

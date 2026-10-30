@@ -5,6 +5,7 @@
 > - Si es tu primer reto, lee antes [Cómo se trabaja un reto](../../../material/4.%20Como_se_trabaja_un_reto.md).
 > - Volver al [README del sprint](../README.md) · [Guía del sprint en PDF](../guia/Guia_Sprint_06.pdf) · [versión ecofriendly para imprimir](../guia/Guia_Sprint_06_ecofriendly.pdf).
 > - **Este reto en PDF:** [a color](Reto_Sprint_06.pdf) · [ecofriendly, para imprimir](Reto_Sprint_06_ecofriendly.pdf).
+> - **Empezad por aquí:** [el reto en una página](Reto_Sprint_06_una_pagina.md) (tres niveles: mínimo, estándar y extra) · [PDF](Reto_Sprint_06_una_pagina.pdf).
 
 ## Ficha del reto
 
@@ -75,7 +76,7 @@
 **Pasos sugeridos.**
 - **Día 1:** *planning* (25 min) con el reparto de roles (Scrum Master y responsable técnico rotan); tras las prácticas 1–2, inventario de defectos con `resumen_calidad` y gráficos (60 min). Primer borrador de la tabla del informe.
 - **Día 2:** función `limpiar_reservas`, comprobación antes/después y separación train/test; *pipeline* de preprocesado (práctica 3) y *baseline* con validación cruzada (práctica 4) (80 min).
-- **Cierre del jueves:** informe, README y ensayo de 5 minutos (25 min); autoevaluación y coevaluación; **review + retrospectiva** (última hora).
+- **Cierre del lunes 9/11:** informe, README y ensayo de 5 minutos (25 min); autoevaluación y coevaluación; **review + retrospectiva** (última hora).
 
 ### Guía paso a paso para principiantes
 
