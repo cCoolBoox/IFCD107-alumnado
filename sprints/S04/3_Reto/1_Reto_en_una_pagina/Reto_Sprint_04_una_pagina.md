@@ -34,5 +34,6 @@
 - «Hemos usado IA para …; lo hemos revisado …; no hemos pegado datos personales.»
 
 ## Antes de entregar
+- **Archivos subidos en `sprint-04/`:** `kpis.py` · `test_kpis.py` · `README.md` · `salida.json` · `autoevaluacion_nombre.md` (**uno por persona**) = 4 + N ficheros
 - [ ] `python test_kpis.py` termina sin fallos · [ ] `salida.json` creado con el CSV real · [ ] ≥ 3 commits con mensaje claro
-- [ ] README con cómo ejecutar, cómo probar y los KPIs · [ ] [Autoevaluación y coevaluación](../2_Ficha_completa/autoevaluacion_y_coevaluacion.md) rellenadas
+- [ ] README con cómo ejecutar, cómo probar y los KPIs · [ ] [Autoevaluación y coevaluación](../4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md): **una por persona**, subida a `sprint-04/`
