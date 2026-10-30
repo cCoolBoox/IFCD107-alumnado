@@ -1,6 +1,6 @@
 # Sprint 4 · Reto «Herramientas internas» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (glosario, uso de la IA, errores frecuentes, guía paso a paso) sigue en [Reto_Sprint_04.md](../2_Ficha_completa/Reto_Sprint_04.md); la plantilla de código está en [`reto_herramientas/`](../2_Ficha_completa/reto_herramientas/).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (glosario, uso de la IA, errores frecuentes, guía paso a paso) sigue en [Reto_Sprint_04.md](../2_Ficha_completa/Reto_Sprint_04.md); la plantilla de código está en [`reto_herramientas/`](../4_Plantillas_y_entrega/reto_herramientas/).
 
 **El cliente.** TurisData calcula cada semana sus cifras de reservas a mano. Quiere un programa que las calcule solo.
 **Qué entregáis (no cambia):** un repositorio Git con `kpis.py`, `test_kpis.py`, `README.md` y un `salida.json` generado con el CSV real. **Al final del sprint se suben a `sprint-04/` del repositorio del equipo: 4 ficheros del equipo (esos cuatro) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
