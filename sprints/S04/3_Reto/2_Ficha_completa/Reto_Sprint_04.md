@@ -3,7 +3,7 @@
 > **Esta es la ficha completa del reto, explicada paso a paso** para quien nunca ha trabajado con esta metodología ni con IA. Léela entera **antes de empezar** y vuelve a ella cuando tengas dudas.
 >
 > - Si es tu primer reto, lee antes [Cómo se trabaja un reto](../../../../material/4.%20Como_se_trabaja_un_reto.md).
-> - Volver al [README del sprint](../../README.md) · [Tu sprint, día a día en PDF](../../0_Empieza_aqui/pdf/Tu_sprint_dia_a_dia.pdf) · [versión ecofriendly para imprimir](../../0_Empieza_aqui/pdf/Tu_sprint_dia_a_dia_ecofriendly.pdf).
+> - Volver al [README del sprint](../../README.md) · [README del sprint en PDF](../../pdf/README_Sprint_04.pdf) · [versión ecofriendly para imprimir](../../pdf/README_Sprint_04_ecofriendly.pdf).
 > - **Este reto en PDF:** [a color](pdf/Reto_Sprint_04.pdf) · [ecofriendly, para imprimir](pdf/Reto_Sprint_04_ecofriendly.pdf).
 > - **Empezad por aquí:** [el reto en una página](../1_Reto_en_una_pagina/Reto_Sprint_04_una_pagina.md) (tres niveles: mínimo, estándar y extra) · [PDF](../1_Reto_en_una_pagina/pdf/Reto_Sprint_04_una_pagina.pdf).
 

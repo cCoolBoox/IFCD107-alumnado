@@ -1,79 +1,104 @@
 # README Sprint S04 · Python para IA
 
-**Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?
+**Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?  
 **Fechas:** 3–4 de noviembre · **Horas:** 9 h (2 h teoría · 4 h práctica · 3 h PBL)
 
-📄 **Este README en PDF:** [a color](4_Referencia/README_Sprint_04.pdf) · [ecofriendly, para imprimir](4_Referencia/README_Sprint_04_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
+📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_04.pdf) · [ecofriendly](pdf/README_Sprint_04_ecofriendly.pdf)
 
-## 🚀 Empieza aquí
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
-👉 **[Tu sprint, día a día](0_Empieza_aqui/Tu_sprint_dia_a_dia.md)** · [PDF](0_Empieza_aqui/pdf/Tu_sprint_dia_a_dia.pdf) · [ecofriendly](0_Empieza_aqui/pdf/Tu_sprint_dia_a_dia_ecofriendly.pdf)
+## Qué aprenderás
 
-Una hoja con los días del sprint, en orden, y lo que abres en cada momento. Con ella puedes trabajar todo el sprint; el resto de este README es para consultar.
+1. Escribir **Python** básico en Colab (variables, decisiones, bucles) y crear **funciones y módulos** con pruebas.
+2. Representar datos con **listas, diccionarios y conjuntos**, y leer y escribir **CSV y JSON** controlando los errores.
+3. Entregar una herramienta con **pruebas y Git**: es lo que haréis en el reto «Herramientas internas».
 
-## Requisitos previos
+## Antes de empezar
 - Cuenta de Google para usar Colab (o Python 3.11 y Jupyter/VS Code en tu equipo).
 - **No hace falta saber programar.** Si vienes de Java, en los cuadernos hay comparativas con Python.
 - Los datos (`reservas_turisdata.csv`) los descargan los cuadernos solos; para el reto los tendrás también en el repositorio.
 - Recuerda: los datos son **sintéticos** (no son estadísticas reales del turismo canario).
 
-## 📎 Materiales del sprint
+## Día 1 · Martes 3/11
 
-Las carpetas están **numeradas en el orden en que las usas**: `0_Empieza_aqui` → `1_Teoria` → `2_Practica` → `3_Reto` → `4_Referencia`. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+| ☐ | Qué haces | Abre | Min |
+|---|---|---|---|
+| ☐ | 🔔 Ceremonia · Planning del reto «Herramientas internas» | — | 10 |
+| ☐ | 📖 Teoría · Python: entorno (venv, pip, Jupyter, Git) y lenguaje | [Presentación S04.1](1_Teoria/S04.1_Python_entorno_y_lenguaje.pdf) | 25 |
+| ☐ | 💻 Práctica · Entorno, variables, tipos, `if`, `for` y `while` (los ejercicios marcados «en clase») | [Cuaderno S04_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_01_entorno_sintaxis.ipynb) | 35 |
+| ☐ | 💻 Práctica · Funciones, `*args`, `lambda` y módulos (los ejercicios marcados «en clase») | [Cuaderno S04_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_02_funciones_modulos.ipynb) | 35 |
+| ☐ | 📖 Teoría · Estructuras de datos, funciones, ficheros, excepciones y POO | [Presentación S04.2](1_Teoria/S04.2_Python_estructuras_funciones_y_POO.pdf) | 25 |
+| ☐ | 💻 Práctica · Listas, tuplas, diccionarios y conjuntos (los ejercicios marcados «en clase») | [Cuaderno S04_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) | 30 |
+| ☐ | 💻 Práctica · CSV, JSON y `try`/`except` (prepara `leer_reservas`; los ejercicios marcados «en clase») | [Cuaderno S04_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb) | 40 |
 
-### 1 · Hoy en clase
+**En clase: 3 h 20 min.**
 
-| Material | Para qué | Cuándo |
-|---|---|---|
-| [**Tu sprint, día a día**](0_Empieza_aqui/Tu_sprint_dia_a_dia.md) | El orden de trabajo y lo que abres en cada paso | Siempre |
-| [S04.1](1_Teoria/S04.1_Python_entorno_y_lenguaje.pdf) · [S04.2](1_Teoria/S04.2_Python_estructuras_funciones_y_POO.pdf) | Teoría: las diapositivas de cada día | Teoría de cada día |
-| [**Reto en una página** (.md)](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_04_una_pagina.md) · [PDF](3_Reto/1_Reto_en_una_pagina/pdf/Reto_Sprint_04_una_pagina.pdf) · [ecofriendly](3_Reto/1_Reto_en_una_pagina/pdf/Reto_Sprint_04_una_pagina_ecofriendly.pdf) | Lo esencial del reto: tres niveles, reparto del tiempo y frases para el informe | Durante el reto |
-| [El reto paso a paso](3_Reto/3_Laminas/S04_03_reto_paso_a_paso.png) · [PDF con enlaces](3_Reto/3_Laminas/S04_03_reto_paso_a_paso.pdf) | Los pasos del reto en una lámina, con día y minutos | Durante el reto |
+**Al acabar el día, deberías poder decir:**
 
-**Cuadernos, en orden** (en clase, los ejercicios marcados «en clase»; el resto, en casa):
+- [ ] Mi entorno de Python funciona y sé ejecutar un cuaderno.
+- [ ] Sé escribir una función y leer un CSV.
 
-| Cuaderno | Tema | Colab |
-|---|---|---|
-| `S04_01_entorno_sintaxis` | Entorno, variables, tipos, `if`, `for`, `while` | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_01_entorno_sintaxis.ipynb) |
-| `S04_02_funciones_modulos` | Funciones, `*args`, `lambda`, módulos | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_02_funciones_modulos.ipynb) |
-| `S04_03_estructuras_datos` | Listas, tuplas, diccionarios, conjuntos | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) |
-| `S04_04_ficheros_excepciones` | CSV y JSON, `try`/`except` | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb) |
-| `S04_05_poo_buenas_practicas` | **(OPCIONAL)** Clases, buenas prácticas, Git básico | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb) |
+## Día 2 · Miércoles 4/11
 
-### 2 · Cuando te atasques
+| ☐ | Qué haces | Abre | Min |
+|---|---|---|---|
+| ☐ | 🎯 Reto · Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar → probar que no se rompe → README y Git (pasos 1–5, versión mínima) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_04_una_pagina.md) | 100 |
+| ☐ | 🔔 Ceremonia · Entrega en `sprint-04/` y autoevaluación y coevaluación del Sprint 4 (la review y la retro se hacen junto con las del Sprint 5) | — | 15 |
 
-| Material | Para qué |
-|---|---|
-| [Reto completo, paso a paso (.md)](3_Reto/2_Ficha_completa/Reto_Sprint_04.md) · [PDF](3_Reto/2_Ficha_completa/pdf/Reto_Sprint_04.pdf) · [ecofriendly](3_Reto/2_Ficha_completa/pdf/Reto_Sprint_04_ecofriendly.pdf) | La ficha completa del reto: qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes |
-| [**Código explicado de los cuadernos**](2_Practica/codigo_explicado/) | Cada cuaderno explicado por escrito, con glosario y recorrido celda a celda |
-| [**Carpeta del reto: `3_Reto/`**](3_Reto/) | Plantillas y material de apoyo del reto |
-| [`apuntes_python_para_datos.md`](1_Teoria/apuntes/apuntes_python_para_datos.md) · [PDF](1_Teoria/apuntes/pdf/apuntes_python_para_datos.pdf) · [ecofriendly](1_Teoria/apuntes/pdf/apuntes_python_para_datos_ecofriendly.pdf) | Apuntes que complementan las diapositivas, para repasar en casa |
+**En clase: 1 h 55 min.**
 
-### 3 · Referencia (no hace falta abrirla el primer día)
+## El reto en pocas palabras
 
-- [Resumen del sprint en una página](4_Referencia/infografias/S04_00_resumen_del_sprint.png): lámina con la pregunta guía y cómo se reparte el sprint.
-- [Esquema del contenido y su relación con el reto](4_Referencia/infografias/S04_07_esquema_contenido_y_reto.png): qué presentación prepara cada pieza del entregable.
-- [Infografías del sprint](4_Referencia/infografias/): láminas ilustradas del sprint.
-- [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md): el método de trabajo de todos los retos.
+**Qué os pide el cliente.** El equipo de reservas de TurisData calcula sus cifras semanales **a mano en una hoja de cálculo**. Es lento y cada persona lo hace un poco distinto. Os pide una **herramienta interna**: un pequeño programa que **lea el fichero de reservas, calcule tres cifras importantes (KPIs), avise con claridad si el fichero está mal y guarde los resultados** en un formato que otros sistemas puedan leer.
 
-<!--orden:ini-->
-<!--orden:fin-->
+**Qué vais a entregar:** un repositorio Git con `kpis.py`, `test_kpis.py`, `README.md` y un `salida.json` generado con el CSV real.
 
-## Reto · «Herramientas internas»
+**Núcleo y extra.** Núcleo: las funciones obligatorias hasta que `test_kpis.py` pase y el README. Extra: las partes opcionales (POO y Git básico).
 
-👉 [**Reto en una página** (.md)](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_04_una_pagina.md) para trabajar · [Reto completo, paso a paso (.md)](3_Reto/2_Ficha_completa/Reto_Sprint_04.md) para consultar.
+Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_04_una_pagina.md). Para consultar: [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_04.md) (pasos, rúbrica, ayudas y errores frecuentes). Plantillas, datos y autoevaluación: [`3_Reto/4_Plantillas_y_entrega/`](3_Reto/4_Plantillas_y_entrega/).
 
-**Contexto:** el equipo de reservas de TurisData Canarias calcula sus cifras a mano cada semana. Os pide un script que lea el CSV de reservas, calcule tres KPIs, avise si el fichero está mal y deje un JSON.
-
-**Entregáis** (en la carpeta `sprint-04/` del repositorio del equipo; base en [`reto_herramientas/`](3_Reto/4_Plantillas_y_entrega/reto_herramientas/)):
-- `kpis.py` (funciones + `main`) y `test_kpis.py` (pruebas con `assert`).
-- `README.md` con cómo ejecutar, cómo probar y definición de cada KPI (plantilla: [`README_PLANTILLA.md`](3_Reto/4_Plantillas_y_entrega/reto_herramientas/README_PLANTILLA.md)).
-- `salida.json` generado con el CSV real; opcional: `kpis_pandas.py`.
-
-## ✅ Antes de cerrar el sprint
+## ✅ Antes de cerrar el sprint (Definition of Done)
 - [ ] `python test_kpis.py` pasa todas las pruebas
 - [ ] `python kpis.py reservas_turisdata.csv salida.json` genera el JSON con los 3 KPIs y `calidad`
 - [ ] Funciones con docstring y README con las definiciones de los KPIs
 - [ ] Entregable subido a la carpeta `sprint-04/` del repositorio del equipo (al menos 3 *commits*)
 - [ ] Alguien del grupo ha revisado el código con la rúbrica
 - [ ] [Autoevaluación y coevaluación](3_Reto/4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md) rellenadas
+
+## En casa (cuando puedas)
+
+- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Cuaderno completo en casa: [`S04_05_poo_buenas_practicas`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb)
+- Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_python_para_datos.md).
+
+## Si te atascas
+
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_04.md).
+2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
+3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
+
+## Todo el material, por carpetas
+
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+
+| Carpeta | Qué hay |
+|---|---|
+| [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
+| [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
+| [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
+| [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
+
+Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).
+
+## Temario oficial de este sprint
+
+| Unidad | Conceptos que entran |
+|---|---|
+| UD 1b.1 · Puesta en marcha del entorno | Instalación de Python, entornos virtuales, pip, Jupyter, VS Code; Git básico |
+| UD 1b.2 · Fundamentos del lenguaje | Sintaxis, tipos, operadores, input/print, condicionales, bucles |
+| UD 1b.3 · Estructuras de datos y funciones | Listas, tuplas, diccionarios, conjuntos, comprensiones · Funciones, parámetros, lambda, args/kwargs |
+| UD 1b.4 · Módulos, ficheros, excepciones y POO | Importación de módulos, lectura y escritura de ficheros (CSV, JSON) · Excepciones; clases y objetos (comparativa con Java) |
+
+**Y ahora:** Sprint 5 · Matemáticas y estadística en código (miércoles 4/11).
+
+*9 h (2 h teoría · 4 h práctica · 3 h PBL).*
