@@ -1,112 +1,68 @@
-# Código explicado · S05.07 · Reto PBL «¿La ocupación depende de esto?» (plantilla del cuaderno entregable)
+# Código explicado · S05.07 · Reto «¿La ocupación depende de esto?» (plantilla del cuaderno entregable)
+<!--manual-->
 
-> **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
+> **Para qué sirve.** Este cuaderno es la **plantilla del reto**: no trae el código hecho, trae **huecos** (`...` y `# TODO`) que rellenáis vosotros. Por eso esta página no explica código ya escrito: os dice, **hueco por hueco**, qué hay que construir, con qué herramienta y qué error es el más habitual. Las palabras de código nuevas se explican en los cuadernos `S05_03` (descenso del gradiente), `S05_05` (contrastes) y `S05_06` (bases de datos).
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_07_reto_ocupacion.ipynb) · [descargar](../S05_07_reto_ocupacion.ipynb) · 🏫 2 celdas de código en clase
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_07_reto_ocupacion.ipynb) · [descargar](../S05_07_reto_ocupacion.ipynb)
 >
-> **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
+> **Cómo usarlo:** 1) leed el apartado del cuaderno; 2) buscad aquí el mismo número; 3) escribid vuestro código en el hueco; 4) ejecutad la celda: los `assert` (puntos de control) os avisan si algo no cuadra.
 
-**Cómo se lee una línea de código.** Casi todo sigue la forma `resultado = objeto.acción(opciones)`: se lee **de derecha a izquierda**, «coge este objeto, hazle esta acción con estas opciones y guarda lo que salga en `resultado`». Lo que va tras `#` es un comentario: Python lo ignora y es para las personas.
+**Cómo se lee una línea de código.** Casi todo sigue la forma `resultado = objeto.acción(opciones)`: se lee **de derecha a izquierda**, «coge este objeto, hazle esta acción con estas opciones y guarda lo que salga en `resultado`». Lo que va tras `#` es un comentario: Python lo ignora.
 
-## 1. Recorrido de 10 minutos (con el docente)
+## Celdas de preparación (no se tocan)
 
-El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta. Lo demás se lee aquí.
+Las dos primeras celdas de código ya están hechas: descargan los datos del curso y cargan las librerías (`sqlite3` para la base de datos, `pandas` para las tablas, `matplotlib` para los gráficos, `statsmodels` y `scipy.stats` para la estadística). También fijan `SEMILLA = 42` (para que el azar salga igual en todos los ordenadores) y `RUTA_BD = "turisdata_reto.db"` (el nombre del archivo de la base).
 
-| Celda | Sección | Qué miramos |
+## 1 · Base de datos: cargar y consultar
+
+| Qué hay que hacer | Con qué | Ojo con… |
 |---|---|---|
-| 1 | Qué debes entregar (este mismo cuaderno… | Importa las librerías que usa el cuaderno y fija `SEMILLA`. |
+| Crear la tabla `ocupacion_diaria` desde el CSV | `datos.to_sql("ocupacion_diaria", con, if_exists="replace", index=False)` | `replace` borra y vuelve a crear la tabla: así podéis ejecutar la celda varias veces sin duplicar filas. |
+| Crear un índice sobre `fecha` | `con.execute("CREATE INDEX IF NOT EXISTS ... ON ocupacion_diaria(fecha)")` | Un índice es como el índice de un libro: acelera las búsquedas por esa columna. |
+| Leer los datos **con SQL** | `pd.read_sql("SELECT ..., CAST(SUBSTR(fecha, 6, 2) AS INTEGER) AS mes FROM ocupacion_diaria", con)` | `SUBSTR(fecha, 6, 2)` recorta los caracteres 6 y 7 de `2025-07-14` (el mes, `07`); `CAST(... AS INTEGER)` lo convierte en el número 7. |
 
-## 2. Qué guarda cada variable
+Resultado: un DataFrame `diaria` con una columna `mes` de 1 a 12.
 
-| Variable | Se crea así | Celda |
-|---|---|---|
-| `SEMILLA` | `42` | 1 |
-| `RUTA_BD` | `"turisdata_reto.db"` | 1 |
+## 2 · Primer vistazo a los datos
 
-## 3. Palabras de código de este cuaderno
+- `diaria["ocupacion_pct"].describe()` da media, dispersión y extremos de golpe.
+- `diaria.groupby("mes")["ocupacion_pct"].mean()` calcula **una media por mes**; ordenadla para ver los meses de mayor y menor ocupación.
+- Dos gráficos como mínimo: un **diagrama de caja** por mes (`sns.boxplot` o `plt.boxplot`) y una **dispersión** temperatura-ocupación (`plt.scatter`). Poned título y ejes **en español**.
+- Debajo, en la celda de texto, 2–3 observaciones en vuestras palabras («en agosto la ocupación…»).
 
-**Definidas en este cuaderno** (las crea el propio cuaderno; `def` define una función):
+## 3 · Regresión lineal desde cero
 
-| Palabra | Qué hace |
+Es el mismo método del cuaderno `S05_03`, con datos nuevos.
+
+1. **Estandarizar** una variable es restarle su media y dividir entre su desviación (`(x - x.mean()) / x.std()`). Así todas las variables tienen una escala parecida y el descenso del gradiente converge.
+2. **`gradiente_mse(X, y, w)`** devuelve `(2 / n) * X.T @ (X @ w - y)`: cuánto cambia el error al mover cada peso. `@` es el producto de matrices; `X.T` es la matriz traspuesta.
+3. **`entrenar(X, y, tasa, epocas)`** repite `w = w - tasa * gradiente` durante las épocas indicadas y guarda el error en cada vuelta (`historial`). Para el modelo con control: unas 2.000 épocas con tasa 0,1.
+4. **Modelo con control:** añadid `festivo` y los indicadores de mes con `pd.get_dummies(diaria["mes"], drop_first=True)` (11 columnas; se quita una para no repetir información).
+5. **Deshacer la estandarización:** cada coeficiente se divide entre la desviación de **su** variable. Así `pendiente_simple` queda en *puntos de ocupación por °C* y no en «desviaciones».
+
+Error típico: olvidar la columna de unos (el término independiente) o dividir entre la desviación equivocada.
+
+La **curva de aprendizaje** es `plt.plot(historial)`: el error tiene que bajar y aplanarse. Si sube o da saltos, la tasa es demasiado grande.
+
+## 4 · Contraste con una librería
+
+`smf.ols("ocupacion_pct ~ temperatura_c", data=diaria).fit()` ajusta el mismo modelo con `statsmodels`. La fórmula del modelo con control es `"ocupacion_pct ~ temperatura_c + festivo + C(mes)"` (`C(mes)` trata el mes como categoría). Los coeficientes están en `.params["temperatura_c"]`. La tabla `comparacion` (3 filas × 2 columnas) debe mostrar que **vuestro código y la librería coinciden** casi al decimal.
+
+## 5 · Responder con estadística
+
+| Variable que se guarda | De dónde sale |
 |---|---|
-| `gradiente_mse` | Gradiente del error cuadrático medio de y_pred = X @ w. *(La escribís vosotros en un ejercicio.)* |
-| `entrenar` | Descenso del gradiente. Devuelve (w, historial de MSE). *(La escribís vosotros en un ejercicio.)* |
+| `p_temp_control` | `ols_control.pvalues["temperatura_c"]` |
+| `ic_festivo` | `tuple(ols_control.conf_int().loc["festivo"])` (intervalo de confianza del 95 %) |
+| `p_festivo_ttest` | `stats.ttest_ind(festivos, no_festivos, equal_var=False).pvalue` (t de Welch) |
+| `r2_control` | `ols_control.rsquared` |
 
-**De Python y sus librerías:**
+Recordad lo que enseña `S05_05`: un p-valor alto (> 0,05) **no demuestra** que no haya efecto, solo que estos datos no bastan para afirmarlo.
 
-| Palabra | Qué hace | Celdas |
-|---|---|---|
-| `close` | Cierra un fichero, una conexión o una figura. | 8 |
+## 6 · Respuesta al cliente
 
-## 4. Celda a celda
+No hay código: son 150 palabras como máximo para una persona que no programa. Usad el orden del cuaderno: respuesta directa con cifras e incertidumbre → recomendación accionable → límites (correlación no es causalidad, el mes confunde, datos sintéticos de un solo alojamiento) → una frase de IA responsable.
 
-🏫 = se hace en clase · 🏠 = para casa. Las celdas de **ejercicio** no llevan código aquí: son vuestras, y la solución de referencia está en el propio cuaderno.
+## 7 · Antes de entregar
 
-### Celda 1 · Qué debes entregar (este mismo cuaderno, comple… · 🏫
-
-**Qué hace:** Importa las librerías que usa el cuaderno y fija `SEMILLA`.
-
-```python
-import os
-import sqlite3
-
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import statsmodels.formula.api as smf
-from scipy import stats
-
-SEMILLA = 42
-RUTA_BD = "turisdata_reto.db"        # el archivo que entregarás junto al cuaderno
-```
-
-**Qué hace cada línea:**
-
-- `import os` → Trae `os` para poder usarlo.
-- `import sqlite3` → Trae `sqlite3` para poder usarlo.
-- `import numpy as np` → Trae `numpy` (lo llamamos `np`) para poder usarlo.
-- `import pandas as pd` → Trae `pandas` (lo llamamos `pd`) para poder usarlo.
-- `import matplotlib.pyplot as plt` → Trae `matplotlib.pyplot` (lo llamamos `plt`) para poder usarlo.
-- `import statsmodels.formula.api as smf` → Trae `statsmodels.formula.api` (lo llamamos `smf`) para poder usarlo.
-- `from scipy import stats` → Trae `stats` de `scipy` para poder usarlo.
-- `SEMILLA = 42` → Guarda el valor en `SEMILLA`.
-- `RUTA_BD = "turisdata_reto.db" # el archivo que entregarás junto al cuaderno` → Guarda el valor en `RUTA_BD`.
-
-### Celda 2 · 1 · Base de datos: cargar y consultar · 🏫 · ejercicio
-
-Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
-
-### Celda 3 · 2 · Primer vistazo a los datos · 🏫 · ejercicio
-
-Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
-
-### Celda 4 · 3 · Regresión lineal desde cero (descenso del g… · 🏫 · ejercicio
-
-Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
-
-### Celda 5 · 3 · Regresión lineal desde cero (descenso del g… · 🏫 · ejercicio
-
-Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
-
-### Celda 6 · 4 · Contraste con una librería · 🏫 · ejercicio
-
-Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
-
-### Celda 7 · 5 · Responder con estadística · 🏫 · ejercicio
-
-Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
-
-### Celda 8 · 7 · Reproducibilidad: antes de entregar · 🏫
-
-**Qué hace:** Practica `close` (sección «7 · Reproducibilidad: antes de entregar»).
-
-```python
-con.close()
-```
-
-**Qué hace cada línea:**
-
-- `con.close()` → `close`: cierra un fichero, una conexión o una figura.
-
----
-*Generado a partir de `laboratorios/fuentes/S05_07_reto_ocupacion.py`. Si algo no os cuadra con lo que sale en vuestra pantalla, preguntad al docente.*
+La última celda (`con.close()`) cierra la conexión con la base. Antes de subir el cuaderno: **Entorno de ejecución → Reiniciar y ejecutar todo** y comprobad que no hay errores. Las versiones de las librerías se anotan en el **README de vuestro repositorio** (o con una celda `!pip freeze`).

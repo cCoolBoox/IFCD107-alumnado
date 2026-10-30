@@ -4,7 +4,7 @@
 
 **El cliente.** Sois una consultora de IA y el docente es el cliente. Elegís un brief (turismo, cultivos, asistente de FP o energía) o proponéis uno propio. **Aquí todavía no se busca el mejor modelo:** se decide qué hacer, con qué datos y cómo se demostrará que funciona.
 **Qué entregáis (no cambia):** ficha de proyecto, plan de datos con licencia, EDA, baseline, backlog y registro de riesgos éticos, más el README y `requirements.txt` del repositorio. **Al final del sprint se suben a `sprint-14/` del repositorio del equipo: 6 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** 3 jornadas (600 min). Hitos: día 1, brief **antes del descanso** y ficha **antes de las 14:30** · día 2, *go / no-go* · día 3, review y retro.
+**Tiempo en clase:** 3 jornadas de 6 h (600 min de pasos + 50 min diarios para subir de nivel). Hitos: día 1, brief **antes del descanso** y ficha **antes de las 14:30** · día 2, *go / no-go* · día 3, review y retro.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

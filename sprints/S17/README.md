@@ -23,9 +23,10 @@
 | ☐ | 💻 Práctica · **Tu historia:** plantilla de storytelling (máx. 12 diapositivas) | [plantilla de storytelling](3_Reto/4_Plantillas_y_entrega/plantilla_storytelling.md) | 45 |
 | ☐ | 💻 Práctica · **Pitch de 3 minutos** y guion de la defensa (`guion_defensa.md`) | [`guion_defensa.md`](1_Teoria/actividades/guion_defensa.md) | 40 |
 | ☐ | 🎯 Reto · **Ensayos con preguntas** cruzadas entre equipos | — | 55 |
+| ☐ | 🎯 Reto · **Ronda extra y cambios:** las tres preguntas más difíciles que os haría un cliente y la lista de 3 cambios del guion | — | 50 |
 | ☐ | 🎯 Reto · **Ensayo general** con cronómetro: 10 min | — | 40 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 ## El reto en pocas palabras
 

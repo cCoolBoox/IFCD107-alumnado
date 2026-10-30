@@ -4,7 +4,7 @@
 
 **El cliente.** El docente recibirá vuestro trabajo como un entregable real: clonará el repositorio, seguirá el README, probará el demostrador, leerá la memoria y querrá entender los riesgos.
 **Qué entregáis (no cambia):** evaluación final en test, sesgos con mitigación medida, riesgos cerrados, demostrador con plan B en vídeo, model card y memoria de 10–15 páginas. **Al final se suben a `sprint-16/` del repositorio del equipo: 9 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`). La coevaluación confidencial (anexo B) va al docente.
-**Tiempo:** 3 días de clase (525 min de reto) con dos días sin clase entre el 1 y el 2. **Congelación: 10/12 a las 14:30.** Etiqueta `v1.0-entrega` antes.
+**Tiempo:** 3 días de clase de 6 h (525 min de reto + 50 min diarios para subir de nivel) con dos días sin clase entre el 1 y el 2. **Congelación: 10/12 a las 14:30.** Etiqueta `v1.0-entrega` antes.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

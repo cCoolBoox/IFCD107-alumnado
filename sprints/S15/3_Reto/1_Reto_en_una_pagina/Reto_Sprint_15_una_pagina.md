@@ -4,7 +4,7 @@
 
 **El cliente.** El docente quiere saber **qué modelo recomendáis y por qué**, no solo cuál tiene el número más alto: si la mejora frente al *baseline* compensa el coste, si el modelo funciona con datos nuevos y si se puede repetir.
 **Qué entregáis (no cambia):** el registro de experimentos, el cuaderno `03_modelos.ipynb`, la justificación de una página del candidato, el modelo guardado con sus metadatos y una primera explicación del modelo. **Al final del sprint se suben a `sprint-15/` del repositorio del equipo: 6 ficheros del equipo (esos seis) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** reto 470 min (130 el día 1, 200 el día 2 y 140 el día 3) · review y retro 60 min. El test se usa **una sola vez**.
+**Tiempo en clase:** reto 470 min (130 el día 1, 200 el día 2 y 140 el día 3) + 50 min diarios para subir de nivel (jornadas de 6 h) · review y retro 60 min. El test se usa **una sola vez**.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

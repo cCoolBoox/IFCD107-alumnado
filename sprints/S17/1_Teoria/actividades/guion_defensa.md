@@ -65,13 +65,15 @@ Las preguntas de ampliación pueden dirigirse a **cualquier** integrante.
 | 9 | ¿Qué haríais con más tiempo o más datos? | | |
 | 10 | ¿Qué ha aportado cada persona del equipo? | | |
 
-## 5. Ensayos (11/12, 3 horas)
+## 5. Ensayos (11/12, 145 minutos de los 250 de la jornada)
+La jornada del 11/12 es de 6 horas (250 minutos de trabajo): 85 para la historia y el pitch y **145 para ensayar** (las cuatro rondas de abajo); el resto son los 20 minutos de teoría.
+
 | Ronda | Duración | Cómo se hace | Qué se comprueba |
 |---|---|---|---|
-| 1. Cronometrada | 30 min | Solo el equipo, con demo | Tiempo, transiciones, quién habla cuándo |
-| 2. Con preguntas | 45 min | Otro equipo hace de tribunal (usa la tabla de preguntas) | Respuestas con datos, método RESPONDE |
-| 3. **Ensayo general** | 60 min | Exactamente como el 14/12, con el docente | Todo: tiempo, demo, plan B, reparto |
-| Cambios | 45 min | Ajustar diapositivas y guion | Lista de 3 cambios y responsable |
+| 1. Cronometrada | 20 min | Solo el equipo, con demo | Tiempo, transiciones, quién habla cuándo |
+| 2. Con preguntas | 35 min | Otro equipo hace de tribunal (usa la tabla de preguntas) | Respuestas con datos, método RESPONDE |
+| Ronda extra y cambios | 50 min | Las tres preguntas más difíciles de un cliente; después ajustad diapositivas y guion | Lista de 3 cambios y responsable |
+| 3. **Ensayo general** | 40 min | Exactamente como el 14/12, con el docente | Todo: tiempo, demo, plan B, reparto |
 
 **Ficha de feedback entre equipos (rellena quien escucha):**
 - Lo que **mejor** funcionó: ______

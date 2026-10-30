@@ -24,8 +24,9 @@
 | ☐ | 💻 Práctica · Práctica del demostrador | [Cuaderno S16_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/S16_01_demostrador.ipynb) | 45 |
 | ☐ | 🎯 Reto · **Tutoría de sesgos y visualización** (franja por equipo) | — | 40 |
 | ☐ | 🎯 Reto · **Memoria técnica:** esqueleto y *model card* | [esqueleto](3_Reto/4_Plantillas_y_entrega/plantilla_esqueleto_memoria_tecnica.md) | 85 |
+| ☐ | 🎯 Reto · **Subid de nivel:** completad la medición de sesgos por subgrupos y la visualización que la acompaña | — | 50 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 **Al acabar el día, deberías poder decir:**
 
@@ -41,8 +42,9 @@
 | ☐ | 🎯 Reto · **Demostrador:** pulir y probarlo en limpio | — | 40 |
 | ☐ | 🎯 Reto · **Model card** del modelo final | — | 35 |
 | ☐ | 🎯 Reto · **Memoria técnica** | — | 45 |
+| ☐ | 🎯 Reto · **Subid de nivel:** mejorad el criterio más flojo de la rúbrica (la mitigación, el demostrador o la model card) | — | 50 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 **Al acabar el día, deberías poder decir:**
 
@@ -54,13 +56,14 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🎯 Reto · **Memoria y verificación en limpio:** clona tu repo en un Colab nuevo y comprueba que todo se ejecuta (`checklist_congelacion.md`) | [`checklist_congelacion.md`](3_Reto/4_Plantillas_y_entrega/checklist_congelacion.md) | 60 |
+| ☐ | 🎯 Reto · **Subid de nivel:** repasad la rúbrica y corregid lo que aún está en el nivel mínimo antes de la congelación | — | 50 |
 | ☐ | 🎯 Reto · Corrige lo que haya fallado | — | 20 |
 | ☐ | 🎯 Reto · **Vídeo de reserva** de la demo (por si falla internet el día de la defensa) | — | 30 |
 | ☐ | 🎯 Reto · **Checklist de congelación** y coevaluación | [coevaluación](3_Reto/4_Plantillas_y_entrega/plantilla_coevaluacion.md) | 35 |
 | ☐ | 🔔 Ceremonia · Review (5 min de demo por equipo) y retro: ¿qué mantenemos?, ¿qué cambiamos? | — | 35 |
 | ☐ | 🔔 Ceremonia · 🔒 **Congelación a las 14:30:** último *push*. Lo que no esté subido, no cuenta (los 30 min finales son el margen) | — | 20 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 ## El reto en pocas palabras
 

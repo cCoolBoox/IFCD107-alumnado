@@ -104,7 +104,7 @@ Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y c
 
 ### 4 · 🪜 Guía paso a paso
 
-Son cinco pasos, de **470 minutos en total** (130 el día 1, 200 el día 2 y 140 el día 3). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa.
+Son cinco pasos, de **470 minutos en total** (130 el día 1, 200 el día 2 y 140 el día 3, junto a la píldora, la práctica, la tutoría, la entrega y la review). Las jornadas de proyecto duran **6 horas completas (250 minutos de trabajo al día)**: los pasos de esta ficha ocupan unos 200 y los **50 minutos restantes de cada día son «subir de nivel»** (pasar del mínimo al estándar con la rúbrica en la mano). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa.
 
 #### Paso 1 · Preparar el terreno y repetir el baseline (día 1, 130 minutos)
 1. Fijar la semilla, anotar las versiones y crear el registro con la plantilla.

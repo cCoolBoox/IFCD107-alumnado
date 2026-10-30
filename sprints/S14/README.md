@@ -24,9 +24,10 @@
 | ☐ | 💻 Práctica · Taller de Design Thinking: empatía, «Cómo podríamos…», dos briefs candidatos y canvas borrador | — | 40 |
 | ☐ | 🎯 Reto · Elegir el brief (**antes del descanso**, hito del día) | [Elegir el brief](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_una_pagina.md) | 15 |
 | ☐ | 🎯 Reto · Buscar y validar datos (licencia, tamaño, acceso; plan de datos: plantilla) | [plantilla](3_Reto/4_Plantillas_y_entrega/plantilla_plan_datos_licencias.md) | 60 |
+| ☐ | 🎯 Reto · **Subid de nivel:** repasad la rúbrica del reto y mejorad el criterio más flojo (canvas, brief o plan de datos) | — | 50 |
 | ☐ | 🎯 Reto · Ficha del proyecto y entrega **antes de las 14:30** | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_una_pagina.md) | 50 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 **Al acabar el día, deberías poder decir:**
 
@@ -39,8 +40,9 @@
 |---|---|---|---|
 | ☐ | 🎯 Reto · Leer el go / no-go del docente y, si hace falta, corregir la ficha | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_una_pagina.md) | 20 |
 | ☐ | 🎯 Reto · EDA, calidad del dato y *baseline* (paso 5) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_una_pagina.md) | 180 |
+| ☐ | 🎯 Reto · **Subid de nivel:** mejorad el criterio más flojo de la rúbrica (un hallazgo por subgrupos, un informe de calidad más claro o un baseline mejor explicado) | — | 50 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 **Al acabar el día, deberías poder decir:**
 
@@ -52,9 +54,10 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🎯 Reto · Backlog y sprints, registro de riesgos éticos y README del repositorio (paso 6) | [Backlog y sprints](3_Reto/4_Plantillas_y_entrega/plantilla_backlog_y_sprints.md) | 140 |
+| ☐ | 🎯 Reto · **Subid de nivel:** mejorad el criterio más flojo de la rúbrica antes de la entrega (historias con criterios, riesgos con mitigación, README que otra persona pueda seguir) | — | 50 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-14/`, autoevaluación y coevaluación, review (paso 7: 5 min por equipo) y retrospectiva | — | 60 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 ## El reto en pocas palabras
 

@@ -30,6 +30,7 @@
 
 - [ ] Mi equipo ha acordado los pesos de rendimiento, explicabilidad y coste.
 - [ ] Sé cómo decide un árbol y para qué sirve un ensemble.
+- [ ] En casa, esta tarde: la práctica `S08_05` (≈ 40 min), la guía del paso 3 del reto de mañana.
 
 ## Día 2 · Jueves 12/11
 

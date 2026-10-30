@@ -82,7 +82,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 
 La usan **dos veces**: el equipo, para revisar su propio trabajo antes y después de defender (es lo que dice la *Definition of Done*), y el docente, para puntuar. Se mira **cada criterio por separado** y se pone el nivel de la columna cuyo texto **se cumple entero**: si lo de un nivel se cumple a medias, es el nivel de abajo. **0** significa que no se ha entregado nada de ese criterio.
 
-Orientación: lo que pide el nivel 🟢 mínimo sale en un **2**, el 🟡 estándar en un **3** y los 🔴 extras en un **4**. Ojo: la nota del **proyecto** usa su propia rúbrica (el criterio I, «Defensa», vale 15 puntos); esta rúbrica sirve para la nota del sprint y para que reflexionéis.
+Orientación: lo que pide el nivel 🟢 mínimo sale en un **2**, el 🟡 estándar en un **3** y los 🔴 extras en un **4**. **En este sprint se usan dos rúbricas.** Esta, de cuatro criterios (0–4), sirve para la nota del sprint; la **rúbrica del proyecto de 100 puntos** ([`briefs_y_rubrica.md`](../../../../proyecto-final/briefs_y_rubrica.md)) puntúa la defensa con su **criterio I, «Defensa» (15 puntos)**: Insuficiente, Suficiente, Bueno o Excelente según haya relato, demo y respuestas. En la hoja de autoevaluación y coevaluación marcáis las dos.
 
 | Criterio | 1 · Empezado | 2 · Mínimo | 3 · Estándar | 4 · Extra |
 |---|---|---|---|---|
@@ -105,7 +105,7 @@ Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y c
 
 ### 4 · 🪜 Guía paso a paso
 
-Son cinco pasos: **3 h 20 min el día 1 y 2 horas el día 2**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, asegurad el nivel mínimo y dejad lo demás para el siguiente ensayo.
+Son cinco pasos: **4 h 10 min de trabajo el día 1 (250 minutos, dentro de la jornada de 6 horas) y 2 horas el día 2**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, asegurad el nivel mínimo y dejad lo demás para el siguiente ensayo.
 
 #### Paso 1 · Teoría de storytelling (día 1, 20 minutos)
 1. Escuchar la estructura de una buena historia: audiencia, mensaje, orden de las ideas.
@@ -143,18 +143,19 @@ Son cinco pasos: **3 h 20 min el día 1 y 2 horas el día 2**. Cada uno dice **q
 
 **Hecho cuando:** pasáis la comprobación final de la plantilla (apartado 8): el mensaje se entiende en 20 segundos, cada título se entiende sin oír al orador y todas las personas tienen turno. Con eso ya podéis hacer las diapositivas.
 
-#### Paso 3 · Tres rondas de ensayo (día 1, 95 minutos)
+#### Paso 3 · Rondas de ensayo (día 1, 145 minutos)
 1. Hacer las diapositivas y probar la demo; grabar el vídeo del plan B.
-2. Ensayar tres veces: con cronómetro, con preguntas de otro equipo y como el día real.
+2. Ensayar con cronómetro, con preguntas de otro equipo, con una ronda extra de preguntas difíciles y, al final, como el día real.
 3. Después de cada ronda, escribir dos cosas que mejorar y arreglar solo eso.
 4. Preparar las 10 preguntas más probables, con su respuesta y quién responde.
 
-**Cómo se hace.** Las rondas siguen el [guion de defensa](../../1_Teoria/actividades/guion_defensa.md), pero en el calendario de este día caben **95 minutos**, así que usad estos tiempos y hacedlas más cortas. Compartid la versión del ensayo de las diapositivas con quien os escuche.
+**Cómo se hace.** Las rondas siguen el [guion de defensa](../../1_Teoria/actividades/guion_defensa.md), pero en el calendario de este día caben **145 minutos** (la jornada es de 6 horas), así que usad estos tiempos y hacedlas más cortas. Compartid la versión del ensayo de las diapositivas con quien os escuche.
 
 | Ronda | Cómo | Qué se mira | Minutos |
 |---|---|---|---|
 | **1** | Solo el equipo, **cronometrada y con demo** | ¿Cabe en el tiempo? ¿La demo funciona? ¿Quién habla cuándo? | 20 |
 | **2** | Otro equipo hace de tribunal y os hace **preguntas** | ¿Respondemos con datos? ¿Quién responde qué? Usad el método RESPONDE de los apuntes | 35 |
+| **Extra** | Las **tres preguntas más difíciles** que os haría un cliente; después, ajustad diapositivas y guion | ¿Respondemos sin leer? Anotad una lista de 3 cambios con responsable | 50 |
 | **3 (ensayo general)** | **Exactamente como el día real**, con el docente | ¿Estamos listos? Anotad lo que cambiáis | 40 |
 
 - **La demo.** Se prueba hoy, en el ordenador y el proyector que vais a usar. Guion de 4 pasos: abrir la app, una entrada típica, **una entrada errónea** y el aviso de límites. Grabad la pantalla (unos 90 segundos) y dejad ese vídeo como **plan B**.

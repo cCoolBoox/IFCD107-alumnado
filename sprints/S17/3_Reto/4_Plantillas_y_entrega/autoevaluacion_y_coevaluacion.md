@@ -1,8 +1,8 @@
 # Autoevaluación y coevaluación · «La defensa»
 
-**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante la *review*). Se puntúa con la rúbrica del reto (criterios de evaluación de la [ficha del reto](../2_Ficha_completa/Reto_Sprint_17.md)), de 1 a 4.
+**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante la *review*). Se puntúa con la rúbrica del reto (criterios de evaluación de la [ficha del reto](../2_Ficha_completa/Reto_Sprint_17.md)), de 1 a 4, y con el criterio de defensa de la rúbrica del proyecto.
 
-> **Ojo:** la nota del **proyecto** usa la rúbrica de 100 puntos (documento de briefs). Esta hoja usa los cuatro criterios de los retos y sirve para la nota del sprint y para que reflexionéis antes de entregar.
+> **Ojo, en este sprint se usan dos rúbricas.** (1) Los **cuatro criterios de los retos** (1–4): sirven para la nota del sprint. (2) La **rúbrica del proyecto de 100 puntos** ([`briefs_y_rubrica.md`](../../../../proyecto-final/briefs_y_rubrica.md), apartado 5): en la defensa cuenta su **criterio I, «Defensa» (15 puntos)**. En esta hoja puntuáis las dos, para que reflexionéis antes de la defensa.
 
 **Cómo se rellena y se sube (sin instalar nada):** cada persona entrega **su propio archivo**, con su cuenta de GitHub. Es el mismo procedimiento que el del entregable ([guía completa: cómo subir a GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md)).
 
@@ -51,6 +51,17 @@ Volver a la [ficha del reto](../2_Ficha_completa/Reto_Sprint_17.md).
 | Análisis y comunicación al cliente | …… | …… | …… |
 | IA responsable | …… | …… | …… |
 
+**Rúbrica del proyecto · criterio I, «Defensa»** (15 de los 100 puntos; marca con ✔ el nivel que crees que alcanza **tu equipo**):
+
+| Nivel | Qué se ve | Mi equipo |
+|---|---|---|
+| Insuficiente | No presenta todo el equipo o no responde | …… |
+| Suficiente | Discurso correcto, demo con fallos | …… |
+| Bueno | Relato claro, demo estable, respuestas sólidas | …… |
+| Excelente | Además relato memorable para público no técnico, gestiona el tiempo y responde con datos | …… |
+
+**Por qué (una frase):** ……
+
 - **Lo que más me costó fue ……, porque ……**
 - **He usado IA para ……, y lo que he comprobado a mano es ……**
 
@@ -76,6 +87,15 @@ Volver a la [ficha del reto](../2_Ficha_completa/Reto_Sprint_17.md).
 | Reproducibilidad | …… | …… |
 | Análisis y comunicación al cliente | …… | …… |
 | IA responsable | …… | …… |
+
+**Rúbrica del proyecto · criterio I, «Defensa»** (marca con ✔ el nivel de la defensa que has visto):
+
+| Nivel | Qué se ve | Lo que he visto |
+|---|---|---|
+| Insuficiente | No presenta todo el equipo o no responde | …… |
+| Suficiente | Discurso correcto, demo con fallos | …… |
+| Bueno | Relato claro, demo estable, respuestas sólidas | …… |
+| Excelente | Además relato memorable para público no técnico, gestiona el tiempo y responde con datos | …… |
 
 - **Lo que está muy bien:** ……
 - **Lo que yo cambiaría, y por qué:** ……

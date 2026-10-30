@@ -22,8 +22,9 @@
 | ☐ | 📖 Teoría · **Píldora: seguimiento de experimentos** | [Presentación S15.1](1_Teoria/S15.1_Pildora_seguimiento_de_experimentos.pdf) | 20 |
 | ☐ | 💻 Práctica · Práctica de seguimiento de experimentos | [Cuaderno S15_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb) | 50 |
 | ☐ | 🎯 Reto · **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el registro de experimentos | [registro de experimentos](3_Reto/4_Plantillas_y_entrega/registro_experimentos_plantilla.csv) | 130 |
+| ☐ | 🎯 Reto · **Subid de nivel:** más experimentos con otra semilla o una mejora razonada; el registro sigue limpio y completo | — | 50 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 **Al acabar el día, deberías poder decir:**
 
@@ -35,8 +36,9 @@
 |---|---|---|---|
 | ☐ | 🎯 Reto · **Proyecto:** prueba modelos (clásico, red o LLM/RAG, según tu brief) | — | 100 |
 | ☐ | 🎯 Reto · Continúa con los experimentos. **Tutoría técnica de 20 min por equipo** (el docente indica tu franja) | — | 100 |
+| ☐ | 🎯 Reto · **Subid de nivel:** ampliad la comprobación de fugas y dejad el registro sin columnas vacías ni nombres repetidos | — | 50 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 **Al acabar el día, deberías poder decir:**
 
@@ -48,11 +50,12 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🎯 Reto · **Comparativa** de modelos y elección del **candidato** | — | 70 |
+| ☐ | 🎯 Reto · **Subid de nivel:** ampliad la comparativa sin tocar el test (media ± desviación, coste y complejidad) y escribid la justificación del candidato | — | 50 |
 | ☐ | 🎯 Reto · **Evaluación única en test:** una sola vez, con el candidato elegido | — | 40 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-15/` de tu repo + autoevaluación y coevaluación | — | 30 |
 | ☐ | 🔔 Ceremonia · Review (5 min de demo por equipo) y retro: ¿qué mantenemos?, ¿qué cambiamos? | — | 60 |
 
-**En clase: 3 h 20 min.**
+**En clase: 4 h 10 min.**
 
 ## El reto en pocas palabras
 
