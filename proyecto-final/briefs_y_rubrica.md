@@ -38,7 +38,7 @@
 
 Los cambios de alcance después del 27/11 se negocian en la review del sprint con el docente.
 
-*¿Por qué 4 sprints y cómo decidir qué cabe en ellos? Guía: [`¿Cuántos sprints tiene el proyecto?`](../sprints/S13/Reto_S13/guia_cuantos_sprints_tiene_el_proyecto.md).*
+*¿Por qué 4 sprints y cómo decidir qué cabe en ellos? Guía: [`¿Cuántos sprints tiene el proyecto?`](../sprints/S13/3_Reto/4_Plantillas_y_entrega/guia_cuantos_sprints_tiene_el_proyecto.md).*
 
 ---
 

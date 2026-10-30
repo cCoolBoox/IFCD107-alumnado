@@ -1,9 +1,11 @@
 # README Sprint S11 · Visión por computador
 
-**Pregunta guía:** ¿podemos aprovechar las imágenes del cliente?
+**Pregunta guía:** ¿podemos aprovechar las imágenes del cliente?  
 **Fechas:** 19–20 de noviembre · **Horas:** 12 h (2 h teoría · 4 h práctica · 6 h PBL)
 
-📄 **Este README en PDF:** [a color](README_Sprint_11.pdf) · [ecofriendly, para imprimir](README_Sprint_11_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
+📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_11.pdf) · [ecofriendly](pdf/README_Sprint_11_ecofriendly.pdf)
+
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
 ## Qué aprenderás
 
@@ -13,103 +15,96 @@
 4. Detección de objetos y segmentación: IoU, NMS, AP/mAP y un detector clásico con OpenCV.
 5. Evaluar un clasificador de imágenes con métricas por clase y **análisis de errores**.
 
-## Requisitos previos
+## Día 1 · Jueves 19/11
 
-- Sprint 10 (redes neuronales, Keras, curvas de aprendizaje, regularización).
-- Todo funciona **sin internet** con imágenes sintéticas (dibujos generados por código, no fotos reales).
-- Algunas celdas opcionales para Colab (descarga de `tf_flowers`, pesos de MobileNetV2 con ImageNet, YOLO) están marcadas
-  como **«requiere internet»**: en el taller no se ejecutan (llevan un interruptor `USAR_INTERNET = False`).
-
-## 📎 Materiales del sprint
-
-**Documentos del curso** (PDF y .md; las actividades van en la tabla siguiente)
-
-| Material | Tema | Tiempo | Cuándo |
+| ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| [Guía del sprint (PDF)](guia/Guia_Sprint_11.pdf) · [ecofriendly](guia/Guia_Sprint_11_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [**Código explicado de los cuadernos**](codigo_explicado/) | Cada cuaderno explicado por escrito: recorrido de 10 minutos con el docente, glosario de sus palabras de código y qué hace cada celda y cada línea (para leerlo con calma, mientras o después de ejecutar) | A tu ritmo | Con cada cuaderno |
-| [**Carpeta del reto: `Reto_S11/`**](Reto_S11/) | Todo el material del reto junto: ficha (.md y PDF), hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
-| [**Reto en una página** (.md)](Reto_S11/Reto_Sprint_11_una_pagina.md) · [PDF](Reto_S11/Reto_Sprint_11_una_pagina.pdf) · [ecofriendly](Reto_S11/Reto_Sprint_11_una_pagina_ecofriendly.pdf) | Lo esencial para trabajar con la ficha abierta: tres niveles (mínimo, estándar, extra), reparto del tiempo y frases para el informe | 1 página | Durante el reto |
-| [Reto completo, paso a paso (.md)](Reto_S11/Reto_Sprint_11.md) · [PDF](Reto_S11/Reto_Sprint_11.pdf) · [ecofriendly](Reto_S11/Reto_Sprint_11_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
-| [Resumen del sprint en una página](infografias/S11_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
-| [El reto paso a paso](Reto_S11/S11_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S11/S11_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
-| [Esquema del contenido y su relación con el reto](infografias/S11_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del sprint](infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
-| [Atlas de algoritmos](../S10/infografias/S10_03_atlas_redes_neuronales_y_vision.png) | Atlas de algoritmos (S10–S11): CNN, transfer learning y detección, junto al MLP | — | Teoría y práctica; consulta cuando elijas modelo |
-| [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S11.1_Redes_convolucionales_CNN.pdf`](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) | Redes convolucionales (CNN) | 25 min | Teoría · día 1 del S11 |
-| [`S11.2_Transfer_learning_y_fine_tuning.pdf`](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf) | Transfer learning y fine-tuning | 20 min | Teoría · día 1 del S11 |
-| [`S11.3_Deteccion_de_objetos_y_segmentacion.pdf`](presentaciones/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) | Detección de objetos y segmentación | 20 min | Teoría · día 2 del S11 |
+| ☐ | 🔔 Ceremonia · Planning del reto «Visión artificial para el cliente» y reparto de roles | — | 10 |
+| ☐ | 📖 Teoría · Redes convolucionales (CNN) | [Presentación S11.1](1_Teoria/S11.1_Redes_convolucionales_CNN.pdf) | 25 |
+| ☐ | 💻 Práctica · Convolución, pooling, CNN y *data augmentation* (los ejercicios marcados «en clase») | [Cuaderno S11_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_01_cnn.ipynb) | 40 |
+| ☐ | 📖 Teoría · Transfer learning y fine-tuning | [Presentación S11.2](1_Teoria/S11.2_Transfer_learning_y_fine_tuning.pdf) | 25 |
+| ☐ | 💻 Práctica · Transfer learning y fine-tuning (los ejercicios marcados «en clase») | [Cuaderno S11_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_02_transfer_learning.ipynb) | 75 |
+| ☐ | 🎯 Reto · Preparar los datos (paso 1) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_11_una_pagina.md) | 25 |
 
-**Material de las actividades**
+**En clase: 3 h 20 min.**
 
-| Notebook | Tema | Tiempo | Colab |
+**Al acabar el día, deberías poder decir:**
+
+- [ ] Sé qué hace una capa convolucional.
+- [ ] Sé qué es el transfer learning.
+- [ ] El dataset de mi equipo está preparado.
+
+## Día 2 · Viernes 20/11
+
+| ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| [`apuntes_vision_por_computador.md`](actividades/apuntes_vision_por_computador.md) · [PDF](actividades/apuntes_vision_por_computador.pdf) · [ecofriendly](actividades/apuntes_vision_por_computador_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: convolución, pooling, CNN, transfer learning, detección (IoU, NMS, AP) y segmentación explicados con cuentas que puedes hacer a mano | — | Antes del sprint y cuando tengas dudas |
-| `S11_01_cnn` | Convolución, pooling y CNN en Keras (dígitos 8×8); *data augmentation* | 65 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_01_cnn.ipynb) |
-| `S11_02_transfer_learning` | Transfer learning y fine-tuning (con preentrenamiento propio y MobileNetV2 en Colab) | 80 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) |
-| `S11_03_deteccion_segmentacion` | IoU, NMS, mAP, detector con OpenCV, segmentación (y YOLO opcional) | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) |
-| `S11_04_reto_vision_cliente` | Esqueleto del reto: dataset por carpetas, transfer learning, análisis de errores | 60 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) |
+| ☐ | 📖 Teoría · Detección de objetos y segmentación (versión corta) | [Presentación S11.3](1_Teoria/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) | 15 |
+| ☐ | 💻 Práctica · IoU y NMS con números pequeños (los ejercicios marcados «en clase»); el detector con OpenCV y la segmentación son para casa | [Cuaderno S11_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_03_deteccion_segmentacion.ipynb) | 35 |
+| ☐ | 💻 Práctica · Esqueleto del reto: dataset por carpetas y análisis de errores | [Cuaderno S11_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb) | 40 |
+| ☐ | 🎯 Reto · Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_11_una_pagina.md) | 80 |
+| ☐ | 🔔 Ceremonia · Entrega en `sprint-11/`, autoevaluación y coevaluación, review y retrospectiva | — | 30 |
 
-Extra: `generar_dataset_sintetico.py` crea el mini dataset de alojamientos (una carpeta por clase): `python generar_dataset_sintetico.py`.
+**En clase: 3 h 20 min.**
 
-<!--orden:ini-->
-## 🧭 Orden de trabajo del sprint
+## El reto en pocas palabras
 
-Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+**Qué os pide el cliente.** TurisData recibe **cientos de fotos** de alojamientos y zonas cada semana, y una persona las clasifica a mano (hotel, apartamentos, casa rural, camping, piscina). Quiere saber si un modelo puede **pre-clasificarlas** y, sobre todo, **en qué se equivoca**, para decidir cuánto puede fiarse y **qué fotos debe revisar una persona**.
 
-**Día 1 del S11**
+**Qué vais a entregar:** el modelo (`.keras` o cuaderno que lo reproduce), el demostrador y el análisis de errores.
 
-| Nº | Tipo | Qué se hace | Tiempo |
-|---|---|---|---|
-| 1 | 🔔 Ceremonia | Planning del reto «Visión artificial para el cliente» y reparto de roles | 10 min |
-| 2 | 📖 Teoría | [Redes convolucionales (CNN)](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) | 25 min |
-| 3 | 💻 Práctica | [Convolución, pooling, CNN y *data augmentation* (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_01_cnn.ipynb) | 40 min |
-| 4 | 📖 Teoría | [Transfer learning y fine-tuning](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf) | 25 min |
-| 5 | 💻 Práctica | [Transfer learning y fine-tuning (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) | 1 h 15 min |
-| 6 | 🎯 Reto | [Preparar los datos (paso 1)](Reto_S11/Reto_Sprint_11.md) | 25 min |
+**Núcleo y extra.** Núcleo: un modelo de *transfer learning* bien evaluado, con análisis de errores y demostrador. Extra: *fine-tuning* y comparar más modelos.
 
-**Día 2 del S11**
+Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_11_una_pagina.md). Para consultar: [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_11.md) (pasos, rúbrica, ayudas y errores frecuentes). Plantillas, datos y autoevaluación: [`3_Reto/4_Plantillas_y_entrega/`](3_Reto/4_Plantillas_y_entrega/).
 
-| Nº | Tipo | Qué se hace | Tiempo |
-|---|---|---|---|
-| 7 | 📖 Teoría | [Detección de objetos y segmentación (versión corta)](presentaciones/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) | 15 min |
-| 8 | 💻 Práctica | [IoU y NMS con números pequeños (los ejercicios marcados «en clase»); el detector con OpenCV y la segmentación son para casa](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) | 35 min |
-| 9 | 💻 Práctica | [Esqueleto del reto: dataset por carpetas y análisis de errores](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) | 40 min |
-| 10 | 🎯 Reto | [Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5)](Reto_S11/Reto_Sprint_11.md) | 1 h 20 min |
-| 11 | 🔔 Ceremonia | Entrega en `sprint-11/`, autoevaluación y coevaluación, review y retrospectiva | 30 min |
+## ✅ Antes de cerrar el sprint (Definition of Done)
 
-<!--orden:fin-->
+**Archivos subidos en el repositorio del equipo, carpeta `sprint-11/`** (marca cada uno cuando lo veas en GitHub):
+- [ ] `reto_vision_cliente.ipynb` · lo modificáis
+- [ ] `analisis_errores.md` · lo creáis
+- [ ] `README.md` · lo creáis
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md)
 
-## Reto · «Visión artificial para el cliente»
+**Total en `sprint-11/`: 3 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 6). Aparte: clasificador_alojamientos.keras; los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
-📄 [Reto en PDF](Reto_S11/Reto_Sprint_11.pdf) · [ecofriendly](Reto_S11/Reto_Sprint_11_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
-
-👉 **[Ver el reto completo, explicado paso a paso](Reto_S11/Reto_Sprint_11.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
-
-
-**Contexto:** TurisData Canarias recibe cientos de fotos de alojamientos cada semana y las clasifica una persona a mano. Quiere saber si un modelo puede pre-clasificarlas y, sobre todo, en qué se equivoca, para decidir qué fotos revisar a mano.
-
-
-**Entregáis** (carpeta `sprint-11/` del repositorio del equipo):
-- Modelo con *transfer learning* (`.keras` o notebook que lo reproduce), con una referencia desde cero.
-- Demostrador: función que recibe una foto y devuelve clase, confianza y «revisar a mano» si es baja.
-- Análisis de errores (1–2 páginas): métricas por clase, matriz de confusión y ≥ 6 ejemplos mal clasificados con su causa probable.
-- Origen y licencia de los datos.
-
-
-**Reglas:**
-- Unas 3 h 5 min de reto en equipo (más el planning y la entrega); dataset sintético o propio con licencia clara, sin personas reconocibles, una carpeta por clase (≥ 30 imágenes).
-- Partición fija; prueba usada una sola vez; debe ejecutarse en CPU en pocos minutos.
-- Nunca claves ni datos personales.
-
-
-**Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable (representatividad, clases raras, licencias y privacidad), más umbral de confianza justificado.
-
-## ✅ Antes de cerrar el sprint
+**Comprobaciones antes de dar el sprint por cerrado:**
 - [ ] Notebook ejecutable de principio a fin (`Restart & Run all`)
 - [ ] Dataset por carpetas comprobado por clase; test usado una sola vez
 - [ ] Métricas por clase, matriz de confusión y ≥ 6 errores analizados
 - [ ] Demostrador con umbral de confianza y opción «revisar a mano»
-- [ ] Entregable subido a la carpeta `sprint-11/` del repositorio del equipo
-- [ ] [Autoevaluación y coevaluación](Reto_S11/autoevaluacion_y_coevaluacion.md) rellenadas
+- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Ficha_completa/Reto_Sprint_11.md#rúbrica-del-reto--cómo-se-puntúa-y-cómo-se-revisa) y lo ha anotado en el propio entregable
+
+## En casa (cuando puedas)
+
+- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_vision_por_computador.md).
+
+## Si te atascas
+
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_11.md).
+2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
+3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
+
+## Todo el material, por carpetas
+
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+
+| Carpeta | Qué hay |
+|---|---|
+| [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
+| [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
+| [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
+| [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
+
+Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).
+
+## Temario oficial de este sprint
+
+| Unidad | Conceptos que entran |
+|---|---|
+| UD 4.4 | CNN y visión por computador: convolución, pooling, arquitecturas (LeNet, VGG, ResNet), data augmentation |
+| UD 4.5 | Transfer learning y fine-tuning |
+| UD 4.6 | Detección de objetos y segmentación (introducción, YOLO) |
+
+**Y ahora:** Sprint 12 · Lenguaje, secuencias y modelos generativos (+ informe visual) (lunes 23/11).
+
+*12 h (2 h teoría · 4 h práctica · 6 h PBL).*

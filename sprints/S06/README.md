@@ -1,110 +1,109 @@
 # README Sprint S06 · Datos listos para modelar
 
-**Pregunta guía:** ¿están los datos en condiciones de entrenar algo fiable?
+**Pregunta guía:** ¿están los datos en condiciones de entrenar algo fiable?  
 **Fechas:** 6 y 9 de noviembre · **Horas:** 12 h (3 h teoría · 5 h práctica · 4 h PBL)
 
-📄 **Este README en PDF:** [a color](README_Sprint_06.pdf) · [ecofriendly, para imprimir](README_Sprint_06_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
+📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_06.pdf) · [ecofriendly](pdf/README_Sprint_06_ecofriendly.pdf)
+
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
 ## Qué aprenderás
+
 1. Explorar una tabla con pandas y elegir el gráfico adecuado para cada tipo de dato.
 2. Encontrar defectos en un dataset (nulos, duplicados, *outliers*, tipos y fechas mal formados, categorías inconsistentes) y **razonar de dónde vienen**.
 3. Construir un **pipeline** reproducible (`ColumnTransformer` + `Pipeline`) que impute, escale y codifique sin fuga de datos.
 4. Medir un modelo con honestidad: *baseline*, métricas, validación cruzada, partición temporal.
 5. Reconocer y evitar la **fuga de datos** (*data leakage*).
 
-## Requisitos previos
-- Sprint 4 y 5: Python básico, NumPy y algo de estadística con pandas.
-- Cuenta de Google (para Colab) o el entorno local del curso (Python 3.11).
-- Datos: `datos/reservas_turisdata.csv` (limpio) y `datos/reservas_sucio.csv` (el del reto). Los notebooks los descargan solos si no los encuentran.
+## Día 1 · Viernes 6/11
 
-## 📎 Materiales del sprint
-
-**Documentos del curso** (PDF y .md; las actividades van en la tabla siguiente)
-
-| Material | Tema | Tiempo | Cuándo |
+| ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| [Guía del sprint (PDF)](guia/Guia_Sprint_06.pdf) · [ecofriendly](guia/Guia_Sprint_06_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [**Código explicado de los cuadernos**](codigo_explicado/) | Cada cuaderno explicado por escrito: recorrido de 10 minutos con el docente, glosario de sus palabras de código y qué hace cada celda y cada línea (para leerlo con calma, mientras o después de ejecutar) | A tu ritmo | Con cada cuaderno |
-| [**Carpeta del reto: `Reto_S06/`**](Reto_S06/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
-| [**Reto en una página** (.md)](Reto_S06/Reto_Sprint_06_una_pagina.md) · [PDF](Reto_S06/Reto_Sprint_06_una_pagina.pdf) · [ecofriendly](Reto_S06/Reto_Sprint_06_una_pagina_ecofriendly.pdf) | Lo esencial para trabajar con la ficha abierta: tres niveles (mínimo, estándar, extra), reparto del tiempo y frases para el informe | 1 página | Durante el reto |
-| [Reto completo, paso a paso (.md)](Reto_S06/Reto_Sprint_06.md) · [PDF](Reto_S06/Reto_Sprint_06.pdf) · [ecofriendly](Reto_S06/Reto_Sprint_06_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
-| [Resumen del sprint en una página](infografias/S06_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
-| [El reto paso a paso](Reto_S06/S06_03_reto_paso_a_paso.png) · [PDF con enlaces](Reto_S06/S06_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
-| [Esquema del contenido y su relación con el reto](infografias/S06_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del sprint](infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
-| [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf`](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | Datos, pandas y visualización exploratoria | 15 min | Teoría · día 1 del S06 |
-| [`S06.2_Limpieza_y_preprocesado.pdf`](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | Limpieza y preprocesado | 20 min | Teoría · día 1 del S06 |
-| [`S06.3_scikit_learn_metricas_y_validacion.pdf`](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | scikit-learn: métricas y validación | 15 min | Teoría · día 2 del S06 |
+| ☐ | 🔔 Ceremonia · Planning del reto «Datos sucios, cliente impaciente» y reparto de roles | — | 10 |
+| ☐ | 📖 Teoría · Datos, pandas y visualización exploratoria | [Presentación S06.1](1_Teoria/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 30 |
+| ☐ | 💻 Práctica · pandas, EDA y primer chequeo de calidad (los ejercicios marcados «en clase») | [Cuaderno S06_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_01_pandas_eda.ipynb) | 45 |
+| ☐ | 🎯 Reto · Arrancar el inventario de defectos del fichero sucio (pasos 1–2) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_06_una_pagina.md) | 30 |
+| ☐ | 📖 Teoría · Limpieza y preprocesado | [Presentación S06.2](1_Teoria/S06.2_Limpieza_y_preprocesado.pdf) | 30 |
+| ☐ | 💻 Práctica · Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos (los ejercicios marcados «en clase») | [Cuaderno S06_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_02_limpieza.ipynb) | 55 |
 
-**Material de las actividades**
+**En clase: 3 h 20 min.**
 
-| Notebook | Tema | Tiempo | Colab |
+**Al acabar el día, deberías poder decir:**
+
+- [ ] Mi equipo tiene el inventario de defectos del fichero sucio.
+- [ ] Sé limpiar duplicados, tipos y fechas con pandas.
+
+## Día 2 · Lunes 9/11
+
+| ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| [`apuntes_datos_limpieza_y_metricas.md`](actividades/apuntes_datos_limpieza_y_metricas.md) · [PDF](actividades/apuntes_datos_limpieza_y_metricas.pdf) · [ecofriendly](actividades/apuntes_datos_limpieza_y_metricas_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: EDA con pandas, limpieza, pipelines, métricas (precisión, recall, F1, AUC), validación cruzada y fuga de datos explicados paso a paso con ejemplos | — | Antes del sprint y cuando tengas dudas |
-| `S06_01_pandas_eda` | pandas, EDA y visualización exploratoria; primer chequeo de calidad | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) |
-| `S06_02_limpieza` | Limpieza: duplicados, tipos, fechas, categorías, imposibles, nulos | 55 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) |
-| `S06_03_preprocesado_pipeline` | Escalado, codificación, `ColumnTransformer` y `Pipeline` | 40 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) |
-| `S06_04_metricas_validacion` | Baseline, métricas, sobreajuste, validación cruzada, fuga y partición temporal | 45 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) |
+| ☐ | 💻 Práctica · Escalado, codificación, `ColumnTransformer` y `Pipeline` (los ejercicios marcados «en clase») | [Cuaderno S06_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_03_preprocesado_pipeline.ipynb) | 40 |
+| ☐ | 🎯 Reto · Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_06_una_pagina.md) | 30 |
+| ☐ | 📖 Teoría · scikit-learn: métricas y validación | [Presentación S06.3](1_Teoria/S06.3_scikit_learn_metricas_y_validacion.pdf) | 30 |
+| ☐ | 💻 Práctica · *Baseline*, métricas, validación cruzada y fuga de datos (los ejercicios marcados «en clase») | [Cuaderno S06_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_04_metricas_validacion.ipynb) | 45 |
+| ☐ | 🎯 Reto · Informe, README y ensayo (paso 5) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_06_una_pagina.md) | 20 |
+| ☐ | 🔔 Ceremonia · Entrega en `sprint-06/`, autoevaluación y coevaluación, review y retrospectiva | — | 35 |
 
-Cada notebook tiene ejercicios con `assert`: si la celda de comprobación no da error, vas bien. Los datos se descargan solos.
+**En clase: 3 h 20 min.**
 
-<!--orden:ini-->
-## 🧭 Orden de trabajo del sprint
+## El reto en pocas palabras
 
-Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+**Qué os pide el cliente.** TurisData os envía por correo un fichero de reservas exportado **a mano desde varios sistemas** (`reservas_sucio.csv`). El gerente quiere un primer modelo de cancelaciones «para ayer», pero **no se fía de los datos** (con razón). Os pide dos cosas:
 
-**Día 1 del S06**
+**Qué vais a entregar:** un repositorio o carpeta con `informe_calidad.md`, `reto_S06.ipynb` y `README.md`.
 
-| Nº | Tipo | Qué se hace | Tiempo |
-|---|---|---|---|
-| 1 | 🔔 Ceremonia | Planning del reto «Datos sucios, cliente impaciente» y reparto de roles | 10 min |
-| 2 | 📖 Teoría | [Datos, pandas y visualización exploratoria](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 30 min |
-| 3 | 💻 Práctica | [pandas, EDA y primer chequeo de calidad (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) | 45 min |
-| 4 | 🎯 Reto | [Arrancar el inventario de defectos del fichero sucio (pasos 1–2)](Reto_S06/Reto_Sprint_06.md) | 30 min |
-| 5 | 📖 Teoría | [Limpieza y preprocesado](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | 30 min |
-| 6 | 💻 Práctica | [Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) | 55 min |
+**Núcleo y extra.** Núcleo: inventario de defectos, función de limpieza y *baseline* con su *pipeline*. Extra: informe más detallado y comparativa de variantes de limpieza.
 
-**Día 2 del S06**
+Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_06_una_pagina.md). Para consultar: [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_06.md) (pasos, rúbrica, ayudas y errores frecuentes). Plantillas, datos y autoevaluación: [`3_Reto/4_Plantillas_y_entrega/`](3_Reto/4_Plantillas_y_entrega/).
 
-| Nº | Tipo | Qué se hace | Tiempo |
-|---|---|---|---|
-| 7 | 💻 Práctica | [Escalado, codificación, `ColumnTransformer` y `Pipeline` (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) | 40 min |
-| 8 | 🎯 Reto | [Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4)](Reto_S06/Reto_Sprint_06.md) | 30 min |
-| 9 | 📖 Teoría | [scikit-learn: métricas y validación](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | 30 min |
-| 10 | 💻 Práctica | [*Baseline*, métricas, validación cruzada y fuga de datos (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) | 45 min |
-| 11 | 🎯 Reto | [Informe, README y ensayo (paso 5)](Reto_S06/Reto_Sprint_06.md) | 20 min |
-| 12 | 🔔 Ceremonia | Entrega en `sprint-06/`, autoevaluación y coevaluación, review y retrospectiva | 35 min |
+## ✅ Antes de cerrar el sprint (Definition of Done)
 
-<!--orden:fin-->
+**Archivos subidos en el repositorio del equipo, carpeta `sprint-06/`** (marca cada uno cuando lo veas en GitHub):
+- [ ] `informe_calidad.md` · lo creáis a partir de una plantilla
+- [ ] `reto_S06.ipynb` · lo creáis
+- [ ] `README.md` · lo modificáis
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md)
 
-## Reto · «Datos sucios, cliente impaciente»
+**Total en `sprint-06/`: 3 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 6). Aparte: reservas_sucio.csv en `data/` si aún no está; los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
-📄 [Reto en PDF](Reto_S06/Reto_Sprint_06.pdf) · [ecofriendly](Reto_S06/Reto_Sprint_06_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
-
-👉 **[Ver el reto completo, explicado paso a paso](Reto_S06/Reto_Sprint_06.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
-
-
-**Contexto:** TurisData Canarias nos envía `reservas_sucio.csv`, exportado a mano desde varios sistemas. Quieren un primer modelo de cancelaciones, pero el gerente no se fía de los datos. Pide un informe corto de qué está mal y por qué, y un proceso que deje los datos listos cada vez.
-
-
-**Entregáis** (carpeta `sprint-06/` del repositorio del equipo):
-- `informe_calidad.md` (1–2 páginas): defectos, causa probable, tratamiento y preguntas al cliente. Plantilla: [`informe_calidad_plantilla.md`](Reto_S06/informe_calidad_plantilla.md).
-- `reto_S06.ipynb`: EDA, función de limpieza, *pipeline* y *baseline* con validación cruzada.
-- `README.md` con las instrucciones y versiones para reproducirlo.
-
-
-**Reglas:**
-- Unas 2 h 10 min en equipo (planning, reto y entrega); solo librerías del curso. Nada de editar el CSV a mano: toda corrección va en código.
-- Lo aprendido de los datos (medianas, categorías…) se ajusta **solo con train**. No se descarta ninguna fila sin justificarla.
-- Nunca claves ni datos personales. Review: 5 min por equipo (3 defectos graves y *pipeline* en marcha).
-
-
-**Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable (¿y si el país de origen se imputa mal?).
-
-## ✅ Antes de cerrar el sprint
+**Comprobaciones antes de dar el sprint por cerrado:**
 - [ ] Notebook ejecutable de principio a fin (`Restart & Run all`)
 - [ ] El informe recoge cada defecto con causa probable y tratamiento
 - [ ] Hay *baseline* (`DummyClassifier`) y un modelo, comparados con validación cruzada
-- [ ] Entregable subido a la carpeta `sprint-06/` del repositorio del equipo
-- [ ] [Autoevaluación y coevaluación](Reto_S06/autoevaluacion_y_coevaluacion.md) rellenadas
+- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Ficha_completa/Reto_Sprint_06.md#rúbrica-del-reto--cómo-se-puntúa-y-cómo-se-revisa) y lo ha anotado en el propio entregable
+
+## En casa (cuando puedas)
+
+- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_datos_limpieza_y_metricas.md).
+
+## Si te atascas
+
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_06.md).
+2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
+3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
+
+## Todo el material, por carpetas
+
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+
+| Carpeta | Qué hay |
+|---|---|
+| [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
+| [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
+| [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
+| [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
+
+Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).
+
+## Temario oficial de este sprint
+
+| Unidad | Conceptos que entran |
+|---|---|
+| M2 · Exploración del conjunto de datos (UD 2.1 a 2.5) | Funciones del Data Scientist; datos estructurados, no estructurados y series temporales · read_csv, info, describe, filtrado, agrupación, uniones · matplotlib, seaborn, plotly; elección del gráfico según el tipo de dato · Nulos, duplicados, outliers, tipos incorrectos; detección de defectos y de sus causas · Escalado, codificación de categóricas, reducción de dimensionalidad, separación train/test |
+| UD 3.1 | Flujo de trabajo con scikit-learn: estimadores, pipelines, validación cruzada |
+| UD 3.2 | Métricas y evaluación: MAE/RMSE/R², precisión/recall/F1, ROC-AUC, sesgo-varianza, GridSearchCV |
+
+**Y ahora:** Sprint 7 · ML supervisado: regresión y clasificación (martes 10/11).
+
+*12 h (3 h teoría · 5 h práctica · 4 h PBL).*

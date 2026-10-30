@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>La matriz de confusión, en sencillo</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F1E8;--ink:#1D2433;--mute:#566073;--line:#D9D2C0;--acc:#C23B1F;--teal:#0F7F7F;--mint:#D5ECEA;--pink:#F7DDD4;--sand:#EFE7D2;--sky:#DCE6F5;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque','Public Sans',system-ui,sans-serif;letter-spacing:-.01em}
+.wrap{max-width:900px;margin:0 auto;padding:30px 18px 70px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+h1{margin:6px 0 10px;font-size:clamp(30px,5.5vw,50px);line-height:1.05;font-weight:800}
+.lead{font-size:20px;color:var(--mute);margin:0 0 24px;max-width:720px}
+section{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:22px;margin:0 0 20px}
+h2{margin:0 0 6px;font-size:25px;font-weight:800}
+.sub{color:var(--mute);margin:0 0 14px}
+.matrix{display:grid;grid-template-columns:96px 1fr 1fr;gap:8px;margin:14px 0}
+.mh{display:flex;align-items:center;justify-content:center;text-align:center;font-size:12.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);padding:4px}
+.cell{font:inherit;text-align:center;border:3px solid transparent;border-radius:14px;padding:16px 10px;cursor:pointer;color:var(--ink);transition:transform .12s,border-color .12s}
+.cell.g{background:var(--mint);border-color:#A9D6D2}.cell.r{background:var(--pink);border-color:#EDB5A3}
+.cell:hover{transform:translateY(-2px)}
+.cell.on{border-color:var(--ink);box-shadow:0 4px 0 var(--ink)}
+.cell:focus-visible,.opt:focus-visible,.tg:focus-visible{outline:3px solid #4A6FA5;outline-offset:2px}
+.cell .sg{display:block;font:800 40px 'Bricolage Grotesque',sans-serif;line-height:1}
+.cell .nm{display:block;font-weight:700;margin-top:4px}
+.cell .ej{display:block;font-size:14px;color:#3b4252;margin-top:4px;line-height:1.3}
+.detail{border-radius:12px;padding:14px 16px;background:var(--sand);min-height:74px}
+.detail b.t{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}
+.tip{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 0;font-size:14px;color:var(--mute)}
+.decoder{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:12px 0}
+.decoder .q{font-weight:700;margin-bottom:6px}
+.tgs{display:flex;gap:8px;flex-wrap:wrap}
+.tg{font:700 16px 'Public Sans',sans-serif;border:2px solid var(--line);background:#fff;border-radius:10px;padding:8px 14px;cursor:pointer}
+.tg.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.result{margin-top:8px;border-radius:14px;padding:14px 18px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.result.g{background:var(--mint)}.result.r{background:var(--pink)}
+.result .big{font:800 46px 'Bricolage Grotesque',sans-serif;line-height:1;min-width:84px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{border-radius:14px;padding:14px 16px}
+.card h3{margin:0 0 4px;font-size:19px}
+.card.p{background:var(--pink)}.card.s{background:var(--sand)}
+.big-ex{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
+.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.nums div{border-radius:12px;padding:10px;text-align:center}
+.nums .g{background:var(--mint)}.nums .r{background:var(--pink)}
+.nums b{display:block;font:800 30px 'Bricolage Grotesque',sans-serif;line-height:1}
+.nums span{font-size:13px;font-weight:700;color:var(--mute)}
+.bar{height:26px;border-radius:8px;background:var(--pink);overflow:hidden;display:flex;margin:6px 0}
+.bar i{display:block;height:100%;background:#7FC4BE}
+.note{background:var(--sky);border-radius:12px;padding:12px 16px;margin:12px 0 0}
+.quiz .case{font-weight:600;margin:16px 0 8px}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opt{font:800 17px 'Bricolage Grotesque',sans-serif;border:2px solid var(--line);background:#fff;border-radius:10px;padding:8px 18px;cursor:pointer;min-width:64px}
+.opt.good{background:#DDF1E6;border-color:#1B7F4B}.opt.bad{background:#FBE0DD;border-color:#B3261E}
+.fb{font-size:15px;margin-top:6px;min-height:1.2em;font-weight:600}
+.score{margin-top:12px;font-weight:700}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.links a{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;border-radius:10px;padding:9px 16px;font-size:15px}
+.links a.ghost{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.foot{font-size:14px;color:var(--mute);margin-top:26px}
+@media(max-width:640px){.matrix{grid-template-columns:62px 1fr 1fr}.cell .sg{font-size:30px}.decoder,.two,.big-ex{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">IFCD107 · Evaluar un modelo</div>
+  <h1>La matriz de confusión, en sencillo</h1>
+  <p class="lead">Un modelo dice algo (<i>«esta reserva se cancelará»</i>) y después la realidad dice qué pasó. La matriz <b>cuenta cuántas veces coinciden y cuántas no</b>.</p>
+
+  <section>
+    <h2>1 · Las cuatro casillas</h2>
+    <p class="sub">Caso del hotel: el modelo avisa o no avisa de que una reserva se cancelará. <b>Pulsa cada casilla</b> para ver qué significa.</p>
+    <div class="matrix" role="group" aria-label="Matriz de confusión">
+      <div></div><div class="mh">El modelo dice:<br>«no cancela»</div><div class="mh">El modelo dice:<br>«cancela»</div>
+      <div class="mh">Realidad:<br>no canceló</div>
+      <button class="cell g" data-k="vn"><span class="sg">VN</span><span class="nm">Acierto</span><span class="ej">No avisó y no canceló</span></button>
+      <button class="cell r" data-k="fp"><span class="sg">FP</span><span class="nm">Falsa alarma</span><span class="ej">Avisó y no canceló</span></button>
+      <div class="mh">Realidad:<br>canceló</div>
+      <button class="cell r" data-k="fn"><span class="sg">FN</span><span class="nm">Se nos escapó</span><span class="ej">No avisó y sí canceló</span></button>
+      <button class="cell g" data-k="vp"><span class="sg">VP</span><span class="nm">Acierto</span><span class="ej">Avisó y canceló</span></button>
+    </div>
+    <div class="detail" id="detail" aria-live="polite"><b class="t">Pulsa una casilla</b>Verde = el modelo acertó. Rosa = el modelo se equivocó.</div>
+  </section>
+
+  <section>
+    <h2>2 · Cómo leer las siglas</h2>
+    <p class="sub">Cada sigla tiene <b>dos letras</b>. Responde a las dos preguntas y obtienes la sigla.</p>
+    <div class="decoder">
+      <div><div class="q">1.ª letra: ¿acertó el modelo?</div><div class="tgs" id="g1"><button class="tg on" data-v="V">Sí · V (verdadero)</button><button class="tg" data-v="F">No · F (falso)</button></div></div>
+      <div><div class="q">2.ª letra: ¿qué dijo el modelo?</div><div class="tgs" id="g2"><button class="tg on" data-v="P">«Cancela» · P (positivo)</button><button class="tg" data-v="N">«No cancela» · N (negativo)</button></div></div>
+    </div>
+    <div class="result g" id="res"><div class="big" id="resSg">VP</div><div id="resTx"></div></div>
+  </section>
+
+  <section>
+    <h2>3 · Los dos errores no cuestan lo mismo</h2>
+    <p class="sub">Por eso no basta con contar aciertos.</p>
+    <div class="two">
+      <div class="card p"><h3>FP · Falsa alarma</h3>Avisamos y el cliente venía. <b>Coste:</b> molestar a un cliente, pedirle un depósito que no hacía falta.</div>
+      <div class="card p"><h3>FN · Se nos escapó</h3>No avisamos y canceló. <b>Coste:</b> habitación vacía que ya no se puede vender.</div>
+    </div>
+    <div class="note">Cuál es <b>peor</b> depende del negocio. Si un FN cuesta el triple que un FP, conviene avisar más, aunque haya más falsas alarmas.</div>
+  </section>
+
+  <section>
+    <h2>4 · Un ejemplo con 20 reservas</h2>
+    <p class="sub">VN = 10 · FP = 2 · FN = 4 · VP = 4</p>
+    <div class="big-ex">
+      <div class="nums"><div class="g"><b>10</b><span>VN</span></div><div class="r"><b>2</b><span>FP</span></div><div class="r"><b>4</b><span>FN</span></div><div class="g"><b>4</b><span>VP</span></div></div>
+      <div>
+        <b>Aciertos:</b> 10 + 4 = <b>14 de 20 (70 %)</b>
+        <div class="bar" aria-hidden="true"><i style="width:70%"></i></div>
+        <b>Cancelaciones que vimos venir:</b> 4 de las 8 que cancelaron (<b>la mitad</b>)
+        <div class="bar" aria-hidden="true"><i style="width:50%"></i></div>
+      </div>
+    </div>
+    <div class="note"><b>La trampa:</b> un 70 % suena bien, pero se nos escapó la mitad de las cancelaciones. Si solo el 5 % de las reservas se cancela, un modelo que diga siempre «no cancela» acierta el <b>95 %</b> y no sirve para nada. Por eso se mira la matriz entera y no un solo número.</div>
+  </section>
+
+  <section class="quiz">
+    <h2>5 · Compruébalo</h2>
+    <p class="sub">¿Qué sigla es cada caso?</p>
+    <div id="quiz"></div>
+    <div class="score" id="score"></div>
+  </section>
+
+  <div class="links">
+    <a href="../../../S01/actividades/S01_ejercicio_matriz_de_confusion.html">Ejercicio interactivo (S01, sin código)</a>
+    <a class="ghost" href="S07_ejercicio_matriz_de_confusion.html">Ejercicio completo (S07)</a>
+  </div>
+  <p class="foot">IFCD107 · Especialista en Inteligencia Artificial · Explicación sencilla de la matriz de confusión. Positivo = «cancela».</p>
+</div>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const INFO={
+ vp:['VP · Verdadero positivo','Acierto','El modelo avisó de que se cancelaría <b>y se canceló</b>. Es como una alarma de incendios que suena <b>y hay fuego</b>.'],
+ vn:['VN · Verdadero negativo','Acierto','El modelo no avisó <b>y no se canceló</b>. La alarma está en silencio <b>y no hay fuego</b>.'],
+ fp:['FP · Falso positivo','Error: falsa alarma','El modelo avisó, pero <b>no se canceló</b>. La alarma suena <b>y no hay fuego</b>. Coste: molestar a un cliente que iba a venir.'],
+ fn:['FN · Falso negativo','Error: se nos escapó','El modelo no avisó, pero <b>sí se canceló</b>. Hay fuego <b>y la alarma no suena</b>. Coste: habitación vacía sin vender.']
+};
+document.querySelectorAll('.cell').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.cell').forEach(c=>c.classList.remove('on'));b.classList.add('on');
+  const [n,t,d]=INFO[b.dataset.k];$('detail').innerHTML='<b class="t" style="text-transform:none;letter-spacing:0;font-size:16px;color:var(--ink)">'+n+' · '+t+'</b>'+d;
+}));
+// decodificador
+let a='V',p='P';
+function dec(){
+  const sg=a+p,ok=a==='V',txt={VP:'El modelo dijo «cancela» y <b>acertó</b>: de verdad se canceló.',VN:'El modelo dijo «no cancela» y <b>acertó</b>: no se canceló.',FP:'El modelo dijo «cancela» y <b>se equivocó</b>: no se canceló. <b>Falsa alarma.</b>',FN:'El modelo dijo «no cancela» y <b>se equivocó</b>: sí se canceló. <b>Se nos escapó.</b>'};
+  $('resSg').textContent=sg;$('resTx').innerHTML=txt[sg];$('res').className='result '+(ok?'g':'r');
+}
+function tog(id,setter){document.querySelectorAll('#'+id+' .tg').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#'+id+' .tg').forEach(x=>x.classList.remove('on'));b.classList.add('on');setter(b.dataset.v);dec()}))}
+tog('g1',v=>a=v);tog('g2',v=>p=v);dec();
+// quiz
+const CASOS=[
+ ['El modelo avisa de que la reserva se cancelará y el cliente <b>sí cancela</b>.','VP'],
+ ['El modelo avisa de que se cancelará, pero el cliente <b>viene</b>.','FP'],
+ ['El modelo no avisa y el cliente <b>viene</b>.','VN'],
+ ['El modelo no avisa y la reserva <b>se cancela</b>: habitación vacía.','FN']
+];
+let hechos=0,aciertos=0;
+CASOS.sort(()=>Math.random()-.5).forEach(([t,r],i)=>{
+  const d=document.createElement('div');d.innerHTML='<div class="case">'+(i+1)+'. '+t+'</div><div class="opts"></div><div class="fb"></div>';
+  const o=d.querySelector('.opts'),f=d.querySelector('.fb');let resp=false;
+  ['VP','VN','FP','FN'].forEach(s=>{const b=document.createElement('button');b.className='opt';b.textContent=s;
+    b.onclick=()=>{
+      if(resp)return;
+      if(s===r){resp=true;b.classList.add('good');f.style.color='#0E5B34';f.textContent='¡Correcto!';hechos++;if(!d.dataset.fallo)aciertos++;
+        $('score').textContent=hechos===CASOS.length?'Has resuelto '+hechos+' de '+CASOS.length+(aciertos===CASOS.length?' a la primera. ¡Perfecto!':' ('+aciertos+' a la primera). Repasa las siglas de la sección 2.'):'';}
+      else{b.classList.add('bad');f.style.color='#8C1D18';f.textContent='No: '+(s[0]==='V'?'ese sería un acierto':'ese sería un error')+'. Mira qué dijo el modelo (2.ª letra) y si acertó (1.ª).';d.dataset.fallo=1}
+    };o.appendChild(b)});
+  $('quiz').appendChild(d);
+});
+</script>
+</body>
+</html>
