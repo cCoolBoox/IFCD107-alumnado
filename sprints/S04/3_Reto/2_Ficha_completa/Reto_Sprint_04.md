@@ -34,7 +34,19 @@
 
 ### 3 · 📦 Qué entregar
 
-**Qué se sube:** `kpis.py`, `test_kpis.py`, `README.md` y `salida.json`, dentro de la carpeta **`sprint-04/`** del repositorio privado del equipo. Niveles: 🟢 mínimo (entrega válida) · 🟡 estándar · 🔴 extra.
+**Punto de partida: qué os damos y qué hacéis vosotros.** Antes de subir nada, mirad qué trabajo hay en cada fichero: algunos ya están hechos, otros los modificáis y otros los creáis o los genera el programa.
+
+| Fichero | Origen | Qué hacéis vosotros |
+|---|---|---|
+| `kpis.py` | **Lo modificáis.** Os damos una plantilla con las funciones vacías (`calcular_kpis` y la estructura de `main` ya vienen hechas) | Escribís el código de las funciones sobre la propia plantilla |
+| `test_kpis.py` | **Ya hecho.** Pruebas completas | Nada: se copia tal cual y **no se modifica** |
+| `reservas_turisdata.csv` | **Ya hecho.** Los datos reales (sintéticos) | Nada: se copia junto a `kpis.py` sin cambiarlo |
+| `salida.json` | **Lo genera el programa** al ejecutarlo con el CSV real | Ejecutar el programa; no se escribe a mano |
+| `README.md` | **Lo creáis a partir de una plantilla.** Os damos `README_PLANTILLA.md` con huecos | Copiarla como `README.md` y rellenarla |
+| Autoevaluación y coevaluación | **Ya hecha, en blanco** | Cada persona rellena y sube la suya |
+| `kpis_pandas.py` y pruebas propias (extra) | **Extra.** El primero parte de `plantilla_kpis_pandas.py` (lo modificáis); las pruebas propias las creáis vosotros | Solo si el equipo llega al nivel extra |
+
+**Qué se sube:** `kpis.py`, `test_kpis.py`, `README.md` y `salida.json` (más una copia sin cambios del CSV, para que otra persona pueda reproducir el resultado), dentro de la carpeta **`sprint-04/`** del repositorio privado del equipo. Niveles: 🟢 mínimo (entrega válida) · 🟡 estándar · 🔴 extra.
 
 | Requerimiento | Qué se pide exactamente | Nivel | Dónde va |
 |---|---|---|---|
