@@ -73,9 +73,9 @@ Lucía, directora comercial de **TurisData Canarias**, envía la misma newslette
 ### Pasos sugeridos
 | Día | Qué hacer |
 |---|---|
-| **Jueves 12/11 (1 h de PBL tras las prácticas 01 y 02)** | Ya tenéis los segmentos en borrador: elegid método y `k` con silueta **y** con criterio de negocio; haced el mapa PCA. |
-| **Viernes 13/11, por la mañana** | Prácticas 03 y 04. Con lo aprendido, arrancad el prototipo de `recomendar` y comparad al menos dos métodos. |
-| **Viernes 13/11 (1 h 25 min de PBL)** | 1) Comparad recomendadores y probad `recomendar` con 3 usuarios (40 min). 2) Rellenad la ficha de segmentos, nota de IA responsable, repaso de la Definition of Done y ensayo de la review (45 min). |
+| **Viernes 13/11 (45 min de PBL tras las prácticas 01 y 02)** | Ya tenéis los segmentos en borrador: elegid método y `k` con silueta **y** con criterio de negocio; haced el mapa PCA. |
+| **Lunes 16/11, por la mañana** | Prácticas 03 y 04. Con lo aprendido, arrancad el prototipo de `recomendar` y comparad al menos dos métodos. |
+| **Lunes 16/11 (50 min de PBL)** | 1) Comparad recomendadores y probad `recomendar` con 3 usuarios (40 min). 2) Rellenad la ficha de segmentos, nota de IA responsable, repaso de la Definition of Done y ensayo de la review (45 min). |
 
 ### Guía paso a paso para principiantes
 

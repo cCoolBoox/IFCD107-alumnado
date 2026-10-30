@@ -1,7 +1,7 @@
 # README Sprint S11 · Visión por computador
 
 **Pregunta guía:** ¿podemos aprovechar las imágenes del cliente?
-**Fechas:** 18–20 de noviembre · **Horas:** 18 h (4 h teoría · 7 h práctica · 7 h PBL)
+**Fechas:** 19–20 de noviembre · **Horas:** 12 h (2 h teoría · 4 h práctica · 6 h PBL)
 
 📄 **Este README en PDF:** [a color](README_Sprint_11.pdf) · [ecofriendly, para imprimir](README_Sprint_11_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
@@ -61,29 +61,22 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Visión artificial para el cliente» y reparto de roles | 10 min |
-| 2 | 📖 Teoría | [Redes convolucionales (CNN)](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) | 25 min |
-| 3 | 💻 Práctica | [Convolución, pooling, CNN y *data augmentation*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_01_cnn.ipynb) | 1 h 5 min |
-| 4 | 📖 Teoría | [Transfer learning y fine-tuning](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf) | 20 min |
-| 5 | 💻 Práctica | [Transfer learning y fine-tuning (primera parte)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) | 1 h |
-| 6 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 20 min |
+| 2 | 📖 Teoría | [Redes convolucionales (CNN)](presentaciones/S11.1_Redes_convolucionales_CNN.pdf) | 30 min |
+| 3 | 💻 Práctica | [Convolución, pooling, CNN y *data augmentation* (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_01_cnn.ipynb) | 35 min |
+| 4 | 📖 Teoría | [Transfer learning y fine-tuning](presentaciones/S11.2_Transfer_learning_y_fine_tuning.pdf) | 30 min |
+| 5 | 💻 Práctica | [Transfer learning y fine-tuning (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) | 40 min |
+| 6 | 🎯 Reto | [Preparar los datos (paso 1)](Reto_S11/Reto_Sprint_11.md) | 45 min |
+| 7 | 💻 Práctica | Terminad los cuadernos pendientes y poneos al día | 10 min |
 
 **Día 2 del S11**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 7 | 💻 Práctica | [Transfer learning y fine-tuning (final)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_02_transfer_learning.ipynb) | 20 min |
-| 8 | 📖 Teoría | [Detección de objetos y segmentación](presentaciones/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) | 20 min |
-| 9 | 💻 Práctica | [IoU, NMS, mAP, detector con OpenCV y segmentación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) | 45 min |
-| 10 | 💻 Práctica | [Esqueleto del reto: dataset por carpetas y análisis de errores (arranque del reto)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) | 1 h |
-| 11 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
-| 12 | 🎯 Reto | [Preparar los datos (paso 1)](Reto_S11/Reto_Sprint_11.md) | 45 min |
-
-**Día 3 del S11**
-
-| Nº | Tipo | Qué se hace | Tiempo |
-|---|---|---|---|
-| 13 | 🎯 Reto | [Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5)](Reto_S11/Reto_Sprint_11.md) | 2 h 20 min |
-| 14 | 🔔 Ceremonia | Entrega en `sprint-11/`, autoevaluación y coevaluación, review y retrospectiva | 1 h |
+| 8 | 📖 Teoría | [Detección de objetos y segmentación (versión corta)](presentaciones/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) | 15 min |
+| 9 | 💻 Práctica | [IoU, NMS, mAP, detector con OpenCV y segmentación (demostración guiada)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_03_deteccion_segmentacion.ipynb) | 25 min |
+| 10 | 💻 Práctica | [Esqueleto del reto: dataset por carpetas y análisis de errores](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/notebooks/S11_04_reto_vision_cliente.ipynb) | 40 min |
+| 11 | 🎯 Reto | [Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5)](Reto_S11/Reto_Sprint_11.md) | 1 h 30 min |
+| 12 | 🔔 Ceremonia | Entrega en `sprint-11/`, autoevaluación y coevaluación, review y retrospectiva | 30 min |
 
 <!--orden:fin-->
 

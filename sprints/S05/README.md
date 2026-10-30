@@ -1,7 +1,7 @@
 # README Sprint S05 · Matemáticas y estadística en código
 
 **Pregunta guía:** ¿podemos demostrar con código lo que vimos en teoría?
-**Fechas:** 30/10 y 3/11 · **Horas:** 12 h (3 h teoría · 6 h práctica, incluye 1 h de CRUD · 3 h PBL)
+**Fechas:** 4–5 de noviembre · **Horas:** 9 h (2 h teoría · 4 h práctica, incluye 1 h de CRUD · 3 h PBL)
 
 📄 **Este README en PDF:** [a color](README_Sprint_05.pdf) · [ecofriendly, para imprimir](README_Sprint_05_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
@@ -59,23 +59,20 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «¿La ocupación depende de esto?» | 10 min |
-| 2 | 📖 Teoría | [NumPy y álgebra lineal: vectorización y *broadcasting*](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | 15 min |
-| 3 | 💻 Práctica | [Arrays, vectorización y *broadcasting*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_01_numpy.ipynb) | 35 min |
-| 4 | 💻 Práctica | [Matrices, sistemas y ecuación normal](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_02_algebra_lineal.ipynb) | 35 min |
-| 5 | 📖 Teoría | [Descenso del gradiente y regresión desde cero](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | 20 min |
-| 6 | 💻 Práctica | [Descenso del gradiente y regresión desde cero](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_03_gradiente_regresion.ipynb) | 1 h 10 min |
-| 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 15 min |
+| 2 | 📖 Teoría | [NumPy y álgebra lineal: vectorización y *broadcasting*](presentaciones/S05.1_NumPy_y_algebra_lineal.pdf) | 25 min |
+| 3 | 💻 Práctica | [Arrays, vectorización y *broadcasting* (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_01_numpy.ipynb) | 30 min |
+| 4 | 📖 Teoría | [Descenso del gradiente y regresión desde cero](presentaciones/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | 20 min |
 
 **Día 2 del S05**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 8 | 📖 Teoría | [Estadística con Python y CRUD](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) | 15 min |
-| 9 | 💻 Práctica | [Descriptiva, Monte Carlo e intervalos de confianza](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_04_estadistica_descriptiva_ic.ipynb) | 35 min |
-| 10 | 💻 Práctica | [Contrastes, causalidad, `statsmodels` y Bayes](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_05_contrastes_causalidad.ipynb) | 35 min |
-| 11 | 💻 Práctica | [CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_06_crud_python.ipynb) | 30 min |
-| 12 | 🎯 Reto | Cuaderno [`S05_07`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb): mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6) | 45 min |
-| 13 | 🔔 Ceremonia | Entrega en `sprint-05/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
+| 5 | 💻 Práctica | [Descenso del gradiente y regresión desde cero (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_03_gradiente_regresion.ipynb) | 40 min |
+| 6 | 📖 Teoría | [Estadística con Python y CRUD](presentaciones/S05.3_Estadistica_con_Python_y_CRUD.pdf) | 20 min |
+| 7 | 💻 Práctica | [Descriptiva, Monte Carlo e intervalos de confianza (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_04_estadistica_descriptiva_ic.ipynb) | 30 min |
+| 8 | 💻 Práctica | [CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_06_crud_python.ipynb) | 25 min |
+| 9 | 🎯 Reto | Cuaderno [`S05_07`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/notebooks/S05_07_reto_ocupacion.ipynb): mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6) | 45 min |
+| 10 | 🔔 Ceremonia | Entrega en `sprint-05/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 4 y 5 | 40 min |
 
 <!--orden:fin-->
 

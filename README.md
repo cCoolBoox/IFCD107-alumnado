@@ -135,16 +135,16 @@ gantt
     S0 Arranque ágil                  :a0, 2026-10-16, 4d
     S1 Qué es la IA                   :a1, 2026-10-20, 2d
     S2 Mates y estadística            :a2, 2026-10-22, 2d
-    S3 Del dato al modelo             :a3, 2026-10-26, 2d
+    S3 Del dato al modelo             :a3, 2026-10-26, 5d
     section Etapa B · Construir
-    S4 Python para IA                 :b4, 2026-10-28, 2d
-    S5 Mates en código                :b5, 2026-10-30, 5d
-    S6 Datos listos para modelar      :b6, 2026-11-04, 2d
-    S7 ML supervisado                 :b7, 2026-11-06, 4d
-    S8 Árboles, ensembles y SVM       :b8, 2026-11-10, 2d
-    S9 Segmentar y recomendar         :b9, 2026-11-12, 2d
-    S10 Redes neuronales              :b10, 2026-11-16, 2d
-    S11 Visión por computador         :b11, 2026-11-18, 3d
+    S4 Python para IA                 :b4, 2026-11-03, 2d
+    S5 Mates en código                :b5, 2026-11-04, 2d
+    S6 Datos listos para modelar      :b6, 2026-11-06, 4d
+    S7 ML supervisado                 :b7, 2026-11-10, 2d
+    S8 Árboles, ensembles y SVM       :b8, 2026-11-11, 2d
+    S9 Segmentar y recomendar         :b9, 2026-11-13, 4d
+    S10 Redes neuronales              :b10, 2026-11-17, 2d
+    S11 Visión por computador         :b11, 2026-11-19, 2d
     S12 Lenguaje, series y S13           :b12, 2026-11-23, 3d
     section Etapa C · Demostrar
     S14 Reto, equipo y datos          :c14, 2026-11-26, 5d
@@ -202,14 +202,14 @@ Cada sprint responde a **una pregunta del cliente** y termina en **un reto**.
 
 | # | Fechas | Pregunta del cliente | Reto que entregas |
 |---|---|---|---|
-| **4** | 28–29/10 | ¿Cómo automatizamos lo que hicimos a mano? | Herramientas internas |
-| **5** | 30/10 y 3/11 | ¿Podemos demostrar con código lo que vimos en teoría? | ¿La ocupación depende de esto? |
-| **6** | 4–5/11 | ¿Están los datos en condiciones de entrenar algo fiable? | Datos sucios, cliente impaciente |
-| **7** | 6 y 9/11 | ¿Podemos predecir el precio o la cancelación? | Precio y cancelación |
-| **8** | 10–11/11 | ¿Cuál es el mejor modelo y cuánto cuesta mantenerlo? | Duelo de modelos |
-| **9** | 12–13/11 | ¿Qué tipos de cliente tenemos y qué les ofrecemos? | Conocer al huésped |
-| **10** | 16–17/11 | ¿Una red neuronal mejora al ML clásico y a qué precio? | ¿Vale la pena la red? |
-| **11** | 18–20/11 | ¿Podemos aprovechar las imágenes del cliente? | Visión artificial para el cliente |
+| **4** | 3–4/11 | ¿Cómo automatizamos lo que hicimos a mano? | Herramientas internas |
+| **5** | 4–5/11 | ¿Podemos demostrar con código lo que vimos en teoría? | ¿La ocupación depende de esto? |
+| **6** | 6 y 9/11 | ¿Están los datos en condiciones de entrenar algo fiable? | Datos sucios, cliente impaciente |
+| **7** | 10–11/11 | ¿Podemos predecir el precio o la cancelación? | Precio y cancelación |
+| **8** | 11–12/11 | ¿Cuál es el mejor modelo y cuánto cuesta mantenerlo? | Duelo de modelos |
+| **9** | 13 y 16/11 | ¿Qué tipos de cliente tenemos y qué les ofrecemos? | Conocer al huésped |
+| **10** | 17–18/11 | ¿Una red neuronal mejora al ML clásico y a qué precio? | ¿Vale la pena la red? |
+| **11** | 19–20/11 | ¿Podemos aprovechar las imágenes del cliente? | Visión artificial para el cliente |
 | **12** | 23–25/11 | ¿Qué dicen los clientes y qué pasará mañana? | Escuchar al cliente |
 | **13** | 25/11 (dentro del 12) | ¿Cómo enseñamos y defendemos los resultados? | Informe visual para dirección |
 
@@ -282,8 +282,8 @@ El resultado final es **Apto / No Apto**. Se evalúa con cuatro instrumentos:
 |---|---|---|---|
 | M1a · Fundamentos de IA | vie 23/10 | S02 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) |
 | Bloque M6–M8 · SQL, AutoML e IA responsable | mar 27/10 | S03 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) |
-| M3 · parte 1 (UD 3.1–3.4) | lun 9/11 | S07 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) |
-| M3 · parte 2 (UD 3.5–3.8) | mié 11/11 | S08 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) |
+| M3 · parte 1 (UD 3.1–3.4) | mié 11/11 | S07 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) |
+| M3 · parte 2 (UD 3.5–3.8) | jue 12/11 | S08 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) |
 | M4 · Redes neuronales | mié 25/11 | S12 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) |
 
 

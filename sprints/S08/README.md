@@ -1,7 +1,7 @@
 # README Sprint S08 · Árboles, ensembles y SVM
 
 **Pregunta guía:** ¿cuál es el mejor modelo y cuánto nos cuesta mantenerlo?
-**Fechas:** 10–11 de noviembre · **Horas:** 12 h (3 h teoría · 4 h práctica guiada · 5 h PBL)
+**Fechas:** 11–12 de noviembre · **Horas:** 9 h (2 h teoría · 3 h práctica · 4 h PBL)
 
 📄 **Este README en PDF:** [a color](README_Sprint_08.pdf) · [ecofriendly, para imprimir](README_Sprint_08_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
@@ -61,25 +61,20 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Duelo de modelos» y pesos de los criterios (la «voz del cliente») | 10 min |
-| 2 | 📖 Teoría | [Árboles de decisión](presentaciones/S08.1_Arboles_de_decision.pdf) | 15 min |
-| 3 | 💻 Práctica | [Árbol de decisión: reglas, poda e importancia](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) | 35 min |
-| 4 | 📖 Teoría | [Ensembles: Random Forest y *boosting*](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | 20 min |
-| 5 | 💻 Práctica | [Random Forest: bagging, OOB e importancia por permutación](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) | 40 min |
-| 6 | 💻 Práctica | [Gradient Boosting, XGBoost y LightGBM](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) | 45 min |
-| 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
-| 8 | 🎯 Reto | [Primeros modelos en el *leaderboard* (*baseline*, logística, árbol y bosque; pasos 1–2)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) | 25 min |
+| 2 | 📖 Teoría | [Árboles de decisión](presentaciones/S08.1_Arboles_de_decision.pdf) | 25 min |
+| 3 | 💻 Práctica | [Árbol de decisión: reglas, poda e importancia (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_01_arboles_decision.ipynb) | 30 min |
+| 4 | 📖 Teoría | [Ensembles: Random Forest y *boosting*](presentaciones/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | 25 min |
 
 **Día 2 del S08**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 9 | 📖 Teoría | [Máquinas de vectores de soporte (SVM)](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) | 15 min |
-| 10 | 💻 Práctica | [SVM: margen, kernels, `C` y `gamma`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_04_svm.ipynb) | 30 min |
-| 11 | 💻 Práctica | [`GridSearchCV` y `RandomizedSearchCV`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_05_busqueda_hiperparametros.ipynb) | 30 min |
-| 12 | 🎯 Reto | [Búsqueda de hiperparámetros para una familia, la que elijáis (paso 3)](Reto_S08/Reto_Sprint_08.md) | 25 min |
-| 13 | 🎯 Reto | [Sensibilidad de los pesos, elegir el campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5)](Reto_S08/Reto_Sprint_08.md) | 40 min |
-| 14 | 📝 Test | [**Test de M3 (parte 2)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | 25 min |
-| 15 | 🔔 Ceremonia | Entrega en `sprint-08/`, autoevaluación y coevaluación, review y retrospectiva | 35 min |
+| 5 | 📖 Teoría | [Máquinas de vectores de soporte (SVM), versión corta](presentaciones/S08.3_Maquinas_de_vectores_de_soporte.pdf) | 10 min |
+| 6 | 💻 Práctica | [Random Forest: bagging, OOB e importancia por permutación (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_02_random_forest.ipynb) | 30 min |
+| 7 | 💻 Práctica | [Gradient Boosting, XGBoost y LightGBM (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_03_boosting_xgboost_lightgbm.ipynb) | 30 min |
+| 8 | 🎯 Reto | [*Leaderboard* (*baseline*, logística, árbol y bosque), búsqueda de hiperparámetros para una familia, sensibilidad de los pesos, campeón, test **una sola vez**, ficha del modelo y README (pasos 1–5)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/notebooks/S08_06_leaderboard_plantilla.ipynb) | 1 h 10 min |
+| 9 | 📝 Test | [**Test de M3 (parte 2)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | 25 min |
+| 10 | 🔔 Ceremonia | Entrega en `sprint-08/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 7 y 8 | 35 min |
 
 <!--orden:fin-->
 
@@ -109,7 +104,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 **Se valora:** corrección técnica, reproducibilidad, comunicación al cliente e IA responsable (usos no previstos, deriva, país de origen), más campeón justificado con rendimiento, explicabilidad y coste.
 
 ## ✅ Antes de cerrar el sprint
-- [ ] Test de conocimientos hecho el mié 11/11
+- [ ] Test de conocimientos hecho el jue 12/11
 - [ ] Notebook ejecutable de principio a fin (`Restart & Run all`)
 - [ ] Leaderboard con ≥ 6 modelos de al menos 4 familias
 - [ ] Hiperparámetros buscados con validación cruzada en train para dos familias

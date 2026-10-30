@@ -1,7 +1,7 @@
 # README Sprint S06 · Datos listos para modelar
 
 **Pregunta guía:** ¿están los datos en condiciones de entrenar algo fiable?
-**Fechas:** 4–5 de noviembre · **Horas:** 12 h (4 h teoría · 4 h práctica guiada · 4 h PBL)
+**Fechas:** 6 y 9 de noviembre · **Horas:** 12 h (3 h teoría · 5 h práctica · 4 h PBL)
 
 📄 **Este README en PDF:** [a color](README_Sprint_06.pdf) · [ecofriendly, para imprimir](README_Sprint_06_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
@@ -57,23 +57,23 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Datos sucios, cliente impaciente» y reparto de roles | 10 min |
-| 2 | 📖 Teoría | [Datos, pandas y visualización exploratoria](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 15 min |
-| 3 | 💻 Práctica | [pandas, EDA y primer chequeo de calidad](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) | 45 min |
+| 2 | 📖 Teoría | [Datos, pandas y visualización exploratoria](presentaciones/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 30 min |
+| 3 | 💻 Práctica | [pandas, EDA y primer chequeo de calidad (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_01_pandas_eda.ipynb) | 35 min |
 | 4 | 🎯 Reto | [Arrancar el inventario de defectos del fichero sucio (pasos 1–2)](Reto_S06/Reto_Sprint_06.md) | 30 min |
-| 5 | 📖 Teoría | [Limpieza y preprocesado](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | 20 min |
-| 6 | 💻 Práctica | [Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) | 55 min |
-| 7 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 25 min |
+| 5 | 📖 Teoría | [Limpieza y preprocesado](presentaciones/S06.2_Limpieza_y_preprocesado.pdf) | 30 min |
+| 6 | 💻 Práctica | [Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_02_limpieza.ipynb) | 40 min |
+| 7 | 💻 Práctica | Terminad los cuadernos pendientes y poneos al día | 25 min |
 
 **Día 2 del S06**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 8 | 💻 Práctica | [Escalado, codificación, `ColumnTransformer` y `Pipeline`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) | 40 min |
+| 8 | 💻 Práctica | [Escalado, codificación, `ColumnTransformer` y `Pipeline` (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_03_preprocesado_pipeline.ipynb) | 35 min |
 | 9 | 🎯 Reto | [Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4)](Reto_S06/Reto_Sprint_06.md) | 35 min |
-| 10 | 📖 Teoría | [scikit-learn: métricas y validación](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | 15 min |
-| 11 | 💻 Práctica | [*Baseline*, métricas, validación cruzada y fuga de datos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) | 45 min |
-| 12 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
-| 13 | 🎯 Reto | [Informe, README y ensayo (paso 5)](Reto_S06/Reto_Sprint_06.md) | 20 min |
+| 10 | 📖 Teoría | [scikit-learn: métricas y validación](presentaciones/S06.3_scikit_learn_metricas_y_validacion.pdf) | 30 min |
+| 11 | 💻 Práctica | [*Baseline*, métricas, validación cruzada y fuga de datos (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/notebooks/S06_04_metricas_validacion.ipynb) | 35 min |
+| 12 | 🎯 Reto | [Informe, README y ensayo (paso 5)](Reto_S06/Reto_Sprint_06.md) | 20 min |
+| 13 | 💻 Práctica | Terminad los cuadernos pendientes y poneos al día | 10 min |
 | 14 | 🔔 Ceremonia | Entrega en `sprint-06/`, autoevaluación y coevaluación, review y retrospectiva | 35 min |
 
 <!--orden:fin-->

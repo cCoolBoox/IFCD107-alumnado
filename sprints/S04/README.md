@@ -1,7 +1,7 @@
 # README Sprint S04 · Python para IA
 
 **Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?
-**Fechas:** 28–29/10 · **Horas:** 12 h (3 h teoría · 5 h práctica · 4 h PBL)
+**Fechas:** 3–4 de noviembre · **Horas:** 9 h (2 h teoría · 4 h práctica · 3 h PBL)
 
 📄 **Este README en PDF:** [a color](README_Sprint_04.pdf) · [ecofriendly, para imprimir](README_Sprint_04_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
@@ -58,20 +58,19 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Herramientas internas» | 10 min |
-| 2 | 📖 Teoría | [Python: entorno (venv, pip, Jupyter, Git) y lenguaje](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) | 20 min |
-| 3 | 💻 Práctica | [Entorno, variables, tipos, `if`, `for` y `while`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) | 45 min |
-| 4 | 💻 Práctica | [Funciones, `*args`, `lambda` y módulos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) | 45 min |
-| 5 | 💻 Práctica | [Listas, tuplas, diccionarios y conjuntos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) | 45 min |
-| 6 | 💻 Práctica | [CSV, JSON y `try`/`except` (prepara `leer_reservas`)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_04_ficheros_excepciones.ipynb) | 35 min |
+| 2 | 📖 Teoría | [Python: entorno (venv, pip, Jupyter, Git) y lenguaje](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) | 30 min |
+| 3 | 💻 Práctica | [Entorno, variables, tipos, `if`, `for` y `while` (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) | 30 min |
+| 4 | 💻 Práctica | [Funciones, `*args`, `lambda` y módulos (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) | 30 min |
+| 5 | 📖 Teoría | [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | 30 min |
+| 6 | 💻 Práctica | [Listas, tuplas, diccionarios y conjuntos (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) | 30 min |
+| 7 | 💻 Práctica | [CSV, JSON y `try`/`except` (prepara `leer_reservas`; los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_04_ficheros_excepciones.ipynb) | 40 min |
 
 **Día 2 del S04**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 7 | 📖 Teoría | [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | 20 min |
-| 8 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 10 min |
-| 9 | 🎯 Reto | [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar el programa → probar que no se rompe → README y Git (pasos 1–5)](Reto_S04/Reto_Sprint_04.md) | 2 h 10 min |
-| 10 | 🔔 Ceremonia | Entrega en `sprint-04/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
+| 8 | 🎯 Reto | [Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar → probar que no se rompe → README y Git (pasos 1–5, versión mínima)](Reto_S04/Reto_Sprint_04.md) | 1 h 40 min |
+| 9 | 🔔 Ceremonia | Entrega en `sprint-04/` y autoevaluación y coevaluación del Sprint 4 (la review y la retro se hacen junto con las del Sprint 5) | 15 min |
 
 <!--orden:fin-->
 

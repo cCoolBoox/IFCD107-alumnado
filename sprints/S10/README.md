@@ -1,7 +1,7 @@
 # README Sprint S10 · Redes neuronales bien entrenadas
 
 **Pregunta guía:** ¿una red neuronal mejora al aprendizaje automático clásico y a qué precio?
-**Fechas:** 16–17 de noviembre · **Horas:** 12 h (4 h teoría · 4 h práctica · 4 h PBL)
+**Fechas:** 17–18 de noviembre · **Horas:** 12 h (3 h teoría · 5 h práctica · 4 h PBL)
 
 📄 **Este README en PDF:** [a color](README_Sprint_10.pdf) · [ecofriendly, para imprimir](README_Sprint_10_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
@@ -60,20 +60,20 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «¿Vale la pena la red?» y reparto de roles | 10 min |
-| 2 | 📖 Teoría | [Fundamentos de redes neuronales](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | 20 min |
-| 3 | 💻 Práctica | [Una red neuronal con solo NumPy](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) | 40 min |
-| 4 | 📖 Teoría | [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | 20 min |
-| 5 | 💻 Práctica | [MLP en Keras: clasificación y regresión](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) | 1 h |
-| 6 | 💻 Práctica | Terminad los cuadernos pendientes, incluido el apartado «en casa», y poneos al día | 30 min |
-| 7 | 📖 Teoría | [Entrenamiento y regularización (primera parte: diapositivas 1–3)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 20 min |
+| 2 | 📖 Teoría | [Fundamentos de redes neuronales](presentaciones/S10.1_Fundamentos_de_redes_neuronales.pdf) | 25 min |
+| 3 | 💻 Práctica | [Una red neuronal con solo NumPy (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_01_red_desde_cero.ipynb) | 35 min |
+| 4 | 📖 Teoría | [Redes densas con Keras](presentaciones/S10.2_Redes_densas_con_Keras.pdf) | 25 min |
+| 5 | 💻 Práctica | [MLP en Keras: clasificación y regresión (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_02_mlp_keras.ipynb) | 40 min |
+| 6 | 📖 Teoría | [Entrenamiento y regularización (diapositivas 1–5; las 6–7 son del reto)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 30 min |
+| 7 | 💻 Práctica | Terminad los cuadernos pendientes y poneos al día | 35 min |
 
 **Día 2 del S10**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 8 | 📖 Teoría | [Entrenamiento y regularización (final: parada temprana y *callbacks*, diapositivas 4–5; las 6–7 son del reto)](presentaciones/S10.3_Entrenamiento_y_regularizacion.pdf) | 15 min |
-| 9 | 💻 Práctica | [Sobreajuste, L2, *dropout*, parada temprana y *callbacks*](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) | 55 min |
-| 10 | 🎯 Reto | Esqueleto [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb): elegir el problema y reproducir la referencia (paso 1) → primera red (2) → diagnosticar el sobreajuste (3) → comparación justa (4) → informe y presentación (5) | 1 h 30 min |
+| 8 | 💻 Práctica | [Sobreajuste, L2, *dropout*, parada temprana y *callbacks* (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_03_regularizacion.ipynb) | 35 min |
+| 9 | 🎯 Reto | Esqueleto [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/notebooks/S10_04_reto_vale_la_pena.ipynb): elegir el problema y reproducir la referencia (paso 1) → primera red (2) → diagnosticar el sobreajuste (3) → comparación justa (4) → informe y presentación (5) | 1 h 30 min |
+| 10 | 💻 Práctica | Terminad los cuadernos pendientes y poneos al día | 35 min |
 | 11 | 🔔 Ceremonia | Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
 
 <!--orden:fin-->

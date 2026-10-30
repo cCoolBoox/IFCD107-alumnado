@@ -18,11 +18,11 @@ Este temario sigue el orden de impartición de `distribucion_historico.md`: Bloq
 | A | M8 | Responsible AI | 5 | 23–26/10 |
 | A | SS1 | Softskills: Scrum | 4 | 26–27/10 |
 | A | SS2 | Softskills: Design Thinking | 3 | 27/10 |
-| B | M1b | Python + mates/estadística aplicadas | 22 | 27/10–3/11 |
-| B | M6b | CRUD desde Python | 1 | 3/11 |
-| B | M2 | Exploración del conjunto de datos | 5 | 3–4/11 |
-| B | M3 | Algoritmos de Machine Learning | 40 | 4–12/11 |
-| B | M4 | Redes Neuronales | 50 | 13–25/11 |
+| B | M1b | Python + mates/estadística aplicadas | 22 | 3–5/11 |
+| B | M6b | CRUD desde Python | 1 | 5/11 |
+| B | M2 | Exploración del conjunto de datos | 5 | 6/11 |
+| B | M3 | Algoritmos de Machine Learning | 40 | 6–16/11 |
+| B | M4 | Redes Neuronales | 50 | 17–25/11 |
 | B | M5 | Visualización de resultados | 3 | 25/11 |
 | C | M9 | Caso práctico en IA (proyecto) | 60 | 25/11–14/12 |
 | C | SS3 | Softskills: Storytelling | 3 | 11/12 |
@@ -319,8 +319,8 @@ Estructura provisional (el diseño detallado del proyecto está pendiente):
 |---|---|---|---|
 | M1a · Fundamentos de IA | vie 23/10 | S02 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) |
 | Bloque M6–M8 · SQL, AutoML e IA responsable | mar 27/10 | S03 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) |
-| M3 · parte 1 (UD 3.1–3.4) | lun 9/11 | S07 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) |
-| M3 · parte 2 (UD 3.5–3.8) | mié 11/11 | S08 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) |
+| M3 · parte 1 (UD 3.1–3.4) | mié 11/11 | S07 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) |
+| M3 · parte 2 (UD 3.5–3.8) | jue 12/11 | S08 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) |
 | M4 · Redes neuronales | mié 25/11 | S12 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) |
 
 
