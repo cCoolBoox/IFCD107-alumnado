@@ -62,23 +62,22 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Precio y cancelación» y reparto de roles | 10 min |
-| 2 | 📖 Teoría | [Regresión lineal, polinómica y regularización (Ridge y Lasso)](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) | 30 min |
-| 3 | 💻 Práctica | [Regresión lineal y polinómica (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_01_regresion_lineal_polinomica.ipynb) | 30 min |
-| 4 | 💻 Práctica | [Ridge y Lasso (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_02_ridge_lasso.ipynb) | 30 min |
-| 5 | 📖 Teoría | [Regresión logística y clasificación](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf) | 25 min |
-| 6 | 💻 Práctica | [Regresión logística (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_03_regresion_logistica.ipynb) | 35 min |
-| 7 | 🎯 Reto | [Acordar las hipótesis de coste y hacer la regresión del precio (pasos 1–2)](Reto_S07/Reto_Sprint_07.md) | 30 min |
-| 8 | 💻 Práctica | Terminad los cuadernos pendientes y poneos al día | 10 min |
+| 2 | 📖 Teoría | [Regresión lineal, polinómica y regularización (Ridge y Lasso)](presentaciones/S07.1_Regresion_lineal_polinomica_y_regularizacion.pdf) | 25 min |
+| 3 | 💻 Práctica | [Regresión lineal y polinómica (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_01_regresion_lineal_polinomica.ipynb) | 40 min |
+| 4 | 💻 Práctica | [Ridge y Lasso (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_02_ridge_lasso.ipynb) | 35 min |
+| 5 | 📖 Teoría | [Regresión logística y clasificación](presentaciones/S07.2_Regresion_logistica_y_clasificacion.pdf) | 20 min |
+| 6 | 💻 Práctica | [Regresión logística (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_03_regresion_logistica.ipynb) | 45 min |
+| 7 | 🎯 Reto | [Acordar las hipótesis de coste y hacer la regresión del precio (pasos 1–2)](Reto_S07/Reto_Sprint_07.md) | 25 min |
 
 **Día 2 del S07**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 9 | 💻 Práctica | [ROC, PR y datos desbalanceados (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_04_roc_pr_desbalance.ipynb) | 25 min |
-| 10 | 📖 Teoría | [k-NN y Naive Bayes](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf) | 10 min |
-| 11 | 🎯 Reto | [Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5)](Reto_S07/Reto_Sprint_07.md) | 35 min |
-| 12 | 📝 Test | [**Test de M3 (parte 1)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | 25 min |
-| 13 | 🔔 Ceremonia | Entrega en `sprint-07/` y autoevaluación y coevaluación del Sprint 7 (la review y la retro se hacen junto con las del Sprint 8) | 15 min |
+| 8 | 💻 Práctica | [ROC, PR y datos desbalanceados (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/notebooks/S07_04_roc_pr_desbalance.ipynb) | 25 min |
+| 9 | 📖 Teoría | [k-NN y Naive Bayes](presentaciones/S07.3_k_NN_y_Naive_Bayes.pdf) | 10 min |
+| 10 | 🎯 Reto | [Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5)](Reto_S07/Reto_Sprint_07.md) | 30 min |
+| 11 | 📝 Test | [**Test de M3 (parte 1)**, solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | 25 min |
+| 12 | 🔔 Ceremonia | Entrega en `sprint-07/` y autoevaluación y coevaluación del Sprint 7 (la review y la retro se hacen junto con las del Sprint 8) | 15 min |
 
 <!--orden:fin-->
 

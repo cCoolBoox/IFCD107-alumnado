@@ -67,34 +67,33 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Escuchar al cliente» y reparto de las cinco áreas | 10 min |
-| 2 | 📖 Teoría | [RNN, LSTM, GRU y series temporales](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | 25 min |
-| 3 | 💻 Práctica | [Series temporales: *baselines*, descomposición y SARIMAX (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) | 30 min |
-| 4 | 💻 Práctica | [RNN, LSTM y GRU frente al *baseline* (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) | 30 min |
+| 2 | 📖 Teoría | [RNN, LSTM, GRU y series temporales](presentaciones/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | 20 min |
+| 3 | 💻 Práctica | [Series temporales: *baselines*, descomposición y SARIMAX (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_01_series_temporales.ipynb) | 45 min |
+| 4 | 💻 Práctica | [RNN, LSTM y GRU frente al *baseline* (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_02_redes_recurrentes.ipynb) | 45 min |
 | 5 | 📖 Teoría | [NLP clásico y embeddings](presentaciones/S12.2_NLP_clasico_y_embeddings.pdf) | 25 min |
-| 6 | 💻 Práctica | [Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) | 35 min |
-| 7 | 💻 Práctica | Terminad los cuadernos pendientes y poneos al día | 45 min |
+| 6 | 💻 Práctica | [Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_03_nlp_clasico.ipynb) | 55 min |
 
 **Día 2 del S12**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 8 | 📖 Teoría | [Transformers y LLM](presentaciones/S12.3_Transformers_y_LLM.pdf) | 30 min |
-| 9 | 💻 Práctica | [Tokens, atención paso a paso y temperatura (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) | 30 min |
-| 10 | 💻 Práctica | [Mini RAG con la política, evaluación y seguridad (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) | 35 min |
-| 11 | 📖 Teoría | [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | 10 min |
-| 12 | 🎯 Reto | [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](Reto_S12/Reto_Sprint_12.md) | 1 h 5 min |
-| 13 | 💻 Práctica | Terminad los cuadernos pendientes y poneos al día | 30 min |
+| 7 | 📖 Teoría | [Transformers y LLM](presentaciones/S12.3_Transformers_y_LLM.pdf) | 30 min |
+| 8 | 💻 Práctica | [Tokens, atención paso a paso y temperatura (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_05_transformers_atencion.ipynb) | 40 min |
+| 9 | 💻 Práctica | [Mini RAG con la política, evaluación y seguridad (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/notebooks/S12_06_mini_rag.ipynb) | 45 min |
+| 10 | 📖 Teoría | [Autoencoders y modelos generativos](presentaciones/S12.4_Autoencoders_y_modelos_generativos.pdf) | 10 min |
+| 11 | 🎯 Reto | [Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2)](Reto_S12/Reto_Sprint_12.md) | 1 h 5 min |
+| 12 | 💻 Práctica | Terminad los cuadernos pendientes y poneos al día | 10 min |
 
 **Día 3 del S12**
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 14 | 🎯 Reto | [Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4)](Reto_S12/Reto_Sprint_12.md) | 1 h 5 min |
-| 15 | 📝 Test | [**Test de M4** (redes neuronales), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 min |
-| 16 | 📖 Teoría | [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | 10 min |
-| 17 | 💻 Práctica | [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) | 35 min |
-| 18 | 🎯 Reto | [Reto del Sprint 13](../S13/Reto_S13/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/Reto_S13/plantilla_informe_visual.md) | 25 min |
-| 19 | 🔔 Ceremonia | Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva | 35 min |
+| 13 | 🎯 Reto | [Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4)](Reto_S12/Reto_Sprint_12.md) | 1 h 5 min |
+| 14 | 📝 Test | [**Test de M4** (redes neuronales), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 min |
+| 15 | 📖 Teoría | [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](../S13/presentaciones/S13.1_Visualizar_y_comunicar_resultados.pdf) | 10 min |
+| 16 | 💻 Práctica | [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_01_visualizacion_resultados.ipynb) | 35 min |
+| 17 | 🎯 Reto | [Reto del Sprint 13](../S13/Reto_S13/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/notebooks/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](../S13/Reto_S13/plantilla_informe_visual.md) | 25 min |
+| 18 | 🔔 Ceremonia | Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva | 35 min |
 
 <!--orden:fin-->
 
