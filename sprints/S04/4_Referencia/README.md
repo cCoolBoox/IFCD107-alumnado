@@ -1,3 +1,3 @@
 # 4 · Referencia
 
-No hace falta abrirla el primer día: guía del sprint y README en PDF, e `infografias/` del sprint.
+No hace falta abrirla el primer día: aquí están las infografías del sprint (`infografias/`). El README del sprint y sus PDF están en la carpeta principal del sprint y en `pdf/`.
