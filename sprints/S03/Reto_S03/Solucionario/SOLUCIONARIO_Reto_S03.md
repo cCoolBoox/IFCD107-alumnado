@@ -69,6 +69,12 @@ Una alerta se da cuando la probabilidad ≥ umbral. Hay dos formas de equivocars
 
 **Son supuestos razonados, no cifras del cliente: hay que validarlos con TurisData.** Si cambian, cambia el umbral (ver más abajo, «¿Y si los importes fueran otros?»).
 
+**Quién decide cada cosa:**
+- **El 60 % que se recupera al revender** es un dato **del negocio** (cuántas veces se consigue revender y a qué precio según la ocupación y la antelación). Lo aporta o lo confirma **TurisData**, con su historial de reventas; el equipo técnico solo lo estima si no lo tiene.
+- **El 10 % de descuento** es una **política comercial**: decide **dirección o quien gestione los precios en TurisData**. El equipo técnico no puede decidir cuánto se regala, solo calcular qué pasa con cada opción.
+- **El equipo técnico** propone los importes, **escribe sus supuestos** y calcula el umbral. **Nunca los da por buenos él solo**, ni deja que lo decida la IA.
+- **En este solucionario** los dos porcentajes son una propuesta del docente para ilustrar el cálculo, y por eso se pueden y se deben debatir.
+
 Umbral teórico = 60 / (60 + 225) = **0,21**. Lo comprobamos con los datos de prueba:
 
 | Umbral | Alertas | No previstas | Alertas falsas | Coste (€) |
@@ -365,7 +371,7 @@ Depósito: sin depósito 54,0 % (3.292 reservas), parcial 40,9 % (1.799), total 
 3. **«Avisar a todos» queda a solo un 6,3 % del modelo.** ¿En qué casos compensa el modelo y en cuáles no? ¿Cuánto debería costar una alerta falsa para que no compense?
 4. **Con el umbral 0,20 se avisa a 87 de cada 100 reservas.** ¿Es una «alerta» útil o es ruido? ¿Preferís el 20 % de más riesgo?
 5. **El mínimo de coste está en 0,15 y elegimos 0,20.** ¿Es razonable perder 225 € por 58 alertas menos? ¿Qué criterio usaríais vosotros?
-6. **Los 225 € y 60 € salen de suponer que se recupera el 60 % del ingreso y de un 10 % de descuento.** ¿Qué supuestos cambiaríais? ¿Cómo los validaríais con el cliente?
+6. **Los 225 € y 60 € salen de suponer que se recupera el 60 % del ingreso y de un 10 % de descuento.** ¿Quién debería decidir cada porcentaje en un caso real? ¿Qué supuestos cambiaríais y cómo los validaríais con el cliente?
 7. **El modelo avisa mucho más a las reservas de intermediarias que a las directas (96 % frente a 66 %).** ¿Es un sesgo injusto o un reflejo de los datos? ¿Qué se debería prohibir hacer con la alerta?
 8. **Reservas sin país: 32 % cancelan, 91 % reciben alerta.** ¿Qué haríais con los datos que faltan?
 9. **El depósito baja la cancelación del 54 % al 26 %.** ¿Es una medida mejor que cualquier modelo? ¿Qué haríais primero?
