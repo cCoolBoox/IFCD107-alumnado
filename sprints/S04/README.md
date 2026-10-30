@@ -58,10 +58,10 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 🔔 Ceremonia | Planning del reto «Herramientas internas» | 10 min |
-| 2 | 📖 Teoría | [Python: entorno (venv, pip, Jupyter, Git) y lenguaje](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) | 30 min |
-| 3 | 💻 Práctica | [Entorno, variables, tipos, `if`, `for` y `while` (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) | 30 min |
-| 4 | 💻 Práctica | [Funciones, `*args`, `lambda` y módulos (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) | 30 min |
-| 5 | 📖 Teoría | [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | 30 min |
+| 2 | 📖 Teoría | [Python: entorno (venv, pip, Jupyter, Git) y lenguaje](presentaciones/S04.1_Python_entorno_y_lenguaje.pdf) | 25 min |
+| 3 | 💻 Práctica | [Entorno, variables, tipos, `if`, `for` y `while` (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_01_entorno_sintaxis.ipynb) | 35 min |
+| 4 | 💻 Práctica | [Funciones, `*args`, `lambda` y módulos (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_02_funciones_modulos.ipynb) | 35 min |
+| 5 | 📖 Teoría | [Estructuras de datos, funciones, ficheros, excepciones y POO](presentaciones/S04.2_Python_estructuras_funciones_y_POO.pdf) | 25 min |
 | 6 | 💻 Práctica | [Listas, tuplas, diccionarios y conjuntos (los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_03_estructuras_datos.ipynb) | 30 min |
 | 7 | 💻 Práctica | [CSV, JSON y `try`/`except` (prepara `leer_reservas`; los ejercicios marcados «en clase»)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/notebooks/S04_04_ficheros_excepciones.ipynb) | 40 min |
 
