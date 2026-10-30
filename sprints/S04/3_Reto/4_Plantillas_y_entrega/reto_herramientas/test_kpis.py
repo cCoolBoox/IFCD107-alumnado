@@ -144,7 +144,8 @@ def test_exportar_json_y_main():
 
 def _ruta_datos_reales():
     for candidata in ("reservas_turisdata.csv", os.path.join("datos", "reservas_turisdata.csv"),
-                      os.path.join("..", "..", "..", "datos", "reservas_turisdata.csv")):
+                      os.path.join("..", "..", "..", "datos", "reservas_turisdata.csv"),
+                      os.path.join("..", "..", "..", "..", "..", "datos", "reservas_turisdata.csv")):
         if os.path.exists(candidata):
             return candidata
     return None
