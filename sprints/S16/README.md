@@ -89,6 +89,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_16_
 - [ ] Rendimiento por subgrupos y mitigación aplicada y medida.
 - [ ] Registro de riesgos cerrado; demostrador probado desde cero, con vídeo plan B.
 - [ ] README reproducible probado por otra persona; model card y memoria en `docs/`.
+- [ ] La **coevaluación confidencial** (anexo B de la memoria) entregada al docente: no se sube al repositorio, a diferencia de la hoja de autoevaluación y coevaluación
 - [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Ficha_completa/Reto_Sprint_16.md#rúbrica-del-reto--cómo-se-puntúa-y-cómo-se-revisa) y lo ha anotado en el propio entregable
 
 ## En casa (cuando puedas)

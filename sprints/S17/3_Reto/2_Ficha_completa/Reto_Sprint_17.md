@@ -105,9 +105,9 @@ Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y c
 
 ### 4 · 🪜 Guía paso a paso
 
-Son cinco pasos: **6 horas el día 1 y 2 horas el día 2**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, asegurad el nivel mínimo y dejad lo demás para el siguiente ensayo.
+Son cinco pasos: **3 h 20 min el día 1 y 2 horas el día 2**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, asegurad el nivel mínimo y dejad lo demás para el siguiente ensayo.
 
-#### Paso 1 · Teoría de storytelling (día 1, 60 minutos)
+#### Paso 1 · Teoría de storytelling (día 1, 20 minutos)
 1. Escuchar la estructura de una buena historia: audiencia, mensaje, orden de las ideas.
 2. Tomar notas **pensando en vuestro proyecto**, no en uno cualquiera.
 3. Leer juntos los apuntes y repartir quién cuenta qué parte del relato.
@@ -121,7 +121,7 @@ Son cinco pasos: **6 horas el día 1 y 2 horas el día 2**. Cada uno dice **qué
 
 **Hecho cuando:** cada persona sabe explicar con sus palabras qué es un mensaje único, una pirámide y un arco narrativo, y el equipo ha dicho en voz alta quién es su audiencia.
 
-#### Paso 2 · Construir el relato (día 1, 120 minutos)
+#### Paso 2 · Construir el relato (día 1, 85 minutos)
 1. Rellenar la plantilla de storytelling, de arriba abajo: audiencia, mensaje único, pirámide y arco narrativo.
 2. Dibujar el storyboard: un máximo de 12 diapositivas, cada una con su título-conclusión.
 3. Escribir quién habla en cada parte, de modo que hablen todas las personas.
@@ -143,20 +143,19 @@ Son cinco pasos: **6 horas el día 1 y 2 horas el día 2**. Cada uno dice **qué
 
 **Hecho cuando:** pasáis la comprobación final de la plantilla (apartado 8): el mensaje se entiende en 20 segundos, cada título se entiende sin oír al orador y todas las personas tienen turno. Con eso ya podéis hacer las diapositivas.
 
-#### Paso 3 · Tres rondas de ensayo (día 1, 180 minutos)
+#### Paso 3 · Tres rondas de ensayo (día 1, 95 minutos)
 1. Hacer las diapositivas y probar la demo; grabar el vídeo del plan B.
 2. Ensayar tres veces: con cronómetro, con preguntas de otro equipo y como el día real.
 3. Después de cada ronda, escribir dos cosas que mejorar y arreglar solo eso.
 4. Preparar las 10 preguntas más probables, con su respuesta y quién responde.
 
-**Cómo se hace.** Los tiempos de cada ronda son los del [guion de defensa](../../1_Teoria/actividades/guion_defensa.md) (suman 180 minutos). Compartid la versión del ensayo de las diapositivas con quien os escuche.
+**Cómo se hace.** Las rondas siguen el [guion de defensa](../../1_Teoria/actividades/guion_defensa.md), pero en el calendario de este día caben **95 minutos**, así que usad estos tiempos y hacedlas más cortas. Compartid la versión del ensayo de las diapositivas con quien os escuche.
 
 | Ronda | Cómo | Qué se mira | Minutos |
 |---|---|---|---|
-| **1** | Solo el equipo, **cronometrada y con demo** | ¿Cabe en el tiempo? ¿La demo funciona? ¿Quién habla cuándo? | 30 |
-| **2** | Otro equipo hace de tribunal y os hace **preguntas** | ¿Respondemos con datos? ¿Quién responde qué? Usad el método RESPONDE de los apuntes | 45 |
-| **3 (ensayo general)** | **Exactamente como el día real**, con el docente | ¿Estamos listos? Anotad lo que cambiáis | 60 |
-| Cambios | Ajustar diapositivas y guion | Una lista de 3 cambios con su responsable | 45 |
+| **1** | Solo el equipo, **cronometrada y con demo** | ¿Cabe en el tiempo? ¿La demo funciona? ¿Quién habla cuándo? | 20 |
+| **2** | Otro equipo hace de tribunal y os hace **preguntas** | ¿Respondemos con datos? ¿Quién responde qué? Usad el método RESPONDE de los apuntes | 35 |
+| **3 (ensayo general)** | **Exactamente como el día real**, con el docente | ¿Estamos listos? Anotad lo que cambiáis | 40 |
 
 - **La demo.** Se prueba hoy, en el ordenador y el proyector que vais a usar. Guion de 4 pasos: abrir la app, una entrada típica, **una entrada errónea** y el aviso de límites. Grabad la pantalla (unos 90 segundos) y dejad ese vídeo como **plan B**.
 - **Las 10 preguntas.** Escribidlas en el apartado 4 del guion con respuesta, dato y responsable. Algunas seguras: ¿Cómo sabéis que el modelo no falla con datos nuevos? ¿Qué pasa si se equivoca y quién lo sufre? ¿Qué datos usasteis y de dónde salen? ¿Qué haríais con más tiempo? ¿Qué recomendáis hacer mañana?

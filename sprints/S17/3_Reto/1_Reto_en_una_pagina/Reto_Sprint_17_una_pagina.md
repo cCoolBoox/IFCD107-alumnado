@@ -4,7 +4,7 @@
 
 **El cliente.** Un directivo y su equipo (el tribunal) **no son técnicos**. Tienen que salir sabiendo: qué problema resolvéis, qué habéis encontrado, qué recomendáis y **de qué no deben fiarse**.
 **Qué entregáis (no cambia):** una presentación en PDF de **12 diapositivas como máximo** (antes de las 8:30 del 14/12), la **defensa en directo** con demo y plan B en vídeo, y la plantilla de storytelling rellena con la revisión con la rúbrica. **Hablan todas las personas.**
-**Tiempo:** día 1, 6 h (teoría, práctica y ensayos) · día 2, 2 h de defensa (turno de 13 a 22 min según los equipos).
+**Tiempo:** día 1, 3 h 20 min (teoría, práctica y ensayos) · día 2, 2 h de defensa (turno de 13 a 22 min según los equipos).
 
 ## Tres niveles: el equipo decide hasta dónde llega
 
@@ -16,15 +16,15 @@
 
 \*Orientativo; puntúa el docente con la rúbrica del curso (0–4 en cada criterio). El mínimo es una entrega válida y evaluable; la «Definition of Done» de la ficha completa describe el nivel **estándar**.
 
-## Reparto sugerido de los 360 minutos del día 1
+## Reparto sugerido del día 1: 200 minutos en clase + 15 de subida
 
 | Min | Qué | Se sabe que está hecho cuando… |
 |---|---|---|
-| 60 | Teoría de storytelling y notas sobre vuestro proyecto | Sabéis explicar mensaje único, pirámide y arco |
-| 120 | Plantilla: audiencia, mensaje, pirámide, arco, storyboard, voces y pitch | El mensaje se entiende en 20 segundos |
-| 30 + 45 | Ronda 1 (cronometrada, con demo) y ronda 2 (preguntas de otro equipo) | Sabéis dos cosas que mejorar tras cada ronda |
-| 60 + 45 | Ensayo general y cambios | Cabéis en el turno y hay plan B grabado |
-| 15 | Exportar el PDF, revisar las cifras y subirlo | PDF subido, 12 diapositivas o menos |
+| 20 | Teoría de storytelling y notas sobre vuestro proyecto | Sabéis explicar mensaje único, pirámide y arco |
+| 85 | Plantilla: audiencia, mensaje, pirámide, arco, storyboard, voces y pitch | El mensaje se entiende en 20 segundos |
+| 20 + 35 | Ronda 1 (cronometrada, con demo) y ronda 2 (preguntas de otro equipo) | Sabéis dos cosas que mejorar tras cada ronda |
+| 40 | Ensayo general con cronómetro | Cabéis en el turno y hay plan B grabado |
+| 15 | Exportar el PDF, revisar las cifras y subirlo (al final del día o en casa, antes de las 8:30) | PDF subido, 12 diapositivas o menos |
 
 El día 2 (120 min) es la defensa de todos los equipos; al acabar, 15 min para la revisión con la rúbrica.
 

@@ -115,7 +115,7 @@ Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y c
 
 ### 4 · 🪜 Guía paso a paso
 
-Son siete pasos, de **600 minutos en total** (tres jornadas). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa. **No tengáis prisa por programar:** en este sprint lo importante es pensar bien.
+Son siete pasos, de **600 minutos en total** (tres jornadas; en el calendario hay unos 465 minutos de reto en clase y el resto va a casa). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa. **No tengáis prisa por programar:** en este sprint lo importante es pensar bien.
 
 #### Paso 1 · Planning, píldora y taller (día 1, 75 minutos)
 1. Leer las reglas del proyecto y repartir los roles del sprint.

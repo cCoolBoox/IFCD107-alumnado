@@ -6,13 +6,13 @@ Los notebooks los descargan solos con la función `dato("archivo")`; no hace fal
 | Archivo | Contenido | Se usa en |
 |---|---|---|
 | `reservas_turisdata.csv` | 6.000 reservas; objetivo `cancelada` | Sprints 3–8, 10, 13 |
-| `reservas_sucio.csv` | 1.500 reservas con defectos de calidad | Sprint 6 |
+| `reservas_sucio.csv` | 1.545 filas con defectos de calidad (1.500 reservas distintas: hay 45 duplicados exactos) | Sprint 6 |
 | `turisdata.db` | Base SQLite: `alojamientos`, `clientes`, `reservas` | Sprints 3 y 5 |
 | **Esquema de `turisdata.db`** | Tablas, campos y relaciones en una imagen: [`esquema_turisdata.md`](../sprints/S03/actividades/esquema_turisdata/esquema_turisdata.md) | Sprints 3 y 5 |
 | `turisdata.sql` | La misma base en **texto SQL**: se importa en DB Browser si `turisdata.db` no se abre bien | Sprints 3 y 5 |
 | `ocupacion_diaria.csv` | Serie diaria 2023–2025 de un alojamiento | Sprints 5 y 12 |
 | `huespedes.csv` | 1.200 huéspedes para segmentar | Sprint 9 |
-| `valoraciones_experiencias.csv`, `experiencias.csv` | Valoraciones y catálogo de 25 experiencias | Sprint 9 |
+| `valoraciones_experiencias.csv`, `experiencias.csv` | 2.232 valoraciones (de los huéspedes 1 a 300) y catálogo de 25 experiencias | Sprint 9 |
 | `resenas.csv` | 1.500 reseñas en español con sentimiento | Sprint 12 |
 | `politica_alojamiento.md`, `preguntas_referencia.csv` | Corpus y preguntas del asistente RAG | Sprint 12 |
 | `informe_cliente.csv`, `informe_cliente.md` | Informe con errores estadísticos para auditar. **Ahora están en [`sprints/S02/Reto_S02/`](../sprints/S02/Reto_S02/)**, junto al resto del material del reto | Sprint 2 |
