@@ -65,13 +65,37 @@ Un único documento (Markdown o PDF, máximo 4 páginas) con tres partes:
 - **Seguridad:** nunca pongáis claves, contraseñas ni cadenas de conexión en el informe ni en repositorios.
 - **Evitar la fuga de datos:** el modelo solo puede usar información disponible en el momento de hacer la reserva.
 
-### Criterios de evaluación (rúbrica del curso, 0–4 en cada criterio)
-| Criterio | Qué se mirará en este reto |
-|---|---|
-| **Corrección técnica** | Partición de datos adecuada, métrica coherente con el problema, comparación de modelos, umbral justificado, la API responde. |
-| **Reproducibilidad** | Otra persona puede repetir el experimento con vuestro informe: datos, ajustes, versiones y pasos. |
-| **Análisis y comunicación al cliente** | Conclusiones claras para alguien no técnico y recomendación accionable: qué hacer con una alerta y con qué límites. |
-| **IA responsable** | Riesgos identificados (datos sintéticos, falsas alertas que perjudican a clientes, sesgos por país o canal) y medidas propuestas. |
+### Rúbrica del reto · cómo se puntúa y cómo se revisa
+La usan **dos veces**: el equipo, para revisar el informe antes de entregar (es lo que dice la *Definition of Done*), y el docente, para puntuar. Se mira **cada criterio por separado** y se pone el nivel cuyo texto **se cumple entero**; si se cumple a medias, es el nivel de abajo. **0** significa que no se ha entregado nada de ese criterio.
+
+Orientación: el **núcleo** del reto bien hecho (mejor modelo con su umbral, llamada al servicio, cierre de recursos e informe con riesgos y recomendación) es un **3**; lo esencial con huecos es un **2**; los **extras** llevan al **4**.
+
+| Criterio | 1 · Empezado | 2 · Con huecos | 3 · Núcleo bien hecho | 4 · Extra |
+|---|---|---|---|---|
+| **Corrección técnica** (¿funciona y está bien planteado?) | Hay un modelo, pero se evaluó con los mismos datos con los que se entrenó, o no hay llamada a la API | Se compararon modelos y la API responde, pero la partición es al azar, no se revisaron las columnas que «delatan» la respuesta o falta la prueba de que se cerraron los recursos | **Partición por fecha**; columnas excluidas explicadas; métrica coherente con el problema; umbral elegido con **vuestros importes** y comparado con «avisar a todos» y «no avisar nunca»; la API devuelve probabilidad y alerta; recursos cerrados **con captura** | Además, compara más modelos o ajustes y explica la diferencia, o prueba que la API avisa bien si faltan datos de la reserva |
+| **Reproducibilidad** (¿lo puede repetir otra persona?) | No se sabe con qué datos ni ajustes se entrenó | Se dice la herramienta y los datos, pero faltan ajustes (versión, preset, límite de tiempo, semilla o partición) | Otra persona puede repetir el experimento con el informe: **datos, versión, ajustes, semilla, partición** y los pasos para publicar el servicio | Además, los ficheros necesarios (cuaderno o script, requisitos) están en el repositorio y el informe dice qué resultado debería salir |
+| **Análisis y comunicación al cliente** (¿lo entiende quien no es técnico?) | Solo cifras o técnica, sin explicar | Explica la métrica y el umbral, pero con palabras que un directivo no entendería | Un directivo entiende qué modelo se eligió, **qué cuesta cada error** y **qué hacer con una alerta y con qué límites**; las tres partes caben en 4 páginas | Además, estima el beneficio en euros frente a no hacer nada y propone cómo medirlo cuando esté en marcha |
+| **IA responsable** (¿se ven los riesgos y las medidas?) | No menciona riesgos | Cita un riesgo (por ejemplo, datos sintéticos) sin medida | **Al menos dos riesgos** (datos sintéticos, falsas alertas que molestan a clientes, sesgos por país o canal), cada uno con **una medida**; sin claves ni datos personales en el informe | Además, comprueba un sesgo con los datos (por ejemplo, falsas alertas por país o canal) y dice qué se haría si saliera desigual; una persona decide siempre ante la alerta |
+
+**Cómo se revisa** (unos 10 minutos, antes de entregar; lo hace **una persona que no escribió esa parte**):
+1. **Contar las partes:** informe del modelo, evidencia de la API e informe de recursos y costes, y que cabe en 4 páginas.
+2. **Leer la parte del modelo con tres preguntas:** ¿se partió por fecha?, ¿se dicen las columnas excluidas y por qué?, ¿la métrica y el umbral se explican con importes?
+3. **Mirar las capturas:** en la de la API se ve la petición y la respuesta **sin claves**; en la de cierre se ve la lista de recursos **vacía**.
+4. **Probar la reproducibilidad:** sin preguntar a nadie, ¿sabrías qué datos, versión, preset, semilla y partición se usaron?
+5. **Leer como si fueras el director de TurisData:** ¿sabes qué hacer cuando llega una alerta y qué límites tiene?
+6. **Poner un nivel (1 a 4) en cada criterio, con una frase de prueba** (por ejemplo: «2 · la partición es al azar»). Sin prueba escrita, el nivel no vale.
+7. **Apuntar el resultado** en una tabla al final del informe (no cuenta en las 4 páginas) y corregir lo más fácil de arreglar:
+
+| Criterio | Nivel (1–4) | Prueba: una frase de lo que has comprobado |
+|---|---|---|
+| Corrección técnica | | |
+| Reproducibilidad | | |
+| Análisis y comunicación al cliente | | |
+| IA responsable | | |
+
+**Revisado por:** …… · **Lo primero que mejoraríamos:** ……
+
+Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md) con **esta misma rúbrica**.
 
 ### Pasos sugeridos
 - **Día 1 (15 min):** planning del reto; el resto del día son las clases y las prácticas de SQL y NoSQL, que ya os dan el dato conocido.

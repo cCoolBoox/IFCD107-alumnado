@@ -39,3 +39,17 @@ Resultado: <n de n pruebas superadas>
 
 ## Uso de IA y límites
 <Indica si has usado un asistente de IA y para qué; qué has revisado tú. Los datos son sintéticos.>
+
+## Revisión con la rúbrica
+<Rúbrica completa en la ficha del reto, apartado 3. Rellena quien revisa y **no escribió esa parte**: ejecutar, leer el README como cliente, mirar el código, poner nivel con prueba.>
+
+**Revisado por:** <nombre> · **Fecha:** <dd/mm/aaaa>
+
+| Criterio | Nivel (1–4) | Prueba: una frase de lo que has comprobado |
+|---|---|---|
+| Corrección técnica | <1–4> | <p. ej. «12 de 12 pruebas, falta el docstring de `main`»> |
+| Reproducibilidad | <1–4> | <¿obtienes el mismo JSON siguiendo solo este README?> |
+| Análisis y comunicación al cliente | <1–4> | <¿se entiende qué es cada KPI y por qué la ocupación es un proxy?> |
+| IA responsable | <1–4> | <¿dice qué se pidió, qué se revisó y qué se cambió?> |
+
+**Lo primero que mejoraríamos:** <una cosa concreta>

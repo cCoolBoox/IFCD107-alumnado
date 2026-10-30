@@ -69,12 +69,33 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 | **Resultado con el CSV real** | `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` | 🟢 Mínimo | `salida.json` |
 | **Pruebas** | `python test_kpis.py` pasa todo. **No se modifican** las dadas; las vuestras, aparte | 🟡 Estándar | `test_kpis.py` |
 | **Código limpio** | Docstring en cada función y estilo PEP 8 | 🟡 Estándar | `kpis.py` |
-| **README** | Cómo se ejecuta y se prueba · qué es cada KPI · por qué la ocupación es un proxy · uso de la IA (qué pedisteis y qué revisasteis). En el mínimo, versión corta | 🟢 Mínimo | `README.md` |
+| **README** | Cómo se ejecuta y se prueba · qué es cada KPI · por qué la ocupación es un proxy · uso de la IA (qué pedisteis y qué revisasteis) · la revisión con la rúbrica. En el mínimo, versión corta | 🟢 Mínimo | `README.md` |
 | **Git** | Al menos 3 *commits* con mensaje claro, de personas distintas, sin claves ni datos personales | 🟢 Mínimo | Historial del repositorio del equipo |
-| **Revisión y autoevaluación** | Alguien del equipo revisa el código con la rúbrica; cada persona sube su hoja de autoevaluación y coevaluación | 🟡 Estándar | `sprint-04/` |
+| **Revisión y autoevaluación** | Alguien que **no escribió esa parte** revisa el código y el README con la rúbrica (justo debajo de estas tablas) y anota nivel y prueba en el README; cada persona sube su hoja de autoevaluación y coevaluación | 🟡 Estándar | `README.md` (sección «Revisión con la rúbrica») y `sprint-04/` |
 | **Extras** | Pruebas propias · `kpis_pandas.py` con los mismos resultados · argumento `--por-mes` · `@dataclass` para `Reserva` | 🔴 Extra | `test_kpis.py` · `kpis_pandas.py` · `kpis.py` |
 
-**Cómo se evalúa.** El docente puntúa de 0 a 4 con la rúbrica del curso: **corrección técnica** (las pruebas pasan y los KPI coinciden), **reproducibilidad** (otra persona obtiene el mismo JSON con vuestro README), **comunicación al cliente** (README y JSON se entienden sin ser programador) e **IA responsable** (qué se hizo con IA, qué se revisó y los límites de datos sintéticos y proxy). Orientativamente, el mínimo vale un 2, el estándar un 3 y los extras un 4.
+#### Rúbrica del reto · cómo se puntúa y cómo se revisa
+
+La usan **dos veces**: el equipo, para revisar su propio trabajo antes de entregar (es lo que dice la *Definition of Done*), y el docente, para puntuar. Se mira **cada criterio por separado** y se pone el nivel de la columna cuyo texto **se cumple entero**: si lo de un nivel se cumple a medias, es el nivel de abajo. **0** significa que no se ha entregado nada de ese criterio.
+
+Orientación: lo que pide el nivel 🟢 mínimo sale en un **2**, el 🟡 estándar en un **3** y los 🔴 extras en un **4**.
+
+| Criterio | 1 · Empezado | 2 · Mínimo | 3 · Estándar | 4 · Extra |
+|---|---|---|---|---|
+| **Corrección técnica** (¿funciona?) | Hay código, pero fallan muchas pruebas o no se ejecuta con el CSV real | Pasan las pruebas de lectura, cancelación e ingreso medio; sale `salida.json` con el CSV real; un error de fichero o de columna da mensaje y código 1 | `python test_kpis.py` da **12 de 12**; la ocupación y la sección `calidad` salen bien; cada función tiene docstring y el estilo es PEP 8 | Además, pruebas propias que pasan (lista vacía, división entre cero…) o `kpis_pandas.py` con los mismos resultados |
+| **Reproducibilidad** (¿lo puede repetir otra persona?) | Solo funciona en el ordenador de quien lo escribió | El README tiene los comandos, pero faltan datos (carpeta, versión de Python…) | Otra persona obtiene **el mismo JSON y las pruebas en verde** siguiendo solo el README; hay 3 o más *commits* de personas distintas, sin claves ni datos personales | Además, el README indica versión de Python, estructura de carpetas y el comando exacto |
+| **Análisis y comunicación al cliente** (¿lo entiende quien no programa?) | El README no explica qué es cada KPI | Define los tres KPI, pero no sus límites | Define cada KPI **y explica por qué la ocupación es un proxy** (qué capacidad se supuso), sin jerga | Además, explica cómo cambia la ocupación si cambia la capacidad, o qué conclusión saca el cliente del resultado |
+| **IA responsable** (¿se sabe qué hizo la IA y qué comprobasteis?) | No dice si se ha usado IA | Dice que se ha usado IA, sin detalle | Dice **qué se pidió, qué se revisó y qué se cambió**, y quien escribe sabe explicar cualquier línea | Además, cuenta un fallo concreto de la IA que detectaron las pruebas, y menciona que los datos son sintéticos y no hay datos personales |
+
+**Cómo se revisa** (unos 10 minutos, antes de subir; lo hace **una persona que no escribió esa parte**):
+
+1. **Ejecutar**, en una carpeta limpia, `python test_kpis.py` y `python kpis.py reservas_turisdata.csv salida.json --capacidad 40`, copiando solo lo que dice el README. Anotar si algo no funciona.
+2. **Leer el README como si fuera el cliente**: ¿se entiende qué hace cada KPI y por qué la ocupación es un proxy? Subrayar lo que no se entienda.
+3. **Mirar el código**: ¿tiene docstring cada función? ¿Hay algo que no sepáis explicar? Que quien lo escribió lo explique.
+4. **Poner un nivel (1 a 4) en cada criterio, con una frase de prueba** (por ejemplo: «3 · 12 de 12 pruebas, pero falta el docstring de `main`»). Sin prueba escrita, el nivel no vale.
+5. **Apuntar el resultado** en la sección «Revisión con la rúbrica» del `README.md` y corregir lo más fácil de arreglar. Lo demás se anota como mejora.
+
+Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y coevaluación](../4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md) con **esta misma rúbrica**.
 
 ---
 
@@ -219,8 +240,8 @@ Son cinco pasos, de **100 minutos en total**. Cada uno dice **qué hacéis** (la
 
 #### Paso 5 · README y entrega (día 2, 15 minutos)
 1. Copiar `README_PLANTILLA.md` como `README.md` y rellenarlo.
-2. Subir los ficheros a `sprint-04/` en tres o más subidas, hechas por personas distintas.
-3. Si da tiempo, empezar el extra: pruebas propias o `plantilla_kpis_pandas.py`.
+2. Pedir a alguien que no escribió esa parte que lo revise con la rúbrica y anote el resultado en el README.
+3. Subir los ficheros a `sprint-04/` en tres o más subidas, hechas por personas distintas.
 
 **Cómo se hace**
 - **El README.** Cada sección de la plantilla pide una cosa. Para el **nivel mínimo** bastan estas cuatro, en pocas líneas:
@@ -233,12 +254,13 @@ Son cinco pasos, de **100 minutos en total**. Cada uno dice **qué hacéis** (la
 | Uso de IA y límites | Qué le pedisteis a la IA y qué revisasteis; los datos son sintéticos |
 
   Para el **nivel estándar**, completad también «Requisitos», «Gestión de errores» (qué errores controla, qué mensaje da y que devuelve código 1) y la versión con pandas si la hacéis.
+- **La revisión con la rúbrica (5 minutos).** Quien revisa sigue los cinco pasos de «Cómo se revisa» (apartado 3) y rellena la sección «Revisión con la rúbrica» del final del README: un nivel de 1 a 4 por criterio y **una frase de prueba**. Si hay tiempo, arreglad lo más fácil; lo demás queda como «lo primero que mejoraríamos». Si sobran minutos, empezad el extra (pruebas propias o `plantilla_kpis_pandas.py`).
 - **Subir los ficheros (la vía del curso, desde el navegador).** Seguid [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md): (1) abrid el repositorio del equipo y **entrad primero en la carpeta `sprint-04`**; (2) *Add file → Upload files*; (3) arrastrad los ficheros; (4) escribid un mensaje corto y pulsad **Commit changes**. Cada subida es un *commit* con el nombre de quien la hace. Un reparto posible: la persona A sube `kpis.py` («Añado lectura del CSV y KPI»), la B sube `test_kpis.py` y `salida.json` («Añado pruebas y resultado»), la C sube `README.md` («Añado README»). Los nombres de archivo, **en minúsculas y sin espacios**. El CSV va a `data/` del repositorio solo si aún no está.
 - **Alternativa con Git en el terminal** (si ya lo habéis practicado en [`S04_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb)): `git add kpis.py test_kpis.py README.md salida.json`, `git commit -m "Añado lectura del CSV y KPI"` y `git push`. Cada persona lo hace con su propia cuenta.
 
 **Qué deberíais ver.** En la carpeta `sprint-04` del repositorio, los cuatro ficheros; y en el historial (el icono del reloj), al menos tres *commits* con nombres distintos.
 
-**Hecho cuando:** otra persona podría ejecutar el proyecto siguiendo solo el README, y los tres *commits* están en el repositorio.
+**Hecho cuando:** otra persona podría ejecutar el proyecto siguiendo solo el README, la sección «Revisión con la rúbrica» está rellena y los tres *commits* están en el repositorio.
 
 **Después, 15 minutos de entrega y review:** cada persona rellena y sube su autoevaluación y coevaluación a `sprint-04/`, y el equipo enseña, en 3–5 minutos, el script con el CSV real, el JSON, un error provocado con su mensaje y las pruebas en verde. Explicad una decisión de diseño, por ejemplo cómo definisteis la ocupación.
 
