@@ -8,76 +8,60 @@
 
 ## Ficha del reto
 
-### 🎯 En pocas palabras (léelo primero)
+### 1 · 🎯 Qué os pide el cliente
 
-**Qué os pide el cliente.** El equipo de reservas de TurisData calcula cada semana sus cifras **a mano en una hoja de cálculo**: es lento y cada persona lo hace distinto. Os pide un **programa en Python** que lea el fichero de reservas, calcule **tres cifras clave (KPI)**, avise con claridad si el fichero está mal y guarde el resultado en un fichero JSON que otros sistemas puedan leer.
+**Qué os pide el cliente.** El equipo de reservas de TurisData calcula cada semana sus cifras **a mano en una hoja de cálculo**: es lento y cada persona lo hace distinto. Os pide una **herramienta interna**, un programa en Python que lea el fichero de reservas, calcule **tres KPI** (cifras que resumen cómo va el negocio: la ocupación, el ingreso medio por reserva y la tasa de cancelación por canal), **avise con claridad si el fichero está mal** y guarde el resultado en un fichero JSON que otros sistemas puedan leer.
 
-**Qué vais a hacer, en cinco pasos:**
-1. **Preparar** la carpeta de la plantilla y ver que las pruebas fallan (es lo normal).
-2. **Rellenar** las funciones de `kpis.py` una a una hasta que las pruebas pasen.
-3. **Ejecutar** el programa con el CSV real y guardar `salida.json`.
-4. **Romperlo a propósito** y comprobar que avisa con claridad.
-5. **Escribir** el README y subirlo todo a Git.
-
-**Cuánto tiempo:** en clase, 10 min de planning (día 1) y **100 min de reto + 15 min de entrega** (día 2). Lo que no quepa va a casa o a la 6.ª hora.
-
-**Qué entregar y con qué herramientas:** lo explican los dos apartados siguientes de esta ficha; no se repite en otro sitio.
+**Cómo se trabaja.** No hace falta experiencia previa: os damos una **plantilla casi hecha** (funciones vacías y pruebas que os dicen si lo que escribís es correcto) y vuestro trabajo es rellenarla paso a paso. La ocupación será solo un *proxy* (una medida aproximada), porque el fichero no trae la capacidad real del hotel. En clase tenéis 10 minutos de planning (día 1) y **100 minutos de reto + 15 de entrega** (día 2); lo que no quepa va a casa o a la 6.ª hora. El equipo decide hasta dónde llega: 🟢 mínimo, 🟡 estándar o 🔴 extra.
 
 ---
 
-### 📊 Los tres KPI
+### 2 · 🧰 Recursos del reto
 
-| KPI | Cómo se calcula | Detalle importante |
+| Recurso | Para qué lo usaréis | Dónde está |
 |---|---|---|
-| **Ocupación aproximada** (proxy) | noches de reservas **no canceladas** ÷ (días del periodo × habitaciones) × 100 | El periodo va de la primera a la última fecha de llegada. Es un **proxy**: todas las noches se cuentan el día de llegada y la capacidad la suponéis vosotros (`--capacidad`, por defecto 40). |
-| **Ingreso medio por reserva** | media de `noches × precio_noche` de las reservas **no canceladas** | Las canceladas no generan ingreso. 2 decimales. |
-| **Tasa de cancelación por canal** | canceladas ÷ reservas del canal × 100 | Una tasa por cada canal. 1 decimal. |
-
-Estas fórmulas están también en los docstrings de `kpis.py`: es la única definición, no hace falta inventar otra.
-
----
-
-### 📦 Qué hay que entregar
-
-Una carpeta **`sprint-04/`** en el repositorio privado del equipo (cómo subirla: [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md)), con **al menos 3 commits** de personas distintas y estos cuatro ficheros:
-
-| Fichero | Qué contiene |
-|---|---|
-| [`kpis.py`](../4_Plantillas_y_entrega/reto_herramientas/kpis.py) | El programa: funciones + `main`. Solo biblioteca estándar |
-| [`test_kpis.py`](../4_Plantillas_y_entrega/reto_herramientas/test_kpis.py) | Las pruebas. Se dan hechas y **no se modifican** (podéis añadir las vuestras aparte) |
-| `README.md` | Cómo se ejecuta y se prueba, definición de cada KPI, por qué la ocupación es un proxy y uso de la IA. Se parte de [`README_PLANTILLA.md`](../4_Plantillas_y_entrega/reto_herramientas/README_PLANTILLA.md) |
-| `salida.json` | El resultado generado con el **CSV real** |
-
-**Hasta dónde llegar.** El equipo decide el nivel; el mínimo ya es una entrega válida.
-
-| Nivel | Qué se añade | Nota* |
-|---|---|---|
-| 🟢 **Mínimo** | Pasan las pruebas de `leer_reservas`, `tasa_cancelacion_por_canal` e `ingreso_medio_por_reserva` · mensaje claro si falta el fichero · README corto (la ocupación y `main`, con ayuda del docente) | 2 |
-| 🟡 **Estándar** | Todas las pruebas en verde · errores controlados · docstrings y PEP 8 · README con los límites del proxy · declaración del uso de IA | 3 |
-| 🔴 **Extra** | Pruebas propias · `kpis_pandas.py` con los mismos resultados · argumento `--por-mes` · `@dataclass` para `Reserva` | 4 |
-
-\*Orientativo; puntúa el docente con la rúbrica. La lista de comprobación del final describe el nivel **estándar**.
-
----
-
-### 🧰 Con qué herramientas
-
-| Herramienta | Para qué | Cómo conseguirla |
-|---|---|---|
-| **Python 3.11** (solo biblioteca estándar: `csv`, `json`, `argparse`, `datetime`) | Escribir y ejecutar `kpis.py` | Ya instalado en el aula; si no, el de Colab. Pandas solo en el extra |
+| **Python 3.11** (solo biblioteca estándar: `csv`, `json`, `argparse`, `datetime`) | Escribir y ejecutar `kpis.py` | Ya instalado en el aula; si no, el de Colab |
 | **Editor y terminal**: VS Code (recomendado) o Colab | Editar el código y ejecutar `python test_kpis.py` | En Colab, subid la carpeta y poned `!` delante: `!python test_kpis.py` |
-| **La plantilla** [`reto_herramientas/`](../4_Plantillas_y_entrega/reto_herramientas/) | `kpis.py` con funciones vacías, `test_kpis.py` y `README_PLANTILLA.md` | En GitHub: *Code → Download ZIP*. Trabajad en una copia |
+| **La plantilla** [`reto_herramientas/`](../4_Plantillas_y_entrega/reto_herramientas/) | `kpis.py` con funciones vacías, `test_kpis.py`, `README_PLANTILLA.md` y `plantilla_kpis_pandas.py` (extra) | En GitHub: *Code → Download ZIP*. Trabajad en una copia |
 | **El CSV real** [`reservas_turisdata.csv`](../../../../datos/reservas_turisdata.csv) | 6000 reservas **sintéticas** | Botón *Download raw file*; dejadlo **junto a `kpis.py`** |
-| **Git y GitHub** | Guardar versiones (*commits*) y entregar | Terminal o VS Code ([cuaderno `S04_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb) para repasar). Si falla, subid los ficheros desde la web (*Add file → Upload files*): cada subida es un commit |
+| **Cuadernos del sprint**: [`S04_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) y [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb) | Las pistas para las funciones (diccionarios, CSV, JSON, excepciones) | Colab; su [código explicado](../../2_Practica/codigo_explicado/README.md) |
+| **Git y GitHub** + cuaderno [`S04_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb) | Guardar versiones (*commits*) y entregar | Terminal o VS Code. Si falla, subid los ficheros desde la web (*Add file → Upload files*): cada subida es un commit |
+| **Cómo entregar en GitHub** | Subir la carpeta `sprint-04/` | [Guía de entrega](../../../../material/5.%20Como_entregar_en_GitHub.md) |
+| **Autoevaluación y coevaluación** | Cada persona rellena su hoja | [Hoja del sprint](../4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md) |
+| **Un asistente de IA** (opcional) | Entender errores y pedir pistas | Con las reglas de la «Ayuda 1» del paso a paso |
 
 ---
 
-### 🪜 Guía paso a paso
+### 3 · 📦 Qué entregar
 
-Cada paso dice cuánto dura, qué se hace y cuándo está hecho.
+**Qué se sube:** `kpis.py`, `test_kpis.py`, `README.md` y `salida.json`, dentro de la carpeta **`sprint-04/`** del repositorio privado del equipo. Niveles: 🟢 mínimo (entrega válida) · 🟡 estándar · 🔴 extra.
+
+| Requerimiento | Qué se pide exactamente | Nivel | Dónde va |
+|---|---|---|---|
+| **Leer el CSV** | `leer_reservas`: convierte los tipos y **descarta y cuenta** las filas defectuosas (noches < 1, precio ≤ 0, `cancelada` distinto de 0/1, datos que no se pueden convertir) | 🟢 Mínimo | `kpis.py` |
+| **Tasa de cancelación por canal** | canceladas ÷ reservas del canal × 100, con 1 decimal | 🟢 Mínimo | `kpis.py` · `tasa_cancelacion_por_canal` |
+| **Ingreso medio por reserva** | media de `noches × precio_noche` de las reservas **no canceladas**, con 2 decimales (`0.0` si no hay) | 🟢 Mínimo | `kpis.py` · `ingreso_medio_por_reserva` |
+| **Ocupación (proxy)** | noches no canceladas ÷ (días del periodo × habitaciones) × 100; el periodo va de la primera a la última llegada. En el mínimo, con ayuda del docente | 🟡 Estándar | `kpis.py` · `ocupacion_proxy` |
+| **Guardar el resultado** | `exportar_json` y `main`: JSON en UTF-8 con los tres KPI y la sección `calidad` (filas válidas, descartadas y avisos). En el mínimo, con ayuda del docente | 🟡 Estándar | `kpis.py` → `salida.json` |
+| **Avisar de los errores** | Fichero inexistente o columna que falta → mensaje claro y código de salida 1, sin `Traceback` | 🟢 Mínimo | `kpis.py` · `main` y `leer_reservas` |
+| **Resultado con el CSV real** | `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` | 🟢 Mínimo | `salida.json` |
+| **Pruebas** | `python test_kpis.py` pasa todo. **No se modifican** las dadas; las vuestras, aparte | 🟡 Estándar | `test_kpis.py` |
+| **Código limpio** | Docstring en cada función y estilo PEP 8 | 🟡 Estándar | `kpis.py` |
+| **README** | Cómo se ejecuta y se prueba · qué es cada KPI · por qué la ocupación es un proxy · uso de la IA (qué pedisteis y qué revisasteis). Parte de [`README_PLANTILLA.md`](../4_Plantillas_y_entrega/reto_herramientas/README_PLANTILLA.md). En el mínimo, versión corta | 🟢 Mínimo | `README.md` |
+| **Git** | Al menos 3 *commits* con mensaje claro, de personas distintas, sin claves ni datos personales | 🟢 Mínimo | Repositorio del equipo, carpeta `sprint-04/` |
+| **Revisión y autoevaluación** | Alguien del equipo revisa el código con la rúbrica; cada persona sube su hoja de autoevaluación y coevaluación | 🟡 Estándar | Carpeta `sprint-04/` |
+| **Extras** | Pruebas propias · `kpis_pandas.py` con los mismos resultados · argumento `--por-mes` · `@dataclass` para `Reserva` | 🔴 Extra | `test_kpis.py` · `kpis_pandas.py` · `kpis.py` |
+
+**Cómo se evalúa.** El docente puntúa de 0 a 4 con la rúbrica del curso: **corrección técnica** (las pruebas pasan y los KPI coinciden), **reproducibilidad** (otra persona obtiene el mismo JSON con vuestro README), **comunicación al cliente** (README y JSON se entienden sin ser programador) e **IA responsable** (qué se hizo con IA, qué se revisó y los límites de datos sintéticos y proxy). Orientativamente, el mínimo vale un 2, el estándar un 3 y los extras un 4.
+
+---
+
+### 4 · 🪜 Guía paso a paso
+
+Cada paso dice cuánto dura, qué se hace y cuándo está hecho. Las ayudas (IA, errores, atascos) están al final.
 
 #### Paso 1 · Preparar la carpeta y ver que las pruebas fallan (día 2, 10 minutos)
-1. Copiad la plantilla y dejad el CSV real junto a `kpis.py` (ver «Con qué herramientas»).
+1. Copiad la plantilla y dejad el CSV real junto a `kpis.py` (ver «Recursos del reto»).
 2. Abrid una terminal en esa carpeta y ejecutad `python test_kpis.py`.
 3. Repartid el trabajo (ver el paso 2).
 
@@ -113,7 +97,7 @@ Cada paso dice cuánto dura, qué se hace y cuándo está hecho.
 }
 ```
 
-**Hecho cuando:** existe `salida.json` con las mismas cifras y `python test_kpis.py` pasa todo. Si el vuestro difiere, mirad «Errores frecuentes».
+**Hecho cuando:** existe `salida.json` con las mismas cifras y `python test_kpis.py` pasa todo. Si el vuestro difiere, mirad la «Ayuda 2».
 
 #### Paso 4 · Probar que no se rompe (día 2, 15 minutos)
 1. Ejecutad el programa con un fichero que no existe.
@@ -131,16 +115,16 @@ Cada paso dice cuánto dura, qué se hace y cuándo está hecho.
 
 #### Paso 5 · README y Git (día 2, 15 minutos)
 1. Copiad `README_PLANTILLA.md` como `README.md` y rellenadlo.
-2. Subid el trabajo a `sprint-04/` como dice «Qué hay que entregar».
+2. Subid el trabajo a `sprint-04/` como indica la tabla de «Qué entregar».
 3. Si os da tiempo, empezad el extra: pruebas propias o [`plantilla_kpis_pandas.py`](../4_Plantillas_y_entrega/reto_herramientas/plantilla_kpis_pandas.py).
 
 Mensajes de commit de ejemplo: «Añade lectura del CSV», «Añade KPI y exportación», «Añade README».
 
-**Hecho cuando:** otra persona podría ejecutar el proyecto siguiendo solo el README. Después, los 15 minutos de entrega.
+**Hecho cuando:** otra persona podría ejecutar el proyecto siguiendo solo el README.
 
----
+**Después, 15 minutos de entrega y review:** subid todo a `sprint-04/`, rellenad la autoevaluación y coevaluación y enseñad, en 3–5 minutos, el script con el CSV real, el JSON, un error provocado con su mensaje y las pruebas en verde. Explicad una decisión de diseño, por ejemplo cómo definisteis la ocupación.
 
-### 🤖 Cómo usar la IA en este reto
+#### Ayuda 1 · Cómo usar la IA en este reto
 
 La IA puede ahorrar tiempo, pero **da código que parece funcionar y no se entiende**. Reglas:
 - **Todo lo que dé, lo ejecutáis y lo entendéis.** Si el docente pregunta por una línea, tenéis que saber explicarla.
@@ -155,9 +139,7 @@ La IA puede ahorrar tiempo, pero **da código que parece funcionar y no se entie
 | Pedir una pista | «Quiero calcular el % de cancelaciones por canal con la biblioteca estándar. ¿Qué estructura me conviene? No me des el código» | Que respeta «solo biblioteca estándar» |
 | Revisar el estilo | «¿Sigue PEP 8 este código? ¿Qué cambiarías?» | Que las pruebas siguen pasando |
 
----
-
-### ⚠️ Errores frecuentes (y cómo evitarlos)
+#### Ayuda 2 · Errores frecuentes (y cómo evitarlos)
 
 | Error | Por qué ocurre | Cómo evitarlo |
 |---|---|---|
@@ -170,55 +152,8 @@ La IA puede ahorrar tiempo, pero **da código que parece funcionar y no se entie
 | Cambiar las pruebas para que pasen | Prisa | No tocar las pruebas dadas; añadir las propias aparte |
 | Un solo *commit* gigante | «Lo subo al final» | Commits pequeños mientras avanzáis |
 
----
-
-### 🆘 Si os atascáis
+#### Ayuda 3 · Si os atascáis
 
 1. Leed el mensaje de la prueba que falla: dice qué esperaba y qué recibió. Probad la función en una celda con un ejemplo pequeño.
-2. Repasad el cuaderno que corresponde a esa función (tabla del paso 2) y su [código explicado](../../2_Practica/codigo_explicado/README.md).
+2. Repasad el cuaderno que corresponde a esa función (tabla del paso 2).
 3. Preguntad al equipo y, después, al docente.
-
----
-
-### 📝 Cómo se evalúa
-
-Rúbrica del curso, de 0 a 4 en cada criterio.
-
-| Criterio | Qué se mirará en este reto |
-|---|---|
-| **Corrección técnica** | Las pruebas pasan, los KPI coinciden con los esperados, los errores están controlados |
-| **Reproducibilidad** | Otra persona clona el repositorio, sigue el README y obtiene el mismo JSON |
-| **Análisis y comunicación al cliente** | El README y el JSON se entienden sin ser programador; cada KPI está definido y se explica por qué la ocupación es solo un proxy |
-| **IA responsable** | Se dice qué se hizo con IA y qué se revisó; se citan los límites de los datos sintéticos y del proxy |
-
-**En la review (3–5 minutos):** ejecutad el script con el CSV real, enseñad el JSON, provocad un error (fichero inexistente) y mostrad el mensaje, y enseñad las pruebas en verde. Explicad una decisión de diseño, por ejemplo cómo definisteis la ocupación.
-
----
-
-### 📖 Palabras que aparecen en este reto
-
-| Palabra | Qué significa, en sencillo |
-|---|---|
-| **KPI** | Una cifra que resume cómo va el negocio |
-| **Proxy** | Una medida aproximada, usada cuando no se puede medir lo exacto |
-| **CSV / JSON** | Dos formatos de texto para guardar datos: tabla con comas / datos anidados que entienden otros programas |
-| **Biblioteca estándar** | Lo que ya trae Python (`csv`, `json`): no hay que instalar nada |
-| **Prueba (test)** | Código que comprueba que otro código funciona. Usa `assert`: «esto tiene que ser verdad» |
-| **Excepción** | Un error durante la ejecución que se puede **controlar** para que el programa no se rompa |
-| **Docstring / PEP 8** | El texto explicativo dentro de cada función / la guía de estilo de Python |
-| **Commit** | Guardar en Git una versión del trabajo con un mensaje que dice qué cambia |
-
----
-
-## Definition of Done (lista de comprobación)
-
-Antes de entregar, repasad esta lista (es la única; sirve también de autoevaluación rápida). Si queda una casilla sin marcar, **el reto no está terminado**.
-
-- [ ] `python test_kpis.py` termina con todas las pruebas superadas.
-- [ ] `python kpis.py reservas_turisdata.csv salida.json` genera el JSON con los tres KPI y la sección `calidad`.
-- [ ] El script informa con un mensaje claro si falta el fichero o una columna, y descarta y cuenta las filas defectuosas.
-- [ ] Todas las funciones tienen docstring y siguen PEP 8 (nombres, sangría).
-- [ ] El README explica cómo ejecutar, cómo probar y qué significa cada KPI, incluido por qué la ocupación es un proxy.
-- [ ] El repositorio tiene al menos 3 *commits* con mensajes claros y no contiene claves ni datos personales.
-- [ ] Alguien del grupo ha revisado el código con la rúbrica.
-- [ ] [Autoevaluación y coevaluación](../4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md) rellenadas (cada persona sube su hoja).
