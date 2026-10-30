@@ -29,6 +29,16 @@ no-es-fecha,1,120.0,agencia,0
 2025-01-05,5,60.0,web_intermediaria,1
 """
 
+CSV_VALORES_INVALIDOS = """fecha_llegada,noches,precio_noche,canal,cancelada
+2025-01-01,2,100.0,directo,0
+2025-01-02,0,80.0,directo,1
+2025-01-03,-2,80.0,agencia,0
+2025-01-04,3,0,agencia,0
+2025-01-05,3,-50.0,web_intermediaria,0
+2025-01-06,2,60.0,directo,2
+2025-01-07,2,60.0,directo,-1
+"""
+
 CSV_SIN_COLUMNA = "fecha_llegada,noches,precio_noche,canal\n2025-01-01,2,100.0,directo\n"
 
 
@@ -78,11 +88,26 @@ def test_filas_defectuosas_se_descartan_y_se_avisan():
     assert "Fila 3" in avisos[0], "La primera fila defectuosa es la 3 del fichero (la 1 es la cabecera)"
 
 
+def test_valores_imposibles_se_descartan():
+    """Que el dato tenga el tipo correcto no basta: noches < 1, precio <= 0 o cancelada distinta de 0/1 no tienen sentido."""
+    reservas, avisos = kpis.leer_reservas(_escribir(CSV_VALORES_INVALIDOS))
+    assert len(reservas) == 1, f"Solo la primera fila es válida y has leído {len(reservas)}"
+    assert len(avisos) == 6, f"Deben generarse 6 avisos (noches 0 y -2, precio 0 y -50, cancelada 2 y -1) y tienes {len(avisos)}"
+
+
 def test_tasa_cancelacion_por_canal():
     reservas, _ = kpis.leer_reservas(_escribir(CSV_BUENO))
     esperado = {"directo": 50.0, "agencia": 0.0, "web_intermediaria": 100.0}
     assert kpis.tasa_cancelacion_por_canal(reservas) == esperado, f"Debería ser {esperado}"
     assert kpis.tasa_cancelacion_por_canal([]) == {}, "Sin reservas, un diccionario vacío"
+
+
+def test_tasa_cancelacion_se_redondea_a_un_decimal():
+    """Con 1 cancelada de 3 la tasa es 33.333...: debe devolver 33.3, y con 2 de 3, 66.7."""
+    def reserva(cancelada):
+        return {"fecha_llegada": date(2025, 1, 1), "noches": 1, "precio_noche": 50.0, "canal": "web", "cancelada": cancelada}
+    assert kpis.tasa_cancelacion_por_canal([reserva(1), reserva(0), reserva(0)]) == {"web": 33.3}, "1 de 3 = 33.3 %"
+    assert kpis.tasa_cancelacion_por_canal([reserva(1), reserva(1), reserva(0)]) == {"web": 66.7}, "2 de 3 = 66.7 %"
 
 
 def test_ingreso_medio_por_reserva():

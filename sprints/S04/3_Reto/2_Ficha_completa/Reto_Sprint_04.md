@@ -149,14 +149,14 @@ La IA puede ahorrar mucho tiempo en programación, pero **hay una trampa**: te d
 - **Salida del programa:** un JSON ordenado como:
 ```
 {
-  "reservas_analizadas": 1996,
-  "ocupacion_proxy_pct": 61.3,
-  "ingreso_medio_por_reserva": 412.87,
-  "tasa_cancelacion_por_canal_pct": {"directo": 18.5, "web": 24.1},
-  "calidad": {"filas_validas": 1996, "filas_descartadas": 4, "avisos": ["fila 57: precio no numérico"]}
+  "reservas_analizadas": 6000,
+  "ocupacion_proxy_pct": 42.0,
+  "ingreso_medio_por_reserva": 576.04,
+  "tasa_cancelacion_por_canal_pct": {"empresa": 43.3, "directo": 31.5, "web_intermediaria": 53.9, "agencia": 44.0},
+  "calidad": {"filas_validas": 6000, "filas_descartadas": 0, "avisos": []}
 }
 ```
-(Las cifras son un ejemplo; las vuestras saldrán del CSV real.)
+(Es lo que sale con `reservas_turisdata.csv` y `--capacidad 40`. La ocupación cambia con la capacidad que supongáis, y si el fichero tuviera filas defectuosas, `calidad` las contaría: `"filas_descartadas": 2, "avisos": ["Fila 57 descartada: …"]`.)
 - **Mensaje de error:** «Falta la columna `precio_noche` en el fichero».
 - **README:** alguien que no es del equipo puede ejecutarlo siguiendo solo las instrucciones.
 
