@@ -4,7 +4,7 @@
 
 **El cliente.** La dirección de TurisData oye hablar de redes neuronales y pregunta si debe **sustituir su modelo de cancelaciones por una red**. Quiere evidencias con el coste incluido. **«No compensa» es una respuesta tan válida como «sí».**
 **Qué entregáis (no cambia):** el cuaderno ejecutado, un informe comparativo de 1–2 páginas *ML clásico frente a MLP* y el README del sprint. **Al final del sprint se suben a `sprint-10/` del repositorio del equipo: 3 ficheros del equipo (esos tres) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** planning 10 min (día 1) · reto unos 90 min (día 2; los seis pasos suman 145) · entrega, review y retro 40 min. Lo que no quepa, a casa o a la 6.ª hora.
+**Tiempo en clase:** planning 10 min (día 1) · reto unos 90 min (día 2; los seis pasos suman 145) y 15 para poneros al día · entrega, review y retro 40 min. Los 40 min que faltan, en la consolidación y la 6.ª hora (subida hasta las 14:30); lo demás, a casa.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

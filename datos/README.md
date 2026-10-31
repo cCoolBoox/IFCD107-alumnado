@@ -6,7 +6,7 @@ Los notebooks los descargan solos con la función `dato("archivo")`; no hace fal
 | Archivo | Contenido | Se usa en |
 |---|---|---|
 | `reservas_turisdata.csv` | 6.000 reservas; objetivo `cancelada` | Sprints 3–8, 10, 13 |
-| `reservas_sucio.csv` | 1.545 filas con defectos de calidad (1.500 reservas distintas: hay 45 duplicados exactos) | Sprint 6 |
+| `reservas_sucio.csv` | 1.545 filas con defectos de calidad (1.500 reservas distintas: hay 45 duplicados exactos; nulos en `pais_origen`, `regimen`, `adultos` y `precio_noche`) | Sprint 6 |
 | `turisdata.db` | Base SQLite: `alojamientos`, `clientes`, `reservas` | Sprints 3 y 5 |
 | **Esquema de `turisdata.db`** | Tablas, campos y relaciones en una imagen: [`esquema_turisdata.md`](../sprints/S03/actividades/esquema_turisdata/esquema_turisdata.md) | Sprints 3 y 5 |
 | `turisdata.sql` | La misma base en **texto SQL**: se importa en DB Browser si `turisdata.db` no se abre bien | Sprints 3 y 5 |

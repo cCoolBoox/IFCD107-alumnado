@@ -101,7 +101,7 @@ Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y c
 
 ### 4 · 🪜 Guía paso a paso
 
-Son seis pasos, de **145 minutos en total**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa. Trabajad siempre en **una copia** del cuaderno que sea vuestra, sin tocar el original del curso.
+Son seis pasos, de **145 minutos en total**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. En el horario del día 2 caben unos 105 minutos (90 de reto y 15 para poneros al día); los 40 que faltan se hacen en la **consolidación** (13:00–13:30) y en la **6.ª hora** (hasta las 14:30), y la subida puede hacerse hasta esa hora. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa. Trabajad siempre en **una copia** del cuaderno que sea vuestra, sin tocar el original del curso.
 
 #### Paso 1 · Elegir el problema y reproducir la referencia (día 2, 15 minutos)
 1. Elegir **un problema**: cancelaciones (`cancelada`) o precio (`precio_noche`).

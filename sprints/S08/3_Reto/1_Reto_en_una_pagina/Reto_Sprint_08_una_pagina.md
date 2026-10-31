@@ -4,7 +4,7 @@
 
 **El cliente.** TurisData ya sabe predecir cancelaciones. Ahora pregunta: **¿qué modelo ponemos en producción?** ¿El más preciso, el que se entiende o el más barato de mantener? Hay que enfrentar modelos con las mismas reglas y **elegir un campeón con argumentos**.
 **Qué entregáis (no cambia):** `leaderboard_S08.csv`, `model_card.md`, el cuaderno `reto_S08.ipynb` y `README.md`. **Regla de oro: el test se usa una sola vez, solo con el campeón.**
-**Tiempo:** unos 150 min de equipo. En clase: planning 10 min (día 1) · reto 75 min · entrega, review y retro 35 min (día 2). Lo que no quepa, a casa o a la 6.ª hora.
+**Tiempo:** unos 150 min de equipo. En clase: planning 10 min (día 1) · reto 75 min · entrega, review y retro 35 min (día 2). Los 65 min que faltan, en la consolidación y la 6.ª hora del día 2 (subida hasta las 14:30); lo demás, a casa.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 
@@ -21,7 +21,7 @@
 | Min | Qué | Se sabe que está hecho cuando… |
 |---|---|---|
 | 20 | Pesos de los criterios, justificados (día 1) | Pesos escritos que suman 100 % |
-| 30 | Copia del cuaderno `reto_S08.ipynb` y 4 primeros modelos (día 1) | Leaderboard con referencia, logística, árbol y bosque |
+| 30 | Copia del cuaderno `reto_S08.ipynb` y 4 primeros modelos (día 2) | Leaderboard con referencia, logística, árbol y bosque |
 | 25 | *Boosting*, SVM y búsqueda en dos familias (día 2) | 6 a 8 modelos, de 4 familias o más |
 | 45 | Puntuación global, sensibilidad y test del campeón | `auc_test` en una sola fila |
 | 30 | *Model card*, README, revisión con la rúbrica y subida | Otra persona podría ejecutarlo con el README |

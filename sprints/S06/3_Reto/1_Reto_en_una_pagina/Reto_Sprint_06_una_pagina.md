@@ -10,7 +10,7 @@
 
 | Nivel | Qué hay que tener | Nota* |
 |---|---|---|
-| 🟢 **Mínimo** (todos los equipos) | Tabla de **al menos 6 defectos** (qué, dónde, cuántas filas, causa, tratamiento, por qué; los tres más graves destacados) · **una** función `limpiar_reservas` con docstring que devuelve la tabla limpia y un resumen de lo cambiado · el cuaderno corre con *Reiniciar y ejecutar todo* · README corto · subido a `sprint-06/` | 2 |
+| 🟢 **Mínimo** (todos los equipos) | Tabla de **al menos 6 defectos** con las columnas de la plantilla (defecto, columna(s), filas afectadas, cómo se detectó, causa probable, tratamiento y por qué; los tres más graves destacados) · **una** función `limpiar_reservas` con docstring que devuelve la tabla limpia y un resumen de lo cambiado · el cuaderno corre con *Reiniciar y ejecutar todo* · README corto · subido a `sprint-06/` | 2 |
 | 🟡 **Estándar** | `Pipeline` que imputa, escala y codifica **ajustando solo con train** · `DummyClassifier` y un modelo comparados con validación cruzada (media ± desviación) · 3 preguntas al cliente · IA responsable (país de origen) · README con versiones y uso de la IA · revisión con la rúbrica | 3 |
 | 🔴 **Extra** | Tabla con 8–10 defectos · partición temporal en lugar de aleatoria, justificada · explicar o probar qué pasaría si se ajustara el escalado con todos los datos (fuga) | 4 |
 

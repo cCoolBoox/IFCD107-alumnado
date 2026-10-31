@@ -2,7 +2,7 @@
 
 **Proyecto:** ______ · **Product Owner:** el docente · **Scrum Master (rota):** ______
 
-> Requisito R9: tablero, backlog, planning / review / retro de cada sprint. Guardad **capturas o exportación** del tablero en `docs/scrum/` al final de cada sprint.
+> Requisito R9: tablero, backlog, planning / review / retro de cada sprint. Guardad **capturas o exportación** del tablero (o su enlace en el README) al final de cada sprint; si son ficheros, en una carpeta `scrum/` dentro de ese `sprint-NN/`.
 
 ## 1. Formato de historia de usuario
 > **Como** [rol] **quiero** [acción / resultado] **para** [beneficio].

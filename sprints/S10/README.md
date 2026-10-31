@@ -39,7 +39,7 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 💻 Práctica · Sobreajuste, L2, *dropout*, parada temprana y *callbacks* (los ejercicios marcados «en clase») | [Cuaderno S10_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_03_regularizacion.ipynb) | 55 |
-| ☐ | 🎯 Reto · Esqueleto `S10_04`: elegir el problema y reproducir la referencia (paso 1) → primera red (2) → diagnosticar el sobreajuste (3) → comparación justa (4) → informe y presentación (5) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_10_una_pagina.md) | 90 |
+| ☐ | 🎯 Reto · Esqueleto `S10_04`: elegir el problema y reproducir la referencia (paso 1) → primera red (2) → variantes (3) → diagnosticar el sobreajuste (4) → comparación justa (5) → informe y entrega (6); lo que falte, en la consolidación y la 6.ª hora | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_10_una_pagina.md) | 90 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 15 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva | — | 40 |
 

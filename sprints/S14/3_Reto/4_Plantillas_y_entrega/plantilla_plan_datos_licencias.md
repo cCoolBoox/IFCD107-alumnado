@@ -35,7 +35,7 @@
 ```
 Fuente original → descarga (fecha, versión) → limpieza (script) → variables derivadas (script) → partición train / val / test → modelo
 ```
-- Script de descarga / preparación: `src/datos/preparar.py` *(ruta)*.
+- Script de descarga / preparación: `sprint-14/descargar_datos.py` *(o el enlace de descarga del README)*.
 - **Huella (hash) del conjunto final:** ______ *(ver notebook S15_01)*.
 - ¿Se puede recrear todo desde el README? sí / no.
 

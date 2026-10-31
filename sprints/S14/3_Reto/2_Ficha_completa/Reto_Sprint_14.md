@@ -275,7 +275,7 @@ Copiad `plantilla_registro_riesgos_eticos.md` como `riesgos_eticos.md`. Este doc
 
 ##### 6.3 · Repositorio (50 minutos)
 
-- Copiad `plantilla_README_repositorio.md` como `README.md` y rellenad lo que ya sabéis: el problema en tres líneas (apartado 1), la estructura real del repositorio (apartado 3: anotad que hoy los documentos y cuadernos están en `sprint-14/`), **cómo reproducirlo** (apartado 4: descargar los datos y ejecutar los cuadernos en orden), los datos y licencias (6), el resumen de IA responsable (7), el equipo (8) y el tablero (9). La tabla de resultados y el demostrador se rellenan en los sprints 15 y 16.
+- Copiad `plantilla_README_repositorio.md` como `README.md` y rellenad lo que ya sabéis: el problema en tres líneas (apartado 1), la estructura del repositorio (apartado 3: el árbol ya muestra las carpetas `sprint-14/` a `sprint-17/`; hoy solo existe la de este sprint, y las demás se crean en su momento), **cómo reproducirlo** (apartado 4: descargar los datos y ejecutar los cuadernos en orden), los datos y licencias (6), el resumen de IA responsable (7), el equipo (8) y el tablero (9). La tabla de resultados y el demostrador se rellenan en los sprints 15 y 16.
 - Escribid `requirements.txt`: una librería por línea con su versión, como `nombre==versión`. La versión sale con `pip show nombre` o, en Colab, con `!pip freeze` y buscando el nombre.
 - Comprobad que **todas las personas** tienen al menos un *commit* (mensajes del tipo `docs: añado backlog`, `data: añado plan de datos`). Ningún dato personal ni claves.
 - En el apartado 7 del README, **declarad el uso de IA**: qué pedisteis y qué comprobasteis a mano.

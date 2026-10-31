@@ -103,7 +103,7 @@ Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y c
 
 ### 4 · 🪜 Guía paso a paso
 
-Son seis pasos, de **105 minutos en total**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. En clase caben unos 70 minutos (la práctica de CRUD, que es el paso 1, más 45 de reto): completad el nivel mínimo y dejad lo demás para casa. Todo se hace **dentro del cuaderno**, de arriba abajo; ejecutad las celdas en orden.
+Son seis pasos, de **105 minutos en total**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. En el horario del día 2 caben unos 70 minutos (la práctica de CRUD, que es el paso 1, y 45 de reto); los 35 que faltan se hacen en la **consolidación** (13:00–13:30) y en la **6.ª hora** (hasta las 14:30), y la subida puede hacerse hasta esa hora. Completad el nivel mínimo y dejad lo demás para casa. Todo se hace **dentro del cuaderno**, de arriba abajo; ejecutad las celdas en orden.
 
 #### Paso 1 · Cargar los datos en una base de datos (día 2, 30 minutos)
 1. Abrir el cuaderno `S05_07` en Colab, guardar una copia y compartirla con el equipo.

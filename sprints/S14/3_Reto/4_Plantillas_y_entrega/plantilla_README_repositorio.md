@@ -1,6 +1,6 @@
 # [Nombre del proyecto] · [Nombre del equipo]
 
-> *Copia este archivo como `README.md` en la raíz del repositorio del equipo y sustituye lo que está entre corchetes. Un compañero de otro equipo debe poder ejecutar el proyecto **solo con este README** (criterio F de la rúbrica).*
+> *Copia este archivo como `README.md` en la raíz del repositorio del equipo y sustituye lo que está entre corchetes. Un compañero de otro equipo debe poder ejecutar el proyecto **solo con este README** (criterio F de la rúbrica). Lo que ya no sepas en el Sprint 14 (resultados, demostrador) lo dejas con corchetes y lo rellenas en los sprints 15 y 16: en el 16 subes la versión final también a `sprint-16/`. Los ficheros de cada sprint van en su carpeta `sprint-NN/`, como en el árbol del apartado 3.*
 
 **Brief:** [1 Demanda turística / 2 Cultivos / 3 Asistente FP / 4 Energía / Libre] · **Curso:** IFCD107 · Especialista en IA · **Defensa:** 14/12/2026
 
@@ -17,35 +17,35 @@
 | Modelo 2 | | | | |
 | **Candidato final** | | | | |
 
-*(Detalle en `docs/memoria_tecnica.pdf` y en `experimentos/registro.csv`.)*
+*(Detalle en `sprint-16/docs/memoria_tecnica.pdf` y en `sprint-15/registro.csv`.)*
 
 ## 3. Estructura del repositorio
 ```
-.
-├── README.md                  # este archivo
+.                              # raíz del repositorio del equipo (ifcd107-equipo-…)
+├── README.md                  # este archivo (la puerta de entrada)
 ├── requirements.txt           # versiones fijas
-├── .gitignore                 # datos grandes, claves, modelos pesados
-├── datos/
-│   ├── README_datos.md        # fuente, licencia, cómo descargar (plan de datos)
-│   └── descargar_datos.py     # script de descarga o preparación (si los datos no se incluyen)
-├── notebooks/
+├── sprint-14/                 # definición y punto de partida
+│   ├── ficha_proyecto.md
+│   ├── plan_datos_licencias.md   # fuente, licencia, cómo descargar los datos
 │   ├── 01_eda.ipynb
 │   ├── 02_baseline.ipynb
+│   ├── backlog_y_sprints.md
+│   ├── riesgos_eticos.md
+│   └── descargar_datos.py     # solo si no subís los datos
+├── sprint-15/                 # experimentos
+│   ├── registro.csv           # registro de experimentos
 │   ├── 03_modelos.ipynb
-│   └── 04_evaluacion.ipynb
-├── src/                       # código reutilizable (funciones, entrenamiento)
-├── experimentos/registro.csv  # registro de experimentos
-├── modelo/                    # modelo final + metadatos.json (o cómo generarlo)
-├── demostrador/               # app.py / api.py / logica.py
-├── tests/                     # pruebas (pytest -q)
-└── docs/
-    ├── ficha_proyecto.pdf
-    ├── memoria_tecnica.pdf
-    ├── model_card.md
-    ├── riesgos_eticos.md
-    ├── coevaluacion.md        # (solo el docente la recibe: no incluir datos personales de terceros)
-    └── scrum/                 # exportación del tablero, retros, planning
+│   ├── justificacion_candidato.md
+│   ├── modelo_candidato.joblib, metadatos.json, explicacion_modelo.png
+├── sprint-16/                 # entrega final
+│   ├── README.md              # versión final de este README
+│   ├── notebooks/04_evaluacion.ipynb
+│   ├── demostrador/           # logica.py, app.py, tests/, requirements.txt
+│   └── docs/                  # memoria_tecnica.pdf, model_card.md, riesgos_eticos.md, demo.mp4 (si pesa poco)
+└── sprint-17/                 # defensa
+    └── presentacion_defensa.pdf, plantilla_storytelling.md
 ```
+*(Cada `sprint-NN/` lleva además una hoja `autoevaluacion_nombre.md` por persona. La coevaluación confidencial del anexo B **no se sube**: se entrega al docente.)*
 
 ## 4. Cómo reproducirlo (pasos exactos)
 **Requisitos:** Python 3.11 · [Sistema operativo probado] · [GPU si es imprescindible: sí/no]
@@ -56,17 +56,18 @@ cd [carpeta]
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python datos/descargar_datos.py    # descarga y prepara los datos (tarda ~[x] min)
-python src/entrenar.py             # o ejecuta los notebooks 01 a 04 en orden
+python sprint-14/descargar_datos.py   # descarga y prepara los datos (tarda ~[x] min); o el enlace del apartado 6
+# después, ejecuta los cuadernos en orden: sprint-14/01_eda.ipynb, sprint-14/02_baseline.ipynb,
+# sprint-15/03_modelos.ipynb y sprint-16/notebooks/04_evaluacion.ipynb
 ```
-Tiempo total aproximado: [x] minutos. **Semilla fija:** `SEMILLA = 42` (definida en `src/config.py`).
+Tiempo total aproximado: [x] minutos. **Semilla fija:** `SEMILLA = 42` (definida en la primera celda de cada cuaderno).
 
 ## 5. Cómo lanzar el demostrador
 ```bash
-cd demostrador
+cd sprint-16/demostrador
 streamlit run app.py               # o: uvicorn api:app --reload
 ```
-Se abre en <http://localhost:8501>. **Plan B:** vídeo en `docs/demo.mp4` [o enlace].
+Se abre en <http://localhost:8501>. **Plan B:** vídeo en `sprint-16/docs/demo.mp4` [o enlace].
 **Qué probar:** [3 entradas de ejemplo y qué resultado se espera].
 **Entradas que no admite y qué mensaje muestra:** [ejemplo].
 
@@ -79,7 +80,7 @@ Se abre en <http://localhost:8501>. **Plan B:** vídeo en `docs/demo.mp4` [o enl
 
 ## 7. IA responsable (resumen)
 - Clasificación de riesgo (AI Act): [mínimo / limitado / alto]. Datos personales: [sí / no].
-- Principales riesgos y medidas: [3 líneas]. Detalle en `docs/riesgos_eticos.md` y `docs/model_card.md`.
+- Principales riesgos y medidas: [3 líneas]. Detalle en `sprint-16/docs/riesgos_eticos.md` y `sprint-16/docs/model_card.md`.
 - **Limitaciones y usos no permitidos:** [2-3 líneas].
 
 ## 8. Equipo y contribuciones
@@ -90,7 +91,7 @@ Se abre en <http://localhost:8501>. **Plan B:** vídeo en `docs/demo.mp4` [o enl
 Convención de commits: `tipo: descripción` (`feat:`, `fix:`, `docs:`, `data:`, `exp:`). **Todas las personas** deben tener commits propios.
 
 ## 9. Evidencias de metodología
-- Tablero: [enlace o exportación en `docs/scrum/`] · Backlog · Planning / review / retro de cada sprint.
+- Tablero: [enlace al tablero, o capturas en una carpeta `scrum/` dentro del `sprint-NN/` que corresponda] · Backlog (`sprint-14/backlog_y_sprints.md`) · Planning / review / retro de cada sprint.
 
 ## 10. Créditos y licencia del código
 Datos: [atribuciones]. Librerías principales: [lista con versiones]. Licencia del código: [MIT / propia].

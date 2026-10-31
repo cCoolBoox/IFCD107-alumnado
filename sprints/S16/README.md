@@ -74,7 +74,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_16_
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
 **Archivos subidos en el repositorio del equipo, carpeta `sprint-16/`** (marca cada uno cuando lo veas en GitHub):
-- [ ] `README.md` · lo creáis
+- [ ] `README.md` · lo modificáis
 - [ ] `notebooks/04_evaluacion.ipynb` · lo creáis a partir de un cuaderno
 - [ ] `demostrador/logica.py` · lo modificáis
 - [ ] `demostrador/app.py` · lo modificáis

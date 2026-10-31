@@ -104,7 +104,7 @@ Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y c
 
 ### 4 · 🪜 Guía paso a paso
 
-Son cinco pasos, de **150 minutos en total**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa.
+Son cinco pasos, de **150 minutos en total**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. El calendario da menos tiempo de reto del que suman los pasos: el día 1 solo hay 10 minutos (el planning, donde se acuerdan los pesos; los otros 10 son para escribirlos justificados al empezar el día 2) y el día 2 hay 75 minutos de reto, más la entrega, la review y la retro. Los 65 minutos que faltan se hacen al final del día 2, en la **consolidación** (13:00–13:30) y en la **6.ª hora** (hasta las 14:30); la subida puede hacerse hasta esa hora. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa.
 
 #### Paso 1 · Planning y pesos de los criterios (día 1, 20 minutos)
 1. Repartir roles y tareas, y apuntarlas en el tablero.
@@ -150,7 +150,7 @@ Todos revisan el trabajo de otra persona. Para el cuaderno, usad **una sola copi
 
 **Hecho cuando:** los pesos suman 100 %, están justificados y cada persona sabe qué le toca.
 
-#### Paso 2 · Primeros modelos en el leaderboard (día 1, 30 minutos)
+#### Paso 2 · Primeros modelos en el leaderboard (día 2, 30 minutos)
 1. Abrir `S08_06_leaderboard_plantilla` en Colab, guardar una copia y llamarla `reto_S08.ipynb`.
 2. Ejecutar las celdas de preparación y de herramientas **sin cambiarlas**.
 3. Registrar el modelo de referencia (*baseline*), la regresión logística, un árbol podado y un bosque.

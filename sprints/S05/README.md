@@ -39,7 +39,7 @@
 | ☐ | 📖 Teoría · Estadística con Python y CRUD | [Presentación S05.3](1_Teoria/S05.3_Estadistica_con_Python_y_CRUD.pdf) | 20 |
 | ☐ | 💻 Práctica · Descriptiva, Monte Carlo e intervalos de confianza (los ejercicios marcados «en clase») | [Cuaderno S05_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_04_estadistica_descriptiva_ic.ipynb) | 30 |
 | ☐ | 💻 Práctica · CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base) | [Cuaderno S05_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb) | 25 |
-| ☐ | 🎯 Reto · Cuaderno `S05_07`: mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_05_una_pagina.md) | 45 |
+| ☐ | 🎯 Reto · Cuaderno `S05_07`: mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6; lo que falte, en la consolidación y la 6.ª hora) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_05_una_pagina.md) | 45 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-05/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 4 y 5 | — | 40 |
 
 **En clase: 3 h 20 min.**

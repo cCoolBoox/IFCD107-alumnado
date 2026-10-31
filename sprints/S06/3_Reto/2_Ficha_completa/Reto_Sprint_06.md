@@ -153,7 +153,7 @@ Son cinco pasos, de **90 minutos en total** (10 de planning y 80 de reto). Cada 
 | Categorías inconsistentes | Listar los valores distintos de las columnas de texto | `crudo[columna].value_counts()` |
 | Valores imposibles | Mirar mínimos y máximos de las columnas numéricas | `crudo.describe()`, histogramas y diagramas de caja |
 | *Outliers* | Distinguir un valor extremo pero posible de uno imposible | Diagrama de caja; ante la duda, es una pregunta para el cliente |
-| Nulos | Ver dónde faltan datos y cuántos | `crudo.isna().sum()` |
+| Nulos | Ver dónde faltan datos y cuántos: **mirad todas las columnas**, también las de texto como `regimen` | `crudo.isna().sum()` |
 | Incoherencias entre columnas | Cruzar columnas que deberían cuadrar | Recalcular una columna a partir de otras y comparar |
 
 - **Rellenar la tabla.** Por cada defecto, una fila de [`informe_calidad_plantilla.md`](../4_Plantillas_y_entrega/informe_calidad_plantilla.md). Un ejemplo (inventado) de cómo debe quedar:
@@ -169,7 +169,7 @@ Son cinco pasos, de **90 minutos en total** (10 de planning y 80 de reto). Cada 
 
 - **Preguntas al cliente.** Lo que no podéis decidir solos se apunta como pregunta (por ejemplo: «¿un precio de 0 € es cortesía o un error?»), con lo que haréis mientras tanto. Pista de cuaderno: [`S06_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_01_pandas_eda.ipynb) y [`S06_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_02_limpieza.ipynb).
 
-**Qué deberíais ver.** Un fichero de **1545 filas y 18 columnas**, una tabla de `resumen_calidad` con columnas con nulos y alguna columna con un tipo que no es el esperado, y en el informe una tabla con **al menos 6 filas** (qué, dónde, cuántas filas, causa, tratamiento y por qué), con los tres defectos más graves marcados.
+**Qué deberíais ver.** Un fichero de **1545 filas y 18 columnas**, una tabla de `resumen_calidad` con nulos en **cuatro columnas** (`pais_origen`, `regimen`, `adultos` y `precio_noche`) y alguna columna con un tipo que no es el esperado, y en el informe una tabla con **al menos 6 filas**. La plantilla `informe_calidad_plantilla.md` da una columna para cada cosa: número, defecto, columna(s), filas afectadas, cómo lo detectasteis, causa probable, tratamiento aplicado y por qué (y riesgo). Marcad los tres defectos más graves.
 
 **Hecho cuando:** la tabla tiene 6 o más defectos con sus datos completos y hay al menos una pregunta para el cliente. Si no encontráis más, mirad la «Ayuda 3».
 
@@ -195,7 +195,7 @@ Son cinco pasos, de **90 minutos en total** (10 de planning y 80 de reto). Cada 
 3. Compararlos con validación cruzada y escribir la frase del resultado.
 
 **Cómo se hace**
-- **Columnas.** Separad las numéricas de las de texto (categóricas) de `X`.
+- **Columnas.** Separad las numéricas de las de texto (categóricas) de `X`. Ojo: `regimen` es de texto y tiene huecos; irá por la rama categórica, que los rellena con el valor más frecuente.
 - **El *pipeline*.** Un `ColumnTransformer` con dos ramas: numéricas con `SimpleImputer(strategy="median")` y `StandardScaler()`; categóricas con `SimpleImputer(strategy="most_frequent")` y `OneHotEncoder(handle_unknown="ignore")`. Después, un `Pipeline` que une el preprocesado con `LogisticRegression(max_iter=1000)`. Como todo va dentro del `Pipeline`, se ajusta **solo con los datos que le pasáis a `fit`**: eso evita la fuga.
 - **El modelo «tonto».** El mismo `Pipeline`, pero con `DummyClassifier(strategy="prior")` en el último paso.
 - **Validación cruzada.** `cross_val_score(modelo, X_train, y_train, cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42), scoring=...)`. Elegid una métrica que mire las cancelaciones (`"f1"` o `"roc_auc"`) y decid cuál y por qué. **Con `"roc_auc"`, el baseline debe salir en torno a 0,5**.

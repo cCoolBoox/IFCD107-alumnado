@@ -52,7 +52,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 
 | Fichero | Origen | Qué hacéis vosotros | ¿Se sube? |
 |---|---|---|---|
-| `README.md` | **Lo creáis.** No hay plantilla: la lista de apartados está en el bloque A de la lista de congelación | Escribirlo: problema, resultados, estructura de carpetas, cómo reproducir, cómo lanzar la demo, datos y licencias, IA responsable y equipo. Al final, la sección «Revisión con la rúbrica» | **Sí** · `sprint-16/` |
+| `README.md` | **Lo modificáis.** Partid del `README.md` de la raíz (que salió de la plantilla del Sprint 14); la lista de apartados está en el bloque A de la lista de congelación. Subid la versión final a `sprint-16/` y dejad también la raíz al día | Escribirlo: problema, resultados, estructura de carpetas, cómo reproducir, cómo lanzar la demo, datos y licencias, IA responsable y equipo. Al final, la sección «Revisión con la rúbrica» | **Sí** · `sprint-16/` |
 | `notebooks/04_evaluacion.ipynb` | **Lo creáis a partir de un cuaderno.** Os damos `S13_02` con los gráficos | Adaptarlo a vuestro modelo: evaluación en test, gráficos, análisis de errores, rendimiento por subgrupos y mitigación medida | **Sí** · `sprint-16/notebooks/` |
 | `demostrador/logica.py` | **Lo modificáis.** Plantilla con validación, nivel de riesgo y aviso de incertidumbre | Cambiar los campos, las reglas de validación y el texto del aviso por los de vuestro problema | **Sí** · `sprint-16/demostrador/` |
 | `demostrador/app.py` | **Lo modificáis.** Plantilla de interfaz con Streamlit | Adaptar el formulario a vuestros campos. Si usáis Gradio u otra herramienta, el fichero se llama distinto pero cuenta igual | **Sí** · `sprint-16/demostrador/` |
