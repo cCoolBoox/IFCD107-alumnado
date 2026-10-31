@@ -41,16 +41,6 @@
 
 **En clase: 2 h 30 min.**
 
-## 📘 Teoría en PDF (para consultar)
-
-En clase **no se proyecta entera**: el docente la usa en demos de 5 minutos dentro de cada misión. Abre el PDF cuando una misión te pida repasar un concepto.
-
-| PDF | Te ayuda en | Qué trae |
-|---|---|---|
-| [S04.1 · Python: entorno y lenguaje](1_Teoria/S04.1_Python_entorno_y_lenguaje.pdf) | Misiones 0 a 2 y la entrega con Git | Entorno (`venv`, `pip`, Git), variables, tipos, f-strings, `if`, `for` y `while` |
-| [S04.2 · Estructuras de datos, ficheros y errores](1_Teoria/S04.2_Python_estructuras_funciones_y_POO.pdf) | Misiones 1, 3, 4 y 5 | Listas, diccionarios, funciones, CSV y JSON, excepciones y del cuaderno al reto (la POO, para casa) |
-| [Apuntes del sprint](1_Teoria/apuntes/apuntes_python_para_datos.md) | Cualquier misión | La misma teoría, por escrito y con calma |
-
 ## El reto en pocas palabras
 
 **Qué os pide el cliente.** El equipo de reservas de TurisData calcula sus cifras semanales **a mano en una hoja de cálculo**. Es lento y cada persona lo hace un poco distinto. Os pide una **herramienta interna**: un pequeño programa que **lea el fichero de reservas, calcule tres cifras importantes (KPIs), avise con claridad si el fichero está mal y guarde los resultados** en un formato que otros sistemas puedan leer.
