@@ -100,7 +100,7 @@
 1. *(30 min)* Curso ★ [excepciones](https://www.curso.soultechlabs.io/basico/#pi-excepciones) (ejercicios 1 y 2) y [ficheros de texto, CSV y JSON](https://www.curso.soultechlabs.io/basico/#pi-ficheros) (ejercicios 2 y 3).
 2. *(20 min)* Taller, [bloque 3](https://www.curso.soultechlabs.io/taller/#t-leer): «Leer un CSV sin que se rompa», «¿Qué error es cada uno?» y «Guardar los KPIs en JSON».
 
-**🛠️ Trabajo** *(los otros 50 minutos)*. En `kpis.py`: primero `_convertir_fila` y después `leer_reservas`, con los comentarios «Paso». Ejecutad `python test_kpis.py 2` y mirad cuáles pasan de rojo a verde.
+**🛠️ Trabajo** *(los otros 50 minutos)*. En `kpis.py`: primero `_convertir_fila` y después `leer_reservas`, con los comentarios «Paso». Ejecutad `python test_kpis.py 2` y mirad cuáles pasan de rojo a verde. Ojo: `leer_reservas` devuelve **dos cosas a la vez** (`return reservas, avisos`, una *tupla*); quien la llama las recoge con `reservas, avisos = leer_reservas(ruta)`.
 
 **✅ Hecho cuando** pasan las pruebas de lectura: `test_leer_reservas_convierte_tipos`, `test_fichero_inexistente`, `test_faltan_columnas`, `test_filas_defectuosas…` y `test_valores_imposibles…`.
 
