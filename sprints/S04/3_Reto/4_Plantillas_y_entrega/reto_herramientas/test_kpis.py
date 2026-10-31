@@ -1,9 +1,11 @@
 """Pruebas del reto «Herramientas internas».
 
-Ejecuta:   python test_kpis.py        (no necesita pytest)
+Ejecuta:   python test_kpis.py        todas las pruebas (la entrega final)
+           python test_kpis.py 1      solo la FASE 1 (martes, misión 3: las funciones que calculan)
+           python test_kpis.py 2      solo la FASE 2 (miércoles, misiones 4 y 5: ficheros, errores y JSON)
 o bien:    python -m pytest -q        (si lo tienes instalado)
 
-Cada función `test_...` comprueba una parte del script `kpis.py`.
+Cada función `test_...` comprueba una parte del script `kpis.py`. No modifiques estas pruebas.
 """
 import json
 import os
@@ -40,6 +42,17 @@ CSV_VALORES_INVALIDOS = """fecha_llegada,noches,precio_noche,canal,cancelada
 """
 
 CSV_SIN_COLUMNA = "fecha_llegada,noches,precio_noche,canal\n2025-01-01,2,100.0,directo\n"
+
+
+def _r(dia, noches, precio, canal, cancelada):
+    """Una reserva ya convertida (como la que devuelve leer_reservas), para la FASE 1: sin ficheros."""
+    return {"fecha_llegada": date(2025, 1, dia), "noches": noches, "precio_noche": precio,
+            "canal": canal, "cancelada": cancelada}
+
+
+# Las mismas 5 reservas que CSV_BUENO, pero ya en memoria
+RESERVAS_EN_MEMORIA = [_r(1, 2, 100.0, "directo", 0), _r(3, 3, 80.0, "directo", 1), _r(5, 4, 50.0, "agencia", 0),
+                       _r(10, 1, 120.0, "agencia", 0), _r(10, 5, 60.0, "web_intermediaria", 1)]
 
 
 def _escribir(texto):
@@ -96,7 +109,7 @@ def test_valores_imposibles_se_descartan():
 
 
 def test_tasa_cancelacion_por_canal():
-    reservas, _ = kpis.leer_reservas(_escribir(CSV_BUENO))
+    reservas = RESERVAS_EN_MEMORIA
     esperado = {"directo": 50.0, "agencia": 0.0, "web_intermediaria": 100.0}
     assert kpis.tasa_cancelacion_por_canal(reservas) == esperado, f"Debería ser {esperado}"
     assert kpis.tasa_cancelacion_por_canal([]) == {}, "Sin reservas, un diccionario vacío"
@@ -111,14 +124,14 @@ def test_tasa_cancelacion_se_redondea_a_un_decimal():
 
 
 def test_ingreso_medio_por_reserva():
-    reservas, _ = kpis.leer_reservas(_escribir(CSV_BUENO))
+    reservas = RESERVAS_EN_MEMORIA
     # confirmadas: 2x100=200, 4x50=200, 1x120=120 -> media 173.33
     assert kpis.ingreso_medio_por_reserva(reservas) == 173.33, "Media de las confirmadas: (200+200+120)/3 = 173.33"
     assert kpis.ingreso_medio_por_reserva([]) == 0.0, "Sin reservas debe devolver 0.0, no error"
 
 
 def test_ocupacion_proxy():
-    reservas, _ = kpis.leer_reservas(_escribir(CSV_BUENO))
+    reservas = RESERVAS_EN_MEMORIA
     # 7 noches confirmadas / (10 días x 5 habitaciones) = 14.0 %
     assert kpis.ocupacion_proxy(reservas, capacidad_habitaciones=5) == 14.0, "7 / (10 x 5) = 14.0 %"
     assert kpis.ocupacion_proxy([], capacidad_habitaciones=5) == 0.0, "Sin reservas, 0.0"
@@ -177,8 +190,19 @@ def test_version_pandas_coincide_si_existe():
         assert obtenido[clave] == esperado[clave], f"La versión pandas no coincide en {clave}: {obtenido[clave]} frente a {esperado[clave]}"
 
 
+FASE_1 = {"test_tasa_cancelacion_por_canal", "test_tasa_cancelacion_se_redondea_a_un_decimal",
+          "test_ingreso_medio_por_reserva", "test_ocupacion_proxy"}
+
+
 if __name__ == "__main__":
-    pruebas = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
+    import sys
+    fase = sys.argv[1] if len(sys.argv) > 1 else "todas"
+    if fase not in ("1", "2", "todas"):
+        raise SystemExit("Uso: python test_kpis.py [1|2]   (sin número, se ejecutan todas)")
+    pruebas = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)
+               and (fase == "todas" or (n in FASE_1) == (fase == "1"))]
+    titulo = {"1": "FASE 1 · funciones que calculan (datos en memoria)", "2": "FASE 2 · ficheros, errores y JSON", "todas": "TODAS LAS PRUEBAS"}
+    print(f"--- {titulo[fase]} ---")
     fallos = 0
     for nombre, funcion in pruebas:
         try:

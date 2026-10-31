@@ -9,36 +9,37 @@
 
 ## Qué aprenderás
 
-1. Escribir **Python** básico en el navegador y en Colab (variables, decisiones, bucles) y crear **funciones y módulos** con pruebas.
-2. Representar datos con **listas, diccionarios y conjuntos**, y leer y escribir **CSV y JSON** controlando los errores.
-3. Entregar una herramienta con **pruebas y Git**: es lo que haréis en el reto «Herramientas internas».
+1. Escribir **Python** básico (listas, diccionarios, decisiones, bucles) y **funciones con pruebas**, aprendiendo lo justo en cada misión del reto «Herramientas internas».
+2. Leer y escribir **CSV y JSON** controlando los errores, y trabajar en **parejas de piloto y copiloto**.
+3. Entregar una herramienta con **pruebas y Git**, y comprobar con dos *katas* individuales que cada persona sabe escribir sus funciones.
 
 ## Día 1 · Martes 3/11
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 🔔 Ceremonia · Planning del reto «Herramientas internas» y test de nivel de partida (5 preguntas, anónimo) | — | 10 |
-| ☐ | 📖 Teoría · Python: entorno (venv, pip, Jupyter, Git) y lenguaje | [Presentación S04.1](1_Teoria/S04.1_Python_entorno_y_lenguaje.pdf) | 25 |
-| ☐ | 💻 Práctica · Curso Python desde cero ★ (días 2–3): type(), indexar y formatear | [Abrir](https://www.curso.soultechlabs.io/basico/#type) | 40 |
-| ☐ | 💻 Práctica · Curso Python desde cero ★ (día 4): listas, tuplas, dicts e if/else | [Abrir](https://www.curso.soultechlabs.io/basico/#list) | 50 |
-| ☐ | 💻 Práctica · Curso Python desde cero ★ (día 5): for, range() y funciones | [Abrir](https://www.curso.soultechlabs.io/basico/#for) | 45 |
-| ☐ | 💻 Práctica · Curso Python desde cero ★ (ampliación): try/except, CSV y JSON | [Abrir](https://www.curso.soultechlabs.io/basico/#pi-excepciones) | 30 |
+| ☐ | 🔔 Ceremonia · Planning, brief del cliente y test de nivel (5 preguntas, anónimo) | — | 15 |
+| ☐ | 🎯 Reto · Misión 0 · Mirar la demo del cliente + curso ★ `type()` y f-strings | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 35 |
+| ☐ | 🎯 Reto · Misión 1 · Datos: curso ★ listas y dicts, `mision_1_datos.py`, Taller 1 | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
+| ☐ | 🎯 Reto · Misión 2 · Decidir: curso ★ `if` y `for`, `mision_2_decidir.py` | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
+| ☐ | 🎯 Reto · Misión 3 · Funciones: curso ★ funciones, Taller 2 y `kpis.py` | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
 
 **En clase: 3 h 20 min.**
 
 **Al acabar el día, deberías poder decir:**
 
-- [ ] Mi entorno funciona y sé ejecutar código en el navegador y en un cuaderno.
-- [ ] Sé escribir una función corta y leer un CSV.
+- [ ] Sé leer y modificar datos en una lista de diccionarios.
+- [ ] Sé contar con `for` e `if` y meterlo en una función con `return`.
 
 ## Día 2 · Miércoles 4/11
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 🎯 Reto · Preparar la carpeta y ver que las pruebas fallan → rellenar las funciones una a una → exportar y ejecutar → probar que no se rompe → README y Git (pasos 1–5, versión mínima). Se empieza con 10 min del Taller de bloques (bloque 4: encadenar funciones y `main`) en pantalla compartida, y el docente modela `leer_reservas` en directo | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_04_una_pagina.md) | 100 |
-| ☐ | 🔔 Ceremonia · Entrega en `sprint-04/` y autoevaluación y coevaluación del Sprint 4 (la review y la retro se hacen junto con las del Sprint 5) | — | 15 |
+| ☐ | 🎯 Reto · Misión 4 · Ficheros: curso ★ excepciones y CSV, Taller 3 | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
+| ☐ | 🎯 Reto · Misión 4 · `_convertir_fila` y `leer_reservas` con sus pruebas | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
+| ☐ | 🎯 Reto · Misión 5 · Taller 4, `exportar_json`, `main` y errores a propósito | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 25 |
+| ☐ | 🔔 Ceremonia · README, revisión con la rúbrica, entrega en `sprint-04/` y autoevaluación | — | 25 |
 
-**En clase: 1 h 55 min.**
+**En clase: 2 h 30 min.**
 
 ## El reto en pocas palabras
 
@@ -71,8 +72,8 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_04_
 ## En casa (cuando puedas)
 
 - Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
-- [Taller de bloques](https://www.curso.soultechlabs.io/taller/): puzles de arrastrar piezas (los bloques 1–3 el martes en la tutoría; el bloque 4 es el calentamiento del reto). Lo que no acabes, para casa.
-- Curso «Python desde cero»: lo que os falte de la **ruta mínima ★** y los proyectos «Agenda telefónica» y «Tablas de multiplicar» ([abrir el curso](https://www.curso.soultechlabs.io/basico/)). Al acabar cada día, **exportad vuestro progreso** (botón «Exportar mi progreso») y enviad una captura del contador.
+- [Taller de bloques](https://www.curso.soultechlabs.io/taller/): los bloques que no hayas hecho dentro de las misiones y, si no te salió, repite la **kata** del día. Lo que no acabes, para casa.
+- Curso «Python desde cero»: los **pendientes de la ruta mínima ★** (`idx`, tuplas, `range`, `while`, funciones que llaman funciones, comprensiones, `lambda` y clases) y los proyectos «Agenda telefónica» y «Tablas de multiplicar» ([abrir el curso](https://www.curso.soultechlabs.io/basico/)). Para el **nivel B** de Python (escribir funciones cortas y leer un CSV con `try/except`) hay que llegar **antes del 17/11**. Al acabar cada día, **exportad vuestro progreso** (botón «Exportar mi progreso») y enviad una captura del contador.
 - Refuerzo en Colab: los cuadernos [`S04_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_01_entorno_sintaxis.ipynb), [`S04_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_02_funciones_modulos.ipynb), [`S04_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) y [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb), empezando por los ejercicios «en clase».
 - Cuaderno completo en casa: [`S04_05_poo_buenas_practicas`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb)
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_python_para_datos.md).
