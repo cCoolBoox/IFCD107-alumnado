@@ -90,7 +90,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 
 | Carpeta | Qué hay |
 |---|---|
-| [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
+| [`1_Teoria/`](1_Teoria/) | Los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
 | [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |

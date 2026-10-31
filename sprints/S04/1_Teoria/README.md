@@ -1,5 +1,5 @@
 # 1 · Teoría
 
-Las presentaciones del sprint, en orden (`S0N.1`, `S0N.2`…), y los **apuntes** para repasar en casa (`apuntes/`).
+Los **apuntes** para repasar en casa (`apuntes/`). En este sprint no hay presentaciones: el trabajo es el reto, por misiones.
 
-El orden de uso está en [README del sprint](../README.md).
+El orden de uso está en el [README del sprint](../README.md).
