@@ -1,8 +1,42 @@
 # Apuntes del Sprint 4 · Python para datos: de la hoja de cálculo al programa
 
-Las diapositivas del Sprint 4 enseñan mucho código muy rápido. Estos apuntes **explican paso a paso qué hace cada línea**, con ejemplos pequeños cuyo resultado puedes comprobar con una calculadora. Léelos **antes de abrir cada cuaderno** o cuando algo te salga en rojo.
+Estos apuntes **explican paso a paso qué hace cada línea**, con ejemplos pequeños cuyo resultado puedes comprobar con una calculadora. Úsalos **durante las misiones** cuando algo se te atasque, **en casa para repasar** o cuando algo te salga en rojo.
 
 No hace falta haber programado nunca. **Programar es dar instrucciones muy precisas y en orden**, como una receta: el ordenador hace exactamente lo que escribes, ni más ni menos.
+
+---
+
+## Índice
+
+- [Cómo estudiar estos apuntes](#cómo-estudiar-estos-apuntes)
+- [0. De qué va el sprint (en 1 minuto)](#0-de-qué-va-el-sprint-en-1-minuto)
+- **Día 1 · Martes**: la lógica, con los datos en memoria (misiones 0 a 3)
+    - [1. Dónde se ejecuta Python](#1-dónde-se-ejecuta-python)
+    - [2. Variables, tipos y operadores](#2-variables-tipos-y-operadores)
+    - [3. Decidir y repetir: if, for, while](#3-decidir-y-repetir-if-for-while)
+    - [4. Funciones: encapsular un cálculo](#4-funciones-encapsular-un-cálculo)
+    - [5. Listas, tuplas, diccionarios y conjuntos](#5-listas-tuplas-diccionarios-y-conjuntos)
+    - [6. Una lista de diccionarios es una tabla](#6-una-lista-de-diccionarios-es-una-tabla)
+- **Día 2 · Miércoles**: ficheros, errores y entrega (misiones 4 y 5)
+    - [7. Leer CSV y guardar JSON](#7-leer-csv-y-guardar-json)
+    - [8. Cuando algo falla: excepciones](#8-cuando-algo-falla-excepciones)
+    - [9. El reto, función a función](#9-el-reto-función-a-función)
+- **Para casa**: material extra
+    - [10. Entorno limpio: venv, pip y Git en el terminal](#10-entorno-limpio-venv-pip-y-git-en-el-terminal)
+    - [11. Buenas prácticas y POO](#11-buenas-prácticas-y-poo)
+- **Para consultar**
+    - [12. Dónde practicar cada cosa](#12-dónde-practicar-cada-cosa)
+    - [13. Chuleta de vocabulario](#13-chuleta-de-vocabulario)
+
+---
+
+## Cómo estudiar estos apuntes
+
+1. **Antes de cada misión** (o de cada cuaderno, si repasas en casa), lee la sección correspondiente: la tabla de la sección 12 te dice cuál.
+2. **Escribe el código tú, no lo copies**: los fallos que tengas enseñan más que acertar a la primera.
+3. **Cambia números y predice** qué saldrá antes de ejecutar.
+4. **Cuando salga un error en rojo, lee la última línea**: casi siempre dice qué pasó (consulta la tabla de errores de la sección 8).
+5. **En el reto, no empieces por el final:** pruebas en rojo → una función → verde → commit.
 
 ---
 
@@ -10,7 +44,7 @@ No hace falta haber programado nunca. **Programar es dar instrucciones muy preci
 
 TurisData calcula sus cifras **a mano en una hoja de cálculo**. Esa hoja se rompe, nadie sabe quién tocó qué y no se puede repetir. Python permite convertir esos cálculos en **un programa que cualquiera ejecuta y comprueba**.
 
-| Pieza | Para qué sirve | Cuaderno |
+| Pieza | Para qué sirve | Cuaderno (en casa) |
 |---|---|---|
 | Variables, tipos, `if`, `for` | Guardar datos y tomar decisiones | S04_01 |
 | Funciones | Encapsular un cálculo para reutilizarlo | S04_02 |
@@ -22,7 +56,9 @@ TurisData calcula sus cifras **a mano en una hoja de cálculo**. Esa hoja se rom
 
 ---
 
-# DÍA 1 · Lo básico del lenguaje
+# DÍA 1 · Martes · La lógica, con los datos en memoria
+
+*Misiones 0 a 3 del reto: variables y tipos, listas y diccionarios, decidir y repetir, funciones con pruebas.*
 
 ## 1. Dónde se ejecuta Python
 
@@ -88,9 +124,9 @@ canal = canal_bruto.strip().lower().replace(" ", "_")
 
 > **Si vienes de Java:** no hay `;` ni llaves. Los bloques se marcan con **sangría de 4 espacios** y no declaras el tipo: lo lleva el valor.
 
-## 3. Decidir y repetir: `if`, `for`, `while`
+## 3. Decidir y repetir: if, for, while
 
-### `if`: decidir
+### if: decidir
 
 ```python
 if tarifa == "flexible" and deposito == "sin_deposito":
@@ -103,7 +139,7 @@ else:
 
 Se lee: *si las dos cosas se cumplen → alto; si no, si se cumple al menos una → medio; en cualquier otro caso → bajo*. Python evalúa **de arriba abajo y se queda con el primer caso que se cumple**. Los dos puntos `:` y la **sangría** son obligatorios.
 
-### `for`: repetir recorriendo una secuencia
+### for: repetir recorriendo una secuencia
 
 Una estancia de 3 noches, con precio base 60 € que sube 5 € cada noche:
 
@@ -123,7 +159,7 @@ Paso a paso:
 
 `total += x` es lo mismo que `total = total + x`. `range(3)` genera **0, 1, 2** (empieza en 0 y **no incluye** el 3).
 
-### `while`: repetir mientras se cumpla algo
+### while: repetir mientras se cumpla algo
 
 ```python
 intentos = 0
@@ -166,7 +202,7 @@ El texto entre triples comillas es el **docstring**: explica qué hace la funci�
 - `lambda`: una función de una sola línea sin nombre.
 - **Módulos:** código ya hecho que se importa (`import datetime`, `import statistics`).
 
-### Probar con `assert`
+### Probar con assert
 
 Cada función lleva **una prueba** que comprueba que hace lo que debe:
 
@@ -176,10 +212,6 @@ assert clasificar_antelacion(10) == "ultima_hora"
 ```
 
 Si es cierto, no pasa nada (**silencio = bien**). Si es falso, salta un `AssertionError` que te avisa del fallo. Eso es una «prueba».
-
----
-
-# DÍA 2 · Datos reales: estructuras, ficheros y errores
 
 ## 5. Listas, tuplas, diccionarios y conjuntos
 
@@ -256,6 +288,12 @@ tasa = {c: round(100 * canceladas[c] / total[c], 1) for c in total}
 
 Resultado: `{'directo': 0.0, 'agencia': 50.0}`: de las 2 reservas de agencia, 1 se canceló → 50 %.
 
+---
+
+# DÍA 2 · Miércoles · Ficheros, errores y entrega
+
+*Misiones 4 y 5 del reto: leer el CSV sin que se rompa, guardar el JSON y entregar.*
+
 ## 7. Leer CSV y guardar JSON
 
 Un **CSV** es una tabla en texto plano (valores separados por comas). Un **JSON** es un diccionario/lista en texto: es el formato que usan casi todas las aplicaciones para intercambiar datos.
@@ -313,11 +351,38 @@ def a_float_seguro(texto, defecto=None):
 | `FileNotFoundError` | No encuentra el fichero | Carpeta y nombre del archivo |
 | `ZeroDivisionError` | Divides entre 0 | Comprueba que el total no es 0 |
 
+## 9. El reto, función a función
+
+El reto reúne lo que has practicado. Cada función de la plantilla se construye en una misión y tiene un cuaderno de refuerzo:
+
+| Función | Qué hace | Se construye en | Refuerzo en casa |
+|---|---|---|---|
+| `leer_reservas(ruta)` | Lee, valida y devuelve `(reservas, avisos)` | Misión 4 | S04_04 |
+| `tasa_cancelacion_por_canal` | % de canceladas por canal (1 decimal) | Misión 3 | S04_03 |
+| `ingreso_medio_por_reserva` | Media de noches × precio de las **no canceladas** | Misión 3 | S04_02 |
+| `ocupacion_proxy` | Ocupación aproximada con la capacidad | Misión 3 (en pantalla, con el docente) | S04_01 |
+| `exportar_json` | Guarda el resultado con tildes y sangría | Misión 5 | S04_04 |
+
+Con el ejemplo del apartado 6, `ingreso_medio_por_reserva` sería (240 + 200 + 360) / 3 = **266,67 €**.
+
+### Orden de trabajo en el reto: pruebas primero (desde el martes)
+
+1. **Ejecuta `python test_kpis.py`: tiene que fallar** (todavía no hay código).
+2. **Rellena una función.**
+3. **Vuelve a ejecutar:** esa prueba **pasa a verde**.
+4. **Commit** (guarda una «foto» de lo que ya funciona). Y a la siguiente.
+
+Así siempre sabes **qué funciona y qué no**, y avanzas sin miedo a romper lo anterior.
+
+Un **commit** es una «foto» de tu trabajo con un **mensaje** que dice **qué cambia y por qué**. Mensaje malo: «cambios». Mensaje bueno: «Valida columnas obligatorias en leer_reservas». En el reto, cada subida de ficheros a GitHub desde el navegador es un commit (la ficha explica cómo); hacen falta al menos tres, de personas distintas.
+
 ---
 
-# DÍA 3 · Del cuaderno al reto
+# PARA CASA · Material extra
 
-## 9. Entorno limpio: `venv`, `pip` y Git
+*Nada de esto hace falta para terminar el reto: es para quien quiera ir más allá.*
+
+## 10. Entorno limpio: venv, pip y Git en el terminal
 
 ```bash
 python -m venv .venv                 # crea un entorno aislado para ESTE proyecto
@@ -328,32 +393,9 @@ git init && git add . && git commit -m "Primer commit"
 
 - Un **venv por proyecto** evita el famoso «en mi ordenador funciona».
 - `requirements.txt` **anota las versiones** para que otra persona lo reproduzca.
-- **Git** guarda «fotos» de tu trabajo. Un **commit** = una foto con un **mensaje** que dice **qué cambia y por qué**. Mensaje malo: «cambios». Mensaje bueno: «Valida columnas obligatorias en leer_reservas».
+- **Git** guarda «fotos» de tu trabajo (qué es un *commit* y cómo escribir su mensaje: sección 9). Aquí lo haces desde el terminal, en vez de subir los ficheros desde el navegador.
 
-## 10. De las funciones del cuaderno al `kpis.py`
-
-El reto reúne lo que has practicado. Cada función de la plantilla la prepara un cuaderno:
-
-| Función | Qué hace | La prepara |
-|---|---|---|
-| `leer_reservas(ruta)` | Lee, valida y devuelve `(reservas, avisos)` | S04_04 |
-| `tasa_cancelacion_por_canal` | % de canceladas por canal (1 decimal) | S04_03 |
-| `ingreso_medio_por_reserva` | Media de noches × precio de las **no canceladas** | S04_02 |
-| `ocupacion_proxy` | Ocupación aproximada con la capacidad | S04_01 |
-| `exportar_json` | Guarda el resultado con tildes y sangría | S04_04 |
-
-Con el ejemplo del apartado 6, `ingreso_medio_por_reserva` sería (240 + 200 + 360) / 3 = **266,67 €**.
-
-### Orden de trabajo en el reto: pruebas primero
-
-1. **Ejecuta `python test_kpis.py`: tiene que fallar** (todavía no hay código).
-2. **Rellena una función.**
-3. **Vuelve a ejecutar:** esa prueba **pasa a verde**.
-4. **Commit.** Y a la siguiente.
-
-Así siempre sabes **qué funciona y qué no**, y avanzas sin miedo a romper lo anterior.
-
-## 11. Buenas prácticas y POO (para casa)
+## 11. Buenas prácticas y POO
 
 - **PEP 8:** `nombres_con_guion_bajo`, 4 espacios, docstring en cada función.
 - **Funciones pequeñas:** leer, calcular y exportar son **funciones distintas**, no una gigante.
@@ -364,14 +406,15 @@ Así siempre sabes **qué funciona y qué no**, y avanzas sin miedo a romper lo 
 
 ## 12. Dónde practicar cada cosa
 
-| Si no entiendes… | Mira la sección | Practica en |
-|---|---|---|
-| Variables, tipos, `if`, `for`, `while` | 2-3 | Cuaderno `S04_01_entorno_sintaxis` |
-| Funciones, `assert`, `lambda` | 4 | `S04_02_funciones_modulos` |
-| Listas, diccionarios, comprensiones | 5-6 | `S04_03_estructuras_datos` |
-| CSV, JSON, `try/except` | 7-8 | `S04_04_ficheros_excepciones` |
-| Entorno, Git, pruebas en verde | 9-10 | Reto «Herramientas internas» (pasos 1-5) |
-| Clases y herencia | 11 | `S04_05_poo_buenas_practicas` (opcional) |
+| Si no entiendes… | Mira la sección | En clase | En casa |
+|---|---|---|---|
+| Variables, tipos, `if`, `for`, `while` | 2-3 | Misiones 0 y 2 | Cuaderno `S04_01_entorno_sintaxis` |
+| Funciones, `assert`, `lambda` | 4 | Misión 3 | `S04_02_funciones_modulos` |
+| Listas, diccionarios, comprensiones | 5-6 | Misión 1 | `S04_03_estructuras_datos` |
+| CSV, JSON, `try/except` | 7-8 | Misiones 4 y 5 | `S04_04_ficheros_excepciones` |
+| Pruebas en verde, commits, el reto completo | 9 | Misiones 3 a 5 (ficha del reto, pasos 1-5) | — |
+| Entorno limpio y Git en el terminal | 10 | — | Material extra |
+| Clases y herencia | 11 | — | `S04_05_poo_buenas_practicas` (opcional) |
 
 ## 13. Chuleta de vocabulario
 
@@ -393,11 +436,3 @@ Así siempre sabes **qué funciona y qué no**, y avanzas sin miedo a romper lo 
 | **Entorno virtual (`venv`)** | Instalación de Python aislada por proyecto |
 | **Commit** | «Foto» guardada de tu trabajo en Git |
 | **Módulo** | Código ya hecho que se importa |
-
-## 14. Cómo estudiar estos apuntes
-
-1. **Antes de cada cuaderno**, lee la sección correspondiente (mira la tabla de la sección 12).
-2. **Escribe el código tú, no lo copies**: los fallos que tengas enseñan más que acertar a la primera.
-3. **Cambia números y predice** qué saldrá antes de ejecutar.
-4. **Cuando salga un error en rojo, lee la última línea**: casi siempre dice qué pasó (consulta la tabla de errores de la sección 8).
-5. **En el reto, no empieces por el final:** pruebas en rojo → una función → verde → commit.
