@@ -2,9 +2,21 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_05.md](../3_Consultar/Reto_Sprint_05.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Todo se hace dentro del cuaderno [`S05_07_reto_ocupacion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_07_reto_ocupacion.ipynb), que lleva puntos de control (`assert`); los datos: [`ocupacion_diaria.csv`](../../../../datos/ocupacion_diaria.csv).
 
-**El cliente.** Al dueño de TurisData le han dicho que «con calor se llena menos» y que «los festivos llenan». Quiere saber **cuánto** cambia la ocupación diaria y **con qué seguridad** se puede afirmar. Tres años de datos diarios.
-**Qué entregáis (no cambia):** el cuaderno completo, la base de datos `turisdata_reto.db` y, dentro del cuaderno, una **respuesta al cliente de 150 palabras como máximo**. **Al final del sprint se suben a `sprint-05/` del repositorio del equipo: 2 ficheros del equipo (cuaderno y base de datos) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** planning 10 min (día 1) · día 2: CRUD (paso 1) y reto 45 min · entrega, review y retro 40 min. Los 35 min que faltan, en la consolidación y la 6.ª hora (subida hasta las 14:30); lo demás, a casa.
+**Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S05/3_Reto/1_Trabajar/S05_demo_reto.html):** una sola página, sin instalar nada, que muestra lo que tendréis al final.
+
+- **El cliente.**
+    - Al dueño de TurisData le han dicho que «con calor se llena menos» y que «los festivos llenan».
+    - Quiere saber **cuánto** cambia la ocupación diaria y **con qué seguridad** se puede afirmar.
+    - Tiene tres años de datos diarios.
+- **Qué entregáis (no cambia):**
+    - El cuaderno completo.
+    - La base de datos `turisdata_reto.db`.
+    - Dentro del cuaderno, una **respuesta al cliente de 150 palabras como máximo**.
+    - Al final se suben a `sprint-05/` del repositorio del equipo (lista completa en «Antes de entregar»).
+- **Tiempo en clase:**
+    - Planning: 10 min (día 1).
+    - Día 2: CRUD (paso 1) y reto, 45 min; entrega, review y retro, 40 min.
+    - Los 35 min que faltan, en la consolidación y la 6.ª hora (subida hasta las 14:30); lo demás, a casa.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 
