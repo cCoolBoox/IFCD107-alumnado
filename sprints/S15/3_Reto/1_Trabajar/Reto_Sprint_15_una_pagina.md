@@ -1,6 +1,6 @@
 # Sprint 15 · Reto «El mejor modelo, demostrado» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (pasos, rúbrica, ayudas y errores frecuentes) sigue en [Reto_Sprint_15.md](../3_Consultar/Reto_Sprint_15.md); la plantilla del registro está en [`registro_experimentos_plantilla.csv`](plantillas/registro_experimentos_plantilla.csv).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_15.md](../3_Consultar/Reto_Sprint_15.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del registro está en [`registro_experimentos_plantilla.csv`](plantillas/registro_experimentos_plantilla.csv).
 
 **El cliente.** El docente quiere saber **qué modelo recomendáis y por qué**, no solo cuál tiene el número más alto: si la mejora frente al *baseline* compensa el coste, si el modelo funciona con datos nuevos y si se puede repetir.
 **Qué entregáis (no cambia):** el registro de experimentos, el cuaderno `03_modelos.ipynb`, la justificación de una página del candidato, el modelo guardado con sus metadatos y una primera explicación del modelo. **Al final del sprint se suben a `sprint-15/` del repositorio del equipo: 6 ficheros del equipo (esos seis) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
@@ -25,6 +25,8 @@
 | 60 (día 2) | Lista de fugas y tutoría de 20 min con el docente | Cinco respuestas escritas y registro limpio |
 | 70 (día 3) | Media ± desviación, coste y elección del candidato | `justificacion_candidato.md` con tabla y candidato razonado |
 | 70 (día 3) | Test una vez, modelo guardado, explicación, revisión y subida | Los ficheros están en `sprint-15/` |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_15_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_15_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_15_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_15_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_15_paso_5.md)
 
 ## Frases para la justificación (completad los huecos)
 

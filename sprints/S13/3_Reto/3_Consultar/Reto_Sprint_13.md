@@ -35,94 +35,12 @@
 
 Son cuatro pasos, de **25 minutos en total** (el 25/11, dentro del último día del Sprint 12). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo (tres gráficos, titular y tres viñetas) y dejad lo demás para la franja de entrega o para casa.
 
-#### Paso 1 · Elegir el modelo, cargarlo y fijar los costes (día 1, 4 minutos)
-1. Elegir el mejor modelo del curso y abrir el cuaderno plantilla en Colab.
-2. Comprobar que el modelo se carga y que el cuaderno llega hasta el final sin errores.
-3. Escribir el coste de cada error y el umbral.
-4. Repartir el trabajo del paso 2.
+**Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 
-**Cómo se hace**
-- **Abrir la plantilla.** Pulsad el botón de Colab del apartado 2 y guardad una copia (*Archivo → Guardar una copia en Drive*), para no perder los cambios.
-- **Cambiar el modelo.** Buscad la línea marcada `# >>> EDITA` en la celda «1. Datos y modelo» y poned vuestro modelo. Tiene que ser un objeto que sepa dar probabilidades (`predict_proba`) y que reciba `X_test`. Mantened las **semillas** y la separación entre entrenamiento y prueba, y usad **el mismo preprocesado con el que se entrenó**. Si el modelo no carga a tiempo, dejad el de ejemplo (regresión logística), que sí funciona, y decidlo en el pie del informe.
-- **Fijar los costes.** En la celda «Parámetros del informe» cambiad `COSTE_FN` (lo que perdéis por cada cancelación que el modelo no detecta, es decir, una habitación vacía) y `COSTE_FP` (lo que cuesta avisar a quien sí iba a venir). Los valores de la plantilla (50 y 30) son de ejemplo. Preguntadle al docente, que hace de cliente; si no lo sabe, **proponed una hipótesis y escribidla**.
-- **Elegir el umbral.** `UMBRAL` es la probabilidad a partir de la cual avisáis. Elegidlo con el gráfico de costes del cuaderno [`S13_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb), no por costumbre.
-
-| Persona | Parte | Minutos |
-|---|---|---|
-| A | Modelo, costes y cuaderno (paso 1) | 4 |
-| B | Los gráficos y sus títulos (paso 2) | 8 |
-| C | Titular, viñetas y pie (paso 3) | 8 |
-| D (si hay 4) | Prueba de los 30 segundos y revisión (paso 4) | 5 |
-
-**Qué deberíais ver.** Una línea como `AUC en prueba: … · reservas de prueba: …` al final de la celda de datos y modelo, y ningún mensaje de error rojo.
-
-**Hecho cuando:** el modelo se carga, `COSTE_FN`, `COSTE_FP` y `UMBRAL` están escritos, y cada persona sabe qué parte le toca.
-
-#### Paso 2 · Ajustar los gráficos con título-conclusión (día 1, 8 minutos)
-1. Ejecutar las celdas de cálculos y del panel.
-2. Cambiar el título de cada gráfico para que **diga una conclusión** con su cifra.
-3. Comprobar que cada gráfico tiene ejes con nombre, barras desde 0 y pocos colores.
-4. Volver a ejecutar para guardar el PNG con los cambios.
-
-**Cómo se hace.** El panel tiene cuatro gráficos y cada uno contesta a una pregunta de Marcos. Los títulos que lleva la plantilla son un punto de partida: los marcados con `# >>> EDITA` tenéis que reescribirlos.
-
-| Gráfico | Contesta a | Qué cambiáis | Ejemplo de título-conclusión |
-|---|---|---|---|
-| 1. Matriz de confusión (en %) | ¿Puedo fiarme? | Nada si los números cambian solos; revisad que el título diga lo que se ve | «Detectamos 7 de cada 10 cancelaciones, con 2 falsas alarmas de cada 10» |
-| 2. Curva ROC (la que se añade en el nivel 🟡) | ¿Puedo fiarme? | El título (hoy es genérico) | «Acierta bastante mejor que el azar, pero no es perfecto» |
-| 3. Importancia de variables | ¿Qué mueve las cancelaciones? | El título: nombrad la variable líder | «La tarifa flexible es lo que más pesa en una cancelación» |
-| 4. Coste con y sin modelo | ¿Qué hago el lunes? | El título, con el ahorro en € | «Con el modelo perdemos 1 230 € menos en 3 000 reservas» |
-
-Los ejemplos llevan cifras inventadas: las vuestras son las que salen en vuestro gráfico. Para cada gráfico comprobad esta lista corta:
-- El título enuncia una conclusión y se **ve realmente** en el gráfico.
-- Los ejes tienen nombre y las barras empiezan en 0 (el gráfico 4 ya lleva `set_ylim(0, …)`). Nada de 3D y 3–4 colores con sentido.
-- Está calculado sobre el **test**, no sobre el entrenamiento.
-
-**Qué deberíais ver.** Un panel de 2 × 2 con vuestros cuatro títulos y, en el panel de archivos de Colab (icono de la carpeta), el fichero `informe_visual_panel.png`.
-
-**Hecho cuando:** cada gráfico tiene un título-conclusión y ejes con nombre, y el PNG se ha generado **después** del último cambio.
-
-#### Paso 3 · Escribir titular, viñetas y pie (día 1, 8 minutos)
-1. Copiar `plantilla_informe_visual.md` como `informe_visual.md`.
-2. Escribir el titular-decisión y las tres viñetas, sin jerga.
-3. Rellenar la sección de IA responsable y el pie.
-4. Comprobar que las cifras del texto son las mismas que las del gráfico.
-
-**Cómo se hace**
-- **Copiar la plantilla.** En GitHub abrid el archivo y pulsad *Raw*; copiad el texto y pegadlo en un archivo nuevo llamado `informe_visual.md`. Sustituid todo lo que está entre corchetes.
-- **El titular** es una decisión de una línea: qué hacer, a quién y con qué efecto. Ejemplo (cifras inventadas): «Llamar cada lunes a las 25 reservas de mayor riesgo evitaría unas 8 habitaciones vacías al mes». Debajo de «Los cuatro gráficos» poned vuestros cuatro títulos con una frase cada uno y añadid la línea `![Panel del informe](informe_visual_panel.png )` (el espacio antes del último paréntesis es opcional).
-- **Las tres viñetas** son «Qué hemos hecho» (cuántos datos, qué se predice), «Qué recomendamos» (acción, umbral y ahorro esperado) y «Qué límites tiene» (datos sintéticos, dónde falla más, qué no debe usarse para decidir). Entre el titular, los gráficos y las viñetas tienen que quedar contestadas las tres preguntas de Marcos.
-- **IA responsable, en dos líneas.** Un riesgo concreto y una medida. Ejemplo: «El modelo no debe usarse para negar reservas a nadie; solo para priorizar avisos».
-- **El pie** lleva los datos (con cuántas reservas y qué periodo), el modelo, el umbral, la semilla, el cuaderno y quién es responsable. Si habéis usado IA, decidlo aquí.
-- **Traducir la jerga.** Si una sigla aparece, va con una frase:
-
-| Palabra | Cómo decirlo |
-|---|---|
-| AUC | «nota de 0,5 a 1 de lo bien que el modelo separa a quien cancela de quien no» |
-| F1 | «número que combina cuántos avisos acierta y cuántas cancelaciones detecta» |
-| SHAP | «forma de ver qué datos empujan más la decisión del modelo» |
-| Falso negativo / falso positivo | «cancelación que no detectamos» / «falsa alarma» |
-
-**Qué deberíais ver.** Un `informe_visual.md` que se lee en un minuto, con el panel a la vista, un titular que es una decisión y todas las cifras del texto iguales que las del gráfico.
-
-**Hecho cuando:** no queda ningún corchete de la plantilla, no hay jerga sin explicar y alguien ha comparado una por una las cifras del texto con las del gráfico.
-
-#### Paso 4 · Probar con otro equipo, revisar con la rúbrica y dejarlo listo (día 1, 5 minutos)
-1. Pasar la página a otro equipo y preguntar: **«¿Entiendes la decisión en 30 segundos?»**
-2. Si no la entienden o entienden otra cosa, reescribir el titular.
-3. Pedir a alguien que no escribió esa parte que la revise con la rúbrica y anote el resultado en `informe_visual.md`.
-
-**Cómo se hace**
-- **La prueba de los 30 segundos.** Quien lee mira la página 30 segundos y dice **con sus palabras** qué decisión entiende. Si no coincide con la vuestra, **el mensaje no está claro**: reescribid el titular, no el lector.
-- **La revisión con la rúbrica.** Quien revisa sigue los cinco pasos de «Cómo se revisa» de [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md) y rellena la sección «Revisión con la rúbrica» del final de `informe_visual.md`: un nivel de 1 a 4 por criterio y **una frase de prueba**. Esa sección va debajo de la página del informe y no se proyecta. Si no da tiempo, se acaba al empezar la franja de entrega.
-- **Antes de subir.** Repasad la lista de comprobación del final de la plantilla (la «Definition of Done» del reto) y descargad el cuaderno con *Archivo → Descargar → Descargar .ipynb*, con el nombre `informe_visual.ipynb`.
-- **Subir los ficheros (la vía del curso, desde el navegador), en la franja de entrega.** Seguid [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md): (1) abrid el repositorio del equipo y **entrad primero en la carpeta `sprint-13`**; (2) *Add file → Upload files*; (3) arrastrad `informe_visual.md`, `informe_visual_panel.png` e `informe_visual.ipynb`; (4) escribid un mensaje corto y pulsad **Commit changes**. Cada subida es un *commit* con el nombre de quien la hace, así que repartidlas entre personas. Los nombres de archivo, **en minúsculas y sin espacios**.
-
-**Qué deberíais ver.** Una página que otro equipo entiende, la sección «Revisión con la rúbrica» rellena con un nivel y una frase de prueba por criterio, y, tras la subida, en la carpeta `sprint-13` del repositorio, los tres ficheros del equipo y una hoja de autoevaluación por persona (**3 + N**).
-
-**Hecho cuando:** otro equipo ha dicho la misma decisión que vosotros, la revisión con la rúbrica está anotada y los ficheros están listos para subir a `sprint-13/`.
-
-**Después, en la franja de entrega y review:** cada persona rellena y sube su autoevaluación y coevaluación a `sprint-13/`, y cada equipo proyecta su página 30 segundos. **El resto de la clase dice la decisión que entiende**; si no coincide con la del equipo, el mensaje no está claro. Se comparan los titulares y se elige el más claro.
+- [Paso 1 · Elegir el modelo, cargarlo y fijar los costes (día 1, 4 minutos)](Reto_Sprint_13_paso_1.md)
+- [Paso 2 · Ajustar los gráficos con título-conclusión (día 1, 8 minutos)](Reto_Sprint_13_paso_2.md)
+- [Paso 3 · Escribir titular, viñetas y pie (día 1, 8 minutos)](Reto_Sprint_13_paso_3.md)
+- [Paso 4 · Probar con otro equipo, revisar con la rúbrica y dejarlo listo (día 1, 5 minutos)](Reto_Sprint_13_paso_4.md)
 
 #### Ayuda 1 · Cómo usar la IA en este reto
 

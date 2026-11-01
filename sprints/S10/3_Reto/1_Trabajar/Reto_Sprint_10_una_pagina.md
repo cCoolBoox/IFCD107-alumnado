@@ -1,6 +1,6 @@
 # Sprint 10 · Reto «¿Vale la pena la red?» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (recursos, guía paso a paso, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_10.md](../3_Consultar/Reto_Sprint_10.md). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Se hace con el cuaderno [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_04_reto_vale_la_pena.ipynb) y los datos [`reservas_turisdata.csv`](../../../../datos/reservas_turisdata.csv).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_10.md](../3_Consultar/Reto_Sprint_10.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Se hace con el cuaderno [`S10_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_04_reto_vale_la_pena.ipynb) y los datos [`reservas_turisdata.csv`](../../../../datos/reservas_turisdata.csv).
 
 **El cliente.** La dirección de TurisData oye hablar de redes neuronales y pregunta si debe **sustituir su modelo de cancelaciones por una red**. Quiere evidencias con el coste incluido. **«No compensa» es una respuesta tan válida como «sí».**
 **Qué entregáis (no cambia):** el cuaderno ejecutado, un informe comparativo de 1–2 páginas *ML clásico frente a MLP* y el README del sprint. **Al final del sprint se suben a `sprint-10/` del repositorio del equipo: 3 ficheros del equipo (esos tres) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
@@ -26,6 +26,8 @@
 | 20 | Leer las curvas y diagnosticar el sobreajuste | El ejercicio 3 pasa y hay una frase de diagnóstico |
 | 25 | Comparación justa: semillas, prueba una vez y coste | El ejercicio 4 pasa y hay media ± desviación |
 | 35 | Informe, README, revisión con la rúbrica y subida | Otra persona podría repetirlo con el README |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_10_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_10_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_10_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_10_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_10_paso_5.md) · [Paso 6](../3_Consultar/Reto_Sprint_10_paso_6.md)
 
 ## Frases para el informe (completad los huecos)
 

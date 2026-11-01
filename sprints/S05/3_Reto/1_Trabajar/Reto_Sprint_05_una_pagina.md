@@ -1,6 +1,6 @@
 # Sprint 5 · Reto «¿La ocupación depende de esto?» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (recursos, guía paso a paso, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_05.md](../3_Consultar/Reto_Sprint_05.md). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Todo se hace dentro del cuaderno [`S05_07_reto_ocupacion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_07_reto_ocupacion.ipynb), que lleva puntos de control (`assert`); los datos: [`ocupacion_diaria.csv`](../../../../datos/ocupacion_diaria.csv).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_05.md](../3_Consultar/Reto_Sprint_05.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Todo se hace dentro del cuaderno [`S05_07_reto_ocupacion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_07_reto_ocupacion.ipynb), que lleva puntos de control (`assert`); los datos: [`ocupacion_diaria.csv`](../../../../datos/ocupacion_diaria.csv).
 
 **El cliente.** Al dueño de TurisData le han dicho que «con calor se llena menos» y que «los festivos llenan». Quiere saber **cuánto** cambia la ocupación diaria y **con qué seguridad** se puede afirmar. Tres años de datos diarios.
 **Qué entregáis (no cambia):** el cuaderno completo, la base de datos `turisdata_reto.db` y, dentro del cuaderno, una **respuesta al cliente de 150 palabras como máximo**. **Al final del sprint se suben a `sprint-05/` del repositorio del equipo: 2 ficheros del equipo (cuaderno y base de datos) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
@@ -26,6 +26,8 @@
 | 10 | Paso 4: comparar con `statsmodels` | Punto de control 3 superado |
 | 10 | Paso 5: p-valor, intervalo y tamaño del efecto, con palabras | Punto de control 4 superado |
 | 10 | Paso 6: respuesta al cliente, reiniciar y ejecutar todo, revisión con la rúbrica | Todo corre sin errores y la revisión está anotada |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_05_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_05_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_05_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_05_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_05_paso_5.md) · [Paso 6](../3_Consultar/Reto_Sprint_05_paso_6.md)
 
 ## Frases para la respuesta al cliente (150 palabras)
 

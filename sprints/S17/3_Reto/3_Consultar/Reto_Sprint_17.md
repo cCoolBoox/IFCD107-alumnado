@@ -37,103 +37,13 @@
 
 Son cinco pasos: **4 h 10 min de trabajo el día 1 (250 minutos, dentro de la jornada de 6 horas) y 2 horas el día 2**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, asegurad el nivel mínimo y dejad lo demás para el siguiente ensayo.
 
-#### Paso 1 · Teoría de storytelling (día 1, 20 minutos)
-1. Escuchar la estructura de una buena historia: audiencia, mensaje, orden de las ideas.
-2. Tomar notas **pensando en vuestro proyecto**, no en uno cualquiera.
-3. Leer juntos los apuntes y repartir quién cuenta qué parte del relato.
+**Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 
-**Cómo se hace**
-- **Escuchar.** El docente presenta [`S17.1_Storytelling_y_defensa.pdf`](../../1_Teoria/S17.1_Storytelling_y_defensa.pdf). Cada persona apunta, en una hoja o en el móvil, **tres ideas** que puede usar en su proyecto.
-- **Leer.** Con el resto de la hora, mirad los [apuntes](../../1_Teoria/apuntes/apuntes_storytelling_y_defensa.md), sobre todo los ejemplos «hablas para ti / hablas para ellos».
-- **Preguntarse.** Contestad en voz alta: ¿quién escucha el día 14?, ¿qué decisión tiene que tomar?, ¿qué le asusta?
-
-**Qué deberíais ver.** Cada persona con tres notas sobre su proyecto y el equipo con una respuesta común a «¿quién escucha y qué le importa?» (dinero, tiempo, riesgos y qué hacer mañana).
-
-**Hecho cuando:** cada persona sabe explicar con sus palabras qué es un mensaje único, una pirámide y un arco narrativo, y el equipo ha dicho en voz alta quién es su audiencia.
-
-#### Paso 2 · Construir el relato (día 1, 85 minutos)
-1. Rellenar la plantilla de storytelling, de arriba abajo: audiencia, mensaje único, pirámide y arco narrativo.
-2. Dibujar el storyboard: un máximo de 12 diapositivas, cada una con su título-conclusión.
-3. Escribir quién habla en cada parte, de modo que hablen todas las personas.
-4. Escribir y ensayar en voz alta el pitch de 3 minutos.
-
-**Cómo se hace.** Copiad [`plantilla_storytelling.md`](../1_Trabajar/plantillas/plantilla_storytelling.md) a una carpeta vuestra y rellenadla **antes de abrir el editor de diapositivas**: si el mensaje no cabe en una frase, no cabrá en 12 diapositivas. El tiempo es orientativo.
-
-| Orden | Qué hacéis | Ejemplo o pista | Minutos |
-|---|---|---|---|
-| 1 | **Audiencia:** quién escucha, qué sabe, qué le preocupa y qué términos hay que traducir (tabla de traducción de al menos 4) | El cliente es un directivo no técnico: le importan el dinero, el tiempo, los riesgos y qué hacer | 25 |
-| 2 | **Mensaje único** en una frase, con la fórmula de la plantilla | «Podemos prever la ocupación con 3 meses de antelación con un error del 7 %, suficiente para planificar plantilla, pero no para fijar precios». Si os atascáis: «Gracias a nuestro trabajo, el cliente puede ___, pero no debe ___» | 20 |
-| 3 | **Pirámide:** conclusión arriba, 3 argumentos y la evidencia de cada uno (un dato o una figura de la memoria) | Si un dato no sostiene ningún argumento, se queda fuera: va a la memoria | 20 |
-| 4 | **Arco narrativo:** situación, complicación, pregunta, resolución, demostración, límites y llamada a la acción | Situación: «el hotel planifica a ojo». Problema: «errores de ±20 %». Resolución: «nuestro modelo». Propuesta: «usarlo así y con estos límites». El protagonista es el cliente, no el modelo | 20 |
-| 5 | **Storyboard** de 12 diapositivas como máximo: un título-conclusión, un elemento visual y un tiempo por diapositiva | Título-conclusión: «El modelo supera al método simple en 9 de 12 meses» (no una etiqueta como «Resultados») | 20 |
-| 6 | **Reparto de voces:** escribid quién cuenta cada parte; con 3 personas, una asume también los límites | El reparto del [guion](../../1_Teoria/actividades/guion_defensa.md) es solo orientativo | 5 |
-| 7 | **Pitch de 3 minutos**, que debe funcionar **sin diapositivas** | Gancho, problema, solución, resultado, límite y petición, con un cronómetro | 10 |
-
-**Qué deberíais ver.** Una plantilla con todos los huecos rellenos, un storyboard de 12 diapositivas o menos con una persona en cada fila, y un pitch que se dice en voz alta en menos de 3 minutos.
-
-**Hecho cuando:** pasáis la comprobación final de la plantilla (apartado 8): el mensaje se entiende en 20 segundos, cada título se entiende sin oír al orador y todas las personas tienen turno. Con eso ya podéis hacer las diapositivas.
-
-#### Paso 3 · Rondas de ensayo (día 1, 145 minutos)
-1. Hacer las diapositivas y probar la demo; grabar el vídeo del plan B.
-2. Ensayar con cronómetro, con preguntas de otro equipo, con una ronda extra de preguntas difíciles y, al final, como el día real.
-3. Después de cada ronda, escribir dos cosas que mejorar y arreglar solo eso.
-4. Preparar las 10 preguntas más probables, con su respuesta y quién responde.
-
-**Cómo se hace.** Las rondas siguen el [guion de defensa](../../1_Teoria/actividades/guion_defensa.md), pero en el calendario de este día caben **145 minutos** (la jornada es de 6 horas), así que usad estos tiempos y hacedlas más cortas. Compartid la versión del ensayo de las diapositivas con quien os escuche.
-
-| Ronda | Cómo | Qué se mira | Minutos |
-|---|---|---|---|
-| **1** | Solo el equipo, **cronometrada y con demo** | ¿Cabe en el tiempo? ¿La demo funciona? ¿Quién habla cuándo? | 20 |
-| **2** | Otro equipo hace de tribunal y os hace **preguntas** | ¿Respondemos con datos? ¿Quién responde qué? Usad el método RESPONDE de los apuntes | 35 |
-| **Extra** | Las **tres preguntas más difíciles** que os haría un cliente; después, ajustad diapositivas y guion | ¿Respondemos sin leer? Anotad una lista de 3 cambios con responsable | 50 |
-| **3 (ensayo general)** | **Exactamente como el día real**, con el docente | ¿Estamos listos? Anotad lo que cambiáis | 40 |
-
-- **La demo.** Se prueba hoy, en el ordenador y el proyector que vais a usar. Guion de 4 pasos: abrir la app, una entrada típica, **una entrada errónea** y el aviso de límites. Grabad la pantalla (unos 90 segundos) y dejad ese vídeo como **plan B**.
-- **Las 10 preguntas.** Escribidlas en el apartado 4 del guion con respuesta, dato y responsable. Algunas seguras: ¿Cómo sabéis que el modelo no falla con datos nuevos? ¿Qué pasa si se equivoca y quién lo sufre? ¿Qué datos usasteis y de dónde salen? ¿Qué haríais con más tiempo? ¿Qué recomendáis hacer mañana?
-- **Cuando alguien escucha,** rellena la ficha de feedback del guion (lo que mejor funcionó, el mensaje que entendió con sus palabras, qué sobra y qué pregunta haría).
-
-**Qué deberíais ver.** Al final del ensayo general, una presentación que cabe en el tiempo del turno con margen, una demo que funciona o salta al plan B sin silencios, y una lista de 3 cambios hechos.
-
-**Hecho cuando:** el ensayo general entra en el tiempo de vuestro turno, todas las personas han hablado y han respondido alguna pregunta, y el plan B está grabado y se abre.
-
-#### Paso 4 · Subir la presentación en PDF (día 1, 15 minutos; como tarde, antes de las 8:30 del día 2)
-1. Exportar las diapositivas a PDF con el nombre `presentacion_defensa.pdf`.
-2. Comprobar que son 12 o menos y que todas las cifras coinciden con la memoria congelada.
-3. Subir el PDF a `sprint-17/` en el repositorio del equipo.
-
-**Cómo se hace**
-- **Exportar.** En el editor: *Archivo → Descargar* (o *Exportar*) *→ PDF*. Nombre del archivo, **en minúsculas y sin espacios**.
-- **Comprobar.** Que una persona **que no hizo la diapositiva** lea cada cifra y la busque en la memoria. Si no coincide, se corrige la diapositiva: **no se cambia la memoria**. No se presentan resultados nuevos.
-- **Subir.** Seguid [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md): entrad primero en la carpeta `sprint-17`, *Add file → Upload files*, arrastrad el PDF, escribid un mensaje corto («Añado la presentación de la defensa») y pulsad **Commit changes**. Si ya subisteis la versión del ensayo, subid esta con el mismo nombre: la sustituye y el historial guarda las dos.
-
-**Qué deberíais ver.** En `sprint-17/`, el archivo `presentacion_defensa.pdf` con la hora de la subida anterior a las 8:30 del 14/12.
-
-**Hecho cuando:** el PDF final está subido, tiene 12 diapositivas o menos y una persona ajena a cada diapositiva ha comprobado sus cifras.
-
-#### Paso 5 · La defensa y la revisión con la rúbrica (día 2, 120 minutos)
-1. Llegar 15 minutos antes, probar proyector y demo y dejar el plan B abierto.
-2. Defender en vuestro turno, hablando para un público no técnico.
-3. Escuchar el feedback global y hacer la retrospectiva del proyecto.
-4. Revisar con la rúbrica, anotar el resultado y subir `plantilla_storytelling.md` y las autoevaluaciones.
-
-**Cómo se hace.** Las 2 horas son para **todos los equipos**; el vuestro tiene su turno. El docente os dice cuántos equipos hay y por tanto cuánto dura vuestro turno (2 horas menos 10 minutos de cambios entre equipos):
-
-| Equipos | Turno de cada equipo | Relato · demo · preguntas (minutos) |
-|---|---|---|
-| 5 | 22 | 13 · 4,5 · 4,5 |
-| 6 | 18 | 11 · 3,5 · 3,5 |
-| 7 | 15 | 9 · 3 · 3 |
-| 8 | 13 | 8 · 2,5 · 2,5 |
-
-- **Antes de empezar.** Llegad 15 minutos antes; probad el proyector y la demo, tened el **plan B abierto** y una copia del PDF en el ordenador de defensa. Una persona lleva el cronómetro y avisa con un cartel. El turno se corta cuando se agota.
-- **Durante la defensa.** Hablad para el público no técnico: cada término técnico lleva una frase de traducción. Si la demo falla, mantened la calma y pasad al plan B. Ante una pregunta, repetidla, responded directo, dad un dato y decid el límite. Si no lo sabéis: «no lo hemos medido; lo haríamos así».
-- **Después.** El docente da el feedback global y se cierra el curso con una retrospectiva breve del proyecto: ¿qué mejoraríais en el próximo?
-- **La revisión con la rúbrica (15 minutos).** Quien revisa **no escribió esa parte** y sigue los cinco pasos de «Cómo se revisa» de [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Rellena la sección «Revisión con la rúbrica» al final de `plantilla_storytelling.md`: un nivel de 1 a 4 por criterio, **una frase de prueba** y una línea sobre el uso de la IA. Quien haya preparado esa parte no pone el nivel de su propia parte.
-- **Subir.** `plantilla_storytelling.md` la sube una persona del equipo; cada persona sube su `autoevaluacion_nombre.md` a `sprint-17/`, con su propia cuenta. El guion y las diapositivas de reserva, solo si los hicisteis.
-
-**Qué deberíais ver.** En `sprint-17/`, los dos ficheros del equipo y una hoja de autoevaluación por persona (**2 + N**), y la sección «Revisión con la rúbrica» rellena.
-
-**Hecho cuando:** habéis defendido con todas las personas hablando, la revisión con la rúbrica está anotada con sus pruebas y los ficheros están subidos.
+- [Paso 1 · Teoría de storytelling (día 1, 20 minutos)](Reto_Sprint_17_paso_1.md)
+- [Paso 2 · Construir el relato (día 1, 85 minutos)](Reto_Sprint_17_paso_2.md)
+- [Paso 3 · Rondas de ensayo (día 1, 145 minutos)](Reto_Sprint_17_paso_3.md)
+- [Paso 4 · Subir la presentación en PDF (día 1, 15 minutos; como tarde, antes de las 8:30 del día 2)](Reto_Sprint_17_paso_4.md)
+- [Paso 5 · La defensa y la revisión con la rúbrica (día 2, 120 minutos)](Reto_Sprint_17_paso_5.md)
 
 #### Ayuda 1 · Cómo usar la IA en este reto
 

@@ -1,6 +1,6 @@
 # Sprint 8 · Reto «Duelo de modelos» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (pasos detallados, rúbrica, uso de la IA, errores frecuentes) sigue en [Reto_Sprint_08.md](../3_Consultar/Reto_Sprint_08.md); las plantillas están en [`model_card_plantilla.md`](plantillas/model_card_plantilla.md) y [`leaderboard_plantilla.csv`](plantillas/leaderboard_plantilla.csv); el cuaderno del reto, [`S08_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_06_leaderboard_plantilla.ipynb).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_08.md](../3_Consultar/Reto_Sprint_08.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); las plantillas están en [`model_card_plantilla.md`](plantillas/model_card_plantilla.md) y [`leaderboard_plantilla.csv`](plantillas/leaderboard_plantilla.csv); el cuaderno del reto, [`S08_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_06_leaderboard_plantilla.ipynb).
 
 **El cliente.** TurisData ya sabe predecir cancelaciones. Ahora pregunta: **¿qué modelo ponemos en producción?** ¿El más preciso, el que se entiende o el más barato de mantener? Hay que enfrentar modelos con las mismas reglas y **elegir un campeón con argumentos**.
 **Qué entregáis (no cambia):** `leaderboard_S08.csv`, `model_card.md`, el cuaderno `reto_S08.ipynb` y `README.md`. **Regla de oro: el test se usa una sola vez, solo con el campeón.**
@@ -25,6 +25,8 @@
 | 25 | *Boosting*, SVM y búsqueda en dos familias (día 2) | 6 a 8 modelos, de 4 familias o más |
 | 45 | Puntuación global, sensibilidad y test del campeón | `auc_test` en una sola fila |
 | 30 | *Model card*, README, revisión con la rúbrica y subida | Otra persona podría ejecutarlo con el README |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_08_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_08_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_08_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_08_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_08_paso_5.md)
 
 ## Frases para la model card y el README
 

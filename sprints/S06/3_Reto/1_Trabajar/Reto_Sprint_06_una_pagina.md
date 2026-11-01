@@ -1,6 +1,6 @@
 # Sprint 6 · Reto «Datos sucios, cliente impaciente» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (palabras nuevas, guía paso a paso, uso de la IA, errores frecuentes) sigue en [Reto_Sprint_06.md](../3_Consultar/Reto_Sprint_06.md); la plantilla del informe está en [`informe_calidad_plantilla.md`](plantillas/informe_calidad_plantilla.md) y los datos en [`reservas_sucio.csv`](../../../../datos/reservas_sucio.csv).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (palabras nuevas, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_06.md](../3_Consultar/Reto_Sprint_06.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`informe_calidad_plantilla.md`](plantillas/informe_calidad_plantilla.md) y los datos en [`reservas_sucio.csv`](../../../../datos/reservas_sucio.csv).
 
 **El cliente.** TurisData os manda `reservas_sucio.csv`, exportado a mano de varios sistemas. El gerente quiere un primer modelo de cancelaciones «para ayer», pero no se fía de los datos: pide un informe de qué está mal y un proceso que limpie el fichero siempre igual.
 **Qué entregáis (no cambia):** `informe_calidad.md`, `reto_S06.ipynb` y `README.md`. **Al final del sprint se suben a `sprint-06/` del repositorio del equipo: 3 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
@@ -25,6 +25,8 @@
 | 15 | `limpiar_reservas`, antes y después, y partición *train*/*test* | La función devuelve tabla y resumen sin tocar el original |
 | 15 | *Pipeline*, *baseline* y validación cruzada | Hay una frase con media ± desviación, modelo frente a tonto |
 | 20 | Informe, README y revisión con la rúbrica | Otra persona podría repetir el cuaderno con el README |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_06_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_06_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_06_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_06_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_06_paso_5.md)
 
 ## Frases para el informe y el README
 

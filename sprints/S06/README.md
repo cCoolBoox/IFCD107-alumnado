@@ -60,7 +60,7 @@
 
 **Núcleo y extra.** Núcleo: inventario de defectos, función de limpieza y *baseline* con su *pipeline*. Extra: informe más detallado y comparativa de variantes de limpieza.
 
-Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_06.md) (pasos, ayudas y errores frecuentes).
+Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_06.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
@@ -97,7 +97,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
-| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha completa del reto) |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y cada paso explicado) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

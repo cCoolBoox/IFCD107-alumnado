@@ -36,109 +36,13 @@
 
 Son cinco pasos, de **105 minutos en total** (unos 45 el día 1 y unos 60 el día 2; el aula da 45 y 50, así que lo que no quepa va a casa). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa.
 
-#### Paso 1 · Preparar el cuaderno y los datos (día 1, 10 minutos)
-1. Crear en Colab el cuaderno `reto_S09_conocer_al_huesped.ipynb`.
-2. Cargar `huespedes.csv` y mirar sus columnas.
-3. Escalar las variables numéricas.
-4. Repartir el trabajo de los pasos 2 y 3.
+**Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 
-**Cómo se hace**
-- **Crear el cuaderno.** En Colab: *Archivo → Cuaderno nuevo* y cambiadle el nombre a `reto_S09_conocer_al_huesped`. Trabajad en una sola pantalla compartida o compartid el cuaderno con el botón *Compartir* de Colab.
-- **Cargar los datos.** Copiad al principio la celda «Preparación» de `S09_01` (la que define `dato(...)` y descarga los datos) y las importaciones. Fijad una semilla una sola vez, `SEMILLA = 42`, y usadla siempre que pidan `random_state`.
-- **Mirar las columnas.** Con `head()` y `describe()`: `id_huesped` es solo un identificador y las otras 7 son números (`viaja_con_ninos` solo vale 0 o 1). Fijaos en las escalas: la edad va de 18 a 75 y el gasto diario, de 35 a 340.
-- **Escalar.** Quitad `id_huesped` y pasad las 7 columnas por `StandardScaler().fit_transform(...)`: así todas pesan lo mismo. Guardad el resultado como `X`. Sin escalar, el gasto en euros mandaría sobre las demás.
-
-**Qué deberíais ver.** Una tabla de 1200 filas y 8 columnas (el identificador y las 7 variables) y una matriz `X` de 1200 filas y 7 columnas, con la media de cada columna cerca de 0.
-
-**Hecho cuando:** `X` existe y está escalada, y cada persona sabe qué parte del paso 2 o del 3 le toca.
-
-#### Paso 2 · Segmentar y elegir k (día 1, 20 minutos)
-1. Probar k-means con `k` de 2 a 8.
-2. Calcular la silueta de cada `k` y dibujar la curva.
-3. Elegir `k` con una razón técnica **y** una de negocio.
-4. Escribir esa razón en una frase.
-
-**Cómo se hace.** Es el mismo trabajo del ejercicio 2 de `S09_01`: podéis copiar de ahí la idea y adaptarla a vuestro cuaderno.
-
-| Orden | Qué hacéis | Pista |
-|---|---|---|
-| 1 | Para cada `k` de 2 a 8, entrenar k-means sobre `X` | `KMeans(n_clusters=k, n_init=10, random_state=SEMILLA)` |
-| 2 | Guardar la silueta media de cada `k` en un diccionario | `silhouette_score(X, etiquetas)`; va de −1 a 1 y **más alto es mejor** |
-| 3 | Dibujar la curva: `k` en el eje horizontal y silueta en el vertical | Título y nombres de ejes, como en `S09_01` |
-| 4 | Preguntaos si Lucía puede actuar con ese número de grupos | Entre 3 y 5 segmentos suele ser manejable; 12 no lo serían |
-| 5 | Escribir **una frase con las dos razones** y ponerla en el cuaderno y en la cabecera de la ficha | «Elegimos k = … porque la silueta es … y, para el negocio, … grupos se pueden gestionar» |
-
-**Qué deberíais ver.** Una curva con siluetas para `k` = 2, 3, …, 8 y un `k` elegido entre 3 y 5 (en `S09_01` el de mejor silueta cae en ese rango). No elijáis `k` **solo** por el número más alto de la silueta.
-
-**Hecho cuando:** hay curva de silueta, un `k` elegido y la frase con las dos razones.
-
-#### Paso 3 · Mapa PCA e interpretación de los segmentos (día 1, 15 minutos)
-1. Dibujar el mapa 2D con PCA, con los segmentos coloreados.
-2. Calcular el perfil medio de cada segmento y su tamaño.
-3. Ponerle nombre a cada segmento, con cifras.
-4. Proponer una acción comercial por segmento.
-
-**Cómo se hace**
-- **El mapa.** Entrenad `k-means` con el `k` elegido y guardad el grupo de cada huésped. Aplicad `PCA(n_components=2)` sobre `X` y dibujad un diagrama de dispersión coloreado por grupo (es el ejercicio 2 de `S09_02`). Los ejes llevan el **% de varianza** de cada componente (`explained_variance_ratio_`) y el título dice una **conclusión** («Cuatro tipos de huésped bastante separados»). Con 2 componentes se conserva solo una parte de la información (en `S09_02` salía cerca del 69 %): si el mapa sale mezclado, decidlo en la ficha.
-- **El perfil.** Con `groupby` calculad la media de cada variable por grupo y el número de huéspedes. Comparad cada media con la media general; el mapa de calor de `S09_01` ayuda.
-- **El nombre.** Cada nombre se apoya en **dos cifras** del perfil. Ejemplo de la plantilla: «Familias de larga estancia · 410 (34 %) · 9 de cada 10 viajan con niños, reservan con 110 días de antelación y gastan poco en actividades». Los tamaños de todos los segmentos suman 1.200.
-- **La acción comercial.** Una por segmento: qué enseñar, cuándo y por qué canal. La IA puede sugerir nombres, pero el nombre tiene que reflejar vuestras cifras.
-
-**Qué deberíais ver.** Un mapa con un color por segmento y el % de varianza en los ejes, y una tabla con el perfil medio de cada segmento: nombre, tamaño, dos o tres cifras y una acción.
-
-**Hecho cuando:** el mapa está dibujado y cada segmento tiene nombre, tamaño, perfil con cifras y una acción.
-
-#### Paso 4 · Recomendador de experiencias (día 2, 30 minutos)
-1. Separar valoraciones de entrenamiento y de prueba.
-2. Montar al menos dos métodos y evaluarlos con RMSE y precision@3.
-3. Programar `recomendar(id_usuario, n)`.
-4. Probarla con 3 usuarios.
-
-**Cómo se hace.** Es el trabajo de `S09_03`: reutilizad su código y comprobad que lo entendéis.
-
-| Orden | Qué hacéis | Pista |
-|---|---|---|
-| 1 | Esconder el 20 % de las valoraciones como prueba y construir la matriz usuario × experiencia solo con el 80 % restante | `valoraciones.sample(frac=0.2, random_state=SEMILLA)`; las casillas vacías son `NaN` |
-| 2 | Primer método: **popularidad** (la nota media de cada experiencia, igual para todos) | Es la referencia que hay que batir y la única opción para un huésped nuevo (*arranque en frío*) |
-| 3 | Segundo método: **contenido** (se hace en clase en `S09_03`) o, si lo habéis hecho en casa, filtrado colaborativo o factorización | Cualquiera sirve, pero tiene que ser distinto de la popularidad |
-| 4 | Medir los dos con **RMSE** (error de la nota, menos es mejor) y **precision@3** (de las 3 recomendadas, cuántas le gustaban, más es mejor) | Con pocos usuarios evaluables, una diferencia de 0,01 es ruido: no la vendáis como mejora |
-| 5 | Una tabla *método · RMSE · precision@3* y una frase que explica cuál elegís | «Elegimos … porque su precision@3 es …» |
-| 6 | Programar `recomendar(id_usuario, n)`: las `n` mejores experiencias **que el usuario no ha valorado**, con nombre, categoría, isla y nota prevista | Poned `-inf` en lo ya valorado antes de ordenar; es el mini-reto de `S09_03` |
-
-Probad `recomendar` con **3 usuarios distintos** y comprobad dos cosas: que ninguna experiencia recomendada estaba ya valorada y que las recomendaciones cambian de una persona a otra. Solo los usuarios 1 a 300 tienen valoraciones.
-
-**Qué deberíais ver.** La tabla comparativa de los dos métodos, la frase de elección y tres listas de `n` experiencias, distintas entre sí.
-
-**Hecho cuando:** el recomendador está evaluado con valoraciones escondidas, `recomendar` funciona con 3 usuarios y no propone nada ya valorado.
-
-#### Paso 5 · Ficha, IA responsable, revisión y entrega (día 2, 30 minutos)
-1. Rellenar la ficha de segmentos y la nota de IA responsable.
-2. Pedir a alguien que no escribió esa parte que revise con la rúbrica y anote el resultado en la ficha.
-3. Dejar el cuaderno ejecutable y subir los ficheros a `sprint-09/`.
-4. Ensayar 3 minutos de review.
-
-**Cómo se hace**
-- **La ficha.** Copiad el texto de `plantilla_ficha_segmentos.md` en un archivo nuevo `ficha_segmentos.md` y rellenad cada sección:
-
-| Sección de la plantilla | Qué escribís |
-|---|---|
-| Cabecera | Equipo, método, `k`, silueta y la frase de las dos razones del paso 2 |
-| Mapa de segmentos | La imagen del mapa (`mapa_pca.png`, subida junto a la ficha) o dónde está en el cuaderno |
-| Segmentos | Una fila por segmento: nombre, tamaño, perfil con cifras, acción y **experiencia estrella** (la que recomienda vuestro prototipo a ese grupo; **ojo:** los datos son sintéticos y las 300 personas de las valoraciones **no son** las de `huespedes.csv`, así que no hay un cruce real entre ambos ficheros: elegid la experiencia razonando con el perfil del segmento y apoyadla en lo que recomienda vuestro prototipo, y anotad esa decisión como supuesto) |
-| Recomendador | Los dos métodos con su RMSE y precision@3, el elegido y un ejemplo con un usuario; qué haría el sistema con un huésped nuevo sin valoraciones |
-| IA responsable | Cinco líneas con **al menos 2 riesgos específicos** de este caso, cada uno con su medida (ejemplos justo debajo de la tabla) |
-| Limitaciones | Datos sintéticos, comportamiento de un año, pocas valoraciones por persona, y las vuestras |
-
-- **Nota de IA responsable.** Ejemplos, para que elijáis los que valen para **vuestro** caso: *discriminar* (si se usan la edad o «viaja con niños» para fijar precios; medida: usar la segmentación para comunicar, no para variar precios); *sesgo de popularidad* (las experiencias poco conocidas casi no se recomiendan; medida: reservar un hueco a opciones menos populares); *privacidad* (se combinan datos de reserva y valoraciones; medida: usar identificadores y no mostrar datos personales).
-- **Declarar la IA.** En el cuaderno, una celda de texto que diga dónde la habéis usado y qué habéis comprobado a mano.
-- **La revisión con la rúbrica (10 minutos).** Quien revisa sigue los cinco pasos de «Cómo se revisa» de [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md) y rellena la sección «Revisión con la rúbrica» del final de `ficha_segmentos.md`: un nivel de 1 a 4 por criterio y **una frase de prueba**. Si hay tiempo, arreglad lo más fácil; lo demás queda como «lo primero que mejoraríamos». Si sobran minutos, empezad algún extra.
-- **Subir los ficheros (la vía del curso, desde el navegador).** Seguid [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md). (1) En Colab, *Entorno de ejecución → Reiniciar y ejecutar todo* y después *Archivo → Descargar → Descargar .ipynb*. (2) Abrid el repositorio del equipo y **entrad primero en la carpeta `sprint-09`**. (3) *Add file → Upload files*, arrastrad los ficheros, escribid un mensaje corto y pulsad **Commit changes**. Cada subida es un *commit* con el nombre de quien la hace. Un reparto posible: la persona A sube el cuaderno («Añado segmentación y recomendador»), la B sube la ficha y el mapa («Añado ficha de segmentos»), y cada persona sube su autoevaluación. Nombres de archivo **sin espacios ni tildes**.
-
-**Qué deberíais ver.** En la carpeta `sprint-09` del repositorio, el cuaderno y la ficha del equipo (y el mapa, si lo habéis puesto) y una hoja de autoevaluación por persona (**2 + N**); y en el historial (el icono del reloj), *commits* de todas las personas del equipo.
-
-**Hecho cuando:** otra persona podría repetir el cuaderno de arriba abajo, la sección «Revisión con la rúbrica» está rellena y cada persona ha subido algo con su cuenta.
-
-**Después, 40 minutos de entrega, review y retrospectiva:** cada persona rellena y sube su autoevaluación y coevaluación a `sprint-09/`, y el equipo presenta en 3 minutos **sus segmentos (nombre y acción)** y **una recomendación concreta para un usuario**. Se comparan los `k` elegidos y se discute: *¿es el mismo cliente aunque le pongamos otro nombre?*
+- [Paso 1 · Preparar el cuaderno y los datos (día 1, 10 minutos)](Reto_Sprint_09_paso_1.md)
+- [Paso 2 · Segmentar y elegir k (día 1, 20 minutos)](Reto_Sprint_09_paso_2.md)
+- [Paso 3 · Mapa PCA e interpretación de los segmentos (día 1, 15 minutos)](Reto_Sprint_09_paso_3.md)
+- [Paso 4 · Recomendador de experiencias (día 2, 30 minutos)](Reto_Sprint_09_paso_4.md)
+- [Paso 5 · Ficha, IA responsable, revisión y entrega (día 2, 30 minutos)](Reto_Sprint_09_paso_5.md)
 
 #### Ayuda 1 · Cómo usar la IA en este reto
 

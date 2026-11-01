@@ -1,6 +1,6 @@
 # Sprint 7 · Reto «Precio y cancelación» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (recursos, tablas de requisitos, rúbrica, guía paso a paso, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_07.md](../3_Consultar/Reto_Sprint_07.md); la plantilla del informe está en [`informe_modelado_plantilla.md`](plantillas/informe_modelado_plantilla.md).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_07.md](../3_Consultar/Reto_Sprint_07.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`informe_modelado_plantilla.md`](plantillas/informe_modelado_plantilla.md).
 
 **El cliente.** El gerente de TurisData quiere una **tarifa de referencia** (predecir `precio_noche`, un número) y un **aviso de riesgo de cancelación** (predecir `cancelada`, sí o no). No quiere oír hablar de «AUC»: quiere saber **cuánto dinero se juega** si el modelo se equivoca. Vosotros traducís las métricas a **euros**.
 **Qué entregáis (no cambia):** el informe `informe_modelado.md` (2–3 páginas), el cuaderno `reto_S07.ipynb` y el `README.md`. **Al final del sprint se suben a `sprint-07/` del repositorio del equipo: 3 ficheros del equipo (esos tres) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
@@ -25,6 +25,8 @@
 | 2 | 15 | Cancelación: referencia, logística, matriz, ROC/PR y umbral | Umbral elegido con vuestros costes; test usado una vez |
 | 2 | 5 | Sensibilidad: FN el doble, FP la mitad | Tabla con tres combinaciones o más |
 | 2 | 10 | Informe (plantilla) y README | Otra persona podría ejecutarlo con el README |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_07_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_07_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_07_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_07_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_07_paso_5.md)
 
 ## Frases para el informe (completad los huecos)
 

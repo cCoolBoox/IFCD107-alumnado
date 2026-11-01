@@ -1,6 +1,6 @@
 # Sprint 11 · Reto «Visión artificial para el cliente» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (pasos, uso de la IA, errores frecuentes y rúbrica) sigue en [Reto_Sprint_11.md](../3_Consultar/Reto_Sprint_11.md); el cuaderno de partida es [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_11.md](../3_Consultar/Reto_Sprint_11.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); el cuaderno de partida es [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb).
 
 **El cliente.** TurisData recibe cientos de fotos a la semana y una persona las clasifica a mano. Quiere saber si un modelo puede **pre-clasificarlas** y **en qué se equivoca**. **Lo importante no es el acierto, sino saber cuándo no fiarse.**
 **Qué entregáis (no cambia):** el modelo y el **demostrador** (dentro del cuaderno), el **análisis de errores** de 1–2 páginas y un README. **Al final del sprint se suben a `sprint-11/` del repositorio del equipo: 3 ficheros del equipo (esos tres) + 1 autoevaluación y coevaluación por persona.** Las fotos no se suben.
@@ -25,6 +25,8 @@
 | 20 | Paso 3: prueba (una vez), matriz, ejercicios 3 y 4, tabla de errores | Matriz interpretada y errores con hipótesis |
 | 15 | Paso 4: `clasificar_foto`, ejercicio 5 y umbral | El demostrador responde con 2–3 fotos |
 | 20 | Paso 5: informe, README, revisión con la rúbrica y subida | Otra persona podría ejecutarlo con el README |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_11_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_11_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_11_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_11_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_11_paso_5.md)
 
 ## Frases para el análisis de errores
 

@@ -1,6 +1,6 @@
 # Sprint 9 · Reto «Conocer al huésped» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (recursos, tablas de ficheros y requisitos, rúbrica, guía paso a paso, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_09.md](../3_Consultar/Reto_Sprint_09.md); la plantilla de la ficha está en [`plantilla_ficha_segmentos.md`](plantillas/plantilla_ficha_segmentos.md).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_09.md](../3_Consultar/Reto_Sprint_09.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla de la ficha está en [`plantilla_ficha_segmentos.md`](plantillas/plantilla_ficha_segmentos.md).
 
 **El cliente.** Lucía, directora comercial de TurisData, envía la misma newsletter a sus 1.200 huéspedes. Pide: *«Decidme quiénes son mis clientes, cómo los llamo y qué le enseño a cada uno.»* Aquí **no hay respuesta correcta en los datos**: hay que descubrir los grupos y darles sentido de negocio.
 **Qué entregáis (no cambia):** un cuaderno (`reto_S09_conocer_al_huesped.ipynb`) y una **ficha de segmentos de 1 página** (`ficha_segmentos.md`) con la nota de IA responsable dentro. **Al final del sprint se suben a `sprint-09/` del repositorio del equipo: 2 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
@@ -25,6 +25,8 @@
 | 15 | Mapa PCA, perfil de cada segmento, nombre y acción | Cada segmento tiene nombre, tamaño, cifras y acción |
 | 30 | Dos recomendadores, RMSE, precision@3 y `recomendar` | La función no propone nada ya valorado |
 | 30 | Ficha, nota de IA, revisión con la rúbrica y subida | Todo está en `sprint-09/` |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_09_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_09_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_09_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_09_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_09_paso_5.md)
 
 ## Frases para la ficha de segmentos
 

@@ -1,6 +1,6 @@
 # Sprint 16 · Reto «Entrega final: evaluar, demostrar y documentar» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (guía paso a paso, uso de la IA, errores frecuentes y rúbrica) sigue en [Reto_Sprint_16.md](../3_Consultar/Reto_Sprint_16.md). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Plantillas: [model card](plantillas/plantilla_model_card.md) · [memoria](plantillas/plantilla_esqueleto_memoria_tecnica.md) · [lista de congelación](plantillas/checklist_congelacion.md) · [demostrador](plantillas/demostrador/).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_16.md](../3_Consultar/Reto_Sprint_16.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Plantillas: [model card](plantillas/plantilla_model_card.md) · [memoria](plantillas/plantilla_esqueleto_memoria_tecnica.md) · [lista de congelación](plantillas/checklist_congelacion.md) · [demostrador](plantillas/demostrador/).
 
 **El cliente.** El docente recibirá vuestro trabajo como un entregable real: clonará el repositorio, seguirá el README, probará el demostrador, leerá la memoria y querrá entender los riesgos.
 **Qué entregáis (no cambia):** evaluación final en test, sesgos con mitigación medida, riesgos cerrados, demostrador con plan B en vídeo, model card y memoria de 10–15 páginas. **Al final se suben a `sprint-16/` del repositorio del equipo: 9 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`). La coevaluación confidencial (anexo B) va al docente.
@@ -28,6 +28,8 @@
 | 3 | 80 | Prueba en limpio y corrección | Otra persona lo reproduce con solo el README |
 | 3 | 65 | Vídeo plan B, lista de congelación, coevaluación | Todo marcado |
 | 3 | 55 | Rúbrica, review, retro, subida y etiqueta | `v1.0-entrega` antes de las 14:30 |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_16_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_16_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_16_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_16_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_16_paso_5.md) · [Paso 6](../3_Consultar/Reto_Sprint_16_paso_6.md) · [Paso 7](../3_Consultar/Reto_Sprint_16_paso_7.md) · [Paso 8](../3_Consultar/Reto_Sprint_16_paso_8.md)
 
 ## Frases para la memoria y la model card (completad los huecos)
 - «El … baja del … % global al … % en el subgrupo …. Aplicamos … y subió al … % (… puntos menos en el resto); a cambio, …»

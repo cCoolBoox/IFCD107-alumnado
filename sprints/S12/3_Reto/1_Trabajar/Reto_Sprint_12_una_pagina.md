@@ -1,6 +1,6 @@
 # Sprint 12 · Reto «Escuchar al cliente» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, rúbrica, guía paso a paso, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_12.md](../3_Consultar/Reto_Sprint_12.md); la plantilla del informe está en [`plantilla_informe_cliente.md`](plantillas/plantilla_informe_cliente.md). El informe visual del Sprint 13 es otro reto, con su propia ficha.
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_12.md](../3_Consultar/Reto_Sprint_12.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`plantilla_informe_cliente.md`](plantillas/plantilla_informe_cliente.md). El informe visual del Sprint 13 es otro reto, con su propia ficha.
 
 **El cliente.** TurisData recibe decenas de reseñas y de mensajes con las mismas preguntas. Quiere (1) saber **qué opinan y de qué se quejan**, (2) **prever la ocupación de la semana siguiente** y (3) probar un **asistente que responda con la política del alojamiento sin inventar nada** (RAG). Los datos son sintéticos: decidlo en el informe.
 **Qué entregáis (no cambia):** (1) el informe de reseñas, (2) el cuaderno de ocupación, (3) el cuaderno del asistente con su tabla de evaluación y (4) la nota de IA responsable, más un `LEEME.md` de 5 líneas. **Al final del sprint se suben a `sprint-12/` del repositorio del equipo: 8 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
@@ -25,6 +25,8 @@
 | 30 | Día 3: ocupación (B) | Hay tabla de MAE con *baseline* y modelo |
 | 40 | Día 3: evaluar las 25 preguntas, probar 3 ataques y medir una defensa | `evaluacion_asistente.csv` completo |
 | 40 | Día 3: informe, nota y `LEEME.md`; todo desde cero; revisión con la rúbrica; subida y ensayo de la review | Otra persona podría repetirlo con el `LEEME.md` |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_12_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_12_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_12_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_12_paso_4.md)
 
 ## Frases para el informe
 

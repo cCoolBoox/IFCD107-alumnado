@@ -36,93 +36,13 @@
 
 Son cinco pasos, de **55 minutos en total** (25 el día 1 y 30 el día 2), más 15 minutos de entrega. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa. Antes del paso 1 ya habéis hecho el *planning* de 10 minutos (roles del sprint y tareas en el tablero).
 
-#### Paso 1 · Acordar las hipótesis de coste y abrir el cuaderno (día 1, 5 minutos)
-1. Abrir un cuaderno nuevo en Colab con el nombre `reto_S07`.
-2. Responder la pregunta central: ¿qué cuesta más, una cancelación no prevista o una falsa alarma?
-3. Escribir una hipótesis de coste para cada error, con una frase de razón.
+**Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 
-**Cómo se hace**
-- **Abrir el cuaderno.** En [Colab](https://colab.research.google.com), *Nuevo cuaderno*, y ponedle `reto_S07`. En la primera celda copiad la celda «Preparación» de `S07_01` (la función `dato()` que descarga el CSV) y escribid `SEMILLA = 42`.
-- **La pregunta central del informe.** Una **cancelación no prevista** es un falso negativo (FN): el modelo dice «no se cancelará», sí se cancela y la habitación queda vacía. Una **falsa alarma** es un falso positivo (FP): el modelo dice «se cancelará», no se cancela y el cliente llega y no hay sitio.
-- **Hipótesis de coste.** Proponed una cifra en euros para cada error y **una frase de razón**. Ejemplos del enunciado: una cancelación no prevista cuesta **la mitad de una noche**, porque solo se revende la mitad de esas noches; una falsa alarma cuesta **una noche de compensación** (alojamiento en otro hotel y una disculpa). Para pasar «una noche» a euros, mirad el precio medio de `precio_noche` en los datos.
-- **Escribidlas como variables**, con su razón en un comentario, para poder cambiarlas luego: `COSTE_FN = …  # razón` y `COSTE_FP = …  # razón`.
-
-**Qué deberíais ver.** Una celda con `SEMILLA`, `COSTE_FN` y `COSTE_FP`, cada coste con su razón al lado, y el CSV cargado en un `DataFrame`.
-
-**Hecho cuando:** el cuaderno abre y carga los datos, y las dos hipótesis de coste están escritas con su razón.
-
-#### Paso 2 · Regresión del precio (día 1, 20 minutos)
-1. Elegir las variables que **se conocen al reservar**; `cancelada` queda fuera.
-2. Separar train y test, y medir el modelo de referencia (precio medio).
-3. Ajustar la regresión lineal y comparar.
-4. Probar una mejora y decidir si compensa. Contar el resultado en euros.
-
-**Cómo se hace**
-- **Variables sin fuga.** Haced una lista de las columnas del CSV y marcad cuáles se conocen **en el momento de reservar** (por ejemplo, tipo de habitación, mes de llegada, antelación, canal). **`cancelada` no se puede usar para predecir el precio**: es fuga, porque no se sabe hasta después. Apuntad la lista de usadas y excluidas: va en el informe.
-- **Separar y medir la referencia.** Como en `S07_01`: `train_test_split` con 20 % de test y `random_state=SEMILLA`. El modelo de referencia (*baseline*) predice siempre la media del precio de entrenamiento (`DummyRegressor`). Medid MAE y RMSE sobre test.
-- **Regresión lineal.** La de `S07_01` (`LinearRegression`), con las variables elegidas. Medid MAE, RMSE y R². ¿Mejora a la referencia?
-- **Una mejora.** Interacciones o polinomio (`S07_01`) o regularización Ridge o Lasso (`S07_02`). Si apenas mejora, quedaos con el modelo sencillo y decidlo en el informe.
-- **En euros.** Escribid una frase del tipo «nos equivocamos de media en X € por noche».
-
-**Qué deberíais ver.** Una tabla con una fila por modelo (referencia, lineal y mejora) y las columnas MAE, RMSE y R². La lineal mejora a la referencia. Como orientación: en `S07_01`, con tipo de habitación y temporada, el cuaderno espera un R² por encima de 0,85 y un MAE de entre 5 y 15 €. Si el vuestro está muy lejos, mirad la «Ayuda 2».
-
-**Hecho cuando:** la tabla de precio está en el cuaderno, sin `cancelada` entre las variables, y tenéis la frase del error medio en euros.
-
-#### Paso 3 · Clasificación de la cancelación y elección del umbral (día 2, 15 minutos)
-1. Separar train y test, y **no tocar el test** hasta el final.
-2. Medir la referencia (siempre «no cancela») y la regresión logística; dibujar la matriz de confusión y las curvas ROC y PR.
-3. Elegir el umbral que minimiza el coste con validación cruzada sobre train.
-4. Usar el test **una sola vez**, al final, para dar el coste esperado.
-
-**Cómo se hace**
-- **Partir y modelos.** Como en `S07_03`: partición train/test y regresión logística. La referencia es un `DummyClassifier` que siempre dice «no cancela». Máximo 3 modelos por problema, referencia incluida.
-- **Matriz y curvas.** Matriz de confusión en test (`S07_03`), y curvas ROC y PR con AUC y AP (`S07_04`: `roc_auc_score`, `average_precision_score`). Para el nivel mínimo basta la matriz.
-- **El umbral.** El umbral es la probabilidad a partir de la cual decimos «se cancelará». Con `cross_val_predict` sobre train (como en `S07_03`) obtenéis las probabilidades; probad muchos umbrales (`np.arange(0.05, 0.96, 0.05)`) y calculad el coste de cada uno: `coste = FN × COSTE_FN + FP × COSTE_FP`. **Cuidado:** `coste_total` de `S07_03` trae por defecto FN = 3 y FP = 1; pasadle **vuestros** costes. El mejor umbral es el que **minimiza el coste**; no se lo dejéis elegir a la IA.
-- **El test, una vez.** Con el umbral ya elegido, calculad el coste en test de tres formas: **sin modelo** (la referencia, que nunca avisa), con el umbral 0,5 y con el umbral elegido.
-
-**Qué deberíais ver.** La matriz de confusión, una tabla o curva de coste por umbral con un mínimo claro y tres cifras de coste en test (sin modelo, umbral 0,5 y umbral elegido). El umbral elegido cuesta menos que el 0,5.
-
-**Hecho cuando:** hay umbral elegido con vuestros costes, el coste en test está calculado una sola vez y nadie ha mirado el test para elegir el umbral.
-
-#### Paso 4 · Análisis de sensibilidad (día 2, 5 minutos)
-1. Cambiar los costes: ¿y si una noche vacía costara el doble? ¿y si la compensación costara la mitad?
-2. Calcular el umbral óptimo y el coste total de cada combinación.
-3. Resumir en una tabla y una frase.
-
-**Cómo se hace**
-- **Repetid la búsqueda del paso 3** dentro de un bucle: para cada pareja de costes, buscad el umbral de menor coste y guardad el resultado. Usad al menos tres combinaciones: la vuestra, FN el doble y FP la mitad.
-- **Tabla.** Con las columnas `COSTE_FN`, `COSTE_FP`, umbral óptimo y coste total; un gráfico del umbral óptimo también vale.
-- **La conclusión** es del tipo: «con estos costes recomendamos un umbral de X; si el coste de una falsa alarma sube al doble, el umbral sube a Y». Las cifras serán las de vuestro cuaderno.
-
-**Qué deberíais ver.** Una tabla con al menos tres filas y cómo se mueve el umbral óptimo. Si FN se encarece, el umbral baja (se avisa más); si se encarece FP, sube.
-
-**Hecho cuando:** la tabla (o el gráfico) está en el cuaderno y tenéis la frase de conclusión escrita.
-
-#### Paso 5 · Informe y README (día 2, 10 minutos)
-1. Copiar la plantilla como `informe_modelado.md` y rellenarla con las cifras del cuaderno.
-2. Escribir el README: semilla, versiones, cómo ejecutar y uso de la IA.
-3. Preparar la entrega: revisión con la rúbrica, subida y autoevaluación (los 15 minutos siguientes).
-
-**Cómo se hace**
-- **El informe.** Abrid [`informe_modelado_plantilla.md`](../1_Trabajar/plantillas/informe_modelado_plantilla.md), pulsad *Raw*, copiad el texto y pegadlo en un archivo nuevo `informe_modelado.md`. Para el **nivel mínimo** bastan estas, en pocas líneas:
-
-| Apartado de la plantilla | Qué escribís |
-|---|---|
-| 1 · Resumen para el gerente | Cinco líneas con euros: qué recomendáis, qué cuesta cada error y cuánto ahorráis frente a no hacer nada |
-| 3 · Regresión | La tabla de MAE, RMSE y R² y la frase del error medio en euros |
-| 4 · Clasificación | La tabla de métricas y la matriz de confusión con el umbral elegido |
-| 5 · De las métricas a los euros | `COSTE_FN` y `COSTE_FP` con su razón, el umbral y el coste en test |
-
-  Para el **nivel estándar**, completad también el 2 (variables usadas y excluidas), la sensibilidad del 5, el 6 (recomendación con cifras y límites) y el 7 (riesgos de IA responsable).
-- **El README.** Cuatro cosas: `SEMILLA = 42`; las versiones (`!python --version` y `import sklearn; print(sklearn.__version__)` en una celda); cómo ejecutar (*abrir en Colab y ejecutar de arriba abajo*); y el uso de la IA (qué pedisteis y qué revisasteis). Añadid quién hizo qué.
-- **La revisión con la rúbrica (5 minutos, al empezar la entrega).** Quien revisa sigue los cinco pasos de «Cómo se revisa» de [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md) y rellena la sección «Revisión con la rúbrica» del final de `informe_modelado.md`: un nivel de 1 a 4 por criterio y **una frase de prueba**.
-- **Subir los ficheros (la vía del curso, desde el navegador).** Seguid [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md): (1) en Colab, *Entorno de ejecución → Reiniciar y ejecutar todo* y después *Archivo → Descargar → Descargar .ipynb*; (2) abrid el repositorio del equipo y **entrad primero en la carpeta `sprint-07`**; (3) *Add file → Upload files* y arrastrad los ficheros; (4) escribid un mensaje corto y pulsad **Commit changes**. Cada subida es un *commit* con el nombre de quien la hace. Un reparto posible: la persona A sube `reto_S07.ipynb` («Añado cuaderno del reto»), la B sube `informe_modelado.md` («Añado informe»), la C edita `README.md` («Completo README»). Los nombres de archivo, **en minúsculas y sin espacios**. El CSV va a `data/` del repositorio solo si aún no está.
-
-**Qué deberíais ver.** En la carpeta `sprint-07` del repositorio, los tres ficheros del equipo y una hoja de autoevaluación por persona (**3 + N**); y en el historial (el icono del reloj), commits de personas distintas.
-
-**Hecho cuando:** otra persona podría ejecutar el cuaderno siguiendo solo el README, la sección «Revisión con la rúbrica» del informe está rellena y todo está subido a `sprint-07/`.
-
-**Después, 15 minutos de entrega:** cada persona rellena y sube su autoevaluación y coevaluación a `sprint-07/` (la parte de coevaluación se completa en la *review* del jueves 12/11, en el mismo fichero). En la *review* (5 minutos por equipo) enseñaréis la tabla comparativa de métricas, el umbral elegido y su coste en euros frente a «no hacer nada», y una frase de recomendación para el gerente. En la retrospectiva, pensad: ¿qué hipótesis de coste discutimos más? ¿Cómo cambia la decisión si cambia el coste? ¿Qué habríamos necesitado saber del hotel para afinar?
+- [Paso 1 · Acordar las hipótesis de coste y abrir el cuaderno (día 1, 5 minutos)](Reto_Sprint_07_paso_1.md)
+- [Paso 2 · Regresión del precio (día 1, 20 minutos)](Reto_Sprint_07_paso_2.md)
+- [Paso 3 · Clasificación de la cancelación y elección del umbral (día 2, 15 minutos)](Reto_Sprint_07_paso_3.md)
+- [Paso 4 · Análisis de sensibilidad (día 2, 5 minutos)](Reto_Sprint_07_paso_4.md)
+- [Paso 5 · Informe y README (día 2, 10 minutos)](Reto_Sprint_07_paso_5.md)
 
 #### Ayuda 1 · Cómo usar la IA en este reto
 

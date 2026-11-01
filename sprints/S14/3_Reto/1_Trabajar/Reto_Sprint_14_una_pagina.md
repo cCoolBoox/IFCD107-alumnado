@@ -1,6 +1,6 @@
 # Sprint 14 · Reto «Proyecto final: definir, tener datos y un punto de partida» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (recursos, guía paso a paso, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_14.md](../3_Consultar/Reto_Sprint_14.md); las plantillas están en [`4_Plantillas_y_entrega`](plantillas/).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_14.md](../3_Consultar/Reto_Sprint_14.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); las plantillas están en [`4_Plantillas_y_entrega`](plantillas/).
 
 **El cliente.** Sois una consultora de IA y el docente es el cliente. Elegís un brief (turismo, cultivos, asistente de FP o energía) o proponéis uno propio. **Aquí todavía no se busca el mejor modelo:** se decide qué hacer, con qué datos y cómo se demostrará que funciona.
 **Qué entregáis (no cambia):** ficha de proyecto, plan de datos con licencia, EDA, baseline, backlog y registro de riesgos éticos, más el README y `requirements.txt` del repositorio. **Al final del sprint se suben a `sprint-14/` del repositorio del equipo: 6 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
@@ -27,6 +27,8 @@
 | 200 | Día 2 · *go / no-go*, EDA con informe de calidad y baseline | Métrica y partición escritas antes; los dos cuadernos se ejecutan |
 | 140 | Día 3 · backlog, plan ético y README | 10–15 historias, 5 riesgos y un README que otra persona pueda seguir |
 | 60 | Día 3 · revisión con la rúbrica, entrega, review (5 min por equipo) y retro | Todo subido y revisión anotada en el README |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_14_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_14_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_14_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_14_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_14_paso_5.md) · [Paso 6](../3_Consultar/Reto_Sprint_14_paso_6.md) · [Paso 7](../3_Consultar/Reto_Sprint_14_paso_7.md)
 
 ## Frases para la ficha (completad los huecos)
 

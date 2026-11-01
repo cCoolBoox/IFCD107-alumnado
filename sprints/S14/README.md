@@ -69,7 +69,7 @@
 
 **Núcleo y extra.** Núcleo: brief elegido, ficha aprobada, plan de datos y *baseline*. Extra: EDA ampliado y backlog más detallado.
 
-Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_14.md) (pasos, ayudas y errores frecuentes).
+Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_14.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
@@ -112,7 +112,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 | Carpeta | Qué hay |
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
-| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha completa del reto) |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y cada paso explicado) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

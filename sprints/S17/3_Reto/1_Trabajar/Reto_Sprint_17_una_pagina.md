@@ -1,6 +1,6 @@
 # Sprint 17 · Reto «La defensa» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (pasos, rúbrica, ayudas y errores frecuentes) sigue en [Reto_Sprint_17.md](../3_Consultar/Reto_Sprint_17.md); la plantilla del relato está en [`plantilla_storytelling.md`](plantillas/plantilla_storytelling.md) y el guion de defensa en [`guion_defensa.md`](../../1_Teoria/actividades/guion_defensa.md).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_17.md](../3_Consultar/Reto_Sprint_17.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del relato está en [`plantilla_storytelling.md`](plantillas/plantilla_storytelling.md) y el guion de defensa en [`guion_defensa.md`](../../1_Teoria/actividades/guion_defensa.md).
 
 **El cliente.** Un directivo y su equipo (el tribunal) **no son técnicos**. Tienen que salir sabiendo: qué problema resolvéis, qué habéis encontrado, qué recomendáis y **de qué no deben fiarse**.
 **Qué entregáis (no cambia):** una presentación en PDF de **12 diapositivas como máximo** (antes de las 8:30 del 14/12), la **defensa en directo** con demo y plan B en vídeo, y la plantilla de storytelling rellena con la revisión con la rúbrica. **Hablan todas las personas.**
@@ -26,6 +26,8 @@
 | 50 | Ronda extra: tres preguntas difíciles y lista de 3 cambios | Respondéis sin leer y sabéis qué cambiáis |
 | 40 | Ensayo general con cronómetro | Cabéis en el turno y hay plan B grabado |
 | 15 | Exportar el PDF, revisar las cifras y subirlo (al final del día o en casa, antes de las 8:30) | PDF subido, 12 diapositivas o menos |
+
+**Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_17_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_17_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_17_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_17_paso_4.md) · [Paso 5](../3_Consultar/Reto_Sprint_17_paso_5.md)
 
 El día 2 (120 min) es la defensa de todos los equipos; al acabar, 15 min para la revisión con la rúbrica.
 
