@@ -23,7 +23,7 @@
 | **Python 3.11** (solo biblioteca estándar: `csv`, `json`, `argparse`, `datetime`) | Escribir y ejecutar `kpis.py` | Ya instalado en el aula; si no, el de Colab |
 | **Editor y terminal**: VS Code (recomendado) o Colab | Editar el código y ejecutar `python test_kpis.py` | En Colab, subid la carpeta y poned `!` delante: `!python test_kpis.py` |
 | **La plantilla y el CSV real**: [`reto_herramientas.zip`](https://raw.githubusercontent.com/cCoolBoox/IFCD107-alumnado/main/sprints/S04/3_Reto/1_Trabajar/reto_herramientas.zip) | Una sola descarga con la carpeta [`reto_herramientas/`](../1_Trabajar/reto_herramientas/) y el CSV [`reservas_turisdata.csv`](../../../../datos/reservas_turisdata.csv) (6000 reservas **sintéticas**) dentro: `kpis.py` con funciones vacías y pasos, `test_kpis.py` (por fases), `README_PLANTILLA.md`, los archivos de las misiones 0 a 2 (`demo_cliente.py`, `reservas_demo.py`, `mision_1_datos.py`, `mision_2_decidir.py`) y `extra/plantilla_kpis_pandas.py` (solo para el nivel extra) | Descomprimidlo y trabajad ahí: el CSV ya está **junto a `kpis.py`** |
-| **Las tarjetas de misión** ([índice](../1_Trabajar/README.md)) | Una por misión, para tenerla abierta mientras trabajáis: la idea clave, el paso a paso explicado, qué deberíais ver, cuándo está hecha y qué hacer si os atascáis | En el repositorio del curso, en `1_Trabajar/tarjetas/` |
+| **Las tarjetas de misión** ([índice](../1_Trabajar/README.md)) | Una por misión, para tenerla abierta mientras trabajáis: qué lograréis, la idea en un minuto, el paso a paso explicado, cuándo está terminada y qué hacer si os atascáis | En el repositorio del curso, en `1_Trabajar/tarjetas/` |
 | **El solucionario de las misiones** ([abrir](Solucionario_misiones.md)) | Contrastar vuestro trabajo cuando hayáis terminado una misión o agotado las pistas: soluciones de las misiones 0 a 2 y cifras para comprobar a mano las 3 a 5 | En esta carpeta; se publica por días (martes: misiones 0 a 2; miércoles: 3 a 5) |
 | **El curso «Python desde cero»** ([abrir](https://www.curso.soultechlabs.io/basico/)) y **el Taller de bloques** ([abrir](https://www.curso.soultechlabs.io/taller/)) | Los pasos de «aprender» de cada misión (lecciones ★ mínimas y puzles) y las dos katas | En el navegador, sin instalar nada; podéis exportar vuestro progreso |
 | **Cuadernos del sprint**: [`S04_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) y [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb) | Las pistas para las funciones (diccionarios, CSV, JSON, excepciones) | Colab; su [código explicado](../../2_Practica/codigo_explicado/README.md) |
@@ -43,7 +43,7 @@ Qué ficheros se suben y de dónde sale cada uno, qué requisitos se evalúan (�
 
 ### 4 · 🪜 Guía paso a paso: las tarjetas de misión
 
-El paso a paso de las **seis misiones** (qué hacéis, cómo se hace, qué deberíais ver, cuándo está hecha y qué hacer si os atascáis) está en las **[tarjetas de misión](../1_Trabajar/README.md)**: una por misión, para tener abierta solo la que toca. Aquí queda únicamente lo que vale para todo el reto:
+El paso a paso de las **seis misiones** (qué hacéis, cómo se hace, cuándo está terminada y qué hacer si os atascáis) está en las **[tarjetas de misión](../1_Trabajar/README.md)**: una por misión, para tener abierta solo la que toca. Aquí queda únicamente lo que vale para todo el reto:
 
 #### Ayuda 1 · Cómo usar la IA en este reto
 

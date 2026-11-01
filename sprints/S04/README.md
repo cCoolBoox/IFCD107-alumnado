@@ -18,10 +18,10 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning, brief del cliente y test de nivel (5 preguntas, anónimo) | — | 15 |
-| ☐ | 🎯 Reto · Misión 0 · Mirar la demo del cliente + curso ★ `type()` y f-strings | [Tarjeta de la misión 0](3_Reto/1_Trabajar/tarjetas/tarjeta_0_mirar_la_demo.md) | 35 |
-| ☐ | 🎯 Reto · Misión 1 · Datos: curso ★ listas y dicts, `mision_1_datos.py`, Taller 1 | [Tarjeta de la misión 1](3_Reto/1_Trabajar/tarjetas/tarjeta_1_datos.md) | 50 |
-| ☐ | 🎯 Reto · Misión 2 · Decidir: curso ★ `if` y `for`, `mision_2_decidir.py` | [Tarjeta de la misión 2](3_Reto/1_Trabajar/tarjetas/tarjeta_2_decidir.md) | 50 |
-| ☐ | 🎯 Reto · Misión 3 · Funciones: curso ★ funciones, Taller 2 y `kpis.py` | [Tarjeta de la misión 3](3_Reto/1_Trabajar/tarjetas/tarjeta_3_funciones.md) | 50 |
+| ☐ | 🎯 Reto · Misión 0 · Mirar la demo: curso ★ `type()` y f-strings | [Tarjeta de la misión 0](3_Reto/1_Trabajar/tarjetas/tarjeta_0_mirar_la_demo.md) | 35 |
+| ☐ | 🎯 Reto · Misión 1 · Datos en memoria: curso ★ listas y dicts, `mision_1_datos.py`, Taller 1 | [Tarjeta de la misión 1](3_Reto/1_Trabajar/tarjetas/tarjeta_1_datos.md) | 50 |
+| ☐ | 🎯 Reto · Misión 2 · Decidir y repetir: curso ★ `if` y `for`, `mision_2_decidir.py` | [Tarjeta de la misión 2](3_Reto/1_Trabajar/tarjetas/tarjeta_2_decidir.md) | 50 |
+| ☐ | 🎯 Reto · Misión 3 · Funciones que calculan: curso ★ funciones, Taller 2 y `kpis.py` | [Tarjeta de la misión 3](3_Reto/1_Trabajar/tarjetas/tarjeta_3_funciones.md) | 50 |
 
 **En clase: 3 h 20 min.**
 
@@ -34,9 +34,9 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 🎯 Reto · Misión 4 · Ficheros: curso ★ excepciones y CSV, Taller 3 | [Tarjeta de la misión 4](3_Reto/1_Trabajar/tarjetas/tarjeta_4_ficheros.md) | 50 |
+| ☐ | 🎯 Reto · Misión 4 · Leer el CSV: curso ★ excepciones y CSV, Taller 3 | [Tarjeta de la misión 4](3_Reto/1_Trabajar/tarjetas/tarjeta_4_ficheros.md) | 50 |
 | ☐ | 🎯 Reto · Misión 4 · `_convertir_fila` y `leer_reservas` con sus pruebas | [Tarjeta de la misión 4](3_Reto/1_Trabajar/tarjetas/tarjeta_4_ficheros.md) | 50 |
-| ☐ | 🎯 Reto · Misión 5 · Taller 4, `exportar_json`, `main` y errores a propósito | [Tarjeta de la misión 5](3_Reto/1_Trabajar/tarjetas/tarjeta_5_salida.md) | 25 |
+| ☐ | 🎯 Reto · Misión 5 · Guardar y entregar: Taller 4, `exportar_json`, `main` y errores a propósito | [Tarjeta de la misión 5](3_Reto/1_Trabajar/tarjetas/tarjeta_5_salida.md) | 25 |
 | ☐ | 🔔 Ceremonia · README, revisión con la rúbrica, entrega en `sprint-04/` y autoevaluación | [Entrega y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) | 25 |
 
 **En clase: 2 h 30 min.**

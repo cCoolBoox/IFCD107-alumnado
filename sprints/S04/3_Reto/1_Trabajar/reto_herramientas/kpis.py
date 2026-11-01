@@ -85,7 +85,7 @@ def calcular_kpis(reservas, capacidad_habitaciones):
 
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════
-#  FASE 2 · MIÉRCOLES · MISIÓN 4 · Leer el CSV sin que se rompa
+#  FASE 2 · MIÉRCOLES · MISIÓN 4 · Leer el CSV
 # ════════════════════════════════════════════════════════════════════════════════════════════════
 
 def _convertir_fila(fila):
@@ -121,7 +121,7 @@ def leer_reservas(ruta):
 
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════
-#  FASE 2 · MIÉRCOLES · MISIÓN 5 · Guardar el resultado y ponerlo todo en marcha
+#  FASE 2 · MIÉRCOLES · MISIÓN 5 · Guardar y entregar
 # ════════════════════════════════════════════════════════════════════════════════════════════════
 
 def exportar_json(datos, ruta):

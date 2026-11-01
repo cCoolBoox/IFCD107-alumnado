@@ -1,14 +1,22 @@
-# Misión 5 · Guardar el resultado, ponerlo en marcha y entregar
+# Misión 5 · Guardar y entregar
+*Guardar el JSON, ponerlo en marcha con un comando y entregar.*
 
-> ⏱ **25 minutos + 25 minutos de entrega** · 🅱️ Fase 2 · miércoles · 👥 Piloto y copiloto; en la parte B, repartíos el trabajo · [Volver al índice](../README.md)
->
-> **En esta misión usáis:** 🌐 el navegador (Taller y GitHub) · 📄 `kpis.py` y un `README.md` nuevo · 💻 la terminal
+| | |
+|---|---|
+| ⏱ **Cuándo** | Miércoles · 25 min + 25 min de entrega |
+| 👥 **Cómo** | Piloto y copiloto; en la parte B, repartíos el trabajo |
+| 🧰 **Usáis** | 🌐 el navegador (Taller y GitHub) · 📄 `kpis.py` y un `README.md` nuevo · 💻 la terminal |
+| 🏁 **Al terminar** | `12 de 12 pruebas superadas`, `salida.json` y la entrega subida |
 
-## 🎯 Qué construís
+**En esta tarjeta:** [Qué lograréis](#-qué-lograréis) · [La idea en un minuto](#-la-idea-en-un-minuto) · [Paso a paso](#-paso-a-paso) · [Misión terminada cuando](#-misión-terminada-cuando) · [Si os atascáis](#-si-os-atascáis) · [Kata 2](#-kata-2--leer-un-csv-sin-que-se-rompa) · [Siguiente](#-siguiente)
+
+← [Volver al índice de misiones](../README.md)
+
+## 🎯 Qué lograréis
 
 `exportar_json` y `main`: **la herramienta de verdad**, que se ejecuta con un solo comando, lee el CSV, calcula los tres KPI, avisa si algo está mal y guarda un JSON que otros sistemas puedan leer. Y después, **la entrega**.
 
-## 💡 La idea clave
+## 💡 La idea en un minuto
 
 **`main` es la receta que encadena todo lo que ya habéis hecho**: leer → calcular → guardar. Las piezas ya existen (`leer_reservas`, `calcular_kpis`, `exportar_json`); `main` solo las pone en orden y decide qué hacer si algo falla:
 
@@ -20,17 +28,17 @@ leer_reservas  →  calcular_kpis  →  exportar_json  →  mensaje de éxito  (
 
 El **código de salida** (0 = bien, 1 = mal) es la forma en que un programa le dice al sistema si ha ido bien. Y un error **no es un `Traceback` rojo**: es un mensaje que entiende cualquiera.
 
-## 🛠️ Paso a paso
+## 👣 Paso a paso
 
 | # | Tipo | Qué hacéis | Dónde | Min | Está terminado cuando |
 |---|---|---|---|---|---|
 | **Parte A** | | | | **25** | |
 | 1 | 📚 Aprender | «Encadena las funciones» y «Escribe la función principal». Es exactamente vuestro `main` | Taller: [bloque 4](https://www.curso.soultechlabs.io/taller/#t-tuberia) | 8 | Los dos puzles montados |
-| 2 | 🛠️ Construir | `exportar_json(datos, ruta)` (detalle abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 4 | La función está escrita |
-| 3 | 🛠️ Construir | `main(argumentos=None)` (detalle abajo) | `kpis.py` | 8 | La función está escrita |
-| 4 | ✅ Comprobar | Ejecutar el programa entero con el CSV real, abrir `salida.json` y pasar todas las pruebas | Terminal: `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` y `python test_kpis.py` | 5 | `salida.json` como en «Qué deberíais ver» y **`12 de 12 pruebas superadas`** |
+| 2 | 🛠️ Construir | `exportar_json(datos, ruta)` (ver «Pasos 2 y 3», abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 4 | La función está escrita |
+| 3 | 🛠️ Construir | `main(argumentos=None)` (ver «Pasos 2 y 3», abajo) | `kpis.py` | 8 | La función está escrita |
+| 4 | ✅ Comprobar | Ejecutar el programa entero con el CSV real, abrir `salida.json` y pasar todas las pruebas | Terminal: `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` y `python test_kpis.py` | 5 | `salida.json` como en «Misión terminada cuando» y **`12 de 12 pruebas superadas`** |
 | **Parte B** | | *(repartíos el trabajo: los pasos 5 y 6 se hacen a la vez)* | | **25** | |
-| 5 | ✅ Comprobar | Provocar **a propósito** los tres errores, siempre sobre **copias** del CSV (detalle abajo) | Terminal | 10 | Los tres casos dan lo que dice la tabla |
+| 5 | ✅ Comprobar | Provocar **a propósito** los tres errores, siempre sobre **copias** del CSV (ver «Paso 5», abajo) | Terminal | 10 | Los tres casos dan lo que dice la tabla |
 | 6 | 🛠️ Construir | Copiar `README_PLANTILLA.md` como `README.md` y rellenarlo (apartado 4 de [Entrega y rúbrica](../../2_Entregar/entrega_y_rubrica.md)) | `README.md` | 10 | Otra persona podría ejecutar el proyecto siguiendo solo el README |
 | 7 | ✅ Comprobar | Revisión con la rúbrica: **alguien que no escribió esa parte** la revisa y anota el resultado en el README (apartado 3 de Entrega y rúbrica) | `README.md`, sección «Revisión con la rúbrica» | 5 | La sección está rellena |
 | 8 | 📤 Entregar | Subir los ficheros del equipo a `sprint-04/` en **tres o más subidas, hechas por personas distintas**; **cada persona** sube su autoevaluación y coevaluación (apartado 5 de Entrega y rúbrica) | GitHub, carpeta `sprint-04/` | 10 | Están los cuatro ficheros del equipo y una hoja por persona (**4 + N**), con tres *commits* o más |
@@ -38,11 +46,9 @@ El **código de salida** (0 = bien, 1 = mal) es la forma en que un programa le d
 
 Si sobran minutos, empezad el extra (pruebas propias o `extra/plantilla_kpis_pandas.py`).
 
-### Detalle de los pasos 2 y 3: `exportar_json` y `main`
+### Pasos 2 y 3 · `exportar_json` y `main`
 
-**`main` es la receta que encadena todo lo que ya habéis hecho:** `leer_reservas` → `calcular_kpis` → `exportar_json` → mensaje de éxito.
-
-1. **`exportar_json(datos, ruta)`**: abrid `ruta` para escribir con `encoding="utf8"` y guardad con `json.dump(datos, f, ensure_ascii=False, indent=2)`. Sin `ensure_ascii=False`, las tildes saldrían como `\u00f3`. Pista: [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb).
+1. **`exportar_json(datos, ruta)`**: abrid `ruta` para escribir con `encoding="utf8"` y guardad con `json.dump(datos, f, ensure_ascii=False, indent=2)`. Sin `ensure_ascii=False`, las tildes saldrían como `ó`. Pista: [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb).
 2. **`main(argumentos=None)`**: la plantilla ya lee los argumentos (`args.entrada`, `args.salida` y `args.capacidad`). Vosotros, **dentro de un `try`**:
    1. `leer_reservas(args.entrada)`;
    2. `calcular_kpis(reservas, args.capacidad)`, que ya viene hecha;
@@ -52,7 +58,7 @@ Si sobran minutos, empezad el extra (pruebas propias o `extra/plantilla_kpis_pan
 
    En el `except (FileNotFoundError, ValueError)`: imprimir `ERROR: …` **por `sys.stderr`** y **devolver 1**.
 
-### Detalle del paso 5: los tres errores a propósito
+### Paso 5 · Los tres errores a propósito
 
 | Caso | Cómo se provoca | Qué deberíais ver | Código de salida |
 |---|---|---|---|
@@ -62,11 +68,17 @@ Si sobran minutos, empezad el extra (pruebas propias o `extra/plantilla_kpis_pan
 
 El código de salida se mira justo después de ejecutar: en Linux o Mac, `echo $?`; en Windows (cmd), `echo %errorlevel%`; en PowerShell, `echo $LASTEXITCODE`. **Al terminar, borrad las copias de prueba** (`sin_col.csv`, `con_error.csv` y el JSON de prueba): no se suben. Ese será vuestro «provocar un error» en la review.
 
-## 👀 Qué deberíais ver
+## ✅ Misión terminada cuando
 
-Por pantalla, un mensaje como `OK: 6000 reservas analizadas, 0 descartadas -> salida.json` y, en la carpeta, un fichero `salida.json` con este contenido:
+- [ ] `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` escribe `OK: 6000 reservas analizadas, 0 descartadas -> salida.json` y deja un `salida.json` con las cifras de abajo.
+- [ ] `python test_kpis.py` da **`12 de 12 pruebas superadas`** (con `kpis_pandas.py` ausente, la prueba opcional se omite y cuenta como superada).
+- [ ] Los tres errores provocados (paso 5) dan su mensaje.
+- [ ] En `sprint-04/` están el README, la revisión con la rúbrica, los cuatro ficheros del equipo y una hoja de autoevaluación por persona (**4 + N**); y en el historial (el icono del reloj), al menos tres *commits* con nombres distintos.
+- [ ] **Prueba final:** otra persona podría ejecutar el proyecto siguiendo solo el README.
 
-```
+**Lo que tiene que salir** en `salida.json`:
+
+```json
 {
   "reservas_analizadas": 6000,
   "ocupacion_proxy_pct": 42.0,
@@ -75,12 +87,6 @@ Por pantalla, un mensaje como `OK: 6000 reservas analizadas, 0 descartadas -> sa
   "calidad": {"filas_validas": 6000, "filas_descartadas": 0, "avisos": []}
 }
 ```
-
-Y `python test_kpis.py` da **`12 de 12 pruebas superadas`** (con `kpis_pandas.py` ausente, la prueba opcional se omite y cuenta como superada). En `sprint-04/`: los cuatro ficheros del equipo y una hoja de autoevaluación por persona (**4 + N**); y en el historial (el icono del reloj), al menos tres *commits* con nombres distintos.
-
-## ✅ Hecho cuando
-
-Existe `salida.json` con esas cifras, las 12 pruebas pasan, los tres errores provocados dan su mensaje, y el README, la revisión con la rúbrica y los *commits* están subidos. Prueba final: **otra persona podría ejecutar el proyecto siguiendo solo el README**.
 
 ## 🚑 Si os atascáis
 
@@ -92,15 +98,15 @@ Existe `salida.json` con esas cifras, las 12 pruebas pasan, los tres errores pro
 | `test_exportar_json_y_main` falla | `main` no devuelve 0, o no escribe el fichero | Revisad el `return 0` y la ruta de `args.salida` |
 | Un solo *commit* gigante | «Lo subo al final» | Commits pequeños mientras avanzáis; la entrega pide tres o más |
 | Cambiar las pruebas para que pasen | Prisa | No se tocan las pruebas dadas; las propias van aparte |
+| Queréis usar un asistente de IA | Es una ayuda legítima, con reglas | Seguid las reglas de la «Ayuda 1» de la [ficha completa](../../3_Consultar/Reto_Sprint_04.md) y declarad el uso en el README |
+| Seguís sin verlo | A veces pasa | 1) Preguntad al equipo; 2) después, al docente; 3) **cuando hayáis terminado o agotado las pistas**, contrastad con el [solucionario de la misión 5](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el miércoles). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo |
 
-Si usáis un asistente de IA, seguid las reglas de la «Ayuda 1» de la [ficha completa](../../3_Consultar/Reto_Sprint_04.md) y declarad el uso en el README.
+## 🥋 Kata 2 · Leer un CSV sin que se rompa
 
-📖 **Para contrastar**, cuando hayáis terminado o agotado las pistas: [solucionario de la misión 5](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el miércoles). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo.
+⏱ 10 min · 👤 **Individual** · fin del miércoles · [Abrir la kata 2](https://www.curso.soultechlabs.io/taller/#kata-2)
 
-## 🥋 Kata 2 · Leer un CSV sin que se rompa — 10 min, **individual**, fin del miércoles
+**Cada persona sola**, sin mirar esta tarjeta ni preguntar al equipo: escribid `media_precio(ruta)`, que lee un CSV, ignora las filas defectuosas y devuelve `None` si el fichero no existe. Apuntad **cuántas pistas** habéis usado. Sirve para comprobar que **cada persona** lo ha aprendido, no solo el equipo.
 
-[Abrir la kata 2](https://www.curso.soultechlabs.io/taller/#kata-2). **Cada persona sola**: escribid `media_precio(ruta)`, que lee un CSV, ignora las filas defectuosas y devuelve `None` si el fichero no existe. Apuntad cuántas pistas habéis usado.
-
-## ➡️ Siguiente
+## 👉 Siguiente
 
 ¡Reto terminado! 🎉 Continuamos con el [Sprint 5](../../../../S05/README.md).

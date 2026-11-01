@@ -1,4 +1,4 @@
-"""MISIÓN 1 · Los datos en memoria.
+"""MISIÓN 1 · Datos en memoria.
 
 Una reserva es un DICCIONARIO (clave: valor). Muchas reservas son una LISTA de diccionarios.
 Completa cada TODO (sustituye el `None` o escribe las líneas que faltan) y ejecuta:   python mision_1_datos.py

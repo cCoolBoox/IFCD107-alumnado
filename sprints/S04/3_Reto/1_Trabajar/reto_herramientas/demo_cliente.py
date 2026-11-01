@@ -1,4 +1,4 @@
-"""MISIÓN 0 · La demostración del cliente.
+"""MISIÓN 0 · Mirar la demo.
 
 TurisData nos ha enviado este programa de ejemplo: así quiere ver sus cifras. Funciona, pero solo con 8
 reservas puestas a mano. Nuestro reto es construir la herramienta de verdad (leer un fichero, avisar de los
