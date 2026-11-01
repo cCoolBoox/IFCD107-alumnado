@@ -1,6 +1,6 @@
 # Autoevaluación y coevaluación · «Herramientas internas»
 
-**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante la *review*). Se puntúa con la rúbrica del reto (criterios de evaluación de la [ficha del reto](../2_Ficha_completa/Reto_Sprint_04.md)), de 1 a 4.
+**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante la *review*). Se puntúa con la rúbrica del reto (en [Entrega y rúbrica](entrega_y_rubrica.md)), de 1 a 4.
 
 **Cómo se rellena y se sube (sin instalar nada):** cada persona entrega **su propio archivo**, con su cuenta de GitHub. Es el mismo procedimiento que el del entregable ([guía completa: cómo subir a GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md)).
 
@@ -19,7 +19,7 @@
 - **Parte 1 (autoevaluación):** la rellenas tú sobre **tu** trabajo y el de tu equipo.
 - **Parte 2 (coevaluación):** la rellenas tú, en **tu mismo archivo**, sobre el trabajo de **la persona o el equipo que te toca revisar** (el docente te lo indica en la *review*). No escribas en el archivo de otra persona: cada cual sube lo suyo, y vuestra revisión se la comentáis también de palabra.
 
-Volver a la [ficha del reto](../2_Ficha_completa/Reto_Sprint_04.md).
+Volver a [Entrega y rúbrica](entrega_y_rubrica.md).
 
 ---
 
@@ -27,7 +27,7 @@ Volver a la [ficha del reto](../2_Ficha_completa/Reto_Sprint_04.md).
 
 **Nombre:** ……
 
-**Repaso rápido** (las mismas preguntas del final de la ficha del reto; contesta Sí / No / A medias):
+**Repaso rápido** (son las comprobaciones de «Antes de cerrar el sprint» del [README del sprint](../../README.md); contesta Sí / No / A medias):
 
 | Pregunta | Mi respuesta |
 |---|---|

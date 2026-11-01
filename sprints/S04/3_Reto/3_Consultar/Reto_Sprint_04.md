@@ -1,6 +1,6 @@
 # Sprint 4 · Reto «Herramientas internas»
 
-> **Ficha completa del reto, para consultar.** Para trabajar con ella abierta, usad [el reto en una página](../1_Reto_en_una_pagina/Reto_Sprint_04_una_pagina.md).
+> **Ficha completa del reto, para consultar.** Para trabajar, las [tarjetas de misión](../1_Trabajar/tarjetas_de_mision.md). Para entregar, [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md).
 >
 > - Volver al [README del sprint](../../README.md) · [README del sprint en PDF](../../pdf/README_Sprint_04.pdf) · [ecofriendly](../../pdf/README_Sprint_04_ecofriendly.pdf)
 > - **Esta ficha en PDF:** [a color](pdf/Reto_Sprint_04.pdf) · [ecofriendly, para imprimir](pdf/Reto_Sprint_04_ecofriendly.pdf)
@@ -22,92 +22,28 @@
 |---|---|---|
 | **Python 3.11** (solo biblioteca estándar: `csv`, `json`, `argparse`, `datetime`) | Escribir y ejecutar `kpis.py` | Ya instalado en el aula; si no, el de Colab |
 | **Editor y terminal**: VS Code (recomendado) o Colab | Editar el código y ejecutar `python test_kpis.py` | En Colab, subid la carpeta y poned `!` delante: `!python test_kpis.py` |
-| **La plantilla** [`reto_herramientas/`](../4_Plantillas_y_entrega/reto_herramientas/) | `kpis.py` con funciones vacías y pasos, `test_kpis.py` (por fases), `README_PLANTILLA.md`, `plantilla_kpis_pandas.py` (extra) y los archivos de las misiones 0 a 2 (`demo_cliente.py`, `reservas_demo.py`, `mision_1_datos.py`, `mision_2_decidir.py`) | En GitHub: *Code → Download ZIP*. Trabajad en una copia |
-| **Las tarjetas de misión** [`tarjetas_de_mision.md`](../4_Plantillas_y_entrega/tarjetas_de_mision.md) | Tenerlas abiertas mientras trabajáis: qué hacer, con qué ayuda y cuándo está hecha cada misión | En el repositorio del curso |
+| **La plantilla** [`reto_herramientas/`](../1_Trabajar/reto_herramientas/) | `kpis.py` con funciones vacías y pasos, `test_kpis.py` (por fases), `README_PLANTILLA.md`, `extra/plantilla_kpis_pandas.py` (solo para el nivel extra) y los archivos de las misiones 0 a 2 (`demo_cliente.py`, `reservas_demo.py`, `mision_1_datos.py`, `mision_2_decidir.py`) | En GitHub: *Code → Download ZIP*. Trabajad en una copia |
+| **Las tarjetas de misión** [`tarjetas_de_mision.md`](../1_Trabajar/tarjetas_de_mision.md) | Tenerlas abiertas mientras trabajáis: qué hacer, con qué ayuda y cuándo está hecha cada misión | En el repositorio del curso |
 | **El curso «Python desde cero»** ([abrir](https://www.curso.soultechlabs.io/basico/)) y **el Taller de bloques** ([abrir](https://www.curso.soultechlabs.io/taller/)) | El paquete de ayuda de cada misión (lecciones ★ mínimas y puzles) y las dos katas | En el navegador, sin instalar nada; podéis exportar vuestro progreso |
 | **El CSV real** [`reservas_turisdata.csv`](../../../../datos/reservas_turisdata.csv) | 6000 reservas **sintéticas** | Botón *Download raw file*; dejadlo **junto a `kpis.py`** |
 | **Cuadernos del sprint**: [`S04_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) y [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb) | Las pistas para las funciones (diccionarios, CSV, JSON, excepciones) | Colab; su [código explicado](../../2_Practica/codigo_explicado/README.md) |
 | **Git y GitHub** + cuaderno [`S04_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb) | Guardar versiones (*commits*) y entregar | Terminal o VS Code. Si falla, subid los ficheros desde la web (*Add file → Upload files*): cada subida es un commit |
-| **Cómo entregar en GitHub** | Subir la carpeta `sprint-04/` | [Guía de entrega](../../../../material/5.%20Como_entregar_en_GitHub.md) |
-| **Autoevaluación y coevaluación** | Cada persona rellena su hoja | [Hoja del sprint](../4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md) |
+| **Entrega y rúbrica** | Qué se sube, qué se evalúa, el README y la subida a `sprint-04/`; cada persona rellena su [autoevaluación y coevaluación](../2_Entregar/autoevaluacion_y_coevaluacion.md) | [`entrega_y_rubrica.md`](../2_Entregar/entrega_y_rubrica.md) y la [guía de entrega](../../../../material/5.%20Como_entregar_en_GitHub.md) |
 | **Un asistente de IA** (opcional) | Entender errores y pedir pistas | Con las reglas de la «Ayuda 1» del paso a paso |
 
 ---
 
 ### 3 · 📦 Qué entregar
 
-Este apartado responde a **dos preguntas distintas**, una tabla para cada una:
-
-**Tabla A · Los ficheros:** qué ficheros hay, de dónde sale cada uno (ya hecho, lo modificáis, lo creáis o lo genera el programa) y **cuáles se suben y adónde**.
-
-**Tabla B · Los requisitos:** qué tiene que cumplir lo que entregáis y hasta dónde llegar (🟢 mínimo, 🟡 estándar, 🔴 extra). **Es lo que se evalúa.**
-
 **En total, al final del sprint se suben a `sprint-04/`:** **4 ficheros del equipo** (`kpis.py`, `test_kpis.py`, `README.md`, `salida.json`) **+ 1 autoevaluación y coevaluación por persona**, es decir, **4 + tantos ficheros como personas haya en el equipo** (un equipo de 3 sube 7). «El reto» no es un fichero aparte: son esos cuatro ficheros. Además, el CSV va a `data/` si aún no está, y los extras solo si los hacéis. La *review* y la *retro* se hacen de palabra: no se suben.
 
-#### Tabla A · Los ficheros: de dónde sale cada uno y cuáles se suben
-
-Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`), en la carpeta **`sprint-04/`**, salvo el CSV.
-
-| Fichero | Origen | Qué hacéis vosotros | ¿Se sube? |
-|---|---|---|---|
-| `kpis.py` | **Lo modificáis.** Os damos una plantilla con las funciones vacías (`calcular_kpis` y la estructura de `main` ya vienen hechas) | Escribís el código de las funciones sobre la propia plantilla | **Sí** · `sprint-04/` |
-| `test_kpis.py` | **Ya hecho.** Pruebas completas, que se ejecutan por fases (`python test_kpis.py 1`, `2` o sin número) | Nada: se copia tal cual y **no se modifica** | **Sí**, sin cambios · `sprint-04/` |
-| `README.md` | **Lo creáis a partir de una plantilla.** Os damos `README_PLANTILLA.md` con huecos | Copiarla como `README.md` y rellenarla | **Sí** · `sprint-04/` |
-| `salida.json` | **Lo genera el programa** al ejecutarlo con el CSV real | Ejecutar el programa; no se escribe a mano | **Sí** · `sprint-04/` |
-| `reservas_turisdata.csv` | **Ya hecho.** Los datos reales (sintéticos) | Nada: se copia junto a `kpis.py` sin cambiarlo | **Sí**, sin cambios · `data/` (si aún no está) |
-| Autoevaluación y coevaluación (`autoevaluacion_nombre.md`) | **Ya hecha, en blanco** | Cada persona copia la plantilla con su nombre y la rellena; la coevaluación va **dentro del mismo fichero** | **Sí**, **una por persona** (no una por equipo) · `sprint-04/` |
-| `kpis_pandas.py` (extra) | **Lo modificáis.** Parte de `plantilla_kpis_pandas.py` | Solo si el equipo llega al nivel extra | Solo si lo hacéis · `sprint-04/` |
-| Pruebas propias (extra) | **Lo creáis vosotros**, en un fichero aparte | Solo si el equipo llega al nivel extra | Solo si lo hacéis · `sprint-04/` |
-| `demo_cliente.py` y `reservas_demo.py` | **Ya hechos.** La demostración del cliente y sus 8 reservas de ejemplo | Ejecutarlos y leerlos (misión 0) | **No se suben** |
-| `mision_1_datos.py` y `mision_2_decidir.py` | **Lo modificáis.** Ejercicios con huecos (`TODO`) y comprobación automática | Rellenar cada `TODO` (misiones 1 y 2) | **No se suben** |
-| Copias de prueba de la misión 5 (`sin_col.csv`…) | **Las creáis** para romper el programa a propósito | Usarlas y borrarlas | **No se suben** |
-
-#### Tabla B · Los requisitos: qué tiene que cumplir y hasta dónde llegar
-
-| Requisito | Qué se pide exactamente | Nivel | Dónde se comprueba |
-|---|---|---|---|
-| **Leer el CSV** | `leer_reservas`: convierte los tipos y **descarta y cuenta** las filas defectuosas (noches < 1, precio ≤ 0, `cancelada` distinto de 0/1, datos que no se pueden convertir) | 🟢 Mínimo | `kpis.py` |
-| **Tasa de cancelación por canal** | canceladas ÷ reservas del canal × 100, con 1 decimal | 🟢 Mínimo | `kpis.py` · `tasa_cancelacion_por_canal` |
-| **Ingreso medio por reserva** | media de `noches × precio_noche` de las reservas **no canceladas**, con 2 decimales (`0.0` si no hay) | 🟢 Mínimo | `kpis.py` · `ingreso_medio_por_reserva` |
-| **Ocupación (proxy)** | noches no canceladas ÷ (días del periodo × habitaciones) × 100; el periodo va de la primera a la última llegada. En el mínimo, con ayuda del docente | 🟡 Estándar | `kpis.py` · `ocupacion_proxy` |
-| **Guardar el resultado** | `exportar_json` y `main`: JSON en UTF-8 con los tres KPI y la sección `calidad` (filas válidas, descartadas y avisos). En el mínimo, con ayuda del docente | 🟡 Estándar | `kpis.py` → `salida.json` |
-| **Avisar de los errores** | Fichero inexistente o columna que falta → mensaje claro y código de salida 1, sin `Traceback` | 🟢 Mínimo | `kpis.py` · `main` y `leer_reservas` |
-| **Resultado con el CSV real** | `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` | 🟢 Mínimo | `salida.json` |
-| **Pruebas** | `python test_kpis.py` pasa todo. **No se modifican** las dadas; las vuestras, aparte | 🟡 Estándar | `test_kpis.py` |
-| **Código limpio** | Docstring en cada función y estilo PEP 8 | 🟡 Estándar | `kpis.py` |
-| **README** | Cómo se ejecuta y se prueba · qué es cada KPI · por qué la ocupación es un proxy · uso de la IA (qué pedisteis y qué revisasteis) · la revisión con la rúbrica. En el mínimo, versión corta | 🟢 Mínimo | `README.md` |
-| **Git** | Al menos 3 *commits* con mensaje claro, de personas distintas, sin claves ni datos personales | 🟢 Mínimo | Historial del repositorio del equipo |
-| **Revisión y autoevaluación** | Alguien que **no escribió esa parte** revisa el código y el README con la rúbrica (justo debajo de estas tablas) y anota nivel y prueba en el README; cada persona sube su hoja de autoevaluación y coevaluación | 🟡 Estándar | `README.md` (sección «Revisión con la rúbrica») y `sprint-04/` |
-| **Extras** | Pruebas propias · `kpis_pandas.py` con los mismos resultados · argumento `--por-mes` · `@dataclass` para `Reserva` | 🔴 Extra | `test_kpis.py` · `kpis_pandas.py` · `kpis.py` |
-
-#### Rúbrica del reto · cómo se puntúa y cómo se revisa
-
-La usan **dos veces**: el equipo, para revisar su propio trabajo antes de entregar (es lo que dice la *Definition of Done*), y el docente, para puntuar. Se mira **cada criterio por separado** y se pone el nivel de la columna cuyo texto **se cumple entero**: si lo de un nivel se cumple a medias, es el nivel de abajo. **0** significa que no se ha entregado nada de ese criterio.
-
-Orientación: lo que pide el nivel 🟢 mínimo sale en un **2**, el 🟡 estándar en un **3** y los 🔴 extras en un **4**.
-
-| Criterio | 1 · Empezado | 2 · Mínimo | 3 · Estándar | 4 · Extra |
-|---|---|---|---|---|
-| **Corrección técnica** (¿funciona?) | Hay código, pero fallan muchas pruebas o no se ejecuta con el CSV real | Pasan las pruebas de lectura, cancelación e ingreso medio; sale `salida.json` con el CSV real; un error de fichero o de columna da mensaje y código 1 | `python test_kpis.py` da **12 de 12**; la ocupación y la sección `calidad` salen bien; cada función tiene docstring y el estilo es PEP 8 | Además, pruebas propias que pasan (lista vacía, división entre cero…) o `kpis_pandas.py` con los mismos resultados |
-| **Reproducibilidad** (¿lo puede repetir otra persona?) | Solo funciona en el ordenador de quien lo escribió | El README tiene los comandos, pero faltan datos (carpeta, versión de Python…) | Otra persona obtiene **el mismo JSON y las pruebas en verde** siguiendo solo el README; hay 3 o más *commits* de personas distintas, sin claves ni datos personales | Además, el README indica versión de Python, estructura de carpetas y el comando exacto |
-| **Análisis y comunicación al cliente** (¿lo entiende quien no programa?) | El README no explica qué es cada KPI | Define los tres KPI, pero no sus límites | Define cada KPI **y explica por qué la ocupación es un proxy** (qué capacidad se supuso), sin jerga | Además, explica cómo cambia la ocupación si cambia la capacidad, o qué conclusión saca el cliente del resultado |
-| **IA responsable** (¿se sabe qué hizo la IA y qué comprobasteis?) | No dice si se ha usado IA | Dice que se ha usado IA, sin detalle | Dice **qué se pidió, qué se revisó y qué se cambió**, y quien escribe sabe explicar cualquier línea | Además, cuenta un fallo concreto de la IA que detectaron las pruebas, y menciona que los datos son sintéticos y no hay datos personales |
-
-**Cómo se revisa** (unos 10 minutos, antes de subir; lo hace **una persona que no escribió esa parte**):
-
-1. **Ejecutar**, en una carpeta limpia, `python test_kpis.py` y `python kpis.py reservas_turisdata.csv salida.json --capacidad 40`, copiando solo lo que dice el README. Anotar si algo no funciona.
-2. **Leer el README como si fuera el cliente**: ¿se entiende qué hace cada KPI y por qué la ocupación es un proxy? Subrayar lo que no se entienda.
-3. **Mirar el código**: ¿tiene docstring cada función? ¿Hay algo que no sepáis explicar? Que quien lo escribió lo explique.
-4. **Poner un nivel (1 a 4) en cada criterio, con una frase de prueba** (por ejemplo: «3 · 12 de 12 pruebas, pero falta el docstring de `main`»). Sin prueba escrita, el nivel no vale.
-5. **Apuntar el resultado** en la sección «Revisión con la rúbrica» del `README.md` y corregir lo más fácil de arreglar. Lo demás se anota como mejora.
-
-Cada persona, además, se puntúa a sí misma en su hoja de [autoevaluación y coevaluación](../4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md) con **esta misma rúbrica**.
+Qué ficheros se suben y de dónde sale cada uno, qué requisitos se evalúan (🟢 mínimo, 🟡 estándar, 🔴 extra), la rúbrica y cómo se revisa: **[Entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md)**.
 
 ---
 
 ### 4 · 🪜 Guía paso a paso: seis misiones
 
-El reto se hace en **seis misiones**, en **dos fases**: el **martes** la lógica con las reservas ya **en memoria** (sin ficheros) y el **miércoles** los ficheros, los errores, el JSON y la entrega. Cada misión dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecha**. Cada una trae su **paquete de ayuda** (unas pocas lecciones del [curso «Python desde cero»](https://www.curso.soultechlabs.io/basico/) y unos puzles del [Taller de bloques](https://www.curso.soultechlabs.io/taller/)) **justo antes de necesitarlo**. Las ayudas (IA, errores, atascos) están al final. Para tenerlas abiertas mientras trabajáis, usad las [tarjetas de misión](../4_Plantillas_y_entrega/tarjetas_de_mision.md).
+El reto se hace en **seis misiones**, en **dos fases**: el **martes** la lógica con las reservas ya **en memoria** (sin ficheros) y el **miércoles** los ficheros, los errores, el JSON y la entrega. Cada misión dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecha**. Cada una trae su **paquete de ayuda** (unas pocas lecciones del [curso «Python desde cero»](https://www.curso.soultechlabs.io/basico/) y unos puzles del [Taller de bloques](https://www.curso.soultechlabs.io/taller/)) **justo antes de necesitarlo**. Las ayudas (IA, errores, atascos) están al final. Para tenerlas abiertas mientras trabajáis, usad las [tarjetas de misión](../1_Trabajar/tarjetas_de_mision.md).
 
 **Cómo se reparte el trabajo.** En **parejas de piloto y copiloto**: el piloto teclea, el copiloto lee en voz alta lo que pide la misión y comprueba; **cambiad de papel en cada misión**. En un equipo de 3, la tercera persona revisa (ejecuta las pruebas y lee el docstring). Al final de cada día, **cada persona sola** escribe una **kata**: una función corta, sin ayuda, en el [Taller](https://www.curso.soultechlabs.io/taller/). Es lo que asegura que **cada persona** ha aprendido, no solo el equipo.
 
@@ -131,7 +67,7 @@ El reto se hace en **seis misiones**, en **dos fases**: el **martes** la lógica
 4. Hacer en el curso `type()` y los f-strings (ejercicios mínimos).
 
 **Cómo se hace** (unos 15 minutos para los puntos 1 a 3 y 20 para el curso)
-- **Descargar.** Opción rápida: en el [repositorio del curso](https://github.com/cCoolBoox/IFCD107-alumnado) pulsad *Code → Download ZIP*, descomprimid y copiad a una carpeta nueva (por ejemplo `sprint-04`) **todo el contenido** de `sprints/S04/3_Reto/4_Plantillas_y_entrega/reto_herramientas/` (`kpis.py`, `test_kpis.py`, `README_PLANTILLA.md`, `demo_cliente.py`, `reservas_demo.py`, `mision_1_datos.py`, `mision_2_decidir.py` y `plantilla_kpis_pandas.py`) y, de `datos/`, `reservas_turisdata.csv`. Todo **junto, en la misma carpeta**.
+- **Descargar.** Opción rápida: en el [repositorio del curso](https://github.com/cCoolBoox/IFCD107-alumnado) pulsad *Code → Download ZIP*, descomprimid y copiad a una carpeta nueva (por ejemplo `sprint-04`) **todo el contenido** de `sprints/S04/3_Reto/1_Trabajar/reto_herramientas/` (`kpis.py`, `test_kpis.py`, `README_PLANTILLA.md`, `demo_cliente.py`, `reservas_demo.py`, `mision_1_datos.py`, `mision_2_decidir.py`; la carpeta `extra/` es solo para el nivel extra) y, de `datos/`, `reservas_turisdata.csv`. Todo **junto, en la misma carpeta**.
 - **Abrir la terminal.** En VS Code: *File → Open Folder…* (elegid `sprint-04`) y *Terminal → New Terminal*. Si el aula no tuviera Python, usad Colab: subid los ficheros al panel izquierdo y poned `!` delante de cada comando.
 - **Comprobar Python.** Escribid `python --version`; debe salir 3.11 o superior. Si da error, probad `python3 --version` y usad `python3` en lugar de `python` en todo el reto.
 - **Ejecutar la demostración.** `python demo_cliente.py`. Los 8 datos de ejemplo están en `reservas_demo.py`: no hace falta tocarlos.
@@ -154,7 +90,7 @@ Ingreso medio por reserva confirmada: 182.00 €
 
 #### Misión 1 · Los datos en memoria (día 1, 50 minutos)
 1. Hacer en el curso listas y diccionarios (ejercicios mínimos).
-2. Completar [`mision_1_datos.py`](../4_Plantillas_y_entrega/reto_herramientas/mision_1_datos.py).
+2. Completar [`mision_1_datos.py`](../1_Trabajar/reto_herramientas/mision_1_datos.py).
 3. Montar con piezas los dos primeros puzles del bloque 1 del Taller.
 
 **Cómo se hace**
@@ -168,7 +104,7 @@ Ingreso medio por reserva confirmada: 182.00 €
 
 #### Misión 2 · Decidir y repetir (día 1, 50 minutos)
 1. Hacer en el curso `if/elif/else` y `for` (ejercicios mínimos).
-2. Completar [`mision_2_decidir.py`](../4_Plantillas_y_entrega/reto_herramientas/mision_2_decidir.py) con los contadores.
+2. Completar [`mision_2_decidir.py`](../1_Trabajar/reto_herramientas/mision_2_decidir.py) con los contadores.
 
 **Cómo se hace**
 - **Curso (25 minutos).** [`if / elif / else`](https://www.curso.soultechlabs.io/basico/#elif) (ejercicios 1 y 2) y [`for`](https://www.curso.soultechlabs.io/basico/#for) (los 3 ejercicios).
@@ -326,28 +262,13 @@ Ingreso medio por reserva confirmada: 182.00 €
 2. Pedir a alguien que no escribió esa parte que lo revise con la rúbrica y anote el resultado en el README.
 3. Subir los ficheros a `sprint-04/` en tres o más subidas, hechas por personas distintas.
 
-**Cómo se hace**
-- **El README.** Cada sección de la plantilla pide una cosa. Para el **nivel mínimo** bastan estas cuatro, en pocas líneas:
-
-| Sección de la plantilla | Qué escribís |
-|---|---|
-| Qué hace | Dos o tres frases: lee el CSV de reservas, calcula tres KPI, avisa si el fichero está mal y guarda un JSON |
-| Cómo se ejecuta y cómo se prueban | Los comandos `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` y `python test_kpis.py`, y el resultado (`12 de 12 pruebas superadas`) |
-| KPIs y decisiones | Qué es cada KPI y **por qué la ocupación es un proxy**. Ejemplo: «No sabemos cuántas habitaciones tiene el hotel: suponemos 40 y, con 20, saldría el doble. Además contamos todas las noches el día de llegada» |
-| Uso de IA y límites | Qué le pedisteis a la IA y qué revisasteis; los datos son sintéticos |
-
-  Para el **nivel estándar**, completad también «Requisitos», «Gestión de errores» (qué errores controla, qué mensaje da y que devuelve código 1) y la versión con pandas si la hacéis.
-- **La revisión con la rúbrica (5 minutos).** Quien revisa sigue los cinco pasos de «Cómo se revisa» (apartado 3) y rellena la sección «Revisión con la rúbrica» del final del README: un nivel de 1 a 4 por criterio y **una frase de prueba**. Si hay tiempo, arreglad lo más fácil; lo demás queda como «lo primero que mejoraríamos». Si sobran minutos, empezad el extra (pruebas propias o `plantilla_kpis_pandas.py`).
-- **Subir los ficheros (la vía del curso, desde el navegador).** Seguid [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md): (1) abrid el repositorio del equipo y **entrad primero en la carpeta `sprint-04`**; (2) *Add file → Upload files*; (3) arrastrad los ficheros; (4) escribid un mensaje corto y pulsad **Commit changes**. Cada subida es un *commit* con el nombre de quien la hace. Un reparto posible: la persona A sube `kpis.py` («Añado lectura del CSV y KPI»), la B sube `test_kpis.py` y `salida.json` («Añado pruebas y resultado»), la C sube `README.md` («Añado README»). Los nombres de archivo, **en minúsculas y sin espacios**. El CSV va a `data/` del repositorio solo si aún no está.
-- **Alternativa con Git en el terminal** (si ya lo habéis practicado en [`S04_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb)): `git add kpis.py test_kpis.py README.md salida.json`, `git commit -m "Añado lectura del CSV y KPI"` y `git push`. Cada persona lo hace con su propia cuenta.
-
-**Qué deberíais ver.** En la carpeta `sprint-04` del repositorio, los cuatro ficheros del equipo y una hoja de autoevaluación por persona (**4 + N**); y en el historial (el icono del reloj), al menos tres *commits* con nombres distintos.
+**Cómo se hace.** Todo está en [Entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md): el README (apartado 4, unos 10 minutos), la revisión con la rúbrica (apartado 3, unos 5) y la subida a GitHub (apartado 5, unos 10). Si sobran minutos, empezad el extra (pruebas propias o `extra/plantilla_kpis_pandas.py`).
 
 **Cuando lo tengáis:** otra persona podría ejecutar el proyecto siguiendo solo el README, la sección «Revisión con la rúbrica» está rellena y los tres *commits* están en el repositorio.
 
 **Después, 15 minutos de entrega y review:** cada persona rellena y sube su autoevaluación y coevaluación a `sprint-04/`, y el equipo enseña, en 3–5 minutos, el script con el CSV real, el JSON, un error provocado con su mensaje y las pruebas en verde. Explicad una decisión de diseño, por ejemplo cómo definisteis la ocupación.
 
-**Qué deberíais ver.** `python test_kpis.py` da `12 de 12 pruebas superadas`; en `sprint-04/`, los cuatro ficheros del equipo y una hoja de autoevaluación por persona.
+**Qué deberíais ver.** `python test_kpis.py` da `12 de 12 pruebas superadas`; en `sprint-04/`, los cuatro ficheros del equipo y una hoja de autoevaluación por persona (**4 + N**); y en el historial (el icono del reloj), al menos tres *commits* con nombres distintos.
 
 **Hecho cuando:** existe `salida.json` con las cifras esperadas, las 12 pruebas pasan, los tres errores provocados dan su mensaje, y el README, la revisión y los *commits* están subidos.
 

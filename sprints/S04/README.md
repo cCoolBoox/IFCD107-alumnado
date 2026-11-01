@@ -18,10 +18,10 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning, brief del cliente y test de nivel (5 preguntas, anónimo) | — | 15 |
-| ☐ | 🎯 Reto · Misión 0 · Mirar la demo del cliente + curso ★ `type()` y f-strings | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 35 |
-| ☐ | 🎯 Reto · Misión 1 · Datos: curso ★ listas y dicts, `mision_1_datos.py`, Taller 1 | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
-| ☐ | 🎯 Reto · Misión 2 · Decidir: curso ★ `if` y `for`, `mision_2_decidir.py` | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
-| ☐ | 🎯 Reto · Misión 3 · Funciones: curso ★ funciones, Taller 2 y `kpis.py` | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
+| ☐ | 🎯 Reto · Misión 0 · Mirar la demo del cliente + curso ★ `type()` y f-strings | [Tarjetas de misión](3_Reto/1_Trabajar/tarjetas_de_mision.md) | 35 |
+| ☐ | 🎯 Reto · Misión 1 · Datos: curso ★ listas y dicts, `mision_1_datos.py`, Taller 1 | [Tarjetas de misión](3_Reto/1_Trabajar/tarjetas_de_mision.md) | 50 |
+| ☐ | 🎯 Reto · Misión 2 · Decidir: curso ★ `if` y `for`, `mision_2_decidir.py` | [Tarjetas de misión](3_Reto/1_Trabajar/tarjetas_de_mision.md) | 50 |
+| ☐ | 🎯 Reto · Misión 3 · Funciones: curso ★ funciones, Taller 2 y `kpis.py` | [Tarjetas de misión](3_Reto/1_Trabajar/tarjetas_de_mision.md) | 50 |
 
 **En clase: 3 h 20 min.**
 
@@ -34,10 +34,10 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 🎯 Reto · Misión 4 · Ficheros: curso ★ excepciones y CSV, Taller 3 | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
-| ☐ | 🎯 Reto · Misión 4 · `_convertir_fila` y `leer_reservas` con sus pruebas | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 50 |
-| ☐ | 🎯 Reto · Misión 5 · Taller 4, `exportar_json`, `main` y errores a propósito | [Tarjetas de misión](3_Reto/4_Plantillas_y_entrega/tarjetas_de_mision.md) | 25 |
-| ☐ | 🔔 Ceremonia · README, revisión con la rúbrica, entrega en `sprint-04/` y autoevaluación | — | 25 |
+| ☐ | 🎯 Reto · Misión 4 · Ficheros: curso ★ excepciones y CSV, Taller 3 | [Tarjetas de misión](3_Reto/1_Trabajar/tarjetas_de_mision.md) | 50 |
+| ☐ | 🎯 Reto · Misión 4 · `_convertir_fila` y `leer_reservas` con sus pruebas | [Tarjetas de misión](3_Reto/1_Trabajar/tarjetas_de_mision.md) | 50 |
+| ☐ | 🎯 Reto · Misión 5 · Taller 4, `exportar_json`, `main` y errores a propósito | [Tarjetas de misión](3_Reto/1_Trabajar/tarjetas_de_mision.md) | 25 |
+| ☐ | 🔔 Ceremonia · README, revisión con la rúbrica, entrega en `sprint-04/` y autoevaluación | [Entrega y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) | 25 |
 
 **En clase: 2 h 30 min.**
 
@@ -49,7 +49,7 @@
 
 **Núcleo y extra.** Núcleo: las funciones obligatorias hasta que `test_kpis.py` pase y el README. Extra: las partes opcionales (POO y Git básico).
 
-Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_04_una_pagina.md). Para consultar: [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_04.md) (pasos, rúbrica, ayudas y errores frecuentes). Plantillas, datos y autoevaluación: [`3_Reto/4_Plantillas_y_entrega/`](3_Reto/4_Plantillas_y_entrega/).
+Para trabajar: las [tarjetas de misión](3_Reto/1_Trabajar/tarjetas_de_mision.md) y la plantilla [`reto_herramientas/`](3_Reto/1_Trabajar/reto_herramientas/). Para entregar: [entrega y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y vuestra hoja de [autoevaluación y coevaluación](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md). Para consultar: la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_04.md) (pasos, ayudas y errores frecuentes).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
@@ -58,7 +58,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_04_
 - [ ] `test_kpis.py` · el dado, **sin cambios**
 - [ ] `README.md` · rellenado, con la sección «Revisión con la rúbrica»
 - [ ] `salida.json` · generado con el CSV real
-- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md)
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
 **Total en `sprint-04/`: 4 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 7). Aparte: el CSV en `data/` si aún no está, y los extras (`kpis_pandas.py`, pruebas propias) solo si los hacéis. La *review* y la *retro* no se suben.
 
@@ -67,7 +67,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_04_
 - [ ] `python kpis.py reservas_turisdata.csv salida.json` genera el JSON con los 3 KPIs y `calidad`
 - [ ] Funciones con docstring y README con las definiciones de los KPIs
 - [ ] Al menos 3 *commits* en el repositorio, de personas distintas
-- [ ] Alguien que **no escribió esa parte** ha revisado el código y el README con la [rúbrica](3_Reto/2_Ficha_completa/Reto_Sprint_04.md) y lo ha anotado en el README
+- [ ] Alguien que **no escribió esa parte** ha revisado el código y el README con la [rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y lo ha anotado en el README
 
 ## Material extra para casa
 
@@ -79,7 +79,7 @@ Nada de esto es necesario para entregar el reto. Va **por orden de importancia**
 
 ## Si te atascas
 
-1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_04.md).
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_04.md).
 2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
 
@@ -91,7 +91,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
-| [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (tarjetas y plantilla) · `2_Entregar` (entrega, rúbrica y autoevaluación) · `3_Consultar` (ficha completa) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

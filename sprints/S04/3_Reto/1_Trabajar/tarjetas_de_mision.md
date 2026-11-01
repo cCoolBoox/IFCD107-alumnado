@@ -2,7 +2,7 @@
 
 > **Cómo se trabaja el reto del Sprint 4.** No se aprende «todo Python» primero y se hace el reto después: el reto se divide en **seis misiones** y cada una trae **justo antes** lo que necesitáis (unas pocas lecciones del curso y unos puzles del Taller). Cuando una misión está hecha, la herramienta tiene una pieza más.
 >
-> Estas tarjetas son para **tenerlas abiertas mientras trabajáis**. La ficha completa (rúbrica, entrega, ayudas) está en [la ficha del reto](../2_Ficha_completa/Reto_Sprint_04.md) y el resumen en [el reto en una página](../1_Reto_en_una_pagina/Reto_Sprint_04_una_pagina.md).
+> Estas tarjetas son para **tenerlas abiertas mientras trabajáis**. Para entregar, mirad [Entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md) (qué se sube y cómo se evalúa); si algo no queda claro, la [ficha completa](../3_Consultar/Reto_Sprint_04.md).
 
 ## Antes de empezar
 
@@ -123,7 +123,7 @@ python test_kpis.py
 
 **✅ Hecho cuando** existe `salida.json` con las cifras esperadas y `python test_kpis.py` da **`12 de 12 pruebas superadas`**.
 
-**📦 Entrega** *(25 min)*: provocar los 3 errores a propósito (la [ficha](../2_Ficha_completa/Reto_Sprint_04.md) lo explica en el paso 4 de la misión 5), README con la plantilla, revisión con la rúbrica, subida a `sprint-04/` y autoevaluación y coevaluación **de cada persona**.
+**📦 Entrega** *(25 min)*: provocar los 3 errores a propósito (lo explica el apartado 5.2 de la [ficha](../3_Consultar/Reto_Sprint_04.md)) y, en [Entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md): el README (apartado 4), la revisión con la rúbrica (apartado 3) y la subida a `sprint-04/` (apartado 5), con la autoevaluación y coevaluación **de cada persona**.
 
 ---
 
