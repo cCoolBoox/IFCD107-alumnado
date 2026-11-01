@@ -2,9 +2,20 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_11.md](../3_Consultar/Reto_Sprint_11.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); el cuaderno de partida es [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb).
 
-**El cliente.** TurisData recibe cientos de fotos a la semana y una persona las clasifica a mano. Quiere saber si un modelo puede **pre-clasificarlas** y **en qué se equivoca**. **Lo importante no es el acierto, sino saber cuándo no fiarse.**
-**Qué entregáis (no cambia):** el modelo y el **demostrador** (dentro del cuaderno), el **análisis de errores** de 1–2 páginas y un README. **Al final del sprint se suben a `sprint-11/` del repositorio del equipo: 3 ficheros del equipo (esos tres) + 1 autoevaluación y coevaluación por persona.** Las fotos no se suben.
-**Tiempo en clase:** planning 10 min · reto 105 min (25 el día 1 y 80 el día 2) · entrega, review y retro 30 min.
+- **El cliente.**
+    - TurisData recibe cientos de fotos a la semana y una persona las clasifica a mano.
+    - Quiere saber si un modelo puede **pre-clasificarlas** y **en qué se equivoca**.
+    - **Lo importante no es el acierto, sino saber cuándo no fiarse.**
+- **Qué entregáis (no cambia):**
+    - El modelo y el **demostrador** (dentro del cuaderno).
+    - El **análisis de errores** de 1–2 páginas.
+    - Un README.
+    - Al final se suben a `sprint-11/` del repositorio del equipo (lista completa en «Antes de entregar»).
+    - Las fotos no se suben.
+- **Tiempo en clase:**
+    - Planning: 10 min.
+    - Reto: 105 min (25 el día 1 y 80 el día 2).
+    - Entrega, review y retro: 30 min.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

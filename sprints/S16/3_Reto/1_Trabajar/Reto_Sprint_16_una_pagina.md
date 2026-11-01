@@ -2,9 +2,20 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_16.md](../3_Consultar/Reto_Sprint_16.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Plantillas: [model card](plantillas/plantilla_model_card.md) · [memoria](plantillas/plantilla_esqueleto_memoria_tecnica.md) · [lista de congelación](plantillas/checklist_congelacion.md) · [demostrador](plantillas/demostrador/).
 
-**El cliente.** El docente recibirá vuestro trabajo como un entregable real: clonará el repositorio, seguirá el README, probará el demostrador, leerá la memoria y querrá entender los riesgos.
-**Qué entregáis (no cambia):** evaluación final en test, sesgos con mitigación medida, riesgos cerrados, demostrador con plan B en vídeo, model card y memoria de 10–15 páginas. **Al final se suben a `sprint-16/` del repositorio del equipo: 9 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`). La coevaluación confidencial (anexo B) va al docente.
-**Tiempo:** 3 días de clase de 6 h (525 min de reto + 50 min diarios para subir de nivel) con dos días sin clase entre el 1 y el 2. **Congelación: 10/12 a las 14:30.** Etiqueta `v1.0-entrega` antes.
+- **El cliente.**
+    - El docente recibirá vuestro trabajo como un entregable real.
+    - Clonará el repositorio, seguirá el README, probará el demostrador y leerá la memoria.
+    - Querrá entender los riesgos.
+- **Qué entregáis (no cambia):**
+    - Evaluación final en test.
+    - Sesgos con mitigación medida y riesgos cerrados.
+    - Demostrador con plan B en vídeo.
+    - Model card y memoria de 10–15 páginas.
+    - Al final se suben a `sprint-16/` del repositorio del equipo (lista completa en «Antes de entregar»).
+    - La coevaluación confidencial (anexo B) va al docente.
+- **Tiempo:**
+    - 3 días de clase de 6 h (525 min de reto + 50 min diarios para subir de nivel), con dos días sin clase entre el 1 y el 2.
+    - **Congelación: 10/12 a las 14:30.** Etiqueta `v1.0-entrega` antes.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

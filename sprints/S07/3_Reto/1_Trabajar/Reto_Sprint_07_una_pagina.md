@@ -2,9 +2,21 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_07.md](../3_Consultar/Reto_Sprint_07.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`informe_modelado_plantilla.md`](plantillas/informe_modelado_plantilla.md).
 
-**El cliente.** El gerente de TurisData quiere una **tarifa de referencia** (predecir `precio_noche`, un número) y un **aviso de riesgo de cancelación** (predecir `cancelada`, sí o no). No quiere oír hablar de «AUC»: quiere saber **cuánto dinero se juega** si el modelo se equivoca. Vosotros traducís las métricas a **euros**.
-**Qué entregáis (no cambia):** el informe `informe_modelado.md` (2–3 páginas), el cuaderno `reto_S07.ipynb` y el `README.md`. **Al final del sprint se suben a `sprint-07/` del repositorio del equipo: 3 ficheros del equipo (esos tres) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** planning 10 min · reto 55 min (25 el día 1 y 30 el día 2) · entrega 15 min. Lo que no quepa, a casa o a la 6.ª hora.
+- **El cliente.**
+    - El gerente de TurisData quiere una **tarifa de referencia** (predecir `precio_noche`, un número).
+    - También quiere un **aviso de riesgo de cancelación** (predecir `cancelada`, sí o no).
+    - No quiere oír hablar de «AUC»: quiere saber **cuánto dinero se juega** si el modelo se equivoca.
+    - Vosotros traducís las métricas a **euros**.
+- **Qué entregáis (no cambia):**
+    - El informe `informe_modelado.md` (2–3 páginas).
+    - El cuaderno `reto_S07.ipynb`.
+    - El `README.md`.
+    - Al final se suben a `sprint-07/` del repositorio del equipo (lista completa en «Antes de entregar»).
+- **Tiempo en clase:**
+    - Planning: 10 min.
+    - Reto: 55 min (25 el día 1 y 30 el día 2).
+    - Entrega: 15 min.
+    - Lo que no quepa, a casa o a la 6.ª hora.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

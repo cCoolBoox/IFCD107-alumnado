@@ -2,9 +2,19 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_09.md](../3_Consultar/Reto_Sprint_09.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla de la ficha está en [`plantilla_ficha_segmentos.md`](plantillas/plantilla_ficha_segmentos.md).
 
-**El cliente.** Lucía, directora comercial de TurisData, envía la misma newsletter a sus 1.200 huéspedes. Pide: *«Decidme quiénes son mis clientes, cómo los llamo y qué le enseño a cada uno.»* Aquí **no hay respuesta correcta en los datos**: hay que descubrir los grupos y darles sentido de negocio.
-**Qué entregáis (no cambia):** un cuaderno (`reto_S09_conocer_al_huesped.ipynb`) y una **ficha de segmentos de 1 página** (`ficha_segmentos.md`) con la nota de IA responsable dentro. **Al final del sprint se suben a `sprint-09/` del repositorio del equipo: 2 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** planning 10 min · reto 95 min (45 el día 1 y 50 el día 2) · entrega, review y retro 40 min. Lo que no quepa, a casa.
+- **El cliente.**
+    - Lucía, directora comercial de TurisData, envía la misma newsletter a sus 1.200 huéspedes.
+    - Pide: *«Decidme quiénes son mis clientes, cómo los llamo y qué le enseño a cada uno.»*
+    - Aquí **no hay respuesta correcta en los datos**: hay que descubrir los grupos y darles sentido de negocio.
+- **Qué entregáis (no cambia):**
+    - Un cuaderno (`reto_S09_conocer_al_huesped.ipynb`).
+    - Una **ficha de segmentos de 1 página** (`ficha_segmentos.md`) con la nota de IA responsable dentro.
+    - Al final se suben a `sprint-09/` del repositorio del equipo (lista completa en «Antes de entregar»).
+- **Tiempo en clase:**
+    - Planning: 10 min.
+    - Reto: 95 min (45 el día 1 y 50 el día 2).
+    - Entrega, review y retro: 40 min.
+    - Lo que no quepa, a casa.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

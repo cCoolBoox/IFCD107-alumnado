@@ -2,9 +2,20 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (palabras nuevas, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_06.md](../3_Consultar/Reto_Sprint_06.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`informe_calidad_plantilla.md`](plantillas/informe_calidad_plantilla.md) y los datos en [`reservas_sucio.csv`](../../../../datos/reservas_sucio.csv).
 
-**El cliente.** TurisData os manda `reservas_sucio.csv`, exportado a mano de varios sistemas. El gerente quiere un primer modelo de cancelaciones «para ayer», pero no se fía de los datos: pide un informe de qué está mal y un proceso que limpie el fichero siempre igual.
-**Qué entregáis (no cambia):** `informe_calidad.md`, `reto_S06.ipynb` y `README.md`. **Al final del sprint se suben a `sprint-06/` del repositorio del equipo: 3 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** planning 10 min · reto 80 min (30 el día 1 y 50 el día 2) · entrega y review 35 min. Lo que no quepa, a casa o a la 6.ª hora.
+- **El cliente.**
+    - TurisData os manda `reservas_sucio.csv`, exportado a mano de varios sistemas.
+    - El gerente quiere un primer modelo de cancelaciones «para ayer», pero no se fía de los datos.
+    - Pide un informe de qué está mal y un proceso que limpie el fichero siempre igual.
+- **Qué entregáis (no cambia):**
+    - `informe_calidad.md`.
+    - `reto_S06.ipynb`.
+    - `README.md`.
+    - Al final se suben a `sprint-06/` del repositorio del equipo (lista completa en «Antes de entregar»).
+- **Tiempo en clase:**
+    - Planning: 10 min.
+    - Reto: 80 min (30 el día 1 y 50 el día 2).
+    - Entrega y review: 35 min.
+    - Lo que no quepa, a casa o a la 6.ª hora.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

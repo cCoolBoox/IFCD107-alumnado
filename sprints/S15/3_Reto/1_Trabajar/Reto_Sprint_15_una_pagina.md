@@ -2,9 +2,21 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_15.md](../3_Consultar/Reto_Sprint_15.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del registro está en [`registro_experimentos_plantilla.csv`](plantillas/registro_experimentos_plantilla.csv).
 
-**El cliente.** El docente quiere saber **qué modelo recomendáis y por qué**, no solo cuál tiene el número más alto: si la mejora frente al *baseline* compensa el coste, si el modelo funciona con datos nuevos y si se puede repetir.
-**Qué entregáis (no cambia):** el registro de experimentos, el cuaderno `03_modelos.ipynb`, la justificación de una página del candidato, el modelo guardado con sus metadatos y una primera explicación del modelo. **Al final del sprint se suben a `sprint-15/` del repositorio del equipo: 6 ficheros del equipo (esos seis) + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** reto 470 min (130 el día 1, 200 el día 2 y 140 el día 3) + 50 min diarios para subir de nivel (jornadas de 6 h) · review y retro 60 min. El test se usa **una sola vez**.
+- **El cliente.**
+    - El docente quiere saber **qué modelo recomendáis y por qué**, no solo cuál tiene el número más alto.
+    - Quiere saber:
+        - Si la mejora frente al *baseline* compensa el coste.
+        - Si el modelo funciona con datos nuevos.
+        - Si se puede repetir.
+- **Qué entregáis (no cambia):**
+    - El registro de experimentos.
+    - El cuaderno `03_modelos.ipynb`.
+    - La justificación de una página del candidato.
+    - El modelo guardado con sus metadatos y una primera explicación del modelo.
+    - Al final se suben a `sprint-15/` del repositorio del equipo (lista completa en «Antes de entregar»).
+- **Tiempo en clase:**
+    - Reto: 470 min (130 el día 1, 200 el día 2 y 140 el día 3) + 50 min diarios para subir de nivel (jornadas de 6 h).
+    - Review y retro: 60 min. El test se usa **una sola vez**.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

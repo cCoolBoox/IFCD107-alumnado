@@ -2,9 +2,20 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_08.md](../3_Consultar/Reto_Sprint_08.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); las plantillas están en [`model_card_plantilla.md`](plantillas/model_card_plantilla.md) y [`leaderboard_plantilla.csv`](plantillas/leaderboard_plantilla.csv); el cuaderno del reto, [`S08_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_06_leaderboard_plantilla.ipynb).
 
-**El cliente.** TurisData ya sabe predecir cancelaciones. Ahora pregunta: **¿qué modelo ponemos en producción?** ¿El más preciso, el que se entiende o el más barato de mantener? Hay que enfrentar modelos con las mismas reglas y **elegir un campeón con argumentos**.
-**Qué entregáis (no cambia):** `leaderboard_S08.csv`, `model_card.md`, el cuaderno `reto_S08.ipynb` y `README.md`. **Regla de oro: el test se usa una sola vez, solo con el campeón.**
-**Tiempo:** unos 150 min de equipo. En clase: planning 10 min (día 1) · reto 75 min · entrega, review y retro 35 min (día 2). Los 65 min que faltan, en la consolidación y la 6.ª hora del día 2 (subida hasta las 14:30); lo demás, a casa.
+- **El cliente.**
+    - TurisData ya sabe predecir cancelaciones.
+    - Ahora pregunta: **¿qué modelo ponemos en producción?** ¿El más preciso, el que se entiende o el más barato de mantener?
+    - Hay que enfrentar modelos con las mismas reglas y **elegir un campeón con argumentos**.
+- **Qué entregáis (no cambia):**
+    - `leaderboard_S08.csv`.
+    - `model_card.md`.
+    - El cuaderno `reto_S08.ipynb`.
+    - `README.md`.
+    - **Regla de oro: el test se usa una sola vez, solo con el campeón.**
+- **Tiempo:**
+    - Unos 150 min de equipo.
+    - En clase: planning 10 min (día 1); reto 75 min; entrega, review y retro 35 min (día 2).
+    - Los 65 min que faltan, en la consolidación y la 6.ª hora del día 2 (subida hasta las 14:30); lo demás, a casa.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 
