@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?  
 **Fechas:** 3–4 de noviembre · **Horas:** 9 h
 
-📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_04.pdf) · [ecofriendly](pdf/README_Sprint_04_ecofriendly.pdf)
+📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
 > **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo lo que pone en las misiones: lo demás es para casa.
 
@@ -98,7 +98,7 @@ Nada de esto es necesario para entregar el reto. Va **por orden de importancia**
 
 ## Todo el material, por carpetas
 
-Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`.
 
 | Carpeta | Qué hay |
 |---|---|

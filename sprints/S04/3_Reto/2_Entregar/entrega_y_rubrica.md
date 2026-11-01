@@ -4,7 +4,6 @@
 >
 > - Volver al [README del sprint](../../README.md) · [ficha del reto](../3_Consultar/Reto_Sprint_04.md), para consultar.
 > - Vuestra hoja personal: [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md).
-> - **Este documento en PDF:** [a color](pdf/entrega_y_rubrica.pdf) · [ecofriendly, para imprimir](pdf/entrega_y_rubrica_ecofriendly.pdf).
 > - Cómo subir a GitHub paso a paso, con capturas: [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md).
 
 ## 1 · 📦 Tabla A · Los ficheros: qué se sube

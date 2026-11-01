@@ -2,8 +2,7 @@
 
 > **Ficha del reto, para consultar.** Para trabajar, las [tarjetas de misión](../1_Trabajar/README.md) (una por misión). Para entregar, [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Para contrastar lo hecho, el [solucionario de las misiones](Solucionario_misiones.md).
 >
-> - Volver al [README del sprint](../../README.md) · [README del sprint en PDF](../../pdf/README_Sprint_04.pdf) · [ecofriendly](../../pdf/README_Sprint_04_ecofriendly.pdf)
-> - **Esta ficha en PDF:** [a color](pdf/Reto_Sprint_04.pdf) · [ecofriendly, para imprimir](pdf/Reto_Sprint_04_ecofriendly.pdf)
+> - Volver al [README del sprint](../../README.md).
 > - Si es vuestro primer reto: [Cómo se trabaja un reto](../../../../material/4.%20Como_se_trabaja_un_reto.md).
 
 ## Ficha del reto
