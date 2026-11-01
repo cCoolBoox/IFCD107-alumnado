@@ -95,6 +95,8 @@ Existe `salida.json` con esas cifras, las 12 pruebas pasan, los tres errores pro
 
 Si usáis un asistente de IA, seguid las reglas de la «Ayuda 1» de la [ficha completa](../../3_Consultar/Reto_Sprint_04.md) y declarad el uso en el README.
 
+📖 **Para contrastar**, cuando hayáis terminado o agotado las pistas: [solucionario de la misión 5](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el miércoles). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo.
+
 ## 🥋 Kata 2 · Leer un CSV sin que se rompa — 10 min, **individual**, fin del miércoles
 
 [Abrir la kata 2](https://www.curso.soultechlabs.io/taller/#kata-2). **Cada persona sola**: escribid `media_precio(ruta)`, que lee un CSV, ignora las filas defectuosas y devuelve `None` si el fichero no existe. Apuntad cuántas pistas habéis usado.

@@ -69,6 +69,8 @@ Cada persona sabe responder, sin mirar el ordenador, estas cinco preguntas:
 | `No such file or directory` o `ModuleNotFoundError: reservas_demo` | La terminal está en otra carpeta | Abrid la terminal **dentro** de la carpeta descomprimida (`ls` o `dir` debe mostrar `demo_cliente.py`) |
 | No entendéis una línea | Es normal en el primer contacto | Subrayadla y preguntad al docente en el momento de los 5 minutos |
 
+📖 **Para contrastar**, cuando hayáis terminado o agotado las pistas: [solucionario de la misión 0](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el martes). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo.
+
 ## ➡️ Siguiente
 
 [Misión 1 · Los datos en memoria](tarjeta_1_datos.md): aprenderéis a leer y modificar la lista de reservas.

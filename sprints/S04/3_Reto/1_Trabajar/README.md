@@ -2,7 +2,7 @@
 
 > **El reto se hace en seis misiones, y cada misión tiene su tarjeta.** No se aprende «todo Python» primero y se hace el reto después: cada tarjeta trae **justo antes** lo que necesitáis (unas pocas lecciones del curso y unos puzles del Taller) y os explica el paso a paso. Cuando una misión está hecha, la herramienta tiene una pieza más.
 >
-> **Tened abierta solo la tarjeta de la misión en la que estáis.** Para entregar, mirad [Entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md); si algo no queda claro, la [ficha completa](../3_Consultar/Reto_Sprint_04.md).
+> **Tened abierta solo la tarjeta de la misión en la que estáis.** Para entregar, mirad [Entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md); si algo no queda claro, la [ficha completa](../3_Consultar/Reto_Sprint_04.md); y para contrastar lo que habéis hecho, el [solucionario de las misiones](../3_Consultar/Solucionario_misiones.md), que se publica por días y se usa **después de intentarlo**.
 
 ## Las seis misiones
 
@@ -26,7 +26,7 @@
 | **Parejas: piloto y copiloto** | **Piloto:** teclea. **Copiloto:** lee en voz alta lo que pide la tarjeta y comprueba. **Cambiad de papel en cada misión** (y a mitad si dura más de 25 minutos). En equipos de 3, la tercera persona **revisa** (ejecuta las pruebas y lee el docstring). |
 | **Cómo sabéis que vais bien** | Cada misión termina con algo que se **ve en pantalla** (un mensaje verde, una prueba que pasa). Si no lo veis, no está hecha. |
 | **Dos katas** | Al final de cada día, **cada persona sola** escribe una función en el [Taller](https://www.curso.soultechlabs.io/taller/): martes la [kata 1](https://www.curso.soultechlabs.io/taller/#kata-1) y miércoles la [kata 2](https://www.curso.soultechlabs.io/taller/#kata-2). Sirven para comprobar que **cada persona** lo ha aprendido, no solo el equipo. |
-| **Si os atascáis** | 1) Leed el mensaje de la prueba que falla: dice **qué esperaba y qué recibió**. 2) Repasad la tarjeta de la misión, la lección del curso y su puzle del Taller. 3) Preguntad al equipo y, después, al docente. Cada tarjeta trae además sus errores más típicos. |
+| **Si os atascáis** | 1) Leed el mensaje de la prueba que falla: dice **qué esperaba y qué recibió**. 2) Repasad la tarjeta de la misión, la lección del curso y su puzle del Taller. 3) Preguntad al equipo y, después, al docente. Cada tarjeta trae además sus errores más típicos. 4) Cuando hayáis terminado la misión (o agotado las pistas), contrastad con el [solucionario](../3_Consultar/Solucionario_misiones.md). |
 | **Un asistente de IA** (opcional) | Con las reglas de la «Ayuda 1» de la [ficha completa](../3_Consultar/Reto_Sprint_04.md): lo que dé lo ejecutáis y lo entendéis, las pruebas mandan y lo declaráis en el README. |
 
 ## Cuánto del curso entra aquí (y qué queda pendiente)

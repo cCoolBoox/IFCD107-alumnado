@@ -67,6 +67,8 @@ Al empezar: `Misión 1: 0 de 6 apartados bien`, con la lista de lo que falta. **
 | `TypeError` o el apartado sigue en la lista | Dejasteis el `None` o falta una coma o una llave | Releed la línea en voz alta, símbolo a símbolo |
 | `ModuleNotFoundError` | La terminal no está en la carpeta del reto | Abridla **dentro** de la carpeta descomprimida |
 
+📖 **Para contrastar**, cuando hayáis terminado o agotado las pistas: [solucionario de la misión 1](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el martes). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo.
+
 ## ➡️ Siguiente
 
 [Misión 2 · Decidir y repetir](tarjeta_2_decidir.md): con los mismos datos, recorreréis la lista y contaréis.

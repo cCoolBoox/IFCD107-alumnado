@@ -72,7 +72,7 @@
 
 - **Para trabajar:** las [tarjetas de misión](3_Reto/1_Trabajar/README.md) (una por misión) y la plantilla [`reto_herramientas/`](3_Reto/1_Trabajar/reto_herramientas/).
 - **Para entregar:** [entrega y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y vuestra hoja de [autoevaluación y coevaluación](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md).
-- **Para consultar:** la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_04.md) (qué pide el cliente, recursos y reglas de la IA).
+- **Para consultar:** la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_04.md) (qué pide el cliente, recursos y reglas de la IA) y el [solucionario de las misiones](3_Reto/3_Consultar/Solucionario_misiones.md) (para contrastar lo que hayáis hecho; se publica por días).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
@@ -102,9 +102,10 @@ Nada de esto es necesario para entregar el reto. Va **por orden de importancia**
 
 ## Si te atascas
 
-1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_04.md).
+1. Lee primero la parte «Si os atascáis» de la tarjeta de la misión en la que estás (índice de las [tarjetas](3_Reto/1_Trabajar/README.md)).
 2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
+4. Cuando hayas terminado la misión (o agotado las pistas), contrasta con el [solucionario de las misiones](3_Reto/3_Consultar/Solucionario_misiones.md).
 
 ## Todo el material, por carpetas
 

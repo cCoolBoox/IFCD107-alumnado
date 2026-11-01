@@ -78,6 +78,8 @@ Pasan las pruebas de lectura: `test_leer_reservas_convierte_tipos`, `test_ficher
 | `leer_reservas` «devuelve una tupla» y falla al usarla | Se guarda en una sola variable | `reservas, avisos = leer_reservas(ruta)` |
 | Todas las filas salen descartadas | La conversión falla siempre (clave mal escrita, fecha mal leída) | Imprimid el aviso de una fila y leed el error |
 
+📖 **Para contrastar**, cuando hayáis terminado o agotado las pistas: [solucionario de la misión 4](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el miércoles). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo.
+
 ## ➡️ Siguiente
 
 [Misión 5 · Guardar, poner en marcha y entregar](tarjeta_5_salida.md): guardáis el resultado en JSON, lo ponéis todo en marcha con un comando y entregáis.

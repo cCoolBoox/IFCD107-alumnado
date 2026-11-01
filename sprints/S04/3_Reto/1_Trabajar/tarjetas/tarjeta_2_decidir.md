@@ -64,6 +64,8 @@ Al empezar, `Misión 2: N de 4 apartados bien` y los que faltan. Cuando están b
 | El contador sale siempre 0 (o siempre 8) | El `+ 1` está fuera del `if`, o usáis `=` donde va `==` | Comparar es `==`; asignar es `=` |
 | Cuenta de más al sumar noches | Se incluyen las canceladas | Solo `cancelada == 0` |
 
+📖 **Para contrastar**, cuando hayáis terminado o agotado las pistas: [solucionario de la misión 2](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el martes). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo.
+
 ## ➡️ Siguiente
 
 [Misión 3 · Funciones que calculan](tarjeta_3_funciones.md): meteréis estos contadores dentro de funciones y las pruebas os dirán si están bien.

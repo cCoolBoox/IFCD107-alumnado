@@ -100,6 +100,8 @@ Pasan las cuatro pruebas de la fase 1. Si `ocupacion_proxy` la ha hecho el docen
 
 Para probar una función a mano: en `python`, `from reservas_demo import RESERVAS` y llamadla con esa lista. Si seguís sin avanzar, preguntad primero al equipo y luego al docente.
 
+📖 **Para contrastar**, cuando hayáis terminado o agotado las pistas: [solucionario de la misión 3](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el miércoles). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo.
+
 ## 🥋 Kata 1 · Una función con `return` — 10 min, **individual**, fin del martes
 
 [Abrir la kata 1](https://www.curso.soultechlabs.io/taller/#kata-1). **Cada persona sola**, sin mirar esta tarjeta ni preguntar al equipo: escribid `noches_confirmadas(reservas)`. Apuntad **cuántas pistas** habéis usado. Si no sale, no pasa nada: se repite mañana por la mañana. Sirve para comprobar que **cada persona** lo ha aprendido, no solo el equipo.
