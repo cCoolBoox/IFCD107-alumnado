@@ -2,7 +2,7 @@
 
 > **El reto se hace en seis misiones, y cada misión tiene su tarjeta.** No se aprende «todo Python» primero y se hace el reto después: cada tarjeta trae **justo antes** lo que necesitáis (unas pocas lecciones del curso y unos puzles del Taller) y os explica el paso a paso. Cuando una misión está hecha, la herramienta tiene una pieza más.
 >
-> **Tened abierta solo la tarjeta de la misión en la que estáis.** Para entregar, mirad [Entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md); si algo no queda claro, la [ficha completa](../3_Consultar/Reto_Sprint_04.md); y para contrastar lo que habéis hecho, el [solucionario de las misiones](../3_Consultar/Solucionario_misiones.md), que se publica por días y se usa **después de intentarlo**.
+> **Tened abierta solo la tarjeta de la misión en la que estáis.** Para entregar, mirad [Entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md); si queréis releer qué pide el cliente o cómo usar la IA, la [ficha del reto](../3_Consultar/Reto_Sprint_04.md); y para contrastar lo que habéis hecho, el [solucionario de las misiones](../3_Consultar/Solucionario_misiones.md), que se publica por días y se usa **después de intentarlo**.
 
 ## Las seis misiones
 
@@ -27,7 +27,7 @@
 | **Carpeta de trabajo** | Una sola descarga: [`reto_herramientas.zip`](https://raw.githubusercontent.com/cCoolBoox/IFCD107-alumnado/main/sprints/S04/3_Reto/1_Trabajar/reto_herramientas.zip). Lleva dentro la plantilla **y** el CSV `reservas_turisdata.csv`. Cómo prepararla paso a paso: [misión 0](tarjetas/tarjeta_0_mirar_la_demo.md). |
 | **Parejas: piloto y copiloto** | **Piloto:** teclea. **Copiloto:** lee en voz alta lo que pide la tarjeta y comprueba. **Cambiad de papel en cada misión** (y a mitad si dura más de 25 minutos). En equipos de 3, la tercera persona **revisa** (ejecuta las pruebas y lee el docstring). |
 | **Cómo sabéis que vais bien** | Cada misión termina con algo que se **ve en pantalla** (un mensaje verde, una prueba que pasa). Si no lo veis, no está hecha. |
-| **Un asistente de IA** (opcional) | Con las reglas de la «Ayuda 1» de la [ficha completa](../3_Consultar/Reto_Sprint_04.md): lo que dé lo ejecutáis y lo entendéis, las pruebas mandan y lo declaráis en el README. |
+| **Un asistente de IA** (opcional) | Con las reglas de la [ficha del reto](../3_Consultar/Reto_Sprint_04.md): lo que dé lo ejecutáis y lo entendéis, las pruebas mandan y lo declaráis en el README. |
 
 ## Cuánto del curso entra aquí (y qué queda pendiente)
 

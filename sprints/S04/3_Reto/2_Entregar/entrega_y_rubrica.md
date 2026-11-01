@@ -2,7 +2,7 @@
 
 > **Qué se sube y cómo se evalúa.** Se lee **una vez**, el miércoles, antes de la entrega (misión 5), y se vuelve a la rúbrica cuando el equipo revisa su trabajo. Mientras programáis no hace falta: para eso están las [tarjetas de misión](../1_Trabajar/README.md).
 >
-> - Volver al [README del sprint](../../README.md) · [ficha completa del reto](../3_Consultar/Reto_Sprint_04.md), para consultar.
+> - Volver al [README del sprint](../../README.md) · [ficha del reto](../3_Consultar/Reto_Sprint_04.md), para consultar.
 > - Vuestra hoja personal: [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md).
 > - **Este documento en PDF:** [a color](pdf/entrega_y_rubrica.pdf) · [ecofriendly, para imprimir](pdf/entrega_y_rubrica_ecofriendly.pdf).
 > - Cómo subir a GitHub paso a paso, con capturas: [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md).

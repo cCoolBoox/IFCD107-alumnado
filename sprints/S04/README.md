@@ -104,7 +104,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
-| [`3_Reto/`](3_Reto/) | `1_Trabajar` (tarjetas y plantilla) · `2_Entregar` (entrega, rúbrica y autoevaluación) · `3_Consultar` (ficha completa) |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (tarjetas y plantilla) · `2_Entregar` (entrega, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y solucionario) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

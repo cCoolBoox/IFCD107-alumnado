@@ -98,7 +98,7 @@ El código de salida se mira justo después de ejecutar: en Linux o Mac, `echo $
 | `test_exportar_json_y_main` falla | `main` no devuelve 0, o no escribe el fichero | Revisad el `return 0` y la ruta de `args.salida` |
 | Un solo *commit* gigante | «Lo subo al final» | Commits pequeños mientras avanzáis; la entrega pide tres o más |
 | Cambiar las pruebas para que pasen | Prisa | No se tocan las pruebas dadas; las propias van aparte |
-| Queréis usar un asistente de IA | Es una ayuda legítima, con reglas | Seguid las reglas de la «Ayuda 1» de la [ficha completa](../../3_Consultar/Reto_Sprint_04.md) y declarad el uso en el README |
+| Queréis usar un asistente de IA | Es una ayuda legítima, con reglas | Seguid las reglas de la [ficha del reto](../../3_Consultar/Reto_Sprint_04.md) y declarad el uso en el README |
 | Seguís sin verlo | A veces pasa | 1) Preguntad al equipo; 2) después, al docente; 3) **cuando hayáis terminado o agotado las pistas**, contrastad con el [solucionario de la misión 5](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el miércoles). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo |
 
 ## 🥋 Kata 2 · Leer un CSV sin que se rompa
