@@ -1,16 +1,16 @@
 # Código explicado · S04.02 · Funciones y módulos
 
-> **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
+> **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. Es para leerlo con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_02_funciones_modulos.ipynb) · [descargar](../S04_02_funciones_modulos.ipynb) · ⏱ en clase: 35 min · 🏫 4 celdas de código en clase · 🏠 1 en casa
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_02_funciones_modulos.ipynb) · [descargar](../S04_02_funciones_modulos.ipynb) · 🏠 5 celdas de código
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 
 **Cómo se lee una línea de código.** Casi todo sigue la forma `resultado = objeto.acción(opciones)`: se lee **de derecha a izquierda**, «coge este objeto, hazle esta acción con estas opciones y guarda lo que salga en `resultado`». Lo que va tras `#` es un comentario: Python lo ignora y es para las personas.
 
-## 1. Recorrido de 10 minutos (con el docente)
+## 1. Para empezar: las primeras celdas
 
-El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta. Lo demás se lee aquí.
+Empieza por estas celdas y comprueba qué hace cada una. Lo demás se lee aquí con calma.
 
 | Celda | Sección | Qué miramos |
 |---|---|---|
@@ -71,9 +71,9 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 
 ## 4. Celda a celda
 
-🏫 = se hace en clase · 🏠 = para casa. Las celdas de **ejercicio** no llevan código aquí: son vuestras, y la solución de referencia está en el propio cuaderno.
+Las celdas de **ejercicio** no llevan código aquí: son vuestras, y la solución de referencia está en el propio cuaderno.
 
-### Celda 1 · 1 · Definir una función · 🏫
+### Celda 1 · 1 · Definir una función · 🏠
 
 **Qué hace:** Practica `help` (sección «1 · Definir una función»).
 
@@ -92,7 +92,7 @@ help(ingreso_reserva)     # muestra el docstring
 - `print(ingreso_reserva(3, 89.24))` → `print`: muestra un valor por pantalla; `ingreso_reserva`: devuelve el ingreso bruto de una reserva (noches por precio de la noche).
 - `help(ingreso_reserva) # muestra el docstring` → `help`: muestra la ayuda (el docstring) de una función.
 
-### Celda 2 · 1 · Definir una función · 🏫
+### Celda 2 · 1 · Definir una función · 🏠
 
 **Qué hace:** Practica `def` (sección «1 · Definir una función»).
 
@@ -111,7 +111,7 @@ print(ingreso_con_tasa(4, 80, tasa_por_noche=0))     # sin tasa
 - `print(ingreso_con_tasa(4, 80)) # usa la tasa por defecto` → `print`: muestra un valor por pantalla; `ingreso_con_tasa`: ingreso de la reserva incluyendo la tasa turística por noche (1,5 EUR por defecto).
 - `print(ingreso_con_tasa(4, 80, tasa_por_noche=0)) # sin tasa` → `print`: muestra un valor por pantalla; `ingreso_con_tasa`: ingreso de la reserva incluyendo la tasa turística por noche (1,5 EUR por defecto).
 
-### Celda 3 · 1 · Definir una función · 🏫 · ejercicio 1
+### Celda 3 · 1 · Definir una función · 🏠 · ejercicio 1
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
@@ -119,7 +119,7 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 5 · 2 · `*args`, `**kwargs` y `lambda` · 🏫
+### Celda 5 · 2 · `*args`, `**kwargs` y `lambda` · 🏠
 
 **Qué hace:** Practica `join`, `sorted`, `sum`, `items` (sección «2 · `*args`, `**kwargs` y `lambda`»).
 
@@ -152,7 +152,7 @@ print(sorted(reservas, key=lambda r: r[1] * r[2], reverse=True))    # ordenar po
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 7 · 3 · Módulos: importar código ya escrito · 🏫
+### Celda 7 · 3 · Módulos: importar código ya escrito · 🏠
 
 **Qué hace:** Practica `date`, `sqrt`, `ceil`, `mean` y más (sección «3 · Módulos: importar código ya escrito»).
 
@@ -180,7 +180,7 @@ print("Noches:", (salida - llegada).days)
 - `salida = date(2025, 12, 28)` → Guarda en `salida` el resultado. `date`: crea una fecha (año, mes, día).
 - `print("Noches:", (salida - llegada).days)` → `print`: muestra un valor por pantalla.
 
-### Celda 8 · 3 · Módulos: importar código ya escrito · 🏫 · ejercicio 4
+### Celda 8 · 3 · Módulos: importar código ya escrito · 🏠 · ejercicio 4
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 

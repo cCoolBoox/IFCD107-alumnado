@@ -1,20 +1,22 @@
 # Código explicado · S04.05 · (Opcional) Programación orientada a objetos básica, buenas prácticas y Git
 
-> **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
+> **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. Es para leerlo con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb) · [descargar](../S04_05_poo_buenas_practicas.ipynb) · ⏱ en clase: 50 min · 🏫 0 celdas de código en clase · 🏠 4 en casa
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb) · [descargar](../S04_05_poo_buenas_practicas.ipynb) · ⏱ en casa: 50 min · 🏠 4 celdas de código
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 
 **Cómo se lee una línea de código.** Casi todo sigue la forma `resultado = objeto.acción(opciones)`: se lee **de derecha a izquierda**, «coge este objeto, hazle esta acción con estas opciones y guarda lo que salga en `resultado`». Lo que va tras `#` es un comentario: Python lo ignora y es para las personas.
 
-## 1. Recorrido de 10 minutos (con el docente)
+## 1. Para empezar: las primeras celdas
 
-El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta. Lo demás se lee aquí.
+Empieza por estas celdas y comprueba qué hace cada una. Lo demás se lee aquí con calma.
 
 | Celda | Sección | Qué miramos |
 |---|---|---|
-| — | — | Este cuaderno no tiene celdas de explicación previas: se trabaja directamente en el cuaderno. |
+| 2 | 1 · Clases y objetos | Practica `ingreso` (sección «1 · Clases y objetos»). |
+| 4 | 2 · `@classmethod`: construir objetos d… | Practica `cls` (sección «2 · `@classmethod`: construir objetos d…»). |
+| 6 | 3 · Una clase que agrupa objetos | Practica `list`, `sum` (sección «3 · Una clase que agrupa objetos»). |
 
 ## 2. Qué guarda cada variable
 
@@ -62,7 +64,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 
 ## 4. Celda a celda
 
-🏫 = se hace en clase · 🏠 = para casa. Las celdas de **ejercicio** no llevan código aquí: son vuestras, y la solución de referencia está en el propio cuaderno.
+Las celdas de **ejercicio** no llevan código aquí: son vuestras, y la solución de referencia está en el propio cuaderno.
 
 ### Celda 1 · Contexto TurisData · 🏠
 

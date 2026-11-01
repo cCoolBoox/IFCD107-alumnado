@@ -1,16 +1,16 @@
 # Código explicado · S04.04 · Ficheros CSV y JSON con la biblioteca estándar, y excepciones
 
-> **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
+> **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. Es para leerlo con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb) · [descargar](../S04_04_ficheros_excepciones.ipynb) · ⏱ en clase: 40 min · 🏫 4 celdas de código en clase
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb) · [descargar](../S04_04_ficheros_excepciones.ipynb) · 🏠 4 celdas de código
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 
 **Cómo se lee una línea de código.** Casi todo sigue la forma `resultado = objeto.acción(opciones)`: se lee **de derecha a izquierda**, «coge este objeto, hazle esta acción con estas opciones y guarda lo que salga en `resultado`». Lo que va tras `#` es un comentario: Python lo ignora y es para las personas.
 
-## 1. Recorrido de 10 minutos (con el docente)
+## 1. Para empezar: las primeras celdas
 
-El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta. Lo demás se lee aquí.
+Empieza por estas celdas y comprueba qué hace cada una. Lo demás se lee aquí con calma.
 
 | Celda | Sección | Qué miramos |
 |---|---|---|
@@ -58,9 +58,9 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 
 ## 4. Celda a celda
 
-🏫 = se hace en clase · 🏠 = para casa. Las celdas de **ejercicio** no llevan código aquí: son vuestras, y la solución de referencia está en el propio cuaderno.
+Las celdas de **ejercicio** no llevan código aquí: son vuestras, y la solución de referencia está en el propio cuaderno.
 
-### Celda 1 · Contexto TurisData · 🏫
+### Celda 1 · Contexto TurisData · 🏠
 
 **Qué hace:** Practica `dato` (sección «Contexto TurisData»).
 
@@ -83,7 +83,7 @@ print(ruta_reservas)
 - `ruta_reservas = dato("reservas_turisdata.csv")` → Guarda en `ruta_reservas` el resultado. `dato`: devuelve la ruta de un fichero de datos del curso (lo busca en las carpetas habituales y, si no está, lo descarga).
 - `print(ruta_reservas)` → `print`: muestra un valor por pantalla.
 
-### Celda 2 · 1 · Leer un CSV con `csv.DictReader` · 🏫
+### Celda 2 · 1 · Leer un CSV con `csv.DictReader` · 🏠
 
 **Qué hace:** Practica `open`, `list`, `type`, `DictReader` (sección «1 · Leer un CSV con `csv.DictReader`»).
 
@@ -103,7 +103,7 @@ print(type(filas[0]["noches"]), "-> hay que convertir con int()")
 - `print(filas[0])` → `print`: muestra un valor por pantalla.
 - `print(type(filas[0]["noches"]), "-> hay que convertir con int()")` → `print`: muestra un valor por pantalla; `type`: dice de qué tipo es un valor (`int`, `str`…).
 
-### Celda 3 · 1 · Leer un CSV con `csv.DictReader` · 🏫 · ejercicio 1
+### Celda 3 · 1 · Leer un CSV con `csv.DictReader` · 🏠 · ejercicio 1
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
@@ -111,7 +111,7 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 5 · 2 · Escribir y leer JSON · 🏫
+### Celda 5 · 2 · Escribir y leer JSON · 🏠
 
 **Qué hace:** Practica `mkdtemp`, `join`, `open`, `read` (sección «2 · Escribir y leer JSON»).
 
@@ -139,11 +139,11 @@ print(leido == resumen)
 - `with open(ruta_json, encoding="utf8") as f:` → Abre un recurso (fichero, conexión…) y lo cierra solo al terminar el bloque. Dentro del bloque: `load`: lee un fichero JSON y lo convierte en datos de Python.
 - `print(leido == resumen)` → `print`: muestra un valor por pantalla.
 
-### Celda 6 · 2 · Escribir y leer JSON · 🏫 · ejercicio 3
+### Celda 6 · 2 · Escribir y leer JSON · 🏠 · ejercicio 3
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 7 · 3 · Excepciones: cuando algo falla · 🏫
+### Celda 7 · 3 · Excepciones: cuando algo falla · 🏠
 
 **Qué hace:** Practica `open` (sección «3 · Excepciones: cuando algo falla»).
 
@@ -173,7 +173,7 @@ except FileNotFoundError as error:
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 9 · 3 · Excepciones: cuando algo falla · 🏫 · ejercicio 5
+### Celda 9 · 3 · Excepciones: cuando algo falla · 🏠 · ejercicio 5
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
