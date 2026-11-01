@@ -10,7 +10,8 @@
 |---|---|
 | **Carpeta de trabajo** | Copiad la carpeta [`reto_herramientas/`](reto_herramientas/) entera, y el CSV [`reservas_turisdata.csv`](../../../../datos/reservas_turisdata.csv) dentro. Abrid la terminal **en esa carpeta** (`python --version` debe dar 3.11 o más; si no, `python3`). |
 | **Parejas: piloto y copiloto** | **Piloto:** teclea. **Copiloto:** lee en voz alta lo que pide la tarjeta y comprueba. **Cambiad de papel en cada misión** (y a mitad si dura más de 25 minutos). En equipos de 3, la tercera persona **revisa** (ejecuta las pruebas y lee el docstring). |
-| **Dos fases** | **Fase 1 · martes:** misiones 0 a 3, con las reservas ya **en memoria** (sin ficheros). **Fase 2 · miércoles:** misiones 4 y 5: leer el CSV, avisar de los errores, guardar el JSON, README y entrega. |
+| **Dos fases** | **Fase 1 · martes:** misiones 0 a 3, con las reservas ya **en memoria** (sin ficheros). 
+**Fase 2 · miércoles:** misiones 4 y 5: leer el CSV, avisar de los errores, guardar el JSON, README y entrega. |
 | **Cómo sabéis que vais bien** | Cada misión termina con algo que se **ve en pantalla** (un mensaje verde, una prueba que pasa). Si no lo veis, no está hecha. |
 | **Dos katas** | Al final de cada día, **cada persona sola** escribe una función en el [Taller](https://www.curso.soultechlabs.io/taller/): martes la [kata 1](https://www.curso.soultechlabs.io/taller/#kata-1) y miércoles la [kata 2](https://www.curso.soultechlabs.io/taller/#kata-2). Sirven para comprobar que **cada persona** lo ha aprendido, no solo el equipo. |
 
