@@ -1,7 +1,7 @@
 # README Sprint S04 · Python para IA
 
 **Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?  
-**Fechas:** 3–4 de noviembre · **Horas:** 9 h (2 h teoría · 4 h práctica · 3 h PBL)
+**Fechas:** 3–4 de noviembre · **Horas:** 9 h
 
 📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_04.pdf) · [ecofriendly](pdf/README_Sprint_04_ecofriendly.pdf)
 
@@ -130,4 +130,4 @@ Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../mater
 
 **Y ahora:** Sprint 5 · Matemáticas y estadística en código (miércoles 4/11).
 
-*9 h (2 h teoría · 4 h práctica · 3 h PBL).*
+*9 h.*
