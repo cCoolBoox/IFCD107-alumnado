@@ -41,15 +41,38 @@
 
 **En clase: 2 h 30 min.**
 
+**Al acabar el día, deberías poder decir:**
+
+- [ ] `python test_kpis.py` pasa todas las pruebas (12 de 12).
+- [ ] README y código subidos a `sprint-04/` de mi repo.
+- [ ] Autoevaluación y coevaluación del Sprint 4 rellenadas.
+
 ## El reto en pocas palabras
 
-**Qué os pide el cliente.** El equipo de reservas de TurisData calcula sus cifras semanales **a mano en una hoja de cálculo**. Es lento y cada persona lo hace un poco distinto. Os pide una **herramienta interna**: un pequeño programa que **lea el fichero de reservas, calcule tres cifras importantes (KPIs), avise con claridad si el fichero está mal y guarde los resultados** en un formato que otros sistemas puedan leer.
+**Qué os pide el cliente.** El equipo de reservas de TurisData calcula sus cifras semanales **a mano en una hoja de cálculo**. Es lento y cada persona lo hace un poco distinto. Os pide una **herramienta interna**, un pequeño programa que:
 
-**Qué vais a entregar:** un repositorio Git con `kpis.py`, `test_kpis.py`, `README.md` y un `salida.json` generado con el CSV real.
+- **lea el fichero de reservas**;
+- **calcule tres cifras importantes (KPIs)**;
+- **avise con claridad si el fichero está mal**;
+- **guarde los resultados** en un formato que otros sistemas puedan leer.
 
-**Núcleo y extra.** Núcleo: las funciones obligatorias hasta que `test_kpis.py` pase y el README. Extra: las partes opcionales (POO y Git básico).
+**Qué vais a entregar:** un repositorio Git con estos cuatro ficheros:
 
-Para trabajar: las [tarjetas de misión](3_Reto/1_Trabajar/README.md) (una por misión) y la plantilla [`reto_herramientas/`](3_Reto/1_Trabajar/reto_herramientas/). Para entregar: [entrega y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y vuestra hoja de [autoevaluación y coevaluación](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md). Para consultar: la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_04.md) (qué pide el cliente, recursos y reglas de la IA).
+- `kpis.py` · vuestro código
+- `test_kpis.py` · las pruebas
+- `README.md`
+- `salida.json` · generado con el CSV real
+
+**Núcleo y extra:**
+
+- **Núcleo:** las funciones obligatorias hasta que `test_kpis.py` pase y el README.
+- **Extra:** las partes opcionales (POO y Git básico).
+
+**Dónde está cada cosa:**
+
+- **Para trabajar:** las [tarjetas de misión](3_Reto/1_Trabajar/README.md) (una por misión) y la plantilla [`reto_herramientas/`](3_Reto/1_Trabajar/reto_herramientas/).
+- **Para entregar:** [entrega y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y vuestra hoja de [autoevaluación y coevaluación](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md).
+- **Para consultar:** la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_04.md) (qué pide el cliente, recursos y reglas de la IA).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 

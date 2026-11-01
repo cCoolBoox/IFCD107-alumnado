@@ -101,4 +101,4 @@ Si usáis un asistente de IA, seguid las reglas de la «Ayuda 1» de la [ficha c
 
 ## ➡️ Siguiente
 
-¡Reto terminado! 🎉 Esta misma tarde empieza el [Sprint 5](../../../../S05/README.md).
+¡Reto terminado! 🎉 Continuamos con el [Sprint 5](../../../../S05/README.md).
