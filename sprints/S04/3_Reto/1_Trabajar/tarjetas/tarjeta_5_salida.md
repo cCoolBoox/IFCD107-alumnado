@@ -1,6 +1,8 @@
 # Misión 5 · Guardar el resultado, ponerlo en marcha y entregar
 
 > ⏱ **25 minutos + 25 minutos de entrega** · 🅱️ Fase 2 · miércoles · 👥 Piloto y copiloto; en la parte B, repartíos el trabajo · [Volver al índice](../README.md)
+>
+> **En esta misión usáis:** 🌐 el navegador (Taller y GitHub) · 📄 `kpis.py` y un `README.md` nuevo · 💻 la terminal
 
 ## 🎯 Qué construís
 
@@ -18,15 +20,29 @@ leer_reservas  →  calcular_kpis  →  exportar_json  →  mensaje de éxito  (
 
 El **código de salida** (0 = bien, 1 = mal) es la forma en que un programa le dice al sistema si ha ido bien. Y un error **no es un `Traceback` rojo**: es un mensaje que entiende cualquiera.
 
-## 🧰 Antes de tocar el código
-
-**Taller de bloques** *(10 min)*: [bloque 4](https://www.curso.soultechlabs.io/taller/#t-tuberia), «Encadena las funciones» y «Escribe la función principal». Es exactamente vuestro `main`.
-
 ## 🛠️ Paso a paso
 
-### Parte A · Programar y ejecutar (15 min)
+| # | Tipo | Qué hacéis | Dónde | Min | Está terminado cuando |
+|---|---|---|---|---|---|
+| **Parte A** | | | | **25** | |
+| 1 | 📚 Aprender | «Encadena las funciones» y «Escribe la función principal». Es exactamente vuestro `main` | Taller: [bloque 4](https://www.curso.soultechlabs.io/taller/#t-tuberia) | 8 | Los dos puzles montados |
+| 2 | 🛠️ Construir | `exportar_json(datos, ruta)` (detalle abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 4 | La función está escrita |
+| 3 | 🛠️ Construir | `main(argumentos=None)` (detalle abajo) | `kpis.py` | 8 | La función está escrita |
+| 4 | ✅ Comprobar | Ejecutar el programa entero con el CSV real, abrir `salida.json` y pasar todas las pruebas | Terminal: `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` y `python test_kpis.py` | 5 | `salida.json` como en «Qué deberíais ver» y **`12 de 12 pruebas superadas`** |
+| **Parte B** | | *(repartíos el trabajo: los pasos 5 y 6 se hacen a la vez)* | | **25** | |
+| 5 | ✅ Comprobar | Provocar **a propósito** los tres errores, siempre sobre **copias** del CSV (detalle abajo) | Terminal | 10 | Los tres casos dan lo que dice la tabla |
+| 6 | 🛠️ Construir | Copiar `README_PLANTILLA.md` como `README.md` y rellenarlo (apartado 4 de [Entrega y rúbrica](../../2_Entregar/entrega_y_rubrica.md)) | `README.md` | 10 | Otra persona podría ejecutar el proyecto siguiendo solo el README |
+| 7 | ✅ Comprobar | Revisión con la rúbrica: **alguien que no escribió esa parte** la revisa y anota el resultado en el README (apartado 3 de Entrega y rúbrica) | `README.md`, sección «Revisión con la rúbrica» | 5 | La sección está rellena |
+| 8 | 📤 Entregar | Subir los ficheros del equipo a `sprint-04/` en **tres o más subidas, hechas por personas distintas**; **cada persona** sube su autoevaluación y coevaluación (apartado 5 de Entrega y rúbrica) | GitHub, carpeta `sprint-04/` | 10 | Están los cuatro ficheros del equipo y una hoja por persona (**4 + N**), con tres *commits* o más |
+| 9 | 📤 Entregar | La review: enseñar el script con el CSV real, el JSON, un error provocado con su mensaje y las pruebas en verde. Explicar **una decisión de diseño** (por ejemplo, cómo definisteis la ocupación) | A la clase | 3–5 | Lo habéis enseñado |
 
-1. **`exportar_json(datos, ruta)`**: abrid `ruta` para escribir con `encoding="utf8"` y guardad con `json.dump(datos, f, ensure_ascii=False, indent=2)`. Sin `ensure_ascii=False`, las tildes saldrían como `ó`. Pista: [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb).
+Si sobran minutos, empezad el extra (pruebas propias o `extra/plantilla_kpis_pandas.py`).
+
+### Detalle de los pasos 2 y 3: `exportar_json` y `main`
+
+**`main` es la receta que encadena todo lo que ya habéis hecho:** `leer_reservas` → `calcular_kpis` → `exportar_json` → mensaje de éxito.
+
+1. **`exportar_json(datos, ruta)`**: abrid `ruta` para escribir con `encoding="utf8"` y guardad con `json.dump(datos, f, ensure_ascii=False, indent=2)`. Sin `ensure_ascii=False`, las tildes saldrían como `\u00f3`. Pista: [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb).
 2. **`main(argumentos=None)`**: la plantilla ya lee los argumentos (`args.entrada`, `args.salida` y `args.capacidad`). Vosotros, **dentro de un `try`**:
    1. `leer_reservas(args.entrada)`;
    2. `calcular_kpis(reservas, args.capacidad)`, que ya viene hecha;
@@ -35,32 +51,16 @@ El **código de salida** (0 = bien, 1 = mal) es la forma en que un programa le d
    5. imprimir un mensaje de éxito y **devolver 0**.
 
    En el `except (FileNotFoundError, ValueError)`: imprimir `ERROR: …` **por `sys.stderr`** y **devolver 1**.
-3. **Ejecutad el programa entero** y las pruebas:
 
-   ```
-   python kpis.py reservas_turisdata.csv salida.json --capacidad 40
-   python test_kpis.py
-   ```
+### Detalle del paso 5: los tres errores a propósito
 
-4. **Abrid `salida.json`** y comparadlo con lo que debería salir.
+| Caso | Cómo se provoca | Qué deberíais ver | Código de salida |
+|---|---|---|---|
+| 1. Fichero que no existe | `python kpis.py no_existe.csv salida.json` | `ERROR: No se encuentra el fichero: no_existe.csv` | 1 |
+| 2. Falta una columna | Copiad el CSV como `sin_col.csv` y, con el editor, cambiad en la primera línea `precio_noche` por `precio`. Ejecutad con `sin_col.csv` | `ERROR: Faltan columnas obligatorias: ['precio_noche']` | 1 |
+| 3. Dato incorrecto | Copiad el CSV como `con_error.csv` y, con el editor, escribid `abc` como precio de la fila 5 y `0` como noches de la fila 10. Ejecutad con `con_error.csv` | El programa **no se rompe**: `OK: 5998 reservas analizadas, 2 descartadas -> …` y en `calidad.avisos` aparecen `Fila 5 descartada: …` y `Fila 10 descartada: noches debe ser >= 1` | 0 |
 
-### Parte B · Probar que no se rompe y entregar (25 min)
-
-> 💡 **Repartíos el trabajo:** mientras una pareja provoca los errores, la otra empieza el README. Luego se cambian.
-
-5. **Provocad los tres errores a propósito** (unos 10 min). Trabajad siempre sobre **copias**: el CSV original no se toca.
-
-   | Caso | Cómo se provoca | Qué deberíais ver | Código de salida |
-   |---|---|---|---|
-   | 1. Fichero que no existe | `python kpis.py no_existe.csv salida.json` | `ERROR: No se encuentra el fichero: no_existe.csv` | 1 |
-   | 2. Falta una columna | Copiad el CSV como `sin_col.csv` y, con el editor, cambiad en la primera línea `precio_noche` por `precio`. Ejecutad con `sin_col.csv` | `ERROR: Faltan columnas obligatorias: ['precio_noche']` | 1 |
-   | 3. Dato incorrecto | Copiad el CSV como `con_error.csv` y, con el editor, escribid `abc` como precio de la fila 5 y `0` como noches de la fila 10. Ejecutad con `con_error.csv` | El programa **no se rompe**: `OK: 5998 reservas analizadas, 2 descartadas -> …` y en `calidad.avisos` aparecen `Fila 5 descartada: …` y `Fila 10 descartada: noches debe ser >= 1` | 0 |
-
-   El código de salida se mira justo después de ejecutar: en Linux o Mac, `echo $?`; en Windows (cmd), `echo %errorlevel%`; en PowerShell, `echo $LASTEXITCODE`. **Al terminar, borrad las copias de prueba** (`sin_col.csv`, `con_error.csv` y el JSON de prueba): no se suben. Ese será vuestro «provocar un error» en la review.
-
-6. **README, revisión y subida** (unos 25 min en total, con el punto anterior en paralelo). Todo está en [Entrega y rúbrica](../../2_Entregar/entrega_y_rubrica.md): copiad `README_PLANTILLA.md` como `README.md` y rellenadlo (apartado 4); pedid a alguien que **no escribió esa parte** que lo revise con la rúbrica y anote el resultado en el README (apartado 3); y subid los ficheros a `sprint-04/` en **tres o más subidas, hechas por personas distintas** (apartado 5). **Cada persona** rellena y sube su autoevaluación y coevaluación. Si sobran minutos, empezad el extra (pruebas propias o `extra/plantilla_kpis_pandas.py`).
-
-7. **Review (3–5 min por equipo).** Enseñad: el script con el CSV real, el JSON, un error provocado con su mensaje y las pruebas en verde. Explicad **una decisión de diseño**, por ejemplo cómo definisteis la ocupación.
+El código de salida se mira justo después de ejecutar: en Linux o Mac, `echo $?`; en Windows (cmd), `echo %errorlevel%`; en PowerShell, `echo $LASTEXITCODE`. **Al terminar, borrad las copias de prueba** (`sin_col.csv`, `con_error.csv` y el JSON de prueba): no se suben. Ese será vuestro «provocar un error» en la review.
 
 ## 👀 Qué deberíais ver
 

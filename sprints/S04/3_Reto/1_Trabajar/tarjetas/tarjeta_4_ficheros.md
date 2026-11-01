@@ -1,6 +1,8 @@
 # Misión 4 · Leer el CSV sin que se rompa
 
 > ⏱ **50 minutos + 50 minutos** · 🅱️ Fase 2 · miércoles · 👥 Todo el equipo, pilotos y copilotos rotando cada 15 minutos · [Volver al índice](../README.md)
+>
+> **En esta misión usáis:** 🌐 el navegador (curso y Taller) · 📄 un archivo: `kpis.py` (y el CSV `reservas_turisdata.csv`) · 💻 la terminal
 
 ## 🎯 Qué construís
 
@@ -24,14 +26,22 @@ Tres ideas, de la más pequeña a la más importante:
 
 **Ejemplo.** La fila 3 del fichero tiene `noches = 0` → aviso `Fila 3 descartada: noches debe ser >= 1`, y esa fila no entra en la lista de reservas.
 
-## 🧰 Antes de tocar el código *(50 min)*
+## 🛠️ Paso a paso
 
-1. **Curso «Python desde cero»** *(30 min)*: [excepciones](https://www.curso.soultechlabs.io/basico/#pi-excepciones) (ejercicios 1 y 2) y [ficheros de texto, CSV y JSON](https://www.curso.soultechlabs.io/basico/#pi-ficheros) (ejercicios 2 y 3).
-2. **Taller de bloques** *(20 min)*: [bloque 3](https://www.curso.soultechlabs.io/taller/#t-leer), «Leer un CSV sin que se rompa», «¿Qué error es cada uno?» y «Guardar los KPIs en JSON».
+| # | Tipo | Qué hacéis | Dónde | Min | Está terminado cuando |
+|---|---|---|---|---|---|
+| **Parte A** | | | | **50** | |
+| 1 | 📚 Aprender | Excepciones (ejercicios 1 y 2) | Curso: [excepciones](https://www.curso.soultechlabs.io/basico/#pi-excepciones) | 15 | Los dos ejercicios en verde |
+| 2 | 📚 Aprender | Ficheros de texto, CSV y JSON (ejercicios 2 y 3) | Curso: [ficheros](https://www.curso.soultechlabs.io/basico/#pi-ficheros) | 15 | Los dos ejercicios en verde |
+| 3 | 📚 Aprender | «Leer un CSV sin que se rompa», «¿Qué error es cada uno?» y «Guardar los KPIs en JSON» | Taller: [bloque 3](https://www.curso.soultechlabs.io/taller/#t-leer) | 20 | Los tres puzles montados |
+| **Parte B** | | | | **50** | |
+| 4 | 🛠️ Construir | `_convertir_fila`: convertir los tipos y validar los valores (filas 1 y 2 de la tabla de abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 15 | La función está escrita con sus «Paso» |
+| 5 | 🛠️ Construir | `leer_reservas`: abrir el fichero, comprobar la cabecera, descartar y avisar, y devolver las dos cosas (filas 3 a 6) | `kpis.py` | 25 | La función está escrita con sus «Paso» |
+| 6 | ✅ Comprobar | Ejecutar las pruebas y verlas pasar de rojo a verde. Si una falla, leed qué esperaba y qué recibió | Terminal: `python test_kpis.py 2` | 10 | **`7 de 8 pruebas superadas`** |
 
-## 🛠️ Paso a paso *(los otros 50 min)*
+Pilotos y copilotos, **rotando cada 15 minutos** en la parte B.
 
-En [`kpis.py`](../reto_herramientas/kpis.py): **primero `_convertir_fila` y después `leer_reservas`**, con los comentarios «Paso» de cada docstring. Ejecutad `python test_kpis.py 2` después de cada paso y mirad cuáles pasan de rojo a verde.
+### Detalle de los pasos 4 y 5: qué hace cada función
 
 **`_convertir_fila` recibe** una fila con todo en texto, `{"fecha_llegada": "2025-01-01", "noches": "2", "precio_noche": "100.0", "canal": "directo", "cancelada": "0"}`, y **la devuelve con los tipos buenos**: la fecha como `date`, `noches` como `int`, `precio_noche` como `float` y `cancelada` como `int`.
 

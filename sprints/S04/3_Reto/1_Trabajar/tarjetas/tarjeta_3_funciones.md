@@ -1,6 +1,8 @@
 # Misión 3 · Funciones que calculan
 
 > ⏱ **50 minutos + 40 minutos** (la segunda parte, después de la consolidación) · 🅰️ Fase 1 · martes · 👥 Piloto y copiloto (cambiad de papel entre las dos partes) · [Volver al índice](../README.md)
+>
+> **En esta misión usáis:** 🌐 el navegador (curso y Taller) · 📄 un archivo: `kpis.py` (y `test_kpis.py`, que **no se toca**) · 💻 la terminal
 
 ## 🎯 Qué construís
 
@@ -22,19 +24,25 @@ def noches_totales(reservas):          # entra: la lista de reservas
 - **Las pruebas os guían.** `test_kpis.py` llama a vuestras funciones con ejemplos y compara. Al principio fallan todas (es lo normal): vais arreglándolas **una a una** y veis cómo pasan de rojo a verde. Cada fallo dice **qué esperaba y qué recibió**: leedlo antes de tocar nada.
 - **Nunca cambiéis `test_kpis.py` para que pase.** Si una prueba falla, lo que está mal es vuestra función.
 
-## 🧰 Antes de tocar el código
-
-1. **Curso «Python desde cero»** *(10 min)*: [funciones](https://www.curso.soultechlabs.io/basico/#func) (ejercicios 1 y 2): `def`, parámetros y `return`.
-2. **Taller de bloques** *(10 min)*: [bloque 2](https://www.curso.soultechlabs.io/taller/#t-conteo), «Contar con un diccionario» e «Ingreso medio de las reservas confirmadas». **Son casi vuestras dos funciones**, montadas con piezas.
-
 ## 🛠️ Paso a paso
 
-### Parte A · 30 minutos (de los 50)
+| # | Tipo | Qué hacéis | Dónde | Min | Está terminado cuando |
+|---|---|---|---|---|---|
+| **Parte A** | | | | **50** | |
+| 1 | 📚 Aprender | Funciones (ejercicios 1 y 2): `def`, parámetros y `return` | Curso: [funciones](https://www.curso.soultechlabs.io/basico/#func) | 10 | Los dos ejercicios en verde |
+| 2 | 📚 Aprender | «Contar con un diccionario» e «Ingreso medio de las reservas confirmadas». **Son casi vuestras dos funciones**, montadas con piezas | Taller: [bloque 2](https://www.curso.soultechlabs.io/taller/#t-conteo) | 10 | Los dos puzles montados |
+| 3 | ✅ Comprobar | Ver las pruebas en rojo. La fase 1 son **4 pruebas** y empiezan fallando: es lo normal | Terminal: `python test_kpis.py 1` | 5 | Veis «0 de 4» y qué espera cada prueba |
+| 4 | 🛠️ Construir | `tasa_cancelacion_por_canal`, siguiendo los comentarios «Paso» de su docstring (detalle 3.1, abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 20 | La función está escrita con un `return` |
+| 5 | ✅ Comprobar | Ejecutar la prueba, leer qué esperaba y qué recibió, corregir y repetir | Terminal: `python test_kpis.py 1` | 5 | `test_tasa_cancelacion…` en verde |
+| **Parte B** | | *(después de la consolidación)* | | **40** | |
+| 6 | 🛠️ Construir | `ingreso_medio_por_reserva` (detalle 3.2, abajo) | `kpis.py` | 17 | La función está escrita con un `return` |
+| 7 | ✅ Comprobar | Ejecutar la prueba y corregir | Terminal: `python test_kpis.py 1` | 3 | `test_ingreso_medio…` en verde |
+| 8 | 🛠️ Construir | `ocupacion_proxy`: el docente la hace en pantalla; vosotros **la copiáis** (detalle 3.3, abajo) | `kpis.py` | 10 | Está copiada y cada persona sabe explicar una línea |
+| 9 | ✅ Comprobar | Ejecutar todas las pruebas de la fase 1 | Terminal: `python test_kpis.py 1` | 10 | **`4 de 4 pruebas superadas`** |
 
-1. **Abrid [`kpis.py`](../reto_herramientas/kpis.py)** y ejecutad `python test_kpis.py 1`. La fase 1 son **4 pruebas** y empiezan fallando.
-2. **Programad una función cada vez**, siguiendo los comentarios «Paso» de su docstring. El ciclo es: ejecutar la prueba → leer qué esperaba y qué recibió → corregir → repetir. Es el método de los profesionales: trabajar **guiados por las pruebas**.
+**El ciclo de los pasos 4 a 7 es siempre el mismo:** escribir una función → ejecutar la prueba → leer qué esperaba y qué recibió → corregir → repetir. Es el método de los profesionales: trabajar **guiados por las pruebas**.
 
-#### 3.1 · `tasa_cancelacion_por_canal` (25 min)
+### Detalle del paso 4 (3.1): `tasa_cancelacion_por_canal`
 
 **Recibe y devuelve.** La lista de reservas → un diccionario `{canal: porcentaje}`. Con 3 reservas del canal `web` y 1 cancelada: `{"web": 33.3}`. Sin reservas: `{}`.
 
@@ -46,9 +54,7 @@ def noches_totales(reservas):          # entra: la lista de reservas
 
 Se comprueba con `test_tasa_cancelacion…` (incluye el redondeo). **Pista de cuaderno:** [`S04_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) (diccionarios).
 
-### Parte B · 40 minutos (después de la consolidación)
-
-#### 3.2 · `ingreso_medio_por_reserva` (20 min)
+### Detalle del paso 6 (3.2): `ingreso_medio_por_reserva`
 
 **Recibe y devuelve.** La lista de reservas → un número con 2 decimales. Con reservas confirmadas de 2×100 €, 4×50 € y 1×120 €: (200 + 200 + 120) ÷ 3 = **173.33**. Sin ninguna confirmada: `0.0` (sin dividir entre cero).
 
@@ -60,7 +66,7 @@ Se comprueba con `test_tasa_cancelacion…` (incluye el redondeo). **Pista de cu
 
 Se comprueba con `test_ingreso_medio…`. **Pista de cuaderno:** `S04_03` (comprensiones de lista).
 
-#### 3.3 · `ocupacion_proxy` (10 min, con el docente)
+### Detalle del paso 8 (3.3): `ocupacion_proxy`
 
 **Recibe y devuelve.** La lista de reservas y la capacidad (nº de habitaciones) → un porcentaje con 1 decimal. Ejemplo de la prueba: 7 noches confirmadas, un periodo de 10 días y 5 habitaciones → 7 ÷ (10 × 5) × 100 = **14.0**.
 
@@ -72,7 +78,7 @@ Se comprueba con `test_ingreso_medio…`. **Pista de cuaderno:** `S04_03` (compr
 | 4 | Sumar las noches de las reservas **no canceladas** | `sum(...)` sobre una comprensión con `if` |
 | 5 | Aplicar la fórmula con 1 decimal | `round(100 * noches / (dias * capacidad), 1)` |
 
-Se comprueba con `test_ocupacion_proxy`. El docente la hace en pantalla; vosotros **la copiáis y la explicáis con vuestras palabras**. Recordad que es un **proxy** (una medida aproximada, porque el fichero no trae la capacidad real del hotel): se explica en el README.
+Se comprueba con `test_ocupacion_proxy`. Vosotros **la copiáis y la explicáis con vuestras palabras**. Recordad que es un **proxy** (una medida aproximada, porque el fichero no trae la capacidad real del hotel): se explica en el README.
 
 ## 👀 Qué deberíais ver
 

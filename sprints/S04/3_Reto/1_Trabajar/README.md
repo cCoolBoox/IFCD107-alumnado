@@ -21,6 +21,7 @@
 
 | | |
 |---|---|
+| **Cómo leer una tarjeta** | Cada una empieza diciendo **qué vais a usar** (el navegador, un archivo concreto, la terminal) y sigue con una tabla de **pasos numerados, en el orden en que se hacen**. Cada paso lleva una etiqueta: 📚 **Aprender** (curso o Taller, o leer algo: no se programa el reto) · 🛠️ **Construir** (abrís un archivo del reto y escribís) · ✅ **Comprobar** (ejecutáis y veis un resultado). Solo hay dos más, de un uso puntual: 🔧 **Preparar** (la carpeta y la terminal, en la misión 0) y 📤 **Entregar** (subir y enseñar, en la misión 5). Cada paso dice **dónde**, **cuántos minutos** y **cuándo está terminado**. |
 | **Carpeta de trabajo** | Una sola descarga: [`reto_herramientas.zip`](https://raw.githubusercontent.com/cCoolBoox/IFCD107-alumnado/main/sprints/S04/3_Reto/1_Trabajar/reto_herramientas.zip). Lleva dentro la plantilla **y** el CSV `reservas_turisdata.csv`. Cómo prepararla paso a paso: [misión 0](tarjetas/tarjeta_0_mirar_la_demo.md). |
 | **Parejas: piloto y copiloto** | **Piloto:** teclea. **Copiloto:** lee en voz alta lo que pide la tarjeta y comprueba. **Cambiad de papel en cada misión** (y a mitad si dura más de 25 minutos). En equipos de 3, la tercera persona **revisa** (ejecuta las pruebas y lee el docstring). |
 | **Cómo sabéis que vais bien** | Cada misión termina con algo que se **ve en pantalla** (un mensaje verde, una prueba que pasa). Si no lo veis, no está hecha. |

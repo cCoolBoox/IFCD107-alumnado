@@ -1,6 +1,8 @@
 # Misión 1 · Los datos en memoria
 
 > ⏱ **50 minutos** · 🅰️ Fase 1 · martes · 👥 Piloto y copiloto (cambiad de papel respecto a la misión 0) · [Volver al índice](../README.md)
+>
+> **En esta misión usáis:** 🌐 el navegador (curso y Taller) · 📄 un archivo: `mision_1_datos.py` · 💻 la terminal
 
 ## 🎯 Qué construís
 
@@ -27,25 +29,26 @@ reservas.append({...})    # mete una ficha nueva al final de la caja
 
 Si lo pensáis así, `reservas[0]["canal"]` se lee de izquierda a derecha: «de la primera reserva, el canal».
 
-## 🧰 Antes de tocar el código
-
-**Curso «Python desde cero»** *(25 min)*: [listas](https://www.curso.soultechlabs.io/basico/#list) (ejercicios 1 y 2) y [diccionarios](https://www.curso.soultechlabs.io/basico/#dict) (los 3 ejercicios).
-
 ## 🛠️ Paso a paso
 
-1. **Abrid [`mision_1_datos.py`](../reto_herramientas/mision_1_datos.py)** *(15 min)*. Tiene seis apartados con un `TODO` cada uno. El de arriba ya trae la lista de reservas de ejemplo.
+| # | Tipo | Qué hacéis | Dónde | Min | Está terminado cuando |
+|---|---|---|---|---|---|
+| 1 | 📚 Aprender | Listas (ejercicios 1 y 2) | Curso: [listas](https://www.curso.soultechlabs.io/basico/#list) | 15 | Los dos ejercicios en verde |
+| 2 | 📚 Aprender | Diccionarios (los 3 ejercicios) | Curso: [diccionarios](https://www.curso.soultechlabs.io/basico/#dict) | 10 | Los tres ejercicios en verde |
+| 3 | 🛠️ Construir | Sustituir cada `TODO` del archivo (cambiad el `None` o escribid las líneas que faltan). Los seis apartados, abajo | [`mision_1_datos.py`](../reto_herramientas/mision_1_datos.py) | 13 | Ya no queda ningún `TODO` |
+| 4 | ✅ Comprobar | Ejecutarlo **después de cada apartado**, no al final | Terminal: `python mision_1_datos.py` | 2 | «✅ ¡Misión 1 superada!» |
+| 5 | 📚 Aprender | «El total de una reserva» y «Un mensaje con f-string»: lo mismo, montado con piezas | Taller: [bloque 1](https://www.curso.soultechlabs.io/taller/#t-total) | 10 | Los dos puzles montados |
 
-   | Apartado | Qué pide | En qué os fijáis |
-   |---|---|---|
-   | 1.1 | Guardar **cuántas reservas** hay | `len(...)` |
-   | 1.2 | El canal de la **primera** reserva | Posición `0` y etiqueta `"canal"` |
-   | 1.3 | El precio por noche de la **última** | El índice `-1` |
-   | 1.4 | **Cambiar** a 1 la cancelación de la primera | Una asignación con `=` |
-   | 1.5 | **Añadir** una reserva nueva al final | `append` con un diccionario completo |
-   | 1.6 | Un **mensaje** con datos de la segunda reserva | Un `f-string` (el de la misión 0) |
+### Detalle del paso 3: los seis apartados de `mision_1_datos.py`
 
-2. **Sustituid cada `TODO`** (cambiad el `None` o escribid las líneas que faltan) y ejecutad `python mision_1_datos.py` **después de cada apartado**. No esperéis a terminar los seis.
-3. **Taller de bloques** *(10 min)*: [bloque 1](https://www.curso.soultechlabs.io/taller/#t-total), «El total de una reserva» y «Un mensaje con f-string». Es lo mismo que acabáis de hacer, pero montado con piezas.
+| Apartado | Qué pide | En qué os fijáis |
+|---|---|---|
+| 1.1 | Guardar **cuántas reservas** hay | `len(...)` |
+| 1.2 | El canal de la **primera** reserva | Posición `0` y etiqueta `"canal"` |
+| 1.3 | El precio por noche de la **última** | El índice `-1` |
+| 1.4 | **Cambiar** a 1 la cancelación de la primera | Una asignación con `=` |
+| 1.5 | **Añadir** una reserva nueva al final | `append` con un diccionario completo |
+| 1.6 | Un **mensaje** con datos de la segunda reserva | Un `f-string` (el de la misión 0) |
 
 ## 👀 Qué deberíais ver
 

@@ -1,6 +1,8 @@
 # Misión 0 · Mirar la demostración del cliente
 
 > ⏱ **35 minutos** · 🅰️ Fase 1 · martes · 👥 Todo el equipo junto, una persona al teclado · [Volver al índice](../README.md)
+>
+> **En esta misión usáis:** 🌐 el navegador (el curso) · 📄 un archivo que **solo se lee**: `demo_cliente.py` · 💻 la terminal
 
 ## 🎯 Qué construís
 
@@ -19,19 +21,19 @@ Nada todavía. Esta misión es para **entender** el programa que nos envía el c
 
 Todo lo que haréis en el reto es una variación de estas cuatro piezas.
 
-## 🧰 Antes de tocar nada
-
-1. **Preparad la carpeta de trabajo** *(5 min)*. Descargad [`reto_herramientas.zip`](https://raw.githubusercontent.com/cCoolBoox/IFCD107-alumnado/main/sprints/S04/3_Reto/1_Trabajar/reto_herramientas.zip) y descomprimidlo. Dentro está **todo junto**: la plantilla, los archivos de las misiones y el CSV `reservas_turisdata.csv`.
-2. **Abrid la terminal en esa carpeta** *(5 min)*. En VS Code: *File → Open Folder…* (elegid la carpeta descomprimida) y *Terminal → New Terminal*. Si el aula no tuviera Python, usad Colab: subid los ficheros al panel izquierdo y poned `!` delante de cada comando.
-3. **Comprobad Python.** Escribid `python --version`: debe salir **3.11 o superior**. Si da error, probad `python3 --version` y usad `python3` en lugar de `python` en todo el reto.
-
 ## 🛠️ Paso a paso
 
-1. **Leed `demo_cliente.py` de arriba abajo, sin ejecutarlo** *(10 min)*. Abrid [`demo_cliente.py`](../reto_herramientas/demo_cliente.py): es **el programa**, no su resultado. Los 8 datos de ejemplo están en [`reservas_demo.py`](../reto_herramientas/reservas_demo.py); no hace falta tocarlos. Intentad encontrar las cuatro piezas de la tabla y **subrayad lo que no entendáis**. Apuntad también qué creéis que va a escribir.
-2. **El docente lo proyecta y lo comenta** *(5 min)*. Es el momento de preguntar lo que habíais subrayado.
-3. **Ejecutadlo** con `python demo_cliente.py` y comparad: ¿sale lo que habíais pensado?
-4. **Responded a las cinco preguntas** de «Hecho cuando», **sin mirar el ordenador**. Cada persona con sus palabras, no solo la que teclea.
-5. **Curso «Python desde cero»** *(20 min)*. [`type()`](https://www.curso.soultechlabs.io/basico/#type) (los 3 ejercicios) y [formateo de textos](https://www.curso.soultechlabs.io/basico/#fmt) (ejercicios 1 y 2: el `f-string` y los dos decimales). El docente hace en pantalla el primer ejercicio de cada lección.
+| # | Tipo | Qué hacéis | Dónde | Min | Está terminado cuando |
+|---|---|---|---|---|---|
+| 1 | 🔧 Preparar | Descargar y descomprimir. Dentro está **todo junto**: la plantilla, los archivos de las misiones y el CSV | [`reto_herramientas.zip`](https://raw.githubusercontent.com/cCoolBoox/IFCD107-alumnado/main/sprints/S04/3_Reto/1_Trabajar/reto_herramientas.zip) | 2 | Veis `demo_cliente.py` dentro de la carpeta |
+| 2 | 🔧 Preparar | Abrir la carpeta en VS Code y abrir una terminal **en ella**; comprobar la versión de Python | VS Code: *File → Open Folder…* y *Terminal → New Terminal*; después `python --version` | 3 | Sale **3.11 o superior** (si da error, probad `python3` y usadlo en todo el reto) |
+| 3 | 📚 Aprender | Leer el programa **de arriba abajo, sin ejecutarlo**. Buscar las cuatro piezas, subrayar lo que no entendáis y apuntar qué creéis que va a escribir | [`demo_cliente.py`](../reto_herramientas/demo_cliente.py) (sus 8 datos: [`reservas_demo.py`](../reto_herramientas/reservas_demo.py)) | 5 | Tenéis apuntadas una predicción y vuestras dudas |
+| 4 | 📚 Aprender | El docente lo proyecta y lo comenta. Es el momento de preguntar lo subrayado | La pantalla del aula | 5 | Se han resuelto vuestras dudas |
+| 5 | ✅ Comprobar | Ejecutarlo y comparar con vuestra predicción | Terminal: `python demo_cliente.py` | 2 | Sale el resumen de «Qué deberíais ver» |
+| 6 | ✅ Comprobar | Responder, **sin mirar el ordenador**, las cinco preguntas de «Hecho cuando» (cada persona, con sus palabras) | Esta tarjeta | 3 | Las cinco respondidas |
+| 7 | 📚 Aprender | `type()` (los 3 ejercicios) y formateo de textos (ejercicios 1 y 2: el `f-string` y los dos decimales). El docente hace el primero de cada lección en pantalla | Curso: [`type()`](https://www.curso.soultechlabs.io/basico/#type) y [formateo](https://www.curso.soultechlabs.io/basico/#fmt) | 15 | Los cinco ejercicios en verde |
+
+Si el aula no tuviera Python, usad Colab: subid los ficheros al panel izquierdo y poned `!` delante de cada comando.
 
 ## 👀 Qué deberíais ver
 
