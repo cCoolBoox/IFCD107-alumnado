@@ -61,7 +61,7 @@ El reto se hace en **seis misiones**, en **dos fases**: el **martes** la lógica
 
 #### Misión 0 · Mirar la demostración del cliente (día 1, 35 minutos)
 1. Preparar la carpeta de trabajo con la plantilla y el CSV.
-2. Ejecutar `python demo_cliente.py` y leer el programa de arriba abajo.
+2. Leer `demo_cliente.py` de arriba abajo (es el programa, no su resultado) y, después, ejecutarlo con `python demo_cliente.py`.
 3. Responder, sin mirar el ordenador, a cinco preguntas de lectura.
 4. Hacer en el curso `type()` y los f-strings (ejercicios mínimos).
 

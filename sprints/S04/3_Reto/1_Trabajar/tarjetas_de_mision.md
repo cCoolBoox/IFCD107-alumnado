@@ -25,7 +25,7 @@
 **🎯 Qué construís.** Nada todavía: **entender** el programa que nos envía el cliente. Es el reto en pequeño (8 reservas puestas a mano).
 
 **🧰 Paquete de ayuda.**
-1. *(15 min)* Preparad la carpeta de trabajo (mirad «Antes de empezar»), ejecutad `python demo_cliente.py` y leed [`demo_cliente.py`](reto_herramientas/demo_cliente.py) de arriba abajo. Subrayad lo que no entendáis. El docente la comenta en pantalla durante 5 minutos.
+1. *(15 min)* Preparad la carpeta de trabajo (mirad «Antes de empezar») y leed [`demo_cliente.py`](reto_herramientas/demo_cliente.py) **de arriba abajo** (es el programa, no su resultado). Subrayad lo que no entendáis. El docente lo proyecta y lo comenta durante 5 minutos. Después, ejecutadlo con `python demo_cliente.py` y comprobad si sale lo que habíais pensado.
 2. *(20 min)* Curso ★ [`type()`](https://www.curso.soultechlabs.io/basico/#type) (los 3 ejercicios) y [formateo de textos](https://www.curso.soultechlabs.io/basico/#fmt) (ejercicios 1 y 2: `f-string` y dos decimales).
 
 **✅ Hecho cuando** sabéis responder, sin mirar el ordenador, estas cinco preguntas:
