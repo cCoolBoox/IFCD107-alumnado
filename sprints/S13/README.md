@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿cómo enseñamos y defendemos los resultados de un modelo?
 **Fecha:** 25/11, dentro del último día del Sprint 12 · **Tiempo:** ≈ 1 h 10 min (10 min de teoría · 35 de práctica · 25 de reto)
 
-📄 **Este README en PDF:** [a color](4_Referencia/README_Sprint_13.pdf) · [ecofriendly, para imprimir](4_Referencia/README_Sprint_13_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
+📄 **Este README en PDF:** [a color](pdf/README_Sprint_13.pdf) · [ecofriendly, para imprimir](pdf/README_Sprint_13_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
 ## Qué aprenderás
 1. Dibujar e interpretar la **matriz de confusión**, la **curva ROC** y la **curva precisión-exhaustividad** de un modelo de clasificación.
@@ -23,12 +23,12 @@
 
 | Material | Tema | Tiempo | Cuándo |
 |---|---|---|---|
-| [Guía del sprint (PDF)](4_Referencia/Guia_Sprint_13.pdf) · [ecofriendly](4_Referencia/Guia_Sprint_13_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
+| [Guía del sprint (PDF)](pdf/Guia_Sprint_13.pdf) · [ecofriendly](pdf/Guia_Sprint_13_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
 | [**Código explicado de los cuadernos**](2_Practica/codigo_explicado/) | Cada cuaderno explicado por escrito: recorrido de 10 minutos con el docente, glosario de sus palabras de código y qué hace cada celda y cada línea (para leerlo con calma, mientras o después de ejecutar) | A tu ritmo | Con cada cuaderno |
 | [**Carpeta del reto: `3_Reto/`**](3_Reto/) | Una carpeta por momento: `1_Trabajar` (reto en una página y plantillas), `2_Entregar` (qué se sube, rúbrica y autoevaluación y coevaluación) y `3_Consultar` (ficha completa) | — | Antes del planning y durante el reto |
 | [Reto completo, paso a paso (.md)](3_Reto/3_Consultar/Reto_Sprint_13.md) · [PDF](pdf/Reto_Sprint_13.pdf) · [ecofriendly](pdf/Reto_Sprint_13_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
 | [Resumen del sprint en una página](4_Referencia/infografias/S13_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
-| [El reto paso a paso](4_Referencia/infografias/S13_03_reto_paso_a_paso.png) · [PDF con enlaces](4_Referencia/infografias/S13_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
+| [El reto paso a paso](4_Referencia/infografias/S13_03_reto_paso_a_paso.png) · [PDF con enlaces](pdf/S13_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](4_Referencia/infografias/S13_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del sprint](4_Referencia/infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
