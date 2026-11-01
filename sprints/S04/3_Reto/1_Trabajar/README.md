@@ -6,16 +6,16 @@
 
 ## Las seis misiones
 
-| Misión | Cuándo | Qué lograréis | Se comprueba con |
-|---|---|---|---|
-| [**0 · Mirar la demo**](tarjetas/tarjeta_0_mirar_la_demo.md) | Martes · 35 min | Entender el programa del cliente antes de escribir nada | Cinco preguntas de lectura |
-| [**1 · Datos en memoria**](tarjetas/tarjeta_1_datos.md) | Martes · 50 min | Leer y modificar una lista de reservas | `python mision_1_datos.py` |
-| [**2 · Decidir y repetir**](tarjetas/tarjeta_2_decidir.md) | Martes · 50 min | Contar con `if` y `for` (los contadores de los KPI) | `python mision_2_decidir.py` |
-| [**3 · Funciones que calculan**](tarjetas/tarjeta_3_funciones.md) | Martes · 50 + 40 min | Meter los contadores en funciones que devuelven un resultado: `tasa_cancelacion_por_canal`, `ingreso_medio_por_reserva` y `ocupacion_proxy` (con el docente) · **Kata 1** | `python test_kpis.py 1` |
-| [**4 · Leer el CSV**](tarjetas/tarjeta_4_ficheros.md) | Miércoles · 50 + 50 min | Leer el fichero real sin que se rompa: `_convertir_fila` y `leer_reservas` | `python test_kpis.py 2` |
-| [**5 · Guardar y entregar**](tarjetas/tarjeta_5_salida.md) | Miércoles · 25 + 25 min | Guardar el JSON, ponerlo en marcha con un comando y entregar: `exportar_json`, `main`, README y entrega · **Kata 2** | `python test_kpis.py` (12 de 12) |
+| Misión | Qué lograréis | Se comprueba con |
+|---|---|---|
+| [**0 · Mirar la demo**](tarjetas/tarjeta_0_mirar_la_demo.md) | Entender el programa del cliente antes de escribir nada | Cinco preguntas de lectura |
+| [**1 · Datos en memoria**](tarjetas/tarjeta_1_datos.md) | Leer y modificar una lista de reservas | `python mision_1_datos.py` |
+| [**2 · Decidir y repetir**](tarjetas/tarjeta_2_decidir.md) | Contar con `if` y `for` (los contadores de los KPI) | `python mision_2_decidir.py` |
+| [**3 · Funciones que calculan**](tarjetas/tarjeta_3_funciones.md) | Meter los contadores en funciones que devuelven un resultado: `tasa_cancelacion_por_canal`, `ingreso_medio_por_reserva` y `ocupacion_proxy` (con el docente) · **Kata 1** | `python test_kpis.py 1` |
+| [**4 · Leer el CSV**](tarjetas/tarjeta_4_ficheros.md) | Leer el fichero real sin que se rompa: `_convertir_fila` y `leer_reservas` | `python test_kpis.py 2` |
+| [**5 · Guardar y entregar**](tarjetas/tarjeta_5_salida.md) | Guardar el JSON, ponerlo en marcha con un comando y entregar: `exportar_json`, `main`, README y entrega · **Kata 2** | `python test_kpis.py` (12 de 12) |
 
-**Martes:** misiones 0 a 3, con las reservas ya **en memoria** (sin ficheros). **Miércoles:** misiones 4 y 5: leer el CSV, avisar de los errores, guardar el JSON, README y entrega.
+Qué día y cuántos minutos lleva cada misión: en el [README del sprint](../../README.md).
 
 ## Antes de empezar
 
