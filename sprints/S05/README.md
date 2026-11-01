@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿podemos demostrar con código lo que vimos en teoría?  
 **Fechas:** 4–5 de noviembre · **Horas:** 9 h (2 h teoría · 4 h práctica, incluye 1 h de CRUD · 3 h PBL)
 
-📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_05.pdf) · [ecofriendly](pdf/README_Sprint_05_ecofriendly.pdf)
+📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
 > **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
@@ -21,15 +21,13 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «¿La ocupación depende de esto?» | — | 10 |
 | ☐ | 📖 Teoría · NumPy y álgebra lineal: vectorización y *broadcasting* | [Presentación S05.1](1_Teoria/S05.1_NumPy_y_algebra_lineal.pdf) | 25 |
-| ☐ | 💻 Práctica · Arrays, vectorización y *broadcasting* (los ejercicios marcados «en clase») | [Cuaderno S05_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_01_numpy.ipynb) | 30 |
-| ☐ | 📖 Teoría · Descenso del gradiente y regresión desde cero | [Presentación S05.2](1_Teoria/S05.2_Descenso_del_gradiente_y_regresion_desde_cero.pdf) | 20 |
+| ☐ | 💻 Práctica · Arrays, vectorización y *broadcasting* (los ejercicios marcados «en clase») | [Cuaderno S05_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_01_numpy.ipynb) | 15 |
 
-**En clase: 1 h 25 min.**
+**En clase: 50 min.**
 
 **Al acabar el día, deberías poder decir:**
 
 - [ ] Sé hacer cálculos con arrays sin escribir bucles.
-- [ ] Sé qué es el descenso del gradiente.
 
 ## Día 2 · Jueves 5/11
 
@@ -39,10 +37,16 @@
 | ☐ | 📖 Teoría · Estadística con Python y CRUD | [Presentación S05.3](1_Teoria/S05.3_Estadistica_con_Python_y_CRUD.pdf) | 20 |
 | ☐ | 💻 Práctica · Descriptiva, Monte Carlo e intervalos de confianza (los ejercicios marcados «en clase») | [Cuaderno S05_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_04_estadistica_descriptiva_ic.ipynb) | 30 |
 | ☐ | 💻 Práctica · CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base) | [Cuaderno S05_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb) | 25 |
-| ☐ | 🎯 Reto · Cuaderno `S05_07`: mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6; lo que falte, en la consolidación y la 6.ª hora) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_05_una_pagina.md) | 45 |
+| ☐ | 🎯 Reto · Cuaderno `S05_07`: mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6; lo que falte, en la consolidación y la 6.ª hora) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_05_una_pagina.md) | 45 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-05/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 4 y 5 | — | 40 |
 
 **En clase: 3 h 20 min.**
+
+**Al acabar el día, deberías poder decir:**
+
+- [ ] Sé ajustar una regresión con el descenso del gradiente y comprobar que da lo mismo que una librería.
+- [ ] Sé medir lo seguro que es un resultado con un intervalo de confianza.
+- [ ] Sé cargar datos en una base con `sqlite3` y responder al cliente con una conclusión y sus límites.
 
 ## El reto en pocas palabras
 
@@ -52,14 +56,14 @@
 
 **Núcleo y extra.** Núcleo: la regresión desde cero y la respuesta al cliente con su medida de confianza. Extra: la comparación con una librería y el CRUD ampliado.
 
-Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_05_una_pagina.md). Para consultar: [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_05.md) (pasos, rúbrica, ayudas y errores frecuentes). Plantillas, datos y autoevaluación: [`3_Reto/4_Plantillas_y_entrega/`](3_Reto/4_Plantillas_y_entrega/).
+Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_05_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_05.md) (pasos, ayudas y errores frecuentes).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
 **Archivos subidos en el repositorio del equipo, carpeta `sprint-05/`** (marca cada uno cuando lo veas en GitHub):
 - [ ] `S05_07_reto_ocupacion.ipynb` · lo modificáis
 - [ ] `turisdata_reto.db` · lo genera el cuaderno
-- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md)
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
 **Total en `sprint-05/`: 2 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 5). Aparte: ocupacion_diaria.csv en `data/` si aún no está; los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
@@ -68,7 +72,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_05_
 - [ ] `turisdata_reto.db` con la tabla `ocupacion_diaria` (1096 filas)
 - [ ] Regresión coincide con `statsmodels`; hay p-valor, intervalo y tamaño del efecto interpretados
 - [ ] Respuesta al cliente (≤ 150 palabras) con recomendación y límites
-- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Ficha_completa/Reto_Sprint_05.md#rúbrica-del-reto--cómo-se-puntúa-y-cómo-se-revisa) y lo ha anotado en el propio entregable
+- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y lo ha anotado en el propio entregable
 
 ## En casa (cuando puedas)
 
@@ -79,19 +83,19 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_05_
 
 ## Si te atascas
 
-1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_05.md).
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_05.md).
 2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
 
 ## Todo el material, por carpetas
 
-Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`.
 
 | Carpeta | Qué hay |
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
-| [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha completa del reto) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

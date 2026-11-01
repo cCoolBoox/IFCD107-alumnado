@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿cuál es el mejor modelo y cuánto nos cuesta mantenerlo?  
 **Fechas:** 11–12 de noviembre · **Horas:** 9 h (2 h teoría · 3 h práctica · 4 h PBL)
 
-📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_08.pdf) · [ecofriendly](pdf/README_Sprint_08_ecofriendly.pdf)
+📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
 > **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
@@ -45,6 +45,12 @@
 
 **En clase: 3 h 20 min.**
 
+**Al acabar el día, deberías poder decir:**
+
+- [ ] Sé buscar hiperparámetros sin engañarme con la nota de validación.
+- [ ] Sé elegir un modelo campeón justificando rendimiento, explicabilidad y coste.
+- [ ] Sé usar el test una sola vez y documentar el modelo en una ficha (*model card*).
+
 ## El reto en pocas palabras
 
 **Qué os pide el cliente.** TurisData ya sabe que se pueden predecir las cancelaciones (lo visteis en el Sprint 7). Ahora la pregunta es: **¿qué modelo ponemos en producción?** El gerente duda: *«¿el más preciso? ¿el que yo pueda entender? ¿el más barato de mantener?»*. Vuestro equipo tiene que **enfrentar varios modelos** (árboles, bosques, boosting y SVM), compararlos con las mismas reglas y **elegir un campeón con argumentos**.
@@ -53,7 +59,7 @@
 
 **Núcleo y extra.** Núcleo: *leaderboard* con tres familias de modelos, pesos de los criterios, test una sola vez y ficha del modelo. Extra: más familias y búsqueda de hiperparámetros en varias.
 
-Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_08_una_pagina.md). Para consultar: [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_08.md) (pasos, rúbrica, ayudas y errores frecuentes). Plantillas, datos y autoevaluación: [`3_Reto/4_Plantillas_y_entrega/`](3_Reto/4_Plantillas_y_entrega/).
+Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_08_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_08.md) (pasos, ayudas y errores frecuentes).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
@@ -62,7 +68,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_08_
 - [ ] `reto_S08.ipynb` · lo modificáis
 - [ ] `model_card.md` · lo creáis a partir de una plantilla
 - [ ] `README.md` · lo creáis
-- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md)
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
 **Total en `sprint-08/`: 4 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 7). Los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
@@ -72,7 +78,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_08_
 - [ ] Leaderboard con ≥ 6 modelos de al menos 4 familias
 - [ ] Hiperparámetros buscados con validación cruzada en train para dos familias
 - [ ] AUC de test calculado una sola vez y `model_card.md` completa
-- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Ficha_completa/Reto_Sprint_08.md#rúbrica-del-reto--cómo-se-puntúa-y-cómo-se-revisa) y lo ha anotado en el propio entregable
+- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y lo ha anotado en el propio entregable
 
 ## En casa (cuando puedas)
 
@@ -81,19 +87,19 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_08_
 
 ## Si te atascas
 
-1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_08.md).
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_08.md).
 2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
 
 ## Todo el material, por carpetas
 
-Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`.
 
 | Carpeta | Qué hay |
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
-| [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha completa del reto) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

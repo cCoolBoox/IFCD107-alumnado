@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿qué modelo es el mejor para nuestro problema y cómo lo demostramos sin engañarnos?  
 **Fechas:** 1–3/12 · **Horas:** 18 h (1 T · 3 P · 14 PBL) · **Hito:** 3/12 modelo candidato elegido
 
-📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_15.pdf) · [ecofriendly](pdf/README_Sprint_15_ecofriendly.pdf)
+📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
 > **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
@@ -21,7 +21,7 @@
 |---|---|---|---|
 | ☐ | 📖 Teoría · **Píldora: seguimiento de experimentos** | [Presentación S15.1](1_Teoria/S15.1_Pildora_seguimiento_de_experimentos.pdf) | 20 |
 | ☐ | 💻 Práctica · Práctica de seguimiento de experimentos | [Cuaderno S15_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb) | 50 |
-| ☐ | 🎯 Reto · **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el registro de experimentos | [registro de experimentos](3_Reto/4_Plantillas_y_entrega/registro_experimentos_plantilla.csv) | 130 |
+| ☐ | 🎯 Reto · **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el registro de experimentos | [registro de experimentos](3_Reto/1_Trabajar/plantillas/registro_experimentos_plantilla.csv) | 130 |
 | ☐ | 🎯 Reto · **Subid de nivel:** más experimentos con otra semilla o una mejora razonada; el registro sigue limpio y completo | — | 50 |
 
 **En clase: 4 h 10 min.**
@@ -57,13 +57,23 @@
 
 **En clase: 4 h 10 min.**
 
+**Al acabar el día, deberías poder decir:**
+
+- [ ] Sé comparar varios modelos con la misma partición y validación cruzada, sin fuga de datos.
+- [ ] Sé registrar mis experimentos para que otra persona los reproduzca.
+- [ ] Sé elegir un modelo candidato justificando rendimiento, coste y explicabilidad.
+
 ## El reto en pocas palabras
 
 **Qué os pide el cliente.** El cliente (el docente) quiere saber **qué modelo recomendáis y por qué**. No le basta con «el que tiene mejor número». Quiere saber:
 
+- si **la mejora frente al baseline justifica el coste y la complejidad**,
+- si el modelo **generaliza** (funciona con datos que no ha visto),
+- y que vuestros resultados **se pueden repetir**.
+
 **Qué vais a entregar:** el registro de experimentos, el notebook `03_modelos.ipynb`, la justificación de 1 página del candidato, el modelo guardado y una primera explicación (importancia de variables, SHAP o Grad-CAM).
 
-Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_15_una_pagina.md). Para consultar: [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_15.md) (pasos, rúbrica, ayudas y errores frecuentes). Plantillas, datos y autoevaluación: [`3_Reto/4_Plantillas_y_entrega/`](3_Reto/4_Plantillas_y_entrega/).
+Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_15_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_15.md) (pasos, ayudas y errores frecuentes).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
@@ -74,7 +84,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_15_
 - [ ] `modelo_candidato.joblib` · lo genera el cuaderno
 - [ ] `metadatos.json` · lo genera el cuaderno
 - [ ] `explicacion_modelo.png` · lo genera el cuaderno
-- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md)
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
 **Total en `sprint-15/`: 6 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 9). Los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
@@ -84,7 +94,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_15_
 - [ ] Semilla fija; el notebook se ejecuta de arriba abajo.
 - [ ] Modelo candidato elegido y justificado; test evaluado una sola vez.
 - [ ] Roles rotados, tablero actualizado y retro con acción concreta.
-- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Ficha_completa/Reto_Sprint_15.md#rúbrica-del-reto--cómo-se-puntúa-y-cómo-se-revisa) y lo ha anotado en el propio entregable
+- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y lo ha anotado en el propio entregable
 
 ## En casa (cuando puedas)
 
@@ -93,19 +103,19 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_15_
 
 ## Si te atascas
 
-1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_15.md).
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_15.md).
 2. Mira el [código explicado]() del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
 
 ## Todo el material, por carpetas
 
-Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`.
 
 | Carpeta | Qué hay |
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
-| [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha completa del reto) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

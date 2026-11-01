@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿podemos aprovechar las imágenes del cliente?  
 **Fechas:** 19–20 de noviembre · **Horas:** 12 h (2 h teoría · 4 h práctica · 6 h PBL)
 
-📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_11.pdf) · [ecofriendly](pdf/README_Sprint_11_ecofriendly.pdf)
+📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
 > **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
@@ -24,7 +24,7 @@
 | ☐ | 💻 Práctica · Convolución, pooling, CNN y *data augmentation* (los ejercicios marcados «en clase») | [Cuaderno S11_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_01_cnn.ipynb) | 40 |
 | ☐ | 📖 Teoría · Transfer learning y fine-tuning | [Presentación S11.2](1_Teoria/S11.2_Transfer_learning_y_fine_tuning.pdf) | 25 |
 | ☐ | 💻 Práctica · Transfer learning y fine-tuning (los ejercicios marcados «en clase») | [Cuaderno S11_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_02_transfer_learning.ipynb) | 75 |
-| ☐ | 🎯 Reto · Preparar los datos (paso 1) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_11_una_pagina.md) | 25 |
+| ☐ | 🎯 Reto · Preparar los datos (paso 1) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_11_una_pagina.md) | 25 |
 
 **En clase: 3 h 20 min.**
 
@@ -41,10 +41,16 @@
 | ☐ | 📖 Teoría · Detección de objetos y segmentación (versión corta) | [Presentación S11.3](1_Teoria/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) | 15 |
 | ☐ | 💻 Práctica · IoU y NMS con números pequeños (los ejercicios marcados «en clase»); el detector con OpenCV y la segmentación son para casa | [Cuaderno S11_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_03_deteccion_segmentacion.ipynb) | 35 |
 | ☐ | 💻 Práctica · Esqueleto del reto: dataset por carpetas y análisis de errores | [Cuaderno S11_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb) | 40 |
-| ☐ | 🎯 Reto · Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_11_una_pagina.md) | 80 |
+| ☐ | 🎯 Reto · Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_11_una_pagina.md) | 80 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-11/`, autoevaluación y coevaluación, review y retrospectiva | — | 30 |
 
 **En clase: 3 h 20 min.**
+
+**Al acabar el día, deberías poder decir:**
+
+- [ ] Sé reutilizar una red preentrenada (*transfer learning*) para clasificar imágenes.
+- [ ] Sé analizar los errores de un clasificador de imágenes, clase por clase.
+- [ ] Sé poner un umbral de confianza a un demostrador para que avise cuando no está seguro.
 
 ## El reto en pocas palabras
 
@@ -54,7 +60,7 @@
 
 **Núcleo y extra.** Núcleo: un modelo de *transfer learning* bien evaluado, con análisis de errores y demostrador. Extra: *fine-tuning* y comparar más modelos.
 
-Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_11_una_pagina.md). Para consultar: [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_11.md) (pasos, rúbrica, ayudas y errores frecuentes). Plantillas, datos y autoevaluación: [`3_Reto/4_Plantillas_y_entrega/`](3_Reto/4_Plantillas_y_entrega/).
+Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_11_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_11.md) (pasos, ayudas y errores frecuentes).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
@@ -62,7 +68,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_11_
 - [ ] `reto_vision_cliente.ipynb` · lo modificáis
 - [ ] `analisis_errores.md` · lo creáis
 - [ ] `README.md` · lo creáis
-- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md)
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
 **Total en `sprint-11/`: 3 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 6). Aparte: clasificador_alojamientos.keras; los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
@@ -71,7 +77,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_11_
 - [ ] Dataset por carpetas comprobado por clase; test usado una sola vez
 - [ ] Métricas por clase, matriz de confusión y ≥ 6 errores analizados
 - [ ] Demostrador con umbral de confianza y opción «revisar a mano»
-- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Ficha_completa/Reto_Sprint_11.md#rúbrica-del-reto--cómo-se-puntúa-y-cómo-se-revisa) y lo ha anotado en el propio entregable
+- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y lo ha anotado en el propio entregable
 
 ## En casa (cuando puedas)
 
@@ -80,19 +86,19 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_11_
 
 ## Si te atascas
 
-1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_11.md).
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_11.md).
 2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
 
 ## Todo el material, por carpetas
 
-Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`.
 
 | Carpeta | Qué hay |
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
-| [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha completa del reto) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

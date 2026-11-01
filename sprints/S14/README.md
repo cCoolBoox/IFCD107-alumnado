@@ -3,7 +3,7 @@
 **Pregunta guía:** ¿qué problema vamos a resolver, con qué datos y cómo sabremos que lo hemos resuelto?  
 **Fechas:** 26 al 30 de noviembre · **Horas:** 18 h (1 h teoría · 3 h práctica · 14 h PBL) · **Hitos:** 26/11 elección de brief · 27/11 ficha aprobada (go / no-go)
 
-📄 **Este README en PDF** (para imprimir; descárgalo para que funcionen los enlaces): [a color](pdf/README_Sprint_14.pdf) · [ecofriendly](pdf/README_Sprint_14_ecofriendly.pdf)
+📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
 > **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
@@ -22,10 +22,10 @@
 | ☐ | 📖 Teoría · Lanzamiento del proyecto final: cómo formular un proyecto de IA (canvas y criterios de éxito) | [Presentación S14.1](1_Teoria/S14.1_Lanzamiento_del_proyecto_final.pdf) | 25 |
 | ☐ | 🔔 Ceremonia · Planning del sprint: leer las reglas y repartir roles | — | 10 |
 | ☐ | 💻 Práctica · Taller de Design Thinking: empatía, «Cómo podríamos…», dos briefs candidatos y canvas borrador | — | 40 |
-| ☐ | 🎯 Reto · Elegir el brief (**antes del descanso**, hito del día) | [Elegir el brief](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_una_pagina.md) | 15 |
-| ☐ | 🎯 Reto · Buscar y validar datos (licencia, tamaño, acceso; plan de datos: plantilla) | [plantilla](3_Reto/4_Plantillas_y_entrega/plantilla_plan_datos_licencias.md) | 60 |
+| ☐ | 🎯 Reto · Elegir el brief (**antes del descanso**, hito del día) | [Elegir el brief](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md) | 15 |
+| ☐ | 🎯 Reto · Buscar y validar datos (licencia, tamaño, acceso; plan de datos: plantilla) | [plantilla](3_Reto/1_Trabajar/plantillas/plantilla_plan_datos_licencias.md) | 60 |
 | ☐ | 🎯 Reto · **Subid de nivel:** repasad la rúbrica del reto y mejorad el criterio más flojo (canvas, brief o plan de datos) | — | 50 |
-| ☐ | 🎯 Reto · Ficha del proyecto y entrega **antes de las 14:30** | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_una_pagina.md) | 50 |
+| ☐ | 🎯 Reto · Ficha del proyecto y entrega **antes de las 14:30** | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md) | 50 |
 
 **En clase: 4 h 10 min.**
 
@@ -38,8 +38,8 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 🎯 Reto · Leer el go / no-go del docente y, si hace falta, corregir la ficha | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_una_pagina.md) | 20 |
-| ☐ | 🎯 Reto · EDA, calidad del dato y *baseline* (paso 5) | [Reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_una_pagina.md) | 180 |
+| ☐ | 🎯 Reto · Leer el go / no-go del docente y, si hace falta, corregir la ficha | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md) | 20 |
+| ☐ | 🎯 Reto · EDA, calidad del dato y *baseline* (paso 5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md) | 180 |
 | ☐ | 🎯 Reto · **Subid de nivel:** mejorad el criterio más flojo de la rúbrica (un hallazgo por subgrupos, un informe de calidad más claro o un baseline mejor explicado) | — | 50 |
 
 **En clase: 4 h 10 min.**
@@ -53,17 +53,23 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 🎯 Reto · Backlog y sprints, registro de riesgos éticos y README del repositorio (paso 6) | [Backlog y sprints](3_Reto/4_Plantillas_y_entrega/plantilla_backlog_y_sprints.md) | 140 |
+| ☐ | 🎯 Reto · Backlog y sprints, registro de riesgos éticos y README del repositorio (paso 6) | [Backlog y sprints](3_Reto/1_Trabajar/plantillas/plantilla_backlog_y_sprints.md) | 140 |
 | ☐ | 🎯 Reto · **Subid de nivel:** mejorad el criterio más flojo de la rúbrica antes de la entrega (historias con criterios, riesgos con mitigación, README que otra persona pueda seguir) | — | 50 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-14/`, autoevaluación y coevaluación, review (paso 7: 5 min por equipo) y retrospectiva | — | 60 |
 
 **En clase: 4 h 10 min.**
 
+**Al acabar el día, deberías poder decir:**
+
+- [ ] Sé formular un proyecto de IA: pregunta de negocio, decisión que apoya y métrica de éxito.
+- [ ] Sé documentar la fuente, la licencia y las limitaciones de unos datos reales.
+- [ ] Sé planificar el trabajo con un backlog de historias y anticipar los riesgos éticos.
+
 ## El reto en pocas palabras
 
 **Núcleo y extra.** Núcleo: brief elegido, ficha aprobada, plan de datos y *baseline*. Extra: EDA ampliado y backlog más detallado.
 
-Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_una_pagina.md). Para consultar: [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_14.md) (pasos, rúbrica, ayudas y errores frecuentes). Plantillas, datos y autoevaluación: [`3_Reto/4_Plantillas_y_entrega/`](3_Reto/4_Plantillas_y_entrega/).
+Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_14.md) (pasos, ayudas y errores frecuentes).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 
@@ -76,7 +82,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_
 - [ ] `riesgos_eticos.md` · lo creáis a partir de una plantilla
 - [ ] `README.md` · lo creáis a partir de una plantilla
 - [ ] `requirements.txt` · lo creáis
-- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/4_Plantillas_y_entrega/autoevaluacion_y_coevaluacion.md)
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
 **Total en `sprint-14/`: 8 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 11). Aparte: Datos descargados; descargar_datos.py; los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
@@ -86,7 +92,7 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_
 - [ ] EDA con informe de calidad y baseline con métrica definida antes de ver resultados.
 - [ ] Backlog de 10-15 historias y tablero actualizado.
 - [ ] Registro de riesgos con ≥ 5 riesgos específicos.
-- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Ficha_completa/Reto_Sprint_14.md#rúbrica-del-reto--cómo-se-puntúa-y-cómo-se-revisa) y lo ha anotado en el propio entregable
+- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y lo ha anotado en el propio entregable
 
 ## En casa (cuando puedas)
 
@@ -95,18 +101,18 @@ Para trabajar: [reto en una página](3_Reto/1_Reto_en_una_pagina/Reto_Sprint_14_
 
 ## Si te atascas
 
-1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/2_Ficha_completa/Reto_Sprint_14.md).
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_14.md).
 2. Mira el [código explicado]() del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
 
 ## Todo el material, por carpetas
 
-Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`; sus PDF (color y ecofriendly) están en la subcarpeta `pdf/`.
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`.
 
 | Carpeta | Qué hay |
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
-| [`3_Reto/`](3_Reto/) | `1_Reto_en_una_pagina` · `2_Ficha_completa` · `3_Laminas` · `4_Plantillas_y_entrega` |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha completa del reto) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

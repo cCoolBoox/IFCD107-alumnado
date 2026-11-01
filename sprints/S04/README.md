@@ -43,9 +43,9 @@
 
 **Al acabar el día, deberías poder decir:**
 
-- [ ] `python test_kpis.py` pasa todas las pruebas (12 de 12).
-- [ ] README y código subidos a `sprint-04/` de mi repo.
-- [ ] Autoevaluación y coevaluación del Sprint 4 rellenadas.
+- [ ] Sé leer un CSV con `try/except` y avisar de las filas con errores.
+- [ ] Sé guardar los resultados en un JSON y juntar mis funciones en una herramienta con `main`.
+- [ ] Sé explicar, línea a línea, qué hace el código de mi equipo y cómo lo comprueban las pruebas.
 
 ## El reto en pocas palabras
 
