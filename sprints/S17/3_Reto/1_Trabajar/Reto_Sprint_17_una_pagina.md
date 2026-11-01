@@ -2,9 +2,17 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_17.md](../3_Consultar/Reto_Sprint_17.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del relato está en [`plantilla_storytelling.md`](plantillas/plantilla_storytelling.md) y el guion de defensa en [`guion_defensa.md`](../../1_Teoria/actividades/guion_defensa.md).
 
-**El cliente.** Un directivo y su equipo (el tribunal) **no son técnicos**. Tienen que salir sabiendo: qué problema resolvéis, qué habéis encontrado, qué recomendáis y **de qué no deben fiarse**.
-**Qué entregáis (no cambia):** una presentación en PDF de **12 diapositivas como máximo** (antes de las 8:30 del 14/12), la **defensa en directo** con demo y plan B en vídeo, y la plantilla de storytelling rellena con la revisión con la rúbrica. **Hablan todas las personas.**
-**Tiempo:** día 1, 4 h 10 min (teoría, práctica y ensayos, con una ronda extra) · día 2, 2 h de defensa (turno de 13 a 22 min según los equipos).
+- **El cliente.**
+    - Un directivo y su equipo (el tribunal) **no son técnicos**.
+    - Tienen que salir sabiendo: qué problema resolvéis, qué habéis encontrado, qué recomendáis y **de qué no deben fiarse**.
+- **Qué entregáis (no cambia):**
+    - Una presentación en PDF de **12 diapositivas como máximo** (antes de las 8:30 del 14/12).
+    - La **defensa en directo** con demo y plan B en vídeo.
+    - La plantilla de storytelling rellena con la revisión con la rúbrica.
+    - **Hablan todas las personas.**
+- **Tiempo:**
+    - Día 1: 4 h 10 min (teoría, práctica y ensayos, con una ronda extra).
+    - Día 2: 2 h de defensa (turno de 13 a 22 min según los equipos).
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

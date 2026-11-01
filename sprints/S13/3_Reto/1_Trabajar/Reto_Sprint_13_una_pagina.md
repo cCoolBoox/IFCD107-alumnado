@@ -2,9 +2,16 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_13.md](../3_Consultar/Reto_Sprint_13.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); el texto del informe está en [`plantilla_informe_visual.md`](plantillas/plantilla_informe_visual.md) y el cuaderno en [`S13_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb).
 
-**El cliente.** Marcos, director de TurisData Canarias, tiene 10 minutos y no sabe qué es un AUC. Pide: *«Una página. ¿Puedo fiarme del modelo, qué mueve las cancelaciones y qué hago el lunes?»*
-**Qué entregáis (no cambia):** el informe de una página (`informe_visual.md` con el PNG del panel) y el cuaderno que lo genera. **Al final del sprint se suben a `sprint-13/` del repositorio del equipo: 3 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** 25 min de reto el 25/11, dentro del último día del Sprint 12; luego, entrega y review. **Llegad con el modelo elegido.**
+- **El cliente.**
+    - Marcos, director de TurisData Canarias, tiene 10 minutos y no sabe qué es un AUC.
+    - Pide: *«Una página. ¿Puedo fiarme del modelo, qué mueve las cancelaciones y qué hago el lunes?»*
+- **Qué entregáis (no cambia):**
+    - El informe de una página (`informe_visual.md` con el PNG del panel).
+    - El cuaderno que lo genera.
+    - Al final se suben a `sprint-13/` del repositorio del equipo (lista completa en «Antes de entregar»).
+- **Tiempo en clase:**
+    - 25 min de reto el 25/11, dentro del último día del Sprint 12; luego, entrega y review.
+    - **Llegad con el modelo elegido.**
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

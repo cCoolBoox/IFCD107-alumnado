@@ -2,9 +2,21 @@
 
 > Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_12.md](../3_Consultar/Reto_Sprint_12.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`plantilla_informe_cliente.md`](plantillas/plantilla_informe_cliente.md). El informe visual del Sprint 13 es otro reto, con su propia ficha.
 
-**El cliente.** TurisData recibe decenas de reseñas y de mensajes con las mismas preguntas. Quiere (1) saber **qué opinan y de qué se quejan**, (2) **prever la ocupación de la semana siguiente** y (3) probar un **asistente que responda con la política del alojamiento sin inventar nada** (RAG). Los datos son sintéticos: decidlo en el informe.
-**Qué entregáis (no cambia):** (1) el informe de reseñas, (2) el cuaderno de ocupación, (3) el cuaderno del asistente con su tabla de evaluación y (4) la nota de IA responsable, más un `LEEME.md` de 5 líneas. **Al final del sprint se suben a `sprint-12/` del repositorio del equipo: 8 ficheros del equipo + 1 autoevaluación y coevaluación por persona** (`autoevaluacion_nombre.md`).
-**Tiempo en clase:** planning 10 min (día 1) · reto 130 min y entrega y review 35 min (días 2 y 3). **Se reparte:** cada persona lidera una parte, pero todas entienden todas.
+- **El cliente.**
+    - TurisData recibe decenas de reseñas y de mensajes con las mismas preguntas.
+    - Quiere tres cosas:
+        - Saber **qué opinan y de qué se quejan**.
+        - **Prever la ocupación de la semana siguiente**.
+        - Probar un **asistente que responda con la política del alojamiento sin inventar nada** (RAG).
+    - Los datos son sintéticos: decidlo en el informe.
+- **Qué entregáis (no cambia):**
+    - El informe de reseñas y el cuaderno de ocupación.
+    - El cuaderno del asistente con su tabla de evaluación.
+    - La nota de IA responsable y un `LEEME.md` de 5 líneas.
+    - Al final se suben a `sprint-12/` del repositorio del equipo (lista completa en «Antes de entregar»).
+- **Tiempo en clase:**
+    - Planning: 10 min (día 1); reto: 130 min y entrega y review: 35 min (días 2 y 3).
+    - **Se reparte:** cada persona lidera una parte, pero todas entienden todas.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 
