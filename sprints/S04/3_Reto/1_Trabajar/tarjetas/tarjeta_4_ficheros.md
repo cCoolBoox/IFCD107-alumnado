@@ -20,7 +20,7 @@
 
 Tres ideas, de la más pequeña a la más importante:
 
-1. **En un CSV todo llega como texto.** `"2"` no es el número 2: se convierte con `int("2")`, `float("100.0")` o `date.fromisoformat("2025-01-01")`. Si el texto no sirve (`int("abc")`), Python lanza un `ValueError`.
+1. **Un CSV es una tabla guardada como texto** (una fila por línea, valores separados por comas), así que **todo llega como texto.** `"2"` no es el número 2: se convierte con `int("2")`, `float("100.0")` o `date.fromisoformat("2025-01-01")`. Si el texto no sirve (`int("abc")`), Python lanza un `ValueError`.
 2. **Un fichero real siempre trae filas mal, y el programa no se rompe:** prueba cada fila con `try` / `except` («intenta esto; si falla de esta manera, haz esto otro»), descarta la mala, guarda un aviso y sigue con la siguiente.
 3. **`leer_reservas` devuelve dos cosas a la vez:** las reservas buenas y los avisos de las descartadas (`return reservas, avisos`; una *tupla*, dos valores juntos). Quien la llama las recoge así: `reservas, avisos = leer_reservas(ruta)`.
 

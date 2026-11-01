@@ -38,7 +38,7 @@ reservas.append({...})    # mete una ficha nueva al final de la caja
 |---|---|---|---|---|---|
 | 1 | 📚 Aprender | Listas (ejercicios 1 y 2) | Curso: [listas](https://www.curso.soultechlabs.io/basico/#list) | 15 | Los dos ejercicios en verde |
 | 2 | 📚 Aprender | Diccionarios (los 3 ejercicios) | Curso: [diccionarios](https://www.curso.soultechlabs.io/basico/#dict) | 10 | Los tres ejercicios en verde |
-| 3 | 🛠️ Construir | Sustituir cada `TODO` del archivo (cambiad el `None` o escribid las líneas que faltan). Los seis apartados, en «Paso 3» (abajo) | [`mision_1_datos.py`](../reto_herramientas/mision_1_datos.py) | 13 | Ya no queda ningún `TODO` |
+| 3 | 🛠️ Construir | Sustituir cada `TODO` del archivo (un aviso de «aquí falta algo»): cambiad el `None`, que significa «vacío», o escribid las líneas que faltan. Los seis apartados, en «Paso 3» (abajo) | [`mision_1_datos.py`](../reto_herramientas/mision_1_datos.py) | 13 | Ya no queda ningún `TODO` |
 | 4 | ✅ Comprobar | Ejecutarlo **después de cada apartado**, no al final | Terminal: `python mision_1_datos.py` | 2 | «✅ ¡Misión 1 superada!» |
 | 5 | 📚 Aprender | «El total de una reserva» y «Un mensaje con f-string»: lo mismo, montado con piezas | Taller: [bloque 1](https://www.curso.soultechlabs.io/taller/#t-total) | 10 | Los dos puzles montados |
 

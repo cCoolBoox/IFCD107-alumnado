@@ -14,7 +14,7 @@
 
 ## 🎯 Qué lograréis
 
-`exportar_json` y `main`: **la herramienta de verdad**, que se ejecuta con un solo comando, lee el CSV, calcula los tres KPI, avisa si algo está mal y guarda un JSON que otros sistemas puedan leer. Y después, **la entrega**.
+`exportar_json` y `main`: **la herramienta de verdad**, que se ejecuta con un solo comando, lee el CSV, calcula los tres KPI, avisa si algo está mal y guarda un **JSON** (los mismos datos como diccionarios y listas, escritos en un fichero de texto) que otros sistemas puedan leer. Y después, **la entrega**.
 
 ## 💡 La idea en un minuto
 
@@ -26,7 +26,7 @@ leer_reservas  →  calcular_kpis  →  exportar_json  →  mensaje de éxito  (
       mensaje de error claro por sys.stderr  (devuelve 1)
 ```
 
-El **código de salida** (0 = bien, 1 = mal) es la forma en que un programa le dice al sistema si ha ido bien. Y un error **no es un `Traceback` rojo**: es un mensaje que entiende cualquiera.
+El **código de salida** (0 = bien, 1 = mal) es la forma en que un programa le dice al sistema si ha ido bien. Los errores se escriben por `sys.stderr`, la salida de errores de la terminal. Y un error **no es un `Traceback`** (esas líneas rojas que salen cuando Python se rompe): es un mensaje que entiende cualquiera.
 
 ## 👣 Paso a paso
 
@@ -41,7 +41,7 @@ El **código de salida** (0 = bien, 1 = mal) es la forma en que un programa le d
 | 5 | ✅ Comprobar | Provocar **a propósito** los tres errores, siempre sobre **copias** del CSV (ver «Paso 5», abajo) | Terminal | 10 | Los tres casos dan lo que dice la tabla |
 | 6 | 🛠️ Construir | Copiar `README_PLANTILLA.md` como `README.md` y rellenarlo (apartado 4 de [Entrega y rúbrica](../../2_Entregar/entrega_y_rubrica.md)) | `README.md` | 10 | Otra persona podría ejecutar el proyecto siguiendo solo el README |
 | 7 | ✅ Comprobar | Revisión con la rúbrica: **alguien que no escribió esa parte** la revisa y anota el resultado en el README (apartado 3 de Entrega y rúbrica) | `README.md`, sección «Revisión con la rúbrica» | 5 | La sección está rellena |
-| 8 | 📤 Entregar | Subir los ficheros del equipo a `sprint-04/` en **tres o más subidas, hechas por personas distintas**; **cada persona** sube su autoevaluación y coevaluación (apartado 5 de Entrega y rúbrica) | GitHub, carpeta `sprint-04/` | 10 | Están los cuatro ficheros del equipo y una hoja por persona (**4 + N**), con tres *commits* o más |
+| 8 | 📤 Entregar | Subir los ficheros del equipo a `sprint-04/` en **tres o más subidas, hechas por personas distintas**; **cada persona** sube su autoevaluación y coevaluación (apartado 5 de Entrega y rúbrica) | GitHub, carpeta `sprint-04/` | 10 | Están los cuatro ficheros del equipo y una hoja por persona (**4 + N**), con tres *commits* (versiones guardadas) o más |
 | 9 | 📤 Entregar | La review: enseñar el script con el CSV real, el JSON, un error provocado con su mensaje y las pruebas en verde. Explicar **una decisión de diseño** (por ejemplo, cómo definisteis la ocupación) | A la clase | 3–5 | Lo habéis enseñado |
 
 Si sobran minutos, empezad el extra (pruebas propias o `extra/plantilla_kpis_pandas.py`).

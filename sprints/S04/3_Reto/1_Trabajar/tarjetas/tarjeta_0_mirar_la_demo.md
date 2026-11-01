@@ -35,7 +35,7 @@ Todo lo que haréis en el reto es una variación de estas cuatro piezas.
 
 | # | Tipo | Qué hacéis | Dónde | Min | Está terminado cuando |
 |---|---|---|---|---|---|
-| 1 | 🔧 Preparar | Descargar y descomprimir. Dentro está **todo junto**: la plantilla, los archivos de las misiones y el CSV | [`reto_herramientas.zip`](https://raw.githubusercontent.com/cCoolBoox/IFCD107-alumnado/main/sprints/S04/3_Reto/1_Trabajar/reto_herramientas.zip) | 2 | Veis `demo_cliente.py` dentro de la carpeta |
+| 1 | 🔧 Preparar | Descargar y descomprimir. Dentro está **todo junto**: la plantilla, los archivos de las misiones y el CSV (una tabla guardada como texto, con los valores separados por comas) | [`reto_herramientas.zip`](https://raw.githubusercontent.com/cCoolBoox/IFCD107-alumnado/main/sprints/S04/3_Reto/1_Trabajar/reto_herramientas.zip) | 2 | Veis `demo_cliente.py` dentro de la carpeta |
 | 2 | 🔧 Preparar | Abrir la carpeta en VS Code y abrir una terminal **en ella**; comprobar la versión de Python | VS Code: *File → Open Folder…* y *Terminal → New Terminal*; después `python --version` | 3 | Sale **3.11 o superior** (si da error, probad `python3` y usadlo en todo el reto) |
 | 3 | 📚 Aprender | Leer el programa **de arriba abajo, sin ejecutarlo**. Buscar las cuatro piezas, subrayar lo que no entendáis y apuntar qué creéis que va a escribir | [`demo_cliente.py`](../reto_herramientas/demo_cliente.py) (sus 8 datos: [`reservas_demo.py`](../reto_herramientas/reservas_demo.py)) | 5 | Tenéis apuntadas una predicción y vuestras dudas |
 | 4 | 📚 Aprender | El docente lo proyecta y lo comenta. Es el momento de preguntar lo subrayado | La pantalla del aula | 5 | Se han resuelto vuestras dudas |

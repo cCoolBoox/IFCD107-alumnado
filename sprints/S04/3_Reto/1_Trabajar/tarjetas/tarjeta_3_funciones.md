@@ -39,7 +39,7 @@ def noches_totales(reservas):          # entra: la lista de reservas
 | 1 | 📚 Aprender | Funciones (ejercicios 1 y 2): `def`, parámetros y `return` | Curso: [funciones](https://www.curso.soultechlabs.io/basico/#func) | 10 | Los dos ejercicios en verde |
 | 2 | 📚 Aprender | «Contar con un diccionario» e «Ingreso medio de las reservas confirmadas». **Son casi vuestras dos funciones**, montadas con piezas | Taller: [bloque 2](https://www.curso.soultechlabs.io/taller/#t-conteo) | 10 | Los dos puzles montados |
 | 3 | ✅ Comprobar | Ver las pruebas en rojo. La fase 1 son **4 pruebas** y empiezan fallando: es lo normal | Terminal: `python test_kpis.py 1` | 5 | Veis «0 de 4» y qué espera cada prueba |
-| 4 | 🛠️ Construir | `tasa_cancelacion_por_canal`, siguiendo los comentarios «Paso» de su docstring (ver «Paso 4», abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 20 | La función está escrita con un `return` |
+| 4 | 🛠️ Construir | `tasa_cancelacion_por_canal`, siguiendo los comentarios «Paso» de su docstring (el texto entre comillas triples, justo debajo de `def`, que explica la función; ver «Paso 4», abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 20 | La función está escrita con un `return` |
 | 5 | ✅ Comprobar | Ejecutar la prueba, leer qué esperaba y qué recibió, corregir y repetir | Terminal: `python test_kpis.py 1` | 5 | `test_tasa_cancelacion…` en verde |
 | **Parte B** | | *(después de la consolidación)* | | **40** | |
 | 6 | 🛠️ Construir | `ingreso_medio_por_reserva` (ver «Paso 6», abajo) | `kpis.py` | 17 | La función está escrita con un `return` |

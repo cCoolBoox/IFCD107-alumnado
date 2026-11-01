@@ -644,7 +644,8 @@ th,td{padding:7px 12px;text-align:left;white-space:nowrap}
       '<div><h3>Misión ' + n + ' · ' + esc(m.t) + '</h3><p class="mwhen">' + m.dia + ' · ' + m.min + ' · ' + esc(m.como) + '</p></div>' +
       '<dl><dt>QUÉ HACÉIS</dt><dd>' + m.esc + '</dd><dt>ESTÁ HECHA CUANDO</dt><dd>' + m.ok + '</dd>' +
       (m.extra ? '<dt>ADEMÁS</dt><dd>' + m.extra + '</dd>' : '') + '</dl>' +
-      '<p class="mlink"><a href="' + BASE + m.card + '" target="_blank" rel="noopener">Abrir la tarjeta de la misión ' + n + '</a></p>';
+      '<p class="mlink"><a target="_blank" rel="noopener">Abrir la tarjeta de la misión ' + n + '</a></p>';
+    $("mpanel").querySelector(".mlink a").setAttribute("href", BASE + m.card);
   }
   pick(3);
 })();
