@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Demo interactiva del reto del Sprint 4 (IFCD107): qué hace la herramienta final, un simulador para ensuciar los datos y qué pieza construye cada misión.">
+<title>Reto TurisData · demo interactiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Maqueta: una columna de lectura. Primero el resultado (terminal + JSON), luego el simulador de datos sucios,
+   después el mapa de las seis misiones sobre el flujo CSV → JSON y, al final, qué se entrega.
+   Identidad: la de las infografías del curso (tinta azulada, óxido, verde azulado, crema). */
+:root{
+  --bg:#F5F1E8; --surface:#FFFFFF; --ink:#1D2433; --muted:#566073; --line:#D9D2C0; --soft:#EFE7D2;
+  --accent:#C23B1F; --accent-soft:#F7DDD4; --teal:#0F7F7F; --teal-soft:#D5ECEA; --sky:#DCE6F5; --blue:#3D5F96;
+  --ok:#1B7F4B; --ok-soft:#D9F0E3; --bad:#B42318; --bad-soft:#FBE0DC; --warn:#8A5A00; --warn-soft:#F6E7C4;
+  --code-bg:rgba(29,36,51,.08); --focus:#1D2433;
+  --term-bg:#141B27; --term-fg:#E6E9F0; --term-dim:#8E99AE; --term-ok:#6FD3A0; --term-err:#FF8D78; --term-prompt:#7FD6D0;
+  --f-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+    --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+    --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+    --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0;
+    --term-bg:#0A0F17; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+  --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+  --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+  --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0;
+  --term-bg:#0A0F17; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5.2vw,52px);line-height:1.05;font-weight:800;letter-spacing:-.02em;margin-top:8px}
+h2{font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+h3{font-size:20px;line-height:1.15;font-weight:800}
+p{margin:0}
+code{font-family:var(--f-mono);font-size:.86em;background:var(--code-bg);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+a{color:var(--accent);font-weight:700;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+button{font:inherit;color:inherit;cursor:pointer}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:62ch;margin-top:10px}
+.cmd{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
+.cmd .line{flex:1 1 320px;min-width:0;background:var(--term-bg);color:var(--term-fg);border-radius:12px;padding:12px 16px;font-family:var(--f-mono);font-size:14px;overflow-wrap:anywhere}
+.cmd .line b{color:var(--term-prompt);font-weight:600;margin-right:8px}
+.btn{border:2px solid var(--ink);background:transparent;border-radius:10px;padding:9px 14px;font-weight:700;font-size:14px}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.small{padding:6px 11px;font-size:13px}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sh .st{font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--accent);letter-spacing:.12em;white-space:nowrap}
+.sh .ln{flex:1;height:2px;background:var(--line)}
+.sec-intro{color:var(--muted);max-width:66ch;margin:-4px 0 16px}
+
+/* pestañas de escenarios */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tab{border:2px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 16px;font-weight:700;font-size:14.5px}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.why{background:var(--teal-soft);border-radius:12px;padding:11px 16px;margin-bottom:14px;font-size:15.5px}
+.why b{color:var(--teal)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid2>*{min-width:0}
+@media (max-width:860px){.grid2{grid-template-columns:1fr}}
+.box{background:var(--surface);border:2px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.box>.bh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 14px;border-bottom:2px solid var(--line);font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:7px 12px;text-align:left;white-space:nowrap}
+.csv th{font-family:var(--f-mono);font-size:12.5px;font-weight:600;color:var(--muted);border-bottom:2px solid var(--line)}
+.csv td{font-family:var(--f-mono);font-size:13px;border-bottom:1px solid var(--line)}
+.csv .ln-n{color:var(--muted);font-size:12px}
+.csv .more{color:var(--muted);font-style:italic}
+.csv td.bad,.csv th.bad{background:var(--bad-soft);color:var(--bad);font-weight:600}
+.csv .gap td{text-align:center;color:var(--muted)}
+.csvnote{padding:8px 14px;font-size:14px;color:var(--muted);border-top:2px solid var(--line)}
+
+/* terminal */
+.term{background:var(--term-bg);color:var(--term-fg);font-family:var(--f-mono);font-size:13.5px;line-height:1.6;padding:14px 16px;overflow-x:auto;min-height:118px}
+.term .p{color:var(--term-prompt)}
+.term .ok{color:var(--term-ok)}
+.term .err{color:var(--term-err)}
+.term .dim{color:var(--term-dim)}
+.term .cmdl{white-space:pre-wrap;overflow-wrap:anywhere}
+.exit{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:10px 14px;font-size:14px;border-top:2px solid var(--line)}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 11px;font-weight:800;font-size:12.5px;letter-spacing:.04em}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.json{font-family:var(--f-mono);font-size:13px;line-height:1.55;padding:12px 16px;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;min-height:118px}
+.json .k{color:var(--blue)} .json .s{color:var(--teal)} .json .n{color:var(--accent);font-weight:600}
+.empty{padding:16px;color:var(--muted);font-size:15px}
+
+/* simulador */
+.simbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:12px}
+.simbar label{font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px}
+.cap{width:5.2em;font-family:var(--f-mono);font-size:14px;padding:6px 8px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.sim td,.sim th{padding:5px 8px;vertical-align:top}
+.sim th{font-family:var(--f-mono);font-size:12px;font-weight:600;color:var(--muted);border-bottom:2px solid var(--line)}
+.sim td{border-bottom:1px solid var(--line)}
+.sim .ln-n{font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-top:11px}
+.cell{font-family:var(--f-mono);font-size:13px;padding:5px 7px;border:2px solid transparent;border-radius:7px;background:var(--soft);color:var(--ink);width:100%}
+.cell.bad{border-color:var(--bad);background:var(--bad-soft);color:var(--bad)}
+.stt{min-width:230px;white-space:normal;padding-top:6px}
+.stt small{display:block;font-family:var(--f-mono);font-size:12px;color:var(--bad);margin-top:3px;overflow-wrap:anywhere}
+.sumline{padding:9px 14px;font-weight:700;font-size:14.5px;border-top:2px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 18px}
+.hint{font-size:14px;color:var(--muted)}
+
+/* mapa */
+.chips{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:16px}
+.cgroup{display:flex;flex-direction:column;gap:6px}
+.cgroup .gl{font-size:11.5px;font-weight:800;letter-spacing:.12em;color:var(--muted)}
+.crow{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:8px 13px;text-align:left;line-height:1.2}
+.chip b{font-family:var(--f-display);font-size:15px;display:block}
+.chip small{font-size:12.5px;color:var(--muted)}
+.chip.tue{background:var(--sky)} .chip.wed{background:var(--teal-soft)}
+.chip[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.flow{background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.mainbar{border:2px dashed var(--line);border-radius:10px;padding:8px 12px;font-size:14px;color:var(--muted)}
+.mainbar b{color:var(--ink);font-family:var(--f-mono);font-size:13px}
+.stages{display:grid;grid-template-columns:minmax(0,1fr) 16px minmax(0,1.4fr) 16px minmax(0,1.75fr) 16px minmax(0,1fr) 16px minmax(0,.9fr);gap:6px;align-items:stretch}
+.arrow{display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:800;font-size:18px}
+.node{border:2px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;background:var(--bg);min-width:0;font-size:13.5px;line-height:1.35}
+.node b{font-family:var(--f-mono);font-size:13px;overflow-wrap:anywhere}
+.node small{color:var(--muted);font-size:12.5px}
+.node.io{background:var(--soft)}
+.nt{font-size:10.5px;font-weight:800;letter-spacing:.12em;color:var(--muted)}
+.sub{border:1.5px solid var(--line);border-radius:8px;padding:6px 8px;background:var(--surface);font-size:12.5px}
+.sub code{font-size:11.5px;padding:0;background:none;font-weight:600}
+.badge{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.06em;background:var(--ink);color:var(--bg);border-radius:6px;padding:1px 7px}
+.base{display:grid;grid-template-columns:auto repeat(4,1fr);gap:8px;align-items:stretch}
+.base .bl{font-size:11.5px;font-weight:800;letter-spacing:.1em;color:var(--muted);align-self:center;padding-right:6px}
+@media (max-width:860px){
+  .stages{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg);height:18px}
+  .base{grid-template-columns:1fr 1fr}
+  .base .bl{grid-column:1/-1}
+}
+.on{border-color:var(--accent)!important;background:var(--accent-soft)!important;box-shadow:0 0 0 2px var(--accent)}
+.dim{opacity:.45}
+.dim .dim{opacity:1}
+.mpanel{margin-top:14px;background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;grid-template-columns:auto 1fr;gap:6px 18px}
+.mnum{font-family:var(--f-display);font-weight:800;font-size:64px;line-height:.9;color:var(--accent)}
+.mpanel dl{margin:10px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;grid-column:1/-1}
+.mpanel dt{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--muted);padding-top:3px}
+.mpanel dd{margin:0}
+.mwhen{color:var(--muted);font-size:14.5px;margin-top:4px}
+.mlink{grid-column:1/-1;margin-top:8px}
+@media (max-width:560px){.mpanel dl{grid-template-columns:1fr}.mpanel dt{padding-top:0}.mnum{font-size:48px}}
+
+/* entrega */
+.files{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (max-width:560px){.files{grid-template-columns:1fr}}
+.file{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:10px 14px}
+.file b{font-family:var(--f-mono);font-size:14px}
+.file span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+.crit{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+@media (max-width:560px){.crit{grid-template-columns:1fr}}
+.crit div{background:var(--soft);border-radius:12px;padding:10px 14px;font-size:14.5px}
+.crit b{display:block;font-family:var(--f-display);font-size:16px}
+.levels{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center;font-size:14px;color:var(--muted)}
+.foot{font-size:14px;color:var(--muted);border-top:2px solid var(--line);padding-top:16px;display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between}
+.swipe{display:none;padding:0 14px 10px;font-size:13px;color:var(--muted)}
+@media (max-width:640px){
+  .swipe{display:block}
+  .sim,.sim tbody{display:block}
+  .sim thead{display:none}
+  .sim tr{display:grid;grid-template-columns:1fr 1fr;grid-auto-flow:row dense;gap:8px 10px;padding:12px 14px;border-bottom:2px solid var(--line)}
+  .sim td[data-l="canal"]{grid-column:1/-1}
+  .sim td{display:block;padding:0;border:0;min-width:0}
+  .sim td.ln-n{grid-column:1/-1;padding:0;font-size:13px}
+  .sim td.ln-n::before{content:"línea "}
+  .sim td[data-l]::before{content:attr(data-l);display:block;font-family:var(--f-mono);font-size:11px;color:var(--muted);margin-bottom:2px}
+  .sim td.stt{grid-column:1/-1;min-width:0;padding:0}
+  .stt small{display:inline;margin-left:8px}
+  .cell{padding:8px;font-size:16px}
+  .cap{font-size:16px}
+}
+@media (max-width:560px){
+  .crow{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .cgroup{width:100%;flex:1 1 100%}
+  .chip b{font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div class="kicker">IFCD107 · SPRINT 4 · RETO «HERRAMIENTAS INTERNAS»</div>
+    <h1>TurisData os pide una herramienta: un comando, un CSV, un JSON</h1>
+    <p class="lead">Esto es lo que tendréis funcionando el miércoles. Probadlo aquí antes de escribir una línea: así sabéis qué tiene que hacer cada pieza que vais a construir.</p>
+    <div class="cmd">
+      <div class="line" id="cmdline"><b>$</b>python kpis.py reservas_turisdata.csv salida.json --capacidad 40</div>
+      <button class="btn" id="copy" type="button">Copiar comando</button>
+      <span class="hint" id="copied" role="status"></span>
+    </div>
+  </header>
+
+  <section aria-labelledby="h-hace">
+    <div class="sh"><span class="st">LO QUE HACE</span><span class="ln"></span></div>
+    <h2 id="h-hace">Cuatro formas de ejecutarla</h2>
+    <p class="sec-intro">Resultados reales de la herramienta ya hecha, con el fichero de 6000 reservas. Elegid un caso y mirad qué entra, qué sale en pantalla y qué se guarda.</p>
+    <div class="tabs" role="tablist" aria-label="Casos de ejecución" id="tabs"></div>
+    <div class="why" id="why" aria-live="polite"></div>
+    <div class="box" style="margin-bottom:14px">
+      <div class="bh"><span>EL FICHERO QUE ENTRA</span><span id="csvname"></span></div>
+      <div class="scroll"><table class="csv" id="csv"></table></div>
+      <div class="csvnote" id="csvnote"></div>
+      <div class="swipe">Deslizad la tabla hacia los lados para ver todas las columnas.</div>
+    </div>
+    <div class="grid2">
+      <div class="box">
+        <div class="bh"><span>TERMINAL</span></div>
+        <div class="term" id="term" role="tabpanel"></div>
+        <div class="exit" id="exit"></div>
+      </div>
+      <div class="box">
+        <div class="bh"><span>SALIDA.JSON</span></div>
+        <div id="jsonwrap"></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-sim">
+    <div class="sh"><span class="st">ROMPEDLA VOSOTROS</span><span class="ln"></span></div>
+    <h2 id="h-sim">Ensuciad los datos y mirad qué hace</h2>
+    <p class="sec-intro">Son las 8 reservas de ejemplo de las misiones 0 a 3. Cambiad cualquier valor como si estuviera mal en el CSV: la herramienta descarta la fila, la cuenta y sigue. También probad la capacidad en 0.</p>
+    <div class="simbar">
+      <label for="cap">--capacidad <input class="cap" id="cap" type="text" inputmode="numeric" value="10" autocomplete="off"></label>
+      <button class="btn small" type="button" id="dirty">Ensuciar dos filas</button>
+      <button class="btn small" type="button" id="reset">Restaurar</button>
+      <span class="hint">Cada fila lleva el número de línea que tendría en el fichero (la 1 es la cabecera).</span>
+    </div>
+    <div class="box" style="margin-bottom:14px">
+      <div class="bh"><span>RESERVAS_DEMO.CSV</span><span id="simcount"></span></div>
+      <div class="scroll"><table class="sim" id="sim"></table></div>
+      <div class="sumline" id="sumline"></div>
+    </div>
+    <div class="grid2">
+      <div class="box">
+        <div class="bh"><span>TERMINAL</span></div>
+        <div class="term" id="simterm"></div>
+        <div class="exit" id="simexit"></div>
+      </div>
+      <div class="box">
+        <div class="bh"><span>SALIDA.JSON</span></div>
+        <div id="simjson"></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-mapa">
+    <div class="sh"><span class="st">CÓMO SE CONSTRUYE</span><span class="ln"></span></div>
+    <h2 id="h-mapa">Seis misiones, una pieza cada vez</h2>
+    <p class="sec-intro">El programa final es una cadena de funciones. Elegid una misión y se ilumina lo que construye. Las misiones 0 a 2 no tocan la herramienta: preparan las piezas básicas con 8 reservas en memoria.</p>
+    <div class="chips" id="chips"></div>
+    <div class="flow" id="flow">
+      <div class="mainbar" data-m="5"><span class="badge">M5</span> <b>main()</b> encadena todo y decide el código de salida: 0 si va bien, 1 si hay un error con mensaje claro.</div>
+      <div class="stages">
+        <div class="node io"><span class="nt">ENTRA</span><b>reservas_<wbr>turisdata.csv</b><small>6000 filas, todo en texto</small></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="node" data-m="4"><span class="badge">M4</span><b>leer_reservas</b><small>abre el fichero, comprueba las columnas, descarta las filas malas y avisa</small>
+          <div class="sub" data-m="4"><code>_convertir_fila</code> pasa el texto a números y fechas, y valida</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="node" data-m="3"><span class="badge">M3</span><b>calcular_kpis</b><small>ya viene hecha: junta los tres cálculos</small>
+          <div class="sub" data-m="3"><code>tasa_cancelacion_<wbr>por_canal</code></div>
+          <div class="sub" data-m="3"><code>ingreso_medio_<wbr>por_reserva</code></div>
+          <div class="sub" data-m="3"><code>ocupacion_proxy</code> (con el docente)</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="node" data-m="5"><span class="badge">M5</span><b>exportar_json</b><small>guarda el resultado en UTF-8</small></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="node io"><span class="nt">SALE</span><b>salida.json</b><small>y el mensaje «OK: …»</small></div>
+      </div>
+      <div class="base">
+        <div class="bl">LAS CUATRO PIEZAS</div>
+        <div class="node" data-m="0 1"><span class="badge">M1</span><b>Datos</b><small>una lista de reservas, cada una un diccionario</small></div>
+        <div class="node" data-m="0 2"><span class="badge">M2</span><b>Bucle for</b><small>coger las reservas una a una</small></div>
+        <div class="node" data-m="0 2"><span class="badge">M2</span><b>Decisión if</b><small>sumar solo cuando toca</small></div>
+        <div class="node" data-m="0 1"><span class="badge">M1</span><b>Mensaje print</b><small>escribir el resultado con un f-string</small></div>
+      </div>
+    </div>
+    <div class="mpanel" id="mpanel" aria-live="polite"></div>
+  </section>
+
+  <section aria-labelledby="h-entrega">
+    <div class="sh"><span class="st">AL FINAL</span><span class="ln"></span></div>
+    <h2 id="h-entrega">Qué se sube y cómo se evalúa</h2>
+    <p class="sec-intro">El miércoles se sube todo a la carpeta <code>sprint-04/</code> del repositorio del equipo, en tres o más subidas hechas por personas distintas.</p>
+    <div class="files">
+      <div class="file"><b>kpis.py</b><span>Lo escribís vosotros sobre la plantilla.</span></div>
+      <div class="file"><b>test_kpis.py</b><span>Ya hecho. Se copia tal cual y no se toca.</span></div>
+      <div class="file"><b>README.md</b><span>Lo rellenáis a partir de una plantilla.</span></div>
+      <div class="file"><b>salida.json</b><span>Lo genera el programa con el CSV real.</span></div>
+    </div>
+    <p style="margin-top:12px"><b>Y cada persona sube su hoja de autoevaluación y coevaluación:</b> en total, 4 ficheros del equipo más una hoja por persona. La review es de palabra: enseñáis el script con el CSV real, el JSON, un error provocado con su mensaje y las pruebas en verde.</p>
+    <div class="crit">
+      <div><b>Corrección técnica</b>¿Funciona?</div>
+      <div><b>Reproducibilidad</b>¿Lo puede repetir otra persona?</div>
+      <div><b>Análisis y comunicación al cliente</b>¿Lo entiende quien no programa?</div>
+      <div><b>IA responsable</b>¿Se sabe qué hizo la IA y qué comprobasteis?</div>
+    </div>
+    <div class="levels">Cada criterio puntúa de 1 a 4:
+      <span class="pill ok">Mínimo = 2</span><span class="pill warn">Estándar = 3</span><span class="pill bad">Extra = 4</span></div>
+  </section>
+
+  <footer class="foot">
+    <span>Cifras y mensajes: ejecución real de la solución con <code>reservas_turisdata.csv</code> (datos sintéticos).</span>
+    <a href="https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/3_Reto/1_Trabajar/README.md" target="_blank" rel="noopener">Abrir el índice de las seis misiones</a>
+  </footer>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(id){ return document.getElementById(id); };
+  var esc = function(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); };
+
+  /* ───────── 1 · Escenarios con la ejecución real ───────── */
+  var COLS = ["fecha_llegada","noches","precio_noche","canal","cancelada"];
+  var JSON_OK = '{\n  "reservas_analizadas": 6000,\n  "ocupacion_proxy_pct": 42.0,\n  "ingreso_medio_por_reserva": 576.04,\n  "tasa_cancelacion_por_canal_pct": {\n    "empresa": 43.3,\n    "directo": 31.5,\n    "web_intermediaria": 53.9,\n    "agencia": 44.0\n  },\n  "calidad": {\n    "filas_validas": 6000,\n    "filas_descartadas": 0,\n    "avisos": []\n  }\n}';
+  var JSON_ERR = '{\n  "reservas_analizadas": 5998,\n  "ocupacion_proxy_pct": 42.0,\n  "ingreso_medio_por_reserva": 575.93,\n  "tasa_cancelacion_por_canal_pct": {\n    "empresa": 43.3,\n    "directo": 31.5,\n    "web_intermediaria": 53.9,\n    "agencia": 44.0\n  },\n  "calidad": {\n    "filas_validas": 5998,\n    "filas_descartadas": 2,\n    "avisos": [\n      "Fila 5 descartada: could not convert string to float: \'abc\'",\n      "Fila 10 descartada: noches debe ser >= 1"\n    ]\n  }\n}';
+  var ESC = [
+    { tab:"Todo bien", file:"reservas_turisdata.csv",
+      cmd:"python kpis.py reservas_turisdata.csv salida.json --capacidad 40",
+      out:[["ok","OK: 6000 reservas analizadas, 0 descartadas -> salida.json"]], code:0, json:JSON_OK,
+      why:"<b>Lo que tiene que pasar:</b> lee las 6000 reservas, calcula los tres KPI y guarda el JSON. Es el resultado que se entrega.",
+      head:COLS, rows:[[2,"2024-03-21","3","89.24","empresa","1"],[3,"2024-06-06","4","63.5","directo","0"],[4,"2024-03-19","7","94.56","web_intermediaria","1"],[5,"2024-03-07","7","133.22","web_intermediaria","0"],[6,"2024-06-23","6","69.8","agencia","0"]],
+      bad:{}, badHead:-1, note:"6000 filas y 18 columnas. La herramienta solo usa estas 5; las otras 13 las ignora." },
+    { tab:"Fichero que no existe", file:"no_existe.csv",
+      cmd:"python kpis.py no_existe.csv salida.json",
+      out:[["err","ERROR: No se encuentra el fichero: no_existe.csv"]], code:1, json:null,
+      why:"<b>Lo que tiene que pasar:</b> un mensaje claro que incluye la ruta, código de salida 1 y ningún <code>Traceback</code> rojo. No se crea <code>salida.json</code>.",
+      head:null, rows:[], bad:{}, badHead:-1, note:"No hay fichero con ese nombre en la carpeta." },
+    { tab:"Falta una columna", file:"sin_col.csv",
+      cmd:"python kpis.py sin_col.csv salida.json",
+      out:[["err","ERROR: Faltan columnas obligatorias: ['precio_noche']"]], code:1, json:null,
+      why:"<b>Lo que tiene que pasar:</b> comprueba la cabecera antes de leer filas y nombra las columnas que faltan. Código 1 y sin <code>salida.json</code>.",
+      head:["fecha_llegada","noches","precio","canal","cancelada"],
+      rows:[[2,"2024-03-21","3","89.24","empresa","1"],[3,"2024-06-06","4","63.5","directo","0"],[4,"2024-03-19","7","94.56","web_intermediaria","1"]],
+      bad:{}, badHead:2, note:"En la primera línea, <code>precio_noche</code> se ha cambiado por <code>precio</code>, así que ya no está la columna que la herramienta necesita." },
+    { tab:"Dos datos mal", file:"con_error.csv",
+      cmd:"python kpis.py con_error.csv salida.json --capacidad 40",
+      out:[["ok","OK: 5998 reservas analizadas, 2 descartadas -> salida.json"]], code:0, json:JSON_ERR,
+      why:"<b>Lo que tiene que pasar:</b> no se rompe. Descarta las 2 filas malas, las cuenta y deja los avisos en <code>calidad.avisos</code>. Código 0.",
+      head:COLS, rows:[[4,"2024-03-19","7","94.56","web_intermediaria","1"],[5,"2024-03-07","7","abc","web_intermediaria","0"],[6,"2024-06-23","6","69.8","agencia","0"],null,[10,"2024-04-25","0","72.83","agencia","1"],[11,"2024-04-01","6","90.16","web_intermediaria","0"]],
+      bad:{"5":2,"10":1}, badHead:-1, note:"Se ha escrito <code>abc</code> como precio de la línea 5 y <code>0</code> como noches de la línea 10." }
+  ];
+
+  function term(el, cmd, out){
+    var h = '<div class="cmdl"><span class="p">$</span> ' + esc(cmd) + '</div>';
+    for (var i=0;i<out.length;i++) h += '<div class="' + out[i][0] + '">' + esc(out[i][1]) + '</div>';
+    el.innerHTML = h;
+  }
+  function exitBox(el, code){
+    var h;
+    if (code === 0) h = '<span class="pill ok">código de salida 0</span><span>Todo ha ido bien.</span>';
+    else if (code === 1) h = '<span class="pill bad">código de salida 1</span><span>Error controlado: el mensaje sale por <code>sys.stderr</code> y el programa termina limpio.</span>';
+    else h = '<span class="pill warn">código de salida ' + code + '</span><span>Argumentos incorrectos: lo detecta <code>argparse</code> antes de empezar.</span>';
+    el.innerHTML = h;
+  }
+  function hl(text){
+    return esc(text)
+      .replace(/("(?:[^"\\]|\\.)*")(\s*:)/g, '<span class="k">$1</span>$2')
+      .replace(/:\s("(?:[^"\\]|\\.)*")/g, function(m, s){ return ': <span class="s">' + s + '</span>'; })
+      .replace(/^(\s+)("(?:[^"\\]|\\.)*")(,?)$/gm, function(m, a, s, c){ return a + '<span class="s">' + s + '</span>' + c; })
+      .replace(/:\s(-?\d+(?:\.\d+)?)/g, ': <span class="n">$1</span>');
+  }
+  function jsonBox(el, text, emptyMsg){
+    el.innerHTML = text ? '<pre class="json">' + hl(text) + '</pre>' : '<div class="empty">' + emptyMsg + '</div>';
+  }
+
+  function showEsc(i){
+    var e = ESC[i], tabs = document.querySelectorAll("#tabs .tab");
+    for (var t=0;t<tabs.length;t++){ tabs[t].setAttribute("aria-selected", t===i ? "true":"false"); tabs[t].tabIndex = t===i ? 0 : -1; }
+    $("why").innerHTML = e.why;
+    $("csvname").textContent = e.file;
+    var tb = $("csv"), h = "";
+    if (e.head){
+      h += "<thead><tr><th>línea</th>";
+      for (var c=0;c<e.head.length;c++) h += '<th' + (c===e.badHead ? ' class="bad"' : '') + '>' + esc(e.head[c]) + '</th>';
+      h += '<th class="more">+ 13 columnas más</th></tr></thead><tbody>';
+      for (var r=0;r<e.rows.length;r++){
+        var row = e.rows[r];
+        if (!row){ h += '<tr class="gap"><td colspan="7">⋮</td></tr>'; continue; }
+        h += '<tr><td class="ln-n">' + row[0] + '</td>';
+        for (var k=1;k<row.length;k++) h += '<td' + (e.bad[row[0]] === k-1 ? ' class="bad"' : '') + '>' + esc(row[k]) + '</td>';
+        h += '<td class="more">…</td></tr>';
+      }
+      h += "</tbody>";
+    } else {
+      h = '<tbody><tr><td class="more" style="padding:14px 16px">No existe ningún fichero llamado <code>' + esc(e.file) + '</code>.</td></tr></tbody>';
+    }
+    tb.innerHTML = h;
+    $("csvnote").innerHTML = e.note;
+    term($("term"), e.cmd, e.out);
+    exitBox($("exit"), e.code);
+    jsonBox($("jsonwrap"), e.json, "No se crea <code>salida.json</code>: con un error de fichero o de columna no hay nada que guardar.");
+  }
+  (function buildTabs(){
+    var box = $("tabs"), h = "";
+    for (var i=0;i<ESC.length;i++) h += '<button class="tab" role="tab" type="button" data-i="' + i + '" aria-selected="false">' + esc(ESC[i].tab) + '</button>';
+    box.innerHTML = h;
+    box.addEventListener("click", function(ev){
+      var b = ev.target.closest(".tab"); if (b) showEsc(+b.dataset.i);
+    });
+    box.addEventListener("keydown", function(ev){
+      var cur = +document.activeElement.dataset.i; if (isNaN(cur)) return;
+      var nx = ev.key === "ArrowRight" ? (cur+1) % ESC.length : ev.key === "ArrowLeft" ? (cur+ESC.length-1) % ESC.length : -1;
+      if (nx < 0) return;
+      ev.preventDefault(); showEsc(nx); box.children[nx].focus();
+    });
+  })();
+  showEsc(0);
+
+  $("copy").addEventListener("click", function(){
+    var txt = "python kpis.py reservas_turisdata.csv salida.json --capacidad 40", msg = $("copied");
+    function listo(ok){ msg.textContent = ok ? "Copiado" : "Seleccionad el texto y copiadlo"; setTimeout(function(){ msg.textContent = ""; }, 2200); }
+    try {
+      navigator.clipboard.writeText(txt).then(function(){ listo(true); }, function(){ sel(); });
+    } catch(err){ sel(); }
+    function sel(){
+      var r = document.createRange(), el = $("cmdline"); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); listo(false);
+    }
+  });
+
+  /* ───────── 2 · Simulador: misma lógica que kpis.py ───────── */
+  function pyRepr(s){
+    if (s.indexOf("'") >= 0 && s.indexOf('"') < 0) return '"' + s.replace(/\\/g,"\\\\") + '"';
+    return "'" + s.replace(/\\/g,"\\\\").replace(/'/g,"\\'") + "'";
+  }
+  function fail(campo, msg){ throw { campo: campo, msg: msg }; }
+  function pyInt(s, campo){
+    if (/^\s*[+-]?\d+\s*$/.test(s)) return parseInt(s, 10);
+    fail(campo, "invalid literal for int() with base 10: " + pyRepr(s));
+  }
+  function pyFloat(s, campo){
+    var t = s.trim();
+    if (t !== "" && /^[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$/.test(t)) return parseFloat(t);
+    fail(campo, "could not convert string to float: " + pyRepr(s));
+  }
+  function pyDate(s, campo){
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
+    if (!m) fail(campo, "Invalid isoformat string: " + pyRepr(s));
+    var y = +m[1], mo = +m[2], d = +m[3];
+    if (y < 1) fail(campo, "year " + y + " is out of range");
+    if (mo < 1 || mo > 12) fail(campo, "month must be in 1..12");
+    if (d < 1 || d > new Date(Date.UTC(y, mo, 0)).getUTCDate()) fail(campo, "day is out of range for month");
+    return Date.UTC(y, mo - 1, d) / 86400000;
+  }
+  /* mismo orden de comprobaciones que _convertir_fila */
+  function convertir(f){
+    var canal = (f[3] || "").trim();
+    if (!canal) fail(3, "canal vacío");
+    var noches = pyInt(f[1], 1);
+    if (noches < 1) fail(1, "noches debe ser >= 1");
+    var precio = pyFloat(f[2], 2);
+    if (precio <= 0) fail(2, "precio_noche debe ser > 0");
+    var canc = pyInt(f[4], 4);
+    if (canc !== 0 && canc !== 1) fail(4, "cancelada debe ser 0 o 1");
+    var dia = pyDate(f[0], 0);
+    return { dia: dia, noches: noches, precio: precio, canal: canal, cancelada: canc };
+  }
+  /* round() de Python: redondeo exacto, y a la cifra par si es un empate exacto */
+  function roundPy(x, d){
+    var neg = x < 0, s = Math.abs(x).toFixed(60), p = s.indexOf("."), ent = s.slice(0, p), fr = s.slice(p + 1);
+    var keep = fr.slice(0, d), rest = fr.slice(d), digits = ent + keep;
+    var first = rest.charAt(0), tail = rest.slice(1), up;
+    if (first > "5") up = true;
+    else if (first < "5") up = false;
+    else if (/[1-9]/.test(tail)) up = true;
+    else up = (parseInt(digits.charAt(digits.length - 1), 10) % 2) === 1;
+    var n = BigInt(digits);
+    if (up) n += 1n;
+    var str = n.toString().padStart(d + 1, "0"), v = parseFloat(str.slice(0, str.length - d) + (d ? "." + str.slice(str.length - d) : ""));
+    return neg ? -v : v;
+  }
+  /* sum() de Python 3.12 o superior: suma compensada (Kahan-Babuska-Neumaier) */
+  function sumPy(xs){
+    var s = 0, c = 0, t;
+    for (var i=0;i<xs.length;i++){
+      t = s + xs[i];
+      c += Math.abs(s) >= Math.abs(xs[i]) ? (s - t) + xs[i] : (xs[i] - t) + s;
+      s = t;
+    }
+    return s + c;
+  }
+  function F(v){ this.v = v; }
+  function dump(o, lvl){
+    var pad = new Array(lvl + 2).join("  "), end = new Array(lvl + 1).join("  ");
+    if (o instanceof F){ var s = String(o.v); return /[.eE]/.test(s) ? s : s + ".0"; }
+    if (typeof o === "number") return String(o);
+    if (typeof o === "string") return JSON.stringify(o);
+    if (Array.isArray(o)) return o.length ? "[\n" + o.map(function(x){ return pad + dump(x, lvl + 1); }).join(",\n") + "\n" + end + "]" : "[]";
+    var ks = Object.keys(o);
+    return ks.length ? "{\n" + ks.map(function(k){ return pad + JSON.stringify(k) + ": " + dump(o[k], lvl + 1); }).join(",\n") + "\n" + end + "}" : "{}";
+  }
+  function kpis(res, cap){
+    var total = {}, canc = {}, i, r;
+    for (i=0;i<res.length;i++){ r = res[i]; total[r.canal] = (total[r.canal] || 0) + 1; canc[r.canal] = (canc[r.canal] || 0) + r.cancelada; }
+    var tasa = {}; Object.keys(total).forEach(function(c){ tasa[c] = new F(roundPy(100 * canc[c] / total[c], 1)); });
+    var ing = [], noches = 0;
+    for (i=0;i<res.length;i++){ r = res[i]; if (r.cancelada === 0){ ing.push(r.noches * r.precio); noches += r.noches; } }
+    var medio = ing.length ? roundPy(sumPy(ing) / ing.length, 2) : 0.0;
+    if (cap <= 0) throw new Error("La capacidad debe ser mayor que 0");
+    var ocup = 0.0;
+    if (res.length){
+      var mn = Infinity, mx = -Infinity;
+      for (i=0;i<res.length;i++){ mn = Math.min(mn, res[i].dia); mx = Math.max(mx, res[i].dia); }
+      ocup = roundPy(100 * noches / ((mx - mn + 1) * cap), 1);
+    }
+    return { reservas_analizadas: res.length, ocupacion_proxy_pct: new F(ocup), ingreso_medio_por_reserva: new F(medio), tasa_cancelacion_por_canal_pct: tasa };
+  }
+
+  var DEMO = [
+    ["2025-01-01","2","100.0","directo","0"], ["2025-01-03","3","80.0","directo","1"],
+    ["2025-01-05","4","50.0","agencia","0"],  ["2025-01-10","1","120.0","agencia","0"],
+    ["2025-01-10","5","60.0","web_intermediaria","1"], ["2025-01-12","2","90.0","web_intermediaria","0"],
+    ["2025-01-15","3","70.0","directo","0"], ["2025-01-20","2","110.0","web_intermediaria","1"]
+  ];
+  var WIDTH = [11, 5, 7, 19, 4];
+  var inputs = [], statuses = [];
+
+  function buildSim(){
+    var h = "<thead><tr><th>línea</th>" + COLS.map(function(c){ return "<th>" + c + "</th>"; }).join("") + "<th>qué hace la herramienta</th></tr></thead><tbody>";
+    for (var i=0;i<DEMO.length;i++){
+      h += '<tr><td class="ln-n">' + (i + 2) + "</td>";
+      for (var c=0;c<5;c++) h += '<td data-l="' + COLS[c] + '"><input class="cell" id="c' + i + "_" + c + '" aria-label="Línea ' + (i + 2) + ", " + COLS[c] + '" value="' + esc(DEMO[i][c]) + '" size="' + WIDTH[c] + '" autocomplete="off" spellcheck="false"></td>';
+      h += '<td class="stt" id="s' + i + '"></td></tr>';
+    }
+    $("sim").innerHTML = h + "</tbody>";
+    for (i=0;i<DEMO.length;i++){
+      inputs[i] = []; for (c=0;c<5;c++) inputs[i][c] = $("c" + i + "_" + c);
+      statuses[i] = $("s" + i);
+    }
+  }
+  function simular(){
+    var res = [], avisos = [], n = DEMO.length, i, c;
+    for (i=0;i<n;i++){
+      var fila = inputs[i].map(function(el){ return el.value; });
+      for (c=0;c<5;c++) inputs[i][c].classList.remove("bad");
+      try {
+        res.push(convertir(fila));
+        statuses[i].innerHTML = '<span class="pill ok">entra</span>';
+      } catch(e){
+        if (e.campo === undefined) throw e;
+        inputs[i][e.campo].classList.add("bad");
+        statuses[i].innerHTML = '<span class="pill bad">descartada</span><small>' + esc(e.msg) + "</small>";
+        avisos.push("Fila " + (i + 2) + " descartada: " + e.msg);
+      }
+    }
+    $("simcount").textContent = n + " filas de datos";
+    $("sumline").innerHTML = '<span>' + res.length + ' entran</span><span>' + avisos.length + ' descartadas</span>';
+    var capTxt = $("cap").value.trim(), cmd = "python kpis.py reservas_demo.csv salida.json --capacidad " + capTxt, out, code, json = null;
+    if (!/^[+-]?\d+$/.test(capTxt)){
+      out = [["err","usage: kpis.py [-h] [--capacidad CAPACIDAD] entrada salida"],["err","kpis.py: error: argument --capacidad: invalid int value: " + pyRepr(capTxt)]]; code = 2;
+    } else {
+      try {
+        var k = kpis(res, parseInt(capTxt, 10));
+        k.calidad = { filas_validas: res.length, filas_descartadas: avisos.length, avisos: avisos.slice(0, 20) };
+        json = dump(k, 0);
+        out = [["ok","OK: " + res.length + " reservas analizadas, " + avisos.length + " descartadas -> salida.json"]]; code = 0;
+      } catch(e2){
+        if (!(e2 instanceof Error)) throw e2;
+        out = [["err","ERROR: " + e2.message]]; code = 1;
+      }
+    }
+    term($("simterm"), cmd, out);
+    exitBox($("simexit"), code);
+    jsonBox($("simjson"), json, "No se crea <code>salida.json</code>: el programa ha terminado con un error antes de guardar.");
+  }
+  buildSim(); simular();
+  $("sim").addEventListener("input", simular);
+  $("cap").addEventListener("input", simular);
+  $("reset").addEventListener("click", function(){
+    for (var i=0;i<DEMO.length;i++) for (var c=0;c<5;c++) inputs[i][c].value = DEMO[i][c];
+    $("cap").value = "10"; simular();
+  });
+  $("dirty").addEventListener("click", function(){
+    inputs[2][2].value = "abc";   /* línea 4: precio */
+    inputs[5][1].value = "0";     /* línea 7: noches */
+    simular();
+  });
+
+  /* ───────── 3 · Mapa de las misiones ───────── */
+  var BASE = "https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/3_Reto/1_Trabajar/tarjetas/";
+  var MIS = [
+    { n:0, t:"Mirar la demo", dia:"Martes", min:"35 min", como:"Todo el equipo junto, una persona al teclado",
+      esc:"Nada todavía. Leéis <code>demo_cliente.py</code> sin ejecutarlo, apuntáis qué creéis que escribirá y lo comprobáis.",
+      ok:"Cada persona responde, sin mirar el ordenador, cinco preguntas sobre el programa.", card:"tarjeta_0_mirar_la_demo.md" },
+    { n:1, t:"Datos en memoria", dia:"Martes", min:"50 min", como:"Piloto y copiloto",
+      esc:"Completáis los seis apartados de <code>mision_1_datos.py</code>: contar las reservas, leer un dato, cambiarlo y añadir una reserva nueva.",
+      ok:"La terminal dice <code>✅ ¡Misión 1 superada!</code>", card:"tarjeta_1_datos.md" },
+    { n:2, t:"Decidir y repetir", dia:"Martes", min:"50 min", como:"Piloto y copiloto",
+      esc:"Rellenáis los 4 apartados de <code>mision_2_decidir.py</code>: contadores con <code>for</code> e <code>if</code>, y un contador por canal.",
+      ok:"La terminal dice <code>✅ ¡Misión 2 superada!</code>", card:"tarjeta_2_decidir.md" },
+    { n:3, t:"Funciones que calculan", dia:"Martes", min:"50 + 40 min", como:"Piloto y copiloto",
+      esc:"Las primeras funciones de <code>kpis.py</code>: <code>tasa_cancelacion_por_canal</code> e <code>ingreso_medio_por_reserva</code>. <code>ocupacion_proxy</code> la hace el docente en pantalla y la copiáis.",
+      ok:"<code>python test_kpis.py 1</code> da <code>4 de 4 pruebas superadas</code>", card:"tarjeta_3_funciones.md",
+      extra:"Kata 1: cada persona sola escribe <code>noches_confirmadas(reservas)</code> en 10 minutos." },
+    { n:4, t:"Leer el CSV", dia:"Miércoles", min:"50 + 50 min", como:"Todo el equipo, rotando piloto y copiloto cada 15 minutos",
+      esc:"<code>_convertir_fila</code> y <code>leer_reservas</code>: convertir los tipos, descartar y contar las filas defectuosas y avisar si falta el fichero o una columna.",
+      ok:"<code>python test_kpis.py 2</code> da <code>7 de 8 pruebas superadas</code>", card:"tarjeta_4_ficheros.md" },
+    { n:5, t:"Guardar y entregar", dia:"Miércoles", min:"25 + 25 min", como:"Piloto y copiloto; en la parte B, repartís el trabajo",
+      esc:"<code>exportar_json</code> y <code>main</code>, provocar los tres errores a propósito, el README, la revisión con la rúbrica y la entrega.",
+      ok:"<code>python test_kpis.py</code> da <code>12 de 12 pruebas superadas</code> y existe <code>salida.json</code>", card:"tarjeta_5_salida.md",
+      extra:"Kata 2: cada persona sola escribe <code>media_precio(ruta)</code> en 10 minutos." }
+  ];
+  (function buildChips(){
+    function chip(m, cls){
+      return '<button class="chip ' + cls + '" type="button" data-n="' + m.n + '" aria-pressed="false"><b>Misión ' + m.n + ' · ' + esc(m.t) + '</b><small>' + m.min + '</small></button>';
+    }
+    var tue = MIS.filter(function(m){ return m.dia === "Martes"; }), wed = MIS.filter(function(m){ return m.dia === "Miércoles"; });
+    $("chips").innerHTML =
+      '<div class="cgroup"><span class="gl">MARTES</span><div class="crow">' + tue.map(function(m){ return chip(m, "tue"); }).join("") + '</div></div>' +
+      '<div class="cgroup"><span class="gl">MIÉRCOLES</span><div class="crow">' + wed.map(function(m){ return chip(m, "wed"); }).join("") + '</div></div>';
+    $("chips").addEventListener("click", function(ev){
+      var b = ev.target.closest(".chip"); if (b) pick(+b.dataset.n);
+    });
+  })();
+  function pick(n){
+    var m = MIS[n], chips = document.querySelectorAll("#chips .chip");
+    for (var i=0;i<chips.length;i++) chips[i].setAttribute("aria-pressed", +chips[i].dataset.n === n ? "true" : "false");
+    var els = document.querySelectorAll("#flow [data-m]");
+    for (i=0;i<els.length;i++){
+      var on = els[i].getAttribute("data-m").split(" ").indexOf(String(n)) >= 0;
+      els[i].classList.toggle("on", on); els[i].classList.toggle("dim", !on);
+    }
+    var top = document.querySelectorAll("#flow .node:not([data-m]), #flow .arrow");
+    for (i=0;i<top.length;i++) top[i].classList.toggle("dim", true);
+    $("mpanel").innerHTML =
+      '<div class="mnum" aria-hidden="true">' + n + '</div>' +
+      '<div><h3>Misión ' + n + ' · ' + esc(m.t) + '</h3><p class="mwhen">' + m.dia + ' · ' + m.min + ' · ' + esc(m.como) + '</p></div>' +
+      '<dl><dt>QUÉ HACÉIS</dt><dd>' + m.esc + '</dd><dt>ESTÁ HECHA CUANDO</dt><dd>' + m.ok + '</dd>' +
+      (m.extra ? '<dt>ADEMÁS</dt><dd>' + m.extra + '</dd>' : '') + '</dl>' +
+      '<p class="mlink"><a href="' + BASE + m.card + '" target="_blank" rel="noopener">Abrir la tarjeta de la misión ' + n + '</a></p>';
+  }
+  pick(3);
+})();
+</script>
+</body>
+</html>

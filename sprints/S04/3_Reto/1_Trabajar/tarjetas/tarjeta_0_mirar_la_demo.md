@@ -16,6 +16,8 @@
 
 **Entender** el programa que nos envía el cliente: una versión en pequeño de lo que vais a construir (analiza 8 reservas puestas a mano y escribe un resumen). Todavía no se programa nada. Si lo entendéis, el resto del reto es ir haciéndolo más grande y más robusto.
 
+👀 **Antes de empezar, mirad adónde vamos:** la [demo interactiva del reto](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S04/3_Reto/1_Trabajar/S04_demo_reto.html) (se abre en el navegador, sin instalar nada) enseña la herramienta final funcionando. Probad los cuatro casos, ensuciad un dato y volved a ella cuando queráis: en cada misión se ilumina la pieza que construís.
+
 ## 💡 La idea en un minuto
 
 **Un programa de verdad son solo cuatro piezas.** Pensad en cómo revisaríais a mano un montón de fichas de papel:
