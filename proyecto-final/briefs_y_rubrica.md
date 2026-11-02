@@ -48,7 +48,7 @@ Los cambios de alcance después del 27/11 se negocian en la review del sprint co
 **Cliente:** consejería o cabildo que quiere anticipar la llegada de visitantes por isla y mes para planificar servicios (transporte, residuos, alojamiento).
 **Pregunta guía:** ¿podemos predecir la llegada de turistas con 3–6 meses de antelación y qué factores la explican?
 
-- **Datos candidatos (a validar antes del 16/10):** estadísticas de turismo del ISTAC y Frontur-Canarias, datos abiertos de datos.gob.es, meteorología de AEMET OpenData, calendario de festivos y eventos.
+- **Datos candidatos (a validar en el Sprint 14):** estadísticas de turismo del ISTAC y Frontur-Canarias, datos abiertos de datos.gob.es, meteorología de AEMET OpenData, calendario de festivos y eventos.
 - **Tipo de problema:** previsión de series temporales + segmentación de mercados emisores.
 - **Técnicas esperadas:** baseline estacional; regresión regularizada; Random Forest/XGBoost con variables de calendario; **LSTM/GRU**; clustering de mercados emisores; PCA.
 - **Entregable específico:** panel con la previsión, su intervalo de incertidumbre y las variables más influyentes; nota de recomendaciones para el cliente.
@@ -109,7 +109,7 @@ Los cambios de alcance después del 27/11 se negocian en la review del sprint co
 
 ## 4. Brief libre
 
-Un equipo puede proponer su propio proyecto si presenta la **ficha de proyecto (anexo A)** antes del **26/11** y cumple:
+Un equipo puede proponer su propio proyecto si presenta la **ficha de proyecto (anexo A)** antes de las **14:30 del 26/11** y cumple:
 
 1. Pregunta de negocio clara con métrica de éxito.
 2. Datos **reales, accesibles y con licencia** ya identificados (no se aceptan proyectos "a la espera de datos").
@@ -184,7 +184,7 @@ Cada entregable se evalúa de 0 a 4 en estos cuatro criterios (los pesos son igu
 
 ---
 
-## Anexo A · Ficha de proyecto (1 página, entrega antes del 27/11)
+## Anexo A · Ficha de proyecto (1 página, entrega antes de las 14:30 del 26/11)
 
 1. **Equipo** y roles iniciales (Scrum Master, responsable técnico, responsable de datos, responsable de IA responsable).
 2. **Brief elegido** (o propuesta libre) y **pregunta de negocio** en una frase.

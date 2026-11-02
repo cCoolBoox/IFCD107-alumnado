@@ -1,6 +1,6 @@
 # Sprint 14 · Reto «Proyecto final: definir, tener datos y un punto de partida» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_14.md](../3_Consultar/Reto_Sprint_14.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); las plantillas están en [`4_Plantillas_y_entrega`](plantillas/). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S14/3_Reto/1_Trabajar/S14_demo_reto.html)** (una página, sin instalar nada).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_14.md](../3_Consultar/Reto_Sprint_14.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); las plantillas están en [`plantillas/`](plantillas/). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S14/3_Reto/1_Trabajar/S14_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - Sois una consultora de IA y el docente es el cliente.

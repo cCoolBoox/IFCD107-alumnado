@@ -19,7 +19,7 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 📖 Teoría · Lanzamiento del proyecto final: cómo formular un proyecto de IA (canvas y criterios de éxito) | [Presentación S14.1](1_Teoria/S14.1_Lanzamiento_del_proyecto_final.pdf) | 25 |
+| ☐ | 📖 Teoría · Lanzamiento del proyecto final: cómo formular un proyecto de IA (canvas y criterios de éxito) | [Presentación S14_01](1_Teoria/S14_01_presentacion_Lanzamiento_del_proyecto_final.pdf) | 25 |
 | ☐ | 🔔 Ceremonia · Planning del sprint: leer las reglas y repartir roles | — | 10 |
 | ☐ | 💻 Práctica · Taller de Design Thinking: empatía, «Cómo podríamos…», dos briefs candidatos y canvas borrador | — | 40 |
 | ☐ | 🎯 Reto · Elegir el brief (**antes del descanso**, hito del día) | [Elegir el brief](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md) | 15 |
@@ -80,11 +80,11 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 - [ ] `02_baseline.ipynb` · lo creáis
 - [ ] `backlog_y_sprints.md` · lo creáis a partir de una plantilla
 - [ ] `riesgos_eticos.md` · lo creáis a partir de una plantilla
-- [ ] `README.md` · lo creáis a partir de una plantilla
-- [ ] `requirements.txt` · lo creáis
+- [ ] `README.md` · lo creáis a partir de una plantilla (en la **raíz** del repositorio, no en `sprint-14/`)
+- [ ] `requirements.txt` · lo creáis (en la **raíz** del repositorio, no en `sprint-14/`)
 - [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
-**Total en `sprint-14/`: 8 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 11). Aparte: Datos descargados; descargar_datos.py; los extras solo si los hacéis. La *review* y la *retro* no se suben.
+**Total en `sprint-14/`: 6 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 9); `README.md` y `requirements.txt` van en la raíz. Aparte: Datos descargados; descargar_datos.py; los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
 **Comprobaciones antes de dar el sprint por cerrado:**
 - [ ] Ficha entregada antes de las 14:30 del día 1 y con **go** del docente.
