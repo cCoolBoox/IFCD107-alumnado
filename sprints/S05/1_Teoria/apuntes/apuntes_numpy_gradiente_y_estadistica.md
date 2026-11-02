@@ -8,11 +8,14 @@ Si algo de matemáticas te suena raro, vuelve a la sección correspondiente del 
 
 ## 0. De qué va el sprint (en 1 minuto)
 
-| Presentación | Idea central | Cuadernos |
+| Presentación | Idea central | Cuaderno |
 |---|---|---|
-| **S05.1** NumPy y álgebra lineal | Operar con **muchos números a la vez**, sin bucles | S05_01, S05_02 |
-| **S05.2** Gradiente y regresión desde cero | **Así aprende un modelo**: mide el error y da un paso cuesta abajo | S05_03 |
-| **S05.3** Estadística y CRUD | Responder al cliente **con números, no con intuiciones** | S05_04, S05_05, S05_06 |
+| **S05_01** NumPy: calcular sin bucles | Operar con **muchos números a la vez**, sin bucles | S05_01 |
+| **S05_02** Álgebra lineal con NumPy | Vectores, matrices y sistemas de ecuaciones **en código** | S05_02 |
+| **S05_03** Descenso del gradiente y regresión desde cero | **Así aprende un modelo**: mide el error y da un paso cuesta abajo | S05_03 |
+| **S05_04** Estadística descriptiva, Monte Carlo e intervalos de confianza | Responder al cliente **con números, no con intuiciones** | S05_04 |
+| **S05_05** Contrastes de hipótesis, correlación y causalidad | Distinguir **casualidad, efecto y causa** | S05_05 |
+| **S05_06** CRUD desde Python | Guardar y consultar los datos en una **base de datos** | S05_06 |
 
 **El reto:** con la serie de ocupación de TurisData, cargar los datos en una base, mirar los datos, programar una regresión desde cero, compararla con una librería, **medir cuánta confianza merece el resultado** y responder al cliente en 150 palabras.
 

@@ -20,9 +20,9 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «¿La ocupación depende de esto?» | — | 10 |
-| ☐ | 📖 Teoría · NumPy y álgebra lineal: vectorización y *broadcasting* | [Presentación S05.1](1_Teoria/S05.1_NumPy_y_algebra_lineal.pdf) | 25 |
+| ☐ | 📖 Teoría · NumPy: arrays, máscaras, vectorización y *broadcasting* | [Presentación S05_01](1_Teoria/S05_01_presentacion_NumPy_calcular_sin_bucles.pdf) | 25 |
 | ☐ | 💻 Práctica · Arrays, vectorización y *broadcasting* (los ejercicios marcados «en clase»; lo que falte, en la tutoría) | [Cuaderno S05_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_01_numpy.ipynb) | 15 |
-| ☐ | 🏠 **En casa** · Álgebra lineal con NumPy: vectores, matrices y sistemas de ecuaciones (cuaderno completo) | [Cuaderno S05_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_02_algebra_lineal.ipynb) | 40 (casa) |
+| ☐ | 🏠 **En casa** · Álgebra lineal con NumPy: vectores, matrices y sistemas de ecuaciones (cuaderno completo) | [Cuaderno S05_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_02_algebra_lineal.ipynb) · [Presentación S05_02](1_Teoria/S05_02_presentacion_Algebra_lineal_con_NumPy.pdf) | 40 (casa) |
 
 **En clase: 50 min.**
 
@@ -34,13 +34,13 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · Descenso del gradiente y regresión desde cero (los ejercicios marcados «en clase») | [Cuaderno S05_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_03_gradiente_regresion.ipynb) | 40 |
-| ☐ | 📖 Teoría · Estadística con Python y CRUD | [Presentación S05.3](1_Teoria/S05.3_Estadistica_con_Python_y_CRUD.pdf) | 20 |
+| ☐ | 💻 Práctica · Descenso del gradiente y regresión desde cero (los ejercicios marcados «en clase») | [Cuaderno S05_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_03_gradiente_regresion.ipynb) · [Presentación S05_03](1_Teoria/S05_03_presentacion_Descenso_del_gradiente_y_regresion.pdf) | 40 |
+| ☐ | 📖 Teoría · Estadística descriptiva, Monte Carlo e intervalos de confianza | [Presentación S05_04](1_Teoria/S05_04_presentacion_Estadistica_descriptiva_Monte_Carlo_e_IC.pdf) | 20 |
 | ☐ | 💻 Práctica · Descriptiva, Monte Carlo e intervalos de confianza (los ejercicios marcados «en clase») | [Cuaderno S05_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_04_estadistica_descriptiva_ic.ipynb) | 30 |
-| ☐ | 💻 Práctica · CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base) | [Cuaderno S05_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb) | 25 |
+| ☐ | 💻 Práctica · CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base) | [Cuaderno S05_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb) · [Presentación S05_06](1_Teoria/S05_06_presentacion_CRUD_desde_Python.pdf) | 25 |
 | ☐ | 🎯 Reto · Cuaderno `S05_07`: mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6; lo que falte, en la consolidación y la 6.ª hora) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_05_una_pagina.md) | 45 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-05/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 4 y 5 | — | 40 |
-| ☐ | 🏠 **En casa** · Contrastes de hipótesis, correlación y causalidad (cuaderno completo) | [Cuaderno S05_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_05_contrastes_causalidad.ipynb) | 40 (casa) |
+| ☐ | 🏠 **En casa** · Contrastes de hipótesis, correlación y causalidad (cuaderno completo) | [Cuaderno S05_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_05_contrastes_causalidad.ipynb) · [Presentación S05_05](1_Teoria/S05_05_presentacion_Contrastes_correlacion_y_causalidad.pdf) | 40 (casa) |
 
 **En clase: 3 h 20 min.**
 
