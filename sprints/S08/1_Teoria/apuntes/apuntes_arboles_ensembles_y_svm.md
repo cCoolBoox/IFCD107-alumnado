@@ -18,11 +18,15 @@ TurisData ya sabe que **se pueden predecir las cancelaciones**. Ahora la pregunt
 
 Un **leaderboard** (tabla de clasificación) mide a todos los modelos **con la misma vara**.
 
-| Presentación | Familia | Cuaderno |
+| Presentación | Idea central | Cuaderno |
 |---|---|---|
-| **S08.1** | Árbol de decisión | S08_01 |
-| **S08.2** | Random Forest y boosting | S08_02, S08_03 |
-| **S08.3** | SVM, búsqueda de hiperparámetros y cierre | S08_04, S08_05, S08_06 |
+| **S08_01** Árboles de decisión | Un árbol que se puede leer | S08_01 |
+| **S08_02** Random Forest | Muchos árboles votan mejor que uno | S08_02 |
+| **S08_03** Boosting | Árboles en cadena que corrigen errores | S08_03 |
+| **S08_04** Máquinas de vectores de soporte | La calle más ancha entre las clases | S08_04 |
+| **S08_05** Búsqueda de hiperparámetros | Ajustar sin hacer trampas | S08_05 |
+
+La plantilla del *leaderboard* (S08_06) es la herramienta del reto: no tiene presentación.
 
 **El reto:** el **duelo de modelos**: competís con varios, elegís un **campeón justificado** y lo documentáis en una **model card**.
 

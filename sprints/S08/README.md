@@ -20,10 +20,11 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Duelo de modelos» y pesos de los criterios (la «voz del cliente») | — | 10 |
-| ☐ | 📖 Teoría · Árboles de decisión | [Presentación S08.1](1_Teoria/S08.1_Arboles_de_decision.pdf) | 25 |
+| ☐ | 📖 Teoría · Árboles de decisión: reglas, sobreajuste y poda | [Presentación S08_01](1_Teoria/S08_01_presentacion_Arboles_de_decision.pdf) | 25 |
 | ☐ | 💻 Práctica · Árbol de decisión: reglas, poda e importancia (los ejercicios marcados «en clase») | [Cuaderno S08_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_01_arboles_decision.ipynb) | 35 |
-| ☐ | 📖 Teoría · Ensembles: Random Forest y *boosting* | [Presentación S08.2](1_Teoria/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | 25 |
-| ☐ | 🏠 **En casa** · Buscar hiperparámetros con `GridSearchCV` y `RandomizedSearchCV`: **esta tarde**, para el paso 3 del reto de mañana (bastan sus secciones 2 y 3) | [Cuaderno S08_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_05_busqueda_hiperparametros.ipynb) | 40 (casa) |
+| ☐ | 📖 Teoría · Random Forest: muchos árboles votan | [Presentación S08_02](1_Teoria/S08_02_presentacion_Random_Forest.pdf) | 15 |
+| ☐ | 📖 Teoría · *Boosting*: corregir los errores paso a paso | [Presentación S08_03](1_Teoria/S08_03_presentacion_Boosting.pdf) | 10 |
+| ☐ | 🏠 **En casa** · Buscar hiperparámetros con `GridSearchCV` y `RandomizedSearchCV`: **esta tarde**, para el paso 3 del reto de mañana (bastan sus secciones 2 y 3) | [Cuaderno S08_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_05_busqueda_hiperparametros.ipynb) · [Presentación S08_05](1_Teoria/S08_05_presentacion_Busqueda_de_hiperparametros.pdf) | 40 (casa) |
 
 **En clase: 1 h 35 min.**
 
@@ -37,13 +38,13 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 📖 Teoría · Máquinas de vectores de soporte (SVM), versión corta | [Presentación S08.3](1_Teoria/S08.3_Maquinas_de_vectores_de_soporte.pdf) | 10 |
-| ☐ | 💻 Práctica · Random Forest: bagging, OOB e importancia por permutación (los ejercicios marcados «en clase») | [Cuaderno S08_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_02_random_forest.ipynb) | 30 |
-| ☐ | 💻 Práctica · Gradient Boosting, XGBoost y LightGBM (los ejercicios marcados «en clase») | [Cuaderno S08_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_03_boosting_xgboost_lightgbm.ipynb) | 25 |
+| ☐ | 📖 Teoría · Máquinas de vectores de soporte (SVM), versión corta | [Presentación S08_04](1_Teoria/S08_04_presentacion_Maquinas_de_vectores_de_soporte_SVM.pdf) | 10 |
+| ☐ | 💻 Práctica · Random Forest: bagging, OOB e importancia por permutación (los ejercicios marcados «en clase») | [Cuaderno S08_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_02_random_forest.ipynb) · [Presentación S08_02](1_Teoria/S08_02_presentacion_Random_Forest.pdf) | 30 |
+| ☐ | 💻 Práctica · Gradient Boosting, XGBoost y LightGBM (los ejercicios marcados «en clase») | [Cuaderno S08_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_03_boosting_xgboost_lightgbm.ipynb) · [Presentación S08_03](1_Teoria/S08_03_presentacion_Boosting.pdf) | 25 |
 | ☐ | 🎯 Reto · *Leaderboard* (*baseline*, logística, árbol y bosque), búsqueda de hiperparámetros en dos familias, sensibilidad de los pesos, campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5; los pasos 2–3 van dentro de las prácticas; lo que falte, en la consolidación y la 6.ª hora) | [Cuaderno S08_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_06_leaderboard_plantilla.ipynb) | 75 |
 | ☐ | 📝 Test · **Test de M3 (parte 2)**, solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | 25 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-08/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 7 y 8 | — | 35 |
-| ☐ | 🏠 **En casa** · Máquinas de vectores de soporte, SVM (cuaderno completo) | [Cuaderno S08_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_04_svm.ipynb) | 40 (casa) |
+| ☐ | 🏠 **En casa** · Máquinas de vectores de soporte, SVM (cuaderno completo) | [Cuaderno S08_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_04_svm.ipynb) · [Presentación S08_04](1_Teoria/S08_04_presentacion_Maquinas_de_vectores_de_soporte_SVM.pdf) | 40 (casa) |
 
 **En clase: 3 h 20 min.**
 

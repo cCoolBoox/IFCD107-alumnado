@@ -16,7 +16,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 |---|---|---|
 | 1 |  | Practica `filterwarnings`, `set_theme`, `read_csv`, `astype` y más. |
 | 2 | 1. La idea: bagging + variables al azar | Cuántas reservas quedan fuera de una muestra bootstrap: ≈ 36,8 %. |
-| 4 | 2. Cuántos árboles y de qué tamaño | oob_decision_function_ contiene la probabilidad OOB de cada reserva de train. |
+| 4 | 2. Cuántos árboles y de qué tamaño | oob_decision_function_ contiene la probabilidad OOB de cada reserva de train; con pocos á… |
 
 ## 2. Qué guarda cada variable
 
@@ -179,7 +179,7 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 
 ### Celda 4 · 2. Cuántos árboles y de qué tamaño · 🏫
 
-**Qué hace:** oob_decision_function_ contiene la probabilidad OOB de cada reserva de train.
+**Qué hace:** oob_decision_function_ contiene la probabilidad OOB de cada reserva de train; con pocos árboles, algunas.
 
 ```python
 n_arboles = [5, 10, 25, 50, 100, 200, 400]
@@ -187,7 +187,8 @@ oob_auc = []
 for k in n_arboles:
     b = RandomForestClassifier(n_estimators=k, min_samples_leaf=5, oob_score=True,
                                random_state=SEMILLA, n_jobs=2).fit(Xtr, y_train)
-    # oob_decision_function_ contiene la probabilidad OOB de cada reserva de train
+    # oob_decision_function_ contiene la probabilidad OOB de cada reserva de train; con pocos árboles, algunas
+    # reservas no quedan fuera en ninguno (NaN) y se rellenan con 0,5 («no sé»)
     oob_auc.append(roc_auc_score(y_train, np.nan_to_num(b.oob_decision_function_[:, 1], nan=0.5)))
 plt.figure(figsize=(7, 3.8))
 plt.plot(n_arboles, oob_auc, marker="o", color="#2a6f97")
