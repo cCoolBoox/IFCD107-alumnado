@@ -32,7 +32,7 @@
 | [Esquema del contenido y su relación con el reto](4_Referencia/infografias/S13_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
 | [Infografías del sprint](4_Referencia/infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S13.1_Visualizar_y_comunicar_resultados.pdf`](1_Teoria/S13.1_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · dentro de la última jornada del S12 |
+| [`S13_01_presentacion_Visualizar_y_comunicar_resultados.pdf`](1_Teoria/S13_01_presentacion_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · dentro de la última jornada del S12 |
 | [`guia_cuantos_sprints_tiene_el_proyecto.md`](3_Reto/1_Trabajar/plantillas/guia_cuantos_sprints_tiene_el_proyecto.md) | ¿Cuántos sprints tiene el proyecto? Capacidad, tallas y qué cabe en los Sprints 14–17 | 25–30 min | Al cerrar el 25/11 o antes del planning del 26/11 |
 
 **Material de las actividades**
@@ -54,7 +54,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
-| 1 | 📖 Teoría | [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](1_Teoria/S13.1_Visualizar_y_comunicar_resultados.pdf) | 10 min |
+| 1 | 📖 Teoría | [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](1_Teoria/S13_01_presentacion_Visualizar_y_comunicar_resultados.pdf) | 10 min |
 | 2 | 💻 Práctica | [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb) | 35 min |
 | 3 | 🎯 Reto | [Reto del Sprint 13](3_Reto/3_Consultar/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](3_Reto/1_Trabajar/plantillas/plantilla_informe_visual.md) | 35 min |
 

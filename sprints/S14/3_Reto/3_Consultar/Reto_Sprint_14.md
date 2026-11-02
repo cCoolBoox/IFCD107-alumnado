@@ -21,7 +21,7 @@
 | Recurso | Para qué lo usaréis | Dónde está |
 |---|---|---|
 | **Las reglas del proyecto**: [`briefs_y_rubrica.md`](../../../../proyecto-final/briefs_y_rubrica.md) | Saber qué se evalúa (R1–R11), leer los cuatro briefs y la rúbrica de 100 puntos | Léelo antes del planning; subrayad lo que no entendáis |
-| **Presentación S14.1** [Lanzamiento del proyecto final](../../1_Teoria/S14.1_Lanzamiento_del_proyecto_final.pdf) y sus [apuntes](../../1_Teoria/apuntes/apuntes_formular_un_proyecto_de_ia.md) | Aprender a formular un proyecto de IA con un *canvas* (un esquema de una página) | El docente la explica el día 1 (25 minutos) |
+| **Presentación S14_01** [Lanzamiento del proyecto final](../../1_Teoria/S14_01_presentacion_Lanzamiento_del_proyecto_final.pdf) y sus [apuntes](../../1_Teoria/apuntes/apuntes_formular_un_proyecto_de_ia.md) | Aprender a formular un proyecto de IA con un *canvas* (un esquema de una página) | El docente la explica el día 1 (25 minutos) |
 | **Plantilla de la ficha** [`plantilla_ficha_proyecto.md`](../1_Trabajar/plantillas/plantilla_ficha_proyecto.md) | Resumir el proyecto en una página (anexo A) | Copiadla como `ficha_proyecto.md` |
 | **Plantilla del plan de datos** [`plantilla_plan_datos_licencias.md`](../1_Trabajar/plantillas/plantilla_plan_datos_licencias.md) | Documentar fuente, licencia, variables, calidad, linaje y partición | Copiadla como `plan_datos_licencias.md` |
 | **Plantilla del backlog** [`plantilla_backlog_y_sprints.md`](../1_Trabajar/plantillas/plantilla_backlog_y_sprints.md) | Historias de usuario, objetivo de cada sprint y retrospectivas | Copiadla como `backlog_y_sprints.md` |

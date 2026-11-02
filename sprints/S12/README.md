@@ -61,7 +61,7 @@
 |---|---|---|---|
 | ☐ | 🎯 Reto · Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_12_una_pagina.md) | 65 |
 | ☐ | 📝 Test · **Test de M4** (redes neuronales), solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 |
-| ☐ | 📖 Teoría · Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | [Presentación S13.1](../S13/1_Teoria/S13.1_Visualizar_y_comunicar_resultados.pdf) | 10 |
+| ☐ | 📖 Teoría · Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | [Presentación S13_01](../S13/1_Teoria/S13_01_presentacion_Visualizar_y_comunicar_resultados.pdf) | 10 |
 | ☐ | 💻 Práctica · Matriz de confusión, ROC/PR, importancia, umbral y coste | [Cuaderno S13_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb) | 35 |
 | ☐ | 🎯 Reto · Reto del Sprint 13: elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el cuaderno plantilla y la plantilla del informe | [Reto del Sprint 13](../S13/3_Reto/1_Trabajar/Reto_Sprint_13_una_pagina.md) | 35 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva | — | 25 |
