@@ -33,7 +33,7 @@ Empieza por estas celdas y comprueba qué hace cada una. Lo demás se lee aquí 
 | `i` | `5` | 7 |
 | `original` | `sem_test[i:i + 1]` | 7 |
 | `recons` | `ae.predict(original, verbose=0)` | 7 |
-| `dias` | `["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]` | 7 |
+| `dias` | `["dom", "lun", "mar", "mié", "jue", "vie", "sáb"]` | 7 |
 | `normal` | `semanas[corte:corte + 3].copy()` | 9 |
 | `raras` | `np.array([np.full(7, 15.0), # apagón normal[0].copy(), #…` | 9 |
 | `raras_esc` | `escalador.transform(raras)` | 9 |
@@ -212,7 +212,7 @@ plt.show()
 i = 5
 original = sem_test[i:i + 1]
 recons = ae.predict(original, verbose=0)
-dias = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]
+dias = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"]   # los datos empiezan el domingo 1/1/2023: cada semana de 7 días empieza en domingo
 fig, ax = plt.subplots(figsize=(6, 3))
 ax.plot(dias, escalador.inverse_transform(original)[0], "o-", label="Real")
 ax.plot(dias, escalador.inverse_transform(recons)[0], "s--", label="Reconstruida")
@@ -225,7 +225,7 @@ plt.show()
 - `i = 5` → Guarda el valor en `i`.
 - `original = sem_test[i:i + 1]` → Guarda el valor en `original`.
 - `recons = ae.predict(original, verbose=0)` → Guarda en `recons` el resultado. `predict`: pide al modelo ya entrenado que haga predicciones.
-- `dias = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]` → Guarda el valor en `dias`.
+- `dias = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"] # los datos empiez…` → Guarda el valor en `dias`.
 - `fig, ax = plt.subplots(figsize=(6, 3))` → Guarda en `fig, ax` el resultado. `subplots`: crea una figura con uno o varios ejes (gráficos) dentro.
 - `ax.plot(dias, escalador.inverse_transform(original)[0], "o-", label="Real")` → `plot`: dibuja una línea (o puntos unidos); `inverse_transform`: deshace una transformación (por ejemplo, vuelve a la escala original).
 - `ax.plot(dias, escalador.inverse_transform(recons)[0], "s--", label="Reconst…` → `plot`: dibuja una línea (o puntos unidos); `inverse_transform`: deshace una transformación (por ejemplo, vuelve a la escala original).
