@@ -1,129 +1,118 @@
 # README Sprint S03 · Del dato al modelo en la nube
 
-**Pregunta guía:** ¿podemos tener un primer modelo funcionando, sin programar?
+**Pregunta guía:** ¿podemos tener un primer modelo funcionando, sin programar?  
 **Fechas:** 26–27/10 · **Horas:** 12 h (4 h teoría · 4 h práctica · 4 h proyecto)
 
-📄 **Este README en PDF:** [a color](pdf/README_Sprint_03.pdf) · [ecofriendly, para imprimir](pdf/README_Sprint_03_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
+📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
+
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo lo que pone en las filas de cada día: lo demás es para casa.
 
 ## Qué aprenderás
+
 1. A **consultar y modificar** una base de datos relacional con SQL (`SELECT`, `JOIN`, `GROUP BY`, subconsultas, `INSERT`/`UPDATE`/`DELETE`).
 2. A **modelar** datos con claves, restricciones e índices, y a explicar por qué importan.
 3. A guardar el mismo dato como **documentos** en MongoDB y a decidir cuándo conviene SQL o NoSQL.
 4. A lanzar un **experimento de AutoML**, leer sus métricas y elegir un umbral con criterio de negocio.
 5. A **servir un modelo por API** y a controlar y cerrar los recursos que usas.
 
-## Requisitos previos
+## Antes de empezar
 - Haber terminado el Sprint 2 (cuentas y herramientas preparadas).
 - Un navegador actual. Para SQL: **DB Browser for SQLite** instalado, o un cliente SQLite en línea (consulta con tu docente cuál).
 - No hace falta saber programar en este sprint. Los ejercicios de SQL y AutoML no usan Python; solo el laboratorio opcional de NoSQL (y el laboratorio de AutoML basado en cuadernos, si se usa).
 - Datos: `turisdata.db` (SQLite con las tablas `alojamientos`, `clientes` y `reservas`). Son datos **sintéticos**: sirven para practicar, no son estadísticas reales del turismo en Canarias.
 
-## 📎 Materiales del sprint
+## Día 1 · Lunes 26/10
 
-**Documentos del curso** (PDF y .md; las actividades van en la tabla siguiente)
-
-| Material | Tema | Tiempo | Cuándo |
+| ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| [Guía del sprint (PDF)](pdf/README_Sprint_03.pdf) · [ecofriendly](pdf/README_Sprint_03_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [**Carpeta del reto: `Reto_S03/`**](3_Reto/) | Todo el material del reto junto: ficha (.md y PDF), hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
-| [Reto completo, paso a paso (.md)](3_Reto/3_Consultar/Reto_Sprint_03.md) · [PDF](pdf/Reto_Sprint_03.pdf) · [ecofriendly](pdf/Reto_Sprint_03_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
-| [Resumen del sprint en una página](4_Referencia/infografias/S03_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
-| [El reto paso a paso](4_Referencia/infografias/S03_03_reto_paso_a_paso.png) · [PDF con enlaces](pdf/S03_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
-| [Esquema del contenido y su relación con el reto](4_Referencia/infografias/S03_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del sprint](4_Referencia/infografias/) | 2 láminas ilustradas | — | Antes del planning y durante el reto |
-| [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [`S03.1_Bases_de_datos_relacionales_y_SQL.pdf`](1_Teoria/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) | Modelo relacional, SQL, CRUD y nociones de administración | 40 min | Teoría · día 1 del S03 |
-| [`S03.2_Bases_de_datos_NoSQL.pdf`](1_Teoria/S03.2_Bases_de_datos_NoSQL.pdf) | Bases de datos NoSQL (demostración corta) | 15 min | Teoría · día 1 del S03 |
-| [`S03.3_AutoML_y_MLOps.pdf`](1_Teoria/S03.3_AutoML_y_MLOps.pdf) | Introducción a AutoML y MLOps | 20 min | Teoría · día 2 del S03 |
-| [`Guia_AutoML_AutoGluon.pdf`](pdf/Guia_AutoML_AutoGluon.pdf) | Guía de laboratorio de AutoML con AutoGluon | — | AutoML (Bloque B) |
-| [`Reto_S03/laboratorio_automl/`](2_Practica/laboratorio_automl/) | Archivos del laboratorio de AutoML: cuaderno `.ipynb`, 3 `.py`, `requirements.txt` y `reservas_turisdata.csv` | — | AutoML (Bloque B) |
-| [Test de conocimientos](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | Test del bloque M6–M8 · SQL, AutoML e IA responsable · 10 preguntas · individual, en el navegador, sin penalización por fallo. | 15 min | Solo se abre el mar 27/10 (hora de Canarias) |
+| ☐ | 🔔 Ceremonia · Planning del reto «Primer modelo en producción»: leed la ficha y repartid roles | — | 10 |
+| ☐ | 📖 Teoría · Modelo relacional, SQL, CRUD y nociones de administración | [Presentación S03_01](1_Teoria/S03_01_presentacion_Bases_de_datos_relacionales_y_SQL.pdf) | 40 |
+| ☐ | 💻 Práctica · Scripts SQL 01–06 en DB Browser, en este orden: `SELECT`, `JOIN`, `GROUP BY` y subconsultas; después, CRUD sobre una copia y modelado e índices | [`SELECT`](2_Practica/sql/01_select_where.sql) | 105 |
+| ☐ | 📖 Teoría · Bases de datos NoSQL (demostración corta) | [Presentación S03_02](1_Teoria/S03_02_presentacion_Bases_de_datos_NoSQL.pdf) | 15 |
+| ☐ | 💻 Práctica · NoSQL con documentos (o, si usáis MongoDB Compass, la guía de MongoDB) | [NoSQL con documentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/2_Practica/S03_01_nosql_mongomock.ipynb) | 30 |
 
-**Material de las actividades**
+**En clase: 3 h 20 min.**
 
-**Bloque A · SQL.** Abre `turisdata.db` (datos sintéticos) en DB Browser for SQLite, pestaña *Ejecutar SQL*, y sigue los scripts en orden. Para hacerlo **en parejas y sin perderte**, usa la **[guía autoguiada](2_Practica/sql/guia_sql_en_parejas.md)**:
+**Al acabar el día, deberías poder decir:**
 
-| Script | Tema |
-|---|---|
-| [`esquema_turisdata.md`](2_Practica/esquema_turisdata/esquema_turisdata.md) · [PDF](pdf/esquema_turisdata.pdf) · [imagen](2_Practica/esquema_turisdata/esquema_turisdata.png) | **Esquema de `turisdata.db`**: tablas, campos, qué significa cada uno y dónde buscar cada dato. **Tenedlo abierto en los ejercicios** |
-| [`apuntes_sql_nosql_y_automl.md`](1_Teoria/apuntes/apuntes_sql_nosql_y_automl.md) · [PDF](pdf/apuntes_sql_nosql_y_automl.pdf) · [ecofriendly](pdf/apuntes_sql_nosql_y_automl_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: SQL (SELECT, JOIN, GROUP BY, CRUD), NoSQL, AutoML, fuga de datos y umbral de negocio explicados con una mini-base de datos que puedes comprobar a mano |
-| [`guia_sql_en_parejas.md`](2_Practica/sql/guia_sql_en_parejas.md) · [PDF](pdf/guia_sql_en_parejas.pdf) · [ecofriendly](pdf/guia_sql_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar los scripts SQL en parejas**: roles, ciclo de cada ejercicio, plan de 100 min, errores y hoja de registro |
-| [`listado_ejercicios_sql.md`](2_Practica/sql/listado_ejercicios_sql.md) · [PDF](pdf/listado_ejercicios_sql.pdf) · [ecofriendly](pdf/listado_ejercicios_sql_ecofriendly.pdf) | **Listado de los 50 ejercicios SQL** por script, con casilla para marcar los que lleváis |
-| [`soluciones_sql_paso_a_paso.md`](2_Practica/sql/soluciones_sql_paso_a_paso.md) | **Solucionario paso a paso** de los 50 ejercicios SQL, con el resultado que debe salir. Usadlo **después** de intentarlo en pareja |
-| [`sql/01_select_where.sql`](2_Practica/sql/01_select_where.sql) | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `NULL` |
-| [`sql/02_join.sql`](2_Practica/sql/02_join.sql) | `JOIN` y `LEFT JOIN` |
-| [`sql/03_group_by.sql`](2_Practica/sql/03_group_by.sql) | Agregaciones, `GROUP BY`, `HAVING` |
-| [`sql/04_subconsultas.sql`](2_Practica/sql/04_subconsultas.sql) | Subconsultas y `WITH` |
-| [`sql/05_crud.sql`](2_Practica/sql/05_crud.sql) | `INSERT`, `UPDATE`, `DELETE`, transacciones |
-| [`sql/06_modelado_indices.sql`](2_Practica/sql/06_modelado_indices.sql) | Claves, normalización e índices |
+- [ ] Sé escribir un `SELECT` con `JOIN` y `GROUP BY`.
+- [ ] Sé cuándo elegir una base relacional y cuándo una NoSQL.
 
-| Guía / cuaderno | Tema | Colab |
-|---|---|---|
-| [`NoSQL_MongoDB.md`](2_Practica/nosql/NoSQL_MongoDB.md) + `S03_01_nosql_mongomock` (opcional) | Reservas como documentos en MongoDB | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/2_Practica/S03_01_nosql_mongomock.ipynb) |
-| [`guia_nosql_en_parejas.md`](2_Practica/nosql/guia_nosql_en_parejas.md) · [PDF](pdf/guia_nosql_en_parejas.pdf) · [ecofriendly](pdf/guia_nosql_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar el cuaderno de NoSQL en parejas**: roles, ciclo de cada ejercicio, plan de 30 min, errores y hoja de registro | |
-| [`listado_ejercicios_nosql.md`](2_Practica/nosql/listado_ejercicios_nosql.md) · [PDF](pdf/listado_ejercicios_nosql.pdf) · [ecofriendly](pdf/listado_ejercicios_nosql_ecofriendly.pdf) | **Listado de los ejercicios NoSQL** del cuaderno, con casilla para marcar los que lleváis | |
-| [`soluciones_nosql_paso_a_paso.md`](2_Practica/nosql/soluciones_nosql_paso_a_paso.md) | **Solucionario paso a paso** de los ejercicios NoSQL. Usadlo **después** de intentarlo en pareja | |
-| [`S3.5_lab_autogluon.ipynb`](2_Practica/laboratorio_automl/S3.5_lab_autogluon.ipynb) | **Cuaderno del laboratorio de AutoML** (AutoGluon): se ejecuta celda a celda, sin coste | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/2_Practica/laboratorio_automl/S3.5_lab_autogluon.ipynb) |
-| [`guia_automl_en_parejas.md`](2_Practica/automl/guia_automl_en_parejas.md) · [PDF](pdf/guia_automl_en_parejas.pdf) · [ecofriendly](pdf/guia_automl_en_parejas_ecofriendly.pdf) | **Guía autoguiada para trabajar el laboratorio de AutoML en parejas**: roles, ciclo de cada paso, plan de 100 min, elección del umbral con costes, esqueleto del informe y hoja de registro | |
-| [`listado_pasos_automl.md`](2_Practica/automl/listado_pasos_automl.md) · [PDF](pdf/listado_pasos_automl.pdf) · [ecofriendly](pdf/listado_pasos_automl_ecofriendly.pdf) | **Listado de pasos y preguntas de AutoML**, con casilla para marcar los que lleváis | |
-| [`soluciones_automl_paso_a_paso.md`](2_Practica/automl/soluciones_automl_paso_a_paso.md) | **Solucionario paso a paso** de las preguntas de AutoML. Usadlo **después** de intentarlo en pareja | |
-| [`codigo_explicado_automl.md`](2_Practica/automl/codigo_explicado_automl.md) | **El código del cuaderno explicado línea a línea**: qué hace cada celda, qué debe salir y pequeñas pruebas para comprobar que lo entendéis | |
+## Día 2 · Martes 27/10
 
-**Bloque B · AutoML.** Abre el **[cuaderno en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/2_Practica/laboratorio_automl/S3.5_lab_autogluon.ipynb)** y trabaja con la **[guía en parejas](2_Practica/automl/guia_automl_en_parejas.md)** (sin coste, sin crear más cuentas). La [guía corta de laboratorio AutoML con AutoGluon](pdf/Guia_AutoML_AutoGluon.pdf) es el resumen de una página. Los archivos que usa (el cuaderno, tres `.py`, `requirements.txt` y el CSV de reservas) están en **[`Reto_S03/laboratorio_automl/`](2_Practica/laboratorio_automl/)**. Si más adelante usáis otra plataforma de AutoML (por ejemplo, Amazon SageMaker Canvas), el flujo es el mismo: tenéis la tabla de equivalencias en el [README del laboratorio](2_Practica/laboratorio_automl/README.md#otras-plataformas-de-automl-por-ejemplo-amazon-sagemaker-canvas).
-
-<!--orden:ini-->
-## 🧭 Orden de trabajo del sprint
-
-Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
-
-**Día 1 del S03**
-
-| Nº | Tipo | Qué se hace | Tiempo |
+| ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| 1 | 🔔 Ceremonia | Planning del reto «Primer modelo en producción»: leed la ficha y repartid roles | 10 min |
-| 2 | 📖 Teoría | [Modelo relacional, SQL, CRUD y nociones de administración](1_Teoria/S03.1_Bases_de_datos_relacionales_y_SQL.pdf) | 40 min |
-| 3 | 💻 Práctica | Scripts SQL 01–06 en DB Browser, en este orden: [`SELECT`](2_Practica/sql/01_select_where.sql), [`JOIN`](2_Practica/sql/02_join.sql), [`GROUP BY`](2_Practica/sql/03_group_by.sql) y [subconsultas](2_Practica/sql/04_subconsultas.sql); después, [CRUD sobre una copia](2_Practica/sql/05_crud.sql) y [modelado e índices](2_Practica/sql/06_modelado_indices.sql) | 1 h 40 min |
-| 4 | 📖 Teoría | [Bases de datos NoSQL (demostración corta)](1_Teoria/S03.2_Bases_de_datos_NoSQL.pdf) | 15 min |
-| 5 | 💻 Práctica | [NoSQL con documentos](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/2_Practica/S03_01_nosql_mongomock.ipynb) (o, si usáis MongoDB Compass, la [guía de MongoDB](2_Practica/nosql/NoSQL_MongoDB.md)) | 35 min |
+| ☐ | 📖 Teoría · Introducción a AutoML y MLOps | [Presentación S03_03](1_Teoria/S03_03_presentacion_AutoML_y_MLOps.pdf) | 20 |
+| ☐ | 💻 Práctica · Carga, exploración y primer experimento de AutoML: cuaderno en Colab con la guía en parejas y el listado de pasos (pasos 0 a 5) | [cuaderno en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/2_Practica/laboratorio_automl/S3.5_lab_autogluon.ipynb) | 35 |
+| ☐ | 🎯 Reto · Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_03_una_pagina.md) | 80 |
+| ☐ | 📝 Test · **Test del bloque M6–M8** (bases de datos, AutoML y responsabilidad), solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | 25 |
+| ☐ | 🔔 Ceremonia · Entrega en `sprint-03/`, autoevaluación y coevaluación, review y retrospectiva | — | 40 |
 
-**Día 2 del S03**
+**En clase: 3 h 20 min.**
 
-| Nº | Tipo | Qué se hace | Tiempo |
-|---|---|---|---|
-| 6 | 📖 Teoría | [Introducción a AutoML y MLOps](1_Teoria/S03.3_AutoML_y_MLOps.pdf) | 20 min |
-| 7 | 💻 Práctica | [Carga y exploración de datos y primer experimento de AutoML (guía en parejas)](2_Practica/automl/guia_automl_en_parejas.md) · [cuaderno en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/2_Practica/laboratorio_automl/S3.5_lab_autogluon.ipynb) | 35 min |
-| 8 | 🎯 Reto | [Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6)](3_Reto/3_Consultar/Reto_Sprint_03.md) | 1 h 20 min |
-| 9 | 📝 Test | [**Test del bloque M6–M8** (bases de datos, AutoML y responsabilidad), solo se abre hoy](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | 25 min |
-| 10 | 🔔 Ceremonia | Entrega en `sprint-03/`, autoevaluación y coevaluación, review y retrospectiva | 40 min |
+**Al acabar el día, deberías poder decir:**
 
-<!--orden:fin-->
+- [ ] Informe del mejor modelo, evidencia de la llamada al servicio e informe de recursos en `sprint-03/`.
+- [ ] Recursos cerrados y borrados (0 €).
+- [ ] Test M6–M8 hecho y autoevaluación/coevaluación rellenadas.
 
-## Reto · «Primer modelo en producción»
+## El reto en pocas palabras
 
-📄 [Reto en PDF](pdf/Reto_Sprint_03.pdf) · [ecofriendly](pdf/Reto_Sprint_03_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+**Qué os pide el cliente.** TurisData ha perdido dinero porque algunas reservas se cancelan a última hora y la habitación se queda vacía. Os envía su histórico de reservas y os pide: *«¿Se puede construir algo que avise de qué reservas tienen más riesgo de cancelarse, y que mi equipo de reservas lo consulte desde otra aplicación?»* Es decir: **un modelo de IA funcionando como un servicio**, no solo un experimento.
 
-👉 **[Ver el reto completo, explicado paso a paso](3_Reto/3_Consultar/Reto_Sprint_03.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+**Qué vais a entregar:** un único informe de máximo 4 páginas con tres partes: el mejor modelo (con su umbral y sus costes), la evidencia de la llamada a la API y el informe de recursos y costes, con la prueba de que habéis cerrado todo.
 
+**Núcleo y extra.** Núcleo: el mejor modelo con su umbral (con vuestros costes), la llamada al servicio, el cierre y borrado de recursos (0 €) y el informe con riesgos y recomendación. Extra: comparar más modelos o ajustes, probar la API con datos imposibles, estimar el beneficio en euros o comprobar un posible sesgo con los datos.
 
-**Contexto:** TurisData Canarias quiere avisar de las reservas con más riesgo de cancelarse y consultarlo desde otra aplicación. Vosotros lo ponéis en marcha, del dato al servicio.
+Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_03_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_03.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
-**Entregáis** (un documento `.md` o PDF de máx. 4 páginas, en la carpeta `sprint-03/` del repositorio del equipo):
-- Informe del mejor modelo: modelos comparados, métrica, resultados en datos no vistos, umbral justificado y variables influyentes.
-- Evidencia de una llamada a la API, con su petición y su respuesta y sin claves visibles.
-- Informe de recursos y costes, con prueba de que todo se ha cerrado o eliminado.
+## ✅ Antes de cerrar el sprint (Definition of Done)
 
-**Reglas:**
-- Unas 2 h 10 min entre el planning, el reto y la entrega; solo datos sintéticos de TurisData y el límite de uso que indique el docente.
-- Nunca claves, contraseñas ni cadenas de conexión en el informe ni en el repositorio.
-- Evitad la fuga de datos: solo información disponible al hacer la reserva.
+**Archivos subidos en el repositorio del equipo, carpeta `sprint-03/`** (marca cada uno cuando lo veas en GitHub):
+- [ ] `informe_modelo.md` · lo creáis a partir de una plantilla
+- [ ] `captura_cierre.png` · lo creáis
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
-**Se valora:** corrección técnica, reproducibilidad, comunicación al cliente (qué hacer con una alerta) e IA responsable (falsas alertas, sesgos por país o canal), más umbral y fuga de datos bien justificados.
+**Total en `sprint-03/`: 2 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 5). Aparte: S3.5_lab_autogluon.ipynb; los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
-## ✅ Antes de cerrar el sprint
+**Comprobaciones antes de dar el sprint por cerrado:**
 - [ ] Test de conocimientos hecho el mar 27/10
 - [ ] Informe con las tres partes, en 4 páginas o menos
 - [ ] Métrica y umbral justificados en lenguaje de negocio, y variables excluidas por fuga explicadas
 - [ ] Llamada a la API probada, sin credenciales
 - [ ] Recursos cerrados o eliminados, con prueba
-- [ ] Entregable subido a la carpeta `sprint-03/` del repositorio del equipo
-- [ ] [Autoevaluación y coevaluación](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md) rellenadas
+- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y lo ha anotado en el propio entregable
+
+## En casa (cuando puedas)
+
+- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_sql_nosql_y_automl.md).
+
+## Si te atascas
+
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_03.md).
+2. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
+
+## Todo el material, por carpetas
+
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`.
+
+| Carpeta | Qué hay |
+|---|---|
+| [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
+| [`2_Practica/`](2_Practica/) | Las actividades del sprint: dinámicas, hojas de ejercicios, guías y scripts |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y cada paso explicado) |
+| [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
+
+Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).
+
+## Temario oficial de este sprint
+
+| Unidad | Conceptos que entran |
+|---|---|
+| M6a · Bases de datos SQL y NoSQL (UD 6a.1 a 6a.3) | Tablas, claves, relaciones, normalización básica · DDL/DML y CRUD: CREATE, INSERT, SELECT, UPDATE, DELETE; WHERE, ORDER BY, JOIN, GROUP BY · Índices, transacciones (ACID), copias de seguridad, usuarios y permisos · Buenas prácticas: nombrado, integridad, evitar SELECT , consultas parametrizadas · Tipos: documental, clave-valor, columnar, grafos; comparativa con SQL · CRUD en MongoDB (Compass/Atlas); cuándo elegir cada tipo |
+| M7 · AutoML y MLOps (UD 7.1 a 7.4) | Qué es AutoML; beneficios y límites frente al ML tradicional · Plataformas: SageMaker (Canvas/Autopilot), Vertex AI, Azure AutoML, H2O · Principios de MLOps: ciclo, versionado, despliegue, monitorización, deriva de datos · Cuenta, IAM, costes y buenas prácticas de seguridad; almacenamiento en S3 · Carga y tratamiento del dataset; visualización y calidad de datos · Tipo de problema y métrica objetivo; lanzamiento del experimento · Revisión de modelos candidatos, explicabilidad, validación y evaluación · Despliegue de un endpoint; invocación por API · Seguridad de acceso (IAM, API Gateway/Lambda), monitorización, control de costes |
+
+**Y ahora:** Sprint 4 · Python para IA (martes 3/11).
+
+*12 h (4 h teoría · 4 h práctica · 4 h PBL).*

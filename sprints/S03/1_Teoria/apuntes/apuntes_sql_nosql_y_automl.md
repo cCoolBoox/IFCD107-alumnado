@@ -271,7 +271,7 @@ EXPLAIN QUERY PLAN SELECT COUNT(*) FROM reservas WHERE id_cliente = 100;
 
 ---
 
-# DÍA 2 · NoSQL: cuando las filas y columnas no bastan
+# DÍA 1 · NoSQL: cuando las filas y columnas no bastan
 
 ## 8. De filas relacionadas a un documento
 
@@ -340,7 +340,7 @@ Equivalencias: `$match` ≈ `WHERE` · `$group` ≈ `GROUP BY` · `$sort`/`$limi
 
 ---
 
-# DÍA 3 · AutoML y MLOps: vuestro primer modelo, de principio a fin
+# DÍA 2 · AutoML y MLOps: vuestro primer modelo, de principio a fin
 
 ## 12. Qué automatiza AutoML (y qué no)
 

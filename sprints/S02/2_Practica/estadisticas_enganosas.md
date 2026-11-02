@@ -1,6 +1,6 @@
 # Casos de estadísticas engañosas
 
-**Práctica del sprint (≈ 1 h).** Nueve situaciones inspiradas en errores muy habituales al leer informes, noticias y gráficos. **Los datos son inventados.** En parejas o tríos.
+**Práctica del sprint (≈ 45 min).** Nueve situaciones inspiradas en errores muy habituales al leer informes, noticias y gráficos. **Los datos son inventados.** En parejas o tríos.
 
 ## Cómo trabajar cada caso
 Para cada uno, responded en 3 líneas:
