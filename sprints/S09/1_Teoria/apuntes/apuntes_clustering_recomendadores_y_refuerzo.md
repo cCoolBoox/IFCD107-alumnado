@@ -10,9 +10,10 @@ Hasta ahora **siempre había una columna objetivo** (¿cancela? ¿cuánto cuesta
 
 | Presentación | Pregunta | Tipo de aprendizaje |
 |---|---|---|
-| **S09.1** Clustering y PCA | ¿Qué «tipos» de cliente hay? ¿Cómo dibujo datos de muchas columnas? | **No supervisado** |
-| **S09.2** Recomendadores | ¿Qué experiencias le gustarán a cada huésped? | **No supervisado / híbrido** |
-| **S09.3** Refuerzo | ¿Cómo aprende un agente probando, con premios y castigos? | **Por refuerzo** |
+| **S09_01** Clustering | ¿Qué «tipos» de cliente hay? | **No supervisado** |
+| **S09_02** PCA | ¿Cómo dibujo datos de muchas columnas? | **No supervisado** |
+| **S09_03** Recomendadores | ¿Qué experiencias le gustarán a cada huésped? | **No supervisado / híbrido** |
+| **S09_04** Refuerzo | ¿Cómo aprende un agente probando, con premios y castigos? | **Por refuerzo** |
 
 **El reto:** segmentar a los huéspedes de TurisData, construir un recomendador de experiencias, ponerle **nombre, tamaño y acción comercial** a cada segmento y reflexionar sobre **IA responsable**.
 

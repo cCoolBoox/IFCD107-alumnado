@@ -14,9 +14,9 @@ La dirección de TurisData **oye hablar de redes neuronales en todas partes** y 
 
 | Presentación | Pregunta | Cuaderno |
 |---|---|---|
-| **S10.1** Fundamentos | ¿Qué es una red por dentro? | S10_01 (solo NumPy) |
-| **S10.2** Redes densas con Keras | ¿Cómo la construyo y la aplico a TurisData? | S10_02 |
-| **S10.3** Entrenamiento y regularización | ¿Cómo evito que memorice? | S10_03, S10_04 (reto) |
+| **S10_01** Red neuronal desde cero | ¿Qué es una red por dentro? | S10_01 (solo NumPy) |
+| **S10_02** Redes densas con Keras | ¿Cómo la construyo y la aplico a TurisData? | S10_02 |
+| **S10_03** Entrenamiento y regularización | ¿Cómo evito que memorice? | S10_03, S10_04 (reto) |
 
 ---
 

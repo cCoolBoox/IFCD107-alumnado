@@ -20,11 +20,11 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «¿Vale la pena la red?» y reparto de roles | — | 10 |
-| ☐ | 📖 Teoría · Fundamentos de redes neuronales | [Presentación S10.1](1_Teoria/S10.1_Fundamentos_de_redes_neuronales.pdf) | 20 |
+| ☐ | 📖 Teoría · Una red neuronal desde cero: neurona, activación, error y gradiente | [Presentación S10_01](1_Teoria/S10_01_presentacion_Red_neuronal_desde_cero.pdf) | 20 |
 | ☐ | 💻 Práctica · Una red neuronal con solo NumPy (los ejercicios marcados «en clase») | [Cuaderno S10_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_01_red_desde_cero.ipynb) | 40 |
-| ☐ | 📖 Teoría · Redes densas con Keras | [Presentación S10.2](1_Teoria/S10.2_Redes_densas_con_Keras.pdf) | 25 |
+| ☐ | 📖 Teoría · Redes densas con Keras: preparar los datos, Sequential, Dense y fit | [Presentación S10_02](1_Teoria/S10_02_presentacion_Redes_densas_con_Keras.pdf) | 25 |
 | ☐ | 💻 Práctica · MLP en Keras: clasificación y regresión (los ejercicios marcados «en clase») | [Cuaderno S10_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_02_mlp_keras.ipynb) | 60 |
-| ☐ | 📖 Teoría · Entrenamiento y regularización (diapositivas 1–4; las 5–6 son del reto) | [Presentación S10.3](1_Teoria/S10.3_Entrenamiento_y_regularizacion.pdf) | 25 |
+| ☐ | 📖 Teoría · Entrenamiento y regularización: sobreajuste, L2, *dropout* y *callbacks* (diapositivas 2 a 5; la 11 es del reto) | [Presentación S10_03](1_Teoria/S10_03_presentacion_Entrenamiento_y_regularizacion.pdf) | 25 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 20 |
 
 **En clase: 3 h 20 min.**
@@ -38,7 +38,7 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · Sobreajuste, L2, *dropout*, parada temprana y *callbacks* (los ejercicios marcados «en clase») | [Cuaderno S10_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_03_regularizacion.ipynb) | 55 |
+| ☐ | 💻 Práctica · Sobreajuste, L2, *dropout*, parada temprana y *callbacks* (los ejercicios marcados «en clase») | [Cuaderno S10_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_03_regularizacion.ipynb) · [Presentación S10_03](1_Teoria/S10_03_presentacion_Entrenamiento_y_regularizacion.pdf) | 55 |
 | ☐ | 🎯 Reto · Esqueleto `S10_04`: elegir el problema y reproducir la referencia (paso 1) → primera red (2) → variantes (3) → diagnosticar el sobreajuste (4) → comparación justa (5) → informe y entrega (6); lo que falte, en la consolidación y la 6.ª hora | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_10_una_pagina.md) | 90 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 15 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva | — | 40 |

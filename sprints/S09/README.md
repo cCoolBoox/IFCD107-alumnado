@@ -20,11 +20,12 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Conocer al huésped» y reparto de roles | — | 10 |
-| ☐ | 📖 Teoría · Clustering y PCA | [Presentación S09.1](1_Teoria/S09.1_Clustering_y_PCA.pdf) | 30 |
+| ☐ | 📖 Teoría · Clustering: agrupar sin etiquetas con k-means, silueta, jerárquico y DBSCAN | [Presentación S09_01](1_Teoria/S09_01_presentacion_Clustering.pdf) | 20 |
 | ☐ | 💻 Práctica · Segmentar huéspedes: k-means, silueta, jerárquico y DBSCAN (los ejercicios marcados «en clase») | [Cuaderno S09_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_01_clustering.ipynb) | 45 |
+| ☐ | 📖 Teoría · PCA: varianza explicada y mapa en 2D | [Presentación S09_02](1_Teoria/S09_02_presentacion_PCA.pdf) | 10 |
 | ☐ | 💻 Práctica · PCA: varianza explicada y mapa en 2D (los ejercicios marcados «en clase») | [Cuaderno S09_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_02_pca.ipynb) | 30 |
 | ☐ | 🎯 Reto · Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_09_una_pagina.md) | 45 |
-| ☐ | 📖 Teoría · Sistemas de recomendación | [Presentación S09.2](1_Teoria/S09.2_Sistemas_de_recomendacion.pdf) | 25 |
+| ☐ | 📖 Teoría · Sistemas de recomendación | [Presentación S09_03](1_Teoria/S09_03_presentacion_Sistemas_de_recomendacion.pdf) | 25 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 15 |
 
 **En clase: 3 h 20 min.**
@@ -38,8 +39,8 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · Recomendadores: popularidad, contenido, colaborativo y factorización (los ejercicios marcados «en clase») | [Cuaderno S09_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_03_recomendadores.ipynb) | 50 |
-| ☐ | 📖 Teoría · Aprendizaje por refuerzo (visión conceptual) | [Presentación S09.3](1_Teoria/S09.3_Aprendizaje_por_refuerzo.pdf) | 15 |
+| ☐ | 💻 Práctica · Recomendadores: popularidad, contenido, colaborativo y factorización (los ejercicios marcados «en clase») | [Cuaderno S09_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_03_recomendadores.ipynb) · [Presentación S09_03](1_Teoria/S09_03_presentacion_Sistemas_de_recomendacion.pdf) | 50 |
+| ☐ | 📖 Teoría · Aprendizaje por refuerzo (visión conceptual) | [Presentación S09_04](1_Teoria/S09_04_presentacion_Aprendizaje_por_refuerzo.pdf) | 15 |
 | ☐ | 💻 Práctica · Q-learning en el hotel (demostración guiada) | [Cuaderno S09_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_04_q_learning.ipynb) | 25 |
 | ☐ | 🎯 Reto · Recomendador, ficha de segmentos, IA responsable y ensayo (pasos 4–5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_09_una_pagina.md) | 50 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 20 |
