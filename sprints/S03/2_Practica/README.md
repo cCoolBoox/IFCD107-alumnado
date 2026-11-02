@@ -1,14 +1,14 @@
-# Actividades del Sprint 3 · mapa de la carpeta
+# Práctica del Sprint 3 · mapa de la carpeta
 
-Aquí está todo lo que se **practica** en el S03. Cada carpeta tiene lo mismo: una **guía** para trabajar en pareja, el **listado** de ejercicios y el **solucionario** (para mirar **después** de intentarlo).
+Aquí está todo lo que se **practica** en el Sprint 3. Cada carpeta tiene lo mismo: una **guía** para trabajar en pareja, el **listado** de ejercicios y el **solucionario** (para mirar **después** de intentarlo).
 
 | Carpeta | Qué hay | Empezad por… |
 |---|---|---|
 | [`esquema_turisdata/`](esquema_turisdata/) | **Esquema de `turisdata.db`**: tablas, campos y relaciones (imagen, PDF y explicación) | [`esquema_turisdata.md`](esquema_turisdata/esquema_turisdata.md) · **tenedlo abierto en todos los ejercicios** |
 | [`sql/`](sql/) | Los **6 scripts SQL** (`01_…` a `06_…`) con los 50 ejercicios, más su guía, listado y solucionario | [`guia_sql_en_parejas.md`](sql/guia_sql_en_parejas.md) |
-| [`nosql/`](nosql/) | Guía, listado y solucionario del **cuaderno de NoSQL** (el cuaderno está en [`../notebooks/`](./)) | [`guia_nosql_en_parejas.md`](nosql/guia_nosql_en_parejas.md) |
-| [`automl/`](automl/) | Guía, listado, solucionario y **código explicado línea a línea** del **laboratorio de AutoML** (el cuaderno está en [`../Reto_S03/laboratorio_automl/`](laboratorio_automl/)) | [`guia_automl_en_parejas.md`](automl/guia_automl_en_parejas.md) |
-| *(esta carpeta)* | **Apuntes** de teoría de SQL, NoSQL y AutoML | [`apuntes_sql_nosql_y_automl.md`](../1_Teoria/apuntes/apuntes_sql_nosql_y_automl.md) |
+| [`nosql/`](nosql/) | Guía, listado y solucionario del **cuaderno de NoSQL** (el cuaderno es [`S03_01_nosql_mongomock.ipynb`](S03_01_nosql_mongomock.ipynb), en esta misma carpeta) | [`guia_nosql_en_parejas.md`](nosql/guia_nosql_en_parejas.md) |
+| [`automl/`](automl/) | Guía, listado, solucionario y **código explicado línea a línea** del **laboratorio de AutoML** (el cuaderno está en [`laboratorio_automl/`](laboratorio_automl/)) | [`guia_automl_en_parejas.md`](automl/guia_automl_en_parejas.md) |
+| *(en `1_Teoria/`)* | **Apuntes** de teoría de SQL, NoSQL y AutoML | [`apuntes_sql_nosql_y_automl.md`](../1_Teoria/apuntes/apuntes_sql_nosql_y_automl.md) |
 
 ## Orden recomendado
 

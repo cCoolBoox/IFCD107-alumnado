@@ -6,7 +6,7 @@
 
 1. Guardar y recargar el modelo (apartados 8 y 9 del cuaderno).
 2. Fijar vuestro umbral en el servicio y llamar a la API con una reserva (apartado 10).
-3. Probar una reserva con datos imposibles y guardar la petición y la respuesta como evidencia.
+3. Guardar la petición y la respuesta como evidencia (extra 🔴: probar antes una reserva con datos imposibles).
 
 **En sencillo.** Hasta ahora el modelo vive dentro del cuaderno, y el equipo de reservas no trabaja con cuadernos. Un **servicio** (una **API**) es una ventanilla: otra aplicación entrega los datos de una reserva y el modelo devuelve su riesgo y si hay alerta, como un camarero que lleva el pedido a la cocina y vuelve con el plato. En Colab no se puede abrir la web del servicio desde vuestro navegador, así que el cuaderno usa una pieza (`TestClient`) que hace la llamada «por dentro», igual que la haría otra aplicación. El código ya está escrito: ejecutáis, añadís una celda de tres líneas y guardáis lo que sale. No hace falta saber qué es FastAPI ni cómo se programa un servicio.
 
@@ -43,7 +43,7 @@
 
 3. **Ejecutar el apartado «10. Servir el modelo por API».** Descarga `api_cancelaciones.py` (necesita internet), pregunta al servicio si está vivo (`/salud`) y le manda una reserva de ejemplo (`/predecir`). La respuesta tiene tres datos: `probabilidad_cancelacion` (el riesgo, de 0 a 1), `alerta` (`True` si el riesgo llega al umbral) y `umbral` (el que usa el servicio).
 
-4. **Probar una reserva con datos imposibles.** El cuaderno lo sugiere en un comentario. Añadid otra celda nueva debajo del apartado 10 y ejecutadla:
+4. **Extra 🔴 (si os da tiempo): probar una reserva con datos imposibles.** El cuaderno lo sugiere en un comentario. Si vais justos, saltad al punto 5. Añadid otra celda nueva debajo del apartado 10 y ejecutadla:
 
     ```python
     reserva_mala = dict(reserva_ejemplo, noches=0)
@@ -63,7 +63,7 @@
 
 **Qué deberíais ver.** Apartado 8: `Modelo recargado. Probabilidades de ejemplo:` seguido de cinco números entre 0 y 1. Apartado 9: `Ejemplo de predicción: {'probabilidad_cancelacion': …, 'alerta': …}`, con alerta calculada con 0,5. Apartado 10: una línea `{'estado': 'ok', 'modelo': 'modelo_cancelaciones'}` y otra `200 {'probabilidad_cancelacion': …, 'alerta': …, 'umbral': …}`: la probabilidad es un número entre 0 y 1 (la guía da ~0,79 para la reserva de ejemplo), `alerta` es `True` si la probabilidad supera el umbral y `umbral` es **el vuestro**. En la celda de los datos imposibles, un `422`.
 
-**Hecho cuando:** la respuesta del apartado 10 muestra vuestro umbral, tenéis guardado el texto o la captura de la petición y la respuesta, y habéis visto el `422` con `noches` a 0.
+**Hecho cuando:** la respuesta del apartado 10 muestra vuestro umbral, tenéis guardado el texto o la captura de la petición y la respuesta, (extra 🔴: y habéis visto el `422` con `noches` a 0).
 
 ## Si algo falla
 

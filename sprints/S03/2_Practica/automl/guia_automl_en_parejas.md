@@ -2,7 +2,7 @@
 
 **Para qué sirve:** os explica **cómo trabajar vosotros dos, paso a paso**, el laboratorio de AutoML del Sprint 3: entrenar un modelo que **predice si una reserva de TurisData se cancelará**, evaluarlo, elegir cuándo dar la alerta y ofrecerlo como servicio. Es la práctica que os prepara para el **reto «Primer modelo en producción»**.
 
-- **Tiempo en clase:** unos **100 minutos** (el plan está en la sección 4). El informe del reto se remata después.
+- **Tiempo en clase:** unos **100 minutos de cuaderno**, repartidos entre la práctica guiada (35 min, pasos 0 a 5) y el bloque del reto (pasos 6 a 11); el plan está en la sección 4. El informe del reto se remata dentro del propio reto.
 - **Coste:** **0 €**. Se hace en Colab (gratis) o en vuestro ordenador. No hace falta crear cuentas de pago.
 - **Qué necesitáis:** un navegador y una **cuenta de Google** (para Colab), o Python 3.10–3.13 con 8 GB de RAM si lo hacéis en local.
 - **Qué no necesitáis:** saber programar a fondo. Ejecutáis celdas **de una en una**, leéis lo que sale y respondéis preguntas. Lo difícil no es el código: es **interpretar los resultados y decidir**.
@@ -70,7 +70,7 @@ Repetid esto **en cada celda del laboratorio**.
 
 ---
 
-## 4. Plan de la sesión (100 minutos)
+## 4. Plan del cuaderno (100 minutos en total)
 
 | Bloque | Pasos del cuaderno | Minutos | Qué os llevaréis |
 |---|---|---|---|

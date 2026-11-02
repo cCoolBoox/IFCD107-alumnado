@@ -32,7 +32,7 @@
 | 10 | Paso 1: problema y datos (SQL por canal, 18 columnas) | Frase del cliente, % por canal y columnas razonadas |
 | 10 | Paso 2: comparar modelos y ver qué pesa | Mejor modelo con su `score_test`, métrica y ajustes anotados |
 | 25 | Paso 3: elegir el umbral con vuestros costes | Importes con su razón, umbral elegido y frase para el directivo |
-| 10 | Paso 4: publicar el servicio y hacer una llamada | Respuesta con vuestro umbral y el 422 guardados |
+| 10 | Paso 4: publicar el servicio y hacer una llamada | Respuesta con vuestro umbral guardada (extra: la prueba del 422) |
 | 10 | Paso 5: cerrar y borrar | Tabla de recursos y `captura_cierre.png` |
 | 15 | Paso 6: redactar el informe | Siete apartados rellenos |
 | 40 | Entrega: revisión con la rúbrica, review (demo de 5 min con la llamada en directo) y retro | Todo subido y revisión anotada |

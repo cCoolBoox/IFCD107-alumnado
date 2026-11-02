@@ -15,9 +15,6 @@
 4. Detectar **muestras sesgadas**, la **confusión entre correlación y causalidad** y la **paradoja de Simpson**.
 5. Conocer el **ecosistema de software** de IA (Python, Colab, librerías, GPU) y tener tus cuentas listas.
 
-## Antes de empezar
-Sprint 1 terminado. Matemáticas de secundaria (fracciones, potencias, porcentajes). Una calculadora o el móvil.
-
 ## Día 1 · Jueves 22/10
 
 | ☐ | Qué haces | Abre | Min |

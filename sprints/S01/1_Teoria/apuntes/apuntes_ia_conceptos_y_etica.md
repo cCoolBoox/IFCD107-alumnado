@@ -87,7 +87,7 @@ La IA ha vivido ciclos de **entusiasmo (verano)** y **desencanto (invierno)**:
 
 Muchos sistemas mezclan varias (un asistente de voz: voz + lenguaje + generativa).
 
-**Casos en Canarias:** chatbots multiidioma y predicción de ocupación en turismo; mantenimiento predictivo en puertos; visión para la calidad del plátano y el tomate; clasificación de expedientes en la administración; tutores adaptativos en educación.
+**Casos en Canarias:** chatbots multiidioma y predicción de ocupación en turismo; mantenimiento predictivo en puertos; visión para la calidad del plátano y el tomate; clasificación de expedientes y atención ciudadana en la administración; tutores adaptativos y detección de abandono en educación; diagnóstico asistido por imagen y triaje en salud.
 
 ## 4. Tres mitos y los límites reales
 
@@ -187,7 +187,7 @@ Es el paso donde más gente se equivoca. Ejemplo en TurisData:
 | **Problema de negocio** | «Reducir las habitaciones vacías por cancelaciones de última hora» |
 | **Traducción a ML** | Clasificación binaria: ¿esta reserva se cancelará? |
 | **Variable objetivo** | `cancelada` (0 / 1) |
-| **Métrica de éxito** | Detectar las cancelaciones (recall) sin saturar de falsas alarmas |
+| **Métrica de éxito** | Detectar las cancelaciones (exhaustividad o *recall*) sin saturar de falsas alarmas |
 
 Una mala traducción **invalida todo el trabajo posterior**, aunque el modelo sea excelente.
 
@@ -199,7 +199,7 @@ Se mira: **cuántos datos** hay (los modelos complejos necesitan más), **explic
 
 ### Por qué fracasan los proyectos de IA
 
-Entre el **70 % y el 85 %** no llega a producción o no da el valor esperado, **y casi nunca por motivos técnicos**:
+Según el informe de RAND (2024), **más del 80 %** de los proyectos de IA fracasan: no llegan a producción o no dan el valor esperado, **y casi nunca por motivos técnicos**:
 
 1. Problema mal definido o sin métrica de negocio.
 2. Datos insuficientes, sesgados o mal gestionados.
@@ -307,7 +307,7 @@ Precisión = 4 / (4 + 6)    = 40 %       ← de cada 10 avisos, 4 son ciertos
 
 Fíjate: **tiene peor exactitud (93 % < 95 %) y es muchísimo más útil**. Por eso se mira siempre la matriz y se compara con un **modelo de referencia muy simple** (baseline).
 
-> Métricas más finas (precisión, recall, AUC) se ven en los Sprints 6 y 13. Aquí basta con entender **por qué la exactitud sola no sirve**.
+> Métricas más finas (precisión, exhaustividad o *recall*, AUC) se ven en los Sprints 6, 7 y 13. Aquí basta con entender **por qué la exactitud sola no sirve**.
 
 ---
 
@@ -317,9 +317,9 @@ Fíjate: **tiene peor exactitud (93 % < 95 %) y es muchísimo más útil**. Por 
 
 | Caso | Qué pasó |
 |---|---|
-| **COMPAS** (EE. UU., 2016) | Software que predecía riesgo de reincidencia: puntuaba **más alto** a personas negras con historiales similares a los de personas blancas |
+| **COMPAS** (EE. UU., 2016) | Software que predecía riesgo de reincidencia. ProPublica comparó sus puntuaciones con lo que pasó después: entre quienes **no** volvieron a delinquir, marcó como riesgo alto al **45 %** de los acusados negros y al **23 %** de los blancos |
 | **Amazon, selección de CV** (2018) | Se retiró: **penalizaba a las candidatas** porque aprendió de diez años de contrataciones mayoritariamente masculinas |
-| **Reconocimiento facial** | Errores muy distintos según el grupo: **34,7 %** en mujeres de piel oscura frente a **0,8 %** en hombres de piel clara (estudio *Gender Shades*, 2018) |
+| **Reconocimiento facial** | Errores muy distintos según el grupo: **34,7 %** en mujeres de piel oscura frente a **0,8 %** en hombres de piel clara (estudio *Gender Shades*, de Buolamwini y Gebru, 2018, con tres sistemas comerciales: error de **hasta** 34,7 % en un caso y **nunca más de** 0,8 % en el otro) |
 
 **Qué tienen en común:** resultados discriminatorios, con **datos históricos sesgados** y nadie midió la equidad antes de desplegar. El algoritmo no «es racista»: **reproduce lo que había en los datos**.
 
@@ -388,6 +388,10 @@ La norma europea de IA clasifica los sistemas por riesgo:
 | **Mínimo** | Sin obligaciones específicas | Filtros de spam |
 
 Los sistemas de **alto riesgo** necesitan gestión de riesgos, gobernanza de datos, documentación y registros, y **supervisión humana**. Los plazos son escalonados: **consulta siempre el calendario vigente** antes de decidir.
+
+**Calendario (Reglamento (UE) 2024/1689, comprobado en noviembre de 2026; verifícalo antes de citarlo):** entró en vigor el 1/8/2024; las prácticas prohibidas se aplican desde el 2/2/2025; los modelos de IA de uso general, desde el 2/8/2025; la mayoría de las normas, con la transparencia, desde el 2/8/2026; el alto riesgo de uso listado (empleo, educación, crédito…), desde el 2/12/2027, y el de productos regulados (juguetes, máquinas…), desde el 2/8/2028, tras el aplazamiento del «Ómnibus digital de IA» (Reglamento (UE) 2026/1744). Hay excepciones según el tipo de sistema y la fecha en que se comercializó, y las fechas pueden volver a cambiar.
+
+**Multas máximas del AI Act:** 35 M€ o el 7 % de la facturación mundial anual en las prácticas prohibidas, y 15 M€ o el 3 % en otras obligaciones (siempre la cifra mayor; en las pymes, la menor). En España vigilan la **AEPD** (datos personales) y la **AESIA** (Agencia Española de Supervisión de la Inteligencia Artificial).
 
 **Ejemplo TurisData:** un chatbot de reservas es riesgo **limitado** (avisar de que es IA). Un sistema que **filtra currículums** para contratar personal sería **alto** riesgo.
 

@@ -40,7 +40,8 @@
 ## Frases para el dictamen (completad los huecos)
 
 - «Se compara con …, pero no hay ningún dato que lo respalde.» · «En el total gana …, pero dentro de cada grupo ocurre lo contrario, porque …»
-- «Solo ha respondido …; faltan …, así que no representa a todos.» · «Se comparan … y …, que no son equivalentes porque …»
+- «Solo hay … datos, de …; es poco para sacar una conclusión.» · «Solo ha respondido …; faltan …, así que no representa a todos.»
+- «Que … y … suban a la vez no prueba que una cause la otra; puede influir …» · «Se comparan … y …, que no son equivalentes porque …»
 - «Recomendamos … porque … Antes de decidir habría que mirar …» · «Si entrenáramos un modelo con …, aprendería …, porque …»
 
 ## Antes de entregar

@@ -386,12 +386,12 @@ Los dos errores no cuestan lo mismo:
 
 | Error | Qué pasa | Coste |
 |---|---|---|
-| **Cancelación no detectada** | No avisamos y la habitación queda vacía | **Alto** |
-| **Falsa alarma** | Avisamos (por ejemplo, ofrecemos un descuento) y la reserva se mantiene | **Menor** |
+| **Cancelación no prevista** | No avisamos y la habitación queda vacía | **Alto** |
+| **Alerta falsa** | Avisamos (por ejemplo, ofrecemos un descuento) y la reserva se mantiene | **Menor** |
 
 ### Ejemplo numérico completo
 
-Supón que una cancelación no detectada cuesta **100 €** y una falsa alarma **10 €**. El modelo da estas probabilidades para 8 reservas (y sabemos qué pasó de verdad):
+Supón que una cancelación no prevista cuesta **100 €** y una alerta falsa **10 €**. El modelo da estas probabilidades para 8 reservas (y sabemos qué pasó de verdad):
 
 | Reserva | A | B | C | D | E | F | G | H |
 |---|---|---|---|---|---|---|---|---|
@@ -402,7 +402,7 @@ Supón que una cancelación no detectada cuesta **100 €** y una falsa alarma *
 
 ```
 Aciertos de cancelación (VP): A, B, D = 3
-Falsas alarmas (FP): C = 1          Canceladas que se nos escapan (FN): E = 1
+Alertas falsas (FP): C = 1          Canceladas que se nos escapan (FN): E = 1
 Coste = 1 × 100 € + 1 × 10 € = 110 €
 ```
 

@@ -235,11 +235,11 @@ Mira: la media (2.220) **no representa a nadie** porque el 6.000 la arrastra hac
 
 ### Dispersión: ¿cuánto se separan los datos?
 
-- **Desviación típica (σ):** "cuánto se alejan, de media, los datos de la media". Con `2, 4, 4, 4, 5, 5, 7, 9`:
-  1. Media = 5.
-  2. Diferencias con la media: `−3, −1, −1, −1, 0, 0, 2, 4`.
-  3. Elévalas al cuadrado: `9, 1, 1, 1, 0, 0, 4, 16` → suma 32.
-  4. Divide entre 8 (**varianza** = 4) y haz la raíz: **σ = 2**.
+- **Desviación típica (σ):** "cuánto se alejan, de media, los datos de la media". Con `1, 5, 5, 7, 7, 11` (minutos de espera de 6 clientes):
+  1. Media = 6.
+  2. Diferencias con la media: `−5, −1, −1, 1, 1, 5`.
+  3. Elévalas al cuadrado: `25, 1, 1, 1, 1, 25` → suma 54.
+  4. Divide entre 6 (**varianza** = 9) y haz la raíz: **σ = 3**.
   
   Sale en las **mismas unidades** que el dato (si son euros, σ son euros).
 - **Cuartiles:** ordena los datos y pártelos en 4 trozos iguales. **Q1** deja el 25 % por debajo, la mediana es Q2 y **Q3** deja el 75 %. El **IQR = Q3 − Q1** es el rango donde está el **50 % central**. Es la "caja" del diagrama de caja.
@@ -281,22 +281,22 @@ Muchas medidas (alturas, tiempos, errores) se reparten en forma de **campana** a
 
 La pregunta: **"si ha dado positivo, ¿cuánta probabilidad hay de que sea de verdad?"** Casi nadie acierta a ojo. Se resuelve **contando personas**.
 
-**Ejemplo:** alarma de humo de un hotel. Un día de cada 100 hay un incendio real. La alarma detecta el **90 %** de los incendios reales, pero **suena en falso el 10 %** de los días sin incendio. Se ha activado. ¿Probabilidad de incendio real?
+**Ejemplo:** alarma de humo de un hotel. Un día de cada 200 hay un incendio real. La alarma detecta el **95 %** de los incendios reales, pero **suena en falso el 4 %** de los días sin incendio. Se ha activado. ¿Probabilidad de incendio real?
 
-Imagina **10.000 días**:
+Imagina **20.000 días**:
 
 ```
-Incendios reales: 1 de cada 100          → 100 días
-   de ellos, la alarma suena (90 %)      →  90 días  ✔ (alarma buena)
-Días sin incendio: 9.900
-   de ellos, suena en falso (10 %)       → 990 días  ✘ (falsas alarmas)
+Incendios reales: 1 de cada 200          → 100 días
+   de ellos, la alarma suena (95 %)      →  95 días  ✔ (alarma buena)
+Días sin incendio: 19.900
+   de ellos, suena en falso (4 %)        → 796 días  ✘ (falsas alarmas)
 
-Total de días en que suena la alarma = 90 + 990 = 1.080
-De esos, incendios reales = 90
-Probabilidad = 90 ÷ 1.080 = 0,083  → solo un 8,3 %
+Total de días en que suena la alarma = 95 + 796 = 891
+De esos, incendios reales = 95
+Probabilidad = 95 ÷ 891 = 0,107  → solo un 10,7 %
 ```
 
-**Aunque la alarma "acierta el 90 %", casi 9 de cada 10 veces que suena es falsa**, porque lo que se busca (el incendio) es **raro** y las falsas alarmas se acumulan sobre los muchos días normales. Es exactamente lo que le pasa a un detector de reservas fraudulentas si el fraude es poco frecuente.
+**Aunque la alarma "acierta el 95 %", casi 9 de cada 10 veces que suena es falsa**, porque lo que se busca (el incendio) es **raro** y las falsas alarmas se acumulan sobre los muchos días normales. Es exactamente lo que le pasa a un detector de reservas fraudulentas si el fraude es poco frecuente.
 
 La fórmula de Bayes, `P(A|B) = P(B|A) · P(A) ÷ P(B)`, es **esta misma cuenta**: *(los verdaderos positivos) ÷ (todos los positivos)*. Si en un examen te falla la fórmula, vuelve a contar personas.
 
@@ -353,16 +353,20 @@ A veces una tendencia **se da la vuelta** al juntar los grupos. Ejemplo (datos i
 
 ## 13. Lista de trampas para auditar una frase (la usarás en el reto)
 
-| Trampa | Ejemplo | La pregunta que la destapa |
+Son las **ocho cartas de error** del reto, con su número. Las cartas 7 y 8 son trampas que el informe de este sprint no contiene, pero conviene conocerlas.
+
+| Carta | Ejemplo | La pregunta que la destapa |
 |---|---|---|
-| **Sin comparación o sin fuente** | "Estamos en la media del sector" | ¿Con qué se compara? ¿Hay un dato? |
-| **Muestra pequeña** | "El 100 % lo recomienda" (n = 2) | ¿Cuántos datos hay? |
-| **Muestra sesgada** | Encuesta solo a quien dejó su correo | ¿Quién ha respondido y quién falta? |
-| **Correlación = causa** | "Helados ↔ quemaduras" | ¿Hay una tercera cosa que explique las dos? |
-| **Simpson / no separar grupos** | El total contradice a los grupos | Si separo por grupos, ¿cambia? |
-| **Base de comparación distinta** | "+50 % y −10 % se compensan" (no: depende de cuánto había) · "julio→agosto" no es "agosto→julio" | ¿Se comparan cosas iguales (mismos días, misma situación)? |
-| **Eje truncado** | Gráfico que empieza en 90 en vez de 0 | ¿Dónde empieza el eje? |
-| **Significativo ≠ importante** | Un efecto minúsculo puede tener p < 0,05 | ¿Es lo bastante grande como para importar? |
+| **1. Comparación sin fuente** | "Estamos en la media del sector" | ¿Con qué se compara? ¿Hay algún dato que lo respalde? |
+| **2. Paradoja de Simpson** | El total contradice a los grupos | Si separo por grupos, ¿cambia el resultado? |
+| **3. Muestra pequeña** | "El 100 % lo recomienda" (n = 2) | ¿Cuántos datos hay? ¿De qué momento? |
+| **4. Muestra sesgada** | Encuesta solo a quien dejó su correo | ¿Quién ha respondido y quién falta? |
+| **5. Correlación no es causa** | "Helados ↔ quemaduras" | ¿Hay una tercera cosa que explique las dos? |
+| **6. Base de comparación distinta** | "+50 % y −10 % se compensan" (no: depende de cuánto había) · "julio→agosto" no es "agosto→julio" | ¿Se comparan cosas iguales (mismos días, misma situación)? |
+| **7. Eje truncado** *(trampa)* | Gráfico que empieza en 90 en vez de 0 | ¿Dónde empieza el eje? |
+| **8. Sesgo de supervivencia** *(trampa)* | Entrevistar solo a quien terminó la maratón | ¿Solo se mira a quien «llegó hasta el final»? |
+
+Una trampa más, que no es carta del reto: **Significativo ≠ importante**. Un efecto minúsculo puede tener p < 0,05; la pregunta es si es lo bastante grande como para importar.
 
 ### El método en 3 preguntas (para cada frase del informe)
 

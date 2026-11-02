@@ -15,9 +15,6 @@
 4. Identificar riesgos de **sesgo, privacidad, transparencia, desinformación y decisiones automatizadas**, y conocer lo esencial de RGPD y del AI Act.
 5. Aplicar un **checklist ético** a un caso y priorizar oportunidades de IA para un cliente.
 
-## Antes de empezar
-Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). No hace falta Python ni matemáticas.
-
 ## Día 1 · Martes 20/10
 
 | ☐ | Qué haces | Abre | Min |
@@ -29,7 +26,7 @@ Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). N
 | ☐ | 📖 Teoría · Panorama de algoritmos y CRISP-DM | [Presentación S01_02](1_Teoria/S01_02_presentacion_Algoritmos_y_CRISP-DM.pdf) | 25 |
 | ☐ | 💻 Práctica · Dinámica C: elegir la familia de algoritmos en 3 de los 6 problemas (con el docente) | — | 15 |
 | ☐ | 📖 Teoría · Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste | [Presentación S01_03](1_Teoria/S01_03_presentacion_Tipos_de_aprendizaje_y_sobreajuste.pdf) | 25 |
-| ☐ | 💻 Práctica · Dinámica B: clasificación «a mano» (demostración en la pizarra) | [ejemplo clasificacion caso](2_Practica/ejemplo_clasificacion_caso.md) | 10 |
+| ☐ | 💻 Práctica · Dinámica B: clasificación «a mano» (demostración en la pizarra) | [tarjetas casos uso](2_Practica/tarjetas_casos_uso.md) | 10 |
 | ☐ | 🎯 Reto · Lluvia de ideas y elección de casos (paso 2) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_01_una_pagina.md) | 25 |
 
 **En clase: 3 h 20 min.**
@@ -85,6 +82,7 @@ Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_01_una_pagina
 ## En casa (cuando puedas)
 
 - Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Practicar la matriz de confusión y las métricas (opcional, sin código): [«La matriz de confusión, en sencillo»](2_Practica/S01_matriz_de_confusion_en_sencillo.html) (10 min), [ejercicio de la matriz de confusión](2_Practica/S01_ejercicio_matriz_de_confusion.html) (20 min, en parejas) y [ejercicio «¿Bueno o malo?»](2_Practica/S01_ejercicio_bueno_o_malo.html).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_ia_conceptos_y_etica.md).
 
 ## Si te atascas

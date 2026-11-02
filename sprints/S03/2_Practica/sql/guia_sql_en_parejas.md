@@ -2,7 +2,7 @@
 
 **Para qué sirve:** os explica **cómo trabajar vosotros dos, paso a paso**, los seis scripts de SQL del Sprint 3, sin que nadie tenga que deciros qué hacer en cada momento.
 
-- **Tiempo en clase:** unos **100 minutos** (el trabajo recomendado está en la tabla de la sección 4). Los ejercicios que no os dé tiempo a hacer se pueden terminar en casa.
+- **Tiempo en clase:** unos **105 minutos**: 5 para prepararos (sección 1) y 100 para los scripts (el trabajo recomendado está en la tabla de la sección 4). Los ejercicios que no os dé tiempo a hacer se pueden terminar en casa.
 - **Qué necesitáis:** **DB Browser for SQLite** instalado, el [esquema de turisdata.db](../esquema_turisdata/esquema_turisdata.md), el archivo [`turisdata.db`](../../../../datos/turisdata.db) y los scripts [`sql/`](./). Un ordenador por pareja es suficiente.
 - **Qué no necesitáis:** saber programar. SQL se parece a **hacer preguntas en inglés muy sencillo** a una tabla.
 - **Datos:** son **sintéticos** (inventados). Sirven para practicar, no son estadísticas reales del turismo.
@@ -88,7 +88,7 @@ Repetid esto **en cada ejercicio**. Con la práctica os llevará menos de 3 minu
 
 ---
 
-## 4. Plan de la sesión (100 minutos)
+## 4. Plan de la sesión (100 minutos de scripts)
 
 | Script | Minutos | Qué hacéis (núcleo) | Qué es opcional |
 |---|---|---|---|

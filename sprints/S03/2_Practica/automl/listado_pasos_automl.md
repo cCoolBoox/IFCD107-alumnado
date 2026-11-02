@@ -23,7 +23,7 @@ Un CSV con **6.000 reservas y 18 columnas**, [`reservas_turisdata.csv`](../labor
 
 ---
 
-## En clase (≈ 100 minutos)
+## En clase (≈ 100 minutos de cuaderno: 35 en la práctica guiada y el resto en el bloque del reto)
 
 | ✓ | Paso | Qué se hace | Dato que hay que anotar |
 |---|---|---|---|
@@ -57,7 +57,7 @@ Un CSV con **6.000 reservas y 18 columnas**, [`reservas_turisdata.csv`](../labor
 | □ | **7** | ¿Tienen sentido las variables más importantes para el negocio? ¿Alguna **sospechosa de fuga**? |
 | □ | **10** | Probad una reserva con datos imposibles (`"noches": 0`): ¿qué error da la API y por qué? |
 
-## En casa (para el informe del reto)
+## Para el informe del reto (en el bloque del reto; lo que no dé tiempo, en casa)
 
 | ✓ | Tarea | Qué piden |
 |---|---|---|
@@ -66,4 +66,4 @@ Un CSV con **6.000 reservas y 18 columnas**, [`reservas_turisdata.csv`](../labor
 | □ | **Escribir el informe** | Máximo 4 páginas: planteamiento y datos · modelos y resultados · umbral y negocio · qué pesa en la predicción · evidencia de la API · recursos y costes |
 | □ | **Tabla de recursos** | Recurso · cuándo se creó · tiempo usado · coste · cerrado · prueba |
 
-**Total: 15 filas de pasos (instalación, 0 a 11, 6b y cierre) + 9 preguntas + 4 tareas para casa.**
+**Total: 15 filas de pasos (instalación, 0 a 11, 6b y cierre) + 9 preguntas + 4 tareas para el informe.**

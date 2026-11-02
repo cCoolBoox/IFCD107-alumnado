@@ -29,7 +29,7 @@ Volver a la [ficha del reto](../3_Consultar/Reto_Sprint_14.md).
 
 **Nombre:** ……
 
-**Repaso rápido** (las mismas preguntas del final de la ficha del reto; contesta Sí / No / A medias):
+**Repaso rápido** (las mismas preguntas de «Antes de entregar» del reto en una página; contesta Sí / No / A medias):
 
 | Pregunta | Mi respuesta |
 |---|---|

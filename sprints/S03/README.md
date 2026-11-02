@@ -15,12 +15,6 @@
 4. A lanzar un **experimento de AutoML**, leer sus métricas y elegir un umbral con criterio de negocio.
 5. A **servir un modelo por API** y a controlar y cerrar los recursos que usas.
 
-## Antes de empezar
-- Haber terminado el Sprint 2 (cuentas y herramientas preparadas).
-- Un navegador actual. Para SQL: **DB Browser for SQLite** instalado, o un cliente SQLite en línea (consulta con tu docente cuál).
-- No hace falta saber programar en este sprint. Los ejercicios de SQL y AutoML no usan Python; solo el laboratorio opcional de NoSQL (y el laboratorio de AutoML basado en cuadernos, si se usa).
-- Datos: `turisdata.db` (SQLite con las tablas `alojamientos`, `clientes` y `reservas`). Son datos **sintéticos**: sirven para practicar, no son estadísticas reales del turismo en Canarias.
-
 ## Día 1 · Lunes 26/10
 
 | ☐ | Qué haces | Abre | Min |

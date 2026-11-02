@@ -35,7 +35,7 @@
 
 ### 3 · 🪜 Guía paso a paso
 
-Son cinco pasos, de **110 minutos en total** (10 de planning y 100 de reto: 35 el día 1 y 75 el día 2). Además, el día 2 hay 50 minutos de entrega, review y retro, que se explican al final del paso 5. Cada paso dice **qué hacéis**, **cómo se hace**, **qué deberíais ver** y **cuándo está hecho**. Aquí no hay código: lo difícil es decidir y explicarlo con claridad. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para vuestro tiempo de equipo.
+Son cinco pasos, de **110 minutos en total** (10 de planning y 100 de reto: 25 el día 1 y 75 el día 2). Además, el día 2 hay 50 minutos de entrega, review y retro, que se explican al final del paso 5. Cada paso dice **qué hacéis**, **cómo se hace**, **qué deberíais ver** y **cuándo está hecho**. Aquí no hay código: lo difícil es decidir y explicarlo con claridad. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para vuestro tiempo de equipo.
 
 **Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 
