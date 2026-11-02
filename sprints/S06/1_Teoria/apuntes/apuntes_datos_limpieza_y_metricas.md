@@ -16,15 +16,16 @@ Las diapositivas del Sprint 6 enseñan muchísimo código en muy poco espacio. E
 
 | Presentación | Pregunta | Cuaderno |
 |---|---|---|
-| **S06.1** pandas y EDA | ¿Qué hay en estos datos? | S06_01 |
-| **S06.2** Limpieza y preprocesado | ¿Cómo los dejo listos sin hacer trampas? | S06_02, S06_03 |
-| **S06.3** Métricas y validación | ¿Mi modelo es bueno *de verdad*? | S06_04 |
+| **S06_01** pandas y EDA | ¿Qué hay en estos datos? | S06_01 |
+| **S06_02** Limpieza de datos | ¿Qué defectos tiene el fichero y cómo los arreglo? | S06_02 |
+| **S06_03** Preprocesado y pipelines | ¿Cómo los dejo listos sin hacer trampas? | S06_03 |
+| **S06_04** Métricas y validación | ¿Mi modelo es bueno *de verdad*? | S06_04 |
 
 **El reto:** el cliente os pasa un fichero **sucio**; hacéis el **inventario de defectos**, una **función de limpieza reproducible**, un **pipeline**, un **baseline** y un informe honesto.
 
 ---
 
-# DÍA 1 · Explorar los datos con pandas (EDA)
+# PARTE 1 · Explorar los datos con pandas (EDA)
 
 ## 1. Qué es pandas y qué es un DataFrame
 
@@ -103,7 +104,7 @@ pct_nulos_pais = df["pais_origen"].isna().mean() * 100            # % de vacíos
 
 ---
 
-# DÍA 2 · Limpiar y preparar sin hacer trampas
+# PARTE 2 · Limpiar y preparar sin hacer trampas
 
 ## 7. Nunca limpies a ciegas
 
@@ -252,7 +253,7 @@ modelo = Pipeline([("prep", preprocesado),
 
 ---
 
-# DÍA 3 · Medir con honestidad: scikit-learn
+# PARTE 3 · Medir con honestidad: scikit-learn
 
 ## 14. El patrón `fit` / `predict` y el baseline
 
