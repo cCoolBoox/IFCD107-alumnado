@@ -58,7 +58,7 @@
 | 17 | Proyecto · Storytelling, ensayos y defensa | M9 + Storytelling | 8 | 1 | 2 | 5 | vie 11/12 | lun 14/12 |
 | | **Total** | | **230** | **53** | **70** | **107** | | |
 
-*Cada sprint ocupa jornadas completas: empieza a las 08:30 de su primer día y termina a las 14:30 de su último, con la review y la retro en las últimas horas. No hay relevos a mitad de jornada. Días sin clase: lun 2/11, lun 7/12 y mar 8/12. Última sesión: lun 14/12, solo 2 h. El Sprint 0 ocupó 12 h (previstas 7): esas 5 h se recuperan recortando práctica y PBL en los Sprints 1, 3, 5, 10, 12 y 14. Las horas de cada sprint incluyen el *daily* de cada día y el descanso.*
+*Cada sprint ocupa jornadas completas: empieza a las 08:30 de su primer día y termina a las 14:30 de su último, con la review y la retro en las últimas horas. No hay relevos a mitad de jornada. Días sin clase: lun 2/11, lun 7/12 y mar 8/12. Última sesión: lun 14/12, solo 2 h. El Sprint 0 ocupó 12 h (previstas 7): esas 5 h se recuperan recortando práctica y PBL en los Sprints 1, 3, 5, 10, 12 y 14. Las horas de cada sprint incluyen el *daily* de cada día y el descanso: son jornadas completas de 6 h. El trabajo programado minuto a minuto está en el README de cada sprint (en las jornadas de proyecto, 250 min al día).*
 
 Comprobaciones: Python continuo del 3/11 al 25/11 (Sprints 4–13) = 102 h; los Sprints 1–3 ocuparon 9 jornadas (54 h) en lugar de 6 (36 h), por lo que el bloque A suma 66 h; 66 + 102 + 62 = 230 h. Proyecto de cierre = 18 + 18 + 18 + 8 = 62 h (Sprints 14–17). Total = **230 h**. Los totales por módulo del cronograma oficial se desvían (M5 y M9, menos 1–2 h; M1a y M1b, ±2 h; **M3 y M4 pierden varias horas cada uno** al recuperar el retraso de los Sprints 1–3: se recorta el trabajo repetitivo, que pasa a casa, y la teoría de Redes se da en versión corta), pero el total y las unidades didácticas se mantienen.
 
@@ -220,7 +220,7 @@ Comprobaciones: Python continuo del 3/11 al 25/11 (Sprints 4–13) = 102 h; los 
 ## Sprint 17 · Proyecto · Storytelling, ensayos y defensa (8 h · 11 y 14/12)
 - **Teoría (1 h):** Storytelling: estructura y elementos (11/12).
 - **Práctica (2 h):** construcción del relato y práctica del pitch de 3 min (11/12).
-- **PBL (5 h):** ensayos de defensa (3 h, 11/12) y **defensa final** de los equipos (2 h, 14/12).
+- **PBL (5 h):** ensayos de defensa (11/12) y **defensa final** de los equipos (2 h, 14/12). Reparto real de la jornada del 11/12 (250 min de trabajo): 20 de teoría, 85 de relato y pitch, **145 de ensayos** (20 + 35 + 50 + 40).
 - **Entregable:** presentación + defensa. Con 2 h el tiempo por equipo es de unos 15 min si hay 7 equipos; ajustar según el número de alumnos.
 
 ---

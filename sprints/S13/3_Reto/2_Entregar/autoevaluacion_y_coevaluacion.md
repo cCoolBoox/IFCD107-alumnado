@@ -31,7 +31,7 @@ Volver a la [ficha del reto](../3_Consultar/Reto_Sprint_13.md).
 
 | Pregunta | Mi respuesta |
 |---|---|
-| ¿Es una sola página con titular-decisión, 4 gráficos, 3 viñetas y pie? | …… |
+| ¿Es una sola página con titular-decisión, 3 o 4 gráficos, 3 viñetas y pie? | …… |
 | ¿Cada gráfico tiene título-conclusión y ejes con nombre? | …… |
 | ¿Las barras empiezan en 0, sin 3D y con 3–4 colores con sentido? | …… |
 | ¿Las métricas están calculadas sobre el test? | …… |

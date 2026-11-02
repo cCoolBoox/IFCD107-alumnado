@@ -20,7 +20,7 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · **Planning del Sprint 16:** lee el README del Sprint 16 y reparte tareas | [README del Sprint 16](README.md) | 10 |
-| ☐ | 📖 Teoría · **Despliegue y documentación** | [Presentación S16.1](1_Teoria/S16.1_Pildora_demostrador_y_documentacion.pdf) | 20 |
+| ☐ | 📖 Teoría · **Demostrador y documentación** | [Presentación S16_01](1_Teoria/S16_01_presentacion_Demostrador_y_documentacion.pdf) | 20 |
 | ☐ | 💻 Práctica · Práctica del demostrador (se ejecuta y se lee; los ejercicios, para casa) | [Cuaderno S16_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/S16_01_demostrador.ipynb) | 45 |
 | ☐ | 🎯 Reto · **Tutoría de sesgos y visualización** (franja por equipo) | — | 40 |
 | ☐ | 🎯 Reto · **Memoria técnica:** esqueleto y *model card* | [esqueleto](3_Reto/1_Trabajar/plantillas/plantilla_esqueleto_memoria_tecnica.md) | 85 |
@@ -115,7 +115,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 ## Si te atascas
 
 1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_16.md).
-2. Mira el [código explicado]() del cuaderno en el que estás.
+2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
 
 ## Todo el material, por carpetas
@@ -140,4 +140,4 @@ Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../mater
 
 **Y ahora:** Sprint 17 · Storytelling, ensayos y defensa (viernes 11/12).
 
-*.*
+*18 h (1 h teoría · 3 h práctica · 14 h PBL).*

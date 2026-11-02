@@ -19,8 +19,8 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 📖 Teoría · **Píldora: seguimiento de experimentos** | [Presentación S15.1](1_Teoria/S15.1_Pildora_seguimiento_de_experimentos.pdf) | 20 |
-| ☐ | 💻 Práctica · Práctica de seguimiento de experimentos | [Cuaderno S15_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb) | 50 |
+| ☐ | 📖 Teoría · **Seguimiento de experimentos** | [Presentación S15_01](1_Teoria/S15_01_presentacion_Seguimiento_de_experimentos.pdf) | 20 |
+| ☐ | 💻 Práctica · Práctica de seguimiento de experimentos (los ejercicios marcados «en clase»; el resto, para casa) | [Cuaderno S15_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb) | 50 |
 | ☐ | 🎯 Reto · **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el registro de experimentos | [registro de experimentos](3_Reto/1_Trabajar/plantillas/registro_experimentos_plantilla.csv) | 130 |
 | ☐ | 🎯 Reto · **Subid de nivel:** más experimentos con otra semilla o una mejora razonada; el registro sigue limpio y completo | — | 50 |
 
@@ -104,7 +104,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 ## Si te atascas
 
 1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_15.md).
-2. Mira el [código explicado]() del cuaderno en el que estás.
+2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
 
 ## Todo el material, por carpetas
@@ -128,4 +128,4 @@ Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../mater
 
 **Y ahora:** Sprint 16 · Evaluación, IA responsable y entrega (viernes 4/12).
 
-*.*
+*18 h (1 h teoría · 3 h práctica · 14 h PBL).*

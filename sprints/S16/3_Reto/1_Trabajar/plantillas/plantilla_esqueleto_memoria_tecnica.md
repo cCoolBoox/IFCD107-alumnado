@@ -54,7 +54,7 @@ Problema, enfoque, resultado principal con cifras, recomendación al cliente y u
 - Cómo reproducir todo (resumen de los pasos del README), versiones y pruebas.
 - Plan B y limitaciones técnicas.
 
-## 8. Gestión del proyecto (½–1 página) · *R9, R11 · criterio G*
+## 8. Gestión del proyecto (½–1 página) · *R9 · criterio G*
 - Roles y rotación, backlog y sprints (objetivo y resultado de cada uno).
 - **Mejoras entre retrospectivas** (acción → efecto).
 - Reparto de trabajo y evidencias (commits, tablero).

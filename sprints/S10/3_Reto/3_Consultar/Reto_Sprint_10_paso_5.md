@@ -97,7 +97,7 @@
 
 **Qué deberíais ver.**
 - **Media ± desviación:** una línea como `AUC de validación del MLP: 0.7… ± 0.0…`.
-- **La tabla de la sección 6:** dos filas, `Boosting de árboles` y `MLP (media de 3 semillas)`, con las columnas AUC, AP, F1, precisión, entrenamiento (s) y parámetros / árboles. Para el boosting, con esta partición, salen aproximadamente AUC 0.738, AP 0.722, F1 0.639 y precisión 0.672 (un modelo que dijera siempre «no cancela» acertaría un 54 %). El MLP debería quedar muy cerca, con un tiempo de entrenamiento bastante mayor y, con las capas por defecto, `4,417 pesos` (35·64 + 64 + 64·32 + 32 + 32 + 1).
+- **La tabla de la sección 6:** dos filas, `Boosting de árboles` y `MLP (media de 3 semillas)`, con las columnas AUC, AP, F1, precisión, entrenamiento (s) y parámetros / árboles. Para el boosting, con esta partición, salen aproximadamente AUC 0.738, AP 0.722, F1 0.639 y precisión 0.672 (un modelo que dijera siempre «no cancela» acertaría un 54 %). El MLP debería quedar muy cerca, con un tiempo de entrenamiento bastante mayor y, con las capas por defecto, `4.417 pesos` (35·64 + 64 + 64·32 + 32 + 32 + 1).
 - **El bootstrap:** una línea `Diferencia de AUC (MLP − boosting): +0.0… · intervalo 95 %: [-0.0…, +0.0…]` y un histograma con una línea roja discontinua en el 0.
 - **El ejercicio 4:** `Veredicto estadístico: Empate` (o `MLP`, o `Boosting`). Con estos datos lo esperable es que los dos queden muy cerca, y un «Empate» es un resultado perfectamente válido.
 

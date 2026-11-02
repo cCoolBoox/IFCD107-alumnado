@@ -103,6 +103,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `range` | Genera la secuencia 0, 1, 2… (hasta uno antes del final); se usa en bucles `for`. | 10 |
 | `ravel` | Aplana un array a una sola dimensión. | 9, 12 |
 | `read_csv` | Lee un fichero CSV y lo convierte en una tabla. | 2 |
+| `replace` | Sustituye un trozo de texto (o valores de una tabla) por otro. | 9 |
 | `Ridge` | Regresión lineal con penalización L2 (encoge los coeficientes). | 12 |
 | `roc_auc_score` | Calcula el AUC: la capacidad del modelo para ordenar bien los casos (1 = perfecto, 0,5 = azar). | 4, 10 |
 | `round` | Redondea un número a los decimales indicados. | 9, 12 |
@@ -293,7 +294,7 @@ prob_mlp_pru = np.mean([m.predict(A_pru, verbose=0).ravel() for m in modelos_mlp
 tabla = pd.DataFrame({"Boosting de árboles": evaluar(y_pru, prob_boost_pru),
                       "MLP (media de 3 semillas)": evaluar(y_pru, prob_mlp_pru)}).T
 tabla["entrenamiento (s)"] = [t_boost, np.mean(tiempos)]
-tabla["parámetros / árboles"] = ["200 iteraciones × árboles de profundidad ≤ 4", f"{modelos_mlp[0].count_params():,} pesos"]
+tabla["parámetros / árboles"] = ["200 iteraciones × árboles de profundidad ≤ 4", f"{modelos_mlp[0].count_params():,}".replace(",", ".") + " pesos"]
 tabla.round(3)
 ```
 
@@ -302,7 +303,7 @@ tabla.round(3)
 - `prob_mlp_pru = np.mean([m.predict(A_pru, verbose=0).ravel() for m in modelo…` → Guarda en `prob_mlp_pru` el resultado. `mean`: calcula la media; `ravel`: aplana un array a una sola dimensión; `predict`: pide al modelo ya entrenado que haga predicciones.
 - `tabla = pd.DataFrame({"Boosting de árboles": evaluar(y_pru, prob_boost_pru),` → Guarda en `tabla` el resultado. `DataFrame`: crea una tabla de pandas (filas y columnas); `evaluar`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
 - `tabla["entrenamiento (s)"] = [t_boost, np.mean(tiempos)]` → Guarda en `tabla["entrenamiento (s…` el resultado. `mean`: calcula la media.
-- `tabla["parámetros / árboles"] = ["200 iteraciones × árboles de profundidad…` → Guarda en `tabla["parámetros / árb…` el resultado. `count_params`: cuenta cuántos pesos tiene el modelo.
+- `tabla["parámetros / árboles"] = ["200 iteraciones × árboles de profundidad…` → Guarda en `tabla["parámetros / árb…` el resultado. `replace`: sustituye un trozo de texto (o valores de una tabla) por otro; `count_params`: cuenta cuántos pesos tiene el modelo.
 - `tabla.round(3)` → `round`: redondea un número a los decimales indicados.
 
 ### Celda 10 · 6. El veredicto en el conjunto de prueba · 🏫

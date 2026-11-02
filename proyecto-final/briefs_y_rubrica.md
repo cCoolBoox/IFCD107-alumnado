@@ -114,7 +114,7 @@ Un equipo puede proponer su propio proyecto si presenta la **ficha de proyecto (
 1. Pregunta de negocio clara con métrica de éxito.
 2. Datos **reales, accesibles y con licencia** ya identificados (no se aceptan proyectos "a la espera de datos").
 3. Cumple **todos los requisitos mínimos R1–R11**.
-4. Dificultad comparable a los briefs anteriores (se descartan problemas triviales o irrealizables en 54 h).
+4. Dificultad comparable a los briefs anteriores (se descartan problemas triviales o irrealizables en unas 37 h de trabajo en clase: nueve jornadas de 4 h 10 min, de S14 a S16).
 5. No usa datos personales sensibles ni de terceros sin autorización (RGPD).
 
 El docente responde go / no-go el **27/11**.

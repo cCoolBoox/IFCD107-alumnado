@@ -11,7 +11,7 @@
 
 **Qué os pide el cliente.** El cliente y su equipo directivo (el **tribunal**: el docente y, si procede, otras personas invitadas) **no son técnicos**. Este es el último reto del curso y ya no se construye nada nuevo: se trata de **contar con claridad y honestidad** el proyecto que habéis hecho. Al terminar la defensa, el tribunal tiene que saber cuatro cosas: **qué problema resolvéis, qué habéis encontrado, qué os recomienda hacer y de qué no debe fiarse**. Un buen trabajo mal contado es un trabajo que nadie entenderá ni utilizará.
 
-**Cómo se trabaja.** No hace falta experiencia previa: os damos una **plantilla de storytelling** (contar una historia con estructura) con huecos para rellenar y un guion de defensa con ejemplos. Hablan **todas las personas del equipo** y las preguntas pueden dirigirse a cualquiera. En clase tenéis **6 horas el día 1** (teoría, práctica y tres ensayos) y **2 horas el día 2** (la defensa de todos los equipos, con vuestro turno dentro). Solo se presenta lo que ya está en la **memoria congelada** del Sprint 16: no hay resultados nuevos. El equipo decide hasta dónde llega: 🟢 mínimo, 🟡 estándar o 🔴 extra.
+**Cómo se trabaja.** No hace falta experiencia previa: os damos una **plantilla de storytelling** (contar una historia con estructura) con huecos para rellenar y un guion de defensa con ejemplos. Hablan **todas las personas del equipo** y las preguntas pueden dirigirse a cualquiera. En clase tenéis **4 h 10 min el día 1** (teoría, práctica y cuatro rondas de ensayo) y **2 horas el día 2** (la defensa de todos los equipos, con vuestro turno dentro). Solo se presenta lo que ya está en la **memoria congelada** del Sprint 16: no hay resultados nuevos. El equipo decide hasta dónde llega: 🟢 mínimo, 🟡 estándar o 🔴 extra.
 
 ---
 
@@ -19,7 +19,7 @@
 
 | Recurso | Para qué lo usaréis | Dónde está |
 |---|---|---|
-| **Presentación de teoría** [`S17.1_Storytelling_y_defensa.pdf`](../../1_Teoria/S17.1_Storytelling_y_defensa.pdf) | Aprender la estructura de una buena historia: audiencia, mensaje único, pirámide y arco narrativo | Día 1, primera hora (unos 20 minutos) |
+| **Presentación de teoría** [`S17_01_presentacion_Storytelling_y_defensa.pdf`](../../1_Teoria/S17_01_presentacion_Storytelling_y_defensa.pdf) | Aprender la estructura de una buena historia: audiencia, mensaje único, pirámide y arco narrativo | Día 1, primera hora (unos 20 minutos) |
 | **Apuntes del sprint** [`apuntes_storytelling_y_defensa.md`](../../1_Teoria/apuntes/apuntes_storytelling_y_defensa.md) | Ejemplos de frases «antes y después», el método RESPONDE para las preguntas y consejos para cada ensayo | Leedlos antes de rellenar la plantilla y otra vez antes del ensayo general |
 | **La plantilla** [`plantilla_storytelling.md`](../1_Trabajar/plantillas/plantilla_storytelling.md) | Rellenar audiencia, mensaje único, pirámide, arco narrativo, storyboard de 12 diapositivas y pitch de 3 minutos | Copiadla a una carpeta vuestra y rellenadla; es la que se sube |
 | **El guion de defensa** [`guion_defensa.md`](../../1_Teoria/actividades/guion_defensa.md) | Guion base de 10 minutos, ajuste al tiempo de vuestro turno, guion de la demo, 10 preguntas probables y ficha de feedback | Se copia y se rellena; subirlo es opcional |

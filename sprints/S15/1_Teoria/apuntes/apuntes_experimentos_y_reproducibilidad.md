@@ -70,14 +70,18 @@ Es una **tabla** (un CSV en el repositorio: `experimentos/registro.csv`) donde *
 |---|---|---|
 | **id** | Número de prueba | 7 |
 | **fecha** | Cuándo | 2026-12-02 |
-| **persona** | Quién la hizo | Marta |
+| **responsable** | Quién la hizo | Marta |
 | **modelo** | Qué modelo | RandomForest |
-| **hiperparámetros** | Ajustes | `max_depth=6, n_estimators=200` |
-| **partición** | Con qué datos se midió | `temporal_2022-2024` |
-| **métrica (media)** | Resultado de la validación | 0,71 |
-| **desviación** | Cuánto varía | 0,02 |
-| **tiempo** | Cuánto tardó (s) | 14 |
+| **hiperparametros** | Ajustes | `{"max_depth": 6, "n_estimators": 200}` |
+| **datos_hash** | Huella de los datos con los que se midió | `a3f9c1…` |
+| **semilla** | Semilla del azar | 42 |
+| **metrica** | Qué se mide | roc_auc |
+| **valor_cv** | Resultado de la validación (media) | 0,71 |
+| **desv_cv** | Cuánto varía | 0,02 |
+| **tiempo_s** | Cuánto tardó (s) | 14 |
 | **notas** | Lo que se aprendió | «Empeora al subir profundidad: sobreajuste» |
+
+Son las **doce columnas** de la plantilla `registro_experimentos_plantilla.csv` y del cuaderno `S15_01`. Más abajo se muestra una versión resumida, para que quepa en la página.
 
 > **La columna de notas es la más valiosa.** Los números los puede regenerar el código. **Lo que has pensado, no.**
 
@@ -253,7 +257,7 @@ El **test** son **los datos que se reservan para el examen final**. Si lo usas *
 
 Imagina que **200 modelos son puro azar** (adivinan lanzando una moneda; su verdadera exactitud es 50 %). Los evalúas todos en el **mismo test de 100 ejemplos** y te quedas con el mejor.
 
-**Resultado de la simulación (semilla 1):** el «mejor» de los 200 acierta **69 de 100**. **Un 69 % con un modelo que adivina al azar.** Parece un resultado estupendo… y **es pura casualidad**: con tantos intentos, alguno saldrá afortunado.
+**Resultado de la simulación:** de media, el «mejor» de los 200 acierta **cerca de 64 de 100** (63,6). **Un 64 % con un modelo que adivina al azar.** Parece un resultado estupendo… y **es pura casualidad**: con tantos intentos, alguno saldrá afortunado.
 
 > **Esa es la razón de la regla «nada de probar 200 combinaciones y quedarse con la mejor».** Cuantas más cosas pruebas **mirando el test**, más probable es que lo que ves **sea suerte**.
 
@@ -295,7 +299,7 @@ Un número de rendimiento no explica **por qué** decide lo que decide. En este 
 - **Roles nuevos** (se rotan; Sprint 0).
 - **Cada persona anota al menos una fila** del registro.
 - **Una única partición común, guardada**: **no cada uno la suya**. Si cada persona usa una partición distinta, **no se pueden comparar los resultados**.
-- **Tutoría de 15 minutos**: contad **qué comparación hacéis y qué fuga podría haber**.
+- **Tutoría de 20 minutos**: contad **qué comparación hacéis y qué fuga podría haber**.
 - **Retro con una acción concreta** del sprint anterior.
 
 ---

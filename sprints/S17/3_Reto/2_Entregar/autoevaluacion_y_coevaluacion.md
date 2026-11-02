@@ -1,6 +1,6 @@
 # Autoevaluación y coevaluación · «La defensa»
 
-**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante la *review*). Se puntúa con la rúbrica del reto (criterios de evaluación de la [ficha del reto](../3_Consultar/Reto_Sprint_17.md)), de 1 a 4, y con el criterio de defensa de la rúbrica del proyecto.
+**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante las defensas). Se puntúa con la rúbrica del reto (criterios de evaluación de la [ficha del reto](../3_Consultar/Reto_Sprint_17.md)), de 1 a 4, y con el criterio de defensa de la rúbrica del proyecto.
 
 > **Ojo, en este sprint se usan dos rúbricas.** (1) Los **cuatro criterios de los retos** (1–4): sirven para la nota del sprint. (2) La **rúbrica del proyecto de 100 puntos** ([`briefs_y_rubrica.md`](../../../../proyecto-final/briefs_y_rubrica.md), apartado 5): en la defensa cuenta su **criterio I, «Defensa» (15 puntos)**. En esta hoja puntuáis las dos, para que reflexionéis antes de la defensa.
 
@@ -19,7 +19,7 @@
 
 **Quién rellena qué:**
 - **Parte 1 (autoevaluación):** la rellenas tú sobre **tu** trabajo y el de tu equipo.
-- **Parte 2 (coevaluación):** la rellenas tú, en **tu mismo archivo**, sobre el trabajo de **la persona o el equipo que te toca revisar** (el docente te lo indica en la *review*). No escribas en el archivo de otra persona: cada cual sube lo suyo, y vuestra revisión se la comentáis también de palabra.
+- **Parte 2 (coevaluación):** la rellenas tú, en **tu mismo archivo**, sobre el trabajo de **la persona o el equipo que te toca revisar** (el docente te lo indica el día de las defensas). No escribas en el archivo de otra persona: cada cual sube lo suyo, y vuestra revisión se la comentáis también de palabra.
 
 Volver a la [ficha del reto](../3_Consultar/Reto_Sprint_17.md).
 
@@ -67,7 +67,7 @@ Volver a la [ficha del reto](../3_Consultar/Reto_Sprint_17.md).
 
 ---
 
-## 2. Coevaluación (durante la review, unos 10 minutos)
+## 2. Coevaluación (durante las defensas, unos 10 minutos)
 
 **Trabajo revisado de (persona o equipo):** ……  **Revisado por (yo):** ……
 

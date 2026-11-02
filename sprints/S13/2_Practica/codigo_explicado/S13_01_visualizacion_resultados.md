@@ -14,7 +14,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 
 | Celda | Sección | Qué miramos |
 |---|---|---|
-| 1 |  | Practica `seed`, `set_theme`. |
+| 1 |  | Practica `seed`, `set_theme`, `replace`. |
 | 2 | 0. Punto de partida: dos modelos sencil… | Practica `read_csv`, `drop`, `train_test_split`, `tolist` y más (sección «0. Punto de par… |
 | 4 | 1. Matriz de confusión: ¿en qué acierta… | Practica `subplots`, `plot`, `set_title`, `set_xlabel` y más (sección «Ejercicio 1»). |
 | 6 | 2. Curvas ROC y precisión-exhaustividad… | Practica `subplots`, `plot`, `set_xlabel`, `set_ylabel` y más (sección «Ejercicio 2»). |
@@ -43,6 +43,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 
 | Palabra | Qué hace |
 |---|---|
+| `euros` | 4980 → '4.980 €' (puntos para los miles, como se escribe en español). |
 | `coste_total` | Función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)* |
 
 **De Python y sus librerías:**
@@ -81,6 +82,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `print` | Muestra un valor por pantalla. | 2 |
 | `RandomForestClassifier` | Bosque de muchos árboles que votan. | 2 |
 | `read_csv` | Lee un fichero CSV y lo convierte en una tabla. | 2 |
+| `replace` | Sustituye un trozo de texto (o valores de una tabla) por otro. | 1 |
 | `roc_auc_score` | Calcula el AUC: la capacidad del modelo para ordenar bien los casos (1 = perfecto, 0,5 = azar). | 6 |
 | `roc_curve` | Calcula los puntos de la curva ROC. | 6 |
 | `seed` | Fija la semilla del azar para que salga siempre lo mismo. | 1 |
@@ -104,7 +106,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 
 ### Celda 1 · 🏫
 
-**Qué hace:** Practica `seed`, `set_theme`.
+**Qué hace:** Practica `seed`, `set_theme`, `replace`.
 
 ```python
 import numpy as np
@@ -124,6 +126,10 @@ from sklearn.inspection import permutation_importance
 SEMILLA = 42
 np.random.seed(SEMILLA)
 sns.set_theme(style="whitegrid", font_scale=1.0)
+
+def euros(x):
+    """4980 → '4.980 €' (puntos para los miles, como se escribe en español)."""
+    return f"{x:,.0f}".replace(",", ".") + " €"
 ```
 
 **Qué hace cada línea:**
@@ -137,7 +143,7 @@ sns.set_theme(style="whitegrid", font_scale=1.0)
 - `from sklearn.pipeline import Pipeline` → Trae `Pipeline` de `sklearn.pipeline` para poder usarlo.
 - `from sklearn.preprocessing import StandardScaler, OneHotEncoder` → Trae `StandardScaler`, `OneHotEncoder` de `sklearn.preprocessing` para poder usarlo.
 - `from sklearn.linear_model import LogisticRegression` → Trae `LogisticRegression` de `sklearn.linear_model` para poder usarlo.
-- … y 6 más con las mismas ideas.
+- … y 7 más con las mismas ideas.
 
 ### Celda 2 · 0. Punto de partida: dos modelos sencillos · 🏫
 
@@ -251,7 +257,7 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 fig, ax = plt.subplots(figsize=(7, 4))
 importancias.head(8)[::-1].plot.barh(ax=ax, color="tab:blue")
 ax.set_xlabel("Caída del AUC al desordenar la variable")
-ax.set_title("La antelación de la reserva es lo que más pesa en una cancelación")
+ax.set_title(f"Lo que más pesa en una cancelación: {top3[0]}")
 plt.tight_layout(); plt.show()
 ```
 
@@ -260,7 +266,7 @@ plt.tight_layout(); plt.show()
 - `fig, ax = plt.subplots(figsize=(7, 4))` → Guarda en `fig, ax` el resultado. `subplots`: crea una figura con uno o varios ejes (gráficos) dentro.
 - `importancias.head(8)[::-1].plot.barh(ax=ax, color="tab:blue")` → `barh`: dibuja barras horizontales; `head`: muestra las primeras filas.
 - `ax.set_xlabel("Caída del AUC al desordenar la variable")` → `set_xlabel`: pone el nombre del eje horizontal.
-- `ax.set_title("La antelación de la reserva es lo que más pesa en una cancela…` → `set_title`: pone el título de un gráfico.
+- `ax.set_title(f"Lo que más pesa en una cancelación: {top3[0]}")` → `set_title`: pone el título de un gráfico.
 - `plt.tight_layout(); plt.show()` → `tight_layout`: ajusta los márgenes para que nada se solape.
 - `plt.tight_layout(); plt.show()` → `show`: muestra el gráfico.
 
@@ -276,11 +282,11 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 fig, ax = plt.subplots(figsize=(7, 3.8))
 ax.plot(umbrales, costes, color="tab:blue")
 ax.plot(umbral_optimo, coste_minimo, "o", color="tab:red")
-ax.annotate(f"Umbral óptimo {umbral_optimo:.2f}\n{coste_minimo:,.0f} €", (umbral_optimo, coste_minimo),
+ax.annotate(f"Umbral óptimo {umbral_optimo:.2f}\n{euros(coste_minimo)}", (umbral_optimo, coste_minimo),
             xytext=(umbral_optimo + 0.12, coste_minimo + 0.08 * (max(costes) - min(costes))),
             arrowprops=dict(arrowstyle="->"))
 ax.set_xlabel("Umbral (avisamos si la probabilidad supera este valor)"); ax.set_ylabel("Coste total en la muestra de prueba (€)")
-ax.set_title("Un umbral algo más bajo que 0,5 es el que menos cuesta")
+ax.set_title(f"Coste total según el umbral: mínimo en {umbral_optimo:.2f}")
 plt.tight_layout(); plt.show()
 ```
 
@@ -289,10 +295,10 @@ plt.tight_layout(); plt.show()
 - `fig, ax = plt.subplots(figsize=(7, 3.8))` → Guarda en `fig, ax` el resultado. `subplots`: crea una figura con uno o varios ejes (gráficos) dentro.
 - `ax.plot(umbrales, costes, color="tab:blue")` → `plot`: dibuja una línea (o puntos unidos).
 - `ax.plot(umbral_optimo, coste_minimo, "o", color="tab:red")` → `plot`: dibuja una línea (o puntos unidos).
-- `ax.annotate(f"Umbral óptimo {umbral_optimo:.2f}\n{coste_minimo:,.0f} €", (u…` → `annotate`: escribe una nota con flecha en el gráfico; `dict`: crea un diccionario (parejas nombre: valor); `max`: devuelve el valor más grande.
+- `ax.annotate(f"Umbral óptimo {umbral_optimo:.2f}\n{euros(coste_minimo)}", (u…` → `annotate`: escribe una nota con flecha en el gráfico; `dict`: crea un diccionario (parejas nombre: valor); `euros`: 4980 → '4.980 €' (puntos para los miles, como se escribe en español).
 - `ax.set_xlabel("Umbral (avisamos si la probabilidad supera este valor)"); ax…` → `set_xlabel`: pone el nombre del eje horizontal.
 - `ax.set_xlabel("Umbral (avisamos si la probabilidad supera este valor)"); ax…` → `set_ylabel`: pone el nombre del eje vertical.
-- `ax.set_title("Un umbral algo más bajo que 0,5 es el que menos cuesta")` → `set_title`: pone el título de un gráfico.
+- `ax.set_title(f"Coste total según el umbral: mínimo en {umbral_optimo:.2f}")` → `set_title`: pone el título de un gráfico.
 - `plt.tight_layout(); plt.show()` → `tight_layout`: ajusta los márgenes para que nada se solape.
 - `plt.tight_layout(); plt.show()` → `show`: muestra el gráfico.
 

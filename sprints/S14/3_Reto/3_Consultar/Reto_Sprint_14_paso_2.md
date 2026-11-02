@@ -34,7 +34,7 @@
 
     - **Datos reales accesibles hoy:** 1 si no conocéis ni una fuente con licencia clara; 5 si ya sabéis dónde descargarlos.
     - **Nos interesa:** 1 si os da igual; 5 si os apetece trabajar en ello cuatro sprints.
-    - **Se puede terminar en el tiempo que hay:** pensad en unas 54 horas de proyecto. Un brief con GPU y mucho entrenamiento (el 2) o con documentos que preparar (el 3) puntúa más bajo si dudáis.
+    - **Se puede terminar en el tiempo que hay:** pensad en unas 37 horas de trabajo en clase (nueve jornadas de 4 h 10 min, de S14 a S16). Un brief con GPU y mucho entrenamiento (el 2) o con documentos que preparar (el 3) puntúa más bajo si dudáis.
 
     ```text
     | Brief                  | Datos (1–5) | Interés (1–5) | Tiempo (1–5) | Total |

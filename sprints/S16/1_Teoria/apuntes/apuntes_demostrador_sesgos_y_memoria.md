@@ -264,7 +264,7 @@ Para **el cliente y un compañero técnico**: **autocontenida** (que se entienda
 | 5. Evaluación y resultados | 2-3 | R5 |
 | 6. IA responsable | 2 | R6 |
 | 7. Demostrador y reproducibilidad | 1 | R7, R8 |
-| 8. Gestión del proyecto | ½-1 | R9, R11 |
+| 8. Gestión del proyecto | ½-1 | R9 |
 | 9. Conclusiones y recomendaciones | 1 | |
 
 (Portada, índice, referencias y **anexos no cuentan**.)
@@ -285,7 +285,7 @@ Para **el cliente y un compañero técnico**: **autocontenida** (que se entienda
 
 **A las 14:30 del 10/12** se evalúa lo que haya en la **rama principal**. Para dejarlo claro se crea una **etiqueta** (*tag*) en Git llamada **`v1.0-entrega`** **antes de las 14:30**. Después **no se toca código ni memoria** (solo la presentación y el vídeo). Un fallo crítico del demostrador solo se corrige **con permiso del docente** y dejándolo documentado.
 
-**El `checklist_congelacion.md`** tiene cinco bloques: **A** repositorio, **B** reproducibilidad (en limpio), **C** demostrador, **D** evaluación e IA responsable, **E** memoria. **Cada casilla sin marcar es un riesgo.**
+**El `checklist_congelacion.md`** tiene seis bloques: **A** repositorio, **B** reproducibilidad (en limpio), **C** demostrador, **D** evaluación e IA responsable, **E** memoria y **F** equipo y metodología. **Cada casilla sin marcar es un riesgo.**
 
 ### 8.2. La coevaluación
 

@@ -47,7 +47,7 @@
     - `X_fuga` es una copia de las pistas a la que se añade una columna que vale 1 casi siempre que la reserva se canceló: es la respuesta disfrazada de pista.
     - `Xd=X_fuga` le dice a `experimento` que use esa tabla en lugar de `X_ent`. La fila queda en el registro con el nombre `LogisticaConFuga` y la nota `ALARMA`.
 
-    Con los datos de práctica sale aproximadamente `AUC con la variable con fuga: 0.975`, frente a ≈ 0,75 sin ella: **demasiado bueno**. Este modelo **no se puede elegir** (en el paso 4 se excluye por llevar «Fuga» en el nombre); sirve para contar en la *review* **una fuga que detectasteis**.
+    Con los datos de práctica sale aproximadamente `AUC con la variable con fuga: 0.972 (frente a 0.755 del mejor modelo sin ella)`: **demasiado bueno**. Este modelo **no se puede elegir** (en el paso 4 se excluye por llevar «Fuga» en el nombre); sirve para contar en la *review* **una fuga que detectasteis**.
 
 3. **Si una respuesta falla, corregid y repetid.** Si descubrís una variable que no se conocería al decidir, quitadla de `X` y repetid las pruebas afectadas. **No borréis la celda antigua**: dejadla y añadid en su `notas=` que tenía una fuga (por ejemplo, `notas="tenía fuga: variable X; repetida sin ella"`). Así el registro cuenta lo que pasó, y sirve para la rúbrica.
 

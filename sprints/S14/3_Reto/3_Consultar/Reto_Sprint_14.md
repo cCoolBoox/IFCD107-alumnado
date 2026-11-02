@@ -70,7 +70,7 @@ En un proyecto largo la IA puede ayudar mucho, pero **la responsabilidad es vues
 
 | Error | Por qué ocurre | Cómo evitarlo |
 |---|---|---|
-| Elegir un problema demasiado grande | Ambición | Preguntaos: ¿se puede hacer en unas 54 horas de proyecto? |
+| Elegir un problema demasiado grande | Ambición | Preguntaos: ¿se puede hacer en unas 37 horas de trabajo en clase (nueve jornadas de 4 h 10 min, de S14 a S16)? |
 | Elegir datos sin mirar la licencia | Se quiere avanzar | La licencia es lo primero que se comprueba |
 | Definir la métrica después de ver los resultados | «Para que salga bien» | Escribidla en la ficha y no la cambiéis |
 | Baseline demasiado complicado | Se quiere lucir | El baseline es **lo más simple posible** |

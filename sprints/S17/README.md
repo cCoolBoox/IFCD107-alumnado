@@ -19,7 +19,7 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 📖 Teoría · **Storytelling** | [Presentación S17.1](1_Teoria/S17.1_Storytelling_y_defensa.pdf) | 20 |
+| ☐ | 📖 Teoría · **Storytelling** | [Presentación S17_01](1_Teoria/S17_01_presentacion_Storytelling_y_defensa.pdf) | 20 |
 | ☐ | 💻 Práctica · **Tu historia:** plantilla de storytelling (máx. 12 diapositivas) | [plantilla de storytelling](3_Reto/1_Trabajar/plantillas/plantilla_storytelling.md) | 45 |
 | ☐ | 💻 Práctica · **Pitch de 3 minutos** y guion de la defensa (`guion_defensa.md`) | [`guion_defensa.md`](1_Teoria/actividades/guion_defensa.md) | 40 |
 | ☐ | 🎯 Reto · **Ensayos con cronómetro** (solo el equipo, 20 min) **y con preguntas** de otro equipo (35 min) | — | 55 |
@@ -76,14 +76,12 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_storytelling_y_defensa.md).
 
 ## Si te atascas
 
 1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_17.md).
-2. Mira el [código explicado]() del cuaderno en el que estás.
-3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
+2. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
 
 ## Todo el material, por carpetas
 
@@ -107,4 +105,4 @@ Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../mater
 
 
 
-*.*
+*8 h (1 h teoría · 2 h práctica · 5 h PBL).*

@@ -22,7 +22,7 @@ La presentación del Sprint 13 es muy esquemática. Estos apuntes **explican cad
 | **Umbral y coste** | ¿A partir de cuándo actúo? | «¿Qué hago el lunes?» |
 | **Un gráfico para dirección** | ¿Cómo lo enseño? | «Que lo entienda en 30 segundos» |
 
-**El reto:** una **página** (un panel de 4 gráficos + un titular + 3 viñetas sin jerga) que **se entiende en 30 segundos**.
+**El reto:** una **página** (un panel de 4 gráficos, 3 como mínimo, + un titular + 3 viñetas sin jerga) que **se entiende en 30 segundos**.
 
 ---
 
@@ -187,7 +187,7 @@ Cierra el ciclo: **enséñale tu página a otro equipo durante 30 segundos** y p
 |---|---|
 | 1 | **Elige tu mejor modelo del curso** (Sprints 8, 10 o 12) y cárgalo en la plantilla `S13_02` |
 | 2 | **Acuerda el coste de los errores** (cuánto cuesta un FN y un FP) |
-| 3 | **Ajusta 4 gráficos**, cada uno con un título que diga una conclusión |
+| 3 | **Ajusta los gráficos** (3 como mínimo, 4 en el nivel estándar), cada uno con un título que diga una conclusión |
 | 4 | **Escribe el titular-decisión y 3 viñetas sin jerga** |
 | 5 | **Pruébalo con otro equipo:** ¿entienden la decisión en 30 segundos? |
 

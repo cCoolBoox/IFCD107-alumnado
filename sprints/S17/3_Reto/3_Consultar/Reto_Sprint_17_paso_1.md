@@ -24,7 +24,7 @@
 
 **Cómo se hace**
 
-1. **Escuchar y apuntar tres ideas.** El docente presenta [`S17.1_Storytelling_y_defensa.pdf`](../../1_Teoria/S17.1_Storytelling_y_defensa.pdf). **Cada persona** (no una por equipo) apunta, en una hoja o en el móvil, tres ideas que pueda usar en su proyecto, con este formato de dos columnas: lo que dice la charla y lo que haré yo. Un ejemplo de cómo quedan, con ideas que salen de los apuntes (las vuestras hablarán de **vuestro** proyecto):
+1. **Escuchar y apuntar tres ideas.** El docente presenta [`S17_01_presentacion_Storytelling_y_defensa.pdf`](../../1_Teoria/S17_01_presentacion_Storytelling_y_defensa.pdf). **Cada persona** (no una por equipo) apunta, en una hoja o en el móvil, tres ideas que pueda usar en su proyecto, con este formato de dos columnas: lo que dice la charla y lo que haré yo. Un ejemplo de cómo quedan, con ideas que salen de los apuntes (las vuestras hablarán de **vuestro** proyecto):
 
     | Lo que dice la charla | Cómo lo uso en mi proyecto |
     |---|---|
