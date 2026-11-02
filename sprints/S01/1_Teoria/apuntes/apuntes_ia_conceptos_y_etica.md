@@ -193,7 +193,7 @@ Una mala traducción **invalida todo el trabajo posterior**, aunque el modelo se
 
 ### Cómo elegir un algoritmo
 
-Se mira: **cuántos datos** hay (los modelos complejos necesitan más), **explicabilidad** (¿hay que justificar decisiones?), y **coste/tiempo** (¿en tiempo real o por lotes?). Rara vez se maximizan precisión, explicabilidad y coste a la vez.
+Se mira: **cuántos datos** hay (los modelos complejos necesitan más), **explicabilidad** (¿hay que justificar decisiones?), y **coste/tiempo** (¿en tiempo real o por lotes?). Rara vez se maximizan exactitud, explicabilidad y coste a la vez.
 
 > **Regla de oro:** empieza por el modelo **más simple** que pueda resolver el problema.
 
