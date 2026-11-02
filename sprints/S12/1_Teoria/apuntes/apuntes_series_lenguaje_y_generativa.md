@@ -10,10 +10,13 @@ Este sprint es el **más variado del curso**: cuatro presentaciones, cuatro tema
 
 | Presentación | Pregunta de TurisData | Herramienta |
 |---|---|---|
-| **S12.1** Series temporales | ¿Qué ocupación tendremos los próximos 7 días? | Baselines, SARIMAX, RNN/LSTM/GRU |
-| **S12.2** NLP clásico | ¿De qué se quejan los huéspedes en las reseñas? | Limpieza, TF-IDF, sentimiento, embeddings |
-| **S12.3** Transformers y LLM | ¿Puede un asistente contestar sin inventarse nada? | Tokens, atención, RAG, prompt injection |
-| **S12.4** Autoencoders y generativos | ¿Cómo detecto semanas raras? ¿Qué es una GAN o la difusión? | Autoencoder, anomalías |
+| **S12_01** Series temporales | ¿Qué ocupación tendremos los próximos 7 días? | *Baselines*, descomposición, SARIMAX |
+| **S12_02** RNN, LSTM y GRU | ¿Una red con memoria gana a un *baseline*? | RNN, LSTM, GRU |
+| **S12_03** NLP clásico | ¿De qué se quejan los huéspedes en las reseñas? | Limpieza, TF-IDF, sentimiento, temas |
+| **S12_04** Embeddings y LSA (casa) | ¿Cómo se representa el significado con números? | Vectores, similitud del coseno, LSA |
+| **S12_05** Transformers y atención | ¿Cómo «lee» un modelo de lenguaje? | Tokens, atención, temperatura |
+| **S12_06** Mini RAG | ¿Puede un asistente contestar sin inventarse nada? | Recuperar, umbral, «no consta», *prompt injection* |
+| **S12_07** Autoencoders y generativos (casa) | ¿Cómo detecto semanas raras? ¿Qué es una GAN o la difusión? | Autoencoder, anomalías |
 
 **El reto:** el cliente recibe **tres partes**: (A) análisis de reseñas, (B) predicción de ocupación, (C) **asistente con RAG** que responde con la política del alojamiento, cita su fuente y **sabe decir «no consta»**.
 

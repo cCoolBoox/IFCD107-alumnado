@@ -12,9 +12,9 @@ TurisData recibe **cientos de fotos de alojamientos cada semana** y las clasific
 
 | Presentación | Pregunta | Cuaderno |
 |---|---|---|
-| **S11.1** CNN | ¿Cómo «ve» una red una imagen? | S11_01 |
-| **S11.2** Transfer learning | ¿Y si solo tengo 30 fotos? | S11_02 |
-| **S11.3** Detección y segmentación | ¿Qué hay, dónde, y cuándo **no** fiarse del modelo? | S11_03, S11_04 (reto) |
+| **S11_01** CNN | ¿Cómo «ve» una red una imagen? | S11_01 |
+| **S11_02** Transfer learning | ¿Y si solo tengo 30 fotos? | S11_02 |
+| **S11_03** Detección y segmentación | ¿Qué hay, dónde, y cuándo **no** fiarse del modelo? | S11_03, S11_04 (reto) |
 
 **El reto:** un **demostrador** que recibe una foto y devuelve **clase, confianza y «revisar a mano» si la confianza es baja**, con análisis de errores.
 
