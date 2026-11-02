@@ -15,7 +15,7 @@
     - La nota de IA responsable y un `LEEME.md` de 5 líneas.
     - Al final se suben a `sprint-12/` del repositorio del equipo (lista completa en «Antes de entregar»).
 - **Tiempo en clase:**
-    - Planning: 10 min (día 1); reto: 130 min y entrega y review: 35 min (días 2 y 3).
+    - Planning: 15 min (día 1); reto: 130 min y entrega y review: 25 min (días 2 y 3).
     - **Se reparte:** cada persona lidera una parte, pero todas entienden todas.
 
 ## Tres niveles: el equipo decide hasta dónde llega

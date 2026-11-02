@@ -72,8 +72,8 @@
 
     Copiad las cifras a una celda de texto («AUC 0,744, entre 0,719 y 0,767»). No cambiéis el modelo ni `UMBRAL` para mejorarlas.
 
-4. **Gráficos con título-conclusión (7 minutos).** Pulsad ▶ en la celda «3. El panel de una página» (dibuja 4 gráficos) y cambiad los títulos marcados `# >>> EDITA` para que digan lo que muestran **vuestras** cifras. En TurisData: «Detectamos el 83 % de las cancelaciones, con un 49 % de falsas alarmas»; «Lo que más pesa en una cancelación es la antelación» (la variable líder sale de `importancias.head(6)`); y el del dinero, «Con el modelo perdemos 16,590 € menos en 1500 reservas».
-5. **Métrica por subgrupos (8 minutos).** Pegad esta función (se queda en el cuaderno: la usaréis también en el paso 3) y usadla con la columna que queráis:
+4. **Gráficos con título-conclusión (7 minutos).** Pulsad ▶ en la celda «3. El panel de una página» (dibuja 4 gráficos) y cambiad los títulos marcados `# >>> EDITA` para que digan lo que muestran **vuestras** cifras. En TurisData: «Detectamos el 83 % de las cancelaciones; avisamos por error al 49 % de quien no cancela»; «Lo que más pesa en una cancelación es la antelación» (la variable líder sale de `importancias.head(6)`); y el del dinero, «Con el modelo perdemos 16,590 € menos en 1500 reservas».
+5. **Métrica por subgrupos (8 minutos).** Pegad esta función (se queda en el cuaderno: la usaréis también en el paso 3) y usadla con la columna que queráis. *(Si vuestro proyecto es una serie, imágenes o un asistente con documentos, no uséis esta función: la tabla del apartado 6 del paso 3 dice qué subgrupos medir y cómo.)*
 
     ```python
     def medir_subgrupos(real, pred, grupo):

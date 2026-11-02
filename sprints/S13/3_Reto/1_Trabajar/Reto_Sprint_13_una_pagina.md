@@ -10,7 +10,7 @@
     - El cuaderno que lo genera.
     - Al final se suben a `sprint-13/` del repositorio del equipo (lista completa en «Antes de entregar»).
 - **Tiempo en clase:**
-    - 25 min de reto en el último día del Sprint 12; luego, entrega y review.
+    - 35 min de reto en el último día del Sprint 12; luego, entrega y review.
     - **Llegad con el modelo elegido.**
 
 ## Tres niveles: el equipo decide hasta dónde llega
@@ -23,13 +23,13 @@
 
 \*Orientativo; puntúa el docente con la rúbrica del curso (0–4 en cada criterio). El mínimo es una entrega válida y evaluable; la «Definition of Done» de la ficha completa describe el nivel **estándar**.
 
-## Reparto sugerido de los 25 minutos
+## Reparto sugerido de los 35 minutos
 
 | Min | Qué | Se sabe que está hecho cuando… |
 |---|---|---|
 | 4 | Elegir el modelo, cargarlo y fijar `COSTE_FN`, `COSTE_FP` y `UMBRAL` | El cuaderno llega al final sin errores |
 | 8 | Ajustar los gráficos: un título-conclusión en cada uno | Se genera `informe_visual_panel.png` |
-| 8 | Titular, tres viñetas, IA responsable y pie en `informe_visual.md` | Las cifras del texto son las del gráfico |
+| 18 | Titular, tres viñetas, IA responsable y pie en `informe_visual.md` | Las cifras del texto son las del gráfico |
 | 5 | Prueba de los 30 segundos con otro equipo y revisión con la rúbrica | Otro equipo dice vuestra misma decisión |
 
 **Cada paso, explicado al detalle:** [Paso 1](../3_Consultar/Reto_Sprint_13_paso_1.md) · [Paso 2](../3_Consultar/Reto_Sprint_13_paso_2.md) · [Paso 3](../3_Consultar/Reto_Sprint_13_paso_3.md) · [Paso 4](../3_Consultar/Reto_Sprint_13_paso_4.md)

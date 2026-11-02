@@ -51,7 +51,7 @@
     | C · Demostrador | Se lanza con un solo comando; las 5 entradas del paso 4; aviso de incertidumbre en cada resultado; `docs/demo.mp4` o su enlace |
     | D · Evaluación e IA responsable | Test usado una sola vez; subgrupos y mitigación medida; `docs/riesgos_eticos.md` con la Parte D rellena (fecha y firmas incluidas); `docs/model_card.md` sin `______` |
     | E · Memoria | `docs/memoria_tecnica.pdf` con 10 a 15 páginas contadas y las cifras de la tabla del paso 5 iguales en todos los sitios |
-    | F · Equipo | Capturas del tablero (backlog, planning, review y retro de los sprints 14, 15 y 16) en `docs/scrum/`; la retro con una acción concreta; coevaluación hecha |
+    | F · Equipo | Capturas del tablero (backlog, planning, review y retro de los sprints 14, 15 y 16; captura de pantalla con `Windows + Mayús + S` o `Cmd + Mayús + 4`, guardada como PNG y subida con *Add file → Upload files*) en `docs/scrum/`; la retro con una acción concreta; coevaluación hecha |
 
     El registro de riesgos se cerró en el paso 5. Aquí solo se comprueba, y si el paso 6 destapó algo nuevo (por ejemplo, un modelo que no cabe en el repositorio) se añade como riesgo con su estado. **Cada casilla sin marcar** se arregla ahora, antes de las 14:30, o se apunta en el tablero con responsable y hora. Tras las 14:30 no se cambia código ni memoria.
 

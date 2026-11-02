@@ -91,7 +91,7 @@
     |---|---|---|
     | A | Modelo, costes y cuaderno (paso 1) | 4 |
     | B | Los gráficos y sus títulos (paso 2) | 8 |
-    | C | Titular, viñetas y pie (paso 3) | 8 |
+    | C | Titular, viñetas y pie (paso 3) | 18 |
     | D (si hay 4) | Prueba de los 30 segundos y revisión (paso 4) | 5 |
 
 **Qué deberíais ver.** Al final de la celda de datos y modelo, la línea `AUC en prueba: … · reservas de prueba: 1500` (0.744 con el modelo de ejemplo), la del umbral óptimo, y ningún mensaje de error en rojo hasta el panel.

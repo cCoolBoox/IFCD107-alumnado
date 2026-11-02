@@ -26,38 +26,8 @@
 **Cómo se hace**
 
 1. **Repartir el trabajo.** Cada persona sube lo suyo con su cuenta: así el historial muestra a todo el equipo, que es lo que se evalúa. Un reparto posible: una persona prepara y sube el cuaderno, otra escribe el informe y otra rellena el README. Quien revise con la rúbrica (el punto 5 de esta lista) **no puede ser quien escribió esa parte**.
-2. **Escribir el informe** `informe_comparativo.md`. No hay plantilla; esta es la estructura, con seis partes **en este orden**. Podéis escribirlo directamente en GitHub (*Add file → Create new file*) o en un editor y subirlo después. Copiad el esqueleto y sustituid lo que va entre corchetes por vuestras cifras y frases:
+2. **Escribir el informe** `informe_comparativo.md`. Abrid [`plantilla_informe_comparativo.md`](../1_Trabajar/plantillas/plantilla_informe_comparativo.md), pulsad *Raw*, copiad el texto y, en la carpeta `sprint-10` del repositorio, usad *Add file → Create new file* con el nombre `informe_comparativo.md` y pegadlo. Tiene seis partes **en este orden**; sustituid lo que va entre corchetes por vuestras cifras y frases.
 
-    ```text
-    # Informe comparativo · ¿Vale la pena la red? (Sprint 10)
-
-    ## 1. Pregunta y respuesta
-    Recomendamos [mantener el boosting / cambiar a la red] porque [una razón con una cifra].
-
-    ## 2. Resultados
-    | Modelo | AUC | AP | F1 | Precisión |
-    |---|---|---|---|---|
-    | Boosting de árboles | | | | |
-    | MLP (media de 3 semillas) | | | | |
-
-    AUC de validación del MLP: [media] ± [desviación]. Diferencia de AUC (MLP − boosting): [valor], intervalo del 95 %: [inf, sup]. La diferencia [es / no es] mayor que el ruido.
-
-    ## 3. Curva comentada
-    [Imagen o descripción de la curva.] Diagnóstico: [vuestra frase del paso 4].
-
-    ## 4. Coste
-    Tiempo de entrenamiento: [..] · Complejidad: [..] · Explicabilidad: [..]
-
-    ## 5. Riesgos de IA responsable
-    1. Riesgo: [..] Medida: [..]
-    2. Riesgo: [..] Medida: [..]
-
-    ## 6. Límites y siguiente paso
-    [Qué no sabemos y qué haríamos después.]
-
-    ## Uso de la IA
-    Pedimos [..]; comprobamos a mano [..]; cambiamos [..].
-    ```
 
     De dónde sale cada parte:
 
@@ -76,7 +46,7 @@
 
     **No vale:** un informe sin recomendación, cifras escritas de memoria o copiadas de lo que dijo una IA (todas salen de vuestro cuaderno), ni riesgos genéricos.
 
-3. **Guardar la curva (opcional).** Si queréis ver la curva dentro del informe, guardad la imagen de la gráfica del cuaderno con el nombre `curvas_aprendizaje.png` (clic derecho sobre la gráfica → *Guardar imagen como…*) y subidla a `sprint-10/`. Añadid también la línea de **uso de la IA** (parte final del esqueleto): qué pedisteis, qué comprobasteis a mano y qué cambiasteis.
+3. **Guardar la curva (opcional).** Si queréis ver la curva dentro del informe, guardad la imagen de la gráfica del cuaderno con el nombre `curvas_aprendizaje.png` (clic derecho sobre la gráfica → *Guardar imagen como…*) y subidla a `sprint-10/`. Añadid también la línea de **uso de la IA** (parte final de la plantilla): qué pedisteis, qué comprobasteis a mano y qué cambiasteis.
 4. **Rellenar el README.** Abrid `sprint-10/README.md` en el repositorio del equipo → icono del lápiz y completad los cuatro campos que ya trae. Así puede quedar:
 
     ```text
@@ -93,22 +63,8 @@
 
     Después pulsad **Commit changes**.
 
-5. **La revisión con la rúbrica (5 minutos).** Quien revisa **no escribió esa parte**. Sigue los cinco pasos de «Cómo se revisa» de [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md): reiniciar y ejecutar el cuaderno, leer el informe como si fuera el cliente, mirar el cuaderno, poner un nivel de 1 a 4 por criterio **con una frase de prueba** y apuntar el resultado. Añade al final del informe esta sección rellena:
+5. **La revisión con la rúbrica (5 minutos).** Quien revisa **no escribió esa parte**. Sigue los cinco pasos de «Cómo se revisa» de [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md): reiniciar y ejecutar el cuaderno, leer el informe como si fuera el cliente, mirar el cuaderno, poner un nivel de 1 a 4 por criterio **con una frase de prueba** y apuntar el resultado. Rellena la sección «Revisión con la rúbrica» que la plantilla trae al final del informe:
 
-    ```text
-    ## Revisión con la rúbrica
-
-    Revisado por: (nombre) · Fecha: (dd/mm/aaaa)
-
-    | Criterio | Nivel (1–4) | Prueba: una frase de lo que has comprobado |
-    |---|---|---|
-    | Corrección técnica | | |
-    | Reproducibilidad | | |
-    | Análisis y comunicación al cliente | | |
-    | IA responsable | | |
-
-    Lo primero que mejoraríamos: (una cosa concreta)
-    ```
 
     Un ejemplo de frase de prueba: «3 · reinicia y ejecuta sin errores y el AUC coincide con el informe, pero falta explicar el coste». Sin frase, el nivel no vale. Si hay tiempo, arreglad lo más fácil; lo demás queda como «lo primero que mejoraríamos». Si sobran minutos, empezad un extra (la variante de precio, o guardar el modelo y recargarlo).
 

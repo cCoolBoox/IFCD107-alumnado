@@ -27,40 +27,8 @@
 **Cómo se hace**
 
 1. **Repartir el trabajo.** Cada persona sube lo suyo con su cuenta: así el historial muestra a todo el equipo, que es lo que se evalúa. Un reparto posible: una persona prepara y sube el cuaderno, otra escribe el informe y otra el README. Quien revise con la rúbrica (el punto 4) **no puede ser quien escribió esa parte**.
-2. **Escribir el informe** `analisis_errores.md`. No hay plantilla. Esta es la estructura, con seis apartados **en este orden**. Podéis escribirlo directamente en GitHub (*Add file → Create new file*) o en un editor y subirlo después. Copiad el esqueleto y sustituid lo que va entre corchetes por vuestras cifras y frases:
+2. **Escribir el informe** `analisis_errores.md`. Abrid [`plantilla_analisis_errores.md`](../1_Trabajar/plantillas/plantilla_analisis_errores.md), pulsad *Raw*, copiad el texto y, en la carpeta `sprint-11` del repositorio, usad *Add file → Create new file* con el nombre `analisis_errores.md` y pegadlo. Tiene seis apartados **en este orden**; sustituid lo que va entre corchetes por vuestras cifras y frases.
 
-    ```text
-    # Análisis de errores · Visión artificial para el cliente (Sprint 11)
-
-    ## 1. Qué se ha hecho y con qué datos
-    [Cliente, qué clasifica el modelo, origen y licencia de las fotos, fotos por clase, cómo se partieron.]
-
-    ## 2. Resultados
-    | Clase | Precisión | Recall |
-    |---|---|---|
-    | apartamentos | | |
-    | camping | | |
-    | casa_rural | | |
-    | hotel | | |
-    | piscina | | |
-
-    Precisión en prueba: transfer + fine-tuning [..] · desde cero [..]. F1 macro: [..] y [..].
-
-    ## 3. La matriz de confusión
-    [Qué clases se confunden y cuántas fotos; una frase.]
-
-    ## 4. Los errores
-    | Foto | Verdadera | Predicha | Confianza | Hipótesis de causa | Mejora propuesta |
-    |---|---|---|---|---|---|
-    | | | | | | |
-
-    ## 5. Recomendación al cliente
-    Con un umbral de [..], el modelo decide solo el [..] % de las fotos y acierta el [..] % de ellas; el resto lo revisa una persona.
-
-    ## 6. Riesgos de IA responsable
-    1. Riesgo: [..] Medida: [..]
-    2. Riesgo: [..] Medida: [..]
-    ```
 
     Casi todo sale de lo que ya apuntasteis: las fotos y la partición (pasos 1 y 2), las cifras por clase y la matriz (paso 3), la tabla de errores (paso 3) y la frase del umbral (paso 4).
 
@@ -68,7 +36,7 @@
 
     **No vale:** un informe sin recomendación, cifras escritas de memoria o copiadas de lo que dijo una IA (todas salen de vuestro cuaderno), hipótesis que no se ven en la foto, ni riesgos genéricos.
 
-3. **Rellenar el README.** No hay plantilla. Para el nivel mínimo bastan estas cinco secciones en pocas líneas. Abrid el repositorio del equipo, entrad en `sprint-11/` y usad *Add file → Create new file* con el nombre `README.md`. Así puede quedar:
+3. **Rellenar el README.** Ya existe `sprint-11/README.md` en el repositorio del equipo, con la plantilla de cuatro campos. Abridlo (icono del lápiz) y sustituid su contenido por estas secciones; para el nivel mínimo bastan cinco, en pocas líneas. Así puede quedar:
 
     ```text
     # Sprint 11 · Visión artificial para el cliente

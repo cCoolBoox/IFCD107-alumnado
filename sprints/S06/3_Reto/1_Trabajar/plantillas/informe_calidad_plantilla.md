@@ -9,6 +9,7 @@
 
 | Nº | Defecto | Columna(s) | Filas afectadas | Cómo lo detectamos | Causa probable | Tratamiento aplicado | Por qué (y riesgo) |
 |---|---|---|---|---|---|---|---|
+| Ej. | *(ejemplo de otra tabla, de ventas; borrad esta fila)* Fechas escritas de dos formas (`03/11/2025` y `2025-11-03`) | `fecha_venta` | 87 | `df['fecha_venta'].str.contains('/').sum()` | Dos sistemas exportan distinto | Convertir cada formato por separado con `pd.to_datetime(..., format=...)` | No se pierde ninguna fila; riesgo: confundir día y mes |
 | 1 | | | | | | | |
 | 2 | | | | | | | |
 | … | | | | | | | |

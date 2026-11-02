@@ -24,7 +24,7 @@ Con estas tres cuentas tienes todo lo necesario. Son gratis.
 
 **Colab es un cuaderno en internet donde escribes y ejecutas programas de Python sin instalar nada.** Cada práctica tiene un botón azul **«Open in Colab»**: pulsas, se abre, y ya puedes empezar.
 
-Si un día Colab no funciona, el aula tiene el mismo entorno instalado en local (se llama **Anaconda + Visual Studio Code**). El docente te avisará y te explicará cómo usarlo.
+Si un día Colab no funciona, el aula tiene el mismo entorno instalado en local (se llama **Anaconda + Visual Studio Code**). El docente te avisará y te explicará cómo usarlo. Para el Sprint 16, la guía [Python en el ordenador del aula](8.%20Python_en_el_ordenador_del_aula.md) explica la terminal paso a paso.
 
 ---
 

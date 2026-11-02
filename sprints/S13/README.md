@@ -1,7 +1,7 @@
 # README Sprint S13 · Contar lo que hace el modelo
 
 **Pregunta guía:** ¿cómo enseñamos y defendemos los resultados de un modelo?
-**Fecha:** 25/11, dentro del último día del Sprint 12 · **Tiempo:** ≈ 1 h 10 min (10 min de teoría · 35 de práctica · 25 de reto)
+**Fecha:** 25/11, dentro del último día del Sprint 12 · **Tiempo:** ≈ 1 h 20 min (10 min de teoría · 35 de práctica · 35 de reto)
 
 📄 **Este README en PDF:** [a color](pdf/README_Sprint_13.pdf) · [ecofriendly, para imprimir](pdf/README_Sprint_13_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
 
@@ -41,7 +41,7 @@
 |---|---|---|---|
 | [`apuntes_comunicar_resultados.md`](1_Teoria/apuntes/apuntes_comunicar_resultados.md) · [PDF](pdf/apuntes_comunicar_resultados.pdf) · [ecofriendly](pdf/apuntes_comunicar_resultados_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: matriz de confusión, ROC/PR, importancia por permutación, umbral por coste y reglas para un informe visual de una página explicados con ejemplos | — | Antes del sprint y cuando tengas dudas |
 | `S13_01_visualizacion_resultados` | Matriz de confusión, ROC/PR, importancia, umbral y coste, buenas prácticas | 35 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb) |
-| `S13_02_plantilla_informe_visual` | Plantilla ejecutable del panel de una página (para el reto) | 25 min (dentro del reto) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb) |
+| `S13_02_plantilla_informe_visual` | Plantilla ejecutable del panel de una página (para el reto) | 35 min (dentro del reto) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb) |
 
 Plantilla en esta carpeta: [`plantilla_informe_visual.md`](3_Reto/1_Trabajar/plantillas/plantilla_informe_visual.md) (texto del informe de una página).
 
@@ -56,7 +56,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 |---|---|---|---|
 | 1 | 📖 Teoría | [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](1_Teoria/S13.1_Visualizar_y_comunicar_resultados.pdf) | 10 min |
 | 2 | 💻 Práctica | [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb) | 35 min |
-| 3 | 🎯 Reto | [Reto del Sprint 13](3_Reto/3_Consultar/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](3_Reto/1_Trabajar/plantillas/plantilla_informe_visual.md) | 25 min |
+| 3 | 🎯 Reto | [Reto del Sprint 13](3_Reto/3_Consultar/Reto_Sprint_13.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](3_Reto/1_Trabajar/plantillas/plantilla_informe_visual.md) | 35 min |
 
 <!--orden:fin-->
 

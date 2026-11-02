@@ -19,11 +19,11 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 🔔 Ceremonia · Planning del reto «Escuchar al cliente» y reparto de las cinco áreas | — | 10 |
+| ☐ | 🔔 Ceremonia · Planning del reto «Escuchar al cliente» y reparto de las cinco áreas | — | 15 |
 | ☐ | 📖 Teoría · RNN, LSTM, GRU y series temporales | [Presentación S12.1](1_Teoria/S12.1_RNN_LSTM_GRU_y_series_temporales.pdf) | 20 |
 | ☐ | 💻 Práctica · Series temporales: *baselines*, descomposición y SARIMAX (los ejercicios marcados «en clase») | [Cuaderno S12_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_01_series_temporales.ipynb) | 45 |
 | ☐ | 💻 Práctica · RNN, LSTM y GRU frente al *baseline* (los ejercicios marcados «en clase») | [Cuaderno S12_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_02_redes_recurrentes.ipynb) | 45 |
-| ☐ | 📖 Teoría · NLP clásico y embeddings | [Presentación S12.2](1_Teoria/S12.2_NLP_clasico_y_embeddings.pdf) | 25 |
+| ☐ | 📖 Teoría · NLP clásico y embeddings | [Presentación S12.2](1_Teoria/S12.2_NLP_clasico_y_embeddings.pdf) | 20 |
 | ☐ | 💻 Práctica · Reseñas: limpieza, TF-IDF, sentimiento, temas y n-gramas (los ejercicios marcados «en clase») | [Cuaderno S12_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_03_nlp_clasico.ipynb) | 55 |
 
 **En clase: 3 h 20 min.**
@@ -37,12 +37,12 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 📖 Teoría · Transformers y LLM | [Presentación S12.3](1_Teoria/S12.3_Transformers_y_LLM.pdf) | 30 |
+| ☐ | 📖 Teoría · Transformers y LLM | [Presentación S12.3](1_Teoria/S12.3_Transformers_y_LLM.pdf) | 25 |
 | ☐ | 💻 Práctica · Tokens, atención paso a paso y temperatura (los ejercicios marcados «en clase») | [Cuaderno S12_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_05_transformers_atencion.ipynb) | 40 |
 | ☐ | 💻 Práctica · Mini RAG con la política, evaluación y seguridad (los ejercicios marcados «en clase») | [Cuaderno S12_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_06_mini_rag.ipynb) | 45 |
 | ☐ | 📖 Teoría · Autoencoders y modelos generativos | [Presentación S12.4](1_Teoria/S12.4_Autoencoders_y_modelos_generativos.pdf) | 10 |
 | ☐ | 🎯 Reto · Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_12_una_pagina.md) | 65 |
-| ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 10 |
+| ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 15 |
 | ☐ | 🏠 **En casa** · Embeddings: representar el significado con vectores, LSA (ampliación) | [Cuaderno S12_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_04_embeddings_lsa.ipynb) | 50 (casa) |
 | ☐ | 🏠 **En casa** · Autoencoders y modelos generativos, GAN y difusión (ampliación) | [Cuaderno S12_07](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_07_autoencoder_generativos.ipynb) | 50 (casa) |
 
@@ -61,8 +61,8 @@
 | ☐ | 📝 Test · **Test de M4** (redes neuronales), solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 |
 | ☐ | 📖 Teoría · Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | [Presentación S13.1](../S13/1_Teoria/S13.1_Visualizar_y_comunicar_resultados.pdf) | 10 |
 | ☐ | 💻 Práctica · Matriz de confusión, ROC/PR, importancia, umbral y coste | [Cuaderno S13_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb) | 35 |
-| ☐ | 🎯 Reto · Reto del Sprint 13: elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el cuaderno plantilla y la plantilla del informe | [Reto del Sprint 13](../S13/3_Reto/1_Trabajar/Reto_Sprint_13_una_pagina.md) | 25 |
-| ☐ | 🔔 Ceremonia · Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva | — | 35 |
+| ☐ | 🎯 Reto · Reto del Sprint 13: elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el cuaderno plantilla y la plantilla del informe | [Reto del Sprint 13](../S13/3_Reto/1_Trabajar/Reto_Sprint_13_una_pagina.md) | 35 |
+| ☐ | 🔔 Ceremonia · Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva | — | 25 |
 
 **En clase: 3 h 20 min.**
 

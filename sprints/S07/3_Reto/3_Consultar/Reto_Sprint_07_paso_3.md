@@ -1,4 +1,4 @@
-# Paso 3 · Clasificación de la cancelación y elección del umbral (día 2, 15 minutos)
+# Paso 3 · Clasificación de la cancelación y elección del umbral (día 2, 25 minutos)
 
 <!--nav-->
 > Sprint 7 · Reto «Precio y cancelación» · paso 3 de 5 · [Ficha del reto](Reto_Sprint_07.md) · [Reto en una página](../1_Trabajar/Reto_Sprint_07_una_pagina.md) · [Paso 4 →](Reto_Sprint_07_paso_4.md)

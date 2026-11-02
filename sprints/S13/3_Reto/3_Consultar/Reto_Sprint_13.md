@@ -33,13 +33,13 @@
 
 ### 3 · 🪜 Guía paso a paso
 
-Son cuatro pasos, de **25 minutos en total** (en el último día del Sprint 12). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo (tres gráficos, titular y tres viñetas) y dejad lo demás para la franja de entrega o para casa.
+Son cuatro pasos, de **35 minutos en total** (en el último día del Sprint 12). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo (tres gráficos, titular y tres viñetas) y dejad lo demás para la franja de entrega o para casa.
 
 **Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 
 - [Paso 1 · Elegir el modelo, cargarlo y fijar los costes (día 1, 4 minutos)](Reto_Sprint_13_paso_1.md)
 - [Paso 2 · Ajustar los gráficos con título-conclusión (día 1, 8 minutos)](Reto_Sprint_13_paso_2.md)
-- [Paso 3 · Escribir titular, viñetas y pie (día 1, 8 minutos)](Reto_Sprint_13_paso_3.md)
+- [Paso 3 · Escribir titular, viñetas y pie (día 1, 18 minutos)](Reto_Sprint_13_paso_3.md)
 - [Paso 4 · Probar con otro equipo, revisar con la rúbrica y dejarlo listo (día 1, 5 minutos)](Reto_Sprint_13_paso_4.md)
 
 #### Ayuda 1 · Cómo usar la IA en este reto

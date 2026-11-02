@@ -311,6 +311,8 @@
 
     Si la celda `comparativa` de la sección 6 del cuaderno da `NameError: name 'mae_sin_exog' is not defined`, falta el Ejercicio 4: borrad esa celda, la vuestra ya hace su trabajo.
 
+    **Si preferís una red GRU en lugar de SARIMAX.** Copiad `S12_02` en vez de `S12_01`: los pasos 1 a 3 son los mismos (la misma partición por fecha y el mismo *baseline* de 4.46, que ahí se llama `mae_base`). Ejecutad las secciones 4 a 7; la del Ejercicio 3 entrena SimpleRNN, LSTM y GRU, y la 7 escribe la comparación y dibuja la mejor. Deberíais ver más o menos `SimpleRNN 3.79`, `LSTM 3.51`, `GRU 3.28` y `Baseline estacional 4.46` (cambian unas décimas de una ejecución a otra). Para vuestra tabla del paso 5 usad `resultados["GRU"]` donde pone `mae_sar` y `mae_base` donde pone `mae_est`; el gráfico y la frase del paso 6 funcionan igual con esos nombres. Una red no tiene por qué ganar: aquí queda casi empatada con SARIMAX (3.28 frente a 3.18), y la entrega pide que digáis cuál elegís y por qué (precisión, tiempo de ejecución y facilidad para explicarla al cliente).
+
 **Hecho cuando (parte B):** hay una tabla con el MAE del *baseline* y del modelo, el porcentaje de mejora, la previsión de los próximos 7 días del *baseline*, un gráfico y una frase para el cliente.
 
 **Qué deberíais ver.** Los tres cuadernos, cada uno con su resultado final visible:

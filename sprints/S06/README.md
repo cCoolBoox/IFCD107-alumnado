@@ -20,8 +20,8 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Datos sucios, cliente impaciente» y reparto de roles | — | 10 |
-| ☐ | 📖 Teoría · Datos, pandas y visualización exploratoria | [Presentación S06.1](1_Teoria/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 30 |
-| ☐ | 💻 Práctica · pandas, EDA y primer chequeo de calidad (los ejercicios marcados «en clase») | [Cuaderno S06_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_01_pandas_eda.ipynb) | 45 |
+| ☐ | 📖 Teoría · Datos, pandas y visualización exploratoria | [Presentación S06.1](1_Teoria/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 20 |
+| ☐ | 💻 Práctica · pandas, EDA y primer chequeo de calidad (los ejercicios marcados «en clase») | [Cuaderno S06_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_01_pandas_eda.ipynb) | 55 |
 | ☐ | 🎯 Reto · Arrancar el inventario de defectos del fichero sucio (pasos 1–2) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md) | 30 |
 | ☐ | 📖 Teoría · Limpieza y preprocesado | [Presentación S06.2](1_Teoria/S06.2_Limpieza_y_preprocesado.pdf) | 30 |
 | ☐ | 💻 Práctica · Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos (los ejercicios marcados «en clase») | [Cuaderno S06_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_02_limpieza.ipynb) | 55 |

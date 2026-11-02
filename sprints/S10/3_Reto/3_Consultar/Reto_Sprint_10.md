@@ -24,6 +24,7 @@
 | **Presentación** [`S10.3`](../../1_Teoria/S10.3_Entrenamiento_y_regularizacion.pdf) y [apuntes de redes neuronales](../../1_Teoria/apuntes/apuntes_redes_neuronales.md) | Repasar las curvas de aprendizaje y la regularización (las diapositivas 6–7 son de este reto) | Carpeta de teoría del sprint |
 | **Los datos** [`reservas_turisdata.csv`](../../../../datos/reservas_turisdata.csv) | 6000 reservas **sintéticas** (inventadas), con la columna `cancelada` y el `precio_noche` | El cuaderno los descarga solo en su primera celda; no hace falta tocarlos |
 | **Google Colab** (Python, Keras y scikit-learn ya instalados) | Ejecutar el cuaderno sin instalar nada | colab.research.google.com; al terminar, *Archivo → Descargar → Descargar .ipynb* |
+| **La plantilla del informe** [`plantilla_informe_comparativo.md`](../1_Trabajar/plantillas/plantilla_informe_comparativo.md) | Las seis partes del informe, con huecos | En GitHub: copiad el texto con el botón *Raw* |
 | **Cómo entregar en GitHub** | Subir el cuaderno, el informe y el README a `sprint-10/` desde el navegador | [Guía de entrega](../../../../material/5.%20Como_entregar_en_GitHub.md) |
 | **Autoevaluación y coevaluación** | Cada persona rellena su hoja | [Hoja del sprint](../2_Entregar/autoevaluacion_y_coevaluacion.md) |
 | **Un asistente de IA** (opcional) | Entender conceptos, curvas y errores de Keras | Con las reglas de la «Ayuda 1» del paso a paso |

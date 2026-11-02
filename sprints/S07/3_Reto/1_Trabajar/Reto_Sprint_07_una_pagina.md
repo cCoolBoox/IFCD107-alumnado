@@ -14,7 +14,7 @@
     - Al final se suben a `sprint-07/` del repositorio del equipo (lista completa en «Antes de entregar»).
 - **Tiempo en clase:**
     - Planning: 10 min.
-    - Reto: 55 min (25 el día 1 y 30 el día 2).
+    - Reto: 65 min (25 el día 1 y 40 el día 2).
     - Entrega: 15 min.
     - Lo que no quepa, a casa o a la 6.ª hora.
 
@@ -28,13 +28,13 @@
 
 \*Orientativo; puntúa el docente con la rúbrica del curso (0–4 en cada criterio). El mínimo es una entrega válida y evaluable; la «Definition of Done» de la ficha completa describe el nivel **estándar**.
 
-## Reparto sugerido de los 55 minutos
+## Reparto sugerido de los 65 minutos
 
 | Día | Min | Qué | Se sabe que está hecho cuando… |
 |---|---|---|---|
 | 1 | 5 | Abrir `reto_S07`, escribir `COSTE_FN` y `COSTE_FP` con su razón | Dos variables con una frase de razón cada una |
 | 1 | 20 | Precio: variables sin fuga, referencia, lineal y una mejora | Tabla con MAE, RMSE y R² y una frase en euros |
-| 2 | 15 | Cancelación: referencia, logística, matriz, ROC/PR y umbral | Umbral elegido con vuestros costes; test usado una vez |
+| 2 | 25 | Cancelación: referencia, logística, matriz, ROC/PR y umbral | Umbral elegido con vuestros costes; test usado una vez |
 | 2 | 5 | Sensibilidad: FN el doble, FP la mitad | Tabla con tres combinaciones o más |
 | 2 | 10 | Informe (plantilla) y README | Otra persona podría ejecutarlo con el README |
 

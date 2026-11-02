@@ -167,7 +167,7 @@ for a in (3, 3, 1):   # derecha, derecha, abajo (choca con la pared)
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 4 · 3. Explorar o explotar: epsilon-greedy · 🏫 · ejercicio 2
+### Celda 4 · 3. Explorar o explotar: epsilon-greedy · 🏠 · ejercicio 2
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 

@@ -66,8 +66,8 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 **Archivos subidos en el repositorio del equipo, carpeta `sprint-11/`** (marca cada uno cuando lo veas en GitHub):
 - [ ] `reto_vision_cliente.ipynb` · lo modificáis
-- [ ] `analisis_errores.md` · lo creáis
-- [ ] `README.md` · lo creáis
+- [ ] `analisis_errores.md` · lo creáis a partir de una plantilla
+- [ ] `README.md` · lo modificáis
 - [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
 **Total en `sprint-11/`: 3 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 6). Aparte: clasificador_alojamientos.keras; los extras solo si los hacéis. La *review* y la *retro* no se suben.

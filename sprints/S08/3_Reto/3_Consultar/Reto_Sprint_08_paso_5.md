@@ -63,7 +63,7 @@
     | 9. Mantenimiento | Qué mediríais en producción para ver la **deriva**, cada cuánto se reentrena y quién se encarga | «Comparar cada mes la tasa de cancelación real con la prevista; reentrenar si…; responsable: …» |
     | 10. Cómo reproducirlo | Semilla, versiones, orden de ejecución y ficheros | «`SEMILLA = 42`; versiones del paso 1; orden del cuaderno de arriba abajo.» |
 
-3. **Escribir el README.** Creadlo con **Add file → Create new file** (nombre `README.md`) dentro de `sprint-08`, o editad el que ya haya en la carpeta (icono del lápiz). No hay plantilla: usad este guion, sustituyendo los `…`. Tres cosas no pueden faltar: **qué se entrega y quién hizo qué**, **cómo se reproduce** (con versiones, `SEMILLA = 42` y orden de ejecución) y **uso de IA** (qué pedisteis y qué revisasteis):
+3. **Escribir el README.** Ya existe `sprint-08/README.md` en el repositorio del equipo, con la plantilla de cuatro campos: abridlo (icono del lápiz) y sustituid su contenido por este guion, cambiando los `…`. Tres cosas no pueden faltar: **qué se entrega y quién hizo qué**, **cómo se reproduce** (con versiones, `SEMILLA = 42` y orden de ejecución) y **uso de IA** (qué pedisteis y qué revisasteis):
 
     ```text
     # Sprint 8 · Duelo de modelos · Equipo …

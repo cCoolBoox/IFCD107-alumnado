@@ -20,12 +20,12 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «¿Vale la pena la red?» y reparto de roles | — | 10 |
-| ☐ | 📖 Teoría · Fundamentos de redes neuronales | [Presentación S10.1](1_Teoria/S10.1_Fundamentos_de_redes_neuronales.pdf) | 25 |
+| ☐ | 📖 Teoría · Fundamentos de redes neuronales | [Presentación S10.1](1_Teoria/S10.1_Fundamentos_de_redes_neuronales.pdf) | 20 |
 | ☐ | 💻 Práctica · Una red neuronal con solo NumPy (los ejercicios marcados «en clase») | [Cuaderno S10_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_01_red_desde_cero.ipynb) | 40 |
 | ☐ | 📖 Teoría · Redes densas con Keras | [Presentación S10.2](1_Teoria/S10.2_Redes_densas_con_Keras.pdf) | 25 |
 | ☐ | 💻 Práctica · MLP en Keras: clasificación y regresión (los ejercicios marcados «en clase») | [Cuaderno S10_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_02_mlp_keras.ipynb) | 60 |
-| ☐ | 📖 Teoría · Entrenamiento y regularización (diapositivas 1–5; las 6–7 son del reto) | [Presentación S10.3](1_Teoria/S10.3_Entrenamiento_y_regularizacion.pdf) | 30 |
-| ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 10 |
+| ☐ | 📖 Teoría · Entrenamiento y regularización (diapositivas 1–4; las 5–6 son del reto) | [Presentación S10.3](1_Teoria/S10.3_Entrenamiento_y_regularizacion.pdf) | 25 |
+| ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 20 |
 
 **En clase: 3 h 20 min.**
 
@@ -64,7 +64,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 **Archivos subidos en el repositorio del equipo, carpeta `sprint-10/`** (marca cada uno cuando lo veas en GitHub):
 - [ ] `reto_vale_la_pena.ipynb` · lo modificáis
-- [ ] `informe_comparativo.md` · lo creáis
+- [ ] `informe_comparativo.md` · lo creáis a partir de una plantilla
 - [ ] `README.md` · lo modificáis
 - [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 

@@ -1,4 +1,4 @@
-# Paso 3 · Escribir titular, viñetas y pie (día 1, 8 minutos)
+# Paso 3 · Escribir titular, viñetas y pie (día 1, 18 minutos)
 
 <!--nav-->
 > Sprint 13 · Reto «Informe visual para dirección» · paso 3 de 4 · [Ficha del reto](Reto_Sprint_13.md) · [Reto en una página](../1_Trabajar/Reto_Sprint_13_una_pagina.md) · [Paso 4 →](Reto_Sprint_13_paso_4.md)

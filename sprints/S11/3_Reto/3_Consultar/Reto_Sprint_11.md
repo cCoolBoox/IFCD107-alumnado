@@ -25,6 +25,7 @@
 | **Presentación y apuntes** [`S11.2`](../../1_Teoria/S11.2_Transfer_learning_y_fine_tuning.pdf) · [apuntes de visión por computador](../../1_Teoria/apuntes/apuntes_vision_por_computador.md) | Repasar qué es una CNN y qué es el *transfer learning* | En la carpeta del sprint |
 | **Las fotos sintéticas** | 5 clases (hotel, apartamentos, casa rural, camping, piscina), 60 dibujos por clase; algunos con la etiqueta dudosa a propósito | Las **genera el propio cuaderno** la primera vez (o el script [`generar_dataset_sintetico.py`](../1_Trabajar/plantillas/generar_dataset_sintetico.py)) |
 | **Fotos propias** (opcional) | Probar con fotos reales: hechas por vosotros o con licencia abierta, **sin personas reconocibles** | Una carpeta por clase; apuntad autor y licencia de cada una |
+| **La plantilla del informe** [`plantilla_analisis_errores.md`](../1_Trabajar/plantillas/plantilla_analisis_errores.md) | Los seis apartados del informe, con huecos | En GitHub: copiad el texto con el botón *Raw* |
 | **Cómo entregar en GitHub** | Subir los ficheros a `sprint-11/` y subir el cuaderno de Colab | [Guía de entrega](../../../../material/5.%20Como_entregar_en_GitHub.md) |
 | **Autoevaluación y coevaluación** | Cada persona rellena su hoja | [Hoja del sprint](../2_Entregar/autoevaluacion_y_coevaluacion.md) |
 | **Un asistente de IA** (opcional) | Entender errores y pedir ideas | Con las reglas de la «Ayuda 1» del paso a paso |

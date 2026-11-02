@@ -69,7 +69,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 - [ ] `leaderboard_S08.csv` · lo genera
 - [ ] `reto_S08.ipynb` · lo modificáis
 - [ ] `model_card.md` · lo creáis a partir de una plantilla
-- [ ] `README.md` · lo creáis
+- [ ] `README.md` · lo modificáis
 - [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
 **Total en `sprint-08/`: 4 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 7). Los extras solo si los hacéis. La *review* y la *retro* no se suben.

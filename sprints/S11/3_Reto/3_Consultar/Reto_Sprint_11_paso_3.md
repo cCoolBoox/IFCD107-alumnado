@@ -95,7 +95,7 @@
 
     Para cada foto de la figura mirad con calma y preguntaos: ¿está mal etiquetada y el modelo tiene razón? ¿Tiene mucho grano? ¿Se parece a otra clase (un edificio alto y uno bajo, por ejemplo)? ¿El objeto es muy pequeño? Si la foto aparece en vuestra lista de «etiquetas dudosas» del paso 1, probablemente **no** se ha equivocado el modelo, sino quien etiquetó, y eso también hay que contarlo.
 
-5. **Rellenar la tabla de errores.** Copiad esta tabla en `analisis_errores.md` (lo escribiréis en el paso 5) y añadid **una fila por foto**: 3 como mínimo, 6 para el nivel estándar. En «Foto» poned la carpeta de la clase real y el nombre del archivo, por ejemplo `camping/img_031.png`:
+5. **Rellenar la tabla de errores.** Copiad esta tabla en `analisis_errores.md` (lo escribiréis en el paso 5) y añadid **una fila por foto**: 3 como mínimo, 6 para el nivel estándar. *(Si el modelo acierta casi todo y hay menos errores de los que se piden, completad la tabla con las fotos que acertó con **menos confianza**: es un «casi error», se analiza igual y lo ponéis en el informe. Si no hay ningún error, decidlo y analizad las 3 de menos confianza.)* En «Foto» poned la carpeta de la clase real y el nombre del archivo, por ejemplo `camping/img_031.png`:
 
     | Foto | Verdadera | Predicha | Confianza | Hipótesis de causa | Mejora propuesta |
     |---|---|---|---|---|---|

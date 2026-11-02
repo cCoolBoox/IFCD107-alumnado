@@ -38,9 +38,9 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · ROC, PR y datos desbalanceados (los ejercicios marcados «en clase») | [Cuaderno S07_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_04_roc_pr_desbalance.ipynb) | 25 |
+| ☐ | 💻 Práctica · ROC, PR y datos desbalanceados (los ejercicios marcados «en clase») | [Cuaderno S07_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_04_roc_pr_desbalance.ipynb) | 15 |
 | ☐ | 📖 Teoría · k-NN y Naive Bayes | [Presentación S07.3](1_Teoria/S07.3_k_NN_y_Naive_Bayes.pdf) | 10 |
-| ☐ | 🎯 Reto · Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_07_una_pagina.md) | 30 |
+| ☐ | 🎯 Reto · Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_07_una_pagina.md) | 40 |
 | ☐ | 📝 Test · **Test de M3 (parte 1)**, solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | 25 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-07/` y autoevaluación y coevaluación del Sprint 7 (la review y la retro se hacen junto con las del Sprint 8) | — | 15 |
 | ☐ | 🏠 **En casa** · k vecinos (k-NN) y Naive Bayes (cuaderno completo) | [Cuaderno S07_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_05_knn_naive_bayes.ipynb) | 40 (casa) |

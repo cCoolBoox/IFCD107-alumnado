@@ -33,7 +33,7 @@
     | Añadir datos | Conseguir más ejemplos del subgrupo que falta |
     | Limitar el uso | Decir en el aviso del demostrador: «no usar el modelo para el grupo X» |
 
-    Aquí tenéis código para las dos primeras (con TurisData y su peor subgrupo, el canal `directo`). Para la tercera y la cuarta, mirad el apartado 6.
+    Aquí tenéis código para las dos primeras (con TurisData y su peor subgrupo, el canal `directo`). Para la tercera y la cuarta, mirad el apartado 7; si vuestro proyecto no es una tabla, el apartado 6.
 
 2. **Guardar el «antes» (5 minutos).** En `04_evaluacion.ipynb`, con las celdas del paso 1 ya ejecutadas (necesitáis la función `medir_subgrupos` y las variables `real`, `pred`):
 
@@ -104,8 +104,18 @@
 
     `.merge(…, on="subgrupo")` junta las dos tablas fila a fila por el nombre del subgrupo y `suffixes` añade «antes» y «después» a las columnas repetidas. Debajo, **una frase de lectura honesta** con vuestras cifras: «El recall de [grupo] sube del [X] % al [Y] % y el de [resto] [cambia/no cambia]; a cambio hay [N] falsas alarmas más». Copiad la tabla a una celda de texto.
 
-6. **Si el sesgo no se puede arreglar (en el mismo tiempo).** Para **añadir datos**, decid cuántos casos del grupo faltan y cómo se conseguirían; si no hay forma, es una limitación. Para **limitar el uso**, escribidlo en el campo `limitaciones` del demostrador (paso 4) y en la model card. Esconderlo no es una opción.
-7. **Registro de experimentos (15 minutos).** Una fila nueva en `registro.csv` con la medida, el antes y después y la decisión. Si copiasteis `registrar` a `utilidades.py` en el Sprint 15 ([`S15_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb)), usadla; si no, añadid la fila a mano con las mismas 12 columnas:
+6. **Si vuestro proyecto no es una tabla (series, imágenes o asistente con documentos).** La idea es la misma (medir por subgrupos, cambiar **una** cosa, medir otra vez), pero los subgrupos y la medida cambian. Elegid la fila de vuestro tipo:
+
+    | Tipo | Subgrupos que medir | Una línea para medirlos | Medida posible |
+    |---|---|---|---|
+    | **Serie temporal** | Día de la semana, mes o temporada, festivos | `error.groupby(error.index.dayofweek).mean()` (con `error = (real - prediccion).abs()`) | Añadir al modelo una columna del grupo que falla (por ejemplo, «es festivo») y repetir |
+    | **Imágenes** | Cada clase, y una condición de la foto (luz, fondo, tamaño) si la apuntasteis | `classification_report(y_test, pred)` para el recall por clase | Más fotos (o giros y recortes) de la clase que va peor; umbral de confianza distinto por clase |
+    | **Asistente con documentos** | Tipo de pregunta (directa, de varias fuentes, sin respuesta, intento de engaño) y documento | `resultados.groupby("tipo")["correcta"].mean()` (con una columna `correcta` de 0 o 1 por pregunta) | Subir el umbral de recuperación, o añadir la regla «si no consta, decirlo» y repetir las preguntas |
+
+    El resto de pasos no cambia: guardad el «antes», aplicad una sola medida, medid el «después» con la misma tabla y escribid la frase de lectura. Para el demostrador de estos tres tipos, mirad «Qué adaptar en vuestro proyecto» en `README_demostrador.md` (paso 4).
+
+7. **Si el sesgo no se puede arreglar (en el mismo tiempo).** Para **añadir datos**, decid cuántos casos del grupo faltan y cómo se conseguirían; si no hay forma, es una limitación. Para **limitar el uso**, escribidlo en el campo `limitaciones` del demostrador (paso 4) y en la model card. Esconderlo no es una opción.
+8. **Registro de experimentos (15 minutos).** Una fila nueva en `registro.csv` con la medida, el antes y después y la decisión. Si copiasteis `registrar` a `utilidades.py` en el Sprint 15 ([`S15_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb)), usadla; si no, añadid la fila a mano con las mismas 12 columnas:
 
     ```python
     registrar("Ana", "RegresionLogistica+umbral_directo", UMBRALES, DATOS_HASH, SEMILLA, "recall_directo", 0.800, 0, 0,

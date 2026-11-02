@@ -34,13 +34,13 @@
 
 ### 3 · 🪜 Guía paso a paso
 
-Son cinco pasos, de **55 minutos en total** (25 el día 1 y 30 el día 2), más 15 minutos de entrega. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa. Antes del paso 1 ya habéis hecho el *planning* de 10 minutos (roles del sprint y tareas en el tablero).
+Son cinco pasos, de **65 minutos en total** (25 el día 1 y 40 el día 2), más 15 minutos de entrega. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para casa. Antes del paso 1 ya habéis hecho el *planning* de 10 minutos (roles del sprint y tareas en el tablero).
 
 **Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 
 - [Paso 1 · Acordar las hipótesis de coste y abrir el cuaderno (día 1, 5 minutos)](Reto_Sprint_07_paso_1.md)
 - [Paso 2 · Regresión del precio (día 1, 20 minutos)](Reto_Sprint_07_paso_2.md)
-- [Paso 3 · Clasificación de la cancelación y elección del umbral (día 2, 15 minutos)](Reto_Sprint_07_paso_3.md)
+- [Paso 3 · Clasificación de la cancelación y elección del umbral (día 2, 25 minutos)](Reto_Sprint_07_paso_3.md)
 - [Paso 4 · Análisis de sensibilidad (día 2, 5 minutos)](Reto_Sprint_07_paso_4.md)
 - [Paso 5 · Informe y README (día 2, 10 minutos)](Reto_Sprint_07_paso_5.md)
 

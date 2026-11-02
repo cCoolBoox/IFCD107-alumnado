@@ -25,7 +25,7 @@
 | **El guion de defensa** [`guion_defensa.md`](../../1_Teoria/actividades/guion_defensa.md) | Guion base de 10 minutos, ajuste al tiempo de vuestro turno, guion de la demo, 10 preguntas probables y ficha de feedback | Se copia y se rellena; subirlo es opcional |
 | **La memoria congelada y el demostrador** del Sprint 16 | La única fuente de cifras, figuras y demo: todo lo que contéis sale de ahí | Repositorio de vuestro equipo (congelado desde el 10/12 a las 14:30) |
 | **Rúbrica del proyecto** [`briefs_y_rubrica.md`](../../../../proyecto-final/briefs_y_rubrica.md) | Leer la sección 6 (Defensa) y el criterio I | Repositorio del curso |
-| **Un editor de diapositivas** y un grabador de pantalla | Hacer las diapositivas, exportarlas a PDF y grabar el vídeo del plan B | Cualquier editor de presentaciones; la exportación a PDF es la entrega |
+| **Un editor de diapositivas** y un grabador de pantalla | Hacer las diapositivas, exportarlas a PDF y grabar el vídeo del plan B | Cualquier editor de presentaciones (no se da un archivo de diapositivas para no ataros a un programa): la plantilla es el guion de las 12 diapositivas de [`guion_defensa.md`](../../1_Teoria/actividades/guion_defensa.md). La exportación a PDF es la entrega |
 | **Un cronómetro** (el del móvil vale) | Ensayar con el tiempo real de vuestro turno | En clase |
 | **Cómo entregar en GitHub** | Subir los ficheros a `sprint-17/` | [Guía de entrega](../../../../material/5.%20Como_entregar_en_GitHub.md) |
 | **Autoevaluación y coevaluación** | Cada persona rellena su hoja | [Hoja del sprint](../2_Entregar/autoevaluacion_y_coevaluacion.md) |

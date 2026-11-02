@@ -1,6 +1,6 @@
 # Coevaluación del equipo · Anexo B
 
-> **Cada persona rellena su propio formulario** al cierre del Sprint 16 (10/12) y lo entrega **directamente al docente** (no en el repositorio del equipo). Es **confidencial**: nadie ve lo que ha escrito el resto.
+> **Cada persona rellena su propio formulario** al cierre del Sprint 16 (10/12) y lo entrega **directamente al docente** (no en el repositorio del equipo), por el canal privado que el docente indique ese día (correo o mensaje directo), como `coevaluacion_equipo_nombre.md` (sin espacios ni tildes). Si no lo ha dicho, preguntadlo antes del cierre. Es **confidencial**: nadie ve lo que ha escrito el resto.
 > El docente la contrasta con el historial de commits y el tablero. Junto con la contribución en el repositorio, **ajusta la nota individual con un factor de 0,8 a 1,1**.
 
 **Tu nombre:** ______ · **Equipo:** ______ · **Fecha:** ______

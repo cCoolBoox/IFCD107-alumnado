@@ -21,7 +21,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 | Fichero | Origen | Qué hacéis vosotros | ¿Se sube? |
 |---|---|---|---|
 | `reto_vale_la_pena.ipynb` | **Lo modificáis.** Parte del cuaderno `S10_04`, que trae el esqueleto y cuatro ejercicios con hueco | Completáis los ejercicios, añadís vuestras variantes y vuestro diagnóstico, y lo descargáis con **todas las celdas ejecutadas** (nombre en minúsculas y sin espacios) | **Sí** · `sprint-10/` |
-| `informe_comparativo.md` | **Lo creáis.** No hay plantilla: su estructura está en el paso 6 | Escribís el informe de 1–2 páginas *ML clásico frente a MLP* y, al final, la sección «Revisión con la rúbrica» | **Sí** · `sprint-10/` |
+| `informe_comparativo.md` | **Lo creáis a partir de una plantilla.** Os damos `plantilla_informe_comparativo.md` con las seis partes | Copiarla como `informe_comparativo.md` y rellenarla (1–2 páginas, *ML clásico frente a MLP*) y, al final, la sección «Revisión con la rúbrica» | **Sí** · `sprint-10/` |
 | `README.md` | **Lo modificáis.** Ya está creado en `sprint-10/` con la plantilla del repositorio del equipo | Lo rellenáis: qué se entrega, quién hizo qué y cómo repetirlo (abrir en Colab y ejecutar de arriba abajo) | **Sí** · `sprint-10/` |
 | `reservas_turisdata.csv` | **Ya hecho.** Los datos del curso (sintéticos) | Nada: el cuaderno los descarga solo; no se modifican | **Sí**, sin cambios · `data/` (si aún no está) |
 | Autoevaluación y coevaluación (`autoevaluacion_nombre.md`) | **Ya hecha, en blanco** | Cada persona copia la plantilla con su nombre y la rellena; la coevaluación va **dentro del mismo fichero** | **Sí**, **una por persona** (no una por equipo) · `sprint-10/` |
