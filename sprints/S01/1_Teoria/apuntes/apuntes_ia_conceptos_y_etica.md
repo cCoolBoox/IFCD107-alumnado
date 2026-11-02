@@ -1,6 +1,6 @@
 # Apuntes del Sprint 1 · Qué es la IA, cómo aprende y cómo usarla con responsabilidad
 
-Las diapositivas del Sprint 1 (S01.1 a S01.4) son un esquema muy comprimido. Estos apuntes **cuentan lo mismo con calma**, con ejemplos de TurisData y sin dar nada por sabido. Léelos antes de las dinámicas o cuando una palabra te suene rara. No hay que memorizar: hay que **entender para qué sirve cada idea**.
+Las diapositivas del Sprint 1 (S01_01 a S01_04) son un esquema muy comprimido. Estos apuntes **cuentan lo mismo con calma**, con ejemplos de TurisData y sin dar nada por sabido. Léelos antes de las dinámicas o cuando una palabra te suene rara. No hay que memorizar: hay que **entender para qué sirve cada idea**.
 
 No hace falta saber programar ni matemáticas para seguirlos.
 
@@ -12,10 +12,10 @@ Este sprint responde a cuatro preguntas, una por cada presentación:
 
 | Presentación | Pregunta | Idea clave |
 |---|---|---|
-| **S01.1** Introducción a la IA | ¿Qué es la IA y qué puede (y no puede) hacer? | IA ≠ magia: aprende patrones de datos |
-| **S01.2** Algoritmos y CRISP-DM | ¿Qué tipos de problemas hay y cómo se organiza un proyecto? | Primero el problema, después el algoritmo |
-| **S01.3** Tipos de aprendizaje | ¿Cómo aprende un modelo y cómo sé si lo hace bien? | Hay que evaluar con datos que no ha visto |
-| **S01.4** IA responsable | ¿Qué puede salir mal con las personas y la ley? | Sesgo, privacidad, RGPD y AI Act |
+| **S01_01** Introducción a la IA | ¿Qué es la IA y qué puede (y no puede) hacer? | IA ≠ magia: aprende patrones de datos |
+| **S01_02** Algoritmos y CRISP-DM | ¿Qué tipos de problemas hay y cómo se organiza un proyecto? | Primero el problema, después el algoritmo |
+| **S01_03** Tipos de aprendizaje | ¿Cómo aprende un modelo y cómo sé si lo hace bien? | Hay que evaluar con datos que no ha visto |
+| **S01_04** IA responsable | ¿Qué puede salir mal con las personas y la ley? | Sesgo, privacidad, RGPD y AI Act |
 
 **El reto:** elegir casos de uso de IA para TurisData y **analizarlos con una lista de comprobación ética**, decidiendo cuáles son recomendables y cuáles no.
 
@@ -209,7 +209,7 @@ Entre el **70 % y el 85 %** no llega a producción o no da el valor esperado, **
 
 ---
 
-# DÍA 2 · Cómo aprenden los modelos y cómo evaluarlos
+# DÍA 1 · Cómo aprenden los modelos y cómo evaluarlos
 
 ## 10. Los tipos de aprendizaje
 
@@ -311,7 +311,7 @@ Fíjate: **tiene peor exactitud (93 % < 95 %) y es muchísimo más útil**. Por 
 
 ---
 
-# DÍA 3 · IA responsable: ética, sesgo y normativa
+# DÍA 2 · IA responsable: ética, sesgo y normativa
 
 ## 14. Casos que salieron mal
 
@@ -319,9 +319,9 @@ Fíjate: **tiene peor exactitud (93 % < 95 %) y es muchísimo más útil**. Por 
 |---|---|
 | **COMPAS** (EE. UU., 2016) | Software que predecía riesgo de reincidencia: puntuaba **más alto** a personas negras con historiales similares a los de personas blancas |
 | **Amazon, selección de CV** (2018) | Se retiró: **penalizaba a las candidatas** porque aprendió de diez años de contrataciones mayoritariamente masculinas |
-| **Reconocimiento facial** | Detenciones erróneas; errores de hasta **10 veces más** en pieles oscuras |
+| **Reconocimiento facial** | Errores muy distintos según el grupo: **34,7 %** en mujeres de piel oscura frente a **0,8 %** en hombres de piel clara (estudio *Gender Shades*, 2018) |
 
-**Qué tienen en común:** resultados discriminatorios, **sin revisión humana**, con **datos históricos sesgados** y nadie midió la equidad antes de desplegar. El algoritmo no «es racista»: **reproduce lo que había en los datos**.
+**Qué tienen en común:** resultados discriminatorios, con **datos históricos sesgados** y nadie midió la equidad antes de desplegar. El algoritmo no «es racista»: **reproduce lo que había en los datos**.
 
 ## 15. Los cuatro pilares éticos
 
@@ -332,7 +332,7 @@ Fíjate: **tiene peor exactitud (93 % < 95 %) y es muchísimo más útil**. Por 
 | **Autonomía** | Sin manipular ni forzar a las personas |
 | **Justicia** | Beneficios y riesgos repartidos con equidad |
 
-**¿Quién responde si falla?** La cadena es larga (quien desarrolla, quien vende, quien usa). El AI Act distingue **proveedor** (quien lo crea) y **desplegante** (quien lo pone en uso). Si la responsabilidad se reparte sin cuidado, **acaba siendo de nadie**.
+**¿Quién responde si falla?** La cadena es larga (quien desarrolla, quien vende, quien usa). El AI Act distingue **proveedor** (quien lo crea) y **responsable del despliegue** (quien lo pone en uso). Si la responsabilidad se reparte sin cuidado, **acaba siendo de nadie**.
 
 ## 16. Gobernanza de datos: el ciclo de vida
 
@@ -363,7 +363,7 @@ El sesgo **no aparece en un solo sitio**: se acumula a lo largo de todo el proce
 
 - **Equidad:** hay **varias definiciones** (paridad demográfica, igualdad de oportunidades, calibración) y **no se pueden cumplir todas a la vez** si los grupos tienen tasas distintas. Se elige según el contexto, y esa elección es una decisión humana.
 - **Transparencia:** se puede examinar el sistema. **Explicabilidad (XAI):** se puede comunicar **por qué** decidió algo. Técnicas: LIME, SHAP, mapas de saliencia, árboles «sombra».
-- **Derechos de las personas:** explicación, rectificación, **intervención humana** y olvido (RGPD, art. 22).
+- **Derechos de las personas:** información y acceso, rectificación y olvido (RGPD, arts. 13 a 17) e **intervención humana** en las decisiones automatizadas (art. 22).
 
 ## 19. RGPD y LOPDGDD en lo esencial
 
@@ -374,7 +374,7 @@ El sesgo **no aparece en un solo sitio**: se acumula a lo largo de todo el proce
 | **Art. 22** | No decidir **solo con automatización** cuando hay efectos jurídicos relevantes |
 | **EIPD** | Evaluación de impacto **antes** de desplegar tratamientos de alto riesgo |
 
-En España: figura del **DPD** (delegado de protección de datos), sanciones de hasta **20 M€ o el 4 %** de la facturación, y la **AEPD** como autoridad (guías en aepd.es).
+En España: figura del **DPD** (delegado de protección de datos), sanciones de hasta **20 M€ o el 4 %** de la facturación mundial anual, la cifra que sea mayor, en las infracciones más graves (RGPD, art. 83), y la **AEPD** como autoridad (guías en aepd.es).
 
 ## 20. AI Act: cuatro niveles de riesgo
 
@@ -450,7 +450,7 @@ En el reto rellenaréis `checklist_etico_v1.md` para cada caso de uso. Hay una f
 
 ## 24. Cómo estudiar estos apuntes
 
-1. **Antes de cada presentación**, lee el día correspondiente (1, 2 o 3) a ritmo tranquilo.
+1. **Antes de cada presentación**, lee el día correspondiente (1 o 2) a ritmo tranquilo.
 2. **Haz los ejemplos numéricos a mano** (matriz de confusión, sobreajuste): son lo que más se pregunta.
 3. **Antes del reto**, relee las secciones 7-9 y 14-21: son las que usarás para elegir y analizar los casos.
 4. Si una palabra te bloquea, **mira la chuleta** (sección 23) y sigue; se aclara con los ejemplos.

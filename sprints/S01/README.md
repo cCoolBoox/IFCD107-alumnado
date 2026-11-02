@@ -1,124 +1,119 @@
 # README Sprint S01 · Qué es la IA, cómo aprende y cómo usarla bien
 
-**Pregunta guía:** ¿dónde puede ayudar la IA al cliente y qué riesgos tiene?
+**Pregunta guía:** ¿dónde puede ayudar la IA al cliente y qué riesgos tiene?  
 **Fechas:** mar 20/10 – mié 21/10 · **Horas:** 12 h (4 h teoría · 3 h práctica · 5 h PBL, con 1 h para cerrar el Sprint 0)
-**Módulos:** M1a (UD 1a.1 a 1a.3) + M8 IA responsable · Bloque A: sin Python ni notebooks
 
-📄 **Este README en PDF:** [a color](pdf/README_Sprint_01.pdf) · [ecofriendly, para imprimir](pdf/README_Sprint_01_ecofriendly.pdf) (descárgalo para que funcionen los enlaces; la vista previa de GitHub no los abre).
+📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
+
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo lo que pone en las filas de cada día: lo demás es para casa.
 
 ## Qué aprenderás
+
 1. Explicar qué es la IA y distinguir IA, machine learning, deep learning e IA generativa, con sus **modalidades** (visión, lenguaje, voz, recomendación, generativa) y casos de uso reales.
 2. Describir las **familias de algoritmos**, el ciclo de vida de un proyecto (CRISP-DM) y elegir una familia razonable ante un problema.
 3. Distinguir aprendizaje **supervisado, no supervisado, por refuerzo** y preentrenado, y entender el **sobreajuste** y por qué se separan los datos de entrenamiento, validación y test.
 4. Identificar riesgos de **sesgo, privacidad, transparencia, desinformación y decisiones automatizadas**, y conocer lo esencial de RGPD y del AI Act.
 5. Aplicar un **checklist ético** a un caso y priorizar oportunidades de IA para un cliente.
 
-## Requisitos previos
+## Antes de empezar
 Haber cursado el Sprint 0 (equipo, tablero y entrevista al cliente TurisData). No hace falta Python ni matemáticas.
 
-## 📎 Materiales del sprint
+## Día 1 · Martes 20/10
 
-**Documentos del curso** (PDF y .md; las actividades van en la tabla siguiente)
-
-| Material | Tema | Tiempo | Cuándo |
+| ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| [Guía del sprint (PDF)](pdf/README_Sprint_01.pdf) · [ecofriendly](pdf/README_Sprint_01_ecofriendly.pdf) | Resumen del sprint: qué aprenderás, temario, material, reto y conclusión | 2 páginas | Antes de empezar |
-| [**Carpeta del reto: `Reto_S01/`**](3_Reto/) | Todo el material del reto junto: ficha (.md y PDF), plantillas y material de apoyo, hoja de autoevaluación y coevaluación y láminas del reto | — | Antes del planning y durante el reto |
-| [Reto completo, paso a paso (.md)](3_Reto/3_Consultar/Reto_Sprint_01.md) · [PDF](pdf/Reto_Sprint_01.pdf) · [ecofriendly](pdf/Reto_Sprint_01_ecofriendly.pdf) | Qué pide el cliente, pasos, rúbrica, ayudas y errores frecuentes | — | Antes del planning y durante el reto |
-| [Resumen del sprint en una página](4_Referencia/infografias/S01_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
-| [El reto paso a paso](4_Referencia/infografias/S01_03_reto_paso_a_paso.png) · [PDF con enlaces](pdf/S01_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
-| [Esquema del contenido y su relación con el reto](4_Referencia/infografias/S01_07_esquema_contenido_y_reto.png) | Qué sesión prepara cada paso del reto y cada apartado del informe, con el material que no entra en el informe | — | Antes del planning y como guía durante el reto |
-| [Infografías del sprint](4_Referencia/infografias/) | 7 láminas ilustradas | — | Antes del planning y durante el reto |
-| [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
-| [Cómo subir vuestras respuestas a GitHub](../../material/5.%20Como_entregar_en_GitHub.md) | Entregar archivos en el repositorio del equipo, desde el navegador | 10 min | Antes de entregar el reto |
-| [`S01.1_Introduccion_a_la_IA.pdf`](1_Teoria/S01.1_Introduccion_a_la_IA.pdf) | Introducción a la IA: modalidades, casos de uso y mitos | 25 min | Teoría · día 1 del S01 |
-| [`S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf`](1_Teoria/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) | Panorama de algoritmos y CRISP-DM | 25 min | Teoría · día 1 del S01 |
-| [`S01.3_Tipos_de_aprendizaje.pdf`](1_Teoria/S01.3_Tipos_de_aprendizaje.pdf) | Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste | 25 min | Teoría · día 1 del S01 |
-| [Explicación sencilla: matriz de confusión (VN, FP, FN, VP)](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S01/2_Practica/S01_matriz_de_confusion_en_sencillo.html) · [`.html`](2_Practica/S01_matriz_de_confusion_en_sencillo.html) | Las cuatro casillas, cómo leer las siglas, por qué los errores no cuestan igual y mini-test | 10 min | Antes del ejercicio interactivo |
-| [Lámina: la matriz de confusión](4_Referencia/infografias/S01_05_matriz_de_confusion.png) | Una página con las cuatro casillas, las métricas y el efecto del umbral (para tener a mano) | — | Consulta (junto al ejercicio) |
-| [Lámina: ¿bueno o malo? Lee las métricas y decide](4_Referencia/infografias/S01_06_bueno_o_malo_metricas.png) | Siete modelos con resultados reales (cáncer de mama, diabetes, dígitos, iris…): lee las métricas y marca bueno, regular o malo | 20–30 min | Al terminar S01.4 (actividad en parejas) |
-| [Ejercicio interactivo: ¿bueno o malo? Lee las métricas y decide](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S01/2_Practica/S01_ejercicio_bueno_o_malo.html) · [`.html`](2_Practica/S01_ejercicio_bueno_o_malo.html) | La misma actividad en pantalla: siete modelos con resultados reales; decide bueno, regular o malo, razona y comprueba (con «Rellenar por mí») | 25–30 min | Al terminar S01.4 (actividad en parejas) |
-| [Ejercicio interactivo: matriz de confusión](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S01/2_Practica/S01_ejercicio_matriz_de_confusion.html) · [`.html`](2_Practica/S01_ejercicio_matriz_de_confusion.html) | Sin código: construye la matriz a mano, mira qué esconde la exactitud y qué cambia con el umbral (datos ficticios) | 20 min | Después de S01.3 (refuerzo) |
-| [`S01.4_IA_responsable_etica_sesgo_y_normativa.pdf`](1_Teoria/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) | IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética | 50 min | Teoría · día 2 del S01 |
+| ☐ | 🎯 Reto · **Cierre del Sprint 0** (lo que quedó pendiente del reto): acuerdo de trabajo y lista de «terminado», entrevista al cliente en grupo grande (antes, 10 min en equipo para preparar las preguntas con la plantilla del mapa a la vista), después el mapa de empatía de TurisData con lo oído y retro corta. **Si aún no tenéis tablero**, montadlo con la guía rápida de Trello (15 min, en casa o en este bloque) | [acuerdo de trabajo y lista de «terminado»](../S00/Reto_S00/plantillas_equipo.md) | 40 |
+| ☐ | 🔔 Ceremonia · Planning del Sprint 1: leed la ficha del reto y repartid los 7 apartados del informe | — | 10 |
+| ☐ | 📖 Teoría · Introducción a la IA: modalidades, casos de uso y mitos | [Presentación S01_01](1_Teoria/S01_01_presentacion_Introduccion_a_la_IA.pdf) | 25 |
+| ☐ | 💻 Práctica · Dinámica A: tarjetas de casos de uso (11 tarjetas) | [tarjetas casos uso](2_Practica/tarjetas_casos_uso.md) | 25 |
+| ☐ | 📖 Teoría · Panorama de algoritmos y CRISP-DM | [Presentación S01_02](1_Teoria/S01_02_presentacion_Algoritmos_y_CRISP-DM.pdf) | 25 |
+| ☐ | 💻 Práctica · Dinámica C: elegir la familia de algoritmos en 3 de los 6 problemas (con el docente) | — | 15 |
+| ☐ | 📖 Teoría · Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste | [Presentación S01_03](1_Teoria/S01_03_presentacion_Tipos_de_aprendizaje_y_sobreajuste.pdf) | 25 |
+| ☐ | 💻 Práctica · Dinámica B: clasificación «a mano» (demostración en la pizarra) | [ejemplo clasificacion caso](2_Practica/ejemplo_clasificacion_caso.md) | 10 |
+| ☐ | 🎯 Reto · Lluvia de ideas y elección de casos (paso 2) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_01_una_pagina.md) | 25 |
 
-**Material de las actividades**
+**En clase: 3 h 20 min.**
 
-| Material | Tema | Tiempo | Cuándo |
+**Al acabar el día, deberías poder decir:**
+
+- [ ] El Sprint 0 está cerrado: acuerdo de trabajo, «terminado» y mapa de empatía en el repositorio del equipo.
+- [ ] Sé distinguir aprendizaje supervisado, no supervisado y por refuerzo.
+- [ ] Mi equipo tiene sus 5 casos de uso candidatos (al menos 2 propios y 1 que no necesita IA).
+
+## Día 2 · Miércoles 21/10
+
+| ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| [`apuntes_ia_conceptos_y_etica.md`](1_Teoria/apuntes/apuntes_ia_conceptos_y_etica.md) · [PDF](pdf/apuntes_ia_conceptos_y_etica.pdf) · [ecofriendly](pdf/apuntes_ia_conceptos_y_etica_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: qué es la IA, tipos de aprendizaje, sobreajuste, matriz de confusión, sesgo, RGPD y AI Act explicados paso a paso con ejemplos | — | Antes del sprint y cuando tengas dudas |
-| [`tarjetas_casos_uso.md`](2_Practica/tarjetas_casos_uso.md) · Dinámica A | Mapa de casos de uso: modalidad, aprendizaje y datos | 25 min (11 tarjetas) | Práctica 1 |
-| [`tarjetas_casos_uso.md`](2_Practica/tarjetas_casos_uso.md) · Dinámica B | Clasificación "a mano" y sobreajuste | 10 min (demostración) | Práctica 2 |
-| [`tarjetas_casos_uso.md`](2_Practica/tarjetas_casos_uso.md) · Dinámica C | ¿Qué familia de algoritmos? (6 problemas) | 15 min (3 de los 6 problemas, en gran grupo) | Práctica 3 |
-| [`casos_debate_ia_responsable.md`](2_Practica/casos_debate_ia_responsable.md) | Debate de casos éticos con roles (2 de los 5) | 25 min | Práctica 4 (M8, UD 8.4) |
-| [`checklist_etico_v1.md`](3_Reto/1_Trabajar/plantillas/checklist_etico_v1.md) | Checklist de IA responsable (versión 1) | en el reto | Reto |
-| [`ejemplo_clasificacion_caso.md`](2_Practica/ejemplo_clasificacion_caso.md) | Ejemplo resuelto de ficha de caso de uso | consulta | Reto |
-| [`guia_rapida_tablero_trello.md`](2_Practica/guia_rapida_tablero_trello.md) | Montar el tablero de Trello del equipo (listas y tareas del Sprint 1 para copiar y pegar) | 15 min | Si aún no hay tablero |
+| ☐ | 📖 Teoría · IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética | [Presentación S01_04](1_Teoria/S01_04_presentacion_IA_responsable.pdf) | 50 |
+| ☐ | 💻 Práctica · Debate de casos éticos con roles (2 de los 5 casos) | [casos debate ia responsable](2_Practica/casos_debate_ia_responsable.md) | 25 |
+| ☐ | 🎯 Reto · Fichas de 4 casos (el 5.º, en versión breve), lista de comprobación ética (completa en los 2 casos priorizados), matriz de priorización y redacción (pasos 3–5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_01_una_pagina.md) | 75 |
+| ☐ | 🔔 Ceremonia · Entrega en `sprint-01/`, autoevaluación y coevaluación, review (5 min por equipo) y retrospectiva | — | 50 |
 
-*(Como no hay notebooks en este bloque, no hay enlaces a Colab. Los materiales son `.md` imprimibles.)*
+**En clase: 3 h 20 min.**
 
-<!--orden:ini-->
-## 🧭 Orden de trabajo del sprint
+**Al acabar el día, deberías poder decir:**
 
-Sigue los pasos **en este orden**: primero la teoría, después la práctica que la aplica y, por último, el reto. Los tiempos son orientativos; si el docente cambia el ritmo, mantén el orden.
+- [ ] Informe de oportunidades y checklist ético subidos a `sprint-01/` de mi repo.
+- [ ] Autoevaluación y coevaluación rellenadas.
 
-**Día 1 del S01**
+## El reto en pocas palabras
 
-| Nº | Tipo | Qué se hace | Tiempo |
-|---|---|---|---|
-| 1 | 🎯 Reto | **Cierre del Sprint 0** (lo que quedó pendiente del reto): [acuerdo de trabajo y lista de «terminado»](../S00/Reto_S00/plantillas_equipo.md), [entrevista al cliente](../S00/actividades/entrevista_descubrimiento.md) en grupo grande (antes, 10 min en equipo para preparar las preguntas con la plantilla del mapa a la vista), después el [mapa de empatía de TurisData](../S00/Reto_S00/empatia_hmw_plantillas.md) con lo oído y retro corta. **Si aún no tenéis tablero**, montadlo con la [guía rápida de Trello](2_Practica/guia_rapida_tablero_trello.md) (15 min, en casa o en este bloque) | 40 min |
-| 2 | 🔔 Ceremonia | Planning del Sprint 1: leed la ficha del reto y repartid los 7 apartados del informe | 10 min |
-| 3 | 📖 Teoría | [Introducción a la IA: modalidades, casos de uso y mitos](1_Teoria/S01.1_Introduccion_a_la_IA.pdf) | 25 min |
-| 4 | 💻 Práctica | [Dinámica A: tarjetas de casos de uso (11 tarjetas)](2_Practica/tarjetas_casos_uso.md) | 25 min |
-| 5 | 📖 Teoría | [Panorama de algoritmos y CRISP-DM](1_Teoria/S01.2_Panorama_de_algoritmos_y_CRISP_DM.pdf) | 25 min |
-| 6 | 💻 Práctica | Dinámica C: elegir la familia de algoritmos en 3 de los 6 problemas (con el docente) | 15 min |
-| 7 | 📖 Teoría | [Tipos de aprendizaje, entrenamiento/validación/test y sobreajuste](1_Teoria/S01.3_Tipos_de_aprendizaje.pdf) | 25 min |
-| 8 | 💻 Práctica | [Dinámica B: clasificación «a mano» (demostración en la pizarra)](2_Practica/ejemplo_clasificacion_caso.md) | 10 min |
-| 9 | 🎯 Reto | [Lluvia de ideas y elección de casos (paso 2)](3_Reto/3_Consultar/Reto_Sprint_01.md) | 25 min |
+**Qué os pide el cliente.** La directora de TurisData no sabe por dónde empezar con la inteligencia artificial. Os pide **un informe corto** que le diga: *qué cinco cosas podría hacer con IA, cuál conviene hacer primero, qué datos necesita y qué riesgos corre.* No quiere códigos ni fórmulas: quiere **un consejo claro para decidir**, con hasta 15.000 € para un piloto.
 
-**Día 2 del S01**
+**Qué vais a entregar:** el informe de oportunidades (siete apartados, 2 o 3 páginas) y el checklist ético, en `sprint-01/`; cada persona sube además su autoevaluación y coevaluación.
 
-| Nº | Tipo | Qué se hace | Tiempo |
-|---|---|---|---|
-| 10 | 📖 Teoría | [IA responsable: ética, sesgo, gobernanza de datos, RGPD, AI Act y lista de comprobación ética](1_Teoria/S01.4_IA_responsable_etica_sesgo_y_normativa.pdf) | 50 min |
-| 11 | 💻 Práctica | [Debate de casos éticos con roles (2 de los 5 casos)](2_Practica/casos_debate_ia_responsable.md) | 25 min |
-| 12 | 🎯 Reto | [Fichas de 4 casos (el 5.º, en versión breve), lista de comprobación ética (completa en los 2 casos priorizados), matriz de priorización y redacción (pasos 3–5)](3_Reto/1_Trabajar/plantillas/checklist_etico_v1.md) | 1 h 15 min |
-| 13 | 🔔 Ceremonia | Entrega en `sprint-01/`, autoevaluación y coevaluación, review (5 min por equipo) y retrospectiva | 50 min |
+**Núcleo y extra.** Núcleo: las fichas de 4 casos (el quinto, en versión breve), la matriz de priorización y el checklist ético completo en los 2 casos priorizados. Extra: fichas y checklist completos en los 5 casos.
 
-<!--orden:fin-->
+Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_01_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_01.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
-## Reto · «Auditoría de oportunidades de IA»
+## ✅ Antes de cerrar el sprint (Definition of Done)
 
-📄 [Reto en PDF](pdf/Reto_Sprint_01.pdf) · [ecofriendly](pdf/Reto_Sprint_01_ecofriendly.pdf) · [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md)
+**Archivos subidos en el repositorio del equipo, carpeta `sprint-01/`** (marca cada uno cuando lo veas en GitHub):
+- [ ] `informe_oportunidades.md` · lo creáis a partir de una plantilla
+- [ ] `checklist_etico.md` · lo creáis a partir de una plantilla
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
-👉 **[Ver el reto completo, explicado paso a paso](3_Reto/3_Consultar/Reto_Sprint_01.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
+**Total en `sprint-01/`: 2 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 5). Los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
-
-
-
-**Contexto:** la directora de TurisData Canarias quiere saber qué 5 cosas podría hacer con IA, cuáles primero, qué datos necesita y qué riesgos corre. Tiene un piloto limitado (hasta 15.000 €).
-
-
-
-**Entregáis** (en la carpeta `sprint-01/` del repositorio del equipo):
-- Informe de oportunidades de 2-3 páginas (`.md` o PDF): resumen, tabla de 5 casos, priorización, riesgos y recomendación.
-- Checklist ético v1 de cada caso (completo en los 2 priorizados).
-- Declaración de dónde habéis usado IA generativa y qué habéis verificado.
-
-
-
-**Reglas:**
-- Unas 1 h 40 min de reto, más el planning y la review; los 5 casos cubren 3 modalidades o más y al menos 2 son propios.
-- Al menos 1 caso no necesita IA (o va mejor con reglas).
-- Nunca claves ni datos personales; no hay datos que analizar, solo ideas y riesgos.
-
-
-
-**Se valora:** corrección técnica, reproducibilidad (criterio de priorización claro), comunicación al cliente e IA responsable (riesgos por caso, AI Act con calendario verificado).
-
-## ✅ Antes de cerrar el sprint
+**Comprobaciones antes de dar el sprint por cerrado:**
 - [ ] Informe de 2-3 páginas con 5 casos y matriz de priorización
 - [ ] Checklist ético v1 con al menos 1 riesgo específico por caso
 - [ ] Revisado por otra persona y declaración de uso de IA hecha
-- [ ] Entregable subido a la carpeta `sprint-01/` del repositorio del equipo
 - [ ] Tablero actualizado
-- [ ] [Autoevaluación y coevaluación](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md) rellenadas
+- [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y lo ha anotado en el propio entregable
+
+## En casa (cuando puedas)
+
+- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_ia_conceptos_y_etica.md).
+
+## Si te atascas
+
+1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_01.md).
+2. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
+
+## Todo el material, por carpetas
+
+Las carpetas están **numeradas en el orden en que las usas**. Cada documento está en `.md`.
+
+| Carpeta | Qué hay |
+|---|---|
+| [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
+| [`2_Practica/`](2_Practica/) | Las actividades del sprint: dinámicas, hojas de ejercicios, guías y scripts |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y cada paso explicado) |
+| [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
+
+Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).
+
+## Temario oficial de este sprint
+
+| Unidad | Conceptos que entran |
+|---|---|
+| UD 1a.1 · Introducción a la IA | Historia y definiciones: IA simbólica, ML, DL, IA generativa. IA débil, general y superinteligencia · Modalidades: visión por computador, NLP, voz, sistemas de recomendación, robótica, IA generativa · Casos de uso reales por sector (educación, salud, turismo, industria, administración) · Mitos y límites: qué puede y qué no puede hacer la IA hoy |
+| UD 1a.2 · Panorama de algoritmos y ciclo de un proyecto | Familias: reglas, regresión, clasificación, clustering, árboles, ensembles, redes neuronales · Ciclo de vida: CRISP-DM (negocio → datos → modelado → evaluación → despliegue) · Datos, características y etiquetas; qué hace falta para entrenar un modelo |
+| UD 1a.3 · Tipos de aprendizaje | Supervisado, no supervisado, semisupervisado, autosupervisado y por refuerzo · Entrenamiento, validación y test; overfitting y underfitting; sesgo y varianza (intuición) · Introducción a métricas: exactitud, error, matriz de confusión |
+| M8 · IA responsable (UD 8.1 a 8.5) | Ética, responsabilidad, gobernanza de datos, investigación e innovación responsables · Fuentes de sesgo en datos y modelos; equidad; transparencia y explicabilidad · RGPD y LOPDGDD; Reglamento Europeo de IA (AI Act): niveles de riesgo y obligaciones · Análisis de casos con dilemas éticos (selección de personal, reconocimiento facial, scoring, IA en educación) · Checklist de IA responsable aplicado a un caso propio |
+
+**Y ahora:** Sprint 2 · Las matemáticas y la estadística detrás (jueves 22/10).
+
+*12 h (4 h teoría · 3 h práctica · 5 h PBL, con 1 h de cierre del Sprint 0).*

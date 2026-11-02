@@ -14,7 +14,7 @@ Tres actividades de práctica (repartidas entre las sesiones del sprint). Se imp
 
 ## Instrucciones
 
-> **Antes de empezar (1 minuto, lo cuenta el docente): «preentrenado + ajuste».** Algunos modelos no se entrenan desde cero. Una empresa los **preentrena** con enormes cantidades de datos sin etiquetas (por ejemplo, textos de internet) y después se **ajustan** a una tarea concreta, o se usan tal cual (resumir reseñas, responder preguntas). Ese preentrenamiento es **autosupervisado**: el modelo se inventa sus propias etiquetas, como adivinar la palabra que falta (diapositiva 7 de S01.3). Si un caso usa un asistente de texto o un modelo ya hecho, marcad **«preentrenado + ajuste»**. Si hay que entrenar con datos vuestros ya etiquetados, será **«supervisado»**.
+> **Antes de empezar (1 minuto, lo cuenta el docente): «preentrenado + ajuste».** Algunos modelos no se entrenan desde cero. Una empresa los **preentrena** con enormes cantidades de datos sin etiquetas (por ejemplo, textos de internet) y después se **ajustan** a una tarea concreta, o se usan tal cual (resumir reseñas, responder preguntas). Ese preentrenamiento es **autosupervisado**: el modelo se inventa sus propias etiquetas, como adivinar la palabra que falta (diapositiva 5 de S01_03). Si un caso usa un asistente de texto o un modelo ya hecho, marcad **«preentrenado + ajuste»**. Si hay que entrenar con datos vuestros ya etiquetados, será **«supervisado»**.
 
 1. Recortad **solo las 11 tarjetas que marque el docente** (**C01, C02, C03, C04, C06, C07, C09, C13, C16, C18 y C22**; incluyen las dos «trampa»). Las otras 11 son el **banco de ideas** del reto: guardadlas para el paso 2.
 2. Para cada tarjeta, rellenad los cuatro campos **a lápiz** (podéis usar los apuntes de la teoría):

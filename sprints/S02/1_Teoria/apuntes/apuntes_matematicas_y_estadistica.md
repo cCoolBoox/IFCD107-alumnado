@@ -1,6 +1,6 @@
 # Apuntes del Sprint 2 · Las matemáticas y la estadística detrás de la IA
 
-Las diapositivas (S02.1 y S02.2) son un esquema. Estos apuntes cuentan lo mismo **explicado con calma, con ejemplos pequeños y las cuentas hechas paso a paso**. Léelos **antes** de los ejercicios o cuando una diapositiva te suene a chino. No hay que memorizar nada: hay que **entender qué significa cada cosa**.
+Las diapositivas (S02_01 y S02_02) son un esquema. Estos apuntes cuentan lo mismo **explicado con calma, con ejemplos pequeños y las cuentas hechas paso a paso**. Léelos **antes** de los ejercicios o cuando una diapositiva te suene a chino. No hay que memorizar nada: hay que **entender qué significa cada cosa**.
 
 No hace falta ser bueno en matemáticas. Con fracciones, porcentajes, potencias y una calculadora (o el móvil) llegas a todo. Cuando veas un símbolo raro, mira su «traducción a lengua normal».
 

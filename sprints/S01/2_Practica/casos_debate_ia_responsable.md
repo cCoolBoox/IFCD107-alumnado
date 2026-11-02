@@ -29,7 +29,7 @@
 
 **Marco mínimo para razonar** (lo veréis en la teoría de M8):
 - **RGPD** (Reglamento general de protección de datos) y **LOPDGDD** (ley orgánica española de protección de datos): licitud, finalidad, minimización, transparencia, derechos, evaluación de impacto, decisiones automatizadas (art. 22).
-- **Reglamento europeo de IA (AI Act):** clasificación por niveles de riesgo (inaceptable, alto, limitado o de transparencia, mínimo) y obligaciones para cada nivel.: qué obligaciones se aplican ya y cuáles aún no.
+- **Reglamento europeo de IA (AI Act):** clasificación por niveles de riesgo (inaceptable, alto, limitado o de transparencia, mínimo) y obligaciones para cada nivel: qué obligaciones se aplican ya y cuáles aún no.
 - **Principios:** equidad, transparencia, supervisión humana, seguridad, responsabilidad.
 
 ---

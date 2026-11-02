@@ -16,9 +16,9 @@ Datos guardados (SQL / NoSQL)  →  Primer modelo (AutoML)  →  Servicio que ot
 
 | Parte | Pregunta | Herramienta |
 |---|---|---|
-| **S03.1** | ¿Cómo guardo y pregunto a los datos? | SQL en DB Browser |
-| **S03.2** | ¿Y si los datos no caben bien en tablas? | NoSQL (MongoDB) |
-| **S03.3** | ¿Cómo consigo un primer modelo rápido y lo pongo a funcionar? | AutoML y MLOps |
+| **S03_01** | ¿Cómo guardo y pregunto a los datos? | SQL en DB Browser |
+| **S03_02** | ¿Y si los datos no caben bien en tablas? | NoSQL (MongoDB) |
+| **S03_03** | ¿Cómo consigo un primer modelo rápido y lo pongo a funcionar? | AutoML y MLOps |
 
 **El reto:** el «primer modelo en producción»: usar los datos de TurisData para predecir cancelaciones con AutoML, elegir el umbral por dinero, publicarlo como servicio y **cerrar y borrar todo lo creado** (coste 0 €).
 
