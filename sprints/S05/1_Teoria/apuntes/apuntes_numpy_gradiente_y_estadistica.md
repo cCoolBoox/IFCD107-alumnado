@@ -18,7 +18,7 @@ Si algo de matemáticas te suena raro, vuelve a la sección correspondiente del 
 
 ---
 
-# DÍA 1 · NumPy y álgebra lineal
+# PARTE 1 · NumPy y álgebra lineal
 
 ## 1. Por qué NumPy
 
@@ -249,7 +249,7 @@ El mini-reto del cuaderno hace lo mismo con tres variables (temperatura, festivo
 
 ---
 
-# DÍA 2 · Así aprende un modelo: descenso del gradiente
+# PARTE 2 · Así aprende un modelo: descenso del gradiente
 
 > Si no recuerdas qué es una derivada o un gradiente, relee las secciones de derivadas y gradiente de los apuntes del Sprint 2. Aquí solo lo usamos.
 
@@ -360,7 +360,7 @@ Si tu modelo «desde cero» **coincide con `LinearRegression`**, **has entendido
 
 ---
 
-# DÍA 3 · Estadística con Python y CRUD
+# PARTE 3 · Estadística con Python y CRUD
 
 ## 10. Describir los datos
 
