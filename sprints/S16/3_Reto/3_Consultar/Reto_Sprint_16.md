@@ -72,6 +72,7 @@ La IA puede ahorrar tiempo, pero **escribe con seguridad cosas que pueden ser fa
 | Dejar la memoria para el último día | «Total, ya está hecho» | Borrador el día 2 (9/12) y revisión el día 3 (10/12) |
 | El demostrador solo funciona en el ordenador de una persona | Dependencias sin documentar | `requirements.txt` con versiones y prueba en un entorno limpio |
 | Mitigación que se aplica pero no se mide | Se piensa que basta con hacerla | Comparad las métricas **antes y después, por subgrupo** |
+| Elegir el umbral o los pesos de la mitigación mirando el test | «Para que salga mejor» | Elegidlos con validación cruzada sobre el entrenamiento; el test solo mide el antes y el después |
 | Subir cambios después de las 14:30 | Se siguen retocando cosas | Crear la etiqueta antes y no tocar nada después |
 | Coevaluación sin entregar | Se olvida | Cada persona la entrega; cuenta para la nota individual |
 | Memoria con más de 15 páginas o con fragmentos copiados | Se llena de relleno | Respetad el presupuesto de páginas; los anexos no cuentan; escribid con vuestras palabras |

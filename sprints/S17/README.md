@@ -22,9 +22,9 @@
 | ☐ | 📖 Teoría · **Storytelling** | [Presentación S17.1](1_Teoria/S17.1_Storytelling_y_defensa.pdf) | 20 |
 | ☐ | 💻 Práctica · **Tu historia:** plantilla de storytelling (máx. 12 diapositivas) | [plantilla de storytelling](3_Reto/1_Trabajar/plantillas/plantilla_storytelling.md) | 45 |
 | ☐ | 💻 Práctica · **Pitch de 3 minutos** y guion de la defensa (`guion_defensa.md`) | [`guion_defensa.md`](1_Teoria/actividades/guion_defensa.md) | 40 |
-| ☐ | 🎯 Reto · **Ensayos con preguntas** cruzadas entre equipos | — | 55 |
+| ☐ | 🎯 Reto · **Ensayos con cronómetro** (solo el equipo, 20 min) **y con preguntas** de otro equipo (35 min) | — | 55 |
 | ☐ | 🎯 Reto · **Ronda extra y cambios:** las tres preguntas más difíciles que os haría un cliente y la lista de 3 cambios del guion | — | 50 |
-| ☐ | 🎯 Reto · **Ensayo general** con cronómetro: 10 min | — | 40 |
+| ☐ | 🎯 Reto · **Ensayo general** como el día real, con el docente de público | — | 40 |
 
 **En clase: 4 h 10 min.**
 
@@ -33,6 +33,21 @@
 - [ ] Sé contar mi proyecto con un mensaje único y una presentación de máximo 12 diapositivas.
 - [ ] Sé defender mi proyecto en un pitch de 3 minutos y responder preguntas con datos.
 - [ ] Sé qué parte cuenta cada persona de mi equipo y puedo responder preguntas sobre cualquiera.
+
+## Día 2 · Lunes 14/12 · hito: defensa final
+
+| ☐ | Qué haces | Abre | Min |
+|---|---|---|---|
+| ☐ | 🎯 Reto · **Defensa ante el tribunal:** el turno de cada equipo (relato, demo y preguntas, con 10 min de cambios entre equipos) y, mientras defienden los demás, vuestra coevaluación (paso 5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_17_una_pagina.md) | 120 |
+
+**En clase: 2 h.**
+
+**Al terminar las defensas** (unos 30 min más, fuera de las 120 de los turnos): feedback global del docente, retrospectiva del proyecto (de palabra) y revisión con la rúbrica; después se suben `plantilla_storytelling.md` y las autoevaluaciones.
+
+**Al acabar el día, deberías poder decir:**
+
+- [ ] Sé defender mi proyecto ante un público no técnico, con relato, demostración y respuestas a las preguntas.
+- [ ] Sé revisar con la rúbrica el trabajo del equipo (el nivel de cada criterio lo pone quien no preparó esa parte) y escribir una frase de prueba.
 
 ## El reto en pocas palabras
 

@@ -3,7 +3,7 @@
 **Proyecto:** ______ · **Responsable de IA responsable:** ______ · **Versión vigente:** S14 / S15 / S16 (tacha)
 
 > Este documento **actualiza el checklist de IA responsable del Sprint 1** (M8, UD 8.5) para el proyecto final (requisito **R6**).
-> Se rellena en el Sprint 14 (plan inicial), se revisa el 3/12 y se **cierra el 10/12** con evidencias. No es un trámite: cada respuesta debe apoyarse en algo que se pueda comprobar en el repositorio.
+> Se rellena en el Sprint 14 (plan inicial), se revisa al final del Sprint 15 y se **cierra al final del Sprint 16** (congelación) con evidencias. No es un trámite: cada respuesta debe apoyarse en algo que se pueda comprobar en el repositorio.
 > **Cómo se actualiza:** conserva vuestras respuestas del Sprint 1 (columna «S1» si las tenéis), y en cada sprint anota en la columna correspondiente qué ha cambiado y la evidencia.
 
 ## Parte A · Checklist ético (versión proyecto final)
@@ -85,7 +85,7 @@ Estado: **✔** cumplido con evidencia · **◐** parcial · **✘** no cumplido
 - *Brief 3 (asistente FP):* alucinaciones y desinformación al alumnado; falta de transparencia sobre el asistente; que se use para tomar decisiones sobre personas; datos personales en las preguntas de los usuarios.
 - *Libre:* ______
 
-## Parte D · Cierre (10/12)
+## Parte D · Cierre (final del Sprint 16)
 - ¿Qué riesgos altos quedaron mitigados y con qué evidencia? ______
 - ¿Qué riesgos **residuales** aceptamos y se comunican al cliente? ______
 - Limitaciones y usos no permitidos (pasan a la *model card* y a la memoria): ______

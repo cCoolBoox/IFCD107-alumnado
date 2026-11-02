@@ -26,12 +26,12 @@
 | H13… | *(añade las tuyas)* | | | | | |
 
 ## 3. Objetivo de cada sprint (Sprint Goal)
-| Sprint | Fechas | Objetivo (una frase medible) | Hito |
+| Sprint | Duración | Objetivo (una frase medible) | Hito |
 |---|---|---|---|
-| 14 | 26-30/11 | | 26/11 brief · 27/11 go / no-go |
-| 15 | 1-3/12 | | 3/12 modelo candidato |
-| 16 | 4-10/12 | | 10/12 14:30 congelación |
-| 17 | 11 y 14/12 | | 11/12 ensayo · 14/12 defensa |
+| 14 | 3 días | | día 1 brief y ficha · día 2 go / no-go |
+| 15 | 3 días | | último día: modelo candidato |
+| 16 | 3 días | | último día, 14:30: congelación |
+| 17 | 2 días | | día 1 ensayo · día 2 defensa |
 
 ## 4. Ceremonias (dentro de las horas del sprint)
 | Ceremonia | Cuándo | Qué se anota |

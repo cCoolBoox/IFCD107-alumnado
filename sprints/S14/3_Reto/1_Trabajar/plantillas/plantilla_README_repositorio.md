@@ -2,7 +2,7 @@
 
 > *Copia este archivo como `README.md` en la raíz del repositorio del equipo y sustituye lo que está entre corchetes. Un compañero de otro equipo debe poder ejecutar el proyecto **solo con este README** (criterio F de la rúbrica). Lo que ya no sepas en el Sprint 14 (resultados, demostrador) lo dejas con corchetes y lo rellenas en los sprints 15 y 16: en el 16 subes la versión final también a `sprint-16/`. Los ficheros de cada sprint van en su carpeta `sprint-NN/`, como en el árbol del apartado 3.*
 
-**Brief:** [1 Demanda turística / 2 Cultivos / 3 Asistente FP / 4 Energía / Libre] · **Curso:** IFCD107 · Especialista en IA · **Defensa:** 14/12/2026
+**Brief:** [1 Demanda turística / 2 Cultivos / 3 Asistente FP / 4 Energía / Libre] · **Curso:** IFCD107 · Especialista en IA · **Defensa:** día 2 del Sprint 17
 
 ## 1. El problema en 3 líneas
 - **Pregunta de negocio:** [una frase]

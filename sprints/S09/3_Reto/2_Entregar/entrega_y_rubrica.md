@@ -39,7 +39,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 | **Ficha de segmentos** | Por segmento: nombre comercial, tamaño (n y %), perfil en una frase **con cifras** y **una acción comercial**. Los tamaños suman 1.200 | 🟢 Mínimo | `ficha_segmentos.md` |
 | **Nota de IA responsable** | 5 líneas dentro de la ficha sobre los riesgos de segmentar y recomendar | 🟢 Mínimo | `ficha_segmentos.md` |
 | **Declarar el uso de la IA** | En el cuaderno, dónde la habéis usado y qué habéis comprobado a mano | 🟢 Mínimo | Cuaderno |
-| **Recomendador comparado** | Al menos **dos métodos** (la popularidad y otro), evaluados con valoraciones **escondidas** (división de prueba) con **RMSE** y **precision@3**, y una frase que explica cuál elegís | 🟡 Estándar | Cuaderno y apartado «Recomendador» de la ficha |
+| **Recomendador comparado** | Al menos **dos métodos**: la popularidad y **item-item** (el de «por contenido» es opcional: con estos datos no mejora a la popularidad), evaluados con valoraciones **escondidas** (división de prueba) con **RMSE** y **precision@3**, y una frase que explica cuál elegís | 🟡 Estándar | Cuaderno y apartado «Recomendador» de la ficha |
 | **Función `recomendar(id_usuario, n)`** | Devuelve las `n` mejores experiencias que el usuario **aún no ha valorado**; probada con 3 usuarios distintos | 🟡 Estándar | Cuaderno |
 | **Experiencia estrella** | Por segmento, la experiencia que recomienda vuestro prototipo | 🟡 Estándar | `ficha_segmentos.md` |
 | **IA responsable con riesgos concretos** | Al menos **2 riesgos específicos** de este caso (por ejemplo, sesgo de popularidad, discriminación por edad o niños, privacidad), cada uno con su medida | 🟡 Estándar | `ficha_segmentos.md` |

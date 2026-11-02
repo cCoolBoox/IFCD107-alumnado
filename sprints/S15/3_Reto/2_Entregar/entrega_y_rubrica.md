@@ -39,7 +39,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 | **Partición común** | Todos los modelos se comparan con **la misma partición**, definida y guardada antes de probar (temporal si hay series; por grupos si hay fotos del mismo objeto) | 🟢 Mínimo | `03_modelos.ipynb` |
 | **Baseline en el registro** | El *baseline* repetido es **la primera fila** del registro | 🟢 Mínimo | `registro.csv` |
 | **Tres modelos clásicos** | Al menos 3 modelos, con media ± desviación de la validación cruzada | 🟢 Mínimo | `03_modelos.ipynb` y `registro.csv` |
-| **Modelo neuronal** | Al menos un modelo neuronal (o el asistente LLM/RAG en el brief 3) con la misma partición | 🟡 Estándar | `03_modelos.ipynb` y `registro.csv` |
+| **Modelo neuronal** | Al menos un modelo neuronal con la misma partición (vale la red de scikit-learn `MLPClassifier`; la de Keras del Sprint 10 es opcional) o, en el brief 3, el asistente LLM/RAG | 🟡 Estándar | `03_modelos.ipynb` y `registro.csv` |
 | **Registro de experimentos** | Una fila por prueba con modelo, ajustes, métrica, desviación y tiempo; **al menos una fila de cada persona**; ≥ 12 filas recomendadas | 🟢 Mínimo | `registro.csv` |
 | **Ajuste de hiperparámetros** | 1–2 ajustes clave de cada familia, probados **solo con validación** y anotados | 🟡 Estándar | `registro.csv` |
 | **Control de fugas** | Lista de 5 preguntas contestada en una celda de texto antes de elegir; nada del test ha servido para decidir | 🟡 Estándar | `03_modelos.ipynb` (celda «Comprobación de fugas») |

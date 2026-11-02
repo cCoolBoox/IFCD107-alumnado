@@ -21,7 +21,7 @@
 | Nivel | Qué hay que tener | Nota* |
 |---|---|---|
 | 🟢 **Mínimo** (todos los equipos) | Variables **escaladas** antes de agrupar · `k` elegido con la silueta y una razón de negocio · mapa 2D con PCA (segmentos coloreados, % de varianza en los ejes) · ficha con **nombre, tamaño, perfil y una acción comercial por segmento** · nota de IA responsable de 5 líneas · IA declarada en el cuaderno | 2 |
-| 🟡 **Estándar** | Recomendador con **dos métodos** comparados con RMSE y precision@3 (valoraciones escondidas) · `recomendar(id_usuario, n)` que no propone lo ya valorado, probada con 3 usuarios · experiencia estrella por segmento · 2 riesgos concretos con medida · cuaderno que se ejecuta entero con semillas fijas · un *commit* por persona | 3 |
+| 🟡 **Estándar** | Recomendador con **dos métodos** (popularidad e *item-item*) comparados con RMSE y precision@3 (valoraciones escondidas) · `recomendar(id_usuario, n)` que no propone lo ya valorado, probada con 3 usuarios · experiencia estrella por segmento · 2 riesgos concretos con medida · cuaderno que se ejecuta entero con semillas fijas · un *commit* por persona | 3 |
 | 🔴 **Extra** | Comparar k-means con jerárquico o DBSCAN y explicar la diferencia · ejes del PCA interpretados con las cargas · recomendación para un huésped nuevo (sin historial) | 4 |
 
 \*Orientativo; puntúa el docente con la rúbrica del curso (0–4 en cada criterio). El mínimo es una entrega válida y evaluable; la «Definition of Done» describe el nivel **estándar**.

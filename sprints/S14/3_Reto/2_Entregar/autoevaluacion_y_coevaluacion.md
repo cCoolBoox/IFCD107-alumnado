@@ -33,7 +33,7 @@ Volver a la [ficha del reto](../3_Consultar/Reto_Sprint_14.md).
 
 | Pregunta | Mi respuesta |
 |---|---|
-| ¿La ficha se entregó antes del 27/11 y tiene el **go** del docente? | …… |
+| ¿La ficha se entregó antes de las 14:30 del día 1 y tiene el **go** del docente? | …… |
 | ¿Los datos son reales, con **fuente y licencia**, y el script o enlace de descarga funciona? | …… |
 | ¿El EDA incluye informe de calidad (nulos, duplicados, sesgos, linaje)? | …… |
 | ¿El baseline usa una métrica técnica definida **antes** de mirar resultados? | …… |

@@ -87,7 +87,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 **Total en `sprint-14/`: 8 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 11). Aparte: Datos descargados; descargar_datos.py; los extras solo si los hacéis. La *review* y la *retro* no se suben.
 
 **Comprobaciones antes de dar el sprint por cerrado:**
-- [ ] Ficha entregada antes del 27/11 y con **go** del docente.
+- [ ] Ficha entregada antes de las 14:30 del día 1 y con **go** del docente.
 - [ ] Datos con fuente y licencia documentadas; el enlace o script de descarga funciona.
 - [ ] EDA con informe de calidad y baseline con métrica definida antes de ver resultados.
 - [ ] Backlog de 10-15 historias y tablero actualizado.

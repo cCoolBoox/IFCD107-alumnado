@@ -11,7 +11,7 @@
 
 **Qué os pide el cliente.** El cliente (el docente) quiere saber **qué modelo recomendáis para vuestro proyecto y por qué**. No le basta con «el que tiene el número más alto»: quiere saber si la mejora frente al *baseline* (el modelo más simple, que sirve de referencia) **compensa el coste y la complejidad**, si el modelo **funciona con datos que no ha visto** y si vuestros resultados **se pueden repetir** otro día y en otro ordenador. Este sprint es el corazón técnico del proyecto, pero lo que se valora **no es probar muchos modelos**: es **probar con orden, anotar cada prueba y elegir con honestidad**.
 
-**Cómo se trabaja.** Partís de lo que ya tenéis del Sprint 14 (datos, análisis y *baseline*) y de las herramientas del cuaderno de práctica: una función que fija el azar, otra que anota cada prueba en un fichero y la validación cruzada (evaluar varias veces con trozos distintos de los datos). Vosotros decidís **antes** qué modelos probáis y por qué (como mínimo, tres modelos clásicos y uno neuronal, o un asistente LLM/RAG si vuestro brief es el 3), los comparáis **con la misma partición**, **elegís el candidato sin mirar el test** y solo después lo evaluáis en el test **una única vez**. Son tres jornadas: **470 minutos de reto** (130 el día 1, 200 el día 2 y 140 el día 3) más 60 de review y retro. El equipo decide hasta dónde llega: 🟢 mínimo, 🟡 estándar o 🔴 extra.
+**Cómo se trabaja.** Partís de lo que ya tenéis del Sprint 14 (datos, análisis y *baseline*) y de las herramientas del cuaderno de práctica: una función que fija el azar, otra que anota cada prueba en un fichero y la validación cruzada (evaluar varias veces con trozos distintos de los datos). Vosotros decidís **antes** qué modelos probáis y por qué (como mínimo, tres modelos clásicos y uno neuronal —vale la red de scikit-learn—, o un asistente LLM/RAG si vuestro brief es el 3), los comparáis **con la misma partición**, **elegís el candidato sin mirar el test** y solo después lo evaluáis en el test **una única vez**. Son tres jornadas: **470 minutos de reto** (130 el día 1, 200 el día 2 y 140 el día 3) más 60 de review y retro. El equipo decide hasta dónde llega: 🟢 mínimo, 🟡 estándar o 🔴 extra.
 
 ---
 
@@ -64,7 +64,7 @@ La IA puede ahorrar tiempo, pero **da código que parece funcionar y no se entie
 | Elegir el modelo mirando el test | «Para ver cuál es mejor» | Elegid solo con validación; el test, una vez |
 | Resultados «increíbles» (99 %) | Fuga de datos | Revisad variables y partición con la lista del paso 3 |
 | Registro con 3 filas de una sola persona | El responsable técnico lo hace todo | Cada persona prueba algo y lo anota con su nombre |
-| Cada persona tiene su propio `registro.csv` | Se trabaja en copias distintas del cuaderno | Juntad todas las filas en un único `registro.csv` antes de subir |
+| Cada persona tiene su propio `registro.csv` | Se trabaja en copias distintas del cuaderno | Un único `03_modelos.ipynb` compartido (Compartir → editor), con una sección por persona: el `registro.csv` sale de «Reiniciar y ejecutar todo» |
 | Comparar con particiones distintas | Cada uno prueba por su lado | Una partición común, guardada y compartida |
 | Mejor número = mejor modelo | Se mira solo la métrica | Añadid tiempo, simplicidad y explicabilidad |
 | Mezclar fotos del mismo objeto entre entrenamiento y test | En imágenes es fácil | Particionad por objeto o por parcela |

@@ -538,7 +538,7 @@ W.proyecto = function(host, D){
     ['Como cliente quiero gráficos claros del error', 'Curvas, matriz, importancia', 'M', 16], ['Como responsable ético quiero analizar sesgos y mitigarlos', 'Métricas por subgrupo + medida', 'M', 16],
     ['Como usuario quiero probar el modelo en un demostrador', 'Demo estable y plan B', 'L', 16], ['Como cliente quiero una memoria técnica', '10-15 páginas', 'L', 16],
     ['Como equipo queremos una presentación de máx. 12 diapositivas', 'Ensayo general hecho', 'M', 17], ['Como equipo queremos repartir preguntas de defensa', 'Todos hablan', 'S', 17]].map(h => ({h: h[0], c: h[1], t: h[2], s: h[3], on: true}));
-  const HITOS = {14: '26–30/11 · 26/11 brief · 27/11 go / no-go', 15: '1–3/12 · 3/12 modelo candidato', 16: '4–10/12 · 10/12 14:30 congelación', 17: '11 y 14/12 · 11/12 ensayo · 14/12 defensa'};
+  const HITOS = {14: '3 días · día 1 brief y ficha · día 2 go / no-go', 15: '3 días · último día: modelo candidato', 16: '3 días · último día, 14:30: congelación', 17: '2 días · día 1 ensayo · día 2 defensa'};
   b.innerHTML = `<p class="cap" style="margin:0 0 8px">Las doce historias de ejemplo de la plantilla. <b>Quitad o cambiad<\/b> alguna y añadid la vuestra (H13…): hacen falta entre 10 y 15, cada una con su criterio de aceptación.<\/p>
     <div class="scroll"><table class="w14-bk"><thead><tr><th><\/th><th>ID<\/th><th>Historia<\/th><th>Criterio de aceptación<\/th><th>Tam.<\/th><th>Sprint<\/th><\/tr><\/thead><tbody id="w14-bt"><\/tbody><\/table><\/div>
     <div class="w14-g" style="margin-top:10px"><label class="w14-f"><span>Nueva historia: «Como … quiero … para …»<\/span><input type="text" id="w14-nh" placeholder="Como cliente quiero ver el error por país para saber cuándo no fiarme"><\/label>

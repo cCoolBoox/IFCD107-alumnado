@@ -23,7 +23,7 @@
 | Nivel | Qué hay que tener | Nota* |
 |---|---|---|
 | 🟢 **Mínimo** (todos los equipos) | Una misma partición para todos · *baseline* en la primera fila del registro y 3 modelos con media ± desviación · una fila de cada persona · candidato elegido **sin mirar el test** y justificado · test evaluado una sola vez · modelo y `metadatos.json` guardados | 2 |
-| 🟡 **Estándar** | Además, un modelo neuronal (o LLM/RAG) · 1–2 hiperparámetros ajustados solo con validación · lista de fugas contestada · registro de ≥ 12 filas · primera explicación (importancia, SHAP o Grad-CAM) · cuaderno reproducible, 3 *commits* de personas distintas · uso de IA declarado · revisión con la rúbrica anotada | 3 |
+| 🟡 **Estándar** | Además, un modelo neuronal (vale `MLPClassifier`) o LLM/RAG · 1–2 hiperparámetros ajustados solo con validación · lista de fugas contestada · registro de ≥ 12 filas · primera explicación (importancia, SHAP o Grad-CAM) · cuaderno reproducible, 3 *commits* de personas distintas · uso de IA declarado · revisión con la rúbrica anotada | 3 |
 | 🔴 **Extra** | Hipótesis de **por qué gana** el candidato, contrastada con la explicación · análisis de errores o curvas · MLflow en local | 4 |
 
 \*Orientativo; puntúa el docente con la rúbrica del curso (0–4 en cada criterio). El mínimo es una entrega válida y evaluable; la «Definition of Done» describe el nivel **estándar**.

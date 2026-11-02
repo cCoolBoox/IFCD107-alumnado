@@ -1,7 +1,7 @@
 # Plantilla de storytelling · [Proyecto] · [Equipo]
 
 > Rellénala **antes** de abrir el editor de diapositivas. Si el mensaje no cabe en una frase, no cabrá en 12 diapositivas.
-> Tiempo sugerido: 60-75 minutos en equipo (11/12).
+> Tiempo sugerido en equipo (día 1): 45 minutos para esta plantilla y 40 para el pitch y el guion de la defensa.
 
 ## 1. Audiencia
 | Pregunta | Respuesta |

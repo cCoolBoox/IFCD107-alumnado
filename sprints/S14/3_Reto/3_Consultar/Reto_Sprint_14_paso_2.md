@@ -49,7 +49,7 @@
 
 3. **Decidir y apuntar.** Marcad el brief con más puntos y escribid en la nota del equipo, en una frase, cuál es y por qué (por ejemplo, «Brief 4: es el que más puntos suma y ya sabemos dónde están los datos»). Decídselo al docente **antes del descanso**. Dos equipos pueden elegir el mismo brief, pero **cada uno define su propia pregunta y su propia métrica**: partid del *canvas* del paso 1.
 
-4. **Brief libre (solo si queréis uno propio).** Es posible si lo presentáis en la ficha **antes del 26/11** y se cumple todo esto: (1) pregunta clara con métrica de éxito; (2) datos reales, accesibles y con licencia **ya identificados**; (3) cumple R1 a R11; (4) dificultad parecida a la de los otros; (5) sin datos personales sensibles. Si dudáis, elegid uno de los cuatro: no se pierde nada.
+4. **Brief libre (solo si queréis uno propio).** Es posible si lo presentáis en la ficha **antes de las 14:30 del día 1** y se cumple todo esto: (1) pregunta clara con métrica de éxito; (2) datos reales, accesibles y con licencia **ya identificados**; (3) cumple R1 a R11; (4) dificultad parecida a la de los otros; (5) sin datos personales sensibles. Si dudáis, elegid uno de los cuatro: no se pierde nada.
 
 **Qué deberíais ver.** Una tabla con las puntuaciones de todo el equipo, un total por brief, un brief marcado como elegido y una frase que explica la elección.
 

@@ -35,7 +35,7 @@
 
 ### 3 · 🪜 Guía paso a paso
 
-Son cinco pasos: **4 h 10 min de trabajo el día 1 (250 minutos, dentro de la jornada de 6 horas) y 2 horas el día 2**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, asegurad el nivel mínimo y dejad lo demás para el siguiente ensayo.
+Son cinco pasos: **4 h 10 min de trabajo el día 1 (250 minutos, dentro de la jornada de 6 horas; el paso 4, de 15 minutos, se hace al final del día o en casa) y 2 horas de defensas el día 2**. Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, asegurad el nivel mínimo y dejad lo demás para el siguiente ensayo.
 
 **Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 

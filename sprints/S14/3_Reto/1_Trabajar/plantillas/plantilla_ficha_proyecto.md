@@ -1,6 +1,6 @@
 # Ficha de proyecto (1 página) · Anexo A
 
-> **Entrega antes del 27/11.** El docente responde **go / no-go** el 27/11. Máximo una página: si no cabe, resume.
+> **Entrega antes de las 14:30 del día 1.** El docente responde **go / no-go** al empezar el día 2. Máximo una página: si no cabe, resume.
 > Borra las notas en cursiva al rellenar.
 
 **Equipo (nombre de la consultora):** ______ · **Fecha:** ______ · **Versión:** 1

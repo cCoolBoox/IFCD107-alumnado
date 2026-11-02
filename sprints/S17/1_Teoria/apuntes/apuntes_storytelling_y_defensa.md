@@ -23,7 +23,7 @@ Es el **criterio I** de la rúbrica (**15 puntos**, el de mayor peso individual 
 
 | Fecha | Qué |
 |---|---|
-| **11/12** | Teoría, plantilla de storytelling, storyboard, pitch y **3 rondas de ensayo** |
+| **11/12** | Teoría, plantilla de storytelling, storyboard, pitch y **145 minutos de ensayos** en cuatro rondas |
 | **Antes de las 8:30 del 14/12** | Presentación en PDF (≤ 12 diapositivas) subida al repositorio |
 | **14/12** | **Defensa** con demo en directo y plan B |
 
@@ -262,14 +262,14 @@ Por eso **toda persona debe conocer todo el proyecto**. Preparad las **10 pregun
 
 ---
 
-## 9. Los ensayos del 11/12 (3 horas)
+## 9. Los ensayos del día 1 (145 minutos)
 
 | Ronda | Cómo | Qué se comprueba |
 |---|---|---|
-| **1 · Cronometrada** (30 min) | Solo el equipo, **con demo** | Tiempo, transiciones, quién habla cuándo |
-| **2 · Con preguntas** (45 min) | **Otro equipo hace de tribunal** | Respuestas con datos, método RESPONDE |
-| **3 · Ensayo general** (60 min) | **Exactamente como el 14/12**, con el docente | Tiempo, demo, plan B, reparto |
-| **Cambios** (45 min) | Ajustar diapositivas y guion | Lista de **3 cambios** y responsable |
+| **1 · Cronometrada** (20 min) | Solo el equipo, **con demo** | Tiempo, transiciones, quién habla cuándo |
+| **2 · Con preguntas** (35 min) | **Otro equipo hace de tribunal** | Respuestas con datos, método RESPONDE |
+| **Ronda extra y cambios** (50 min) | Las tres preguntas más difíciles de un cliente; después, ajustar diapositivas y guion | Lista de **3 cambios** y responsable |
+| **3 · Ensayo general** (40 min) | **Exactamente como el día de la defensa**, con el docente | Tiempo, demo, plan B, reparto |
 
 **Después de cada ronda, escribid dos cosas que mejorar y arreglad solo eso.** (Intentar cambiarlo todo **empeora** el siguiente ensayo.)
 

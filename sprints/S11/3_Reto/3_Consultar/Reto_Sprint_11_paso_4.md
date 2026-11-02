@@ -91,32 +91,22 @@
 
     Pulsad ▶. Los `assert` de debajo usan una tabla de juguete de 4 fotos.
 
-4. **Medir varios umbrales.** Ejecutad la celda siguiente, que ya está escrita: calcula la función para los umbrales `0.0`, `0.5`, `0.7`, `0.9` y `0.95` con las probabilidades de la prueba y muestra una tabla con la cobertura y la «precisión en las aceptadas» de cada uno. Fijaos en tres cosas: con umbral `0.0` se acepta todo (cobertura 1) y la precisión es la global del paso 3; **la cobertura solo puede bajar** al subir el umbral; y la precisión de las aceptadas suele subir (no siempre). Con solo 60 fotos, una foto más o menos mueve las cifras unos 1,7 puntos: no saquéis conclusiones de diferencias pequeñas.
+4. **Medir varios umbrales.** Ejecutad la celda siguiente, que ya está escrita: calcula las probabilidades de la **validación** (`prob_val`) y, con ellas, la cobertura y la «precisión en las aceptadas» para los umbrales `0.0`, `0.5`, `0.7`, `0.9` y `0.95`. Se usa la validación y no la prueba porque el umbral se **elige** mirando esta tabla, y la prueba tiene que seguir sin tocarse hasta el final. Fijaos en tres cosas: con umbral `0.0` se acepta todo (cobertura 1) y la precisión es la de la validación (no tiene por qué coincidir con la del paso 3, que es de la prueba); **la cobertura solo puede bajar** al subir el umbral; y la precisión de las aceptadas suele subir (no siempre). Con solo 60 fotos, una foto más o menos mueve las cifras unos 1,7 puntos: no saquéis conclusiones de diferencias pequeñas.
 
-5. **Elegir el umbral.**
+5. **Elegir el umbral y medirlo en la prueba.**
 
-    - **Estándar:** os basta con el umbral que trae el cuaderno (`0.7`) y explicar con vuestras palabras qué hace y qué cifras da en la tabla.
-    - **Extra (el nivel «extra» de la rúbrica):** elegirlo con datos. Como la tabla del cuaderno usa la **prueba**, para decidir sin hacer trampa hay que calcularla sobre la **validación**. Añadid una celda con:
-
-    ```python
-    prob_val = modelo.predict(X_val, verbose=0)
-    tabla_val = pd.DataFrame([cobertura_y_precision(prob_val, y_val, u) for u in umbrales], index=umbrales,
-                             columns=["cobertura", "precisión en las aceptadas"]).round(3)
-    tabla_val.index.name = "umbral de confianza"
-    tabla_val
-    ```
-
-    Es la misma cuenta de la celda anterior, pero con `X_val` e `y_val` en lugar de las de la prueba: `modelo.predict(X_val, …)` da las probabilidades de validación y la lista `[… for u in umbrales]` calcula una fila por cada umbral. Elegid el umbral que equilibre fotos revisadas a mano y errores evitados, y después comprobad una sola vez qué da en la prueba.
+    - **Estándar:** os basta con el umbral que trae el cuaderno (`0.7`). Ejecutad la celda de debajo de la tabla, que ya está escrita: usa ese umbral con la **prueba** y escribe una línea con la cobertura y el acierto reales.
+    - **Extra (el nivel «extra» de la rúbrica):** elegirlo con datos. Mirad la tabla de validación y elegid el umbral que equilibre fotos revisadas a mano y errores evitados. Después, en esa misma celda de debajo, cambiad `umbral_elegido = 0.7` por el vuestro y ejecutadla **una sola vez**: así la prueba solo mide el resultado y no ha servido para decidir nada.
 
     Pensad también qué error es peor para TurisData: confundir «apartamentos» con «hotel» o clasificar un camping como piscina. Cuanto más cuesta equivocarse, más alto debería ser el umbral.
 
-6. **La frase para el cliente.** Escribidla ya, con números de la tabla: *«Con un umbral de […], el modelo decide solo el […] % de las fotos y acierta el […] % de ellas; el resto ([…] %) lo revisa una persona»*. Si la cobertura es 0,8 (el 80 %), el resto, un 20 %, lo revisa una persona: son las fotos para revisar.
+6. **La frase para el cliente.** Escribidla ya, con los números de la línea de la prueba: *«Con un umbral de […], el modelo decide solo el […] % de las fotos y acierta el […] % de ellas; el resto ([…] %) lo revisa una persona»*. Si la cobertura es 0,8 (el 80 %), el resto, un 20 %, lo revisa una persona: son las fotos para revisar.
 
 **Qué deberíais ver.**
 - **Del demostrador:** una tupla de tres valores: la clase (o `revisar a mano`), la confianza con muchos decimales (por ejemplo `0.8999…`) y un diccionario con las 5 probabilidades. Con NumPy reciente, las probabilidades pueden salir como `np.float32(0.9)` en vez de `0.9`: es el mismo número.
 - **Del bucle de 3 fotos:** tres líneas `real: … → ('…', 0.…)`, a veces con `'revisar a mano'`.
-- **De la tabla de umbrales:** cinco filas con las columnas `cobertura` y `precisión en las aceptadas`, con la cobertura bajando de arriba abajo.
-- **Para el extra:** una segunda tabla, igual pero calculada en validación.
+- **De la tabla de umbrales (validación):** cinco filas con las columnas `cobertura` y `precisión en las aceptadas`, con la cobertura bajando de arriba abajo.
+- **De la celda de la prueba:** una línea parecida a `Prueba con umbral 0.7: el modelo decide solo el 88% de las fotos y acierta el 91% de esas` (con vuestras cifras).
 
 **Hecho cuando:** `clasificar_foto` funciona con 2 o 3 fotos delante del equipo, `cobertura_y_precision` pasa sus comprobaciones y tenéis anotado el umbral elegido con su frase.
 

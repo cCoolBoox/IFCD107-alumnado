@@ -97,7 +97,7 @@
 
     - `COSTE_FN = 284`: guarda en la variable `COSTE_FN` lo que cuesta cada falso negativo, en euros. `COSTE_FP`, lo de cada falso positivo. **Los dos nombres no se cambian**: los usan los pasos 3 y 4.
     - Lo que va tras `#`: la razón. Sin razón, el coste no vale.
-    - Las cifras 284 y 103 son un ejemplo con estos datos. Podéis elegir otras si las razonáis, pero cada coste necesita su frase. En el enunciado, la cancelación no prevista aparece abreviada como «la mitad de una noche»; la razón que se da («solo se revende la mitad de esas noches») es la que justifica la cuenta de arriba.
+    - Las cifras 284 y 103 son un ejemplo con estos datos. Podéis elegir otras si las razonáis, pero cada coste necesita su frase. La razón es la del enunciado: solo se revende la mitad de las noches de una reserva media, y de ahí sale la cuenta de arriba.
 
 **Qué deberíais ver.** Una celda con `SEMILLA`, `COSTE_FN` y `COSTE_FP`, cada coste con su razón al lado, y el CSV cargado en un `DataFrame`. Con el CSV del curso:
 
