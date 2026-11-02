@@ -20,10 +20,10 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Datos sucios, cliente impaciente» y reparto de roles | — | 10 |
-| ☐ | 📖 Teoría · Datos, pandas y visualización exploratoria | [Presentación S06.1](1_Teoria/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 20 |
+| ☐ | 📖 Teoría · pandas y EDA: mirar los datos antes de tocarlos | [Presentación S06_01](1_Teoria/S06_01_presentacion_pandas_y_EDA.pdf) | 20 |
 | ☐ | 💻 Práctica · pandas, EDA y primer chequeo de calidad (los ejercicios marcados «en clase») | [Cuaderno S06_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_01_pandas_eda.ipynb) | 55 |
 | ☐ | 🎯 Reto · Arrancar el inventario de defectos del fichero sucio (pasos 1–2) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md) | 30 |
-| ☐ | 📖 Teoría · Limpieza y preprocesado | [Presentación S06.2](1_Teoria/S06.2_Limpieza_y_preprocesado.pdf) | 30 |
+| ☐ | 📖 Teoría · Limpieza de datos: duplicados, tipos, fechas, categorías y nulos | [Presentación S06_02](1_Teoria/S06_02_presentacion_Limpieza_de_datos.pdf) | 30 |
 | ☐ | 💻 Práctica · Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos (los ejercicios marcados «en clase») | [Cuaderno S06_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_02_limpieza.ipynb) | 55 |
 
 **En clase: 3 h 20 min.**
@@ -37,9 +37,9 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · Escalado, codificación, `ColumnTransformer` y `Pipeline` (los ejercicios marcados «en clase») | [Cuaderno S06_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_03_preprocesado_pipeline.ipynb) | 40 |
+| ☐ | 💻 Práctica · Escalado, codificación, `ColumnTransformer` y `Pipeline` (los ejercicios marcados «en clase») | [Cuaderno S06_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_03_preprocesado_pipeline.ipynb) · [Presentación S06_03](1_Teoria/S06_03_presentacion_Preprocesado_y_pipelines.pdf) | 40 |
 | ☐ | 🎯 Reto · Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md) | 30 |
-| ☐ | 📖 Teoría · scikit-learn: métricas y validación | [Presentación S06.3](1_Teoria/S06.3_scikit_learn_metricas_y_validacion.pdf) | 30 |
+| ☐ | 📖 Teoría · Métricas y validación: *baseline*, validación cruzada y fuga de datos | [Presentación S06_04](1_Teoria/S06_04_presentacion_Metricas_y_validacion.pdf) | 30 |
 | ☐ | 💻 Práctica · *Baseline*, métricas, validación cruzada y fuga de datos (los ejercicios marcados «en clase») | [Cuaderno S06_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_04_metricas_validacion.ipynb) | 45 |
 | ☐ | 🎯 Reto · Informe, README y ensayo (paso 5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md) | 20 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-06/`, autoevaluación y coevaluación, review y retrospectiva | — | 35 |
