@@ -148,7 +148,7 @@ Repetid esto **en cada celda del laboratorio**.
 
 **Qué hace:** `TabularPredictor(...).fit(...)` prueba varios modelos durante hasta `LIMITE_TIEMPO` segundos y se queda con el mejor. Sale **mucho texto**: es normal (cada modelo que prueba).
 
-**Qué debe salir:** al final `Best model: WeightedEnsemble_L2` y `Tiempo de entrenamiento: 36 s` (puede ser entre 20 y 90 s). **Termina antes del límite** si ya ha probado todo. En Colab, además de los modelos de árboles, es normal que **pruebe también redes neuronales** (`NeuralNetTorch`…): saldrán más filas en el paso 5 y los números cambiarán algo.
+**Qué debe salir:** al final `Best model: WeightedEnsemble_L2` y `Tiempo de entrenamiento: 36 s` (en el ejemplo salen 36 s; en otras ejecuciones, entre 10 y 90 s). **Termina antes del límite** si ya ha probado todo. En Colab, además de los modelos de árboles, es normal que **pruebe también redes neuronales** (`NeuralNetTorch`…): saldrán más filas en el paso 5 y los números cambiarán algo.
 
 **Se suele hacer mal:** interrumpir la celda por miedo a que «se ha colgado». Esperad: tarda **de medio minuto a dos minutos**. Si salen avisos (`Warning`, o `Failed to import torch…` en un ordenador sin esa librería), **no son errores**: AutoGluon se salta ese modelo y sigue.
 
@@ -245,7 +245,7 @@ Si cambiáis la reserva a `"noches": 0`, la API responde **422** (datos imposibl
 
 **Qué hace:** suma el tiempo de entrenamiento y el tamaño del modelo en disco.
 
-**Qué debe salir:** tiempo (~36 s), **~225 MB**, coste **0 €** y el recordatorio de **cerrar la sesión de Colab**.
+**Qué debe salir:** tiempo (de 10 a 90 s según la ejecución), **~225 MB**, coste **0 €** y el recordatorio de **cerrar la sesión de Colab**.
 
 **Se suele hacer mal:** no cerrar. En Colab: *Entorno de ejecución → Desconectar y eliminar entorno de ejecución*. Es la prueba de que **no queda nada abierto**.
 

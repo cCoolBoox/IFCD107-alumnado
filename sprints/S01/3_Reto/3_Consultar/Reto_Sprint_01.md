@@ -1,212 +1,79 @@
 # Sprint 1 · Reto «Auditoría de oportunidades de IA»
 
-> **Esta es la ficha completa del reto, explicada paso a paso** para quien nunca ha trabajado con esta metodología ni con IA. Léela entera **antes de empezar** y vuelve a ella cuando tengas dudas.
+> **Ficha completa del reto, para consultar.** Para trabajar, [el reto en una página](../1_Trabajar/Reto_Sprint_01_una_pagina.md). Qué se sube y cómo se evalúa: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md).
 >
-> - Si es tu primer reto, lee antes [Cómo se trabaja un reto](../../../../material/4.%20Como_se_trabaja_un_reto.md).
-> - Volver al [README del sprint](../../README.md) · [Guía del sprint en PDF](../../pdf/README_Sprint_01.pdf) · [versión ecofriendly para imprimir](../../pdf/README_Sprint_01_ecofriendly.pdf).
-> - **Este reto en PDF:** [a color](../../pdf/Reto_Sprint_01.pdf) · [ecofriendly, para imprimir](../../pdf/Reto_Sprint_01_ecofriendly.pdf).
+> - Volver al [README del sprint](../../README.md).
+> - Si es vuestro primer reto: [Cómo se trabaja un reto](../../../../material/4.%20Como_se_trabaja_un_reto.md).
 
 ## Ficha del reto
 
-### En pocas palabras (léelo primero)
+### 1 · 🎯 Qué os pide el cliente
 
-**Qué os pide el cliente.** La directora de TurisData no sabe por dónde empezar con la inteligencia artificial. Os pide **un informe corto** que le diga: *qué cinco cosas podría hacer con IA, cuál conviene hacer primero, qué datos necesita y qué riesgos corre.* No quiere códigos ni fórmulas: quiere **un consejo claro para decidir**.
+**Qué os pide el cliente.** La directora de TurisData Canarias no sabe por dónde empezar con la inteligencia artificial. Os pide **un informe corto** que le diga **qué cinco cosas podría hacer con IA, cuál conviene hacer primero, qué datos necesita y qué riesgos corre**. No quiere códigos ni fórmulas: quiere **un consejo claro para decidir**, con un presupuesto de **hasta 15.000 € para un piloto** (nada de proyectos eternos), sin líos con los datos de sus clientes y sin que una máquina decida sin que ella lo sepa.
 
-**Importante: en este reto no se programa ni se calcula nada.** Es un trabajo de **pensar, comparar y escribir**. Se parece a lo que hace una persona asesora cuando propone un plan antes de gastar dinero.
+**Cómo se trabaja.** En este reto **no se programa ni se calcula nada**: se piensa, se compara y se escribe, como hace una persona asesora antes de que el cliente gaste dinero. Partís de las **22 tarjetas de casos de uso** de la práctica y os quedáis con **cinco casos** (al menos **dos inventados por vosotros**, al menos **tres modalidades** distintas y **uno que no necesite IA**). Los describís, los ordenáis por «cuánto ayudan» y «lo fáciles que son», les pasáis un **checklist ético** y lo contáis en un **informe de 2 o 3 páginas**. En clase tenéis 10 minutos de planning y 25 de ideas el día 1, **75 minutos el día 2** y 50 de entrega, review y retro; lo que no quepa lo termináis en vuestro tiempo de equipo antes del Sprint 2. El equipo decide hasta dónde llega: 🟢 mínimo, 🟡 estándar o 🔴 extra.
 
-**Qué vais a hacer, en cinco pasos:**
-1. **Buscar ideas** (unas 8) usando las [tarjetas de casos de uso](../../2_Practica/tarjetas_casos_uso.md) de la práctica.
-2. **Quedaros con 5**, de las que al menos 2 tienen que ser inventadas por vosotros.
-3. **Describir cada una** en una ficha (hay un [ejemplo resuelto](../../2_Practica/ejemplo_clasificacion_caso.md)): qué problema resuelve, con qué tipo de dato, qué tipo de aprendizaje y qué algoritmo podría servir.
-4. **Ordenarlas** por «cuánto ayuda» y «lo fácil que es» (matriz de priorización) y **pasarles un [checklist ético](../1_Trabajar/plantillas/checklist_etico_v1.md)**.
-5. **Escribir el informe** de 2–3 páginas con una recomendación.
+---
 
-**Qué vais a entregar:** el informe (7 apartados) y el [checklist ético](../1_Trabajar/plantillas/checklist_etico_v1.md) relleno.
+### 2 · 🧰 Recursos del reto
 
-**Qué vais a aprender haciéndolo:** a **distinguir** los tipos de IA y de aprendizaje con ejemplos reales, y a **detectar riesgos** (datos personales, sesgos, decisiones automáticas) *antes* de construir nada.
+| Recurso | Para qué lo usaréis | Dónde está |
+|---|---|---|
+| **Plantilla del informe** [`plantilla_informe_oportunidades.md`](../1_Trabajar/plantillas/plantilla_informe_oportunidades.md) | Los siete apartados con sus tablas; al final lleva «Revisión con la rúbrica» | Copiadla como `informe_oportunidades.md` (botón *Raw*) |
+| **Checklist ético** [`checklist_etico_v1.md`](../1_Trabajar/plantillas/checklist_etico_v1.md) | Revisar los riesgos éticos y legales de cada caso | Copiad su formulario en `checklist_etico.md`, un bloque por caso |
+| **Las 22 tarjetas** [`tarjetas_casos_uso.md`](../../2_Practica/tarjetas_casos_uso.md) y su [versión para recortar](../../2_Practica/tarjetas_casos_uso_recortables.pdf) | Banco de ideas: 11 las trabajasteis en clase y las otras 11 son nuevas | Elegid, adaptad o inventad casos nuevos |
+| **Ejemplo resuelto** [`ejemplo_clasificacion_caso.md`](../../2_Practica/ejemplo_clasificacion_caso.md) | Ver cómo se describe un caso y se le pasa el checklist | Es un modelo de forma: los casos son **vuestros** |
+| **Apuntes y presentaciones**: [apuntes](../../1_Teoria/apuntes/apuntes_ia_conceptos_y_etica.md) · [S01_01](../../1_Teoria/S01_01_presentacion_Introduccion_a_la_IA.pdf) · [S01_02](../../1_Teoria/S01_02_presentacion_Algoritmos_y_CRISP-DM.pdf) · [S01_03](../../1_Teoria/S01_03_presentacion_Tipos_de_aprendizaje_y_sobreajuste.pdf) · [S01_04](../../1_Teoria/S01_04_presentacion_IA_responsable.pdf) | Modalidades, tipos de aprendizaje, familias de algoritmos y riesgos | En el paso 3 ayudan los apartados 3 (modalidades), 7 (familias) y 10 (tipos de aprendizaje) de los apuntes |
+| **Vuestras notas del Sprint 0** (entrevista y mapa de empatía; el formato, en [`empatia_hmw_plantillas.md`](../../../S00/Reto_S00/empatia_hmw_plantillas.md)) | Saber qué le duele al cliente y recuperar vuestra pregunta «¿Cómo podríamos…?» priorizada | Vuestro repositorio y vuestro tablero |
+| **Datos de TurisData** [`datos/README.md`](../../../../datos/README.md) | Solo para saber si un dato **existe ya**: no hay que abrir ningún fichero | La lista de los conjuntos de datos del cliente |
+| **Tablero del equipo** (Trello o similar) | Repartir las tareas y mover las tarjetas | El del equipo; si no existe, la [guía rápida de Trello](../../2_Practica/guia_rapida_tablero_trello.md) (15 min) |
+| **Cómo entregar en GitHub** | Subir los ficheros a `sprint-01/` | [Guía de entrega](../../../../material/5.%20Como_entregar_en_GitHub.md) |
+| **Autoevaluación y coevaluación** | Cada persona rellena su hoja | [Hoja del sprint](../2_Entregar/autoevaluacion_y_coevaluacion.md) |
+| **Un asistente de IA** (opcional) | Ideas, términos nuevos y revisión de estilo | Con las reglas de la «Ayuda 1» |
 
-**Cuánto tiempo:** unas 1 hora y 40 minutos de reto, entre el día 1 y el día 2, más el planning y la review (última hora del día 2).
+---
 
-**Núcleo y extra.** Si el tiempo aprieta, entregad fichas completas de 4 casos (el quinto, en versión breve) y la lista de comprobación ética completa en los 2 casos priorizados. Fichas y lista completas de los 5 casos son el extra.
+### 3 · 🪜 Guía paso a paso
 
-### Palabras que van a aparecer en este reto
+Son cinco pasos, de **110 minutos en total** (10 de planning y 100 de reto: 35 el día 1 y 75 el día 2). Además, el día 2 hay 50 minutos de entrega, review y retro, que se explican al final del paso 5. Cada paso dice **qué hacéis**, **cómo se hace**, **qué deberíais ver** y **cuándo está hecho**. Aquí no hay código: lo difícil es decidir y explicarlo con claridad. Si el tiempo aprieta, completad el nivel mínimo y dejad lo demás para vuestro tiempo de equipo.
 
-| Palabra | Qué significa, en sencillo |
-|---|---|
-| **Caso de uso** | Una situación concreta donde se podría usar IA: «avisar de qué reservas se cancelarán» |
-| **Modalidad** | El tipo de dato con el que trabaja la IA: tablas (datos tabulares), imágenes (visión), texto (lenguaje), sonido (voz) |
-| **Aprendizaje supervisado** | La IA aprende con ejemplos que **ya tienen la respuesta** (reservas pasadas con «se canceló: sí/no») |
-| **Aprendizaje no supervisado** | La IA busca patrones **sin respuestas**, por ejemplo agrupar clientes parecidos |
-| **Familia de algoritmos** | Un tipo de método: árboles, regresiones, redes neuronales, agrupamiento… No hay que saber cómo funcionan por dentro, solo para qué sirven |
-| **Matriz de priorización** | Un cuadro de 2 ejes (impacto y facilidad) que ayuda a decidir qué hacer primero |
-| **Sesgo** | Cuando la IA trata peor a un grupo de personas porque sus datos de aprendizaje estaban desequilibrados |
-| **RGPD** | Ley europea de protección de datos personales |
-| **AI Act** | Reglamento europeo de IA: clasifica los sistemas según su riesgo |
-| **Semáforo ético** | Verde (se puede avanzar), ámbar (con medidas) o rojo (no avanzar sin cambios) |
-| **Piloto** | Una prueba pequeña y barata antes de hacer algo grande |
+**Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 
-### Escena del cliente
-Tras la entrevista del Sprint 0, la directora de *TurisData Canarias* os pide un **informe de oportunidades**: "No sé por dónde empezar con la IA. Decidme **qué cinco cosas** podría hacer, cuáles tienen sentido primero, qué datos necesito y **qué riesgos** corro. No quiero líos con los datos de mis clientes ni que una máquina decida sin que yo lo sepa". Dispone de un presupuesto limitado para un piloto y de datos de reservas, ocupación y reseñas.
+- [Paso 1 · Planning y reparto (día 1, 10 minutos)](Reto_Sprint_01_paso_1.md)
+- [Paso 2 · Lluvia de ideas y elección de casos (día 1, 25 minutos)](Reto_Sprint_01_paso_2.md)
+- [Paso 3 · Fichas de los casos (día 2, 25 minutos)](Reto_Sprint_01_paso_3.md)
+- [Paso 4 · Matriz de priorización y checklist ético (día 2, 30 minutos)](Reto_Sprint_01_paso_4.md)
+- [Paso 5 · Informe, revisión y cierre (día 2, 20 minutos)](Reto_Sprint_01_paso_5.md)
 
-### Qué tenéis que entregar
-1. **Informe de oportunidades** (2-3 páginas, en `.md` o PDF) con la estructura de abajo.
-2. **Checklist ético (versión 1)** rellenado para **cada uno de los 5 casos** (o completo para los 2 casos priorizados y resumido para los otros 3). Para subirlos al repositorio del equipo: [Cómo subir vuestras respuestas a GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md).
+#### Ayuda 1 · Cómo usar la IA en este reto
 
-#### Estructura del informe (2-3 páginas)
-1. **Resumen ejecutivo** (5-6 líneas): las 5 oportunidades y cuál recomendáis empezar.
-2. **Lo que hemos entendido** del cliente (3-4 líneas, con vuestra HMW priorizada del Sprint 0).
-3. **Tabla de 5 casos de uso**: nombre, problema de negocio, modalidad, tipo de aprendizaje, familia de algoritmos, **datos necesarios** (y si existen), métrica de éxito.
-4. **Priorización:** matriz impacto × facilidad, con criterio explicado.
-5. **Riesgos y checklist ético:** el semáforo de cada caso y las medidas para los riesgos principales.
-6. **Recomendación y siguientes pasos:** qué piloto, con qué datos y qué necesitamos del cliente.
-7. **Límites de este informe:** qué no hemos podido comprobar.
+La IA puede ser un **buen compañero de lluvia de ideas** y un **revisor de estilo**, pero **inventa con mucha seguridad** y **la responsabilidad es vuestra**. Reglas:
+- **Las decisiones son vuestras:** qué casos, cuál primero y qué semáforo. No pidáis «hazme el informe entero»: perderíais lo aprendido y saldría genérico, sin las notas de la entrevista.
+- **Contrastad** lo que diga con las tarjetas, los apuntes y vuestro checklist. No copiéis un riesgo sin entenderlo.
+- **Declarad el uso** en una línea al final del informe: qué herramienta, para qué y qué comprobasteis a mano.
+- Si citáis artículos o fechas del AI Act, **comprobadlos en la fuente oficial** y añadid «verificar calendario vigente».
+- **Nada de datos personales ni claves** en una IA.
 
-### Datos y recursos
-- Notas de la entrevista y mapa de empatía del Sprint 0.
-- Las **22 tarjetas** del banco de la dinámica A (11 las trabajasteis en clase; las otras 11 son nuevas) (podéis elegir de ahí, adaptar o inventar casos nuevos, **al menos 2 propios**).
-- [`ejemplo_clasificacion_caso.md`](../../2_Practica/ejemplo_clasificacion_caso.md) y [`checklist_etico_v1.md`](../1_Trabajar/plantillas/checklist_etico_v1.md).
-- No hay datos que analizar todavía: esta auditoría es de **ideas y riesgos**, no de resultados.
-
-### Restricciones
-- **Tiempo:** unas 1 h 40 min de reto en clase, más el planning y la review (dentro de las 12 h del sprint).
-- **Extensión:** 2-3 páginas de informe (sin contar el checklist).
-- **Presupuesto orientativo del cliente:** hasta 15.000 € para un piloto; nada de proyectos eternos.
-- **Los 5 casos** deben cubrir **al menos 3 modalidades** distintas y **al menos 1** no debe requerir IA (o debe resolverse mejor con reglas) para mostrar criterio.
-- Uso de asistentes de IA generativa permitido, con **declaración** de dónde se ha usado y qué habéis verificado.
-
-### Criterios de evaluación
-Cada entregable se evalúa de 0 a 4 en los cuatro criterios de la rúbrica de retos.
-
-| Criterio | 1 · Insuficiente | 2 · Suficiente | 3 · Bueno | 4 · Excelente |
-|---|---|---|---|---|
-| **Corrección técnica** | Confunde modalidad, tipo de aprendizaje o datos en varios casos | Clasificaciones correctas con fallos menores | Clasificaciones correctas y justificadas; datos concretos | Además compara alternativas (p. ej. reglas frente a modelo) y detecta riesgos técnicos (fuga de datos, desbalance) |
-| **Reproducibilidad** | No se entiende cómo se llegó a las conclusiones | Se entiende con ayuda | El informe deja claro el criterio de priorización y las fuentes | Además el checklist y el informe están versionados en el repositorio del equipo |
-| **Análisis y comunicación al cliente** | Jerga sin explicar o lista de ideas sin priorizar | Ideas con interpretación básica | Recomendación clara y comprensible para la dirección | Recomendación accionable con próximos pasos, datos necesarios y límites explicados |
-| **IA responsable** | No se considera | Menciones genéricas ("hay que cumplir el RGPD") | Riesgos específicos por caso | Medidas concretas por caso y criterio para decidir el semáforo |
-
-### Pasos sugeridos (unas 1 h 40 min de reto, repartidas por días)
-
-| Momento | Qué hacer |
-|---|---|
-| **Martes 20/10 · planning (10 min)** | Leed la ficha, repartid el trabajo en el tablero, definid la estructura del informe |
-| **Martes 20/10 (25 min)** | Lluvia de ideas con las tarjetas y elección de 8 candidatos; descartad hasta quedaros con 5 casos (al menos 2 propios) |
-| **Miércoles 21/10 (75 min)** | Fichas de 4 casos (el 5.º, en versión breve) (usad el ejemplo resuelto), checklist ético v1 (completo en los 2 casos priorizados y resumido en el resto), matriz de priorización y redacción del informe; revisión cruzada y DoD. **Lo que no cabra, lo terminaréis dentro de vuestro tiempo de trabajo del equipo, antes del Sprint 2** |
-| **Miércoles 21/10 · última hora** | Review de 5 min por equipo y retro |
-
-Entre medias, aprovechad los ratos de las prácticas (mapa de casos, debate) para adelantar el informe: las tarjetas y el checklist son la materia prima.
-
-### Guía paso a paso para principiantes
-
-#### Paso 1 · Planning y reparto (día 1, 10 minutos)
-1. Leed la ficha entera. Una persona lee, el resto subraya lo que no entiende.
-2. **Repartid las partes del informe** (7 apartados). Una persona puede encargarse de 1 o 2 apartados, pero **todas leen todo al final**.
-3. Pasad al tablero las tareas: «Elegir 8 tarjetas», «Fichas de casos», «Matriz», «Checklist ético», «Redacción», «Revisión cruzada». ¿Aún no tenéis tablero? Montadlo en 15 min con la [guía rápida de Trello](../../2_Practica/guia_rapida_tablero_trello.md).
-
-#### Paso 2 · Lluvia de ideas (día 1, 25 minutos)
-1. Poned sobre la mesa las **22 tarjetas** del banco de la dinámica A (11 las trabajasteis en clase; las otras 11 son nuevas) ([`tarjetas_casos_uso.md`](../../2_Practica/tarjetas_casos_uso.md)).
-2. Cada persona elige 2 o 3 que le parezcan **útiles para TurisData** (no para cualquier empresa). Pensad en los dolores que contó el cliente en el Sprint 0.
-3. Quedaos con **8 candidatos** y luego **descartad hasta 5**. Apuntad **por qué** descartáis las otras tres: lo contaréis en la review.
-4. **Inventad al menos 2 casos propios.** Un truco: recordad una frustración del cliente («las reseñas son miles y nadie las lee») y preguntad «¿se podría ayudar con IA?».
-5. **Incluid un caso que no necesite IA**, o que se resuelva mejor con una regla sencilla (por ejemplo, «enviar un recordatorio 48 h antes de que caduque la cancelación gratuita»). Saber decir «aquí no hace falta IA» demuestra criterio.
-
-#### Paso 3 · Fichas de los 5 casos (día 2, primera parte)
-Para cada caso rellenad una ficha como la del ejemplo resuelto ([`ejemplo_clasificacion_caso.md`](../../2_Practica/ejemplo_clasificacion_caso.md)). Un **mini-ejemplo** de cómo se responde, caso «Resumen automático de reseñas»:
-
-| Campo | Cómo se rellena (ejemplo) |
-|---|---|
-| Problema de negocio | La dirección recibe cientos de reseñas y no las lee. Se pierden quejas repetidas |
-| Modalidad | **Texto** (lenguaje) |
-| Tipo de aprendizaje | Podría ser **supervisado** (si hay reseñas ya etiquetadas con «positiva/negativa») o usar un modelo de lenguaje ya preentrenado |
-| Familia de algoritmos | Clasificación de texto o modelos de lenguaje |
-| Datos necesarios | Reseñas de huéspedes (texto + puntuación). **¿Existen?** Sí, el cliente tiene reseñas, pero conviene revisar si incluyen nombres |
-| Métrica de éxito | % de quejas repetidas detectadas; tiempo que ahorra la dirección |
-
-**Truco para no equivocarse con el tipo de aprendizaje:** preguntaos *«¿tengo ya ejemplos del pasado con la respuesta correcta?»*. Si **sí** → supervisado. Si **no** y quiero agrupar o detectar rarezas → no supervisado.
-
-#### Paso 4 · Matriz de priorización y lista de comprobación ética (día 2, segunda parte)
-1. **Matriz impacto × facilidad:** poned cada caso en un cuadro con dos ejes de 1 a 5. Arriba a la derecha (mucho impacto y fácil) es lo que haríais primero. **Explicad vuestro criterio** («facilidad = tenemos los datos y el plazo es corto»).
-2. **Checklist ético** ([`checklist_etico_v1.md`](../1_Trabajar/plantillas/checklist_etico_v1.md)): responded Sí / No / No aplica / No lo sé a cada pregunta y escribid una **evidencia o una acción**. Rellenadlo **completo para los 2 casos priorizados** y resumido para los otros 3.
-3. Poned un **semáforo** a cada caso y justificadlo en una línea.
-
-#### Paso 5 · Redacción, revisión y cierre
-1. Escribid el **resumen ejecutivo** el último, cuando ya sepáis qué recomendáis (5–6 líneas: «Recomendamos empezar por X porque…»).
-2. **Revisión cruzada:** otra persona del equipo lee el informe *como si fuera la directora* y subraya lo que no entiende.
-3. Subid todo al repositorio, repasad la Definition of Done y rellenad autoevaluación y coevaluación.
-4. Preparad la review de 5 minutos (ver más abajo).
-
-### Cómo usar la IA en este reto
-
-Aquí la IA puede ser un **buen compañero de lluvia de ideas** y un **revisor de estilo**, pero cuidado: **inventa con mucha seguridad**.
-
-| Para qué | Ejemplo de petición | Qué tenéis que comprobar |
+| Para qué | Ejemplo de petición | Qué comprobáis |
 |---|---|---|
 | Generar ideas | «Soy consultor de IA y mi cliente es una empresa de alojamientos turísticos en Canarias con datos de reservas, ocupación y reseñas. Dame 10 posibles usos de IA, cada uno con el problema que resuelve» | Que cada idea sea realista **con los datos que tiene el cliente**; descartad las que no |
-| Entender un término | «Explícame la diferencia entre aprendizaje supervisado y no supervisado con un ejemplo de hoteles» | Que podáis explicarlo vosotros sin mirar |
+| Entender un término | «Explícame la diferencia entre aprendizaje supervisado y no supervisado con un ejemplo de hoteles» | Que podéis explicarlo vosotros sin mirar |
 | Revisar el texto | «Revisa este resumen ejecutivo: ¿hay jerga que una directora no entendería? Marca las frases y propón cambios, sin añadir información nueva» | Que no haya añadido cifras ni datos que no estaban |
-| Buscar riesgos | «Para este caso de uso (…) dime 5 riesgos de datos personales y sesgos que debería considerar» | Contrastadlos con el checklist; **no los copiéis sin entender** |
+| Buscar riesgos | «Para este caso de uso (…) dime 5 riesgos de datos personales y sesgos que debería considerar» | Que los contrastáis con el checklist y que valen para **ese** caso |
 
-**Qué NO hacer:** pedirle «hazme el informe entero». Perderéis el aprendizaje y, además, el informe será genérico, sin las notas de la entrevista.
-
-**Declaración de uso (obligatoria):** una línea al final del informe, por ejemplo: *«Hemos usado [herramienta] para generar ideas de casos y revisar la redacción; hemos descartado X ideas por falta de datos y hemos comprobado a mano las clasificaciones»*.
-
-**Sobre el AI Act:** si citáis artículos o fechas del reglamento, **comprobad la fecha en la fuente oficial**; las IA se equivocan mucho con ellas. Añadid la advertencia «verificar calendario vigente».
-
-### Errores frecuentes (y cómo evitarlos)
+#### Ayuda 2 · Errores frecuentes (y cómo evitarlos)
 
 | Error | Por qué ocurre | Cómo evitarlo |
 |---|---|---|
 | Cinco casos casi iguales | Todos piensan en «predecir cancelaciones» | Cubrid **al menos 3 modalidades** distintas (tablas, texto, imágenes…) |
 | Confundir modalidad con tipo de aprendizaje | Suenan parecido | Modalidad = **tipo de dato**. Aprendizaje = **cómo aprende** |
 | Ningún caso sin IA | Se piensa que «más IA = mejor» | Incluid uno que se resuelva con reglas y explicad por qué |
-| Checklist ético con «cumplir el RGPD» | Frases genéricas | Un **riesgo específico por caso** («las reseñas pueden contener nombres de personas») |
-| Jerga sin explicar | Se escribe para el docente | Releed como si fuerais la directora: ¿se entiende «modalidad»? |
+| Checklist con «cumplir el RGPD» | Frases genéricas | Un **riesgo específico por caso** («las reseñas pueden contener nombres de personas») |
 | Priorizar «a ojo» | Falta criterio | Escribid una frase que explique **por qué** cada caso está donde está |
 
-### Un buen resultado se parece a…
+#### Ayuda 3 · Si os atascáis
 
-- **Resumen ejecutivo:** «Recomendamos empezar por un aviso de riesgo de cancelación porque ataca el problema más caro (habitaciones vacías de última hora), los datos ya existen y el riesgo ético es medio y controlable».
-- **Tabla de casos:** cinco filas completas, con una columna de «datos necesarios» que dice si **ya existen** o no.
-- **Riesgo específico bien escrito:** «El país de origen podría actuar como sustituto indirecto de la nacionalidad; se propone no usarlo para decidir depósitos».
-- **Límites:** «No hemos podido comprobar si las reseñas contienen datos personales».
-
-### Antes de entregar: autoevaluación rápida
-
-Repasad estas preguntas y rellenad después la hoja [autoevaluacion_y_coevaluacion.md](../2_Entregar/autoevaluacion_y_coevaluacion.md) (cada persona sube la suya con su entrega).
-
-| Pregunta | Sí / No |
-|---|---|
-| ¿Los 7 apartados del informe están, en 2–3 páginas? | |
-| ¿Hay 5 casos con modalidad, aprendizaje, familia de algoritmos y datos? | |
-| ¿Al menos 3 modalidades y 2 casos propios? | |
-| ¿Hay un caso que no necesita IA, justificado? | |
-| ¿Cada caso tiene al menos 1 riesgo específico en el checklist? | |
-| ¿Otra persona ha leído el informe y entiende la recomendación? | |
-| ¿Hay declaración de uso de IA? | |
-
-### Si os atascáis
-
-- **No se nos ocurren casos propios:** pensad en una frase de la entrevista del Sprint 0 y preguntaos «¿qué haría una persona para resolver esto hoy?». Ahí suele haber un caso.
-- **No sabemos qué familia de algoritmos poner:** usad la dinámica C de las tarjetas (6 problemas con sus familias) como chuleta.
-- **El informe sale largo:** el límite es 2–3 páginas **sin contar el checklist**. Pasad detalles a un anexo.
-- Más ayuda: [Cómo se trabaja un reto](../../../../material/4.%20Como_se_trabaja_un_reto.md).
-
-### Qué se enseña en la review (5 min por equipo)
-- La **recomendación** en una frase y por qué la primera prioridad.
-- **Un caso que descartasteis** y por qué (por riesgo, por datos o por falta de valor).
-- El **semáforo ético** de vuestro caso principal y la medida más importante.
-- Una duda que queda abierta para el cliente.
-
-## Definition of Done (lista de comprobación)
-
-Si queda una casilla sin marcar, **el reto no está terminado**.
-
-- [ ] Informe de 2-3 páginas con las 7 secciones
-- [ ] 5 casos con modalidad, tipo de aprendizaje, familia y datos necesarios
-- [ ] Al menos 3 modalidades distintas y 2 casos propios
-- [ ] Al menos un caso que no requiere IA (o se resuelve mejor con reglas), justificado
-- [ ] Matriz de priorización con criterio explicado
-- [ ] Checklist ético v1 de cada caso, con al menos 1 riesgo específico por caso
-- [ ] Referencias al AI Act con la advertencia de verificar el calendario vigente
-- [ ] Revisado por otra persona; declaración de uso de IA generativa
-- [ ] Subido a Git / repositorio del equipo; tablero actualizado
-- [ ] [Autoevaluación y coevaluación](../2_Entregar/autoevaluacion_y_coevaluacion.md) rellenadas
+1. **No se nos ocurren casos propios:** pensad en una frase de la entrevista del Sprint 0 y preguntaos «¿qué haría una persona para resolver esto hoy?». Ahí suele haber un caso.
+2. **No sabemos qué familia de algoritmos poner:** mirad los apartados 7 (familias) y 10 (tipos de aprendizaje) de los apuntes y preguntad al docente.
+3. **No hay tiempo para todo:** completad el nivel mínimo y terminad lo demás en vuestro tiempo de equipo, antes del Sprint 2.
+4. Más ayuda: [Cómo se trabaja un reto](../../../../material/4.%20Como_se_trabaja_un_reto.md).

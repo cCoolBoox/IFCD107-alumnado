@@ -1,6 +1,6 @@
 # Autoevaluación y coevaluación · «Proyecto final: definir, tener datos y un punto de partida»
 
-**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante la *review*). Se puntúa con la rúbrica del reto (criterios de evaluación de la [ficha del reto](../3_Consultar/Reto_Sprint_14.md)), de 1 a 4.
+**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante la *review*). Se puntúa con la [rúbrica del reto](entrega_y_rubrica.md), de 1 a 4.
 
 > **Ojo:** la nota del **proyecto** usa la rúbrica de 100 puntos (documento de briefs). Esta hoja usa los cuatro criterios de los retos y sirve para la nota del sprint y para que reflexionéis antes de entregar.
 

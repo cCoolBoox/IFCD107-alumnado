@@ -1,6 +1,6 @@
 # Autoevaluación y coevaluación · «Precio y cancelación»
 
-**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante la *review*). Se puntúa con la rúbrica del reto (criterios de evaluación de la [ficha del reto](../3_Consultar/Reto_Sprint_07.md)), de 1 a 4.
+**Para qué sirve:** antes de entregar, cada persona se puntúa a sí misma (**autoevaluación**) y valora el trabajo de otra persona o equipo (**coevaluación**, durante la *review*). Se puntúa con la [rúbrica del reto](entrega_y_rubrica.md), de 1 a 4.
 
 **Cómo se rellena y se sube (sin instalar nada):** cada persona entrega **su propio archivo**, con su cuenta de GitHub. Es el mismo procedimiento que el del entregable ([guía completa: cómo subir a GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md)).
 
