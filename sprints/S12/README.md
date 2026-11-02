@@ -41,7 +41,7 @@
 | ☐ | 📖 Teoría · Transformers, atención y LLM | [Presentación S12_05](1_Teoria/S12_05_presentacion_Transformers_y_atencion.pdf) | 15 |
 | ☐ | 💻 Práctica · Softmax, atención paso a paso y máscara causal (los ejercicios marcados «en clase») | [Cuaderno S12_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_05_transformers_atencion.ipynb) | 40 |
 | ☐ | 📖 Teoría · RAG: un asistente que cita su fuente | [Presentación S12_06](1_Teoria/S12_06_presentacion_Mini_RAG.pdf) | 10 |
-| ☐ | 💻 Práctica · Mini RAG con la política, evaluación y seguridad (los ejercicios marcados «en clase») | [Cuaderno S12_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_06_mini_rag.ipynb) | 45 |
+| ☐ | 💻 Práctica · Mini RAG: trocear la política, recuperar fragmentos y responder con umbral (los ejercicios marcados «en clase») | [Cuaderno S12_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_06_mini_rag.ipynb) | 45 |
 | ☐ | 📖 Teoría · Autoencoders y modelos generativos (versión corta) | [Presentación S12_07](1_Teoria/S12_07_presentacion_Autoencoders_y_modelos_generativos.pdf) | 10 |
 | ☐ | 🎯 Reto · Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_12_una_pagina.md) | 65 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 15 |
