@@ -18,7 +18,7 @@
 | **Audiencia** | Las personas a las que habláis. Antes de escribir nada hay que saber quiénes son, qué saben y qué les preocupa. |
 | **Mensaje único** | Una sola frase que la audiencia pueda repetir mañana. Todo lo demás de la presentación la apoya o sobra. |
 | **Pirámide de la comunicación** | Un orden de arriba abajo: primero la conclusión, después tres argumentos y al final los datos que los sostienen. |
-| **Arco narrativo** | El orden en el que se cuenta la historia: contexto, complicación, qué hicimos, qué aprendimos y qué proponemos. |
+| **Arco narrativo** | El orden en el que se cuenta la historia, en siete momentos: situación, complicación, pregunta, resolución, demostración, límites y riesgos, y llamada a la acción. |
 | **Memoria congelada** | La memoria técnica del Sprint 16, que ya no se cambia. Es la **única fuente de cifras**: no se presentan resultados nuevos. |
 | **Traducir la jerga** | Poner a cada término técnico una frase que entienda alguien sin formación en IA. |
 
@@ -28,7 +28,7 @@
 
     | Lo que dice la charla | Cómo lo uso en mi proyecto |
     |---|---|
-    | «Habla para quien escucha, no para ti» | En vez de «F1 de 0,71», diré «de cada 10 reservas que se cancelan, detectamos 7» |
+    | «Habla para quien escucha, no para ti» | En vez de «exhaustividad de 0,70», diré «de cada 10 reservas que se cancelan, detectamos 7» |
     | «Si solo recuerdan una frase, ¿cuál es?» | Tengo que poder acabar la frase «Gracias a nuestro trabajo, el cliente puede ___, pero no debe ___» |
     | «Un resultado honesto cuenta mejor que un número bonito sin contexto» | Voy a decir dónde falla nuestro modelo en vez de esconderlo |
 
@@ -41,7 +41,7 @@
     | 1 · La audiencia | La tabla «hablas para ti» frente a «hablas para ellos»: elegid una pareja y reescribid una frase vuestra de la misma manera |
     | 2 · El mensaje único | La fórmula (acción, evidencia y límite) y la diferencia entre «93 % de acierto» y «8 de cada 10, pero en móvil 6 de cada 10» |
     | 3 · La pirámide | Conclusión arriba, tres argumentos debajo y la evidencia de cada uno |
-    | 4 · El arco narrativo | Las cinco etapas y por qué pirámide y arco no se contradicen: la pirámide dice **cómo ordenar** (la conclusión, al principio) y el arco dice **cómo se desarrolla** el relato después |
+    | 4 · El arco narrativo | Los siete momentos y por qué pirámide y arco no se contradicen: la pirámide dice **cómo ordenar** (la conclusión, al principio) y el arco dice **cómo se desarrolla** el relato después |
 
     Si una palabra no se entiende, está en la «chuleta de vocabulario» (sección 13 de los apuntes).
 

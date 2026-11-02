@@ -44,8 +44,8 @@ Es el **criterio I** de la rúbrica (**15 puntos**, el de mayor peso individual 
 
 | Hablas «para ti» | Hablas «para ellos» |
 |---|---|
-| «Hemos obtenido un F1 de 0,71 con validación cruzada» | «De cada 10 reservas que se cancelan, **detectamos 7**» |
-| «Recall de 0,58 en el subgrupo móvil» | «**En reservas por móvil acertamos menos**: 6 de cada 10» |
+| «Hemos obtenido una exhaustividad de 0,70 con validación cruzada» | «De cada 10 reservas que se cancelan, **detectamos 7**» |
+| «Exhaustividad de 0,58 en el subgrupo móvil» | «**En reservas por móvil acertamos menos**: 6 de cada 10» |
 | «Hemos mitigado el sesgo con reponderación» | «Hemos **corregido** el modelo para que **trate mejor** al canal móvil» |
 | «Usamos un transformer con RAG» | «El asistente **busca primero en los documentos** y responde citando la fuente» |
 
@@ -57,15 +57,16 @@ Es el **criterio I** de la rúbrica (**15 puntos**, el de mayor peso individual 
 
 ### 2.1. La fórmula
 
-La presentación propone una frase con tres huecos:
+La presentación propone una frase con cuatro huecos:
 
-> **Recomendamos [X], porque [evidencia], con la precaución de [límite].**
+> **Recomendamos [acción], porque [evidencia principal], lo que supone [beneficio cuantificado], con la precaución de [límite clave].**
 
 | Hueco | Qué pone | Ejemplo |
 |---|---|---|
-| **X** | La **recomendación** | «usar el modelo para planificar la plantilla» |
-| **Evidencia** | **Un dato** que lo sostiene | «porque prevé la ocupación a 3 meses con un error del 7 %» |
-| **Límite** | **Dónde no vale** | «pero no sirve para fijar precios» |
+| **Acción** | La **recomendación** | «usar el modelo para planificar la plantilla» |
+| **Evidencia principal** | **Un dato** que lo sostiene | «porque prevé la ocupación a 3 meses con un error del 7 %» |
+| **Beneficio cuantificado** | **Lo que se gana**, con número | «lo que supone ajustar los turnos con tres meses de margen» |
+| **Límite clave** | **Dónde no vale** | «pero no sirve para fijar precios» |
 
 **Ejemplo completo del reto:**
 

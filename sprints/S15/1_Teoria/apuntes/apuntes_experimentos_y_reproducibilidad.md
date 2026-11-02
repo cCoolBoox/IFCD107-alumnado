@@ -45,10 +45,11 @@ La presentación propone una función única:
 def fijar_semillas(semilla):
     random.seed(semilla); np.random.seed(semilla)
     os.environ["PYTHONHASHSEED"] = str(semilla)
-    tf.random.set_seed(semilla)         # si usas redes
+    # si usas redes con TensorFlow, añade aquí: tf.random.set_seed(semilla)
+    return np.random.default_rng(semilla)   # el generador de numpy, para quien lo necesite
 ```
 
-**Regla del equipo: una función, una semilla** (por ejemplo, 42), **guardada en `utilidades.py`** y que **toda persona importa**. El número no importa; importa que **sea el mismo para todos**.
+**Regla del equipo: una función, una semilla** (por ejemplo, 42), **guardada en las primeras celdas de `03_modelos.ipynb`**, el cuaderno común del equipo, y que **toda persona usa**. El número no importa; importa que **sea el mismo para todos**.
 
 > **No vale cambiar la semilla hasta que salga un resultado bonito.** Eso es hacer trampa (se llama *semilla cherry-picking*). Si el resultado depende mucho de la semilla, **eso es información importante**: significa que el modelo es inestable (por eso se usa la desviación; ver apartado 4).
 
@@ -64,7 +65,7 @@ Distintas versiones de scikit-learn, pandas o TensorFlow pueden dar **resultados
 
 ### 2.1. Para qué sirve
 
-Es una **tabla** (un CSV en el repositorio: `experimentos/registro.csv`) donde **cada prueba** deja una fila. Se abre con Excel y **Git guarda su historia**.
+Es una **tabla** (un CSV en el repositorio: `registro.csv`) donde **cada prueba** deja una fila. Se abre con Excel y **Git guarda su historia**.
 
 | Columna | Qué anota | Ejemplo |
 |---|---|---|
@@ -179,15 +180,15 @@ Dos modelos, 5 pliegues, F1 en cada pliegue:
 
 | Pliegue | Modelo A | Modelo B |
 |---|---|---|
-| 1 | 0,69 | 0,74 |
-| 2 | 0,71 | 0,66 |
-| 3 | 0,70 | 0,77 |
+| 1 | 0,68 | 0,74 |
+| 2 | 0,72 | 0,66 |
+| 3 | 0,68 | 0,77 |
 | 4 | 0,72 | 0,65 |
-| 5 | 0,68 | 0,73 |
+| 5 | 0,70 | 0,73 |
 | **Media** | **0,70** | **0,71** |
 | **Desviación** | **0,02** | **0,05** |
 
-- **B tiene la media más alta** (0,71 frente a 0,70)… pero **varía el triple** (0,05 frente a 0,02). A veces saca 0,77 y a veces 0,65.
+- **B tiene la media más alta** (0,71 frente a 0,70)… pero **varía más del doble** (0,05 frente a 0,02). A veces saca 0,77 y a veces 0,65.
 - La diferencia de medias (**0,01**) es **mucho más pequeña que la variación** del propio modelo B. **No hay base para decir que B es mejor.** Probablemente es **ruido**.
 
 ### 4.3. Regla práctica del «ruido»
@@ -257,7 +258,7 @@ El **test** son **los datos que se reservan para el examen final**. Si lo usas *
 
 Imagina que **200 modelos son puro azar** (adivinan lanzando una moneda; su verdadera exactitud es 50 %). Los evalúas todos en el **mismo test de 100 ejemplos** y te quedas con el mejor.
 
-**Resultado de la simulación:** de media, el «mejor» de los 200 acierta **cerca de 64 de 100** (63,6). **Un 64 % con un modelo que adivina al azar.** Parece un resultado estupendo… y **es pura casualidad**: con tantos intentos, alguno saldrá afortunado.
+**Resultado del cálculo (exacto, sin simular nada):** de media, el «mejor» de los 200 acierta **cerca de 64 de 100** (63,6). **Un 64 % con un modelo que adivina al azar.** Parece un resultado estupendo… y **es pura casualidad**: con tantos intentos, alguno saldrá afortunado.
 
 > **Esa es la razón de la regla «nada de probar 200 combinaciones y quedarse con la mejor».** Cuantas más cosas pruebas **mirando el test**, más probable es que lo que ves **sea suerte**.
 
@@ -277,7 +278,7 @@ Es **normal** que sea algo peor que en validación (por ejemplo, 0,70 en validac
 
 ### 6.4. Guardar el modelo
 
-Se guarda en la carpeta `modelo/` junto con un `metadatos.json` (versión, fecha, métricas, variables usadas), para que **el demostrador del Sprint 16 cargue exactamente este modelo**.
+Se guarda como `modelo_candidato.joblib` en `sprint-15/`, junto con un `metadatos.json` (versión, fecha, métricas, variables usadas), para que **el demostrador del Sprint 16 cargue exactamente este modelo**.
 
 ---
 

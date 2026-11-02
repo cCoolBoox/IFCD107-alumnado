@@ -81,7 +81,7 @@
     | Modelo | Métrica (media ± desv.) | Tiempo | Explicabilidad | Comentario |
     |---|---|---|---|---|
     | Baseline | 0,500 ± 0,000 | ≈ 0,1 s | — | Azar: no mira las pistas |
-    | Regresión logística | 0,755 ± 0,012 | ≈ 0,1 s | Alta: cada variable tiene un peso | **Candidata** |
+    | Regresión logística | 0,755 ± 0,012 | ≈ 0,2 s | Alta: cada variable tiene un peso | **Candidata** |
     | Bosque (profundidad 6) | 0,745 ± 0,013 | ≈ 2 s | Media | Solapa con la logística: puede ser ruido |
     | Red neuronal (MLP) | 0,738 ± 0,019 | ≈ 1 s | Baja | Solapa con la logística; más difícil de explicar |
 

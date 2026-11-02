@@ -31,13 +31,13 @@ Problema, enfoque, resultado principal con cifras, recomendación al cliente y u
 - Baseline, métricas, validación cruzada y semillas.
 - Cómo se registraron los experimentos (enlace a `experimentos/registro.csv`).
 
-## 4. Modelado y experimentos (2-3 páginas) · *R3, R4 · criterio C*
+## 4. Modelado y experimentos (2 páginas) · *R3, R4 · criterio C*
 - Baseline y ≥ 3 modelos (**al menos uno neuronal**, o LLM/RAG en el brief 3): qué son, por qué se eligieron e hiperparámetros probados.
 - **Tabla comparativa** con media ± desviación y tiempo.
 - Justificación de la elección con **coste / beneficio** y explicación del **porqué** de los resultados.
 - Fugas detectadas y cómo se evitaron.
 
-## 5. Evaluación y resultados (2-3 páginas) · *R5 · criterio D*
+## 5. Evaluación y resultados (2 páginas) · *R5 · criterio D*
 - Métricas finales en el test (una sola evaluación), **con incertidumbre** (intervalos o variación).
 - Visualizaciones: curvas, matriz de confusión, importancia de variables, SHAP o Grad-CAM según el caso.
 - **Análisis de errores**: dónde falla y ejemplos.

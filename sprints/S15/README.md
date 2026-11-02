@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, asegura primero el nivel mínimo de la rúbrica del reto: lo demás es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
 ## Qué aprenderás
 
@@ -90,7 +90,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 **Comprobaciones antes de dar el sprint por cerrado:**
 - [ ] Baseline + ≥ 3 modelos + 1 neuronal comparados con la misma partición, sin fuga.
-- [ ] `experimentos/registro.csv` con al menos una fila por persona.
+- [ ] `registro.csv` con al menos una fila por persona.
 - [ ] Semilla fija; el notebook se ejecuta de arriba abajo.
 - [ ] Modelo candidato elegido y justificado; test evaluado una sola vez.
 - [ ] Roles rotados, tablero actualizado y retro con acción concreta.

@@ -2,7 +2,7 @@
 
 > **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb) · [descargar](../S15_01_seguimiento_experimentos.ipynb) · ⏱ en clase: 50 min · 🏫 6 celdas de código en clase
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb) · [descargar](../S15_01_seguimiento_experimentos.ipynb) · ⏱ en clase: 50 min · 🏫 4 celdas de código en clase · 🏠 2 en casa
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 
@@ -63,15 +63,15 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `DummyClassifier` | Modelo «tonto» de referencia (por ejemplo, siempre la clase más común). | 5 |
 | `dumps` | Convierte datos de Python en texto JSON. | 3 |
 | `float` | Convierte un valor en número decimal. | 11 |
-| `hash_pandas_object` | *(sin explicar todavía)* | 5 |
-| `hexdigest` | *(sin explicar todavía)* | 5 |
+| `hash_pandas_object` | Calcula una huella numérica de cada fila de la tabla; sirve para saber si los datos han cambiado. | 5 |
+| `hexdigest` | Devuelve la huella calculada como un texto corto de letras y números. | 5 |
 | `legend` | Muestra la leyenda del gráfico. | 7 |
 | `len` | Cuenta cuántos elementos tiene una lista, texto o tabla. | 9 |
-| `log_metric` | *(sin explicar todavía)* | 11 |
-| `log_params` | *(sin explicar todavía)* | 11 |
+| `log_metric` | MLflow: guarda una medida de la prueba (por ejemplo, el AUC). | 11 |
+| `log_params` | MLflow: guarda los ajustes de la prueba (hiperparámetros). | 11 |
 | `LogisticRegression` | Modelo de clasificación que da una probabilidad (aunque se llame «regresión»). | 5, 9 |
 | `max` | Devuelve el valor más grande. | 9 |
-| `md5` | *(sin explicar todavía)* | 5 |
+| `md5` | Convierte unos datos en una huella corta; si los datos cambian, la huella cambia. | 5 |
 | `mean` | Calcula la media. | 5 |
 | `OneHotEncoder` | Convierte categorías en columnas de 0/1. | 5 |
 | `Pipeline` | Encadena pasos (preprocesado + modelo) en un solo objeto. | 5 |
@@ -80,11 +80,11 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `random` | Número aleatorio entre 0 y 1. | 9 |
 | `read_csv` | Lee un fichero CSV y lo convierte en una tabla. | 5, 9 |
 | `select_dtypes` | Selecciona las columnas de un tipo (numéricas, de texto…). | 5 |
-| `set_experiment` | *(sin explicar todavía)* | 11 |
-| `set_tag` | *(sin explicar todavía)* | 11 |
+| `set_experiment` | MLflow: elige (o crea) el experimento al que pertenecen las pruebas. | 11 |
+| `set_tag` | MLflow: añade una etiqueta a la prueba para encontrarla luego. | 11 |
 | `set_theme` | Elige un estilo visual para todos los gráficos. | 1 |
 | `set_title` | Pone el título de un gráfico. | 7 |
-| `set_tracking_uri` | *(sin explicar todavía)* | 11 |
+| `set_tracking_uri` | MLflow: indica dónde se guardan los experimentos (aquí, una carpeta local). | 11 |
 | `set_xlabel` | Pone el nombre del eje horizontal. | 7 |
 | `set_xlim` | Fija el rango del eje horizontal. | 7 |
 | `shape` | Tamaño de la tabla: (filas, columnas). | 5 |
@@ -92,13 +92,13 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `sort_values` | Ordena la tabla por una o varias columnas. | 7 |
 | `split` | Parte un texto en trozos por un separador. | 3 |
 | `StandardScaler` | Escala los números para que tengan media 0 y desviación 1. | 5 |
-| `start_run` | *(sin explicar todavía)* | 11 |
+| `start_run` | MLflow: abre una prueba nueva; todo lo que se anote después se guarda en ella. | 11 |
 | `std` | Calcula la desviación típica (cuánto se separan los datos de la media). | 5 |
 | `StratifiedKFold` | Crea particiones de validación cruzada que mantienen la proporción de clases. | 5 |
 | `subplots` | Crea una figura con uno o varios ejes (gráficos) dentro. | 7 |
 | `tight_layout` | Ajusta los márgenes para que nada se solape. | 7 |
 | `time` | Devuelve la hora actual en segundos (sirve para medir cuánto tarda algo). | 5 |
-| `tobytes` | *(sin explicar todavía)* | 5 |
+| `tobytes` | Convierte los números de una tabla en una secuencia de bytes, que es lo que necesita `md5`. | 5 |
 | `tolist` | Convierte un array o una columna en una lista de Python. | 5 |
 | `train_test_split` | Reparte los datos en entrenamiento y prueba. | 5 |
 | `values` | Devuelve los valores de un diccionario o de una tabla. | 5 |
@@ -209,7 +209,7 @@ print("Regresión logística:", experimento("RegresionLogistica", LogisticRegres
 - `X = reservas.drop(columns=["id_reserva", "fecha_reserva", "fecha_llegada",…` → Guarda en `X` el resultado. `drop`: quita columnas o filas.
 - `y = reservas["cancelada"]` → Guarda el valor en `y`.
 - `X_ent, X_test, y_ent, y_test = train_test_split(X, y, test_size=0.2, strati…` → Guarda en `X_ent, X_test, y_ent, y…` el resultado. `train_test_split`: reparte los datos en entrenamiento y prueba.
-- `DATOS_HASH = hashlib.md5(pd.util.hash_pandas_object(reservas, index=True).v…` → Guarda en `DATOS_HASH` el resultado. `values`: devuelve los valores de un diccionario o de una tabla.
+- `DATOS_HASH = hashlib.md5(pd.util.hash_pandas_object(reservas, index=True).v…` → Guarda en `DATOS_HASH` el resultado. `hexdigest`: devuelve la huella calculada como un texto corto de letras y números; `md5`: convierte unos datos en una huella corta; si los datos cambian, la huella cambia; `tobytes`: convierte los números de una tabla en una secuencia de bytes, que es lo que necesita `md5`.
 - `print("Huella de los datos:", DATOS_HASH, "· entrenamiento:", X_ent.shape,…` → `print`: muestra un valor por pantalla; `shape`: tamaño de la tabla: (filas, columnas).
 - `categoricas = X.select_dtypes("object").columns.tolist()` → Guarda en `categoricas` el resultado. `tolist`: convierte un array o una columna en una lista de Python; `columns`: nombres de las columnas; `select_dtypes`: selecciona las columnas de un tipo (numéricas, de texto…).
 - `def crear_pipeline(estimador, columnas):` → Define la función `crear_pipeline`: Función definida en el cuaderno.
@@ -250,7 +250,7 @@ plt.tight_layout(); plt.show()
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 9 · 5. Alarma: una métrica demasiado buena (fuga de… · 🏫
+### Celda 9 · 5. Alarma: una métrica demasiado buena (fuga de… · 🏠
 
 **Qué hace:** Practica `copy`, `astype`, `max`, `LogisticRegression` y más (sección «5. Alarma: una métrica demasiado buena…»).
 
@@ -274,7 +274,7 @@ print(f"AUC con la variable con fuga: {m:.3f} (frente a {mejor_sin_fuga:.3f} del
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 11 · 7. (Opcional) MLflow en local · 🏫
+### Celda 11 · 7. (Opcional) MLflow en local · 🏠
 
 **Qué hace:** %pip install -q mlflow # <- descomenta en Colab; en local: pip install mlflow.
 
@@ -305,7 +305,7 @@ else:
 **Qué hace cada línea:**
 
 - `USAR_MLFLOW = False # OPCIONAL: cámbialo a True solo si tu equipo quiere pr…` → Guarda el valor en `USAR_MLFLOW`.
-- `if USAR_MLFLOW:` → Decide: ejecuta el bloque solo si se cumple la condición (y `elif`/`else` si no).
+- `if USAR_MLFLOW:` → Decide: ejecuta el bloque solo si se cumple la condición (y `elif`/`else` si no). Dentro del bloque: `set_tracking_uri`: MLflow: indica dónde se guardan los experimentos (aquí, una carpeta local); `set_experiment`: MLflow: elige (o crea) el experimento al que pertenecen las pruebas; `start_run`: MLflow: abre una prueba nueva; todo lo que se anote después se guarda en ella.
 
 ---
 *Generado a partir de `laboratorios/fuentes/S15_01_seguimiento_experimentos.py`. Si algo no os cuadra con lo que sale en vuestra pantalla, preguntad al docente.*

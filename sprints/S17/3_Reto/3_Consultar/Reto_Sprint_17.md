@@ -9,7 +9,7 @@
 
 ### 1 · 🎯 Qué os pide el cliente
 
-**Qué os pide el cliente.** El cliente y su equipo directivo (el **tribunal**: el docente y, si procede, otras personas invitadas) **no son técnicos**. Este es el último reto del curso y ya no se construye nada nuevo: se trata de **contar con claridad y honestidad** el proyecto que habéis hecho. Al terminar la defensa, el tribunal tiene que saber cuatro cosas: **qué problema resolvéis, qué habéis encontrado, qué os recomienda hacer y de qué no debe fiarse**. Un buen trabajo mal contado es un trabajo que nadie entenderá ni utilizará.
+**Qué os pide el cliente.** El cliente y su equipo directivo (el **tribunal**: el docente y, si procede, otras personas invitadas) **no son técnicos**. Este es el último reto del curso y ya no se construye nada nuevo: se trata de **contar con claridad y honestidad** el proyecto que habéis hecho. Al terminar la defensa, el tribunal tiene que saber cuatro cosas: **qué problema resolvéis, qué habéis encontrado, qué recomendáis hacer y de qué no debe fiarse**. Un buen trabajo mal contado es un trabajo que nadie entenderá ni utilizará.
 
 **Cómo se trabaja.** No hace falta experiencia previa: os damos una **plantilla de storytelling** (contar una historia con estructura) con huecos para rellenar y un guion de defensa con ejemplos. Hablan **todas las personas del equipo** y las preguntas pueden dirigirse a cualquiera. En clase tenéis **4 h 10 min el día 1** (teoría, práctica y cuatro rondas de ensayo) y **2 horas el día 2** (la defensa de todos los equipos, con vuestro turno dentro). Solo se presenta lo que ya está en la **memoria congelada** del Sprint 16: no hay resultados nuevos. El equipo decide hasta dónde llega: 🟢 mínimo, 🟡 estándar o 🔴 extra.
 

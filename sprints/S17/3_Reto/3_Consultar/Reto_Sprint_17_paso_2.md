@@ -66,8 +66,8 @@
 
     | Término técnico | Frase que entiende la audiencia |
     |---|---|
-    | F1 de 0,71 con validación cruzada | De cada 10 reservas que se cancelan, detectamos 7 |
-    | Recall de 0,58 en el subgrupo móvil | En reservas por móvil acertamos menos: 6 de cada 10 |
+    | Exhaustividad de 0,70 con validación cruzada | De cada 10 reservas que se cancelan, detectamos 7 |
+    | Exhaustividad de 0,58 en el subgrupo móvil | En reservas por móvil acertamos menos: 6 de cada 10 |
     | Reponderación para mitigar el sesgo | Hemos corregido el modelo para que trate mejor al canal móvil |
     | Transformer con RAG | El asistente busca primero en los documentos y responde citando la fuente |
 

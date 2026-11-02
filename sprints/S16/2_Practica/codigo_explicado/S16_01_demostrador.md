@@ -16,8 +16,8 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 |---|---|---|
 | 1 |  | Practica `seed`, `join`. |
 | 2 | 1. Guardar el modelo y sus metadatos | Practica `read_csv`, `train_test_split`, `ColumnTransformer`, `fit` y más (sección «1. Gu… |
-| 3 | 1. Guardar el modelo y sus metadatos | Practica `round`, `join`, `open`, `listdir` y más (sección «1. Guardar el modelo y sus me… |
-| 4 | 2. La lógica, separada de la interfaz | Practica `insert`, `open`, `write`, `join` (sección «2. La lógica, separada de la interfa… |
+| 3 | 1. Guardar el modelo y sus metadatos | Practica `dump`, `round`, `join`, `open` y más (sección «1. Guardar el modelo y sus metad… |
+| 4 | 2. La lógica, separada de la interfaz | Practica `insert`, `reload`, `open`, `write` y más (sección «2. La lógica, separada de la… |
 
 ## 2. Qué guarda cada variable
 
@@ -62,25 +62,25 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 |---|---|---|
 | `any` | Dice si ALGUNA condición es verdadera. | 8 |
 | `append` | Añade un elemento al final de una lista. | 13 |
-| `Button` | *(sin explicar todavía)* | 10 |
-| `capitalize` | *(sin explicar todavía)* | 3 |
-| `clear_output` | *(sin explicar todavía)* | 10 |
+| `Button` | ipywidgets: crea un botón que se puede pulsar dentro del cuaderno. | 10 |
+| `capitalize` | Pone la primera letra de un texto en mayúscula. | 3 |
+| `clear_output` | Borra lo que había escrito en la zona de resultados antes de mostrar lo nuevo. | 10 |
 | `ColumnTransformer` | Aplica un preprocesado distinto a cada grupo de columnas. | 2 |
 | `compile` | Prepara el modelo para entrenar (en Keras: elige optimizador, pérdida y métricas). | 9, 11 |
 | `dato` | Devuelve la ruta de un fichero de datos del curso (lo busca en las carpetas habituales y, si no está, lo descarga). | 2 |
 | `display` | Muestra un objeto con el formato bonito del cuaderno. | 10 |
-| `Dropdown` | *(sin explicar todavía)* | 10 |
-| `dump` | *(sin explicar todavía)* | 3 |
+| `Dropdown` | ipywidgets: crea un menú desplegable para elegir una opción. | 10 |
+| `dump` | Guarda una estructura de datos (por ejemplo, un diccionario) en un fichero JSON. | 3 |
 | `fit` | Entrena el modelo con los datos (aquí es donde «aprende»). | 2 |
 | `float` | Convierte un valor en número decimal. | 3, 10 |
-| `FloatText` | *(sin explicar todavía)* | 10 |
+| `FloatText` | ipywidgets: crea una casilla donde escribir un número decimal. | 10 |
 | `get` | Lee un valor de un diccionario; si no existe, devuelve el valor por defecto en vez de fallar. | 12 |
 | `insert` | Inserta elementos en una posición. | 4 |
 | `int` | Convierte un valor en número entero. | 3, 10 |
 | `isinstance` | Comprueba si un valor es de un tipo concreto. | 10 |
 | `items` | Devuelve las parejas (clave, valor) de un diccionario. | 8, 10 |
 | `join` | Une una lista de textos en uno solo con un separador. | 1, 3, 4, 9, 11, 13 |
-| `json` | *(sin explicar todavía)* | 12 |
+| `json` | Módulo de Python para leer y escribir ficheros JSON (texto con datos ordenados). | 12 |
 | `len` | Cuenta cuántos elementos tiene una lista, texto o tabla. | 3 |
 | `list` | Crea una lista (o convierte algo en lista). | 10 |
 | `listdir` | Lista el contenido de una carpeta. | 3 |
@@ -89,17 +89,17 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `max` | Devuelve el valor más grande. | 3 |
 | `mean` | Calcula la media. | 3 |
 | `min` | Devuelve el valor más pequeño. | 3 |
-| `on_click` | *(sin explicar todavía)* | 10 |
+| `on_click` | ipywidgets: dice qué función se ejecuta cuando se pulsa el botón. | 10 |
 | `OneHotEncoder` | Convierte categorías en columnas de 0/1. | 2 |
 | `open` | Abre un fichero para leerlo o escribirlo. | 3, 4, 9, 11, 13 |
-| `Output` | *(sin explicar todavía)* | 10 |
+| `Output` | ipywidgets: reserva un hueco del cuaderno donde mostrar resultados. | 10 |
 | `Pipeline` | Encadena pasos (preprocesado + modelo) en un solo objeto. | 2 |
-| `post` | *(sin explicar todavía)* | 12 |
+| `post` | Define una ruta de la API que recibe datos (la que usa la app para pedir una predicción). | 12 |
 | `predict_proba` | Pide la probabilidad de cada clase (no solo la clase). | 2 |
 | `print` | Muestra un valor por pantalla. | 2, 3, 4, 8, 9, 10… |
-| `prueba` | *(sin explicar todavía)* | 8 |
+| `prueba` | Función de prueba del cuaderno: comprueba que un caso conocido da el resultado esperado. | 8 |
 | `read_csv` | Lee un fichero CSV y lo convierte en una tabla. | 2 |
-| `reload` | *(sin explicar todavía)* | 4, 12 |
+| `reload` | Vuelve a cargar un módulo ya importado, para ver los cambios que acabas de guardar. | 4, 12 |
 | `replace` | Sustituye un trozo de texto (o valores de una tabla) por otro. | 3 |
 | `roc_auc_score` | Calcula el AUC: la capacidad del modelo para ordenar bien los casos (1 = perfecto, 0,5 = azar). | 2 |
 | `round` | Redondea un número a los decimales indicados. | 3 |
@@ -108,14 +108,14 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `split` | Parte un texto en trozos por un separador. | 3 |
 | `StandardScaler` | Escala los números para que tengan media 0 y desviación 1. | 2 |
 | `str` | Da acceso a las operaciones de texto sobre una columna. | 3 |
-| `TestClient` | *(sin explicar todavía)* | 12 |
+| `TestClient` | Cliente de pruebas de FastAPI: llama a la API sin arrancar un servidor. | 12 |
 | `today` | Fecha de hoy. | 3 |
 | `tolist` | Convierte un array o una columna en una lista de Python. | 3 |
 | `train_test_split` | Reparte los datos en entrenamiento y prueba. | 2 |
 | `unique` | Devuelve los valores distintos. | 3 |
 | `values` | Devuelve los valores de un diccionario o de una tabla. | 10 |
-| `VBox` | *(sin explicar todavía)* | 10 |
-| `version` | *(sin explicar todavía)* | 13 |
+| `VBox` | ipywidgets: apila varios elementos del formulario uno debajo de otro. | 10 |
+| `version` | Número de versión de una librería (para anotarlo y poder reproducir el entorno). | 13 |
 | `write` | Escribe en un fichero. | 4, 9, 11, 13 |
 
 ## 4. Celda a celda
@@ -190,7 +190,7 @@ print(f"AUC en test: {auc_test:.3f}")
 
 ### Celda 3 · 1. Guardar el modelo y sus metadatos · 🏫
 
-**Qué hace:** Practica `round`, `join`, `open`, `listdir` y más (sección «1. Guardar el modelo y sus metadatos»).
+**Qué hace:** Practica `dump`, `round`, `join`, `open` y más (sección «1. Guardar el modelo y sus metadatos»).
 
 ```python
 meta = {
@@ -222,13 +222,13 @@ print("Guardado:", os.listdir(os.path.join(CARPETA, "modelo")))
 **Qué hace cada línea:**
 
 - `meta = {` → Guarda en `meta` el resultado. `round`: redondea un número a los decimales indicados; `int`: convierte un valor en número entero; `str`: da acceso a las operaciones de texto sobre una columna.
-- `joblib.dump(modelo, os.path.join(CARPETA, "modelo", "modelo_cancelaciones.j…` → `join`: une una lista de textos en uno solo con un separador.
+- `joblib.dump(modelo, os.path.join(CARPETA, "modelo", "modelo_cancelaciones.j…` → `dump`: guarda una estructura de datos (por ejemplo, un diccionario) en un fichero JSON; `join`: une una lista de textos en uno solo con un separador.
 - `with open(os.path.join(CARPETA, "modelo", "metadatos.json"), "w", encoding=…` → Abre un recurso (fichero, conexión…) y lo cierra solo al terminar el bloque. Dentro del bloque: `dump`: escribe datos de Python en un fichero JSON.
 - `print("Guardado:", os.listdir(os.path.join(CARPETA, "modelo")))` → `print`: muestra un valor por pantalla; `listdir`: lista el contenido de una carpeta; `join`: une una lista de textos en uno solo con un separador.
 
 ### Celda 4 · 2. La lógica, separada de la interfaz · 🏫
 
-**Qué hace:** Practica `insert`, `open`, `write`, `join` (sección «2. La lógica, separada de la interfaz»).
+**Qué hace:** Practica `insert`, `reload`, `open`, `write` y más (sección «2. La lógica, separada de la interfaz»).
 
 ```python
 LOGICA = r'''"""Lógica del demostrador: cargar el modelo, validar la entrada y predecir. Sin interfaz."""
@@ -320,6 +320,7 @@ print(logica.predecir_reserva({**reserva_ejemplo, "noches": -3, "canal": "telepa
 - `with open(os.path.join(CARPETA, "logica.py"), "w", encoding="utf8") as f:` → Abre un recurso (fichero, conexión…) y lo cierra solo al terminar el bloque. Dentro del bloque: `write`: escribe en un fichero.
 - `sys.path.insert(0, CARPETA)` → `insert`: inserta elementos en una posición.
 - `import importlib, logica` → Trae `importlib`, `logica` para poder usarlo.
+- `importlib.reload(logica)` → `reload`: vuelve a cargar un módulo ya importado, para ver los cambios que acabas de guardar.
 - `modelo_cargado, meta_cargado = logica.cargar_modelo()` → Guarda en `modelo_cargado, meta_ca…` el resultado. `cargar_modelo`: devuelve (modelo, metadatos). Lanza FileNotFoundError con un mensaje claro si faltan los archivos.
 - `reserva_ejemplo = {"antelacion_dias": 120, "noches": 5, "adultos": 2, "nino…` → Guarda el valor en `reserva_ejemplo`.
 - `print(logica.predecir_reserva(reserva_ejemplo, modelo_cargado, meta_cargado…` → `print`: muestra un valor por pantalla; `predecir_reserva`: valida y predice. Devuelve un diccionario; si hay errores, solo {'errores': [...]}.
@@ -369,7 +370,7 @@ for prueba in (test_reserva_valida_devuelve_probabilidad, test_entrada_invalida_
 - `def test_entrada_invalida_no_rompe():` → Define la función `test_entrada_invalida_no_rompe`: Función definida en el cuaderno.
 - `def test_falta_un_campo():` → Define la función `test_falta_un_campo`: Función definida en el cuaderno.
 - `def test_sentido_comun():` → Define la función `test_sentido_comun`: Función definida en el cuaderno.
-- `for prueba in (test_reserva_valida_devuelve_probabilidad, test_entrada_inva…` → Repite el bloque de debajo para cada valor de `prueba` en `(test_reserva_valida_devuelve_probabili…`.
+- `for prueba in (test_reserva_valida_devuelve_probabilidad, test_entrada_inva…` → Repite el bloque de debajo para cada valor de `prueba` en `(test_reserva_valida_devuelve_probabili…`. Dentro del bloque: `prueba`: función de prueba del cuaderno: comprueba que un caso conocido da el resultado esperado.
 
 ### Celda 9 · 4. Opción A (recomendada): app de Streamlit · 🏫
 
@@ -437,7 +438,7 @@ print("app.py creado y sin errores de sintaxis. Para verlo: cd demostrador && st
 
 ### Celda 10 · 5. Opción B: notebook con widgets (plan B sin i… · 🏠
 
-**Qué hace:** Practica `items`, `display`, `list`, `isinstance` y más (sección «5. Opción B: notebook con widgets (plan…»).
+**Qué hace:** Practica `items`, `Button`, `Output`, `on_click` y más (sección «5. Opción B: notebook con widgets (plan…»).
 
 ```python
 try:
@@ -476,7 +477,7 @@ if HAY_WIDGETS:
 **Qué hace cada línea:**
 
 - `try:` → Intenta el bloque; si ocurre un error, pasa al `except` en vez de romperse.
-- `if HAY_WIDGETS:` → Decide: ejecuta el bloque solo si se cumple la condición (y `elif`/`else` si no). Dentro del bloque: `items`: devuelve las parejas (clave, valor) de un diccionario; `predecir_reserva`: valida y predice. Devuelve un diccionario; si hay errores, solo {'errores': [...]}; `isinstance`: comprueba si un valor es de un tipo concreto.
+- `if HAY_WIDGETS:` → Decide: ejecuta el bloque solo si se cumple la condición (y `elif`/`else` si no). Dentro del bloque: `items`: devuelve las parejas (clave, valor) de un diccionario; `Dropdown`: ipywidgets: crea un menú desplegable para elegir una opción; `FloatText`: ipywidgets: crea una casilla donde escribir un número decimal.
 
 ### Celda 11 · 6. Opción C (opcional): API con FastAPI · 🏠
 
@@ -558,7 +559,7 @@ except ImportError as e:
 
 **Qué hace cada línea:**
 
-- `try:` → Intenta el bloque; si ocurre un error, pasa al `except` en vez de romperse. Dentro del bloque: `get`: lee un valor de un diccionario; si no existe, devuelve el valor por defecto en vez de fallar.
+- `try:` → Intenta el bloque; si ocurre un error, pasa al `except` en vez de romperse. Dentro del bloque: `reload`: vuelve a cargar un módulo ya importado, para ver los cambios que acabas de guardar; `TestClient`: cliente de pruebas de FastAPI: llama a la API sin arrancar un servidor; `json`: módulo de Python para leer y escribir ficheros JSON (texto con datos ordenados).
 
 ### Celda 13 · 7. Lista de reproducibilidad del demostrador · 🏠
 
@@ -584,7 +585,7 @@ print("\n".join(lineas))
 - `import importlib.metadata as md` → Trae `importlib.metadata` (lo llamamos `md`) para poder usarlo.
 - `paquetes = ["numpy", "pandas", "scikit-learn", "joblib", "streamlit", "ipyw…` → Guarda el valor en `paquetes`.
 - `lineas = []` → Guarda el valor en `lineas`.
-- `for p in paquetes:` → Repite el bloque de debajo para cada valor de `p` en `paquetes`.
+- `for p in paquetes:` → Repite el bloque de debajo para cada valor de `p` en `paquetes`. Dentro del bloque: `version`: número de versión de una librería (para anotarlo y poder reproducir el entorno).
 - `with open(os.path.join(CARPETA, "requirements.txt"), "w", encoding="utf8")…` → Abre un recurso (fichero, conexión…) y lo cierra solo al terminar el bloque. Dentro del bloque: `write`: escribe en un fichero; `join`: une una lista de textos en uno solo con un separador.
 - `print("\n".join(lineas))` → `print`: muestra un valor por pantalla; `join`: une una lista de textos en uno solo con un separador.
 

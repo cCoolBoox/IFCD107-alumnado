@@ -10,7 +10,7 @@
 ## Qué aprenderás
 
 1. Estructurar un mensaje con la **pirámide de la comunicación**: primero la conclusión, después los argumentos y las evidencias.
-2. Formular un **mensaje único** y un **arco narrativo** (situación, problema, resolución, propuesta) para una audiencia no técnica.
+2. Formular un **mensaje único** y un **arco narrativo** (siete momentos: situación, complicación, pregunta, resolución, demostración, límites y riesgos, y llamada a la acción) para una audiencia no técnica.
 3. Diseñar una **presentación de máximo 12 diapositivas** con una idea por diapositiva y gráficos que cuentan.
 4. Construir y practicar un **pitch de 3 minutos** y una **defensa de 10 minutos** con demostración y plan B.
 5. **Responder preguntas** con datos, reconocer los límites y trabajar en equipo bajo presión (todas las personas hablan).
@@ -52,6 +52,11 @@
 ## El reto en pocas palabras
 
 **Qué os pide el cliente.** El cliente y su equipo directivo (el **tribunal**: el docente y, si procede, otras personas invitadas) **no son técnicos**. Deben salir de la defensa sabiendo cuatro cosas:
+
+1. **Qué problema resolvéis.**
+2. **Qué habéis encontrado.**
+3. **Qué recomendáis hacer.**
+4. **De qué no deben fiarse.**
 
 **Qué vais a entregar:** la presentación en PDF (≤ 12 diapositivas, en el repositorio **antes de las 8:30 del 14/12**), la defensa en directo y, opcionalmente, un guion con respuestas a las preguntas más probables.
 

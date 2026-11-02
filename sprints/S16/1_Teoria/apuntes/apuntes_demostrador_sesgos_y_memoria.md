@@ -158,13 +158,7 @@ Es como un restaurante: **la cocina** (lógica) **y la sala** (interfaz) **son c
 | **Avisa de la incertidumbre** | «Riesgo: alto» más un aviso con el AUC del modelo («Estimación orientativa. El modelo tiene un AUC de 0,75…») y sus límites |
 | **Devuelve datos, no imprime** | Devuelve un diccionario; es la interfaz quien lo muestra |
 
-La función `mensaje_errores` del cuaderno transforma una lista de errores en un texto amable:
-
-```python
-def mensaje_errores(errores):
-    if not errores: return ""
-    return "No se puede calcular todavía:\n" + "\n".join(f"- {e}" for e in errores)
-```
+La función `mensaje_errores` del cuaderno (ejercicio 2) transforma una lista de errores en un único texto amable: una cabecera que diga que todavía no se puede calcular y, debajo, una línea por error. Con la lista vacía devuelve un texto vacío. Es una función pequeña que no calcula nada: solo da formato.
 
 ### 4.4. Probar con entradas «malas» a propósito
 
@@ -260,14 +254,14 @@ Para **el cliente y un compañero técnico**: **autocontenida** (que se entienda
 | 1. Problema y valor de negocio | 1 | R1 |
 | 2. Datos y EDA | 2 | R2 |
 | 3. Metodología | 1 | R3 |
-| 4. Modelado y experimentos | 2-3 | R3, R4 |
-| 5. Evaluación y resultados | 2-3 | R5 |
+| 4. Modelado y experimentos | 2 | R3, R4 |
+| 5. Evaluación y resultados | 2 | R5 |
 | 6. IA responsable | 2 | R6 |
 | 7. Demostrador y reproducibilidad | 1 | R7, R8 |
 | 8. Gestión del proyecto | ½-1 | R9 |
 | 9. Conclusiones y recomendaciones | 1 | |
 
-(Portada, índice, referencias y **anexos no cuentan**.)
+Con el resumen y la gestión en su máximo, la suma es de 14 páginas, dentro del límite de 15. (Portada, índice, referencias y **anexos no cuentan**.)
 
 ### 7.3. Cómo escribirla sin sufrir
 

@@ -29,7 +29,7 @@ Volver a la [ficha del reto](../3_Consultar/Reto_Sprint_17.md).
 
 **Nombre:** ……
 
-**Repaso rápido** (las mismas preguntas del final de la ficha del reto; contesta Sí / No / A medias):
+**Repaso rápido** (las mismas preguntas de la «Definition of Done» del README del sprint; contesta Sí / No / A medias):
 
 | Pregunta | Mi respuesta |
 |---|---|

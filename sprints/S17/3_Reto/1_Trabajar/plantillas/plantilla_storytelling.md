@@ -120,7 +120,7 @@ Versión ultracorta para un directivo con poco tiempo. Debe funcionar **sin diap
 - [ ] ¿Cabe en el tiempo del turno con margen de 30 segundos?
 
 ## Revisión con la rúbrica
-<Rúbrica completa en la ficha del reto, apartado 3. Se rellena después de defender. Quien revisa **no escribió esa parte**: mirar el PDF subido, comprobar tres cifras con la memoria, lanzar la demo, recordar la defensa como lo haría el cliente y poner nivel con prueba.>
+<Rúbrica completa en `entrega_y_rubrica.md`, apartado 3. Se rellena después de defender. Quien revisa **no escribió esa parte**: mirar el PDF subido, comprobar tres cifras con la memoria, lanzar la demo, recordar la defensa como lo haría el cliente y poner nivel con prueba.>
 
 **Revisado por:** <nombre> · **Fecha:** <dd/mm/aaaa>
 
