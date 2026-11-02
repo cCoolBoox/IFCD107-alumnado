@@ -707,7 +707,7 @@ print(clasificar_foto(demo_ruta))
 modelo.save("clasificador_alojamientos.keras")     # se queda en la carpeta del cuaderno (en Colab, en el panel de archivos)
 recargado = keras.models.load_model("clasificador_alojamientos.keras")
 assert clasificar_foto(demo_ruta, recargado)[0] == clasificar_foto(demo_ruta)[0], "El modelo recargado debe dar la misma respuesta"
-print("Modelo guardado en clasificador_alojamientos.keras (si queréis entregarlo, descargadlo y subidlo a sprint-11/)")
+print("Modelo guardado en clasificador_alojamientos.keras (si quieres entregarlo, descárgalo y súbelo a sprint-11/)")
 ```
 
 **Qué hace cada línea:**
@@ -719,7 +719,7 @@ print("Modelo guardado en clasificador_alojamientos.keras (si queréis entregarl
 - `modelo.save("clasificador_alojamientos.keras") # se queda en la carpeta del…` → `save`: guarda el modelo entrenado en un fichero.
 - `recargado = keras.models.load_model("clasificador_alojamientos.keras")` → Guarda en `recargado` el resultado. `load_model`: carga un modelo guardado.
 - `assert clasificar_foto(demo_ruta, recargado)[0] == clasificar_foto(demo_rut…` → Comprueba que es verdad; si no, para con un mensaje.
-- `print("Modelo guardado en clasificador_alojamientos.keras (si queréis entre…` → `print`: muestra un valor por pantalla.
+- `print("Modelo guardado en clasificador_alojamientos.keras (si quieres entre…` → `print`: muestra un valor por pantalla.
 
 ### Celda 19 · 7. Rama Colab: MobileNetV2 con pesos de ImageNe… · 🏠
 

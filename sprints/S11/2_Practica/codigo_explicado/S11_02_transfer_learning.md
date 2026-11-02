@@ -65,7 +65,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `copiar_base` | Copia independiente de la base con los mismos pesos (para no modificar la original). *(La escribís vosotros en un ejercicio.)* |
 | `descongelar_bloque` | Función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)* |
 | `experimento` | Devuelve la precisión en prueba de (desde cero, base congelada, base con fine-tuning). |
-| `construir_mobilenet` | pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet, se descarga ≈ 10 MB). |
+| `construir_mobilenet` | pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet; descarga unos pocos MB, tamaño no verificado). |
 
 **De Python y sus librerías:**
 
@@ -584,7 +584,7 @@ plt.title(f"Con solo {N_POR_CLASE} imágenes por clase (media de 3 semillas)"); 
 ```python
 # Esta celda funciona SIN internet: construye MobileNetV2 con pesos aleatorios (weights=None) para ver su estructura.
 def construir_mobilenet(pesos=None, tam=96):
-    """pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet, se descarga ≈ 10 MB)."""
+    """pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet; descarga unos pocos MB, tamaño no verificado)."""
     base = keras.applications.MobileNetV2(input_shape=(tam, tam, 3), include_top=False, weights=pesos, alpha=0.35)
     base.trainable = False
     entrada = keras.layers.Input(shape=(48, 48, 3))
@@ -606,8 +606,8 @@ print("Salida del modelo para 2 imágenes sintéticas:", mn.predict(X_ent[:2], v
 
 **Qué hace cada línea:**
 
-- `def construir_mobilenet(pesos=None, tam=96):` → Define la función `construir_mobilenet`: pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet, se descarga ≈ 10 MB).
-- `mn, mn_base = construir_mobilenet(pesos=None)` → Guarda en `mn, mn_base` el resultado. `construir_mobilenet`: pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet, se descarga ≈ 10 MB).
+- `def construir_mobilenet(pesos=None, tam=96):` → Define la función `construir_mobilenet`: pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet; descarga unos pocos MB, tamaño no verificado).
+- `mn, mn_base = construir_mobilenet(pesos=None)` → Guarda en `mn, mn_base` el resultado. `construir_mobilenet`: pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet; descarga unos pocos MB, tamaño no verificado).
 - `print("MobileNetV2 (alpha 0.35): capas de la base =", len(mn_base.layers),…` → `print`: muestra un valor por pantalla; `len`: cuenta cuántos elementos tiene una lista, texto o tabla; `count_params`: cuenta cuántos pesos tiene el modelo.
 - `print("Salida del modelo para 2 imágenes sintéticas:", mn.predict(X_ent[:2]…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `predict`: pide al modelo ya entrenado que haga predicciones.
 
@@ -636,7 +636,7 @@ else:
 **Qué hace cada línea:**
 
 - `USAR_INTERNET = False # ← True solo con conexión (Colab)` → Guarda el valor en `USAR_INTERNET`.
-- `if USAR_INTERNET:` → Decide: ejecuta el bloque solo si se cumple la condición (y `elif`/`else` si no). Dentro del bloque: `construir_mobilenet`: pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet, se descarga ≈ 10 MB); `fit`: entrena el modelo con los datos (aquí es donde «aprende»); `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
+- `if USAR_INTERNET:` → Decide: ejecuta el bloque solo si se cumple la condición (y `elif`/`else` si no). Dentro del bloque: `construir_mobilenet`: pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet; descarga unos pocos MB, tamaño no verificado); `fit`: entrena el modelo con los datos (aquí es donde «aprende»); `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
 
 ### Celda 15 · 7. Mini-reto integrador: ¿cuántas imágenes nece… · 🏠 · ejercicio
 

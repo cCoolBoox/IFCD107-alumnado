@@ -20,9 +20,9 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Visión artificial para el cliente» y reparto de roles | — | 10 |
-| ☐ | 📖 Teoría · Redes convolucionales (CNN) | [Presentación S11.1](1_Teoria/S11.1_Redes_convolucionales_CNN.pdf) | 25 |
+| ☐ | 📖 Teoría · Redes convolucionales (CNN) | [Presentación S11_01](1_Teoria/S11_01_presentacion_Redes_convolucionales_CNN.pdf) | 25 |
 | ☐ | 💻 Práctica · Convolución, pooling, CNN y *data augmentation* (los ejercicios marcados «en clase») | [Cuaderno S11_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_01_cnn.ipynb) | 40 |
-| ☐ | 📖 Teoría · Transfer learning y fine-tuning | [Presentación S11.2](1_Teoria/S11.2_Transfer_learning_y_fine_tuning.pdf) | 25 |
+| ☐ | 📖 Teoría · Transfer learning y fine-tuning | [Presentación S11_02](1_Teoria/S11_02_presentacion_Transfer_learning_y_fine_tuning.pdf) | 25 |
 | ☐ | 💻 Práctica · Transfer learning y fine-tuning (los ejercicios marcados «en clase») | [Cuaderno S11_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_02_transfer_learning.ipynb) | 75 |
 | ☐ | 🎯 Reto · Preparar los datos (paso 1) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_11_una_pagina.md) | 25 |
 
@@ -38,7 +38,7 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 📖 Teoría · Detección de objetos y segmentación (versión corta) | [Presentación S11.3](1_Teoria/S11.3_Deteccion_de_objetos_y_segmentacion.pdf) | 15 |
+| ☐ | 📖 Teoría · Detección de objetos y segmentación (versión corta) | [Presentación S11_03](1_Teoria/S11_03_presentacion_Deteccion_de_objetos_y_segmentacion.pdf) | 15 |
 | ☐ | 💻 Práctica · IoU y NMS con números pequeños (los ejercicios marcados «en clase»); el detector con OpenCV y la segmentación son para casa | [Cuaderno S11_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_03_deteccion_segmentacion.ipynb) | 35 |
 | ☐ | 💻 Práctica · Esqueleto del reto: dataset por carpetas y análisis de errores | [Cuaderno S11_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb) | 40 |
 | ☐ | 🎯 Reto · Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_11_una_pagina.md) | 80 |
