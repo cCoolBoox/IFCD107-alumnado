@@ -124,7 +124,7 @@
     | 10 | IA responsable | Tres riesgos altos, todos con medida aplicada |
     | 12 | Cierre | Repite el mensaje único |
 
-    Las demás las escribís vosotros con la misma idea. **Sumad la columna de tiempo**: la que trae la plantilla suma 11 minutos y 45 segundos. Tiene que caber en el relato y la demo de vuestro turno (en el paso 3 y en el paso 5 está la tabla por número de equipos). Si no cabe, **quitad diapositivas, no aceleréis**. No hace falta diapositiva de «Gracias»: la 12 es el cierre. Lo técnico que sobre va a diapositivas de reserva, **después** de la 12.
+    Las demás las escribís vosotros con la misma idea. **Sumad la columna de tiempo**: la que trae la plantilla suma 10 minutos, los del guion base. Tiene que caber en el relato y la demo de vuestro turno (en el paso 3 y en el paso 5 está la tabla por número de equipos). Si no cabe, **quitad diapositivas, no aceleréis**. No hace falta diapositiva de «Gracias»: la 12 es el cierre. Lo técnico que sobre va a diapositivas de reserva, **después** de la 12.
 
 7. **Reparto de voces.** Rellenad la columna *Persona que habla* del storyboard. Reglas: hablan **todas** las personas, y **cualquiera** puede recibir una pregunta, así que todas deben conocer todo el proyecto. El reparto orientativo del [guion de defensa](../../1_Teoria/actividades/guion_defensa.md) es este (con 3 personas, la persona 1 se queda también los límites):
 

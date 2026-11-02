@@ -14,8 +14,9 @@
     - **Regla de oro: el test se usa una sola vez, solo con el campeón.**
 - **Tiempo:**
     - Unos 150 min de equipo.
-    - En clase: planning 10 min (día 1); reto 75 min; entrega, review y retro 35 min (día 2).
-    - Los 65 min que faltan, en la consolidación y la 6.ª hora del día 2 (subida hasta las 14:30); lo demás, a casa.
+    - En clase: planning 10 min (día 1); pasos 4 y 5, 75 min; entrega, review y retro 35 min (día 2).
+    - Los pasos 2 y 3 (55 min) se hacen dentro de las prácticas `S08_02` y `S08_03` del día 2.
+    - Los 10 min que faltan, en la consolidación y la 6.ª hora del día 2 (subida hasta las 14:30); lo demás, a casa.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

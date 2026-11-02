@@ -2,7 +2,7 @@
 
 > **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_03_boosting_xgboost_lightgbm.ipynb) · [descargar](../S08_03_boosting_xgboost_lightgbm.ipynb) · ⏱ en clase: 25 min · 🏫 1 celdas de código en clase · 🏠 2 en casa
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_03_boosting_xgboost_lightgbm.ipynb) · [descargar](../S08_03_boosting_xgboost_lightgbm.ipynb) · ⏱ en clase: 25 min · 🏫 2 celdas de código en clase · 🏠 1 en casa
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 
@@ -15,6 +15,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | Celda | Sección | Qué miramos |
 |---|---|---|
 | 1 |  | Para la parada temprana necesitamos un conjunto de VALIDACIÓN aparte (sacado de train, no… |
+| 2 | 2. Sobreajuste por exceso de árboles | Practica `fit`, `figure`, `plot`, `title` y más (sección «2. Sobreajuste por exceso de ár… |
 
 ## 2. Qué guarda cada variable
 
@@ -138,7 +139,7 @@ print("Entrenar:", len(Xfit), "· validar:", len(Xval), "· probar (test, intact
 - `from sklearn.impute import SimpleImputer` → Trae `SimpleImputer` de `sklearn.impute` para poder usarlo.
 - … y 21 más con las mismas ideas.
 
-### Celda 2 · 2. Sobreajuste por exceso de árboles · 🏠
+### Celda 2 · 2. Sobreajuste por exceso de árboles · 🏫
 
 **Qué hace:** Practica `fit`, `figure`, `plot`, `title` y más (sección «2. Sobreajuste por exceso de árboles»).
 
@@ -169,11 +170,11 @@ plt.show()
 - `plt.ylabel("AUC")` → `ylabel`: pone el nombre del eje vertical.
 - … y 2 más con las mismas ideas.
 
-### Celda 3 · 2. Sobreajuste por exceso de árboles · 🏠 · ejercicio
+### Celda 3 · 2. Sobreajuste por exceso de árboles · 🏫 · ejercicio
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 4 · 3. XGBoost · 🏠 · ejercicio
+### Celda 4 · 3. XGBoost · 🏫 · ejercicio
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 

@@ -2,7 +2,7 @@
 
 > **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb) · [descargar](../S11_04_reto_vision_cliente.ipynb) · ⏱ en clase: 60 min · 🏫 11 celdas de código en clase · 🏠 3 en casa
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb) · [descargar](../S11_04_reto_vision_cliente.ipynb) · ⏱ en clase: 40 min · 🏫 13 celdas de código en clase · 🏠 2 en casa
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 
@@ -46,12 +46,12 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `errores` | `indices_errores(y_pru, prob_pru)` | 12 |
 | `n_mostrar` | `min(10, len(errores))` | 12 |
 | `pares` | `pd.Series([f"{NOMBRES[y_pru[i]]} → {NOMBRES[pred_pru[i]]}…` | 13 |
+| `prob_val` | `modelo.predict(X_val, verbose=0)` | 16 |
 | `umbrales` | `[0.0, 0.5, 0.7, 0.9, 0.95]` | 16 |
-| `tabla` | `pd.DataFrame([cobertura_y_precision(prob_pru, y_pru, u) f…` | 16 |
-| `demo_ruta` | `rutas_pru[0]` | 17 |
-| `carpeta_tmp` | `tempfile.mkdtemp()` | 17 |
-| `recargado` | `keras.models.load_model(os.path.join(carpeta_tmp, "clasif…` | 17 |
-| … | otras 2 variables | |
+| `tabla` | `pd.DataFrame([cobertura_y_precision(prob_val, y_val, u) f…` | 16 |
+| `umbral_elegido` | `0.7` | 17 |
+| `demo_ruta` | `rutas_pru[0]` | 18 |
+| … | otras 4 variables | |
 
 ## 3. Palabras de código de este cuaderno
 
@@ -82,71 +82,71 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 |---|---|---|
 | `abs` | Valor absoluto: quita el signo negativo. | 2 |
 | `accuracy_score` | Calcula el porcentaje de aciertos. | 9 |
-| `Adam` | Optimizador Adam: decide cómo ajustar los pesos en cada paso. | 6, 8, 18 |
+| `Adam` | Optimizador Adam: decide cómo ajustar los pesos en cada paso. | 6, 8, 19 |
 | `append` | Añade un elemento al final de una lista. | 2 |
 | `arange` | Crea una secuencia de números con un paso fijo. | 2 |
-| `argmax` | Devuelve la posición del valor más grande. | 9, 17 |
+| `argmax` | Devuelve la posición del valor más grande. | 9, 18 |
 | `array` | Crea una matriz o vector de NumPy (números que se pueden operar todos a la vez). | 2 |
 | `asarray` | Convierte algo en array de NumPy sin copiarlo si ya lo es. | 2 |
 | `astype` | Cambia el tipo de los datos (por ejemplo, de texto a número). | 2, 5, 12 |
 | `axis` | Controla los ejes del gráfico (`axis("off")` los oculta); en pandas/NumPy, `axis` indica si se opera por filas o por columnas. | 5, 12 |
-| `base` | La red preentrenada que se reutiliza (el «cuerpo» del modelo). | 6, 18 |
+| `base` | La red preentrenada que se reutiliza (el «cuerpo» del modelo). | 6, 19 |
 | `basename` | Devuelve solo el nombre del fichero, sin la carpeta. | 12 |
 | `choice` | Elige un elemento al azar. | 2 |
 | `classification_report` | Resumen de precisión, sensibilidad y F1 por clase. | 9 |
 | `clip` | Limita los valores a un mínimo y un máximo. | 2 |
-| `compile` | Prepara el modelo para entrenar (en Keras: elige optimizador, pérdida y métricas). | 6, 8, 18 |
+| `compile` | Prepara el modelo para entrenar (en Keras: elige optimizador, pérdida y métricas). | 6, 8, 19 |
 | `concatenate` | Une arrays uno detrás de otro. | 5 |
 | `confusion_matrix` | Cuenta aciertos y fallos de cada tipo (matriz de confusión). | 9 |
 | `Conv2D` | Capa convolucional: detecta patrones (bordes, formas) en imágenes. | 6 |
-| `count_params` | Cuenta cuántos pesos tiene el modelo. | 6, 18 |
+| `count_params` | Cuenta cuántos pesos tiene el modelo. | 6, 19 |
 | `DataFrame` | Crea una tabla de pandas (filas y columnas). | 16 |
 | `default_rng` | Crea un generador de números aleatorios reproducible (con semilla). | 2 |
-| `Dense` | Capa de neuronas totalmente conectadas. | 6, 18 |
-| `dict` | Crea un diccionario (parejas nombre: valor). | 17 |
+| `Dense` | Capa de neuronas totalmente conectadas. | 6, 19 |
+| `dict` | Crea un diccionario (parejas nombre: valor). | 18 |
 | `Draw` | Dibuja sobre una imagen (clase de Pillow). | 2 |
-| `Dropout` | Capa que apaga neuronas al azar al entrenar para evitar el sobreajuste. | 6, 18 |
+| `Dropout` | Capa que apaga neuronas al azar al entrenar para evitar el sobreajuste. | 6, 19 |
 | `ellipse` | Dibuja una elipse. | 2 |
 | `enumerate` | Recorre una lista dando a la vez la posición y el valor. | 6 |
-| `evaluate` | Calcula la pérdida y las métricas del modelo con unos datos. | 8, 18 |
-| `expand_dims` | Añade una dimensión de tamaño 1. | 17 |
+| `evaluate` | Calcula la pérdida y las métricas del modelo con unos datos. | 8, 19 |
+| `expand_dims` | Añade una dimensión de tamaño 1. | 18 |
 | `f1_score` | Calcula el F1: equilibrio entre precisión y sensibilidad. | 9 |
 | `figure` | Crea la figura (el lienzo) donde se dibuja. | 9 |
-| `fit` | Entrena el modelo con los datos (aquí es donde «aprende»). | 6, 8, 18 |
+| `fit` | Entrena el modelo con los datos (aquí es donde «aprende»). | 6, 8, 19 |
 | `Flatten` | Capa que aplana la imagen en un vector. | 6 |
-| `float` | Convierte un valor en número decimal. | 17 |
+| `float` | Convierte un valor en número decimal. | 18 |
 | `fromarray` | Convierte un array de NumPy en imagen. | 2 |
 | `funcion` | La función que se pasa como argumento y se llama dentro. | 2 |
-| `GlobalAveragePooling2D` | Capa que resume cada mapa de características en un solo número (su media). | 18 |
+| `GlobalAveragePooling2D` | Capa que resume cada mapa de características en un solo número (su media). | 19 |
 | `head` | Muestra las primeras filas. | 13 |
 | `image_dataset_from_directory` | Carga imágenes de carpetas (una por clase) como conjunto de datos. | 5 |
-| `img_to_array` | Convierte una imagen en un array de números. | 17 |
+| `img_to_array` | Convierte una imagen en un array de números. | 18 |
 | `imshow` | Muestra una imagen o una matriz como imagen. | 5, 9, 12 |
-| `Input` | Define la forma de los datos de entrada del modelo. | 6, 18 |
-| `int` | Convierte un valor en número entero. | 2, 17 |
+| `Input` | Define la forma de los datos de entrada del modelo. | 6, 19 |
+| `int` | Convierte un valor en número entero. | 2, 18 |
 | `integers` | Genera números enteros aleatorios. | 2 |
-| `isdir` | Comprueba si una ruta es una carpeta. | 3, 19 |
-| `join` | Une una lista de textos en uno solo con un separador. | 2, 3, 14, 17 |
+| `isdir` | Comprueba si una ruta es una carpeta. | 3, 20 |
+| `join` | Une una lista de textos en uno solo con un separador. | 2, 3, 14, 18 |
 | `len` | Cuenta cuántos elementos tiene una lista, texto o tabla. | 2, 5, 6, 12, 13, 14 |
 | `line` | Dibuja una línea. | 2 |
 | `list` | Crea una lista (o convierte algo en lista). | 5 |
-| `load_img` | Carga una imagen desde un fichero. | 17 |
-| `load_model` | Carga un modelo guardado. | 17 |
+| `load_img` | Carga una imagen desde un fichero. | 18 |
+| `load_model` | Carga un modelo guardado. | 18 |
 | `makedirs` | Crea una carpeta (y las que falten). | 2 |
-| `max` | Devuelve el valor más grande. | 2, 9, 12, 17 |
+| `max` | Devuelve el valor más grande. | 2, 9, 12, 18 |
 | `MaxPooling2D` | Capa que reduce la imagen quedándose con el valor máximo de cada zona. | 6 |
 | `min` | Devuelve el valor más pequeño. | 12 |
-| `mkdtemp` | Crea una carpeta temporal que se borra sola al acabar. | 17 |
-| `MobileNetV2` | Red ya entrenada con millones de imágenes, lista para reutilizar. | 18 |
-| `Model` | Crea un modelo de Keras indicando entradas y salidas. | 6, 18 |
+| `mkdtemp` | Crea una carpeta temporal que se borra sola al acabar. | 18 |
+| `MobileNetV2` | Red ya entrenada con millones de imágenes, lista para reutilizar. | 19 |
+| `Model` | Crea un modelo de Keras indicando entradas y salidas. | 6, 19 |
 | `new` | Crea una imagen nueva en blanco (Pillow) del tamaño y color indicados. | 2 |
 | `normal` | Genera números aleatorios con forma de campana (normal). | 2 |
 | `numpy` | Convierte un tensor de TensorFlow en un array de NumPy. | 5 |
 | `open` | Abre un fichero para leerlo o escribirlo. | 2 |
 | `permutation` | Devuelve un orden aleatorio de los índices. | 2 |
 | `polygon` | Dibuja un polígono. | 2 |
-| `predict` | Pide al modelo ya entrenado que haga predicciones. | 9, 17 |
-| `preprocess_input` | Prepara las imágenes como espera la red preentrenada. | 18 |
+| `predict` | Pide al modelo ya entrenado que haga predicciones. | 9, 16, 18 |
+| `preprocess_input` | Prepara las imágenes como espera la red preentrenada. | 19 |
 | `print` | Muestra un valor por pantalla. | 3, 5, 6, 8, 9, 12… |
 | `random` | Número aleatorio entre 0 y 1. | 2 |
 | `range` | Genera la secuencia 0, 1, 2… (hasta uno antes del final); se usa en bucles `for`. | 2, 5, 9 |
@@ -158,10 +158,10 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `replace` | Sustituye un trozo de texto (o valores de una tabla) por otro. | 14 |
 | `Rescaling` | Capa de Keras que reescala los píxeles (por ejemplo, de 0–255 a 0–1). | 6 |
 | `resize` | Cambia el tamaño de una imagen. | 2 |
-| `Resizing` | Capa de Keras que cambia el tamaño de las imágenes. | 18 |
-| `rmtree` | Borra una carpeta con todo lo que contiene. | 17, 19 |
-| `round` | Redondea un número a los decimales indicados. | 8, 16, 17, 18 |
-| `save` | Guarda el modelo (o el objeto) en un fichero. | 2, 17 |
+| `Resizing` | Capa de Keras que cambia el tamaño de las imágenes. | 19 |
+| `rmtree` | Borra una carpeta con todo lo que contiene. | 18, 20 |
+| `round` | Redondea un número a los decimales indicados. | 8, 16, 18, 19 |
+| `save` | Guarda el modelo (o el objeto) en un fichero. | 2, 18 |
 | `Series` | Crea una columna de pandas (una sola serie de valores). | 13 |
 | `set` | Crea un conjunto (valores sin repetir) o, en un gráfico, fija varias opciones a la vez. | 14 |
 | `set_random_seed` | Fija la semilla del azar de TensorFlow/Keras para repetir resultados. | 1, 6, 8 |
@@ -184,7 +184,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `xticks` | Fija las marcas del eje horizontal. | 9 |
 | `ylabel` | Pone el nombre del eje vertical. | 9 |
 | `yticks` | Fija las marcas del eje vertical. | 9 |
-| `zip` | Recorre varias listas a la vez, emparejando sus elementos. | 5, 12, 17 |
+| `zip` | Recorre varias listas a la vez, emparejando sus elementos. | 5, 12, 18 |
 
 ## 4. Celda a celda
 
@@ -649,23 +649,43 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 
 ### Celda 16 · 5. IA responsable: cuándo el modelo debe pedir… · 🏫
 
-**Qué hace:** Practica `round`, `DataFrame` (sección «5. IA responsable: cuándo el modelo deb…»).
+**Qué hace:** El umbral se ELIGE con la validación; la prueba no se toca para decidir nada.
 
 ```python
+# El umbral se ELIGE con la validación; la prueba no se toca para decidir nada
+prob_val = modelo.predict(X_val, verbose=0)
 umbrales = [0.0, 0.5, 0.7, 0.9, 0.95]
-tabla = pd.DataFrame([cobertura_y_precision(prob_pru, y_pru, u) for u in umbrales], index=umbrales,
+tabla = pd.DataFrame([cobertura_y_precision(prob_val, y_val, u) for u in umbrales], index=umbrales,
                      columns=["cobertura", "precisión en las aceptadas"]).round(3)
-tabla.index.name = "umbral de confianza"
+tabla.index.name = "umbral de confianza (validación)"
 tabla
 ```
 
 **Qué hace cada línea:**
 
+- `prob_val = modelo.predict(X_val, verbose=0)` → Guarda en `prob_val` el resultado. `predict`: pide al modelo ya entrenado que haga predicciones.
 - `umbrales = [0.0, 0.5, 0.7, 0.9, 0.95]` → Guarda el valor en `umbrales`.
-- `tabla = pd.DataFrame([cobertura_y_precision(prob_pru, y_pru, u) for u in um…` → Guarda en `tabla` el resultado. `round`: redondea un número a los decimales indicados; `DataFrame`: crea una tabla de pandas (filas y columnas); `cobertura_y_precision`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
-- `tabla.index.name = "umbral de confianza"` → Guarda el valor en `tabla.index.name`.
+- `tabla = pd.DataFrame([cobertura_y_precision(prob_val, y_val, u) for u in um…` → Guarda en `tabla` el resultado. `round`: redondea un número a los decimales indicados; `DataFrame`: crea una tabla de pandas (filas y columnas); `cobertura_y_precision`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
+- `tabla.index.name = "umbral de confianza (validación)"` → Guarda el valor en `tabla.index.name`.
 
-### Celda 17 · 6. Demostrador · 🏠
+### Celda 17 · 5. IA responsable: cuándo el modelo debe pedir… · 🏫
+
+**Qué hace:** Con el umbral ya elegido (aquí 0.7), la prueba solo mide el resultado final.
+
+```python
+# Con el umbral ya elegido (aquí 0.7), la prueba solo mide el resultado final
+umbral_elegido = 0.7
+cob, prec = cobertura_y_precision(prob_pru, y_pru, umbral_elegido)
+print(f"Prueba con umbral {umbral_elegido}: el modelo decide solo el {cob:.0%} de las fotos y acierta el {prec:.0%} de esas")
+```
+
+**Qué hace cada línea:**
+
+- `umbral_elegido = 0.7` → Guarda el valor en `umbral_elegido`.
+- `cob, prec = cobertura_y_precision(prob_pru, y_pru, umbral_elegido)` → Guarda en `cob, prec` el resultado. `cobertura_y_precision`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
+- `print(f"Prueba con umbral {umbral_elegido}: el modelo decide solo el {cob:.…` → `print`: muestra un valor por pantalla.
+
+### Celda 18 · 6. Demostrador · 🏫
 
 **Qué hace:** Guardar y recargar el modelo (para el demostrador).
 
@@ -702,7 +722,7 @@ shutil.rmtree(carpeta_tmp, ignore_errors=True)
 - `assert clasificar_foto(demo_ruta, recargado)[0] == clasificar_foto(demo_rut…` → Comprueba que es verdad; si no, para con un mensaje.
 - `shutil.rmtree(carpeta_tmp, ignore_errors=True)` → `rmtree`: borra una carpeta con todo lo que contiene.
 
-### Celda 18 · 7. Rama Colab: MobileNetV2 con pesos de ImageNe… · 🏠
+### Celda 19 · 7. Rama Colab: MobileNetV2 con pesos de ImageNe… · 🏠
 
 **Qué hace:** Practica `MobileNetV2`, `Input`, `preprocess_input`, `Model` y más (sección «7. Rama Colab: MobileNetV2 con pesos de…»).
 
@@ -737,7 +757,7 @@ if USAR_INTERNET:
 - `print("MobileNetV2 construida:", mn.count_params(), "parámetros ·", "pesos…` → `print`: muestra un valor por pantalla; `count_params`: cuenta cuántos pesos tiene el modelo.
 - `if USAR_INTERNET:` → Decide: ejecuta el bloque solo si se cumple la condición (y `elif`/`else` si no). Dentro del bloque: `fit`: entrena el modelo con los datos (aquí es donde «aprende»); `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
 
-### Celda 19 · 11. Resumen: qué has aprendido · 🏠
+### Celda 20 · 11. Resumen: qué has aprendido · 🏠
 
 **Qué hace:** Limpieza (opcional): borra el dataset sintético generado; se puede regenerar cuando quieras con el script.
 

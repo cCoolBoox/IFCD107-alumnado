@@ -1,20 +1,21 @@
 # Código explicado · S07.05 · k vecinos (k-NN) y Naive Bayes
 
-> **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
+> **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. Es para leerlo con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_05_knn_naive_bayes.ipynb) · [descargar](../S07_05_knn_naive_bayes.ipynb) · ⏱ en clase: 40 min · 🏫 0 celdas de código en clase · 🏠 2 en casa
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_05_knn_naive_bayes.ipynb) · [descargar](../S07_05_knn_naive_bayes.ipynb) · ⏱ en casa: 40 min · 🏠 2 celdas de código
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 
 **Cómo se lee una línea de código.** Casi todo sigue la forma `resultado = objeto.acción(opciones)`: se lee **de derecha a izquierda**, «coge este objeto, hazle esta acción con estas opciones y guarda lo que salga en `resultado`». Lo que va tras `#` es un comentario: Python lo ignora y es para las personas.
 
-## 1. Recorrido de 10 minutos (con el docente)
+## 1. Para empezar: las primeras celdas
 
-El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta. Lo demás se lee aquí.
+Empieza por estas celdas y comprueba qué hace cada una. Lo demás se lee aquí con calma.
 
 | Celda | Sección | Qué miramos |
 |---|---|---|
-| — | — | Este cuaderno no tiene celdas de explicación previas: se trabaja directamente en el cuaderno. |
+| 1 |  | Practica `filterwarnings`, `set_theme`, `read_csv`, `astype` y más. |
+| 2 | 1. k-NN: predecir mirando a los vecinos | ¿Qué variable manda en la distancia? Comparamos qué % de la distancia² entre pares aporta… |
 
 ## 2. Qué guarda cada variable
 
@@ -73,7 +74,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 
 ## 4. Celda a celda
 
-🏫 = se hace en clase · 🏠 = para casa. Las celdas de **ejercicio** no llevan código aquí: son vuestras, y la solución de referencia está en el propio cuaderno.
+Las celdas de **ejercicio** no llevan código aquí: son vuestras, y la solución de referencia está en el propio cuaderno.
 
 ### Celda 1 · 🏠
 

@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo lo que está por encima de la línea «🏠 A partir de aquí, en casa» de cada cuaderno: lo demás es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
 
 ## Qué aprenderás
 
@@ -21,10 +21,10 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Datos sucios, cliente impaciente» y reparto de roles | — | 10 |
 | ☐ | 📖 Teoría · Datos, pandas y visualización exploratoria | [Presentación S06.1](1_Teoria/S06.1_Datos_pandas_y_visualizacion_exploratoria.pdf) | 30 |
-| ☐ | 💻 Práctica · pandas, EDA y primer chequeo de calidad (hasta la línea 🏠 del cuaderno) | [Cuaderno S06_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_01_pandas_eda.ipynb) | 45 |
+| ☐ | 💻 Práctica · pandas, EDA y primer chequeo de calidad (los ejercicios marcados «en clase») | [Cuaderno S06_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_01_pandas_eda.ipynb) | 45 |
 | ☐ | 🎯 Reto · Arrancar el inventario de defectos del fichero sucio (pasos 1–2) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md) | 30 |
 | ☐ | 📖 Teoría · Limpieza y preprocesado | [Presentación S06.2](1_Teoria/S06.2_Limpieza_y_preprocesado.pdf) | 30 |
-| ☐ | 💻 Práctica · Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos (hasta la línea 🏠 del cuaderno) | [Cuaderno S06_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_02_limpieza.ipynb) | 55 |
+| ☐ | 💻 Práctica · Limpieza: duplicados, tipos, fechas, categorías, imposibles y nulos (los ejercicios marcados «en clase») | [Cuaderno S06_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_02_limpieza.ipynb) | 55 |
 
 **En clase: 3 h 20 min.**
 
@@ -37,10 +37,10 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · Escalado, codificación, `ColumnTransformer` y `Pipeline` (hasta la línea 🏠 del cuaderno) | [Cuaderno S06_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_03_preprocesado_pipeline.ipynb) | 40 |
+| ☐ | 💻 Práctica · Escalado, codificación, `ColumnTransformer` y `Pipeline` (los ejercicios marcados «en clase») | [Cuaderno S06_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_03_preprocesado_pipeline.ipynb) | 40 |
 | ☐ | 🎯 Reto · Función de limpieza, partición train/test, *pipeline* y *baseline* (pasos 3–4) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md) | 30 |
 | ☐ | 📖 Teoría · scikit-learn: métricas y validación | [Presentación S06.3](1_Teoria/S06.3_scikit_learn_metricas_y_validacion.pdf) | 30 |
-| ☐ | 💻 Práctica · *Baseline*, métricas, validación cruzada y fuga de datos (hasta la línea 🏠 del cuaderno) | [Cuaderno S06_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_04_metricas_validacion.ipynb) | 45 |
+| ☐ | 💻 Práctica · *Baseline*, métricas, validación cruzada y fuga de datos (los ejercicios marcados «en clase») | [Cuaderno S06_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_04_metricas_validacion.ipynb) | 45 |
 | ☐ | 🎯 Reto · Informe, README y ensayo (paso 5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md) | 20 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-06/`, autoevaluación y coevaluación, review y retrospectiva | — | 35 |
 
