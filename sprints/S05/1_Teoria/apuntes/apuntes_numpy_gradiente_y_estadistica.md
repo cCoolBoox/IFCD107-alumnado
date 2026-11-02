@@ -133,6 +133,34 @@ noches_dia = np.array([2, 1, 0]); precios = np.array([80, 100, 90])
 noches_dia @ precios        # 2·80 + 1·100 + 0·90 = 260
 ```
 
+### Producto matricial: muchos productos escalares a la vez
+
+Con los mismos precios y **cuatro días** (cada fila de la matriz es un día; cada columna, un tipo de habitación):
+
+```python
+noches_dias = np.array([[2, 1, 0],
+                        [1, 3, 2],
+                        [0, 2, 3],
+                        [3, 0, 1]])
+precios = np.array([80, 100, 90])
+noches_dias @ precios       # [260 560 470 330]
+```
+
+Cada fila se multiplica por el vector `precios`, igual que el producto escalar de antes: la primera fila da 2·80 + 1·100 + 0·90 = 260. El resultado es **un ingreso por día**.
+
+**La regla de las formas:** `(m × n) @ (n × k) = (m × k)`; los dos `n` tienen que coincidir. Aquí `(4 × 3) @ (3,) = (4,)`: 4 días, 3 tipos de habitación, 4 ingresos. Si no coinciden, NumPy da un error `matmul: Input operand … mismatch`.
+
+Lo mismo sirve con otro vector. Si la tasa turística por noche es 1, 1 y 2 € según el tipo, el total de los cuatro días (alojamiento + tasas) es:
+
+```python
+tasa = np.array([1, 1, 2])
+alojamiento = noches_dias @ precios       # [260 560 470 330]
+tasas       = noches_dias @ tasa          # [3 8 8 5]
+(alojamiento + tasas).sum()               # 1644
+```
+
+`.sum()` suma todos los elementos de un vector: 1.620 € de alojamiento + 24 € de tasas = **1.644 €**.
+
 ### Resolver un sistema de ecuaciones
 
 Se sabe cuánto se facturó en dos días, y cuántas noches de cada tipo (A y B) se vendieron, pero **no los precios**:
@@ -150,6 +178,41 @@ np.linalg.solve(noches, facturado)       # [90. 80.]  → A cuesta 90 €, B cue
 
 Comprobación: 2·90 + 80 = 260 ✓ y 90 + 3·80 = 330 ✓.
 
+### Inversa e identidad
+
+La **inversa** de una matriz deshace lo que hace esa matriz. Con la tabla de noches del sistema anterior:
+
+```python
+noches  = np.array([[2, 1], [1, 3]])
+inversa = np.linalg.inv(noches)         # [[ 0.6 -0.2]
+                                        #  [-0.2  0.4]]
+np.round(noches @ inversa, 10)          # [[1. 0.]
+                                        #  [0. 1.]]  ← la identidad
+np.linalg.det(noches)                   # 5.0  (2·3 − 1·1)
+```
+
+Una matriz por su inversa da la **identidad**: unos en la diagonal y ceros fuera (hace el papel del 1 en una multiplicación normal). El `round` quita los restos diminutos que deja el ordenador; si ves un `-0.`, es un cero. El **determinante** (`np.linalg.det`) dice si la inversa existe: si es distinto de 0, existe. En la práctica se usa `solve` en lugar de calcular la inversa.
+
+### Cuando no hay una solución única
+
+Imagina que otro día se vende justo el **doble** de noches de cada tipo y se factura el doble:
+
+```
+2·A + 1·B = 260
+4·A + 2·B = 520
+```
+
+La segunda ecuación es la primera multiplicada por 2: **no aporta información nueva**. Hay muchos precios que cumplen las dos (A = 90 y B = 80, pero también A = 100 y B = 60). Es lo que pasa cuando una fila es múltiplo de otra:
+
+```python
+M = np.array([[2, 1], [4, 2]])
+det = round(np.linalg.det(M), 6)        # 0.0
+tiene_inversa = det != 0                # False
+np.linalg.solve(M, [260, 520])          # LinAlgError: Singular matrix
+```
+
+**Determinante 0 = no hay inversa = no hay solución única.** Si `solve` da «Singular matrix», mira si una fila es múltiplo de otra.
+
 ### La regresión lineal es un sistema de ecuaciones (ecuación normal)
 
 ```python
@@ -162,7 +225,27 @@ w = np.linalg.solve(X.T @ X, X.T @ ocupacion)
 |---|---|---|---|---|
 | Ocupación | 90 | 80 | 70 | 60 |
 
-Se obtiene `w = [120, −2]`: **ocupación = 120 − 2 × temperatura**. A 25 °C: 120 − 50 = **70** ✓ (coincide con la tabla). La pendiente es **negativa** (más calor, menos ocupación). Pero… ¿el calor provoca menos reservas? Lo discutiremos en el día 3.
+Se obtiene `w = [120, −2]`: **ocupación = 120 − 2 × temperatura**. A 25 °C: 120 − 50 = **70** ✓ (coincide con la tabla). La pendiente es **negativa** (más calor, menos ocupación).
+
+### Varias variables a la vez (mini-reto)
+
+Añadir una variable es añadir **una columna a `X`**; la ecuación normal no cambia. Con los mismos 4 días, sabiendo ahora cuáles fueron festivo (1) y cuáles no (0):
+
+| Temperatura | 15 | 20 | 25 | 30 |
+|---|---|---|---|---|
+| Festivo | 0 | 1 | 0 | 1 |
+| Ocupación | 90 | 90 | 70 | 70 |
+
+```python
+X = np.column_stack([np.ones(4), temperatura, festivo])   # unos + 2 variables
+w = np.linalg.solve(X.T @ X, X.T @ ocupacion)             # [120. -2. 10.]
+```
+
+`np.column_stack` pega columnas una al lado de otra. Se obtiene `w = [120, −2, 10]`: **ocupación = 120 − 2 × temperatura + 10 × festivo**. Cada coeficiente se lee **con las demás variables sin cambiar**: a la misma temperatura, un festivo suma 10 puntos de ocupación. Comprobación con el día 2 (20 °C, festivo): 120 − 40 + 10 = **90** (coincide con la tabla).
+
+El mini-reto del cuaderno hace lo mismo con tres variables (temperatura, festivo y precio medio) y los 1.096 días reales: una columna más en `X`, un coeficiente más en `w`.
+
+**Para pensar:** la pendiente de la temperatura era negativa (más calor, menos ocupación). ¿El calor provoca menos reservas? Lo discutiremos el próximo día.
 
 ---
 
