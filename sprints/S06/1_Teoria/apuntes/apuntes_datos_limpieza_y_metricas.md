@@ -100,7 +100,7 @@ pct_nulos_pais = df["pais_origen"].isna().mean() * 100            # % de vacíos
 
 | ❌ Mal | ✅ Bien |
 |---|---|
-| «La correlación de `deposito` con `cancelada` es −0,27» | «Los clientes **sin depósito cancelan 2,4 veces más** que los que pagan un depósito total (52 % frente a 22 %)» *(cifras de ejemplo)* |
+| «La correlación de `deposito` con `cancelada` es −0,20» | «Los clientes **sin depósito cancelan el doble** que los que pagan un depósito total (54 % frente a 26 %)» *(cifras del fichero de reservas)* |
 
 ---
 
@@ -159,10 +159,10 @@ d3["fecha_reserva"] = iso.fillna(esp)
 | **Outlier** | Precio muy alto pero **posible** (una suite en Navidad) | **Se investiga**, no se borra sin más |
 
 ```python
-d5.loc[~d5["precio_noche"].between(1, 1000), "precio_noche"] = np.nan
+d5.loc[~d5["precio_noche"].between(20, 1000), "precio_noche"] = np.nan
 ```
 
-Dice: «las filas cuyo precio NO está entre 1 y 1.000, ponles `NaN`». Y de **consistencia entre columnas**: `fecha_llegada` no puede ser anterior a `fecha_reserva`.
+Dice: «las filas cuyo precio NO está entre 20 y 1.000, ponles `NaN`». Y de **consistencia entre columnas**: `fecha_llegada` no puede ser anterior a `fecha_reserva`.
 
 ## 9. Nulos: ¿qué hacemos con ellos?
 
