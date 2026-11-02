@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo lo que está por encima de la línea «🏠 A partir de aquí, en casa» de cada cuaderno: lo demás es para casa.
 
 ## Qué aprenderás
 
@@ -21,8 +21,9 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Duelo de modelos» y pesos de los criterios (la «voz del cliente») | — | 10 |
 | ☐ | 📖 Teoría · Árboles de decisión | [Presentación S08.1](1_Teoria/S08.1_Arboles_de_decision.pdf) | 25 |
-| ☐ | 💻 Práctica · Árbol de decisión: reglas, poda e importancia (los ejercicios marcados «en clase») | [Cuaderno S08_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_01_arboles_decision.ipynb) | 35 |
+| ☐ | 💻 Práctica · Árbol de decisión: reglas, poda e importancia (hasta la línea 🏠 del cuaderno) | [Cuaderno S08_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_01_arboles_decision.ipynb) | 35 |
 | ☐ | 📖 Teoría · Ensembles: Random Forest y *boosting* | [Presentación S08.2](1_Teoria/S08.2_Ensembles_Random_Forest_y_Boosting.pdf) | 25 |
+| ☐ | 🏠 **En casa** · Buscar hiperparámetros con `GridSearchCV` y `RandomizedSearchCV`: **esta tarde**, para el paso 3 del reto de mañana (bastan sus secciones 2 y 3) | [Cuaderno S08_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_05_busqueda_hiperparametros.ipynb) | 40 (casa) |
 
 **En clase: 1 h 35 min.**
 
@@ -37,11 +38,12 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 📖 Teoría · Máquinas de vectores de soporte (SVM), versión corta | [Presentación S08.3](1_Teoria/S08.3_Maquinas_de_vectores_de_soporte.pdf) | 10 |
-| ☐ | 💻 Práctica · Random Forest: bagging, OOB e importancia por permutación (los ejercicios marcados «en clase») | [Cuaderno S08_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_02_random_forest.ipynb) | 30 |
-| ☐ | 💻 Práctica · Gradient Boosting, XGBoost y LightGBM (los ejercicios marcados «en clase») | [Cuaderno S08_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_03_boosting_xgboost_lightgbm.ipynb) | 25 |
+| ☐ | 💻 Práctica · Random Forest: bagging, OOB e importancia por permutación (hasta la línea 🏠 del cuaderno) | [Cuaderno S08_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_02_random_forest.ipynb) | 30 |
+| ☐ | 💻 Práctica · Gradient Boosting, XGBoost y LightGBM (hasta la línea 🏠 del cuaderno) | [Cuaderno S08_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_03_boosting_xgboost_lightgbm.ipynb) | 25 |
 | ☐ | 🎯 Reto · *Leaderboard* (*baseline*, logística, árbol y bosque), búsqueda de hiperparámetros en dos familias, sensibilidad de los pesos, campeón, test **una sola vez**, ficha del modelo y README (pasos 2–5; lo que falte, en la consolidación y la 6.ª hora) | [Cuaderno S08_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_06_leaderboard_plantilla.ipynb) | 75 |
 | ☐ | 📝 Test · **Test de M3 (parte 2)**, solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | 25 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-08/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 7 y 8 | — | 35 |
+| ☐ | 🏠 **En casa** · Máquinas de vectores de soporte, SVM (cuaderno completo) | [Cuaderno S08_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_04_svm.ipynb) | 40 (casa) |
 
 **En clase: 3 h 20 min.**
 

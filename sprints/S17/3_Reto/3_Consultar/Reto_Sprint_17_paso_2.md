@@ -99,7 +99,7 @@
 
     **Regla:** cada argumento resume su evidencia. Si un dato no sostiene ningún argumento, **se queda fuera** (va a la memoria, no a la presentación).
 
-5. **Apartado 4 · Arco narrativo.** Rellenad los **siete momentos** de la tabla (los apuntes los resumen en cinco: contad los de la plantilla). El protagonista es **el cliente, no el modelo**: «El hotel planificaba la plantilla a ojo» y no «Hemos entrenado un modelo». Orientación con el hotel de los apuntes (las filas 3 y 5 no están en los apuntes: son una propuesta):
+5. **Apartado 4 · Arco narrativo.** Rellenad los **siete momentos** de la tabla (son los mismos de los apuntes). El protagonista es **el cliente, no el modelo**: «El hotel planificaba la plantilla a ojo» y no «Hemos entrenado un modelo». Orientación con el hotel de los apuntes (las filas 3 y 5 no están en los apuntes: son una propuesta):
 
     | Momento | Ejemplo |
     |---|---|

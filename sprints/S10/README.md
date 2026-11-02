@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo lo que está por encima de la línea «🏠 A partir de aquí, en casa» de cada cuaderno: lo demás es para casa.
 
 ## Qué aprenderás
 
@@ -21,9 +21,9 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «¿Vale la pena la red?» y reparto de roles | — | 10 |
 | ☐ | 📖 Teoría · Fundamentos de redes neuronales | [Presentación S10.1](1_Teoria/S10.1_Fundamentos_de_redes_neuronales.pdf) | 25 |
-| ☐ | 💻 Práctica · Una red neuronal con solo NumPy (los ejercicios marcados «en clase») | [Cuaderno S10_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_01_red_desde_cero.ipynb) | 40 |
+| ☐ | 💻 Práctica · Una red neuronal con solo NumPy (hasta la línea 🏠 del cuaderno) | [Cuaderno S10_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_01_red_desde_cero.ipynb) | 40 |
 | ☐ | 📖 Teoría · Redes densas con Keras | [Presentación S10.2](1_Teoria/S10.2_Redes_densas_con_Keras.pdf) | 25 |
-| ☐ | 💻 Práctica · MLP en Keras: clasificación y regresión (los ejercicios marcados «en clase») | [Cuaderno S10_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_02_mlp_keras.ipynb) | 60 |
+| ☐ | 💻 Práctica · MLP en Keras: clasificación y regresión (hasta la línea 🏠 del cuaderno) | [Cuaderno S10_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_02_mlp_keras.ipynb) | 60 |
 | ☐ | 📖 Teoría · Entrenamiento y regularización (diapositivas 1–5; las 6–7 son del reto) | [Presentación S10.3](1_Teoria/S10.3_Entrenamiento_y_regularizacion.pdf) | 30 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 10 |
 
@@ -38,7 +38,7 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · Sobreajuste, L2, *dropout*, parada temprana y *callbacks* (los ejercicios marcados «en clase») | [Cuaderno S10_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_03_regularizacion.ipynb) | 55 |
+| ☐ | 💻 Práctica · Sobreajuste, L2, *dropout*, parada temprana y *callbacks* (hasta la línea 🏠 del cuaderno) | [Cuaderno S10_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_03_regularizacion.ipynb) | 55 |
 | ☐ | 🎯 Reto · Esqueleto `S10_04`: elegir el problema y reproducir la referencia (paso 1) → primera red (2) → variantes (3) → diagnosticar el sobreajuste (4) → comparación justa (5) → informe y entrega (6); lo que falte, en la consolidación y la 6.ª hora | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_10_una_pagina.md) | 90 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 15 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva | — | 40 |

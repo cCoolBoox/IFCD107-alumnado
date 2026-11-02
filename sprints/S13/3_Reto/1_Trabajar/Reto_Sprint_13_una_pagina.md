@@ -10,7 +10,7 @@
     - El cuaderno que lo genera.
     - Al final se suben a `sprint-13/` del repositorio del equipo (lista completa en «Antes de entregar»).
 - **Tiempo en clase:**
-    - 25 min de reto el 25/11, dentro del último día del Sprint 12; luego, entrega y review.
+    - 25 min de reto en el último día del Sprint 12; luego, entrega y review.
     - **Llegad con el modelo elegido.**
 
 ## Tres niveles: el equipo decide hasta dónde llega

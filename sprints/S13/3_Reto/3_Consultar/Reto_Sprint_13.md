@@ -11,7 +11,7 @@
 
 **Qué os pide el cliente.** Marcos, el director general de TurisData Canarias, tiene **10 minutos** antes de la reunión de ingresos. **No sabe qué es un AUC y no quiere saberlo.** Os pide: *«Una página. ¿Puedo fiarme del modelo, qué mueve las cancelaciones y qué hago el lunes?»* Este reto **no trata de entrenar un modelo mejor**, sino de **comunicar**: muchos proyectos de IA fracasan no porque el modelo sea malo, sino porque nadie con capacidad de decidir entiende lo que dice. Vais a convertir **vuestro mejor modelo del curso** en **una página que se entiende en 30 segundos**: un titular que dice qué hacer, cuatro gráficos honestos, tres viñetas sin jerga y un pie con los límites. Será la **semilla de la memoria técnica** del proyecto final.
 
-**Cómo se trabaja.** No hace falta experiencia previa: os damos un **cuaderno plantilla que ya funciona** (al ejecutarlo de arriba abajo dibuja el panel de cuatro gráficos con un modelo de ejemplo) y un **texto de informe con huecos**. Vuestro trabajo es cambiar lo marcado con `# >>> EDITA`, poner títulos que **digan una conclusión** y escribir el texto. En clase tenéis **25 minutos de reto** el 25/11, dentro del último día del Sprint 12 (por eso es corto: **llegad con el modelo elegido**), y después la franja de entrega y review. El equipo decide hasta dónde llega: 🟢 mínimo, 🟡 estándar o 🔴 extra.
+**Cómo se trabaja.** No hace falta experiencia previa: os damos un **cuaderno plantilla que ya funciona** (al ejecutarlo de arriba abajo dibuja el panel de cuatro gráficos con un modelo de ejemplo) y un **texto de informe con huecos**. Vuestro trabajo es cambiar lo marcado con `# >>> EDITA`, poner títulos que **digan una conclusión** y escribir el texto. En clase tenéis **25 minutos de reto** en el último día del Sprint 12 (por eso es corto: **llegad con el modelo elegido**), y después la franja de entrega y review. El equipo decide hasta dónde llega: 🟢 mínimo, 🟡 estándar o 🔴 extra.
 
 ---
 
@@ -33,7 +33,7 @@
 
 ### 3 · 🪜 Guía paso a paso
 
-Son cuatro pasos, de **25 minutos en total** (el 25/11, dentro del último día del Sprint 12). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo (tres gráficos, titular y tres viñetas) y dejad lo demás para la franja de entrega o para casa.
+Son cuatro pasos, de **25 minutos en total** (en el último día del Sprint 12). Cada uno dice **qué hacéis** (la lista corta), **cómo se hace** con el detalle, **qué deberíais ver** y **cuándo está hecho**. Las ayudas (IA, errores, atascos) están al final. Si el tiempo aprieta, completad el nivel mínimo (tres gráficos, titular y tres viñetas) y dejad lo demás para la franja de entrega o para casa.
 
 **Cada paso tiene su propia página.** Abrid la que toque y volved aquí cuando acabéis:
 

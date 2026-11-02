@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo lo que está por encima de la línea «🏠 A partir de aquí, en casa» de cada cuaderno: lo demás es para casa.
 
 ## Qué aprenderás
 
@@ -21,7 +21,7 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · **Planning del Sprint 16:** lee el README del Sprint 16 y reparte tareas | [README del Sprint 16](README.md) | 10 |
 | ☐ | 📖 Teoría · **Despliegue y documentación** | [Presentación S16.1](1_Teoria/S16.1_Pildora_demostrador_y_documentacion.pdf) | 20 |
-| ☐ | 💻 Práctica · Práctica del demostrador | [Cuaderno S16_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/S16_01_demostrador.ipynb) | 45 |
+| ☐ | 💻 Práctica · Práctica del demostrador (hasta la línea 🏠 del cuaderno) | [Cuaderno S16_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/S16_01_demostrador.ipynb) | 45 |
 | ☐ | 🎯 Reto · **Tutoría de sesgos y visualización** (franja por equipo) | — | 40 |
 | ☐ | 🎯 Reto · **Memoria técnica:** esqueleto y *model card* | [esqueleto](3_Reto/1_Trabajar/plantillas/plantilla_esqueleto_memoria_tecnica.md) | 85 |
 | ☐ | 🎯 Reto · **Subid de nivel:** completad la medición de sesgos por subgrupos y la visualización que la acompaña | — | 50 |

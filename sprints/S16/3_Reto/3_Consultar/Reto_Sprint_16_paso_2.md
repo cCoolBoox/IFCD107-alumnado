@@ -48,7 +48,7 @@
 
     Lo que aún no sepáis (apartados 6 a 9), dejadlo en blanco: se cierra el día 2. **No escribáis cifras que no estén en vuestro cuaderno.**
 
-4. **Dejar el demostrador funcionando (35 minutos).** Lo hace la persona D con otra de apoyo. Primero **ejecutad el cuaderno [`S16_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/S16_01_demostrador.ipynb) tal cual** (hasta la sección «2. La lógica»). Con TurisData crea la carpeta `demostrador/` con `modelo/`, `logica.py`, `app.py` y `api.py`. Luego sustituid los datos y el modelo por los vuestros en la celda de la sección 1 (las líneas con `# >>> EDITA`):
+4. **Dejar el demostrador funcionando (35 minutos).** Lo hace la persona D con otra de apoyo. Primero **ejecutad el cuaderno [`S16_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/S16_01_demostrador.ipynb) tal cual** (hasta la línea «🏠 A partir de aquí, en casa»). Con TurisData crea la carpeta `demostrador/` con `modelo/`, `logica.py` y `app.py`; `api.py` solo hace falta si vuestro proyecto lo necesita (sección 6 del cuaderno, en casa). Luego sustituid los datos y el modelo por los vuestros en la celda de la sección 1 (las líneas con `# >>> EDITA`):
 
     ```python
     reservas = pd.read_csv(dato("reservas_turisdata.csv"))    # >>> EDITA: vuestros datos

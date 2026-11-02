@@ -118,13 +118,15 @@ En clase de lengua se aprendió «introducción, nudo, desenlace». **En comunic
 
 Una **historia** tiene **orden y tensión**. El arco que propone el sprint:
 
-| Etapa | Pregunta | Ejemplo (hotel) |
+| Momento | Pregunta | Ejemplo (hotel) |
 |---|---|---|
-| **1. Contexto** | ¿Cuál es la situación? | «El hotel planifica la plantilla **a ojo**» |
-| **2. Complicación** | ¿Qué problema aparece? | «Se equivoca **±20 %** y paga horas extra o deja huéspedes sin servicio» |
-| **3. Qué hicimos** | ¿Cómo lo resolvimos? | «Datos de X, un modelo sencillo frente a una referencia» |
-| **4. Qué aprendimos** | ¿Qué descubrimos? | «Error del 7 %; **funciona hasta con 3 meses de antelación**» |
-| **5. Qué proponemos** | ¿Qué hacer ahora? | «Usarlo así, **con estos límites**» |
+| **1. Situación** | ¿Cuál es el mundo actual del cliente? | «El hotel planifica la plantilla **a ojo**» |
+| **2. Complicación** | ¿Qué problema o coste aparece? | «Se equivoca **±20 %** y paga horas extra o deja huéspedes sin servicio» |
+| **3. Pregunta** | ¿Qué necesitamos saber para decidir? | «¿Con cuántos meses de antelación podemos fiarnos de una previsión?» |
+| **4. Resolución** | ¿Qué hicimos y qué encontramos? | «Datos de X y un modelo sencillo frente a una referencia: error del 7 %, **fiable hasta con 3 meses de antelación**» |
+| **5. Demostración** | ¿Cómo se usa? | «Se escribe la fecha y sale la previsión, con su margen» |
+| **6. Límites y riesgos** | ¿De qué **no** fiarse? | «No sirve para eventos excepcionales; se revisa cada mes» |
+| **7. Llamada a la acción** | ¿Qué proponemos que haga el cliente el lunes? | «Usarlo así, **con estos límites**» |
 
 > **Pirámide y arco no se contradicen.** La pirámide dice **cómo ordenar la información** (conclusión al principio, en la apertura). El arco dice **cómo se desarrolla el relato** después. En la defensa, **empiezas con el mensaje único** (apertura) y **luego cuentas el arco** que lo justifica.
 
@@ -327,7 +329,7 @@ Por eso **toda persona debe conocer todo el proyecto**. Preparad las **10 pregun
 | **Audiencia** | Quién escucha |
 | **Mensaje único** | La frase que quieres que recuerden |
 | **Pirámide de la comunicación** | Conclusión → argumentos → evidencias |
-| **Arco narrativo** | Contexto → complicación → qué hicimos → qué aprendimos → qué proponemos |
+| **Arco narrativo** | Situación → complicación → pregunta → resolución → demostración → límites y riesgos → llamada a la acción |
 | **Pitch** | Presentación breve (3 minutos) |
 | **Storyboard** | Esquema de cada diapositiva antes de hacerlas |
 | **Título-conclusión** | Título que dice lo que se aprende |

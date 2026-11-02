@@ -59,12 +59,12 @@ Una historia tiene un protagonista, un problema y un cambio. **El protagonista e
 | Momento | Pregunta que responde | Nuestro contenido | Tiempo |
 |---|---|---|---|
 | **1. Situación** | ¿Cuál es el mundo actual del cliente? | | 1 min |
-| **2. Complicación** | ¿Qué problema o coste aparece? ¿Por qué duele? | | 1 min |
+| **2. Complicación** | ¿Qué problema o coste aparece? ¿Por qué duele? | | 0,5 min |
 | **3. Pregunta** | ¿Qué necesitamos saber para decidir? | | 0,5 min |
-| **4. Resolución** | ¿Qué hicimos y qué encontramos? (baseline → mejora; el gráfico clave) | | 3-4 min |
-| **5. Demostración** | ¿Cómo se usa? (el momento «ajá») | | 2-3 min |
+| **4. Resolución** | ¿Qué hicimos y qué encontramos? (baseline → mejora; el gráfico clave) | | 3 min |
+| **5. Demostración** | ¿Cómo se usa? (el momento «ajá») | | 2,5 min |
 | **6. Límites y riesgos** | ¿De qué **no** fiarse? ¿Qué hicimos para mitigarlo? | | 1 min |
-| **7. Llamada a la acción** | ¿Qué proponemos al cliente que haga **el lunes**? | | 1 min |
+| **7. Llamada a la acción** | ¿Qué proponemos al cliente que haga **el lunes**? | | 1,5 min |
 
 **Gancho de apertura** (una cifra sorprendente, una pregunta o una escena del usuario): ______
 **Frase de cierre** (que repite el mensaje único): ______
@@ -75,19 +75,19 @@ Una diapositiva = **una idea**. El **título es la conclusión** (frase, no etiq
 | Nº | Título-conclusión | Elemento visual | Persona que habla | Tiempo |
 |---|---|---|---|---|
 | 1 | Mensaje único + equipo | Titular y logo | | 0:45 |
-| 2 | El problema del cliente (situación + complicación) | Una escena o cifra | | 1:00 |
+| 2 | El problema del cliente (situación + complicación) | Una escena o cifra | | 0:45 |
 | 3 | La pregunta y la decisión | Esquema simple | | 0:30 |
-| 4 | Los datos que tenemos (y sus límites) | Una figura del EDA | | 1:00 |
-| 5 | Cómo lo hicimos (enfoque en 3 pasos) | Diagrama del proceso | | 0:45 |
-| 6 | Resultado clave frente al baseline | Gráfico principal | | 1:15 |
+| 4 | Los datos que tenemos (y sus límites) | Una figura del EDA | | 0:30 |
+| 5 | Cómo lo hicimos (enfoque en 3 pasos) | Diagrama del proceso | | 0:30 |
+| 6 | Resultado clave frente al baseline | Gráfico principal | | 1:00 |
 | 7 | Por qué funciona (interpretación) | Importancia / SHAP / Grad-CAM | | 1:00 |
 | 8 | Demostración | Pantalla de la demo / vídeo plan B | | 2:30 |
-| 9 | Dónde falla y para quién (sesgos) | Tabla o gráfico por subgrupo | | 0:45 |
-| 10 | IA responsable: riesgos y medidas | 3 riesgos, 3 medidas | | 0:45 |
+| 9 | Dónde falla y para quién (sesgos) | Tabla o gráfico por subgrupo | | 0:30 |
+| 10 | IA responsable: riesgos y medidas | 3 riesgos, 3 medidas | | 0:30 |
 | 11 | Qué proponemos al cliente | 3 acciones priorizadas | | 1:00 |
 | 12 | Cierre: mensaje único + contacto | Frase repetida | | 0:30 |
 
-*(Sin diapositiva «Gracias / ¿Preguntas?» vacía: la 12 ya es el cierre. Las diapositivas de reserva van **después**, como apéndice para preguntas.)*
+*(Los tiempos suman 10 minutos, los del guion base de la defensa. Sin diapositiva «Gracias / ¿Preguntas?» vacía: la 12 ya es el cierre. Las diapositivas de reserva van **después**, como apéndice para preguntas.)*
 
 ## 6. El pitch de 3 minutos
 Versión ultracorta para un directivo con poco tiempo. Debe funcionar **sin diapositivas**.
