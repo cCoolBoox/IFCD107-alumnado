@@ -167,7 +167,7 @@ Tiempo total: 2 h. Se reservan 10 min para cambios de equipo; el resto se repart
 **Reparto sugerido en cada turno:** 60 % presentación · 20 % demostración · 20 % preguntas del tribunal.
 **Estructura recomendada (Storytelling):** contexto y problema → qué hicimos → qué aprendimos (resultados) → demo → límites y riesgos → qué proponemos al cliente.
 **Reglas:** todos los integrantes hablan; la demo se prueba antes (plan B grabado en vídeo); las preguntas de ampliación pueden dirigirse a cualquier integrante.
-**Si hay más de 7 equipos:** valorar adelantar parte de las defensas a la tarde del 11/12 en lugar de los ensayos, sin perder el ensayo general.
+**Si hay más de 7 equipos:** valorar adelantar parte de las defensas a la segunda mitad de la jornada del 11/12 en lugar de los ensayos, sin perder el ensayo general.
 
 ---
 
@@ -194,7 +194,7 @@ Cada entregable se evalúa de 0 a 4 en estos cuatro criterios (los pesos son igu
 6. **Modelos previstos** (≥ 3, incluyendo redes neuronales/LLM según el brief).
 7. **Demostrador previsto** y tecnología.
 8. **Riesgos** (datos, cómputo, ética) y mitigación.
-9. **Backlog inicial** (10–15 historias) y objetivo de cada sprint.
+9. **Backlog inicial** (lista corta de historias principales; el backlog completo, de 10–15 historias, es el paso 6) y objetivo de cada sprint.
 
 ## Anexo B · Coevaluación (por integrante, al cierre del Sprint 16)
 

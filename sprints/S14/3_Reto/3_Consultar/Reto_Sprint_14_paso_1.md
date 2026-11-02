@@ -43,7 +43,7 @@
     | Ana | Responsable de datos | Responsable de IA responsable | Scrum Master |
     | Pablo | Responsable de IA responsable | Scrum Master | Responsable técnico |
 
-3. **Escuchar la píldora (25 minutos).** El docente explica cómo se formula un proyecto de IA. Mientras tanto, cada persona anota en su hoja las cinco casillas del *canvas*: la **pregunta de negocio**, **quién usa el resultado**, la **decisión que mejora**, los **datos** y la **métrica**. Si queréis repasar luego, están los [apuntes de la píldora](../../1_Teoria/apuntes/apuntes_formular_un_proyecto_de_ia.md).
+3. **Escuchar la píldora (25 minutos).** El docente explica cómo se formula un proyecto de IA. Mientras tanto, cada persona apunta en su hoja ideas para las cinco casillas del *canvas*, que se rellena en el taller: la **pregunta de negocio**, **quién usa el resultado**, la **decisión que mejora**, los **datos** y la **métrica**. Si queréis repasar luego, están los [apuntes de la píldora](../../1_Teoria/apuntes/apuntes_formular_un_proyecto_de_ia.md).
 
 4. **Hacer el taller de Design Thinking (40 minutos).** Seguid este orden:
 

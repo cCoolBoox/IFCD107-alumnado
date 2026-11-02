@@ -217,7 +217,7 @@ Cada sprint responde a **una pregunta del cliente** y termina en **un reto**.
 
 | # | Fechas | Foco | Entregable |
 |---|---|---|---|
-| **14** | 26–30/11 | Reto, equipo y datos | Ficha de proyecto (antes del 27/11) |
+| **14** | 26–30/11 | Reto, equipo y datos | Ficha de proyecto (antes de las 14:30 del 26/11) |
 | **15** | 1–3/12 | Modelado y experimentos | Baseline y modelos comparados |
 | **16** | 4–10/12 | Evaluación, IA responsable y entrega | Demostrador + memoria técnica |
 | **17** | 11 y 14/12 | Storytelling, ensayos y defensa | Defensa ante el tribunal |
