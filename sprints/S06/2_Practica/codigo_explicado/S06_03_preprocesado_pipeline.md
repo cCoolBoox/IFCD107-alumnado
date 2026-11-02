@@ -15,7 +15,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | Celda | Sección | Qué miramos |
 |---|---|---|
 | 1 |  | Practica `set_theme`. |
-| 2 | 1. Punto de partida: datos ya limpiados | Practica `copy`, `to_numeric`, `to_datetime`, `fillna` y más (sección «1. Punto de partid… |
+| 2 | 1. Punto de partida: datos ya limpiados | Practica `copy`, `reset_index`, `to_numeric`, `to_datetime` y más (sección «1. Punto de p… |
 | 3 | 2. Separar entrenamiento y prueba | Crea `columnas_num`, `columnas_cat`, `X` y más. |
 | 5 | 3. Escalado | Practica `SimpleImputer`, `StandardScaler`, `fit_transform`, `transform` y más (sección «… |
 
@@ -25,7 +25,6 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 |---|---|---|
 | `SEMILLA` | `42` | 1 |
 | `EQUIV_PAIS` | `{"es": "ES", "españa": "ES", "uk": "UK", "reino unido": "…` | 2 |
-| `reservas` | `limpiar_reservas(pd.read_csv(dato("reservas_sucio.csv")))` | 2 |
 | `columnas_num` | `["antelacion_dias", "noches", "adultos", "ninos", "precio…` | 3 |
 | `columnas_cat` | `["tipo_habitacion", "regimen", "canal", "pais_origen", "t…` | 3 |
 | `X` | `reservas[columnas_num + columnas_cat]` | 3 |
@@ -63,7 +62,9 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `fit` | Entrena el modelo con los datos (aquí es donde «aprende»). | 7, 11, 12 |
 | `fit_transform` | Ajusta el preprocesado con estos datos y los transforma, todo a la vez. | 5 |
 | `get_feature_names_out` | Devuelve los nombres de las columnas después del preprocesado. | 7 |
+| `int` | Convierte un valor en número entero. | 2 |
 | `isna` | Marca qué valores son huecos (nulos). | 2 |
+| `len` | Cuenta cuántos elementos tiene una lista, texto o tabla. | 2 |
 | `lower` | Pasa el texto a minúsculas. | 2 |
 | `map` | Cambia cada valor según un diccionario o función. | 2 |
 | `mean` | Calcula la media. | 5 |
@@ -133,14 +134,17 @@ sns.set_theme(style="whitegrid")
 
 ### Celda 2 · 1. Punto de partida: datos ya limpiados · 🏫
 
-**Qué hace:** Practica `copy`, `to_numeric`, `to_datetime`, `fillna` y más (sección «1. Punto de partida: datos ya limpiados»).
+**Qué hace:** Practica `copy`, `reset_index`, `to_numeric`, `to_datetime` y más (sección «1. Punto de partida: datos ya limpiados»).
 
 ```python
 EQUIV_PAIS = {"es": "ES", "españa": "ES", "uk": "UK", "reino unido": "UK", "de": "DE",
               "nl": "NL", "it": "IT", "fr": "FR", "nordicos": "Nordicos", "otros": "otros"}
 
 def limpiar_reservas(tabla):
-    t = tabla.drop_duplicates().reset_index(drop=True).copy()
+    t = tabla.copy()
+    resumen = {"filas_antes": len(t)}
+    t = t.drop_duplicates().reset_index(drop=True)
+    resumen["duplicados_quitados"] = resumen["filas_antes"] - len(t)
     t["precio_noche"] = pd.to_numeric(t["precio_noche"].astype(str).str.replace(",", "."), errors="coerce")
     iso = pd.to_datetime(t["fecha_reserva"], format="%Y-%m-%d", errors="coerce")
     esp = pd.to_datetime(t["fecha_reserva"], format="%d/%m/%Y", errors="coerce")
@@ -148,13 +152,19 @@ def limpiar_reservas(tabla):
     t["fecha_llegada"] = pd.to_datetime(t["fecha_llegada"], format="%Y-%m-%d")
     t["canal"] = t["canal"].str.strip().str.lower().str.replace(" ", "_")
     t["pais_origen"] = t["pais_origen"].str.strip().str.lower().map(EQUIV_PAIS)
+    nulos_antes = t[["precio_noche", "noches"]].isna().sum().sum()
     t["precio_noche"] = t["precio_noche"].where(t["precio_noche"].between(20, 1000))
     t["noches"] = t["noches"].where(t["noches"].between(1, 60))
+    resumen["imposibles_a_nulo"] = int(t[["precio_noche", "noches"]].isna().sum().sum() - nulos_antes)
+    antes = t["antelacion_dias"]
     t["antelacion_dias"] = (t["fecha_llegada"] - t["fecha_reserva"]).dt.days
+    resumen["antelaciones_recalculadas"] = int((t["antelacion_dias"] != antes).sum())
     t["mes_llegada"] = t["fecha_llegada"].dt.month
-    return t
+    resumen["filas_despues"] = len(t)
+    return t, resumen
 
-reservas = limpiar_reservas(pd.read_csv(dato("reservas_sucio.csv")))
+reservas, resumen = limpiar_reservas(pd.read_csv(dato("reservas_sucio.csv")))
+print(resumen)
 print(reservas.shape)
 reservas.isna().sum()[lambda s: s > 0]
 ```
@@ -163,7 +173,8 @@ reservas.isna().sum()[lambda s: s > 0]
 
 - `EQUIV_PAIS = {"es": "ES", "españa": "ES", "uk": "UK", "reino unido": "UK",…` → Guarda el valor en `EQUIV_PAIS`.
 - `def limpiar_reservas(tabla):` → Define la función `limpiar_reservas`: Función definida en el cuaderno.
-- `reservas = limpiar_reservas(pd.read_csv(dato("reservas_sucio.csv")))` → Guarda en `reservas` el resultado. `limpiar_reservas`: función definida en el cuaderno; `read_csv`: lee un fichero CSV y lo convierte en una tabla; `dato`: devuelve la ruta de un fichero de datos del curso (lo busca en las carpetas habituales y, si no está, lo descarga).
+- `reservas, resumen = limpiar_reservas(pd.read_csv(dato("reservas_sucio.csv")…` → Guarda en `reservas, resumen` el resultado. `limpiar_reservas`: función definida en el cuaderno; `read_csv`: lee un fichero CSV y lo convierte en una tabla; `dato`: devuelve la ruta de un fichero de datos del curso (lo busca en las carpetas habituales y, si no está, lo descarga).
+- `print(resumen)` → `print`: muestra un valor por pantalla.
 - `print(reservas.shape)` → `print`: muestra un valor por pantalla; `shape`: tamaño de la tabla: (filas, columnas).
 - `reservas.isna().sum()[lambda s: s > 0]` → `sum`: suma todos los valores; `isna`: marca qué valores son huecos (nulos).
 

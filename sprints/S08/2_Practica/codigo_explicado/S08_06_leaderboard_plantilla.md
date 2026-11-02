@@ -116,7 +116,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.model_selection import train_test_split, StratifiedKFold, cross_validate
+from sklearn.model_selection import train_test_split, StratifiedKFold, cross_validate, GridSearchCV, RandomizedSearchCV
 from sklearn.dummy import DummyClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -127,8 +127,8 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import roc_auc_score, average_precision_score
-import xgboost as xgb
 import lightgbm as lgb
+from scipy.stats import randint, loguniform, uniform   # generadores de valores para las búsquedas aleatorias (paso 3 del reto)
 
 warnings.filterwarnings("ignore")
 SEMILLA = 42
@@ -148,7 +148,7 @@ REINICIAR = True                      # True = empieza de cero al ejecutar todo;
 - `import pandas as pd` → Trae `pandas` (lo llamamos `pd`) para poder usarlo.
 - `import matplotlib.pyplot as plt` → Trae `matplotlib.pyplot` (lo llamamos `plt`) para poder usarlo.
 - `import seaborn as sns` → Trae `seaborn` (lo llamamos `sns`) para poder usarlo.
-- `from sklearn.model_selection import train_test_split, StratifiedKFold, cros…` → Trae `train_test_split`, `StratifiedKFold`, `cross_validate` de `sklearn.model_selection` para poder usarlo.
+- `from sklearn.model_selection import train_test_split, StratifiedKFold, cros…` → Trae `train_test_split`, `StratifiedKFold`, `cross_validate`, `GridSearchCV`, `RandomizedSearchCV` de `sklearn.model_selection` para poder usarlo.
 - … y 17 más con las mismas ideas.
 
 ### Celda 2 · 1. Datos y partición · 🏫

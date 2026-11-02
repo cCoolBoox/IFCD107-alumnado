@@ -254,7 +254,7 @@ Por eso **toda persona debe conocer todo el proyecto**. Preparad las **10 pregun
 | **P** | **Pon** el límite | «Pero solo lo hemos probado con datos de 2022 a 2024» |
 | **O** | **Ofrece** el puente | «El detalle está en la sección 5 de la memoria» |
 
-**Y si no lo sabes: dilo.** *«No lo hemos medido; lo haríamos así…»*. **No inventes.** Inventar una respuesta **es el error más caro** (y el tribunal lo detecta).
+**Y si no lo sabes, las tres últimas letras: N-D-E.** **N**o inventes, **D**ilo y **E**xplica cómo lo averiguarías: *«No lo hemos medido; lo haríamos así…»*. Inventar una respuesta **es el error más caro** (y el tribunal lo detecta).
 
 ### 8.3. Técnicas para no quedarte en blanco
 
@@ -334,7 +334,7 @@ Por eso **toda persona debe conocer todo el proyecto**. Preparad las **10 pregun
 | **Storyboard** | Esquema de cada diapositiva antes de hacerlas |
 | **Título-conclusión** | Título que dice lo que se aprende |
 | **Plan B** | Vídeo por si falla la demo |
-| **RESPONDE** | Método de 6 pasos para contestar preguntas |
+| **RESPONDE** | Método para contestar preguntas: R-E-S-P-O y, si no lo sabes, N-D-E |
 | **Tribunal** | Quien evalúa la defensa |
 
 ## 14. Cómo estudiar estos apuntes

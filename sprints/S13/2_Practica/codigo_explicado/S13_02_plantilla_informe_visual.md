@@ -17,7 +17,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | 1 |  | Practica `seed`, `set_theme`. |
 | 2 | Parámetros del informe (edítalos) | >>> EDITA: tu mensaje y tus costes. |
 | 3 | 1. Datos y modelo | Practica `read_csv`, `drop`, `train_test_split`, `tolist` y más (sección «1. Datos y mode… |
-| 4 | 2. Cálculos que alimentan el panel | Practica `astype`, `confusion_matrix`, `roc_curve`, `roc_auc_score` y más (sección «2. Cá… |
+| 4 | 2. Cálculos que alimentan el panel | «Falsas alarmas» puede querer decir dos cosas distintas; elige la que cuentas y di cuál e… |
 
 ## 2. Qué guarda cada variable
 
@@ -30,6 +30,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `COSTE_FN` | `50` | 2 |
 | `COSTE_FP` | `30` | 2 |
 | `UMBRAL` | `0.35` | 2 |
+| `MODELO` | `"regresión logística"` | 2 |
 | `reservas` | `pd.read_csv(dato("reservas_turisdata.csv"), parse_dates=[…` | 3 |
 | `X` | `reservas.drop(columns=["id_reserva", "fecha_reserva", "fe…` | 3 |
 | `y` | `reservas["cancelada"]` | 3 |
@@ -48,10 +49,17 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `coste_con_modelo` | `COSTE_FN * fn + COSTE_FP * fp` | 4 |
 | `coste_sin_modelo` | `COSTE_FN * int((y_test == 1).sum())` | 4 |
 | `ahorro` | `coste_sin_modelo - coste_con_modelo` | 4 |
+| `tp` | `int(((pred == 1) & (y_test == 1)).sum())` | 4 |
 | `valores` | `[coste_sin_modelo, coste_con_modelo]` | 5 |
-| `barras` | `ax[1, 1].bar(["Sin modelo", "Con modelo"], valores, color…` | 5 |
+| … | otras 1 variables | |
 
 ## 3. Palabras de código de este cuaderno
+
+**Definidas en este cuaderno** (las crea el propio cuaderno; `def` define una función):
+
+| Palabra | Qué hace |
+|---|---|
+| `euros` | 16590 → '16.590 €' (puntos para los miles, como se escribe en español). |
 
 **De Python y sus librerías:**
 
@@ -83,6 +91,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `predict_proba` | Pide la probabilidad de cada clase (no solo la clase). | 3 |
 | `print` | Muestra un valor por pantalla. | 3, 4 |
 | `read_csv` | Lee un fichero CSV y lo convierte en una tabla. | 3 |
+| `replace` | Sustituye un trozo de texto (o valores de una tabla) por otro. | 2 |
 | `roc_auc_score` | Calcula el AUC: la capacidad del modelo para ordenar bien los casos (1 = perfecto, 0,5 = azar). | 3, 4 |
 | `roc_curve` | Calcula los puntos de la curva ROC. | 4 |
 | `round` | Redondea un número a los decimales indicados. | 3 |
@@ -158,6 +167,11 @@ AUTORES = "Equipo X (nombres)"
 COSTE_FN = 50   # € que perdemos por cada cancelación que el modelo no detecta
 COSTE_FP = 30   # € que cuesta tratar como "en riesgo" a quien sí viene
 UMBRAL = 0.35   # a partir de qué probabilidad avisamos (elígelo con el gráfico de costes del laboratorio 01)
+MODELO = "regresión logística"   # nombre del modelo que aparece en el pie (cámbialo si cambias de modelo)
+
+def euros(x):
+    """16590 → '16.590 €' (puntos para los miles, como se escribe en español)."""
+    return f"{x:,.0f}".replace(",", ".") + " €"
 ```
 
 **Qué hace cada línea:**
@@ -168,6 +182,8 @@ UMBRAL = 0.35   # a partir de qué probabilidad avisamos (elígelo con el gráfi
 - `COSTE_FN = 50 # € que perdemos por cada cancelación que el modelo no detecta` → Guarda el valor en `COSTE_FN`.
 - `COSTE_FP = 30 # € que cuesta tratar como "en riesgo" a quien sí viene` → Guarda el valor en `COSTE_FP`.
 - `UMBRAL = 0.35 # a partir de qué probabilidad avisamos (elígelo con el gráfi…` → Guarda el valor en `UMBRAL`.
+- `MODELO = "regresión logística" # nombre del modelo que aparece en el pie (c…` → Guarda el valor en `MODELO`.
+- `def euros(x):` → Define la función `euros`: 16590 → '16.590 €' (puntos para los miles, como se escribe en español).
 
 ### Celda 3 · 1. Datos y modelo · 🏫
 
@@ -203,7 +219,7 @@ print("AUC en prueba:", round(roc_auc_score(y_test, prob), 3), "· reservas de p
 
 ### Celda 4 · 2. Cálculos que alimentan el panel · 🏫
 
-**Qué hace:** Practica `astype`, `confusion_matrix`, `roc_curve`, `roc_auc_score` y más (sección «2. Cálculos que alimentan el panel»).
+**Qué hace:** «Falsas alarmas» puede querer decir dos cosas distintas; elige la que cuentas y di cuál es:.
 
 ```python
 pred = (prob >= UMBRAL).astype(int)
@@ -218,7 +234,12 @@ fp = int(((pred == 1) & (y_test == 0)).sum())
 coste_con_modelo = COSTE_FN * fn + COSTE_FP * fp
 coste_sin_modelo = COSTE_FN * int((y_test == 1).sum())   # sin modelo: no detectamos ninguna cancelación
 ahorro = coste_sin_modelo - coste_con_modelo
-print(f"Coste sin modelo: {coste_sin_modelo:,.0f} € · con modelo: {coste_con_modelo:,.0f} € · ahorro: {ahorro:,.0f} € (en {len(y_test)} reservas de prueba)")
+print(f"Coste sin modelo: {euros(coste_sin_modelo)} · con modelo: {euros(coste_con_modelo)} · ahorro: {euros(ahorro)} (en {len(y_test)} reservas de prueba)")
+
+# «Falsas alarmas» puede querer decir dos cosas distintas; elige la que cuentas y di cuál es:
+tp = int(((pred == 1) & (y_test == 1)).sum())
+print(f"De los avisos, {fp / (fp + tp):.0%} eran falsas alarmas (de cada 10 avisos, {10 * fp / (fp + tp):.0f}).")
+print(f"De las reservas que NO cancelan, avisamos por error al {fp / int((y_test == 0).sum()):.0%} (es el dato del gráfico de la matriz).")
 ```
 
 **Qué hace cada línea:**
@@ -232,7 +253,7 @@ print(f"Coste sin modelo: {coste_sin_modelo:,.0f} € · con modelo: {coste_con_
 - `fn = int(((pred == 0) & (y_test == 1)).sum())` → Guarda en `fn` el resultado. `int`: convierte un valor en número entero; `sum`: suma todos los valores.
 - `fp = int(((pred == 1) & (y_test == 0)).sum())` → Guarda en `fp` el resultado. `int`: convierte un valor en número entero; `sum`: suma todos los valores.
 - `coste_con_modelo = COSTE_FN * fn + COSTE_FP * fp` → Guarda el valor en `coste_con_modelo`.
-- … y 3 más con las mismas ideas.
+- … y 6 más con las mismas ideas.
 
 ### Celda 5 · 3. El panel de una página · 🏫
 
@@ -244,7 +265,7 @@ fig.suptitle(TITULAR, fontsize=16, fontweight="bold", x=0.02, ha="left")
 
 # (1) Fiabilidad: matriz de confusión
 ConfusionMatrixDisplay(cm, display_labels=["No cancela", "Cancela"]).plot(ax=ax[0, 0], cmap="Blues", values_format=".0%", colorbar=False)
-ax[0, 0].set_title(f"Detectamos el {cm[1, 1]:.0%} de las cancelaciones,\ncon un {cm[0, 1]:.0%} de falsas alarmas")   # >>> EDITA el título si cambian los números
+ax[0, 0].set_title(f"Detectamos el {cm[1, 1]:.0%} de las cancelaciones;\navisamos por error al {cm[0, 1]:.0%} de quien no cancela")   # >>> EDITA el título si cambian los números
 ax[0, 0].set_xlabel("Lo que dijo el modelo"); ax[0, 0].set_ylabel("Lo que ocurrió")
 
 # (2) Fiabilidad: curva ROC
@@ -261,11 +282,11 @@ ax[1, 0].set_xlabel("Caída del AUC al desordenar la variable")
 # (4) Valor para el negocio
 valores = [coste_sin_modelo, coste_con_modelo]
 barras = ax[1, 1].bar(["Sin modelo", "Con modelo"], valores, color=["lightgray", "tab:green"])
-ax[1, 1].bar_label(barras, fmt="{:,.0f} €", padding=3)
-ax[1, 1].set_title(f"Con el modelo perdemos {ahorro:,.0f} € menos en {len(y_test)} reservas")   # >>> EDITA
+ax[1, 1].bar_label(barras, labels=[euros(v) for v in valores], padding=3)
+ax[1, 1].set_title(f"Con el modelo perdemos {euros(ahorro)} menos en {len(y_test)} reservas")   # >>> EDITA
 ax[1, 1].set_ylabel("Coste de las cancelaciones (€)"); ax[1, 1].set_ylim(0, max(valores) * 1.15)
 
-fig.text(0.02, 0.005, f"{CLIENTE} · {AUTORES} · Datos sintéticos de TurisData · modelo: regresión logística · umbral {UMBRAL:.2f} · semilla {SEMILLA}",
+fig.text(0.02, 0.005, f"{CLIENTE} · {AUTORES} · Datos sintéticos de TurisData · modelo: {MODELO} · umbral {UMBRAL:.2f} · semilla {SEMILLA}",
          fontsize=8, color="gray")
 sns.despine()
 plt.tight_layout(rect=(0, 0.02, 1, 0.96))
@@ -278,7 +299,7 @@ plt.show()
 - `fig, ax = plt.subplots(2, 2, figsize=(13, 9))` → Guarda en `fig, ax` el resultado. `subplots`: crea una figura con uno o varios ejes (gráficos) dentro.
 - `fig.suptitle(TITULAR, fontsize=16, fontweight="bold", x=0.02, ha="left")` → `suptitle`: pone un título general a toda la figura.
 - `ConfusionMatrixDisplay(cm, display_labels=["No cancela", "Cancela"]).plot(a…` → `plot`: dibuja una línea (o puntos unidos); `ConfusionMatrixDisplay`: dibuja una matriz de confusión.
-- `ax[0, 0].set_title(f"Detectamos el {cm[1, 1]:.0%} de las cancelaciones,\nco…` → `set_title`: pone el título de un gráfico.
+- `ax[0, 0].set_title(f"Detectamos el {cm[1, 1]:.0%} de las cancelaciones;\nav…` → `set_title`: pone el título de un gráfico.
 - `ax[0, 0].set_xlabel("Lo que dijo el modelo"); ax[0, 0].set_ylabel("Lo que o…` → `set_xlabel`: pone el nombre del eje horizontal.
 - `ax[0, 0].set_xlabel("Lo que dijo el modelo"); ax[0, 0].set_ylabel("Lo que o…` → `set_ylabel`: pone el nombre del eje vertical.
 - `ax[0, 1].plot(fpr, tpr, color="tab:blue", label=f"Modelo (AUC = {auc:.2f})")` → `plot`: dibuja una línea (o puntos unidos).

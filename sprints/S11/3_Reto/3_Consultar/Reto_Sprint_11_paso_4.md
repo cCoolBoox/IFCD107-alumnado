@@ -52,7 +52,7 @@
     - `return clase, float(p.max()), dict(zip(NOMBRES, p.round(3)))`: devuelve tres cosas: la clase (o «revisar a mano»), la confianza y un diccionario con la probabilidad de cada clase, con tres decimales.
     - `demo_ruta = rutas_pru[0]` y los dos `print`: eligen la primera foto de la prueba, escriben su ruta y la clase real y muestran lo que responde la función.
 
-    La misma celda termina guardando el modelo en una carpeta temporal, recargándolo y comprobando que responde igual (`modelo.save(…)`, `keras.models.load_model(…)`). No hay que hacer nada; sirve para asegurar que el modelo se puede guardar y reutilizar. Después borra la carpeta temporal.
+    La misma celda termina guardando el modelo en el archivo `clasificador_alojamientos.keras`, recargándolo y comprobando que responde igual (`modelo.save(…)`, `keras.models.load_model(…)`). No hay que hacer nada; sirve para asegurar que el modelo se puede guardar y reutilizar. El archivo queda en la carpeta del cuaderno (en Colab, en el panel de archivos de la izquierda, con el icono de la carpeta): si queréis entregarlo, descargadlo desde ahí (botones de los tres puntos → *Descargar*) y subidlo a `sprint-11/`.
 
 2. **Probar con 2 o 3 fotos.** En una celda nueva (**+ Código**) ejecutad:
 

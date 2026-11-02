@@ -66,7 +66,7 @@
 
     - `catalogo["lightgbm_ajustado"] = …`: añade una entrada nueva. El nombre entre comillas tiene que ser **exactamente el mismo que en el leaderboard**.
     - `lambda: busqueda_lgb.best_estimator_`: la receta que devuelve el modelo ganador de la búsqueda.
-    - Si vuestro campeón es uno de los de partida (`logistica`, `arbol_podado`, `random_forest`, `lightgbm`, `xgboost` o `svm_rbf`), ya está en el catálogo, pero añadid las líneas igualmente por si cambiáis de campeón.
+    - Si vuestro campeón es uno de los de partida (`logistica`, `arbol_podado`, `random_forest`, `lightgbm` o `svm_rbf`), ya está en el catálogo, pero añadid las líneas igualmente por si cambiáis de campeón.
 
 6. **El examen final: solo el campeón, una vez.** **Antes de ejecutar, comprobad en equipo que `campeon` es el definitivo**: después de ver el número del test no se cambia. En la misma celda, en el hueco de los `...`, escribid:
 

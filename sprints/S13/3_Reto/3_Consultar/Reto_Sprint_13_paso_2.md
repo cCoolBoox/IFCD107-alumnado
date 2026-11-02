@@ -15,7 +15,7 @@
 
 | Palabra | Qué significa, en sencillo |
 |---|---|
-| **Título-conclusión** | Un título que dice lo que hay que concluir del gráfico, con una cifra: «Con el modelo perdemos 16,590 € menos». |
+| **Título-conclusión** | Un título que dice lo que hay que concluir del gráfico, con una cifra: «Con el modelo perdemos 16.590 € menos». |
 | **Matriz de confusión** | Una tabla que cruza lo que ocurrió con lo que dijo el modelo. Aquí, en porcentaje de cada fila real: «de cada 100 cancelaciones, a cuántas avisó». |
 | **Curva ROC** | Muestra, para todos los umbrales, cuántas cancelaciones se detectan (vertical) frente a cuántas falsas alarmas se dan (horizontal). La diagonal es el azar. |
 | **Importancia de variables** | Se desordena una variable al azar y se mide cuánto empeora el modelo (cuánto cae el AUC). Si empeora mucho, esa variable pesa. |
@@ -25,7 +25,7 @@
 
 **Cómo se hace**
 
-1. **Ejecutar los cálculos y el panel.** Ejecutad con ▶ la celda «2. Cálculos que alimentan el panel» y la celda «3. El panel de una página» (las anteriores ya deberían estar ejecutadas, del paso 1). Deberíais ver `Coste sin modelo: 34,400 € · con modelo: 17,810 € · ahorro: 16,590 € (en 1500 reservas de prueba)` y el panel de 2 × 2.
+1. **Ejecutar los cálculos y el panel.** Ejecutad con ▶ la celda «2. Cálculos que alimentan el panel» y la celda «3. El panel de una página» (las anteriores ya deberían estar ejecutadas, del paso 1). Deberíais ver `Coste sin modelo: 34.400 € · con modelo: 17.810 € · ahorro: 16.590 € (en 1500 reservas de prueba)` y el panel de 2 × 2.
 2. **Leer qué dice cada gráfico antes de escribir su título.** Cada uno contesta a una pregunta de Marcos. Con el modelo de ejemplo y el umbral 0.35, esto es lo que se ve:
 
     | Gráfico | Contesta a | Línea de la celda del panel | Qué se ve |
@@ -33,7 +33,7 @@
     | 1. Matriz de confusión (en %) | ¿Puedo fiarme? | `ax[0, 0].set_title(f"…")`: cambia sola con los números | Detecta el 83 % de las cancelaciones y avisa al 49 % de quienes no cancelan |
     | 2. Curva ROC | ¿Puedo fiarme? | `ax[0, 1].set_title("…")`: fijo, hay que cambiarlo | AUC = 0.74, por encima de la diagonal del azar |
     | 3. Importancia de variables | ¿Qué mueve las cancelaciones? | `ax[1, 0].set_title("…")`: fijo, hay que cambiarlo | `antelacion_dias` (0.10), `deposito` (0.05), `canal` (0.04), `tarifa` (0.03) |
-    | 4. Coste con y sin modelo | ¿Qué hago el lunes? | `ax[1, 1].set_title(f"…")`: cambia sola con los números | 34,400 € sin modelo y 17,810 € con modelo: 16,590 € menos en 1500 reservas |
+    | 4. Coste con y sin modelo | ¿Qué hago el lunes? | `ax[1, 1].set_title(f"…")`: cambia sola con los números | 34.400 € sin modelo y 17.810 € con modelo: 16.590 € menos en 1500 reservas |
 
 3. **Reescribir los títulos que son fijos.** En la celda del panel, buscad las dos líneas marcadas `# >>> EDITA` (gráficos 2 y 3) y sustituidlas por estas:
 
@@ -61,7 +61,7 @@
 
 5. **Volver a ejecutar para guardar el PNG.** Pulsad otra vez ▶ en la celda del panel: su última línea, `plt.savefig("informe_visual_panel.png", dpi=150)`, escribe la imagen **con vuestros títulos**. Se puede abrir con doble clic en el panel de archivos de Colab (icono de la carpeta 📁; si no aparece, pulsad el icono de refrescar).
 
-**Qué deberíais ver.** Un panel de 2 × 2 con vuestros cuatro títulos y, en el panel de archivos, `informe_visual_panel.png`. Con el modelo de ejemplo: «Detectamos el 83% de las cancelaciones, avisando por error al 49% de quien no cancela», «Acierta mejor que el azar (AUC = 0.74), pero no es perfecto», «La antelación de la reserva pesa más del doble que cualquier otra variable» y «Con el modelo perdemos 16,590 € menos en 1500 reservas». Python escribe los miles con coma (16,590); en el informe del paso 3 es la misma cifra que 16.590 €.
+**Qué deberíais ver.** Un panel de 2 × 2 con vuestros cuatro títulos y, en el panel de archivos, `informe_visual_panel.png`. Con el modelo de ejemplo: «Detectamos el 83% de las cancelaciones; avisamos por error al 49% de quien no cancela», «Acierta mejor que el azar (AUC = 0.74), pero no es perfecto», «La antelación de la reserva pesa más del doble que cualquier otra variable» y «Con el modelo perdemos 16.590 € menos en 1500 reservas».
 
 **Hecho cuando:** cada gráfico tiene un título-conclusión y ejes con nombre, y el PNG se ha generado **después** del último cambio.
 

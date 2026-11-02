@@ -102,8 +102,9 @@
     print("Precisión de validación con base congelada:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
 
     # Fine-tuning del último bloque con tasa pequeña (y recompilando)
+    base_congelada.trainable = True      # primero se descongela la base entera...
     for capa in base_congelada.layers:
-        capa.trainable = capa.name.startswith("bloque3")
+        capa.trainable = capa.name.startswith("bloque3")   # ...y solo el último bloque queda entrenable
     modelo.compile(keras.optimizers.Adam(1e-4), "sparse_categorical_crossentropy", metrics=["accuracy"])
     h = modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=25, batch_size=16, verbose=0)
     print("Precisión de validación tras fine-tuning:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
@@ -112,6 +113,7 @@
     keras.utils.set_random_seed(SEMILLA)
     desde_cero = con_cabeza(construir_base("desde_cero"), N_CLASES)
     desde_cero.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=40, batch_size=16, verbose=0)
+    print("Precisión de validación desde cero:", round(desde_cero.evaluate(X_val, y_val, verbose=0)[1], 3))
     ```
 
     Qué hace cada parte:
@@ -119,20 +121,15 @@
     - `modelo, base_congelada = modelo_transfer(base_pre, N_CLASES)`: usa vuestra función y recoge las dos cosas que devuelve.
     - `modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=30, batch_size=16, …)`: entrena 30 épocas con las fotos de entrenamiento, en lotes de 16, y mira cómo va con las de validación. Solo se ajusta la cabeza.
     - `print("Precisión de validación con base congelada:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))`: `evaluate` devuelve dos cifras (la pérdida y la precisión); el `[1]` se queda con la precisión y `round(…, 3)` la deja con tres decimales.
-    - `for capa in base_congelada.layers:` y `capa.trainable = capa.name.startswith("bloque3")`: recorre las capas de la copia y descongela solo las que se llaman `bloque3…` (`bloque3_conv` y `bloque3_pool`); las demás se quedan congeladas.
+    - `base_congelada.trainable = True`: **descongela** la copia entera, para poder decidir capa a capa. Enseguida se vuelve a congelar casi todo.
+    - `for capa in base_congelada.layers:` y `capa.trainable = capa.name.startswith("bloque3")`: recorre las capas de la copia y deja sueltas solo las que se llaman `bloque3…` (`bloque3_conv` y `bloque3_pool`); las demás se quedan congeladas.
     - `modelo.compile(keras.optimizers.Adam(1e-4), …)`: **vuelve a compilar** para que el cambio de congelado surta efecto, con una tasa de aprendizaje diez veces menor (retoques pequeños).
     - `h = modelo.fit(…, epochs=25, …)` y el segundo `print`: 25 épocas más con el último bloque suelto, y la nueva precisión de validación.
-    - `desde_cero = con_cabeza(construir_base("desde_cero"), N_CLASES)`: la **referencia**: la misma arquitectura, con una base nueva que no ha aprendido nada. Se entrena 40 épocas con todo suelto.
+    - `desde_cero = con_cabeza(construir_base("desde_cero"), N_CLASES)`: la **referencia**: la misma arquitectura, con una base nueva que no ha aprendido nada. Se entrena 40 épocas con todo suelto, y el último `print` escribe su precisión de validación.
 
-    La celda no escribe nada mientras entrena y puede tardar un rato (hasta algún minuto): esperad a que aparezcan las dos líneas.
+    La celda no escribe nada mientras entrena y puede tardar un rato (hasta algún minuto): esperad a que aparezcan las tres líneas.
 
-4. **Anotar las tres cifras.** La celda no escribe la precisión de la referencia, así que añadid una celda nueva (**+ Código**) y ejecutad:
-
-    ```python
-    print("Precisión de validación desde cero:", round(desde_cero.evaluate(X_val, y_val, verbose=0)[1], 3))
-    ```
-
-    Es la misma cuenta de antes, pero con el modelo `desde_cero`. Apuntad en el documento del equipo las tres cifras:
+4. **Anotar las tres cifras.** La celda escribe las tres precisiones de validación (base congelada, tras el ajuste fino y desde cero). Apuntad en el documento del equipo las tres cifras:
 
     | Versión | Precisión de validación |
     |---|---|

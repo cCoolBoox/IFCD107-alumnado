@@ -1,8 +1,9 @@
-numpy==2.4.4
+numpy==2.5.3
 pandas==2.3.3
-scikit-learn==1.8.0
-joblib==1.5.3
+scikit-learn==1.9.1
+joblib==1.6.0
 streamlit==1.64.0
 ipywidgets==8.1.9
-fastapi==0.141.1
-uvicorn==0.46.0
+fastapi==0.162.0
+uvicorn==0.54.0
+pytest==9.1.1

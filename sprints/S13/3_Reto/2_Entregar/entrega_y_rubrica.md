@@ -40,7 +40,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 | **Titular-decisión** | Una línea que dice **qué hacer**, a quién y con qué efecto, no solo qué pasa | 🟢 Mínimo | `informe_visual.md` |
 | **Tres viñetas** | «Qué hemos hecho», «Qué recomendamos» y «Qué límites tiene», en frases cortas con cifras | 🟢 Mínimo | `informe_visual.md` |
 | **Guardado en el repositorio** | Los tres ficheros en `sprint-13/`, como semilla de la memoria técnica | 🟢 Mínimo | Repositorio del equipo |
-| **Cuarto gráfico y gráficos honestos** | Se añade la curva ROC; en los cuatro: ejes con nombre, barras desde 0, sin 3D, 3–4 colores con sentido | 🟡 Estándar | `informe_visual_panel.png` |
+| **Cuarto gráfico y gráficos honestos** | El panel tiene los cuatro gráficos (matriz, curva ROC, importancia y ahorro; el cuaderno ya los dibuja), cada uno con título-conclusión; en los cuatro: ejes con nombre, barras desde 0, sin 3D, 3–4 colores con sentido | 🟡 Estándar | `informe_visual_panel.png` |
 | **Sin jerga y cifras coherentes** | Si aparece «AUC», «F1» o «SHAP» va con una frase que lo explica; las cifras del texto son **las mismas** que las del gráfico | 🟡 Estándar | `informe_visual.md` |
 | **Pie del informe** | Con cuántos datos, qué modelo, qué umbral, qué semilla, qué límites y quién es responsable | 🟡 Estándar | `informe_visual.md` |
 | **IA responsable** | Un riesgo específico (por ejemplo, el uso indebido o un grupo peor atendido) con una medida, y qué se pidió a la IA y qué se revisó | 🟡 Estándar | `informe_visual.md` (sección «IA responsable») |

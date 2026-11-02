@@ -283,7 +283,7 @@ Un número de rendimiento no explica **por qué** decide lo que decide. En este 
 
 | Tipo de dato | Técnica | Qué te dice |
 |---|---|---|
-| **Tabular** | **Importancia de variables** o **SHAP** | Qué variables pesan más y en qué dirección |
+| **Tabular** | **Importancia de variables** (por permutación; **SHAP** es otra opción que no usamos en el curso) | Qué variables pesan más y en qué dirección |
 | **Imágenes** | **Grad-CAM** | **Qué zona de la imagen** miró el modelo |
 
 **Cómo leerla con criterio:** pregúntate **«¿tiene sentido para el negocio?»** Si el modelo de cancelaciones dice que lo más importante es el **número de reserva** (un código sin significado), **huele a fuga** o a casualidad.
@@ -322,7 +322,7 @@ Un número de rendimiento no explica **por qué** decide lo que decide. En este 
 | **Entender un modelo** | Que la explicación **encaja con vuestros datos** |
 | **Depurar un error** | Que entendéis **la causa**, no solo copiáis el arreglo |
 | **Buscar fugas en vuestro pipeline** | La IA puede **pasar por alto** una fuga **o ver una que no existe**: verificad con la lista del apartado 3.5 |
-| **Interpretar SHAP** | Contrastadlo **con el sentido del negocio** |
+| **Interpretar la importancia de variables** | Contrastadlo **con el sentido del negocio** |
 
 Y marcad en el registro las pruebas hechas con código generado por IA.
 

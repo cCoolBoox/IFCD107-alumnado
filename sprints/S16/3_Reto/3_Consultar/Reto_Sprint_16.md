@@ -20,7 +20,7 @@
 | Recurso | Para qué lo usaréis | Dónde está |
 |---|---|---|
 | **Vuestro proyecto** (repositorio privado `ifcd107-equipo-…`) | El modelo candidato del Sprint 15, su registro de experimentos, los datos y el registro de riesgos de los sprints 14 y 15 | Vuestro repositorio de GitHub |
-| **Cuaderno del S13** [`S13_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb) | Los gráficos de la evaluación (matriz de confusión, curvas, importancia de variables, SHAP o Grad-CAM) para adaptarlos | Colab |
+| **Cuaderno del S13** [`S13_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb) | Los gráficos de la evaluación (matriz de confusión, curvas e importancia de variables) para adaptarlos | Colab |
 | **Presentación S16.1** y **apuntes del sprint** | Qué es un demostrador, cómo se documenta y, con ejemplos de números, cómo se miden los sesgos y su mitigación | [Presentación](../../1_Teoria/S16.1_Pildora_demostrador_y_documentacion.pdf) · [apuntes](../../1_Teoria/apuntes/apuntes_demostrador_sesgos_y_memoria.md) |
 | **Cuaderno del sprint** [`S16_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/S16_01_demostrador.ipynb) | Práctica del demostrador: guardar el modelo y sus metadatos, separar la lógica, pruebas, Streamlit, widgets y API | Colab |
 | **La carpeta del demostrador** [`demostrador/`](../1_Trabajar/plantillas/demostrador/) | `logica.py`, `app.py`, `api.py` (opcional), `tests/test_logica.py`, `requirements.txt` y `README_demostrador.md`. Es un ejemplo completo con el modelo de TurisData: vosotros lo adaptáis a **vuestro** proyecto. La carpeta `modelo/` no viene hecha: la crea el cuaderno `S16_01` o vuestro script de entrenamiento | En GitHub: *Code → Download ZIP*. Trabajad en una copia |
@@ -47,7 +47,7 @@ Son ocho pasos, de **525 minutos en total** repartidos en tres días. Las jornad
 - [Paso 4 · Pulir el demostrador y probarlo en limpio (día 2, 40 minutos)](Reto_Sprint_16_paso_4.md)
 - [Paso 5 · Cerrar la model card y completar la memoria (día 2, 80 minutos)](Reto_Sprint_16_paso_5.md)
 - [Paso 6 · Verificar en limpio y corregir (día 3, 80 minutos)](Reto_Sprint_16_paso_6.md)
-- [Paso 7 · Plan B, riesgos cerrados, lista de congelación y coevaluación (día 3, 65 minutos)](Reto_Sprint_16_paso_7.md)
+- [Paso 7 · Plan B, lista de congelación y coevaluación (día 3, 65 minutos)](Reto_Sprint_16_paso_7.md)
 - [Paso 8 · Revisión con la rúbrica, review, retro y congelación (día 3, 55 minutos)](Reto_Sprint_16_paso_8.md)
 
 #### Ayuda 1 · Cómo usar la IA en este reto

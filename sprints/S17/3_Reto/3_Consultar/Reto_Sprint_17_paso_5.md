@@ -51,7 +51,7 @@
     - **Una cifra grande y un silencio de 2 segundos** tras la cifra clave. Mirad al público, no a la pantalla, y no leáis.
     - **Si la demo falla,** mantened la calma y pasad al vídeo del plan B. **No pidáis perdón ni os pongáis a arreglarla en directo:** un fallo bien gestionado no resta.
     - **Si veis que el tiempo se acaba,** saltad a la diapositiva 11 (qué proponéis) y a la 12 (cierre con el mensaje único).
-    - **Ante una pregunta** (puede ir a **cualquier** persona del equipo): aplicad RESPONDE. Repetidla, responded directo, dad un dato, poned el límite y ofreced el detalle de la memoria. Si no lo sabéis: «no lo hemos medido; lo haríamos así…». **No inventéis.** Solo si de verdad no sabéis la respuesta, pasadla a otra persona (no como hábito: para el «Apto», cada persona responde al menos una pregunta).
+    - **Ante una pregunta** (puede ir a **cualquier** persona del equipo): aplicad RESPONDE. Repetidla, responded directo, dad un dato, poned el límite y ofreced el detalle de la memoria. Si no lo sabéis (N-D-E): **no inventéis**, decidlo y explicad cómo lo averiguaríais: «no lo hemos medido; lo haríamos así…». Solo si de verdad no sabéis la respuesta, pasadla a otra persona (no como hábito: para el «Apto», cada persona responde al menos una pregunta).
     - **Al terminar:** agradeced, recoged y dad paso al siguiente equipo en **menos de 1 minuto**.
 
 4. **Mientras defienden los demás.** La *review* no existe aparte: la defensa ocupa su lugar. Escuchad y apuntad, para vuestra **coevaluación**, el mensaje que entendéis con vuestras palabras, lo que mejor funciona y una pregunta que haríais. El docente os dirá a qué equipo o persona valoráis. Podéis usar las mismas cuatro frases de la ficha de feedback del paso 3.

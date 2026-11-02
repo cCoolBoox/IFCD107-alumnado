@@ -45,7 +45,7 @@
 - **Plan B si falla la demo:** vídeo de 90 s.
 
 ## 8. Riesgos y mitigación
-| Riesgo | Tipo (datos / cómputo / ética / equipo) | Mitigación |
+| Riesgo | Tipo (datos / modelo / uso / legal / técnico) | Mitigación |
 |---|---|---|
 | | | |
 | | | |

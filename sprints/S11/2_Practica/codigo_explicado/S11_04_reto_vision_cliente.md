@@ -51,7 +51,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `tabla` | `pd.DataFrame([cobertura_y_precision(prob_val, y_val, u) f…` | 16 |
 | `umbral_elegido` | `0.7` | 17 |
 | `demo_ruta` | `rutas_pru[0]` | 18 |
-| … | otras 4 variables | |
+| … | otras 3 variables | |
 
 ## 3. Palabras de código de este cuaderno
 
@@ -126,7 +126,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `int` | Convierte un valor en número entero. | 2, 18 |
 | `integers` | Genera números enteros aleatorios. | 2 |
 | `isdir` | Comprueba si una ruta es una carpeta. | 3, 20 |
-| `join` | Une una lista de textos en uno solo con un separador. | 2, 3, 14, 18 |
+| `join` | Une una lista de textos en uno solo con un separador. | 2, 3, 14 |
 | `len` | Cuenta cuántos elementos tiene una lista, texto o tabla. | 2, 5, 6, 12, 13, 14 |
 | `line` | Dibuja una línea. | 2 |
 | `list` | Crea una lista (o convierte algo en lista). | 5 |
@@ -136,7 +136,6 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `max` | Devuelve el valor más grande. | 2, 9, 12, 18 |
 | `MaxPooling2D` | Capa que reduce la imagen quedándose con el valor máximo de cada zona. | 6 |
 | `min` | Devuelve el valor más pequeño. | 12 |
-| `mkdtemp` | Crea una carpeta temporal que se borra sola al acabar. | 18 |
 | `MobileNetV2` | Red ya entrenada con millones de imágenes, lista para reutilizar. | 19 |
 | `Model` | Crea un modelo de Keras indicando entradas y salidas. | 6, 19 |
 | `new` | Crea una imagen nueva en blanco (Pillow) del tamaño y color indicados. | 2 |
@@ -159,7 +158,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `Rescaling` | Capa de Keras que reescala los píxeles (por ejemplo, de 0–255 a 0–1). | 6 |
 | `resize` | Cambia el tamaño de una imagen. | 2 |
 | `Resizing` | Capa de Keras que cambia el tamaño de las imágenes. | 19 |
-| `rmtree` | Borra una carpeta con todo lo que contiene. | 18, 20 |
+| `rmtree` | Borra una carpeta con todo lo que contiene. | 20 |
 | `round` | Redondea un número a los decimales indicados. | 8, 16, 18, 19 |
 | `save` | Guarda el modelo (o el objeto) en un fichero. | 2, 18 |
 | `Series` | Crea una columna de pandas (una sola serie de valores). | 13 |
@@ -195,7 +194,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 **Qué hace:** Practica `set_random_seed`.
 
 ```python
-import os, functools, tempfile, shutil
+import os, functools, shutil
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 import numpy as np
 import pandas as pd
@@ -210,7 +209,7 @@ keras.utils.set_random_seed(SEMILLA)
 
 **Qué hace cada línea:**
 
-- `import os, functools, tempfile, shutil` → Trae `os`, `functools`, `tempfile`, `shutil` para poder usarlo.
+- `import os, functools, shutil` → Trae `os`, `functools`, `shutil` para poder usarlo.
 - `os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"` → Guarda el valor en `os.environ["TF_CPP_MIN_…`.
 - `import numpy as np` → Trae `numpy` (lo llamamos `np`) para poder usarlo.
 - `import pandas as pd` → Trae `pandas` (lo llamamos `pd`) para poder usarlo.
@@ -518,8 +517,9 @@ modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=30, batch_size=1
 print("Precisión de validación con base congelada:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
 
 # Fine-tuning del último bloque con tasa pequeña (y recompilando)
+base_congelada.trainable = True      # primero se descongela la base entera (así se puede decidir capa a capa)...
 for capa in base_congelada.layers:
-    capa.trainable = capa.name.startswith("bloque3")
+    capa.trainable = capa.name.startswith("bloque3")   # ...y solo el último bloque queda entrenable
 modelo.compile(keras.optimizers.Adam(1e-4), "sparse_categorical_crossentropy", metrics=["accuracy"])
 h = modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=25, batch_size=16, verbose=0)
 print("Precisión de validación tras fine-tuning:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
@@ -528,6 +528,7 @@ print("Precisión de validación tras fine-tuning:", round(modelo.evaluate(X_val
 keras.utils.set_random_seed(SEMILLA)
 desde_cero = con_cabeza(construir_base("desde_cero"), N_CLASES)
 desde_cero.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=40, batch_size=16, verbose=0)
+print("Precisión de validación desde cero:", round(desde_cero.evaluate(X_val, y_val, verbose=0)[1], 3))
 ```
 
 **Qué hace cada línea:**
@@ -536,12 +537,12 @@ desde_cero.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=40, batch_si
 - `modelo, base_congelada = modelo_transfer(base_pre, N_CLASES)` → Guarda en `modelo, base_congelada` el resultado. `modelo_transfer`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
 - `modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=30, batch_s…` → `fit`: entrena el modelo con los datos (aquí es donde «aprende»).
 - `print("Precisión de validación con base congelada:", round(modelo.evaluate(…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
+- `base_congelada.trainable = True # primero se descongela la base entera (así…` → Guarda el valor en `base_congelada.trainable`.
 - `for capa in base_congelada.layers:` → Repite el bloque de debajo para cada valor de `capa` en `base_congelada.layers`. Dentro del bloque: `startswith`: comprueba si un texto empieza por algo.
 - `modelo.compile(keras.optimizers.Adam(1e-4), "sparse_categorical_crossentrop…` → `compile`: prepara el modelo para entrenar (en Keras: elige optimizador, pérdida y métricas); `Adam`: optimizador Adam: decide cómo ajustar los pesos en cada paso.
 - `h = modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=25, bat…` → Guarda en `h` el resultado. `fit`: entrena el modelo con los datos (aquí es donde «aprende»).
 - `print("Precisión de validación tras fine-tuning:", round(modelo.evaluate(X_…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
-- `keras.utils.set_random_seed(SEMILLA)` → `set_random_seed`: fija la semilla del azar de TensorFlow/Keras para repetir resultados.
-- … y 2 más con las mismas ideas.
+- … y 4 más con las mismas ideas.
 
 ### Celda 9 · 3. Rendimiento en el conjunto de prueba · 🏫
 
@@ -703,11 +704,10 @@ print("Foto:", demo_ruta, "· real:", NOMBRES[y_pru[0]])
 print(clasificar_foto(demo_ruta))
 
 # Guardar y recargar el modelo (para el demostrador)
-carpeta_tmp = tempfile.mkdtemp()
-modelo.save(os.path.join(carpeta_tmp, "clasificador_alojamientos.keras"))
-recargado = keras.models.load_model(os.path.join(carpeta_tmp, "clasificador_alojamientos.keras"))
+modelo.save("clasificador_alojamientos.keras")     # se queda en la carpeta del cuaderno (en Colab, en el panel de archivos)
+recargado = keras.models.load_model("clasificador_alojamientos.keras")
 assert clasificar_foto(demo_ruta, recargado)[0] == clasificar_foto(demo_ruta)[0], "El modelo recargado debe dar la misma respuesta"
-shutil.rmtree(carpeta_tmp, ignore_errors=True)
+print("Modelo guardado en clasificador_alojamientos.keras (si queréis entregarlo, descargadlo y subidlo a sprint-11/)")
 ```
 
 **Qué hace cada línea:**
@@ -716,11 +716,10 @@ shutil.rmtree(carpeta_tmp, ignore_errors=True)
 - `demo_ruta = rutas_pru[0]` → Guarda el valor en `demo_ruta`.
 - `print("Foto:", demo_ruta, "· real:", NOMBRES[y_pru[0]])` → `print`: muestra un valor por pantalla.
 - `print(clasificar_foto(demo_ruta))` → `print`: muestra un valor por pantalla; `clasificar_foto`: devuelve (clase, confianza, probabilidades por clase) o 'revisar a mano' si la confianza es baja.
-- `carpeta_tmp = tempfile.mkdtemp()` → Guarda en `carpeta_tmp` el resultado. `mkdtemp`: crea una carpeta temporal que se borra sola al acabar.
-- `modelo.save(os.path.join(carpeta_tmp, "clasificador_alojamientos.keras"))` → `save`: guarda el modelo entrenado en un fichero; `join`: une una lista de textos en uno solo con un separador.
-- `recargado = keras.models.load_model(os.path.join(carpeta_tmp, "clasificador…` → Guarda en `recargado` el resultado. `load_model`: carga un modelo guardado; `join`: une una lista de textos en uno solo con un separador.
+- `modelo.save("clasificador_alojamientos.keras") # se queda en la carpeta del…` → `save`: guarda el modelo entrenado en un fichero.
+- `recargado = keras.models.load_model("clasificador_alojamientos.keras")` → Guarda en `recargado` el resultado. `load_model`: carga un modelo guardado.
 - `assert clasificar_foto(demo_ruta, recargado)[0] == clasificar_foto(demo_rut…` → Comprueba que es verdad; si no, para con un mensaje.
-- `shutil.rmtree(carpeta_tmp, ignore_errors=True)` → `rmtree`: borra una carpeta con todo lo que contiene.
+- `print("Modelo guardado en clasificador_alojamientos.keras (si queréis entre…` → `print`: muestra un valor por pantalla.
 
 ### Celda 19 · 7. Rama Colab: MobileNetV2 con pesos de ImageNe… · 🏠
 

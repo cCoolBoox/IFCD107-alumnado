@@ -26,7 +26,7 @@
 
 **Cómo se hace**
 
-1. **Escribir la función.** Celda nueva. Es la función del mini-reto de [`S06_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_02_limpieza.ipynb), ya montada. Si vuestra tabla del paso 2 tiene un defecto que aquí no aparece, añadid una línea antes del `return`.
+1. **Escribir la función.** Celda nueva. Es la función del mini-reto de [`S06_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_02_limpieza.ipynb), ya montada y con una línea más (`mes_llegada`). Si vuestra tabla del paso 2 tiene un defecto que aquí no aparece, añadid una línea antes del `return`.
 
     ```python
     EQUIV_PAIS = {"es": "ES", "españa": "ES", "uk": "UK", "reino unido": "UK", "de": "DE",

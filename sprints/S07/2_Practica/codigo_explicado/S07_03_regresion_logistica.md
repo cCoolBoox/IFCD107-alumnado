@@ -236,13 +236,16 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 
 ### Celda 8 · 5. Elegir el umbral según el coste · 🏠
 
-**Qué hace:** Practica `StratifiedKFold`, `cross_val_predict` (sección «5. Elegir el umbral según el coste»).
+**Qué hace:** Lo que cuesta, en unidades relativas, cada error. Son decisiones de negocio: no tienen valor por defecto.
 
 ```python
 cv = StratifiedKFold(5, shuffle=True, random_state=SEMILLA)
 proba_cv = cross_val_predict(logit, X_train, y_train, cv=cv, method="predict_proba")[:, 1]
 
-def coste_total(y_real, proba, umbral, coste_fn=3.0, coste_fp=1.0):
+# Lo que cuesta, en unidades relativas, cada error. Son decisiones de negocio: no tienen valor por defecto.
+COSTE_FN, COSTE_FP = 3.0, 1.0   # FN = cancelación que no detectamos · FP = falsa alarma
+
+def coste_total(y_real, proba, umbral, coste_fn, coste_fp):
     m = metricas_umbral(y_real, proba, umbral)
     return m["FN"] * coste_fn + m["FP"] * coste_fp
 ```
@@ -251,7 +254,8 @@ def coste_total(y_real, proba, umbral, coste_fn=3.0, coste_fp=1.0):
 
 - `cv = StratifiedKFold(5, shuffle=True, random_state=SEMILLA)` → Guarda en `cv` el resultado. `StratifiedKFold`: crea particiones de validación cruzada que mantienen la proporción de clases.
 - `proba_cv = cross_val_predict(logit, X_train, y_train, cv=cv, method="predic…` → Guarda en `proba_cv` el resultado. `cross_val_predict`: predicciones de cada dato hechas por un modelo que no lo ha visto.
-- `def coste_total(y_real, proba, umbral, coste_fn=3.0, coste_fp=1.0):` → Define la función `coste_total`: Función definida en el cuaderno.
+- `COSTE_FN, COSTE_FP = 3.0, 1.0 # FN = cancelación que no detectamos · FP = f…` → Guarda el valor en `COSTE_FN, COSTE_FP`.
+- `def coste_total(y_real, proba, umbral, coste_fn, coste_fp):` → Define la función `coste_total`: Función definida en el cuaderno.
 
 ### Celda 9 · 5. Elegir el umbral según el coste · 🏠 · ejercicio
 

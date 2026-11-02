@@ -55,7 +55,7 @@ La IA puede ahorrar tiempo, pero **da código que parece funcionar y no se entie
 | Entender un modelo | «Explícame cuándo conviene un modelo de boosting frente a una regresión logística, con un ejemplo sencillo» | Que la explicación encaja con **vuestros datos** |
 | Depurar un error | «Este código de scikit-learn da este error: *[error]*. Datos: *[estructura]*» | Que entendéis la causa |
 | Detectar fugas | «Aquí está mi pipeline: *[código]*. ¿Hay alguna operación que use el test o el futuro?» | Que **verificáis** la respuesta; la IA puede pasarlas por alto o ver fugas inexistentes |
-| Interpretar SHAP | «Tengo este gráfico SHAP (descripción). ¿Qué significa que la variable X tenga ese efecto?» | Contrastadlo con el sentido del negocio |
+| Interpretar la importancia de variables | «Tengo este gráfico de importancia por permutación (descripción). ¿Qué significa que la variable X pese tanto?» | Contrastadlo con el sentido del negocio |
 
 #### Ayuda 2 · Errores frecuentes (y cómo evitarlos)
 

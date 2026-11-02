@@ -78,8 +78,6 @@
     - El nombre tiene que ser **exactamente** `informe_visual_panel.png`. La imagen se verá cuando esté subida a `sprint-13` (paso 4); en Preview, hasta entonces, saldrá rota.
     - El espacio antes del último paréntesis es opcional. Si ya lo tenéis escrito así, dejadlo.
 
-    Los títulos del gráfico escriben los miles con coma inglesa (16,590 €); en el texto en español, 16.590 €: es la misma cifra.
-
 5. **Sacar del cuaderno las cifras que faltan.** Para las viñetas vais a necesitar datos que el panel no escribe: cuántos avisos, dónde falla más el modelo, con cuántos datos se entrenó. En el cuaderno, **debajo de la celda del panel**, añadid una celda de código (botón **+ Código**), pegad esto y ejecutadla con ▶:
 
     ```python
@@ -146,7 +144,7 @@
     |---|---|
     | 83% y 49% | Matriz de confusión del panel (casillas Cancela/Cancela y No cancela/Cancela) |
     | 0.74 | Leyenda de la curva ROC y salida `AUC en prueba: 0.744` |
-    | 34.400 €, 17.810 € y 16.590 € | Barras del gráfico del coste y la línea `Coste sin modelo: 34,400 € · con modelo: 17,810 € · ahorro: 16,590 €` |
+    | 34.400 €, 17.810 € y 16.590 € | Barras del gráfico del coste y la línea `Coste sin modelo: 34.400 € · con modelo: 17.810 € · ahorro: 16.590 €` |
     | 50 € y 30 € | `COSTE_FN` y `COSTE_FP` de la celda de parámetros |
     | 0.35 y 35 % | `UMBRAL` |
     | 1 500, 4 500, 967, 62 %, 91 % | La celda nueva del punto 5 |

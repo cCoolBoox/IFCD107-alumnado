@@ -44,7 +44,7 @@
 
 3. **La revisión con la rúbrica.** La hace una persona de vuestro equipo que **no escribió esa parte** de la página. Sigue los cinco pasos de «Cómo se revisa» de [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md), aquí con lo que toca mirar:
 
-    - **Ejecutar** el cuaderno en una pestaña nueva de Colab con *Entorno de ejecución → Reiniciar y ejecutar todo* y comparar el PNG y las cifras con las del informe. Con el modelo de ejemplo salen `AUC en prueba: 0.744 · reservas de prueba: 1500` y `Coste sin modelo: 34,400 € · con modelo: 17,810 € · ahorro: 16,590 €`.
+    - **Ejecutar** el cuaderno en una pestaña nueva de Colab con *Entorno de ejecución → Reiniciar y ejecutar todo* y comparar el PNG y las cifras con las del informe. Con el modelo de ejemplo salen `AUC en prueba: 0.744 · reservas de prueba: 1500` y `Coste sin modelo: 34.400 € · con modelo: 17.810 € · ahorro: 16.590 €`.
     - **Leer la página como si fuerais Marcos**, con 30 segundos en el reloj. Subrayar toda la jerga y toda cifra de la que no sepáis el origen.
     - **Mirar los gráficos uno a uno:** ¿el título es una conclusión?, ¿los ejes tienen nombre?, ¿las barras empiezan en 0?, ¿se calcula sobre el test?
     - **Poner un nivel (1 a 4) en cada criterio, con una frase de prueba.** Se pone el nivel de la columna cuyo texto **se cumple entero**; si algo se cumple a medias, es el nivel de abajo; **0** es que no se entregó nada de ese criterio.
@@ -66,7 +66,7 @@
 
     | Criterio | Nivel (1–4) | Prueba: una frase de lo que has comprobado |
     |---|---|---|
-    | Corrección técnica | 3 | Los cuatro gráficos salen de X_test, con barras desde 0 y sin 3D; el ahorro del gráfico (16,590 €) coincide con el de la celda de cálculos. |
+    | Corrección técnica | 3 | Los cuatro gráficos salen de X_test, con barras desde 0 y sin 3D; el ahorro del gráfico (16.590 €) coincide con el de la celda de cálculos. |
     | Reproducibilidad | 3 | Reinicio y ejecuto todo y sale el mismo PNG y AUC en prueba 0.744; el pie dice datos, modelo, umbral y semilla. |
     | Análisis y comunicación al cliente | 2 | Otro equipo entendió la decisión en 30 segundos, pero la viñeta 3 todavía dice «AUC» sin explicarlo. |
     | IA responsable | 3 | Hay un riesgo concreto con su medida, se dice qué se pidió a la IA y que los datos son sintéticos. |

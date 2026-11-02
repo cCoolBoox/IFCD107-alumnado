@@ -32,7 +32,7 @@ Evaluáis **el candidato elegido** en el test **una vez**, y anotáis las métri
 
 ### 1.2. Gráficos que cuentan algo
 
-Usáis los gráficos de la plantilla `S13_02` (Sprint 13): matriz de confusión, curvas, importancia de variables, SHAP o Grad-CAM. Recordad **la regla del Sprint 13**: cada gráfico con **título-conclusión** («Las reservas por móvil se cancelan más»), no con un título descriptivo.
+Usáis los gráficos de la plantilla `S13_02` (Sprint 13): matriz de confusión, curvas e importancia de variables. Recordad **la regla del Sprint 13**: cada gráfico con **título-conclusión** («Las reservas por móvil se cancelan más»), no con un título descriptivo.
 
 ### 1.3. El análisis de errores: mirar dónde falla
 
@@ -114,11 +114,11 @@ A veces **no hay forma de mitigarlo** (faltan datos y no se pueden conseguir). E
 
 El registro de riesgos que empezasteis en el Sprint 14 y revisasteis en el 15 **se cierra aquí**:
 
-- Los **riesgos altos** tienen **estado** (mitigado / aceptado / pendiente) y **evidencia** (dónde se ve en el repositorio).
+- Los **riesgos altos** tienen **estado** (abierto / mitigado / aceptado) y **evidencia** (dónde se ve en el repositorio).
 - La **clasificación RGPD / AI Act** (Sprint 1) está **justificada**: ¿riesgo mínimo, limitado o alto? ¿hay datos personales?
 - Se indican **supervisión humana** (¿quién revisa las decisiones importantes?) y **transparencia** (¿el usuario sabe que habla con una IA y cuánta confianza tiene el resultado?).
 
-> **Cada afirmación necesita una evidencia comprobable.** «Hemos cuidado la privacidad» no vale; «no hay datos personales, ver `docs/plan_datos.md`» sí.
+> **Cada afirmación necesita una evidencia comprobable.** «Hemos cuidado la privacidad» no vale; «no hay datos personales, ver `sprint-14/plan_datos_licencias.md`» sí.
 
 ---
 
@@ -154,8 +154,8 @@ Es como un restaurante: **la cocina** (lógica) **y la sala** (interfaz) **son c
 
 | Rasgo | Ejemplo |
 |---|---|
-| **Errores en español y accionables** | «Introduce una edad entre 0 y 120 (has escrito 250)», no «ValueError» |
-| **Avisa de la incertidumbre** | «Riesgo: alto (**confianza media**)» y los límites del modelo |
+| **Errores en español y accionables** | «'noches' debe estar entre 1 y 30 (has escrito -3)», no «ValueError» |
+| **Avisa de la incertidumbre** | «Riesgo: alto» más un aviso con el AUC del modelo («Estimación orientativa. El modelo tiene un AUC de 0,75…») y sus límites |
 | **Devuelve datos, no imprime** | Devuelve un diccionario; es la interfaz quien lo muestra |
 
 La función `mensaje_errores` del cuaderno transforma una lista de errores en un texto amable:

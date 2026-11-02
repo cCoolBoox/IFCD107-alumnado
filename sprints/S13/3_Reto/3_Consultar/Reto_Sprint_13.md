@@ -62,7 +62,7 @@ La IA puede ahorrar tiempo, pero **es muy mala copiando cifras**. Reglas:
 | Error | Por qué ocurre | Cómo evitarlo |
 |---|---|---|
 | Un informe lleno de gráficos y sin decisión | Se muestra todo lo que se hizo | Cuatro gráficos, un titular |
-| Títulos descriptivos («AUC por modelo») | Es lo que sale por defecto | «El modelo detecta 7 de cada 10 cancelaciones» |
+| Títulos descriptivos («AUC por modelo») | Es lo que sale por defecto | «Detectamos [vuestra cifra] de cada 10 cancelaciones» |
 | Barras que no empiezan en 0 | La herramienta lo hace sola | Fijar el eje a 0 |
 | Métricas sobre el entrenamiento | Se reutiliza el cuaderno sin mirar | Comprobar que usan `X_test` |
 | Jerga sin explicar | Se escribe para el docente | La prueba de los 30 segundos con otro equipo |

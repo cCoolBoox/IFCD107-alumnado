@@ -20,7 +20,7 @@
 | **Turno** | El tiempo total de vuestro equipo en la defensa (relato, demo y preguntas). Depende de cuántos equipos haya. |
 | **Demo** | Enseñar el demostrador funcionando: una entrada normal, una entrada errónea y el aviso de límites. |
 | **Plan B** | Un vídeo de unos 90 segundos de la demo funcionando, abierto en otra pestaña por si la demo falla. |
-| **Método RESPONDE** | Seis pasos para contestar una pregunta en 20 segundos: repetirla, responder directo, dar un dato, poner el límite, ofrecer el detalle y, si no se sabe, decirlo. |
+| **Método RESPONDE** | Pasos para contestar una pregunta en 20 segundos: R-E-S-P-O (repetirla, responder directo, dar un dato, poner el límite y ofrecer el detalle) y, si no se sabe, N-D-E (no inventar, decirlo y explicar cómo se averiguaría). |
 | **Ficha de feedback** | Cuatro frases y dos casillas que rellena quien escucha un ensayo. |
 | **Diapositivas de reserva** | Diapositivas técnicas **después de la 12**, para responder preguntas. Se pueden pasar a un PDF aparte. |
 

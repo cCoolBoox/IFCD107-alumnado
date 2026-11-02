@@ -41,7 +41,7 @@ Fuente original → descarga (fecha, versión) → limpieza (script) → variabl
 
 ## 5. Partición de datos
 - Estrategia: aleatoria estratificada · por fechas (series) · por grupos (p. ej. por usuario / imagen del mismo objeto).
-- Tamaños: entrenamiento ___ · validación ___ · test ___ (**el test no se toca hasta el final**).
+- Tamaños: entrenamiento ___ · validación ___ · test ___ (**el test no se toca hasta que haya un modelo candidato**, y entonces se mira una sola vez).
 - Justificación de por qué evita fugas: ______
 
 ## 6. Privacidad y RGPD

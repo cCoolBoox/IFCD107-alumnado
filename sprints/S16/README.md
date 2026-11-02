@@ -9,7 +9,7 @@
 
 ## Qué aprenderás
 
-1. **Evaluar a fondo el modelo candidato:** métricas adecuadas, análisis de errores y visualizaciones (curvas, matriz de confusión, importancia, SHAP o Grad-CAM) que comunican incertidumbre (R5).
+1. **Evaluar a fondo el modelo candidato:** métricas adecuadas, análisis de errores y visualizaciones (curvas, matriz de confusión e importancia de variables) que comunican incertidumbre (R5).
 2. **Analizar sesgos y limitaciones** por subgrupos y **aplicar y medir medidas de mitigación** (R6).
 3. **Clasificar el riesgo** del sistema (RGPD y AI Act) y cerrar el registro de riesgos.
 4. **Construir un demostrador ejecutable** con validación de entradas, aviso de incertidumbre y plan B (R7).

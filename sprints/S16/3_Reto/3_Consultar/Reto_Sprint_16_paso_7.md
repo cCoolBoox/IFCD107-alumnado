@@ -1,11 +1,11 @@
-# Paso 7 · Plan B, riesgos cerrados, lista de congelación y coevaluación (día 3, 65 minutos)
+# Paso 7 · Plan B, lista de congelación y coevaluación (día 3, 65 minutos)
 
 <!--nav-->
 > Sprint 16 · Reto «Entrega final: evaluar, demostrar y documentar» · paso 7 de 8 · [Ficha del reto](Reto_Sprint_16.md) · [Reto en una página](../1_Trabajar/Reto_Sprint_16_una_pagina.md) · [Paso 8 →](Reto_Sprint_16_paso_8.md)
 <!--/nav-->
 
 1. Grabar el vídeo plan B del demostrador (30 minutos).
-2. Cerrar el registro de riesgos y pasar la lista de congelación (35 minutos).
+2. Pasar la lista de congelación y buscar claves y datos personales olvidados (35 minutos).
 3. Rellenar vuestra coevaluación individual (anexo B).
 
 **En sencillo.** Antes de dar una obra por terminada se hacen tres cosas. Un **seguro**: un vídeo de 90 segundos de la demo funcionando, por si el día de la defensa falla internet o la app. Una **revisión final con lista**, como la de un piloto antes de despegar: casilla a casilla, sin fiarse de la memoria. Y una **valoración honesta del equipo**, en privado. No hace falta programar: se graba la pantalla con lo que trae el ordenador, se marcan casillas y se escribe sobre lo que cada persona ha hecho. Un pequeño programa de unas líneas os ayuda a buscar claves y datos personales olvidados en el repositorio.
@@ -111,7 +111,7 @@
 - **La lista de congelación:** las seis secciones con todas las casillas marcadas, o con lo pendiente apuntado (qué, quién y a qué hora).
 - **La coevaluación:** cada persona con la suya hecha, con comentario en cada 1 o 4 y reparto que suma 100 %.
 
-**Hecho cuando:** el vídeo plan B existe, el registro de riesgos está cerrado, la lista de congelación está pasada y todo el equipo ha entregado la coevaluación.
+**Hecho cuando:** el vídeo plan B existe, la lista de congelación está pasada (con el registro de riesgos ya cerrado en el paso 5) y todo el equipo ha entregado la coevaluación.
 
 ## Si algo falla
 

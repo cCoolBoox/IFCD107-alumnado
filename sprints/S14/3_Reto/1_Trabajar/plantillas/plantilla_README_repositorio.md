@@ -48,7 +48,7 @@
 *(Cada `sprint-NN/` lleva además una hoja `autoevaluacion_nombre.md` por persona. La coevaluación confidencial del anexo B **no se sube**: se entrega al docente.)*
 
 ## 4. Cómo reproducirlo (pasos exactos)
-**Requisitos:** Python 3.11 · [Sistema operativo probado] · [GPU si es imprescindible: sí/no]
+**Requisitos:** Python [la versión que ves con `!python --version` en Colab] · [Sistema operativo probado] · [GPU si es imprescindible: sí/no]
 
 ```bash
 git clone [url-del-repositorio]
@@ -82,6 +82,7 @@ Se abre en <http://localhost:8501>. **Plan B:** vídeo en `sprint-16/docs/demo.m
 - Clasificación de riesgo (AI Act): [mínimo / limitado / alto]. Datos personales: [sí / no].
 - Principales riesgos y medidas: [3 líneas]. Detalle en `sprint-16/docs/riesgos_eticos.md` y `sprint-16/docs/model_card.md`.
 - **Limitaciones y usos no permitidos:** [2-3 líneas].
+- **Uso de IA:** [qué pedisteis a la IA, qué fuentes y licencias comprobasteis a mano y qué cambiasteis].
 
 ## 8. Equipo y contribuciones
 | Persona | Roles (S14 / S15 / S16) | Contribución principal (enlaces a commits / PR) |

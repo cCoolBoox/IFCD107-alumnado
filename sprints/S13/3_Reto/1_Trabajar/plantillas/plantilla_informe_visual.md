@@ -9,10 +9,10 @@
 
 ## Los cuatro gráficos
 
-| ¿Podemos fiarnos del modelo? | ¿Qué falla y cuánto? |
+| ¿Qué falla y cuánto? | ¿Podemos fiarnos del modelo? |
 |---|---|
-| **[Título-conclusión]** — Gráfico 1: curva ROC o PR | **[Título-conclusión]** — Gráfico 2: matriz de confusión (en %) |
-| *Una frase: qué muestra y qué significa.* | *Una frase: qué error es más caro y por qué.* |
+| **[Título-conclusión]** — Gráfico 1: matriz de confusión (en %) | **[Título-conclusión]** — Gráfico 2: curva ROC |
+| *Una frase: qué error es más caro y por qué.* | *Una frase: qué muestra y qué significa.* |
 | **¿Qué mueve el resultado?** | **¿Cuánto vale?** |
 | **[Título-conclusión]** — Gráfico 3: importancia de variables | **[Título-conclusión]** — Gráfico 4: ahorro en € con y sin el modelo |
 | *Una frase: la variable líder y su lectura de negocio.* | *Una frase: supuestos de coste (FN = __ €, FP = __ €).* |
@@ -28,7 +28,7 @@
 [Riesgo específico y medida. Ej.: «El modelo no debe usarse para negar reservas a nadie; solo para priorizar avisos. Se revisará por país de origen cada trimestre.»]
 
 ## Pie
-Datos: ______ (n = ___, periodo ___) · Modelo: ______ · Umbral: ___ · Semilla: 42 · Notebook: `S13_02_...` · Responsable: ______
+Datos: ______ (n = ___, periodo ___) · Modelo: ______ · Umbral: ___ · Semilla: 42 · Notebook: `informe_visual.ipynb` · Responsable: ______
 
 ---
 

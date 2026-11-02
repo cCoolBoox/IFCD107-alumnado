@@ -9,7 +9,7 @@ Esta carpeta es un **ejemplo completo y funcional** con el modelo de cancelacion
 | `app.py` | Interfaz **Streamlit** (formulario → resultado). |
 | `api.py` | API **FastAPI** *(opcional)*: `/salud` y `/predecir`. |
 | `tests/test_logica.py` | Pruebas de sentido común (`pytest -q`). |
-| `requirements.txt` | Versiones del entorno donde se comprobó (recortad a lo que uséis). |
+| `requirements.txt` | Versiones del entorno donde se comprobó (recortad a lo que uséis; `scikit-learn`, `pandas` y `numpy` deben ser las de vuestro modelo, en `modelo/metadatos.json`). |
 | `modelo/` | **No incluida**: la crea el notebook `S16_01_demostrador` (o vuestro script de entrenamiento) con `modelo_cancelaciones.joblib` y `metadatos.json`. |
 
 ## Cómo usarla

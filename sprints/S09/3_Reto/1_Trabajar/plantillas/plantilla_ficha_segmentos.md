@@ -18,7 +18,7 @@ ______________________________________________
 | 2 | | | | | |
 | 3 | | | | | |
 
-*(Ejemplo de fila: «Familias de larga estancia · 410 (34 %) · 9 de cada 10 viajan con niños, reservan con 110 días de antelación y gastan poco en actividades · Pack «Niños gratis en el parque acuático» en la reserva · Parque acuático»)*
+*(Ejemplo de fila: «Familias de larga estancia · 402 (34 %) · 9 de cada 10 viajan con niños, reservan con 110 días de antelación y gastan poco en actividades · Pack «Niños gratis en el parque acuático» en la reserva · Parque acuático»)*
 
 ## Recomendador
 - Métodos comparados: ______ (RMSE ___ / precision@3 ___), ______ (RMSE ___ / precision@3 ___).

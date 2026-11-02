@@ -37,7 +37,7 @@
 ## Frases para el informe (completad los huecos)
 
 - Titular: «… cada … a las … reservas de mayor riesgo evitaría unas … habitaciones vacías (≈ … €)».
-- «Detectamos … de cada 10 cancelaciones; … de cada 10 avisos son falsas alarmas.»
+- «Detectamos … de cada 10 cancelaciones; avisamos por error a … de cada 10 reservas que no cancelan.»
 - «Lo que más pesa en una cancelación es …» · «El modelo no debe usarse para …»
 - Pie: «Modelo: …; datos: … reservas sintéticas; umbral …; límite: …; responsables: …»
 

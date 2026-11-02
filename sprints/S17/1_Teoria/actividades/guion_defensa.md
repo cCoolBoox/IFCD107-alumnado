@@ -25,7 +25,7 @@
 |---|---|---|---|---|---|
 | 5 | 22 min | 13 | 4,5 | 4,5 | Añade una diapositiva de resultados y una de errores; más tiempo para la demo. |
 | 6 | 18 min | 11 | 3,5 | 3,5 | Guion base + 1 min de análisis de sesgos. |
-| 7 | 15 min | 9 | 3 | 3 | Guion base sin las diapositivas 4 y 5 fusionadas en una; demo de 3 min. |
+| 7 | 15 min | 9 | 3 | 3 | Guion base con las diapositivas 4 y 5 fusionadas en una; demo de 3 min. |
 | 8 | 13 min | 8 | 2,5 | 2,5 | Solo diapositivas 1, 2, 6, 8, 9, 11 y 12; el resto, en apéndice. |
 
 *Si tienes más tiempo del que necesitas, no lo rellenes: acaba antes. Si tienes menos, quita diapositivas, no aceleres.*
@@ -49,7 +49,7 @@ Las preguntas de ampliación pueden dirigirse a **cualquier** integrante.
 3. **S**ustenta con un **dato** o figura de la memoria.
 4. **P**one el límite («esto solo lo hemos comprobado con…»).
 5. **O**frece el puente («en la memoria, sección 6, está el detalle»).
-6. Si **no lo sabes**, dilo y explica cómo lo averiguarías. No inventes.
+6. Si **no lo sabes** (**N-D-E**): **N**o inventes, **D**ilo y **E**xplica cómo lo averiguarías.
 
 **Preguntas probables (preparad respuesta y quién contesta):**
 | # | Pregunta | Quién responde | Dato que la sostiene |
