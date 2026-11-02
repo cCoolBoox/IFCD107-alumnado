@@ -83,17 +83,19 @@ mejor = "regresión logística" if auc_lr >= auc_rf else "bosque aleatorio"
 1. Se **desordena al azar una variable del test** (rompiendo su relación con el resultado).
 2. Se mide **cuánto empeora el modelo**.
 
-**Ejemplo:** el modelo tiene un AUC de 0,80. Si desordenas `tarifa`, baja a 0,70 → **importancia = 0,10**. Si desordenas `canal`, baja a 0,79 → importancia **0,01**. **Conclusión: la tarifa importa 10 veces más que el canal.**
+**Ejemplo inventado** (una clínica, no TurisData): el modelo tiene un AUC de 0,80. Si desordenas `recordatorio_sms`, baja a 0,70 → **importancia = 0,10**. Si desordenas `hora_cita`, baja a 0,79 → importancia **0,01**. **Conclusión: el recordatorio importa 10 veces más que la hora.**
 
 ```python
-imp = permutation_importance(modelo, X_test, y_test, n_repeats=10, random_state=SEMILLA)
-importancias = pd.Series(imp.importances_mean, index=X_test.columns).sort_values()
+imp = permutation_importance(modelo, X_test, y_test, scoring="roc_auc", n_repeats=5, random_state=SEMILLA)
+importancias = pd.Series(imp.importances_mean, index=X_test.columns).sort_values(ascending=False)
 ```
 
 - **Funciona con cualquier modelo** y sobre **las variables originales** (no sobre columnas transformadas).
-- `n_repeats=10` **repite el desorden 10 veces** y promedia (para que no dependa de la suerte).
+- `scoring="roc_auc"` mide la caída del **AUC**; sin él, scikit-learn mide la exactitud.
+- `n_repeats=5` **repite el desorden 5 veces** y promedia (para que no dependa de la suerte).
+- `sort_values(ascending=False)` ordena de **mayor a menor** importancia.
 
-> ⚠️ **Describe lo que usa el modelo, no una relación causal** (Sprints 5 y 7). «La tarifa pesa mucho en el modelo» **no significa** que cambiar la tarifa cambie las cancelaciones.
+> ⚠️ **Describe lo que usa el modelo, no una relación causal** (Sprints 5 y 7). «El recordatorio pesa mucho en el modelo» **no significa** que mandar más SMS cambie las faltas.
 
 *Para el proyecto final existen también **SHAP** (explica **cada predicción individual**) y **Grad-CAM** (para imágenes: **qué zona de la foto miró la red**). Aquí solo debes saber que existen.*
 
@@ -107,7 +109,7 @@ Los dos errores **no cuestan lo mismo**:
 | **Falso positivo** | Avisamos y no cancelaba: **compensación o descuento** para que confirme | **30 €** |
 
 ```python
-costes = [coste_total(y_test, prob_lr, u) for u in umbrales]       # 50·FN + 30·FP
+costes = [coste_total(prob_lr, u) for u in umbrales]       # 50·FN + 30·FP
 umbral_optimo = umbrales[int(np.argmin(costes))]
 ```
 
@@ -137,7 +139,7 @@ umbral_optimo = umbrales[int(np.argmin(costes))]
 
 | # | Regla | Ejemplo |
 |---|---|---|
-| 1 | **Un gráfico, un mensaje.** El **título es la conclusión**, no la descripción | ✅ «Sin depósito se cancela el doble» · ❌ «Tasa de cancelación por depósito» |
+| 1 | **Un gráfico, un mensaje.** El **título es la conclusión**, no la descripción | ✅ «Las citas sin recordatorio faltan más» · ❌ «Tasa de faltas por recordatorio» |
 | 2 | **Ejes con nombre y unidades; barras siempre desde 0** | Una barra de 52 % y otra de 50 % que empiezan en 49 % parecen una el **triple** de la otra: **trampa** |
 | 3 | **Pocos colores con sentido:** destaca lo importante y deja el resto en gris | Una barra roja y las demás grises |
 | 4 | **Nada de 3D ni tartas con más de 3 trozos;** etiqueta los valores directamente | `ax.bar_label(...)` en vez de obligar a mirar el eje |
