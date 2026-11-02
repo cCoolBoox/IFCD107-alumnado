@@ -1,6 +1,6 @@
 # Sprint 7 · Reto «Precio y cancelación» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_07.md](../3_Consultar/Reto_Sprint_07.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`informe_modelado_plantilla.md`](plantillas/informe_modelado_plantilla.md).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_07.md](../3_Consultar/Reto_Sprint_07.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`informe_modelado_plantilla.md`](plantillas/informe_modelado_plantilla.md). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/3_Reto/1_Trabajar/S07_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - El gerente de TurisData quiere una **tarifa de referencia** (predecir `precio_noche`, un número).

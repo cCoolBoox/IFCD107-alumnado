@@ -61,7 +61,7 @@
 
 **Núcleo y extra.** Núcleo: segmentos con `k` justificado y su ficha, y un recomendador sencillo. Extra: otros algoritmos de agrupación y el aprendizaje por refuerzo (que se ve en demostración).
 
-Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_09_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_09.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
+Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S09/3_Reto/1_Trabajar/S09_demo_reto.html) (muestra lo que tendréis al final). Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_09_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_09.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 

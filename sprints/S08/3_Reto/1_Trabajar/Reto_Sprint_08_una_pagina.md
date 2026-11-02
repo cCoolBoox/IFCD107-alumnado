@@ -1,6 +1,6 @@
 # Sprint 8 · Reto «Duelo de modelos» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_08.md](../3_Consultar/Reto_Sprint_08.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); las plantillas están en [`model_card_plantilla.md`](plantillas/model_card_plantilla.md) y [`leaderboard_plantilla.csv`](plantillas/leaderboard_plantilla.csv); el cuaderno del reto, [`S08_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_06_leaderboard_plantilla.ipynb).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_08.md](../3_Consultar/Reto_Sprint_08.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); las plantillas están en [`model_card_plantilla.md`](plantillas/model_card_plantilla.md) y [`leaderboard_plantilla.csv`](plantillas/leaderboard_plantilla.csv); el cuaderno del reto, [`S08_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_06_leaderboard_plantilla.ipynb). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/3_Reto/1_Trabajar/S08_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - TurisData ya sabe predecir cancelaciones.

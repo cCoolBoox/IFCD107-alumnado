@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Demo interactiva del reto del Sprint 16 (IFCD107): evaluar el modelo en el test, medir una mitigación del sesgo, probar el demostrador y sus pruebas, la model card con las cifras finales y la lista de congelación.">
+<title>Entrega final: evaluar, demostrar y documentar · demo interactiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Maqueta común de las demos del reto (IFCD107): hero → «el producto funcionando» con un selector de pasos
+   → qué se sube y cómo se evalúa. Identidad: la de las infografías del curso (tinta azulada, óxido, verde azulado, crema). */
+:root{
+  --bg:#F5F1E8; --surface:#FFFFFF; --ink:#1D2433; --muted:#566073; --line:#D9D2C0; --soft:#EFE7D2;
+  --accent:#C23B1F; --accent-soft:#F7DDD4; --teal:#0F7F7F; --teal-soft:#D5ECEA; --sky:#DCE6F5; --blue:#3D5F96;
+  --ok:#1B7F4B; --ok-soft:#D9F0E3; --bad:#B42318; --bad-soft:#FBE0DC; --warn:#8A5A00; --warn-soft:#F6E7C4;
+  --code-bg:rgba(29,36,51,.08); --focus:#1D2433; --pt:rgba(61,95,150,.42); --grid:#E4DDCB;
+  --f-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+    --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+    --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+    --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+  --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+  --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+  --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5.2vw,52px);line-height:1.05;font-weight:800;letter-spacing:-.02em;margin-top:8px}
+h2{font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+h3{font-size:17px;line-height:1.2;font-weight:800}
+p{margin:0}
+code{font-family:var(--f-mono);font-size:.86em;background:var(--code-bg);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+a{color:var(--accent);font-weight:700;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+button{font:inherit;color:inherit;cursor:pointer}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:62ch;margin-top:10px}
+.hint{font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:5px 13px;font-size:14px;font-weight:700}
+.btn{border:2px solid var(--ink);background:transparent;border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.small{padding:5px 11px;font-size:13px}
+.btn.on{background:var(--ink);color:var(--bg)}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sh .st{font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--accent);letter-spacing:.12em;white-space:nowrap}
+.sh .ln{flex:1;height:2px;background:var(--line)}
+.sec-intro{color:var(--muted);max-width:68ch;margin:-4px 0 16px}
+
+/* selector de pasos */
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.step{display:flex;align-items:center;gap:9px;border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:7px 13px 7px 8px;text-align:left;font-weight:700;font-size:14px;line-height:1.2}
+.step .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:14px}
+.step small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+.step[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.step[aria-pressed="true"] small{color:var(--bg);opacity:.8}
+.aqui{background:var(--teal-soft);border-radius:12px;padding:11px 16px;margin-bottom:16px;font-size:15.5px;min-height:3.2em}
+.aqui b{color:var(--teal)}
+
+/* piezas del producto */
+.stage{display:flex;flex-direction:column;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row2>*{min-width:0}
+@media (max-width:860px){.row2{grid-template-columns:1fr}}
+.pieza{background:var(--surface);border:2px solid var(--line);border-radius:14px;overflow:hidden;min-width:0;transition:opacity .2s,box-shadow .2s,border-color .2s}
+.pieza>.bh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 14px;border-bottom:2px solid var(--line);font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.pieza>.bb{padding:12px 14px}
+.stage.sel .pieza{opacity:.5}
+.stage.sel .pieza.hl{opacity:1;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.stage.sel .pieza.hl>.bh{color:var(--accent)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.duo>*{min-width:0}
+@media (max-width:700px){.duo{grid-template-columns:1fr}}
+.cap{font-size:13.5px;color:var(--muted);margin-top:6px}
+.cap b{color:var(--ink)}
+
+/* gráficos */
+svg.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart text{font-family:var(--f-body);font-size:11px;fill:var(--muted)}
+.chart .tl{font-size:11.5px;font-weight:700;fill:var(--ink)}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.chart .ax{stroke:var(--muted);stroke-width:1.2}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--muted);margin-top:4px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.legend i.ln{width:18px;height:3px;border-radius:2px;vertical-align:3px}
+
+/* mandos */
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:12px;padding-top:12px;border-top:2px solid var(--line)}
+.ctl label{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.ctl input[type=range]{width:170px;accent-color:var(--accent)}
+.ctl input[type=number],.ctl select{font-family:var(--f-mono);font-size:14px;padding:5px 8px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.ctl input[type=number]{width:6em}
+.ctl input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
+.read{font-family:var(--f-mono);font-size:13px;color:var(--ink);background:var(--soft);border-radius:8px;padding:6px 10px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 11px;font-weight:800;font-size:12.5px;letter-spacing:.04em}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.msg{margin-top:8px;font-size:14.5px;padding:8px 12px;border-radius:10px;background:var(--soft)}
+.msg.ok{background:var(--ok-soft);color:var(--ok)} .msg.bad{background:var(--bad-soft);color:var(--bad)} .msg.warn{background:var(--warn-soft);color:var(--warn)}
+
+/* tablas */
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:7px 10px;text-align:left}
+th{font-size:12.5px;font-weight:800;letter-spacing:.04em;color:var(--muted);border-bottom:2px solid var(--line)}
+td{border-bottom:1px solid var(--line)}
+td.num,th.num{text-align:right;font-family:var(--f-mono);white-space:nowrap}
+.sql{font-family:var(--f-mono);font-size:13px;background:var(--code-bg);border-radius:8px;padding:8px 12px;margin-bottom:10px;overflow-wrap:anywhere}
+
+/* lista de comprobaciones */
+.checks{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:5px}
+.checks li{display:flex;gap:9px;align-items:baseline;font-size:14.5px}
+.checks .m{flex:none;width:1.3em;text-align:center;font-weight:800}
+.checks li.ok .m{color:var(--ok)} .checks li.no .m{color:var(--muted)} .checks li.bad .m{color:var(--bad)}
+textarea{width:100%;min-height:130px;font:inherit;font-size:15px;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);resize:vertical}
+
+/* qué se sube y rúbrica */
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-bottom:22px}
+.file{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:11px 14px}
+.file b{font-family:var(--f-mono);font-size:13.5px;overflow-wrap:anywhere}
+.file .o{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
+.file .s{display:block;font-size:12.5px;font-weight:800;color:var(--teal);margin-top:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tab{border:2px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 15px;font-weight:700;font-size:14.5px}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:900px){.levels{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.levels{grid-template-columns:1fr}}
+.lv{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:10px 13px;font-size:14px}
+.lv h3{font-size:14px;margin-bottom:5px;color:var(--muted)}
+.lv.min{border-color:var(--teal)} .lv.min h3{color:var(--teal)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.foot{font-size:13.5px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const DEMO = {"kicker":"IFCD107 · SPRINT 16 · DEMO DEL RETO","titulo":"Entrega final: evaluar, demostrar y documentar","lead":"El cliente (el docente) va a recibir vuestro trabajo como si fuera un entregable real.","aviso":"Es una demo para entender adónde vamos: **no se entrega nada desde aquí**. Usa las 6000 reservas **sintéticas** de TurisData (la empresa no existe) y dos modelos de verdad, regresiones logísticas ajustadas con los mismos datos que el reto: el de la evaluación (cuaderno `S13_02`) y el del demostrador de la plantilla (`S16_01`, 11 variables). Vuestro proyecto será otro y **vuestras cifras serán distintas**; el cuaderno, la model card y la memoria los hacéis fuera de esta página.","widget":"demostrador","widget_titulo":"Evaluar, mitigar, demostrar y documentar el mismo modelo","intro":"Esto es lo que tendréis al acabar el reto. **Tocad los mandos:** partid las reservas por canal y buscad dónde falla el modelo, bajad el umbral de un grupo y medidlo en el test solo cuando lo hayáis elegido, probad una entrada imposible y una vacía en el demostrador y estropead `logica.py` para ver cómo saltan las pruebas. Después, elegid un paso para ver qué pieza construís en él.","aqui_todo":"Elegid un paso del reto y se ilumina **la pieza que construís en él**. Pulsad otra vez el mismo paso para verlo todo.","pasos":[{"n":"1","titulo":"Evaluar el modelo en el test y buscar dónde falla","corto":"Evaluar en el test","min":40,"piezas":["evaluacion"],"aqui":"Aquí evaluáis el modelo del Sprint 15 en el test, una sola vez, con su intervalo, y lo partís por subgrupos: mirad cómo la nota global esconde al canal que va peor."},{"n":"2","titulo":"Abrir la memoria y la model card","corto":"Memoria y model card","min":85,"piezas":["modelcard","demostrador"],"aqui":"Aquí montáis el esqueleto de la memoria, empezáis los apartados 1 a 5 de la model card (botón «Día 1») y dejáis el demostrador básico funcionando con vuestro modelo."},{"n":"3","titulo":"Mitigar el sesgo y volver a medir","corto":"Mitigar el sesgo","min":80,"piezas":["mitigacion"],"aqui":"Aquí elegís una medida con los datos de entrenamiento, la medís en el test antes y después, por subgrupo, y apuntáis lo que mejora, lo que empeora y lo que cuesta."},{"n":"4","titulo":"Pulir el demostrador y probarlo en limpio","corto":"Pulir el demostrador","min":40,"piezas":["demostrador","pruebas"],"aqui":"Aquí añadís la regla entre campos, el aviso de incertidumbre y tres pruebas propias, y probáis tres entradas normales, una imposible y una vacía sin que nada se rompa."},{"n":"5","titulo":"Cerrar la model card y completar la memoria","corto":"Cerrar la model card","min":80,"piezas":["modelcard"],"aqui":"Aquí cerráis los apartados 6 a 9 con las cifras de vuestros cuadernos: la tabla de subgrupos sale de la mitigación medida, y el apartado 8 repite las `limitaciones` del demostrador."},{"n":"6","titulo":"Verificar en limpio y corregir","corto":"Verificar en limpio","min":80,"piezas":["pruebas","congelacion"],"aqui":"Aquí otra persona sigue solo el README en un entorno limpio y `pytest -q` pasa; los buscadores encuentran rutas de vuestro ordenador y librerías que faltan en `requirements.txt`."},{"n":"7","titulo":"Plan B, riesgos cerrados, lista de congelación y coevaluación","corto":"Plan B y congelación","min":65,"piezas":["demostrador","congelacion"],"aqui":"Aquí grabáis el vídeo plan B con las entradas de la demo, pasáis la lista de congelación casilla a casilla y buscáis claves y datos personales olvidados."},{"n":"8","titulo":"Revisión con la rúbrica, review, retro y congelación","corto":"Rúbrica y congelación","min":55,"piezas":["congelacion","mitigacion"],"aqui":"Aquí revisáis con la rúbrica, enseñáis en la review la entrada errónea y la tabla antes/después por subgrupo, y creáis la etiqueta `v1.0-entrega` antes de las 14:30."}],"ficheros":[{"nombre":"README.md","origen":"Lo modificáis.","sube":"Sí · sprint-16/"},{"nombre":"notebooks/04_evaluacion.ipynb","origen":"Lo creáis a partir de un cuaderno.","sube":"Sí · sprint-16/notebooks/"},{"nombre":"demostrador/logica.py","origen":"Lo modificáis.","sube":"Sí · sprint-16/demostrador/"},{"nombre":"demostrador/app.py","origen":"Lo modificáis.","sube":"Sí · sprint-16/demostrador/"},{"nombre":"demostrador/tests/test_logica.py","origen":"Lo modificáis.","sube":"Sí · sprint-16/demostrador/tests/"},{"nombre":"demostrador/requirements.txt","origen":"Lo modificáis.","sube":"Sí · sprint-16/demostrador/"},{"nombre":"docs/riesgos_eticos.md","origen":"Lo modificáis.","sube":"Sí · sprint-16/docs/"},{"nombre":"docs/model_card.md","origen":"Lo creáis a partir de una plantilla.","sube":"Sí · sprint-16/docs/"},{"nombre":"docs/memoria_tecnica.pdf","origen":"Lo creáis a partir de una plantilla.","sube":"Sí · sprint-16/docs/"},{"nombre":"docs/demo.mp4","origen":"Lo creáis.","sube":"Solo si pesa menos de 25 MB · sprint-16/docs/; si no, su enl"},{"nombre":"demostrador/modelo/","origen":"Lo genera","sube":"Solo si pesan poco; si no, el README explica cómo generarlos"},{"nombre":"demostrador/api.py","origen":"Lo modificáis.","sube":"Solo si lo hacéis · sprint-16/demostrador/"},{"nombre":"Datos del proyecto o script de descarga","origen":"Ya hecho","sube":"Solo si faltan y pesan poco · data/"},{"nombre":"autoevaluacion_nombre.md","origen":"Ya hecha, en blanco","sube":"Sí, una por persona (no una por equipo) · sprint-16/"}],"sube_resumen":"9 ficheros + 1 hoja por persona","carpeta_entrega":"sprint-16/","rubrica":[{"criterio":"Corrección técnica","pregunta":"¿funciona?","niveles":["Hay evaluación, pero el test se ha usado más de una vez o solo hay una métrica global; el demostrador no arranca","Evaluación en test hecha una vez con métricas y gráficos; métrica por subgrupos; sesgo anotado y medida elegida y aplicada; el demostrador arranca en el equipo de quien lo hizo","Además, análisis de errores con ejemplos reales; mitigación medida antes y después por subgrupo; el demostrador rechaza entradas erróneas con un mensaje claro y pytest -q pasa","Además, el modelo se interpreta con SHAP o Grad-CAM, hay intervalos de incertidumbre, se comparan dos mitigaciones o se prueba con datos distintos"]},{"criterio":"Reproducibilidad","pregunta":"¿lo puede repetir otra persona?","niveles":["Solo funciona en el ordenador de quien lo hizo; el README no dice cómo ejecutarlo","El README tiene los comandos y hay requirements.txt, pero faltan versiones, datos o la versión de Python","Otra persona, en un Colab nuevo o una carpeta limpia, lo ejecuta siguiendo solo el README y ve el demostrador; versiones fijas; commits de todas las personas; etiqueta v1.0-entrega creada antes de las 14:30","Además, el README indica el tiempo total de reproducción, la estructura de carpetas y un comando único para la demo, y la prueba en limpio está anotada (quién, qué falló, cómo se corrigió)"]},{"criterio":"Análisis y comunicación al cliente","pregunta":"¿lo entiende quien no programa?","niveles":["La memoria está incompleta o la model card tiene huecos esenciales","Memoria de 10–15 páginas con todas las secciones y model card completa, pero con conclusiones genéricas o cifras que no coinciden","Memoria clara y autocontenida, con figuras con pie y referencias; cifras iguales en todos los documentos; conclusiones accionables (qué hacer y qué no hacer con el modelo); el demostrador comunica la incertidumbre","Además, un resumen ejecutivo que se entiende sin leer el resto y recomendaciones priorizadas con lo que habría que hacer antes de un despliegue real"]},{"criterio":"IA responsable","pregunta":"¿se sabe qué riesgos hay y qué se hizo?","niveles":["El registro de riesgos no está cerrado o no hay análisis por subgrupos","Registro con estado de cada riesgo alto, clasificación RGPD / AI Act citada, sesgo detectado y aviso de límites en el demostrador","Clasificación justificada; mitigación aplicada y medida; limitaciones y usos no permitidos en la model card; el uso de IA declarado (qué se pidió, qué se revisó y qué se cambió); sin datos personales ni claves","Además, supervisión humana y transparencia explicadas, y se cuenta un fallo concreto (de la IA o de la mitigación, por ejemplo, un subgrupo que empeoró) y qué se decidió"]}],"enlaces":[{"t":"Abrir el cuaderno del reto (Colab)","url":"https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/S16_01_demostrador.ipynb"},{"t":"Reto en una página","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/3_Reto/1_Trabajar/Reto_Sprint_16_una_pagina.md"},{"t":"Qué se sube y la rúbrica","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/3_Reto/2_Entregar/entrega_y_rubrica.md"},{"t":"Ficha completa del reto","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/3_Reto/3_Consultar/Reto_Sprint_16.md"},{"t":"README del Sprint 16","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/README.md"}],"pie":"El reto se hace en el repositorio de vuestro equipo, no en esta página. La evaluación va en `04_evaluacion.ipynb` (a partir de `S13_02`) y el demostrador se adapta a vuestro proyecto desde `S16_01`; si algo de aquí no se entiende, está explicado paso a paso en la ficha del reto.","datos":{"ev":{"n":1500,"pos":688,"umbral":0.35,"avisos":967,"fn":118,"fp":397,"auc":0.744,"auc_ic":[0.719,0.767],"recall":0.828,"recall_ic":[0.799,0.854],"precision":0.589,"coste_fn":50,"coste_fp":30,"coste_sin":34400,"coste_con":17810,"n_ent":4500,"grupos":{"canal":[{"s":"agencia","n":295,"can":128,"det":104,"av":182,"rec":0.812,"m":0.068,"pre":0.571},{"s":"directo","n":388,"can":125,"det":77,"av":154,"rec":0.616,"m":0.085,"pre":0.5},{"s":"empresa","n":79,"can":38,"det":28,"av":49,"rec":0.737,"m":0.14,"pre":0.571},{"s":"web_intermediaria","n":738,"can":397,"det":361,"av":582,"rec":0.909,"m":0.028,"pre":0.62}],"pais_origen":[{"s":"DE","n":207,"can":103,"det":87,"av":134,"rec":0.845,"m":0.07,"pre":0.649},{"s":"ES","n":383,"can":176,"det":143,"av":242,"rec":0.812,"m":0.058,"pre":0.591},{"s":"FR","n":71,"can":31,"det":28,"av":48,"rec":0.903,"m":0.104,"pre":0.583},{"s":"IT","n":76,"can":32,"det":30,"av":50,"rec":0.938,"m":0.084,"pre":0.6},{"s":"NL","n":84,"can":41,"det":33,"av":55,"rec":0.805,"m":0.121,"pre":0.6},{"s":"Nordicos","n":110,"can":53,"det":47,"av":73,"rec":0.887,"m":0.085,"pre":0.644},{"s":"UK","n":369,"can":172,"det":142,"av":247,"rec":0.826,"m":0.057,"pre":0.575},{"s":"otros","n":161,"can":65,"det":52,"av":101,"rec":0.8,"m":0.097,"pre":0.515},{"s":"sin dato","n":39,"can":15,"det":8,"av":17,"rec":0.533,"m":0.252,"pre":0.471}],"tipo_habitacion":[{"s":"estandar","n":755,"can":360,"det":311,"av":510,"rec":0.864,"m":0.035,"pre":0.61},{"s":"familiar","n":220,"can":96,"det":73,"av":141,"rec":0.76,"m":0.085,"pre":0.518},{"s":"suite","n":156,"can":57,"det":37,"av":69,"rec":0.649,"m":0.124,"pre":0.536},{"s":"superior","n":369,"can":175,"det":149,"av":247,"rec":0.851,"m":0.053,"pre":0.603}],"regimen":[{"s":"desayuno","n":588,"can":279,"det":215,"av":342,"rec":0.771,"m":0.049,"pre":0.629},{"s":"media_pension","n":281,"can":131,"det":112,"av":186,"rec":0.855,"m":0.06,"pre":0.602},{"s":"solo_alojamiento","n":239,"can":109,"det":95,"av":164,"rec":0.872,"m":0.063,"pre":0.579},{"s":"todo_incluido","n":392,"can":169,"det":148,"av":275,"rec":0.876,"m":0.05,"pre":0.538}],"tarifa":[{"s":"flexible","n":906,"can":477,"det":412,"av":691,"rec":0.864,"m":0.031,"pre":0.596},{"s":"no_reembolsable","n":594,"can":211,"det":158,"av":276,"rec":0.749,"m":0.059,"pre":0.572}],"deposito":[{"s":"parcial","n":425,"can":178,"det":134,"av":228,"rec":0.753,"m":0.063,"pre":0.588},{"s":"sin_deposito","n":856,"can":448,"det":400,"av":682,"rec":0.893,"m":0.029,"pre":0.587},{"s":"total","n":219,"can":62,"det":36,"av":57,"rec":0.581,"m":0.123,"pre":0.632}]},"etiquetas":{"canal":"canal de venta","pais_origen":"país de origen","tipo_habitacion":"tipo de habitación","regimen":"régimen","tarifa":"tarifa","deposito":"depósito"},"errores":{"n":118,"de":688,"canal":[{"s":"agencia","nd":0.203,"todas":0.186},{"s":"directo","nd":0.407,"todas":0.182},{"s":"empresa","nd":0.085,"todas":0.055},{"s":"web_intermediaria","nd":0.305,"todas":0.577}],"ant_nd":57.0,"ant_todas":110.8}},"mit":{"canales":["agencia","directo","empresa","web_intermediaria"],"directo":1,"test":{"p":[8016,5637,6653,7852,7049,4677,7946,5850,7509,7216,3691,1663,6161,4482,4376,910,614,2722,6587,6261,4758,7624,2192,4799,4259,3764,4003,3838,6021,3235,5947,5988,5085,8358,6592,1135,4679,5886,4353,1318,1201,8795,4590,9245,5093,4993,2379,5282,8171,4563,1252,6371,4068,5533,2626,4523,6703,744,2317,1677,4045,2383,7720,2158,1809,3601,2969,992,4140,4951,2126,953,1922,6585,967,1114,9612,1982,9350,8012,4028,6959,5486,8803,3264,5287,6667,676,2824,903,4574,3512,1950,3076,8366,3586,1368,8496,7477,7303,3960,774,3426,4502,9755,5981,5241,1517,5667,3172,3808,2808,5022,5107,7346,412,7139,3050,3226,7932,3663,3771,2115,3677,2666,5224,7858,960,9622,6800,7772,3109,8017,2429,3438,2605,3664,4042,6550,5707,5909,5646,5351,3187,1890,2552,4485,7036,1543,3543,4877,309,3027,669,6853,3604,8831,7527,1646,1424,4610,6407,2186,5813,8778,5466,1465,562,8356,3959,5530,2136,2742,3102,8378,6120,4557,8007,676,2549,5545,1899,5249,6699,3124,8526,2619,6193,3058,3243,3085,3960,4801,4127,2475,8159,5999,3777,4141,4588,1626,5855,2755,7838,6156,6802,3002,6511,7904,2211,4563,3008,4400,2965,2104,1938,6716,6739,6279,6713,8703,4190,1311,4149,1375,2457,5712,8354,6707,4446,1490,4276,5250,3756,1618,3782,2686,6495,4737,7364,7750,5109,4574,3611,4816,5418,7481,3001,8161,5232,2463,4981,2868,2849,3320,7257,5317,6046,3280,3136,9278,2162,7650,5104,7984,7175,679,8846,257,6803,6096,4402,2638,1833,4055,3409,3782,3288,7031,5104,7499,3239,7527,6684,1550,5190,5184,4245,4528,7342,2630,4709,1117,6162,3854,4677,7056,1160,7212,7739,2861,982,2375,3574,1711,8515,3129,5420,8550,1838,3011,2854,1579,5418,3849,5140,9005,5379,7424,6362,4677,2812,1808,3158,6241,3378,2290,7320,5945,6622,1041,4820,6966,8479,6402,4682,9485,6486,5549,1735,7398,5794,985,4433,6132,5376,7890,7765,9437,3497,5893,5571,5639,2778,5325,7919,3426,7731,7719,3294,5430,4068,3677,5612,1369,4310,5554,5190,4323,7128,2645,2180,2957,2271,249,1429,1794,6596,1844,7061,6234,2283,3544,8529,2965,5404,3160,2156,5174,1641,1925,3320,5313,2868,6648,6122,4083,5847,4315,4355,3369,3756,3182,9571,576,4066,5669,2181,4381,6316,1679,431,6326,6630,5308,2481,1859,2246,1521,7795,7712,2011,4012,6266,4040,5351,9149,5675,9109,7833,2031,2843,9251,3442,4373,5698,3742,7358,4249,2429,4686,7615,3830,8339,6424,3520,1438,682,2200,5445,4574,5549,2888,2172,5874,2961,5328,2663,2810,9300,8512,7387,1022,2409,4998,3180,1020,3660,2156,8033,7095,6931,3222,3974,4378,1212,3611,3326,4835,1844,2385,4443,7131,5779,2039,4881,4386,4855,6765,4872,5154,8238,8161,4059,7151,6833,9564,4383,1164,412,6957,7534,4409,5810,3308,2359,710,4136,6922,7405,2040,5505,2929,3883,2561,7307,3730,1685,4822,7104,1352,8526,6796,5416,7756,5618,4438,3883,3742,1968,704,5281,1957,3063,8194,4624,2894,4974,3094,9295,3800,4172,8309,8277,5214,5388,2557,8367,5379,1487,8435,7806,5872,8358,2738,6724,5480,2998,4188,2389,2328,7503,1461,4188,3977,6475,3353,8525,1887,3148,7876,5480,1286,4427,4582,4243,7553,6000,628,1282,2214,4321,4090,2177,7924,4803,3274,2235,4041,8892,1078,2477,1796,1163,9574,3153,580,1985,6353,7170,956,7381,4238,4736,2343,2471,6465,2683,5452,2822,992,3530,9467,2783,4634,6479,1177,2508,4208,5758,1128,7763,2183,8940,4289,3160,1885,3962,3367,4550,2042,2285,2876,1714,4707,5303,5751,8016,6814,3281,3941,4637,6251,2866,2664,7900,6850,6843,2724,7085,2405,3218,4163,2425,7484,6401,3371,6334,3140,7600,6229,3652,6002,5432,7314,5173,741,3277,3901,1540,2364,5301,5245,6163,2253,3713,4168,5659,2219,4271,2038,3975,8500,6674,972,703,3043,4845,3942,1792,4618,8341,4020,5966,2209,4479,758,3441,3407,4564,6539,2275,9498,6556,1334,3883,1269,9029,2325,3775,5581,7780,2270,5744,3413,3102,7593,4726,5600,1143,5190,8895,6980,5126,3227,9334,5809,4531,7886,1334,6107,3147,9447,3025,6524,5650,2607,2449,1567,7764,5205,6296,6368,4561,3872,9389,2879,5177,6802,6077,5446,5482,7672,6340,4808,908,8910,5454,6237,3387,5348,2160,6956,7812,3280,2673,6056,2004,1606,3534,6368,3017,4904,6867,7428,1870,3502,7191,6198,1594,986,3755,7603,3028,2592,3507,2043,6787,7242,9092,6654,4956,5798,710,6419,1518,8045,2945,5433,1977,6291,5917,7024,2333,4299,1953,9749,5922,4569,2091,8872,6004,1973,1458,2250,4840,1330,547,3656,2271,3777,1964,9174,4891,8858,4378,5169,6795,3698,7462,3032,5699,967,1960,5514,1698,3266,3149,870,8657,3482,7338,4638,4842,6966,6682,4562,3789,8741,4447,9637,6719,3187,1264,9870,4620,3722,6357,7573,699,4653,1825,7187,8208,1350,6280,3797,1503,3843,4581,6858,6134,3938,4775,2032,4898,2376,2916,2731,1166,719,7025,8315,2006,6894,2559,7369,7625,4542,9171,694,7460,7164,7805,4487,4960,4205,3103,4549,3826,5036,5113,6544,3206,6760,3996,2381,4382,3989,7621,6029,7824,5898,1197,3376,5653,6865,2665,7933,2534,2418,696,1623,1096,3767,3377,4199,5745,4993,2084,1052,4089,8955,2029,2967,8439,7622,3370,4301,3179,1780,4644,5047,5440,2547,5328,5350,3492,5231,2525,767,5742,975,8034,5825,5078,6052,1974,6980,8185,6142,8526,3158,1676,4348,3787,8736,3280,9394,5420,3719,1864,5397,7090,5041,3217,5630,9184,5096,4434,6465,6740,1861,3862,2948,9356,2079,8390,6499,5043,5626,4554,699,4296,3574,4679,4128,3874,7682,9603,6913,6867,3463,7358,4662,6423,7122,6180,7238,8113,6329,3816,2924,4590,1977,1984,5717,2735,5937,6438,8880,1848,7367,5482,4632,7845,4222,8665,6735,1211,6300,5632,1152,7229,5075,2567,4562,1977,1614,5143,6931,9154,4907,6199,3443,4058,3233,3549,2204,4194,4970,9386,5631,5006,3227,1015,9121,4938,3604,4552,1052,5600,5464,5037,2602,3625,7114,6720,4282,3215,7573,5484,7420,5346,443,2062,6119,5932,2673,4722,1951,5754,3355,7325,702,5049,2465,7735,1748,1041,4795,8159,4301,8691,4553,7878,1425,2604,1999,5825,1210,3415,4400,3469,3338,3710,3817,8472,3609,6710,6391,7255,1853,6665,3072,4659,3509,3255,5762,2724,5458,2982,6089,1618,4027,4199,5094,2772,9086,496,4037,2335,7679,5704,7808,7082,6742,5847,3482,1037,6694,6277,6679,6576,6664,3388,1195,3391,836,3920,5134,4392,978,1186,4105,6283,2415,6452,2960,4822,6021,4821,997,4476,3956,6904,3166,4271,5173,3888,1753,4045,1408,5217,2609,4221,4918,5967,5667,9092,8377,426,7108,5651,1671,6124,6180,3841,7126,2922,5415,7321,4688,5181,2554,3978,2484,4976,6214,2839,9222,7030,1677,1155,8651,1021,3336,5275,3457,7815,1458,4415,5788,4354,6321,4717,6238,7011,9940,653,5234,4402,7604,3638,255,2487,822,3424,3800,4200,7688,1316,3840,462,2951,8331,499,5888,2997,4317,6437,4768,5711,5715,1664,7981,5328,4570,5395,7906,2581,3242,5402,6847,1538,1893,5303,2760,3240,6754,4424,1241,2605,4691,6136,3871,9152,5318,4767,4600,9192,984,678,814,2974,9043,1539,1766,3767,6561,2367,2522,5561,2113,4243,5051,8951,6992,4071,3106,8159,7883,4050,2692,6115,2012,1990,5275,5519,5855,3236,5441,3291,4919,4030,978,1429,2382,2698,7205,8717,2236,4590,1294,5459,4530,9018,5468,4659,4356,2554,3649,1534,4466,8648,7142,5604,1115,3483,3697,5232,3293,4378,4949,5383,1428,6119,4058,2737,5162,4448,7945,3800,1351,4810,7364,1108,3486,6614,4291,2258,2932,5298,4222,1130,4843,7942,4432,1291,325,2008,6741,5856,8542,4454,3109,2924,1751,4319,7841,4330,2905,7034,2848,5908,4492,4012,3461,8174,5439,5428,7793,1727,4467,3401,3567,7314,6594,5711,551,5074,5301,912,5274,5079,2360,5213,6257,5281,3452,686,5342,4714,3081,2755,4033,8072,5744,3109,1765,1717,4815,5981,5227,2509,3066,4137,4443,7666,9022,9567,4775,6443,1634,1038,5475,6216,9032,4298,4770,6708,5814,4784,4535,4627,3301,4190,3278,8158,1907,4035,4292,980,3982,2168,2943,2460,5794,3298,2816,651,2552,5559,5173,6698,5246,2767,3898,4644,3998,8126,8769,7575,3171,3395,5776,3589,5435,5153,7488,3206,3493,8383,4626,2089,9360,5951,7490,4339,6835,8980,5108,1090,5305,8247,5012,704,1555,5089,6309,3155,6536,5248,4711,1483,2238,3270,5990,5795,9214],"c":"313333332011333100303313313331330031330113301330333333303301103131033131031331333313323111301133103100333331331133313100131013313331323100313031133310313300331133333001303331133310310013311333333013031113333030113031133311331213331033331333331330303111313030213323031313111103333223333111331313102133313333333130033313131331013330233330303110033302313333032331333311330310021303133313323003303012130022333033233113000013012300113313313133103313331103333110210313011011133333313131023011333233313330210333211003133333330321330033312301033033323302131033103301303303132310031113010310332331331010331110002013110123303311301303301302120133313321011330330030330333303331133113323133303131103201333111120131311133001330132333033323033123331333011103030333300031333331023033033112031301033013033033310120303033033301300000013020301033100300330123132313113003330301313333133130000303311113110123331333330111333333021330013302001113313111333110331032311033100313030123233113303030303113331303333333111013110033330312330013303001313333333033213330010010031011313111331311033330333332133301100013330113333331130213203333330301333131113031313330332331033233301111303313131312133333123312313301331303333033303330133111130330303031311033131111310133013030101330331333313130011333303031213010030133113323303132133312313120100130003303311132311313013333003332331013300210331103333111130133303331333131330332003133120330031312203012331300313313333330032311311030113313033311303330213310103313033033133313313313133120","y":"100110110100110100001011111111011100011001101001100100000000011000001000000110110001011000000010011000001010011011001000100001101001101000000001001101101001110001011000100000011101100111010010010001010111111110011000110110000001010111001001110001101000001110001011101101110000010110000110010101001011101101011000011110111001000111000100110010010110101100111110110101111000000100011001000010111011000000010000100000011001101010101100101110000110100010101001100111000000010101100010001110001100101010001100000110011011100001011111100010110011011111111011001011001101100100111010100010101101010110110100010000100001101000110001100010001000001011110101010110100001000101000010010110110111100101010001000010100001010101100110000111101110101100011110010110111000111010110100011000001010001001011100001011111000101110100000000000111011110000000111011111011011101101100011010010111000000001100011010111010111000011010011110011100010101101001001101101110100100101110111010100011000000101000000010101100101110110010011011011000010001000111011110101011100110100111110111000010101001100010000010100110000100100010101000101010100101000000100100011111000110010011100000101001100010000101010101010000110101111011110110110010010110101101111010000101001000011110100010001101001001001011011000100001010011111110000110000011011111000101010110110100000010010000110010000100100100001110000100110101010100001111010001101110101000100111101111111001101110010000000100100100000111010101110001100011011110011001001110101010101"},"cv":{"p":[1364,6319,1604,1977,723,1117,3092,4286,671,8743,1037,6420,5006,1479,3854,2620,1967,1399,4237,6497,8787,1223,4006,6428,4238,4641,1264,2533,4620,2707,2519,1774,1084,2051,1580,7457,1905,1326,3793,3621,2409,3219,1562,3859,2281,799,5143,1972,5602,5268,3533,6630,1647,7411,1293,1069,3450,975,6994,3875,2884,4304,624,1818,1069,5634,1759,1419,1393,1895,3185,6156,3740,1341,6108,3127,3373,502,2296,2538,3660,4996,6297,4366,4101,1093,3827,1437,3336,1530,4808,1899,4078,4658,323,4766,3020,3899,1933,7126,3880,3165,3132,265,710,2531,1725,2272,2008,3103,917,3247,3325,2106,1739,4847,500,1467,1737,2188,2045,1298,2056,1365,3272,5191,4665,1285,4596,2686,3995,1108,5074,7798,1884,2168,3719,3216,1575,1036,952,2483,504,2990,1375,2320,2843,2622,2672,1712,1909,5491,1869,4552,2450,2315,2290,1521,2591,777,931,1856,2616,858,2046,4560,5872,960,1027,6042,1303,1724,6428,3090,3479,217,3468,6434,900,1354,1216,2865,699,662,4653,2743,836,1162,2500,535,7614,709,1555,2445,2156,374,4334,4815,1009,3248,3610,3254,3458,3540,2273,1636,1124,1904,1377,2072,9350,8016,4832,901,297,4315,2423,2568,2859,515,694,3215,7705,4514,2347,960,4699,4866,2643,1684,388,5889,1295,2721,2158,3212,5894,1825,1598,2355,6171,2031,1617,5268,7320,3035,3456,2559,2114,1273,3045,5001,4928,3039,3946,2142,5233,1789,7127,1954,2301,1748,3441,3779,4485,4118,2731,6819,6095,1239,4419,6352,8972,3133,1220,5959,6576,7605,3477,2617,3835,1367,8074,4512,2313,5565,3528,3510,2741,2936,1102,3328,6828,9780,7274,4764,4820,3524,4963,5785,3518,2942,4405,3105,1749,1570,2538,1497,2685,1703,1795,2707,6278,1879,1856,3246,3565,2198,321,1199,4006,9249,2097,1269,1791,1546,4110,2613,534,7209,2515,857,2630,3289,627,2305,618,770,1544,3073,1512,2457,7518,934,5062,4598,6997,2218,4272,315,7338,5421,5354,3895,5647,6489,4960,788,1836,2013,5382,3263,1673,1666,3137,1690,5608,2526,1764,2846,3510,2825,1897,2197,3566,2244,3040,1359,668,9437,3789,1378,4953,1934,2665,853,4198,1485,2252,8305,1348,3029,3556,7105,7812,7661,3494,1682,6983,6082,1107,2974,3855,4362,1163,959,5002,5545,7024,3790,4322,3162,1072,4513,2090,4217,300,1025,3572,4474,5261,1919,1242,4883,3246,1128,660,7818,2522,1344,1169,4962,3391,5103,3525,2133,264,4990,2993,3439,2775,441,5079,1756,1295,2329,3545,1017,3932,4425,1341,1852,3948,3877,2080,5555,5563,2048,1691,2479,1753,932,711,7942,1751,1161,3795,2925,1012,2265,485,3415,2152,940,2461,3210,5248,2509,7060,7295,500,4489,1842,2177,3448,3540,1609,1186,6433,5222,4348,940,1122,8061,5418,1005,2624,1743,9206,2911,1930,2494,3118,820,2775,1454,2416,2105,644,1624,1305,874,6470,4215,1207,3764,5673,3936,6974,360,4873,2401,5209,4524,1074,5464,3223,3879,1475,2247,1695,1244,938,3813,2236,1386,6445,1491,3898,1522,1101,1560,2836,763,5877,3583,720,4244,1010,4360,3678,800,591,3546,2508,2225,5742,834,6896,2052,1385,1795,4171,2422,2840,1811,525,7163,3968,8283,1655,2943,906,2128,4818,2934,2754,2621,2917,1856,1236,5008,6091,3004,1022,2387,2364,1614,2877,1290,6663,4656,3853,2599,650,4126,834,1672,1790,7832,8411,4148,4564,7631,1662,1615,3535,1785,4817,1822,3179,2449,4948,1065,3347,3413,4539,1007,3935,4788,624,7718,2889,3807,2054,2930,3156,1882,2504,1578,3477,4212,3692,2655,1970,2558,7120,5576,966,4622,4944,4036,2734,3988,1194,3283,1317,4454,6056,2537,4302,6641,716,3461,1871,2192,1380,3387,954,6362,5117,2133,5753,2212,1896,1057,1718,2538,2148,1433,5227,846,890,2792,1745,955,3152,1838,6293,1863,3332,2450,2517,3250,2788,2302,1832,796,3539,1253,819,679,3485,2652,2241,826,1959,8051,1920,1088,4885,1399,6349,956,1843,3735,2436,7774,1922,2204,3422,8977,4655,2223,1210,6296,4167,4777,5805,4772,3429,619,4450,6042,3846,1161,1599,1313,320,3716,1696,4406,1186,1077,5666,4324,1136,829,999,1385,348,1927,6276,5058,2194,3317,5803,1232,5128,2309,1177,1479,3435,1718,2115,8438,2400,4817,1670,3386,2472,4864,1157,3735,575,7318,1131,4766,1821,2820,3397,1865,3112,2076,2370,2994,884,8151,1734,4925,5208,3297,4026,7145,4380,1562,1610,4005,2396,5503,4975,2030,7852,3266,2699,8436,951,1740,4624,2960,4920,5206,3930,3961,1039,924,5019,2085,4927,638,1648,3376,849,2324,1233,4006,6210,4124,5651,1875,2256,2348,3200,969,1038,2838,908,1530,2006,4579,1978,3952,6420,7532,1292,2590,1142,901,992,4840,4065,687,6132,1468,4776,2302,4860,4656,1391,2768,1802,1688,5672,2730,1459,2436,3826,4291,3331,5415,915,3710,4164,1266,1587,1409,5161,4857,2202,4648,1387,2203,4292,2196,2564,3171,440,1318,2932,971,3219,1350,6883,3781,6892,6319,3424,3117,6808,7213,3016,9759,2580,6753,3514,3073,1076,2547,2329,3135,6429,5817,6705,2508,3140,6091,4568,6091,6407,3358,996,2942,4472,3486,1911,5880,2998,2912,1278,1513,3353,935,2547,6101,4883,1267,7821,3861,3091,4165,2665,1110,8798,4732,2678,7807,4522,5175,3074,1691,1889,5457,4180,677,1994,1279,3828,1344,3338,1803,3359,1750,2949,3512,2574,3349,5317,1948,3076,6498,973,3773,4475,1104,486,309,6694,2121,4098,2495,2005,2830,5437,2181,2214,1960,1975,4183,2772,1521,2481,350,2217,1204,5376,2380,6335,2459,2856,2312,3000,1454,2434,5439,4466,2011,2966,2668,2011,1331,3279,5054,2999,2217,2294,2172,1213,3626,889,3948,1558,4814,1370,1445,2108,1748,566,9877,2435,631,1465,6408,5713,2701,1096,782,1089,913,2149,2689,1829,509,4540,324,4104,1634,3022,3506,1802,4046,3303,3107,4229,810,1769,547,7147,7331,4039,2437,7218,6230,1828,6336,4052,1587,3258,1888,1377,1561,4107,198,3782,4153,2053,541,755,1796,471,3920,2341,2367,1193,1453],"y":"000000000100000000000001011100000001011001011000111001000000000001010001001010000011000000000101000000100000001011010001100000100100100010000001001110110000100000000110010011001100000001000010111010010000000100111101010000100010010100011000000111100011010010100001101100011000000000110000010011111000000100000001101000000100000001101100001010001110101001111010100010000000001000010010010001000101110001000000000010000011101110010001010011001000000011011101110000010111000011010001000010001100011000100100000100000000110010000100011001001010000011000000000000100100100111000000000100000010101000010101101000000100100000100001000001001101100110000100110100000001011000001110010000000001010011000100010011000011000110000110000010000000001100100011001010100001000101010001010000010101000000001110001100101000001110010000101010100000010011010000101010100100000011010010001000110000001000100100111110011001110011000000000101011101101100100011100001001000011011001010011000101110001011001000101000100000000000100001000100000100010000000100100000000000000000000111000100010000000100","recall_global":0.834,"n_global":4500},"pesos":[{"w":1,"cv_rec":0.597,"cv_pre":0.521,"test":[{"s":"agencia","n":295,"can":128,"det":104,"av":182,"rec":0.812,"m":0.068,"pre":0.571},{"s":"directo","n":388,"can":125,"det":77,"av":154,"rec":0.616,"m":0.085,"pre":0.5},{"s":"empresa","n":79,"can":38,"det":28,"av":49,"rec":0.737,"m":0.14,"pre":0.571},{"s":"web_intermediaria","n":738,"can":397,"det":361,"av":582,"rec":0.909,"m":0.028,"pre":0.62}],"avisos":967,"fp":397,"rec":0.828},{"w":2,"cv_rec":0.6,"cv_pre":0.517,"test":[{"s":"agencia","n":295,"can":128,"det":105,"av":182,"rec":0.82,"m":0.067,"pre":0.577},{"s":"directo","n":388,"can":125,"det":74,"av":152,"rec":0.592,"m":0.086,"pre":0.487},{"s":"empresa","n":79,"can":38,"det":29,"av":51,"rec":0.763,"m":0.135,"pre":0.569},{"s":"web_intermediaria","n":738,"can":397,"det":358,"av":581,"rec":0.902,"m":0.029,"pre":0.616}],"avisos":966,"fp":400,"rec":0.823},{"w":3,"cv_rec":0.6,"cv_pre":0.517,"test":[{"s":"agencia","n":295,"can":128,"det":105,"av":182,"rec":0.82,"m":0.067,"pre":0.577},{"s":"directo","n":388,"can":125,"det":75,"av":150,"rec":0.6,"m":0.086,"pre":0.5},{"s":"empresa","n":79,"can":38,"det":29,"av":51,"rec":0.763,"m":0.135,"pre":0.569},{"s":"web_intermediaria","n":738,"can":397,"det":357,"av":578,"rec":0.899,"m":0.03,"pre":0.618}],"avisos":961,"fp":395,"rec":0.823},{"w":5,"cv_rec":0.591,"cv_pre":0.514,"test":[{"s":"agencia","n":295,"can":128,"det":103,"av":179,"rec":0.805,"m":0.069,"pre":0.575},{"s":"directo","n":388,"can":125,"det":76,"av":150,"rec":0.608,"m":0.086,"pre":0.507},{"s":"empresa","n":79,"can":38,"det":29,"av":51,"rec":0.763,"m":0.135,"pre":0.569},{"s":"web_intermediaria","n":738,"can":397,"det":355,"av":578,"rec":0.894,"m":0.03,"pre":0.614}],"avisos":958,"fp":395,"rec":0.818}]},"dem":{"campos":{"antelacion_dias":{"tipo":"entero","min":1,"max":400,"etiqueta":"Antelación (días entre reserva y llegada)"},"noches":{"tipo":"entero","min":1,"max":30,"etiqueta":"Noches"},"adultos":{"tipo":"entero","min":1,"max":6,"etiqueta":"Adultos"},"ninos":{"tipo":"entero","min":0,"max":6,"etiqueta":"Niños"},"precio_noche":{"tipo":"decimal","min":20.0,"max":600.0,"etiqueta":"Precio por noche (€)"},"cliente_repetidor":{"tipo":"entero","min":0,"max":1,"etiqueta":"Cliente repetidor (0 = no, 1 = sí)"},"cancelaciones_previas":{"tipo":"entero","min":0,"max":10,"etiqueta":"Cancelaciones previas"},"tipo_habitacion":{"tipo":"categoria","valores":["estandar","familiar","suite","superior"],"etiqueta":"Tipo habitacion"},"canal":{"tipo":"categoria","valores":["agencia","directo","empresa","web_intermediaria"],"etiqueta":"Canal"},"tarifa":{"tipo":"categoria","valores":["flexible","no_reembolsable"],"etiqueta":"Tarifa"},"deposito":{"tipo":"categoria","valores":["parcial","sin_deposito","total"],"etiqueta":"Deposito"}},"orden":["antelacion_dias","noches","adultos","ninos","precio_noche","cliente_repetidor","cancelaciones_previas","tipo_habitacion","canal","tarifa","deposito"],"num":{"antelacion_dias":{"mu":89.556042,"sd":62.09869,"w":0.731945},"noches":{"mu":5.536875,"sd":2.125219,"w":0.052711},"adultos":{"mu":2.198958,"sd":0.806613,"w":-0.016538},"ninos":{"mu":0.497917,"sd":0.831412,"w":-0.031808},"precio_noche":{"mu":102.95956,"sd":34.261593,"w":0.016074},"cliente_repetidor":{"mu":0.145,"sd":0.352101,"w":-0.103565},"cancelaciones_previas":{"mu":0.066042,"sd":0.294415,"w":0.118728}},"cat":{"tipo_habitacion":{"estandar":0.227782,"familiar":-0.097742,"suite":-0.47447,"superior":-0.002295},"canal":{"agencia":-0.065467,"directo":-0.662086,"empresa":-0.071444,"web_intermediaria":0.452273},"tarifa":{"flexible":0.224727,"no_reembolsable":-0.571451},"deposito":{"parcial":-0.068024,"sin_deposito":0.580417,"total":-0.859117}},"b":-0.367203,"auc":0.746,"tasa_base":0.459,"n_ent":4800,"semilla":42,"versiones":{"scikit-learn":"1.9.1"}},"lista":[{"bloque":"A · Repositorio","items":["El repositorio del equipo contiene lo que queremos entregar, **todo subido** (nada se queda solo en un ordenador).","En la pestaña **Commits** aparecen aportaciones de **todas** las personas.","**No hay claves, tokens ni datos personales** en ningún archivo del repositorio.","`README.md` completo (problema, resultados, estructura, cómo reproducir, cómo lanzar la demo, datos y licencias, IA responsable, equipo).","`requirements.txt` con **versiones fijas** (`pip freeze` recortado a lo que se usa) y versión de Python indicada.","Datos incluidos (si pesan poco y la licencia lo permite) **o** script de descarga que funciona, con licencia citada.","Estructura de carpetas clara (`notebooks/`, `src/`, `experimentos/`, `modelo/`, `demostrador/`, `tests/`, `docs/`)."]},{"bloque":"B · Reproducibilidad (prueba en limpio)","items":["Descargar el repositorio como ZIP (**Code → Download ZIP**) y abrir el notebook principal en Colab: se ejecuta sin errores siguiendo solo el README.","El script de datos / los notebooks se ejecutan **de arriba abajo** con semilla fija y dan los resultados de la memoria (tolerancia razonable).","Las pruebas (si las hay) pasan.","El tiempo total de reproducción está indicado en el README.","El modelo final se genera o se incluye con su `metadatos.json`."]},{"bloque":"C · Demostrador","items":["Se lanza con **un comando** indicado en el README y se abre sin errores.","Probado con 3 entradas normales, 1 entrada errónea y 1 vacía: muestra mensajes claros y no se rompe.","Muestra **incertidumbre** (probabilidad, intervalo, «no lo sé») y un aviso de límites.","Si es un asistente / chatbot: **indica que es un sistema de IA** y cita fuentes.","**Vídeo plan B** de 90 s guardado (`docs/demo.mp4` o enlace estable)."]},{"bloque":"D · Evaluación e IA responsable","items":["Test usado **una sola vez** con el modelo ya elegido.","Gráficos: curvas / matriz / importancia (SHAP o Grad-CAM si procede), con títulos-conclusión.","Rendimiento **por subgrupos** y medida de mitigación **evaluada**.","`docs/riesgos_eticos.md` cerrado (riesgos altos con estado y evidencia) y clasificación RGPD / AI Act justificada.","`docs/model_card.md` completa."]},{"bloque":"E · Memoria","items":["PDF en `docs/memoria_tecnica.pdf`, **10-15 páginas** sin contar anexos.","Todas las secciones del esqueleto; figuras con pie y referencias; **cifras coherentes** con el README y con el registro de experimentos.","Fuentes, licencias y citas correctas; redacción propia (sin copiar bloques de documentación o de un LLM sin revisar).","Conclusiones **accionables** y límites explicados."]},{"bloque":"F · Equipo y metodología","items":["Tablero exportado (`docs/scrum/`): backlog, planning, review y retro de los sprints 14, 15 y 16.","Retro con **acción concreta** y comprobación de la acción anterior.","**Coevaluación** rellenada por cada integrante y entregada al docente (no en el repositorio)."]}]}};
+(function(){
+"use strict";
+const D = DEMO;
+/* ───────── utilidades ───────── */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md = s => esc(s).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\*([^*]+)\*/g,'<i>$1</i>');
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const fmt = (x, d = 1) => Number.isFinite(x) ? x.toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d}) : 'NaN';
+const mean = a => a.reduce((s, v) => s + v, 0) / a.length;
+const NS = 'http://www.w3.org/2000/svg';
+function S(name, attrs, parent, text){ const e = document.createElementNS(NS, name); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; if (parent) parent.appendChild(e); return e; }
+const lin = (d0, d1, r0, r1) => v => r0 + (v - d0) * (r1 - r0) / (d1 - d0);
+function ticks(a, b, k){ const st = (b - a) / k, out = []; for (let i = 0; i <= k; i++) out.push(a + st * i); return out; }
+/* Gráfico con ejes: devuelve {svg, X, Y, g (capa dentro del área), W, H, m} */
+function chart(opt){
+  const W = opt.w || 460, H = opt.h || 290, m = Object.assign({l: 48, r: 12, t: 12, b: 40}, opt.m || {});
+  const svg = S('svg', {viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': opt.label || ''}); svg.classList.add('chart');
+  const X = lin(opt.x[0], opt.x[1], m.l, W - m.r), Y = lin(opt.y[0], opt.y[1], H - m.b, m.t);
+  const id = 'c' + Math.random().toString(36).slice(2, 8);
+  const cp = S('clipPath', {id}, S('defs', {}, svg)); S('rect', {x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b}, cp);
+  (opt.xt || ticks(opt.x[0], opt.x[1], 5)).forEach(v => { S('line', {x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, class: 'gl'}, svg); S('text', {x: X(v), y: H - m.b + 15, 'text-anchor': 'middle'}, svg, opt.fx ? opt.fx(v) : fmt(v, 0)); });
+  const ylab = [];
+  (opt.yt || ticks(opt.y[0], opt.y[1], 4)).forEach(v => { S('line', {x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: 'gl'}, svg); ylab.push(S('text', {x: m.l - 6, y: Y(v) + 4, 'text-anchor': 'end'}, svg, opt.fy ? opt.fy(v) : fmt(v, 0))); });
+  S('line', {x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, class: 'ax'}, svg); S('line', {x1: m.l, x2: m.l, y1: m.t, y2: H - m.b, class: 'ax'}, svg);
+  if (opt.xl) S('text', {x: (m.l + W - m.r) / 2, y: H - 6, 'text-anchor': 'middle', class: 'tl'}, svg, opt.xl);
+  if (opt.yl) S('text', {x: 12, y: (m.t + H - m.b) / 2, 'text-anchor': 'middle', class: 'tl', transform: `rotate(-90 12 ${(m.t + H - m.b) / 2})`}, svg, opt.yl);
+  const g = S('g', {'clip-path': `url(#${id})`}, svg);
+  return {svg, X, Y, g, W, H, m, ylab};
+}
+function pieza(host, ids, titulo, extra){
+  const p = el('section', 'pieza'); p.dataset.pieza = ids;
+  p.appendChild(el('div', 'bh', `<span>${esc(titulo)}</span>${extra || ''}`));
+  const b = el('div', 'bb'); p.appendChild(b); host.appendChild(p); return b;
+}
+/* ───────── widgets de cada sprint (se concatenan aquí) ───────── */
+const W = {};
+/* Widget «demostrador» (S16): lo que el equipo tiene al cerrar el proyecto. Piezas: evaluacion · mitigacion · demostrador · pruebas · modelcard · congelacion.
+   Datos (D.datos, de prep_demostrador.py): ev (métricas, subgrupos y errores del test del modelo de S13_02), mit (predicciones del test y de la validación
+   cruzada del entrenamiento, para elegir y medir la mitigación), dem (coeficientes del modelo del demostrador de la plantilla S16_01) y lista (congelación). */
+W.demostrador = function(host, D){
+  const d = D.datos, EV = d.ev, MI = d.mit, DM = d.dem;
+  const st = document.createElement('style');
+  st.textContent = `
+.w16-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:10px}
+.w16-tile{background:var(--soft);border-radius:12px;padding:10px 13px;display:flex;flex-direction:column;gap:2px}
+.w16-tile b{font-family:var(--f-display);font-size:30px;line-height:1.1}
+.w16-tile span{font-size:13px;color:var(--muted)}
+.w16-seg{display:inline-flex;flex-wrap:wrap;gap:6px}
+.w16-h{font-family:var(--f-display);font-weight:800;font-size:14px;letter-spacing:.06em;color:var(--accent);margin:0 0 8px;display:flex;gap:9px;align-items:center}
+.w16-h i{font-style:normal;flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:13px}
+.w16-fase{border:2px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:12px}
+.w16-fase .ctl:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.w16-chart{max-width:600px}
+.w16-lb{flex-wrap:wrap}.w16-lb select{max-width:100%;min-width:0}
+@media (max-width:560px){.ctl label.w16-lb{display:grid;width:100%}.w16-lb select{width:100%}}
+.w16-h.b{display:block}.w16-h.b span{display:block;margin-top:2px}
+@media (min-width:561px){.w16-h.b span{display:inline;margin:0 0 0 8px}}
+@media (max-width:560px){
+ .w16-mini{width:44px}
+ .w16-err th,.w16-err td{padding-left:5px;padding-right:5px}.w16-err .w16-mini{width:30px;margin-right:4px;display:block;margin-bottom:2px}
+ .w16-st thead{display:none}
+ .w16-st tr{display:block;border-bottom:2px solid var(--line);padding:5px 0}
+ .w16-st td{display:flex;justify-content:space-between;gap:12px;border:0;padding:2px 0;text-align:right;white-space:normal}
+ .w16-st td::before{content:attr(data-l);font-weight:700;color:var(--muted);text-align:left;flex:none}
+}
+.w16-mini{display:inline-block;vertical-align:middle;width:90px;height:9px;border-radius:5px;background:var(--line);overflow:hidden;margin-right:6px}
+.w16-mini i{display:block;height:100%;background:var(--teal)}
+.w16-mini.a i{background:var(--accent)}
+.w16-app{border:2px solid var(--line);border-radius:12px;padding:14px;background:var(--bg)}
+.w16-app h4{font-family:var(--f-display);font-size:22px;margin:0 0 2px}
+.w16-form{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin:12px 0}
+@media (max-width:560px){.w16-form{grid-template-columns:1fr}}
+.w16-form label{display:flex;flex-direction:column;gap:4px;font-size:13.5px;font-weight:700}
+.w16-form input,.w16-form select{font-family:var(--f-mono);font-size:14px;padding:6px 8px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);width:100%;min-width:0}
+.w16-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.w16-metrics div{background:var(--surface);border:2px solid var(--line);border-radius:10px;padding:8px 12px}
+.w16-metrics span{display:block;font-size:13px;color:var(--muted)}
+.w16-metrics b{font-family:var(--f-display);font-size:30px;line-height:1.1}
+.w16-prog{height:12px;border-radius:6px;background:var(--line);overflow:hidden}
+.w16-prog i{display:block;height:100%;background:var(--accent)}
+.w16-info{margin-top:10px;font-size:14.5px;padding:9px 12px;border-radius:10px;background:var(--sky);border-left:5px solid var(--blue)}
+.w16-term{font-family:var(--f-mono);font-size:13px;background:#1D2433;color:#F1ECE0;border-radius:10px;padding:10px 12px;white-space:pre-wrap;overflow-wrap:anywhere;margin:8px 0}
+.w16-term .f{color:#FF8D78;font-weight:600}.w16-term .p{color:#6FD3A0}
+.w16-code{font-family:var(--f-mono);font-size:12.5px;background:var(--code-bg);border-radius:8px;padding:8px 10px;white-space:pre-wrap;overflow-wrap:anywhere;margin:6px 0 0}
+.w16-card{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:860px){.w16-card{grid-template-columns:1fr}}
+.w16-ap{border:2px solid var(--line);border-radius:12px;padding:10px 13px;min-width:0}
+.w16-ap h4{font-family:var(--f-display);font-size:15px;margin:0 0 6px;display:flex;gap:8px;align-items:center}
+.w16-ap h4 i{font-style:normal;flex:none;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:12px}
+.w16-ap p{margin:0 0 5px;font-size:14px}
+.w16-ap.vacio{opacity:.6;border-style:dashed}
+.w16-ap.ancho{grid-column:1/-1}
+.w16-ap table{font-size:13px}
+.w16-ap .esc{overflow-x:auto}
+.w16-fs{border:2px solid var(--line);border-radius:12px;padding:8px 14px 10px;margin:0 0 10px;min-width:0}
+.w16-fs legend{font-family:var(--f-display);font-weight:800;font-size:14px;padding:0 6px}
+.w16-fs label{display:flex;gap:9px;align-items:flex-start;font-size:14.5px;padding:3px 0}
+.w16-fs input{width:18px;height:18px;flex:none;margin-top:3px;accent-color:var(--accent)}
+.w16-ta{font-family:var(--f-mono);font-size:13px;min-height:150px}
+.w16-hall{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px;font-size:14px}
+.w16-hall code{white-space:normal}
+`;
+  document.head.appendChild(st);
+
+  /* ───────── ayudantes de este widget ───────── */
+  const pc = (x, k = 1) => fmt(x * 100, k) + ' %';
+  const dif = (x, k = 1) => (x < -1e-9 ? '−' : '+') + fmt(Math.abs(x) * 100, k) + ' puntos';
+  const eur = x => fmt(x, 0) + ' €';
+  const num3 = x => fmt(x, 3);
+  const pers = (txt, cls) => `<div class="msg${cls ? ' ' + cls : ''}" aria-live="polite">${txt}<\/div>`;
+  function seg(parent, opciones, valor, cb, etiqueta){
+    const g = el('div', 'w16-seg'); g.setAttribute('role', 'group'); g.setAttribute('aria-label', etiqueta);
+    const bs = opciones.map(([v, t]) => { const x = el('button', 'btn small', esc(t)); x.type = 'button'; x.addEventListener('click', () => poner(v, true)); g.appendChild(x); return [v, x]; });
+    function poner(v, avisar){ bs.forEach(([k, x]) => { const on = k === v; x.classList.toggle('on', on); x.setAttribute('aria-pressed', String(on)); }); if (avisar) cb(v); }
+    poner(valor, false); parent.appendChild(g); return {poner: v => poner(v, false)};
+  }
+  const ancho = (e, max) => Math.max(290, Math.min(max, Math.round(e.clientWidth || max)));
+  const corto = (t, n) => t.length > n ? t.slice(0, n - 1) + '…' : t;
+  const pyNum = (v, tipo) => { const n = Number(v); return tipo === 'decimal' && Number.isInteger(n) ? n.toFixed(1) : String(n); };   // como lo escribe Python
+
+  /* ───────── datos del test y de la validación cruzada (enteros en diezmilésimas) ───────── */
+  const T = {p: MI.test.p, c: Array.from(MI.test.c, Number), y: Array.from(MI.test.y, Number)};
+  const CV = {p: MI.cv.p, y: Array.from(MI.cv.y, Number)};
+  const NT = T.y.length, POS = T.y.reduce((s, v) => s + v, 0), CVPOS = CV.y.reduce((s, v) => s + v, 0);
+  const pred = u100 => T.p.map((p, i) => p >= (T.c[i] === MI.directo ? u100 : 35) * 100 ? 1 : 0);   // umbral propio solo en el canal directo; 35 = 0,35 para el resto
+  function resumen(pr){
+    const canales = MI.canales.map((s, k) => {
+      let n = 0, can = 0, det = 0, av = 0;
+      for (let i = 0; i < NT; i++) if (T.c[i] === k) { n++; if (T.y[i]) can++; if (pr[i]) { av++; if (T.y[i]) det++; } }
+      const rec = det / can; return {s, n, can, det, av, rec, m: 1.96 * Math.sqrt(rec * (1 - rec) / can), pre: av ? det / av : NaN};
+    });
+    return cierra(canales, canales.reduce((s, c) => s + c.av, 0), canales.reduce((s, c) => s + c.det, 0), pr.reduce((s, v, i) => s + (v && !T.y[i] ? 1 : 0), 0));
+  }
+  function cierra(canales, av, det, fp){ const fn = POS - det; return {canales, av, det, fp, fn, rec: det / POS, coste: EV.coste_fn * fn + EV.coste_fp * fp}; }
+  const ANTES = resumen(pred(35));
+  const cvPunto = t100 => { let tp = 0, av = 0; for (let i = 0; i < CV.y.length; i++) if (CV.p[i] >= t100 * 100) { av++; if (CV.y[i]) tp++; } return {rec: tp / CVPOS, pre: av ? tp / av : NaN}; };
+
+  /* ═════════ 1 · EVALUAR EN EL TEST ═════════ */
+  let b = pieza(host, 'evaluacion', 'EVALUAR EN EL TEST · UNA SOLA VEZ');
+  b.innerHTML = `<div class="w16-tiles">
+    <div class="w16-tile"><span>AUC · 0,5 es azar, 1 es perfecto<\/span><b>${num3(EV.auc)}<\/b><span>intervalo 95 %: ${num3(EV.auc_ic[0])} a ${num3(EV.auc_ic[1])}<\/span><\/div>
+    <div class="w16-tile"><span>Recall · cancelaciones detectadas<\/span><b>${num3(EV.recall)}<\/b><span>intervalo 95 %: ${num3(EV.recall_ic[0])} a ${num3(EV.recall_ic[1])}<\/span><\/div>
+    <div class="w16-tile"><span>Precisión · avisos que aciertan<\/span><b>${num3(EV.precision)}<\/b><span>umbral ${fmt(EV.umbral, 2)} · ${fmt(EV.avisos, 0)} avisos<\/span><\/div>
+    <div class="w16-tile"><span>Coste de las cancelaciones<\/span><b>${eur(EV.coste_con)}<\/b><span>frente a ${eur(EV.coste_sin)} sin modelo<\/span><\/div><\/div>
+    <p class="cap" style="margin:0 0 12px">En sencillo: de cada 100 cancelaciones reales el modelo avisa de <b>${fmt(EV.recall * 100, 0)}<\/b>, y de cada 100 avisos <b>${fmt(EV.precision * 100, 0)}<\/b> acaban en cancelación. Son ${fmt(EV.n, 0)} reservas de prueba que el modelo nunca vio, de las que cancelan ${EV.pos}. El intervalo sale de barajar el test 300 veces con las mismas predicciones: el modelo no vuelve a pasar por el test. Costes supuestos de <code>S13_02<\/code>: ${EV.coste_fn} € por cancelación no detectada y ${EV.coste_fp} € por falsa alarma.<\/p>`;
+  const dEv = el('div', 'duo'); b.appendChild(dEv);
+  const colA = el('div'), colB = el('div'); dEv.append(colA, colB);
+  colA.innerHTML = `<p class="w16-h b">¿DÓNDE FALLA? <span style="font-weight:600;letter-spacing:0;color:var(--muted)">la nota global esconde diferencias<\/span><\/p>
+    <div class="ctl" style="border:0;margin:0 0 4px;padding:0"><label>Partir las reservas por <select id="w16-col"><\/select><\/label><\/div><div class="w16-chart" id="w16-sub"><\/div><div id="w16-subm"><\/div>`;
+  const selCol = colA.querySelector('#w16-col');
+  Object.keys(EV.grupos).forEach(c => { const o = el('option', '', esc(EV.etiquetas[c] || c)); o.value = c; selCol.appendChild(o); });
+  function subgrupos(){
+    const col = selCol.value, filas = EV.grupos[col].slice().sort((a, b2) => a.rec - b2.rec), g = EV.recall;
+    const fiable = f => f.m <= 0.10;   // marca de esta demo: un ± de más de 10 puntos quiere decir «pocos casos»
+    const peor = filas.find(fiable);
+    const h = 52 + filas.length * 40, wc = ancho(colA, 440), est = wc < 400;
+    const c = chart({x: [0, 1], y: [0, filas.length], yt: [], xt: [0, .25, .5, .75, 1], fx: v => fmt(v * 100, 0) + ' %', w: wc, h, m: {l: est ? 92 : 108, r: est ? 70 : 86, t: 20, b: 40}, xl: 'Recall (± margen del 95 %)', label: 'Recall por subgrupo de ' + (EV.etiquetas[col] || col)});
+    filas.forEach((f, i) => {
+      const v = filas.length - i - .5, y0 = c.Y(v), alto = (c.Y(v - .32) - c.Y(v + .32));
+      const col2 = f === peor ? 'var(--accent)' : (fiable(f) ? 'var(--teal)' : 'var(--muted)');
+      const r = S('rect', {x: c.X(0), y: c.Y(v + .32), width: c.X(f.rec) - c.X(0), height: alto, fill: col2, rx: 3, 'fill-opacity': fiable(f) ? 1 : .45}, c.svg);
+      S('title', {}, r, `${f.s}: recall ${pc(f.rec)} (± ${fmt(f.m * 100, 1)}), ${f.det} de ${f.can} cancelaciones detectadas`);
+      const a = c.X(Math.max(0, f.rec - f.m)), z = c.X(Math.min(1, f.rec + f.m));
+      S('line', {x1: a, x2: z, y1: y0, y2: y0, stroke: 'var(--ink)', 'stroke-width': 1.6}, c.svg);
+      S('line', {x1: a, x2: a, y1: y0 - 4, y2: y0 + 4, stroke: 'var(--ink)', 'stroke-width': 1.6}, c.svg); S('line', {x1: z, x2: z, y1: y0 - 4, y2: y0 + 4, stroke: 'var(--ink)', 'stroke-width': 1.6}, c.svg);
+      S('text', {x: c.m.l - 7, y: y0 - 1, 'text-anchor': 'end', class: 'tl'}, c.svg, corto(f.s, est ? 14 : 17));
+      S('text', {x: c.m.l - 7, y: y0 + 11, 'text-anchor': 'end'}, c.svg, `${f.can} canc.${fiable(f) ? '' : ' · pocos'}`);
+      S('text', {x: c.W - c.m.r + 8, y: y0 + 4}, c.svg, `${fmt(f.rec * 100, 1)} % ± ${fmt(f.m * 100, 1)}`);
+    });
+    S('line', {x1: c.X(g), x2: c.X(g), y1: c.m.t - 2, y2: c.H - c.m.b, stroke: 'var(--ink)', 'stroke-width': 1.5, 'stroke-dasharray': '5 4'}, c.svg);
+    S('text', {x: c.X(g), y: 11, 'text-anchor': 'middle', class: 'tl'}, c.svg, `global ${fmt(g * 100, 1)} %`);
+    const cont = colA.querySelector('#w16-sub'); cont.innerHTML = ''; cont.appendChild(c.svg);
+    const poco = filas.filter(f => !fiable(f) && f.rec < g);
+    let t;
+    if (peor && g - peor.rec >= .05) t = `El peor subgrupo con bastantes casos es <b>${esc(peor.s)}<\/b>: detecta el <b>${pc(peor.rec)}<\/b> (± ${fmt(peor.m * 100, 1)}) de ${peor.can} cancelaciones, <b>${fmt((g - peor.rec) * 100, 1)} puntos<\/b> por debajo del global.`;
+    else t = 'Aquí no hay diferencias grandes entre subgrupos con bastantes casos. Aun así, la tabla por subgrupos se entrega.';
+    if (poco.length) t += ` ${poco.map(f => `<b>${esc(f.s)}<\/b> (${pc(f.rec)}, ${f.can} cancelaciones, ± ${fmt(f.m * 100, 1)})`).join('; ')}: ${poco.length > 1 ? 'cifras poco fiables' : 'cifra poco fiable'}, hay poca evidencia.`;
+    const m = colA.querySelector('#w16-subm'); m.innerHTML = pers(t, peor && g - peor.rec >= .05 ? 'warn' : 'ok');
+  }
+  selCol.addEventListener('change', subgrupos);
+  /* los errores */
+  const E = EV.errores;
+  colB.innerHTML = `<p class="w16-h b">LOS ERRORES <span style="font-weight:600;letter-spacing:0;color:var(--muted)">cancelaciones que el modelo no vio venir<\/span><\/p>
+    <p class="cap" style="margin:0 0 6px"><b>${E.n}<\/b> no detectadas de ${E.de} (${pc(E.n / E.de, 0)}). ¿Qué tienen en común? Se comparan con <b>todas<\/b> las canceladas:<\/p>
+    <div class="scroll"><table class="w16-err"><thead><tr><th>Canal<\/th><th>No detectadas<\/th><th>Todas<\/th><\/tr><\/thead><tbody>${E.canal.map(c => {
+      const mayor = c.nd - c.todas > .1;
+      return `<tr><td>${esc(c.s)}<\/td><td><span class="w16-mini${mayor ? ' a' : ''}"><i style="width:${c.nd * 100}%"><\/i><\/span>${pc(c.nd, 0)}<\/td><td><span class="w16-mini"><i style="width:${c.todas * 100}%"><\/i><\/span>${pc(c.todas, 0)}<\/td><\/tr>`; }).join('')}<\/tbody><\/table><\/div>
+    <p class="cap"><b>Antelación media:<\/b> ${fmt(E.ant_nd, 0)} días en las no detectadas frente a ${fmt(E.ant_todas, 0)} en todas las canceladas. De aquí salen las <b>limitaciones<\/b> de la model card.<\/p>`;
+  subgrupos();
+
+  /* ═════════ 2 · MITIGAR EL SESGO ═════════ */
+  b = pieza(host, 'mitigacion', 'MITIGAR EL SESGO · ELEGIR CON VALIDACIÓN, MEDIR EN EL TEST'); const bMi = b;
+  b.innerHTML = `<p class="cap" style="margin:0 0 8px"><b>Regla de oro:<\/b> el número que ajustáis (un umbral, un peso) se elige con los datos de <b>entrenamiento<\/b>; el test solo mide el «antes» y el «después» con la medida ya fijada. El canal con peor recall es <b>${esc(MI.canales[MI.directo])}<\/b>. Elegid <b>una<\/b> medida:<\/p><div id="w16-medida"><\/div>`;
+  let medida = 'umbral', uSel = 35, pSel = 1, medido = null; const mirados = new Set(); const alMedir = [];
+  const fase1 = el('div', 'w16-fase'), fase2 = el('div', 'w16-fase'); b.append(fase1, fase2);
+  seg(b.querySelector('#w16-medida'), [['umbral', 'Umbral por grupo'], ['peso', 'Reponderar']], 'umbral', v => { medida = v; vista(); pendiente(); }, 'Medida de mitigación');
+  fase1.innerHTML = `<p class="w16-h"><i>1<\/i>ELEGIR CON EL ENTRENAMIENTO · validación cruzada<\/p>
+    <div id="w16-vu"><div class="ctl"><label>Umbral para el canal directo <input type="range" id="w16-u" min="10" max="50" step="1" value="35"><\/label><span class="read" id="w16-ur"><\/span><\/div>
+      <div class="w16-chart" id="w16-cu"><\/div><div class="legend"><span><i class="ln" style="background:var(--accent)"><\/i>recall del canal directo<\/span><span><i class="ln" style="background:var(--blue)"><\/i>precisión<\/span><span><i class="ln" style="background:var(--muted)"><\/i>recall global (${num3(MI.cv.recall_global)})<\/span><\/div><\/div>
+    <div id="w16-vp"><div class="ctl"><span style="font-weight:700;font-size:14px">Peso de las reservas de directo<\/span><div id="w16-pesos"><\/div><\/div><div class="w16-chart" id="w16-cp"><\/div><div class="legend"><span><i style="background:var(--accent)"><\/i>recall del canal directo<\/span><span><i style="background:var(--blue)"><\/i>precisión<\/span><\/div><\/div>
+    <div id="w16-m1"><\/div>`;
+  fase2.innerHTML = `<p class="w16-h"><i>2<\/i>MEDIR EN EL TEST · con la medida ya fijada<\/p>
+    <div class="ctl" style="border:0;margin:0;padding:0"><button type="button" class="btn" id="w16-medir">Medir en el test<\/button><span class="read" id="w16-cont"><\/span><\/div>
+    <div id="w16-r2"><\/div>`;
+  const q = s => bMi.querySelector(s);
+  /* fase 1 · umbral */
+  const cu = chart({x: [.10, .50], y: [0, 1], xt: [.1, .2, .3, .4, .5], fx: v => fmt(v, 2), fy: v => fmt(v * 100, 0) + ' %', xl: 'Umbral de aviso', w: ancho(q('#w16-cu'), 460), h: 250, m: {l: 48, r: 14, t: 14, b: 40}, label: 'Recall y precisión del canal directo según el umbral'});
+  const lin1 = (clave, color) => { const p = S('path', {d: curvaD(clave), fill: 'none', stroke: color, 'stroke-width': 2.8, 'stroke-linejoin': 'round'}, cu.g); return p; };
+  const curva = []; for (let t = 10; t <= 50; t++) curva.push([t, cvPunto(t)]);
+  function curvaD(k){ return curva.map(([t, v], i) => (i ? 'L' : 'M') + cu.X(t / 100).toFixed(1) + ' ' + cu.Y(v[k]).toFixed(1)).join(''); }
+  S('line', {x1: cu.X(.10), x2: cu.X(.50), y1: cu.Y(MI.cv.recall_global), y2: cu.Y(MI.cv.recall_global), stroke: 'var(--muted)', 'stroke-width': 1.5, 'stroke-dasharray': '5 4'}, cu.g);
+  lin1('rec', 'var(--accent)'); lin1('pre', 'var(--blue)');
+  const mk = S('line', {x1: 0, x2: 0, y1: cu.m.t, y2: cu.H - cu.m.b, stroke: 'var(--ink)', 'stroke-width': 1.4}, cu.g);
+  const pr1 = S('circle', {cx: 0, cy: 0, r: 5.5, fill: 'var(--accent)'}, cu.g), pr2 = S('circle', {cx: 0, cy: 0, r: 5.5, fill: 'var(--blue)'}, cu.g);
+  q('#w16-cu').appendChild(cu.svg);
+  const base = cvPunto(35);
+  function dibujaU(){
+    const v = cvPunto(uSel), x = cu.X(uSel / 100);
+    mk.setAttribute('x1', x); mk.setAttribute('x2', x); pr1.setAttribute('cx', x); pr1.setAttribute('cy', cu.Y(v.rec)); pr2.setAttribute('cx', x); pr2.setAttribute('cy', cu.Y(v.pre));
+    q('#w16-ur').textContent = `umbral ${fmt(uSel / 100, 2)} · recall ${num3(v.rec)} · precisión ${num3(v.pre)}`;
+    let t, cls = '';
+    if (uSel === 35) { t = `Es el umbral de partida: en el canal directo detecta el ${pc(v.rec)} en validación (precisión ${pc(v.pre)}). Bajad el umbral y mirad qué pasa con las dos curvas.`; }
+    else if (uSel > 35) { t = `Con ${fmt(uSel / 100, 2)} se avisa <b>menos<\/b>: el recall de directo baja de ${num3(base.rec)} a ${num3(v.rec)}. Va en la dirección contraria a lo que buscáis.`; cls = 'bad'; }
+    else { const cerca = Math.abs(MI.cv.recall_global - v.rec) <= .05;
+      t = `Con ${fmt(uSel / 100, 2)}, el recall de directo sube de ${num3(base.rec)} a <b>${num3(v.rec)}<\/b>${cerca ? ', cerca del global' : (v.rec > MI.cv.recall_global ? ', ya por encima del global' : ', aún lejos del global')}; la precisión baja de ${num3(base.pre)} a <b>${num3(v.pre)}<\/b>: más avisos que no acaban en cancelación. Elegid el umbral con el que el recall del grupo se acerca al global <b>sin disparar las falsas alarmas<\/b>: es decisión del equipo y se justifica en la memoria.`;
+      cls = cerca ? 'ok' : 'warn'; }
+    q('#w16-m1').innerHTML = pers(t, cls);
+  }
+  q('#w16-u').addEventListener('input', e => { uSel = +e.target.value; dibujaU(); pendiente(); });
+  /* fase 1 · peso */
+  const cp = chart({x: [0, 4], y: [0, 1], xt: [], fy: v => fmt(v * 100, 0) + ' %', xl: 'Peso de directo al entrenar (validación cruzada)', w: ancho(q('#w16-cp'), 460), h: 230, m: {l: 48, r: 14, t: 18, b: 40}, label: 'Recall y precisión de directo según el peso'});
+  const barrasP = [];
+  MI.pesos.forEach((p, i) => {
+    [['cv_rec', 'var(--accent)', .12], ['cv_pre', 'var(--blue)', .5]].forEach(([k, color, off]) => {
+      const x0 = cp.X(i + off), x1 = cp.X(i + off + .38);
+      const r = S('rect', {x: x0, y: cp.Y(p[k]), width: x1 - x0, height: cp.Y(0) - cp.Y(p[k]), fill: color, rx: 3}, cp.g); S('title', {}, r, `peso ${p.w}: ${k === 'cv_rec' ? 'recall' : 'precisión'} ${num3(p[k])}`);
+      S('text', {x: (x0 + x1) / 2, y: cp.Y(p[k]) - 4, 'text-anchor': 'middle', class: 'tl'}, cp.svg, fmt(p[k], 3)); barrasP.push([p.w, r]);
+    });
+    S('text', {x: cp.X(i + .5), y: cp.H - cp.m.b + 15, 'text-anchor': 'middle', class: 'tl'}, cp.svg, 'peso ' + p.w);
+  });
+  q('#w16-cp').appendChild(cp.svg);
+  seg(q('#w16-pesos'), MI.pesos.map(p => [p.w, 'peso ' + p.w]), 1, v => { pSel = v; dibujaP(); pendiente(); }, 'Peso de directo');
+  function dibujaP(){
+    barrasP.forEach(([w, r]) => r.setAttribute('fill-opacity', w === pSel ? 1 : .35));
+    const p = MI.pesos.find(x => x.w === pSel), p1 = MI.pesos[0];
+    const mejora = p.cv_rec - p1.cv_rec;
+    q('#w16-m1').innerHTML = pSel === 1 ? pers('Peso 1 es el entrenamiento de siempre. Probad 2, 3 y 5: ¿sube el recall de directo?')
+      : mejora >= .02 ? pers(`Con peso ${p.w} el recall de directo sube de ${num3(p1.cv_rec)} a <b>${num3(p.cv_rec)}<\/b>. La medida funciona: pasad a medirla en el test.`, 'ok')
+      : pers(`Con peso ${p.w} el recall de directo pasa de ${num3(p1.cv_rec)} a ${num3(p.cv_rec)}: <b>apenas se mueve<\/b>. Reponderar no sirve con este modelo: descartadla, anotadlo (también es un resultado) y probad otra medida.`, 'bad');
+  }
+  function vista(){
+    q('#w16-vu').style.display = medida === 'umbral' ? '' : 'none'; q('#w16-vp').style.display = medida === 'peso' ? '' : 'none';
+    if (medida === 'umbral') dibujaU(); else dibujaP();
+  }
+  /* fase 2 · medir en el test */
+  const r2 = q('#w16-r2'), cont = q('#w16-cont');
+  function contador(){
+    const n = mirados.size;
+    cont.textContent = n === 0 ? 'aún no habéis mirado el test con ninguna medida' : `ajustes distintos mirados en el test: ${n}`;
+    cont.style.background = n >= 2 ? 'var(--warn-soft)' : ''; cont.style.color = n >= 2 ? 'var(--warn)' : '';
+  }
+  function pendiente(){ medido = null; r2.innerHTML = pers('Pulsad «Medir en el test» cuando hayáis fijado la medida arriba. El resultado no se actualiza solo: así no se ajusta mirando el test.'); }
+  function medirTest(){
+    let res, etiqueta, esBase;
+    if (medida === 'umbral') { res = resumen(pred(uSel)); etiqueta = `umbral ${fmt(uSel / 100, 2)} para ${MI.canales[MI.directo]}`; esBase = uSel === 35; }
+    else { const p = MI.pesos.find(x => x.w === pSel); res = cierra(p.test.map(c => Object.assign({}, c, {pre: c.pre == null ? NaN : c.pre})), p.avisos, p.test.reduce((s, c) => s + c.det, 0), p.fp); etiqueta = `peso ${p.w} para ${MI.canales[MI.directo]}`; esBase = pSel === 1; }
+    if (!esBase) mirados.add(medida + ':' + (medida === 'umbral' ? uSel : pSel));
+    contador();
+    medido = {etiqueta, res, esBase}; alMedir.forEach(f => f());
+    const a = ANTES, z = res;
+    const cambios = a.canales.map((f, i) => ({s: f.s, d: z.canales[i].rec - f.rec, de: f.rec, a: z.canales[i].rec})).filter(x => Math.abs(x.d) >= .0005);
+    const lect = esBase ? 'Con el umbral de partida no hay «después»: antes y después son lo mismo. Mover la medida arriba y volved a medir.'
+      : `<b>Lectura:<\/b> ${cambios.length ? cambios.map(x => `el recall de ${esc(x.s)} ${x.d > 0 ? 'sube' : 'baja'} del ${pc(x.de)} al ${pc(x.a)}`).join('; ') : 'el recall no cambia en ningún canal'}${cambios.length && cambios.length < a.canales.length ? '; el de los demás canales no cambia' : ''}; a cambio hay ${z.fp - a.fp >= 0 ? fmt(z.fp - a.fp, 0) + ' falsas alarmas más' : fmt(a.fp - z.fp, 0) + ' falsas alarmas menos'}.`;
+    const cls = esBase ? '' : (cambios.some(x => x.d > .02 && x.s === MI.canales[MI.directo]) ? 'ok' : 'warn');
+    r2.innerHTML = `<div class="duo"><div><div class="w16-chart" id="w16-cg"><\/div><div class="legend"><span><i style="background:var(--blue)"><\/i>antes (umbral 0,35 para todos)<\/span><span><i style="background:var(--accent)"><\/i>después (${esc(etiqueta)})<\/span><\/div><\/div>
+      <div class="scroll"><table class="w16-st"><thead><tr><th>Subgrupo<\/th><th class="num">Reservas<\/th><th class="num">Recall antes → después<\/th><th class="num">Cambio (puntos)<\/th><th class="num">Precisión antes → después<\/th><\/tr><\/thead><tbody>${a.canales.map((f, i) => { const g2 = z.canales[i]; return `<tr><td data-l="Subgrupo">${esc(f.s)}<\/td><td class="num" data-l="Reservas">${f.n}<\/td><td class="num" data-l="Recall">${fmt(f.rec, 3)} → ${fmt(g2.rec, 3)}<\/td><td class="num" data-l="Cambio (puntos)">${(g2.rec - f.rec) * 100 >= 0 ? '+' : '−'}${fmt(Math.abs(g2.rec - f.rec) * 100, 1)}<\/td><td class="num" data-l="Precisión">${fmt(f.pre, 3)} → ${fmt(g2.pre, 3)}<\/td><\/tr>`; }).join('')}<\/tbody><\/table><\/div><\/div>
+      <ul class="checks" style="margin-top:8px"><li class="ok"><span class="m">▸<\/span><span><b>Recall global:<\/b> ${pc(a.rec)} → ${pc(z.rec)}<\/span><\/li>
+        <li class="ok"><span class="m">▸<\/span><span><b>Avisos:<\/b> ${fmt(a.av, 0)} → ${fmt(z.av, 0)} · <b>falsas alarmas:<\/b> ${fmt(a.fp, 0)} → ${fmt(z.fp, 0)}<\/span><\/li>
+        <li class="ok"><span class="m">▸<\/span><span><b>Coste<\/b> (${EV.coste_fn} € por no detectada, ${EV.coste_fp} € por falsa alarma): ${eur(a.coste)} → ${eur(z.coste)}${z.coste === a.coste ? '' : ` (${z.coste > a.coste ? '+' : '−'}${eur(Math.abs(z.coste - a.coste))})`}. ${z.coste > a.coste && cambios.some(x => x.d > .02 && x.s === MI.canales[MI.directo]) ? 'La equidad tiene precio.' : ''}<\/span><\/li><\/ul>
+      ${pers(lect, cls)}`;
+    const c = chart({x: [0, a.canales.length], y: [0, 1], xt: [], fy: v => fmt(v * 100, 0) + ' %', w: ancho(r2.querySelector('#w16-cg'), 460), h: 250, m: {l: 48, r: 12, t: 20, b: 40}, label: 'Recall por canal antes y después'});
+    a.canales.forEach((f, i) => {
+      [[f.rec, 'var(--blue)', .1, 'antes'], [z.canales[i].rec, 'var(--accent)', .5, 'después']].forEach(([v, color, off, n]) => {
+        const x0 = c.X(i + off), x1 = c.X(i + off + .4); const r = S('rect', {x: x0, y: c.Y(v), width: x1 - x0, height: c.Y(0) - c.Y(v), fill: color, rx: 3}, c.g); S('title', {}, r, `${f.s} (${n}): ${pc(v)}`);
+        S('text', {x: (x0 + x1) / 2, y: c.Y(v) - 4, 'text-anchor': 'middle'}, c.svg, fmt(v * 100, 0) + '');
+      });
+      S('text', {x: c.X(i + .5), y: c.H - c.m.b + 15, 'text-anchor': 'middle', class: 'tl'}, c.svg, f.s.length > 12 ? f.s.replace('web_', 'web ') : f.s);
+    });
+    r2.querySelector('#w16-cg').appendChild(c.svg);
+    if (mirados.size >= 2) r2.insertAdjacentHTML('beforeend', pers(`<b>Cuidado:<\/b> ya habéis mirado el test con ${mirados.size} ajustes distintos. Si ahora os quedáis con el que mejor sale, ese número ya no mide nada: el test deja de ser un examen. Elegid siempre con la validación (arriba) y medid una vez.`, 'warn'));
+  }
+  q('#w16-medir').addEventListener('click', medirTest);
+  contador(); vista(); pendiente();
+
+  /* ═════════ 3 · EL DEMOSTRADOR (lógica de logica.py) ═════════ */
+  const LIM = 'Entrenado con datos sintéticos de un solo alojamiento ficticio. Detecta peor las cancelaciones del canal directo (ver model card, apartado 4). No usar para decidir sobre personas concretas: solo orienta la gestión de disponibilidad.';
+  let rotura = 'ninguna', reglaImporte = true;
+  function validarReserva(r){
+    const errores = [];
+    for (const campo of DM.orden) {
+      const regla = DM.campos[campo];
+      if (!(campo in r) || r[campo] === null || r[campo] === '') { errores.push(`Falta el campo '${campo}'.`); continue; }
+      const valor = r[campo];
+      if (regla.tipo === 'categoria') { if (!regla.valores.includes(valor)) errores.push(`'${valor}' no es un valor válido para '${campo}'. Opciones: ${regla.valores.join(', ')}.`); }
+      else {
+        const numero = Number(valor);
+        if (!Number.isFinite(numero)) { errores.push(`'${campo}' debe ser un número (has escrito '${valor}').`); continue; }
+        const min = rotura === 'minNoches' && campo === 'noches' ? -1e9 : regla.min;
+        if (!(min <= numero && numero <= regla.max)) errores.push(`'${campo}' debe estar entre ${pyNum(regla.min, regla.tipo)} y ${pyNum(regla.max, regla.tipo)} (has escrito ${pyNum(valor, regla.tipo)}).`);
+      }
+    }
+    return errores;
+  }
+  function validarCoherencia(r){
+    const errores = [], importe = r.noches * r.precio_noche;
+    if (rotura !== 'coherencia' && importe > 5000) errores.push(`El importe total supera los 5000 € (son ${importe.toFixed(0)} €). Revisa las noches y el precio.`);
+    return errores;
+  }
+  function nivelRiesgo(p){ const alto = rotura === 'niveles' ? .95 : .50; return p < .30 ? 'bajo' : (p < alto ? 'medio' : 'alto'); }
+  function proba(r){
+    let z = DM.b;
+    for (const c in DM.num) z += DM.num[c].w * ((Number(r[c]) - DM.num[c].mu) / DM.num[c].sd);
+    for (const c in DM.cat) z += DM.cat[c][r[c]];
+    const p = 1 / (1 + Math.exp(-z)); return rotura === 'invertida' ? 1 - p : p;
+  }
+  function predecirReserva(r){
+    let errores = validarReserva(r);
+    if (!errores.length && reglaImporte) errores = validarCoherencia(r);
+    if (errores.length) return {errores};
+    const p = Math.round(proba(r) * 1000) / 1000;
+    return {errores: [], probabilidad: p, nivel: nivelRiesgo(p), tasa_base: DM.tasa_base,
+      aviso: `Estimación orientativa. El modelo tiene un AUC de ${DM.auc} en datos de prueba: se equivoca con frecuencia. ${LIM}`};
+  }
+  const pyRepr = v => Array.isArray(v) ? '[' + v.map(pyRepr).join(', ') + ']' : (typeof v === 'string' ? "'" + v.replace(/'/g, "\\'") + "'" : (v && typeof v === 'object' ? '{' + Object.keys(v).map(k => `'${k}': ${pyRepr(v[k])}`).join(', ') + '}' : String(v)));
+
+  b = pieza(host, 'demostrador', 'EL DEMOSTRADOR · FORMULARIO, VALIDACIÓN E INCERTIDUMBRE'); const bDe = b;
+  const normal = {antelacion_dias: 120, noches: 5, adultos: 2, ninos: 1, precio_noche: 95.0, cliente_repetidor: 0, cancelaciones_previas: 0, tipo_habitacion: 'estandar', canal: 'web_intermediaria', tarifa: 'flexible', deposito: 'sin_deposito'};
+  const PRUEBAS = [['normal 1', normal], ['normal 2', Object.assign({}, normal, {antelacion_dias: 7, tarifa: 'no_reembolsable', deposito: 'total', canal: 'directo'})],
+    ['normal 3', Object.assign({}, normal, {adultos: 1, ninos: 0, noches: 3, tipo_habitacion: 'suite', precio_noche: 180.0, cliente_repetidor: 1})],
+    ['imposible', Object.assign({}, normal, {antelacion_dias: 5000})], ['vacía', {}], ['importe alto', Object.assign({}, normal, {noches: 20, precio_noche: 400.0})]];
+  b.innerHTML = `<p class="cap" style="margin:0 0 8px">Así se ve el demostrador de la plantilla (<code>streamlit run app.py<\/code>), con el modelo de <code>S16_01<\/code> (11 variables, AUC ${DM.auc}). Probad las entradas de <code>probar_a_mano.py<\/code> y las vuestras: <b>una normal, una imposible y una vacía<\/b> no pueden romper nada.<\/p>
+    <div class="ctl" style="border:0;margin:0 0 8px;padding:0"><span style="font-weight:700;font-size:14px">Cargar una entrada:<\/span><div id="w16-pr" class="w16-seg"><\/div><\/div>
+    <div class="w16-app"><h4>Riesgo de cancelación de una reserva<\/h4><p class="hint">Demostrador del proyecto. Datos sintéticos de TurisData Canarias (empresa ficticia).<\/p>
+      <div class="w16-form" id="w16-form"><\/div>
+      <div class="ctl" style="margin-top:0"><button type="button" class="btn on" id="w16-calc">Calcular riesgo<\/button>
+        <label><input type="checkbox" id="w16-coh" checked> Regla entre campos del paso 4 (importe &gt; 5000 €)<\/label><\/div>
+      <div id="w16-res" aria-live="polite"><\/div><\/div>
+    <div id="w16-rot"><\/div>
+    <details style="margin-top:10px"><summary style="cursor:pointer;font-weight:700;font-size:14px">Qué devuelve <code>predecir_reserva<\/code> por dentro<\/summary><div class="w16-code" id="w16-dict"><\/div>
+      <p class="cap">Devuelve datos, no imprime: así la misma función sirve a la app, a los widgets y a la API. Aquí el modelo es la regresión logística exportada (misma probabilidad que <code>predict_proba<\/code>).<\/p><\/details>`;
+  const form = b.querySelector('#w16-form'); const ent = {};
+  DM.orden.forEach(c => {
+    const r = DM.campos[c]; const lab = el('label', '', esc(r.etiqueta)); let x;
+    if (r.tipo === 'categoria') { x = el('select'); r.valores.concat(['']).forEach(v => { const o = el('option', '', v === '' ? '(vacío)' : esc(v)); o.value = v; x.appendChild(o); }); }
+    else { x = el('input'); x.type = 'number'; x.step = r.tipo === 'entero' ? '1' : 'any'; x.inputMode = 'decimal'; }
+    x.id = 'w16-f-' + c; lab.appendChild(x); form.appendChild(lab); ent[c] = x;
+  });
+  const porDefecto = () => { DM.orden.forEach(c => { const r = DM.campos[c]; ent[c].value = r.tipo === 'categoria' ? r.valores[0] : (r.tipo === 'entero' ? Math.max(r.min, Math.min(r.max, 1)) : r.min + 75); }); };
+  function leer(){ const r = {}; DM.orden.forEach(c => { const v = ent[c].value; r[c] = v === '' ? null : (DM.campos[c].tipo === 'categoria' ? v : Number(v)); }); return r; }
+  const resEl = b.querySelector('#w16-res');
+  function calcular(){
+    const r = predecirReserva(leer());
+    bDe.querySelector('#w16-dict').textContent = pyRepr(r);
+    if (r.errores.length) { resEl.innerHTML = `<div class="msg warn"><b>No se puede calcular todavía:<\/b><ul style="margin:6px 0 0;padding-left:20px">${r.errores.map(e => `<li>${esc(e)}<\/li>`).join('')}<\/ul><\/div>`; return; }
+    const pr = Math.round(r.probabilidad * 100), dl = Math.round((r.probabilidad - r.tasa_base) * 100), niv = r.nivel;
+    resEl.innerHTML = `<div class="w16-metrics"><div><span>Probabilidad de cancelación<\/span><b>${pr}%<\/b><span>${dl >= 0 ? '+' : '−'}${Math.abs(dl)} puntos frente a la media (${Math.round(r.tasa_base * 100)}%)<\/span><\/div>
+      <div><span>Nivel de riesgo<\/span><b style="color:var(--${niv === 'alto' ? 'bad' : niv === 'medio' ? 'warn' : 'ok'})">${niv.toUpperCase()}<\/b><span>bajo &lt; 30 % · medio &lt; 50 % · alto desde 50 %<\/span><\/div><\/div>
+      <div class="w16-prog" role="progressbar" aria-valuenow="${pr}" aria-valuemin="0" aria-valuemax="100" aria-label="Probabilidad de cancelación"><i style="width:${pr}%"><\/i><\/div>
+      <div class="w16-info">${esc(r.aviso)}<\/div>`;
+  }
+  const prEl = b.querySelector('#w16-pr'), prBt = {};
+  const marca = n => Object.keys(prBt).forEach(k => { prBt[k].classList.toggle('on', k === n); prBt[k].setAttribute('aria-pressed', String(k === n)); });
+  function cargar(nombre){
+    const ex = PRUEBAS.find(p => p[0] === nombre)[1];
+    DM.orden.forEach(c => { ent[c].value = c in ex ? ex[c] : ''; }); marca(nombre); calcular();
+  }
+  PRUEBAS.forEach(([n]) => { const x = el('button', 'btn small', esc(n)); x.type = 'button'; x.addEventListener('click', () => cargar(n)); prEl.appendChild(x); prBt[n] = x; });
+  DM.orden.forEach(c => ent[c].addEventListener('input', () => marca(null)));
+  b.querySelector('#w16-calc').addEventListener('click', calcular);
+  b.querySelector('#w16-coh').addEventListener('change', e => { reglaImporte = e.target.checked; calcular(); });
+  porDefecto(); cargar('normal 1');
+  const rotEl = b.querySelector('#w16-rot');
+  function avisoRotura(){ rotEl.innerHTML = rotura === 'ninguna' ? '' : `<div class="msg bad">Estáis viendo un <code>logica.py<\/code> <b>estropeado a propósito<\/b> desde la pieza de pruebas (${esc(ROTURAS[rotura][0].toLowerCase())}). Volved a «nada» allí para arreglarlo.<\/div>`; }
+
+  /* ═════════ 4 · PRUEBAS AUTOMÁTICAS ═════════ */
+  const ROTURAS = {ninguna: ['Nada: todo bien'], coherencia: ['Borrar la regla del importe (validar_coherencia)'], minNoches: ['Quitar el mínimo de noches'], niveles: ['Subir el nivel «alto» hasta 0,95'], invertida: ['Un modelo que contradice el sentido común (probabilidad invertida)']};
+  b = pieza(host, 'pruebas', 'PRUEBAS AUTOMÁTICAS · pytest -q'); const bPr = b;
+  const RES = Object.assign({}, normal);
+  const pAlto = Object.assign({}, RES, {antelacion_dias: 250, deposito: 'sin_deposito', tarifa: 'flexible', canal: 'web_intermediaria'}), pBajo = Object.assign({}, RES, {antelacion_dias: 7, deposito: 'total', tarifa: 'no_reembolsable', canal: 'directo'});
+  const prob = r => predecirReserva(r).probabilidad;
+  const TESTS = [
+    ['test_entrada_valida', 'plantilla', 'Una reserva válida da una probabilidad entre 0 y 1 y lleva el aviso.', () => { const r = predecirReserva(RES); return r.errores.length === 0 && r.probabilidad >= 0 && r.probabilidad <= 1 && 'aviso' in r; }],
+    ['test_entrada_fuera_de_rango', 'plantilla', 'Con -3 noches, la validación devuelve algún error.', () => validarReserva(Object.assign({}, RES, {noches: -3})).length > 0],
+    ['test_falta_un_campo', 'plantilla', 'Si falta el canal, algún error habla del canal.', () => { const i = Object.assign({}, RES); delete i.canal; return validarReserva(i).some(e => e.includes('canal')); }],
+    ['test_sentido_comun', 'plantilla', 'Una reserva de riesgo alto sobre el papel puntúa más que una de riesgo bajo.', () => prob(pAlto) > prob(pBajo)],
+    ['test_niveles', 'plantilla', '0,1 es «bajo», 0,4 «medio» y 0,8 «alto».', () => nivelRiesgo(.1) === 'bajo' && nivelRiesgo(.4) === 'medio' && nivelRiesgo(.8) === 'alto'],
+    ['test_flexible_sin_deposito_tiene_mas_riesgo', 'propia', 'Tarifa flexible y sin depósito puntúa más que no reembolsable con depósito total.', () => prob(Object.assign({}, RES, {tarifa: 'flexible', deposito: 'sin_deposito'})) > prob(Object.assign({}, RES, {tarifa: 'no_reembolsable', deposito: 'total'}))],
+    ['test_entrada_vacia_avisa_de_todos_los_campos', 'propia', 'Una entrada vacía da un error por cada campo y ninguna probabilidad.', () => { const r = predecirReserva({}); return r.errores.length === DM.orden.length && !('probabilidad' in r); }],
+    ['test_importe_demasiado_alto_se_rechaza', 'propia', '20 noches a 400 € se rechaza con un mensaje que empieza por «El importe total supera los 5000 €».', () => { const r = predecirReserva(Object.assign({}, RES, {noches: 20, precio_noche: 400.0})); return r.errores.length > 0 && r.errores[0].startsWith('El importe total supera los 5000 €'); }],
+  ];
+  b.innerHTML = `<p class="cap" style="margin:0 0 8px">Las ocho pruebas de <code>tests/test_logica.py<\/code>: las 5 de la plantilla y las 3 propias del paso 4. Aquí se ejecutan con el mismo modelo de la pieza anterior. Una prueba es una comprobación de sentido común que el ordenador repite en un segundo.<\/p>
+    <div class="ctl" style="border:0;margin:0;padding:0"><label class="w16-lb">Probad a estropear algo <select id="w16-rotsel"><\/select><\/label><button type="button" class="btn" id="w16-run">▶ pytest -q<\/button><\/div>
+    <div class="w16-term" id="w16-out" aria-live="polite" role="status">$ pytest -q<\/div><ul class="checks" id="w16-tl"><\/ul>`;
+  const rs = b.querySelector('#w16-rotsel'); Object.keys(ROTURAS).forEach(k => { const o = el('option', '', esc(ROTURAS[k][0])); o.value = k; rs.appendChild(o); });
+  const AYUDA = {test_entrada_valida: '', test_entrada_fuera_de_rango: 'la validación ya no rechaza noches negativas', test_falta_un_campo: '', test_sentido_comun: 'el modelo contradice el sentido común: no cambiéis la prueba, apuntadlo como límite en la model card', test_niveles: 'nivel_riesgo(0.8) no devuelve «alto»', test_flexible_sin_deposito_tiene_mas_riesgo: 'el modelo contradice el sentido común: no cambiéis la prueba, apuntadlo como límite en la model card', test_entrada_vacia_avisa_de_todos_los_campos: '', test_importe_demasiado_alto_se_rechaza: 'r["errores"] está vacío: ninguna regla cruza noches y precio'};
+  function ejecutar(){
+    rotura = rs.value; avisoRotura(); calcular();
+    const t0 = performance.now(); const rz = TESTS.map(t => { let ok = false; try { ok = !!t[3](); } catch (e) { ok = false; } return ok; });
+    const seg2 = (performance.now() - t0) / 1000;
+    const nF = rz.filter(v => !v).length;
+    const puntos = rz.map(v => v ? '<span class="p">.<\/span>' : '<span class="f">F<\/span>').join('');
+    const fallos = TESTS.filter((_, i) => !rz[i]).map(t => `<span class="f">FAILED<\/span> tests/test_logica.py::${t[0]}`).join('\n');
+    bPr.querySelector('#w16-out').innerHTML = `$ pytest -q\n${puntos}\n${fallos ? fallos + '\n' : ''}<span class="${nF ? 'f' : 'p'}">${nF ? nF + ' failed, ' : ''}${rz.length - nF} passed in ${Math.max(seg2, .01).toFixed(2)}s<\/span>`;
+    bPr.querySelector('#w16-tl').innerHTML = TESTS.map((t, i) => `<li class="${rz[i] ? 'ok' : 'bad'}"><span class="m">${rz[i] ? '✓' : '✗'}<\/span><span><code>${t[0]}<\/code> <span class="hint">· ${t[1]}<\/span> — ${esc(t[2])}${rz[i] || !AYUDA[t[0]] ? '' : `<br><b>Por qué falla:<\/b> ${esc(AYUDA[t[0]])}.`}<\/span><\/li>`).join('');
+  }
+  b.querySelector('#w16-run').addEventListener('click', ejecutar); rs.addEventListener('change', ejecutar);
+  ejecutar();
+
+  /* ═════════ 5 · MODEL CARD ═════════ */
+  b = pieza(host, 'modelcard', 'MODEL CARD · LAS CIFRAS FINALES'); const bMc = b;
+  b.innerHTML = `<p class="cap" style="margin:0 0 8px">Ejemplo rellenado con TurisData (datos sintéticos): <b>vuestra model card llevará vuestras cifras<\/b>, y no puede pasar de 2 páginas. Los apartados 1 a 5 se empiezan el día 1 (paso 2); el 6 al 9 se cierran el día 2 (paso 5).<\/p>
+    <div id="w16-mc-seg"><\/div><div class="w16-card" id="w16-mc" style="margin-top:12px"><\/div><div id="w16-mc-a"><\/div>`;
+  let modo = 2;
+  seg(b.querySelector('#w16-mc-seg'), [[1, 'Día 1 · paso 2'], [2, 'Día 2 · paso 5 (cerrada)']], 2, v => { modo = v; tarjeta(); }, 'Estado de la model card');
+  const G = EV.grupos.canal;
+  function tarjeta(){
+    const m = medido && !medido.esBase ? medido : null, A = ANTES, Z = m ? m.res : null;
+    const ap = (n, t, html, cierra2) => `<section class="w16-ap${cierra2 && modo === 1 ? ' vacio' : ''}${n === 5 || n === 6 || n === 9 ? ' ancho' : ''}"><h4><i>${n}<\/i>${esc(t)}<\/h4>${cierra2 && modo === 1 ? '<p class="hint">En blanco hasta el día 2.<\/p>' : html}<\/section>`;
+    const filas = [];
+    const poco = f => f.m > .10;
+    const mk = (f, estado, glob) => `<tr><td data-l="Subgrupo">canal = ${esc(f.s)} (${estado})<\/td><td class="num" data-l="n">${f.n}<\/td><td class="num" data-l="Métrica">recall ${pc(f.rec)} (± ${fmt(f.m * 100, 1)})<\/td><td class="num" data-l="Diferencia con el global">${dif(f.rec - glob)}<\/td><td data-l="¿Es aceptable?">${poco(f) ? `Cifra poco fiable: solo ${f.can} cancelaciones` : '<span class="hint">lo escribís vosotros<\/span>'}<\/td><\/tr>`;
+    A.canales.forEach((f, i) => {
+      filas.push(mk(f, Z ? 'antes' : 'sin mitigar', A.rec));
+      if (Z && Math.abs(Z.canales[i].rec - f.rec) >= .0005) filas.push(mk(Z.canales[i], 'después', Z.rec));
+    });
+    const lista = [
+      ap(1, 'Detalles del modelo', `<p><b>Riesgo de cancelación de reservas · TurisData (datos sintéticos) · v1.0<\/b>. Regresión logística en scikit-learn ${esc(DM.versiones['scikit-learn'])}, <code>LogisticRegression(max_iter=2000)<\/code>, semilla ${DM.semilla}; se reproduce ejecutando <code>04_evaluacion.ipynb<\/code> de arriba abajo.<\/p>`),
+      ap(2, 'Uso previsto', '<p>Orientar la gestión de disponibilidad. <b>Una persona decide<\/b> si pide depósito. <b>No usar<\/b> para decidir sobre personas concretas.<\/p>'),
+      ap(3, 'Datos', `<p><code>reservas_turisdata.csv<\/code>: ${fmt(EV.n + EV.n_ent, 0)} reservas sintéticas. ${pc(EV.n_ent / (EV.n + EV.n_ent), 0)} entrenamiento (${fmt(EV.n_ent, 0)}) y ${pc(EV.n / (EV.n + EV.n_ent), 0)} test (${fmt(EV.n, 0)}), estratificado, <code>random_state=42<\/code>; validación cruzada de 5 particiones dentro del entrenamiento. Datos personales: no.<\/p>`),
+      ap(4, 'Factores relevantes', `<p>Canal de reserva (en <b>directo<\/b> se detecta menos: ${pc(G.find(f => f.s === 'directo').rec)}), reservas sin país (${EV.grupos.pais_origen.find(f => f.s === 'sin dato').can} cancelaciones en el test: poco fiable) y reservas de última hora (${fmt(E.ant_nd, 0)} días de antelación en las no detectadas frente a ${fmt(E.ant_todas, 0)}).<\/p>`),
+      ap(5, 'Métricas', `<div class="esc"><table><thead><tr><th>Métrica<\/th><th class="num">Baseline<\/th><th class="num">Modelo<\/th><\/tr><\/thead><tbody><tr><td>AUC (95 %: ${num3(EV.auc_ic[0])}–${num3(EV.auc_ic[1])})<\/td><td class="num">0,50<\/td><td class="num">${num3(EV.auc)}<\/td><\/tr><tr><td>Recall (95 %: ${num3(EV.recall_ic[0])}–${num3(EV.recall_ic[1])})<\/td><td class="num">—<\/td><td class="num">${num3(EV.recall)}<\/td><\/tr><tr><td>Precisión (umbral ${fmt(EV.umbral, 2)})<\/td><td class="num">—<\/td><td class="num">${num3(EV.precision)}<\/td><\/tr><tr><td>Coste en ${fmt(EV.n, 0)} reservas de prueba<\/td><td class="num">${eur(EV.coste_sin)}<\/td><td class="num">${eur(EV.coste_con)}<\/td><\/tr><\/tbody><\/table><\/div>`),
+      ap(6, 'Rendimiento por subgrupos', `<div class="esc"><table class="w16-st"><thead><tr><th>Subgrupo<\/th><th class="num">n<\/th><th class="num">Métrica<\/th><th class="num">Diferencia con el global<\/th><th>¿Es aceptable?<\/th><\/tr><\/thead><tbody>${filas.join('')}<\/tbody><\/table><\/div>${Z ? `<p class="cap">Filas «después»: ${esc(m.etiqueta)}, medido en el test (pieza «Mitigar el sesgo»). Cada estado se compara con el global de su estado (${pc(A.rec)} y ${pc(Z.rec)}).<\/p>` : '<p class="cap">Medid una mitigación en la pieza anterior y aparecen aquí las filas «(después)».<\/p>'}`, true),
+      ap(7, 'Análisis ético y de riesgos', `<p><b>Riesgo mínimo<\/b> (AI Act; se confirma con el docente) y sin datos personales. R-01, sesgo por canal: ${Z ? `${esc(m.etiqueta)}, recall de directo ${pc(A.canales[MI.directo].rec)} → ${pc(Z.canales[MI.directo].rec)}, ${fmt(Math.abs(Z.fp - A.fp), 0)} falsas alarmas ${Z.fp >= A.fp ? 'más' : 'menos'}` : 'medida pendiente de medir'}. Supervisión: una persona decide si pide depósito. Transparencia: cada resultado del demostrador lleva el aviso con el AUC y las limitaciones.<\/p>`, true),
+      ap(8, 'Limitaciones y recomendaciones', `<p>${esc(LIM)}<\/p><p class="hint">Mismo texto que el campo <code>limitaciones<\/code> del demostrador (paso 4).<\/p>`, true),
+      ap(9, 'Contacto y mantenimiento', '<p>Responsable: una persona del equipo. Se reevalúa cuando haya reservas nuevas y siempre que cambie la política de cancelaciones.<\/p>', true)];
+    bMc.querySelector('#w16-mc').innerHTML = lista.join('');
+    bMc.querySelector('#w16-mc-a').innerHTML = pers(`<b>Ojo con una cifra que no coincide.<\/b> Aquí hay dos modelos de TurisData: el de la evaluación (AUC <b>${num3(EV.auc)}<\/b>, todas las variables, partición 75/25) y el del demostrador de la plantilla (AUC <b>${num3(DM.auc)}<\/b>, 11 variables, partición 80/20). En vuestro proyecto el modelo es <b>uno solo<\/b>: el AUC tiene que ser el mismo en la model card, la memoria, el README y el aviso del demostrador.`, 'warn');
+  }
+  alMedir.push(tarjeta); tarjeta();
+
+  /* ═════════ 6 · ANTES DE CONGELAR ═════════ */
+  b = pieza(host, 'congelacion', 'ANTES DE CONGELAR · LISTA Y BUSCADORES'); const bCo = b;
+  b.innerHTML = `<p class="cap" style="margin:0 0 8px">La lista de <code>checklist_congelacion.md<\/code>: una persona <b>que no escribió el README<\/b> la pasa casilla a casilla y marca solo lo que ha visto con sus ojos. Aquí es solo para probarla: no se guarda. Después, los dos buscadores del reto (rutas del ordenador de alguien, claves y datos personales).<\/p>
+    <div id="w16-lista"><\/div><div id="w16-lm"><\/div>`;
+  const lista = bCo.querySelector('#w16-lista'), cajas = [];
+  d.lista.forEach((bl, i) => {
+    const fs = el('fieldset', 'w16-fs'); const lg = el('legend'); fs.appendChild(lg);
+    const marcas = bl.items.map(t => { const l = el('label', '', `<input type="checkbox"><span>${md(t)}<\/span>`); fs.appendChild(l); const c = l.querySelector('input'); c.addEventListener('change', resume); return c; });
+    cajas.push({lg, bl, marcas}); lista.appendChild(fs);
+  });
+  function resume(){
+    let hechas = 0, todas = 0;
+    cajas.forEach(({lg, bl, marcas}) => { const h = marcas.filter(c => c.checked).length; hechas += h; todas += marcas.length; lg.textContent = `${bl.bloque} · ${h}/${marcas.length}`; });
+    const falta = todas - hechas;
+    bCo.querySelector('#w16-lm').innerHTML = falta === 0 ? pers('<b>Lista completa.<\/b> Quedan la hora y el enlace de la etiqueta <code>v1.0-entrega<\/code> (creada antes de las 14:30) y la firma de quien verifica. Tras las 14:30 no se cambia código ni memoria.', 'ok')
+      : pers(`Faltan <b>${falta}<\/b> de ${todas} casillas. Cada casilla sin marcar se arregla <b>ahora<\/b>, antes de las 14:30, o se apunta en el tablero con responsable y hora.`, falta > todas / 2 ? 'bad' : 'warn');
+  }
+  resume();
+  const bus = el('div', 'w16-fase'); bus.innerHTML = `<p class="w16-h">BUSCADORES DE RUTAS, CLAVES Y DATOS PERSONALES<\/p>
+    <p class="cap" style="margin:0 0 6px">Pegad aquí un trozo de texto de vuestro README o de un cuaderno. Los patrones son los de los pasos 6 y 7 del reto. <b>El texto de abajo es un ejemplo inventado<\/b> para probar: ninguna clave ni dato es real. No peguéis claves reales en ninguna página.<\/p>
+    <label class="hint" for="w16-txt">Texto a revisar<\/label><textarea id="w16-txt" class="w16-ta" spellcheck="false"><\/textarea><ul class="w16-hall" id="w16-hall" aria-live="polite"><\/ul>`;
+  b.appendChild(bus);
+  const EJ = ['# README del equipo (EJEMPLO inventado para probar el buscador)', 'Datos: /content/drive/MyDrive/reservas_turisdata.csv', 'Contacto: ana.perez@ejemplo.org · 612345678', 'DNI de prueba: 12345678Z',
+    'api_key = "' + 'AIza' + 'EJEMPLO'.repeat(4) + '"', 'api_key = userdata.get("GEMINI_API_KEY")   # forma correcta: este no sale'].join('\n');
+  const ta = bus.querySelector('#w16-txt'); ta.value = EJ;
+  const RUTAS = ['/content/', '/home/', '/Users/', 'C:\\Users', 'C:/Users', 'drive/MyDrive'];
+  const PATRONES = [['posible clave', /(?:AIza|gsk_|sk-)[0-9A-Za-z_\-]{20,}/g], ['clave escrita en el código', /api_key\s*=\s*["'][^"']{12,}["']/g], ['correo', /[\w.+-]+@[\w-]+\.[\w.-]+/g], ['teléfono', /\b[6-9]\d{8}\b/g], ['DNI', /\b\d{8}[A-Za-z]\b/g]];
+  function buscar(){
+    const t = ta.value, out = [];
+    RUTAS.forEach(m => { if (t.includes(m)) out.push(['bad', `ruta de otro ordenador: contiene <code>${esc(m)}<\/code>. Cambiadla por una ruta relativa o por <code>dato("archivo.csv")<\/code>.`]); });
+    PATRONES.forEach(([n, re]) => { (t.match(re) || []).forEach(h => out.push(['bad', `${esc(n)} → <code>${esc(h.slice(0, 6))}…<\/code>${n.includes('clave') ? ' (si es real: crearla de nuevo en el servicio, desactivar la anterior y avisar al docente)' : ' (dato personal: quitadlo y avisad al docente)'}`])); });
+    bus.querySelector('#w16-hall').innerHTML = out.length ? out.map(([c, h]) => `<li class="msg ${c}" style="margin:0">${h}<\/li>`).join('') : '<li class="msg ok" style="margin:0">Sin hallazgos en este texto. (Solo se muestran los 6 primeros caracteres de cada hallazgo, para no repetir una clave entera.)<\/li>';
+  }
+  ta.addEventListener('input', buscar); buscar();
+  return {};
+};
+
+/* ───────── marco común ───────── */
+const app = document.getElementById('app');
+const sh = (t) => `<div class="sh"><span class="st">${esc(t)}</span><span class="ln"></span></div>`;
+
+const hero = el('header');
+const totalMin = D.pasos.reduce((s, p) => s + (p.min || 0), 0);
+hero.innerHTML = `<div class="kicker">${esc(D.kicker)}</div><h1>${esc(D.titulo)}</h1><p class="lead">${md(D.lead)}</p>
+  <div class="chips"><span class="chip">${D.pasos.length} pasos</span><span class="chip">≈ ${totalMin} min de reto</span><span class="chip">${esc(D.sube_resumen)}</span></div>
+  <p class="hint" style="margin-top:14px">${md(D.aviso)}</p>`;
+app.appendChild(hero);
+
+const play = el('section');
+play.innerHTML = sh('EL PRODUCTO FUNCIONANDO') + `<h2>${esc(D.widget_titulo)}</h2><p class="sec-intro">${md(D.intro)}</p>`;
+const steps = el('div', 'steps'); steps.setAttribute('role', 'group'); steps.setAttribute('aria-label', 'Pasos del reto');
+const aqui = el('div', 'aqui'); aqui.setAttribute('aria-live', 'polite');
+const stage = el('div', 'stage');
+play.append(steps, aqui, stage);
+app.appendChild(play);
+const widget = W[D.widget](stage, D);
+
+function elegir(i){
+  const btns = steps.querySelectorAll('.step');
+  btns.forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
+  const panels = stage.querySelectorAll('[data-pieza]');
+  if (i < 0) { stage.classList.remove('sel'); panels.forEach(p => p.classList.remove('hl')); aqui.innerHTML = md(D.aqui_todo); return; }
+  const p = D.pasos[i];
+  stage.classList.add('sel');
+  panels.forEach(pn => pn.classList.toggle('hl', pn.dataset.pieza.split(' ').some(x => (p.piezas || []).includes(x))));
+  aqui.innerHTML = `<b>Paso ${esc(p.n)} · ${esc(p.titulo)}</b> (${p.min} min). ${md(p.aqui || '')}`;
+  const first = stage.querySelector('.pieza.hl'); if (first && first.getBoundingClientRect().top > window.innerHeight * .8) first.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center'});
+}
+D.pasos.forEach((p, i) => {
+  const b = el('button', 'step', `<span class="n">${esc(p.n)}</span><span>${esc(p.corto || p.titulo)}<small>${p.min} min</small></span>`);
+  b.type = 'button'; b.setAttribute('aria-pressed', 'false'); b.addEventListener('click', () => elegir(steps.querySelector('.step[aria-pressed="true"]') === b ? -1 : i));
+  steps.appendChild(b);
+});
+elegir(-1);
+
+/* qué se sube y cómo se evalúa */
+const fin = el('section');
+fin.innerHTML = sh('QUÉ SE SUBE Y CÓMO SE EVALÚA') + `<h2>Lo que entregáis y con qué se puntúa</h2><p class="sec-intro">Todo va al repositorio del equipo, en la carpeta <code>${esc(D.carpeta_entrega)}</code>. La rúbrica es la misma que usáis para revisar vuestro propio trabajo antes de subirlo.</p>`;
+const files = el('div', 'files');
+D.ficheros.forEach(f => files.appendChild(el('div', 'file', `<b>${esc(f.nombre)}</b><span class="o">${md(f.origen)}</span><span class="s">${esc(f.sube)}</span>`)));
+fin.appendChild(files);
+const tabs = el('div', 'tabs'); tabs.setAttribute('role', 'tablist');
+const lv = el('div', 'levels'); lv.setAttribute('aria-live', 'polite');
+const qq = el('p', 'hint'); qq.style.marginBottom = '10px';
+const NIV = ['1 · Empezado', '2 · Mínimo', '3 · Estándar', '4 · Extra'];
+function criterio(k){
+  tabs.querySelectorAll('.tab').forEach((t, j) => t.setAttribute('aria-selected', String(j === k)));
+  const c = D.rubrica[k]; qq.textContent = c.pregunta;
+  lv.innerHTML = c.niveles.map((t, j) => `<div class="lv${j === 1 ? ' min' : ''}"><h3>${NIV[j]}</h3><p>${md(t)}</p></div>`).join('');
+}
+D.rubrica.forEach((c, k) => { const t = el('button', 'tab', esc(c.criterio)); t.type = 'button'; t.setAttribute('role', 'tab'); t.addEventListener('click', () => criterio(k)); tabs.appendChild(t); });
+fin.append(tabs, qq, lv);
+fin.appendChild(el('p', 'hint', 'Orientación: lo que pide el nivel mínimo sale en un <b>2</b>, el estándar en un <b>3</b> y los extras en un <b>4</b>. Sin una frase de prueba escrita, el nivel no vale.'));
+criterio(0);
+app.appendChild(fin);
+
+const pie = el('footer');
+pie.innerHTML = sh('DÓNDE SEGUIR') + `<div class="links">${D.enlaces.map(e => `<a class="btn" href="${esc(e.url)}">${esc(e.t)}</a>`).join('')}</div><p class="foot" style="margin-top:14px">${md(D.pie)}</p>`;
+app.appendChild(pie);
+})();
+</script>
+</body>
+</html>

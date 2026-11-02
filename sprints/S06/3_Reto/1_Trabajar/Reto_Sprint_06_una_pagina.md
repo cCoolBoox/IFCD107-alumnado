@@ -1,6 +1,6 @@
 # Sprint 6 · Reto «Datos sucios, cliente impaciente» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (palabras nuevas, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_06.md](../3_Consultar/Reto_Sprint_06.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`informe_calidad_plantilla.md`](plantillas/informe_calidad_plantilla.md) y los datos en [`reservas_sucio.csv`](../../../../datos/reservas_sucio.csv).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (palabras nuevas, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_06.md](../3_Consultar/Reto_Sprint_06.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`informe_calidad_plantilla.md`](plantillas/informe_calidad_plantilla.md) y los datos en [`reservas_sucio.csv`](../../../../datos/reservas_sucio.csv). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S06/3_Reto/1_Trabajar/S06_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - TurisData os manda `reservas_sucio.csv`, exportado a mano de varios sistemas.

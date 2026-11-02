@@ -1,6 +1,6 @@
 # Sprint 12 · Reto «Escuchar al cliente» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_12.md](../3_Consultar/Reto_Sprint_12.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`plantilla_informe_cliente.md`](plantillas/plantilla_informe_cliente.md). El informe visual del Sprint 13 es otro reto, con su propia ficha.
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_12.md](../3_Consultar/Reto_Sprint_12.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del informe está en [`plantilla_informe_cliente.md`](plantillas/plantilla_informe_cliente.md). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/3_Reto/1_Trabajar/S12_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - TurisData recibe decenas de reseñas y de mensajes con las mismas preguntas.

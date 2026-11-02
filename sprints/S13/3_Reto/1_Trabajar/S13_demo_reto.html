@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Demo interactiva del reto del Sprint 13 (IFCD107): el panel de cuatro gráficos de S13_02 con un mando de umbral y de costes, y un titular que avisa si se corta y si sus cifras no salen del gráfico, con los datos reales del curso.">
+<title>Informe visual para dirección · demo interactiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Maqueta común de las demos del reto (IFCD107): hero → «el producto funcionando» con un selector de pasos
+   → qué se sube y cómo se evalúa. Identidad: la de las infografías del curso (tinta azulada, óxido, verde azulado, crema). */
+:root{
+  --bg:#F5F1E8; --surface:#FFFFFF; --ink:#1D2433; --muted:#566073; --line:#D9D2C0; --soft:#EFE7D2;
+  --accent:#C23B1F; --accent-soft:#F7DDD4; --teal:#0F7F7F; --teal-soft:#D5ECEA; --sky:#DCE6F5; --blue:#3D5F96;
+  --ok:#1B7F4B; --ok-soft:#D9F0E3; --bad:#B42318; --bad-soft:#FBE0DC; --warn:#8A5A00; --warn-soft:#F6E7C4;
+  --code-bg:rgba(29,36,51,.08); --focus:#1D2433; --pt:rgba(61,95,150,.42); --grid:#E4DDCB;
+  --f-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+    --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+    --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+    --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+  --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+  --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+  --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5.2vw,52px);line-height:1.05;font-weight:800;letter-spacing:-.02em;margin-top:8px}
+h2{font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+h3{font-size:17px;line-height:1.2;font-weight:800}
+p{margin:0}
+code{font-family:var(--f-mono);font-size:.86em;background:var(--code-bg);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+a{color:var(--accent);font-weight:700;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+button{font:inherit;color:inherit;cursor:pointer}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:62ch;margin-top:10px}
+.hint{font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:5px 13px;font-size:14px;font-weight:700}
+.btn{border:2px solid var(--ink);background:transparent;border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.small{padding:5px 11px;font-size:13px}
+.btn.on{background:var(--ink);color:var(--bg)}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sh .st{font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--accent);letter-spacing:.12em;white-space:nowrap}
+.sh .ln{flex:1;height:2px;background:var(--line)}
+.sec-intro{color:var(--muted);max-width:68ch;margin:-4px 0 16px}
+
+/* selector de pasos */
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.step{display:flex;align-items:center;gap:9px;border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:7px 13px 7px 8px;text-align:left;font-weight:700;font-size:14px;line-height:1.2}
+.step .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:14px}
+.step small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+.step[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.step[aria-pressed="true"] small{color:var(--bg);opacity:.8}
+.aqui{background:var(--teal-soft);border-radius:12px;padding:11px 16px;margin-bottom:16px;font-size:15.5px;min-height:3.2em}
+.aqui b{color:var(--teal)}
+
+/* piezas del producto */
+.stage{display:flex;flex-direction:column;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row2>*{min-width:0}
+@media (max-width:860px){.row2{grid-template-columns:1fr}}
+.pieza{background:var(--surface);border:2px solid var(--line);border-radius:14px;overflow:hidden;min-width:0;transition:opacity .2s,box-shadow .2s,border-color .2s}
+.pieza>.bh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 14px;border-bottom:2px solid var(--line);font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.pieza>.bb{padding:12px 14px}
+.stage.sel .pieza{opacity:.5}
+.stage.sel .pieza.hl{opacity:1;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.stage.sel .pieza.hl>.bh{color:var(--accent)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.duo>*{min-width:0}
+@media (max-width:700px){.duo{grid-template-columns:1fr}}
+.cap{font-size:13.5px;color:var(--muted);margin-top:6px}
+.cap b{color:var(--ink)}
+
+/* gráficos */
+svg.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart text{font-family:var(--f-body);font-size:11px;fill:var(--muted)}
+.chart .tl{font-size:11.5px;font-weight:700;fill:var(--ink)}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.chart .ax{stroke:var(--muted);stroke-width:1.2}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--muted);margin-top:4px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.legend i.ln{width:18px;height:3px;border-radius:2px;vertical-align:3px}
+
+/* mandos */
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:12px;padding-top:12px;border-top:2px solid var(--line)}
+.ctl label{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.ctl input[type=range]{width:170px;accent-color:var(--accent)}
+.ctl input[type=number],.ctl select{font-family:var(--f-mono);font-size:14px;padding:5px 8px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.ctl input[type=number]{width:6em}
+.ctl input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
+.read{font-family:var(--f-mono);font-size:13px;color:var(--ink);background:var(--soft);border-radius:8px;padding:6px 10px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 11px;font-weight:800;font-size:12.5px;letter-spacing:.04em}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.msg{margin-top:8px;font-size:14.5px;padding:8px 12px;border-radius:10px;background:var(--soft)}
+.msg.ok{background:var(--ok-soft);color:var(--ok)} .msg.bad{background:var(--bad-soft);color:var(--bad)} .msg.warn{background:var(--warn-soft);color:var(--warn)}
+
+/* tablas */
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:7px 10px;text-align:left}
+th{font-size:12.5px;font-weight:800;letter-spacing:.04em;color:var(--muted);border-bottom:2px solid var(--line)}
+td{border-bottom:1px solid var(--line)}
+td.num,th.num{text-align:right;font-family:var(--f-mono);white-space:nowrap}
+.sql{font-family:var(--f-mono);font-size:13px;background:var(--code-bg);border-radius:8px;padding:8px 12px;margin-bottom:10px;overflow-wrap:anywhere}
+
+/* lista de comprobaciones */
+.checks{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:5px}
+.checks li{display:flex;gap:9px;align-items:baseline;font-size:14.5px}
+.checks .m{flex:none;width:1.3em;text-align:center;font-weight:800}
+.checks li.ok .m{color:var(--ok)} .checks li.no .m{color:var(--muted)} .checks li.bad .m{color:var(--bad)}
+textarea{width:100%;min-height:130px;font:inherit;font-size:15px;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);resize:vertical}
+
+/* qué se sube y rúbrica */
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-bottom:22px}
+.file{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:11px 14px}
+.file b{font-family:var(--f-mono);font-size:13.5px;overflow-wrap:anywhere}
+.file .o{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
+.file .s{display:block;font-size:12.5px;font-weight:800;color:var(--teal);margin-top:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tab{border:2px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 15px;font-weight:700;font-size:14.5px}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:900px){.levels{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.levels{grid-template-columns:1fr}}
+.lv{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:10px 13px;font-size:14px}
+.lv h3{font-size:14px;margin-bottom:5px;color:var(--muted)}
+.lv.min{border-color:var(--teal)} .lv.min h3{color:var(--teal)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.foot{font-size:13.5px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const DEMO = {"kicker":"IFCD107 · SPRINT 13 · DEMO DEL RETO","titulo":"Informe visual para dirección","lead":"Marcos, el director general de TurisData Canarias, tiene 10 minutos antes de la reunión de ingresos.","aviso":"Es una demo para entender adónde vamos: **no se entrega nada desde aquí**. Rehace el panel de `S13_02` con las 6000 reservas **sintéticas** de TurisData, la misma semilla y la misma separación (1500 de prueba); el bosque aleatorio es el del paso 1. Elegir el umbral mirando la propia prueba, como hace el cuaderno, es optimista: con reservas nuevas el ahorro sería algo menor. Las comprobaciones del titular son reglas sencillas, no un corrector: vuestras cifras finales serán distintas.","widget":"informe","widget_titulo":"Un panel de una página y un titular que cuadre con sus cifras","intro":"Esto es lo que tendréis al acabar el reto. **Tocad los mandos:** cambiad de modelo, subid y bajad el umbral y los costes de cada error y mirad cómo se mueve el ahorro y qué títulos del panel dejan de ser ciertos; después escribid un titular, pasadlo de los 100 caracteres y comprobad dónde se corta, y mezclad un 41 % con un 49 % para ver cómo se descubre una cifra que no cuadra. Después, elegid un paso para ver qué pieza construís en él.","aqui_todo":"Elegid un paso del reto y se ilumina **la pieza que construís en él**. Pulsad otra vez el mismo paso para verlo todo.","pasos":[{"n":"1","titulo":"Elegir el modelo, cargarlo y fijar los costes","corto":"Modelo, costes y umbral","min":4,"piezas":["modelo"],"aqui":"Aquí elegís el modelo, ponéis lo que cuesta cada error y fijáis el umbral: la pieza de abajo enseña qué umbral sale más barato y qué cambia al moverlo."},{"n":"2","titulo":"Ajustar los gráficos con título-conclusión","corto":"Títulos-conclusión","min":8,"piezas":["panel"],"aqui":"Aquí ajustáis los títulos de los cuatro gráficos para que digan una conclusión que se vea: mirad el panel y la lista de qué título deja de ser cierto al cambiar de modelo o de umbral."},{"n":"3","titulo":"Escribir titular, viñetas y pie","corto":"Titular y viñetas","min":8,"piezas":["titular"],"aqui":"Aquí escribís el titular-decisión y las tres viñetas: la pieza avisa si el titular se corta, si hay jerga y qué cifras del texto no salen del panel."},{"n":"4","titulo":"Probar con otro equipo, revisar con la rúbrica y dejarlo listo","corto":"Prueba y revisión","min":5,"piezas":["lista"],"aqui":"Aquí hacéis la prueba de los 30 segundos con otro equipo y repasáis la lista de comprobación antes de subir: la pieza marca sola lo que puede ver y deja a mano lo que no."}],"ficheros":[{"nombre":"informe_visual.md","origen":"Lo creáis a partir de una plantilla.","sube":"Sí · sprint-13/"},{"nombre":"informe_visual_panel.png","origen":"Lo genera el cuaderno","sube":"Sí · sprint-13/"},{"nombre":"informe_visual.ipynb","origen":"Lo modificáis.","sube":"Sí · sprint-13/"},{"nombre":"reservas_turisdata.csv","origen":"Ya hecho.","sube":"Sí, sin cambios · data/ (si aún no está)"},{"nombre":"autoevaluacion_nombre.md","origen":"Ya hecha, en blanco","sube":"Sí, una por persona (no una por equipo) · sprint-13/"},{"nombre":"informe_visual.pdf","origen":"Lo generáis vosotros","sube":"Solo si lo hacéis · sprint-13/"}],"sube_resumen":"3 ficheros + 1 hoja por persona","carpeta_entrega":"sprint-13/","rubrica":[{"criterio":"Corrección técnica","pregunta":"¿los gráficos dicen la verdad?","niveles":["Hay gráficos, pero calculados sobre el entrenamiento, o el modelo elegido no carga en el cuaderno","Tres gráficos calculados sobre el test con el modelo elegido y los costes escritos; algún fallo menor (un eje sin nombre, el umbral sin explicar)","Cuatro gráficos sobre el test, con barras desde 0, sin 3D y 3–4 colores con sentido; el umbral y los costes están explicados y el ahorro del gráfico coincide con el del cuaderno","Además compara dos umbrales o dos modelos y justifica la elección con los costes"]},{"criterio":"Reproducibilidad","pregunta":"¿lo puede repetir otra persona?","niveles":["El cuaderno no se puede volver a ejecutar o falta el PNG","El cuaderno se ejecuta con ayuda (hay que arreglar una ruta o repetir celdas)","Otra persona hace Reiniciar y ejecutar todo, con semillas fijas, y obtiene el mismo PNG y las mismas cifras; el pie indica datos, modelo, umbral y semilla","Además indica las versiones de las librerías y guarda el PNG generado junto al informe"]},{"criterio":"Análisis y comunicación al cliente","pregunta":"¿lo entiende quien no programa?","niveles":["Los títulos solo describen («AUC por modelo») y no hay decisión","Hay titular y viñetas, y algún título-conclusión, pero queda alguna sigla sin explicar","Titular-decisión, todos los títulos con una conclusión y tres viñetas sin jerga; cifras del texto = cifras del gráfico y otro equipo entiende la decisión en 30 segundos","Además cuantifica el valor en euros y da una recomendación accionable (quién, cuándo, con qué umbral) con sus límites"]},{"criterio":"IA responsable","pregunta":"¿se sabe qué hizo la IA y qué riesgos hay?","niveles":["No se menciona la IA ni ningún riesgo","Una mención genérica («puede haber sesgos») o dice que se usó IA sin detalle","Un riesgo específico con su medida (por ejemplo, «no se usa para negar reservas») y qué se pidió a la IA y qué se revisó; se dice que los datos son sintéticos","Además comprueba el rendimiento por subgrupos (país, canal) y propone medidas con la cifra encontrada"]}],"enlaces":[{"t":"Abrir el cuaderno del reto (Colab)","url":"https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb"},{"t":"Reto en una página","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/3_Reto/1_Trabajar/Reto_Sprint_13_una_pagina.md"},{"t":"Qué se sube y la rúbrica","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/3_Reto/2_Entregar/entrega_y_rubrica.md"},{"t":"Ficha completa del reto","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/3_Reto/3_Consultar/Reto_Sprint_13.md"},{"t":"README del Sprint 13","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/README.md"}],"pie":"El reto se hace en el cuaderno `S13_02` (una copia que ya funciona) y en `informe_visual.md`, no en esta página. Si algo de aquí no se entiende, está explicado paso a paso en la ficha del reto.","datos":{"n":{"ent":4500,"test":1500,"total":6000,"pos":688,"neg":812,"desde":"2024-01-01","hasta":"2025-12-30"},"mod":{"lr":{"nombre":"Regresión logística","corto":"regresión logística","auc":0.7443,"fn":[0,0,0,0,0,0,0,1,1,3,6,7,11,12,13,17,19,21,25,26,33,37,38,44,51,57,62,68,71,75,81,88,99,106,110,118,128,135,145,156,165,175,186,196,207,218,226,237,248,257,264,276,293,306,318,337,343,353,366,376,384,388,402,412,420,427,432,442,456,464,474,484,491,498,513,521,528,539,550,564,575,582,591,594,606,611,621,625,631,637,642,650,658,663,671,676,680,684,686,687,688],"fp":[812,812,812,809,807,799,794,780,768,766,748,736,722,711,700,690,678,662,652,635,621,607,590,576,565,553,541,526,514,499,483,471,454,429,413,397,392,380,368,356,347,330,323,311,297,282,260,245,238,226,217,210,203,192,178,165,158,146,137,129,121,113,107,100,93,83,74,68,62,54,51,47,39,38,34,30,27,24,20,17,16,14,11,10,7,7,7,6,5,3,3,2,1,0,0,0,0,0,0,0,0],"roc":[0,0,0,41,2,51,4,74,6,89,9,122,11,132,14,150,18,161,20,173,21,190,25,202,30,218,33,227,34,240,38,253,42,266,46,276,48,286,53,294,60,307,64,315,67,326,75,331,78,347,80,358,86,369,102,374,108,381,112,390,119,397,123,407,129,414,133,427,139,435,145,442,154,446,159,456,166,462,174,468,176,481,181,488,192,491,195,501,203,509,209,517,216,531,222,538,229,544,233,554,239,562,248,567,250,577,252,587,259,599,262,609,267,616,276,621,281,628,287,635,294,641,298,650,303,657,313,661,317,672,325,677,334,682,350,683,356,690,365,695,369,702,379,708,383,719,394,725,401,733,405,746,413,751,422,754,429,762,437,769,443,776,448,786,459,791,464,798,474,805,482,811,485,820,489,828,500,831,505,840,520,842,533,846,552,849,559,856,567,862,575,866,580,876,590,879,603,884,611,890,619,894,637,897,648,901,661,907,669,913,681,917,685,926,698,926,702,935,718,936,723,943,749,946,766,952,775,959,792,962,803,964,813,968,830,971,844,974,856,975,869,981,889,984,898,988,915,990,927,991,941,994,968,999,1000,1000],"imp":[["antelacion_dias",0.1008],["deposito",0.0451],["canal",0.0424],["tarifa",0.0306],["tipo_habitacion",0.008],["peticiones_especiales",0.0063],["cliente_repetidor",0.0047],["cancelaciones_previas",0.004]],"tpc":{"agencia":[128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,127,124,124,124,123,120,118,117,116,116,115,113,112,111,109,106,104,102,101,100,99,96,95,93,89,86,85,84,83,80,78,78,77,76,73,70,66,65,64,57,54,52,52,49,48,46,44,43,40,38,35,31,31,31,28,25,24,23,22,20,16,14,14,13,13,11,9,9,9,8,8,8,6,5,4,4,4,3,1,1,0,0],"directo":[125,125,125,125,125,125,125,124,124,123,120,120,118,117,116,116,116,114,111,111,108,105,104,102,100,99,98,94,92,91,88,87,81,78,78,77,75,71,68,64,61,61,60,60,57,54,52,50,50,50,48,45,41,37,36,35,35,33,31,30,29,27,26,25,23,22,21,19,18,18,17,16,15,14,13,12,12,11,10,10,10,10,10,10,9,9,7,6,5,4,4,3,2,1,0,0,0,0,0,0,0],"empresa":[38,38,38,38,38,38,38,38,38,37,37,37,36,36,36,35,35,35,34,34,34,34,34,34,34,34,34,33,33,33,33,32,32,31,31,28,28,28,28,28,27,25,24,23,21,21,21,19,19,17,17,17,16,15,13,13,13,13,13,13,13,13,9,9,9,9,9,9,8,8,7,6,6,6,5,4,4,3,3,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"web_intermediaria":[397,397,397,397,397,397,397,397,397,397,397,396,395,395,395,392,390,390,390,390,389,388,388,385,383,380,377,377,376,374,373,369,365,364,363,361,355,353,347,341,339,332,325,320,317,310,305,299,291,286,281,273,262,257,251,237,232,225,221,215,210,208,202,194,190,186,183,178,168,163,159,151,145,142,132,127,121,113,105,96,88,82,74,71,62,59,51,48,44,39,34,29,23,20,13,8,5,3,1,1,0]}},"rf":{"nombre":"Bosque aleatorio","corto":"bosque aleatorio","auc":0.7333,"fn":[0,0,0,0,0,0,0,0,0,0,0,1,1,1,3,4,4,5,5,6,10,16,18,23,26,29,35,41,45,50,59,64,78,79,90,100,109,119,126,141,151,164,169,179,202,213,225,241,253,263,272,286,303,317,332,339,359,379,389,401,412,428,434,446,470,482,491,510,524,537,546,562,575,584,595,614,623,630,646,658,663,668,676,677,679,682,687,688,688,688,688,688,688,688,688,688,688,688,688,688,688],"fp":[812,812,812,812,812,812,812,810,810,808,804,801,795,786,776,766,754,743,734,721,710,691,678,663,647,623,608,593,576,566,550,535,516,503,488,469,457,438,421,398,388,362,351,337,322,300,285,272,258,243,233,219,203,184,170,158,146,136,120,107,94,83,73,63,58,51,48,38,34,33,30,23,17,14,11,9,8,7,6,5,4,3,2,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"roc":[0,0,1,16,2,29,6,38,6,54,7,73,9,84,10,108,11,125,15,135,17,154,21,166,27,173,28,185,32,195,36,205,38,215,42,224,42,241,44,251,47,263,55,269,59,278,60,289,63,304,69,312,71,324,76,343,83,352,87,365,97,369,102,382,110,388,113,400,121,406,129,410,137,417,140,426,148,432,158,438,163,445,169,452,172,465,176,475,185,481,187,491,191,503,202,509,209,515,212,526,219,532,225,539,232,548,240,552,250,557,256,565,261,576,268,581,273,589,282,594,287,602,289,612,299,616,309,622,315,631,325,635,330,645,337,651,342,658,347,669,351,679,360,683,367,689,374,695,382,701,394,702,400,709,406,718,409,731,414,738,421,749,430,753,441,757,446,765,454,770,462,776,475,776,479,786,485,795,498,798,507,801,511,810,517,817,533,820,539,827,544,834,553,840,564,842,574,847,578,856,586,860,599,866,606,872,613,879,633,885,640,891,645,898,656,903,663,910,676,910,687,919,693,926,702,930,713,935,729,939,738,943,745,949,756,951,765,955,780,959,799,962,814,965,823,971,834,972,850,975,861,980,872,984,881,988,904,991,921,993,956,994,966,997,990,999,1000,1000],"imp":[["antelacion_dias",0.0896],["deposito",0.047],["canal",0.0401],["tarifa",0.027],["mes_llegada",0.0037],["peticiones_especiales",0.0031],["cliente_repetidor",0.0029],["precio_noche",0.0023]],"tpc":{"agencia":[128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,126,126,126,126,125,122,119,117,116,115,114,113,113,113,112,109,109,107,105,102,98,98,94,88,87,82,78,76,75,73,71,68,68,62,60,56,49,48,44,42,40,39,38,36,34,33,23,21,20,19,17,15,13,12,7,6,6,3,2,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"directo":[125,125,125,125,125,125,125,125,125,125,125,124,124,124,122,121,121,120,120,120,119,115,115,111,111,110,110,109,108,105,102,100,94,93,92,88,85,82,80,77,73,71,69,68,61,57,54,49,48,46,43,39,37,33,31,30,27,27,23,22,21,18,17,13,10,6,5,5,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"empresa":[38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,37,37,36,36,35,35,35,35,35,35,33,33,33,32,32,32,32,31,30,30,29,28,27,27,27,26,24,23,22,20,17,17,15,12,12,11,10,10,9,9,9,9,7,7,7,7,7,4,2,2,2,2,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"web_intermediaria":[397,397,397,397,397,397,397,397,397,397,397,397,397,397,397,397,397,397,397,396,393,393,392,391,389,388,386,384,383,382,377,375,370,370,360,356,353,346,343,334,332,325,323,319,310,304,300,294,287,281,278,272,263,253,248,247,234,222,218,211,204,193,189,182,165,159,152,143,134,126,121,107,96,89,79,66,58,52,39,28,23,19,11,11,9,6,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}}},"canales":{"agencia":128,"directo":125,"empresa":38,"web_intermediaria":397},"antel":{"corto":0.366,"largo":0.599},"anchos":{" ":11.6,"!":15.2,"\"":17.3,"#":27.9,"%":33.4,"&":29.1,"'":10.2,"(":15.2,")":15.2,"*":17.4,"+":27.9,",":12.6,"-":13.8,".":12.6,"/":12.2,"0":23.2,"1":23.2,"2":23.2,"3":23.2,"4":23.2,"5":23.2,"6":23.2,"7":23.2,"8":23.2,"9":23.2,":":13.3,";":13.3,"<":27.9,"=":27.9,">":27.9,"?":19.4,"@":33.3,"A":25.8,"B":25.4,"C":24.5,"D":27.6,"E":22.8,"F":22.8,"G":27.4,"H":27.9,"I":12.4,"J":12.4,"K":25.8,"L":21.2,"M":33.2,"N":27.9,"O":28.3,"P":24.4,"Q":28.3,"R":25.7,"S":22.5,"T":23.5,"U":27.1,"V":25.8,"W":36.8,"X":25.8,"Y":24.1,"Z":24.2,"[":15.2,"]":15.2,"^":27.9,"_":16.7,"`":16.7,"a":22.5,"b":23.9,"c":19.8,"d":23.9,"e":22.6,"f":13.5,"g":23.9,"h":23.8,"i":11.4,"j":11.4,"k":22.2,"l":11.4,"m":34.8,"n":23.8,"o":22.9,"p":23.9,"q":23.9,"r":16.4,"s":19.9,"t":15.9,"u":23.8,"v":21.7,"w":30.8,"x":21.5,"y":21.7,"z":19.4,"{":23.7,"|":12.2,"}":23.7,"~":27.9,"¡":15.2,"«":21.6,"·":12.6,"»":21.5,"¿":19.4,"Á":25.8,"É":22.8,"Í":12.4,"Ñ":27.9,"Ó":28.3,"Ú":27.1,"Ü":27.1,"á":22.5,"é":22.6,"í":11.4,"ñ":23.8,"ó":22.9,"ú":23.8,"ü":23.8,"–":16.6,"—":33.3,"…":33.3,"€":23.2},"png":1950,"x0":39.0}};
+(function(){
+"use strict";
+const D = DEMO;
+/* ───────── utilidades ───────── */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md = s => esc(s).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\*([^*]+)\*/g,'<i>$1</i>');
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const fmt = (x, d = 1) => Number.isFinite(x) ? x.toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d}) : 'NaN';
+const mean = a => a.reduce((s, v) => s + v, 0) / a.length;
+const NS = 'http://www.w3.org/2000/svg';
+function S(name, attrs, parent, text){ const e = document.createElementNS(NS, name); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; if (parent) parent.appendChild(e); return e; }
+const lin = (d0, d1, r0, r1) => v => r0 + (v - d0) * (r1 - r0) / (d1 - d0);
+function ticks(a, b, k){ const st = (b - a) / k, out = []; for (let i = 0; i <= k; i++) out.push(a + st * i); return out; }
+/* Gráfico con ejes: devuelve {svg, X, Y, g (capa dentro del área), W, H, m} */
+function chart(opt){
+  const W = opt.w || 460, H = opt.h || 290, m = Object.assign({l: 48, r: 12, t: 12, b: 40}, opt.m || {});
+  const svg = S('svg', {viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': opt.label || ''}); svg.classList.add('chart');
+  const X = lin(opt.x[0], opt.x[1], m.l, W - m.r), Y = lin(opt.y[0], opt.y[1], H - m.b, m.t);
+  const id = 'c' + Math.random().toString(36).slice(2, 8);
+  const cp = S('clipPath', {id}, S('defs', {}, svg)); S('rect', {x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b}, cp);
+  (opt.xt || ticks(opt.x[0], opt.x[1], 5)).forEach(v => { S('line', {x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, class: 'gl'}, svg); S('text', {x: X(v), y: H - m.b + 15, 'text-anchor': 'middle'}, svg, opt.fx ? opt.fx(v) : fmt(v, 0)); });
+  const ylab = [];
+  (opt.yt || ticks(opt.y[0], opt.y[1], 4)).forEach(v => { S('line', {x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: 'gl'}, svg); ylab.push(S('text', {x: m.l - 6, y: Y(v) + 4, 'text-anchor': 'end'}, svg, opt.fy ? opt.fy(v) : fmt(v, 0))); });
+  S('line', {x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, class: 'ax'}, svg); S('line', {x1: m.l, x2: m.l, y1: m.t, y2: H - m.b, class: 'ax'}, svg);
+  if (opt.xl) S('text', {x: (m.l + W - m.r) / 2, y: H - 6, 'text-anchor': 'middle', class: 'tl'}, svg, opt.xl);
+  if (opt.yl) S('text', {x: 12, y: (m.t + H - m.b) / 2, 'text-anchor': 'middle', class: 'tl', transform: `rotate(-90 12 ${(m.t + H - m.b) / 2})`}, svg, opt.yl);
+  const g = S('g', {'clip-path': `url(#${id})`}, svg);
+  return {svg, X, Y, g, W, H, m, ylab};
+}
+function pieza(host, ids, titulo, extra){
+  const p = el('section', 'pieza'); p.dataset.pieza = ids;
+  p.appendChild(el('div', 'bh', `<span>${esc(titulo)}</span>${extra || ''}`));
+  const b = el('div', 'bb'); p.appendChild(b); host.appendChild(p); return b;
+}
+/* ───────── widgets de cada sprint (se concatenan aquí) ───────── */
+const W = {};
+/* Widget «informe» (S13 · Informe visual para dirección). Piezas: modelo · panel · titular · lista.
+   Datos (D.datos, de prep_informe.py): n = tamaños y fechas, mod = por modelo (regresión logística y bosque aleatorio) el AUC, los falsos negativos y
+   positivos para cada umbral 0,00…1,00, la curva ROC aligerada, la importancia por permutación y las detecciones por canal; antel = tasas de cancelación;
+   anchos = ancho en píxeles de cada carácter del titular del PNG (negrita 16, 13 pulgadas, 150 ppp). Todo sale del cuaderno S13_02; aquí solo se
+   recalcula lo que depende de un mando (umbral, costes, modelo) y se leen las cifras del texto que escribís para compararlas con las del panel. */
+W.informe = function(host, D){
+  const d = D.datos, N = d.n, MOD = d.mod, CAN = d.canales, AN = d.anchos, NB = '\u00a0';
+  const $ = (r, s) => r.querySelector(s);
+  const eur = x => fmt(Math.round(x), 0) + NB + '€';
+  const py = x => Math.round(x).toLocaleString('en-US');          // Python: {:,.0f}
+  const p0 = x => Math.round(x * 100) + '%';                       // Python: {:.0%}
+  const P0 = x => Math.round(x * 100) + NB + '%';
+  const sp = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  const NOM = {agencia: 'agencias', directo: 'reservas directas', empresa: 'empresas', web_intermediaria: 'intermediarios web'};
+  const ART = {agencia: 'las agencias', directo: 'las reservas directas', empresa: 'las empresas', web_intermediaria: 'los intermediarios web'};
+  const VAR = {antelacion_dias: 'La antelación de la reserva', deposito: 'El depósito', canal: 'El canal de venta', tarifa: 'La tarifa'};
+  if (!document.getElementById('w13-css')) {
+    const st = document.createElement('style'); st.id = 'w13-css';
+    st.textContent = `
+.w13-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:8px}
+.w13-k{background:var(--soft);border-radius:10px;padding:8px 11px;min-width:0}
+.w13-k small{display:block;font-size:12px;color:var(--muted);line-height:1.25}
+.w13-k b{display:block;font-family:var(--f-display);font-size:23px;line-height:1.15;margin-top:2px}
+.w13-k span{display:block;font-size:12px;color:var(--muted);line-height:1.25}
+.w13-hoja{border:2px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--bg)}
+.w13-sup{font-weight:800;font-size:clamp(15px,2.3vw,19px);line-height:1.3;margin:0 0 10px;overflow-wrap:anywhere}
+.w13-cut{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--bad);font-weight:600}
+.w13-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:760px){.w13-grid{grid-template-columns:1fr}}
+.w13-g{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 11px;min-width:0}
+.w13-g small{display:block;font-size:11.5px;font-weight:800;letter-spacing:.06em;color:var(--accent);text-transform:uppercase}
+.w13-t{font-weight:700;font-size:14px;line-height:1.3;margin:2px 0 8px}
+.w13-pie{font-size:11.5px;color:var(--muted);margin-top:10px;overflow-wrap:anywhere}
+.w13-cm{display:grid;grid-template-columns:auto 1fr 1fr;gap:4px;font-size:13px;align-items:stretch}
+.w13-cm .h{display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-weight:700;font-size:12px;padding:2px 4px}
+.w13-cm .c{display:flex;align-items:center;justify-content:center;border-radius:8px;font-weight:800;font-size:19px;min-height:84px}
+.w13-cm .c.ok{background:var(--ok-soft);color:var(--ok)} .w13-cm .c.er{background:var(--bad-soft);color:var(--bad)}
+.w13-ib{display:grid;gap:5px}
+.w13-ir{display:grid;grid-template-columns:12.5em 1fr 3.4em;gap:7px;align-items:center;font-size:12px}
+.w13-ir .n{font-family:var(--f-mono);font-size:11.5px;overflow-wrap:anywhere}
+.w13-ir .t{height:13px;background:var(--grid);border-radius:4px;overflow:hidden}
+.w13-ir .t i{display:block;height:100%;background:var(--blue)}
+.w13-ir .v{font-family:var(--f-mono);text-align:right}
+.w13-ex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.w13-lb{display:block;font-weight:700;font-size:14px;margin:0 0 4px}
+.w13-ta{min-height:0;font-size:15px;overflow:hidden;resize:none}
+.w13-reg{height:12px;border-radius:6px;background:var(--grid);overflow:hidden;margin:8px 0 4px;position:relative}
+.w13-reg i{position:absolute;left:0;top:0;bottom:0;background:var(--ok);border-radius:6px}
+.w13-reg.mal i{background:var(--bad)} .w13-reg.por i{background:var(--warn)}
+.w13-vb{display:grid;grid-template-columns:1fr;gap:10px;margin-top:6px}
+.w13-h3{font-size:15px;margin:16px 0 6px}
+.w13-det summary{cursor:pointer;font-weight:700;font-size:14px;margin:10px 0 4px}
+.w13-tb td{font-size:13.5px;vertical-align:top} .w13-tb .pill{white-space:nowrap} .w13-tb td.t{font-family:var(--f-mono);font-size:12.5px;white-space:nowrap}
+.w13-w{color:var(--warn)} .checks li.w13-w .m{color:var(--warn)}
+.w13-man{border:0;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.w13-man label{display:flex;gap:9px;align-items:flex-start;font-size:14.5px}
+.w13-man input{width:18px;height:18px;flex:none;margin-top:2px;accent-color:var(--accent)}
+`;
+    document.head.appendChild(st);
+  }
+
+  /* ───────── estado y cálculo ───────── */
+  const E = {m: 'lr', u: 0.35, fn: 50, fp: 30};
+  const subs = [];
+  let C, F = null, A = null;
+  function calc(){
+    const M = MOD[E.m], i = Math.round(E.u * 100), fn = M.fn[i], fp = M.fp[i], tp = N.pos - fn, av = tp + fp;
+    const con = E.fn * fn + E.fp * fp, sin = E.fn * N.pos;
+    let bi = 5, bc = Infinity; const curva = [];
+    for (let j = 5; j <= 95; j++) { const c = E.fn * M.fn[j] + E.fp * M.fp[j]; curva.push(c); if (c < bc - 1e-9) { bc = c; bi = j; } }
+    const can = {}; Object.keys(CAN).forEach(k => { can[k] = M.tpc[k][i] / CAN[k]; });
+    return {M, i, fn, fp, tp, av, con, sin, ah: sin - con, det: tp / N.pos, fa: fp / N.neg, fav: av ? fp / av : 0, pre: av ? tp / av : 0,
+      opt: bi / 100, copt: bc, curva, can, imp: M.imp, auc: M.auc, rz: M.imp[0][1] / M.imp[1][1]};
+  }
+  C = calc();
+  function set(p){ Object.assign(E, p); C = calc(); reanaliza(); subs.forEach(f => f()); }
+  const nice = (max, k) => { const raw = max / k, p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p, s = (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * p; return [s, s * Math.ceil(max / s - 1e-9)]; };
+  const ancho = (e, max, min) => Math.max(min, Math.min(max, Math.round(e.clientWidth) || max));
+  const ticksTo = (s, top) => { const o = []; for (let v = 0; v <= top + 1e-9; v += s) o.push(v); return o; };
+
+  /* ───────── el texto: ejemplo, medida del titular y lectura de cifras ───────── */
+  function ejemplo(){
+    const c = C, orden = Object.keys(c.can).sort((a, b) => c.can[a] - c.can[b]), p = orden[0], q = orden[orden.length - 1];
+    const r100 = Math.round(Math.abs(c.ah) / 100) * 100, a1 = d.n.desde.slice(0, 4), a2 = d.n.hasta.slice(0, 4);
+    return {
+      t: c.ah > 0 ? `Avisar a las reservas de mayor riesgo evitaría unos ${sp(r100)} € de pérdidas por cada ${sp(N.test)} reservas`
+                  : `Avisar no compensa con estos costes: costaría unos ${sp(r100)} € más por cada ${sp(N.test)} reservas`,
+      v: [`Un modelo que calcula la probabilidad de que cada reserva se cancele. Lo hemos entrenado con ${sp(N.ent)} reservas de TurisData hechas en ${a1} y ${a2} y lo hemos probado con otras ${sp(N.test)} que no había visto.`,
+          `Que Ingresos avise a toda reserva con un ${Math.round(E.u * 100)} % o más de probabilidad de cancelar, empezando el lunes por las de esa semana. Con las ${sp(N.test)} reservas de prueba habría supuesto ${c.av} avisos y ${c.ah >= 0 ? 'un ahorro' : 'un sobrecoste'} de ${fmt(Math.abs(c.ah), 0)} € (de ${fmt(c.sin, 0)} € a ${fmt(c.con, 0)} €), contando ${E.fn} € por cada cancelación no detectada y ${E.fp} € por cada falsa alarma.`,
+          `Los datos son sintéticos. De cada 10 avisos, unos ${Math.round(c.fav * 10)} son falsas alarmas (${c.fp} de ${c.av}). Detecta peor las cancelaciones de ${ART[p]} (${Math.round(c.can[p] * 100)} %) que las de ${NOM[q]} (${Math.round(c.can[q] * 100)} %). El ahorro supone que avisar siempre evita la cancelación. No debe usarse para negar reservas a nadie. Se revisará cada trimestre.`]
+    };
+  }
+  const T = ejemplo();
+  const adv = ch => { if (!AN) return 19; const k = (ch === '\u00a0' || ch === '\u202f') ? ' ' : ch; return AN[k] != null ? AN[k] : (AN.n || 19.5); };
+  function medir(t){
+    const cs = [...t]; let x = d.x0, n = 0, tot = 0, fuera = false;
+    cs.forEach(ch => { const w = adv(ch); tot += w; if (!fuera && x + w <= d.png) { x += w; n++; } else fuera = true; });
+    return {len: cs.length, n, corta: n < cs.length, ratio: tot / (d.png - d.x0), vis: cs.slice(0, n).join(''), oculto: cs.slice(n).join('')};
+  }
+  function hechos(){
+    const c = C, H = {eur: [], pct: [], cnt: [], dec: []};
+    H.eur.push({v: Math.abs(c.ah), t: c.ah >= 0 ? 'el ahorro (gráfico 4)' : 'lo que se pierde de más con el modelo (gráfico 4)'}, {v: c.sin, t: 'el coste sin modelo (gráfico 4)'},
+      {v: c.con, t: 'el coste con modelo (gráfico 4)'}, {v: E.fn, t: 'el coste de una cancelación no detectada (FN)'}, {v: E.fp, t: 'el coste de una falsa alarma (FP)'});
+    H.pct.push({v: c.det * 100, k: 'det', t: `cancelaciones detectadas (${c.tp} de ${N.pos}, gráfico 1)`},
+      {v: c.fa * 100, k: 'fa', t: `falsas alarmas entre quienes no cancelan (${c.fp} de ${N.neg}, gráfico 1)`},
+      {v: c.fav * 100, k: 'fav', t: `falsas alarmas entre los avisos (${c.fp} de ${c.av})`},
+      {v: 100 - c.det * 100, k: 'nd', t: `cancelaciones que no detectamos (${c.fn} de ${N.pos})`},
+      {v: c.pre * 100, k: 'pre', t: `avisos que sí se cancelaban (${c.tp} de ${c.av})`}, {v: E.u * 100, k: 'u', t: 'el umbral'});
+    Object.keys(CAN).forEach(k => H.pct.push({v: c.can[k] * 100, k: 'can', t: `cancelaciones detectadas entre ${NOM[k]} (${c.M.tpc[k][c.i]} de ${CAN[k]})`}));
+    H.pct.push({v: d.antel.corto * 100, k: 'an', t: 'se cancelan las reservas con 90 días o menos de antelación'}, {v: d.antel.largo * 100, k: 'an', t: 'se cancelan las reservas con más de 90 días de antelación'});
+    [[N.test, 'reservas de prueba'], [N.ent, 'reservas de entrenamiento'], [N.total, 'reservas en total'], [N.pos, 'cancelaciones reales en la prueba'], [N.neg, 'reservas de prueba que no se cancelan'],
+      [c.fn, 'cancelaciones no detectadas'], [c.fp, 'falsas alarmas'], [c.tp, 'cancelaciones detectadas'], [c.av, 'avisos'], [+d.n.desde.slice(0, 4), 'año de las reservas'], [+d.n.hasta.slice(0, 4), 'año de las reservas']].forEach(([v, t]) => H.cnt.push({v, t}));
+    H.dec.push({v: c.auc, t: 'el AUC (leyenda de la curva ROC)', dp: 3}, {v: E.u, t: 'el umbral', dp: 3}, {v: c.rz, t: 'cuántas veces pesa la variable líder más que la segunda', dp: 1}, {v: 0.5, t: 'el 0,5 del azar (escala del AUC)', dp: 3});
+    return H;
+  }
+  const RXN = /(?<![\d.,])(\d{1,3}(?:[   ]\d{3})+(?:,\d+)?|\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:[.,]\d+)?)(?!\d)/g;
+  function valor(raw){
+    const s = raw.replace(/[  ]/g, ' ');
+    if (/^\d{1,3}(?: \d{3})+(?:,\d+)?$/.test(s)) return {v: +s.replace(/ /g, '').replace(',', '.'), sep: 'esp'};
+    if (/^\d{1,3}(?:\.\d{3})+(?:,\d+)?$/.test(s)) return s[0] === '0' ? {v: parseFloat(s), sep: 'dec'} : {v: +s.replace(/\./g, '').replace(',', '.'), sep: 'pto'};
+    if (/^\d{1,3}(?:,\d{3})+(?:\.\d+)?$/.test(s)) return s[0] === '0' ? {v: +s.replace(',', '.'), sep: 'dec'} : {v: +s.replace(/,/g, ''), sep: 'ing'};
+    return {v: +s.replace(',', '.'), sep: 'dec'};
+  }
+  const ok = (e, t) => ({e, t});
+  function numeros(txt, H){
+    const out = [], ocu = [];
+    const razon = (raw, ix, m, n) => {
+      ocu.push([ix, ix + raw.length]);
+      const pc = m / n * 100, ms = H.pct.filter(f => f.k !== 'u' && Math.abs(pc - f.v) <= 5).sort((a, b) => Math.abs(pc - a.v) - Math.abs(pc - b.v));
+      let est = 'bad', nota = `${fmt(pc, 0)} % no sale de ningún porcentaje del panel`;
+      if (ms.length) {
+        est = 'ok'; nota = `≈ ${fmt(ms[0].v, 0)} %: ${ms[0].t}`;
+        if (ms[0].k === 'fav' && !/avis/i.test(txt.slice(Math.max(0, ix - 40), ix + raw.length + 60))) { est = 'warn'; nota += '. Decid de qué cuenta: no es el porcentaje del gráfico 1'; }
+      }
+      out.push({ix, raw, est, nota, w: est === 'warn' ? 'den' : ''});
+    };
+    for (const m of txt.matchAll(/(\d+)\s+de\s+cada\s+(\d+)/gi)) if (+m[2] > 0) razon(m[0], m.index, +m[1], +m[2]);
+    for (const m of txt.matchAll(/de\s+cada\s+(\d+)[^.;()\d]{0,40}?,?\s*(?:unos|casi|aproximadamente|aprox\.?)?\s*(\d+)(?=\s+\p{L})/giu)) if (+m[1] > 0 && !ocu.some(o => m.index < o[1] && m.index + m[0].length > o[0])) razon(m[0].replace(/\s+/g, ' '), m.index, +m[2], +m[1]);
+    for (const m of txt.matchAll(RXN)) {
+      const raw = m[1], ix = m.index, fin = ix + raw.length;
+      if (ocu.some(o => ix >= o[0] && fin <= o[1])) continue;
+      const {v, sep} = valor(raw), antes = txt.slice(Math.max(0, ix - 24), ix).toLowerCase(), desp = txt.slice(fin, fin + 12);
+      const apx = /(unos|unas|casi|aprox\w*\.?|cerca de|alrededor de|≈|~|más o menos)\s*$/.test(antes);
+      const u = /^\s*(%|por\s*ciento)/i.test(desp) ? 'pct' : (/^\s*(€|euros?\b)/i.test(desp) || /€\s*$/.test(antes)) ? 'eur' : '';
+      const tipo = u || (Number.isInteger(v) && v >= 100 ? 'cnt' : (!Number.isInteger(v) ? 'dec' : ''));
+      if (!tipo) continue;
+      const ing = sep === 'ing', fx = ing ? ` Coma inglesa: en español se escribe ${fmt(v, 0)}.` : '';
+      let est = 'bad', nota = '';
+      if (tipo === 'eur' || tipo === 'cnt') {
+        const L = H[tipo], ex = L.filter(f => Math.abs(v - f.v) < 0.5), ap = apx ? L.filter(f => Math.abs(v - f.v) / f.v <= 0.03) : [];
+        if (ex.length) { est = ing ? 'warn' : 'ok'; nota = '= ' + ex.map(f => f.t).join(' · ') + fx; }
+        else if (ap.length) { est = ing ? 'warn' : 'ok'; nota = `redondeo de ${fmt(ap[0].v, 0)}${tipo === 'eur' ? ' €' : ''}: ${ap[0].t}` + fx; }
+        else nota = tipo === 'eur' ? `no coincide con ningún importe del panel (${H.eur.slice(0, 3).map(f => fmt(f.v, 0) + ' €').join(' · ')})` : `no sale del cuaderno (prueba ${sp(N.test)}, entrenamiento ${sp(N.ent)}, avisos ${C.av}, falsas alarmas ${C.fp}…)`;
+      } else if (tipo === 'pct') {
+        const tol = apx ? 2 : 0.5, ms = H.pct.filter(f => Math.abs(v - f.v) <= tol);
+        if (ms.length) {
+          est = 'ok'; nota = '= ' + ms.map(f => f.t).join(' · ');
+          if (ms.every(f => f.k === 'fav') && !/avis/i.test(txt.slice(Math.max(0, ix - 50), fin + 70))) { est = 'warn'; nota += `. No es el ${fmt(C.fa * 100, 0)} % del gráfico 1 (ese cuenta sobre quienes no cancelan): decid de qué cuenta`; }
+        } else {
+          nota = 'no sale del panel ni del cuaderno';
+          const cerca = /falsa|alarma|error/i.test(txt.slice(Math.max(0, ix - 60), fin + 60)) && H.pct.filter(f => f.k === 'fa' || f.k === 'fav').find(f => Math.abs(v - f.v) <= 12);
+          if (cerca) nota += `. ¿Mezcla de denominadores? ${fmt(C.fa * 100, 0)} % = ${C.fp} de ${N.neg} (quienes no cancelan) y ${fmt(C.fav * 100, 0)} % = ${C.fp} de ${C.av} (los avisos)`;
+        }
+        if (ing) { est = est === 'bad' ? 'bad' : 'warn'; }
+      } else {
+        const dp = (raw.match(/[.,](\d+)$/) || [0, ''])[1].length, tol = 0.5 * Math.pow(10, -dp) + 1e-9, ms = H.dec.filter(f => Math.abs(v - f.v) <= tol);
+        if (ms.length) { est = 'ok'; nota = '= ' + ms[0].t; } else nota = 'no sale del panel (AUC ' + C.auc.toFixed(2) + ', umbral ' + fmt(E.u, 2) + ')';
+      }
+      out.push({ix, raw, est, nota, w: est === 'warn' ? (ing ? 'coma' : 'den') : ''});
+    }
+    return out.sort((a, b) => a.ix - b.ix);
+  }
+  const JERGA = [[/\bAUC\b/g, 'AUC', 'nota de 0,5 a 1 de lo bien que el modelo separa a quien cancela de quien no'], [/\bF1\b/g, 'F1', 'número que combina cuántos avisos acierta y cuántas cancelaciones detecta'],
+    [/\bSHAP\b/g, 'SHAP', 'forma de ver qué datos empujan más la decisión del modelo'], [/\bROC\b/g, 'ROC', 'curva de cancelaciones detectadas frente a falsas alarmas'],
+    [/\bumbrales?\b/gi, 'umbral', 'a partir de qué probabilidad avisamos'], [/\bfalsos?\s+(?:negativos?|positivos?)\b|\b(?:FN|FP)\b/gi, 'falso negativo/positivo', '«cancelación que no detectamos» / «falsa alarma»'],
+    [/\brecall\b|\bprecisión\b/gi, 'recall/precisión', 'cuántas cancelaciones detectamos / cuántos avisos aciertan'], [/\b[a-z]+_[a-z_]+\b/g, 'nombre de columna', 'por ejemplo antelacion_dias → «días entre la reserva y la llegada»']];
+  function jerga(t){ return JERGA.filter(([rx]) => { rx.lastIndex = 0; return rx.test(t); }).map(([, n, tr]) => ({n, tr})); }
+  const decide = t => /^(?:recomendamos |proponemos |conviene |hay que |debemos )?\p{L}+(?:ar|er|ir|ad|ed|id)\b/iu.test(t.trim());
+
+  /* ───────── pieza 1 · modelo, costes y umbral ───────── */
+  const b1 = pieza(host, 'modelo', 'MODELO · el umbral y lo que cuesta cada error');
+  b1.innerHTML = `<div class="ctl" style="margin:0;padding:0;border:0">
+    <label>Modelo <select id="w13-m">${Object.keys(MOD).map(k => `<option value="${k}">${esc(MOD[k].nombre)}<\/option>`).join('')}<\/select><\/label>
+    <label>Cancelación no detectada (FN) <input type="number" id="w13-cfn" min="0" max="1000" step="5" value="${E.fn}"> €<\/label>
+    <label>Falsa alarma (FP) <input type="number" id="w13-cfp" min="0" max="1000" step="5" value="${E.fp}"> €<\/label><\/div>
+    <div class="duo" style="margin-top:10px"><div><div id="w13-cc"><\/div>
+    <div class="legend"><span><i class="ln" style="background:var(--accent)"><\/i>coste con modelo, según el umbral<\/span><span><i class="ln" style="background:var(--muted)"><\/i>coste sin modelo<\/span><span><i style="background:var(--teal)"><\/i>el umbral más barato<\/span><span><i style="background:var(--ink)"><\/i>el umbral elegido<\/span><\/div>
+    <div class="ctl"><label>Umbral <input type="range" id="w13-u" min="0.05" max="0.95" step="0.01" value="${E.u}" aria-describedby="w13-ur"><\/label><span class="read" id="w13-ur"><\/span><button type="button" class="btn small" id="w13-opt"><\/button><\/div><\/div>
+    <div class="w13-kpis" id="w13-kp"><\/div><\/div>
+    <div class="msg" id="w13-mm" aria-live="polite"><\/div>
+    <p class="cap">Los costes (50 € y 30 €) son los del cuaderno: cambiadlos y mirad cómo se mueve el umbral más barato. El AUC no se mueve con el umbral (solo elige un punto de la curva ROC); cambia con el modelo.<\/p>`;
+  const pinta1 = () => {
+    const c = C, mx = Math.max(c.sin, ...c.curva, 1) * 1.06, [st, top] = nice(mx, 4);
+    const wc = ancho($(b1, '#w13-cc'), 460, 290), ch = chart({w: wc, h: Math.round(wc * 0.56), x: [0.05, 0.95], y: [0, top], xt: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9], fx: v => fmt(v, 1), yt: ticksTo(st, top), fy: v => fmt(v, 0), xl: 'Umbral de aviso (probabilidad de cancelar)', yl: 'Coste (€)', m: {l: 56, r: 12, t: 12, b: 42},
+      label: 'Coste de los errores según el umbral, con y sin modelo'});
+    S('line', {x1: ch.X(0.05), x2: ch.X(0.95), y1: ch.Y(c.sin), y2: ch.Y(c.sin), stroke: 'var(--muted)', 'stroke-width': 1.6, 'stroke-dasharray': '6 4'}, ch.g);
+    S('polyline', {points: c.curva.map((v, j) => `${ch.X((j + 5) / 100)},${ch.Y(v)}`).join(' '), fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2.4}, ch.g);
+    S('line', {x1: ch.X(E.u), x2: ch.X(E.u), y1: ch.m.t, y2: ch.H - ch.m.b, stroke: 'var(--ink)', 'stroke-width': 1.2, 'stroke-dasharray': '3 3'}, ch.svg);
+    S('circle', {cx: ch.X(c.opt), cy: ch.Y(c.copt), r: 8, fill: 'none', stroke: 'var(--teal)', 'stroke-width': 2.6}, ch.svg);
+    S('circle', {cx: ch.X(E.u), cy: ch.Y(c.con), r: 4.8, fill: 'var(--ink)'}, ch.svg);
+    const cc = $(b1, '#w13-cc'); cc.textContent = ''; cc.appendChild(ch.svg);
+    $(b1, '#w13-ur').textContent = fmt(E.u, 2);
+    const op = $(b1, '#w13-opt'); op.textContent = `Usar el más barato (${fmt(c.opt, 2)})`;
+    $(b1, '#w13-kp').innerHTML = `<div class="w13-k"><small>AUC (no depende del umbral)<\/small><b>${fmt(c.auc, 3)}<\/b><span>0,5 = azar · 1 = perfecto<\/span><\/div>
+      <div class="w13-k"><small>Avisos<\/small><b>${c.av}<\/b><span>de ${N.test} reservas de prueba<\/span><\/div>
+      <div class="w13-k"><small>Cancelaciones detectadas<\/small><b>${P0(c.det)}<\/b><span>${c.tp} de ${N.pos}<\/span><\/div>
+      <div class="w13-k"><small>Falsas alarmas<\/small><b>${P0(c.fa)}<\/b><span>${c.fp} de las ${N.neg} que no cancelan<\/span><\/div>
+      <div class="w13-k"><small>${c.ah >= 0 ? 'Ahorro' : 'Pérdida de más'}<\/small><b>${eur(Math.abs(c.ah))}<\/b><span>${eur(c.sin)} → ${eur(c.con)}<\/span><\/div>`;
+    const gap = c.con - c.copt, m = $(b1, '#w13-mm');
+    m.className = 'msg ' + (c.ah < 0 ? 'bad' : gap <= 0.5 ? 'ok' : 'warn');
+    m.innerHTML = `Con el umbral <b>${fmt(E.u, 2)}<\/b> avisáis a <b>${c.av}<\/b> de ${N.test} reservas: acertáis ${c.tp} de las ${N.pos} cancelaciones (${P0(c.det)}) y os equivocáis con ${c.fp} reservas que sí venían. ` +
+      (c.ah >= 0 ? `Os cuesta ${eur(c.con)} frente a ${eur(c.sin)} sin modelo: <b>ahorráis ${eur(c.ah)}<\/b>.` : `Os cuesta ${eur(c.con)} frente a ${eur(c.sin)} sin modelo: con estos costes y este umbral <b>el modelo os hace perder ${eur(-c.ah)} más<\/b>.`) +
+      (gap <= 0.5 ? ' Es el umbral que menos cuesta.' : ` El que menos cuesta es ${fmt(c.opt, 2)} (${eur(c.copt)}): os faltan ${eur(gap)}.`);
+    const s = $(b1, '#w13-m'); if (s.value !== E.m) s.value = E.m;
+    const r = $(b1, '#w13-u'); if (+r.value !== E.u) r.value = E.u;
+  };
+  const num = v => { const x = parseFloat(v); return Number.isFinite(x) ? Math.min(1000, Math.max(0, x)) : 0; };
+  $(b1, '#w13-m').addEventListener('change', e => set({m: e.target.value}));
+  $(b1, '#w13-cfn').addEventListener('input', e => set({fn: num(e.target.value)}));
+  $(b1, '#w13-cfp').addEventListener('input', e => set({fp: num(e.target.value)}));
+  $(b1, '#w13-u').addEventListener('input', e => set({u: +e.target.value}));
+  $(b1, '#w13-opt').addEventListener('click', () => set({u: C.opt}));
+  subs.push(pinta1);
+
+  /* ───────── pieza 2 · el panel de una página ───────── */
+  const b2 = pieza(host, 'panel', 'PANEL · los cuatro gráficos de una página');
+  b2.innerHTML = `<div class="ctl" style="margin:0 0 10px;padding:0;border:0">
+    <label>Modelo <select id="w13-m2">${Object.keys(MOD).map(k => `<option value="${k}">${esc(MOD[k].nombre)}<\/option>`).join('')}<\/select><\/label>
+    <label>Umbral <input type="range" id="w13-u2" min="0.05" max="0.95" step="0.01" value="${E.u}" aria-describedby="w13-ur2"><\/label><span class="read" id="w13-ur2"><\/span><\/div>
+    <div class="w13-hoja"><p class="w13-sup" id="w13-sup"><\/p><div class="w13-grid">
+      <figure class="w13-g"><small>1 · ¿Puedo fiarme?<\/small><figcaption class="w13-t" id="w13-t1"><\/figcaption><div id="w13-g1"><\/div><\/figure>
+      <figure class="w13-g"><small>2 · ¿Puedo fiarme?<\/small><figcaption class="w13-t" id="w13-t2"><\/figcaption><div id="w13-g2"><\/div><\/figure>
+      <figure class="w13-g"><small>3 · ¿Qué mueve las cancelaciones?<\/small><figcaption class="w13-t" id="w13-t3"><\/figcaption><div id="w13-g3"><\/div><\/figure>
+      <figure class="w13-g"><small>4 · ¿Qué hago el lunes?<\/small><figcaption class="w13-t" id="w13-t4"><\/figcaption><div id="w13-g4"><\/div><\/figure><\/div>
+      <p class="w13-pie" id="w13-pie"><\/p><\/div>
+    <h3 class="w13-h3">¿Dice cada título lo que se ve?<\/h3><ul class="checks" id="w13-tk2"><\/ul>
+    <p class="cap">El panel imita el PNG de <code>S13_02<\/code>: los títulos usan el formato de Python (83%, 0.74, 16,590 €); en el texto en español, 16.590 €. El punto del umbral sobre la curva y los colores de la matriz son un añadido de la demo.<\/p>`;
+  const caja = (id, ...n) => { const e = $(b2, id); e.textContent = ''; n.forEach(x => e.appendChild(x)); };
+  const pinta2 = () => {
+    const c = C, M = c.M, r = M.roc, lid = c.imp[0][0], nombre = VAR[lid] || 'La variable ' + lid;
+    const t3 = c.rz >= 2 ? `${nombre} pesa más del doble que cualquier otra variable` : `${nombre} es la variable que más pesa (${fmt(c.rz, 1)} veces la segunda)`;
+    const t4 = c.ah >= 0 ? `Con el modelo perdemos ${py(c.ah)} € menos en ${N.test} reservas` : `Con el modelo perdemos ${py(-c.ah)} € más en ${N.test} reservas`;
+    $(b2, '#w13-t1').textContent = `Detectamos el ${p0(c.det)} de las cancelaciones, avisando por error al ${p0(c.fa)} de quien no cancela`;
+    $(b2, '#w13-t2').textContent = `Acierta mejor que el azar (AUC = ${c.auc.toFixed(2)}), pero no es perfecto`;
+    $(b2, '#w13-t3').textContent = t3; $(b2, '#w13-t4').textContent = t4;
+    $(b2, '#w13-g1').innerHTML = `<div class="w13-cm" role="group" aria-label="Matriz de confusión en porcentaje de cada fila real">
+      <span class="h"><\/span><span class="h">Dice: no cancela<\/span><span class="h">Dice: cancela<\/span>
+      <span class="h">Real: no cancela<\/span><span class="c ok">${p0(1 - c.fa)}<\/span><span class="c er">${p0(c.fa)}<\/span>
+      <span class="h">Real: cancela<\/span><span class="c er">${p0(1 - c.det)}<\/span><span class="c ok">${p0(c.det)}<\/span><\/div>
+      <p class="cap" style="margin-top:6px">En verde, lo que acierta; en rojo, lo que falla. Cada fila suma 100 %.<\/p>`;
+    const w2 = ancho($(b2, '#w13-g2'), 420, 250), ch = chart({w: w2, h: Math.round(w2 * 0.75), x: [0, 1], y: [0, 1], xt: [0, 0.2, 0.4, 0.6, 0.8, 1], yt: [0, 0.2, 0.4, 0.6, 0.8, 1], fx: v => v.toFixed(1), fy: v => v.toFixed(1), xl: 'Falsas alarmas', yl: 'Cancelaciones detectadas', m: {l: 40, r: 10, t: 8, b: 36}, label: 'Curva ROC del modelo con el punto del umbral'});
+    S('line', {x1: ch.X(0), y1: ch.Y(0), x2: ch.X(1), y2: ch.Y(1), stroke: 'var(--muted)', 'stroke-width': 1.5, 'stroke-dasharray': '5 4'}, ch.g);
+    const pts = []; for (let k = 0; k < r.length; k += 2) pts.push(`${ch.X(r[k] / 1000)},${ch.Y(r[k + 1] / 1000)}`);
+    S('polyline', {points: pts.join(' '), fill: 'none', stroke: 'var(--blue)', 'stroke-width': 2.4}, ch.g);
+    const px = ch.X(c.fa), py2 = ch.Y(c.det); S('circle', {cx: px, cy: py2, r: 5.5, fill: 'var(--accent)', stroke: 'var(--surface)', 'stroke-width': 1.5}, ch.svg);
+    S('text', {x: px + (c.fa > 0.55 ? -9 : 9), y: py2 + (c.det > 0.9 ? 15 : -8), 'text-anchor': c.fa > 0.55 ? 'end' : 'start', class: 'tl'}, ch.svg, `umbral ${fmt(E.u, 2)}`);
+    $(b2, '#w13-g2').textContent = ''; $(b2, '#w13-g2').appendChild(ch.svg);
+    $(b2, '#w13-g2').insertAdjacentHTML('beforeend', `<div class="legend"><span><i class="ln" style="background:var(--blue)"><\/i>Modelo (AUC = ${c.auc.toFixed(2)})<\/span><span><i class="ln" style="background:var(--muted)"><\/i>Azar<\/span><span><i style="background:var(--accent)"><\/i>umbral elegido<\/span><\/div>`);
+    const top6 = c.imp.slice(0, 6), mxi = Math.max(top6[0][1], 1e-9);
+    $(b2, '#w13-g3').innerHTML = `<div class="w13-ib" role="img" aria-label="Importancia de las seis primeras variables">${top6.map(([n, v]) => `<div class="w13-ir"><span class="n">${esc(n)}<\/span><span class="t"><i style="width:${Math.max(0, v / mxi * 100)}%"><\/i><\/span><span class="v">${v.toFixed(3)}<\/span><\/div>`).join('')}<\/div><p class="cap" style="margin-top:6px">Caída del AUC al desordenar la variable (las barras empiezan en 0).<\/p>`;
+    const mx = Math.max(c.sin, c.con, 1) * 1.15, [st, tp2] = nice(mx, 4);
+    const w4 = ancho($(b2, '#w13-g4'), 420, 250), cb = chart({w: w4, h: Math.round(w4 * 0.75), x: [0, 2], y: [0, tp2], xt: [0.5, 1.5], fx: v => v < 1 ? 'Sin modelo' : 'Con modelo', yt: ticksTo(st, tp2), fy: v => py(v), yl: 'Coste de las cancelaciones (€)', m: {l: 58, r: 10, t: 8, b: 30}, label: 'Coste de las cancelaciones sin modelo y con modelo'});
+    [[c.sin, 0.2, 'var(--muted)'], [c.con, 1.2, c.ah >= 0 ? 'var(--ok)' : 'var(--bad)']].forEach(([v, x0, col]) => {
+      S('rect', {x: cb.X(x0), y: cb.Y(v), width: cb.X(x0 + 0.6) - cb.X(x0), height: Math.max(0, cb.Y(0) - cb.Y(v)), fill: col, 'fill-opacity': col === 'var(--muted)' ? 0.45 : 1}, cb.g);
+      S('text', {x: (cb.X(x0) + cb.X(x0 + 0.6)) / 2, y: cb.Y(v) - 5, 'text-anchor': 'middle', class: 'tl'}, cb.svg, `${py(v)} €`);
+    });
+    $(b2, '#w13-g4').textContent = ''; $(b2, '#w13-g4').appendChild(cb.svg);
+    $(b2, '#w13-pie').textContent = `TurisData Canarias · Dirección de Ingresos · Equipo X (nombres) · Datos sintéticos de TurisData · modelo: ${M.corto} · umbral ${E.u.toFixed(2)} · semilla 42`;
+    const tk = [];
+    tk.push(ok('ok', `<b>Gráfico 1.<\/b> El ${p0(c.det)} y el ${p0(c.fa)} salen de las casillas «cancela/cancela» y «no cancela/cancela». Las falsas alarmas se cuentan sobre quienes <b>no<\/b> cancelan (${c.fp} de ${N.neg}), no sobre los avisos (${P0(c.fav)}: ${c.fp} de ${c.av}).`));
+    tk.push(c.auc > 0.5 ? ok('ok', `<b>Gráfico 2.<\/b> El AUC (${c.auc.toFixed(2)}) sale en la leyenda y la curva queda por encima de la diagonal: «mejor que el azar» es cierto.`) : ok('bad', `<b>Gráfico 2.<\/b> Con AUC ${c.auc.toFixed(2)} no se puede decir «mejor que el azar».`));
+    tk.push(c.rz >= 2 ? ok('ok', `<b>Gráfico 3.<\/b> «Más del doble» se cumple: ${c.imp[0][1].toFixed(3)} frente a ${c.imp[1][1].toFixed(3)} (${fmt(c.rz, 1)} veces).`)
+      : ok('bad', `<b>Gráfico 3.<\/b> La frase del paso 2 («pesa más del doble…») ya no se cumple con este modelo: ${c.imp[0][1].toFixed(3)} frente a ${c.imp[1][1].toFixed(3)} (${fmt(c.rz, 1)} veces). Nombrad la variable líder y ajustad la frase, como en el título de arriba.`));
+    tk.push(c.ah > 0 ? ok('ok', `<b>Gráfico 4.<\/b> ${eur(c.sin)} sin modelo y ${eur(c.con)} con modelo: ${eur(c.ah)} menos. Las barras empiezan en 0.`)
+      : ok('bad', `<b>Gráfico 4.<\/b> Con estos costes y este umbral el modelo no ahorra. La plantilla escribiría «perdemos ${py(c.ah)} € menos», que es falso: hay que cambiar el título.`));
+    $(b2, '#w13-tk2').innerHTML = tk.map(x => `<li class="${x.e}"><span class="m">${x.e === 'ok' ? '✓' : '✗'}<\/span><span>${x.t}<\/span><\/li>`).join('');
+    $(b2, '#w13-ur2').textContent = fmt(E.u, 2);
+    const s = $(b2, '#w13-m2'); if (s.value !== E.m) s.value = E.m;
+    const u2 = $(b2, '#w13-u2'); if (+u2.value !== E.u) u2.value = E.u;
+    pintaSup();
+  };
+  function pintaSup(){
+    const m = medir(T.t), s = $(b2, '#w13-sup');
+    s.innerHTML = m.corta ? `${esc(m.vis)}<span class="w13-cut" title="Esta parte no cabe en el PNG">${esc(m.oculto)}<\/span>` : esc(T.t) || '<span class="w13-cut">(sin titular)<\/span>';
+    s.setAttribute('aria-label', 'Titular del panel' + (m.corta ? '. Se corta en el PNG; la parte tachada no se ve.' : ''));
+  }
+  $(b2, '#w13-m2').addEventListener('change', e => set({m: e.target.value}));
+  $(b2, '#w13-u2').addEventListener('input', e => set({u: +e.target.value}));
+  subs.push(pinta2);
+
+  /* ───────── pieza 3 · el titular y las cifras del texto ───────── */
+  const b3 = pieza(host, 'titular', 'TITULAR · ¿cabe en el PNG y cuadran sus cifras?');
+  b3.innerHTML = `<label class="w13-lb" for="w13-ti">Titular: qué hacer, a quién y con qué efecto<\/label>
+    <textarea id="w13-ti" class="w13-ta" rows="2" spellcheck="false" aria-describedby="w13-tc w13-tm"><\/textarea>
+    <div class="w13-ex" role="group" aria-label="Titulares de prueba"><span class="hint" style="align-self:center">Probad:<\/span>
+      <button type="button" class="btn small" data-x="ok">El del paso 3<\/button><button type="button" class="btn small" data-x="largo">Demasiado largo<\/button><button type="button" class="btn small" data-x="coma">Coma inglesa<\/button>
+      <button type="button" class="btn small" data-x="den">41 % y 49 %<\/button><button type="button" class="btn small" data-x="res">Solo cuenta un resultado<\/button><\/div>
+    <div class="w13-reg" id="w13-rg" aria-hidden="true"><i><\/i><\/div><div class="read" id="w13-tc"><\/div>
+    <div class="msg" id="w13-tm" aria-live="polite"><\/div><ul class="checks" id="w13-tk"><\/ul>
+    <h3 class="w13-h3">Las tres viñetas<\/h3>
+    <div class="w13-vb">${['Qué hemos hecho', 'Qué recomendamos', 'Qué límites tiene'].map((t, i) => `<div><label class="w13-lb" for="w13-v${i}">${t}<\/label><textarea id="w13-v${i}" class="w13-ta" rows="${i === 0 ? 3 : 4}" spellcheck="false"><\/textarea><\/div>`).join('')}<\/div>
+    <h3 class="w13-h3">Cifras del texto frente al panel<\/h3>
+    <div class="scroll"><table class="w13-tb" aria-label="Cifras del texto que no coinciden o hay que revisar"><thead><tr><th>Dónde<\/th><th>Texto<\/th><th>Estado<\/th><th>De dónde sale<\/th><\/tr><\/thead><tbody id="w13-tb"><\/tbody><\/table><\/div>
+    <details class="w13-det"><summary id="w13-ds"><\/summary><div class="scroll"><table class="w13-tb" aria-label="Cifras del texto que coinciden con el panel"><tbody id="w13-tb2"><\/tbody><\/table><\/div><\/details>
+    <div class="msg" id="w13-nm" aria-live="polite"><\/div>
+    <div class="ctl"><button type="button" class="btn small" id="w13-act">Poner las cifras actuales en el ejemplo<\/button><span class="hint">Cambiad el modelo, el umbral o los costes y mirad cómo el texto se queda atrás.<\/span><\/div>
+    <p class="cap">Son reglas sencillas (verbo, euros, jerga, cifras): ayudan a revisar, no sustituyen a que otra persona lo lea. «Cabe» se calcula con la tipografía por defecto del cuaderno (negrita 16, 150 ppp); en vuestro PNG puede variar unos caracteres.<\/p>`;
+  const tx = $(b3, '#w13-ti'), vx = [0, 1, 2].map(i => $(b3, '#w13-v' + i));
+  tx.value = T.t; vx.forEach((e, i) => { e.value = T.v[i]; });
+  function reanaliza(){ F = hechos(); A = {t: numeros(T.t, F), v: T.v.map(x => numeros(x, F))}; }
+  reanaliza();
+  const DON = ['Titular', 'Qué hemos hecho', 'Qué recomendamos', 'Qué límites tiene'];
+  function estadoTit(){
+    const m = medir(T.t), j = jerga(T.t), hu = /[\[\]]/.test(T.t), sinT = !T.t.trim();
+    const L = [];
+    L.push(sinT ? ok('bad', 'Escribid el titular.') : m.corta ? ok('bad', `Se corta en el PNG tras ${m.n} caracteres. Se pierde: «${esc(m.oculto)}»`) : m.len > 100 ? ok('warn', `Cabe por poco (${m.len} caracteres): la guía pide unos 100 como máximo.`) : ok('ok', `Cabe entero en el PNG (${m.len} caracteres).`));
+    L.push(decide(T.t) ? ok('ok', 'Empieza por una acción: es una decisión, no un resultado.') : ok('bad', 'No empieza por un verbo de acción (avisar, pedir, cobrar…): cuenta un resultado o describe el modelo, pero no dice qué hacer.'));
+    L.push(/€|euros?\b/i.test(T.t) ? ok('ok', 'Dice el efecto en euros.') : ok('bad', 'Falta el efecto en euros: «…evitaría unos 16 600 € de pérdidas…».'));
+    L.push(j.length ? ok('bad', 'Jerga: ' + j.map(x => `<b>${esc(x.n)}<\/b> → ${esc(x.tr)}`).join(' · ')) : ok('ok', 'Sin jerga.'));
+    if (hu) L.push(ok('bad', 'Queda un hueco entre corchetes de la plantilla.'));
+    return {m, L, sinT, j, hu};
+  }
+  function pinta3(){
+    const s = estadoTit(), m = s.m, rg = $(b3, '#w13-rg');
+    rg.className = 'w13-reg ' + (m.corta ? 'mal' : m.ratio > 0.98 ? 'por' : '');
+    $(rg, 'i').style.width = Math.min(100, m.ratio * 100) + '%';
+    $(b3, '#w13-tc').textContent = `${m.len} caracteres · ocupa el ${fmt(m.ratio * 100, 0)} % del ancho del PNG`;
+    const tm = $(b3, '#w13-tm');
+    tm.className = 'msg ' + (m.corta ? 'bad' : m.ratio > 0.98 ? 'warn' : s.sinT ? '' : 'ok');
+    tm.innerHTML = s.sinT ? 'Escribid un titular o elegid uno de los de prueba.' : m.corta ? `Se corta por la derecha tras «…${esc(m.vis.slice(-18))}». Marcos no vería: «${esc(m.oculto)}». Acortadlo.` : m.ratio > 0.98 ? 'Cabe, pero por muy poco: cualquier palabra más lo corta.' : 'Cabe entero: se lee completo en el PNG.';
+    $(b3, '#w13-tk').innerHTML = s.L.map(x => `<li class="${x.e === 'warn' ? 'w13-w' : x.e}"><span class="m">${x.e === 'ok' ? '✓' : x.e === 'warn' ? '!' : '✗'}<\/span><span>${x.t}<\/span><\/li>`).join('');
+    const filas = [];
+    [A.t, ...A.v].forEach((lst, k) => lst.forEach(f => filas.push([k, f])));
+    const fila = ([k, f]) => `<tr><td>${DON[k]}<\/td><td class="t">${esc(f.raw)}<\/td><td><span class="pill ${f.est}">${f.est === 'ok' ? '✓ coincide' : f.est === 'warn' ? '! revisad' : '✗ no coincide'}<\/span><\/td><td>${esc(f.nota)}<\/td><\/tr>`;
+    const mal = filas.filter(([, f]) => f.est !== 'ok'), bien = filas.filter(([, f]) => f.est === 'ok');
+    $(b3, '#w13-tb').innerHTML = mal.length ? mal.map(fila).join('') : `<tr><td colspan="4">${filas.length ? 'Ninguna cifra falla.' : 'Todavía no hay cifras en el texto.'}<\/td><\/tr>`;
+    $(b3, '#w13-tb2').innerHTML = bien.map(fila).join('');
+    $(b3, '#w13-ds').textContent = `Ver de dónde sale cada una de las ${bien.length} cifras que coinciden`;
+    $(b3, '.w13-det').hidden = !bien.length;
+    const bad = filas.filter(([, f]) => f.est === 'bad').length, warn = filas.filter(([, f]) => f.est === 'warn').length, nm = $(b3, '#w13-nm');
+    const jv = T.v.map(jerga).flat().map(x => x.n).filter((x, i, a) => a.indexOf(x) === i);
+    nm.className = 'msg ' + (bad ? 'bad' : warn ? 'warn' : filas.length ? 'ok' : '');
+    const nco = filas.filter(([, f]) => f.w === 'coma').length, nde = filas.filter(([, f]) => f.w === 'den').length;
+    nm.innerHTML = (bad ? `<b>${bad} cifra${bad > 1 ? 's' : ''} del texto no sale${bad > 1 ? 'n' : ''} del panel.<\/b> Si cambiasteis el modelo, el umbral o los costes después de escribir, hay que actualizar el texto (botón de abajo). `
+      : filas.length ? (warn ? 'Todas las cifras salen del panel, pero ' : `Las ${filas.length} cifras del texto salen del panel. `) : '') +
+      (warn ? [nco ? `${nco} en coma inglesa (en español se escribe 16.590)` : '', nde ? `${nde} cuenta${nde > 1 ? 'n' : ''} sobre otro total (decid de qué cuenta ese porcentaje)` : ''].filter(Boolean).join(' y ') + '. ' : '') + (jv.length ? `Jerga en las viñetas: ${jv.join(', ')}.` : '');
+  }
+  const autoalto = e => { e.style.height = 'auto'; e.style.height = (e.scrollHeight + 4) + 'px'; };
+  const leer = () => { [tx, ...vx].forEach(autoalto); T.t = tx.value.replace(/\s*\n\s*/g, ' '); T.v = vx.map(e => e.value); reanaliza(); pinta3(); pintaSup(); pinta4(); };
+  tx.addEventListener('input', leer); vx.forEach(e => e.addEventListener('input', leer));
+  const EJ = {
+    largo: () => `Avisar a toda reserva con riesgo alto de cancelar, empezando el lunes por las de esa semana, evitaría unos ${sp(Math.round(C.ah / 100) * 100)} € de pérdidas por cada ${sp(N.test)} reservas`,
+    coma: () => `Avisar a las reservas de mayor riesgo evitaría unos ${py(Math.round(C.ah / 10) * 10)} € de pérdidas por cada ${py(N.test)} reservas`,
+    den: () => `Avisar a las reservas de mayor riesgo detecta el ${Math.round(C.det * 100)} % de las cancelaciones, con un ${Math.round(C.fav * 100)} % de falsas alarmas`,
+    res: () => `El modelo detecta el ${Math.round(C.det * 100)} % de las cancelaciones con un AUC de ${fmt(C.auc, 2)}`
+  };
+  b3.querySelectorAll('.w13-ex button').forEach(bt => bt.addEventListener('click', () => { tx.value = bt.dataset.x === 'ok' ? ejemplo().t : EJ[bt.dataset.x](); leer(); tx.focus(); }));
+  $(b3, '#w13-act').addEventListener('click', () => { const e = ejemplo(); tx.value = e.t; vx.forEach((x, i) => { x.value = e.v[i]; }); leer(); });
+  subs.push(pinta3);
+
+  /* ───────── pieza 4 · lista de comprobación antes de subir ───────── */
+  const b4 = pieza(host, 'lista', 'ANTES DE SUBIR · la lista de comprobación');
+  b4.innerHTML = `<p class="cap" style="margin:0 0 6px">Lo que la demo puede mirar por vosotros, en directo:<\/p><ul class="checks" id="w13-la"><\/ul>
+    <fieldset class="w13-man"><legend class="cap" style="padding:0">Lo que solo pueden mirar personas:<\/legend>
+      ${['Una persona no técnica de otro equipo me dice la decisión con sus palabras en 30 segundos.', 'Cada gráfico tiene un título que concluye, ejes con nombre y barras desde 0.', 'Aparece al menos un límite y un riesgo (sesgo, uso indebido).', 'Cabe en una página y se lee proyectada.'].map((t, i) => `<label><input type="checkbox" class="w13-mc" id="w13-c${i}"> <span>${t}<\/span><\/label>`).join('')}<\/fieldset>
+    <div class="ctl"><button type="button" class="btn small" id="w13-cr" aria-pressed="false">Empezar los 30 segundos<\/button><span class="read" id="w13-crr">30 s<\/span><\/div>
+    <div class="msg" id="w13-lm" aria-live="polite"><\/div>`;
+  function pinta4(){
+    const c = C, s = estadoTit(), bad = [...A.t, ...A.v.flat()].filter(f => f.est === 'bad').length, warn = [...A.t, ...A.v.flat()].filter(f => f.est === 'warn').length;
+    const jv = T.v.some(x => jerga(x).length) || s.j.length || s.hu || T.v.some(x => /[\[\]]/.test(x)), gap = c.con - c.copt;
+    const rows = [
+      s.sinT || s.m.corta ? ok('bad', 'El titular cabe en el PNG.') : ok('ok', 'El titular cabe en el PNG.'),
+      !s.sinT && decide(T.t) && /€|euros?\b/i.test(T.t) ? ok('ok', 'El titular es una decisión, con su efecto en euros.') : ok('bad', 'El titular es una decisión, con su efecto en euros.'),
+      bad ? ok('bad', `Las cifras del texto coinciden con las del panel (fallan ${bad}).`) : warn ? ok('warn', `Las cifras del texto coinciden con las del panel (${warn} por revisar).`) : ok('ok', 'Las cifras del texto coinciden con las del panel.'),
+      jv ? ok('bad', 'Sin jerga ni huecos de la plantilla.') : ok('ok', 'Sin jerga ni huecos de la plantilla.'),
+      c.rz >= 2 && c.ah > 0 ? ok('ok', 'Los títulos del panel dicen lo que se ve.') : ok('bad', `Los títulos del panel dicen lo que se ve (revisad el ${c.ah > 0 ? 'gráfico 3' : 'gráfico 4'}).`),
+      gap <= 0.5 ? ok('ok', 'El umbral es el que menos cuesta con estos costes.') : ok('warn', `El umbral no es el más barato: con ${fmt(c.opt, 2)} os ahorraríais ${eur(gap)} más.`)];
+    $(b4, '#w13-la').innerHTML = rows.map(x => `<li class="${x.e === 'warn' ? 'w13-w' : x.e}"><span class="m">${x.e === 'ok' ? '✓' : x.e === 'warn' ? '!' : '✗'}<\/span><span>${x.t}<\/span><\/li>`).join('');
+    const hechosA = rows.filter(x => x.e === 'ok').length, man = b4.querySelectorAll('.w13-mc:checked').length, lm = $(b4, '#w13-lm');
+    lm.className = 'msg ' + (hechosA === rows.length && man === 4 ? 'ok' : hechosA === rows.length ? 'warn' : '');
+    lm.textContent = `Automáticas: ${hechosA} de ${rows.length} · a mano: ${man} de 4. ` + (hechosA === rows.length ? (man === 4 ? 'Listo para subir. Después de la review, la prueba de verdad: que la clase diga la decisión que entiende.' : 'Falta lo que solo pueden comprobar personas: la prueba de los 30 segundos con otro equipo.') : 'Arreglad primero las marcadas con ✗ o !, que son las que la demo sabe ver.');
+  }
+  b4.querySelectorAll('.w13-mc').forEach(x => x.addEventListener('change', pinta4));
+  let cron = null;
+  const cr = $(b4, '#w13-cr'), crr = $(b4, '#w13-crr');
+  cr.addEventListener('click', () => {
+    if (cron) { clearInterval(cron); cron = null; cr.textContent = 'Empezar los 30 segundos'; cr.setAttribute('aria-pressed', 'false'); crr.textContent = '30 s'; return; }
+    let t = 30; cr.textContent = 'Parar'; cr.setAttribute('aria-pressed', 'true'); crr.textContent = t + ' s';
+    cron = setInterval(() => {
+      t--; crr.textContent = t + ' s';
+      if (t <= 0) { clearInterval(cron); cron = null; cr.textContent = 'Empezar los 30 segundos'; cr.setAttribute('aria-pressed', 'false'); crr.textContent = 'Tiempo'; const lm = $(b4, '#w13-lm'); lm.className = 'msg warn'; lm.textContent = 'Tiempo: preguntad a quien ha mirado la página qué decisión entiende, con sus palabras. Si no es la vuestra, el fallo está en el titular, no en quien lee.'; }
+    }, 1000);
+  });
+  subs.push(pinta4);
+
+  subs.forEach(f => f());
+  [tx, ...vx].forEach(autoalto);
+  let rt = null; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { pinta1(); pinta2(); [tx, ...vx].forEach(autoalto); }, 150); });
+};
+
+/* ───────── marco común ───────── */
+const app = document.getElementById('app');
+const sh = (t) => `<div class="sh"><span class="st">${esc(t)}</span><span class="ln"></span></div>`;
+
+const hero = el('header');
+const totalMin = D.pasos.reduce((s, p) => s + (p.min || 0), 0);
+hero.innerHTML = `<div class="kicker">${esc(D.kicker)}</div><h1>${esc(D.titulo)}</h1><p class="lead">${md(D.lead)}</p>
+  <div class="chips"><span class="chip">${D.pasos.length} pasos</span><span class="chip">≈ ${totalMin} min de reto</span><span class="chip">${esc(D.sube_resumen)}</span></div>
+  <p class="hint" style="margin-top:14px">${md(D.aviso)}</p>`;
+app.appendChild(hero);
+
+const play = el('section');
+play.innerHTML = sh('EL PRODUCTO FUNCIONANDO') + `<h2>${esc(D.widget_titulo)}</h2><p class="sec-intro">${md(D.intro)}</p>`;
+const steps = el('div', 'steps'); steps.setAttribute('role', 'group'); steps.setAttribute('aria-label', 'Pasos del reto');
+const aqui = el('div', 'aqui'); aqui.setAttribute('aria-live', 'polite');
+const stage = el('div', 'stage');
+play.append(steps, aqui, stage);
+app.appendChild(play);
+const widget = W[D.widget](stage, D);
+
+function elegir(i){
+  const btns = steps.querySelectorAll('.step');
+  btns.forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
+  const panels = stage.querySelectorAll('[data-pieza]');
+  if (i < 0) { stage.classList.remove('sel'); panels.forEach(p => p.classList.remove('hl')); aqui.innerHTML = md(D.aqui_todo); return; }
+  const p = D.pasos[i];
+  stage.classList.add('sel');
+  panels.forEach(pn => pn.classList.toggle('hl', pn.dataset.pieza.split(' ').some(x => (p.piezas || []).includes(x))));
+  aqui.innerHTML = `<b>Paso ${esc(p.n)} · ${esc(p.titulo)}</b> (${p.min} min). ${md(p.aqui || '')}`;
+  const first = stage.querySelector('.pieza.hl'); if (first && first.getBoundingClientRect().top > window.innerHeight * .8) first.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center'});
+}
+D.pasos.forEach((p, i) => {
+  const b = el('button', 'step', `<span class="n">${esc(p.n)}</span><span>${esc(p.corto || p.titulo)}<small>${p.min} min</small></span>`);
+  b.type = 'button'; b.setAttribute('aria-pressed', 'false'); b.addEventListener('click', () => elegir(steps.querySelector('.step[aria-pressed="true"]') === b ? -1 : i));
+  steps.appendChild(b);
+});
+elegir(-1);
+
+/* qué se sube y cómo se evalúa */
+const fin = el('section');
+fin.innerHTML = sh('QUÉ SE SUBE Y CÓMO SE EVALÚA') + `<h2>Lo que entregáis y con qué se puntúa</h2><p class="sec-intro">Todo va al repositorio del equipo, en la carpeta <code>${esc(D.carpeta_entrega)}</code>. La rúbrica es la misma que usáis para revisar vuestro propio trabajo antes de subirlo.</p>`;
+const files = el('div', 'files');
+D.ficheros.forEach(f => files.appendChild(el('div', 'file', `<b>${esc(f.nombre)}</b><span class="o">${md(f.origen)}</span><span class="s">${esc(f.sube)}</span>`)));
+fin.appendChild(files);
+const tabs = el('div', 'tabs'); tabs.setAttribute('role', 'tablist');
+const lv = el('div', 'levels'); lv.setAttribute('aria-live', 'polite');
+const qq = el('p', 'hint'); qq.style.marginBottom = '10px';
+const NIV = ['1 · Empezado', '2 · Mínimo', '3 · Estándar', '4 · Extra'];
+function criterio(k){
+  tabs.querySelectorAll('.tab').forEach((t, j) => t.setAttribute('aria-selected', String(j === k)));
+  const c = D.rubrica[k]; qq.textContent = c.pregunta;
+  lv.innerHTML = c.niveles.map((t, j) => `<div class="lv${j === 1 ? ' min' : ''}"><h3>${NIV[j]}</h3><p>${md(t)}</p></div>`).join('');
+}
+D.rubrica.forEach((c, k) => { const t = el('button', 'tab', esc(c.criterio)); t.type = 'button'; t.setAttribute('role', 'tab'); t.addEventListener('click', () => criterio(k)); tabs.appendChild(t); });
+fin.append(tabs, qq, lv);
+fin.appendChild(el('p', 'hint', 'Orientación: lo que pide el nivel mínimo sale en un <b>2</b>, el estándar en un <b>3</b> y los extras en un <b>4</b>. Sin una frase de prueba escrita, el nivel no vale.'));
+criterio(0);
+app.appendChild(fin);
+
+const pie = el('footer');
+pie.innerHTML = sh('DÓNDE SEGUIR') + `<div class="links">${D.enlaces.map(e => `<a class="btn" href="${esc(e.url)}">${esc(e.t)}</a>`).join('')}</div><p class="foot" style="margin-top:14px">${md(D.pie)}</p>`;
+app.appendChild(pie);
+})();
+</script>
+</body>
+</html>

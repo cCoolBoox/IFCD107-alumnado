@@ -1,6 +1,6 @@
 # Sprint 17 · Reto «La defensa» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_17.md](../3_Consultar/Reto_Sprint_17.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del relato está en [`plantilla_storytelling.md`](plantillas/plantilla_storytelling.md) y el guion de defensa en [`guion_defensa.md`](../../1_Teoria/actividades/guion_defensa.md).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_17.md](../3_Consultar/Reto_Sprint_17.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del relato está en [`plantilla_storytelling.md`](plantillas/plantilla_storytelling.md) y el guion de defensa en [`guion_defensa.md`](../../1_Teoria/actividades/guion_defensa.md). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S17/3_Reto/1_Trabajar/S17_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - Un directivo y su equipo (el tribunal) **no son técnicos**.

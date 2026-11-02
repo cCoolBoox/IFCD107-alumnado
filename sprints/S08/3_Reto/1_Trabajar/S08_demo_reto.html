@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Demo interactiva del reto del Sprint 8 (IFCD107): el leaderboard con ocho modelos reales, los pesos de los criterios, el ranking y el campeón, la sensibilidad, el examen final del test y la model card.">
+<title>Duelo de modelos · demo interactiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Maqueta común de las demos del reto (IFCD107): hero → «el producto funcionando» con un selector de pasos
+   → qué se sube y cómo se evalúa. Identidad: la de las infografías del curso (tinta azulada, óxido, verde azulado, crema). */
+:root{
+  --bg:#F5F1E8; --surface:#FFFFFF; --ink:#1D2433; --muted:#566073; --line:#D9D2C0; --soft:#EFE7D2;
+  --accent:#C23B1F; --accent-soft:#F7DDD4; --teal:#0F7F7F; --teal-soft:#D5ECEA; --sky:#DCE6F5; --blue:#3D5F96;
+  --ok:#1B7F4B; --ok-soft:#D9F0E3; --bad:#B42318; --bad-soft:#FBE0DC; --warn:#8A5A00; --warn-soft:#F6E7C4;
+  --code-bg:rgba(29,36,51,.08); --focus:#1D2433; --pt:rgba(61,95,150,.42); --grid:#E4DDCB;
+  --f-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+    --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+    --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+    --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+  --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+  --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+  --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5.2vw,52px);line-height:1.05;font-weight:800;letter-spacing:-.02em;margin-top:8px}
+h2{font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+h3{font-size:17px;line-height:1.2;font-weight:800}
+p{margin:0}
+code{font-family:var(--f-mono);font-size:.86em;background:var(--code-bg);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+a{color:var(--accent);font-weight:700;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+button{font:inherit;color:inherit;cursor:pointer}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:62ch;margin-top:10px}
+.hint{font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:5px 13px;font-size:14px;font-weight:700}
+.btn{border:2px solid var(--ink);background:transparent;border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.small{padding:5px 11px;font-size:13px}
+.btn.on{background:var(--ink);color:var(--bg)}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sh .st{font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--accent);letter-spacing:.12em;white-space:nowrap}
+.sh .ln{flex:1;height:2px;background:var(--line)}
+.sec-intro{color:var(--muted);max-width:68ch;margin:-4px 0 16px}
+
+/* selector de pasos */
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.step{display:flex;align-items:center;gap:9px;border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:7px 13px 7px 8px;text-align:left;font-weight:700;font-size:14px;line-height:1.2}
+.step .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:14px}
+.step small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+.step[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.step[aria-pressed="true"] small{color:var(--bg);opacity:.8}
+.aqui{background:var(--teal-soft);border-radius:12px;padding:11px 16px;margin-bottom:16px;font-size:15.5px;min-height:3.2em}
+.aqui b{color:var(--teal)}
+
+/* piezas del producto */
+.stage{display:flex;flex-direction:column;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row2>*{min-width:0}
+@media (max-width:860px){.row2{grid-template-columns:1fr}}
+.pieza{background:var(--surface);border:2px solid var(--line);border-radius:14px;overflow:hidden;min-width:0;transition:opacity .2s,box-shadow .2s,border-color .2s}
+.pieza>.bh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 14px;border-bottom:2px solid var(--line);font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.pieza>.bb{padding:12px 14px}
+.stage.sel .pieza{opacity:.5}
+.stage.sel .pieza.hl{opacity:1;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.stage.sel .pieza.hl>.bh{color:var(--accent)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.duo>*{min-width:0}
+@media (max-width:700px){.duo{grid-template-columns:1fr}}
+.cap{font-size:13.5px;color:var(--muted);margin-top:6px}
+.cap b{color:var(--ink)}
+
+/* gráficos */
+svg.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart text{font-family:var(--f-body);font-size:11px;fill:var(--muted)}
+.chart .tl{font-size:11.5px;font-weight:700;fill:var(--ink)}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.chart .ax{stroke:var(--muted);stroke-width:1.2}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--muted);margin-top:4px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.legend i.ln{width:18px;height:3px;border-radius:2px;vertical-align:3px}
+
+/* mandos */
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:12px;padding-top:12px;border-top:2px solid var(--line)}
+.ctl label{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.ctl input[type=range]{width:170px;accent-color:var(--accent)}
+.ctl input[type=number],.ctl select{font-family:var(--f-mono);font-size:14px;padding:5px 8px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.ctl input[type=number]{width:6em}
+.ctl input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
+.read{font-family:var(--f-mono);font-size:13px;color:var(--ink);background:var(--soft);border-radius:8px;padding:6px 10px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 11px;font-weight:800;font-size:12.5px;letter-spacing:.04em}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.msg{margin-top:8px;font-size:14.5px;padding:8px 12px;border-radius:10px;background:var(--soft)}
+.msg.ok{background:var(--ok-soft);color:var(--ok)} .msg.bad{background:var(--bad-soft);color:var(--bad)} .msg.warn{background:var(--warn-soft);color:var(--warn)}
+
+/* tablas */
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:7px 10px;text-align:left}
+th{font-size:12.5px;font-weight:800;letter-spacing:.04em;color:var(--muted);border-bottom:2px solid var(--line)}
+td{border-bottom:1px solid var(--line)}
+td.num,th.num{text-align:right;font-family:var(--f-mono);white-space:nowrap}
+.sql{font-family:var(--f-mono);font-size:13px;background:var(--code-bg);border-radius:8px;padding:8px 12px;margin-bottom:10px;overflow-wrap:anywhere}
+
+/* lista de comprobaciones */
+.checks{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:5px}
+.checks li{display:flex;gap:9px;align-items:baseline;font-size:14.5px}
+.checks .m{flex:none;width:1.3em;text-align:center;font-weight:800}
+.checks li.ok .m{color:var(--ok)} .checks li.no .m{color:var(--muted)} .checks li.bad .m{color:var(--bad)}
+textarea{width:100%;min-height:130px;font:inherit;font-size:15px;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);resize:vertical}
+
+/* qué se sube y rúbrica */
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-bottom:22px}
+.file{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:11px 14px}
+.file b{font-family:var(--f-mono);font-size:13.5px;overflow-wrap:anywhere}
+.file .o{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
+.file .s{display:block;font-size:12.5px;font-weight:800;color:var(--teal);margin-top:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tab{border:2px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 15px;font-weight:700;font-size:14.5px}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:900px){.levels{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.levels{grid-template-columns:1fr}}
+.lv{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:10px 13px;font-size:14px}
+.lv h3{font-size:14px;margin-bottom:5px;color:var(--muted)}
+.lv.min{border-color:var(--teal)} .lv.min h3{color:var(--teal)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.foot{font-size:13.5px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const DEMO = {"kicker":"IFCD107 · SPRINT 8 · DEMO DEL RETO","titulo":"Duelo de modelos","lead":"TurisData ya sabe que se pueden predecir las cancelaciones de reservas (lo visteis en el Sprint 7).","aviso":"Es una demo para entender adónde vamos: **no se entrega nada desde aquí**. Los ocho modelos están ajustados de verdad con las 6000 reservas del curso (sintéticas, TurisData no existe) y la misma validación cruzada del cuaderno. Los tiempos y tamaños los midió el ordenador que preparó la demo, y las notas de explicabilidad son las del paso a paso (en el reto las ponéis vosotros), así que **las cifras finales de cada equipo serán algo distintas**.","widget":"ranking","widget_titulo":"Un leaderboard, tres criterios y un campeón con argumentos","intro":"Esto es lo que tendréis al acabar el reto. **Tocad los mandos:** mover los pesos de los tres criterios y mirad cómo cambia el campeón; quitad modelos de la tabla, pulsad en el mapa de pesos y abrid el examen del test una sola vez. Después, elegid un paso para ver qué pieza construís en él.","aqui_todo":"Elegid un paso del reto y se ilumina **la pieza que construís en él**. Pulsad otra vez el mismo paso para verlo todo.","pasos":[{"n":"1","titulo":"Planning y pesos de los criterios","corto":"Pesos de los criterios","min":20,"piezas":["pesos"],"aqui":"Aquí acordáis con el cliente cuánto vale cada criterio. Al mover un peso se reparte el 100 % y ya cambia quién va primero: es lo que justificáis por escrito."},{"n":"2","titulo":"Primeros modelos en el leaderboard","corto":"Primeros modelos","min":30,"piezas":["tabla"],"aqui":"Aquí registráis la referencia, la logística, el árbol y el bosque, y leéis la tabla: AUC con su desviación, tiempo, tamaño y la nota de explicabilidad. Elegid «4 modelos»."},{"n":"3","titulo":"Boosting, SVM y búsqueda de hiperparámetros","corto":"Boosting, SVM y búsqueda","min":25,"piezas":["tabla"],"aqui":"Aquí sumáis el boosting, la SVM y los dos modelos ajustados con la búsqueda de hiperparámetros: de 4 a 8 modelos. Fijaos en la franja azul: casi todos se solapan con el mejor AUC."},{"n":"4","titulo":"Elegir el campeón","corto":"Elegir el campeón","min":45,"piezas":["ranking","sensib","examen"],"aqui":"Aquí calculáis la puntuación global con vuestros pesos, probáis otros pesos (sensibilidad) y abrís el test una sola vez, solo con el campeón ya elegido."},{"n":"5","titulo":"Model card, README y entrega","corto":"Model card y entrega","min":30,"piezas":["ficha"],"aqui":"Aquí pasáis los números a la model card: pesos, campeón, por qué no ganó otro y rendimiento. La ficha de aquí se escribe sola con lo que habéis tocado arriba."}],"ficheros":[{"nombre":"leaderboard_S08.csv","origen":"Lo genera","sube":"Sí · sprint-08/"},{"nombre":"reto_S08.ipynb","origen":"Lo modificáis.","sube":"Sí · sprint-08/"},{"nombre":"model_card.md","origen":"Lo creáis a partir de una plantilla.","sube":"Sí · sprint-08/"},{"nombre":"README.md","origen":"Lo creáis.","sube":"Sí · sprint-08/"},{"nombre":"autoevaluacion_nombre.md","origen":"Ya hecha, en blanco","sube":"Sí, una por persona (no una por equipo) · sprint-08/"}],"sube_resumen":"4 ficheros + 1 hoja por persona","carpeta_entrega":"sprint-08/","rubrica":[{"criterio":"Corrección técnica","pregunta":"¿funciona?","niveles":["Hay cuaderno, pero el leaderboard tiene menos de 6 modelos, se ha cambiado la celda de herramientas o no se ejecuta","6 modelos medidos igual; campeón elegido con puntuacion_global; AUC de test calculado una sola vez y solo para el campeón","Además, búsqueda con validación cruzada solo sobre train en dos familias, sensibilidad de los pesos probada, 4 familias o más y cuaderno que se ejecuta entero","Además, comparación con varias semillas o importancia de variables del campeón que cuadra con los resultados"]},{"criterio":"Reproducibilidad","pregunta":"¿lo puede repetir otra persona?","niveles":["Solo funciona en la sesión de Colab de quien lo hizo, o no hay README","El README dice qué se entrega y cómo abrir el cuaderno, pero faltan versiones, semilla u orden de ejecución","Otra persona, siguiendo solo el README, ejecuta Reiniciar y ejecutar todo y obtiene el mismo leaderboard y el mismo campeón; los ficheros están en sprint-08/, subidos por personas distintas y sin claves","Además, el README da las versiones exactas de las librerías, cuánto tarda en Colab y qué ficheros salen"]},{"criterio":"Análisis y comunicación al cliente","pregunta":"¿lo entiende quien no programa?","niveles":["La model card está vacía o copiada de la plantilla; solo hay cifras","Dice cuál es el campeón y su AUC de test, pero no explica por qué ganó","Explica por qué ganó y por qué no ganó otro con los tres criterios y los pesos justificados, qué pasa si cambian los pesos y los usos previstos y no previstos, sin jerga","Además, explica al gerente en palabras qué variables pesan más, o da una recomendación con sus límites («si el cliente valorara solo el rendimiento, elegiríamos…»)"]},{"criterio":"IA responsable","pregunta":"¿se sabe qué hizo la IA y qué riesgos tiene el modelo?","niveles":["No hay apartado de riesgos ni se dice si se ha usado IA","Menciones genéricas («puede haber sesgos») y dice que se ha usado IA, sin detalle","Riesgos concretos de este modelo (el país de origen como variable sensible, la deriva y qué se medirá, quién revisa las decisiones); dice qué se pidió a la IA, qué se revisó y qué se cambió; los datos son sintéticos","Además, mide algo (por ejemplo, el AUC por país o canal) o fija un plan de mantenimiento con un umbral para reentrenar y una persona responsable"]}],"enlaces":[{"t":"Abrir el cuaderno del reto (Colab)","url":"https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_06_leaderboard_plantilla.ipynb"},{"t":"Reto en una página","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/3_Reto/1_Trabajar/Reto_Sprint_08_una_pagina.md"},{"t":"Qué se sube y la rúbrica","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/3_Reto/2_Entregar/entrega_y_rubrica.md"},{"t":"Ficha completa del reto","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/3_Reto/3_Consultar/Reto_Sprint_08.md"},{"t":"README del Sprint 8","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/README.md"}],"pie":"El reto se hace en el cuaderno `S08_06`, no en esta página. Si algo de aquí no se entiende, está explicado paso a paso en la ficha del reto.","datos":{"modelos":[{"m":"baseline","fam":"referencia","auc":0.5,"sd":0.0,"seg":0.016,"ms":4.9,"kb":3.1,"ex":5,"test":0.5},{"m":"logistica","fam":"lineal","auc":0.7583,"sd":0.0123,"seg":0.028,"ms":5.2,"kb":4.1,"ex":4,"test":0.7458},{"m":"arbol_podado","fam":"arbol","auc":0.7163,"sd":0.016,"seg":0.026,"ms":4.8,"kb":10.9,"ex":5,"test":0.7155},{"m":"random_forest","fam":"ensemble_bagging","auc":0.7409,"sd":0.0136,"seg":0.528,"ms":60.0,"kb":11820.8,"ex":2,"test":0.7328},{"m":"lightgbm","fam":"ensemble_boosting","auc":0.7501,"sd":0.0118,"seg":0.056,"ms":7.6,"kb":107.1,"ex":2,"test":0.7441},{"m":"svm_rbf","fam":"svm","auc":0.7402,"sd":0.0139,"seg":2.606,"ms":189.2,"kb":1006.7,"ex":1,"test":0.7348},{"m":"random_forest_ajustado","fam":"ensemble_bagging","auc":0.7456,"sd":0.0137,"seg":0.485,"ms":60.8,"kb":3207.2,"ex":2,"test":0.7401},{"m":"lightgbm_ajustado","fam":"ensemble_boosting","auc":0.7526,"sd":0.0133,"seg":0.074,"ms":8.2,"kb":123.5,"ex":2,"test":0.7447}],"n":6000,"n_train":4800,"n_test":1200,"tasa":45.9,"sklearn":"1.9.1","semilla":42,"pais_min":44.0,"pais_max":47.5,"ajuste":{"rf":{"max_depth":8,"min_samples_leaf":10,"n_estimators":200},"rf_auc":0.7456,"lgb":{"learning_rate":0.092,"min_child_samples":62,"num_leaves":4,"subsample":0.889},"lgb_auc":0.7526}}};
+(function(){
+"use strict";
+const D = DEMO;
+/* ───────── utilidades ───────── */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md = s => esc(s).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\*([^*]+)\*/g,'<i>$1</i>');
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const fmt = (x, d = 1) => Number.isFinite(x) ? x.toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d}) : 'NaN';
+const mean = a => a.reduce((s, v) => s + v, 0) / a.length;
+const NS = 'http://www.w3.org/2000/svg';
+function S(name, attrs, parent, text){ const e = document.createElementNS(NS, name); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; if (parent) parent.appendChild(e); return e; }
+const lin = (d0, d1, r0, r1) => v => r0 + (v - d0) * (r1 - r0) / (d1 - d0);
+function ticks(a, b, k){ const st = (b - a) / k, out = []; for (let i = 0; i <= k; i++) out.push(a + st * i); return out; }
+/* Gráfico con ejes: devuelve {svg, X, Y, g (capa dentro del área), W, H, m} */
+function chart(opt){
+  const W = opt.w || 460, H = opt.h || 290, m = Object.assign({l: 48, r: 12, t: 12, b: 40}, opt.m || {});
+  const svg = S('svg', {viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': opt.label || ''}); svg.classList.add('chart');
+  const X = lin(opt.x[0], opt.x[1], m.l, W - m.r), Y = lin(opt.y[0], opt.y[1], H - m.b, m.t);
+  const id = 'c' + Math.random().toString(36).slice(2, 8);
+  const cp = S('clipPath', {id}, S('defs', {}, svg)); S('rect', {x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b}, cp);
+  (opt.xt || ticks(opt.x[0], opt.x[1], 5)).forEach(v => { S('line', {x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, class: 'gl'}, svg); S('text', {x: X(v), y: H - m.b + 15, 'text-anchor': 'middle'}, svg, opt.fx ? opt.fx(v) : fmt(v, 0)); });
+  const ylab = [];
+  (opt.yt || ticks(opt.y[0], opt.y[1], 4)).forEach(v => { S('line', {x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: 'gl'}, svg); ylab.push(S('text', {x: m.l - 6, y: Y(v) + 4, 'text-anchor': 'end'}, svg, opt.fy ? opt.fy(v) : fmt(v, 0))); });
+  S('line', {x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, class: 'ax'}, svg); S('line', {x1: m.l, x2: m.l, y1: m.t, y2: H - m.b, class: 'ax'}, svg);
+  if (opt.xl) S('text', {x: (m.l + W - m.r) / 2, y: H - 6, 'text-anchor': 'middle', class: 'tl'}, svg, opt.xl);
+  if (opt.yl) S('text', {x: 12, y: (m.t + H - m.b) / 2, 'text-anchor': 'middle', class: 'tl', transform: `rotate(-90 12 ${(m.t + H - m.b) / 2})`}, svg, opt.yl);
+  const g = S('g', {'clip-path': `url(#${id})`}, svg);
+  return {svg, X, Y, g, W, H, m, ylab};
+}
+function pieza(host, ids, titulo, extra){
+  const p = el('section', 'pieza'); p.dataset.pieza = ids;
+  p.appendChild(el('div', 'bh', `<span>${esc(titulo)}</span>${extra || ''}`));
+  const b = el('div', 'bb'); p.appendChild(b); host.appendChild(p); return b;
+}
+/* ───────── widgets de cada sprint (se concatenan aquí) ───────── */
+const W = {};
+/* Widget «ranking» (S08): duelo de modelos. Piezas: pesos · tabla · ranking · sensib · examen · ficha.
+   Datos: D.datos = {modelos:[{m,fam,auc,sd,seg,ms,kb,ex,test}], n, n_train, n_test, tasa, sklearn, semilla, pais_min, pais_max, ajuste}.
+   Todo lo pesado (validación cruzada, búsquedas, tiempos, tamaños, test) se calculó en prep_ranking.py; aquí solo se puntúa y se ordena. */
+W.ranking = function(host, D){
+  const d = D.datos, ALL = d.modelos; ALL.forEach((m, i) => { m.i = i; });
+  const f2 = x => fmt(x, 2), f3 = x => fmt(x, 3);
+  const sg = (x, k) => (x > 0 ? '+' : x < 0 ? '−' : '') + fmt(Math.abs(x), k);
+  const kbf = v => v >= 1024 ? fmt(v / 1024, 1) + ' MB' : fmt(v, v < 10 ? 1 : 0) + ' KB';
+  const segf = v => fmt(v, v < 0.1 ? 3 : 2) + ' s';
+  const msf = v => fmt(v, v < 10 ? 1 : 0) + ' ms';
+  const nm = m => `<b class="w08-nm">${esc(m)}<\/b>`;
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const PAL = [['#8A8F9C', '#9AA1B1'], ['#3D5F96', '#8FB0E6'], ['#0F7F7F', '#58C7BE'], ['#9A6A08', '#E0A93B'], ['#C23B1F', '#F08A6C'], ['#7A4FA3', '#B79AE0'], ['#D9A441', '#F2D08A'], ['#E8836A', '#F7B8A5']];
+  const tok = k => PAL.map((p, i) => `--w08-c${i}:${p[k]};`).join('');
+  document.head.appendChild(el('style', null, `
+:root{${tok(0)}} @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){${tok(1)}}} :root[data-theme="dark"]{${tok(1)}}
+${PAL.map((_, i) => `.w08-m${i}{fill:var(--w08-c${i})}`).join('')}
+.w08-nm{font-family:var(--f-mono);font-weight:600;font-size:13.5px;overflow-wrap:anywhere}
+.w08-sm{font-weight:600;color:var(--muted);font-size:12px}.btn.on .w08-sm{color:inherit}
+.w08-pre,.w08-seg{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.w08-3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 22px}@media(max-width:700px){.w08-3{grid-template-columns:1fr}}
+.w08-3 label{display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:14.5px}.w08-3 output{font-family:var(--f-mono);color:var(--accent)}
+.w08-3 input[type=range],.w08-sl input[type=range]{width:100%;accent-color:var(--accent);margin:6px 0 0}
+.w08-hd,.w08-li{display:grid;grid-template-columns:minmax(140px,1.1fr) minmax(200px,1.7fr) minmax(190px,1.2fr) 86px;gap:4px 16px;align-items:center}
+.w08-hd{font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--muted);border-bottom:2px solid var(--line);padding:0 0 6px}
+.w08-ls{list-style:none;margin:0;padding:0}.w08-li{padding:9px 0;border-bottom:1px solid var(--line)}
+.w08-li small,.w08-rw small{display:block;color:var(--muted);font-size:12px}
+.w08-au{display:block;font-family:var(--f-mono);font-size:13.5px}.w08-au .pill{padding:1px 8px;font-size:11px;margin-left:6px;font-family:var(--f-body)}
+.w08-tr{display:block;position:relative;height:14px;margin-top:5px;background:linear-gradient(var(--line),var(--line)) center/100% 2px no-repeat}
+.w08-band{position:absolute;top:0;bottom:0;background:var(--sky);border-radius:4px}
+.w08-wh{position:absolute;top:50%;height:3px;margin-top:-1.5px;background:var(--ink);border-radius:2px}
+.w08-dot{position:absolute;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:var(--accent);border:2px solid var(--surface)}
+.w08-co{font-size:13px;color:var(--muted)}.w08-co>span{white-space:nowrap}.w08-co b{color:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:12.5px}
+.w08-pips{display:inline-flex;gap:3px;vertical-align:-1px;margin-right:6px}.w08-pips i{width:10px;height:10px;border-radius:2px;border:2px solid var(--muted)}.w08-pips i.on{background:var(--teal);border-color:var(--teal)}
+.w08-rk{display:grid;gap:6px;margin-top:8px}
+.w08-rw{display:grid;grid-template-columns:22px minmax(130px,.8fr) minmax(180px,2fr) 54px;gap:4px 12px;align-items:center;border:2px solid var(--line);border-radius:10px;padding:7px 10px;cursor:pointer}
+.w08-rw.sel{border-color:var(--accent);background:var(--accent-soft)}.w08-rw input{width:18px;height:18px;accent-color:var(--accent);margin:0}
+.w08-rw.off{opacity:.55;cursor:not-allowed}.w08-rw.lock{cursor:default}.w08-rw.lock:not(.sel){opacity:.75}.w08-rw .pill{padding:0 8px;font-size:11px;margin-left:6px}
+.w08-bar{display:flex;height:14px;background:var(--soft);border-radius:7px;overflow:hidden}.w08-bar i{display:block;height:100%}
+.w08-r{background:var(--blue)}.w08-e{background:var(--teal)}.w08-c{background:var(--warn)}
+.w08-gt{font-family:var(--f-mono);font-size:15px;text-align:right}
+.w08-lg i{border-radius:3px!important}
+.w08-card{border:2px dashed var(--line);border-radius:12px;padding:6px 16px 14px;background:var(--bg)}.w08-card h3{font-size:15px;margin:12px 0 6px}.w08-card p{font-size:14.5px;margin:6px 0}
+.w08-ch{display:inline-flex;gap:6px;border:2px solid var(--line);border-radius:999px;padding:1px 10px;font-size:12.5px;color:var(--muted)}.w08-ch.on{border-color:var(--ok);color:var(--ok);font-weight:800}
+.w08-chs{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.w08-map{cursor:crosshair;max-width:420px;margin:0 auto}
+@media(max-width:700px){
+.w08-hd{display:none}
+.w08-li{grid-template-columns:1fr auto;grid-template-areas:"n x" "a a" "c c"}.w08-li>:nth-child(1){grid-area:n}.w08-li>:nth-child(2){grid-area:a}.w08-li>:nth-child(3){grid-area:c}.w08-li>:nth-child(4){grid-area:x}
+.w08-rw{grid-template-columns:22px 1fr 54px;grid-template-areas:"r n t" "b b b"}.w08-rw>:nth-child(1){grid-area:r}.w08-rw>:nth-child(2){grid-area:n}.w08-rw>:nth-child(3){grid-area:b}.w08-rw>:nth-child(4){grid-area:t}}
+`));
+
+  /* ── puntuación: la misma que puntuacion_global del cuaderno S08_06 ── */
+  const cache = {};
+  const notas = n => cache[n] || (cache[n] = (() => {
+    const L = ALL.slice(0, n), au = L.map(m => m.auc), a0 = Math.min(...au), a1 = Math.max(...au);
+    const cb = L.map(m => Math.log1p(m.seg) + Math.log1p(m.ms) + Math.log1p(m.kb)), c0 = Math.min(...cb), c1 = Math.max(...cb);
+    return L.map((m, k) => ({m, r: (au[k] - a0) / (a1 - a0 + 1e-9), e: (m.ex - 1) / 4, c: 1 - (cb[k] - c0) / (c1 - c0 + 1e-9)}));
+  })());
+  const rank = (n, w) => notas(n).map(o => ({...o, g: w.r * o.r + w.e * o.e + w.c * o.c})).sort((a, b) => b.g - a.g);
+  const ganador = (N, r, e, c) => { let b = null, bg = -1; for (const o of N) { const g = r * o.r + e * o.e + o.c * c; if (g > bg) { bg = g; b = o; } } return b; };
+  const solapa = (a, b) => Math.abs(a.auc - b.auc) < a.sd + b.sd;
+
+  const st = {n: 8, w: [50, 30, 20], man: null, exam: null, vistos: new Set()};
+  const W3 = (w = st.w) => ({r: w[0] / 100, e: w[1] / 100, c: w[2] / 100});
+  const ESC = [['solo rendimiento', 'solo el rendimiento', [80, 10, 10]], ['equilibrado', 'la explicabilidad tanto como el rendimiento', [40, 40, 20]], ['explicabilidad primero', 'la explicabilidad primero', [20, 60, 20]]];
+  let E = null;
+  function calc(){
+    const rk = rank(st.n, W3()), top = rk[0], en = nombre => rk.some(o => o.m.m === nombre);
+    if (st.exam && !en(st.exam)) st.exam = null;
+    if (st.man && !en(st.man)) st.man = null;
+    const camp = st.exam || st.man || (top.m.m !== 'baseline' ? top.m.m : null);
+    E = {rk, top, camp, empate: rk[0].g - rk[1].g < 0.03};
+  }
+
+  /* ───────── pesos ───────── */
+  const PRE = [['Ejemplo del reto', [50, 30, 20]], ['Solo rendimiento', [80, 10, 10]], ['Equilibrado', [40, 40, 20]], ['Explicabilidad primero', [20, 60, 20]], ['Rendimiento a cero', [0, 50, 50]]];
+  const CRI = [['Rendimiento', 'Cuánto acierta: el AUC en validación cruzada, llevado a una escala de 0 a 1.'], ['Explicabilidad', 'Si el gerente entiende por qué avisa el modelo: la nota de 1 a 5 que ponéis vosotros.'], ['Coste', 'Tiempo de entrenar y de predecir, y tamaño del modelo: 1 es barato, 0 es caro.']];
+  const bp = pieza(host, 'pesos', 'PESOS DE LOS CRITERIOS · lo que le importa al cliente');
+  bp.innerHTML = `<div class="w08-pre" role="group" aria-label="Repartos de ejemplo">${PRE.map((p, i) => `<button type="button" class="btn small" data-p="${i}" aria-pressed="false">${p[0]} <span class="w08-sm">${p[1].join(' / ')}<\/span><\/button>`).join('')}<\/div>
+    <div class="w08-3">${CRI.map((c, i) => `<div><label for="w08-s${i}">${c[0]} <output for="w08-s${i}"><\/output><\/label><input type="range" id="w08-s${i}" min="0" max="100" step="5" value="${st.w[i]}"><p class="cap">${c[1]}<\/p><\/div>`).join('')}<\/div>
+    <p class="cap" style="margin:4px 0 8px">Los tres pesos suman siempre 100 %: al mover uno, los otros dos se reparten lo que queda. Esto es lo que escribiríais en el cuaderno:<\/p>
+    <div class="sql" style="margin-bottom:0"><\/div><div class="msg" aria-live="polite"><\/div>`;
+  const pBtn = [...bp.querySelectorAll('[data-p]')], pSl = [...bp.querySelectorAll('input')], pOut = [...bp.querySelectorAll('output')], pCode = bp.querySelector('.sql'), pMsg = bp.querySelector('.msg');
+  function mover(i, v){
+    const o = st.w.slice(), j = (i + 1) % 3, k = (i + 2) % 3, resto = 100 - v, so = o[j] + o[k];
+    const a = clamp(Math.round((so > 0 ? o[j] * resto / so : resto / 2) / 5) * 5, 0, resto);
+    st.w[i] = v; st.w[j] = a; st.w[k] = resto - a; todo();
+  }
+  pSl.forEach((s, i) => s.addEventListener('input', () => mover(i, +s.value)));
+  pBtn.forEach((b, i) => b.addEventListener('click', () => { st.w = PRE[i][1].slice(); todo(); }));
+  function pintarPesos(){
+    pSl.forEach((s, i) => { s.value = st.w[i]; pOut[i].textContent = st.w[i] + ' %'; });
+    pCode.textContent = `pesos = {"rendimiento": ${st.w[0] / 100}, "explicabilidad": ${st.w[1] / 100}, "coste": ${st.w[2] / 100}}`;
+    pBtn.forEach((b, i) => { const on = PRE[i][1].every((v, k) => v === st.w[k]); b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); });
+    const {rk, top, empate} = E;
+    if (top.m.m === 'baseline') { pMsg.className = 'msg bad'; pMsg.innerHTML = `Con estos pesos gana <b>baseline<\/b>, el modelo de referencia (el que no sabe nada): el cuaderno lo rechaza con un <code>AssertionError<\/code>. Dad al rendimiento un peso claro, de 20 % o más.`; }
+    else { pMsg.className = 'msg ' + (empate ? 'warn' : 'ok'); pMsg.innerHTML = `Con estos pesos sale campeón ${nm(top.m.m)} (${f2(top.g)}) y le sigue ${nm(rk[1].m.m)} (${f2(rk[1].g)}).${empate ? ' Están muy cerca: mirad el aviso del ranking.' : ''}`; }
+  }
+
+  /* ───────── tabla (leaderboard) ───────── */
+  const bt = pieza(host, 'tabla', 'EL LEADERBOARD · mismos datos, mismos folds, misma nota');
+  const NS = [[4, '4 modelos', 'paso 2'], [6, '6 modelos', '+ boosting y SVM'], [8, '8 modelos', '+ búsqueda de ajustes']];
+  bt.innerHTML = `<div class="w08-seg" role="group" aria-label="Modelos en la tabla">${NS.map(x => `<button type="button" class="btn small" data-n="${x[0]}" aria-pressed="false">${x[1]} <span class="w08-sm">${x[2]}<\/span><\/button>`).join('')}<\/div>
+    <div class="w08-hd" aria-hidden="true"><span>MODELO<\/span><span>AUC EN VALIDACIÓN CRUZADA (MEDIA ± DESVIACIÓN)<\/span><span>COSTE<\/span><span>EXPLICAB.<\/span><\/div>
+    <ul class="w08-ls"><\/ul><div class="msg" aria-live="polite"><\/div>
+    <p class="cap">Cada fila es un modelo medido igual (5 folds, sobre train). El punto es la media, la raya es ± la desviación y la <b>franja azul<\/b> es el intervalo del mejor: quien la toca no se distingue de él.<\/p>`;
+  const tBtn = [...bt.querySelectorAll('[data-n]')], tLs = bt.querySelector('.w08-ls'), tMsg = bt.querySelector('.msg');
+  tBtn.forEach(b => b.addEventListener('click', () => { st.n = +b.dataset.n; st.man = null; st.exam = null; todo(); }));
+  const lo = Math.floor((Math.min(...ALL.map(m => m.auc - m.sd)) - 0.005) * 100) / 100, hi = Math.ceil((Math.max(...ALL.map(m => m.auc + m.sd)) + 0.005) * 100) / 100;
+  const px = v => ((v - lo) / (hi - lo) * 100).toFixed(2) + '%';
+  function pintarTabla(){
+    tBtn.forEach(b => { const on = +b.dataset.n === st.n; b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); });
+    const L = ALL.slice(0, st.n).sort((a, b) => b.auc - a.auc), mejor = L[0], emp = L.filter(m => m !== mejor && solapa(m, mejor));
+    tLs.innerHTML = L.map(m => {
+      const s = m === mejor ? '<span class="pill ok">mejor AUC<\/span>' : emp.includes(m) ? '<span class="pill warn">empate técnico<\/span>' : '';
+      return `<li class="w08-li"><span>${nm(m.m)}<small>${esc(m.fam)}<\/small><\/span>
+        <span><span class="w08-au">${f3(m.auc)} ± ${f3(m.sd)}${s}<\/span><span class="w08-tr" aria-hidden="true"><i class="w08-band" style="left:${px(mejor.auc - mejor.sd)};width:${(2 * mejor.sd / (hi - lo) * 100).toFixed(2)}%"><\/i><i class="w08-wh" style="left:${px(m.auc - m.sd)};width:${(2 * m.sd / (hi - lo) * 100).toFixed(2)}%"><\/i><i class="w08-dot" style="left:${px(m.auc)}"><\/i><\/span><\/span>
+        <span class="w08-co"><span><b>${segf(m.seg)}<\/b> ajuste<\/span> · <span><b>${msf(m.ms)}<\/b> predicción<\/span> · <span><b>${kbf(m.kb)}<\/b><\/span><\/span>
+        <span><span class="w08-pips" role="img" aria-label="Explicabilidad ${m.ex} de 5">${[1, 2, 3, 4, 5].map(k => `<i class="${k <= m.ex ? 'on' : ''}"><\/i>`).join('')}<\/span>${m.ex}/5<\/span><\/li>`;
+    }).join('');
+    const nuevos = st.n === 4 ? '' : st.n === 6 ? ' Con el boosting y la SVM la tabla ya tiene 6 modelos de 5 familias.' : ' Con los dos modelos ajustados tiene 8 modelos de 6 familias: el máximo.';
+    tMsg.className = 'msg ' + (emp.length ? 'warn' : 'ok');
+    tMsg.innerHTML = (emp.length ? `El AUC más alto es el de ${nm(mejor.m)} (${f3(mejor.auc)} ± ${f3(mejor.sd)}), pero <b>${emp.length}<\/b> ${emp.length === 1 ? 'modelo más se solapa' : 'modelos más se solapan'} con él: con esa diferencia no se puede decir que sea mejor, puede ser ruido. Por eso se decide también con la explicabilidad y el coste.` : `El AUC más alto es el de ${nm(mejor.m)} y ningún otro modelo se solapa con él.`) + nuevos;
+  }
+
+  /* ───────── ranking ───────── */
+  const bk = pieza(host, 'ranking', 'EL RANKING Y EL CAMPEÓN · puntuación global con vuestros pesos');
+  bk.innerHTML = `<p class="cap" style="margin:0 0 8px">Puntuación global = <b>peso × nota<\/b> de cada criterio, sumados. Cada nota va de 0 a 1 y es <b>relativa a esta tabla<\/b>: el mejor tiene 1 y el peor, 0; por eso cambia si añadís o quitáis modelos. Marcad el campeón.<\/p>
+    <div class="legend w08-lg"><span><i style="background:var(--blue)"><\/i>rendimiento<\/span><span><i style="background:var(--teal)"><\/i>explicabilidad<\/span><span><i style="background:var(--warn)"><\/i>coste<\/span><\/div>
+    <div class="w08-rk" role="radiogroup" aria-label="Elegir campeón"><\/div><div id="w08-km" aria-live="polite"><\/div>`;
+  const kRk = bk.querySelector('.w08-rk'), kMsg = bk.querySelector('#w08-km');
+  kRk.addEventListener('change', ev => { if (st.exam) return; st.man = ev.target.value === E.top.m.m ? null : ev.target.value; todo(); });
+  function simple(a, b){ return a.m.ex !== b.m.ex ? (a.m.ex > b.m.ex ? a : b) : (a.m.kb <= b.m.kb ? a : b); }
+  function pintarRanking(){
+    const {rk, top, camp, empate} = E, bloq = !!st.exam;
+    kRk.innerHTML = rk.map((o, k) => {
+      const sel = o.m.m === camp, base = o.m.m === 'baseline', sub = `rendimiento ${f2(o.r)} · explicabilidad ${f2(o.e)} · coste ${f2(o.c)}`;
+      return `<label class="w08-rw${sel ? ' sel' : ''}${base ? ' off' : ''}${bloq ? ' lock' : ''}"><input type="radio" name="w08-camp" value="${esc(o.m.m)}"${sel ? ' checked' : ''}${bloq || base ? ' disabled' : ''}>
+        <span>${nm(o.m.m)}<small>puesto ${k + 1}${sel ? ' <span class="pill ok">campeón<\/span>' : ''}${base ? ' · no puede ser campeón' : ''}<\/small><\/span>
+        <span><span class="w08-bar" role="img" aria-label="${sub}"><i class="w08-r" style="width:${(st.w[0] * o.r).toFixed(1)}%"><\/i><i class="w08-e" style="width:${(st.w[1] * o.e).toFixed(1)}%"><\/i><i class="w08-c" style="width:${(st.w[2] * o.c).toFixed(1)}%"><\/i><\/span><small>${sub}<\/small><\/span>
+        <b class="w08-gt">${f2(o.g)}<\/b><\/label>`;
+    }).join('');
+    const ms = [];
+    if (top.m.m === 'baseline') ms.push(['bad', `Con estos pesos gana el modelo de referencia: el cuaderno no lo admite como campeón. Subid el peso del rendimiento (con 20 % o más ya no pasa).`]);
+    if (bloq) {
+      ms.push(['ok', `Examen abierto con ${nm(st.exam)}: <b>ya no se cambia de campeón<\/b> después de ver el número del test. Para empezar de nuevo, pulsad «Volver a empezar» más abajo.`]);
+      if (top.m.m !== st.exam && top.m.m !== 'baseline') ms.push(['warn', `Con estos pesos el cálculo daría ahora ${nm(top.m.m)}, pero el examen ya está gastado con ${nm(st.exam)}.`]);
+    } else if (st.man) ms.push(['warn', `Habéis marcado ${nm(st.man)} aunque el cálculo da ${nm(top.m.m)}${empate && rk[1].m.m === st.man ? `: se puede justificar porque es un empate técnico y es el ${simple(rk[0], rk[1]).m.m === st.man ? 'más sencillo' : 'segundo'}` : ': no se justifica con estos pesos. El campeón sale del cálculo, no de la intuición. Si queréis otro, cambiad los pesos y justificadlo'}.`]);
+    if (empate && top.m.m !== 'baseline') {
+      const s = simple(rk[0], rk[1]);
+      ms.push(['warn', `<b>Empate técnico:<\/b> ${nm(rk[0].m.m)} y ${nm(rk[1].m.m)} están a ${f3(rk[0].g - rk[1].g)} (menos de 0,03). Los tiempos cambian de una ejecución a otra y entran en el coste, así que el orden podría cambiar. Podéis quedaros con el del cálculo o con el más sencillo (${nm(s.m.m)}, mejor explicado o más ligero), pero decididlo <b>antes<\/b> del examen y contadlo en la <i>model card<\/i>.`]);
+    }
+    kMsg.innerHTML = ms.map(m => `<div class="msg ${m[0]}">${m[1]}<\/div>`).join('');
+  }
+
+  /* ───────── sensibilidad: mapa de campeones ───────── */
+  const bs = pieza(host, 'sensib', 'SENSIBILIDAD · ¿y si cambian los pesos?');
+  bs.innerHTML = `<div class="duo"><div><svg class="chart w08-map" viewBox="0 0 360 318" role="img" aria-label="Mapa triangular de campeones: cada punto es un reparto de pesos y su color, el modelo que gana. La tabla de al lado lo resume en palabras."><\/svg>
+    <p class="cap" style="text-align:center">Pulsad en el mapa para probar ese reparto (o usad los deslizadores). El anillo son vuestros pesos y los círculos 1 a 3, los escenarios de la tabla.<\/p><\/div>
+    <div><div class="scroll"><table><thead><tr><th scope="col">Pesos (rend. / expl. / coste)<\/th><th scope="col">Campeón<\/th><\/tr><\/thead><tbody><\/tbody><\/table><\/div><div class="msg" aria-live="polite"><\/div><div class="legend" style="margin-top:10px"><\/div><\/div><\/div>`;
+  const sSvg = bs.querySelector('svg'), sBody = bs.querySelector('tbody'), sMsg = bs.querySelector('.msg'), sLg = bs.querySelector('.legend');
+  const P3 = (r, e, c) => [180 * r + 30 * e + 330 * c, 24 * r + 284 * (e + c)];
+  const pts = [], g0 = S('g', {}, sSvg);
+  for (let a = 0; a <= 50; a++) for (let b = 0; a + b <= 50; b++) { const [x, y] = P3(a / 50, b / 50, (50 - a - b) / 50); pts.push({a, b, c: S('circle', {cx: x.toFixed(1), cy: y.toFixed(1), r: 3.6}, g0)}); }
+  S('path', {d: 'M180 24L30 284L330 284Z', fill: 'none', stroke: 'var(--muted)', 'stroke-width': 1.4}, sSvg);
+  S('text', {x: 180, y: 14, 'text-anchor': 'middle'}, sSvg, '100 % rendimiento'); S('text', {x: 8, y: 304}, sSvg, '100 % explicabilidad'); S('text', {x: 352, y: 304, 'text-anchor': 'end'}, sSvg, '100 % coste');
+  const mk = S('g', {}, sSvg); ESC.forEach((s, i) => { const [x, y] = P3(s[2][0] / 100, s[2][1] / 100, s[2][2] / 100); const g = S('g', {}, mk); S('circle', {cx: x, cy: y, r: 8, fill: 'var(--surface)', stroke: 'var(--ink)', 'stroke-width': 1.6}, g); S('text', {x, y: y + 3.5, 'text-anchor': 'middle', style: 'fill:var(--ink);font-weight:800;font-size:10px'}, g, String(i + 1)); });
+  const ring = S('g', {}, mk); S('circle', {r: 12, fill: 'none', stroke: 'var(--surface)', 'stroke-width': 5.5}, ring); S('circle', {r: 12, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 2.6}, ring); S('circle', {r: 2.6, fill: 'var(--ink)'}, ring);
+  sSvg.addEventListener('click', ev => {
+    const bb = sSvg.getBoundingClientRect(), x = (ev.clientX - bb.left) / bb.width * 360, y = (ev.clientY - bb.top) / bb.height * 318;
+    let r = clamp(1 - (y - 24) / 260, 0, 1), e = clamp((330 - 150 * r - x) / 300, 0, 1 - r); const R = Math.round(r * 20) * 5; let Ee = Math.min(Math.round(e * 20) * 5, 100 - R);
+    st.w = [R, Ee, 100 - R - Ee]; todo();
+  });
+  let mapaN = 0;
+  function colorear(){
+    const N = notas(st.n), cuenta = new Array(ALL.length).fill(0);
+    pts.forEach(p => { const w = ganador(N, p.a / 50, p.b / 50, (50 - p.a - p.b) / 50); cuenta[w.m.i]++; p.c.setAttribute('class', 'w08-m' + w.m.i); });
+    sLg.innerHTML = cuenta.map((c, i) => [c, i]).filter(x => x[0]).sort((a, b) => b[0] - a[0]).map(x => `<span><i style="background:var(--w08-c${x[1]})"><\/i>${esc(ALL[x[1]].m)} · gana en el ${fmt(x[0] / pts.length * 100, 0)} %${x[1] === 0 ? ' (no vale)' : ''}<\/span>`).join('');
+    mapaN = st.n;
+  }
+  function pintarSens(){
+    if (mapaN !== st.n) colorear();
+    const [x, y] = P3(st.w[0] / 100, st.w[1] / 100, st.w[2] / 100); ring.setAttribute('transform', `translate(${x} ${y})`);
+    const filas = [['vuestros pesos', st.w, '◎'], ...ESC.map((s, i) => [s[0], s[2], String(i + 1)])];
+    const top = E.top.m.m; let cambia = 0;
+    sBody.innerHTML = filas.map((f, i) => {
+      const r = rank(st.n, W3(f[1])), c = r[0].m.m, dif = i > 0 && c !== top; if (dif) cambia++;
+      return `<tr><td><b>${f[2]}<\/b> ${esc(f[0])}<br><span class="w08-sm">${f[1].map(v => fmt(v / 100, 1)).join(' / ')}<\/span><\/td><td>${nm(c)}${dif ? ' <span class="pill warn">cambia<\/span>' : ''}<br><span class="w08-sm">gana por ${f2(r[0].g - r[1].g)} a ${esc(r[1].m.m)}<\/span><\/td><\/tr>`;
+    }).join('');
+    sMsg.className = 'msg ' + (cambia ? 'warn' : 'ok');
+    sMsg.innerHTML = cambia ? `El campeón <b>cambia en ${cambia} de 3 escenarios<\/b>: vuestra recomendación depende de lo que valore el cliente, y así hay que contarlo en la <i>model card<\/i>.` : 'El campeón es el mismo en los tres escenarios: la elección es robusta frente a los pesos.';
+  }
+
+  /* ───────── examen final ───────── */
+  const be = pieza(host, 'examen', 'EL EXAMEN FINAL · el test, una sola vez');
+  be.innerHTML = `<p class="cap" style="margin:0 0 8px">Se apartaron <b>${d.n_test.toLocaleString('es-ES')} de ${d.n.toLocaleString('es-ES')} reservas<\/b> (el test) y ningún modelo las ha visto. Es el examen final: <b>solo el campeón, una sola vez<\/b>. Si probarais varios y os quedarais con el mejor, la nota saldría demasiado optimista.<\/p>
+    <div class="ctl" style="border:0;margin:0;padding:0"><span id="w08-ec"><\/span><button type="button" class="btn" id="w08-eb"><\/button><button type="button" class="btn small" id="w08-er" hidden>Volver a empezar<\/button><\/div>
+    <div id="w08-ex" aria-live="polite"><\/div><div class="w08-chs" id="w08-chs"><\/div>`;
+  const eC = be.querySelector('#w08-ec'), eB = be.querySelector('#w08-eb'), eR = be.querySelector('#w08-er'), eX = be.querySelector('#w08-ex'), eCh = be.querySelector('#w08-chs');
+  eB.addEventListener('click', () => { if (!E.camp || st.exam) return; st.exam = E.camp; st.vistos.add(E.camp); todo(); });
+  eR.addEventListener('click', () => { st.exam = null; todo(); });
+  eR.title = 'Es como ejecutar de nuevo desde la celda de herramientas, que borra el CSV y empieza de cero';
+  function pintarExamen(){
+    const {camp} = E, m = st.exam && ALL.find(x => x.m === st.exam);
+    eC.innerHTML = camp ? `Campeón: ${nm(camp)}` : 'Todavía no hay un campeón válido (mirad el ranking).';
+    eB.textContent = st.exam ? 'Examen abierto' : camp ? `Abrir el examen de «${camp}» (una sola vez)` : 'Abrir el examen';
+    eB.disabled = !camp || !!st.exam; eR.hidden = !st.exam;
+    let h = '';
+    if (m) {
+      const dif = m.test - m.auc, malo = -dif > Math.max(2 * m.sd, 0.03);
+      h = `<div class="ctl" style="margin-top:10px"><span class="read">AUC en validación cruzada ${f3(m.auc)} ± ${f3(m.sd)}<\/span><span class="read">AUC en test ${f3(m.test)}<\/span><span class="read">diferencia ${sg(dif, 3)}<\/span><\/div>
+        <div class="msg ${malo ? 'bad' : 'ok'}">${malo ? 'El test sale <b>mucho más bajo<\/b> que la validación cruzada: señal de sobreajuste (el modelo se ha aprendido los datos de memoria).' : dif < 0 ? 'El test sale <b>algo más bajo<\/b> que la validación cruzada: es lo normal, porque son reservas que el modelo no había visto. No hay señal de sobreajuste.' : 'El test sale igual o algo más alto: puede pasar con solo 1200 reservas, porque el test también tiene su propio ruido.'}<\/div>`;
+    }
+    if (st.vistos.size > 1) h += `<div class="msg bad">Habéis abierto el test de <b>${st.vistos.size} modelos distintos<\/b>. Eso es hacer trampa: el test ya no sirve para decidir, solo para medir al campeón ya elegido. En el cuaderno haría saltar el <code>assert<\/code> «Solo el campeón debe tener AUC de test».<\/div>`;
+    eX.innerHTML = h;
+    eCh.innerHTML = '<span class="w08-sm" style="align-self:center">auc_test en leaderboard_S08.csv:<\/span>' + ALL.slice(0, st.n).map(x => `<span class="w08-ch${x.m === st.exam ? ' on' : ''}">${esc(x.m)} ${x.m === st.exam ? f3(x.test) : '—'}<\/span>`).join('');
+  }
+
+  /* ───────── model card ───────── */
+  const bf = pieza(host, 'ficha', 'MODEL CARD · apartados 3 y 5 con vuestros números');
+  bf.innerHTML = `<p class="cap" style="margin:0 0 8px">Se rellena sola con lo que habéis tocado arriba. Es un <b>ejemplo<\/b> con los números de esta demo: en el reto lo redactáis vosotros, con vuestras palabras y vuestras cifras.<\/p><div class="w08-card" aria-live="polite"><\/div>`;
+  const fC = bf.querySelector('.w08-card');
+  function pintarFicha(){
+    const {rk, camp, top} = E;
+    if (!camp) { fC.innerHTML = `<p class="msg warn">Sin un campeón válido no hay <i>model card<\/i>: subid el peso del rendimiento.<\/p>`; return; }
+    const c = rk.find(o => o.m.m === camp), r = rk.find(o => o.m.m !== camp), m = c.m, v = r.m, tabla = st.exam === camp;
+    const dA = v.auc - m.auc, w = st.w.map(x => x + ' %');
+    const ven = [`su AUC es ${f3(Math.abs(dA))} ${dA < 0 ? 'más bajo' : 'más alto'} (${f3(v.auc)} frente a ${f3(m.auc)})${solapa(m, v) ? ', una diferencia dentro del ruido' : ''}`];
+    if (v.ex !== m.ex) ven.push(`se explica ${v.ex > m.ex ? 'mejor' : 'peor'} (${v.ex} frente a ${m.ex})`);
+    const k = v.kb / m.kb; if (k >= 3 || k <= 1 / 3) ven.push(`el modelo pesa unas ${fmt(k >= 1 ? k : 1 / k, 0)} veces ${k >= 1 ? 'más' : 'menos'} (${kbf(v.kb)} frente a ${kbf(m.kb)})`);
+    const otra = ESC.map(s => [s, rank(st.n, W3(s[2]))[0].m.m]).find(x => x[1] !== top.m.m);
+    fC.innerHTML = `<h3>3 · Por qué este campeón (y no otro)<\/h3>
+      <div class="scroll"><table><thead><tr><th scope="col">Criterio<\/th><th scope="col" class="num">Peso<\/th><th scope="col">Resultado del campeón<\/th><th scope="col">Mejor rival (${esc(v.m)})<\/th><\/tr><\/thead><tbody>
+      <tr><td>Rendimiento (AUC)<\/td><td class="num">${w[0]}<\/td><td>${f3(m.auc)} ± ${f3(m.sd)}<\/td><td>${f3(v.auc)} (${sg(dA, 3)})<\/td><\/tr>
+      <tr><td>Explicabilidad (1–5)<\/td><td class="num">${w[1]}<\/td><td>${m.ex}<\/td><td>${v.ex} (${sg(v.ex - m.ex, 0)})<\/td><\/tr>
+      <tr><td>Coste (ajuste · predicción · tamaño)<\/td><td class="num">${w[2]}<\/td><td>${segf(m.seg)} · ${msf(m.ms)} · ${kbf(m.kb)}<\/td><td>${segf(v.seg)} · ${msf(v.ms)} · ${kbf(v.kb)}<\/td><\/tr><\/tbody><\/table><\/div>
+      <p><b>Campeón:<\/b> ${esc(camp)} (AUC en validación cruzada ${f3(m.auc)} ± ${f3(m.sd)}; en test ${tabla ? f3(m.test) : '<i>pendiente: se abre una sola vez<\/i>'}). No ganó ${esc(v.m)}: ${ven[0]}${ven.length > 1 ? ', pero ' + ven.slice(1).join(' y ') : ''}; su puntuación global es ${f2(r.g)} frente a ${f2(c.g)}. ${otra ? `Si el cliente valorara ${esc(otra[0][1])} (pesos ${otra[0][2].map(x => fmt(x / 100, 1)).join(' / ')}), elegiríamos ${esc(otra[1])}.` : 'El campeón no cambia en los tres escenarios de prueba: la elección es robusta.'}<\/p>
+      <h3>5 · Rendimiento<\/h3><p>Validación cruzada (5 folds, solo train): AUC ${f3(m.auc)} ± ${f3(m.sd)}. Test (<b>una sola evaluación<\/b>): ${tabla ? f3(m.test) : '<i>pendiente<\/i>'}. Reservas: ${d.n.toLocaleString('es-ES')} sintéticas, ${fmt(d.tasa, 1)} % canceladas; la tasa por país va del ${fmt(d.pais_min, 1)} % al ${fmt(d.pais_max, 1)} %.<\/p>`;
+  }
+
+  function todo(){ calc(); pintarPesos(); pintarTabla(); pintarRanking(); pintarSens(); pintarExamen(); pintarFicha(); }
+  todo();
+  return {};
+};
+
+/* ───────── marco común ───────── */
+const app = document.getElementById('app');
+const sh = (t) => `<div class="sh"><span class="st">${esc(t)}</span><span class="ln"></span></div>`;
+
+const hero = el('header');
+const totalMin = D.pasos.reduce((s, p) => s + (p.min || 0), 0);
+hero.innerHTML = `<div class="kicker">${esc(D.kicker)}</div><h1>${esc(D.titulo)}</h1><p class="lead">${md(D.lead)}</p>
+  <div class="chips"><span class="chip">${D.pasos.length} pasos</span><span class="chip">≈ ${totalMin} min de reto</span><span class="chip">${esc(D.sube_resumen)}</span></div>
+  <p class="hint" style="margin-top:14px">${md(D.aviso)}</p>`;
+app.appendChild(hero);
+
+const play = el('section');
+play.innerHTML = sh('EL PRODUCTO FUNCIONANDO') + `<h2>${esc(D.widget_titulo)}</h2><p class="sec-intro">${md(D.intro)}</p>`;
+const steps = el('div', 'steps'); steps.setAttribute('role', 'group'); steps.setAttribute('aria-label', 'Pasos del reto');
+const aqui = el('div', 'aqui'); aqui.setAttribute('aria-live', 'polite');
+const stage = el('div', 'stage');
+play.append(steps, aqui, stage);
+app.appendChild(play);
+const widget = W[D.widget](stage, D);
+
+function elegir(i){
+  const btns = steps.querySelectorAll('.step');
+  btns.forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
+  const panels = stage.querySelectorAll('[data-pieza]');
+  if (i < 0) { stage.classList.remove('sel'); panels.forEach(p => p.classList.remove('hl')); aqui.innerHTML = md(D.aqui_todo); return; }
+  const p = D.pasos[i];
+  stage.classList.add('sel');
+  panels.forEach(pn => pn.classList.toggle('hl', pn.dataset.pieza.split(' ').some(x => (p.piezas || []).includes(x))));
+  aqui.innerHTML = `<b>Paso ${esc(p.n)} · ${esc(p.titulo)}</b> (${p.min} min). ${md(p.aqui || '')}`;
+  const first = stage.querySelector('.pieza.hl'); if (first && first.getBoundingClientRect().top > window.innerHeight * .8) first.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center'});
+}
+D.pasos.forEach((p, i) => {
+  const b = el('button', 'step', `<span class="n">${esc(p.n)}</span><span>${esc(p.corto || p.titulo)}<small>${p.min} min</small></span>`);
+  b.type = 'button'; b.setAttribute('aria-pressed', 'false'); b.addEventListener('click', () => elegir(steps.querySelector('.step[aria-pressed="true"]') === b ? -1 : i));
+  steps.appendChild(b);
+});
+elegir(-1);
+
+/* qué se sube y cómo se evalúa */
+const fin = el('section');
+fin.innerHTML = sh('QUÉ SE SUBE Y CÓMO SE EVALÚA') + `<h2>Lo que entregáis y con qué se puntúa</h2><p class="sec-intro">Todo va al repositorio del equipo, en la carpeta <code>${esc(D.carpeta_entrega)}</code>. La rúbrica es la misma que usáis para revisar vuestro propio trabajo antes de subirlo.</p>`;
+const files = el('div', 'files');
+D.ficheros.forEach(f => files.appendChild(el('div', 'file', `<b>${esc(f.nombre)}</b><span class="o">${md(f.origen)}</span><span class="s">${esc(f.sube)}</span>`)));
+fin.appendChild(files);
+const tabs = el('div', 'tabs'); tabs.setAttribute('role', 'tablist');
+const lv = el('div', 'levels'); lv.setAttribute('aria-live', 'polite');
+const qq = el('p', 'hint'); qq.style.marginBottom = '10px';
+const NIV = ['1 · Empezado', '2 · Mínimo', '3 · Estándar', '4 · Extra'];
+function criterio(k){
+  tabs.querySelectorAll('.tab').forEach((t, j) => t.setAttribute('aria-selected', String(j === k)));
+  const c = D.rubrica[k]; qq.textContent = c.pregunta;
+  lv.innerHTML = c.niveles.map((t, j) => `<div class="lv${j === 1 ? ' min' : ''}"><h3>${NIV[j]}</h3><p>${md(t)}</p></div>`).join('');
+}
+D.rubrica.forEach((c, k) => { const t = el('button', 'tab', esc(c.criterio)); t.type = 'button'; t.setAttribute('role', 'tab'); t.addEventListener('click', () => criterio(k)); tabs.appendChild(t); });
+fin.append(tabs, qq, lv);
+fin.appendChild(el('p', 'hint', 'Orientación: lo que pide el nivel mínimo sale en un <b>2</b>, el estándar en un <b>3</b> y los extras en un <b>4</b>. Sin una frase de prueba escrita, el nivel no vale.'));
+criterio(0);
+app.appendChild(fin);
+
+const pie = el('footer');
+pie.innerHTML = sh('DÓNDE SEGUIR') + `<div class="links">${D.enlaces.map(e => `<a class="btn" href="${esc(e.url)}">${esc(e.t)}</a>`).join('')}</div><p class="foot" style="margin-top:14px">${md(D.pie)}</p>`;
+app.appendChild(pie);
+})();
+</script>
+</body>
+</html>

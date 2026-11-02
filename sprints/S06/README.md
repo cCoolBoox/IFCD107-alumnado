@@ -60,7 +60,7 @@
 
 **Núcleo y extra.** Núcleo: inventario de defectos, función de limpieza y *baseline* con su *pipeline*. Extra: informe más detallado y comparativa de variantes de limpieza.
 
-Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_06.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
+Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S06/3_Reto/1_Trabajar/S06_demo_reto.html) (muestra lo que tendréis al final). Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_06.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 

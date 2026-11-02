@@ -60,7 +60,7 @@
 
 **Núcleo y extra.** Núcleo: regresión del precio y clasificación de la cancelación con las hipótesis de coste. Extra: análisis de sensibilidad completo.
 
-Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_07_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_07.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
+Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/3_Reto/1_Trabajar/S07_demo_reto.html) (muestra lo que tendréis al final). Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_07_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_07.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 

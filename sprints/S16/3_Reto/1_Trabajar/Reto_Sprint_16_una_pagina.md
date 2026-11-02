@@ -1,6 +1,6 @@
 # Sprint 16 · Reto «Entrega final: evaluar, demostrar y documentar» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_16.md](../3_Consultar/Reto_Sprint_16.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Plantillas: [model card](plantillas/plantilla_model_card.md) · [memoria](plantillas/plantilla_esqueleto_memoria_tecnica.md) · [lista de congelación](plantillas/checklist_congelacion.md) · [demostrador](plantillas/demostrador/).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_16.md](../3_Consultar/Reto_Sprint_16.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Plantillas: [model card](plantillas/plantilla_model_card.md) · [memoria](plantillas/plantilla_esqueleto_memoria_tecnica.md) · [lista de congelación](plantillas/checklist_congelacion.md) · [demostrador](plantillas/demostrador/). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S16/3_Reto/1_Trabajar/S16_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - El docente recibirá vuestro trabajo como un entregable real.

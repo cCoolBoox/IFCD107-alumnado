@@ -59,7 +59,7 @@
 
 **Núcleo y extra.** Núcleo: *leaderboard* con tres familias de modelos, pesos de los criterios, test una sola vez y ficha del modelo. Extra: más familias y búsqueda de hiperparámetros en varias.
 
-Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_08_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_08.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
+Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/3_Reto/1_Trabajar/S08_demo_reto.html) (muestra lo que tendréis al final). Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_08_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_08.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
 ## ✅ Antes de cerrar el sprint (Definition of Done)
 

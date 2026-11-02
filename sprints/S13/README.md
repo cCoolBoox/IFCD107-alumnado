@@ -66,6 +66,8 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 
 👉 **[Ver el reto completo, explicado paso a paso](3_Reto/3_Consultar/Reto_Sprint_13.md)** (qué se pide, cómo hacerlo, cómo usar la IA, errores frecuentes y autoevaluación).
 
+👉 **Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S13/3_Reto/1_Trabajar/S13_demo_reto.html)**: una sola página, sin instalar nada, que muestra lo que tendréis al final.
+
 
 **Contexto:** Marcos, director de TurisData Canarias, tiene 10 minutos y no sabe qué es un AUC. Pide: *«Una página. ¿Puedo fiarme del modelo, qué mueve las cancelaciones y qué hago el lunes?»*
 

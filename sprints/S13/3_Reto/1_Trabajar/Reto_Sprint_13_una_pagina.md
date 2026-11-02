@@ -1,6 +1,6 @@
 # Sprint 13 · Reto «Informe visual para dirección» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_13.md](../3_Consultar/Reto_Sprint_13.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); el texto del informe está en [`plantilla_informe_visual.md`](plantillas/plantilla_informe_visual.md) y el cuaderno en [`S13_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_13.md](../3_Consultar/Reto_Sprint_13.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); el texto del informe está en [`plantilla_informe_visual.md`](plantillas/plantilla_informe_visual.md) y el cuaderno en [`S13_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S13/3_Reto/1_Trabajar/S13_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - Marcos, director de TurisData Canarias, tiene 10 minutos y no sabe qué es un AUC.

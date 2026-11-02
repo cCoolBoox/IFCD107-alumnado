@@ -1,8 +1,6 @@
 # Sprint 5 · Reto «¿La ocupación depende de esto?» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_05.md](../3_Consultar/Reto_Sprint_05.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Todo se hace dentro del cuaderno [`S05_07_reto_ocupacion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_07_reto_ocupacion.ipynb), que lleva puntos de control (`assert`); los datos: [`ocupacion_diaria.csv`](../../../../datos/ocupacion_diaria.csv).
-
-**Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S05/3_Reto/1_Trabajar/S05_demo_reto.html):** una sola página, sin instalar nada, que muestra lo que tendréis al final.
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_05.md](../3_Consultar/Reto_Sprint_05.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos). Qué se sube y la rúbrica: [entrega y rúbrica](../2_Entregar/entrega_y_rubrica.md). Todo se hace dentro del cuaderno [`S05_07_reto_ocupacion`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_07_reto_ocupacion.ipynb), que lleva puntos de control (`assert`); los datos: [`ocupacion_diaria.csv`](../../../../datos/ocupacion_diaria.csv). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S05/3_Reto/1_Trabajar/S05_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - Al dueño de TurisData le han dicho que «con calor se llena menos» y que «los festivos llenan».

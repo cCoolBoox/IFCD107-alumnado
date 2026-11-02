@@ -1,6 +1,6 @@
 # Sprint 15 · Reto «El mejor modelo, demostrado» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_15.md](../3_Consultar/Reto_Sprint_15.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del registro está en [`registro_experimentos_plantilla.csv`](plantillas/registro_experimentos_plantilla.csv).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_15.md](../3_Consultar/Reto_Sprint_15.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); la plantilla del registro está en [`registro_experimentos_plantilla.csv`](plantillas/registro_experimentos_plantilla.csv). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S15/3_Reto/1_Trabajar/S15_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - El docente quiere saber **qué modelo recomendáis y por qué**, no solo cuál tiene el número más alto.

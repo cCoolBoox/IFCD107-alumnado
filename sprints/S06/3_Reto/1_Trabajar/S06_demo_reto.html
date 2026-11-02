@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Demo interactiva del reto del Sprint 6 (IFCD107): el inventario de defectos, la función de limpieza con cada regla activable, la partición train/test sin fuga, el modelo frente al modelo tonto y la IA responsable.">
+<title>Datos sucios, cliente impaciente · demo interactiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Maqueta común de las demos del reto (IFCD107): hero → «el producto funcionando» con un selector de pasos
+   → qué se sube y cómo se evalúa. Identidad: la de las infografías del curso (tinta azulada, óxido, verde azulado, crema). */
+:root{
+  --bg:#F5F1E8; --surface:#FFFFFF; --ink:#1D2433; --muted:#566073; --line:#D9D2C0; --soft:#EFE7D2;
+  --accent:#C23B1F; --accent-soft:#F7DDD4; --teal:#0F7F7F; --teal-soft:#D5ECEA; --sky:#DCE6F5; --blue:#3D5F96;
+  --ok:#1B7F4B; --ok-soft:#D9F0E3; --bad:#B42318; --bad-soft:#FBE0DC; --warn:#8A5A00; --warn-soft:#F6E7C4;
+  --code-bg:rgba(29,36,51,.08); --focus:#1D2433; --pt:rgba(61,95,150,.42); --grid:#E4DDCB;
+  --f-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+    --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+    --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+    --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+  --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+  --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+  --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5.2vw,52px);line-height:1.05;font-weight:800;letter-spacing:-.02em;margin-top:8px}
+h2{font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+h3{font-size:17px;line-height:1.2;font-weight:800}
+p{margin:0}
+code{font-family:var(--f-mono);font-size:.86em;background:var(--code-bg);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+a{color:var(--accent);font-weight:700;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+button{font:inherit;color:inherit;cursor:pointer}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:62ch;margin-top:10px}
+.hint{font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:5px 13px;font-size:14px;font-weight:700}
+.btn{border:2px solid var(--ink);background:transparent;border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.small{padding:5px 11px;font-size:13px}
+.btn.on{background:var(--ink);color:var(--bg)}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sh .st{font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--accent);letter-spacing:.12em;white-space:nowrap}
+.sh .ln{flex:1;height:2px;background:var(--line)}
+.sec-intro{color:var(--muted);max-width:68ch;margin:-4px 0 16px}
+
+/* selector de pasos */
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.step{display:flex;align-items:center;gap:9px;border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:7px 13px 7px 8px;text-align:left;font-weight:700;font-size:14px;line-height:1.2}
+.step .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:14px}
+.step small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+.step[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.step[aria-pressed="true"] small{color:var(--bg);opacity:.8}
+.aqui{background:var(--teal-soft);border-radius:12px;padding:11px 16px;margin-bottom:16px;font-size:15.5px;min-height:3.2em}
+.aqui b{color:var(--teal)}
+
+/* piezas del producto */
+.stage{display:flex;flex-direction:column;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row2>*{min-width:0}
+@media (max-width:860px){.row2{grid-template-columns:1fr}}
+.pieza{background:var(--surface);border:2px solid var(--line);border-radius:14px;overflow:hidden;min-width:0;transition:opacity .2s,box-shadow .2s,border-color .2s}
+.pieza>.bh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 14px;border-bottom:2px solid var(--line);font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.pieza>.bb{padding:12px 14px}
+.stage.sel .pieza{opacity:.5}
+.stage.sel .pieza.hl{opacity:1;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.stage.sel .pieza.hl>.bh{color:var(--accent)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.duo>*{min-width:0}
+@media (max-width:700px){.duo{grid-template-columns:1fr}}
+.cap{font-size:13.5px;color:var(--muted);margin-top:6px}
+.cap b{color:var(--ink)}
+
+/* gráficos */
+svg.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart text{font-family:var(--f-body);font-size:11px;fill:var(--muted)}
+.chart .tl{font-size:11.5px;font-weight:700;fill:var(--ink)}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.chart .ax{stroke:var(--muted);stroke-width:1.2}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--muted);margin-top:4px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.legend i.ln{width:18px;height:3px;border-radius:2px;vertical-align:3px}
+
+/* mandos */
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:12px;padding-top:12px;border-top:2px solid var(--line)}
+.ctl label{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.ctl input[type=range]{width:170px;accent-color:var(--accent)}
+.ctl input[type=number],.ctl select{font-family:var(--f-mono);font-size:14px;padding:5px 8px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.ctl input[type=number]{width:6em}
+.ctl input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
+.read{font-family:var(--f-mono);font-size:13px;color:var(--ink);background:var(--soft);border-radius:8px;padding:6px 10px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 11px;font-weight:800;font-size:12.5px;letter-spacing:.04em}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.msg{margin-top:8px;font-size:14.5px;padding:8px 12px;border-radius:10px;background:var(--soft)}
+.msg.ok{background:var(--ok-soft);color:var(--ok)} .msg.bad{background:var(--bad-soft);color:var(--bad)} .msg.warn{background:var(--warn-soft);color:var(--warn)}
+
+/* tablas */
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:7px 10px;text-align:left}
+th{font-size:12.5px;font-weight:800;letter-spacing:.04em;color:var(--muted);border-bottom:2px solid var(--line)}
+td{border-bottom:1px solid var(--line)}
+td.num,th.num{text-align:right;font-family:var(--f-mono);white-space:nowrap}
+.sql{font-family:var(--f-mono);font-size:13px;background:var(--code-bg);border-radius:8px;padding:8px 12px;margin-bottom:10px;overflow-wrap:anywhere}
+
+/* lista de comprobaciones */
+.checks{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:5px}
+.checks li{display:flex;gap:9px;align-items:baseline;font-size:14.5px}
+.checks .m{flex:none;width:1.3em;text-align:center;font-weight:800}
+.checks li.ok .m{color:var(--ok)} .checks li.no .m{color:var(--muted)} .checks li.bad .m{color:var(--bad)}
+textarea{width:100%;min-height:130px;font:inherit;font-size:15px;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);resize:vertical}
+
+/* qué se sube y rúbrica */
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-bottom:22px}
+.file{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:11px 14px}
+.file b{font-family:var(--f-mono);font-size:13.5px;overflow-wrap:anywhere}
+.file .o{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
+.file .s{display:block;font-size:12.5px;font-weight:800;color:var(--teal);margin-top:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tab{border:2px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 15px;font-weight:700;font-size:14.5px}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:900px){.levels{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.levels{grid-template-columns:1fr}}
+.lv{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:10px 13px;font-size:14px}
+.lv h3{font-size:14px;margin-bottom:5px;color:var(--muted)}
+.lv.min{border-color:var(--teal)} .lv.min h3{color:var(--teal)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.foot{font-size:13.5px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const DEMO = {"kicker":"IFCD107 · SPRINT 6 · DEMO DEL RETO","titulo":"Datos sucios, cliente impaciente","lead":"TurisData Canarias os manda por correo un fichero de reservas, reservas_sucio.csv, exportado a mano desde varios sistemas.","aviso":"Es una demo para entender adónde vamos: **no se entrega nada desde aquí**. Usa las 1545 filas de `reservas_sucio.csv` (sintéticas, TurisData no existe) y el modelo sencillo del paso 4. Las cifras de cada equipo dependerán de sus decisiones de limpieza (límites, nulos, métrica), así que serán algo distintas.","widget":"limpieza","widget_titulo":"De un fichero sucio a un modelo de referencia","intro":"Esto es lo que tendréis al acabar el reto. **Tocad los mandos:** elegid un defecto y mirad sus filas reales, activad y desactivad las reglas de la función de limpieza, cambiad el precio del test para ver qué es una fuga y comparad el modelo con el «modelo tonto». Después, elegid un paso para ver qué pieza construís en él.","aqui_todo":"Elegid un paso del reto y se ilumina **la pieza que construís en él**. Pulsad otra vez el mismo paso para verlo todo.","pasos":[{"n":"1","titulo":"Planning y reparto de roles","corto":"Planning y roles","min":10,"piezas":[],"aqui":"Aquí no hay código ni pieza que construir: es una reunión corta para repartir roles, elegir el nivel y crear las seis tarjetas del tablero. El producto de abajo empieza a construirse en el paso 2."},{"n":"2","titulo":"Inventario de defectos","corto":"Inventario de defectos","min":30,"piezas":["inventario"],"aqui":"Aquí recorréis `reservas_sucio.csv` categoría por categoría y rellenáis una fila de la tabla por cada defecto: elegid uno y mirad sus filas reales y la línea de pandas que lo detecta."},{"n":"3","titulo":"Función de limpieza y partición train/test","corto":"Función de limpieza","min":15,"piezas":["limpieza","particion"],"aqui":"Aquí escribís `limpiar_reservas` (reglas fijas, sobre una copia) y separáis train y test antes de aprender nada: activad cada regla y mirad el antes y el después; cambiar el test enseña qué es la fuga."},{"n":"4","titulo":"Pipeline y baseline","corto":"Pipeline y baseline","min":15,"piezas":["modelo"],"aqui":"Aquí montáis el pipeline (imputar, escalar y codificar solo con train) y comparáis la regresión logística con el modelo tonto por validación cruzada: cambiad la métrica y mirad qué pasa con la exactitud."},{"n":"5","titulo":"Informe, README y revisión con la rúbrica","corto":"Informe y README","min":20,"piezas":["ia"],"aqui":"Aquí contáis todo en `informe_calidad.md` y el README con las cifras de las piezas anteriores. Para la IA responsable, comprobad con datos qué pasa con el país de origen: qué se imputa, qué dice el intervalo y si el modelo lo necesita."}],"ficheros":[{"nombre":"informe_calidad.md","origen":"Lo creáis a partir de una plantilla.","sube":"Sí · sprint-06/"},{"nombre":"reto_S06.ipynb","origen":"Lo creáis.","sube":"Sí · sprint-06/"},{"nombre":"README.md","origen":"Lo modificáis.","sube":"Sí · sprint-06/"},{"nombre":"reservas_sucio.csv","origen":"Ya hecho.","sube":"Sí, sin cambios · data/ (si aún no está)"},{"nombre":"autoevaluacion_nombre.md","origen":"Ya hecha, en blanco","sube":"Sí, una por persona (no una por equipo) · sprint-06/"}],"sube_resumen":"3 ficheros + 1 hoja por persona","carpeta_entrega":"sprint-06/","rubrica":[{"criterio":"Corrección técnica","pregunta":"¿funciona?","niveles":["Hay código, pero el cuaderno falla al ejecutarlo entero o se ha corregido el CSV a mano","limpiar_reservas es una sola función con docstring, devuelve tabla limpia y resumen, y trata en código todos los defectos de la tabla","Además, el Pipeline imputa, escala y codifica ajustando solo con train, y el baseline y el modelo se comparan con validación cruzada","Además, partición temporal justificada o una prueba de qué cambia si se ajusta con todos los datos"]},{"criterio":"Reproducibilidad","pregunta":"¿lo puede repetir otra persona?","niveles":["Solo funciona si se ejecutan las celdas sueltas en cierto orden","Reiniciar y ejecutar todo funciona y el README dice cómo ejecutarlo, pero faltan versiones o el orden","Otra persona obtiene las mismas cifras siguiendo solo el README, con versiones de las librerías y semilla fijada","Además, el README indica Python, librerías, ficheros necesarios y de dónde sale el CSV, y se ha probado en un cuaderno nuevo de Colab"]},{"criterio":"Análisis y comunicación al cliente","pregunta":"¿lo entiende quien no programa?","niveles":["El informe dice «hay nulos» sin más: no dice dónde, cuántas filas ni por qué","Tabla de al menos 6 defectos con dónde, cuántas filas, causa probable y tratamiento, y los tres más graves destacados","Además, cada tratamiento está justificado con su riesgo, hay resumen para el gerente sin jerga, 3 preguntas al cliente y una frase del baseline con media ± desviación","Además, 8–10 defectos y una recomendación para el cliente con los límites del modelo explicados"]},{"criterio":"IA responsable","pregunta":"¿se sabe qué hizo la IA y qué comprobasteis?","niveles":["No se menciona la IA ni el riesgo de usar el país de origen","Dice que se ha usado IA, o menciona un riesgo, pero en genérico","Responde con ejemplos del dataset a la pregunta del país de origen y de las columnas que no deben usarse; dice qué se pidió a la IA, qué se revisó y qué se cambió","Además, aplica una medida y la evalúa (por ejemplo, el modelo sin pais_origen frente al modelo con él) y cuenta un fallo concreto de la IA que detectasteis"]}],"enlaces":[{"t":"Reto en una página","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/3_Reto/1_Trabajar/Reto_Sprint_06_una_pagina.md"},{"t":"Qué se sube y la rúbrica","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/3_Reto/2_Entregar/entrega_y_rubrica.md"},{"t":"Ficha completa del reto","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/3_Reto/3_Consultar/Reto_Sprint_06.md"},{"t":"README del Sprint 6","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/README.md"}],"pie":"El reto se hace en vuestro cuaderno nuevo `reto_S06` de Colab, no en esta página; el código de partida está en los cuadernos `S06_01` a `S06_04`. Si algo de aquí no se entiende, está explicado paso a paso en la ficha del reto.","datos":{"n":1545,"cols":18,"con_defecto":705,"defectos":[{"id":"dup","nombre":"Filas repetidas","cols":"las 18 columnas","filas":45,"ej":{"cab":["id_reserva","fecha_llegada","tipo_habitacion","canal"],"filas":[["192","2025-05-17","superior","web_intermediaria"],["192","2025-05-17","superior","web_intermediaria"],["359","2024-07-10","estandar","web_intermediaria"],["359","2024-07-10","estandar","web_intermediaria"]]},"nota":"Hay 1545 filas pero solo 1500 reservas distintas: 45 filas repiten otra reserva con todos los datos iguales.","det":"crudo.duplicated().sum()","causa":"Fichero exportado a mano desde varios sistemas: la misma reserva sale más de una vez.","trat":"drop_duplicates(): se queda con la primera copia y cuenta cuántas quita.","tipo":"regla"},{"id":"coma","nombre":"Precios con coma decimal","cols":"precio_noche","filas":153,"ej":{"cab":["id_reserva","precio_noche"],"filas":[["97","52,7"],["5273","96,02"],["1092","82,1"],["576","88,73"]]},"nota":"La columna sale como texto (object) porque algunos precios usan coma: pandas no puede hacer cuentas con «83,36».","det":"crudo[\"precio_noche\"].astype(str).str.contains(\",\").sum()","causa":"Exportación desde un Excel en español.","trat":"Cambiar la coma por un punto y convertir a número.","tipo":"regla"},{"id":"fecha","nombre":"Dos formatos de fecha","cols":"fecha_reserva","filas":154,"ej":{"cab":["id_reserva","fecha_reserva","fecha_llegada"],"filas":[["935","19/11/2024","2025-04-04"],["4058","22/01/2025","2025-08-12"],["969","02/11/2025","2025-12-07"],["271","03/08/2024","2024-08-10"]]},"nota":"1391 fechas son 2025-11-09 (año-mes-día) y 154 son 19/11/2024 (día/mes/año). 57 de estas 154 podrían leerse también como mes/día; la antelación del propio fichero confirma día/mes en 56 de ellas.","det":"pd.to_datetime(crudo[\"fecha_reserva\"], format=\"%Y-%m-%d\", errors=\"coerce\").isna().sum()","causa":"Dos sistemas de origen con formatos distintos.","trat":"Leer cada formato por separado con errors=\"coerce\" y juntarlos.","tipo":"regla"},{"id":"canal","nombre":"Canal escrito de varias formas","cols":"canal","filas":135,"cuenta":[["web_intermediaria",718],["directo",311],["agencia",297],["empresa",84],["WEB_INTERMEDIARIA",34],["Web Intermediaria",33],["web intermediaria ",28],["Directo",24],["directo ",16]],"nota":"9 valores distintos para 4 canales: para pandas, «Directo», «directo» y «DIRECTO» son tres categorías.","det":"crudo[\"canal\"].value_counts()","causa":"Cada sistema escribe el canal a su manera.","trat":"strip + lower + espacio → guion bajo: quedan 4 canales.","tipo":"regla"},{"id":"pais","nombre":"País con distintos nombres","cols":"pais_origen","filas":94,"cuenta":[["ES",351],["UK",316],["DE",223],["otros",145],["(vacío)",115],["Nordicos",88],["IT",78],["NL",78],["FR",57],["España",26],["es",23],["uk",23],["Reino Unido",22]],"nota":"12 valores: «ES», «España» y «es» son el mismo país; «UK» y «Reino Unido», también.","det":"crudo[\"pais_origen\"].value_counts()","causa":"Mismo motivo: sistemas distintos.","trat":"Tabla de equivalencias (EQUIV_PAIS): quedan 8 países.","tipo":"regla"},{"id":"p0","nombre":"Precios imposibles (0 o negativos)","cols":"precio_noche","filas":4,"ej":{"cab":["id_reserva","precio_noche"],"filas":[["5327","-50.0"],["2830","0.0"],["1192","0.0"],["439","-50.0"]]},"nota":"Una noche no puede costar −50 €. El 0 es dudoso: ¿gratis o «sin dato»?","det":"(precio <= 0).sum()","causa":"Probablemente errores de captura o un código de «sin dato».","trat":"Pasar a nulo (no se borra la fila) y contarlos en el resumen.","tipo":"pregunta","pregunta":"¿El 0 en precio significa «gratis» o «sin dato»?"},{"id":"p9","nombre":"Precios de 9999 €","cols":"precio_noche","filas":4,"ej":{"cab":["id_reserva","precio_noche","tipo_habitacion"],"filas":[["5133","9999.0","estandar"],["1918","9999,0","suite"],["3985","9999.0","familiar"],["2985","9999.0","estandar"]]},"nota":"Es un *outlier*, pero con un valor tan redondo parece un código, no un precio real.","det":"(precio > 1000).sum()","causa":"Probablemente un código de «sin dato».","trat":"Pasar a nulo con la regla fija 20–1000 €.","tipo":"pregunta","pregunta":"¿Qué significa 9999 en el precio?"},{"id":"noches","nombre":"Noches cero o negativas","cols":"noches","filas":6,"ej":{"cab":["id_reserva","fecha_llegada","noches"],"filas":[["455","2025-05-20","-2"],["5779","2025-07-10","0"],["2722","2025-10-14","-2"],["3756","2024-10-19","0"]]},"nota":"Una reserva no puede durar −2 noches.","det":"(crudo[\"noches\"] <= 0).sum()","causa":"Probablemente errores de captura.","trat":"Pasar a nulo con la regla fija 1–60 noches.","tipo":"regla"},{"id":"ant","nombre":"Antelación que no cuadra con las fechas","cols":"antelacion_dias","filas":5,"ej":{"cab":["id_reserva","fecha_reserva","fecha_llegada","antelacion_dias"],"filas":[["1388","2024-08-25","2024-10-24","-3"],["426","2024-05-25","2025-01-13","-3"],["1371","04/10/2025","2026-01-07","-3"],["2311","2024-07-23","2024-10-23","-3"]]},"nota":"La antelación es los días entre reservar y llegar: puede calcularse con las dos fechas, y aquí hay −3 donde no debería.","det":"(fecha_llegada - fecha_reserva).dt.days != crudo[\"antelacion_dias\"]","causa":"Valor mal capturado en la columna.","trat":"Recalcularla con las fechas (regla fija, sin usar medias).","tipo":"regla"},{"id":"nulos","nombre":"Huecos (nulos)","cols":"adultos, regimen, pais_origen, precio_noche","filas":290,"cuenta":[["pais_origen",115],["precio_noche",84],["regimen",61],["adultos",46]],"nota":"Cuatro columnas con casillas vacías. No se rellenan en la limpieza: lo hace el pipeline, aprendiendo solo de train.","det":"crudo.isna().sum()","causa":"Datos que el sistema de origen no tenía.","trat":"Dejarlos en la limpieza; el pipeline los imputa (mediana o valor más frecuente).","tipo":"pregunta","pregunta":"¿Qué hace el sistema con el país cuando reserva una agencia?"}],"ejemplos":[{"col":"fila completa","id":5205,"antes":"2 filas idénticas","pasos":[[[0],"1 fila"]],"nota":"se queda con la primera copia"},{"col":"precio_noche","id":97,"antes":"\"52,7\"","pasos":[[[1],"52.7"]],"nota":"texto con coma → número"},{"col":"fecha_reserva","id":969,"antes":"\"02/11/2025\"","pasos":[[[2],"2025-11-02"]],"nota":"día/mes/año: llegada 2025-12-07 y antelación 35 días solo cuadran así"},{"col":"canal","id":4537,"antes":"\"Web Intermediaria\"","pasos":[[[3],"web_intermediaria"]],"nota":"minúsculas y guion bajo"},{"col":"pais_origen","id":309,"antes":"\"Reino Unido\"","pasos":[[[4],"UK"]],"nota":"tabla de equivalencias"},{"col":"precio_noche","id":5327,"antes":"\"-50.0\"","pasos":[[[1],"-50.0"],[[1,5],"hueco (NaN)"]],"nota":"imposible → nulo; la fila se queda"},{"col":"precio_noche","id":1918,"antes":"\"9999,0\"","pasos":[[[1],"9999.0"],[[1,5],"hueco (NaN)"]],"nota":"9999 € no es un precio: fuera del rango 20–1000"},{"col":"noches","id":455,"antes":"-2","pasos":[[[5,1],"hueco (NaN)"]],"nota":"una reserva no puede durar −2 noches"},{"col":"antelacion_dias","id":1388,"antes":"-3","pasos":[[[2,6],"60"]],"nota":"llegada − reserva, con las fechas ya leídas"}],"combos":{"0000000":{"m":[1545,45,153,154,9,12,14,474.9,5,84,0],"r":[0,0,0,0]},"0000100":{"m":[1545,45,153,154,9,8,14,474.9,5,84,0],"r":[0,0,0,0]},"0001000":{"m":[1545,45,153,154,4,12,14,474.9,5,84,0],"r":[0,0,0,0]},"0001100":{"m":[1545,45,153,154,4,8,14,474.9,5,84,0],"r":[0,0,0,0]},"0010000":{"m":[1545,45,153,0,9,12,14,474.9,5,84,0],"r":[0,0,0,0]},"0010001":{"m":[1545,45,153,0,9,12,14,474.9,0,84,0],"r":[0,0,5,0]},"0010100":{"m":[1545,45,153,0,9,8,14,474.9,5,84,0],"r":[0,0,0,0]},"0010101":{"m":[1545,45,153,0,9,8,14,474.9,0,84,0],"r":[0,0,5,0]},"0011000":{"m":[1545,45,153,0,4,12,14,474.9,5,84,0],"r":[0,0,0,0]},"0011001":{"m":[1545,45,153,0,4,12,14,474.9,0,84,0],"r":[0,0,5,0]},"0011100":{"m":[1545,45,153,0,4,8,14,474.9,5,84,0],"r":[0,0,0,0]},"0011101":{"m":[1545,45,153,0,4,8,14,474.9,0,84,0],"r":[0,0,5,0]},"0100000":{"m":[1545,45,0,154,9,12,14,518.4,5,84,0],"r":[0,0,0,0]},"0100010":{"m":[1545,45,0,154,9,12,0,33.8,5,92,6],"r":[0,14,0,0]},"0100010b":{"m":[1531,45,0,154,9,12,0,33.8,5,84,0],"r":[0,14,0,14]},"0100100":{"m":[1545,45,0,154,9,8,14,518.4,5,84,0],"r":[0,0,0,0]},"0100110":{"m":[1545,45,0,154,9,8,0,33.8,5,92,6],"r":[0,14,0,0]},"0100110b":{"m":[1531,45,0,154,9,8,0,33.8,5,84,0],"r":[0,14,0,14]},"0101000":{"m":[1545,45,0,154,4,12,14,518.4,5,84,0],"r":[0,0,0,0]},"0101010":{"m":[1545,45,0,154,4,12,0,33.8,5,92,6],"r":[0,14,0,0]},"0101010b":{"m":[1531,45,0,154,4,12,0,33.8,5,84,0],"r":[0,14,0,14]},"0101100":{"m":[1545,45,0,154,4,8,14,518.4,5,84,0],"r":[0,0,0,0]},"0101110":{"m":[1545,45,0,154,4,8,0,33.8,5,92,6],"r":[0,14,0,0]},"0101110b":{"m":[1531,45,0,154,4,8,0,33.8,5,84,0],"r":[0,14,0,14]},"0110000":{"m":[1545,45,0,0,9,12,14,518.4,5,84,0],"r":[0,0,0,0]},"0110001":{"m":[1545,45,0,0,9,12,14,518.4,0,84,0],"r":[0,0,5,0]},"0110010":{"m":[1545,45,0,0,9,12,0,33.8,5,92,6],"r":[0,14,0,0]},"0110010b":{"m":[1531,45,0,0,9,12,0,33.8,5,84,0],"r":[0,14,0,14]},"0110011":{"m":[1545,45,0,0,9,12,0,33.8,0,92,6],"r":[0,14,5,0]},"0110011b":{"m":[1531,45,0,0,9,12,0,33.8,0,84,0],"r":[0,14,5,14]},"0110100":{"m":[1545,45,0,0,9,8,14,518.4,5,84,0],"r":[0,0,0,0]},"0110101":{"m":[1545,45,0,0,9,8,14,518.4,0,84,0],"r":[0,0,5,0]},"0110110":{"m":[1545,45,0,0,9,8,0,33.8,5,92,6],"r":[0,14,0,0]},"0110110b":{"m":[1531,45,0,0,9,8,0,33.8,5,84,0],"r":[0,14,0,14]},"0110111":{"m":[1545,45,0,0,9,8,0,33.8,0,92,6],"r":[0,14,5,0]},"0110111b":{"m":[1531,45,0,0,9,8,0,33.8,0,84,0],"r":[0,14,5,14]},"0111000":{"m":[1545,45,0,0,4,12,14,518.4,5,84,0],"r":[0,0,0,0]},"0111001":{"m":[1545,45,0,0,4,12,14,518.4,0,84,0],"r":[0,0,5,0]},"0111010":{"m":[1545,45,0,0,4,12,0,33.8,5,92,6],"r":[0,14,0,0]},"0111010b":{"m":[1531,45,0,0,4,12,0,33.8,5,84,0],"r":[0,14,0,14]},"0111011":{"m":[1545,45,0,0,4,12,0,33.8,0,92,6],"r":[0,14,5,0]},"0111011b":{"m":[1531,45,0,0,4,12,0,33.8,0,84,0],"r":[0,14,5,14]},"0111100":{"m":[1545,45,0,0,4,8,14,518.4,5,84,0],"r":[0,0,0,0]},"0111101":{"m":[1545,45,0,0,4,8,14,518.4,0,84,0],"r":[0,0,5,0]},"0111110":{"m":[1545,45,0,0,4,8,0,33.8,5,92,6],"r":[0,14,0,0]},"0111110b":{"m":[1531,45,0,0,4,8,0,33.8,5,84,0],"r":[0,14,0,14]},"0111111":{"m":[1545,45,0,0,4,8,0,33.8,0,92,6],"r":[0,14,5,0]},"0111111b":{"m":[1531,45,0,0,4,8,0,33.8,0,84,0],"r":[0,14,5,14]},"1000000":{"m":[1500,0,147,150,9,12,14,481.1,5,79,0],"r":[45,0,0,0]},"1000100":{"m":[1500,0,147,150,9,8,14,481.1,5,79,0],"r":[45,0,0,0]},"1001000":{"m":[1500,0,147,150,4,12,14,481.1,5,79,0],"r":[45,0,0,0]},"1001100":{"m":[1500,0,147,150,4,8,14,481.1,5,79,0],"r":[45,0,0,0]},"1010000":{"m":[1500,0,147,0,9,12,14,481.1,5,79,0],"r":[45,0,0,0]},"1010001":{"m":[1500,0,147,0,9,12,14,481.1,0,79,0],"r":[45,0,5,0]},"1010100":{"m":[1500,0,147,0,9,8,14,481.1,5,79,0],"r":[45,0,0,0]},"1010101":{"m":[1500,0,147,0,9,8,14,481.1,0,79,0],"r":[45,0,5,0]},"1011000":{"m":[1500,0,147,0,4,12,14,481.1,5,79,0],"r":[45,0,0,0]},"1011001":{"m":[1500,0,147,0,4,12,14,481.1,0,79,0],"r":[45,0,5,0]},"1011100":{"m":[1500,0,147,0,4,8,14,481.1,5,79,0],"r":[45,0,0,0]},"1011101":{"m":[1500,0,147,0,4,8,14,481.1,0,79,0],"r":[45,0,5,0]},"1100000":{"m":[1500,0,0,150,9,12,14,525.6,5,79,0],"r":[45,0,0,0]},"1100010":{"m":[1500,0,0,150,9,12,0,33.8,5,87,6],"r":[45,14,0,0]},"1100010b":{"m":[1486,0,0,150,9,12,0,33.8,5,79,0],"r":[45,14,0,14]},"1100100":{"m":[1500,0,0,150,9,8,14,525.6,5,79,0],"r":[45,0,0,0]},"1100110":{"m":[1500,0,0,150,9,8,0,33.8,5,87,6],"r":[45,14,0,0]},"1100110b":{"m":[1486,0,0,150,9,8,0,33.8,5,79,0],"r":[45,14,0,14]},"1101000":{"m":[1500,0,0,150,4,12,14,525.6,5,79,0],"r":[45,0,0,0]},"1101010":{"m":[1500,0,0,150,4,12,0,33.8,5,87,6],"r":[45,14,0,0]},"1101010b":{"m":[1486,0,0,150,4,12,0,33.8,5,79,0],"r":[45,14,0,14]},"1101100":{"m":[1500,0,0,150,4,8,14,525.6,5,79,0],"r":[45,0,0,0]},"1101110":{"m":[1500,0,0,150,4,8,0,33.8,5,87,6],"r":[45,14,0,0]},"1101110b":{"m":[1486,0,0,150,4,8,0,33.8,5,79,0],"r":[45,14,0,14]},"1110000":{"m":[1500,0,0,0,9,12,14,525.6,5,79,0],"r":[45,0,0,0]},"1110001":{"m":[1500,0,0,0,9,12,14,525.6,0,79,0],"r":[45,0,5,0]},"1110010":{"m":[1500,0,0,0,9,12,0,33.8,5,87,6],"r":[45,14,0,0]},"1110010b":{"m":[1486,0,0,0,9,12,0,33.8,5,79,0],"r":[45,14,0,14]},"1110011":{"m":[1500,0,0,0,9,12,0,33.8,0,87,6],"r":[45,14,5,0]},"1110011b":{"m":[1486,0,0,0,9,12,0,33.8,0,79,0],"r":[45,14,5,14]},"1110100":{"m":[1500,0,0,0,9,8,14,525.6,5,79,0],"r":[45,0,0,0]},"1110101":{"m":[1500,0,0,0,9,8,14,525.6,0,79,0],"r":[45,0,5,0]},"1110110":{"m":[1500,0,0,0,9,8,0,33.8,5,87,6],"r":[45,14,0,0]},"1110110b":{"m":[1486,0,0,0,9,8,0,33.8,5,79,0],"r":[45,14,0,14]},"1110111":{"m":[1500,0,0,0,9,8,0,33.8,0,87,6],"r":[45,14,5,0]},"1110111b":{"m":[1486,0,0,0,9,8,0,33.8,0,79,0],"r":[45,14,5,14]},"1111000":{"m":[1500,0,0,0,4,12,14,525.6,5,79,0],"r":[45,0,0,0]},"1111001":{"m":[1500,0,0,0,4,12,14,525.6,0,79,0],"r":[45,0,5,0]},"1111010":{"m":[1500,0,0,0,4,12,0,33.8,5,87,6],"r":[45,14,0,0]},"1111010b":{"m":[1486,0,0,0,4,12,0,33.8,5,79,0],"r":[45,14,0,14]},"1111011":{"m":[1500,0,0,0,4,12,0,33.8,0,87,6],"r":[45,14,5,0]},"1111011b":{"m":[1486,0,0,0,4,12,0,33.8,0,79,0],"r":[45,14,5,14]},"1111100":{"m":[1500,0,0,0,4,8,14,525.6,5,79,0],"r":[45,0,0,0]},"1111101":{"m":[1500,0,0,0,4,8,14,525.6,0,79,0],"r":[45,0,5,0]},"1111110":{"m":[1500,0,0,0,4,8,0,33.8,5,87,6],"r":[45,14,0,0]},"1111110b":{"m":[1486,0,0,0,4,8,0,33.8,5,79,0],"r":[45,14,0,14]},"1111111":{"m":[1500,0,0,0,4,8,0,33.8,0,87,6],"r":[45,14,5,0]},"1111111b":{"m":[1486,0,0,0,4,8,0,33.8,0,79,0],"r":[45,14,5,14]}},"resumen_ok":{"antes":1545,"dup_quitados":45,"imp_valores":14,"imp_filas":14,"ant_mal":5,"ant_recalc":5},"n_limpia":1500,"particion":{"n_tr":1200,"n_te":300,"k_tr":565,"k_te":141,"k_tr0":554,"k_te0":152,"sin_rango":[0.38,0.537],"con_rango":[0.47,0.47],"gemelas":18,"n_te_fichero":309,"precio_tr":[63.05,78.02,91.8,93.33,137.61,89.78,117.79,148.3,86.88,61.17,121.1,72.74,141.98,78.98,78.2,73.72,73.12,101.66,110.21,89.35,68.81,185.92,92.41,71.99,79.38,123.23,110.11,110.38,128.77,149.05,98.67,125.99,85.89,92.95,92.81,72.53,107.52,95.11,72.57,89.24,108.34,173.88,94.21,90.19,176.64,128.19,121.4,72.38,115.55,164.95,79.12,137.0,90.52,60.83,79.84,101.24,91.3,78.81,75.56,92.94,87.61,102.32,74.45,104.27,91.16,156.32,71.86,74.57,132.95,134.94,121.8,93.35,210.72,94.4,82.45,113.72,84.19,103.68,96.83,127.82,97.05,118.19,186.4,68.23,69.8,97.43,130.76,105.6,131.72,162.99,104.1,103.19,104.04,84.09,112.41,72.87,101.73,210.9,135.49,86.74,66.71,150.15,69.41,162.76,64.47,70.06,76.96,71.57,100.13,91.02,73.05,87.99,120.27,64.96,103.24,94.01,162.98,92.53,61.42,76.61,121.84,71.02,127.78,69.72,71.15,95.7,80.69,62.26,135.95,123.7,75.57,130.15,88.7,87.76,80.14,52.7,121.24,93.25,61.22,113.6,85.8,86.25,170.59,103.7,117.96,69.65,93.1,64.38,85.9,107.34,195.76,206.31,177.47,72.23,71.32,72.8,84.38,127.94,93.19,85.92,95.3,80.58,87.43,91.65,68.67,95.49,88.91,85.66,72.4,88.28,79.19,90.6,76.2,97.61,82.8,78.97,96.67,116.28,94.19,88.25,124.16,105.37,90.1,183.65,123.63,172.79,81.72,80.66,102.41,82.57,62.05,85.07,69.89,86.85,72.37,103.42,83.38,66.22,105.49,93.49,137.67,130.1,68.78,77.54,99.33,126.8,112.75,91.33,61.7,103.47,78.93,92.02,173.47,80.79,104.8,71.11,138.84,137.65,104.02,94.79,153.59,108.63,112.44,79.16,83.66,112.22,103.06,158.7,78.54,76.96,85.16,73.68,115.12,101.79,118.71,138.35,97.79,97.95,139.09,65.09,106.22,80.3,71.86,92.42,79.59,74.81,165.31,117.23,120.87,135.95,88.63,76.89,88.19,89.62,72.46,68.52,77.77,124.37,70.99,128.74,70.78,73.55,143.95,64.36,93.25,77.47,65.14,88.19,133.57,119.66,74.96,93.76,110.86,87.8,118.07,79.16,62.86,119.96,145.63,97.31,124.88,106.63,96.24,116.02,109.85,115.37,89.85,91.83,185.4,96.02,122.55,87.7,98.87,77.4,65.17,112.88,144.13,83.94,72.66,132.12,90.87,69.37,73.17,167.66,92.81,69.8,86.4,128.75,126.12,111.74,84.01,92.18,90.49,76.13,77.09,73.89,98.7,113.39,92.95,73.66,125.43,109.61,69.73,195.15,94.01,145.25,69.33,71.36,97.76,93.93,65.27,126.84,103.9,123.45,213.19,100.06,95.04,78.49,85.15,114.55,83.98,103.18,71.07,111.49,133.91,138.93,68.62,169.79,69.3,59.86,192.51,103.04,84.06,90.35,101.17,204.6,77.31,129.21,87.54,155.38,66.41,74.44,82.44,84.43,122.52,97.46,154.21,75.83,65.94,118.89,81.78,93.51,187.91,125.13,119.21,114.15,102.67,90.84,85.39,106.04,73.17,126.02,123.03,91.72,139.82,64.73,62.63,91.32,68.55,126.31,81.49,57.97,167.38,78.42,71.55,67.6,81.74,112.68,78.59,113.56,85.98,71.86,111.45,88.16,133.17,57.18,87.44,114.89,151.38,141.49,82.96,89.97,107.18,69.4,119.6,83.99,76.54,114.02,125.64,74.79,74.73,144.61,71.29,75.09,115.56,76.06,79.46,93.86,158.41,80.24,77.42,75.32,78.12,73.75,81.18,148.59,88.64,152.72,101.36,98.13,160.93,99.49,81.96,125.72,60.3,85.56,66.73,169.69,94.16,75.84,85.73,68.23,128.7,79.7,88.32,83.36,80.74,94.29,78.4,87.75,69.24,69.92,87.74,105.19,90.06,78.96,96.06,123.37,68.63,134.58,99.25,68.33,76.25,173.08,88.73,75.17,70.52,213.98,83.25,86.94,98.58,83.59,78.93,124.19,61.32,71.33,65.6,137.4,134.15,65.63,88.23,96.07,103.26,90.23,86.64,123.17,148.15,58.72,108.43,85.94,60.16,148.44,122.51,82.11,88.7,95.0,151.54,73.52,76.38,150.29,69.78,166.0,125.12,130.84,160.66,67.39,83.61,76.14,75.42,121.29,70.6,123.34,123.39,184.57,69.67,92.06,86.79,76.59,128.54,88.59,74.14,65.9,75.84,55.72,128.73,151.57,145.66,133.74,107.37,70.45,183.91,63.3,61.5,67.82,123.42,92.44,109.21,100.32,124.65,93.59,69.05,166.52,199.5,77.3,125.44,95.57,77.49,104.56,98.23,103.88,100.02,86.75,86.23,74.37,105.9,132.3,130.73,107.07,92.85,121.8,129.78,88.09,126.18,93.69,114.15,103.2,75.89,113.01,124.74,69.85,91.08,114.46,94.55,118.45,211.51,85.1,85.59,57.34,88.68,65.96,94.38,101.03,84.32,93.7,132.08,67.85,94.42,83.76,89.59,87.55,74.34,112.34,96.96,67.58,182.0,98.03,198.39,85.32,116.72,90.75,107.77,92.04,65.13,127.45,96.36,97.76,100.29,106.72,170.91,62.18,80.82,169.79,191.03,71.51,178.05,134.42,117.62,92.79,101.32,149.57,155.99,91.45,87.58,108.35,96.68,88.98,99.5,78.06,77.72,77.02,102.88,128.83,90.2,69.27,127.9,73.93,131.18,118.0,212.52,139.8,93.65,78.86,114.78,89.05,145.41,105.34,66.11,121.68,86.44,91.13,144.84,88.89,82.1,141.48,98.31,63.66,138.16,83.32,115.43,98.16,186.18,63.36,92.32,77.54,87.01,70.02,99.46,66.25,71.9,123.92,126.11,79.65,73.82,118.92,70.62,130.69,167.55,151.04,71.3,76.55,98.25,74.87,151.43,96.18,79.51,152.72,66.26,110.18,72.5,104.22,68.98,83.78,115.93,94.81,134.1,96.44,88.91,59.82,123.82,84.07,67.9,102.95,92.43,137.36,98.66,170.44,75.07,149.41,94.65,90.71,88.31,67.14,164.34,69.7,123.48,83.37,72.51,96.5,116.86,97.23,97.27,90.5,68.87,90.23,104.84,77.7,116.44,135.9,95.42,93.33,68.11,150.36,93.74,88.39,106.77,99.77,119.05,95.13,151.27,66.89,118.54,196.49,71.89,74.18,135.63,94.49,90.89,66.18,119.98,140.97,91.6,194.56,82.36,60.87,179.38,134.3,90.04,85.36,73.21,85.35,94.67,71.0,97.18,94.45,202.8,74.01,80.41,87.85,96.61,82.41,82.69,78.77,120.27,72.24,125.58,76.09,70.29,117.01,65.73,87.88,91.95,132.28,111.14,189.38,135.43,104.4,136.97,78.74,91.91,70.9,71.65,69.17,103.37,110.52,158.22,69.38,94.96,58.51,77.75,93.71,120.6,222.0,88.96,91.28,109.74,72.35,78.67,86.13,109.3,198.0,118.82,102.41,73.75,95.79,98.63,66.57,102.59,93.82,122.18,71.69,83.67,75.13,89.11,71.49,112.97,117.93,131.83,84.96,115.24,73.09,66.24,63.57,128.2,193.26,80.57,200.05,176.18,88.36,70.41,209.54,96.65,193.91,104.8,120.07,174.89,65.44,86.2,102.88,78.19,144.68,67.22,109.82,102.75,77.69,125.62,127.11,167.74,74.41,104.44,66.73,95.71,141.9,71.52,84.31,158.4,81.22,90.91,107.05,70.55,72.68,77.04,85.97,106.44,112.94,82.49,76.96,97.25,143.19,93.77,66.68,102.11,70.98,94.53,68.26,89.0,116.93,88.03,116.33,86.62,167.49,169.09,82.75,114.7,90.09,95.35,108.94,201.12,94.08,82.67,93.61,56.28,61.46,88.75,98.73,95.65,101.82,74.63,71.61,96.69,103.92,183.33,96.28,129.46,75.22,99.02,67.23,140.94,104.83,111.85,167.99,98.19,108.03,88.68,65.86,84.23,103.62,134.05,92.96,208.84,60.25,126.7,106.57,70.65,105.43,79.61,75.27,97.82,82.32,82.72,123.6,69.12,131.7,122.79,83.57,84.36,83.86,122.29,72.83,157.19,101.67,57.64,109.56,114.12,114.93,93.78,95.46,85.15,99.54,109.08,76.46,123.77,119.9,199.14,85.48,67.91,83.79,86.12,91.98,71.93,65.8,107.1,74.23,103.83,86.05,69.87,98.03,161.22,79.85,132.46,88.53,78.26,88.43,75.52,85.79,94.6,118.95,85.59,114.46,231.78,122.27,102.35,84.23,129.18,93.23,118.24,185.88,66.86,106.82,81.47,61.31,87.28,95.73,81.94,143.53,57.26,80.26,106.08,83.88,210.29,187.75,67.82,67.86,67.65,64.73,78.2,88.71,130.36,118.32,71.24,88.87,160.95,119.18,145.68,157.34,124.38,208.97,62.57,82.86,71.88,117.75,107.06,217.38,87.97,95.5,85.85,90.83,82.8,115.92,93.02,67.26,104.49,59.16,71.12,133.92,86.54,220.71,72.08,69.99,83.3,191.0,77.18,84.46,77.93,121.86,118.05,89.85,95.94,90.06,191.81,105.0,79.44,104.96,191.45,116.76,71.61,124.69,162.64,124.89,153.42,89.4,90.4,80.46,61.68,141.09,130.0,200.35,181.68,85.84,192.62,87.66,128.88,147.11,87.76,123.62,133.31,95.47,130.04,98.03,61.43,87.07,93.97,76.28,95.43,68.37,130.84,99.11,121.22,202.79,90.38,93.11,80.72,93.09,60.53,90.03,122.52,75.08,70.19,76.89,113.75,61.78,134.16,106.39,89.89,107.38,99.04,88.4,98.62,71.22,132.79],"precio_te":[97.05,73.76,88.35,106.69,125.06,64.32,89.24,93.42,92.31,75.65,59.84,90.75,80.68,71.35,76.24,73.01,92.91,80.51,118.95,97.58,75.81,103.88,73.45,97.25,92.45,221.38,67.57,62.73,67.63,84.13,125.54,65.23,131.68,109.34,129.39,108.6,76.99,90.52,120.15,70.46,94.35,128.12,177.05,155.83,105.66,122.04,80.13,167.54,127.56,202.28,181.68,78.56,133.81,149.23,145.48,82.35,65.18,131.32,142.39,109.66,67.94,97.18,86.2,120.52,65.91,68.22,136.89,100.26,93.22,58.53,108.39,71.49,105.62,70.58,112.05,84.36,76.65,82.24,78.0,79.43,200.15,139.39,153.09,75.64,64.05,140.6,73.2,97.5,73.27,112.79,133.3,74.81,88.13,93.53,70.5,68.86,120.61,205.17,67.09,79.75,89.38,96.18,118.41,119.38,68.58,85.05,124.45,106.3,98.27,202.2,92.26,69.21,91.57,161.41,192.3,103.64,92.39,193.94,58.31,68.19,80.64,91.13,69.4,77.63,73.96,70.97,84.08,66.53,90.75,87.25,77.48,67.33,89.06,81.1,95.2,74.82,114.2,109.85,129.2,71.3,75.55,73.8,88.84,107.66,126.7,70.34,90.36,87.98,103.39,127.63,78.37,134.93,75.25,168.53,86.49,92.44,64.85,85.38,71.14,58.48,219.05,90.2,73.24,86.83,83.45,138.43,88.1,95.27,93.86,85.49,71.68,71.31,81.13,69.58,83.98,111.85,67.63,162.42,70.9,117.79,78.6,67.28,93.95,80.57,127.35,132.78,89.8,61.45,117.68,82.25,91.5,142.83,93.83,115.97,103.92,65.24,81.66,91.96,68.08,133.78,146.75,97.51,126.44,231.1,117.53,111.09,149.27,130.89,76.37,232.92,89.05,82.24,135.64,153.1,133.57,88.97,110.07,228.66,140.42,100.69,82.54,57.11,147.4,77.88,101.78,97.5,76.99,101.2,93.45,105.89,91.18,119.2,188.22,85.21,161.41,75.03,85.87,77.18,121.04,134.65,58.96,97.36,76.64,97.61,126.11,84.8,89.99,105.57,86.35,67.8,95.25,99.53,128.31,88.76,89.75,99.4,91.87,164.03,149.31,81.02,76.32,112.18,114.66,62.2,88.59,150.67,154.34,77.99,172.08,181.54,71.32,146.62,92.16,214.84,119.2,108.47,108.33,70.49,70.73,89.91,68.45,114.25,76.19,68.79],"nulos_precio_tr":71,"auc_ok":[0.7462,0.7556,0.8056,0.7509,0.7324],"auc_fuga":[0.7462,0.7558,0.806,0.7506,0.7324]},"modelo":{"limpio":{"n":1200,"modelo":{"auc":[0.7462,0.7556,0.8056,0.7509,0.7324],"f1":[0.6838,0.6393,0.7032,0.6486,0.6262],"acc":[0.6917,0.6708,0.7292,0.675,0.6667]}},"tonto":{"auc":[0.5,0.5,0.5,0.5,0.5],"f1":[0.0,0.0,0.0,0.0,0.0],"acc":[0.5292,0.5292,0.5292,0.5292,0.5292]},"sucio":{"n":1245,"modelo":{"auc":[0.7152,0.734,0.7552,0.7541,0.7468],"f1":[0.5936,0.6201,0.69,0.6723,0.6722],"acc":[0.6426,0.6506,0.7149,0.6867,0.6827]}}},"ia":{"paises":[["ES",176,388],["UK",169,349],["DE",108,219],["otros",60,139],["Nordicos",40,85],["IT",46,77],["NL",28,75],["FR",26,56]],"falta":[53,112],"es_imp":[229,500],"global":[706,1500],"con_pais":[0.7462,0.7556,0.8056,0.7509,0.7324],"sin_pais":[0.7476,0.7579,0.8065,0.7513,0.7301]}}};
+(function(){
+"use strict";
+const D = DEMO;
+/* ───────── utilidades ───────── */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md = s => esc(s).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\*([^*]+)\*/g,'<i>$1</i>');
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const fmt = (x, d = 1) => Number.isFinite(x) ? x.toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d}) : 'NaN';
+const mean = a => a.reduce((s, v) => s + v, 0) / a.length;
+const NS = 'http://www.w3.org/2000/svg';
+function S(name, attrs, parent, text){ const e = document.createElementNS(NS, name); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; if (parent) parent.appendChild(e); return e; }
+const lin = (d0, d1, r0, r1) => v => r0 + (v - d0) * (r1 - r0) / (d1 - d0);
+function ticks(a, b, k){ const st = (b - a) / k, out = []; for (let i = 0; i <= k; i++) out.push(a + st * i); return out; }
+/* Gráfico con ejes: devuelve {svg, X, Y, g (capa dentro del área), W, H, m} */
+function chart(opt){
+  const W = opt.w || 460, H = opt.h || 290, m = Object.assign({l: 48, r: 12, t: 12, b: 40}, opt.m || {});
+  const svg = S('svg', {viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': opt.label || ''}); svg.classList.add('chart');
+  const X = lin(opt.x[0], opt.x[1], m.l, W - m.r), Y = lin(opt.y[0], opt.y[1], H - m.b, m.t);
+  const id = 'c' + Math.random().toString(36).slice(2, 8);
+  const cp = S('clipPath', {id}, S('defs', {}, svg)); S('rect', {x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b}, cp);
+  (opt.xt || ticks(opt.x[0], opt.x[1], 5)).forEach(v => { S('line', {x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, class: 'gl'}, svg); S('text', {x: X(v), y: H - m.b + 15, 'text-anchor': 'middle'}, svg, opt.fx ? opt.fx(v) : fmt(v, 0)); });
+  const ylab = [];
+  (opt.yt || ticks(opt.y[0], opt.y[1], 4)).forEach(v => { S('line', {x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: 'gl'}, svg); ylab.push(S('text', {x: m.l - 6, y: Y(v) + 4, 'text-anchor': 'end'}, svg, opt.fy ? opt.fy(v) : fmt(v, 0))); });
+  S('line', {x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, class: 'ax'}, svg); S('line', {x1: m.l, x2: m.l, y1: m.t, y2: H - m.b, class: 'ax'}, svg);
+  if (opt.xl) S('text', {x: (m.l + W - m.r) / 2, y: H - 6, 'text-anchor': 'middle', class: 'tl'}, svg, opt.xl);
+  if (opt.yl) S('text', {x: 12, y: (m.t + H - m.b) / 2, 'text-anchor': 'middle', class: 'tl', transform: `rotate(-90 12 ${(m.t + H - m.b) / 2})`}, svg, opt.yl);
+  const g = S('g', {'clip-path': `url(#${id})`}, svg);
+  return {svg, X, Y, g, W, H, m, ylab};
+}
+function pieza(host, ids, titulo, extra){
+  const p = el('section', 'pieza'); p.dataset.pieza = ids;
+  p.appendChild(el('div', 'bh', `<span>${esc(titulo)}</span>${extra || ''}`));
+  const b = el('div', 'bb'); p.appendChild(b); host.appendChild(p); return b;
+}
+/* ───────── widgets de cada sprint (se concatenan aquí) ───────── */
+const W = {};
+/* Widget «limpieza» (S06): del fichero sucio al modelo de referencia. Piezas: inventario · limpieza · particion · modelo · ia.
+   Datos (prep_limpieza.py): D.datos = {n, con_defecto, defectos[], ejemplos[], combos{clave:{m[],r[]}}, particion{}, modelo{}, ia{}}.
+   La clave de combos son 7 bits (una regla cada uno: dup, coma, fecha, canal, pais, imp, ant) y una «b» si los imposibles se borran en vez de pasarse a nulo. */
+W.limpieza = function(host, D){
+  const d = D.datos, N = d.n, P = d.particion;
+  const pc = (k, n, dec = 1) => fmt(100 * k / n, dec) + ' %';
+  const sgn = (x, dec = 1) => (x > 0 ? '+' : x < 0 ? '−' : '') + fmt(Math.abs(x), dec);
+  const sdp = a => { const m = mean(a); return Math.sqrt(a.reduce((s, v) => s + (v - m) * (v - m), 0) / a.length); };
+  const med = a => { const s = a.slice().sort((x, y) => x - y), k = s.length >> 1; return s.length % 2 ? s[k] : (s[k - 1] + s[k]) / 2; };
+  document.head.appendChild(el('style', null, `
+  .ctl label{flex-wrap:wrap} .ctl select{max-width:100%;min-width:0}
+  .w06-sum{margin:0 0 12px;font-size:15px}
+  .w06-inv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:14px;align-items:start}
+  @media (max-width:760px){.w06-inv{grid-template-columns:minmax(0,1fr)}}
+  .w06-list{display:grid;gap:6px}
+  .w06-d{display:block;width:100%;text-align:left;border:2px solid var(--line);background:var(--surface);border-radius:10px;padding:7px 11px;font-size:14px;font-weight:700;line-height:1.25}
+  .w06-d .top{display:flex;justify-content:space-between;gap:10px}
+  .w06-d .n{font-family:var(--f-mono);font-weight:600;white-space:nowrap}
+  .w06-d .bar{display:block;height:5px;border-radius:3px;background:var(--accent);margin-top:5px;min-width:3px}
+  .w06-d[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+  .w06-d[aria-pressed="true"] .bar{background:var(--bg)}
+  .w06-det{border:2px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--bg)}
+  .w06-det h3{margin-bottom:6px}
+  .w06-det p{margin:0 0 8px;font-size:14.5px}
+  .w06-cnt{display:grid;gap:3px;margin:0 0 10px}
+  .w06-cnt .r{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) 3.2em;gap:8px;align-items:center;font-size:13px}
+  .w06-cnt .v{font-family:var(--f-mono);overflow-wrap:anywhere}
+  .w06-cnt .t{height:8px;background:var(--soft);border-radius:4px;overflow:hidden}
+  .w06-cnt .t i{display:block;height:100%;background:var(--blue)}
+  .w06-cnt .c{text-align:right;font-family:var(--f-mono)}
+  .w06-rules{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+  .w06-rules label{display:flex;gap:9px;align-items:flex-start;font-size:14px;font-weight:700;cursor:pointer}
+  .w06-rules input{margin-top:2px;width:18px;height:18px;accent-color:var(--accent);flex:none}
+  .w06-rules small{display:block;font-weight:500;color:var(--muted);font-family:var(--f-mono);font-size:12px;overflow-wrap:anywhere}
+  .w06-rules li.off label{opacity:.55;cursor:not-allowed}
+  .w06-tb{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .w06-tb select{font:inherit;font-size:13.5px;padding:4px 8px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+  td.w06-ch{background:var(--sky);font-weight:700}
+  .w06-nw{white-space:nowrap}
+  @media (max-width:560px){.w06-id{display:none}}
+  .w06-pre{font-family:var(--f-mono);font-size:12.5px;background:var(--code-bg);border-radius:8px;padding:8px 12px;margin:10px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+  .w06-h{font-family:var(--f-display);font-weight:800;font-size:15px;margin:14px 0 6px}
+  .w06-split{display:flex;height:34px;border-radius:8px;overflow:hidden;font-size:13px;font-weight:800;margin-bottom:10px}
+  .w06-split span{display:flex;align-items:center;justify-content:center;white-space:nowrap}
+  .w06-split .tr{background:var(--teal);color:#fff} .w06-split .te{background:var(--accent);color:#fff}
+  .w06-sh{display:grid;grid-template-columns:5.2em minmax(0,1fr) 5.4em;gap:8px;align-items:center;font-size:13.5px;margin-bottom:4px}
+  .w06-sh .t{height:12px;background:var(--soft);border-radius:6px;overflow:hidden}
+  .w06-sh .t i{display:block;height:100%;background:var(--blue)}
+  .w06-sh b{font-family:var(--f-mono);text-align:right}
+  @media (max-width:460px){.w06-sh{grid-template-columns:4em minmax(0,1fr) 5em}}
+  `));
+
+  /* ═════ 1 · inventario ═════ */
+  let b = pieza(host, 'inventario', 'INVENTARIO DE DEFECTOS · reservas_sucio.csv');
+  b.innerHTML = `<p class="w06-sum"><b>${d.con_defecto} de ${N} filas (${pc(d.con_defecto, N, 0)})<\/b> tienen al menos un defecto. ¿Se puede usar el fichero tal cual? Elegid un defecto y mirad <b>filas reales<\/b> del CSV; las barras comparan cuántas filas afecta cada uno.<\/p>
+    <div class="w06-inv"><div class="w06-list" role="group" aria-label="Defectos del fichero"><\/div><div class="w06-det" aria-live="polite"><\/div><\/div>`;
+  const lista = b.querySelector('.w06-list'), det = b.querySelector('.w06-det');
+  const mx = Math.max(...d.defectos.map(x => x.filas));
+  d.defectos.forEach((x, i) => {
+    const bt = el('button', 'w06-d', `<span class="top"><span>${esc(x.nombre)}<\/span><span class="n">${x.filas}<\/span><\/span><span class="bar" style="width:${(100 * x.filas / mx).toFixed(1)}%"><\/span>`);
+    bt.type = 'button'; bt.setAttribute('aria-pressed', 'false'); bt.addEventListener('click', () => elegirDef(i)); lista.appendChild(bt);
+  });
+  function elegirDef(i){
+    lista.querySelectorAll('.w06-d').forEach((x, k) => x.setAttribute('aria-pressed', String(k === i)));
+    const x = d.defectos[i]; let ej = '';
+    if (x.ej) ej = `<div class="scroll"><table><thead><tr>${x.ej.cab.map(c => `<th>${esc(c)}<\/th>`).join('')}<\/tr><\/thead><tbody>${x.ej.filas.map(f => `<tr>${f.map(v => `<td>${esc(v)}<\/td>`).join('')}<\/tr>`).join('')}<\/tbody><\/table><\/div>`;
+    else if (x.cuenta) { const m = Math.max(...x.cuenta.map(c => c[1])); ej = `<div class="w06-cnt">${x.cuenta.map(c => `<div class="r"><span class="v">${x.id === 'nulos' || c[0] === '(vacío)' ? esc(c[0]) : '«' + esc(c[0]) + '»'}<\/span><span class="t"><i style="width:${(100 * c[1] / m).toFixed(1)}%"><\/i><\/span><span class="c">${c[1]}<\/span><\/div>`).join('')}<\/div>`; }
+    det.innerHTML = `<h3>${esc(x.nombre)}<\/h3><p class="hint">Dónde: <code>${esc(x.cols)}<\/code> · <b>${x.filas} de ${N} filas (${pc(x.filas, N)})<\/b><\/p><p>${md(x.nota)}<\/p>${ej}
+      <div class="sql">${esc(x.det)}<\/div><p class="cap"><b>Causa probable:<\/b> ${md(x.causa)}<br><b>La función hace:<\/b> ${md(x.trat)}<\/p>
+      ${x.tipo === 'pregunta' ? `<p style="margin:8px 0 0"><span class="pill warn">PREGUNTA PARA EL CLIENTE<\/span> ${md(x.pregunta)}<\/p>` : `<p style="margin:8px 0 0"><span class="pill ok">SE ARREGLA CON UNA REGLA FIJA<\/span><\/p>`}`;
+  }
+  elegirDef(0);
+
+  /* ═════ 2 · limpieza: una casilla por regla de limpiar_reservas ═════ */
+  const REGLAS = ['dup', 'coma', 'fecha', 'canal', 'pais', 'imp', 'ant'];
+  const TX = [['drop_duplicates()', 'Quitar las filas repetidas'], ['str.replace(",", ".")', 'Precio: coma → punto y a número'], ['to_datetime(…, errors="coerce") ×2', 'Fecha de reserva: leer los dos formatos'],
+    ['str.strip().str.lower().str.replace(" ", "_")', 'Canal: sin espacios, minúsculas, guion bajo'], ['.map(EQUIV_PAIS)', 'País: tabla de equivalencias'],
+    ['.where(…between(20, 1000))', 'Valores imposibles → nulo (precio 20–1000 €, noches 1–60)'], ['(fecha_llegada − fecha_reserva).dt.days', 'Antelación: recalcular con las fechas']];
+  const st = {dup: 1, coma: 1, fecha: 1, canal: 1, pais: 1, imp: 1, ant: 1, borrar: 0};
+  const lm = pieza(host, 'limpieza', 'LIMPIAR CON UNA FUNCIÓN · limpiar_reservas(df)');
+  lm.innerHTML = `<p class="cap" style="margin:0 0 10px">Cada casilla es una línea de la función del paso 3. <b>Marcad y desmarcad<\/b>: la tabla cuenta qué cambia respecto al CSV tal cual, y el resumen es el que devolvería la función.<\/p>
+    <div class="duo"><div><ul class="w06-rules" id="lm-r"><\/ul>
+      <div class="w06-tb"><label class="hint" id="lm-bl">Imposibles: <select id="lm-b" aria-label="Qué hacer con los valores imposibles"><option value="0">pasar a nulo (la fila se queda)<\/option><option value="1">borrar la fila<\/option><\/select><\/label>
+      <button type="button" class="btn small" id="lm-todas">Marcar todas<\/button><button type="button" class="btn small" id="lm-ninguna">Quitar todas<\/button><\/div><\/div>
+      <div><div class="scroll"><table><thead><tr><th>Qué se cuenta<\/th><th class="num">Antes<\/th><th class="num">Después<\/th><\/tr><\/thead><tbody id="lm-t"><\/tbody><\/table><\/div><\/div><\/div>
+    <div class="w06-pre" id="lm-res" aria-label="Resumen que devuelve la función"><\/div><div class="msg" id="lm-m" aria-live="polite"><\/div>
+    <div class="w06-h">Una celda sucia, antes y después<\/div><div class="scroll"><table><thead><tr><th>Columna<\/th><th class="w06-id">id_reserva<\/th><th>En el CSV<\/th><th>Con las reglas<\/th><th>Por qué<\/th><\/tr><\/thead><tbody id="lm-e"><\/tbody><\/table><\/div>`;
+  const $l = s => lm.querySelector(s), ul = $l('#lm-r');
+  REGLAS.forEach((k, i) => { const li = el('li', null, `<label><input type="checkbox" data-k="${k}"><span>${i + 1} · ${esc(TX[i][1])}<small>${esc(TX[i][0])}<\/small><\/span><\/label>`); ul.appendChild(li); });
+  const FILAS = [['Filas', 0, 0], ['Filas repetidas exactas', 1, 0], ['Precios ilegibles (texto con coma)', 2, 0], ['Fechas de reserva sin convertir (dd/mm/aaaa)', 3, 0], ['Valores distintos de canal', 4, 0], ['Valores distintos de país', 5, 0],
+    ['Valores imposibles (precio o noches)', 6, 0], ['Desviación típica del precio (€)', 7, 1], ['Antelaciones que no cuadran con las fechas', 8, 0], ['Huecos en precio_noche', 9, 0], ['Huecos en noches', 10, 0]];
+  const clave = () => REGLAS.map(k => st[k] ? '1' : '0').join('') + (st.imp && st.borrar ? 'b' : '');
+  function limpieza(){
+    REGLAS.forEach(k => { const c = ul.querySelector(`[data-k="${k}"]`); c.checked = !!st[k]; });
+    ul.querySelector('[data-k="imp"]').disabled = !st.coma; ul.querySelector('[data-k="ant"]').disabled = !st.fecha;
+    ul.querySelector('[data-k="imp"]').closest('li').classList.toggle('off', !st.coma); ul.querySelector('[data-k="ant"]').closest('li').classList.toggle('off', !st.fecha);
+    $l('#lm-bl').style.display = st.imp ? '' : 'none'; $l('#lm-b').value = st.borrar ? '1' : '0';
+    const c = d.combos[clave()], m = c.m, rr = c.r, m0 = d.combos['0000000'].m, mf = d.combos['1111111'].m;
+    $l('#lm-t').innerHTML = FILAS.map(([t, i, dec]) => `<tr><td>${esc(t)}<\/td><td class="num">${fmt(m0[i], dec)}<\/td><td class="num${m[i] !== m0[i] ? ' w06-ch' : ''}">${fmt(m[i], dec)}<\/td><\/tr>`).join('');
+    const res = [['filas_antes', N]]; if (st.dup) res.push(['duplicados_quitados', rr[0]]);
+    if (st.imp) res.push(st.borrar ? ['filas_borradas_por_imposibles', rr[3]] : ['imposibles_a_nulo', rr[1]]);
+    if (st.ant) res.push(['antelaciones_recalculadas', rr[2]]); res.push(['filas_despues', m[0]]);
+    $l('#lm-res').textContent = 'resumen = {' + res.map(([k, v]) => `'${k}': ${v}`).join(', ') + '}';
+    const todo = REGLAS.every(k => st[k]) && !st.borrar, ms = [];
+    if (!st.dup) ms.push(`Quedan <b>${m[1]} filas repetidas<\/b>: esas reservas cuentan dos veces y, con un reparto normal, <b>${P.gemelas} de las ${P.n_te_fichero} filas de test<\/b> tendrían una copia idéntica en train (el examen ya visto).`);
+    if (!st.coma) ms.push(`<b>${m[2]} precios siguen siendo texto<\/b> con coma: el modelo no puede leerlos y acabarían como huecos.`);
+    if (!st.imp && m[7] > 2 * mf[7]) ms.push(`Quedan <b>${m[6]} valores imposibles<\/b>: el escalador aprendería una desviación del precio de <b>${fmt(m[7], 0)} €<\/b> en vez de ${fmt(mf[7], 0)} €, porque los 9999 € aplastan al resto.`);
+    else if (!st.imp && m[6]) ms.push(`Quedan <b>${m[6]} valores imposibles<\/b> dentro de los datos.`);
+    if (st.imp && st.borrar) ms.push(`Borrar las filas deja <b>${fmt(m[0], 0)} filas<\/b> en vez de ${fmt(d.combos[clave().slice(0, 7)].m[0], 0)}: cada fila eliminada hay que contarla y justificarla. Pasarla a nulo conserva la reserva y deja que el <i>pipeline<\/i> impute el hueco.`);
+    if (!st.fecha) ms.push(`Las <b>${m[3]} fechas en dd/mm/aaaa<\/b> siguen como texto: no se puede calcular la antelación ni ordenar por fecha.`);
+    else if (!st.ant) ms.push(`Hay <b>${m[8]} antelaciones que no cuadran<\/b> con las fechas.`);
+    if (!st.canal) ms.push(`El canal tiene <b>${m[4]} valores<\/b> en vez de 4.`); if (!st.pais) ms.push(`El país tiene <b>${m[5]} valores<\/b> en vez de ${mf[5]}.`);
+    const q = $l('#lm-m');
+    q.className = 'msg ' + (todo ? 'ok' : ms.length ? 'warn' : '');
+    q.innerHTML = todo ? `<b>Es la limpieza completa del paso 3:<\/b> ${N} → ${m[0]} filas, ${rr[0]} duplicados quitados, ${rr[1]} imposibles pasados a nulo y ${rr[2]} antelaciones recalculadas. Los huecos no se rellenan aquí: lo hace el <i>pipeline<\/i>, solo con <i>train<\/i>.`
+      : ms.length ? ms.slice(0, 2).join(' ') + (ms.length > 2 ? ` <i>(y ${ms.length - 2} aviso${ms.length > 3 ? 's' : ''} más)<\/i>` : '') : 'Combinación válida: mirad la tabla para ver qué cambia.';
+    $l('#lm-e').innerHTML = d.ejemplos.map(e => {
+      let v = e.antes; e.pasos.forEach(([req, val]) => { if (req.every(i => st[REGLAS[i]])) v = val; });
+      if (st.imp && st.borrar && e.pasos.some(p => p[0].includes(5)) && e.col !== 'fila completa') v = '(fila borrada)';
+      const cambia = v !== e.antes;
+      return `<tr><td><code class="w06-nw">${esc(e.col)}<\/code><\/td><td class="num w06-id">${e.id}<\/td><td>${esc(e.antes)}<\/td><td${cambia ? ' class="w06-ch"' : ''}>${esc(v)}<\/td><td class="hint">${esc(e.nota)}<\/td><\/tr>`;
+    }).join('');
+  }
+  ul.addEventListener('change', e => { const k = e.target.dataset.k; if (!k) return; st[k] = e.target.checked ? 1 : 0; if (!st.coma) st.imp = 0; if (!st.fecha) st.ant = 0; limpieza(); });
+  $l('#lm-b').addEventListener('change', e => { st.borrar = +e.target.value; limpieza(); });
+  $l('#lm-todas').addEventListener('click', () => { REGLAS.forEach(k => st[k] = 1); limpieza(); });
+  $l('#lm-ninguna').addEventListener('click', () => { REGLAS.forEach(k => st[k] = 0); limpieza(); });
+  limpieza();
+
+  /* ═════ 3 · partición y fuga ═════ */
+  const pa = pieza(host, 'particion', 'SEPARAR TRAIN Y TEST · antes de aprender nada');
+  pa.innerHTML = `<div class="duo"><div><div class="w06-h" style="margin-top:0">1 · El reparto 80 / 20<\/div>
+      <div class="w06-split" aria-hidden="true"><span class="tr" style="width:80%">train ${fmt(P.n_tr, 0)}<\/span><span class="te" style="width:20%">test ${fmt(P.n_te, 0)}<\/span><\/div>
+      <div class="w06-sh"><span>train<\/span><span class="t"><i id="pa-a"><\/i><\/span><b id="pa-an"><\/b><\/div><div class="w06-sh"><span>test<\/span><span class="t"><i id="pa-b"><\/i><\/span><b id="pa-bn"><\/b><\/div>
+      <p class="cap">Parte coloreada = reservas canceladas en cada trozo.<\/p>
+      <div class="ctl" style="margin-top:6px;padding-top:10px"><label><input type="checkbox" id="pa-s" checked> <code>stratify=y<\/code><\/label><\/div><div class="msg" id="pa-m1" aria-live="polite"><\/div><\/div>
+    <div><div class="w06-h" style="margin-top:0">2 · ¿Con qué filas aprende el imputador y el escalador?<\/div>
+      <div class="scroll"><table><thead><tr><th>Precio (€) que aprende<\/th><th class="num">solo train<\/th><th class="num">todo el dataset<\/th><\/tr><\/thead><tbody id="pa-t"><\/tbody><\/table><\/div>
+      <div class="ctl" style="margin-top:8px;padding-top:10px"><label>Precios del test <input type="range" id="pa-p" min="-40" max="40" step="5" value="0" aria-describedby="pa-pr"><\/label><span class="read" id="pa-pr"><\/span><\/div>
+      <div class="msg" id="pa-m2" aria-live="polite"><\/div><\/div><\/div>`;
+  const $p = s => pa.querySelector(s);
+  function particion(){
+    const s = $p('#pa-s').checked, kt = s ? P.k_tr : P.k_tr0, ke = s ? P.k_te : P.k_te0;
+    $p('#pa-a').style.width = (100 * kt / P.n_tr) + '%'; $p('#pa-b').style.width = (100 * ke / P.n_te) + '%';
+    $p('#pa-an').textContent = pc(kt, P.n_tr); $p('#pa-bn').textContent = pc(ke, P.n_te);
+    const m1 = $p('#pa-m1'); m1.className = 'msg ' + (s ? 'ok' : 'warn');
+    m1.innerHTML = s ? `Con <code>stratify=y<\/code>, train y test tienen la misma proporción de canceladas. En 200 sorteos distintos, el test tuvo siempre un <b>${fmt(100 * P.con_rango[1], 1)} %<\/b>.`
+      : `Sin él, en este sorteo train tiene ${pc(kt, P.n_tr)} y test <b>${pc(ke, P.n_te)}<\/b>: no se evalúa con lo mismo que se aprende. En 200 sorteos, el test iría del <b>${fmt(100 * P.sin_rango[0], 1)} %<\/b> al <b>${fmt(100 * P.sin_rango[1], 1)} %<\/b>.`;
+  }
+  $p('#pa-s').addEventListener('change', particion);
+  const stats = a => { const m = mean(a); return [med(a), m, sdp(a)]; };
+  function fuga(){
+    const f = +$p('#pa-p').value, k = 1 + f / 100, tr = P.precio_tr, te = P.precio_te.map(v => v * k);
+    const a = stats(tr), a0 = stats(tr.concat(P.precio_te)), z = stats(tr.concat(te));
+    $p('#pa-pr').textContent = (f > 0 ? '+' : f < 0 ? '−' : '') + Math.abs(f) + ' %';
+    $p('#pa-t').innerHTML = ['Mediana (rellena los huecos)', 'Media (escalador)', 'Desviación (escalador)'].map((t, i) => `<tr><td>${t}<\/td><td class="num">${fmt(a[i], 1)}<\/td><td class="num${Math.abs(z[i] - a[i]) > .05 ? ' w06-ch' : ''}">${fmt(z[i], 1)}<\/td><\/tr>`).join('');
+    const dm = mean(P.auc_fuga) - mean(P.auc_ok), q = $p('#pa-m2'); q.className = 'msg ' + (f === 0 ? '' : 'bad');
+    q.innerHTML = f === 0 ? `Con el test sin tocar, «todo el dataset» ya da otra mediana (${fmt(z[0], 1)} € frente a ${fmt(a[0], 1)} €): se ha colado información del examen. En estos datos la nota casi no cambia (AUC de validación cruzada ${sgn(dm, 4)}), pero eso no la hace correcta: con otros modelos o variables sí puede inflar el resultado.`
+      : `Habéis cambiado <b>solo el test<\/b>. La columna «solo train» no se mueve (${fmt(a[0], 1)} €); la de «todo el dataset» sí (de ${fmt(a0[0], 1)} a ${fmt(z[0], 1)} €): lo que el modelo aprende depende del examen. Eso es fuga, y por eso el <i>pipeline<\/i> ajusta solo con <i>train<\/i>.`;
+  }
+  $p('#pa-p').addEventListener('input', fuga); particion(); fuga();
+
+  /* ═════ 4 · modelo tonto y validación cruzada ═════ */
+  const mo = pieza(host, 'modelo', 'PIPELINE Y MODELO TONTO · validación cruzada (5 trozos)');
+  mo.innerHTML = `<div class="duo"><div><div id="mo-c"><\/div><div class="legend" id="mo-lg"><\/div><\/div>
+    <div><div class="ctl" style="margin-top:0;padding-top:0;border:0"><label>Métrica <select id="mo-k"><option value="auc">AUC (roc_auc)<\/option><option value="f1">F1<\/option><option value="acc">Exactitud (accuracy)<\/option><\/select><\/label>
+    <label><input type="checkbox" id="mo-s"> Comparar con datos sin limpiar<\/label><\/div>
+    <div class="msg" id="mo-m" aria-live="polite"><\/div><p class="cap" id="mo-f"><\/p>
+    <p class="cap">«Sin limpiar» = el fichero tal cual, con lo mínimo para que <code>scikit-learn<\/code> no falle (un precio con coma queda como hueco). Mismas reservas en <i>train<\/i>; no se usa el test.<\/p><\/div><\/div>
+    <div class="scroll" style="margin-top:12px"><table><thead id="mo-th"><\/thead><tbody id="mo-tb"><\/tbody><\/table><\/div>`;
+  const cm = chart({x: [0, 5], y: [0, 1], xt: [], yt: [0, .25, .5, .75, 1], fy: v => fmt(v, 2), xl: 'Trozo de la validación cruzada', yl: 'Nota', label: 'Nota de cada trozo para cada modelo', w: 460, h: 290});
+  for (let i = 0; i < 5; i++) S('text', {x: cm.X(i + .5), y: cm.H - cm.m.b + 14, 'text-anchor': 'middle'}, cm.svg, String(i + 1));
+  mo.querySelector('#mo-c').appendChild(cm.svg); const gb = S('g', {}, cm.g);
+  const $m = s => mo.querySelector(s), M = d.modelo;
+  const NM = {auc: 'un AUC medio', f1: 'un F1 medio', acc: 'una exactitud media'};
+  function modelo(){
+    const k = $m('#mo-k').value, sc = $m('#mo-s').checked;
+    const ser = [['modelo tonto', M.tonto[k], 'var(--muted)'], ['regresión logística · datos limpios', M.limpio.modelo[k], 'var(--teal)']];
+    if (sc) ser.push(['regresión logística · sin limpiar', M.sucio.modelo[k], 'var(--accent)']);
+    gb.innerHTML = ''; const w = .8 / ser.length;
+    ser.forEach(([nm, v, col], j) => v.forEach((y, i) => { const x0 = cm.X(i + .1 + j * w), x1 = cm.X(i + .1 + (j + 1) * w - .02); const r = S('rect', {x: x0, y: cm.Y(y), width: x1 - x0, height: Math.max(0, cm.Y(0) - cm.Y(y)), fill: col, rx: 2}, gb); S('title', {}, r, `${nm} · trozo ${i + 1}: ${fmt(y, 3)}`); }));
+    $m('#mo-lg').innerHTML = ser.map(([nm, , col]) => `<span><i style="background:${col}"><\/i>${esc(nm)}<\/span>`).join('');
+    $m('#mo-th').innerHTML = `<tr><th>Modelo<\/th>${[1, 2, 3, 4, 5].map(i => `<th class="num">${i}<\/th>`).join('')}<th class="num">media ± desv.<\/th><\/tr>`;
+    $m('#mo-tb').innerHTML = ser.map(([nm, v]) => `<tr><td>${esc(nm)}<\/td>${v.map(y => `<td class="num">${fmt(y, 3)}<\/td>`).join('')}<td class="num"><b>${fmt(mean(v), 3)} ± ${fmt(sdp(v), 3)}<\/b><\/td><\/tr>`).join('');
+    const mt = mean(M.tonto[k]), ml = mean(M.limpio.modelo[k]), sl = sdp(M.limpio.modelo[k]), q = $m('#mo-m');
+    let txt, cls = 'ok';
+    if (k === 'auc') txt = `La logística saca <b>${fmt(ml, 3)}<\/b> frente a <b>${fmt(mt, 3)}<\/b> del tonto (0,5 es azar): <b>ordena las reservas claramente mejor que el azar<\/b>. Se mide siempre contra el tonto.`;
+    else if (k === 'f1') txt = `El tonto saca <b>F1 = ${fmt(mt, 3)}<\/b>: nunca dice «se cancela», así que no detecta ninguna cancelación. La logística llega a <b>${fmt(ml, 3)}<\/b>.`;
+    else { cls = 'warn'; txt = `Ojo con la exactitud: el tonto «acierta» el <b>${fmt(100 * mt, 1)} %<\/b> solo diciendo siempre «no se cancela». La logística llega al ${fmt(100 * ml, 1)} %: son <b>${fmt(100 * (ml - mt), 1)} puntos<\/b> sobre no hacer nada, no ${fmt(100 * ml, 0)}.`; }
+    if (sc) { const ms = mean(M.sucio.modelo[k]), dd = ml - ms, r = Math.max(sl, sdp(M.sucio.modelo[k]));
+      txt += Math.abs(dd) < r ? ` Sin limpiar, la media es ${fmt(ms, 3)}: la diferencia (${sgn(dd, 3)}) es <b>menor que la desviación entre trozos<\/b> (${fmt(r, 3)}). Con este modelo sencillo, limpiar no cambia la nota de forma clara: cambia que sepáis qué datos entran y que otra persona pueda repetirlo.`
+        : ` Sin limpiar, la media baja a ${fmt(ms, 3)} (${sgn(-dd, 3)}): más que la desviación entre trozos (${fmt(r, 3)}), así que aquí la limpieza sí se nota.`; }
+    q.className = 'msg ' + cls; q.innerHTML = txt;
+    $m('#mo-f').innerHTML = `<b>La frase del informe (apartado 4):<\/b> «Nuestro modelo obtiene ${NM[k]} de ${fmt(ml, 3)} ± ${fmt(sl, 3)} frente a ${fmt(mt, 3)} del modelo tonto.»`;
+  }
+  $m('#mo-k').addEventListener('change', modelo); $m('#mo-s').addEventListener('change', modelo); modelo();
+
+  /* ═════ 5 · IA responsable: el país de origen ═════ */
+  const I = d.ia, ia = pieza(host, 'ia', 'IA RESPONSABLE · el país de origen');
+  ia.innerHTML = `<div class="duo"><div id="ia-c"><\/div><div><div class="ctl" style="margin-top:0;padding-top:0;border:0"><label>Países que faltan (${I.falta[1]}) <select id="ia-f"><option value="es">rellenar con el más frecuente (ES)<\/option><option value="des">categoría «desconocido»<\/option><option value="fuera">dejar esas filas fuera<\/option><\/select><\/label>
+    <label><input type="checkbox" id="ia-u" checked> El modelo usa el país<\/label><\/div><div class="msg" id="ia-m1" aria-live="polite"><\/div><div class="msg" id="ia-m2" aria-live="polite"><\/div><div class="msg" id="ia-m3" aria-live="polite"><\/div><\/div><\/div>`;
+  const wil = (k, n) => { const z = 1.96, p = k / n, q = 1 + z * z / n, c = (p + z * z / (2 * n)) / q, h = z * Math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / q; return [c - h, c + h]; };
+  const $i = s => ia.querySelector(s);
+  function paises(){
+    const f = $i('#ia-f').value, g = f === 'fuera' ? (I.global[0] - I.falta[0]) / (I.global[1] - I.falta[1]) : I.global[0] / I.global[1];
+    let fil = I.paises.map(r => r.slice());
+    if (f === 'es') fil = fil.map(r => r[0] === 'ES' ? ['ES', I.es_imp[0], I.es_imp[1]] : r);
+    if (f === 'des') fil.push(['desconocido', I.falta[0], I.falta[1]]);
+    fil.sort((x, y) => y[2] - x[2]);
+    const rh = 27, mL = 80, mR = 84, top = 8, Wd = 460, Hh = top + fil.length * rh + 34, X = lin(.2, .8, mL, Wd - mR);
+    const svg = S('svg', {viewBox: `0 0 ${Wd} ${Hh}`, role: 'img', 'aria-label': 'Porcentaje de cancelaciones por país con su intervalo de confianza'}); svg.classList.add('chart');
+    [.2, .3, .4, .5, .6, .7, .8].forEach(v => { S('line', {x1: X(v), x2: X(v), y1: top, y2: Hh - 30, class: 'gl'}, svg); S('text', {x: X(v), y: Hh - 16, 'text-anchor': 'middle'}, svg, fmt(100 * v, 0) + ' %'); });
+    S('line', {x1: X(g), x2: X(g), y1: top, y2: Hh - 30, stroke: 'var(--muted)', 'stroke-width': 1.6, 'stroke-dasharray': '4 4'}, svg);
+    S('text', {x: X(g) + 4, y: top + 9, fill: 'var(--muted)'}, svg, 'media ' + fmt(100 * g, 1) + ' %');
+    let incl = 0, alto = null;
+    fil.forEach(([nm, k, n], i) => { const y = top + i * rh + rh / 2 + 4, p = k / n, [lo, hi] = wil(k, n), es = nm === 'desconocido' || (nm === 'ES' && f === 'es');
+      if (lo <= g && hi >= g) incl++; if (nm !== 'desconocido' && (!alto || p > alto[1])) alto = [nm, p, n, lo, hi];
+      S('text', {x: mL - 8, y: y + 4, 'text-anchor': 'end', class: 'tl'}, svg, nm);
+      S('line', {x1: X(Math.max(.2, lo)), x2: X(Math.min(.8, hi)), y1: y, y2: y, stroke: es ? 'var(--teal)' : 'var(--blue)', 'stroke-width': 4, 'stroke-linecap': 'round', opacity: .55}, svg);
+      const c = S('circle', {cx: X(p), cy: y, r: 5.5, fill: es ? 'var(--teal)' : 'var(--accent)'}, svg); S('title', {}, c, `${nm}: ${fmt(100 * p, 1)} % de ${n} reservas (intervalo ${fmt(100 * lo, 1)}–${fmt(100 * hi, 1)} %)`);
+      S('text', {x: Wd - mR + 8, y: y + 4}, svg, `${fmt(100 * p, 0)} % · n=${n}`); });
+    const cont = $i('#ia-c'); cont.innerHTML = ''; cont.appendChild(svg);
+    cont.appendChild(el('p', 'cap', '<b>Punto<\/b> = % de reservas canceladas de ese país; <b>raya<\/b> = intervalo de confianza del 95 % (el margen de seguridad). Línea de puntos = media de todas las reservas.'));
+    const nES = I.paises.find(r => r[0] === 'ES'), pe0 = nES[1] / nES[2], pe1 = I.es_imp[0] / I.es_imp[1], pf = I.falta[0] / I.falta[1];
+    const m1 = $i('#ia-m1'); m1.className = 'msg warn';
+    m1.innerHTML = f === 'es' ? `Rellenar con ES convierte ${I.falta[1]} reservas de origen desconocido en españolas: ES pasa de <b>${nES[2]} a ${I.es_imp[1]} reservas<\/b> (+${fmt(100 * I.falta[1] / nES[2], 0)} %) y de ${fmt(100 * pe0, 1)} % a ${fmt(100 * pe1, 1)} %. Aquí casi no se nota porque las reservas sin país cancelan como la media (${fmt(100 * pf, 1)} %), pero eso solo lo sabéis si lo comprobáis.`
+      : f === 'des' ? `Una categoría propia no mezcla nada: las ${I.falta[1]} reservas sin país cancelan un <b>${fmt(100 * pf, 1)} %<\/b>, y el modelo las trata como un grupo más.`
+      : `Dejarlas fuera pierde <b>${I.falta[1]} reservas (${pc(I.falta[1], I.global[1])})<\/b> que sí tienen datos válidos en las demás columnas.`;
+    const ms = $i('#ia-m2'); ms.className = 'msg';
+    ms.innerHTML = `Los intervalos son anchos: <b>${incl} de ${fil.length}<\/b> incluyen la media global. El más alto, <b>${alto[0]}<\/b> (${fmt(100 * alto[1], 0)} % sobre ${alto[2]} reservas, intervalo ${fmt(100 * alto[3], 0)}–${fmt(100 * alto[4], 0)} %), apenas se separa de ella, y mirando ${fil.length} países a la vez alguno saldrá así por azar: no es evidencia fuerte de que esa nacionalidad cancele más.`;
+  }
+  function usoPais(){
+    const u = $i('#ia-u').checked, a = u ? I.con_pais : I.sin_pais, o = u ? I.sin_pais : I.con_pais, q = $i('#ia-m3');
+    q.className = 'msg ok';
+    q.innerHTML = `<b>${u ? 'Con' : 'Sin'} el país en el modelo:<\/b> AUC ${fmt(mean(a), 3)} ± ${fmt(sdp(a), 3)} (${u ? 'sin' : 'con'} país: ${fmt(mean(o), 3)} ± ${fmt(sdp(o), 3)}). ${Math.abs(mean(a) - mean(o)) < .005 ? 'El país <b>no aporta nada medible<\/b>; quitarlo no cuesta nota y elimina el riesgo de tratar distinto a alguien por su nacionalidad.' : 'El país cambia la nota.'}`;
+  }
+  $i('#ia-f').addEventListener('change', () => { paises(); usoPais(); }); $i('#ia-u').addEventListener('change', usoPais);
+  paises(); usoPais();
+  return {};
+};
+
+/* ───────── marco común ───────── */
+const app = document.getElementById('app');
+const sh = (t) => `<div class="sh"><span class="st">${esc(t)}</span><span class="ln"></span></div>`;
+
+const hero = el('header');
+const totalMin = D.pasos.reduce((s, p) => s + (p.min || 0), 0);
+hero.innerHTML = `<div class="kicker">${esc(D.kicker)}</div><h1>${esc(D.titulo)}</h1><p class="lead">${md(D.lead)}</p>
+  <div class="chips"><span class="chip">${D.pasos.length} pasos</span><span class="chip">≈ ${totalMin} min de reto</span><span class="chip">${esc(D.sube_resumen)}</span></div>
+  <p class="hint" style="margin-top:14px">${md(D.aviso)}</p>`;
+app.appendChild(hero);
+
+const play = el('section');
+play.innerHTML = sh('EL PRODUCTO FUNCIONANDO') + `<h2>${esc(D.widget_titulo)}</h2><p class="sec-intro">${md(D.intro)}</p>`;
+const steps = el('div', 'steps'); steps.setAttribute('role', 'group'); steps.setAttribute('aria-label', 'Pasos del reto');
+const aqui = el('div', 'aqui'); aqui.setAttribute('aria-live', 'polite');
+const stage = el('div', 'stage');
+play.append(steps, aqui, stage);
+app.appendChild(play);
+const widget = W[D.widget](stage, D);
+
+function elegir(i){
+  const btns = steps.querySelectorAll('.step');
+  btns.forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
+  const panels = stage.querySelectorAll('[data-pieza]');
+  if (i < 0) { stage.classList.remove('sel'); panels.forEach(p => p.classList.remove('hl')); aqui.innerHTML = md(D.aqui_todo); return; }
+  const p = D.pasos[i];
+  stage.classList.add('sel');
+  panels.forEach(pn => pn.classList.toggle('hl', pn.dataset.pieza.split(' ').some(x => (p.piezas || []).includes(x))));
+  aqui.innerHTML = `<b>Paso ${esc(p.n)} · ${esc(p.titulo)}</b> (${p.min} min). ${md(p.aqui || '')}`;
+  const first = stage.querySelector('.pieza.hl'); if (first && first.getBoundingClientRect().top > window.innerHeight * .8) first.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center'});
+}
+D.pasos.forEach((p, i) => {
+  const b = el('button', 'step', `<span class="n">${esc(p.n)}</span><span>${esc(p.corto || p.titulo)}<small>${p.min} min</small></span>`);
+  b.type = 'button'; b.setAttribute('aria-pressed', 'false'); b.addEventListener('click', () => elegir(steps.querySelector('.step[aria-pressed="true"]') === b ? -1 : i));
+  steps.appendChild(b);
+});
+elegir(-1);
+
+/* qué se sube y cómo se evalúa */
+const fin = el('section');
+fin.innerHTML = sh('QUÉ SE SUBE Y CÓMO SE EVALÚA') + `<h2>Lo que entregáis y con qué se puntúa</h2><p class="sec-intro">Todo va al repositorio del equipo, en la carpeta <code>${esc(D.carpeta_entrega)}</code>. La rúbrica es la misma que usáis para revisar vuestro propio trabajo antes de subirlo.</p>`;
+const files = el('div', 'files');
+D.ficheros.forEach(f => files.appendChild(el('div', 'file', `<b>${esc(f.nombre)}</b><span class="o">${md(f.origen)}</span><span class="s">${esc(f.sube)}</span>`)));
+fin.appendChild(files);
+const tabs = el('div', 'tabs'); tabs.setAttribute('role', 'tablist');
+const lv = el('div', 'levels'); lv.setAttribute('aria-live', 'polite');
+const qq = el('p', 'hint'); qq.style.marginBottom = '10px';
+const NIV = ['1 · Empezado', '2 · Mínimo', '3 · Estándar', '4 · Extra'];
+function criterio(k){
+  tabs.querySelectorAll('.tab').forEach((t, j) => t.setAttribute('aria-selected', String(j === k)));
+  const c = D.rubrica[k]; qq.textContent = c.pregunta;
+  lv.innerHTML = c.niveles.map((t, j) => `<div class="lv${j === 1 ? ' min' : ''}"><h3>${NIV[j]}</h3><p>${md(t)}</p></div>`).join('');
+}
+D.rubrica.forEach((c, k) => { const t = el('button', 'tab', esc(c.criterio)); t.type = 'button'; t.setAttribute('role', 'tab'); t.addEventListener('click', () => criterio(k)); tabs.appendChild(t); });
+fin.append(tabs, qq, lv);
+fin.appendChild(el('p', 'hint', 'Orientación: lo que pide el nivel mínimo sale en un <b>2</b>, el estándar en un <b>3</b> y los extras en un <b>4</b>. Sin una frase de prueba escrita, el nivel no vale.'));
+criterio(0);
+app.appendChild(fin);
+
+const pie = el('footer');
+pie.innerHTML = sh('DÓNDE SEGUIR') + `<div class="links">${D.enlaces.map(e => `<a class="btn" href="${esc(e.url)}">${esc(e.t)}</a>`).join('')}</div><p class="foot" style="margin-top:14px">${md(D.pie)}</p>`;
+app.appendChild(pie);
+})();
+</script>
+</body>
+</html>

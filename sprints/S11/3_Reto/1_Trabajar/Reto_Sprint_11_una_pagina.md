@@ -1,6 +1,6 @@
 # Sprint 11 · Reto «Visión artificial para el cliente» · en una página
 
-> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_11.md](../3_Consultar/Reto_Sprint_11.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); el cuaderno de partida es [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb).
+> Versión corta para **trabajar con ella abierta**. La ficha completa (qué pide el cliente, recursos, uso de la IA y errores frecuentes) sigue en [Reto_Sprint_11.md](../3_Consultar/Reto_Sprint_11.md) y cada paso, explicado, en su propio archivo (enlaces tras el reparto de minutos); el cuaderno de partida es [`S11_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb). **Probad antes la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S11/3_Reto/1_Trabajar/S11_demo_reto.html)** (una página, sin instalar nada).
 
 - **El cliente.**
     - TurisData recibe cientos de fotos a la semana y una persona las clasifica a mano.

@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Demo interactiva del reto del Sprint 17 (IFCD107): audiencia y mensaje único, pirámide, arco y pitch, storyboard con tiempos y voces según el turno, preguntas con el método RESPONDE, comprobación del PDF y revisión con la rúbrica.">
+<title>La defensa · demo interactiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Maqueta común de las demos del reto (IFCD107): hero → «el producto funcionando» con un selector de pasos
+   → qué se sube y cómo se evalúa. Identidad: la de las infografías del curso (tinta azulada, óxido, verde azulado, crema). */
+:root{
+  --bg:#F5F1E8; --surface:#FFFFFF; --ink:#1D2433; --muted:#566073; --line:#D9D2C0; --soft:#EFE7D2;
+  --accent:#C23B1F; --accent-soft:#F7DDD4; --teal:#0F7F7F; --teal-soft:#D5ECEA; --sky:#DCE6F5; --blue:#3D5F96;
+  --ok:#1B7F4B; --ok-soft:#D9F0E3; --bad:#B42318; --bad-soft:#FBE0DC; --warn:#8A5A00; --warn-soft:#F6E7C4;
+  --code-bg:rgba(29,36,51,.08); --focus:#1D2433; --pt:rgba(61,95,150,.42); --grid:#E4DDCB;
+  --f-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+    --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+    --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+    --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12161F; --surface:#1B2230; --ink:#F1ECE0; --muted:#A3ADC0; --line:#2E3748; --soft:#232C3C;
+  --accent:#F08A6C; --accent-soft:#3A2620; --teal:#58C7BE; --teal-soft:#16302F; --sky:#1F2C44; --blue:#8FB0E6;
+  --ok:#6FD3A0; --ok-soft:#173226; --bad:#FF8D78; --bad-soft:#3A1E1A; --warn:#E9C46A; --warn-soft:#3A2F14;
+  --code-bg:rgba(241,236,224,.1); --focus:#F1ECE0; --pt:rgba(143,176,230,.5); --grid:#2A3345; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5.2vw,52px);line-height:1.05;font-weight:800;letter-spacing:-.02em;margin-top:8px}
+h2{font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+h3{font-size:17px;line-height:1.2;font-weight:800}
+p{margin:0}
+code{font-family:var(--f-mono);font-size:.86em;background:var(--code-bg);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+a{color:var(--accent);font-weight:700;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+button{font:inherit;color:inherit;cursor:pointer}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:62ch;margin-top:10px}
+.hint{font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:5px 13px;font-size:14px;font-weight:700}
+.btn{border:2px solid var(--ink);background:transparent;border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.small{padding:5px 11px;font-size:13px}
+.btn.on{background:var(--ink);color:var(--bg)}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sh .st{font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--accent);letter-spacing:.12em;white-space:nowrap}
+.sh .ln{flex:1;height:2px;background:var(--line)}
+.sec-intro{color:var(--muted);max-width:68ch;margin:-4px 0 16px}
+
+/* selector de pasos */
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.step{display:flex;align-items:center;gap:9px;border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:7px 13px 7px 8px;text-align:left;font-weight:700;font-size:14px;line-height:1.2}
+.step .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:14px}
+.step small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+.step[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.step[aria-pressed="true"] small{color:var(--bg);opacity:.8}
+.aqui{background:var(--teal-soft);border-radius:12px;padding:11px 16px;margin-bottom:16px;font-size:15.5px;min-height:3.2em}
+.aqui b{color:var(--teal)}
+
+/* piezas del producto */
+.stage{display:flex;flex-direction:column;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row2>*{min-width:0}
+@media (max-width:860px){.row2{grid-template-columns:1fr}}
+.pieza{background:var(--surface);border:2px solid var(--line);border-radius:14px;overflow:hidden;min-width:0;transition:opacity .2s,box-shadow .2s,border-color .2s}
+.pieza>.bh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 14px;border-bottom:2px solid var(--line);font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.pieza>.bb{padding:12px 14px}
+.stage.sel .pieza{opacity:.5}
+.stage.sel .pieza.hl{opacity:1;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.stage.sel .pieza.hl>.bh{color:var(--accent)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.duo>*{min-width:0}
+@media (max-width:700px){.duo{grid-template-columns:1fr}}
+.cap{font-size:13.5px;color:var(--muted);margin-top:6px}
+.cap b{color:var(--ink)}
+
+/* gráficos */
+svg.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart text{font-family:var(--f-body);font-size:11px;fill:var(--muted)}
+.chart .tl{font-size:11.5px;font-weight:700;fill:var(--ink)}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.chart .ax{stroke:var(--muted);stroke-width:1.2}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--muted);margin-top:4px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.legend i.ln{width:18px;height:3px;border-radius:2px;vertical-align:3px}
+
+/* mandos */
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:12px;padding-top:12px;border-top:2px solid var(--line)}
+.ctl label{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.ctl input[type=range]{width:170px;accent-color:var(--accent)}
+.ctl input[type=number],.ctl select{font-family:var(--f-mono);font-size:14px;padding:5px 8px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.ctl input[type=number]{width:6em}
+.ctl input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
+.read{font-family:var(--f-mono);font-size:13px;color:var(--ink);background:var(--soft);border-radius:8px;padding:6px 10px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 11px;font-weight:800;font-size:12.5px;letter-spacing:.04em}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.msg{margin-top:8px;font-size:14.5px;padding:8px 12px;border-radius:10px;background:var(--soft)}
+.msg.ok{background:var(--ok-soft);color:var(--ok)} .msg.bad{background:var(--bad-soft);color:var(--bad)} .msg.warn{background:var(--warn-soft);color:var(--warn)}
+
+/* tablas */
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:7px 10px;text-align:left}
+th{font-size:12.5px;font-weight:800;letter-spacing:.04em;color:var(--muted);border-bottom:2px solid var(--line)}
+td{border-bottom:1px solid var(--line)}
+td.num,th.num{text-align:right;font-family:var(--f-mono);white-space:nowrap}
+.sql{font-family:var(--f-mono);font-size:13px;background:var(--code-bg);border-radius:8px;padding:8px 12px;margin-bottom:10px;overflow-wrap:anywhere}
+
+/* lista de comprobaciones */
+.checks{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:5px}
+.checks li{display:flex;gap:9px;align-items:baseline;font-size:14.5px}
+.checks .m{flex:none;width:1.3em;text-align:center;font-weight:800}
+.checks li.ok .m{color:var(--ok)} .checks li.no .m{color:var(--muted)} .checks li.bad .m{color:var(--bad)}
+textarea{width:100%;min-height:130px;font:inherit;font-size:15px;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);resize:vertical}
+
+/* qué se sube y rúbrica */
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-bottom:22px}
+.file{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:11px 14px}
+.file b{font-family:var(--f-mono);font-size:13.5px;overflow-wrap:anywhere}
+.file .o{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
+.file .s{display:block;font-size:12.5px;font-weight:800;color:var(--teal);margin-top:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tab{border:2px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 15px;font-weight:700;font-size:14.5px}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:900px){.levels{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.levels{grid-template-columns:1fr}}
+.lv{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:10px 13px;font-size:14px}
+.lv h3{font-size:14px;margin-bottom:5px;color:var(--muted)}
+.lv.min{border-color:var(--teal)} .lv.min h3{color:var(--teal)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.foot{font-size:13.5px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const DEMO = {"kicker":"IFCD107 · SPRINT 17 · DEMO DEL RETO","titulo":"La defensa","lead":"El cliente y su equipo directivo (el tribunal: el docente y, si procede, otras personas invitadas) no son técnicos.","aviso":"Es una demo para entender adónde vamos: **no se entrega nada desde aquí** y no guarda lo que escribáis (al recargar, todo vuelve a empezar). Este sprint no usa datos ni modelos: los campos, los tiempos y las reglas salen de la plantilla de storytelling, el guion de defensa y los apuntes del sprint. Los **ejemplos son solo de ejemplo**: son los del hotel de los apuntes, no los de vuestro proyecto, y vuestras frases y cifras serán otras (todas, de la memoria congelada).","widget":"defensa","widget_titulo":"El relato, el reloj y las voces de vuestra defensa","intro":"Esto es lo que tendréis al acabar el reto. **Tocad los mandos:** decid cuántas personas sois y cuántos equipos defienden, escribid un mensaje único con la fórmula y mirad si cabe en 20 segundos, quitad diapositivas del storyboard hasta que el relato quepa en el turno, repartid las diez preguntas para que todas las personas respondan alguna y probad qué pasa si quien revisa es quien preparó esa parte. Después, elegid un paso para ver qué pieza construís en él.","aqui_todo":"Elegid un paso del reto y se ilumina **la pieza que construís en él**. Pulsad otra vez el mismo paso para verlo todo.","pasos":[{"n":"1","titulo":"Teoría de storytelling","corto":"Teoría de storytelling","min":20,"piezas":["mensaje","arco"],"aqui":"Aquí aprendéis a hablar para quien escucha: probad cómo cambia una frase cuando se dice para el tribunal, cuándo sabe adónde vais quien escucha si ponéis la conclusión primero y qué hay en un mensaje único."},{"n":"2","titulo":"Construir el relato","corto":"Construir el relato","min":85,"piezas":["mensaje","arco","turno"],"aqui":"Aquí rellenáis la plantilla de arriba abajo: la tabla de traducción, el mensaje único, el arco, el pitch de 3 minutos y el storyboard con quién habla en cada diapositiva."},{"n":"3","titulo":"Rondas de ensayo","corto":"Rondas de ensayo","min":145,"piezas":["turno","preguntas"],"aqui":"Aquí ensayáis con el tiempo real de vuestro turno y con las diez preguntas: subid a 8 equipos y mirad cuántas diapositivas sobran, y repartid las preguntas para que todas las personas respondan."},{"n":"4","titulo":"Subir la presentación en PDF","corto":"Subir el PDF","min":15,"piezas":["pdf"],"aqui":"Aquí exportáis el PDF con su nombre exacto, comprobáis que no pasa de 12 páginas y que cada cifra la mira alguien que no hizo esa diapositiva."},{"n":"5","titulo":"La defensa y la revisión con la rúbrica","corto":"La defensa y la rúbrica","min":120,"piezas":["turno","preguntas","rubrica"],"aqui":"Aquí defendéis en vuestro turno (se corta cuando se agota), contestáis con RESPONDE y revisáis con la rúbrica: el nivel lo pone quien no preparó esa parte y siempre con una frase de prueba."}],"ficheros":[{"nombre":"presentacion_defensa.pdf","origen":"Lo creáis","sube":"Sí · sprint-17/ (la final sustituye a la del ensayo)"},{"nombre":"plantilla_storytelling.md","origen":"Lo modificáis.","sube":"Sí · sprint-17/"},{"nombre":"autoevaluacion_nombre.md","origen":"Ya hecha, en blanco","sube":"Sí, una por persona (no una por equipo) · sprint-17/"},{"nombre":"guion_defensa.md","origen":"Lo modificáis.","sube":"Solo si lo hacéis · sprint-17/"},{"nombre":"presentacion_reserva.pdf","origen":"Lo creáis.","sube":"Solo si lo hacéis · sprint-17/"}],"sube_resumen":"2 ficheros + 1 hoja por persona","carpeta_entrega":"sprint-17/","rubrica":[{"criterio":"Corrección técnica","pregunta":"¿funciona?","niveles":["El PDF pasa de 12 diapositivas o llega tarde; la demo falla y no hay plan B; hay cifras que no están en la memoria","PDF de 12 diapositivas o menos, subido antes de las 8:30; hay vídeo de plan B; las cifras principales coinciden con la memoria","La demo funciona en directo (con una entrada normal y una errónea) o se pasa al plan B sin perder el hilo; todas las cifras coinciden con la memoria; el ensayo general cabe en el turno","Además, diapositivas de reserva en un PDF aparte y cada cifra de la presentación se puede localizar en una figura o sección de la memoria"]},{"criterio":"Reproducibilidad","pregunta":"¿lo puede repetir otra persona?","niveles":["Solo una persona sabe lanzar la demo y hablar de cada parte","Hay un reparto de voces escrito y la plantilla tiene mensaje único y pirámide","Una persona que no preparó la demo la lanza siguiendo los pasos escritos y sale lo mismo; el storyboard dice quién habla en cada diapositiva y todas las personas hablan; cualquiera puede retomar la parte de otra","Además, el guion subido tiene las 10 respuestas con quién contesta, el dato y la sección de la memoria, y otra persona podría dar el relato solo con él"]},{"criterio":"Análisis y comunicación al cliente","pregunta":"¿lo entiende quien no programa?","niveles":["Cuenta todo en orden cronológico («primero hicimos…») y con jerga sin explicar","Hay mensaje único y se cuentan el problema, lo encontrado y la recomendación, con alguna palabra técnica sin traducir","La conclusión va primero; el mensaje único está en la diapositiva 1 y en el cierre; títulos-conclusión de una idea; al menos 4 términos traducidos; recomendación de 3 acciones y límites dichos con claridad","Además, un relato memorable: gancho de apertura, una cifra grande por diapositiva y comparación con lo que hace el cliente hoy; alguien ajeno repite el mensaje con sus palabras"]},{"criterio":"IA responsable","pregunta":"¿se sabe de qué no fiarse y qué hizo la IA?","niveles":["No se dice dónde falla el modelo ni qué riesgos tiene; no se dice si se usó IA","Se dice al menos un límite o un riesgo, y si se usó IA para preparar la defensa, sin detalle","Se dice dónde falla y para quién, con tres riesgos y sus medidas; se declara qué se pidió a la IA y qué se revisó; ante lo que no se sabe se responde «no lo hemos medido»","Además, se cuenta un fallo concreto (de la IA o del modelo) y lo que se aprendió, y se dice qué no hacer con el modelo"]}],"enlaces":[{"t":"Reto en una página","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S17/3_Reto/1_Trabajar/Reto_Sprint_17_una_pagina.md"},{"t":"Qué se sube y la rúbrica","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S17/3_Reto/2_Entregar/entrega_y_rubrica.md"},{"t":"Ficha completa del reto","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S17/3_Reto/3_Consultar/Reto_Sprint_17.md"},{"t":"README del Sprint 17","url":"https://github.com/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S17/README.md"}],"pie":"El reto se hace en vuestro repositorio, no en esta página: la plantilla de storytelling se rellena en `plantilla_storytelling.md` y las diapositivas, en vuestro editor. Si algo de aquí no se entiende, está explicado paso a paso en la ficha del reto.","datos":{"ppm":130,"pitch_palabras":400,"responde_s":20,"max_diapos":12,"hora":"8:30","margen_s":30,"min_terminos":4,"ej_huecos":["usar el modelo para planificar la plantilla","prevé la ocupación a 3 meses con un error del 7 %","un error suficiente para planificar plantilla","que no sirve para fijar precios"],"jerga":[{"ti":"Hemos obtenido un F1 de 0,71 con validación cruzada","ellos":"De cada 10 reservas que se cancelan, detectamos 7"},{"ti":"Recall de 0,58 en el subgrupo móvil","ellos":"En reservas por móvil acertamos menos: 6 de cada 10"},{"ti":"Hemos mitigado el sesgo con reponderación","ellos":"Hemos corregido el modelo para que trate mejor al canal móvil"},{"ti":"Usamos un transformer con RAG","ellos":"El asistente busca primero en los documentos y responde citando la fuente"}],"traduccion":[{"t":"AUC 0,75","f":"De cada 4 reservas, ordena bien 3 veces cuál se cancelará antes"},{"t":"Sobreajuste","f":"Aprendió los ejemplos de memoria y falló con los nuevos"},{"t":"Baseline","f":"La regla simple que usamos hoy, para comparar"},{"t":"Fuga de datos","f":"El modelo vio la respuesta antes del examen"}],"formula":"Recomendamos [acción] porque [evidencia principal], lo que supone [beneficio cuantificado], con la precaución de [límite clave].","huecos":["acción","evidencia principal","beneficio cuantificado","límite clave"],"ej_mensaje":"Podemos prever la ocupación con 3 meses de antelación con un error del 7 %, suficiente para planificar plantilla, pero no para fijar precios.","honesto":[{"m":"Nuestro modelo es muy bueno: 93 % de acierto","v":"Poco: ¿frente a qué? ¿Para quién? ¿Con qué datos?"},{"m":"Con la mayoría de reservas el modelo acierta 8 de cada 10; en móvil, 6 de cada 10. Recomendamos usarlo con revisión humana en ese canal","v":"Mucho: es concreto, tiene un límite y una acción"}],"piramide":["Conclusión","Argumento 1 (por qué importa: problema y valor)","Argumento 2 (cómo lo sabemos: método y resultados)","Argumento 3 (qué límites y riesgos hay, y qué proponemos)"],"piramide_ej":{"Conclusión":"Recomendamos usar el modelo para planificar plantilla, no para fijar precios","Argumento 1":"Supera al método actual en 9 de 12 meses","Argumento 2":"Su error es del 7 %, suficiente para ajustar turnos","Argumento 3":"Falla con eventos atípicos y en alojamiento rural; hay que revisarlo a mano","Evidencias":"Gráfico de errores por mes, tabla frente al baseline, demo"},"arco":[{"momento":"Situación","pregunta":"¿Cuál es el mundo actual del cliente?","min":60,"max":60,"ej":"El hotel planifica la plantilla a ojo"},{"momento":"Complicación","pregunta":"¿Qué problema o coste aparece? ¿Por qué duele?","min":60,"max":60,"ej":"Se equivoca ±20 % y paga horas extra o deja huéspedes sin servicio"},{"momento":"Pregunta","pregunta":"¿Qué necesitamos saber para decidir?","min":30,"max":30,"ej":"¿Se puede prever la ocupación con tiempo suficiente para planificar?"},{"momento":"Resolución","pregunta":"¿Qué hicimos y qué encontramos? (baseline → mejora; el gráfico clave)","min":180,"max":240,"ej":"Datos de X y un modelo sencillo frente a una referencia: error del 7 % y funciona hasta con 3 meses de antelación"},{"momento":"Demostración","pregunta":"¿Cómo se usa? (el momento «ajá»)","min":120,"max":180,"ej":"El momento «ajá»: cómo lo usaría el cliente"},{"momento":"Límites y riesgos","pregunta":"¿De qué no fiarse? ¿Qué hicimos para mitigarlo?","min":60,"max":60,"ej":"No sirve para fijar precios; falla con eventos atípicos"},{"momento":"Llamada a la acción","pregunta":"¿Qué proponemos al cliente que haga el lunes?","min":60,"max":60,"ej":"Usarlo así y con estos límites"}],"story":[{"n":1,"tema":"Mensaje único + equipo","visual":"Titular y logo","s":45},{"n":2,"tema":"El problema del cliente (situación + complicación)","visual":"Una escena o cifra","s":60},{"n":3,"tema":"La pregunta y la decisión","visual":"Esquema simple","s":30},{"n":4,"tema":"Los datos que tenemos (y sus límites)","visual":"Una figura del EDA","s":60},{"n":5,"tema":"Cómo lo hicimos (enfoque en 3 pasos)","visual":"Diagrama del proceso","s":45},{"n":6,"tema":"Resultado clave frente al baseline","visual":"Gráfico principal","s":75},{"n":7,"tema":"Por qué funciona (interpretación)","visual":"Importancia / SHAP / Grad-CAM","s":60},{"n":8,"tema":"Demostración","visual":"Pantalla de la demo / vídeo plan B","s":150},{"n":9,"tema":"Dónde falla y para quién (sesgos)","visual":"Tabla o gráfico por subgrupo","s":45},{"n":10,"tema":"IA responsable: riesgos y medidas","visual":"3 riesgos, 3 medidas","s":45},{"n":11,"tema":"Qué proponemos al cliente","visual":"3 acciones priorizadas","s":60},{"n":12,"tema":"Cierre: mensaje único + contacto","visual":"Frase repetida","s":30}],"pitch":[{"de":0,"a":20,"etiqueta":"Gancho","que":"Gancho: dato o escena","ej":"El hotel planifica la plantilla a ojo y se equivoca ±20 %"},{"de":20,"a":50,"etiqueta":"Problema","que":"Problema y quién lo sufre","ej":"Paga horas extra o deja huéspedes sin servicio"},{"de":50,"a":100,"etiqueta":"Solución","que":"Solución: qué hicimos, en lenguaje llano","ej":"Hemos probado un modelo sencillo con los datos de X frente a una referencia"},{"de":100,"a":150,"etiqueta":"Resultado","que":"Resultado: la cifra que importa frente a lo que hay hoy","ej":"Error del 7 %; funciona hasta con 3 meses de antelación"},{"de":150,"a":170,"etiqueta":"Límite","que":"Límite honesto","ej":"No sirve para fijar precios; falla con eventos atípicos"},{"de":170,"a":180,"etiqueta":"Petición","que":"Petición: qué necesitamos que decida","ej":"Usarlo así y con estos límites"}],"base":[{"de":0,"a":45,"bloque":"Apertura","slides":[1],"voz":"P1"},{"de":45,"a":120,"bloque":"Contexto y problema","slides":[2,3],"voz":"P1"},{"de":120,"a":180,"bloque":"Qué hicimos","slides":[4,5],"voz":"P2"},{"de":180,"a":300,"bloque":"Qué aprendimos","slides":[6,7],"voz":"P2 / P3"},{"de":300,"a":450,"bloque":"Demostración","slides":[8],"voz":"P3 (maneja) / P4 (narra)"},{"de":450,"a":510,"bloque":"Límites y riesgos","slides":[9,10],"voz":"P4"},{"de":510,"a":600,"bloque":"Qué proponemos","slides":[11,12],"voz":"P1"}],"voces4":["P1","P1","P1","P2","P2","P2","P3","P4","P4","P4","P1","P1"],"voces3":["P1","P1","P1","P2","P2","P2","P3","P3","P1","P1","P1","P1"],"maneja":"P3","narra4":"P4","turnos":[{"equipos":5,"turno":22.0,"relato":13.0,"demo":4.5,"preguntas":4.5,"recorte":"Añadid una diapositiva de resultados y una de errores; más tiempo para la demo","solo":null},{"equipos":6,"turno":18.0,"relato":11.0,"demo":3.5,"preguntas":3.5,"recorte":"Guion base y 1 minuto de análisis de sesgos","solo":null},{"equipos":7,"turno":15.0,"relato":9.0,"demo":3.0,"preguntas":3.0,"recorte":"Fusionad las diapositivas 4 y 5 en una; demo de 3 minutos","solo":null},{"equipos":8,"turno":13.0,"relato":8.0,"demo":2.5,"preguntas":2.5,"recorte":"Solo las diapositivas 1, 2, 6, 8, 9, 11 y 12; el resto, a reserva","solo":[1,2,6,8,9,11,12]}],"responde":{"pasos":[{"l":"R","q":"Repetir o reformular la pregunta","ej":"¿Preguntas si el modelo solo funciona con los datos que vio?"},{"l":"E","q":"Empezar con la respuesta directa (sí, no o depende)","ej":"Creemos que no"},{"l":"S","q":"Sustentar con un dato o figura de la memoria","ej":"Lo evaluamos en un test que no tocamos hasta el final: 0,69 frente a 0,71 en validación"},{"l":"P","q":"Poner el límite","ej":"Pero solo lo hemos probado con datos de 2022 a 2024"},{"l":"O","q":"Ofrecer el puente","ej":"El detalle está en la sección 5 de la memoria"}],"sexto":"si no lo sabéis, decidlo y explicad cómo lo averiguaríais: «No lo hemos medido; lo haríamos así…»","nolose":"No lo hemos medido; lo haríamos así…"},"preguntas":[{"n":1,"q":"¿Por qué elegisteis ese modelo y no otro?","dato":"Tabla comparativa (Sprint 15)"},{"n":2,"q":"¿Cómo sabéis que no hay fuga de datos?","dato":"Lista de comprobación; partición temporal"},{"n":3,"q":"¿Cuánto mejora frente a lo que se hace hoy y cuánto vale?","dato":"Baseline y métrica de negocio"},{"n":4,"q":"¿En qué casos no debemos fiarnos del modelo?","dato":"Análisis de errores, model card"},{"n":5,"q":"¿Qué sesgos habéis encontrado y qué habéis hecho?","dato":"Tabla por subgrupos y mitigación medida"},{"n":6,"q":"¿Qué datos personales usáis y qué riesgo AI Act tiene?","dato":"Registro de riesgos, clasificación"},{"n":7,"q":"¿Qué pasaría con un suceso atípico / dato nuevo?","dato":"Limitaciones"},{"n":8,"q":"¿Cómo lo mantendríais y monitorizaríais?","dato":"Model card, sección 9"},{"n":9,"q":"¿Qué haríais con más tiempo o más datos?","dato":"Conclusiones"},{"n":10,"q":"¿Qué ha aportado cada persona del equipo?","dato":"Roles, commits"}],"titulos":[{"mal":"Resultados del modelo","bien":"El modelo supera al método simple en 9 de 12 meses"},{"mal":"Análisis por canal","bien":"En reservas por móvil, el modelo acierta menos"},{"mal":"Riesgos","bien":"Tres riesgos altos, todos con medida aplicada"}],"comprobacion":["¿Se entiende el mensaje único en 20 segundos?","¿Cada título de diapositiva se entiende sin oír al orador?","¿Las cifras coinciden con la memoria congelada?","¿Hablan todas las personas y el reparto está equilibrado?","¿Está la demo probada y el plan B abierto?","¿Hay una recomendación accionable y una frase sobre los límites?","¿Cabe en el tiempo del turno con margen de 30 segundos?"],"rubrica":[{"criterio":"Corrección técnica","pregunta":"¿funciona?","niveles":["El PDF pasa de 12 diapositivas o llega tarde; la demo falla y no hay plan B; hay cifras que no están en la memoria","PDF de 12 diapositivas o menos, subido antes de las 8:30; hay vídeo de plan B; las cifras principales coinciden con la memoria","La demo funciona en directo (con una entrada normal y una errónea) o se pasa al plan B sin perder el hilo; todas las cifras coinciden con la memoria; el ensayo general cabe en el turno","Además, diapositivas de reserva en un PDF aparte y cada cifra de la presentación se puede localizar en una figura o sección de la memoria"],"ph":"p. ej. «12 diapositivas, todas las cifras coinciden con la memoria, la demo funcionó»"},{"criterio":"Reproducibilidad","pregunta":"¿lo puede repetir otra persona?","niveles":["Solo una persona sabe lanzar la demo y hablar de cada parte","Hay un reparto de voces escrito y la plantilla tiene mensaje único y pirámide","Una persona que no preparó la demo la lanza siguiendo los pasos escritos y sale lo mismo; el storyboard dice quién habla en cada diapositiva y todas las personas hablan; cualquiera puede retomar la parte de otra","Además, el guion subido tiene las 10 respuestas con quién contesta, el dato y la sección de la memoria, y otra persona podría dar el relato solo con él"],"ph":"¿pudo otra persona lanzar la demo y seguir el reparto de voces escrito?"},{"criterio":"Análisis y comunicación al cliente","pregunta":"¿lo entiende quien no programa?","niveles":["Cuenta todo en orden cronológico («primero hicimos…») y con jerga sin explicar","Hay mensaje único y se cuentan el problema, lo encontrado y la recomendación, con alguna palabra técnica sin traducir","La conclusión va primero; el mensaje único está en la diapositiva 1 y en el cierre; títulos-conclusión de una idea; al menos 4 términos traducidos; recomendación de 3 acciones y límites dichos con claridad","Además, un relato memorable: gancho de apertura, una cifra grande por diapositiva y comparación con lo que hace el cliente hoy; alguien ajeno repite el mensaje con sus palabras"],"ph":"¿repite alguien ajeno el mensaje único con sus palabras?"},{"criterio":"IA responsable","pregunta":"¿se sabe de qué no fiarse y qué hizo la IA?","niveles":["No se dice dónde falla el modelo ni qué riesgos tiene; no se dice si se usó IA","Se dice al menos un límite o un riesgo, y si se usó IA para preparar la defensa, sin detalle","Se dice dónde falla y para quién, con tres riesgos y sus medidas; se declara qué se pidió a la IA y qué se revisó; ante lo que no se sabe se responde «no lo hemos medido»","Además, se cuenta un fallo concreto (de la IA o del modelo) y lo que se aprendió, y se dice qué no hacer con el modelo"],"ph":"¿se dijo dónde falla, qué riesgos hay y qué se pidió a la IA?"}],"pdf":{"cifras":[{"d":6,"c":"Supera al método simple en 9 de 12 meses","donde":"Tabla frente al baseline","est":"si"},{"d":6,"c":"Error del 7 %","donde":"Gráfico de errores por mes","est":"si"},{"d":9,"c":"En reservas por móvil acierta menos","donde":"Tabla por subgrupos","est":"no"}],"nombre":"presentacion_defensa.pdf","reserva":"presentacion_reserva.pdf"},"cuentas":{"base_s":600,"story_s":705,"arco_min_s":570,"arco_max_s":690,"pitch_s":180,"palabras_20s":43,"palabras_3min":390}}};
+(function(){
+"use strict";
+const D = DEMO;
+/* ───────── utilidades ───────── */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md = s => esc(s).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\*([^*]+)\*/g,'<i>$1</i>');
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const fmt = (x, d = 1) => Number.isFinite(x) ? x.toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d}) : 'NaN';
+const mean = a => a.reduce((s, v) => s + v, 0) / a.length;
+const NS = 'http://www.w3.org/2000/svg';
+function S(name, attrs, parent, text){ const e = document.createElementNS(NS, name); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; if (parent) parent.appendChild(e); return e; }
+const lin = (d0, d1, r0, r1) => v => r0 + (v - d0) * (r1 - r0) / (d1 - d0);
+function ticks(a, b, k){ const st = (b - a) / k, out = []; for (let i = 0; i <= k; i++) out.push(a + st * i); return out; }
+/* Gráfico con ejes: devuelve {svg, X, Y, g (capa dentro del área), W, H, m} */
+function chart(opt){
+  const W = opt.w || 460, H = opt.h || 290, m = Object.assign({l: 48, r: 12, t: 12, b: 40}, opt.m || {});
+  const svg = S('svg', {viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': opt.label || ''}); svg.classList.add('chart');
+  const X = lin(opt.x[0], opt.x[1], m.l, W - m.r), Y = lin(opt.y[0], opt.y[1], H - m.b, m.t);
+  const id = 'c' + Math.random().toString(36).slice(2, 8);
+  const cp = S('clipPath', {id}, S('defs', {}, svg)); S('rect', {x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b}, cp);
+  (opt.xt || ticks(opt.x[0], opt.x[1], 5)).forEach(v => { S('line', {x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, class: 'gl'}, svg); S('text', {x: X(v), y: H - m.b + 15, 'text-anchor': 'middle'}, svg, opt.fx ? opt.fx(v) : fmt(v, 0)); });
+  const ylab = [];
+  (opt.yt || ticks(opt.y[0], opt.y[1], 4)).forEach(v => { S('line', {x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: 'gl'}, svg); ylab.push(S('text', {x: m.l - 6, y: Y(v) + 4, 'text-anchor': 'end'}, svg, opt.fy ? opt.fy(v) : fmt(v, 0))); });
+  S('line', {x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, class: 'ax'}, svg); S('line', {x1: m.l, x2: m.l, y1: m.t, y2: H - m.b, class: 'ax'}, svg);
+  if (opt.xl) S('text', {x: (m.l + W - m.r) / 2, y: H - 6, 'text-anchor': 'middle', class: 'tl'}, svg, opt.xl);
+  if (opt.yl) S('text', {x: 12, y: (m.t + H - m.b) / 2, 'text-anchor': 'middle', class: 'tl', transform: `rotate(-90 12 ${(m.t + H - m.b) / 2})`}, svg, opt.yl);
+  const g = S('g', {'clip-path': `url(#${id})`}, svg);
+  return {svg, X, Y, g, W, H, m, ylab};
+}
+function pieza(host, ids, titulo, extra){
+  const p = el('section', 'pieza'); p.dataset.pieza = ids;
+  p.appendChild(el('div', 'bh', `<span>${esc(titulo)}</span>${extra || ''}`));
+  const b = el('div', 'bb'); p.appendChild(b); host.appendChild(p); return b;
+}
+/* ───────── widgets de cada sprint (se concatenan aquí) ───────── */
+const W = {};
+/* Widget «defensa» (S17): el constructor del relato, el reloj y las voces de la defensa. Piezas: mensaje · arco · turno · preguntas · pdf · rubrica.
+   Sin datos ni modelos: D.datos (de prep_defensa.py) son los campos, los tiempos y las reglas que traen la plantilla de storytelling, el guion de defensa,
+   los apuntes y los pasos del sprint. Todo lo que se escribe aquí se queda en la página (no se guarda ni se entrega nada). */
+W.defensa = function(host, D){
+  const d = D.datos, PPM = d.ppm, MARGEN = d.margen_s;
+  const st = document.createElement('style');
+  st.textContent = `
+.w17-aj{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;background:var(--soft);border-radius:14px;padding:10px 14px}
+.w17-aj .t{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--muted);flex:none}
+.w17-aj .g{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px;font-weight:700}
+.w17-aj .read{flex:1 1 280px}
+.w17-seg{display:inline-flex;flex-wrap:wrap;gap:6px}
+.w17-h{font-family:var(--f-display);font-weight:800;font-size:14px;letter-spacing:.05em;color:var(--accent);margin:0 0 8px;display:flex;gap:9px;align-items:center}
+.w17-h i{font-style:normal;flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:13px}
+.w17-blk{margin-top:18px}
+.w17-col{min-width:0}
+.w17-in{font:inherit;font-size:14px;padding:5px 8px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);width:100%;min-width:0}
+textarea.w17-in{min-height:54px;resize:vertical}
+.w17-fr{list-style:none;margin:8px 0;padding:0;display:grid;gap:6px}
+.w17-fr li{padding:7px 11px;border-radius:10px;border-left:5px solid var(--line);background:var(--soft);font-size:14.5px}
+.w17-fr li.ti{border-left-color:var(--bad)}.w17-fr li.el{border-left-color:var(--ok)}
+.w17-tr{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,2fr);gap:6px 8px;align-items:center;padding:6px 0;border-top:1px solid var(--line)}
+.w17-ck{display:flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--muted);white-space:nowrap}
+.w17-ck input{width:18px;height:18px;accent-color:var(--accent)}
+@media (max-width:560px){.w17-tr{grid-template-columns:auto minmax(0,1fr)}.w17-tr .f{grid-column:1/-1}}
+.w17-fm{display:grid;gap:7px}
+.w17-fm label{display:grid;gap:2px;font-size:13px;font-weight:700;color:var(--muted)}
+.w17-fra{margin:10px 0 6px;padding:10px 13px;border-radius:12px;border:2px solid var(--line);background:var(--surface);font-size:15.5px}
+.w17-fra .vacio{color:var(--muted)}
+.w17-bar{position:relative;height:10px;border-radius:5px;background:var(--line)}
+.w17-bar i{display:block;height:100%;border-radius:5px;background:var(--teal);max-width:100%}
+.w17-bar.mal i{background:var(--accent)}
+.w17-bar b{position:absolute;top:-3px;bottom:-3px;width:3px;background:var(--ink);border-radius:2px}
+.w17-lin{display:flex;align-items:center;gap:10px;font-size:13.5px;margin:6px 0 2px}
+.w17-lin .w17-bar{flex:1}
+.w17-lin span{flex:none;min-width:11em;text-align:right;font-family:var(--f-mono);font-size:12.5px}
+.w17-dos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:700px){.w17-dos{grid-template-columns:1fr}}
+.w17-dos>div{border:2px solid var(--line);border-radius:12px;padding:9px 12px;font-size:14px}
+.w17-dos .pill{margin-bottom:4px}
+.w17-tl{display:flex;gap:2px;margin:8px 0 6px}
+.w17-tl i{display:block;height:16px;background:var(--sky);border-radius:4px;min-width:3px}
+.w17-tl i.on{background:var(--accent)}
+.w17-bl{list-style:none;margin:0;padding:0;display:grid;gap:3px;font-size:13.5px}
+.w17-bl li{display:flex;gap:8px;padding:3px 8px;border-radius:8px}
+.w17-bl li span{flex:none;font-family:var(--f-mono);font-size:12.5px;color:var(--muted);min-width:7.5em}
+.w17-bl li.on{background:var(--accent-soft);font-weight:700}
+.w17-pir{display:grid;gap:6px;margin:6px 0}
+.w17-pir>div{border:2px solid var(--line);border-radius:10px;padding:7px 10px;font-size:13.5px;min-width:0}
+.w17-pir b{display:block;font-size:12.5px;letter-spacing:.03em}
+.w17-pir small{display:block;color:var(--muted);font-size:12px;margin-bottom:2px}
+.w17-pir .c{width:70%;margin:0 auto;text-align:center;background:var(--accent-soft);border-color:var(--accent)}
+.w17-pir .a{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;border:0;padding:0}
+.w17-pir .a>div{border:2px solid var(--line);border-radius:10px;padding:7px 10px;background:var(--sky)}
+.w17-pir .e{background:var(--soft)}
+@media (max-width:560px){.w17-pir .a{grid-template-columns:1fr}.w17-pir .c{width:100%}}
+.w17-arc{list-style:none;margin:6px 0;padding:0;display:grid;gap:7px}
+.w17-arc li{border:2px solid var(--line);border-radius:10px;padding:7px 11px;font-size:13.5px}
+.w17-arc li b{font-size:14px}
+.w17-arc li em{display:block;color:var(--muted);font-size:12.5px}
+.w17-arc li .t{float:right;font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.w17-fz{border:2px solid var(--line);border-radius:10px;padding:8px 11px}
+.w17-fz .w17-lin span{min-width:6em}
+.w17-fz label{font-size:13px;font-weight:700}
+.w17-fz .ctl label{max-width:100%;min-width:0}.w17-fz .ctl select{min-width:0;flex:1 1 auto;width:auto!important;max-width:100%}
+.w17-fz small{color:var(--muted);font-size:12.5px}
+.w17-nota{margin-top:10px;font-size:14px;padding:9px 12px;border-radius:10px;background:var(--sky);border-left:5px solid var(--blue)}
+.w17-st{width:100%;border-collapse:collapse;font-size:14px}
+.w17-st th{text-align:left;font-size:12.5px;color:var(--muted);padding:5px 6px;border-bottom:2px solid var(--line)}
+.w17-st td{padding:6px;border-bottom:1px solid var(--line);vertical-align:middle}
+.w17-st td small{display:block;color:var(--muted);font-size:12.5px}
+.w17-st td.n{font-family:var(--f-display);font-weight:800;color:var(--accent)}
+.w17-st td.vz{min-width:9em}.w17-st td.vz select{width:auto;min-width:5em}
+.w17-st td.tp{white-space:nowrap}.w17-st td.tp .t{display:inline-block;min-width:3.4em;text-align:center;font-family:var(--f-mono);font-weight:700}
+.w17-st td.rs input{width:18px;height:18px;accent-color:var(--accent)}
+.w17-st tr.fuera td.tm,.w17-st tr.fuera td.n{opacity:.45;text-decoration:line-through}
+.w17-sl{font-size:12px;font-weight:700;color:var(--muted);margin:0 4px 0 6px}
+.w17-st select+.w17-sl{margin-left:10px}
+@media (max-width:620px){
+ .w17-st thead{display:none}
+ .w17-st tr{display:flex;flex-wrap:wrap;align-items:center;gap:3px 10px;padding:7px 0;border-bottom:1px solid var(--line)}
+ .w17-st td{border:0;padding:0}
+ .w17-st td.tm{flex:1 1 calc(100% - 40px);min-width:0}
+ .w17-st td.vz,.w17-st td.tp,.w17-st td.rs{display:flex;align-items:center;gap:6px}
+ .w17-st td.vz{min-width:0}
+ .w17-st td.vz::before,.w17-st td.tp::before,.w17-st td.rs::before{content:attr(data-l);font-size:12px;font-weight:700;color:var(--muted)}
+}
+.w17-per{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:center;font-size:13.5px;margin:4px 0}
+.w17-per .w17-bar{height:9px}
+.w17-per span.n{font-weight:800}
+.w17-per span.v{font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.w17-chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.w17-q{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:2px 10px;align-items:center;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.w17-q .nn{font-family:var(--f-display);font-weight:800;color:var(--accent)}
+.w17-q small{grid-column:2;color:var(--muted);font-size:12.5px}
+.w17-q select{width:auto;grid-row:1/3;grid-column:3}
+.w17-rs{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 10px;align-items:start;margin:8px 0}
+.w17-rs b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);font-family:var(--f-display);margin-top:2px}
+.w17-rs label{font-size:13px;color:var(--muted);font-weight:700;display:block;margin-bottom:2px}
+.w17-ok{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:700px){.w17-ok{grid-template-columns:1fr}}
+.w17-cr{border:2px solid var(--line);border-radius:12px;padding:10px 13px;min-width:0}
+.w17-cr h5{font-family:var(--f-display);font-size:15px;margin:0 0 2px}
+.w17-cr .p{font-size:12.5px;color:var(--muted);margin:0 0 6px}
+.w17-cr .niv{margin:6px 0}
+.w17-cr .txt{font-size:13.5px;background:var(--soft);border-radius:8px;padding:6px 10px;margin:6px 0}
+.w17-cr.mal{border-color:var(--bad)}.w17-cr.bien{border-color:var(--ok)}
+.w17-pre,textarea.w17-pre{font-family:var(--f-mono);font-size:12.5px;min-height:250px}
+.w17-rs[hidden],.w17-q[hidden]{display:none!important}
+.w17-lb,.ctl label.w17-lb{display:grid;gap:3px;flex:1 1 240px;min-width:0;align-items:stretch}
+.w17-lst{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+`;
+  document.head.appendChild(st);
+
+  /* ───────── ayudantes de este widget ───────── */
+  const q = (r, s) => r.querySelector(s);
+  const mmss = s => { const a = Math.round(Math.abs(s)); return (s < 0 ? '−' : '') + Math.floor(a / 60) + ':' + String(a % 60).padStart(2, '0'); };
+  const pal = t => (String(t).match(/[\p{L}\p{N}]+(?:[.,'’-][\p{L}\p{N}]+)*/gu) || []).length;
+  const min1 = x => fmt(x, Number.isInteger(x) ? 0 : 1);
+  const msg = (cls) => { const m = el('div', 'msg' + (cls ? ' ' + cls : '')); m.setAttribute('aria-live', 'polite'); return m; };
+  const poneMsg = (m, cls, html) => { m.className = 'msg' + (cls ? ' ' + cls : ''); m.innerHTML = html; };
+  function grupo(ops, val, cb, etq){
+    const g = el('div', 'w17-seg'); g.setAttribute('role', 'group'); g.setAttribute('aria-label', etq);
+    const bs = ops.map(([v, t]) => { const x = el('button', 'btn small', esc(t)); x.type = 'button'; x.addEventListener('click', () => { poner(v); cb(v); }); g.appendChild(x); return [v, x]; });
+    function poner(v){ val = v; bs.forEach(([k, x]) => { x.classList.toggle('on', k === v); x.setAttribute('aria-pressed', String(k === v)); }); }
+    poner(val);
+    return {el: g, poner, get v(){ return val; }};
+  }
+  const lista = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' y ' + a[a.length - 1];
+  const boton = (txt, cb) => { const x = el('button', 'btn small', esc(txt)); x.type = 'button'; x.addEventListener('click', cb); return x; };
+  const barra = (v, tope, marca, mal) => `<div class="w17-bar${mal ? ' mal' : ''}"><i style="width:${Math.max(0, Math.min(100, v / tope * 100))}%"><\/i>${marca != null ? `<b style="left:calc(${Math.min(100, marca / tope * 100)}% - 1px)"><\/b>` : ''}<\/div>`;
+  const marca = (ok, txt) => `<li class="${ok ? 'ok' : 'no'}"><span class="m">${ok ? '✓' : '○'}<\/span><span>${txt}<\/span><\/li>`;
+
+  /* estado compartido: personas del equipo y equipos que defienden (lo decide el docente) */
+  const E = {n: 4, eq: 6}; const oyentes = []; const emite = (que) => oyentes.forEach(f => f(que || 'ini'));
+  const turno = () => d.turnos.find(t => t.equipos === E.eq);
+  const P = n => Array.from({length: n}, (_, i) => 'P' + (i + 1));
+  const rellena = (sel, valor, vacio) => { sel.innerHTML = (vacio ? `<option value="">${vacio}<\/option>` : '') + P(E.n).map(p => `<option>${p}<\/option>`).join(''); sel.value = P(E.n).includes(valor) ? valor : ''; if (!sel.value && !vacio) sel.value = 'P1'; };
+  const DEMO = d.base.find(b => /^Demostración/.test(b.bloque)).slides[0] - 1;   // índice de la diapositiva de la demo
+
+  /* ───────── barra de ajustes (no es una pieza) ───────── */
+  const aj = el('div', 'w17-aj'); aj.setAttribute('role', 'group'); aj.setAttribute('aria-label', 'Vuestro equipo y la defensa');
+  const gP = grupo([[3, '3'], [4, '4']], E.n, v => { E.n = v; emite('n'); }, 'Personas del equipo');
+  const gE = grupo(d.turnos.map(t => [t.equipos, String(t.equipos)]), E.eq, v => { E.eq = v; emite('eq'); }, 'Equipos que defienden');
+  const rA = el('div', 'read'); rA.setAttribute('aria-live', 'polite');
+  aj.innerHTML = '<span class="t">VUESTRO EQUIPO Y LA DEFENSA<\/span>';
+  const g1 = el('div', 'g', 'Personas en el equipo'), g2 = el('div', 'g', 'Equipos en la defensa'); g1.appendChild(gP.el); g2.appendChild(gE.el);
+  aj.append(g1, g2, rA); host.appendChild(aj);
+  oyentes.push(() => { const t = turno(); rA.innerHTML = `Turno de <b>${min1(t.turno)} min<\/b>: relato ${min1(t.relato)} · demo ${min1(t.demo)} · preguntas ${min1(t.preguntas)} (60 % · 20 % · 20 %).`; });
+
+  /* ═════════ 1 · AUDIENCIA Y MENSAJE ÚNICO ═════════ */
+  const bM = pieza(host, 'mensaje', 'AUDIENCIA Y MENSAJE ÚNICO · QUE LO ENTIENDA QUIEN NO PROGRAMA');
+  bM.innerHTML = '<div class="duo"><div class="w17-col" id="w17-ma"><\/div><div class="w17-col" id="w17-mb"><\/div><\/div>';
+  const MA = q(bM, '#w17-ma'), MB = q(bM, '#w17-mb');
+  MA.innerHTML = `<h4 class="w17-h"><i>1<\/i>Hablad para quien escucha<\/h4>
+    <p class="cap" style="margin:0 0 8px">El tribunal decide si se usa o no el modelo: sabe su negocio muy bien y la IA, poco o nada. Cambiad de lado y mirad la misma cifra dicha de dos maneras:<\/p>
+    <div id="w17-jg"><\/div><ul class="w17-fr" id="w17-jl"><\/ul><div id="w17-jm"><\/div>
+    <h4 class="w17-h w17-blk"><i>2<\/i>Tabla de traducción · al menos ${d.min_terminos} términos<\/h4>
+    <p class="cap" style="margin:0 0 4px">Dejad los que salgan en vuestro proyecto y sustituid los demás. Son los ejemplos de la plantilla, no los vuestros.<\/p><div id="w17-tt"><\/div><div id="w17-tm"><\/div>`;
+  const jl = q(MA, '#w17-jl'), jm = msg(); q(MA, '#w17-jm').appendChild(jm);
+  const jg = grupo([['ti', 'Hablas «para ti»'], ['el', 'Hablas «para ellos»']], 'ti', pintaJerga, 'Cómo se dice'); q(MA, '#w17-jg').appendChild(jg.el);
+  function pintaJerga(m){
+    jl.innerHTML = d.jerga.map(x => `<li class="${m}">${esc(m === 'ti' ? x.ti : x.ellos)}<\/li>`).join('');
+    poneMsg(jm, m === 'ti' ? 'bad' : 'ok', m === 'ti' ? 'Así habla quien piensa en su modelo: fuera del equipo no lo entiende nadie.' : 'Así habla quien piensa en quien escucha: la misma cifra, dicha en lenguaje de negocio. <b>La jerga se traduce.<\/b>');
+  }
+  pintaJerga('ti');
+  const tt = q(MA, '#w17-tt'), tm = msg();  q(MA, '#w17-tm').appendChild(tm);
+  const tfilas = d.traduccion.map(x => [x.t, x.f]).concat([['', ''], ['', '']]);
+  const tcampos = tfilas.map(([t, f], i) => {
+    const r = el('div', 'w17-tr', `<label class="w17-ck"><input type="checkbox" aria-label="El término ${i + 1} sale en nuestro proyecto">lo usamos<\/label>
+      <input class="w17-in" type="text" aria-label="Término técnico ${i + 1}" placeholder="término técnico" value="${esc(t)}">
+      <textarea class="w17-in f" rows="2" aria-label="Frase que entiende el tribunal, término ${i + 1}" placeholder="frase que entiende el tribunal">${esc(f)}<\/textarea>`);
+    r.addEventListener('input', cuentaTt); r.addEventListener('change', cuentaTt); tt.appendChild(r);
+    const [c, a] = r.querySelectorAll('input'), b = q(r, 'textarea'); return {c, a, b};
+  });
+  function cuentaTt(){
+    const n = tcampos.filter(x => x.c.checked && x.a.value.trim() && x.b.value.trim()).length;
+    poneMsg(tm, n >= d.min_terminos ? 'ok' : 'warn', n >= d.min_terminos
+      ? `<b>${n} términos traducidos.<\/b> Cumplís el mínimo: en la defensa, cada término técnico va con su frase.`
+      : `<b>${n} de ${d.min_terminos} términos traducidos.<\/b> Marcad «lo usamos» en los que salgan en vuestro proyecto (con su frase) o escribid los vuestros.`);
+  }
+  cuentaTt();
+
+  MB.innerHTML = `<h4 class="w17-h"><i>3<\/i>El mensaje único<\/h4>
+    <p class="cap" style="margin:0 0 8px">Una sola frase que el tribunal pueda repetir mañana. Fórmula de la plantilla: <i>«${esc(d.formula)}»<\/i><\/p>
+    <div class="w17-fm" id="w17-fm"><\/div><div class="w17-fra" id="w17-fra" aria-live="polite"><\/div>
+    <div class="w17-lin" id="w17-lp"><\/div><ul class="checks" id="w17-ck"><\/ul>
+    <div class="ctl" id="w17-mbt" style="margin-top:8px;padding-top:8px"><\/div>
+    <h4 class="w17-h w17-blk"><i>4<\/i>Dos mensajes con las mismas cifras<\/h4><div class="w17-dos" id="w17-dos"><\/div>`;
+  const hv = d.huecos.map((h, i) => {
+    const l = el('label', '', `${esc(h)}<input class="w17-in" type="text" aria-label="Hueco: ${esc(h)}" maxlength="200">`); q(MB, '#w17-fm').appendChild(l);
+    const inp = l.querySelector('input'); inp.addEventListener('input', pintaMsg); return inp;
+  });
+  const CAP20 = PPM * 20 / 60;   // palabras que caben en 20 segundos
+  function pintaMsg(){
+    const vals = hv.map(x => x.value.trim());
+    let k = 0;
+    const frase = d.formula.replace(/\[([^\]]+)\]/g, (m, h) => vals[k++] ? `<b>${esc(vals[k - 1])}<\/b>` : `<span class="vacio">[${esc(h)}]<\/span>`);
+    q(MB, '#w17-fra').innerHTML = frase;
+    let j = 0; const plano = d.formula.replace(/\[([^\]]+)\]/g, () => vals[j++] || '');
+    const w = vals.some(Boolean) ? pal(plano) : 0, s = w / PPM * 60, mal = w > CAP20;
+    q(MB, '#w17-lp').innerHTML = `${barra(w, Math.max(CAP20 * 1.5, w), CAP20, mal)}<span>${w} palabras · ${Math.round(s)} s de 20<\/span>`;
+    q(MB, '#w17-ck').innerHTML = [
+      marca(!!vals[0], 'Dice <b>qué hacer<\/b> (la recomendación).'),
+      marca(/\d/.test(vals[1] + vals[2]), 'Lleva <b>una cifra<\/b> como evidencia (que salga de la memoria congelada).'),
+      marca(!!vals[3], 'Dice <b>el límite<\/b>: los límites dan credibilidad.'),
+      marca(vals.every(Boolean) && !mal, `Se dice <b>en 20 segundos<\/b> (a ${PPM} palabras por minuto, unas ${Math.round(CAP20)}). ${mal ? 'Pasa: recortad ideas, no velocidad.' : ''}`)].join('');
+  }
+  const mbt = q(MB, '#w17-mbt');
+  mbt.append(boton('Ver el ejemplo de los apuntes (hotel)', () => { hv.forEach((x, i) => x.value = d.ej_huecos[i]); pintaMsg(); }), boton('Vaciar', () => { hv.forEach(x => x.value = ''); pintaMsg(); }));
+  mbt.appendChild(el('span', 'cap', 'Ejemplo del hotel: el vuestro será otro.'));
+  pintaMsg();
+  q(MB, '#w17-dos').innerHTML = d.honesto.map(h => { const poco = /^Poco/.test(h.v); return `<div><span class="pill ${poco ? 'bad' : 'ok'}">${poco ? 'POCO' : 'MUCHO'}<\/span><br>«${esc(h.m)}»<br><span class="cap">${esc(h.v)}<\/span><\/div>`; }).join('');
+
+  /* ═════════ 2 · PIRÁMIDE, ARCO Y PITCH ═════════ */
+  const bA = pieza(host, 'arco', 'PIRÁMIDE, ARCO Y PITCH · LA CONCLUSIÓN PRIMERO');
+  bA.innerHTML = '<div class="duo"><div class="w17-col" id="w17-aa"><\/div><div class="w17-col" id="w17-ab"><\/div><\/div><div class="w17-blk" id="w17-ap"><\/div>';
+  const AA = q(bA, '#w17-aa'), AB = q(bA, '#w17-ab'), AP = q(bA, '#w17-ap');
+  AA.innerHTML = `<h4 class="w17-h"><i>1<\/i>¿Cuándo sabe el tribunal adónde vais?<\/h4><div id="w17-og"><\/div>
+    <div class="w17-tl" id="w17-otl" aria-hidden="true"><\/div><ul class="w17-bl" id="w17-obl"><\/ul><div id="w17-om"><\/div>
+    <h4 class="w17-h w17-blk"><i>2<\/i>La pirámide: conclusión, tres argumentos, evidencias<\/h4><div class="w17-pir" id="w17-pir"><\/div>
+    <p class="cap">Ejemplo del hotel de los apuntes, no el vuestro. <b>Regla de agrupación:<\/b> cada argumento resume su evidencia; si un dato no sostiene ningún argumento, se queda fuera (va a la memoria).<\/p>`;
+  const om = msg(); q(AA, '#w17-om').appendChild(om);
+  const og = grupo([['p', 'Conclusión primero'], ['d', 'Como un diario']], 'p', pintaOrden, 'Cómo se cuenta'); q(AA, '#w17-og').appendChild(og.el);
+  const ULT = d.base[d.base.length - 1], PRI = d.base[0], TOT = d.base[d.base.length - 1].a;
+  q(AA, '#w17-otl').innerHTML = d.base.map(b => `<i style="flex:${b.a - b.de}"><\/i>`).join('');
+  function pintaOrden(m){
+    const on = m === 'p' ? 0 : d.base.length - 1;
+    [...q(AA, '#w17-otl').children].forEach((x, i) => x.classList.toggle('on', i === on));
+    q(AA, '#w17-obl').innerHTML = d.base.map((b, i) => `<li class="${i === on ? 'on' : ''}"><span>${mmss(b.de)}–${mmss(b.a)}<\/span>${esc(b.bloque)}${i === on ? ' ← aquí oye la recomendación' : ''}<\/li>`).join('');
+    poneMsg(om, m === 'p' ? 'ok' : 'bad', m === 'p'
+      ? `Con la conclusión primero (<b>mensaje único en la apertura<\/b>), el tribunal conoce la recomendación en el minuto <b>${mmss(PRI.a)}<\/b>, y el arco que viene después la justifica.`
+      : `Contado como un diario («primero hicimos…»), el tribunal no oye la recomendación hasta el minuto <b>${mmss(ULT.de)}<\/b>, con solo ${mmss(TOT - ULT.de)} por delante: <b>llega sin saber adónde vais<\/b>.`);
+  }
+  pintaOrden('p');
+  const pir = d.piramide.map(s => { const m = s.match(/^(.+?)(?: \((.+)\))?$/); return {n: m[1], sub: m[2] || ''}; });
+  const pe = d.piramide_ej;
+  q(AA, '#w17-pir').innerHTML = `<div class="c"><b>${esc(pir[0].n)}<\/b>${esc(pe['Conclusión'])}<\/div>
+    <div class="a">${pir.slice(1).map(x => `<div><b>${esc(x.n)}<\/b><small>${esc(x.sub)}<\/small>${esc(pe[x.n])}<\/div>`).join('')}<\/div>
+    <div class="e"><b>Evidencias<\/b>${esc(pe['Evidencias'])}<\/div>`;
+
+  /* arco narrativo con tiempos de la plantilla (mínimo / máximo) */
+  AB.innerHTML = `<h4 class="w17-h"><i>3<\/i>El arco narrativo: el protagonista es el cliente<\/h4><div id="w17-ag"><\/div><ul class="w17-arc" id="w17-al"><\/ul>
+    <div class="w17-lin" id="w17-at"><\/div><div id="w17-am"><\/div><div class="w17-nota" id="w17-ar"><\/div>`;
+  const am = msg(); q(AB, '#w17-am').appendChild(am);
+  const ag = grupo([['min', 'Con el mínimo'], ['max', 'Con el máximo']], 'min', pintaArco, 'Tiempos del arco'); q(AB, '#w17-ag').appendChild(ag.el);
+  const aMin = d.arco.reduce((s, a) => s + a.min, 0), aMax = d.arco.reduce((s, a) => s + a.max, 0);
+  function pintaArco(){
+    const k = ag.v, tot = k === 'min' ? aMin : aMax, t = turno(), pres = (t.relato + t.demo) * 60 - MARGEN;
+    q(AB, '#w17-al').innerHTML = d.arco.map((a, i) => `<li><span class="t">${a.min === a.max ? mmss(a.min) : mmss(a.min) + '–' + mmss(a.max)}<\/span><b>${i + 1}. ${esc(a.momento)}<\/b><em>${esc(a.pregunta)}<\/em><em>Ejemplo del hotel: ${esc(a.ej)}<\/em><\/li>`).join('');
+    q(AB, '#w17-at').innerHTML = `${barra(tot, Math.max(tot, pres) * 1.15, pres, tot > pres)}<span>${mmss(tot)} de ${mmss(pres)}<\/span>`;
+    poneMsg(am, tot > pres ? 'bad' : 'ok', tot > pres
+      ? `Con ${E.eq} equipos, relato y demo suman ${min1(t.relato + t.demo)} min (con ${MARGEN} s de margen: ${mmss(pres)}). El arco ${k === 'min' ? 'incluso con el mínimo' : 'con el máximo'} pasa en <b>${mmss(tot - pres)}<\/b>: quitad ideas, no aceleréis.`
+      : `Con ${E.eq} equipos, el arco ${k === 'min' ? 'con el mínimo' : 'con el máximo'} cabe en el relato y la demo (${mmss(pres)} con margen).`);
+    q(AB, '#w17-ar').innerHTML = `<b>Ojo: la plantilla trae tres relojes.<\/b> El arco suma ${mmss(aMin)}–${mmss(aMax)}, el storyboard ${mmss(d.cuentas.story_s)} y el guion base ${mmss(d.cuentas.base_s)}. Cuentan la misma historia: manda el tiempo de <b>vuestro turno<\/b>, no la suma de la plantilla.`;
+  }
+  oyentes.push(pintaArco); pintaArco();
+
+  /* pitch de 3 minutos: una frase por franja, con las palabras que caben */
+  AP.innerHTML = `<h4 class="w17-h"><i>4<\/i>El pitch de 3 minutos · una frase por franja<\/h4>
+    <p class="cap" style="margin:0 0 8px">Debe funcionar sin diapositivas. A ritmo tranquilo se dicen unas ${PPM} palabras por minuto, es decir, <b>unas ${d.pitch_palabras} en total<\/b>, no 1.000: si pasa de 3 minutos, recortad <b>ideas<\/b>, no velocidad. Es el ejemplo del hotel; escribid vosotras las frases.<\/p>
+    <div class="duo" id="w17-pf"><\/div><div class="w17-lin" id="w17-pt"><\/div><div id="w17-pm"><\/div><div class="ctl" id="w17-pb" style="margin-top:8px;padding-top:8px"><\/div>`;
+  const pm = msg(); q(AP, '#w17-pm').appendChild(pm);
+  const pfr = d.pitch.map((p, i) => {
+    const w = el('div', 'w17-fz'); const cap = PPM * (p.a - p.de) / 60;
+    w.innerHTML = `<label for="w17-pi${i}">${p.de}–${p.a} s · <b>${esc(p.etiqueta)}<\/b><\/label> <small>${esc(p.que.slice(p.etiqueta.length).replace(/^:\s*/, '· ').trim())}<\/small>
+      <textarea class="w17-in" id="w17-pi${i}" rows="2" aria-label="Frase del pitch, ${p.de} a ${p.a} segundos"><\/textarea><div class="w17-lin"><\/div>`;
+    q(AP, '#w17-pf').appendChild(w); const ta = q(w, 'textarea'); ta.addEventListener('input', pintaPitch); return {ta, lin: q(w, '.w17-lin'), cap, p};
+  });
+  function pintaPitch(){
+    let tot = 0, mal = [];
+    pfr.forEach(f => { const n = pal(f.ta.value); tot += n; const sob = n > Math.round(f.cap); if (sob) mal.push(f.p.etiqueta.toLowerCase());
+      f.lin.innerHTML = `${barra(n, Math.max(f.cap * 1.5, n), f.cap, sob)}<span>${n} de ${Math.round(f.cap)} palabras<\/span>`; });
+    const s = tot / PPM * 60, ult = d.pitch[d.pitch.length - 1].a;
+    q(AP, '#w17-pt').innerHTML = `${barra(s, Math.max(ult * 1.3, s), ult, s > ult)}<span>${tot} palabras · ${mmss(s)} de ${mmss(ult)}<\/span>`;
+    poneMsg(pm, !tot ? '' : s > ult ? 'bad' : mal.length ? 'warn' : 'ok', !tot ? 'Escribid una frase por franja (o mirad el ejemplo) y se cuentan las palabras que caben a ritmo tranquilo.'
+      : s > ult ? `Pasa de ${mmss(ult)} (${mmss(s)}): <b>recortad ideas, no velocidad<\/b>.`
+      : mal.length ? `Cabe en ${mmss(ult)}, pero ${mal.length > 1 ? 'las franjas' : 'la franja'} «${mal.join('», «')}» ${mal.length > 1 ? 'se pasan' : 'se pasa'} de las palabras que caben en su tiempo.`
+      : `Cabe: ${tot} palabras, unos ${mmss(s)} a ritmo tranquilo.`);
+  }
+  const pb = q(AP, '#w17-pb');
+  pb.append(boton('Ver el ejemplo del hotel', () => { pfr.forEach(f => f.ta.value = f.p.ej); pintaPitch(); }), boton('Vaciar', () => { pfr.forEach(f => f.ta.value = ''); pintaPitch(); }));
+  pintaPitch();
+
+  /* ═════════ 3 · STORYBOARD, TIEMPO Y VOCES ═════════ */
+  const bT = pieza(host, 'turno', 'STORYBOARD · EL TIEMPO DE VUESTRO TURNO Y QUIÉN HABLA');
+  bT.innerHTML = `<p class="cap" style="margin:0 0 8px">Apartado 5 de la plantilla: una idea por diapositiva y, en cada una, quién habla y cuánto dura. <b>Quitad diapositivas, no aceleréis.<\/b> Cambiad los minutos, mandad una diapositiva «a reserva» (va después de la ${d.max_diapos}) o cambiad arriba el número de equipos y mirad si cabe.<\/p>
+    <div class="scroll"><table class="w17-st"><thead><tr><th>Nº<\/th><th>Diapositiva (tema de la plantilla)<\/th><th>Voz<\/th><th>Tiempo<\/th><th>A reserva<\/th><\/tr><\/thead><tbody><\/tbody><\/table><\/div>
+    <div class="ctl" id="w17-tbt" style="margin-top:8px;padding-top:8px"><\/div><p class="cap" id="w17-tcor"><\/p>
+    <div class="duo w17-blk"><div class="w17-col" id="w17-tp"><h4 class="w17-h"><i>▸<\/i>El tiempo<\/h4><div id="w17-tpb"><\/div><p class="cap" id="w17-tpc"><\/p><div id="w17-tpm"><\/div><\/div>
+    <div class="w17-col" id="w17-tv"><h4 class="w17-h"><i>▸<\/i>Las voces<\/h4><div id="w17-tvb"><\/div><p class="cap" id="w17-tvc"><\/p><div id="w17-tvm"><\/div><\/div><\/div><ul class="checks" id="w17-tck"><\/ul>
+    <details style="margin-top:12px"><summary><b>Título-conclusión, no etiqueta<\/b> (apuntes)<\/summary><ul class="w17-fr">${d.titulos.map(t => `<li class="ti">«${esc(t.mal)}»<\/li><li class="el">«${esc(t.bien)}»<\/li>`).join('')}<\/ul><\/details>`;
+  const tb = q(bT, 'tbody');
+  let voz = d.voces4.slice(), maneja = d.maneja; const tiempo = d.story.map(s => s.s), reserva = d.story.map(() => false);
+  const fila = d.story.map((s, i) => {
+    const demo = i === DEMO, tr = document.createElement('tr');
+    tr.innerHTML = `<td class="n">${s.n}<\/td><td class="tm"><b>${esc(s.tema)}<\/b><small>${esc(s.visual)}<\/small><\/td>
+      <td class="vz" data-l="${demo ? '' : 'Habla'}">${demo ? '<span class="w17-sl">Narra<\/span>' : ''}<select class="w17-in" aria-label="Quién ${demo ? 'narra la demo' : 'habla'} en la diapositiva ${s.n}"><\/select>${demo ? '<span class="w17-sl">Maneja<\/span><select class="w17-in" aria-label="Quién maneja la demo"><\/select>' : ''}<\/td>
+      <td class="tp" data-l="Tiempo"><button type="button" class="btn small" aria-label="Quitar 15 segundos a la diapositiva ${s.n}">−<\/button><span class="t"><\/span><button type="button" class="btn small" aria-label="Añadir 15 segundos a la diapositiva ${s.n}">+<\/button><\/td>
+      <td class="rs" data-l="A reserva"><input type="checkbox" aria-label="Diapositiva ${s.n} a reserva (después de la ${d.max_diapos})"><\/td>`;
+    const [sv, sm] = tr.querySelectorAll('select'), [bm, bp] = tr.querySelectorAll('button'), ck = q(tr, 'input');
+    sv.addEventListener('change', () => { voz[i] = sv.value; pinta(); });
+    if (sm) sm.addEventListener('change', () => { maneja = sm.value; pinta(); });
+    bm.addEventListener('click', () => { tiempo[i] = Math.max(0, tiempo[i] - 15); pinta(); });
+    bp.addEventListener('click', () => { tiempo[i] = Math.min(600, tiempo[i] + 15); pinta(); });
+    ck.addEventListener('change', () => { reserva[i] = ck.checked; pinta(); });
+    tb.appendChild(tr); return {tr, sv, sm, t: q(tr, '.t'), ck};
+  });
+  const tbt = q(bT, '#w17-tbt');
+  const bSolo = boton('', () => { const so = turno().solo; d.story.forEach((_, i) => { reserva[i] = !so.includes(i + 1); }); pinta(); });
+  tbt.append(boton('Volver a la plantilla', () => { voz = (E.n === 3 ? d.voces3 : d.voces4).slice(); maneja = d.maneja; d.story.forEach((s, i) => { tiempo[i] = s.s; reserva[i] = false; }); alinea(); pinta(); }), bSolo);
+  const tpb = q(bT, '#w17-tpb'), tpc = q(bT, '#w17-tpc'), tvb = q(bT, '#w17-tvb'), tvc = q(bT, '#w17-tvc'), tck = q(bT, '#w17-tck');
+  const tpm = msg(), tvm = msg(); q(bT, '#w17-tpm').appendChild(tpm); q(bT, '#w17-tvm').appendChild(tvm);
+  function alinea(){ fila.forEach((f, i) => { rellena(f.sv, voz[i]); voz[i] = f.sv.value; if (f.sm) { rellena(f.sm, maneja); maneja = f.sm.value; } }); }
+  let ultimo = {}; const pasan = []; const emite2 = () => pasan.forEach(f => f());
+  function pinta(){
+    const t = turno(); let rel = 0, dem = 0, fuera = 0;
+    fila.forEach((f, i) => { f.t.textContent = mmss(tiempo[i]); f.ck.checked = reserva[i]; f.tr.classList.toggle('fuera', reserva[i]); f.sv.value = voz[i]; if (f.sm) f.sm.value = maneja;
+      if (reserva[i]) fuera++; else if (i === DEMO) dem += tiempo[i]; else rel += tiempo[i]; });
+    const R = t.relato * 60, Dm = t.demo * 60, lim = R + Dm - MARGEN, tot = rel + dem, resto = lim - tot;
+    tpb.innerHTML = `<div class="w17-lin">${barra(rel, Math.max(R, rel) * 1.15, R, rel > R)}<span>relato ${mmss(rel)} de ${mmss(R)}<\/span><\/div>
+      <div class="w17-lin">${barra(dem, Math.max(Dm, dem) * 1.15, Dm, dem > Dm)}<span>demo ${mmss(dem)} de ${mmss(Dm)}<\/span><\/div>
+      <div class="w17-lin">${barra(tot, Math.max(lim, tot) * 1.15, lim, tot > lim)}<span>total ${mmss(tot)} de ${mmss(lim)}<\/span><\/div>`;
+    tpc.innerHTML = `El tope es relato + demo del turno menos ${MARGEN} s de margen (comprobación final de la plantilla). Las preguntas (${min1(t.preguntas)} min) van aparte, al final.${fuera ? ` ${fuera} ${fuera > 1 ? 'diapositivas van' : 'diapositiva va'} a reserva: el PDF queda en ${d.story.length - fuera}.` : ''}`;
+    poneMsg(tpm, tot > lim ? 'bad' : 'ok', tot > lim ? `No cabe: os pasáis <b>${mmss(tot - lim)}<\/b>. <b>Quitad diapositivas, no aceleréis.<\/b>`
+      : `<b>Cabe<\/b>, con ${mmss(resto)} de sobra${resto > 120 ? ': si os sobra tiempo no lo rellenéis, acabad antes' : ''}.`);
+    const cuenta = P(E.n).map(p => { const ix = d.story.map((_, i) => i).filter(i => !reserva[i] && voz[i] === p); return {p, n: ix.length, t: ix.reduce((s, i) => s + tiempo[i], 0)}; });
+    const totv = cuenta.reduce((s, c) => s + c.t, 0) || 1, nadie = cuenta.filter(c => !c.n).map(c => c.p);
+    tvb.innerHTML = cuenta.map(c => `<div class="w17-per"><span class="n">${c.p}<\/span>${barra(c.t, totv, null, !c.n)}<span class="v">${c.n} diap. · ${mmss(c.t)} · ${Math.round(c.t / totv * 100)} %<\/span><\/div>`).join('');
+    tvc.innerHTML = `La demo la maneja <b>${maneja}<\/b> y la narra <b>${voz[DEMO]}<\/b>${E.n === 3 ? ' (con 3 personas el guion no dice quién la narra: lo decidís vosotras)' : ''}.`;
+    poneMsg(tvm, nadie.length ? 'bad' : 'ok', nadie.length ? `<b>${lista(nadie)} no ${nadie.length > 1 ? 'hablan' : 'habla'} en ninguna diapositiva.<\/b> La regla es que hablen todas las personas.` : '<b>Hablan todas las personas.<\/b> Mirad si el reparto os parece equilibrado.');
+    q(bT, '#w17-tcor').innerHTML = `<b>Cómo recortar el guion base con ${E.eq} equipos<\/b> (paso 3): ${esc(t.recorte)}.`;
+    bSolo.hidden = !t.solo; if (t.solo) bSolo.textContent = `Dejar solo las diapositivas del guion para ${E.eq} equipos`;
+    const cH = d.comprobacion.find(x => /Hablan/.test(x)), cT = d.comprobacion.find(x => /Cabe en el tiempo/.test(x));
+    tck.innerHTML = marca(!nadie.length, `${esc(cH || '')} <i>(quien narra la demo cuenta como hablar; el equilibrio lo decidís vosotras)<\/i>`) + marca(tot <= lim, esc(cT || ''));
+    ultimo = {rel, dem, tot, lim, fuera, voz: voz.slice(), reserva: reserva.slice(), tiempo: tiempo.slice()}; emite2();
+  }
+  oyentes.push(que => { if (que === 'n' || que === 'ini') { voz = (E.n === 3 ? d.voces3 : d.voces4).slice(); maneja = d.maneja; } alinea(); pinta(); });
+
+  /* ═════════ 4 · PREGUNTAS DEL TRIBUNAL ═════════ */
+  const bQ = pieza(host, 'preguntas', 'LAS PREGUNTAS DEL TRIBUNAL · MÉTODO RESPONDE');
+  bQ.innerHTML = '<div class="duo"><div class="w17-col" id="w17-qa"><\/div><div class="w17-col" id="w17-qb"><\/div><\/div>';
+  const QA = q(bQ, '#w17-qa'), QB = q(bQ, '#w17-qb');
+  QA.innerHTML = `<h4 class="w17-h"><i>1<\/i>Las ${d.preguntas.length} preguntas probables: quién prepara cada una<\/h4>
+    <p class="cap" style="margin:0 0 4px">Las preguntas pueden ir a <b>cualquier<\/b> persona, así que todas deben conocer todo el proyecto. Repartir sirve para <b>preparar<\/b> la respuesta con su dato. Para el «Apto», cada persona responde al menos una pregunta individual.<\/p>
+    <div id="w17-ql"><\/div><div class="w17-chips" id="w17-qc"><\/div><div id="w17-qm"><\/div><div class="ctl" id="w17-qbt" style="margin-top:8px;padding-top:8px"><\/div>`;
+  const qsel = d.preguntas.map((p, i) => {
+    const r = el('div', 'w17-q', `<span class="nn">${p.n}<\/span><span>${esc(p.q)}<\/span><select class="w17-in" aria-label="Quién prepara la pregunta ${p.n}"><\/select><small>Dónde buscar el dato: ${esc(p.dato)}<\/small>`);
+    q(QA, '#w17-ql').appendChild(r); const s = q(r, 'select'); s.addEventListener('change', pintaQ); return s;
+  });
+  const qm = msg(); q(QA, '#w17-qm').appendChild(qm);
+  function alineaQ(){ qsel.forEach(s => rellena(s, s.value, '—')); pintaQ(); }
+  function pintaQ(){
+    const c = P(E.n).map(p => [p, qsel.filter(s => s.value === p).length]), sin = c.filter(x => !x[1]).map(x => x[0]), sinAsig = qsel.filter(s => !s.value).length;
+    q(QA, '#w17-qc').innerHTML = c.map(([p, n]) => `<span class="pill ${n ? 'ok' : 'warn'}">${p} · ${n}<\/span>`).join('') + (sinAsig ? `<span class="pill warn">sin repartir · ${sinAsig}<\/span>` : '');
+    poneMsg(qm, sin.length ? 'warn' : 'ok', sin.length ? (sin.length === E.n ? '<b>Todavía nadie tiene preguntas.<\/b>' : `<b>${lista(sin)} ${sin.length > 1 ? 'no tienen' : 'no tiene'} ninguna pregunta.<\/b>`) + ' Para el «Apto», cada persona responde al menos una.' : '<b>Todas las personas tienen preguntas que preparar.<\/b> Y cualquiera puede recibir cualquiera: preparad todas.');
+  }
+  const qbt = q(QA, '#w17-qbt');
+  qbt.append(boton('Repartir por turnos', () => { qsel.forEach((s, i) => s.value = 'P' + (i % E.n + 1)); pintaQ(); }), boton('Vaciar', () => { qsel.forEach(s => s.value = ''); pintaQ(); }));
+  oyentes.push(alineaQ);
+
+  /* RESPONDE */
+  const RE = d.responde, CAPR = PPM * d.responde_s / 60;
+  QB.innerHTML = `<h4 class="w17-h"><i>2<\/i>RESPONDE · ${d.responde_s} segundos por respuesta<\/h4><div id="w17-rg"><\/div>
+    <div class="w17-rs" id="w17-rc"><\/div><div class="w17-lin" id="w17-rp"><\/div><div id="w17-rm"><\/div><div class="ctl" id="w17-rbt" style="margin-top:8px;padding-top:8px"><\/div>`;
+  const rcampos = RE.pasos.map((p, i) => {
+    const w = el('div'); w.style.display = 'contents';
+    w.innerHTML = `<b aria-hidden="true">${esc(p.l)}<\/b><div><label for="w17-r${i}">${esc(p.q)}<\/label><input class="w17-in" id="w17-r${i}" type="text" maxlength="240"><\/div>`;
+    q(QB, '#w17-rc').appendChild(w); const inp = q(w, 'input'); inp.addEventListener('input', pintaR); return {w, inp, l: q(w, 'label')};
+  });
+  const rno = el('div', 'w17-rs'); rno.hidden = true;
+  rno.innerHTML = `<b aria-hidden="true">?<\/b><div><label for="w17-rno">${esc(RE.sexto)}<\/label><input class="w17-in" id="w17-rno" type="text" maxlength="240" placeholder="${esc(RE.nolose)}"><\/div>`;
+  q(QB, '#w17-rc').after(rno); q(rno, 'input').addEventListener('input', pintaR);
+  const rm = msg(); q(QB, '#w17-rm').appendChild(rm);
+  const rg = grupo([['si', 'Sabemos la respuesta'], ['no', 'No lo sabemos']], 'si', pintaR, 'La respuesta'); q(QB, '#w17-rg').appendChild(rg.el);
+  function pintaR(){
+    const no = rg.v === 'no'; rno.hidden = !no; q(QB, '#w17-rc').hidden = no;
+    const textos = no ? [q(rno, 'input').value] : rcampos.map(c => c.inp.value);
+    const w = textos.reduce((s, t) => s + pal(t), 0), s = w / PPM * 60;
+    q(QB, '#w17-rp').innerHTML = `${barra(w, Math.max(CAPR * 1.6, w), CAPR, w > CAPR)}<span>${w} palabras · ${Math.round(s)} s de ${d.responde_s}<\/span>`;
+    if (no) { poneMsg(rm, 'warn', `<b>Si no lo sabéis, decidlo.<\/b> «${esc(RE.nolose)}» <b>No inventéis<\/b>: inventar una respuesta es el error más caro, y el tribunal lo detecta.`); }
+    else poneMsg(rm, !w ? '' : w > CAPR ? 'warn' : 'ok', !w ? 'Escribid una frase por letra (o mirad el ejemplo de los apuntes) y se cuentan las palabras: a ritmo tranquilo caben unas ' + Math.round(CAPR) + '.'
+      : w > CAPR ? `Son unos <b>${Math.round(s)} s<\/b>: pasáis de los ${d.responde_s}. Recortad el dato o el límite, no la velocidad.` : `Cabe en ${d.responde_s} s (unos ${Math.round(s)}).`);
+  }
+  const rbt = q(QB, '#w17-rbt');
+  rbt.append(boton('Ver el ejemplo de los apuntes', () => { rg.poner('si'); RE.pasos.forEach((p, i) => rcampos[i].inp.value = p.ej); pintaR(); }), boton('Vaciar', () => { rcampos.forEach(c => c.inp.value = ''); q(rno, 'input').value = ''; pintaR(); }));
+  rbt.appendChild(el('span', 'cap', 'Pregunta del ejemplo: «¿cómo sabéis que no es sobreajuste?»'));
+  pintaR();
+
+  /* ═════════ 5 · EL PDF Y SUS CIFRAS ═════════ */
+  const bP = pieza(host, 'pdf', 'EL PDF Y SUS CIFRAS · ANTES DE SUBIRLO');
+  bP.innerHTML = '<div class="duo"><div class="w17-col" id="w17-pa"><\/div><div class="w17-col" id="w17-pb2"><\/div><\/div>';
+  const PA = q(bP, '#w17-pa'), PB = q(bP, '#w17-pb2');
+  PA.innerHTML = `<h4 class="w17-h"><i>1<\/i>El archivo<\/h4>
+    <div class="ctl" style="margin-top:0;padding-top:0;border:0"><label class="w17-lb">Nombre del PDF <input class="w17-in" id="w17-pn" type="text" value="Presentación sin título.pdf" aria-describedby="w17-pnl"><\/label><\/div>
+    <ul class="checks" id="w17-pnl"><\/ul>
+    <div class="ctl"><label>Páginas del PDF <input type="number" id="w17-pg" min="1" max="30" value="12"><\/label><label>Hora de subida <input type="time" id="w17-ph" value="08:10"><\/label><\/div>
+    <ul class="checks" id="w17-pgl"><\/ul><div id="w17-pm2"><\/div><div class="ctl" id="w17-pbt" style="margin-top:8px;padding-top:8px"><\/div>`;
+  const pnI = q(PA, '#w17-pn'), pgI = q(PA, '#w17-pg'), phI = q(PA, '#w17-ph'), pm2 = msg(); q(PA, '#w17-pm2').appendChild(pm2);
+  let pgTocado = false;
+  const sinTildes = t => !/[\u0300-\u036f]/.test(t.normalize('NFD'));
+  function pintaPdf(){
+    const n = pnI.value, ok = n === d.pdf.nombre;
+    q(PA, '#w17-pnl').innerHTML = marca(/\.pdf$/.test(n), 'Termina en <code>.pdf<\/code>.') + marca(n === n.toLowerCase(), 'Todo en <b>minúsculas<\/b>.') + marca(!/\s/.test(n), '<b>Sin espacios<\/b>.') + marca(sinTildes(n), '<b>Sin tildes<\/b>.') + marca(ok, `Es exactamente <code>${esc(d.pdf.nombre)}<\/code>${ok ? '' : ' (el editor pone su propio nombre: cambiadlo antes de subirlo)'}.`);
+    const pg = +pgI.value, [h, mi] = (phI.value || '0:0').split(':').map(Number), hh = d.hora.split(':').map(Number), tarde = h * 60 + mi > hh[0] * 60 + hh[1];
+    q(PA, '#w17-pgl').innerHTML = marca(pg <= d.max_diapos, `<b>Como máximo ${d.max_diapos} páginas<\/b> (las de reserva van aparte, en <code>${esc(d.pdf.reserva)}<\/code>).`) + marca(!tarde, `Subido <b>antes de las ${esc(d.hora)}<\/b> del día de la defensa (lo dice el historial, el reloj de GitHub).`);
+    poneMsg(pm2, ok && pg <= d.max_diapos && !tarde ? 'ok' : 'warn', ok && pg <= d.max_diapos && !tarde ? '<b>Listo para subir<\/b> a la carpeta del sprint. Después, recargad la carpeta: el archivo tiene que aparecer.' : `Todavía no: ${[!ok && 'el nombre', pg > d.max_diapos && `las páginas (${pg} de ${d.max_diapos})`, tarde && 'la hora'].filter(Boolean).join(', ')}.`);
+  }
+  [pnI, pgI, phI].forEach(x => x.addEventListener('input', () => { if (x === pgI) pgTocado = true; pintaPdf(); }));
+  q(PA, '#w17-pbt').append(boton('Poner el nombre correcto', () => { pnI.value = d.pdf.nombre; pintaPdf(); }));
+  pasan.push(() => { if (!pgTocado) { pgI.value = ultimo.reserva.filter(r => !r).length; } pintaPdf(); });
+  PB.innerHTML = `<h4 class="w17-h"><i>2<\/i>Las cifras: se comprueban contra la memoria<\/h4>
+    <p class="cap" style="margin:0 0 6px">Las comprueba <b>una persona que no hizo esa diapositiva<\/b>. Son los ejemplos del hotel: las cifras de vuestra presentación serán otras.<\/p><div id="w17-pc" class="w17-lst"><\/div><div id="w17-pcm"><\/div>`;
+  const accion = {si: 'Coincide: no se toca nada.', no: 'No coincide: se corrige <b>la diapositiva<\/b> y se exporta otra vez. <b>No se cambia la memoria.<\/b>', fuera: 'No está en la memoria: la cifra se <b>quita<\/b>. No se presentan resultados nuevos.'};
+  const pcm = msg(); q(PB, '#w17-pcm').appendChild(pcm);
+  const cif = d.pdf.cifras.map((c, i) => {
+    const w = el('div', 'w17-fz', `<b>Diapositiva ${c.d}<\/b> · «${esc(c.c)}»<br><small>En la memoria: ${esc(c.donde)}<\/small>
+      <div class="ctl" style="margin-top:6px;padding-top:6px"><label>¿Coincide? <select class="w17-in" style="width:auto"><option value="si">sí<\/option><option value="no">no coincide<\/option><option value="fuera">no está en la memoria<\/option><\/select><\/label>
+      <label>La comprueba <select class="w17-in" style="width:auto"><\/select><\/label><\/div><div class="cap"><\/div>`);
+    q(PB, '#w17-pc').appendChild(w); const [se, sr] = w.querySelectorAll('select'); se.value = c.est; se.addEventListener('change', pintaCif); sr.addEventListener('change', pintaCif);
+    return {se, sr, c, cap: q(w, '.cap')};
+  });
+  function pordefecto(){ cif.forEach(f => { rellena(f.sr, '', ''); const h = (ultimo.voz || voz)[f.c.d - 1], k = +h.slice(1); f.sr.value = 'P' + (k === 1 ? E.n : k - 1); }); }
+  function pintaCif(){
+    let bad = 0, own = 0;
+    cif.forEach(f => { const h = (ultimo.voz || voz)[f.c.d - 1], propia = f.sr.value === h; own += propia; bad += f.se.value !== 'si';
+      f.cap.innerHTML = accion[f.se.value] + (propia ? ` <b class="w17-malx" style="color:var(--bad)">Pero ${h} habla y hace esa diapositiva: que la compruebe otra persona.<\/b>` : ''); });
+    poneMsg(pcm, own || bad ? 'warn' : 'ok', `${cif.length - bad} de ${cif.length} cifras coinciden.${bad ? ' <b>Una cifra distinta basta para bajar el nivel de «Corrección técnica»<\/b> en la rúbrica: se corrige la diapositiva.' : ''}${own ? ' Nadie revisa su propia diapositiva.' : ''}`);
+  }
+  oyentes.push(que => { if (que !== 'eq') pordefecto(); pintaCif(); });
+  pasan.push(pintaCif);
+
+  /* ═════════ 6 · LA REVISIÓN CON LA RÚBRICA ═════════ */
+  const bR = pieza(host, 'rubrica', 'LA REVISIÓN CON LA RÚBRICA · QUIEN NO LO PREPARÓ, CON PRUEBA');
+  const PARTES = ['Diapositivas', 'Demo', 'Plantilla y relato', 'Límites y riesgos'];
+  bR.innerHTML = `<p class="cap" style="margin:0 0 8px">Después de defender, la revisión la hace <b>quien no escribió esa parte<\/b>. El nivel es el de la columna cuyo texto <b>se cumple entero<\/b>; si se cumple a medias, el de abajo. Sin una frase de prueba, el nivel no vale. Cada criterio se mira con su parte (el de Reproducibilidad lo pone quien no preparó la demo; el resto, en el mismo orden).<\/p>
+    <div class="ctl" id="w17-rpp" style="margin-top:0;padding-top:0;border:0"><\/div>
+    <div class="w17-ok" id="w17-rcr"><\/div><div id="w17-rrm"><\/div>
+    <div class="ctl"><label class="w17-lb">Uso de IA en la preparación de la defensa <input class="w17-in" id="w17-ria" type="text" placeholder="qué le pedisteis y qué revisasteis a mano; si no la usasteis, escribidlo"><\/label><label class="w17-lb">Lo primero que mejoraríamos <input class="w17-in" id="w17-rme" type="text" placeholder="una cosa concreta"><\/label><\/div>
+    <h4 class="w17-h w17-blk"><i>▸<\/i>Así quedaría al final de <code>plantilla_storytelling.md<\/code><\/h4>
+    <textarea class="w17-in w17-pre" id="w17-rmd" readonly aria-label="Texto de la revisión con la rúbrica, para copiar en la plantilla"><\/textarea><div class="ctl" id="w17-rcp" style="margin-top:6px;padding-top:6px;border:0"><\/div>`;
+  const prep = PARTES.map((p, i) => { const l = el('label', '', `${esc(p)} lo preparó <select class="w17-in" style="width:auto" aria-label="Quién preparó: ${esc(p)}"><\/select>`); q(bR, '#w17-rpp').appendChild(l); const s = q(l, 'select'); s.addEventListener('change', pintaRub); return s; });
+  const defPrep = ['P2', 'P3', 'P1', 'P4'];
+  let rubNivel = d.rubrica.map(() => 0);
+  const rcr = d.rubrica.map((r, i) => {
+    const c = el('div', 'w17-cr'); q(bR, '#w17-rcr').appendChild(c);
+    c.innerHTML = `<h5>${esc(r.criterio)}<\/h5><p class="p">${esc(r.pregunta)} · parte: <b>${esc(PARTES[i])}<\/b><\/p>
+      <div class="niv"><\/div><div class="txt" aria-live="polite">Elegid un nivel y leed si se cumple <b>entero<\/b>.<\/div>
+      <label>Pone el nivel <select class="w17-in" style="width:auto" aria-label="Quién pone el nivel de ${esc(r.criterio)}"><\/select><\/label>
+      <textarea class="w17-in" rows="2" style="margin-top:6px" aria-label="Frase de prueba de ${esc(r.criterio)}" placeholder="${esc(r.ph)}"><\/textarea><div class="cap est"><\/div>`;
+    const g = grupo([[1, '1'], [2, '2'], [3, '3'], [4, '4']], 0, v => { rubNivel[i] = v; q(c, '.txt').innerHTML = `<b>Nivel ${v}:<\/b> ${esc(r.niveles[v - 1])}`; pintaRub(); }, `Nivel de ${r.criterio}`);
+    q(c, '.niv').appendChild(g.el);
+    const sel = q(c, 'select'); sel.addEventListener('change', pintaRub); q(c, 'textarea').addEventListener('input', pintaRub);
+    return {c, sel, ta: q(c, 'textarea'), est: q(c, '.est')};
+  });
+  const rrm = msg(); q(bR, '#w17-rrm').appendChild(rrm);
+  const rmd = q(bR, '#w17-rmd'), ria = q(bR, '#w17-ria'), rme = q(bR, '#w17-rme');
+  ria.addEventListener('input', pintaRub); rme.addEventListener('input', pintaRub);
+  function pintaRub(){
+    let validos = 0;
+    rcr.forEach((f, i) => {
+      const prepara = prep[i].value, razones = [];
+      if (!rubNivel[i]) razones.push('falta el nivel');
+      if (pal(f.ta.value) < 3) razones.push('falta la frase de prueba (sin prueba, el nivel no vale)');
+      if (f.sel.value === prepara) razones.push(`${prepara} preparó esa parte y no puede poner su nivel`);
+      f.c.classList.toggle('bien', !razones.length); f.c.classList.toggle('mal', razones.length > 0 && !!(rubNivel[i] || f.ta.value));
+      f.est.innerHTML = razones.length ? `<span class="pill ${rubNivel[i] || f.ta.value ? 'bad' : 'warn'}">NO VALE TODAVÍA<\/span> ${razones.join('; ')}.` : '<span class="pill ok">VÁLIDO<\/span> nivel, prueba y quien lo pone.';
+      validos += !razones.length;
+    });
+    poneMsg(rrm, validos === rcr.length ? 'ok' : 'warn', `<b>${validos} de ${rcr.length} criterios con un nivel que vale.<\/b> ${validos === rcr.length ? 'Falta solo copiar el resultado a la plantilla.' : 'Cada uno necesita nivel, frase de prueba y que lo ponga quien no preparó esa parte.'}`);
+    const quien = [...new Set(rcr.map(f => f.sel.value))].join(' y ');
+    rmd.value = `**Revisado por:** ${quien} · **Fecha:** dd/mm/aaaa\n\n**Uso de IA en la preparación de la defensa:** ${ria.value.trim() || '…'}\n\n| Criterio | Nivel (1–4) | Prueba: una frase de lo que has comprobado |\n|---|---|---|\n` +
+      d.rubrica.map((r, i) => `| ${r.criterio} | ${rubNivel[i] || '…'} | ${rcr[i].ta.value.trim().replace(/\|/g, '/') || '…'} |`).join('\n') + `\n\n**Lo primero que mejoraríamos:** ${rme.value.trim() || '…'}\n`;
+  }
+  q(bR, '#w17-rcp').append(boton('Copiar el texto', () => { rmd.select(); const viejo = () => { try { document.execCommand('copy'); } catch (e2) {} }; try { navigator.clipboard.writeText(rmd.value).catch(viejo); } catch (e) { viejo(); } }), el('span', 'cap', 'Solo es un borrador: lo que se entrega es el archivo de vuestro repositorio.'));
+  oyentes.push(que => {
+    prep.forEach((s, i) => rellena(s, que === 'eq' ? s.value : defPrep[i]));
+    rcr.forEach((f, i) => { if (que !== 'eq') { rellena(f.sel, ''); f.sel.value = P(E.n).find(p => p !== prep[i].value); } }); pintaRub(); });
+
+  emite();
+};
+
+/* ───────── marco común ───────── */
+const app = document.getElementById('app');
+const sh = (t) => `<div class="sh"><span class="st">${esc(t)}</span><span class="ln"></span></div>`;
+
+const hero = el('header');
+const totalMin = D.pasos.reduce((s, p) => s + (p.min || 0), 0);
+hero.innerHTML = `<div class="kicker">${esc(D.kicker)}</div><h1>${esc(D.titulo)}</h1><p class="lead">${md(D.lead)}</p>
+  <div class="chips"><span class="chip">${D.pasos.length} pasos</span><span class="chip">≈ ${totalMin} min de reto</span><span class="chip">${esc(D.sube_resumen)}</span></div>
+  <p class="hint" style="margin-top:14px">${md(D.aviso)}</p>`;
+app.appendChild(hero);
+
+const play = el('section');
+play.innerHTML = sh('EL PRODUCTO FUNCIONANDO') + `<h2>${esc(D.widget_titulo)}</h2><p class="sec-intro">${md(D.intro)}</p>`;
+const steps = el('div', 'steps'); steps.setAttribute('role', 'group'); steps.setAttribute('aria-label', 'Pasos del reto');
+const aqui = el('div', 'aqui'); aqui.setAttribute('aria-live', 'polite');
+const stage = el('div', 'stage');
+play.append(steps, aqui, stage);
+app.appendChild(play);
+const widget = W[D.widget](stage, D);
+
+function elegir(i){
+  const btns = steps.querySelectorAll('.step');
+  btns.forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
+  const panels = stage.querySelectorAll('[data-pieza]');
+  if (i < 0) { stage.classList.remove('sel'); panels.forEach(p => p.classList.remove('hl')); aqui.innerHTML = md(D.aqui_todo); return; }
+  const p = D.pasos[i];
+  stage.classList.add('sel');
+  panels.forEach(pn => pn.classList.toggle('hl', pn.dataset.pieza.split(' ').some(x => (p.piezas || []).includes(x))));
+  aqui.innerHTML = `<b>Paso ${esc(p.n)} · ${esc(p.titulo)}</b> (${p.min} min). ${md(p.aqui || '')}`;
+  const first = stage.querySelector('.pieza.hl'); if (first && first.getBoundingClientRect().top > window.innerHeight * .8) first.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center'});
+}
+D.pasos.forEach((p, i) => {
+  const b = el('button', 'step', `<span class="n">${esc(p.n)}</span><span>${esc(p.corto || p.titulo)}<small>${p.min} min</small></span>`);
+  b.type = 'button'; b.setAttribute('aria-pressed', 'false'); b.addEventListener('click', () => elegir(steps.querySelector('.step[aria-pressed="true"]') === b ? -1 : i));
+  steps.appendChild(b);
+});
+elegir(-1);
+
+/* qué se sube y cómo se evalúa */
+const fin = el('section');
+fin.innerHTML = sh('QUÉ SE SUBE Y CÓMO SE EVALÚA') + `<h2>Lo que entregáis y con qué se puntúa</h2><p class="sec-intro">Todo va al repositorio del equipo, en la carpeta <code>${esc(D.carpeta_entrega)}</code>. La rúbrica es la misma que usáis para revisar vuestro propio trabajo antes de subirlo.</p>`;
+const files = el('div', 'files');
+D.ficheros.forEach(f => files.appendChild(el('div', 'file', `<b>${esc(f.nombre)}</b><span class="o">${md(f.origen)}</span><span class="s">${esc(f.sube)}</span>`)));
+fin.appendChild(files);
+const tabs = el('div', 'tabs'); tabs.setAttribute('role', 'tablist');
+const lv = el('div', 'levels'); lv.setAttribute('aria-live', 'polite');
+const qq = el('p', 'hint'); qq.style.marginBottom = '10px';
+const NIV = ['1 · Empezado', '2 · Mínimo', '3 · Estándar', '4 · Extra'];
+function criterio(k){
+  tabs.querySelectorAll('.tab').forEach((t, j) => t.setAttribute('aria-selected', String(j === k)));
+  const c = D.rubrica[k]; qq.textContent = c.pregunta;
+  lv.innerHTML = c.niveles.map((t, j) => `<div class="lv${j === 1 ? ' min' : ''}"><h3>${NIV[j]}</h3><p>${md(t)}</p></div>`).join('');
+}
+D.rubrica.forEach((c, k) => { const t = el('button', 'tab', esc(c.criterio)); t.type = 'button'; t.setAttribute('role', 'tab'); t.addEventListener('click', () => criterio(k)); tabs.appendChild(t); });
+fin.append(tabs, qq, lv);
+fin.appendChild(el('p', 'hint', 'Orientación: lo que pide el nivel mínimo sale en un <b>2</b>, el estándar en un <b>3</b> y los extras en un <b>4</b>. Sin una frase de prueba escrita, el nivel no vale.'));
+criterio(0);
+app.appendChild(fin);
+
+const pie = el('footer');
+pie.innerHTML = sh('DÓNDE SEGUIR') + `<div class="links">${D.enlaces.map(e => `<a class="btn" href="${esc(e.url)}">${esc(e.t)}</a>`).join('')}</div><p class="foot" style="margin-top:14px">${md(D.pie)}</p>`;
+app.appendChild(pie);
+})();
+</script>
+</body>
+</html>
