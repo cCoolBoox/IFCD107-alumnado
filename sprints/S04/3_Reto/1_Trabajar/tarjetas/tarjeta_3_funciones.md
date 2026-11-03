@@ -39,7 +39,7 @@ def noches_totales(reservas):          # entra: la lista de reservas
 | 1 | 📚 Aprender | Funciones (ejercicios 1 y 2): `def`, parámetros y `return` | Curso: [funciones](https://www.curso.soultechlabs.io/basico/#func) | 10 | Los dos ejercicios en verde |
 | 2 | 📚 Aprender | «Contar con un diccionario» e «Ingreso medio de las reservas confirmadas». **Son casi vuestras dos funciones**, montadas con piezas | Taller: [bloque 2](https://www.curso.soultechlabs.io/taller/#t-conteo) | 10 | Los dos puzles montados |
 | 3 | ✅ Comprobar | Ver las pruebas en rojo. La fase 1 son **4 pruebas** y empiezan fallando: es lo normal | Terminal: `python test_kpis.py 1` | 5 | Veis «0 de 4» y qué espera cada prueba |
-| 4 | 🛠️ Construir | `tasa_cancelacion_por_canal`, siguiendo los comentarios «Paso» de su docstring (el texto entre comillas triples, justo debajo de `def`, que explica la función; ver «Paso 4», abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 20 | La función está escrita con un `return` |
+| 4 | 🛠️ Construir | `tasa_cancelacion_por_canal`, siguiendo los comentarios `# Paso` que hay justo debajo del docstring (el texto entre comillas triples, bajo `def`, que explica la función; ver «Paso 4», abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 20 | La función está escrita con un `return` |
 | 5 | ✅ Comprobar | Ejecutar la prueba, leer qué esperaba y qué recibió, corregir y repetir | Terminal: `python test_kpis.py 1` | 5 | `test_tasa_cancelacion…` en verde |
 | **Parte B** | | *(después de la consolidación)* | | **40** | |
 | 6 | 🛠️ Construir | `ingreso_medio_por_reserva` (ver «Paso 6», abajo) | `kpis.py` | 17 | La función está escrita con un `return` |
@@ -67,11 +67,11 @@ Se comprueba con `test_tasa_cancelacion…` (incluye el redondeo). **Pista de cu
 
 | Orden | Qué hacéis | Pista de Python |
 |---|---|---|
-| 1 | Hacer una lista con `noches × precio_noche` **solo** de las reservas no canceladas | Comprensión de lista con `if r["cancelada"] == 0` |
+| 1 | Hacer una lista con `noches × precio_noche` **solo** de las reservas no canceladas | Crea una lista vacía y, con `for` + `if r["cancelada"] == 0`, añádele cada valor con `append` (como en el puzle «Ingreso medio de las reservas confirmadas» del Taller). La comprensión de lista es la versión corta, opcional |
 | 2 | Si la lista está vacía, devolver `0.0` | `if not lista:` |
 | 3 | Si no, la media con 2 decimales | `round(sum(lista) / len(lista), 2)` |
 
-Se comprueba con `test_ingreso_medio…`. **Pista de cuaderno:** `S04_03` (comprensiones de lista).
+Se comprueba con `test_ingreso_medio…`. **Pista de cuaderno:** `S04_03` (listas y bucles `for` con `if`).
 
 ### Paso 8 · `ocupacion_proxy`
 
@@ -82,7 +82,7 @@ Se comprueba con `test_ingreso_medio…`. **Pista de cuaderno:** `S04_03` (compr
 | 1 | Si la capacidad es ≤ 0, dar un error (no se puede dividir entre cero) | `raise ValueError("La capacidad debe ser mayor que 0")` |
 | 2 | Si no hay reservas, devolver `0.0` | `if not reservas:` |
 | 3 | Calcular los días del periodo: de la primera a la última llegada, **contando también el primer día** | `(max(fechas) - min(fechas)).days + 1` |
-| 4 | Sumar las noches de las reservas **no canceladas** | `sum(...)` sobre una comprensión con `if` |
+| 4 | Sumar las noches de las reservas **no canceladas** | `sum(...)` sobre las noches de las no canceladas: un `for` con `if` que vaya sumando sirve igual (la comprensión es opcional) |
 | 5 | Aplicar la fórmula con 1 decimal | `round(100 * noches / (dias * capacidad), 1)` |
 
 Se comprueba con `test_ocupacion_proxy`. Vosotros **la copiáis y la explicáis con vuestras palabras**. Recordad que es un **proxy** (una medida aproximada, porque el fichero no trae la capacidad real del hotel): se explica en el README.

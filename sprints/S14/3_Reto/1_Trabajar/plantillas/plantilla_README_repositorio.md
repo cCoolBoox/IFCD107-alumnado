@@ -98,7 +98,7 @@ Convención de commits: `tipo: descripción` (`feat:`, `fix:`, `docs:`, `data:`,
 Datos: [atribuciones]. Librerías principales: [lista con versiones]. Licencia del código: [MIT / propia].
 
 ## Revisión con la rúbrica
-<Sprint 14. Rúbrica completa en la ficha del reto, apartado 3. Rellena quien revisa y **no escribió esa parte**: seguir solo este README para descargar los datos y ejecutar los cuadernos, leer la ficha como cliente, comprobar la fuente y la licencia, poner nivel con prueba.>
+<Sprint 14. Rúbrica completa en `entrega_y_rubrica.md` de la carpeta `2_Entregar` del sprint, apartado 3. Rellena quien revisa y **no escribió esa parte**: seguir solo este README para descargar los datos y ejecutar los cuadernos, leer la ficha como cliente, comprobar la fuente y la licencia, poner nivel con prueba.>
 
 **Revisado por:** <nombre> · **Fecha:** <dd/mm/aaaa>
 

@@ -45,16 +45,16 @@ En la parte B, pilotos y copilotos **rotan cada 15 minutos**.
 
 **`_convertir_fila` recibe** una fila con todo en texto, `{"fecha_llegada": "2025-01-01", "noches": "2", "precio_noche": "100.0", "canal": "directo", "cancelada": "0"}`, y **la devuelve con los tipos buenos**: la fecha como `date`, `noches` como `int`, `precio_noche` como `float` y `cancelada` como `int`.
 
-**Cómo pensarlo, en este orden** (así las pruebas se van poniendo en verde una a una):
+**Cómo pensarlo, en este orden.** Las pruebas llaman a `leer_reservas`, así que las órdenes 1 y 2 (que están dentro de `_convertir_fila`) no ponen nada en verde por sí solas: se ven al completar la función de lectura. A partir del orden 3 las pruebas se van poniendo en verde una a una:
 
-| Orden | Qué hacéis | Pista de Python | Prueba que pasa a verde |
+| Orden | Qué hacéis | Pista de Python | Cuándo se ve en verde |
 |---|---|---|---|
-| 1 | Convertir los tipos en `_convertir_fila` | `int()`, `float()` y `date.fromisoformat()` ya lanzan `ValueError` si el texto no sirve | `test_leer_reservas_convierte_tipos` |
-| 2 | Validar los valores: además del tipo, el valor debe tener sentido (noches ≥ 1, precio > 0, `cancelada` 0 o 1, canal no vacío) | `raise ValueError("noches debe ser >= 1")` | `test_valores_imposibles…` |
+| 1 | Convertir los tipos en `_convertir_fila` | `int()`, `float()` y `date.fromisoformat()` ya lanzan `ValueError` si el texto no sirve | Todavía ninguna: se comprueba a través de `leer_reservas` |
+| 2 | Validar los valores: además del tipo, el valor debe tener sentido (noches ≥ 1, precio > 0, `cancelada` 0 o 1, canal no vacío) | `raise ValueError("noches debe ser >= 1")` | Todavía ninguna: `test_valores_imposibles…` pasa con el orden 5 |
 | 3 | Leer el fichero en `leer_reservas`; si no existe, lanzar un error que **incluya la ruta** | `open(ruta, newline="", encoding="utf8")`, `csv.DictReader` y `except FileNotFoundError` | `test_fichero_inexistente` |
 | 4 | Comprobar la cabecera: si falta una columna, un error que **nombre las que faltan** | Comparar `lector.fieldnames` con `COLUMNAS_OBLIGATORIAS` | `test_faltan_columnas` |
-| 5 | Descartar y avisar: probar cada fila, y si falla, guardar el aviso y seguir | `for n, fila in enumerate(lector, start=2)` (la fila 1 es la cabecera), `try`/`except ValueError` y `f"Fila {n} descartada: {error}"` | `test_filas_defectuosas…` |
-| 6 | Devolver **dos cosas a la vez**: las reservas buenas y los avisos | `return reservas, avisos` | `test_leer_reservas_convierte_tipos` |
+| 5 | Descartar y avisar: probar cada fila, y si falla, guardar el aviso y seguir | `for n, fila in enumerate(lector, start=2)` (la fila 1 es la cabecera), `try`/`except ValueError` y `f"Fila {n} descartada: {error}"` | `test_filas_defectuosas…` y `test_valores_imposibles…` |
+| 6 | Devolver **dos cosas a la vez**: las reservas buenas y los avisos | `return reservas, avisos` | `test_leer_reservas_convierte_tipos` (necesita los órdenes 1, 3, 5 y 6) |
 
 **Pista de cuaderno:** [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb) (CSV, JSON y `try`/`except`).
 

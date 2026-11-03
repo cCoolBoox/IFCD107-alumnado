@@ -8,7 +8,7 @@
 
 ## 1 · 📦 Tabla A · Los ficheros: qué se sube
 
-**En total, al final del sprint se suben a `sprint-04/`:** **4 ficheros del equipo** (`kpis.py`, `test_kpis.py`, `README.md`, `salida.json`) **+ 1 autoevaluación y coevaluación por persona**, es decir, **4 + tantos ficheros como personas haya en el equipo** (un equipo de 3 sube 7). «El reto» no es un fichero aparte: son esos cuatro ficheros. Además, el CSV va a `data/` si aún no está, y los extras solo si los hacéis. La *review* y la *retro* se hacen de palabra: no se suben.
+**En total, al final del sprint se suben a `sprint-04/`:** **4 ficheros del equipo** (`kpis.py`, `test_kpis.py`, `README.md`, `salida.json`) **+ 1 autoevaluación y coevaluación por persona**, es decir, **4 + tantos ficheros como personas haya en el equipo** (un equipo de 3 sube 7). «El reto» no es un fichero aparte: son esos cuatro ficheros. Además, el CSV (`reservas_turisdata.csv`, sin cambios) va en la misma carpeta que `kpis.py`, y los extras solo si los hacéis. La *review* y la *retro* se hacen de palabra: no se suben.
 
 Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`), en la carpeta **`sprint-04/`**, salvo el CSV.
 
@@ -18,7 +18,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 | `test_kpis.py` | **Ya hecho.** Pruebas completas, que se ejecutan por fases (`python test_kpis.py 1`, `2` o sin número) | Nada: se copia tal cual y **no se modifica** | **Sí**, sin cambios · `sprint-04/` |
 | `README.md` | **Lo creáis a partir de una plantilla.** Os damos `README_PLANTILLA.md` con huecos | Copiarla como `README.md` y rellenarla | **Sí** · `sprint-04/` |
 | `salida.json` | **Lo genera el programa** al ejecutarlo con el CSV real | Ejecutar el programa; no se escribe a mano | **Sí** · `sprint-04/` |
-| `reservas_turisdata.csv` | **Ya hecho.** Los datos reales (sintéticos) | Nada: se copia junto a `kpis.py` sin cambiarlo | **Sí**, sin cambios · `data/` (si aún no está) |
+| `reservas_turisdata.csv` | **Ya hecho.** Los datos reales (sintéticos) | Nada: se copia junto a `kpis.py` sin cambiarlo | **Sí**, sin cambios · `sprint-04/`, junto a `kpis.py` |
 | Autoevaluación y coevaluación (`autoevaluacion_nombre.md`) | **Ya hecha, en blanco** | Cada persona copia la plantilla con su nombre y la rellena; la coevaluación va **dentro del mismo fichero** | **Sí**, **una por persona** (no una por equipo) · `sprint-04/` |
 | `kpis_pandas.py` (extra) | **Lo modificáis.** Parte de `reto_herramientas/extra/plantilla_kpis_pandas.py` | Solo si el equipo llega al nivel extra | Solo si lo hacéis · `sprint-04/` |
 | Pruebas propias (extra) | **Lo creáis vosotros**, en un fichero aparte | Solo si el equipo llega al nivel extra | Solo si lo hacéis · `sprint-04/` |

@@ -35,7 +35,7 @@ ______________________________________________
 Datos sintéticos, comportamiento de un año, valoraciones escasas (4-11 por usuario)… añade las tuyas: ______
 
 ## Revisión con la rúbrica
-<Rúbrica completa en la ficha del reto, apartado 3. La rellena quien revisa y **no escribió esa parte**: ejecutar el cuaderno de arriba abajo, leer esta ficha como si fuera Lucía, mirar el cuaderno, poner un nivel con prueba. Esta sección no cuenta en la página de la ficha.>
+<Rúbrica completa en `entrega_y_rubrica.md` de la carpeta `2_Entregar` del sprint, apartado 3. La rellena quien revisa y **no escribió esa parte**: ejecutar el cuaderno de arriba abajo, leer esta ficha como si fuera Lucía, mirar el cuaderno, poner un nivel con prueba. Esta sección no cuenta en la página de la ficha.>
 
 **Revisado por:** <nombre> · **Fecha:** <dd/mm/aaaa>
 

@@ -70,9 +70,9 @@
 - [ ] `test_kpis.py` · el dado, **sin cambios**
 - [ ] `README.md` · rellenado, con la sección «Revisión con la rúbrica»
 - [ ] `salida.json` · generado con el CSV real
-- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
+- [ ] `autoevaluacion_nombre.md` · **uno por persona** (la coevaluación va dentro del mismo fichero: el miércoles se sube con la autoevaluación y el jueves, tras la review, se añade la coevaluación y se vuelve a subir): [plantilla](3_Reto/2_Entregar/autoevaluacion_y_coevaluacion.md)
 
-**Total en `sprint-04/`: 4 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 7). Aparte: el CSV en `data/` si aún no está, y los extras (`kpis_pandas.py`, pruebas propias) solo si los hacéis. La *review* y la *retro* no se suben.
+**Total en `sprint-04/`: 4 ficheros del equipo + 1 hoja por persona** (un equipo de 3 sube 7). Aparte: `reservas_turisdata.csv`, sin cambios, en la misma carpeta que `kpis.py` (así quien clone el repositorio puede ejecutar el script sin buscar los datos), y los extras (`kpis_pandas.py`, pruebas propias) solo si los hacéis. La *review* y la *retro* no se suben.
 
 **Comprobaciones antes de dar el sprint por cerrado:**
 - [ ] `python test_kpis.py` pasa todas las pruebas

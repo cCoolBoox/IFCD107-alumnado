@@ -41,14 +41,14 @@ El **código de salida** (0 = bien, 1 = mal) es la forma en que un programa le d
 | 5 | ✅ Comprobar | Provocar **a propósito** los tres errores, siempre sobre **copias** del CSV (ver «Paso 5», abajo) | Terminal | 10 | Los tres casos dan lo que dice la tabla |
 | 6 | 🛠️ Construir | Copiar `README_PLANTILLA.md` como `README.md` y rellenarlo (apartado 4 de [Entrega y rúbrica](../../2_Entregar/entrega_y_rubrica.md)) | `README.md` | 10 | Otra persona podría ejecutar el proyecto siguiendo solo el README |
 | 7 | ✅ Comprobar | Revisión con la rúbrica: **alguien que no escribió esa parte** la revisa y anota el resultado en el README (apartado 3 de Entrega y rúbrica) | `README.md`, sección «Revisión con la rúbrica» | 5 | La sección está rellena |
-| 8 | 📤 Entregar | Subir los ficheros del equipo a `sprint-04/` en **tres o más subidas, hechas por personas distintas**; **cada persona** sube su autoevaluación y coevaluación (apartado 5 de Entrega y rúbrica) | GitHub, carpeta `sprint-04/` | 10 | Están los cuatro ficheros del equipo y una hoja por persona (**4 + N**), con tres *commits* (versiones guardadas) o más |
-| 9 | 📤 Entregar | La review: enseñar el script con el CSV real, el JSON, un error provocado con su mensaje y las pruebas en verde. Explicar **una decisión de diseño** (por ejemplo, cómo definisteis la ocupación) | A la clase | 3–5 | Lo habéis enseñado |
+| 8 | 📤 Entregar | Subir los ficheros del equipo a `sprint-04/` en **tres o más subidas, hechas por personas distintas**; **cada persona** sube su hoja con la autoevaluación (apartado 5 de Entrega y rúbrica); la coevaluación se añade el jueves, tras la review, y se vuelve a subir la hoja | GitHub, carpeta `sprint-04/` | 10 | Están los cuatro ficheros del equipo y una hoja por persona (**4 + N**), con tres *commits* (versiones guardadas) o más |
+| 9 | 📤 Entregar | **Jueves** (review de los Sprints 4 y 5, tras la entrega del 5): enseñar el script con el CSV real, el JSON, un error provocado con su mensaje y las pruebas en verde. Explicar **una decisión de diseño** (por ejemplo, cómo definisteis la ocupación) | A la clase | jueves · 3–5 por equipo | Lo habéis enseñado |
 
 Si sobran minutos, empezad el extra (pruebas propias o `extra/plantilla_kpis_pandas.py`).
 
 ### Pasos 2 y 3 · `exportar_json` y `main`
 
-1. **`exportar_json(datos, ruta)`**: abrid `ruta` para escribir con `encoding="utf8"` y guardad con `json.dump(datos, f, ensure_ascii=False, indent=2)`. Sin `ensure_ascii=False`, las tildes saldrían como `ó`. Pista: [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb).
+1. **`exportar_json(datos, ruta)`**: abrid `ruta` para escribir con `encoding="utf8"` y guardad con `json.dump(datos, f, ensure_ascii=False, indent=2)`. Sin `ensure_ascii=False`, las tildes saldrían como secuencias del estilo `\u00f3` (así se escribe la «ó»). Pista: [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb).
 2. **`main(argumentos=None)`**: la plantilla ya lee los argumentos (`args.entrada`, `args.salida` y `args.capacidad`). Vosotros, **dentro de un `try`**:
    1. `leer_reservas(args.entrada)`;
    2. `calcular_kpis(reservas, args.capacidad)`, que ya viene hecha;
@@ -93,7 +93,7 @@ El código de salida se mira justo después de ejecutar: en Linux o Mac, `echo $
 | Qué pasa | Por qué | Qué hacer |
 |---|---|---|
 | La ocupación no sale `42.0` | Falta el `+ 1` en los días, se cuentan canceladas o la capacidad no es 40 | Releer la fórmula y ejecutar con `--capacidad 40` |
-| Las tildes de `salida.json` salen como `ó` | Falta `ensure_ascii=False` | Añadirlo en `json.dump` |
+| Las tildes de `salida.json` salen como `\u00f3` y similares | Falta `ensure_ascii=False` | Añadirlo en `json.dump` |
 | Sale un `Traceback` rojo en vez de `ERROR: …` | El `except` no recoge ese tipo de error | `except (FileNotFoundError, ValueError)` |
 | `test_exportar_json_y_main` falla | `main` no devuelve 0, o no escribe el fichero | Revisad el `return 0` y la ruta de `args.salida` |
 | Un solo *commit* gigante | «Lo subo al final» | Commits pequeños mientras avanzáis; la entrega pide tres o más |

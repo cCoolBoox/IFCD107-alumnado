@@ -43,7 +43,7 @@ Riesgos específicos (sesgo por país o canal, efecto sobre clientes reubicados,
 Versiones, semilla, orden de ejecución.
 
 ## Revisión con la rúbrica
-<Rúbrica completa en la ficha del reto, apartado 3. Rellena quien revisa y **no escribió esa parte**: ejecutar el cuaderno de arriba abajo con solo el README, leer el informe como si fueras el gerente, mirar el cuaderno (variables, umbral, test) y poner nivel con prueba.>
+<Rúbrica completa en `entrega_y_rubrica.md` de la carpeta `2_Entregar` del sprint, apartado 3. Rellena quien revisa y **no escribió esa parte**: ejecutar el cuaderno de arriba abajo con solo el README, leer el informe como si fueras el gerente, mirar el cuaderno (variables, umbral, test) y poner nivel con prueba.>
 
 **Revisado por:** <nombre> · **Fecha:** <dd/mm/aaaa>
 

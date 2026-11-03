@@ -10,7 +10,7 @@
 
 ## Requisitos
 - Python 3.11 (biblioteca estándar; pandas solo para la versión opcional).
-- El fichero `reservas_turisdata.csv` en la misma carpeta o en `datos/`.
+- El fichero `reservas_turisdata.csv` en la misma carpeta que `kpis.py`.
 
 ## Cómo se ejecuta
 ```
@@ -41,7 +41,7 @@ Resultado: <n de n pruebas superadas>
 <Indica si has usado un asistente de IA y para qué; qué has revisado tú. Los datos son sintéticos.>
 
 ## Revisión con la rúbrica
-<Rúbrica completa en la ficha del reto, apartado 3. Rellena quien revisa y **no escribió esa parte**: ejecutar, leer el README como cliente, mirar el código, poner nivel con prueba.>
+<Rúbrica completa en `entrega_y_rubrica.md` de la carpeta `2_Entregar` del sprint, apartado 3. Rellena quien revisa y **no escribió esa parte**: ejecutar, leer el README como cliente, mirar el código, poner nivel con prueba.>
 
 **Revisado por:** <nombre> · **Fecha:** <dd/mm/aaaa>
 

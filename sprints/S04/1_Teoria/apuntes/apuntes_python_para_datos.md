@@ -305,7 +305,9 @@ with open("reservas_turisdata.csv", newline="", encoding="utf8") as f:
     filas = list(csv.DictReader(f))        # lista de diccionarios
 
 noches = int(filas[0]["noches"])           # hay que CONVERTIR
-json.dump(kpis, open("kpis.json", "w"), ensure_ascii=False, indent=2)
+
+with open("kpis.json", "w", encoding="utf8") as f:
+    json.dump(kpis, f, ensure_ascii=False, indent=2)   # guarda con tildes y sangría
 ```
 
 Puntos importantes:
@@ -359,8 +361,8 @@ El reto reúne lo que has practicado. Cada función de la plantilla se construye
 |---|---|---|---|
 | `leer_reservas(ruta)` | Lee, valida y devuelve `(reservas, avisos)` | Misión 4 | S04_04 |
 | `tasa_cancelacion_por_canal` | % de canceladas por canal (1 decimal) | Misión 3 | S04_03 |
-| `ingreso_medio_por_reserva` | Media de noches × precio de las **no canceladas** | Misión 3 | S04_02 |
-| `ocupacion_proxy` | Ocupación aproximada con la capacidad | Misión 3 (en pantalla, con el docente) | S04_01 |
+| `ingreso_medio_por_reserva` | Media de noches × precio de las **no canceladas** | Misión 3 | S04_03 |
+| `ocupacion_proxy` | Ocupación aproximada con la capacidad | Misión 3 (en pantalla, con el docente) | S04_03 |
 | `exportar_json` | Guarda el resultado con tildes y sangría | Misión 5 | S04_04 |
 
 Con el ejemplo del apartado 6, `ingreso_medio_por_reserva` sería (240 + 200 + 360) / 3 = **266,67 €**.
@@ -374,7 +376,7 @@ Con el ejemplo del apartado 6, `ingreso_medio_por_reserva` sería (240 + 200 + 3
 
 Así siempre sabes **qué funciona y qué no**, y avanzas sin miedo a romper lo anterior.
 
-Un **commit** es una «foto» de tu trabajo con un **mensaje** que dice **qué cambia y por qué**. Mensaje malo: «cambios». Mensaje bueno: «Valida columnas obligatorias en leer_reservas». En el reto, cada subida de ficheros a GitHub desde el navegador es un commit (la ficha explica cómo); hacen falta al menos tres, de personas distintas.
+Un **commit** es una «foto» de tu trabajo con un **mensaje** que dice **qué cambia y por qué**. Mensaje malo: «cambios». Mensaje bueno: «Valida columnas obligatorias en leer_reservas». En el reto, cada subida de ficheros a GitHub desde el navegador es un commit (lo explica «Cómo entregar en GitHub»); hacen falta al menos tres, de personas distintas.
 
 ---
 
@@ -412,7 +414,7 @@ git init && git add . && git commit -m "Primer commit"
 | Funciones, `assert`, `lambda` | 4 | Misión 3 | `S04_02_funciones_modulos` |
 | Listas, diccionarios, comprensiones | 5-6 | Misión 1 | `S04_03_estructuras_datos` |
 | CSV, JSON, `try/except` | 7-8 | Misiones 4 y 5 | `S04_04_ficheros_excepciones` |
-| Pruebas en verde, commits, el reto completo | 9 | Misiones 3 a 5 (ficha del reto, pasos 1-5) | — |
+| Pruebas en verde, commits, el reto completo | 9 | Misiones 3 a 5 (tarjetas de misión) | — |
 | Entorno limpio y Git en el terminal | 10 | — | Material extra |
 | Clases y herencia | 11 | — | `S04_05_poo_buenas_practicas` (opcional) |
 

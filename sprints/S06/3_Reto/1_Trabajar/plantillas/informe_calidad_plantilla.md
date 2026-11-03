@@ -34,7 +34,7 @@ Riesgos específicos de este dataset (p. ej., uso del país de origen, imputacio
 Versión de Python y librerías, orden de ejecución, ficheros.
 
 ## Revisión con la rúbrica
-<Rúbrica completa en la ficha del reto, apartado 3. Rellena quien revisa y **no escribió esa parte**: ejecutar el cuaderno con «Reiniciar y ejecutar todo» siguiendo solo el README, leer el informe como el gerente, mirar el código (¿algún `fit` usa el test?), poner nivel con prueba.>
+<Rúbrica completa en `entrega_y_rubrica.md` de la carpeta `2_Entregar` del sprint, apartado 3. Rellena quien revisa y **no escribió esa parte**: ejecutar el cuaderno con «Reiniciar y ejecutar todo» siguiendo solo el README, leer el informe como el gerente, mirar el código (¿algún `fit` usa el test?), poner nivel con prueba.>
 
 **Revisado por:** <nombre> · **Fecha:** <dd/mm/aaaa>
 

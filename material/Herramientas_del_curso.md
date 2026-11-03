@@ -2,7 +2,7 @@
 
 **No tienes que saber usar nada de esto antes de empezar.** Las iremos viendo poco a poco, cuando toquen. Esta página es solo para que sepas qué vas a encontrarte y para qué sirve cada cosa.
 
-> **La idea clave:** casi todo se hace **en el navegador**. No hay que instalar nada en tu casa. Los programas del aula ya vienen instalados.
+> **La idea clave:** casi todo se hace **en el navegador**. No hay que instalar nada en tu casa. Los programas del aula ya vienen instalados (el Sprint 4 y el demostrador del Sprint 16 se hacen en el ordenador del aula, con Visual Studio Code).
 
 ---
 
@@ -24,7 +24,7 @@ Con estas tres cuentas tienes todo lo necesario. Son gratis.
 
 **Colab es un cuaderno en internet donde escribes y ejecutas programas de Python sin instalar nada.** Cada práctica tiene un botón azul **«Open in Colab»**: pulsas, se abre, y ya puedes empezar.
 
-Si un día Colab no funciona, el aula tiene el mismo entorno instalado en local (se llama **Anaconda + Visual Studio Code**). El docente te avisará y te explicará cómo usarlo. Para el Sprint 16, la guía [Python en el ordenador del aula](8.%20Python_en_el_ordenador_del_aula.md) explica la terminal paso a paso.
+Si un día Colab no funciona, el aula tiene el mismo entorno instalado en local (se llama **Anaconda + Visual Studio Code**). El docente te avisará y te explicará cómo usarlo. Para los Sprints 4 y 16, la guía [Python en el ordenador del aula](8.%20Python_en_el_ordenador_del_aula.md) explica la terminal paso a paso.
 
 ---
 
@@ -37,7 +37,8 @@ No lo tienes que aprender de golpe. Cada herramienta aparece cuando se necesita:
 | **Sprint 0** (16–19/10) | GitHub y Trello | Montar tu equipo y organizar el trabajo |
 | **Sprint 2** | Desmos y GeoGebra (en la web) | Ver las matemáticas en gráficas, sin fórmulas a ciegas |
 | **Sprint 3** | DB Browser, Colab y AutoGluon | Hacer consultas a una base de datos y entrenar tu primer modelo automático |
-| **Sprints 4–6** | Python en Colab | Aprender a escribir programas y a preparar datos |
+| **Sprint 4** | Python en el ordenador del aula (Visual Studio Code y terminal; Colab si el aula no lo permite) | Aprender a escribir programas y probarlos |
+| **Sprints 5–6** | Python en Colab | Aprender a escribir programas y a preparar datos |
 | **Sprints 7–9** | Colab | Tus primeros modelos de Machine Learning |
 | **Sprints 10–12** | Colab (Keras, imágenes y texto) | Redes neuronales: reconocer imágenes y entender lenguaje |
 | **Sprint 13** | Colab | Convertir resultados en gráficas que se entienden |
