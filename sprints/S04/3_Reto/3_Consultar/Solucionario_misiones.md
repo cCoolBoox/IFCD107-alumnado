@@ -9,7 +9,7 @@
 - [Misión 1 · Datos en memoria](#misión-1--datos-en-memoria): las seis líneas, la salida y los fallos más comunes
 - [Misión 2 · Decidir y repetir](#misión-2--decidir-y-repetir): los cuatro bucles, la salida y los fallos más comunes
 - [Misión 3 · Funciones que calculan](#misión-3--funciones-que-calculan): los mismos pasos que la tarjeta, con el código en trozos y cada línea explicada
-- [Misión 4 · Leer el CSV](#misión-4--leer-el-csv): los mismos pasos que la tarjeta, con el código explicado línea a línea
+- [Misión 4 · Leer el CSV](#misión-4--leer-el-csv): los mismos pasos que la tarjeta (4.1 a 5.12), con el código explicado línea a línea
 - [Misión 5 · Guardar y entregar](#misión-5--guardar-y-entregar): una comprobación cruzada de cifras y fallos reconocibles
 - [Mensajes de error: qué significan](#mensajes-de-error-qué-significan): los errores más comunes de Python en el reto y cómo se arreglan
 
@@ -341,7 +341,9 @@ python -c "from reservas_demo import RESERVAS; from kpis import ocupacion_proxy;
 
 ## Misión 4 · Leer el CSV
 
-Tarjeta: [Misión 4](../1_Trabajar/tarjetas/tarjeta_4_ficheros.md). **Tiene los mismos pasos que este apartado, con los mismos números**: leed el paso en la tarjeta, intentadlo y, si no sale, venid al mismo paso de aquí. Las funciones se escriben en [`kpis.py`](../1_Trabajar/reto_herramientas/kpis.py). El ejemplo es el mismo de la tarjeta: tres filas (la fila 1 es la cabecera), una buena y dos malas.
+> **Para contrastar**, cuando hayáis terminado el paso o agotado las pistas de la [tarjeta de la misión 4](../1_Trabajar/tarjetas/tarjeta_4_ficheros.md). **Tiene los mismos números de paso que la tarjeta** (4.1, 4.2… 5.4…): buscad el vuestro. Primero intentadlo; después de mirarlo, cerradlo y volved a escribirlo sin mirar. Lo que copiéis, tenéis que saber explicarlo.
+
+**El ejemplo (`mini.csv`)**, igual que en la tarjeta. La fila 1 es la cabecera:
 
 ```
 fecha_llegada,noches,precio_noche,canal,cancelada
@@ -350,13 +352,9 @@ fecha_llegada,noches,precio_noche,canal,cancelada
 2025-01-05,0,50.0,web_intermediaria,1      ← fila 4: mala (0 noches)
 ```
 
-### Pasos 1 a 3 · Aprender
-
-No hay nada que escribir aquí: son los ejercicios del curso (excepciones, ficheros) y los puzles del Taller. Si el paso 5 os parece un salto, **volved al puzle «Leer un CSV sin que se rompa»**: es casi la misma función.
-
 ### Paso 4 · `_convertir_fila`
 
-**Cómo copiarla sin errores de sangría.** En `kpis.py`, seleccionad la función entera, **desde la línea `def …` hasta la línea `raise NotImplementedError(...)` (incluida)**, y pegad encima.
+**Cómo copiarla sin errores de sangría:** en `kpis.py`, seleccionad la función entera (desde `def` hasta la línea `raise NotImplementedError(...)`, incluida) y pegad la de abajo encima. Guardad con Ctrl+S.
 
 ```python
 def _convertir_fila(fila):
@@ -380,55 +378,57 @@ def _convertir_fila(fila):
             "canal": canal, "cancelada": cancelada}
 ```
 
-**Paso 1 de `kpis.py` · convertir** (las cuatro primeras líneas y `canal`):
+| Paso | Línea | Qué hace, con palabras normales |
+|---|---|---|
+| **4.3** | `noches = int(fila["noches"])` | Coge el texto `"2"` y lo convierte en el **número** 2 |
+| **4.4** | `precio = float(fila["precio_noche"])` | `"100.0"` → 100.0. Con el precio vacío (fila 3), `float("")` da `ValueError` **solo** |
+| **4.4** | `cancelada = int(fila["cancelada"])` | `"0"` → 0 |
+| **4.4** | `fecha = date.fromisoformat(fila["fecha_llegada"])` | `"2025-01-01"` → una **fecha**. Si el texto no es una fecha, da `ValueError` |
+| **4.5** | `canal = fila["canal"].strip()` | El canal, **sin espacios** por delante ni por detrás |
+| **4.6** | `if canal == "":` + `raise ValueError(...)` | Canal vacío: **para** con ese mensaje |
+| **4.6** | `if noches < 1:` + `raise ValueError(...)` | Menos de una noche (fila 4): para. `int("0")` funciona, pero 0 noches no tiene sentido |
+| **4.6** | `if precio <= 0:` + `raise ValueError(...)` | Precio de 0 o negativo: para |
+| **4.6** | `if cancelada not in (0, 1):` + `raise ValueError(...)` | `cancelada` solo puede ser 0 o 1 |
+| **4.7** | `return {...}` | **Entrega** un diccionario con los valores ya convertidos |
 
-| Línea | Qué hace, con palabras normales |
-|---|---|
-| `noches = int(fila["noches"])` | Coge el texto `"2"` de la fila y lo convierte en el **número** 2 |
-| `precio = float(fila["precio_noche"])` | Lo mismo con el precio: `"100.0"` → 100.0. Con un precio vacío, `float("")` da `ValueError` **solo** |
-| `cancelada = int(fila["cancelada"])` | `"0"` → 0 |
-| `fecha = date.fromisoformat(fila["fecha_llegada"])` | `"2025-01-01"` → una **fecha**. Si el texto no es una fecha, da `ValueError` |
-| `canal = fila["canal"].strip()` | El canal, **sin espacios** por delante ni por detrás |
-
-**Paso 2 · comprobar que tiene sentido** (los cuatro `if`). Convertir bien no basta: `int("0")` funciona, pero 0 noches no tiene sentido.
-
-| Línea | Qué hace |
-|---|---|
-| `if canal == "":` + `raise ValueError("canal vacío")` | Si el canal está vacío, **para** con ese mensaje |
-| `if noches < 1:` + `raise ValueError("noches debe ser >= 1")` | Menos de una noche: para |
-| `if precio <= 0:` + `raise ValueError(...)` | Un precio de 0 o negativo: para |
-| `if cancelada not in (0, 1):` + `raise ValueError(...)` | `cancelada` solo puede valer 0 o 1 |
-
-**Paso 3 · devolver:** `return {...}` entrega **un diccionario** con los valores ya convertidos (`noches` es un número, `fecha_llegada` es una fecha).
-
-**Seguimiento con las 3 filas del ejemplo:**
+**Seguimiento con las 3 filas:**
 
 | Fila | Qué pasa | Resultado |
 |---|---|---|
-| 2 | Todo se convierte y pasa las 4 comprobaciones | Devuelve el diccionario con los tipos buenos |
-| 3 | `float("")` falla en el paso 1 | `ValueError: could not convert string to float: ''` |
-| 4 | Se convierte bien (0 es un número), pero `noches < 1` | `ValueError: noches debe ser >= 1` |
+| 2 | Se convierte todo y pasa las 4 comprobaciones | Devuelve el diccionario con los tipos buenos |
+| 3 | `float("")` falla en 4.4 | `ValueError: could not convert string to float: ''` |
+| 4 | Se convierte bien, pero `noches < 1` | `ValueError: noches debe ser >= 1` |
 
-**Probadla a mano** (una línea, en la terminal, dentro de la carpeta del reto):
+**Probadla** (una línea, en la terminal, dentro de la carpeta del reto):
 
 ```
 python -c "from kpis import _convertir_fila; print(_convertir_fila({'fecha_llegada': '2025-01-01', 'noches': '2', 'precio_noche': '100.0', 'canal': 'directo', 'cancelada': '0'}))"
 ```
 
-Tiene que salir `{'fecha_llegada': datetime.date(2025, 1, 1), 'noches': 2, 'precio_noche': 100.0, 'canal': 'directo', 'cancelada': 0}`.
+✅ `{'fecha_llegada': datetime.date(2025, 1, 1), 'noches': 2, 'precio_noche': 100.0, 'canal': 'directo', 'cancelada': 0}`. Con `'noches': '0'`: ✅ `ValueError: noches debe ser >= 1`.
 
 | Os sale | Probablemente |
 |---|---|
-| `'noches': '2'` (con comillas) | Falta el `int(...)`: se está devolviendo el texto |
-| `'fecha_llegada': '2025-01-01'` (con comillas) | Falta `date.fromisoformat(...)` |
-| `NameError: name 'date' is not defined` | Falta `from datetime import date` (viene ya en la plantilla: no lo borréis) |
+| `'noches': '2'` (con comillas) | Falta el `int(...)`: se devuelve el texto (4.3) |
+| `'fecha_llegada': '2025-01-01'` (con comillas) | Falta `date.fromisoformat(...)` (4.4) |
 | `KeyError: 'noches'` | Clave mal escrita: tiene que ser exactamente `"noches"` |
-| `None` | Falta el `return` del final |
-| `NotImplementedError` | Falta borrar la línea `raise NotImplementedError(...)` (ahora ya está dentro de la función pegada) |
+| `NameError: name 'date' is not defined` | Falta `from datetime import date`; viene en la plantilla, no lo borréis |
+| `None` | Falta el `return` (4.7) |
+| `NotImplementedError` | Queda la línea `raise NotImplementedError(...)` (4.2) |
+| `IndentationError` | Líneas con más o menos espacios que sus vecinas, o fichero sin guardar (4.8) |
+| `kpis.py: error: the following arguments are required: entrada, salida` | Habéis pulsado el botón ▶ (Run) de VS Code: ejecuta `kpis.py` sin datos. No es un fallo: probad con las líneas `python -c "..."` de la terminal |
 
 ### Paso 5 · `leer_reservas`
 
-**La idea.** Abrir el fichero, recorrer las filas y devolver **dos cosas**: las reservas buenas y un aviso por cada fila mala. Una fila mala **no para** el programa: se apunta y se sigue.
+**Cómo copiarla:** igual que la anterior: función entera, de `def` a `raise`, pegada encima (triple clic en la línea `raise NotImplementedError(...)` para seleccionarla entera). Cada nivel (4 espacios, o un Tab) **más a la derecha** significa «dentro de» lo de arriba. **Niveles de cada línea** (el `def` es el nivel 0):
+
+| Nivel | Líneas |
+|---|---|
+| 1 | `try:` · `except FileNotFoundError:` |
+| 2 | `with open(...) as f:` · el `raise FileNotFoundError(...)` |
+| 3 | `lector = …` · `faltan = []` · `for columna in …:` · `if faltan:` · `reservas = []` · `avisos = []` · `for n, fila in …:` · `return reservas, avisos` |
+| 4 | `if columna not in …:` · `raise ValueError(...)` · `try:` · `except ValueError as error:` |
+| 5 | `faltan.append(columna)` · `reservas.append(...)` · `avisos.append(...)` |
 
 ```python
 def leer_reservas(ruta):
@@ -437,93 +437,95 @@ def leer_reservas(ruta):
         with open(ruta, newline="", encoding="utf8") as f:
             lector = csv.DictReader(f)
 
-            faltan = []
+            faltan = []                                            # 5.4
             for columna in COLUMNAS_OBLIGATORIAS:
                 if columna not in lector.fieldnames:
                     faltan.append(columna)
             if faltan:
                 raise ValueError(f"Faltan columnas obligatorias: {faltan}")
 
-            reservas = []
+            reservas = []                                          # 5.5
             avisos = []
-            for n, fila in enumerate(lector, start=2):
+
+            for n, fila in enumerate(lector, start=2):             # 5.6
                 try:
                     reservas.append(_convertir_fila(fila))
                 except ValueError as error:
                     avisos.append(f"Fila {n} descartada: {error}")
-            return reservas, avisos
+
+            return reservas, avisos                                # 5.7
     except FileNotFoundError:
-        raise FileNotFoundError(f"No se encuentra el fichero: {ruta}")
+        raise FileNotFoundError(f"No se encuentra el fichero: {ruta}")   # 5.8
 ```
 
-(Se copia igual que la anterior: función entera, de `def` a `raise`, pegada encima. Cada nivel **más a la derecha** significa «dentro de» lo de arriba.)
+(Los `# 5.x` son solo para localizar el paso: no hace falta escribirlos.)
 
-**Paso 1 de `kpis.py` · abrir el fichero:**
+| Paso | Línea | Qué hace, con palabras normales |
+|---|---|---|
+| **5.3** | `try:` | «Intenta todo lo de abajo» |
+| **5.3** | `with open(ruta, newline="", encoding="utf8") as f:` | Abre el fichero (`utf8` para que las tildes salgan bien) y **lo cierra solo** al terminar |
+| **5.3** | `lector = csv.DictReader(f)` | Un lector que entrega cada fila como diccionario: `fila["noches"]` |
+| **5.4** | `faltan = []` | Una lista vacía: aquí se apuntan las columnas que falten |
+| **5.4** | `for columna in COLUMNAS_OBLIGATORIAS:` + `if columna not in lector.fieldnames:` + `faltan.append(columna)` | Por cada columna obligatoria, si **no está** en la cabecera, se apunta |
+| **5.4** | `if faltan:` + `raise ValueError(...)` | Si falta alguna, **para** con un mensaje que las nombra |
+| **5.5** | `reservas = []` y `avisos = []` | Dos listas vacías: las buenas y los avisos |
+| **5.6** | `for n, fila in enumerate(lector, start=2):` | Coge las filas una a una; `n` es el **número de fila del fichero** (empieza en 2: la 1 es la cabecera) |
+| **5.6** | `try:` + `reservas.append(_convertir_fila(fila))` | Intenta convertir la fila; si va bien, **la añade a las buenas** |
+| **5.6** | `except ValueError as error:` | Si `_convertir_fila` ha dado `ValueError`… |
+| **5.6** | `avisos.append(f"Fila {n} descartada: {error}")` | …apunta un aviso con el número de fila y el motivo, **y sigue** con la siguiente |
+| **5.7** | `return reservas, avisos` | **Entrega las dos listas a la vez** |
+| **5.8** | `except FileNotFoundError:` + `raise FileNotFoundError(f"...{ruta}")` | Si el fichero **no existe**, para con un mensaje claro que **incluye el nombre** |
 
-| Línea | Qué hace |
-|---|---|
-| `try:` | «Intenta todo lo de abajo» |
-| `with open(ruta, newline="", encoding="utf8") as f:` | Abre el fichero (con `encoding="utf8"` para que las tildes salgan bien) y **lo cierra solo** al terminar |
-| `except FileNotFoundError:` (la última) | Si el fichero **no existe**… |
-| `raise FileNotFoundError(f"No se encuentra el fichero: {ruta}")` | …para con un mensaje claro que **incluye el nombre** |
+**Seguimiento con `mini.csv`:** la fila 2 entra en `reservas`; la fila 3 da `ValueError` → aviso `Fila 3 descartada: …`; la fila 4 da `ValueError` → aviso `Fila 4 descartada: noches debe ser >= 1`. Resultado: **1 reserva y 2 avisos**.
 
-**Paso 2 · mirar la cabecera:**
+**Probadla** (una línea, entera, en la terminal). **Antes, guardad con Ctrl+S** (si la pestaña tiene un punto ●, no está guardado y sale `NotImplementedError`).
 
-| Línea | Qué hace |
-|---|---|
-| `lector = csv.DictReader(f)` | Un lector que entrega cada fila como un diccionario (`fila["noches"]`) |
-| `faltan = []` | Una lista vacía: aquí se apuntan las columnas que falten |
-| `for columna in COLUMNAS_OBLIGATORIAS:` y el `if` | Por cada columna obligatoria, si **no está** en la cabecera (`lector.fieldnames`), se apunta |
-| `if faltan:` + `raise ValueError(...)` | Si falta alguna, **para** con un mensaje que las nombra |
+**5.10 · Con el fichero real:**
 
-**Paso 3 · recorrer las filas:**
+```
+python -c "from kpis import leer_reservas; reservas, avisos = leer_reservas('reservas_turisdata.csv'); print(len(reservas), len(avisos))"
+```
 
-| Línea | Qué hace |
-|---|---|
-| `reservas = []` y `avisos = []` | Dos listas vacías: las buenas y los avisos |
-| `for n, fila in enumerate(lector, start=2):` | Coge las filas una a una; `n` es el **número de fila del fichero** (empieza en 2 porque la 1 es la cabecera) |
-| `try:` + `reservas.append(_convertir_fila(fila))` | Intenta convertir la fila; si va bien, **la añade a las buenas** |
-| `except ValueError as error:` | Si `_convertir_fila` ha dado `ValueError`… |
-| `avisos.append(f"Fila {n} descartada: {error}")` | …apunta un aviso con el número de fila y el motivo, **y sigue** con la siguiente |
+✅ `6000 0`.
 
-**Paso 4 · devolver:** `return reservas, avisos` entrega **las dos listas a la vez**. Quien la llama las recoge así: `reservas, avisos = leer_reservas(ruta)`.
-
-**Seguimiento con `mini.csv`** (las 3 filas): la fila 2 entra en `reservas`; la fila 3 da `ValueError` → aviso `Fila 3 descartada: …`; la fila 4 da `ValueError` → aviso `Fila 4 descartada: noches debe ser >= 1`. Resultado: **1 reserva y 2 avisos**.
-
-**Probadla a mano.** Cread `mini.csv` (las 4 líneas de arriba, con la cabecera) junto a `kpis.py` y, en una línea:
+**5.12 · Con `mini.csv`** (5.11: se crea desde el Explorador de VS Code con el icono «Nuevo archivo»; si usáis el menú, elegid «Archivo de texto»):
 
 ```
 python -c "from kpis import leer_reservas; reservas, avisos = leer_reservas('mini.csv'); print(len(reservas), avisos)"
 ```
 
+✅
 ```
 1 ["Fila 3 descartada: could not convert string to float: ''", 'Fila 4 descartada: noches debe ser >= 1']
 ```
 
-El texto exacto del primer motivo lo pone Python; lo que tiene que coincidir es el **número de fila** y que haya **un aviso por cada fila descartada**. Con el fichero real, `leer_reservas('reservas_turisdata.csv')` da 6000 reservas y 0 avisos. Con otros ficheros tiene que **parar con un error** (no devolver avisos):
+El motivo de la fila 3 lo pone Python y puede variar; lo que tiene que coincidir es el **número de fila** y **un aviso por cada fila descartada**.
 
-| Fichero | Mensaje esperado |
+Con otros ficheros **tiene que parar con un error** (no devolver avisos):
+
+| Fichero | ✅ Mensaje esperado |
 |---|---|
 | Uno que no existe (`'nada.csv'`) | `FileNotFoundError: No se encuentra el fichero: nada.csv` |
 | `mini.csv` sin la columna `cancelada` | `ValueError: Faltan columnas obligatorias: ['cancelada']` |
 
-**Si os sale otro resultado:**
-
 | Os sale | Probablemente |
 |---|---|
-| Avisos de «Fila 2» y «Fila 3» | Numeráis desde 1: la cabecera es la fila 1, los datos empiezan en la 2 (`start=2`) |
-| 2 reservas válidas (entra la de 0 noches) | `_convertir_fila` solo convierte tipos: falta el `if noches < 1` |
-| 1 reserva válida pero `avisos` vacío | Se descarta la fila en silencio: falta el `avisos.append(...)` en el `except` |
-| El programa se rompe con `ValueError` en la fila 3 | Falta el `try` / `except` dentro del `for` |
-| `TypeError: list indices must be integers or slices, not str` | La función devuelve **dos** cosas y las guardáis en una sola variable: `reservas, avisos = leer_reservas(...)` |
-| Las tildes salen rotas | Falta `encoding="utf8"` al abrir |
-| `IndentationError` | Pegada solo una parte, o fichero sin guardar: pegad la función entera y guardad con Ctrl+S |
+| Avisos de «Fila 2» y «Fila 3» | Contáis desde 1: falta `start=2` (5.6) |
+| 2 reservas válidas (entra la de 0 noches) | Falta `if noches < 1:` en `_convertir_fila` (4.6) |
+| 1 reserva válida pero `avisos` vacío | La fila mala se descarta **en silencio**: falta `avisos.append(...)` en el `except` (5.6) |
+| El programa se rompe con `ValueError` en la fila 3 | Falta el `try` / `except` dentro del `for` (5.6) |
+| `TypeError: list indices must be integers or slices, not str` | La función devuelve **dos** cosas y las guardáis en una variable: `reservas, avisos = leer_reservas(...)` |
+| Las tildes salen rotas | Falta `encoding="utf8"` (5.3) |
+| `NotImplementedError` aunque ya lo habéis escrito | El fichero **no está guardado** (punto ● en la pestaña): Python lee el guardado | Ctrl+S y repetid la línea |
+| `IndentationError` | Falta un nivel de sangría, o fichero sin guardar. Mirad el esqueleto: `for` y `try` a 12, `except ValueError` a 16 |
 
 ### Paso 6 · Pruebas
 
-`python test_kpis.py 2` pasa de **`1 de 8`** (todo en rojo, salvo una prueba opcional) a **`7 de 8 pruebas superadas`**. Solo se queda en rojo `test_exportar_json_y_main`, que es de la misión 5. Si no hicisteis la misión 3, también falla `test_datos_reales…` (necesita `tasa_cancelacion_por_canal`) y salen 6 de 8.
+`python test_kpis.py 2` pasa de **`1 de 8`** (todo en rojo, salvo una prueba opcional que se omite) a **`7 de 8 pruebas superadas`**. Solo queda en rojo `test_exportar_json_y_main`, de la misión 5. Si no hicisteis la misión 3, `test_datos_reales…` también falla y salen **`6 de 8`**.
 
-**Para explicárselo a vuestra pareja** (elegid una):
+### Para explicárselo a vuestra pareja
+
+Elegid una:
 
 1. ¿Por qué es mejor descartar la fila mala y apuntarla en `avisos` que parar el programa? ¿Y por qué no descartarla sin decir nada?
 2. ¿Por qué `_convertir_fila` comprueba `noches < 1` si `int("0")` ya funciona?
