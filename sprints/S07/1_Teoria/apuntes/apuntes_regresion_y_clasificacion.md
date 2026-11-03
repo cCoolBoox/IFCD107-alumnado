@@ -19,7 +19,7 @@ Hay **dos grandes tipos de problema supervisado** (ya lo viste en el Sprint 1):
 
 ---
 
-# DÍA 1 · Regresión: predecir un número
+# PARTE 1 · Regresión: predecir un número
 
 ## 1. La idea: una suma ponderada
 
@@ -106,11 +106,11 @@ La **regularización** añade al error una **«multa» por cada coeficiente gran
 
 - `RidgeCV` y `LassoCV` **prueban una lista de `alpha` con validación cruzada** dentro del entrenamiento; **el test no se toca hasta el final**.
 - **Escala antes de penalizar**: si una variable va de 0 a 10.000 y otra de 0 a 1, la primera tendrá un coeficiente diminuto y la multa no la afecta; la otra sí. Escalar iguala el terreno.
-- **Con muchos datos, regularizar importa menos**: el mini-reto muestra la curva del R² en prueba con 60, 120, 300 y 1.000 filas: con 1.000, OLS y Lasso se parecen.
+- **Con muchos datos, regularizar importa menos**: el mini-reto muestra la curva del R² en prueba con 60, 120, 300 y 1.000 filas: con 1.000 la diferencia se reduce mucho (R² en prueba de unos 0,84 frente a 0,93).
 
 ---
 
-# DÍA 2 · Clasificación: la regresión logística
+# PARTE 2 · Clasificación: la regresión logística
 
 ## 6. De una suma ponderada a una probabilidad
 
@@ -200,7 +200,7 @@ Si **un FN cuesta el triple que un FP** (FN = 3, FP = 1), conviene ser más «al
 
 ```python
 umbrales = np.arange(0.05, 0.96, 0.05)
-costes = [coste_total(y_train, proba_cv, u) for u in umbrales]      # FN = 3, FP = 1
+costes = [coste_total(y_train, proba_cv, u, 3, 1) for u in umbrales]      # FN = 3, FP = 1
 mejor_umbral = umbrales[int(np.argmin(costes))]                    # el de menor coste
 ```
 
@@ -208,7 +208,7 @@ mejor_umbral = umbrales[int(np.argmin(costes))]                    # el de menor
 
 ---
 
-# DÍA 3 · Datos desbalanceados, ROC/PR y modelos sencillos
+# PARTE 3 · Datos desbalanceados, ROC/PR y modelos sencillos
 
 ## 10. La paradoja de la exactitud
 

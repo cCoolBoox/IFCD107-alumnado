@@ -44,7 +44,7 @@ df.head()       # las primeras 5 filas
 df.describe()   # resumen de las columnas numéricas (media, mínimo, máximo…)
 ```
 
-Con ellos respondes: *¿cuántos datos hay? ¿de qué tipo es cada columna? ¿faltan valores? ¿hay valores raros?* Si `info()` dice que `precio_noche` es `object` (texto) en vez de `float64`, **algo está mal** (quizá lleva comas decimales).
+Con ellos respondes: *¿cuántos datos hay? ¿de qué tipo es cada columna? ¿faltan valores? ¿hay valores raros?* Si `info()` dice que `precio_noche` es `object` o `str` (texto) en vez de `float64`, **algo está mal** (quizá lleva comas decimales).
 
 ## 3. Filtrar y agrupar
 

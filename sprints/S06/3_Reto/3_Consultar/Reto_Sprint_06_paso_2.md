@@ -19,7 +19,7 @@
 | **`crudo`** | El nombre de la tabla tal y como llega del cliente. No se modifica nunca: sirve para comparar al final. |
 | **Función (`def`)** | Un trozo de código con nombre que se escribe una vez y se usa muchas. Aquí, `dato` y `resumen_calidad`. |
 | **Nulo (`NaN`)** | Una casilla vacía, sin dato. |
-| **Tipo de dato** | Cómo guarda pandas una columna: `int64` (entero), `float64` (decimal), `object` (texto). Un precio en `object` es sospechoso. |
+| **Tipo de dato** | Cómo guarda pandas una columna: `int64` (entero), `float64` (decimal), `object` o `str` (texto; según la versión de pandas sale una u otra). Un precio en texto es sospechoso. |
 | **Duplicado** | Una fila idéntica a otra en todas sus columnas. |
 | **Categoría inconsistente** | Lo mismo escrito de varias formas: `directo`, `Directo` y `DIRECTO` son para el ordenador tres cosas distintas. |
 | **Valor imposible** | Un dato que no puede ser verdad (un precio negativo). Un *outlier* es un valor extremo pero **posible**: ante la duda, es una pregunta para el cliente. |
@@ -184,7 +184,7 @@
     | Defecto | Precios escritos con coma decimal (`83,36`) |
     | Columna(s) | `precio_noche` |
     | Filas afectadas | 153 de 1545 |
-    | Cómo lo detectamos | `resumen_calidad` dice `object` (texto) en una columna de precios; `.str.contains(",")` los cuenta |
+    | Cómo lo detectamos | `resumen_calidad` dice `object` o `str` (texto) en una columna de precios; `.str.contains(",")` los cuenta |
     | Causa probable | Exportación desde un Excel en español |
     | Tratamiento aplicado | Cambiar la coma por un punto y convertir a número |
     | Por qué (y riesgo) | No se pierde información; un texto raro pasaría a nulo sin avisar, por eso se cuentan |
@@ -196,7 +196,7 @@
 **Qué deberíais ver.** Con este CSV, estas salidas (los recuentos son los del fichero del curso):
 
 - `(1545, 18)`: 1545 filas y 18 columnas.
-- `resumen_calidad`: nulos en **cuatro columnas** (`adultos` 46, `regimen` 61, `pais_origen` 115 y `precio_noche` 84), y `object` en `fecha_reserva`, `fecha_llegada` y `precio_noche`. `id_reserva` tiene 1500 valores distintos en 1545 filas.
+- `resumen_calidad`: nulos en **cuatro columnas** (`adultos` 46, `regimen` 61, `pais_origen` 115 y `precio_noche` 84), y texto (`object` o `str`) en `fecha_reserva`, `fecha_llegada` y `precio_noche`. `id_reserva` tiene 1500 valores distintos en 1545 filas.
 - `Filas duplicadas exactas: 45` y `Precios escritos con coma: 153`.
 - `Fechas ISO: 1391 · dd/mm/aaaa: 154 · sin leer: 0`: dos formatos de fecha, y entre los dos se leen todas.
 - `canal` con 9 valores (`web_intermediaria` 718, pero también `WEB_INTERMEDIARIA` 34, `Web Intermediaria` 33, `web intermediaria` 28, `Directo` 24, `directo` 16…) y `pais_origen` con 12 (`ES` 351 y también `España` 26 y `es` 23; `UK` 316 y también `Reino Unido` 22 y `uk` 23).
