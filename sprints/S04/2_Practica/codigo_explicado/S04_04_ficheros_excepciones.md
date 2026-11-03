@@ -16,7 +16,7 @@ Empieza por estas celdas y comprueba qué hace cada una. Lo demás se lee aquí 
 |---|---|---|
 | 1 | Contexto TurisData | Practica `dato` (sección «Contexto TurisData»). |
 | 2 | 1 · Leer un CSV con `csv.DictReader` | Practica `open`, `list`, `type`, `DictReader` (sección «1 · Leer un CSV con `csv.DictRead… |
-| 5 | 2 · Escribir y leer JSON | Practica `mkdtemp`, `join`, `open`, `read` (sección «2 · Escribir y leer JSON»). |
+| 5 | 2 · Escribir y leer JSON | Practica `mkdtemp`, `join`, `open`, `dump` y más (sección «2 · Escribir y leer JSON»). |
 | 7 | 3 · Excepciones: cuando algo falla | Practica `open` (sección «3 · Excepciones: cuando algo falla»). |
 
 ## 2. Qué guarda cada variable
@@ -113,7 +113,7 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 
 ### Celda 5 · 2 · Escribir y leer JSON · 🏠
 
-**Qué hace:** Practica `mkdtemp`, `join`, `open`, `read` (sección «2 · Escribir y leer JSON»).
+**Qué hace:** Practica `mkdtemp`, `join`, `open`, `dump` y más (sección «2 · Escribir y leer JSON»).
 
 ```python
 carpeta = tempfile.mkdtemp()

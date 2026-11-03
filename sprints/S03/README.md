@@ -109,4 +109,4 @@ Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../mater
 
 **Y ahora:** Sprint 4 · Python para IA (martes 3/11).
 
-*12 h (4 h teoría · 4 h práctica · 4 h PBL).*
+*30 h (16 h teoría · 7 h práctica · 7 h PBL).*

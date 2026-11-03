@@ -69,7 +69,7 @@ La IA puede ahorrar tiempo, pero **da respuestas que parecen correctas y no lo s
 | Evaluar varios modelos en el test y quedarse con el mejor | Curiosidad o prisa | El test se usa **una vez**, con el campeón ya elegido; `auc_test` en una sola fila |
 | Elegir por el AUC más alto sin mirar la desviación | «0,81 es más que 0,80» | Si las desviaciones se solapan, la diferencia puede ser ruido: elegid el más simple |
 | `model_card` genérica | Se copian los ejemplos de la plantilla | Cada apartado con **vuestros** datos y riesgos |
-| Olvidar la explicabilidad y el coste | Solo se mira la precisión | Puntuadlos y ponderadlos con `puntuacion_global` |
+| Olvidar la explicabilidad y el coste | Solo se mira el rendimiento (el AUC) | Puntuadlos y ponderadlos con `puntuacion_global` |
 | Búsquedas que duran horas | «Más combinaciones» | Máximo 5 minutos por búsqueda: menos combinaciones o `RandomizedSearchCV` con pocas iteraciones |
 | Se pierde el leaderboard | Colab borra los ficheros al cerrar y `REINICIAR = True` vuelve a empezar de cero | Descargad `leaderboard_S08.csv` antes de cerrar y no editéis el CSV a mano |
 | El campeón no está en `catalogo` | Se registró un modelo ajustado y no se añadió al diccionario | Añadid cada modelo ajustado a `catalogo` con el mismo nombre del leaderboard |

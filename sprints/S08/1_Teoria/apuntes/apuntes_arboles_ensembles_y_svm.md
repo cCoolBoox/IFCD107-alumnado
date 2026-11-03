@@ -79,7 +79,7 @@ Sin límites, el árbol **sigue preguntando hasta que cada hoja es pura**. Eso s
 
 | | AUC en entrenamiento | AUC en prueba |
 |---|---|---|
-| Árbol libre | **1,00** | 0,68 *(ilustrativo)* |
+| Árbol libre | **1,00** | 0,59 |
 
 **La señal de alarma, como siempre: una gran brecha entre entrenamiento y prueba** (Sprint 1).
 
@@ -192,7 +192,7 @@ Dos implementaciones muy rápidas y populares del boosting:
 | Crece | **Por niveles** (`max_depth`) | **Por hojas** (`num_leaves`) |
 | Control de hojas | `min_child_weight` | `min_child_samples` |
 | Parada temprana | `early_stopping_rounds` + `eval_set` | `callbacks` + `eval_set` |
-| Importancias | Por ganancia | Por ganancia |
+| Importancias | Por ganancia (por defecto) | Por nº de divisiones (por defecto); con `importance_type="gain"`, por ganancia |
 
 Se usa un **`eval_set`** (un conjunto de validación) para que el modelo sepa cuándo parar.
 

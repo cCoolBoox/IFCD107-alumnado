@@ -2,7 +2,7 @@
 
 > **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_01_clustering.ipynb) · [descargar](../S09_01_clustering.ipynb) · ⏱ en clase: 45 min · 🏫 5 celdas de código en clase · 🏠 5 en casa
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_01_clustering.ipynb) · [descargar](../S09_01_clustering.ipynb) · ⏱ en clase: 45 min · 🏫 5 celdas de código en clase · 🏠 4 en casa
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 
@@ -33,7 +33,6 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `perfil_z` | `pd.DataFrame(km.cluster_centers_, columns=variables)` | 9 |
 | `muestra` | `np.random.default_rng(SEMILLA).choice(len(X), size=150, r…` | 11 |
 | `Z` | `linkage(X[muestra], method="ward")` | 11 |
-| `real` | `pd.read_csv(dato("_solucion_huespedes.csv"))` | 16 |
 
 ## 3. Palabras de código de este cuaderno
 
@@ -41,12 +40,11 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 
 | Palabra | Qué hace | Celdas |
 |---|---|---|
-| `adjusted_rand_score` | Mide cuánto coinciden dos agrupaciones (1 = idénticas). | 16 |
 | `axvline` | Dibuja una línea vertical de referencia. | 7 |
 | `bincount` | Cuenta cuántas veces aparece cada entero. | 5 |
 | `choice` | Elige un elemento al azar. | 11 |
 | `DataFrame` | Crea una tabla de pandas (filas y columnas). | 9 |
-| `dato` | Devuelve la ruta de un fichero de datos del curso (lo busca en las carpetas habituales y, si no está, lo descarga). | 1, 16 |
+| `dato` | Devuelve la ruta de un fichero de datos del curso (lo busca en las carpetas habituales y, si no está, lo descarga). | 1 |
 | `DBSCAN` | Agrupa por densidad y marca el ruido como −1. | 13 |
 | `default_rng` | Crea un generador de números aleatorios reproducible (con semilla). | 11 |
 | `dendrogram` | Dibuja el árbol de uniones del clustering jerárquico. | 11 |
@@ -63,9 +61,9 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `list` | Crea una lista (o convierte algo en lista). | 7 |
 | `mean` | Calcula la media. | 3, 8, 13 |
 | `plot` | Dibuja una línea (o puntos unidos). | 7 |
-| `print` | Muestra un valor por pantalla. | 1, 3, 5, 13, 16 |
-| `read_csv` | Lee un fichero CSV y lo convierte en una tabla. | 1, 16 |
-| `round` | Redondea un número a los decimales indicados. | 2, 3, 5, 8, 16 |
+| `print` | Muestra un valor por pantalla. | 1, 3, 5, 13 |
+| `read_csv` | Lee un fichero CSV y lo convierte en una tabla. | 1 |
+| `round` | Redondea un número a los decimales indicados. | 2, 3, 5, 8 |
 | `seed` | Fija la semilla del azar para que salga siempre lo mismo. | 1 |
 | `set` | Crea un conjunto (valores sin repetir) o, en un gráfico, fija varias opciones a la vez. | 13 |
 | `set_theme` | Elige un estilo visual para todos los gráficos. | 1 |
@@ -294,25 +292,6 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 ### Celda 15 · Mini-reto integrador: ponle nombre a tus segmen… · 🏠 · ejercicio
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
-
-### Celda 16 · Qué has aprendido · 🏠
-
-**Qué hace:** Solo docente: contraste con el segmento real.
-
-```python
-# Solo docente: contraste con el segmento real
-from sklearn.metrics import adjusted_rand_score
-real = pd.read_csv(dato("_solucion_huespedes.csv"))
-print("ARI k-means:", round(adjusted_rand_score(real["segmento_real"], huespedes["grupo"]), 3))
-print("ARI jerárquico:", round(adjusted_rand_score(real["segmento_real"], etiquetas_jer), 3))
-```
-
-**Qué hace cada línea:**
-
-- `from sklearn.metrics import adjusted_rand_score` → Trae `adjusted_rand_score` de `sklearn.metrics` para poder usarlo.
-- `real = pd.read_csv(dato("_solucion_huespedes.csv"))` → Guarda en `real` el resultado. `read_csv`: lee un fichero CSV y lo convierte en una tabla; `dato`: devuelve la ruta de un fichero de datos del curso (lo busca en las carpetas habituales y, si no está, lo descarga).
-- `print("ARI k-means:", round(adjusted_rand_score(real["segmento_real"], hues…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `adjusted_rand_score`: mide cuánto coinciden dos agrupaciones (1 = idénticas).
-- `print("ARI jerárquico:", round(adjusted_rand_score(real["segmento_real"], e…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `adjusted_rand_score`: mide cuánto coinciden dos agrupaciones (1 = idénticas).
 
 ---
 *Generado a partir de `laboratorios/fuentes/S09_01_clustering.py`. Si algo no os cuadra con lo que sale en vuestra pantalla, preguntad al docente.*

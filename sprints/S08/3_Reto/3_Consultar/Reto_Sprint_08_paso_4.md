@@ -92,11 +92,11 @@
     Si el cliente valorara solo …, elegiríamos ….
     ```
 
-    Por ejemplo, con los números de esta ejecución (los vuestros serán distintos): *«Campeón: logistica (AUC en validación cruzada 0,758 ± 0,012; en test 0,746). No ganó lightgbm_ajustado porque su AUC (0,753) es prácticamente el mismo, pero se explica peor (2 frente a 4) y el modelo pesa unas 30 veces más (124 KB frente a 4 KB). Si el cliente valorara la explicabilidad tanto como el rendimiento (pesos 0,4 / 0,4 / 0,2), elegiríamos el árbol podado.»* Esas líneas van a la *model card* (apartado 3) en el paso 5.
+    Por ejemplo, con los números de esta ejecución (los vuestros serán distintos): *«Campeón: logistica (AUC en validación cruzada 0,758 ± 0,012; en test 0,746). No ganó lightgbm_ajustado porque su AUC (0,753) es prácticamente el mismo, pero se explica peor (2 frente a 4) y el modelo pesa unas 30 veces más (124 KB frente a 4 KB). Si el cliente valorara la explicabilidad por encima del rendimiento (pesos 0,2 / 0,6 / 0,2), elegiríamos el árbol podado.»* Esas líneas van a la *model card* (apartado 3) en el paso 5.
 
 **Qué deberíais ver.**
-- **Ejercicio 3** (pesos 0,5 / 0,3 / 0,2): `Campeón con estos pesos: logistica`, con `logistica` en cabeza (≈ 0,92) y `arbol_podado` muy cerca (≈ 0,90). Detrás, a mucha distancia (≈ 0,69 y menos), los demás; la SVM, con la puntuación más baja por ser caja negra, lenta y pesada.
-- **Sensibilidad:** una tabla con `logistica` para «solo rendimiento» y `arbol_podado` para «equilibrado» y «explicabilidad primero»: **el campeón cambia con los pesos**.
+- **Ejercicio 3** (pesos 0,5 / 0,3 / 0,2): `Campeón con estos pesos: logistica`, con `logistica` en cabeza (≈ 0,92) y `arbol_podado` en segundo lugar (≈ 0,87). Detrás, a mucha distancia (≈ 0,69 y menos), los demás; la SVM, con la puntuación más baja por ser caja negra, lenta y pesada.
+- **Sensibilidad:** una tabla con `logistica` para «solo rendimiento» y `arbol_podado` para «explicabilidad primero»; en «equilibrado» quedan casi empatados (≈ 0,89) y puede ganar cualquiera según los tiempos de vuestro ordenador: **el campeón cambia con los pesos**.
 - **Examen final:** `Campeón: logistica · AUC en validación cruzada 0.758 · AUC en test 0.746` y una tabla `lb_final` donde `auc_test` solo tiene valor en la fila del campeón (≈ 0,7458); en el resto, `NaN`.
 - El AUC de test sale algo más bajo que el de validación (aquí, unas 0,01) y entre 0,65 y 0,85. Si fuera **mucho** más bajo, sería sobreajuste. En `leaderboard_S08.csv`, `auc_test` tiene valor en **una sola fila**.
 - Con otros pesos o con otros modelos ajustados, vuestro campeón puede ser otro. Los tiempos cambian de un ordenador a otro y de una ejecución a otra, así que la nota de coste y la puntuación global pueden variar unas centésimas.

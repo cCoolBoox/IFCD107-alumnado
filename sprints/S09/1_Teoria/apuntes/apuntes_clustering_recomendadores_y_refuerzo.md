@@ -125,7 +125,7 @@ AgglomerativeClustering(n_clusters=4, linkage="ward")
 DBSCAN(eps=1.0, min_samples=10)
 ```
 
-**DBSCAN, intuición:** un punto está en una zona densa si tiene al menos `min_samples` vecinos a menos de `eps`. Los puntos aislados quedan como **ruido**: a veces son los clientes más interesantes (o errores).
+**DBSCAN, intuición:** un punto está en una zona densa si tiene al menos `min_samples` puntos (él incluido) a menos de `eps`. Los puntos aislados quedan como **ruido**: a veces son los clientes más interesantes (o errores).
 
 > **Mini-reto:** elige método, **justifícalo en una frase** y escribe para cada grupo nombre, descripción y acción comercial (`nombres_segmentos`).
 
@@ -328,7 +328,7 @@ La **política** es el «mapa de instrucciones»: en cada casilla, qué hacer. E
 
 **Experimento clave:** con `coste_paso = 0`, **la única recompensa llega al final**; sin exploración, el agente **no encuentra nunca la meta y no aprende**. **La exploración importa.**
 
-**Mini-reto:** pasar por la zona en obras cuesta ahora **−20** (reclamaciones). Reentrena y **comprueba si el camino cambia**: ahora el agente dará un rodeo, aunque sea más largo, porque el castigo supera el coste de unos pasos más.
+**Mini-reto:** pasar por la zona en obras cuesta ahora **−20** (reclamaciones). Reentrena y **comprueba que el camino sigue evitando las obras** (ya las evitaba con −5): el castigo mayor no cambia la ruta, solo encarece pisar la zona.
 
 ---
 
