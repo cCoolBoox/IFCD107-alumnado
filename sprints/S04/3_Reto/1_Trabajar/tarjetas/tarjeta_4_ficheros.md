@@ -17,7 +17,7 @@
 
 # 1 · Guía paso a paso
 
-**Qué vais a hacer:** dos funciones de `kpis.py`. `_convertir_fila` convierte **una fila** del CSV. `leer_reservas` lee **todo el fichero** usando la anterior.
+**Qué vais a hacer:** dos funciones de `kpis.py`: 1.`_convertir_fila` convierte **una fila** del CSV. 2.`leer_reservas` lee **todo el fichero** usando la anterior.
 
 **Cómo se sigue:** de arriba abajo, **un número cada vez**. Cada paso termina en ✅: lo que tiene que salir. Si no sale, no sigáis: mirad la parte 2.
 
