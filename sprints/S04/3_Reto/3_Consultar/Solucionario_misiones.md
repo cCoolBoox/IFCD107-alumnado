@@ -6,9 +6,9 @@
 
 - [Cómo usarlo](#cómo-usarlo): primero intentarlo, después contrastar
 - [Misión 0 · Mirar la demo](#misión-0--mirar-la-demo): qué sale y las respuestas a las cinco preguntas
-- [Misión 1 · Datos en memoria](#misión-1--datos-en-memoria): las seis líneas, la salida y los fallos más comunes
-- [Misión 2 · Decidir y repetir](#misión-2--decidir-y-repetir): los cuatro bucles, la salida y los fallos más comunes
-- [Misión 3 · Funciones que calculan](#misión-3--funciones-que-calculan): los mismos pasos que la tarjeta, con el código en trozos y cada línea explicada
+- [Misión 1 · Datos en memoria](#misión-1--datos-en-memoria): los mismos pasos que la tarjeta (3 y 4.1 a 4.6), con las seis líneas, la salida y los fallos más comunes
+- [Misión 2 · Decidir y repetir](#misión-2--decidir-y-repetir): los mismos pasos que la tarjeta (3 a 7), con los cuatro bucles, la salida y los fallos más comunes
+- [Misión 3 · Funciones que calculan](#misión-3--funciones-que-calculan): los mismos pasos que la tarjeta (1 a 9), con el código en trozos y cada línea explicada
 - [Misión 4 · Leer el CSV](#misión-4--leer-el-csv): los mismos pasos que la tarjeta (4.1 a 5.12), con el código explicado línea a línea
 - [Misión 5 · Guardar y entregar](#misión-5--guardar-y-entregar): los mismos pasos que la tarjeta (2 a 5), con el código explicado, los tres errores y la comprobación cruzada
 - [Mensajes de error: qué significan](#mensajes-de-error-qué-significan): los errores más comunes de Python en el reto y cómo se arreglan
@@ -33,9 +33,36 @@
 
 ## Misión 0 · Mirar la demo
 
-Tarjeta: [Misión 0](../1_Trabajar/tarjetas/tarjeta_0_mirar_la_demo.md).
+<h2 align="center">Entender el programa del cliente antes de escribir nada</h2>
 
-**Qué tiene que salir** al ejecutar `python demo_cliente.py`:
+> **Para contrastar**, cuando hayáis terminado el paso o agotado las pistas de la [tarjeta](../1_Trabajar/tarjetas/tarjeta_0_mirar_la_demo.md). **Tiene los mismos números de paso que la tarjeta** (1, 2.1, 3.2…): buscad el vuestro. Primero intentadlo; después de mirarlo, cerradlo y volved a explicarlo sin mirar. Lo que copiéis, tenéis que saber explicarlo.
+
+**Esta misión no se escribe: se lee y se ejecuta.** Lo que se contrasta es qué sale y las respuestas a las cinco preguntas.
+
+### Pasos 1 y 2 · Preparar
+
+| Paso | Qué tiene que pasar | Fallo habitual |
+|---|---|---|
+| **1** | Al descomprimir, la carpeta `reto_herramientas` contiene `demo_cliente.py`, `kpis.py`, `mision_1_datos.py`, `mision_2_decidir.py`, `reservas_demo.py`, `test_kpis.py` y `reservas_turisdata.csv` | Abrir el `.zip` sin extraerlo: se ven los archivos, pero no se pueden ejecutar |
+| **2.4** | `python --version` da `Python 3.11` o superior | `python` no se reconoce: probad `python3` y usadlo en todo el reto |
+
+### Paso 3 · Dónde están las cuatro piezas en `demo_cliente.py`
+
+| Paso | Pieza | Línea | Qué es |
+|---|---|---|---|
+| **3.2** | Datos | 12 | `from reservas_demo import RESERVAS`: la lista de 8 reservas |
+| **3.3** | Bucle | 25 | `for reserva in RESERVAS:` recorre las reservas una a una |
+| **3.4** | Decisión | 28 | `if reserva["cancelada"] == 1:` (con su `else` en la línea 30) |
+| **3.5** | Mensaje | 36–41 | Los `print(...)`: el resumen final |
+
+Además hay dos cosas que preparan el resumen:
+
+- **Líneas 20–23:** `total`, `canceladas`, `ingreso_total` y `por_canal` empiezan vacías (en `0` o `{}`).
+- **Línea 33–34:** `confirmadas = total - canceladas` y `media = ingreso_total / confirmadas`.
+
+### Paso 5 · Ejecutarlo
+
+`python demo_cliente.py` tiene que escribir **exactamente**:
 
 ```
 === Resumen semanal de reservas ===
@@ -47,30 +74,86 @@ Ingreso medio por reserva confirmada: 182.00 €
   - web_intermediaria: 3 reservas
 ```
 
+| Os sale | Probablemente |
+|---|---|
+| `No such file or directory` o `ModuleNotFoundError: reservas_demo` | La terminal está en otra carpeta: abridla **dentro** de `reto_herramientas` (`ls` o `dir` debe mostrar `demo_cliente.py`) |
+| `python` no se reconoce | Probad `python3` |
+| Cifras distintas de las de arriba | Habéis cambiado algo de `demo_cliente.py` o de `reservas_demo.py`: volved a descomprimir el `.zip` |
+
+### Paso 6 · Las cinco preguntas
+
 | Pregunta de la tarjeta | Respuesta |
 |---|---|
-| 1. ¿Cuántas reservas analiza el programa y qué línea lo calcula? | **8**, con `total = len(RESERVAS)` |
+| 1. ¿Cuántas reservas analiza el programa y qué línea lo calcula? | **8**, con `total = len(RESERVAS)` (línea 20) |
 | 2. ¿Por qué `canceladas` empieza en `0` y `por_canal` en `{}`? | Son **acumuladores**: se empieza en `0` y en `{}` porque todavía no se ha contado nada; el bucle los va rellenando |
 | 3. Si la primera reserva pasara a estar cancelada (`"cancelada": 1`), ¿qué cifras cambian? | Las canceladas pasan de 3 a **4 (50.0 %)** y el ingreso medio, de 182.00 a **177.50 €** (se quitan los 200 € de esa reserva y quedan 4 confirmadas). El reparto por canal **no cambia**: cuenta todas las reservas, canceladas o no |
 | 4. ¿Qué hace `:.1f` dentro de las llaves del f-string? | Muestra el número con **un decimal** (`:.2f`, con dos) |
 | 5. Si `RESERVAS` estuviera vacía, ¿qué error saldría y en qué línea? | **`ZeroDivisionError: float division by zero`** en `media = ingreso_total / confirmadas` (línea 34): hay 0 confirmadas. Es el primer error que el programa debería evitar; lo retomáis en la misión 4 |
 
-**Para explicárselo a vuestra pareja:** ¿qué hace el `for` de la demo, línea a línea, y por qué dentro hay un `if` con su `else`?
+**Comprobación de la pregunta 5** (pasos 6.3 a 6.5, en la copia `demo_copia.py` con `RESERVAS = []`):
+
+```
+Traceback (most recent call last):
+  File "demo_copia.py", line 34, in <module>
+    media = ingreso_total / confirmadas
+ZeroDivisionError: float division by zero
+```
+
+| Os sale | Probablemente |
+|---|---|
+| Ningún error, y el resumen sale con 8 reservas | Habéis cambiado el original y no la copia, o no guardasteis la copia (punto ● en la pestaña) |
+| `NameError: name 'RESERVAS' is not defined` | Borrasteis la línea del `from … import` sin escribir `RESERVAS = []` |
+
+### Paso 7 · El curso
+
+Sin solución aquí: los ejercicios del curso y del Taller se corrigen solos (en verde).
+
+### Para explicárselo a vuestra pareja
+
+¿Qué hace el `for` de la demo, línea a línea, y por qué dentro hay un `if` con su `else`?
 
 ## Misión 1 · Datos en memoria
 
-Tarjeta: [Misión 1](../1_Trabajar/tarjetas/tarjeta_1_datos.md). Fichero: [`mision_1_datos.py`](../1_Trabajar/reto_herramientas/mision_1_datos.py). En cada apartado se sustituye el `None` o se escribe la línea que falta.
+<h2 align="center">Leer y modificar una lista de reservas</h2>
 
-| Apartado | Qué se escribe | Fallo habitual |
-|---|---|---|
-| 1.1 | `cantidad = len(reservas)` (vale **3**: se cuenta antes de añadir la reserva del 1.5) | `len(reservas[0])` da 4: son las claves de la primera reserva, no cuántas reservas hay |
-| 1.2 | `canal_primera = reservas[0]["canal"]` (`'directo'`) | `reservas["canal"]` → `TypeError: list indices must be integers or slices, not str`: falta el número de la reserva |
-| 1.3 | `precio_ultima = reservas[-1]["precio_noche"]` (`60.0`) | `reservas[3]` → `IndexError: list index out of range`: solo hay 3 reservas (índices 0 a 2) |
-| 1.4 | `reservas[0]["cancelada"] = 1` | `==` en vez de `=`: no da error y no cambia nada, y la comprobación 1.4 falla |
-| 1.5 | `reservas.append({"canal": "directo", "noches": 3, "precio_noche": 80.0, "cancelada": 0})` | Olvidar una clave o cambiarle el nombre (`precio` en lugar de `precio_noche`): el diccionario no coincide y falla la 1.5 |
-| 1.6 | `texto = f"La reserva 2 es del canal {reservas[1]['canal']}: {reservas[1]['noches']} noches a {reservas[1]['precio_noche']} euros"` | Olvidar la `f` (sale el texto con las llaves) o usar comillas dobles dentro de un f-string de comillas dobles: `SyntaxError` en Python 3.11 |
+> **Para contrastar**, cuando hayáis terminado el paso o agotado las pistas de la [tarjeta](../1_Trabajar/tarjetas/tarjeta_1_datos.md). **Tiene los mismos números de paso que la tarjeta** (3.2, 4.1… 4.6): buscad el vuestro. Primero intentadlo; después de mirarlo, cerradlo y volved a escribirlo sin mirar. Lo que copiéis, tenéis que saber explicarlo.
 
-**Qué tiene que salir:**
+**Fichero:** [`mision_1_datos.py`](../1_Trabajar/reto_herramientas/mision_1_datos.py). Los apartados del archivo se llaman 1.1 a 1.6; en la tarjeta son los pasos **4.1 a 4.6**.
+
+**Lo que no cambia en ningún apartado**
+
+- Se escribe **pegado al borde izquierdo** (sin espacios al principio de la línea).
+- Se guarda con **Ctrl+S** antes de ejecutar (sin punto ● en la pestaña).
+- Se borra también el `# TODO`.
+
+### Paso 3 · Antes de escribir nada
+
+`python mision_1_datos.py` con el archivo tal cual tiene que dar:
+
+```
+Cantidad al empezar: None
+Canal de la primera: None
+Precio de la última: None
+Ahora hay 3 reservas
+None
+
+Misión 1: 0 de 6 apartados bien. Te faltan:
+   ✗ 1.1  `cantidad` debe valer 3 (cuéntala ANTES de añadir la reserva nueva)
+   ...
+```
+
+### Paso 4 · Los seis apartados
+
+| Paso | Qué se escribe | Qué sale al ejecutar | Fallo habitual |
+|---|---|---|---|
+| **4.1** (1.1) | `cantidad = len(reservas)` | `Cantidad al empezar: 3` · **1 de 6** (vale **3**: se cuenta antes de añadir la reserva del 4.5) | `len(reservas[0])` da 4: son las claves de la primera reserva, no cuántas reservas hay |
+| **4.2** (1.2) | `canal_primera = reservas[0]["canal"]` | `Canal de la primera: directo` · **2 de 6** | `reservas["canal"]` → `TypeError: list indices must be integers or slices, not str`: falta el número de la reserva |
+| **4.3** (1.3) | `precio_ultima = reservas[-1]["precio_noche"]` | `Precio de la última: 60.0` · **3 de 6** | `reservas[3]` → `IndexError: list index out of range`: solo hay 3 reservas (índices 0 a 2) |
+| **4.4** (1.4) | `reservas[0]["cancelada"] = 1` | No se ve nada nuevo · **4 de 6** | `==` en vez de `=`: no da error y no cambia nada, y la comprobación 1.4 falla |
+| **4.5** (1.5) | `reservas.append({"canal": "directo", "noches": 3, "precio_noche": 80.0, "cancelada": 0})` | `Ahora hay 4 reservas` · **5 de 6** | Olvidar una clave o cambiarle el nombre (`precio` en lugar de `precio_noche`): el diccionario no coincide y falla la 1.5 |
+| **4.6** (1.6) | `texto = f"La reserva 2 es del canal {reservas[1]['canal']}: {reservas[1]['noches']} noches a {reservas[1]['precio_noche']} euros"` | `La reserva 2 es del canal agencia: 4 noches a 50.0 euros` · **6 de 6** | Olvidar la `f` (sale el texto con las llaves) o usar comillas dobles dentro de un f-string de comillas dobles: `SyntaxError` en Python 3.11 |
+
+**Al terminar** tiene que salir:
 
 ```
 Cantidad al empezar: 3
@@ -82,41 +165,158 @@ La reserva 2 es del canal agencia: 4 noches a 50.0 euros
 ✅ ¡Misión 1 superada! Ya sabes leer y modificar los datos del reto.
 ```
 
-**Para explicárselo a vuestra pareja:** ¿por qué `cantidad` vale 3 si al terminar la misión hay 4 reservas?
+| Os sale | Probablemente |
+|---|---|
+| `KeyError: 'canl'` | Etiqueta mal escrita: tiene que ser exactamente `"canal"` (4.2) |
+| `IndexError: list index out of range` | Posición que no existe: la primera es `0`, la última `-1` (4.2, 4.3) |
+| Un apartado ya hecho sigue en la lista de «Te faltan» | Archivo **sin guardar** (punto ● en la pestaña): Ctrl+S y ejecutad otra vez |
+| `1.1` falla con `cantidad` = 4 | Contasteis **después** de añadir la reserva (4.5): `cantidad` va antes |
+| `TypeError` o el apartado sigue en la lista | Se dejó el `None`, o falta una coma o una llave |
+| `ModuleNotFoundError` | La terminal no está en la carpeta del reto |
+
+### Paso 5 · Taller
+
+Sin solución aquí: los dos puzles se montan en el Taller y se corrigen solos.
+
+### Para explicárselo a vuestra pareja
+
+¿Por qué `cantidad` vale 3 si al terminar la misión hay 4 reservas?
 
 ## Misión 2 · Decidir y repetir
 
-Tarjeta: [Misión 2](../1_Trabajar/tarjetas/tarjeta_2_decidir.md). Fichero: [`mision_2_decidir.py`](../1_Trabajar/reto_herramientas/mision_2_decidir.py), con las 8 reservas de [`reservas_demo.py`](../1_Trabajar/reto_herramientas/reservas_demo.py). Las variables (`canceladas = 0`, `noches_confirmadas = 0`, `por_canal = {}`, `largas = []`) ya vienen escritas; en cada apartado se sustituye el `TODO` por el bucle.
+<h2 align="center">Contar con <code>if</code> y <code>for</code></h2>
+
+> **Para contrastar**, cuando hayáis terminado el paso o agotado las pistas de la [tarjeta de la misión 2](../1_Trabajar/tarjetas/tarjeta_2_decidir.md). **Tiene los mismos números de paso que la tarjeta** (3.x a 7.x): buscad el vuestro. Primero intentadlo; después de mirarlo, cerradlo y volved a escribirlo sin mirar. Lo que copiéis, tenéis que saber explicarlo.
+
+**El punto de partida**, en [`mision_2_decidir.py`](../1_Trabajar/reto_herramientas/mision_2_decidir.py) (con las 8 reservas de [`reservas_demo.py`](../1_Trabajar/reto_herramientas/reservas_demo.py)):
+
+- Las cuatro variables ya vienen escritas: `canceladas = 0`, `noches_confirmadas = 0`, `por_canal = {}` y `largas = []`.
+- En cada apartado se **sustituye la línea `# TODO`** por el bucle.
+- Todo lo de debajo de `NO TOCAR: comprobación automática` se queda como está.
+
+**Cómo escribirlo sin errores de sangría.** Cada nivel (4 espacios, o un Tab) **más a la derecha** significa «dentro de» lo de arriba. El `for` se escribe al borde izquierdo (**nivel 0**), el `if` o la línea que sigue, **un nivel** más, y lo que hay dentro del `if`, **dos**. Guardad con **Ctrl+S** antes de ejecutar (sin ● en la pestaña).
+
+### Paso 4 · Apartado 2.1: contar las canceladas
 
 ```python
-# 2.1  Reservas canceladas
-for r in RESERVAS:
-    if r["cancelada"] == 1:
-        canceladas += 1
-
-# 2.2  Noches de las reservas NO canceladas
-for r in RESERVAS:
-    if r["cancelada"] == 0:
-        noches_confirmadas += r["noches"]
-
-# 2.3  Reservas por canal
-for r in RESERVAS:
-    por_canal[r["canal"]] = por_canal.get(r["canal"], 0) + 1
-
-# 2.4  Canal de las confirmadas de 3 noches o más
-for r in RESERVAS:
-    if r["cancelada"] == 0 and r["noches"] >= 3:
-        largas.append(r["canal"])
+canceladas = 0
+for reserva in RESERVAS:
+    if reserva["cancelada"] == 1:
+        canceladas = canceladas + 1
 ```
 
-| Apartado | Valor esperado | Fallo habitual |
-|---|---|---|
-| 2.1 | `canceladas == 3` | `canceladas = 1` en lugar de `+= 1` (se queda en 1), o el `+= 1` fuera del `if` (cuenta las 8) |
-| 2.2 | `noches_confirmadas == 12` | Comparar con `== 1` (suma 10 noches: las de las canceladas) o no poner el `if` (suma las 22) |
-| 2.3 | `{'directo': 3, 'agencia': 2, 'web_intermediaria': 3}` | `por_canal[canal] += 1` sin `get` → `KeyError: 'directo'`: el canal todavía no está en el diccionario |
-| 2.4 | `['agencia', 'directo']` | `>` en lugar de `>=` (sale solo `['agencia']`), o `or` en lugar de `and` (salen 7 canales en vez de 2) |
+| Paso | Línea | Nivel | Qué hace, con palabras normales |
+|---|---|---|---|
+| **4.3** | `for reserva in RESERVAS:` | 0 | Coge las reservas **una a una**; en cada vuelta, `reserva` es una |
+| **4.4** | `if reserva["cancelada"] == 1:` | 1 | «¿Esta reserva está cancelada?» (`1` = sí) |
+| **4.5** | `canceladas = canceladas + 1` | 2 | **Solo si** lo está, suma uno al contador |
 
-**Qué tiene que salir:**
+**Seguimiento con las 8 reservas** (`cancelada` de cada una: 0, 1, 0, 0, 1, 0, 0, 1):
+
+| Vuelta | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|---|---|
+| `canceladas` después | 0 | **1** | 1 | 1 | **2** | 2 | 2 | **3** |
+
+✅ **4.6 · Sale** `Canceladas: 3` y `Misión 2: 1 de 4 apartados bien. Te faltan:` (con las otras tres ✗).
+
+| Os sale | Probablemente |
+|---|---|
+| `Canceladas: 1` | Habéis escrito `canceladas = 1` en vez de `canceladas = canceladas + 1`: se queda en 1 |
+| `Canceladas: 8` | Falta el `if`: la suma queda directamente dentro del `for` y se hace en **todas** las vueltas |
+| `Canceladas: 0` | El fichero **no está guardado** (● en la pestaña) |
+| `Canceladas: 5` | La condición es `== 0` en vez de `== 1`: cuenta las **confirmadas** |
+| `IndentationError: expected an indented block after 'if' statement` | Falta sangrar la línea de debajo del `if` (4.5): **dos niveles** |
+| `SyntaxError: expected ':'` | Falta el `:` al final del `for` o del `if` |
+| `SyntaxError: cannot assign to subscript here. Maybe you meant '==' instead of '='?` | Habéis escrito `=` donde va `==` |
+
+### Paso 5 · Apartado 2.2: sumar las noches
+
+```python
+noches_confirmadas = 0
+for reserva in RESERVAS:
+    if reserva["cancelada"] == 0:
+        noches_confirmadas = noches_confirmadas + reserva["noches"]
+```
+
+| Paso | Línea | Nivel | Qué hace, con palabras normales |
+|---|---|---|---|
+| **5.2** | `for reserva in RESERVAS:` | 0 | Una vuelta por reserva |
+| **5.3** | `if reserva["cancelada"] == 0:` | 1 | «¿**No** está cancelada?» (`0` = confirmada) |
+| **5.4** | `noches_confirmadas = noches_confirmadas + reserva["noches"]` | 2 | Suma **las noches de esa reserva** (no un `1`) |
+
+- Las reservas confirmadas son las 1, 3, 4, 6 y 7, con 2 + 4 + 1 + 2 + 3 noches.
+- El marcador va: 2, 2, 6, 7, 7, 9, 12, 12.
+
+✅ **5.5 · Sale** `Noches confirmadas: 12` y `2 de 4 apartados bien`.
+
+| Os sale | Probablemente |
+|---|---|
+| `Noches confirmadas: 22` | No hay `if`: suma las noches de **todas** (22), también de las canceladas |
+| `Noches confirmadas: 10` | Habéis comparado con `== 1`: suma las noches de las **canceladas** (3 + 5 + 2) |
+| `Noches confirmadas: 0` | Fichero sin guardar, o el `+ reserva["noches"]` no está |
+
+### Paso 6 · Apartado 2.3: contar por canal
+
+```python
+por_canal = {}
+for reserva in RESERVAS:
+    canal = reserva["canal"]
+    por_canal[canal] = por_canal.get(canal, 0) + 1
+```
+
+| Paso | Línea | Nivel | Qué hace, con palabras normales |
+|---|---|---|---|
+| **6.2** | `for reserva in RESERVAS:` | 0 | Una vuelta por reserva |
+| **6.3** | `canal = reserva["canal"]` | 1 | Guarda el canal de **esta** reserva en `canal` |
+| **6.4** | `por_canal[canal] = por_canal.get(canal, 0) + 1` | 1 | «Lo que llevo de ese canal, o `0` si todavía no está; le sumo 1 y lo guardo» |
+
+**Seguimiento** (el diccionario va creciendo):
+
+| Vuelta | `canal` | `por_canal` después |
+|---|---|---|
+| 1 | `directo` | `{'directo': 1}` |
+| 2 | `directo` | `{'directo': 2}` |
+| 3 | `agencia` | `{'directo': 2, 'agencia': 1}` |
+| 4 | `agencia` | `{'directo': 2, 'agencia': 2}` |
+| 5 a 8 | `web_intermediaria`, `web_intermediaria`, `directo`, `web_intermediaria` | `{'directo': 3, 'agencia': 2, 'web_intermediaria': 3}` |
+
+✅ **6.5 · Sale** `Por canal: {'directo': 3, 'agencia': 2, 'web_intermediaria': 3}` y `3 de 4 apartados bien`.
+
+| Os sale | Probablemente |
+|---|---|
+| `KeyError: 'directo'` | Habéis escrito `por_canal[canal] = por_canal[canal] + 1` (o `+= 1`) **sin `.get`**: la primera vez, el canal todavía no está en el diccionario |
+| `Por canal: {}` | Fichero sin guardar, o el `for` queda sin esa línea dentro |
+| `Por canal: {'web_intermediaria': 1}` | La línea 6.4 está **fuera** del `for` (nivel 0): solo cuenta una vez, con el último canal |
+
+### Paso 7 · Apartado 2.4: la lista de canales
+
+```python
+largas = []
+for reserva in RESERVAS:
+    if reserva["cancelada"] == 0 and reserva["noches"] >= 3:
+        largas.append(reserva["canal"])
+```
+
+| Paso | Línea | Nivel | Qué hace, con palabras normales |
+|---|---|---|---|
+| **7.2** | `for reserva in RESERVAS:` | 0 | Una vuelta por reserva |
+| **7.3** | `if reserva["cancelada"] == 0 and reserva["noches"] >= 3:` | 1 | «¿Confirmada **y** de 3 noches o más?» Se tienen que cumplir **las dos** |
+| **7.4** | `largas.append(reserva["canal"])` | 2 | Añade el **canal** de esa reserva al final de la lista |
+
+- La reserva 3 (`agencia`, 4 noches) y la 7 (`directo`, 3 noches) cumplen las dos condiciones, en ese orden.
+- La 2 y la 5 tienen 3 o más noches, pero están **canceladas**: no entran.
+
+✅ **7.5 · Sale** `Confirmadas de 3 noches o más: ['agencia', 'directo']` y la línea final.
+
+| Os sale | Probablemente |
+|---|---|
+| `['agencia']` | `>` en lugar de `>=`: la reserva de **3** noches se queda fuera |
+| Una lista con **7** canales | `or` en lugar de `and`: entra todo lo que cumpla **una** de las dos condiciones |
+| `['directo', 'web_intermediaria']` | `== 1` en vez de `== 0`: entran las **canceladas** de 3 noches o más (reservas 2 y 5) |
+| `[]` | El fichero no está guardado (● en la pestaña) |
+| `AttributeError: 'list' object has no attribute 'apend'` | `append` mal escrito |
+
+### Qué tiene que salir al final
 
 ```
 Canceladas: 3
@@ -127,21 +327,30 @@ Confirmadas de 3 noches o más: ['agencia', 'directo']
 ✅ ¡Misión 2 superada! Ya sabes contar con if y for: es la base de los KPI.
 ```
 
-**Para explicárselo a vuestra pareja:** en el 2.3, ¿qué pasa si quitáis el `.get(..., 0)` y escribís solo `por_canal[canal] += 1`? ¿Por qué?
+**Si el marcador se queda en «N de 4»:** cada ✗ nombra el apartado (`2.1`, `2.2`, `2.3` o `2.4`) y lo que `debe valer`. Mirad el paso con ese número en este solucionario.
+
+**Para explicárselo a vuestra pareja:** en el 2.3, ¿qué pasa si quitáis el `.get(..., 0)` y escribís solo `por_canal[canal] = por_canal[canal] + 1`? ¿Por qué?
 
 ## Misión 3 · Funciones que calculan
 
-Tarjeta: [Misión 3](../1_Trabajar/tarjetas/tarjeta_3_funciones.md). **Tiene los mismos pasos que este apartado, con los mismos números**: leed el paso en la tarjeta, intentadlo y, si no sale, venid al mismo paso de aquí. Las funciones se escriben en [`kpis.py`](../1_Trabajar/reto_herramientas/kpis.py) y los datos de ejemplo están en [`reservas_demo.py`](../1_Trabajar/reto_herramientas/reservas_demo.py).
+<h2 align="center">Tres funciones que calculan, con el código explicado línea a línea</h2>
 
-**Cómo leer el código de aquí:** cada trozo va seguido de una tabla que explica **cada línea con palabras normales**. Si una línea no la entendéis, no la copiéis: preguntad.
+**Cómo usarlo**
+
+- Para **contrastar**, cuando hayáis terminado el paso o agotado las pistas de la [tarjeta de la misión 3](../1_Trabajar/tarjetas/tarjeta_3_funciones.md).
+- Tiene los **mismos números de paso** que la tarjeta (4.10, 4.11, 6.4…): buscad el vuestro.
+- Las funciones se escriben en [`kpis.py`](../1_Trabajar/reto_herramientas/kpis.py); los datos de ejemplo están en [`reservas_demo.py`](../1_Trabajar/reto_herramientas/reservas_demo.py).
+- Cada trozo de código va seguido de una tabla que explica **cada línea con palabras normales**. Si una línea no la entendéis, no la copiéis: preguntad.
+- **Primero intentadlo.** Después de mirarlo, cerradlo y volved a escribirlo sin mirar.
 
 ### Pasos 1 y 2 · Aprender
 
-No hay nada que escribir aquí. Son los ejercicios del curso y del Taller (funciones, `def`, `return`, diccionarios). Si el paso 4 os parece un salto, **volved al puzle «Contar con un diccionario» del Taller**: es casi la misma función.
+- No hay nada que escribir aquí: son los ejercicios del curso y del Taller (funciones, `def`, `return`, diccionarios).
+- Si el paso 4 os parece un salto, **volved al puzle «Contar con un diccionario» del Taller**: es casi la misma función.
 
 ### Paso 3 · Ver las pruebas fallar
 
-Con la plantilla sin tocar, `python test_kpis.py 1` tiene que enseñar, en rojo:
+Con la plantilla sin tocar, `python test_kpis.py 1` (pasos 3.1 y 3.2) tiene que enseñar, en rojo:
 
 ```
 --- FASE 1 · funciones que calculan (datos en memoria) ---
@@ -153,15 +362,26 @@ Con la plantilla sin tocar, `python test_kpis.py 1` tiene que enseñar, en rojo:
 0 de 4 pruebas superadas
 ```
 
-Si lo veis así, **todo va bien**: las funciones todavía no están hechas. Si no sale `0 de 4`, mirad si habéis escrito el `1` al final (`python test_kpis.py 1`) y si la terminal está dentro de la carpeta del reto.
+- Si lo veis así, **todo va bien**: las funciones todavía no están hechas.
+- Si no sale `0 de 4`:
+  - Mirad si habéis escrito el `1` al final (`python test_kpis.py 1`).
+  - Mirad si la terminal está dentro de la carpeta del reto.
 
 ### Paso 4 · `tasa_cancelacion_por_canal`
 
-**Ojo con los números:** el «Paso 4» es el de la tarjeta (de los 9); los `# Paso 1, 2, 3` son los comentarios de dentro de la función en `kpis.py`.
+**Ojo con los números:** los pasos **4.1 a 4.9** (a mano, y preparar el fichero) no llevan código. El código está en **4.10, 4.11 y 4.12**, que son los `# Paso 1, 2, 3` de los comentarios de la función.
 
-**La idea.** Hay que contar dos cosas por cada canal: cuántas reservas hay y cuántas están canceladas. Después, dividir.
+**La idea**
 
-**Cómo copiarla sin errores de sangría.** En `kpis.py`, seleccionad la función entera, **desde la línea `def …` hasta la línea `raise NotImplementedError(...)` (incluida)**, y pegad encima. Así no se mezclan los espacios. (Si pegáis solo las líneas de dentro y el cursor ya tenía 4 espacios, la primera línea queda con 8 y sale `IndentationError: unexpected indent`.)
+- Hay que contar dos cosas por cada canal: cuántas reservas hay y cuántas están canceladas.
+- Después, dividir.
+
+**Cómo copiarla sin errores de sangría**
+
+- En `kpis.py`, seleccionad la función entera: **desde la línea `def …` hasta la línea `raise NotImplementedError(...)`, incluida**.
+- Pegad la de abajo encima.
+- Guardad con Ctrl+S.
+- Si pegáis solo las líneas de dentro y el cursor ya tenía 4 espacios, la primera queda con 8 y sale `IndentationError: unexpected indent`.
 
 ```python
 def tasa_cancelacion_por_canal(reservas):
@@ -179,7 +399,7 @@ def tasa_cancelacion_por_canal(reservas):
     return tasas
 ```
 
-**Primera parte · preparar y contar** (pasos 1 y 2 de los comentarios de `kpis.py`):
+**Primera parte · preparar y contar** (4.10 y 4.11):
 
 | Línea | Qué hace, con palabras normales |
 |---|---|
@@ -191,7 +411,7 @@ def tasa_cancelacion_por_canal(reservas):
 | `if r["cancelada"] == 1:` | Solo si esta reserva está cancelada, haz lo de abajo |
 | `canceladas[canal] = canceladas.get(canal, 0) + 1` | Lo mismo que con `total`, pero en la libreta de canceladas |
 
-**Segunda parte · calcular y devolver** (paso 3 de los comentarios de `kpis.py`):
+**Segunda parte · calcular y devolver** (4.12):
 
 | Línea | Qué hace |
 |---|---|
@@ -202,26 +422,40 @@ def tasa_cancelacion_por_canal(reservas):
 | `round(..., 1)` | Redondea a **1 decimal**: `33.3` en lugar de `33.333333333333336` |
 | `return tasas` | **Entrega** el resultado. Sin esta línea, la función devuelve `None` |
 
-**Seguimiento con las 4 reservas de la tarjeta** (web no, web **sí**, directo no, web no). Cada reserva es una vuelta del `for`:
+**Seguimiento con las 4 reservas de la tarjeta** (4.3 a 4.7: web no, web **sí**, directo no, web no). Cada reserva es una vuelta del `for`:
 
 1. Reserva 1 (web, no): `total = {"web": 1}`, `canceladas = {}`.
 2. Reserva 2 (web, **sí**): `total = {"web": 2}`, `canceladas = {"web": 1}`.
 3. Reserva 3 (directo, no): `total = {"web": 2, "directo": 1}`, `canceladas` igual.
 4. Reserva 4 (web, no): `total = {"web": 3, "directo": 1}`, `canceladas` igual.
 
-Después, el segundo `for`: `web` → 100 × 1 ÷ 3 = **33.3** y `directo` → 100 × **0** ÷ 1 = **0.0** (`directo` no está en `canceladas`: `.get` da `0`). Resultado: `{"web": 33.3, "directo": 0.0}`.
+Después, el segundo `for`:
 
-**Por qué `.get(canal, 0)` y no `canceladas[canal]`:** `agencia` no tiene ninguna cancelada, así que **no está** en `canceladas`. Pedirlo con corchetes da `KeyError: 'agencia'`. Con `.get(canal, 0)` se dice «lo que lleve, o `0` si todavía no está».
+- `web` → 100 × 1 ÷ 3 = **33.3**.
+- `directo` → 100 × **0** ÷ 1 = **0.0** (no está en `canceladas`: `.get` da `0`).
+- Resultado: `{"web": 33.3, "directo": 0.0}`.
 
-### Paso 5 · Probar y corregir
+**Por qué `.get(canal, 0)` y no `canceladas[canal]`**
 
-A mano, con **una sola línea** en la terminal, dentro de la carpeta del reto (copiadla entera y pulsad Intro):
+- `agencia` no tiene ninguna cancelada, así que **no está** en `canceladas`.
+- Pedirlo con corchetes da `KeyError: 'agencia'`.
+- Con `.get(canal, 0)` se dice «lo que lleve, o `0` si todavía no está».
+
+### Paso 5 · Probar la tasa
+
+**5.1 · A mano, con una sola línea** (en la terminal, dentro de la carpeta del reto; copiadla entera y pulsad Intro):
 
 ```
 python -c "from reservas_demo import RESERVAS; from kpis import tasa_cancelacion_por_canal; print(tasa_cancelacion_por_canal(RESERVAS))"
 ```
 
-Tiene que salir `{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}`. (No ejecutéis `python kpis.py` solo: ese fichero necesita datos y no enseña nada.) Después `python test_kpis.py 1`: las **dos pruebas de la tasa** tienen que salir `[OK]` en verde y el resumen pasa de `0 de 4` a `2 de 4`.
+✅ Sale `{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}`.
+
+**5.2 · La prueba:** `python test_kpis.py 1`.
+
+- Las **dos pruebas de la tasa** salen `[OK]` en verde.
+- El resumen pasa de `0 de 4` a `2 de 4`.
+- No ejecutéis `python kpis.py` solo ni el botón ▶: ese fichero necesita datos y no enseña nada.
 
 **Si os sale otra cosa:**
 
@@ -236,7 +470,12 @@ Tiene que salir `{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}`. 
 
 ### Paso 6 · `ingreso_medio_por_reserva`
 
-**La idea.** Hacer una lista con lo que ingresa cada reserva **no cancelada** (`noches × precio_noche`) y calcular su media. Una reserva cancelada no deja dinero.
+**La idea**
+
+- Hacer una lista con lo que ingresa cada reserva **no cancelada** (`noches × precio_noche`).
+- Calcular su media.
+- Una reserva cancelada no deja dinero.
+- Los pasos 6.1 y 6.2 son a mano; el código es **6.4 a 6.6**.
 
 ```python
 def ingreso_medio_por_reserva(reservas):
@@ -250,7 +489,7 @@ def ingreso_medio_por_reserva(reservas):
     return round(sum(ingresos) / len(ingresos), 2)
 ```
 
-(Se copia igual que la anterior: función entera, de `def` a `raise`, pegada encima.)
+Se copia igual que la anterior: **función entera, de `def` a `raise`, pegada encima**, y Ctrl+S.
 
 | Línea | Qué hace |
 |---|---|
@@ -263,17 +502,25 @@ def ingreso_medio_por_reserva(reservas):
 | `sum(ingresos) / len(ingresos)` | La media: la **suma** de los importes entre **cuántos hay** |
 | `round(..., 2)` | Redondea a 2 decimales (son euros) |
 
-**Seguimiento.** Con las 3 reservas de la tarjeta (200 €, 200 € y 120 €): 520 ÷ 3 = **173.33**. Con las 8 reservas de ejemplo: las no canceladas son 5, y el cajón queda `[200.0, 200.0, 120.0, 180.0, 210.0]`. Suman 910 y 910 ÷ 5 = **182.0**.
+**Seguimiento**
 
-### Paso 7 · Probar y corregir
+- Con las 3 reservas de la tarjeta (200 €, 200 € y 120 €): 520 ÷ 3 = **173.33**.
+- Con las 8 reservas de ejemplo: las no canceladas son 5 y el cajón queda `[200.0, 200.0, 120.0, 180.0, 210.0]`.
+- Suman 910 y 910 ÷ 5 = **182.0**.
 
-A mano, con una línea (en la terminal, dentro de la carpeta del reto):
+### Paso 7 · Probar el ingreso medio
+
+**7.1 · A mano, con una línea** (en la terminal, dentro de la carpeta del reto):
 
 ```
 python -c "from reservas_demo import RESERVAS; from kpis import ingreso_medio_por_reserva; print(ingreso_medio_por_reserva(RESERVAS))"
 ```
 
-Tiene que salir **`182.0`**. Después `python test_kpis.py 1`: `test_ingreso_medio…` en verde (**`3 de 4`**).
+✅ Sale **`182.0`**.
+
+**7.2 · La prueba:** `python test_kpis.py 1` → `test_ingreso_medio…` en verde (**`3 de 4`**).
+
+**Si os sale otra cosa:**
 
 | Os sale | Probablemente |
 |---|---|
@@ -285,7 +532,11 @@ Tiene que salir **`182.0`**. Después `python test_kpis.py 1`: `test_ingreso_med
 
 ### Paso 8 · `ocupacion_proxy`
 
-**La idea.** Qué parte de las «noches posibles» (días del periodo × habitaciones) están ocupadas. Esta la hace **el docente en pantalla**; vosotros la copiáis y **explicáis una línea con vuestras palabras**.
+**La idea**
+
+- Qué parte de las «noches posibles» (días del periodo × habitaciones) están ocupadas.
+- La hace **el docente en pantalla** (8.2).
+- Vosotros la copiáis (8.3) y **explicáis una línea con vuestras palabras** (8.5).
 
 ```python
 def ocupacion_proxy(reservas, capacidad_habitaciones):
@@ -314,13 +565,22 @@ def ocupacion_proxy(reservas, capacidad_habitaciones):
 | `noches = 0` y el `for` con `if` | Suma las noches de las reservas **no canceladas** (el marcador empieza en 0) |
 | `return round(100 * noches / (dias * capacidad_habitaciones), 1)` | La fórmula: noches ocupadas entre noches posibles, por 100, con 1 decimal |
 
-**Seguimiento con el dedo** (8 reservas, 5 habitaciones): del 1 al 20 de enero hay **20 días** (19 de diferencia + 1). Las noches no canceladas son 2 + 4 + 1 + 2 + 3 = **12**. Entonces 100 × 12 ÷ (20 × 5) = **12.0**.
+**Seguimiento con el dedo** (8 reservas, 5 habitaciones)
 
-**Por qué es un «proxy»:** el fichero no dice cuántas habitaciones tiene el hotel de verdad y cada reserva cuenta sus noches el día de la llegada. Es una **medida aproximada**, útil para comparar, no una ocupación exacta.
+- Del 1 al 20 de enero hay **20 días** (19 de diferencia + 1).
+- Las noches no canceladas son 2 + 4 + 1 + 2 + 3 = **12**.
+- Entonces 100 × 12 ÷ (20 × 5) = **12.0**.
+
+**Por qué es un «proxy»**
+
+- El fichero no dice cuántas habitaciones tiene el hotel de verdad.
+- Cada reserva cuenta sus noches el día de la llegada.
+- Es una **medida aproximada**, útil para comparar, no una ocupación exacta.
 
 ### Paso 9 · Todas las pruebas
 
-`python test_kpis.py 1` termina con **`4 de 4 pruebas superadas`**, en verde, y a mano, con una línea, da **`12.0`**:
+- **9.1:** `python test_kpis.py 1` termina con **`4 de 4 pruebas superadas`**, en verde.
+- **9.2:** a mano, con una línea, da **`12.0`**:
 
 ```
 python -c "from reservas_demo import RESERVAS; from kpis import ocupacion_proxy; print(ocupacion_proxy(RESERVAS, 5))"
@@ -333,7 +593,9 @@ python -c "from reservas_demo import RESERVAS; from kpis import ocupacion_proxy;
 | `ZeroDivisionError` con capacidad 0 | Falta la primera comprobación (`capacidad_habitaciones <= 0`) |
 | `TypeError` al restar fechas | Estáis restando textos y no fechas: en las 8 reservas de ejemplo ya son fechas; en el CSV las convierte la misión 4 |
 
-**Para explicárselo a vuestra pareja** (elegid una):
+### Para explicárselo a vuestra pareja
+
+Elegid una:
 
 1. En la tasa de cancelación, ¿qué pasaría si usarais `canceladas[canal]` en lugar de `canceladas.get(canal, 0)`? ¿Con qué canal?
 2. La tasa cuenta las reservas canceladas y las que no, pero el ingreso medio solo cuenta las no canceladas. ¿Por qué?
