@@ -120,16 +120,15 @@ Al final tenéis `total = {web: 3, directo: 1}` y `canceladas = {web: 1}`. Los p
 2. Las dos pruebas de la tasa tienen que salir en verde: **`2 de 4`**.
 3. Si falla, leed qué **debería salir** y comparadlo con lo que sale en la vuestra.
 
-Para ver lo que sale en la vuestra, probadla a mano (con las 8 reservas de ejemplo). En la terminal, dentro de la carpeta del reto:
+Para ver lo que sale en la vuestra, probadla a mano **con una sola línea**. En la terminal, dentro de la carpeta del reto, copiadla **entera** y pulsad Intro:
 
 ```
-python
->>> from reservas_demo import RESERVAS
->>> from kpis import tasa_cancelacion_por_canal
->>> tasa_cancelacion_por_canal(RESERVAS)
+python -c "from reservas_demo import RESERVAS; from kpis import tasa_cancelacion_por_canal; print(tasa_cancelacion_por_canal(RESERVAS))"
 ```
 
-Tiene que salir `{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}`. Para salir: `exit()`.
+Tiene que salir `{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}`.
+
+No ejecutéis `python kpis.py` solo: no enseña nada. Se prueba con `python test_kpis.py 1`.
 
 ### Paso 6 · `ingreso_medio_por_reserva`
 
@@ -157,7 +156,11 @@ Ayuda: el puzle «Ingreso medio de las reservas confirmadas» del Taller, y el c
 
 ### Paso 7 · Probar y corregir
 
-`python test_kpis.py 1`: `test_ingreso_medio…` en verde (**`3 de 4`**). Con las 8 reservas de ejemplo, a mano, tiene que salir **`182.0`**.
+`python test_kpis.py 1`: `test_ingreso_medio…` en verde (**`3 de 4`**). A mano, con una línea, tiene que salir **`182.0`**:
+
+```
+python -c "from reservas_demo import RESERVAS; from kpis import ingreso_medio_por_reserva; print(ingreso_medio_por_reserva(RESERVAS))"
+```
 
 ### Paso 8 · `ocupacion_proxy`
 
@@ -177,7 +180,11 @@ Es un **proxy**: una medida aproximada, porque el fichero no dice cuántas habit
 
 ### Paso 9 · Todas las pruebas
 
-`python test_kpis.py 1` tiene que terminar con **`4 de 4 pruebas superadas`**, en verde. A mano, `ocupacion_proxy(RESERVAS, 5)` da **`12.0`**.
+`python test_kpis.py 1` tiene que terminar con **`4 de 4 pruebas superadas`**, en verde. A mano, con una línea, da **`12.0`**:
+
+```
+python -c "from reservas_demo import RESERVAS; from kpis import ocupacion_proxy; print(ocupacion_proxy(RESERVAS, 5))"
+```
 
 ## ✅ Misión terminada cuando
 
@@ -189,7 +196,8 @@ Es un **proxy**: una medida aproximada, porque el fichero no dice cuántas habit
 | Qué pasa | Por qué | Qué hacer |
 |---|---|---|
 | La prueba dice que la función devuelve `None` | Imprime con `print` pero no termina con `return` | Terminar con `return valor`: devolver no es lo mismo que mostrar |
-| `IndentationError` | Las líneas nuevas no tienen los 4 espacios del principio | Dentro de una función, todo va con 4 espacios; dentro de un `for`, con 8 |
+| `IndentationError` | Las líneas no están bien sangradas, o el fichero no está guardado | Dentro de una función, todo va con 4 espacios; dentro de un `for`, con 8. Si pegáis la solución, pegad la **función entera** (de `def` a `raise`) y guardad con Ctrl+S |
+| `ParserError` o `>>>` en la terminal | Habéis pegado líneas que empiezan por `>>>` | Esas líneas son de Python por dentro: usad la línea `python -c "..."` de la tarjeta, que se pega entera |
 | Sigue saliendo `NotImplementedError` | No habéis borrado la línea `raise NotImplementedError(...)` | Borradla: queda **solo vuestro código** |
 | `KeyError` | Se pide un canal que todavía no está en el diccionario | Usad `.get(canal, 0)` |
 | `ModuleNotFoundError: kpis` (o `reservas_demo`) | Se ejecuta desde otra carpeta | Abrir la terminal **dentro** de la carpeta del reto |

@@ -161,9 +161,11 @@ Si lo veis así, **todo va bien**: las funciones todavía no están hechas. Si n
 
 **La idea.** Hay que contar dos cosas por cada canal: cuántas reservas hay y cuántas están canceladas. Después, dividir.
 
-**Trozo 1 · preparar y contar** (pasos 1 y 2 de los comentarios de `kpis.py`):
+**Cómo copiarla sin errores de sangría.** En `kpis.py`, seleccionad la función entera, **desde la línea `def …` hasta la línea `raise NotImplementedError(...)` (incluida)**, y pegad encima. Así no se mezclan los espacios. (Si pegáis solo las líneas de dentro y el cursor ya tenía 4 espacios, la primera línea queda con 8 y sale `IndentationError: unexpected indent`.)
 
 ```python
+def tasa_cancelacion_por_canal(reservas):
+    """Devuelve {canal: porcentaje de reservas canceladas, con 1 decimal}."""
     total = {}
     canceladas = {}
     for r in reservas:
@@ -171,7 +173,13 @@ Si lo veis así, **todo va bien**: las funciones todavía no están hechas. Si n
         total[canal] = total.get(canal, 0) + 1
         if r["cancelada"] == 1:
             canceladas[canal] = canceladas.get(canal, 0) + 1
+    tasas = {}
+    for canal in total:
+        tasas[canal] = round(100 * canceladas.get(canal, 0) / total[canal], 1)
+    return tasas
 ```
+
+**Primera parte · preparar y contar** (pasos 1 y 2 de los comentarios de `kpis.py`):
 
 | Línea | Qué hace, con palabras normales |
 |---|---|
@@ -183,14 +191,7 @@ Si lo veis así, **todo va bien**: las funciones todavía no están hechas. Si n
 | `if r["cancelada"] == 1:` | Solo si esta reserva está cancelada, haz lo de abajo |
 | `canceladas[canal] = canceladas.get(canal, 0) + 1` | Lo mismo que con `total`, pero en la libreta de canceladas |
 
-**Trozo 2 · calcular y devolver** (paso 3 de los comentarios de `kpis.py`):
-
-```python
-    tasas = {}
-    for canal in total:
-        tasas[canal] = round(100 * canceladas.get(canal, 0) / total[canal], 1)
-    return tasas
-```
+**Segunda parte · calcular y devolver** (paso 3 de los comentarios de `kpis.py`):
 
 | Línea | Qué hace |
 |---|---|
@@ -214,17 +215,13 @@ Después, el segundo `for`: `web` → 100 × 1 ÷ 3 = **33.3** y `directo` → 1
 
 ### Paso 5 · Probar y corregir
 
-A mano, en la terminal dentro de la carpeta del reto:
+A mano, con **una sola línea** en la terminal, dentro de la carpeta del reto (copiadla entera y pulsad Intro):
 
 ```
-python
->>> from reservas_demo import RESERVAS
->>> from kpis import tasa_cancelacion_por_canal
->>> tasa_cancelacion_por_canal(RESERVAS)
-{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}
+python -c "from reservas_demo import RESERVAS; from kpis import tasa_cancelacion_por_canal; print(tasa_cancelacion_por_canal(RESERVAS))"
 ```
 
-(`exit()` para salir; si cambiáis `kpis.py`, salid y volved a entrar.) Después `python test_kpis.py 1`: las **dos pruebas de la tasa** tienen que salir `[OK]` en verde y el resumen pasa de `0 de 4` a `2 de 4`.
+Tiene que salir `{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}`. (No ejecutéis `python kpis.py` solo: ese fichero necesita datos y no enseña nada.) Después `python test_kpis.py 1`: las **dos pruebas de la tasa** tienen que salir `[OK]` en verde y el resumen pasa de `0 de 4` a `2 de 4`.
 
 **Si os sale otra cosa:**
 
@@ -233,7 +230,7 @@ python
 | `{'directo': 33.333333333333336, …}` | Falta el `round(..., 1)` |
 | `KeyError: 'agencia'` | Escribís `canceladas[canal]` en lugar de `canceladas.get(canal, 0)` |
 | `None` (o la prueba dice que no es un diccionario) | Falta el `return tasas`, o está dentro del `for` (con 8 espacios) |
-| `IndentationError` | Las líneas nuevas no tienen los 4 espacios del principio |
+| `IndentationError` | Habéis pegado solo las líneas de dentro con el cursor ya sangrado (la primera queda con 8 espacios), o el fichero **no está guardado** (mirad si la pestaña tiene un punto): pegad la función entera y guardad con Ctrl+S |
 | Sigue `NotImplementedError` | No habéis borrado la línea `raise NotImplementedError(...)` |
 | `ZeroDivisionError` | Dividís entre un `total` de 0: no pasa si recorréis `total`, que solo tiene canales que han aparecido |
 
@@ -242,6 +239,8 @@ python
 **La idea.** Hacer una lista con lo que ingresa cada reserva **no cancelada** (`noches × precio_noche`) y calcular su media. Una reserva cancelada no deja dinero.
 
 ```python
+def ingreso_medio_por_reserva(reservas):
+    """Ingreso medio de las reservas NO canceladas, con 2 decimales."""
     ingresos = []
     for r in reservas:
         if r["cancelada"] == 0:
@@ -250,6 +249,8 @@ python
         return 0.0
     return round(sum(ingresos) / len(ingresos), 2)
 ```
+
+(Se copia igual que la anterior: función entera, de `def` a `raise`, pegada encima.)
 
 | Línea | Qué hace |
 |---|---|
@@ -266,7 +267,13 @@ python
 
 ### Paso 7 · Probar y corregir
 
-A mano: `ingreso_medio_por_reserva(RESERVAS)` tiene que dar **`182.0`**. Después `python test_kpis.py 1`: `test_ingreso_medio…` en verde (**`3 de 4`**).
+A mano, con una línea (en la terminal, dentro de la carpeta del reto):
+
+```
+python -c "from reservas_demo import RESERVAS; from kpis import ingreso_medio_por_reserva; print(ingreso_medio_por_reserva(RESERVAS))"
+```
+
+Tiene que salir **`182.0`**. Después `python test_kpis.py 1`: `test_ingreso_medio…` en verde (**`3 de 4`**).
 
 | Os sale | Probablemente |
 |---|---|
@@ -281,6 +288,8 @@ A mano: `ingreso_medio_por_reserva(RESERVAS)` tiene que dar **`182.0`**. Despué
 **La idea.** Qué parte de las «noches posibles» (días del periodo × habitaciones) están ocupadas. Esta la hace **el docente en pantalla**; vosotros la copiáis y **explicáis una línea con vuestras palabras**.
 
 ```python
+def ocupacion_proxy(reservas, capacidad_habitaciones):
+    """Ocupación aproximada en %, con 1 decimal."""
     if capacidad_habitaciones <= 0:
         raise ValueError("La capacidad debe ser mayor que 0")
     if not reservas:
@@ -311,7 +320,11 @@ A mano: `ingreso_medio_por_reserva(RESERVAS)` tiene que dar **`182.0`**. Despué
 
 ### Paso 9 · Todas las pruebas
 
-`python test_kpis.py 1` termina con **`4 de 4 pruebas superadas`**, en verde, y a mano `ocupacion_proxy(RESERVAS, 5)` da **`12.0`**.
+`python test_kpis.py 1` termina con **`4 de 4 pruebas superadas`**, en verde, y a mano, con una línea, da **`12.0`**:
+
+```
+python -c "from reservas_demo import RESERVAS; from kpis import ocupacion_proxy; print(ocupacion_proxy(RESERVAS, 5))"
+```
 
 | Os sale | Probablemente |
 |---|---|
