@@ -92,14 +92,13 @@ Es lo normal. `NotImplementedError` significa «esto está **sin hacer**»: es l
 
 Y el resultado: `web` → 100 × 1 ÷ 3 = **33.3** y `directo` → 100 × 0 ÷ 1 = **0.0**.
 
-**Qué tocáis en `kpis.py`.** Dejad el `def` y el texto entre comillas triples. **Borrad solo la línea `raise NotImplementedError(...)`** y escribid vuestras líneas en su lugar, con 4 espacios al principio. Terminad con `return`.
+**Qué tocáis en `kpis.py`.** Dejad el `def` y el texto entre comillas triples. **Borrad solo la línea `raise NotImplementedError(...)`** y escribid vuestras líneas en su lugar, con 4 espacios al principio. Terminad con `return`. Los pasos de la tabla son **los mismos `# Paso 1`, `# Paso 2`… que están como comentario dentro de cada función de `kpis.py`** (no los confundáis con los pasos 1 a 9 de la tarjeta).
 
-| Orden | Qué hacéis | Pista de Python |
+| Paso de `kpis.py` | Qué hacéis | Pista de Python |
 |---|---|---|
 | 1 | Crear dos diccionarios vacíos: las reservas de cada canal y las canceladas de cada canal | `total = {}` y `canceladas = {}` |
 | 2 | Recorrer las reservas con un `for`. Cada una suma 1 al total de **su** canal; si `cancelada` vale 1, suma 1 también a las canceladas | `total[canal] = total.get(canal, 0) + 1` |
-| 3 | Crear un diccionario vacío y, por cada canal, calcular el porcentaje con 1 decimal | `round(100 * canceladas.get(canal, 0) / total[canal], 1)` |
-| 4 | Devolver ese diccionario | `return tasas` |
+| 3 | Crear un diccionario vacío (`tasas`) y, por cada canal, calcular su porcentaje con 1 decimal; al terminar, devolver `tasas` | `round(100 * canceladas.get(canal, 0) / total[canal], 1)` y `return tasas` |
 
 **La trampa habitual.** `directo` no está en `canceladas`, y `canceladas["directo"]` da `KeyError`. Con `.get(canal, 0)` se pide «lo que lleve ese canal, o `0` si todavía no está».
 
@@ -122,7 +121,7 @@ Y el resultado: `web` → 100 × 1 ÷ 3 = **33.3** y `directo` → 100 × 0 ÷ 1
 
 **Qué hace.** Recibe la lista de reservas y devuelve **cuánto ingresa de media una reserva**, con 2 decimales. Solo cuentan las **no canceladas**: una reserva cancelada no deja dinero. Con confirmadas de 2 noches a 100 €, 4 noches a 50 € y 1 noche a 120 €: (200 + 200 + 120) ÷ 3 = **173.33**. Sin ninguna confirmada: `0.0`.
 
-| Orden | Qué hacéis | Pista de Python |
+| Paso de `kpis.py` | Qué hacéis | Pista de Python |
 |---|---|---|
 | 1 | Crear una lista vacía y, con un `for` y un `if`, añadir `noches × precio_noche` de cada reserva **no cancelada** | `ingresos = []` y `ingresos.append(...)`; el `if` mira `r["cancelada"] == 0` |
 | 2 | Si la lista está vacía, devolver `0.0` (no se puede dividir entre cero) | `if not ingresos:` |
@@ -138,7 +137,7 @@ Igual que el paso 5. A mano, con las 8 reservas de ejemplo, tiene que salir **`1
 
 **Qué hace.** Recibe la lista de reservas y el número de habitaciones, y devuelve **qué porcentaje de las habitaciones está ocupado**, con 1 decimal. Ejemplo de la prueba: 7 noches confirmadas, 10 días y 5 habitaciones → 7 ÷ (10 × 5) × 100 = **14.0**.
 
-| Orden | Qué hacéis | Pista de Python |
+| Paso de `kpis.py` | Qué hacéis | Pista de Python |
 |---|---|---|
 | 1 | Si las habitaciones son 0 o menos, dar un error (no se divide entre cero) | `raise ValueError("La capacidad debe ser mayor que 0")` |
 | 2 | Si no hay reservas, devolver `0.0` | `if not reservas:` |

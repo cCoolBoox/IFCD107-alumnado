@@ -157,9 +157,11 @@ Si lo veis así, **todo va bien**: las funciones todavía no están hechas. Si n
 
 ### Paso 4 · `tasa_cancelacion_por_canal`
 
+**Ojo con los números:** el «Paso 4» es el de la tarjeta (de los 9); los `# Paso 1, 2, 3` son los comentarios de dentro de la función en `kpis.py`.
+
 **La idea.** Hay que contar dos cosas por cada canal: cuántas reservas hay y cuántas están canceladas. Después, dividir.
 
-**Trozo 1 · preparar y contar** (Órdenes 1 y 2 de la tarjeta):
+**Trozo 1 · preparar y contar** (pasos 1 y 2 de los comentarios de `kpis.py`):
 
 ```python
     total = {}
@@ -181,7 +183,7 @@ Si lo veis así, **todo va bien**: las funciones todavía no están hechas. Si n
 | `if r["cancelada"] == 1:` | Solo si esta reserva está cancelada, haz lo de abajo |
 | `canceladas[canal] = canceladas.get(canal, 0) + 1` | Lo mismo que con `total`, pero en la libreta de canceladas |
 
-**Trozo 2 · calcular y devolver** (Órdenes 3 y 4):
+**Trozo 2 · calcular y devolver** (paso 3 de los comentarios de `kpis.py`):
 
 ```python
     tasas = {}
