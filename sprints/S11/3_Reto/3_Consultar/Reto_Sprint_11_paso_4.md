@@ -26,7 +26,7 @@
 
 **Cómo se hace**
 
-1. **Probar el demostrador.** Bajad a la sección 6 («Demostrador») y ejecutad su celda. Ya está escrita y **no hay que modificarla**. El cuaderno la coloca bajo la línea «A partir de aquí, en casa», pero en el reto sí se hace. Su código es este:
+1. **Probar el demostrador.** Bajad a la sección 6 («Demostrador») y ejecutad su celda. Ya está escrita y **no hay que modificarla**. Su código es este:
 
     ```python
     def clasificar_foto(ruta_imagen, modelo_=None, umbral=0.7):
@@ -106,7 +106,7 @@
 - **Del demostrador:** una tupla de tres valores: la clase (o `revisar a mano`), la confianza con muchos decimales (por ejemplo `0.8999…`) y un diccionario con las 5 probabilidades. Con NumPy reciente, las probabilidades pueden salir como `np.float32(0.9)` en vez de `0.9`: es el mismo número.
 - **Del bucle de 3 fotos:** tres líneas `real: … → ('…', 0.…)`, a veces con `'revisar a mano'`.
 - **De la tabla de umbrales (validación):** cinco filas con las columnas `cobertura` y `exactitud en las aceptadas`, con la cobertura bajando de arriba abajo.
-- **De la celda de la prueba:** una línea parecida a `Prueba con umbral 0.7: el modelo decide solo el 88% de las fotos y acierta el 91% de esas` (con vuestras cifras).
+- **De la celda de la prueba:** una línea parecida a `Prueba con umbral 0.7: el modelo decide solo el 78% de las fotos y acierta el 77% de esas` (con vuestras cifras).
 
 **Hecho cuando:** `clasificar_foto` funciona con 2 o 3 fotos delante del equipo, `cobertura_y_exactitud` pasa sus comprobaciones y tenéis anotado el umbral elegido con su frase.
 

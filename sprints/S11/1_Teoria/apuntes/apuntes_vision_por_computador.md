@@ -22,13 +22,13 @@ TurisData recibe **cientos de fotos de alojamientos cada semana** y las clasific
 
 ---
 
-# DÍA 1 · Redes convolucionales (CNN)
+# PARTE 1 · Redes convolucionales (CNN)
 
 ## 1. Una imagen es una matriz de números
 
 | Tipo | Forma | Ejemplo |
 |---|---|---|
-| **Escala de grises** | `(alto, ancho)` | 8×8 píxeles, de 0 (negro) a 16 (blanco) — los dígitos de scikit-learn |
+| **Escala de grises** | `(alto, ancho)` | 8×8 píxeles, de 0 (blanco, sin tinta) a 16 (negro, tinta máxima) — los dígitos de scikit-learn |
 | **Color** | `(alto, ancho, 3)` | 3 **canales**: rojo, verde y azul |
 | **Un lote** | `(n, alto, ancho, canales)` | n imágenes juntas |
 
@@ -156,7 +156,7 @@ Si el alojamiento aparece **más a la izquierda, más pequeño o ligeramente gir
 
 ---
 
-# DÍA 2 · Transfer learning y fine-tuning
+# PARTE 2 · Transfer learning y fine-tuning
 
 ## 6. El problema: pocas imágenes
 
@@ -206,7 +206,7 @@ Gráfica de **exactitud en prueba frente a nº de imágenes** para los dos model
 
 ---
 
-# DÍA 3 · Detección, segmentación y cuándo no fiarse
+# PARTE 3 · Detección, segmentación y cuándo no fiarse
 
 ## 11. Tres tareas con imágenes
 
@@ -282,7 +282,7 @@ Se mide con la **IoU de máscaras** o con el **Dice**:
 
 ```python
 iou_mascara = (pred & real).sum() / (pred | real).sum()
-dice = 2 * (pred & real).sum() / (pred.sum() + real.sum())       # 1.0 si ambas están vacías
+dice = 2 * (pred & real).sum() / (pred.sum() + real.sum())       # (0/0 si ambas están vacías: el cuaderno lo trata aparte)
 ```
 
 **Ejemplo:** la máscara real tiene 6 píxeles; la predicha, 4; **coinciden en 3**.

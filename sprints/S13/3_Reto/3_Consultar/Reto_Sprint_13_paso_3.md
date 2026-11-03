@@ -62,7 +62,7 @@
     | Casilla | Título (el mismo que en el PNG) | Frase de debajo |
     |---|---|---|
     | Curva ROC · ¿Podemos fiarnos del modelo? | Acierta mejor que el azar (AUC = 0.74), pero no es perfecto | El modelo detecta más cancelaciones que tirar una moneda con la misma proporción de falsas alarmas. El AUC es una nota de 0,5 (moneda) a 1 (perfecto) y aquí sale 0,74. |
-    | Matriz · ¿Qué falla y cuánto? | Detectamos el 83% de las cancelaciones, avisando por error al 49% de quien no cancela | El error más caro es no detectar una cancelación (50 €) frente a avisar por error (30 €); por eso preferimos avisar de más. |
+    | Matriz · ¿Qué falla y cuánto? | Detectamos el 83% de las cancelaciones; avisamos por error al 49% de quien no cancela | El error más caro es no detectar una cancelación (50 €) frente a avisar por error (30 €); por eso preferimos avisar de más. |
     | Importancia · ¿Qué mueve el resultado? | La antelación de la reserva pesa más del doble que cualquier otra variable | Lo que más pesa es cuántos días antes de la llegada se reserva; le siguen el depósito y el canal de venta. |
     | Coste · ¿Cuánto vale? | Con el modelo perdemos 16.590 € menos en 1500 reservas | Supuestos: cada cancelación no detectada cuesta 50 € (FN = 50 €) y cada falsa alarma 30 € (FP = 30 €). Sin modelo se pierden 34.400 € y con modelo 17.810 €. |
 

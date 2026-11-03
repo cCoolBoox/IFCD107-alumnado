@@ -20,7 +20,7 @@ La dirección de TurisData **oye hablar de redes neuronales en todas partes** y 
 
 ---
 
-# DÍA 1 · Qué es una red neuronal por dentro
+# PARTE 1 · Qué es una red neuronal por dentro
 
 ## 1. La neurona: tres pasos
 
@@ -125,7 +125,7 @@ El cuaderno entrena redes con **1, 2 y 8 neuronas ocultas** sobre los anillos: *
 
 ---
 
-# DÍA 2 · Redes densas con Keras
+# PARTE 2 · Redes densas con Keras
 
 ## 6. Preparar los datos para una red
 
@@ -230,7 +230,7 @@ auc_ancho = hist_ancho.history["val_auc"][-1]
 
 ---
 
-# DÍA 3 · Entrenamiento y regularización
+# PARTE 3 · Entrenamiento y regularización
 
 ## 11. Diagnosticar el sobreajuste
 

@@ -6,7 +6,7 @@
 Recomendamos [mantener el boosting / cambiar a la red] porque [una razón con una cifra].
 
 ## 2. Resultados
-| Modelo | AUC | AP | F1 | Precisión |
+| Modelo | AUC | AP | F1 | Exactitud |
 |---|---|---|---|---|
 | Boosting de árboles | | | | |
 | MLP (media de 3 semillas) | | | | |

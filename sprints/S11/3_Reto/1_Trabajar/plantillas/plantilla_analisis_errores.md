@@ -14,7 +14,7 @@
 | hotel | | |
 | piscina | | |
 
-Precisión en prueba: transfer + fine-tuning [..] · desde cero [..]. F1 macro: [..] y [..].
+Exactitud en prueba: transfer + fine-tuning [..] · desde cero [..]. F1 macro: [..] y [..].
 
 ## 3. La matriz de confusión
 [Qué clases se confunden y cuántas fotos; una frase.]

@@ -106,7 +106,7 @@
 6. **Interpretar la matriz en una frase.** Mirad qué números hay fuera de la diagonal y escribid, con vuestras cifras: *«La clase [X] es la más difícil (*recall* [..]): [n] de sus fotos se predicen como [Y], posiblemente porque [se parecen / la etiqueta es dudosa]»*. Comprobad también si el modelo con *transfer learning* y el de «desde cero» quedan cerca o lejos en las dos líneas de precisión y F1 macro, y anotadlo.
 
 **Qué deberíais ver.**
-- **Dos líneas** con la precisión y el F1 macro de los dos modelos, y el informe `classification_report` con cinco filas de clases (`apartamentos`, `camping`, `casa_rural`, `hotel`, `piscina`) más las filas `accuracy`, `macro avg` y `weighted avg`.
+- **Dos líneas** con la exactitud y el F1 macro de los dos modelos, y el informe `classification_report` con cinco filas de clases (`apartamentos`, `camping`, `casa_rural`, `hotel`, `piscina`) más las filas `accuracy`, `macro avg` y `weighted avg`.
 - **La matriz de confusión:** una cuadrícula de 5 × 5 con números, con la diagonal más oscura. Los dibujos de hotel y apartamentos se parecen (los dos son edificios), así que sería razonable que se mezclen entre sí, pero lo que cuenta es lo que salga en **vuestra** matriz.
 - **El ejercicio 3:** una tabla de cinco filas con `recall` y `precisión`, y la clase más difícil.
 - **Los errores:** `N imágenes mal clasificadas de 60`, hasta diez fotos con su clase real, predicha y confianza, y la lista de los pares más confundidos. Si N es menor que 3, es una buena noticia, no un fallo: apuntadlo y avisad al docente de que no tenéis fotos suficientes para la tabla.

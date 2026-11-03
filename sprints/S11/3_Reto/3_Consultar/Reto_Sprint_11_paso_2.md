@@ -144,7 +144,7 @@
 **Qué deberíais ver.**
 - **De la celda de la base:** `Base preentrenada lista: 23584 parámetros`. Ese número depende solo de la arquitectura, así que debe salir igual.
 - **Del ejercicio 2:** nada, si los `assert` pasan.
-- **Del entrenamiento:** dos líneas, `Exactitud de validación con base congelada: 0.…` y `Exactitud de validación tras fine-tuning: 0.…`, y después, de la celda que añadisteis, `Exactitud de validación desde cero: 0.…`. Las cifras van de 0 a 1 y, como la validación tiene 60 fotos, cada foto de más o de menos mueve la cifra unos 0,017.
+- **Del entrenamiento:** dos líneas, `Exactitud de validación con base congelada: 0.…` y `Exactitud de validación tras fine-tuning: 0.…`, y después, de la celda de la referencia, `Exactitud de validación desde cero: 0.…`. Las cifras van de 0 a 1 y, como la validación tiene 60 fotos, cada foto de más o de menos mueve la cifra unos 0,017.
 - **Lo esperable:** que el ajuste fino quede igual o mejor que la base congelada, y que el *transfer learning* quede igual o mejor que la referencia. Si no es así, no es un error: anotadlo y pensad por qué (las fotos con ruido, las etiquetas dudosas o que la tarea auxiliar se parezca poco).
 
 **Hecho cuando:** `modelo_transfer` pasa sus comprobaciones y tenéis anotadas las tres cifras de validación.
