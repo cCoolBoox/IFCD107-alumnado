@@ -59,6 +59,20 @@ def noches_totales(reservas):          # entra: la lista de reservas
 | 2 | Recorrer las reservas: sumar 1 al total de su canal y, si `cancelada` vale 1, sumar 1 a las canceladas | `total[c] = total.get(c, 0) + 1` empieza un contador |
 | 3 | Por cada canal, calcular el porcentaje con 1 decimal | `round(100 * canceladas[c] / total[c], 1)` |
 
+**Antes de escribir, seguid un ejemplo con el dedo.** Cuatro reservas: `web` (no cancelada), `web` (cancelada), `directo` (no cancelada) y `web` (no cancelada). Al terminar el `for`, los dos diccionarios quedan así:
+
+| Diccionario | Contenido | Cómo se llega a él |
+|---|---|---|
+| `total` | `{"web": 3, "directo": 1}` | cada reserva suma 1 a **su** canal, esté o no cancelada |
+| `canceladas` | `{"web": 1}` | solo suma 1 la reserva con `cancelada == 1`; **`directo` no aparece** |
+
+Y el resultado: `web` → 100 × 1 ÷ 3 = **33.3** y `directo` → 100 × 0 ÷ 1 = **0.0**.
+
+**Qué tocáis en `kpis.py`:**
+- Dentro de la función, **borrad la línea `raise NotImplementedError(...)`**: es la que hace fallar la prueba. Vuestras líneas van en su lugar, con 4 espacios al principio.
+- La función **termina con `return`** del diccionario de porcentajes.
+- **Trampa habitual:** `directo` no está en `canceladas`, y `canceladas["directo"]` da `KeyError`. Se evita con `canceladas.get(canal, 0)`, que devuelve 0 si el canal no está.
+
 Se comprueba con `test_tasa_cancelacion…` (incluye el redondeo). **Pista de cuaderno:** [`S04_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) (diccionarios).
 
 ### Paso 6 · `ingreso_medio_por_reserva`
