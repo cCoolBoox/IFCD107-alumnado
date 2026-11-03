@@ -14,7 +14,7 @@
 
 ## 🎯 Qué lograréis
 
-Tres funciones de `kpis.py`, la herramienta del cliente:
+Tres funciones de `kpis.py` (herramienta del cliente):
 
 - `tasa_cancelacion_por_canal`: qué porcentaje de las reservas se cancela en cada canal.
 - `ingreso_medio_por_reserva`: cuánto dinero deja una reserva, de media.
