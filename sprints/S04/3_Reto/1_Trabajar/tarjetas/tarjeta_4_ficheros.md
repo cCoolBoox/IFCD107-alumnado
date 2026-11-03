@@ -37,7 +37,7 @@ Tres ideas, de la más pequeña a la más importante:
 | **Parte B** | | | | **50** | |
 | 4 | 🛠️ Construir | `_convertir_fila`: convertir los tipos y validar los valores (órdenes 1 y 2 de «Pasos 4 y 5», abajo) | [`kpis.py`](../reto_herramientas/kpis.py) | 15 | La función está escrita con sus «Paso» |
 | 5 | 🛠️ Construir | `leer_reservas`: abrir el fichero, comprobar la cabecera, descartar y avisar, y devolver las dos cosas (órdenes 3 a 6 de «Pasos 4 y 5», abajo) | `kpis.py` | 25 | La función está escrita con sus «Paso» |
-| 6 | ✅ Comprobar | Ejecutar las pruebas y verlas pasar de rojo a verde. Si una falla, leed qué esperaba y qué recibió | Terminal: `python test_kpis.py 2` | 10 | **`7 de 8 pruebas superadas`** |
+| 6 | ✅ Comprobar | Ejecutar las pruebas y verlas pasar de rojo a verde. Si una falla, leed qué debería salir y comparadlo con lo que sale en la vuestra | Terminal: `python test_kpis.py 2` | 10 | **`7 de 8 pruebas superadas`** |
 
 En la parte B, pilotos y copilotos **rotan cada 15 minutos**.
 
