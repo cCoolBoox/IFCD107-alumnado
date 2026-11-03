@@ -8,9 +8,9 @@
 - [Misión 0 · Mirar la demo](#misión-0--mirar-la-demo): qué sale y las respuestas a las cinco preguntas
 - [Misión 1 · Datos en memoria](#misión-1--datos-en-memoria): las seis líneas, la salida y los fallos más comunes
 - [Misión 2 · Decidir y repetir](#misión-2--decidir-y-repetir): los cuatro bucles, la salida y los fallos más comunes
-- Misión 3 · Funciones que calculan: *se publica el miércoles al acabar la clase*
-- Misión 4 · Leer el CSV: *se publica el miércoles al acabar la clase*
-- Misión 5 · Guardar y entregar: *se publica el miércoles al acabar la clase*
+- [Misión 3 · Funciones que calculan](#misión-3--funciones-que-calculan): cifras para comprobar a mano y fallos reconocibles por el número
+- [Misión 4 · Leer el CSV](#misión-4--leer-el-csv): un CSV pequeño resuelto a mano y fallos reconocibles
+- [Misión 5 · Guardar y entregar](#misión-5--guardar-y-entregar): una comprobación cruzada de cifras y fallos reconocibles
 - [Mensajes de error: qué significan](#mensajes-de-error-qué-significan): los errores más comunes de Python en el reto y cómo se arreglan
 
 ## Cómo usarlo
@@ -128,6 +128,95 @@ Confirmadas de 3 noches o más: ['agencia', 'directo']
 ```
 
 **Para explicárselo a vuestra pareja:** en el 2.3, ¿qué pasa si quitáis el `.get(..., 0)` y escribís solo `por_canal[canal] += 1`? ¿Por qué?
+
+## Misión 3 · Funciones que calculan
+
+Tarjeta: [Misión 3](../1_Trabajar/tarjetas/tarjeta_3_funciones.md). Aquí **no se da el código** de `kpis.py`: es lo que se evalúa. Se dan las cifras con las 8 reservas de [`reservas_demo.py`](../1_Trabajar/reto_herramientas/reservas_demo.py) para que comprobéis **a mano** antes de pasar la prueba (en `python`: `from reservas_demo import RESERVAS` y llamad a la función con esa lista).
+
+| Función | Cómo se calcula con las 8 reservas | Resultado |
+|---|---|---|
+| `tasa_cancelacion_por_canal(RESERVAS)` | `directo`: 1 cancelada de 3 = 33,3 %; `agencia`: 0 de 2 = 0,0 %; `web_intermediaria`: 2 de 3 = 66,7 % | `{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}` |
+| `ingreso_medio_por_reserva(RESERVAS)` | Solo las no canceladas: 200 + 200 + 120 + 180 + 210 = 910 € entre 5 reservas | `182.0` |
+| `ocupacion_proxy(RESERVAS, 5)` | Días: del 1 al 20 de enero son **20** (cuenta también el primer día). Noches confirmadas: 12. Fórmula: 100 × 12 ÷ (20 × 5) | `12.0` |
+
+**Si os sale otro número:**
+
+| Os sale | Probablemente |
+|---|---|
+| Ingreso medio `208.75` | Sumáis también las canceladas (1670 € entre 8) |
+| Ingreso medio `113.75` | Dividís entre las 8 reservas en vez de entre las 5 confirmadas |
+| Ocupación `12.6` | Falta el `+ 1` en los días: usáis 19 en vez de 20 |
+| Ocupación `22.0` | Contáis también las noches de las canceladas (22 en vez de 12) |
+| Una tasa como `33.333333333333336` | Falta el `round(..., 1)` |
+| `ZeroDivisionError` con una lista vacía, o con capacidad 0 | Falta comprobar antes: lista vacía → `0.0`; capacidad menor o igual que 0 → `ValueError` con mensaje |
+
+**Para explicárselo a vuestra pareja:** la tasa de cancelación cuenta las reservas canceladas y las que no, pero el ingreso medio solo cuenta las no canceladas. ¿Por qué?
+
+## Misión 4 · Leer el CSV
+
+Tarjeta: [Misión 4](../1_Trabajar/tarjetas/tarjeta_4_ficheros.md). Tampoco aquí hay código: se da un **fichero pequeño con la respuesta resuelta a mano**. Guardad estas cuatro líneas como `mini.csv` junto a `kpis.py`:
+
+```
+fecha_llegada,noches,precio_noche,canal,cancelada
+2025-01-01,2,100.0,directo,0
+2025-01-03,3,,agencia,0
+2025-01-05,0,50.0,web_intermediaria,1
+```
+
+Y en `python`:
+
+```python
+from kpis import leer_reservas
+reservas, avisos = leer_reservas("mini.csv")
+print(len(reservas), avisos)
+```
+
+Tiene que salir **1 reserva válida** (la de la fila 2) y **dos avisos**, uno por cada fila mala:
+
+```
+1 ["Fila 3 descartada: could not convert string to float: ''", 'Fila 4 descartada: noches debe ser >= 1']
+```
+
+El texto exacto del motivo puede variar según cómo lo hayáis escrito (el primero es el mensaje de Python); lo que tiene que coincidir es el **número de fila** (la cabecera es la fila 1) y que haya un aviso por cada fila descartada.
+
+Con otros ficheros, `leer_reservas` tiene que **lanzar un error** (no devolver avisos) con un mensaje claro:
+
+| Fichero | Mensaje esperado |
+|---|---|
+| Uno que no existe (`leer_reservas("nada.csv")`) | `FileNotFoundError: No se encuentra el fichero: nada.csv` (incluye la ruta) |
+| El mismo `mini.csv` sin la columna `cancelada` | `ValueError: Faltan columnas obligatorias: ['cancelada']` (nombra las que faltan) |
+
+**Si os sale otro resultado:**
+
+| Os sale | Probablemente |
+|---|---|
+| Avisos de «Fila 2» y «Fila 3» | Numeráis desde 1: la cabecera es la fila 1, los datos empiezan en la 2 |
+| 2 reservas válidas (entra la de 0 noches) | Solo convertís los tipos: falta validar el **valor** (`noches` mayor o igual que 1) |
+| 1 reserva válida pero `avisos` vacío | Descartáis las filas malas **en silencio**: hay que guardar un aviso por cada una |
+| `TypeError: list indices must be integers or slices, not str` al recorrer lo que devuelve `leer_reservas` | La función devuelve **dos** cosas y las estáis guardando en una sola variable: `reservas, avisos = leer_reservas(...)` |
+
+**Para explicárselo a vuestra pareja:** ¿por qué es mejor descartar la fila mala y apuntarla en `avisos` que parar el programa? ¿Y por qué no descartarla sin decir nada?
+
+## Misión 5 · Guardar y entregar
+
+Tarjeta: [Misión 5](../1_Trabajar/tarjetas/tarjeta_5_salida.md). La salida esperada con el CSV real ya está en «Misión terminada cuando» de la tarjeta. Aquí, una **comprobación cruzada**: la ocupación es inversamente proporcional a la capacidad, así que con el CSV real:
+
+| Orden | `ocupacion_proxy_pct` |
+|---|---|
+| `python kpis.py reservas_turisdata.csv salida.json --capacidad 20` | `84.0` |
+| `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` | `42.0` |
+| `python kpis.py reservas_turisdata.csv salida.json --capacidad 80` | `21.0` |
+
+Si al doblar la capacidad la ocupación no se queda en la mitad, la capacidad no está llegando a `ocupacion_proxy` (revisad cómo pasáis `args.capacidad`).
+
+**Código de salida.** Tras un error provocado a propósito (fichero que no existe, capacidad 0), el programa tiene que terminar con **código 1**, y con un fichero correcto, con **0**. Se ve con `echo $?` (Linux y Mac), `echo %errorlevel%` (cmd de Windows) o `$LASTEXITCODE` (PowerShell).
+
+| Os pasa | Probablemente |
+|---|---|
+| Sale `ERROR: …` pero el código de salida es 0 | `main` no devuelve 1 cuando captura el error (la plantilla ya hace `sys.exit(main())`: lo que devuelva `main` es el código) |
+| La ocupación no cambia al cambiar `--capacidad` | Hay un `40` escrito a mano en algún sitio en lugar de usar `args.capacidad` |
+
+**Para explicárselo a vuestra pareja:** ¿por qué `main` recibe `argumentos=None` en vez de leer siempre lo que se escribe en la terminal?
 
 ## Mensajes de error: qué significan
 
