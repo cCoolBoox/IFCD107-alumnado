@@ -37,7 +37,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 | **Presentación en PDF** | Como máximo **12 diapositivas**, exportadas a PDF y subidas antes de las 8:30 del 14/12 | 🟢 Mínimo | `presentacion_defensa.pdf` |
 | **Las cuatro cosas del cliente** | Se cuenta qué problema resolvéis, qué habéis encontrado, qué recomendáis y de qué no debe fiarse el cliente | 🟢 Mínimo | Defensa en directo |
 | **Mensaje único** | Una frase que el cliente pueda repetir mañana; aparece en la diapositiva 1 y en el cierre | 🟢 Mínimo | `plantilla_storytelling.md` (apartado 2) y `presentacion_defensa.pdf` |
-| **Relato preparado** | Audiencia, pirámide (conclusión → 3 argumentos → evidencias) y arco narrativo (situación, complicación, resolución, propuesta) rellenados | 🟢 Mínimo | `plantilla_storytelling.md` (apartados 1, 3 y 4) |
+| **Relato preparado** | Audiencia, pirámide (conclusión → 3 argumentos → evidencias) y arco narrativo (los 7 momentos de la plantilla) rellenado | 🟢 Mínimo | `plantilla_storytelling.md` (apartados 1, 3 y 4) |
 | **Todas las personas hablan** | Cada integrante presenta una parte y el reparto de voces está escrito. Cada persona responde al menos **una pregunta individual** (hace falta para el «Apto») | 🟢 Mínimo | Defensa en directo y `plantilla_storytelling.md` (storyboard) |
 | **Demo y plan B** | La demo se prueba el 11/12 y hay un vídeo grabado, listo para abrir si falla | 🟢 Mínimo | Defensa en directo |
 | **Solo lo que está en la memoria** | Todas las cifras y figuras coinciden con la memoria congelada; no se presentan resultados nuevos | 🟢 Mínimo | `presentacion_defensa.pdf` frente a la memoria del Sprint 16 |

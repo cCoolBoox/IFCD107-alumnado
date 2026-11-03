@@ -103,7 +103,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 - [ ] Rendimiento por subgrupos y mitigación aplicada y medida.
 - [ ] Registro de riesgos cerrado; demostrador probado desde cero, con vídeo plan B.
 - [ ] README reproducible probado por otra persona; model card y memoria en `docs/`.
-- [ ] La **coevaluación confidencial** (anexo B de la memoria) entregada al docente: no se sube al repositorio, a diferencia de la hoja de autoevaluación y coevaluación
+- [ ] La **coevaluación confidencial** (anexo B de `proyecto-final/briefs_y_rubrica.md`; plantilla `plantilla_coevaluacion.md`) entregada al docente: no se sube al repositorio, a diferencia de la hoja de autoevaluación y coevaluación
 - [ ] Checklist de congelación completo y último *push* hecho antes de las **14:30** (lo que no esté subido, no cuenta)
 - [ ] Alguien que **no escribió esa parte** ha revisado el entregable con la [rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md) y lo ha anotado en el propio entregable
 
