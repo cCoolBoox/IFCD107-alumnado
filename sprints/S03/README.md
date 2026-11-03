@@ -39,7 +39,7 @@
 | ☐ | 📖 Teoría · Introducción a AutoML y MLOps | [Presentación S03_03](1_Teoria/S03_03_presentacion_AutoML_y_MLOps.pdf) | 20 |
 | ☐ | 💻 Práctica · Carga, exploración y primer experimento de AutoML: cuaderno en Colab con la guía en parejas y el listado de pasos (pasos 0 a 5) | [cuaderno en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S03/2_Practica/laboratorio_automl/S3.5_lab_autogluon.ipynb) | 35 |
 | ☐ | 🎯 Reto · Reto «Primer modelo en producción»: entender el problema → comparar modelos → elegir el umbral → publicar el servicio → **cerrar y borrar los recursos** → informe (pasos 1–6) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_03_una_pagina.md) | 80 |
-| ☐ | 📝 Test · **Test del bloque M6–M8** (bases de datos, AutoML y responsabilidad), solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | 25 |
+| ☐ | 📝 Test · **Test del bloque M6–M8** (bases de datos, AutoML y responsabilidad) | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) | 25 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-03/`, autoevaluación y coevaluación, review y retrospectiva | — | 40 |
 
 **En clase: 3 h 20 min.**

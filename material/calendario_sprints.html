@@ -58,7 +58,7 @@ tfoot td{font-weight:700;background:var(--bg)}
  <button class="chip" data-f="A" aria-pressed="false">A · Sin Python</button>
  <button class="chip" data-f="B" aria-pressed="false">B · Python</button>
  <button class="chip" data-f="C" aria-pressed="false">C · Proyecto</button>
- <span class="legend"><span><i class="dot" style="background:var(--t)"></i>T Teoría</span><span><i class="dot" style="background:var(--p)"></i>P Práctica</span><span><i class="dot" style="background:var(--pbl)"></i>PBL Reto</span><span>📝 Test (se abre solo ese día)</span></span>
+ <span class="legend"><span><i class="dot" style="background:var(--t)"></i>T Teoría</span><span><i class="dot" style="background:var(--p)"></i>P Práctica</span><span><i class="dot" style="background:var(--pbl)"></i>PBL Reto</span><span>📝 Test (abierto siempre; en clase, ese día)</span></span>
 </div>
 <div class="tw">
 <table>
@@ -91,7 +91,7 @@ function render(f){
     const pill=st==="now"?'<span class="pill now">En curso</span>':st==="past"?'<span class="pill past">Hecho</span>':'<span class="pill">Próximo</span>';
     const d=Math.round((dt(s.a)-hoy)/day);
     const extra=st==="next"?'<span class="sm">'+(d===1?"mañana":"en "+d+" días")+"</span>":"";
-    r.innerHTML='<td class="n">'+s.n+'</td><td class="tt">'+s.t+(TESTS[s.n]?'<a class="tst" href="../sprints/'+TESTS[s.n][2]+'.html" title="Solo se abre ese día">📝 Test '+TESTS[s.n][0]+' · '+TESTS[s.n][1]+'</a>':'')+'<div class="mix" title="T '+s.T+' h · P '+s.P+' h · PBL '+s.B+' h"><i style="width:'+s.T/s.h*100+'%"></i><i style="width:'+s.P/s.h*100+'%"></i><i style="width:'+s.B/s.h*100+'%"></i></div></td><td>'+s.m+'</td><td class="num">'+s.h+'</td><td class="num">'+s.T+'</td><td class="num">'+s.P+'</td><td class="num">'+s.B+'</td><td class="d">'+fmt(s.a)+'</td><td class="d">'+fmt(s.b)+'</td><td>'+pill+extra+"</td>";
+    r.innerHTML='<td class="n">'+s.n+'</td><td class="tt">'+s.t+(TESTS[s.n]?'<a class="tst" href="../sprints/'+TESTS[s.n][2]+'.html" title="Abierto siempre; en clase se hace ese día">📝 Test '+TESTS[s.n][0]+' · '+TESTS[s.n][1]+'</a>':'')+'<div class="mix" title="T '+s.T+' h · P '+s.P+' h · PBL '+s.B+' h"><i style="width:'+s.T/s.h*100+'%"></i><i style="width:'+s.P/s.h*100+'%"></i><i style="width:'+s.B/s.h*100+'%"></i></div></td><td>'+s.m+'</td><td class="num">'+s.h+'</td><td class="num">'+s.T+'</td><td class="num">'+s.P+'</td><td class="num">'+s.B+'</td><td class="d">'+fmt(s.a)+'</td><td class="d">'+fmt(s.b)+'</td><td>'+pill+extra+"</td>";
     tb.appendChild(r);
   });
 }

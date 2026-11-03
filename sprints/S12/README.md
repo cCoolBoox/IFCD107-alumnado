@@ -60,7 +60,7 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 🎯 Reto · Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_12_una_pagina.md) | 65 |
-| ☐ | 📝 Test · **Test de M4** (redes neuronales), solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 |
+| ☐ | 📝 Test · **Test de M4** (redes neuronales) | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 |
 | ☐ | 📖 Teoría · Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | [Presentación S13_01](../S13/1_Teoria/S13_01_presentacion_Visualizar_y_comunicar_resultados.pdf) | 10 |
 | ☐ | 💻 Práctica · Matriz de confusión, ROC/PR, importancia, umbral y coste | [Cuaderno S13_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb) | 35 |
 | ☐ | 🎯 Reto · Reto del Sprint 13: elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el cuaderno plantilla y la plantilla del informe | [Reto del Sprint 13](../S13/3_Reto/1_Trabajar/Reto_Sprint_13_una_pagina.md) | 35 |
@@ -77,6 +77,10 @@
 ## El reto en pocas palabras
 
 **Qué os pide el cliente.** TurisData recibe cada semana **decenas de reseñas** y **decenas de mensajes** de huéspedes con las mismas preguntas («¿hasta cuándo puedo cancelar?», «¿admiten perros?»). La dirección no puede leerlo todo ni contestar a mano. Quiere **tres cosas**:
+
+1. **Saber qué opinan y de qué se quejan** sus clientes (reseñas).
+2. **Prever la ocupación de la próxima semana** para organizar personal y compras (serie temporal).
+3. **Probar un asistente** que responda con la política del alojamiento **sin inventar nada** (RAG).
 
 **Qué vais a entregar:** una carpeta (o zip) por equipo con (1) el informe de reseñas, (2) el cuaderno del modelo de ocupación, (3) el cuaderno de la demo del asistente con su tabla de evaluación y (4) la nota de IA responsable, más un `LEEME.md` de 5 líneas.
 

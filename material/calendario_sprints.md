@@ -243,7 +243,7 @@ Comprobaciones: Python continuo del 3/11 al 25/11 (Sprints 4–13) = 102 h; los 
 ## 4. Evaluación por sprint (Apto / No Apto)
 
 - **Entregables PBL de los Sprints 1–13:** evaluados con la misma rúbrica de 4 criterios (corrección técnica, reproducibilidad, análisis y comunicación al cliente, IA responsable). Su media alimenta el bloque de "ejercicios y entregas".
-- **Tests:** Sprint 2 (M1a, 23/10), Sprint 3 (bloque M6–M8, 27/10), Sprint 7 y 8 (M3 en dos partes, 11/11 y 12/11) y Sprint 12 (M4, 25/11). Cada test es una página web que solo se abre su día; el enlace está en el README del sprint.
+- **Tests:** Sprint 2 (M1a, 23/10), Sprint 3 (bloque M6–M8, 27/10), Sprint 7 y 8 (M3 en dos partes, 11/11 y 12/11) y Sprint 12 (M4, 25/11). Cada test es una página web que se puede abrir en cualquier momento (en clase se hace el día indicado); el enlace está en el README del sprint.
 - **Trabajo en equipo:** coevaluación y retrospectiva de cada sprint.
 - **Proyecto final (Sprints 14–17):** rúbrica de entregables, memoria y defensa.
 - Pesos y umbrales orientativos, a validar con los requisitos de la entidad y del SEPE.

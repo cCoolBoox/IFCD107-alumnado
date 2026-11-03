@@ -276,9 +276,9 @@ El resultado final es **Apto / No Apto**. Se evalúa con cuatro instrumentos:
 | Participación y trabajo en equipo | Continua y en el proyecto | **10 %** |
 | Proyecto final: entrega + defensa | 11–14/12 | **30 %** |
 
-**Los 5 tests (cada uno se abre solo su día; el enlace está también en el README del sprint):**
+**Los 5 tests (se pueden abrir en cualquier momento; en clase se hacen el día indicado; el enlace está también en el README del sprint):**
 
-| Test | Día | Sprint | Enlace |
+| Test | En clase | Sprint | Enlace |
 |---|---|---|---|
 | M1a · Fundamentos de IA | vie 23/10 | S02 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) |
 | Bloque M6–M8 · SQL, AutoML e IA responsable | mar 27/10 | S03 | [abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S03/tests/test_M6-M8.html) |

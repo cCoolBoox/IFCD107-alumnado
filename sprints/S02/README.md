@@ -39,7 +39,7 @@
 |---|---|---|---|
 | ☐ | 📖 Teoría · Estadística y probabilidad: descriptiva, Bayes, correlación y paradoja de Simpson | [Presentación S02_02](1_Teoria/S02_02_presentacion_Estadistica_y_probabilidad.pdf) | 35 |
 | ☐ | 💻 Práctica · Estadísticas engañosas (4 de los 9 casos en clase). **Para casa:** el resto y la hoja 2 de ejercicios de estadística | [Estadísticas engañosas](2_Practica/estadisticas_enganosas.md) | 45 |
-| ☐ | 📝 Test · **Test corto de M1a** (matemáticas y estadística), solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) | 25 |
+| ☐ | 📝 Test · **Test corto de M1a** (matemáticas y estadística) | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S02/tests/test_M1a.html) | 25 |
 | ☐ | 🎯 Reto · Dictamen, frase de IA responsable y revisión cruzada (paso 5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_02_una_pagina.md) | 55 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-02/`, autoevaluación y coevaluación, review y retrospectiva | — | 40 |
 

@@ -9,7 +9,7 @@ Cada carpeta `Sxx/` tiene **un `README.md`** (la guía del sprint con la ficha d
 | `presentaciones/` | Diapositivas de cada sesión |
 | `notebooks/` | Prácticas para abrir en Google Colab |
 | `actividades/` | Material de las actividades y ejercicios, con sus scripts y ficheros de apoyo |
-| `tests/` | Test de conocimientos (solo se abre el día indicado) |
+| `tests/` | Test de conocimientos (se pueden abrir en cualquier momento) |
 
 Un sprint solo tiene las subcarpetas que necesita. Empieza siempre por el `README.md` del sprint: tiene la sección *📎 Material del sprint* con todos los enlaces.
 Los notebooks se abren en **Google Colab** con la insignia de la primera celda de cada uno; los datos se descargan solos desde la carpeta [`../datos`](../datos).

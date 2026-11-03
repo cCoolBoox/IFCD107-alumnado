@@ -42,7 +42,7 @@
 | ☐ | 💻 Práctica · ROC, PR y datos desbalanceados (los ejercicios marcados «en clase») | [Cuaderno S07_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_04_roc_pr_desbalance.ipynb) · [Presentación S07_04](1_Teoria/S07_04_presentacion_Curvas_ROC_y_PR_y_clases_desbalanceadas.pdf) | 15 |
 | ☐ | 📖 Teoría · k-NN y Naive Bayes: dos algoritmos más | [Presentación S07_05](1_Teoria/S07_05_presentacion_k-NN_y_Naive_Bayes.pdf) | 10 |
 | ☐ | 🎯 Reto · Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_07_una_pagina.md) | 40 |
-| ☐ | 📝 Test · **Test de M3 (parte 1)**, solo se abre hoy | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | 25 |
+| ☐ | 📝 Test · **Test de M3 (parte 1)** | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | 25 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-07/` y autoevaluación y coevaluación del Sprint 7 (la review y la retro se hacen junto con las del Sprint 8) | — | 15 |
 | ☐ | 🏠 **En casa** · k vecinos (k-NN) y Naive Bayes (cuaderno completo) | [Cuaderno S07_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_05_knn_naive_bayes.ipynb) · [Presentación S07_05](1_Teoria/S07_05_presentacion_k-NN_y_Naive_Bayes.pdf) | 40 (casa) |
 
@@ -57,6 +57,9 @@
 ## El reto en pocas palabras
 
 **Qué os pide el cliente.** El gerente de TurisData quiere **dos herramientas**:
+
+1. Una **tarifa de referencia**: cuánto debería costar una noche según el tipo de habitación y la época (predecir un **número**: `precio_noche`).
+2. Un **aviso de riesgo de cancelación**, para decidir cuándo vender por encima de su capacidad (*overbooking*: aceptar más reservas que habitaciones, apostando a que algunas se cancelarán) (predecir una **categoría**: `cancelada`, sí o no).
 
 **Qué vais a entregar:** `informe_modelado.md` (o PDF), el cuaderno `reto_S07.ipynb` y un `README.md`.
 
