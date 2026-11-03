@@ -201,13 +201,14 @@ Si lo veis así, **todo va bien**: las funciones todavía no están hechas. Si n
 | `round(..., 1)` | Redondea a **1 decimal**: `33.3` en lugar de `33.333333333333336` |
 | `return tasas` | **Entrega** el resultado. Sin esta línea, la función devuelve `None` |
 
-**Seguimiento con el dedo** (las 8 reservas de ejemplo). Al terminar el primer `for`:
+**Seguimiento con las 4 reservas de la tarjeta** (web no, web **sí**, directo no, web no). Cada reserva es una vuelta del `for`:
 
-| Canal | `total` | `canceladas` | Porcentaje |
-|---|---|---|---|
-| `directo` | 3 | 1 | 100 × 1 ÷ 3 = **33.3** |
-| `agencia` | 2 | *(no aparece)* → `0` | 100 × 0 ÷ 2 = **0.0** |
-| `web_intermediaria` | 3 | 2 | 100 × 2 ÷ 3 = **66.7** |
+1. Reserva 1 (web, no): `total = {"web": 1}`, `canceladas = {}`.
+2. Reserva 2 (web, **sí**): `total = {"web": 2}`, `canceladas = {"web": 1}`.
+3. Reserva 3 (directo, no): `total = {"web": 2, "directo": 1}`, `canceladas` igual.
+4. Reserva 4 (web, no): `total = {"web": 3, "directo": 1}`, `canceladas` igual.
+
+Después, el segundo `for`: `web` → 100 × 1 ÷ 3 = **33.3** y `directo` → 100 × **0** ÷ 1 = **0.0** (`directo` no está en `canceladas`: `.get` da `0`). Resultado: `{"web": 33.3, "directo": 0.0}`.
 
 **Por qué `.get(canal, 0)` y no `canceladas[canal]`:** `agencia` no tiene ninguna cancelada, así que **no está** en `canceladas`. Pedirlo con corchetes da `KeyError: 'agencia'`. Con `.get(canal, 0)` se dice «lo que lleve, o `0` si todavía no está».
 
@@ -261,7 +262,7 @@ python
 | `sum(ingresos) / len(ingresos)` | La media: la **suma** de los importes entre **cuántos hay** |
 | `round(..., 2)` | Redondea a 2 decimales (son euros) |
 
-**Seguimiento con el dedo** (8 reservas): las no canceladas son 5, y el cajón queda `[200.0, 200.0, 120.0, 180.0, 210.0]`. Suman 910 y 910 ÷ 5 = **182.0**.
+**Seguimiento.** Con las 3 reservas de la tarjeta (200 €, 200 € y 120 €): 520 ÷ 3 = **173.33**. Con las 8 reservas de ejemplo: las no canceladas son 5, y el cajón queda `[200.0, 200.0, 120.0, 180.0, 210.0]`. Suman 910 y 910 ÷ 5 = **182.0**.
 
 ### Paso 7 · Probar y corregir
 

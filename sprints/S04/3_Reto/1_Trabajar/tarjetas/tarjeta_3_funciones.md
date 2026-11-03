@@ -81,87 +81,103 @@ Es lo normal. `NotImplementedError` significa «esto está **sin hacer**»: es l
 
 ### Paso 4 · `tasa_cancelacion_por_canal`
 
-**Qué hace.** Recibe la lista de reservas y devuelve un diccionario con el porcentaje de canceladas de cada canal. Con 3 reservas de `web` y 1 cancelada: `{"web": 33.3}`. Sin reservas: `{}`.
+**Qué hace.** Dice, **por cada canal**, qué porcentaje de sus reservas se ha cancelado.
 
-**Seguid un ejemplo con el dedo.** Tenéis 4 reservas. Tapad la tabla con una hoja y destapadla **fila a fila**: cada fila es **una vuelta del `for`**.
+**Primero, a mano y con lápiz.** Estas son 4 reservas. Dibujad en el cuaderno **dos cajas vacías**: `total` (reservas de cada canal) y `canceladas` (canceladas de cada canal).
 
-| Vuelta | Reserva (`canal`, `cancelada`) | `total` queda así | `canceladas` queda así |
-|---|---|---|---|
-| Al empezar | *(todavía ninguna)* | `{}` | `{}` |
-| 1 | `web`, no cancelada (0) | `{"web": 1}` | `{}` |
-| 2 | `web`, **cancelada (1)** | `{"web": 2}` | `{"web": 1}` |
-| 3 | `directo`, no cancelada (0) | `{"web": 2, "directo": 1}` | `{"web": 1}` |
-| 4 | `web`, no cancelada (0) | `{"web": 3, "directo": 1}` | `{"web": 1}` |
-
-Fijaos en dos cosas: **`total` sube en todas las vueltas** (esté cancelada o no) y **`canceladas` solo sube en la vuelta 2**, la única con `cancelada` = 1. Por eso `directo` **no aparece** en `canceladas`.
-
-**Después del `for`, el porcentaje de cada canal** (canceladas ÷ total × 100):
-
-| Canal | Canceladas | Total | Cuenta | Resultado |
-|---|---|---|---|---|
-| `web` | 1 | 3 | 100 × 1 ÷ 3 | **33.3** |
-| `directo` | 0 (no aparece → `0`) | 1 | 100 × 0 ÷ 1 | **0.0** |
-
-La función devuelve `{"web": 33.3, "directo": 0.0}`.
-
-**Qué tocáis en `kpis.py`.** Dejad el `def` y el texto entre comillas triples. **Borrad solo la línea `raise NotImplementedError(...)`** y escribid vuestras líneas en su lugar, con 4 espacios al principio. Terminad con `return`. Los pasos de la tabla son **los mismos `# Paso 1`, `# Paso 2`… que están como comentario dentro de cada función de `kpis.py`** (no los confundáis con los pasos 1 a 9 de la tarjeta).
-
-| Paso de `kpis.py` | Qué hacéis | Pista de Python |
+| Reserva | Canal | ¿Cancelada? |
 |---|---|---|
-| 1 | Crear dos diccionarios vacíos: las reservas de cada canal y las canceladas de cada canal | `total = {}` y `canceladas = {}` |
-| 2 | Recorrer las reservas con un `for`. Cada una suma 1 al total de **su** canal; si `cancelada` vale 1, suma 1 también a las canceladas | `total[canal] = total.get(canal, 0) + 1` |
-| 3 | Crear un diccionario vacío (`tasas`) y, por cada canal, calcular su porcentaje con 1 decimal; al terminar, devolver `tasas` | `round(100 * canceladas.get(canal, 0) / total[canal], 1)` y `return tasas` |
+| 1 | web | no |
+| 2 | web | **sí** |
+| 3 | directo | no |
+| 4 | web | no |
 
-**La trampa habitual.** `directo` no está en `canceladas`, y `canceladas["directo"]` da `KeyError`. Con `.get(canal, 0)` se pide «lo que lleve ese canal, o `0` si todavía no está».
+Ahora, **una reserva cada vez**. Tapad las de abajo con la mano:
+
+1. **Reserva 1** (web, no): en `total` apuntad `web: 1`.
+2. **Reserva 2** (web, **sí**): `total` → `web: 2`. Y en `canceladas` → `web: 1`.
+3. **Reserva 3** (directo, no): `total` → `directo: 1`. `canceladas` no cambia.
+4. **Reserva 4** (web, no): `total` → `web: 3`. `canceladas` no cambia.
+
+Al final tenéis `total = {web: 3, directo: 1}` y `canceladas = {web: 1}`. Los porcentajes:
+
+- `web`: 1 de 3 → 100 × 1 ÷ 3 = **33.3**
+- `directo`: 0 de 1 → 100 × 0 ÷ 1 = **0.0**
+
+**Lo que acabáis de hacer a mano es lo que hace la función.** Ahora, escribidlo en [`kpis.py`](../reto_herramientas/kpis.py). Borrad **solo** la línea `raise NotImplementedError(...)` y escribid con 4 espacios delante. Son los mismos `# Paso 1, 2, 3` que ya ponen los comentarios de la función.
+
+| Paso de `kpis.py` | Lo que hacíais a mano | Pista |
+|---|---|---|
+| 1 | Dibujar las dos cajas vacías | `total = {}` y `canceladas = {}` |
+| 2 | Mirar las reservas **una a una**: sumar 1 a `total`; si está cancelada, sumar 1 a `canceladas` | `for r in reservas:` y `total[canal] = total.get(canal, 0) + 1` |
+| 3 | Calcular el porcentaje de cada canal y entregarlo | `round(100 * ... / ..., 1)` y `return` |
+
+**Ojo:** `directo` no está en `canceladas`. Pedirlo con corchetes da `KeyError`. Con `.get(canal, 0)` decís «lo que lleve, o `0` si todavía no está».
 
 ### Paso 5 · Probar y corregir
 
-1. **Probadla a mano**, con las 8 reservas de ejemplo. En la terminal, dentro de la carpeta del reto:
+1. Ejecutad `python test_kpis.py 1`.
+2. Las dos pruebas de la tasa tienen que salir en verde: **`2 de 4`**.
+3. Si falla, leed qué **debería salir** y comparadlo con lo que sale en la vuestra.
 
-   ```
-   python
-   >>> from reservas_demo import RESERVAS
-   >>> from kpis import tasa_cancelacion_por_canal
-   >>> tasa_cancelacion_por_canal(RESERVAS)
-   ```
+Para ver lo que sale en la vuestra, probadla a mano (con las 8 reservas de ejemplo). En la terminal, dentro de la carpeta del reto:
 
-   Tiene que salir `{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}`. Para salir, `exit()`. Si cambiáis `kpis.py`, salid y volved a entrar.
-2. Ejecutad `python test_kpis.py 1`. Las dos pruebas de la tasa tienen que salir `[OK]` en verde.
-3. Si falla, leed el mensaje (dice **qué debería salir**), comparadlo con lo que sale a mano y corregid.
+```
+python
+>>> from reservas_demo import RESERVAS
+>>> from kpis import tasa_cancelacion_por_canal
+>>> tasa_cancelacion_por_canal(RESERVAS)
+```
+
+Tiene que salir `{'directo': 33.3, 'agencia': 0.0, 'web_intermediaria': 66.7}`. Para salir: `exit()`.
 
 ### Paso 6 · `ingreso_medio_por_reserva`
 
-**Qué hace.** Recibe la lista de reservas y devuelve **cuánto ingresa de media una reserva**, con 2 decimales. Solo cuentan las **no canceladas**: una reserva cancelada no deja dinero. Con confirmadas de 2 noches a 100 €, 4 noches a 50 € y 1 noche a 120 €: (200 + 200 + 120) ÷ 3 = **173.33**. Sin ninguna confirmada: `0.0`.
+**Qué hace.** Dice **cuánto dinero deja de media una reserva**. Las **canceladas no cuentan**: no dejan dinero.
 
-| Paso de `kpis.py` | Qué hacéis | Pista de Python |
+**Primero, a mano.** Tres reservas **no canceladas**:
+
+| Reserva | Cuenta | Dinero |
 |---|---|---|
-| 1 | Crear una lista vacía y, con un `for` y un `if`, añadir `noches × precio_noche` de cada reserva **no cancelada** | `ingresos = []` y `ingresos.append(...)`; el `if` mira `r["cancelada"] == 0` |
-| 2 | Si la lista está vacía, devolver `0.0` (no se puede dividir entre cero) | `if not ingresos:` |
-| 3 | Si no, devolver la suma dividida entre cuántos hay, con 2 decimales | `round(sum(ingresos) / len(ingresos), 2)` |
+| 1 | 2 noches × 100 € | 200 € |
+| 2 | 4 noches × 50 € | 200 € |
+| 3 | 1 noche × 120 € | 120 € |
 
-Es casi el puzle «Ingreso medio de las reservas confirmadas» del Taller. **Pista de cuaderno:** [`S04_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) (listas y bucles `for` con `if`).
+Se suma todo (520 €) y se divide entre 3 reservas: **173.33**. Y si no hay ninguna reserva, devuelve `0.0`.
+
+Ahora, en `kpis.py`:
+
+| Paso de `kpis.py` | Lo que hacíais a mano | Pista |
+|---|---|---|
+| 1 | Una lista vacía; por cada reserva **no cancelada**, apuntar su dinero | `ingresos = []`, `if r["cancelada"] == 0:` y `ingresos.append(...)` |
+| 2 | Si no hay ninguna, devolver `0.0` | `if not ingresos:` |
+| 3 | Sumar todo y dividir entre cuántas hay | `round(sum(ingresos) / len(ingresos), 2)` |
+
+Ayuda: el puzle «Ingreso medio de las reservas confirmadas» del Taller, y el cuaderno [`S04_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb).
 
 ### Paso 7 · Probar y corregir
 
-Igual que el paso 5. A mano, con las 8 reservas de ejemplo, tiene que salir **`182.0`** (200 + 200 + 120 + 180 + 210 = 910 €, entre 5 reservas). Después, `python test_kpis.py 1`: `test_ingreso_medio…` en verde.
+`python test_kpis.py 1`: `test_ingreso_medio…` en verde (**`3 de 4`**). Con las 8 reservas de ejemplo, a mano, tiene que salir **`182.0`**.
 
 ### Paso 8 · `ocupacion_proxy`
 
-**Qué hace.** Recibe la lista de reservas y el número de habitaciones, y devuelve **qué porcentaje de las habitaciones está ocupado**, con 1 decimal. Ejemplo de la prueba: 7 noches confirmadas, 10 días y 5 habitaciones → 7 ÷ (10 × 5) × 100 = **14.0**.
+**Qué hace.** Dice **qué parte de las habitaciones está ocupada**, en porcentaje. **La hace el docente en pantalla**; vosotros **la copiáis** y **explicáis una línea** con vuestras palabras.
 
-| Paso de `kpis.py` | Qué hacéis | Pista de Python |
-|---|---|---|
-| 1 | Si las habitaciones son 0 o menos, dar un error (no se divide entre cero) | `raise ValueError("La capacidad debe ser mayor que 0")` |
-| 2 | Si no hay reservas, devolver `0.0` | `if not reservas:` |
-| 3 | Contar los días del periodo, de la primera a la última llegada, **incluido el primer día** | `(max(fechas) - min(fechas)).days + 1` |
-| 4 | Sumar las noches de las reservas **no canceladas** | un `for` con `if`, como en el paso 6 |
-| 5 | Aplicar la fórmula con 1 decimal | `round(100 * noches / (dias * capacidad), 1)` |
+**A mano.** Un hotel con 5 habitaciones, durante 10 días, tiene 10 × 5 = **50** «noches posibles». Si se han ocupado 7 noches: 7 ÷ 50 × 100 = **14.0 %**.
 
-Esta la **hace el docente en pantalla** y vosotros **la copiáis y la explicáis con vuestras palabras**. Es un **proxy** (una medida aproximada, porque el fichero no trae la capacidad real del hotel): se explica en el README.
+| Paso de `kpis.py` | Qué hace |
+|---|---|
+| 1 | Si las habitaciones son 0 o menos, da un error (no se puede dividir entre 0) |
+| 2 | Si no hay reservas, devuelve `0.0` |
+| 3 | Cuenta los días: de la primera a la última llegada, **contando también el primer día** |
+| 4 | Suma las noches de las reservas **no canceladas** |
+| 5 | Calcula el porcentaje, con 1 decimal |
+
+Es un **proxy**: una medida aproximada, porque el fichero no dice cuántas habitaciones tiene el hotel de verdad.
 
 ### Paso 9 · Todas las pruebas
 
-`python test_kpis.py 1` tiene que terminar con **`4 de 4 pruebas superadas`**, en verde. A mano, con las 8 reservas, `ocupacion_proxy(RESERVAS, 5)` da **`12.0`**.
+`python test_kpis.py 1` tiene que terminar con **`4 de 4 pruebas superadas`**, en verde. A mano, `ocupacion_proxy(RESERVAS, 5)` da **`12.0`**.
 
 ## ✅ Misión terminada cuando
 
