@@ -171,11 +171,11 @@ Tiempo total: 2 h. Se reservan 10 min para cambios de equipo; el resto se repart
 
 ---
 
-## 7. Rúbrica de los retos PBL (Sprints 1–13)
+## 7. Rúbrica de los retos PBL (Sprints 1–17)
 
-Cada entregable se evalúa de 0 a 4 en estos cuatro criterios (los pesos son iguales); su media alimenta el bloque de "ejercicios y entregas".
+Cada entregable se evalúa con un nivel de 1 a 4 en estos cuatro criterios (los pesos son iguales); su media alimenta el bloque de "ejercicios y entregas".
 
-| Criterio | 1 · Insuficiente | 2 · Suficiente | 3 · Bueno | 4 · Excelente |
+| Criterio | 1 · Empezado | 2 · Mínimo | 3 · Estándar | 4 · Extra |
 |---|---|---|---|---|
 | **Corrección técnica** | Errores que invalidan el resultado | Correcto con fallos menores | Correcto y bien justificado | Correcto, justificado y con alternativas comparadas |
 | **Reproducibilidad** | No se puede volver a ejecutar | Se ejecuta con ayuda | Se ejecuta desde el README | Además incluye datos o script y versiones fijas |

@@ -67,7 +67,7 @@
 
 ## El reto en pocas palabras
 
-**Núcleo y extra.** Núcleo: brief elegido, ficha aprobada, plan de datos y *baseline*. Extra: EDA ampliado y backlog más detallado.
+**Niveles.** 🟢 Mínimo: brief elegido, ficha aprobada, plan de datos y *baseline*. 🟡 Estándar y 🔴 Extra: lo que añade cada nivel está en el reto en una página (por ejemplo, un EDA ampliado y un backlog más detallado).
 
 Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S14/3_Reto/1_Trabajar/S14_demo_reto.html) (muestra lo que tendréis al final). Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_14.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
