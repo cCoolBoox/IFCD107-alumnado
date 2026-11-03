@@ -202,17 +202,22 @@ if __name__ == "__main__":
     pruebas = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)
                and (fase == "todas" or (n in FASE_1) == (fase == "1"))]
     titulo = {"1": "FASE 1 · funciones que calculan (datos en memoria)", "2": "FASE 2 · ficheros, errores y JSON", "todas": "TODAS LAS PRUEBAS"}
+    import os
+    color = sys.stdout.isatty() and "NO_COLOR" not in os.environ
+    if color and os.name == "nt":
+        os.system("")                       # activa los colores en la consola de Windows
+    ROJO, VERDE, FIN = ("\033[31m", "\033[32m", "\033[0m") if color else ("", "", "")
     print(f"--- {titulo[fase]} ---")
     fallos = 0
     for nombre, funcion in pruebas:
         try:
             funcion()
-            print(f"[OK]    {nombre}")
+            print(f"{VERDE}[OK]    {nombre}{FIN}")
         except AssertionError as error:
             fallos += 1
-            print(f"[FALLO] {nombre}: {error}")
+            print(f"{ROJO}[FALLO] {nombre}: {error}{FIN}")
         except Exception as error:          # cualquier otro error también cuenta
             fallos += 1
-            print(f"[ERROR] {nombre}: {type(error).__name__}: {error}")
-    print(f"\n{len(pruebas) - fallos} de {len(pruebas)} pruebas superadas")
+            print(f"{ROJO}[ERROR] {nombre}: {type(error).__name__}: {error}{FIN}")
+    print(f"\n{ROJO if fallos else VERDE}{len(pruebas) - fallos} de {len(pruebas)} pruebas superadas{FIN}")
     raise SystemExit(1 if fallos else 0)
