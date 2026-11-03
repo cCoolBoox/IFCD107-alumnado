@@ -64,7 +64,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `congelar` | Función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)* |
 | `copiar_base` | Copia independiente de la base con los mismos pesos (para no modificar la original). *(La escribís vosotros en un ejercicio.)* |
 | `descongelar_bloque` | Función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)* |
-| `experimento` | Devuelve la precisión en prueba de (desde cero, base congelada, base con fine-tuning). |
+| `experimento` | Devuelve la exactitud en prueba de (desde cero, base congelada, base con fine-tuning). |
 | `construir_mobilenet` | pesos=None (aleatorios, offline) o pesos='imagenet' (requiere internet; descarga unos pocos MB, tamaño no verificado). |
 
 **De Python y sus librerías:**
@@ -436,7 +436,7 @@ keras.utils.set_random_seed(SEMILLA)
 desde_cero = con_cabeza(construir_base("base_desde_cero"), 5)
 h_cero = entrenar(desde_cero, epocas=40)
 acc_cero = desde_cero.evaluate(X_pru, y_pru, verbose=0)[1]
-print(f"CNN desde cero con {len(X_ent)} imágenes → precisión en prueba: {acc_cero:.3f}")
+print(f"CNN desde cero con {len(X_ent)} imágenes → exactitud en prueba: {acc_cero:.3f}")
 ```
 
 **Qué hace cada línea:**
@@ -448,7 +448,7 @@ print(f"CNN desde cero con {len(X_ent)} imágenes → precisión en prueba: {acc
 - `desde_cero = con_cabeza(construir_base("base_desde_cero"), 5)` → Guarda en `desde_cero` el resultado. `con_cabeza`: base + cabeza nueva (Dropout y Dense softmax), ya compilado; `construir_base`: función definida en el cuaderno.
 - `h_cero = entrenar(desde_cero, epocas=40)` → Guarda en `h_cero` el resultado. `entrenar`: función definida en el cuaderno.
 - `acc_cero = desde_cero.evaluate(X_pru, y_pru, verbose=0)[1]` → Guarda en `acc_cero` el resultado. `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
-- `print(f"CNN desde cero con {len(X_ent)} imágenes → precisión en prueba: {ac…` → `print`: muestra un valor por pantalla; `len`: cuenta cuántos elementos tiene una lista, texto o tabla.
+- `print(f"CNN desde cero con {len(X_ent)} imágenes → exactitud en prueba: {ac…` → `print`: muestra un valor por pantalla; `len`: cuenta cuántos elementos tiene una lista, texto o tabla.
 
 ### Celda 6 · 3. Preentrenar la base en una tarea auxiliar · 🏫
 
@@ -462,7 +462,7 @@ keras.utils.set_random_seed(SEMILLA)
 base_pre = construir_base("base_preentrenada")
 modelo_aux = con_cabeza(base_pre, len(CLASES_FORMAS), dropout=0.0)
 modelo_aux.fit(X_aux, y_aux, epochs=12, batch_size=64, verbose=0)
-print("Precisión en la tarea auxiliar (validación):", round(modelo_aux.evaluate(X_aux_v, y_aux_v, verbose=0)[1], 3))
+print("Exactitud en la tarea auxiliar (validación):", round(modelo_aux.evaluate(X_aux_v, y_aux_v, verbose=0)[1], 3))
 print("La base tiene", base_pre.count_params(), "parámetros y ya sabe extraer rasgos visuales.")
 ```
 
@@ -474,7 +474,7 @@ print("La base tiene", base_pre.count_params(), "parámetros y ya sabe extraer r
 - `base_pre = construir_base("base_preentrenada")` → Guarda en `base_pre` el resultado. `construir_base`: función definida en el cuaderno.
 - `modelo_aux = con_cabeza(base_pre, len(CLASES_FORMAS), dropout=0.0)` → Guarda en `modelo_aux` el resultado. `con_cabeza`: base + cabeza nueva (Dropout y Dense softmax), ya compilado; `len`: cuenta cuántos elementos tiene una lista, texto o tabla.
 - `modelo_aux.fit(X_aux, y_aux, epochs=12, batch_size=64, verbose=0)` → `fit`: entrena el modelo con los datos (aquí es donde «aprende»).
-- `print("Precisión en la tarea auxiliar (validación):", round(modelo_aux.eval…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
+- `print("Exactitud en la tarea auxiliar (validación):", round(modelo_aux.eval…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
 - `print("La base tiene", base_pre.count_params(), "parámetros y ya sabe extra…` → `print`: muestra un valor por pantalla; `count_params`: cuenta cuántos pesos tiene el modelo.
 
 ### Celda 7 · 4. Congelar la base y entrenar solo una cabeza… · 🏫 · ejercicio
@@ -491,7 +491,7 @@ n_entrenables = sum(int(np.prod(p.shape)) for p in transfer.trainable_weights)
 print(f"Parámetros totales: {transfer.count_params()} · entrenables (solo la cabeza): {n_entrenables}")
 h_transfer = entrenar(transfer, epocas=30)
 acc_transfer = transfer.evaluate(X_pru, y_pru, verbose=0)[1]
-print(f"Transfer learning (base congelada) → precisión en prueba: {acc_transfer:.3f}")
+print(f"Transfer learning (base congelada) → exactitud en prueba: {acc_transfer:.3f}")
 ```
 
 **Qué hace cada línea:**
@@ -501,7 +501,7 @@ print(f"Transfer learning (base congelada) → precisión en prueba: {acc_transf
 - `print(f"Parámetros totales: {transfer.count_params()} · entrenables (solo l…` → `print`: muestra un valor por pantalla; `count_params`: cuenta cuántos pesos tiene el modelo.
 - `h_transfer = entrenar(transfer, epocas=30)` → Guarda en `h_transfer` el resultado. `entrenar`: función definida en el cuaderno.
 - `acc_transfer = transfer.evaluate(X_pru, y_pru, verbose=0)[1]` → Guarda en `acc_transfer` el resultado. `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
-- `print(f"Transfer learning (base congelada) → precisión en prueba: {acc_tran…` → `print`: muestra un valor por pantalla.
+- `print(f"Transfer learning (base congelada) → exactitud en prueba: {acc_tran…` → `print`: muestra un valor por pantalla.
 
 ### Celda 9 · 5. *Fine-tuning*: descongelar las últimas capas… · 🏠 · ejercicio
 
@@ -517,7 +517,7 @@ n_ent_ft = descongelar_bloque(copia_base, 3)
 transfer.compile(keras.optimizers.Adam(1e-4), "sparse_categorical_crossentropy", metrics=["accuracy"])   # ¡recompilar!
 h_ft = entrenar(transfer, epocas=25, semilla=1)
 acc_ft = transfer.evaluate(X_pru, y_pru, verbose=0)[1]
-print(f"Tras fine-tuning del bloque 3 → precisión en prueba: {acc_ft:.3f}")
+print(f"Tras fine-tuning del bloque 3 → exactitud en prueba: {acc_ft:.3f}")
 ```
 
 **Qué hace cada línea:**
@@ -526,7 +526,7 @@ print(f"Tras fine-tuning del bloque 3 → precisión en prueba: {acc_ft:.3f}")
 - `transfer.compile(keras.optimizers.Adam(1e-4), "sparse_categorical_crossentr…` → `compile`: prepara el modelo para entrenar (en Keras: elige optimizador, pérdida y métricas); `Adam`: optimizador Adam: decide cómo ajustar los pesos en cada paso.
 - `h_ft = entrenar(transfer, epocas=25, semilla=1)` → Guarda en `h_ft` el resultado. `entrenar`: función definida en el cuaderno.
 - `acc_ft = transfer.evaluate(X_pru, y_pru, verbose=0)[1]` → Guarda en `acc_ft` el resultado. `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
-- `print(f"Tras fine-tuning del bloque 3 → precisión en prueba: {acc_ft:.3f}")` → `print`: muestra un valor por pantalla.
+- `print(f"Tras fine-tuning del bloque 3 → exactitud en prueba: {acc_ft:.3f}")` → `print`: muestra un valor por pantalla.
 
 ### Celda 11 · 5. *Fine-tuning*: descongelar las últimas capas… · 🏠
 
@@ -534,7 +534,7 @@ print(f"Tras fine-tuning del bloque 3 → precisión en prueba: {acc_ft:.3f}")
 
 ```python
 def experimento(semilla, X=None, y=None, epocas=30):
-    """Devuelve la precisión en prueba de (desde cero, base congelada, base con fine-tuning)."""
+    """Devuelve la exactitud en prueba de (desde cero, base congelada, base con fine-tuning)."""
     keras.utils.set_random_seed(semilla)
     m0 = con_cabeza(construir_base("cero"), 5)
     entrenar(m0, epocas + 10, semilla, X, y)
@@ -554,8 +554,8 @@ comparacion
 
 **Qué hace cada línea:**
 
-- `def experimento(semilla, X=None, y=None, epocas=30):` → Define la función `experimento`: Devuelve la precisión en prueba de (desde cero, base congelada, base con fine-tuning).
-- `filas = [experimento(s) for s in (1, 2, 3)]` → Guarda en `filas` el resultado. `experimento`: devuelve la precisión en prueba de (desde cero, base congelada, base con fine-tuning).
+- `def experimento(semilla, X=None, y=None, epocas=30):` → Define la función `experimento`: Devuelve la exactitud en prueba de (desde cero, base congelada, base con fine-tuning).
+- `filas = [experimento(s) for s in (1, 2, 3)]` → Guarda en `filas` el resultado. `experimento`: devuelve la exactitud en prueba de (desde cero, base congelada, base con fine-tuning).
 - `comparacion = pd.DataFrame(filas, columns=["Desde cero", "Base congelada",…` → Guarda en `comparacion` el resultado. `round`: redondea un número a los decimales indicados; `agg`: calcula varias estadísticas a la vez (media, suma…) por grupo; `DataFrame`: crea una tabla de pandas (filas y columnas).
 
 ### Celda 12 · 5. *Fine-tuning*: descongelar las últimas capas… · 🏠
@@ -564,16 +564,16 @@ comparacion
 
 ```python
 comparacion.loc["mean"].plot(kind="bar", yerr=comparacion.loc["std"], capsize=4, color=["gray", "steelblue", "seagreen"])
-plt.ylabel("precisión en prueba"); plt.ylim(0, 1); plt.xticks(rotation=0)
+plt.ylabel("exactitud en prueba"); plt.ylim(0, 1); plt.xticks(rotation=0)
 plt.title(f"Con solo {N_POR_CLASE} imágenes por clase (media de 3 semillas)"); plt.show()
 ```
 
 **Qué hace cada línea:**
 
 - `comparacion.loc["mean"].plot(kind="bar", yerr=comparacion.loc["std"], capsi…` → `plot`: dibuja una línea (o puntos unidos); `loc`: selecciona filas/columnas por su etiqueta o por una condición.
-- `plt.ylabel("precisión en prueba"); plt.ylim(0, 1); plt.xticks(rotation=0)` → `ylabel`: pone el nombre del eje vertical.
-- `plt.ylabel("precisión en prueba"); plt.ylim(0, 1); plt.xticks(rotation=0)` → `ylim`: fija el rango del eje vertical.
-- `plt.ylabel("precisión en prueba"); plt.ylim(0, 1); plt.xticks(rotation=0)` → `xticks`: fija las marcas del eje horizontal.
+- `plt.ylabel("exactitud en prueba"); plt.ylim(0, 1); plt.xticks(rotation=0)` → `ylabel`: pone el nombre del eje vertical.
+- `plt.ylabel("exactitud en prueba"); plt.ylim(0, 1); plt.xticks(rotation=0)` → `ylim`: fija el rango del eje vertical.
+- `plt.ylabel("exactitud en prueba"); plt.ylim(0, 1); plt.xticks(rotation=0)` → `xticks`: fija las marcas del eje horizontal.
 - `plt.title(f"Con solo {N_POR_CLASE} imágenes por clase (media de 3 semillas)…` → `title`: pone el título del gráfico.
 - `plt.title(f"Con solo {N_POR_CLASE} imágenes por clase (media de 3 semillas)…` → `show`: muestra el gráfico.
 
@@ -621,7 +621,7 @@ USAR_INTERNET = False        # ← True solo con conexión (Colab)
 if USAR_INTERNET:
     mn_real, mn_real_base = construir_mobilenet(pesos="imagenet")           # ← aquí se descargan los pesos
     mn_real.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=15, batch_size=16, verbose=0)
-    print("MobileNetV2 con ImageNet, precisión en prueba:", round(mn_real.evaluate(X_pru, y_pru, verbose=0)[1], 3))
+    print("MobileNetV2 con ImageNet, exactitud en prueba:", round(mn_real.evaluate(X_pru, y_pru, verbose=0)[1], 3))
     # Fine-tuning: se descongelan las últimas capas de la base y se baja la tasa (recompilar siempre)
     mn_real_base.trainable = True
     for capa in mn_real_base.layers[:-20]:

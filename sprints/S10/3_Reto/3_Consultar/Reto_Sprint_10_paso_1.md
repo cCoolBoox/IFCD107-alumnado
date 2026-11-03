@@ -57,16 +57,16 @@
         return {"AUC": roc_auc_score(y_real, prob),
                 "AP": average_precision_score(y_real, prob),
                 "F1": f1_score(y_real, clases),
-                "precisión": accuracy_score(y_real, clases)}
+                "exactitud": accuracy_score(y_real, clases)}
     ```
 
     Qué hace cada línea:
 
     - `def evaluar(y_real, prob, umbral=0.5):`: define la función. Recibe `y_real` (lo que pasó de verdad, 0 o 1), `prob` (la probabilidad de cancelar que da el modelo) y `umbral` (el corte; si no se dice nada, 0,5). **Los dos puntos del final y la sangría de las líneas de debajo son obligatorios.**
     - `clases = (np.asarray(prob) >= umbral).astype(int)`: convierte probabilidades en decisiones: 1 («cancelará») si la probabilidad llega al umbral y 0 si no. `np.asarray` se asegura de que `prob` sea una tabla de NumPy y `.astype(int)` cambia `True`/`False` por 1/0.
-    - `return {…}`: devuelve un diccionario con las cuatro notas. **Los nombres de las claves no se pueden cambiar** (`"AUC"`, `"AP"`, `"F1"` y `"precisión"`, con tilde): el `assert` los comprueba.
+    - `return {…}`: devuelve un diccionario con las cuatro notas. **Los nombres de las claves no se pueden cambiar** (`"AUC"`, `"AP"`, `"F1"` y `"exactitud"`): el `assert` los comprueba.
     - `roc_auc_score(y_real, prob)` y `average_precision_score(y_real, prob)`: el AUC y el AP (otra nota basada en probabilidades). Se calculan con **`prob`**, no con las clases.
-    - `f1_score(y_real, clases)` y `accuracy_score(y_real, clases)`: el F1 (equilibra no dejar escapar cancelaciones y no dar falsas alarmas) y la precisión (aciertos entre total). Se calculan con **`clases`**, las decisiones.
+    - `f1_score(y_real, clases)` y `accuracy_score(y_real, clases)`: el F1 (equilibra no dejar escapar cancelaciones y no dar falsas alarmas) y la exactitud (aciertos entre total). Se calculan con **`clases`**, las decisiones.
 
     Pulsad ▶. Si no aparece nada, está bien: los `assert` solo hablan cuando algo falla.
 
@@ -106,8 +106,8 @@
 | `NameError: name 'evaluar' is not defined` | La celda del ejercicio 1 todavía tiene los `...` y no define la función. | Borrad los tres puntos, escribid la función y volved a pulsar ▶. |
 | `TypeError: 'NoneType' object is not iterable` | La función no devuelve nada: falta el `return`. | Poned `return {…}` como última línea de la función, con la misma sangría. |
 | `IndentationError: expected an indented block…` | Las líneas de dentro de la función no tienen sangría. | Dejad 4 espacios delante de las tres líneas de debajo de `def`. |
-| `AssertionError: El diccionario debe tener las claves AUC, AP, F1 y precisión` | Falta una clave o está mal escrita (por ejemplo, `precision` sin tilde). | Copiad los cuatro nombres tal cual: `"AUC"`, `"AP"`, `"F1"`, `"precisión"`. |
-| `AssertionError: Revisa: AUC esperado 0.75 y precisión 0.5 en la prueba mínima` | El AUC se ha calculado con las clases (0 y 1) en vez de con las probabilidades, o el umbral no se aplica bien. | AUC y AP con `prob`; F1 y precisión con `clases`. |
+| `AssertionError: El diccionario debe tener las claves AUC, AP, F1 y exactitud` | Falta una clave o está mal escrita (por ejemplo, `precisión` en lugar de `exactitud`). | Copiad los cuatro nombres tal cual: `"AUC"`, `"AP"`, `"F1"`, `"exactitud"`. |
+| `AssertionError: Revisa: AUC esperado 0.75 y exactitud 0.5 en la prueba mínima` | El AUC se ha calculado con las clases (0 y 1) en vez de con las probabilidades, o el umbral no se aplica bien. | AUC y AP con `prob`; F1 y exactitud con `clases`. |
 | `ValueError: Classification metrics can't handle a mix of binary and continuous targets` | Se ha pasado `prob` (números decimales) a `f1_score` o a `accuracy_score`. | Pasadles `clases`. |
 | El AUC de validación sale casi 1,000 | Sospecha de fuga: el modelo ha visto la respuesta. | Comprobad que no habéis tocado las listas `num` y `cat` (la respuesta, `cancelada`, no puede ser una entrada). |
 

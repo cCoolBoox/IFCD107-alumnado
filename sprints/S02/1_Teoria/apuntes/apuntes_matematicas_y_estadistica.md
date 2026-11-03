@@ -78,7 +78,7 @@ reserva 2:  1·50 + 1·20 + 0·30 =  50 + 20 +  0 =  70
 reserva 3:  5·50 + 4·20 + 1·30 = 250 + 80 + 30 = 360
 ```
 
-Resultado: el vector `(220, 70, 360)`. **Una capa de una red neuronal es esto:** `y = A·x + b`.
+Resultado: el vector `(220, 70, 360)`. **Una capa de una red neuronal es esto:** `y = A·W + b`, con los pesos `W` en el lugar de los precios `w` y un número base `b` añadido.
 
 ### Producto de matrices: la regla de las dimensiones
 
@@ -206,7 +206,7 @@ Por eso α es el **ajuste más importante** del entrenamiento: ni muy tímido, n
 
 | Qué hace el modelo | Qué matemáticas usa |
 |---|---|
-| **Entrada → predicción** | vectores y matrices: `y = A·x + b` |
+| **Entrada → predicción** | vectores y matrices: `y = A·W + b` |
 | **Predicción → error** | una **función de coste** (cuánto se aleja de lo real) |
 | **Error → cómo corregir** | el **gradiente** (regla de la cadena = retropropagación) |
 | **Corregir** | el **descenso del gradiente** con paso α |

@@ -7,7 +7,7 @@
 1. Preparar la base preentrenada y hacer el ejercicio 2 (`modelo_transfer`).
 2. Entrenar el modelo con la base congelada y después hacer el ajuste fino del último bloque.
 3. Entrenar una referencia «desde cero» con la misma arquitectura.
-4. Anotar la precisión de validación de las tres versiones.
+4. Anotar la exactitud de validación de las tres versiones.
 
 **En sencillo.** Pensad en una persona que ya sabe distinguir rayas, cuadrículas, círculos y triángulos: si ahora le enseñáis a reconocer hoteles y campings, aprenderá más rápido que alguien que no ha visto nunca un dibujo. Eso es el ***transfer learning***: se parte de una red que ya aprendió a ver formas y texturas (la **base**), se le **congela** lo aprendido para no estropearlo y solo se entrena una parte nueva al final (la **cabeza**), que es la que da la respuesta «hotel, camping…». Después, el **ajuste fino** descongela el último bloque de la base y lo retoca muy despacio. Y para saber si todo ese esfuerzo sirve, se entrena también una **referencia «desde cero»**: la misma red sin ningún aprendizaje previo. Al final tenéis tres notas de validación que comparar. No hace falta saber cómo funciona una red por dentro: copiáis, ejecutáis y leéis las cifras.
 
@@ -23,7 +23,7 @@
 | **Tasa de aprendizaje** | El tamaño de cada retoque al entrenar. En el ajuste fino es diez veces menor: `1e-4` se lee 0,0001. |
 | **Referencia «desde cero»** | La misma red sin preentrenar, entrenada con las mismas fotos, para ver cuánto aporta el *transfer learning*. |
 | **Época** | Una pasada de la red por todas las fotos de entrenamiento. `epochs=30` son 30 pasadas. |
-| **Precisión de validación** | La fracción de las 60 fotos de validación que acierta el modelo (0,883 = 88,3 %). Sirve para ensayar y comparar; la prueba no se toca. |
+| **Exactitud de validación** | La fracción de las 60 fotos de validación que acierta el modelo (0,883 = 88,3 %). Sirve para ensayar y comparar; la prueba no se toca. |
 
 **Cómo se hace**
 
@@ -99,7 +99,7 @@
     keras.utils.set_random_seed(SEMILLA)
     modelo, base_congelada = modelo_transfer(base_pre, N_CLASES)
     modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=30, batch_size=16, verbose=0)
-    print("Precisión de validación con base congelada:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
+    print("Exactitud de validación con base congelada:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
 
     # Fine-tuning del último bloque con tasa pequeña (y recompilando)
     base_congelada.trainable = True      # primero se descongela la base entera...
@@ -107,31 +107,31 @@
         capa.trainable = capa.name.startswith("bloque3")   # ...y solo el último bloque queda entrenable
     modelo.compile(keras.optimizers.Adam(1e-4), "sparse_categorical_crossentropy", metrics=["accuracy"])
     h = modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=25, batch_size=16, verbose=0)
-    print("Precisión de validación tras fine-tuning:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
+    print("Exactitud de validación tras fine-tuning:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
 
     # Referencia: la misma arquitectura entrenada desde cero
     keras.utils.set_random_seed(SEMILLA)
     desde_cero = con_cabeza(construir_base("desde_cero"), N_CLASES)
     desde_cero.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=40, batch_size=16, verbose=0)
-    print("Precisión de validación desde cero:", round(desde_cero.evaluate(X_val, y_val, verbose=0)[1], 3))
+    print("Exactitud de validación desde cero:", round(desde_cero.evaluate(X_val, y_val, verbose=0)[1], 3))
     ```
 
     Qué hace cada parte:
 
     - `modelo, base_congelada = modelo_transfer(base_pre, N_CLASES)`: usa vuestra función y recoge las dos cosas que devuelve.
     - `modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=30, batch_size=16, …)`: entrena 30 épocas con las fotos de entrenamiento, en lotes de 16, y mira cómo va con las de validación. Solo se ajusta la cabeza.
-    - `print("Precisión de validación con base congelada:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))`: `evaluate` devuelve dos cifras (la pérdida y la precisión); el `[1]` se queda con la precisión y `round(…, 3)` la deja con tres decimales.
+    - `print("Exactitud de validación con base congelada:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))`: `evaluate` devuelve dos cifras (la pérdida y la exactitud); el `[1]` se queda con la exactitud y `round(…, 3)` la deja con tres decimales.
     - `base_congelada.trainable = True`: **descongela** la copia entera, para poder decidir capa a capa. Enseguida se vuelve a congelar casi todo.
     - `for capa in base_congelada.layers:` y `capa.trainable = capa.name.startswith("bloque3")`: recorre las capas de la copia y deja sueltas solo las que se llaman `bloque3…` (`bloque3_conv` y `bloque3_pool`); las demás se quedan congeladas.
     - `modelo.compile(keras.optimizers.Adam(1e-4), …)`: **vuelve a compilar** para que el cambio de congelado surta efecto, con una tasa de aprendizaje diez veces menor (retoques pequeños).
-    - `h = modelo.fit(…, epochs=25, …)` y el segundo `print`: 25 épocas más con el último bloque suelto, y la nueva precisión de validación.
-    - `desde_cero = con_cabeza(construir_base("desde_cero"), N_CLASES)`: la **referencia**: la misma arquitectura, con una base nueva que no ha aprendido nada. Se entrena 40 épocas con todo suelto, y el último `print` escribe su precisión de validación.
+    - `h = modelo.fit(…, epochs=25, …)` y el segundo `print`: 25 épocas más con el último bloque suelto, y la nueva exactitud de validación.
+    - `desde_cero = con_cabeza(construir_base("desde_cero"), N_CLASES)`: la **referencia**: la misma arquitectura, con una base nueva que no ha aprendido nada. Se entrena 40 épocas con todo suelto, y el último `print` escribe su exactitud de validación.
 
     La celda no escribe nada mientras entrena y puede tardar un rato (hasta algún minuto): esperad a que aparezcan las tres líneas.
 
-4. **Anotar las tres cifras.** La celda escribe las tres precisiones de validación (base congelada, tras el ajuste fino y desde cero). Apuntad en el documento del equipo las tres cifras:
+4. **Anotar las tres cifras.** La celda escribe las tres exactitudes de validación (base congelada, tras el ajuste fino y desde cero). Apuntad en el documento del equipo las tres cifras:
 
-    | Versión | Precisión de validación |
+    | Versión | Exactitud de validación |
     |---|---|
     | *Transfer learning* con la base congelada | (vuestra cifra) |
     | *Transfer learning* tras el ajuste fino | (vuestra cifra) |
@@ -144,7 +144,7 @@
 **Qué deberíais ver.**
 - **De la celda de la base:** `Base preentrenada lista: 23584 parámetros`. Ese número depende solo de la arquitectura, así que debe salir igual.
 - **Del ejercicio 2:** nada, si los `assert` pasan.
-- **Del entrenamiento:** dos líneas, `Precisión de validación con base congelada: 0.…` y `Precisión de validación tras fine-tuning: 0.…`, y después, de la celda que añadisteis, `Precisión de validación desde cero: 0.…`. Las cifras van de 0 a 1 y, como la validación tiene 60 fotos, cada foto de más o de menos mueve la cifra unos 0,017.
+- **Del entrenamiento:** dos líneas, `Exactitud de validación con base congelada: 0.…` y `Exactitud de validación tras fine-tuning: 0.…`, y después, de la celda que añadisteis, `Exactitud de validación desde cero: 0.…`. Las cifras van de 0 a 1 y, como la validación tiene 60 fotos, cada foto de más o de menos mueve la cifra unos 0,017.
 - **Lo esperable:** que el ajuste fino quede igual o mejor que la base congelada, y que el *transfer learning* quede igual o mejor que la referencia. Si no es así, no es un error: anotadlo y pensad por qué (las fotos con ruido, las etiquetas dudosas o que la tarea auxiliar se parezca poco).
 
 **Hecho cuando:** `modelo_transfer` pasa sus comprobaciones y tenéis anotadas las tres cifras de validación.

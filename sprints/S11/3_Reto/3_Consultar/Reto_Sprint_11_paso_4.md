@@ -18,7 +18,7 @@
 | **Confianza** | La probabilidad más alta que da el modelo a una foto, de 0 (nada seguro) a 1 (seguro del todo). |
 | **Umbral** | La confianza mínima para que el modelo decida solo. Por debajo de ella, responde «revisar a mano». |
 | **Cobertura** | De todas las fotos, la fracción que el modelo decide solo (las que superan el umbral). |
-| **Precisión de las aceptadas** | De las fotos que el modelo decide solo, la fracción que acierta. |
+| **Exactitud de las aceptadas** | De las fotos que el modelo decide solo, la fracción que acierta. |
 | **Abstenerse** | No decidir y pasar la foto a una persona. Es lo que hace el modelo con las fotos que no supera el umbral. |
 | **Tupla** | Un par o grupo de valores entre paréntesis, como `(0.5, 1.0)`. Una función puede devolver varios valores a la vez en una tupla. |
 | **Máscara** | Una lista de `True` y `False`, una por foto, que dice cuáles cumplen una condición. Aquí: cuáles superan el umbral. |
@@ -69,10 +69,10 @@
 
     **Importante:** el umbral se escribe siempre con su nombre (`umbral=0.9`). La función tiene como segundo argumento el modelo (`modelo_`): si escribís `clasificar_foto(ruta, 0.9)`, Python cree que 0,9 es el modelo y da error. Probad también `umbral=0.5` y `umbral=0.99` con la misma foto y fijaos en cómo cambia la respuesta.
 
-3. **Ejercicio 5: cobertura y precisión de las aceptadas.** Bajad al enunciado de la sección 5 («IA responsable»), borrad los tres puntos `...` de su celda y escribid:
+3. **Ejercicio 5: cobertura y exactitud de las aceptadas.** Bajad al enunciado de la sección 5 («IA responsable»), borrad los tres puntos `...` de su celda y escribid:
 
     ```python
-    def cobertura_y_precision(prob, y_real, umbral):
+    def cobertura_y_exactitud(prob, y_real, umbral):
         aceptadas = prob.max(axis=1) >= umbral
         if aceptadas.sum() == 0:
             return 0.0, 0.0
@@ -82,16 +82,16 @@
 
     Qué hace cada línea:
 
-    - `def cobertura_y_precision(prob, y_real, umbral):`: define la función. Recibe la tabla de probabilidades, las clases reales y el umbral. Los dos puntos del final son obligatorios.
+    - `def cobertura_y_exactitud(prob, y_real, umbral):`: define la función. Recibe la tabla de probabilidades, las clases reales y el umbral. Los dos puntos del final son obligatorios.
     - `aceptadas = prob.max(axis=1) >= umbral`: `prob.max(axis=1)` es la confianza de cada foto. Comparada con el umbral da una **máscara**: `True` para las fotos que el modelo decide solo.
     - `if aceptadas.sum() == 0:`: `sum()` cuenta los `True`. Si no se acepta ninguna foto no se puede calcular nada...
     - `return 0.0, 0.0`: ...así que se devuelve `(0.0, 0.0)`, que es lo que pide el enunciado. Esta línea va con **8 espacios** (está dentro del `if`).
     - `aciertos = prob.argmax(axis=1)[aceptadas] == y_real[aceptadas]`: se queda solo con las fotos aceptadas (`[aceptadas]`) y comprueba, para cada una, si la clase elegida coincide con la real. El resultado es otra lista de `True` y `False`.
-    - `return float(aceptadas.mean()), float(aciertos.mean())`: la media de una lista de `True`/`False` es la fracción de `True`. La primera es la **cobertura** (fracción de fotos aceptadas); la segunda, la **precisión de las aceptadas**. Se devuelven juntas, en una tupla, y siempre en este orden.
+    - `return float(aceptadas.mean()), float(aciertos.mean())`: la media de una lista de `True`/`False` es la fracción de `True`. La primera es la **cobertura** (fracción de fotos aceptadas); la segunda, la **exactitud de las aceptadas**. Se devuelven juntas, en una tupla, y siempre en este orden.
 
     Pulsad ▶. Los `assert` de debajo usan una tabla de juguete de 4 fotos.
 
-4. **Medir varios umbrales.** Ejecutad la celda siguiente, que ya está escrita: calcula las probabilidades de la **validación** (`prob_val`) y, con ellas, la cobertura y la «precisión en las aceptadas» para los umbrales `0.0`, `0.5`, `0.7`, `0.9` y `0.95`. Se usa la validación y no la prueba porque el umbral se **elige** mirando esta tabla, y la prueba tiene que seguir sin tocarse hasta el final. Fijaos en tres cosas: con umbral `0.0` se acepta todo (cobertura 1) y la precisión es la de la validación (no tiene por qué coincidir con la del paso 3, que es de la prueba); **la cobertura solo puede bajar** al subir el umbral; y la precisión de las aceptadas suele subir (no siempre). Con solo 60 fotos, una foto más o menos mueve las cifras unos 1,7 puntos: no saquéis conclusiones de diferencias pequeñas.
+4. **Medir varios umbrales.** Ejecutad la celda siguiente, que ya está escrita: calcula las probabilidades de la **validación** (`prob_val`) y, con ellas, la cobertura y la «exactitud en las aceptadas» para los umbrales `0.0`, `0.5`, `0.7`, `0.9` y `0.95`. Se usa la validación y no la prueba porque el umbral se **elige** mirando esta tabla, y la prueba tiene que seguir sin tocarse hasta el final. Fijaos en tres cosas: con umbral `0.0` se acepta todo (cobertura 1) y la exactitud es la de la validación (no tiene por qué coincidir con la del paso 3, que es de la prueba); **la cobertura solo puede bajar** al subir el umbral; y la exactitud de las aceptadas suele subir (no siempre). Con solo 60 fotos, una foto más o menos mueve las cifras unos 1,7 puntos: no saquéis conclusiones de diferencias pequeñas.
 
 5. **Elegir el umbral y medirlo en la prueba.**
 
@@ -105,10 +105,10 @@
 **Qué deberíais ver.**
 - **Del demostrador:** una tupla de tres valores: la clase (o `revisar a mano`), la confianza con muchos decimales (por ejemplo `0.8999…`) y un diccionario con las 5 probabilidades. Con NumPy reciente, las probabilidades pueden salir como `np.float32(0.9)` en vez de `0.9`: es el mismo número.
 - **Del bucle de 3 fotos:** tres líneas `real: … → ('…', 0.…)`, a veces con `'revisar a mano'`.
-- **De la tabla de umbrales (validación):** cinco filas con las columnas `cobertura` y `precisión en las aceptadas`, con la cobertura bajando de arriba abajo.
+- **De la tabla de umbrales (validación):** cinco filas con las columnas `cobertura` y `exactitud en las aceptadas`, con la cobertura bajando de arriba abajo.
 - **De la celda de la prueba:** una línea parecida a `Prueba con umbral 0.7: el modelo decide solo el 88% de las fotos y acierta el 91% de esas` (con vuestras cifras).
 
-**Hecho cuando:** `clasificar_foto` funciona con 2 o 3 fotos delante del equipo, `cobertura_y_precision` pasa sus comprobaciones y tenéis anotado el umbral elegido con su frase.
+**Hecho cuando:** `clasificar_foto` funciona con 2 o 3 fotos delante del equipo, `cobertura_y_exactitud` pasa sus comprobaciones y tenéis anotado el umbral elegido con su frase.
 
 ## Si algo falla
 
@@ -117,8 +117,8 @@
 | `AttributeError: 'float' object has no attribute 'predict'` | Habéis escrito el umbral sin su nombre, así que Python lo toma como el modelo. | Escribid `clasificar_foto(ruta, umbral=0.9)`. |
 | `NameError: name 'rutas_pru' is not defined` (o `'modelo'`, `'y_pru'`) | Colab se desconectó o no se ejecutaron las celdas de los pasos 1 a 3. | Ejecutad desde arriba, por orden, hasta la sección 3 y después el demostrador. |
 | `FileNotFoundError: [Errno 2] No such file or directory: …` | La ruta de la foto no existe: está mal escrita o la carpeta `datos_sinteticos` se ha borrado. | Usad `rutas_pru[0]`, `rutas_pru[1]`… en vez de escribir la ruta a mano. Si se ha borrado, volved a ejecutar la celda de la sección 1. |
-| `NameError: name 'cobertura_y_precision' is not defined` | La celda del ejercicio 5 todavía tiene los `...`. | Escribid la función y volved a pulsar ▶. |
-| `AssertionError: Con umbral 0.65 se aceptan 2 de 4 (filas 0 y 2) y ambas aciertan` | La cuenta o el orden están mal: se calculan los aciertos sobre todas las fotos y no solo sobre las aceptadas, o se devuelve primero la precisión y después la cobertura. | Revisad que `aciertos` usa `[aceptadas]` y que se devuelve `(cobertura, precisión)`, en ese orden. |
+| `NameError: name 'cobertura_y_exactitud' is not defined` | La celda del ejercicio 5 todavía tiene los `...`. | Escribid la función y volved a pulsar ▶. |
+| `AssertionError: Con umbral 0.65 se aceptan 2 de 4 (filas 0 y 2) y ambas aciertan` | La cuenta o el orden están mal: se calculan los aciertos sobre todas las fotos y no solo sobre las aceptadas, o se devuelve primero la exactitud y después la cobertura. | Revisad que `aciertos` usa `[aceptadas]` y que se devuelve `(cobertura, exactitud)`, en ese orden. |
 | `AssertionError: Si no se acepta ninguna: (0.0, 0.0)` | Falta el caso especial, o devuelve otra cosa. | Añadid el `if aceptadas.sum() == 0:` con `return 0.0, 0.0` dentro. |
 | `IndentationError: expected an indented block after 'if' statement on line …` | El `return` de dentro del `if` no tiene sangría. | Ponedle 8 espacios (4 del `def` y 4 más del `if`). |
 

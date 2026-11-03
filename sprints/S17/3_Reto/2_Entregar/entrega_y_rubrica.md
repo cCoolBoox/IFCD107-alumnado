@@ -37,7 +37,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 | **Presentación en PDF** | Como máximo **12 diapositivas**, exportadas a PDF y subidas antes de las 8:30 del 14/12 | 🟢 Mínimo | `presentacion_defensa.pdf` |
 | **Las cuatro cosas del cliente** | Se cuenta qué problema resolvéis, qué habéis encontrado, qué recomendáis y de qué no debe fiarse el cliente | 🟢 Mínimo | Defensa en directo |
 | **Mensaje único** | Una frase que el cliente pueda repetir mañana; aparece en la diapositiva 1 y en el cierre | 🟢 Mínimo | `plantilla_storytelling.md` (apartado 2) y `presentacion_defensa.pdf` |
-| **Relato preparado** | Audiencia, pirámide (conclusión → 3 argumentos → evidencias) y arco narrativo (los siete momentos) rellenados | 🟢 Mínimo | `plantilla_storytelling.md` (apartados 1, 3 y 4) |
+| **Relato preparado** | Audiencia, pirámide (conclusión → 3 argumentos → evidencias) y arco narrativo (situación, complicación, resolución, propuesta) rellenados | 🟢 Mínimo | `plantilla_storytelling.md` (apartados 1, 3 y 4) |
 | **Todas las personas hablan** | Cada integrante presenta una parte y el reparto de voces está escrito. Cada persona responde al menos **una pregunta individual** (hace falta para el «Apto») | 🟢 Mínimo | Defensa en directo y `plantilla_storytelling.md` (storyboard) |
 | **Demo y plan B** | La demo se prueba el 11/12 y hay un vídeo grabado, listo para abrir si falla | 🟢 Mínimo | Defensa en directo |
 | **Solo lo que está en la memoria** | Todas las cifras y figuras coinciden con la memoria congelada; no se presentan resultados nuevos | 🟢 Mínimo | `presentacion_defensa.pdf` frente a la memoria del Sprint 16 |
@@ -56,7 +56,7 @@ Todo lo que se sube va al repositorio privado del equipo (`ifcd107-equipo-…`),
 
 La usan **dos veces**: el equipo, para revisar su propio trabajo antes y después de defender (es lo que dice la *Definition of Done*), y el docente, para puntuar. Se mira **cada criterio por separado** y se pone el nivel de la columna cuyo texto **se cumple entero**: si lo de un nivel se cumple a medias, es el nivel de abajo. **0** significa que no se ha entregado nada de ese criterio.
 
-Orientación: lo que pide el nivel 🟢 mínimo sale en un **2**, el 🟡 estándar en un **3** y los 🔴 extras en un **4**. **En este sprint se usan dos rúbricas.** Esta, de cuatro criterios (0–4), sirve para la nota del sprint; la **rúbrica del proyecto de 100 puntos** ([`briefs_y_rubrica.md`](../../../../proyecto-final/briefs_y_rubrica.md)) puntúa la defensa con su **criterio I, «Defensa» (15 puntos)**: Insuficiente, Suficiente, Bueno o Excelente según haya relato, demo y respuestas. En la hoja de autoevaluación y coevaluación marcáis las dos.
+Orientación: lo que pide el nivel 🟢 mínimo sale en un **2**, el 🟡 estándar en un **3** y los 🔴 extras en un **4**. **En este sprint se usan dos rúbricas.** Esta, de cuatro criterios (niveles 1–4; 0 solo si no se entrega nada), sirve para la nota del sprint; la **rúbrica del proyecto de 100 puntos** ([`briefs_y_rubrica.md`](../../../../proyecto-final/briefs_y_rubrica.md)) puntúa la defensa con su **criterio I, «Defensa» (15 puntos)**: Insuficiente, Suficiente, Bueno o Excelente según haya relato, demo y respuestas. En la hoja de autoevaluación y coevaluación marcáis las dos.
 
 | Criterio | 1 · Empezado | 2 · Mínimo | 3 · Estándar | 4 · Extra |
 |---|---|---|---|---|

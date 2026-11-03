@@ -216,7 +216,7 @@ X, y = make_circles(n_samples=600, noise=0.10, factor=0.45, random_state=SEMILLA
 X_ent, X_val, y_ent, y_val = train_test_split(X, y, test_size=0.3, random_state=SEMILLA, stratify=y)
 
 lineal = LogisticRegression().fit(X_ent, y_ent)
-print("Precisión de un modelo lineal en validación:", round(lineal.score(X_val, y_val), 3))
+print("Exactitud de un modelo lineal en validación:", round(lineal.score(X_val, y_val), 3))
 
 plt.scatter(X[:, 0], X[:, 1], c=y, cmap="coolwarm", s=12)
 plt.title("Dos grupos que ninguna recta separa"); plt.xlabel("variable 1"); plt.ylabel("variable 2"); plt.show()
@@ -227,7 +227,7 @@ plt.title("Dos grupos que ninguna recta separa"); plt.xlabel("variable 1"); plt.
 - `X, y = make_circles(n_samples=600, noise=0.10, factor=0.45, random_state=SE…` → Guarda en `X, y` el resultado. `make_circles`: genera datos sintéticos en forma de dos círculos concéntricos.
 - `X_ent, X_val, y_ent, y_val = train_test_split(X, y, test_size=0.3, random_s…` → Guarda en `X_ent, X_val, y_ent, y_…` el resultado. `train_test_split`: reparte los datos en entrenamiento y prueba.
 - `lineal = LogisticRegression().fit(X_ent, y_ent)` → Guarda en `lineal` el resultado. `fit`: entrena el modelo con los datos (aquí es donde «aprende»); `LogisticRegression`: modelo de clasificación que da una probabilidad (aunque se llame «regresión»).
-- `print("Precisión de un modelo lineal en validación:", round(lineal.score(X_…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `score`: calcula la nota del modelo con la métrica por defecto.
+- `print("Exactitud de un modelo lineal en validación:", round(lineal.score(X_…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `score`: calcula la nota del modelo con la métrica por defecto.
 - `plt.scatter(X[:, 0], X[:, 1], c=y, cmap="coolwarm", s=12)` → `scatter`: dibuja un gráfico de puntos.
 - `plt.title("Dos grupos que ninguna recta separa"); plt.xlabel("variable 1");…` → `title`: pone el título del gráfico.
 - `plt.title("Dos grupos que ninguna recta separa"); plt.xlabel("variable 1");…` → `xlabel`: pone el nombre del eje horizontal.
@@ -359,7 +359,7 @@ resultados = {}
 for n_ocultas in (1, 2, 8):
     red = RedNeuronal(2, n_ocultas).entrenar(X_ent, y_ent, epocas=1500, tasa=0.3, X_val=X_val, y_val=y_val)
     resultados[n_ocultas] = red
-    print(f"{n_ocultas} neuronas ocultas → precisión validación: {(red.predecir(X_val) == y_val).mean():.3f}")
+    print(f"{n_ocultas} neuronas ocultas → exactitud validación: {(red.predecir(X_val) == y_val).mean():.3f}")
 ```
 
 **Qué hace cada línea:**

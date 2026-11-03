@@ -22,7 +22,7 @@
 | 🟡 **Estándar** | Título-conclusión y una idea por diapositiva · 4 términos técnicos traducidos · ensayo general dentro del turno · 3 acciones y límites con 3 riesgos y sus medidas · 10 preguntas con respuesta y quién responde · uso de IA declarado | 3 |
 | 🔴 **Extra** | Relato memorable (gancho, cifra grande, comparación con lo de hoy) · un fallo contado y lo aprendido · diapositivas de reserva en un PDF aparte · guion con las 10 respuestas subido | 4 |
 
-\*Orientativo; puntúa el docente con la rúbrica del curso (0–4 en cada criterio). El mínimo es una entrega válida y evaluable; la «Definition of Done» del README del sprint describe el nivel **estándar**.
+\*Orientativo; puntúa el docente con la rúbrica del curso (0–4 en cada criterio). El mínimo es una entrega válida y evaluable; la «Definition of Done» de la ficha completa describe el nivel **estándar**.
 
 ## Reparto sugerido del día 1: 250 minutos en clase + 15 de subida
 

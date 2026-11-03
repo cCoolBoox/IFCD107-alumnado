@@ -233,23 +233,23 @@ W.curvas = function(host, D){
       <p class="cap">Boosting entrenado en <b>${fmt(d.ref.t, 1)} s<\/b>. Un modelo que dijera siempre «no cancela» acertaría un <b>${fmt(100 * d.ref.siempre_no, 1)} %<\/b>.<\/p><\/div><div id="w10-evc"><\/div><\/div>
     <div class="ctl"><label>Umbral de decisión <input type="range" id="w10-um" min="0" max="${d.umbrales.length - 1}" step="1" value="9"><\/label><span class="read" id="w10-umr"><\/span><\/div>
     <div class="msg" id="w10-umm" aria-live="polite"><\/div>`;
-  const ce = chart({x: [0, 1], y: [0, 1], xt: [0, .25, .5, .75, 1], yt: [0, .25, .5, .75, 1], fx: v => fmt(v, 2), fy: v => fmt(v, 2), xl: 'Umbral', yl: 'Nota', label: 'F1 y precisión del boosting según el umbral', w: 420, h: 250});
+  const ce = chart({x: [0, 1], y: [0, 1], xt: [0, .25, .5, .75, 1], yt: [0, .25, .5, .75, 1], fx: v => fmt(v, 2), fy: v => fmt(v, 2), xl: 'Umbral', yl: 'Nota', label: 'F1 y exactitud del boosting según el umbral', w: 420, h: 250});
   const lnE = (arr, col) => S('path', {d: d.umbrales.map((u, k) => (k ? 'L' : 'M') + ce.X(u).toFixed(1) + ' ' + ce.Y(arr[k]).toFixed(1)).join(''), fill: 'none', stroke: col, 'stroke-width': 3, 'stroke-linejoin': 'round'}, ce.g);
   S('line', {x1: ce.X(0), x2: ce.X(1), y1: ce.Y(d.ref.siempre_no), y2: ce.Y(d.ref.siempre_no), stroke: 'var(--muted)', 'stroke-width': 1.5, 'stroke-dasharray': '5 4'}, ce.g);
   lnE(d.ref.f1, 'var(--teal)'); lnE(d.ref.acc, 'var(--accent)');
   const mkU = S('line', {x1: 0, x2: 0, y1: ce.m.t, y2: ce.H - ce.m.b, stroke: 'var(--ink)', 'stroke-width': 1.6, 'stroke-dasharray': '4 4'}, ce.g);
-  pRef.querySelector('#w10-evc').append(ce.svg, el('div', 'legend', '<span><i class="ln" style="background:var(--teal)"><\/i>F1<\/span><span><i class="ln" style="background:var(--accent)"><\/i>precisión<\/span><span>línea de puntos: siempre «no cancela»<\/span>'));
+  pRef.querySelector('#w10-evc').append(ce.svg, el('div', 'legend', '<span><i class="ln" style="background:var(--teal)"><\/i>F1<\/span><span><i class="ln" style="background:var(--accent)"><\/i>exactitud<\/span><span>línea de puntos: siempre «no cancela»<\/span>'));
   const um = pRef.querySelector('#w10-um');
   function referencia(){
     const k = +um.value, u = d.umbrales[k], f1 = d.ref.f1[k], ac = d.ref.acc[k];
     pRef.querySelector('#w10-ev').textContent = `evaluar(y_val, prob_boost_val, umbral=${u.toFixed(2)})`;
-    pRef.querySelector('#w10-evt').innerHTML = [['AUC', fmt(d.ref.auc_val, 3), 'no depende del umbral'], ['AP', fmt(d.ref.ap_val, 3), 'no depende del umbral'], ['F1', fmt(f1, 3), 'cambia con el umbral'], ['precisión', fmt(ac, 3), 'cambia con el umbral']]
+    pRef.querySelector('#w10-evt').innerHTML = [['AUC', fmt(d.ref.auc_val, 3), 'no depende del umbral'], ['AP', fmt(d.ref.ap_val, 3), 'no depende del umbral'], ['F1', fmt(f1, 3), 'cambia con el umbral'], ['exactitud', fmt(ac, 3), 'cambia con el umbral']]
       .map(r => `<tr><td><b>${r[0]}<\/b><\/td><td class="num">${r[1]}<\/td><td class="w10-sm">${r[2]}<\/td><\/tr>`).join('');
     mkU.setAttribute('x1', ce.X(u)); mkU.setAttribute('x2', ce.X(u));
-    pRef.querySelector('#w10-umr').textContent = `umbral ${fmt(u, 2)} · F1 ${fmt(f1, 3)} · precisión ${fmt(ac, 3)}`;
+    pRef.querySelector('#w10-umr').textContent = `umbral ${fmt(u, 2)} · F1 ${fmt(f1, 3)} · exactitud ${fmt(ac, 3)}`;
     const mj = d.ref.f1.indexOf(Math.max(...d.ref.f1)), m = pRef.querySelector('#w10-umm');
     if (ac < d.ref.siempre_no) { m.className = 'msg bad'; m.innerHTML = `Con este umbral acierta <b>menos<\/b> (${fmt(ac, 3)}) que un modelo que dijera siempre «no cancela» (${fmt(d.ref.siempre_no, 3)}): el corte importa. <b>El AUC sigue igual<\/b> (${fmt(d.ref.auc_val, 3)}): mide cómo ordena las reservas, no dónde se corta.`; }
-    else { m.className = 'msg'; m.innerHTML = `Subid y bajad el umbral: <b>F1 y precisión cambian<\/b>, pero el <b>AUC no<\/b> (${fmt(d.ref.auc_val, 3)}). Por eso las variantes y la comparación se hacen con el AUC. El mejor F1 sale con umbral ${fmt(d.umbrales[mj], 2)} (${fmt(d.ref.f1[mj], 3)}).`; }
+    else { m.className = 'msg'; m.innerHTML = `Subid y bajad el umbral: <b>F1 y exactitud cambian<\/b>, pero el <b>AUC no<\/b> (${fmt(d.ref.auc_val, 3)}). Por eso las variantes y la comparación se hacen con el AUC. El mejor F1 sale con umbral ${fmt(d.umbrales[mj], 2)} (${fmt(d.ref.f1[mj], 3)}).`; }
   }
   um.addEventListener('input', referencia); referencia();
 
@@ -408,7 +408,7 @@ W.curvas = function(host, D){
     const hay = inf > 0 || sup < 0, ganador = !hay ? 'Empate' : (mu > 0 ? 'MLP' : 'Boosting'), pw = d.pesos[+c.k[0]];
     const mt = mean(c.te), st_ = sd(c.te), distintas = ST.vistas.length;
     box.innerHTML = `${distintas > 1 ? `<div class="msg bad" style="margin-top:12px"><b>Ya habéis mirado la prueba con ${distintas} recetas distintas.<\/b> Si la usáis para ver cuál sale mejor, deja de ser un examen: la elección se hace con la validación. Pulsad «Guardar la prueba otra vez en el cajón» para empezar de nuevo.<\/div>` : ''}
-      <div class="scroll" style="margin-top:12px"><table><thead><tr><th>Prueba (${miles(d.n[2])} reservas)<\/th><th class="num">AUC<\/th><th class="num">AP<\/th><th class="num">F1<\/th><th class="num">Precisión<\/th><th class="num">Entrenar (s)<\/th><th>Complejidad<\/th><\/tr><\/thead><tbody>
+      <div class="scroll" style="margin-top:12px"><table><thead><tr><th>Prueba (${miles(d.n[2])} reservas)<\/th><th class="num">AUC<\/th><th class="num">AP<\/th><th class="num">F1<\/th><th class="num">Exactitud<\/th><th class="num">Entrenar (s)<\/th><th>Complejidad<\/th><\/tr><\/thead><tbody>
         <tr><td><b>Boosting de árboles<\/b><\/td><td class="num">${fmt(pb.auc, 3)}<\/td><td class="num">${fmt(pb.ap, 3)}<\/td><td class="num">${fmt(pb.f1, 3)}<\/td><td class="num">${fmt(pb.acc, 3)}<\/td><td class="num">${fmt(d.ref.t, 1)}<\/td><td>200 iteraciones de árboles (profundidad ≤ 4)<\/td><\/tr>
         <tr><td><b>MLP (media de 3 semillas)<\/b><\/td><td class="num">${fmt(auc, 3)}<\/td><td class="num">${fmt(ap, 3)}<\/td><td class="num">${fmt(f1, 3)}<\/td><td class="num">${fmt(ac, 3)}<\/td><td class="num">${fmt(c.t, 1)}<\/td><td>${miles(pw)} pesos<\/td><\/tr><\/tbody><\/table><\/div>
       <p class="cap">AUC del MLP por semilla: <b>${c.te.map(x => fmt(x, 3)).join(' · ')}<\/b> → media ± desviación <b>${fmt(mt, 3)} ± ${fmt(st_, 3)}<\/b>. El ruido entre semillas es pequeño al lado del que trae el examen: <b>solo ${miles(d.n[2])} reservas<\/b> (el AUC del boosting baila ±${fmt(d.boot_ab[1], 3)} al remuestrear la prueba). Los segundos son los de este cálculo (NumPy, una hebra): en vuestro cuaderno con Keras saldrán otros.<\/p>

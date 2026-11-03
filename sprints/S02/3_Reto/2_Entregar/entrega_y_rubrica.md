@@ -65,7 +65,7 @@ Orientación: lo que pide el nivel 🟢 mínimo sale en un **2**, el 🟡 están
 | **Análisis y comunicación al cliente** (¿lo entiende quien no programa?) | Solo dice «está mal» | Explica el error con la frase de la carta | Explica con lenguaje claro y propone una frase corregida en cada afirmación | Además la recomendación sobre el canal tiene cautelas y datos a pedir |
 | **IA responsable** (¿se sabe qué hizo la IA y qué riesgos hay?) | No dice si se ha usado IA ni se considera el sesgo | Dice si se ha usado IA y menciona «cuidado con los sesgos» | Dice **para qué** se usó la IA y **qué se comprobó a mano**, y una frase explica qué aprendería un modelo entrenado con datos así | Además propone una comprobación concreta antes de usar esos datos |
 
-**Cómo se revisa** (unos 15 minutos, en la revisión cruzada del paso 5; lo hace **una persona que no escribió ese dictamen**):
+**Cómo se revisa** (unos 15 minutos, en la revisión cruzada del paso 5; lo hace **una persona que no escribió ese dictamen**: cada equipo revisa el del equipo siguiente en la lista, y el último, el del primero):
 
 1. **Leer cada bloque** y marcar ✔, ✘ o — en la parte 2 de la hoja: ¿tiene carta, veredicto, frase corregida y cuenta (si la hay)?
 2. **Rehacer una cuenta** con los datos (por ejemplo, la tasa del canal directo) y comprobar que la tabla de la afirmación 2 sale igual.

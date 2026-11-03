@@ -16,7 +16,7 @@
 | Palabra | Qué significa, en sencillo |
 |---|---|
 | **Prueba** (*test*) | Las 60 fotos reservadas desde el paso 1. Se usan **una sola vez**, para esta nota final; después no se decide nada con ellas. |
-| **Precisión global** (*accuracy*) | De todas las fotos de la prueba, qué fracción acierta el modelo. El cuaderno la llama «Precisión en prueba». |
+| **Exactitud global** (*accuracy*) | De todas las fotos de la prueba, qué fracción acierta el modelo. El cuaderno la llama «Exactitud en prueba». |
 | **Precisión de una clase** | De las fotos que el modelo dijo «hotel», cuántas eran de verdad hotel. Baja si el modelo llama «hotel» a cosas que no lo son. |
 | ***Recall*** (o exhaustividad) | De las fotos que de verdad eran hotel, cuántas encontró el modelo. Baja si deja hoteles sin reconocer. |
 | **F1 macro** | Una nota que mezcla precisión y *recall* de cada clase y hace la media de las clases, de modo que todas pesan igual. |
@@ -33,7 +33,7 @@
     prob_pru = modelo.predict(X_pru, verbose=0)
     pred_pru = prob_pru.argmax(axis=1)
     pred_cero = desde_cero.predict(X_pru, verbose=0).argmax(axis=1)
-    print(f"Precisión en prueba → transfer + fine-tuning: {accuracy_score(y_pru, pred_pru):.3f} · desde cero: {accuracy_score(y_pru, pred_cero):.3f}")
+    print(f"Exactitud en prueba → transfer + fine-tuning: {accuracy_score(y_pru, pred_pru):.3f} · desde cero: {accuracy_score(y_pru, pred_cero):.3f}")
     print(f"F1 macro → transfer: {f1_score(y_pru, pred_pru, average='macro'):.3f} · desde cero: {f1_score(y_pru, pred_cero, average='macro'):.3f}")
     print(classification_report(y_pru, pred_pru, target_names=NOMBRES, zero_division=0))
 
@@ -45,7 +45,7 @@
     - `prob_pru = modelo.predict(X_pru, verbose=0)`: el modelo mira cada foto de la prueba y devuelve 5 probabilidades por foto, una por clase. Es una tabla de 60 filas y 5 columnas.
     - `pred_pru = prob_pru.argmax(axis=1)`: de cada fila, la **posición** de la probabilidad más alta. Es la clase que el modelo elige (un número del 0 al 4).
     - `pred_cero = desde_cero.predict(…).argmax(axis=1)`: lo mismo con el modelo de referencia, para compararlos.
-    - Los dos `print(f"…")`: escriben la precisión global y el F1 macro de los dos modelos, con tres decimales. `y_pru` son las clases reales; `pred_pru`, las predichas.
+    - Los dos `print(f"…")`: escriben la exactitud global y el F1 macro de los dos modelos, con tres decimales. `y_pru` son las clases reales; `pred_pru`, las predichas.
     - `print(classification_report(…))`: una tabla con una fila por clase y las columnas `precision`, `recall`, `f1-score` y `support` (cuántas fotos de prueba hay de esa clase). Debajo, las filas `accuracy`, `macro avg` y `weighted avg`.
     - `cm = confusion_matrix(…)`: la matriz de confusión, de 5 × 5. Cada fila es una clase real; cada columna, una predicha.
 

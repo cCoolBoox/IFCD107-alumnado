@@ -48,7 +48,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `pares` | `pd.Series([f"{NOMBRES[y_pru[i]]} → {NOMBRES[pred_pru[i]]}…` | 13 |
 | `prob_val` | `modelo.predict(X_val, verbose=0)` | 16 |
 | `umbrales` | `[0.0, 0.5, 0.7, 0.9, 0.95]` | 16 |
-| `tabla` | `pd.DataFrame([cobertura_y_precision(prob_val, y_val, u) f…` | 16 |
+| `tabla` | `pd.DataFrame([cobertura_y_exactitud(prob_val, y_val, u) f…` | 16 |
 | `umbral_elegido` | `0.7` | 17 |
 | `demo_ruta` | `rutas_pru[0]` | 18 |
 | … | otras 3 variables | |
@@ -72,7 +72,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `con_cabeza` | Función definida en el cuaderno. |
 | `modelo_transfer` | Función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)* |
 | `indices_errores` | Función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)* |
-| `cobertura_y_precision` | Función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)* |
+| `cobertura_y_exactitud` | Función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)* |
 | `clasificar_foto` | Devuelve (clase, confianza, probabilidades por clase) o 'revisar a mano' si la confianza es baja. |
 | `construir_mobilenet` | MobileNetV2 (alpha 0.35) congelada + cabeza nueva. pesos='imagenet' descarga los pesos (requiere internet). |
 
@@ -514,7 +514,7 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 keras.utils.set_random_seed(SEMILLA)
 modelo, base_congelada = modelo_transfer(base_pre, N_CLASES)
 modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=30, batch_size=16, verbose=0)
-print("Precisión de validación con base congelada:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
+print("Exactitud de validación con base congelada:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
 
 # Fine-tuning del último bloque con tasa pequeña (y recompilando)
 base_congelada.trainable = True      # primero se descongela la base entera (así se puede decidir capa a capa)...
@@ -522,13 +522,13 @@ for capa in base_congelada.layers:
     capa.trainable = capa.name.startswith("bloque3")   # ...y solo el último bloque queda entrenable
 modelo.compile(keras.optimizers.Adam(1e-4), "sparse_categorical_crossentropy", metrics=["accuracy"])
 h = modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=25, batch_size=16, verbose=0)
-print("Precisión de validación tras fine-tuning:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
+print("Exactitud de validación tras fine-tuning:", round(modelo.evaluate(X_val, y_val, verbose=0)[1], 3))
 
 # Referencia: la misma arquitectura entrenada desde cero
 keras.utils.set_random_seed(SEMILLA)
 desde_cero = con_cabeza(construir_base("desde_cero"), N_CLASES)
 desde_cero.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=40, batch_size=16, verbose=0)
-print("Precisión de validación desde cero:", round(desde_cero.evaluate(X_val, y_val, verbose=0)[1], 3))
+print("Exactitud de validación desde cero:", round(desde_cero.evaluate(X_val, y_val, verbose=0)[1], 3))
 ```
 
 **Qué hace cada línea:**
@@ -536,12 +536,12 @@ print("Precisión de validación desde cero:", round(desde_cero.evaluate(X_val, 
 - `keras.utils.set_random_seed(SEMILLA)` → `set_random_seed`: fija la semilla del azar de TensorFlow/Keras para repetir resultados.
 - `modelo, base_congelada = modelo_transfer(base_pre, N_CLASES)` → Guarda en `modelo, base_congelada` el resultado. `modelo_transfer`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
 - `modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=30, batch_s…` → `fit`: entrena el modelo con los datos (aquí es donde «aprende»).
-- `print("Precisión de validación con base congelada:", round(modelo.evaluate(…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
+- `print("Exactitud de validación con base congelada:", round(modelo.evaluate(…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
 - `base_congelada.trainable = True # primero se descongela la base entera (así…` → Guarda el valor en `base_congelada.trainable`.
 - `for capa in base_congelada.layers:` → Repite el bloque de debajo para cada valor de `capa` en `base_congelada.layers`. Dentro del bloque: `startswith`: comprueba si un texto empieza por algo.
 - `modelo.compile(keras.optimizers.Adam(1e-4), "sparse_categorical_crossentrop…` → `compile`: prepara el modelo para entrenar (en Keras: elige optimizador, pérdida y métricas); `Adam`: optimizador Adam: decide cómo ajustar los pesos en cada paso.
 - `h = modelo.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=25, bat…` → Guarda en `h` el resultado. `fit`: entrena el modelo con los datos (aquí es donde «aprende»).
-- `print("Precisión de validación tras fine-tuning:", round(modelo.evaluate(X_…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
+- `print("Exactitud de validación tras fine-tuning:", round(modelo.evaluate(X_…` → `print`: muestra un valor por pantalla; `round`: redondea un número a los decimales indicados; `evaluate`: calcula la pérdida y las métricas del modelo con unos datos.
 - … y 4 más con las mismas ideas.
 
 ### Celda 9 · 3. Rendimiento en el conjunto de prueba · 🏫
@@ -552,7 +552,7 @@ print("Precisión de validación desde cero:", round(desde_cero.evaluate(X_val, 
 prob_pru = modelo.predict(X_pru, verbose=0)
 pred_pru = prob_pru.argmax(axis=1)
 pred_cero = desde_cero.predict(X_pru, verbose=0).argmax(axis=1)
-print(f"Precisión en prueba → transfer + fine-tuning: {accuracy_score(y_pru, pred_pru):.3f} · desde cero: {accuracy_score(y_pru, pred_cero):.3f}")
+print(f"Exactitud en prueba → transfer + fine-tuning: {accuracy_score(y_pru, pred_pru):.3f} · desde cero: {accuracy_score(y_pru, pred_cero):.3f}")
 print(f"F1 macro → transfer: {f1_score(y_pru, pred_pru, average='macro'):.3f} · desde cero: {f1_score(y_pru, pred_cero, average='macro'):.3f}")
 print(classification_report(y_pru, pred_pru, target_names=NOMBRES, zero_division=0))
 
@@ -570,7 +570,7 @@ plt.xlabel("predicho"); plt.ylabel("real"); plt.title("Matriz de confusión (pru
 - `prob_pru = modelo.predict(X_pru, verbose=0)` → Guarda en `prob_pru` el resultado. `predict`: pide al modelo ya entrenado que haga predicciones.
 - `pred_pru = prob_pru.argmax(axis=1)` → Guarda en `pred_pru` el resultado. `argmax`: devuelve la posición del valor más grande.
 - `pred_cero = desde_cero.predict(X_pru, verbose=0).argmax(axis=1)` → Guarda en `pred_cero` el resultado. `argmax`: devuelve la posición del valor más grande; `predict`: pide al modelo ya entrenado que haga predicciones.
-- `print(f"Precisión en prueba → transfer + fine-tuning: {accuracy_score(y_pru…` → `print`: muestra un valor por pantalla; `accuracy_score`: calcula el porcentaje de aciertos.
+- `print(f"Exactitud en prueba → transfer + fine-tuning: {accuracy_score(y_pru…` → `print`: muestra un valor por pantalla; `accuracy_score`: calcula el porcentaje de aciertos.
 - `print(f"F1 macro → transfer: {f1_score(y_pru, pred_pru, average='macro'):.3…` → `print`: muestra un valor por pantalla; `f1_score`: calcula el F1: equilibrio entre precisión y sensibilidad.
 - `print(classification_report(y_pru, pred_pru, target_names=NOMBRES, zero_div…` → `print`: muestra un valor por pantalla; `classification_report`: resumen de precisión, sensibilidad y F1 por clase.
 - `cm = confusion_matrix(y_pru, pred_pru, labels=range(N_CLASES))` → Guarda en `cm` el resultado. `confusion_matrix`: cuenta aciertos y fallos de cada tipo (matriz de confusión); `range`: genera la secuencia 0, 1, 2… (hasta uno antes del final); se usa en bucles `for`.
@@ -656,8 +656,8 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 # El umbral se ELIGE con la validación; la prueba no se toca para decidir nada
 prob_val = modelo.predict(X_val, verbose=0)
 umbrales = [0.0, 0.5, 0.7, 0.9, 0.95]
-tabla = pd.DataFrame([cobertura_y_precision(prob_val, y_val, u) for u in umbrales], index=umbrales,
-                     columns=["cobertura", "precisión en las aceptadas"]).round(3)
+tabla = pd.DataFrame([cobertura_y_exactitud(prob_val, y_val, u) for u in umbrales], index=umbrales,
+                     columns=["cobertura", "exactitud en las aceptadas"]).round(3)
 tabla.index.name = "umbral de confianza (validación)"
 tabla
 ```
@@ -666,7 +666,7 @@ tabla
 
 - `prob_val = modelo.predict(X_val, verbose=0)` → Guarda en `prob_val` el resultado. `predict`: pide al modelo ya entrenado que haga predicciones.
 - `umbrales = [0.0, 0.5, 0.7, 0.9, 0.95]` → Guarda el valor en `umbrales`.
-- `tabla = pd.DataFrame([cobertura_y_precision(prob_val, y_val, u) for u in um…` → Guarda en `tabla` el resultado. `round`: redondea un número a los decimales indicados; `DataFrame`: crea una tabla de pandas (filas y columnas); `cobertura_y_precision`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
+- `tabla = pd.DataFrame([cobertura_y_exactitud(prob_val, y_val, u) for u in um…` → Guarda en `tabla` el resultado. `round`: redondea un número a los decimales indicados; `DataFrame`: crea una tabla de pandas (filas y columnas); `cobertura_y_exactitud`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
 - `tabla.index.name = "umbral de confianza (validación)"` → Guarda el valor en `tabla.index.name`.
 
 ### Celda 17 · 5. IA responsable: cuándo el modelo debe pedir… · 🏫
@@ -676,14 +676,14 @@ tabla
 ```python
 # Con el umbral ya elegido (aquí 0.7), la prueba solo mide el resultado final
 umbral_elegido = 0.7
-cob, prec = cobertura_y_precision(prob_pru, y_pru, umbral_elegido)
-print(f"Prueba con umbral {umbral_elegido}: el modelo decide solo el {cob:.0%} de las fotos y acierta el {prec:.0%} de esas")
+cob, exa = cobertura_y_exactitud(prob_pru, y_pru, umbral_elegido)
+print(f"Prueba con umbral {umbral_elegido}: el modelo decide solo el {cob:.0%} de las fotos y acierta el {exa:.0%} de esas")
 ```
 
 **Qué hace cada línea:**
 
 - `umbral_elegido = 0.7` → Guarda el valor en `umbral_elegido`.
-- `cob, prec = cobertura_y_precision(prob_pru, y_pru, umbral_elegido)` → Guarda en `cob, prec` el resultado. `cobertura_y_precision`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
+- `cob, exa = cobertura_y_exactitud(prob_pru, y_pru, umbral_elegido)` → Guarda en `cob, exa` el resultado. `cobertura_y_exactitud`: función definida en el cuaderno. *(La escribís vosotros en un ejercicio.)*.
 - `print(f"Prueba con umbral {umbral_elegido}: el modelo decide solo el {cob:.…` → `print`: muestra un valor por pantalla.
 
 ### Celda 18 · 6. Demostrador · 🏫
@@ -745,7 +745,7 @@ mn = construir_mobilenet(N_CLASES, pesos="imagenet" if USAR_INTERNET else None) 
 print("MobileNetV2 construida:", mn.count_params(), "parámetros ·", "pesos de ImageNet" if USAR_INTERNET else "pesos aleatorios (sin entrenar)")
 if USAR_INTERNET:
     mn.fit(X_ent, y_ent, validation_data=(X_val, y_val), epochs=15, batch_size=16, verbose=0)
-    print("MobileNetV2 + ImageNet, precisión en prueba:", round(mn.evaluate(X_pru, y_pru, verbose=0)[1], 3))
+    print("MobileNetV2 + ImageNet, exactitud en prueba:", round(mn.evaluate(X_pru, y_pru, verbose=0)[1], 3))
 ```
 
 **Qué hace cada línea:**

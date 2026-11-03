@@ -241,7 +241,7 @@ prob_log = logistica.predict_proba(Xc_pru)[:, 1]
 tabla = pd.DataFrame({
     "modelo": ["Siempre 'no cancela'", "Regresión logística", "MLP (32-16)"],
     "AUC": [0.5, roc_auc_score(yc_pru, prob_log), roc_auc_score(yc_pru, prob_mlp)],
-    "precisión": [1 - yc_pru.mean(), accuracy_score(yc_pru, prob_log > 0.5), accuracy_score(yc_pru, prob_mlp > 0.5)],
+    "exactitud": [1 - yc_pru.mean(), accuracy_score(yc_pru, prob_log > 0.5), accuracy_score(yc_pru, prob_mlp > 0.5)],
 }).round(3)
 tabla
 ```

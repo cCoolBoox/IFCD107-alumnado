@@ -202,7 +202,7 @@ for n in [3, 6, 12, 24]:                                  # imágenes por clase
     entrenar(transfer_congelado, epocas, semilla, X, y)   # base preentrenada congelada
 ```
 
-Gráfica de **precisión en prueba frente a nº de imágenes** para los dos modelos. Lo normal: **con muy pocas imágenes, el transfer learning gana por mucho; con muchas, la diferencia se reduce**. Tu respuesta debe decir **dónde deja de compensar etiquetar más** (por ejemplo, *«a partir de 12 por clase la mejora es solo de 1 punto»*).
+Gráfica de **exactitud en prueba frente a nº de imágenes** para los dos modelos. Lo normal: **con muy pocas imágenes, el transfer learning gana por mucho; con muchas, la diferencia se reduce**. Tu respuesta debe decir **dónde deja de compensar etiquetar más** (por ejemplo, *«a partir de 12 por clase la mejora es solo de 1 punto»*).
 
 ---
 
@@ -302,7 +302,7 @@ El **Dice siempre sale algo mayor** que la IoU para el mismo caso: no los compar
 | Transfer learning | `modelo_transfer(base, n_clases)` | El modelo |
 | Matriz de confusión | `recall_clase`, `precision_clase` | Métricas **por clase** |
 | Análisis de errores | `indices_errores(y_real, prob)` | Ver **las fotos fallidas**, de mayor a menor confianza |
-| **El modelo pide ayuda** | **umbral de confianza** | Cobertura y precisión sobre lo aceptado |
+| **El modelo pide ayuda** | **umbral de confianza** | Cobertura y exactitud sobre lo aceptado |
 
 ### Análisis de errores: la parte más valiosa
 
@@ -316,10 +316,10 @@ El demostrador acepta la predicción **solo si la confianza supera un umbral**; 
 
 ```
 Cobertura  = 70 / 100 = 70 %    (lo que resuelve solo)
-Precisión sobre lo aceptado = 66 / 70 = 94,3 %
+Exactitud sobre lo aceptado = 66 / 70 = 94,3 %
 ```
 
-**Subir el umbral** → menos cobertura (más trabajo humano) pero **más precisión**. **Bajarlo** → más automático, **más errores**. Es un **equilibrio de negocio** (como el umbral del Sprint 7), y se elige según el coste de un error.
+**Subir el umbral** → menos cobertura (más trabajo humano) pero **más exactitud**. **Bajarlo** → más automático, **más errores**. Es un **equilibrio de negocio** (como el umbral del Sprint 7), y se elige según el coste de un error.
 
 ## 16. El demostrador del reto
 

@@ -227,7 +227,7 @@ W.vision = function(host, D){
     const f1 = rec.map((r, i) => r + pre[i] ? 2 * r * pre[i] / (r + pre[i]) : 0);
     return {rec, pre, f1, sop, f1m: mean(f1), acc: sum(c.map((r, i) => r[i])) / sum(sop)};
   };
-  const cobPre = (m, s, u) => {                                           // ejercicio 5: cobertura_y_precision
+  const cobPre = (m, s, u) => {                                           // ejercicio 5: cobertura_y_exactitud
     const a = AN[m][s], y = Y[s]; let ac = 0, ok = 0;
     a.conf.forEach((c, i) => { if (c >= u - 1e-9) { ac++; if (a.pred[i] === y[i]) ok++; } });
     return {ac, ok, n: y.length, cob: ac / y.length, pre: ac ? ok / ac : 0};
@@ -432,8 +432,8 @@ W.vision = function(host, D){
     $x('#w11-xm').value = m;
     const c0 = metricas(matriz('cero'));
     $x('#w11-xr').innerHTML = m === 'cero'
-      ? `Precisión en prueba → desde cero: <b>${fmt(mt.acc, 3)}<\/b> · F1 macro: <b>${fmt(mt.f1m, 3)}<\/b>`
-      : `Precisión en prueba → ${ETC[m]}: <b>${fmt(mt.acc, 3)}<\/b> · desde cero: <b>${fmt(c0.acc, 3)}<\/b><br>F1 macro → ${ETC[m]}: <b>${fmt(mt.f1m, 3)}<\/b> · desde cero: <b>${fmt(c0.f1m, 3)}<\/b>`;
+      ? `Exactitud en prueba → desde cero: <b>${fmt(mt.acc, 3)}<\/b> · F1 macro: <b>${fmt(mt.f1m, 3)}<\/b>`
+      : `Exactitud en prueba → ${ETC[m]}: <b>${fmt(mt.acc, 3)}<\/b> · desde cero: <b>${fmt(c0.acc, 3)}<\/b><br>F1 macro → ${ETC[m]}: <b>${fmt(mt.f1m, 3)}<\/b> · desde cero: <b>${fmt(c0.f1m, 3)}<\/b>`;
     const v = $x('#w11-xv');
     if (ST.vistos.size > 1) {
       v.className = 'msg bad';
@@ -503,8 +503,8 @@ W.vision = function(host, D){
     <div class="ctl"><label>Umbral de confianza <input type="range" id="w11-u" min="0" max="99" step="1" value="${ST.u}"><\/label><span class="read" id="w11-ur"><\/span>
       <label>Medir en <select id="w11-us"><option value="v">validación (para decidir)<\/option><option value="p">prueba (para confirmar)<\/option><\/select><\/label>
       <button type="button" class="btn small" id="w11-fij">Fijar este umbral<\/button><\/div>
-    <div class="duo" style="margin-top:10px"><div id="w11-uc"><\/div><div><div class="scroll"><table class="w11-tab"><thead><tr><th class="num">Umbral<\/th><th class="num">Cobertura<\/th><th class="num">Precisión aceptadas<\/th><\/tr><\/thead><tbody id="w11-ut"><\/tbody><\/table><\/div><\/div><\/div>
-    <div class="legend"><span><i class="ln" style="background:var(--teal)"><\/i>cobertura: fotos que decide el modelo solo<\/span><span><i class="ln" style="background:var(--accent)"><\/i>precisión de esas fotos<\/span><\/div>
+    <div class="duo" style="margin-top:10px"><div id="w11-uc"><\/div><div><div class="scroll"><table class="w11-tab"><thead><tr><th class="num">Umbral<\/th><th class="num">Cobertura<\/th><th class="num">Exactitud aceptadas<\/th><\/tr><\/thead><tbody id="w11-ut"><\/tbody><\/table><\/div><\/div><\/div>
+    <div class="legend"><span><i class="ln" style="background:var(--teal)"><\/i>cobertura: fotos que decide el modelo solo<\/span><span><i class="ln" style="background:var(--accent)"><\/i>exactitud de esas fotos<\/span><\/div>
     <div class="msg" id="w11-um" aria-live="polite"><\/div>
     <div id="w11-uf"><\/div>`;
   const $u = Q(pUmb);
@@ -523,8 +523,8 @@ W.vision = function(host, D){
   function umbral(){
     const m = ST.m, s = ST.ds, u = UM(), r = cobPre(m, s, u), a = AN[m][s], y = Y[s];
     $u('#w11-us').value = s; $u('#w11-u').value = ST.u;
-    $u('#w11-ur').textContent = `umbral ${fmt(u, 2)} · cobertura ${pc(r.cob)} · precisión ${r.ac ? pc(r.pre) : '—'}`;
-    const c = chart({x: [0, 1], y: [0, 1], xt: [0, .25, .5, .75, 1], yt: [0, .25, .5, .75, 1], fx: v => fmt(v, 2), fy: v => fmt(v, 2), xl: 'Umbral de confianza', yl: 'Fracción', label: `Cobertura y precisión según el umbral, medidas en la ${SET[s]}`, w: 430, h: 270});
+    $u('#w11-ur').textContent = `umbral ${fmt(u, 2)} · cobertura ${pc(r.cob)} · exactitud ${r.ac ? pc(r.pre) : '—'}`;
+    const c = chart({x: [0, 1], y: [0, 1], xt: [0, .25, .5, .75, 1], yt: [0, .25, .5, .75, 1], fx: v => fmt(v, 2), fy: v => fmt(v, 2), xl: 'Umbral de confianza', yl: 'Fracción', label: `Cobertura y exactitud según el umbral, medidas en la ${SET[s]}`, w: 430, h: 270});
     const ks = Array.from({length: 100}, (_, k) => k), rs = ks.map(k => cobPre(m, s, k / 100));
     S('path', {d: ks.map(k => (k ? 'L' : 'M') + c.X(k / 100).toFixed(1) + ' ' + c.Y(rs[k].cob).toFixed(1)).join(''), fill: 'none', stroke: 'var(--teal)', 'stroke-width': 3, 'stroke-linejoin': 'round'}, c.g);
     let tr = '', cortar = true; ks.forEach(k => { if (!rs[k].ac) { cortar = true; return; } tr += (cortar ? 'M' : 'L') + c.X(k / 100).toFixed(1) + ' ' + c.Y(rs[k].pre).toFixed(1); cortar = false; });
@@ -577,7 +577,7 @@ W.vision = function(host, D){
     const peor = er.length ? er[0] : null, par = (() => { let p = null; c.forEach((fl, i) => fl.forEach((n, j) => { if (i !== j && (!p || n > p[2])) p = [i, j, n]; })); return p; })();
     const dif = mt.rec.indexOf(Math.min(...mt.rec)), nd = er.filter(dud).length;
     const lineas = [
-      `<b>2 · Resultados.<\/b> «Precisión en prueba (${ETC[m]}): ${fmt(mt.acc, 3)}; F1 macro: ${fmt(mt.f1m, 3)}. La clase más difícil es <i>${NOM[dif]}<\/i>, con <i>recall<\/i> ${fmt(mt.rec[dif], 2)}.»`,
+      `<b>2 · Resultados.<\/b> «Exactitud en prueba (${ETC[m]}): ${fmt(mt.acc, 3)}; F1 macro: ${fmt(mt.f1m, 3)}. La clase más difícil es <i>${NOM[dif]}<\/i>, con <i>recall<\/i> ${fmt(mt.rec[dif], 2)}.»`,
       `<b>3 · Matriz.<\/b> «${par && par[2] ? `Se confunden sobre todo ${NOM[par[0]]} y ${NOM[par[1]]}: ${par[2]} foto${par[2] === 1 ? '' : 's'} de ${NOM[par[0]]} se leen como ${NOM[par[1]]}.` : 'No se confunde ninguna clase.'}»`,
       `<b>4 · Errores.<\/b> «Hay ${er.length} errores en ${NF} fotos${peor !== null ? `; el más seguro de sí mismo es una foto de ${NOM[Ypru[peor]]} leída como ${NOM[a.pred[peor]]} con ${pc(a.conf[peor])} de confianza` : ''}.${ST.sawAmb ? ` ${nd} de ellos ${nd === 1 ? 'es una foto' : 'son fotos'} con la etiqueta dudosa: ahí el fallo es de la etiqueta.` : ' Falta mirar si alguno es un fallo de la etiqueta y no del modelo.'}»`,
       `<b>5 · Recomendación.<\/b> «Con un umbral de ${fmt(u, 2)}${f ? '' : ' (todavía provisional)'}, el modelo decide solo el ${pc(r.cob)} de las fotos y acierta el ${r.ac ? pc(r.pre) : '—'} de ellas; el resto (${r.n - r.ac} de ${r.n}) lo revisa una persona.»`,

@@ -40,7 +40,7 @@
     - **IA responsable.** Completad: «*Si entrenáramos un modelo con ……, aprendería ……, porque …….*». Partid de una de las afirmaciones que habéis visto. Ejemplo inventado, que no es ninguna de las vuestras: «Si entrenáramos un modelo con las reseñas de quien se anima a escribir, aprendería solo la opinión de los extremos, porque las personas medianamente satisfechas casi no escriben».
     - **Uso de IA.** «¿Hemos usado IA? Sí / No. Si sí: para qué y qué hemos comprobado a mano». Si la IA os ayudó con una cuenta, rehacedla vosotros (afirmaciones 2 y 6). Ejemplo inventado: «Sí: para reescribir con palabras más sencillas la frase corregida de la 4; comprobamos a mano que las cifras seguían siendo las del informe».
 
-3. **Revisión cruzada = coevaluación (15 minutos).** Intercambiad el dictamen con una persona que **no lo escribió** (el docente dice con quién; si no, con el equipo de al lado). Quien revisa:
+3. **Revisión cruzada = coevaluación (15 minutos).** Cada equipo revisa el dictamen del **equipo siguiente en la lista** (el último revisa el del primero), así nadie revisa el suyo; el docente puede cambiar el orden, y si solo hay un equipo, lo revisa una persona que **no lo escribió**. Todas las personas del equipo que revisa hacen lo mismo, cada una en su propio archivo. Quien revisa:
 
     - Lee cada bloque y comprueba que tiene **carta, veredicto, frase corregida y cuenta** (si hay) y que la frase corregida se entiende sin jerga.
     - Rehace una cuenta con los datos (por ejemplo, la tasa del canal directo) para ver si sale lo mismo.
