@@ -10,7 +10,7 @@
 - [Misión 2 · Decidir y repetir](#misión-2--decidir-y-repetir): los cuatro bucles, la salida y los fallos más comunes
 - [Misión 3 · Funciones que calculan](#misión-3--funciones-que-calculan): los mismos pasos que la tarjeta, con el código en trozos y cada línea explicada
 - [Misión 4 · Leer el CSV](#misión-4--leer-el-csv): los mismos pasos que la tarjeta (4.1 a 5.12), con el código explicado línea a línea
-- [Misión 5 · Guardar y entregar](#misión-5--guardar-y-entregar): una comprobación cruzada de cifras y fallos reconocibles
+- [Misión 5 · Guardar y entregar](#misión-5--guardar-y-entregar): los mismos pasos que la tarjeta (2 a 5), con el código explicado, los tres errores y la comprobación cruzada
 - [Mensajes de error: qué significan](#mensajes-de-error-qué-significan): los errores más comunes de Python en el reto y cómo se arreglan
 
 ## Cómo usarlo
@@ -27,7 +27,7 @@
 
 **Después de mirarlo, cerradlo y volved a escribirlo sin mirar.** Copiar una línea no es saberla: la prueba de que la sabéis es poder explicársela a vuestra pareja con vuestras palabras. Cada misión termina con una pregunta para eso.
 
-**Qué hay y qué no hay.** En las misiones 0 a 4 está la solución con el código **explicado línea a línea**: la parte de práctica y las funciones de `kpis.py` que calculan (misión 3) y que leen el CSV (misión 4). En la misión 5, que cierra `kpis.py` (guardar y entregar), **no hay código**: hay cifras para comprobar a mano, los fallos más comunes reconocibles por el resultado y una pregunta para explicar. Los cuadernos `S04_03` y `S04_04` traen, además, celdas plegadas 🆘 «Solución de referencia» con la solución de **sus propios ejercicios**. Si usáis un asistente de IA, seguid las reglas de uso de la IA de la [ficha del reto](Reto_Sprint_04.md) y declarad el uso en el README.
+**Qué hay y qué no hay.** En las misiones 0 a 5 está la solución con el código **explicado línea a línea**: la parte de práctica y las funciones de `kpis.py` (calcular en la misión 3, leer el CSV en la 4, guardar y entregar en la 5), con los mismos pasos que su tarjeta, los resultados esperados y los fallos más comunes. Los cuadernos `S04_03` y `S04_04` traen, además, celdas plegadas 🆘 «Solución de referencia» con la solución de **sus propios ejercicios**. Si usáis un asistente de IA, seguid las reglas de uso de la IA de la [ficha del reto](Reto_Sprint_04.md) y declarad el uso en el README.
 
 **Cuándo se publica cada parte.** Las misiones 0 a 2 y los mensajes de error, al acabar la clase del martes; las misiones 3 a 5, al acabar la del miércoles.
 
@@ -533,7 +533,156 @@ Elegid una:
 
 ## Misión 5 · Guardar y entregar
 
-Tarjeta: [Misión 5](../1_Trabajar/tarjetas/tarjeta_5_salida.md). La salida esperada con el CSV real ya está en «Misión terminada cuando» de la tarjeta. Aquí, una **comprobación cruzada**: la ocupación es inversamente proporcional a la capacidad, así que con el CSV real:
+<h2 align="center">Guardar el JSON, ponerlo en marcha con un comando y entregar</h2>
+
+**Cómo usarlo**
+
+- Para **contrastar**, cuando hayáis terminado el paso o agotado las pistas de la [tarjeta de la misión 5](../1_Trabajar/tarjetas/tarjeta_5_salida.md).
+- Tiene los **mismos números de paso** que la tarjeta (2.1, 3.4…, 5.1…): buscad el vuestro.
+- **Primero intentadlo.** Después de mirarlo, cerradlo y volved a escribirlo sin mirar.
+- Lo que copiéis, tenéis que saber explicarlo.
+
+### Paso 2 · `exportar_json`
+
+**Cómo copiarla sin errores de sangría**
+
+- En `kpis.py`, seleccionad la función entera: desde `def` hasta la línea `raise NotImplementedError(...)`, incluida.
+- Pegad la de abajo encima.
+- Guardad con Ctrl+S.
+
+```python
+def exportar_json(datos, ruta):
+    """Guarda `datos` en un fichero JSON legible."""
+    with open(ruta, "w", encoding="utf8") as f:
+        json.dump(datos, f, ensure_ascii=False, indent=2)
+```
+
+| Paso | Línea | Qué hace, con palabras normales |
+|---|---|---|
+| **2.3** | `with open(ruta, "w", encoding="utf8") as f:` | Abre el fichero `ruta` **para escribir** (`"w"`; si existe, lo sustituye) y **lo cierra solo** al terminar. `utf8` para las tildes |
+| **2.4** | `json.dump(datos, f, ensure_ascii=False, indent=2)` | Escribe `datos` en el fichero como JSON. `ensure_ascii=False` deja las tildes como son; `indent=2` lo sangra para que se lea bien |
+
+**Probadla** (una línea, en la terminal, dentro de la carpeta del reto):
+
+```
+python -c "from kpis import exportar_json; exportar_json({'canal': 'ocupación'}, 'prueba.json')"
+```
+
+✅ `prueba.json` contiene:
+
+```
+{
+  "canal": "ocupación"
+}
+```
+
+| Os sale | Probablemente |
+|---|---|
+| `"ocupación"` | Falta `ensure_ascii=False` |
+| Todo el JSON en una sola línea | Falta `indent=2` |
+| `TypeError: Object of type date is not JSON serializable` | Estáis guardando una fecha: `exportar_json` solo guarda lo que le llega (números, textos, listas, diccionarios) |
+| `PermissionError` o no aparece el fichero | Estáis en otra carpeta, o el fichero está abierto en otro programa |
+| `NotImplementedError` | Falta guardar con Ctrl+S, o queda la línea `raise NotImplementedError(...)` |
+
+### Paso 3 · `main`
+
+**Cómo copiarla**
+
+- Igual que las anteriores: función entera, de `def` a `raise`, pegada encima (triple clic en la línea `raise NotImplementedError(...)` para seleccionarla entera).
+- Incluye las líneas del `parser`, que ya venían escritas en la plantilla: no las cambiéis.
+- **Las dos últimas líneas del fichero** (`if __name__ == "__main__":` y `sys.exit(main())`) **se quedan como están**: son las que arrancan `main` al escribir `python kpis.py …`. No hay que copiarlas ni tocarlas.
+
+```python
+def main(argumentos=None):
+    """Punto de entrada: devuelve 0 si todo va bien y 1 si hay un error."""
+    parser = argparse.ArgumentParser(description="KPIs de reservas de TurisData")
+    parser.add_argument("entrada", help="CSV de reservas")
+    parser.add_argument("salida", help="JSON de salida")
+    parser.add_argument("--capacidad", type=int, default=40, help="habitaciones disponibles (proxy de ocupación)")
+    args = parser.parse_args(argumentos)
+    try:
+        reservas, avisos = leer_reservas(args.entrada)                                       # 3.4
+        kpis = calcular_kpis(reservas, args.capacidad)                                       # 3.5
+        kpis["calidad"] = {"filas_validas": len(reservas), "filas_descartadas": len(avisos),
+                           "avisos": avisos[:20]}                                            # 3.6
+        exportar_json(kpis, args.salida)                                                     # 3.7
+    except (FileNotFoundError, ValueError) as error:
+        print(f"ERROR: {error}", file=sys.stderr)                                            # 3.8
+        return 1
+    print(f"OK: {len(reservas)} reservas analizadas, {len(avisos)} descartadas -> {args.salida}")   # 3.9
+    return 0
+```
+
+**Niveles de cada línea** (el `def` es el nivel 0):
+
+| Nivel | Líneas |
+|---|---|
+| 0 | `def main(...)` · `if __name__ == "__main__":` (las dos últimas líneas del fichero) |
+| 1 | Las del `parser` y `args` · `try:` · `except …:` · el `print(f"OK…")` final · `return 0` · `sys.exit(main())` (dentro del `if __name__`) |
+| 2 | Las cuatro del `try` (3.4 a 3.7) · el `print(…ERROR…)` y `return 1` (dentro del `except`) |
+
+| Paso | Línea | Qué hace, con palabras normales |
+|---|---|---|
+| — | `parser … args = parser.parse_args(argumentos)` | Ya venía hecho: lee lo que se escribe tras `python kpis.py` y lo deja en `args.entrada`, `args.salida` y `args.capacidad` |
+| — | `try:` | «Intenta todo lo de abajo; si falla de cierta manera, salta al `except`» |
+| **3.4** | `reservas, avisos = leer_reservas(args.entrada)` | Lee el CSV. Devuelve **dos cosas**, que se recogen en dos variables |
+| **3.5** | `kpis = calcular_kpis(reservas, args.capacidad)` | Calcula los tres KPI (ya venía hecha) y los deja en un diccionario |
+| **3.6** | `kpis["calidad"] = {...}` | **Añade** una clave nueva al diccionario: cuántas filas buenas, cuántas descartadas y los avisos (solo los 20 primeros: `avisos[:20]`) |
+| **3.7** | `exportar_json(kpis, args.salida)` | Guarda el diccionario en el fichero JSON |
+| **3.8** | `except (FileNotFoundError, ValueError) as error:` | Si `leer_reservas` ha parado por fichero inexistente o columna que falta… |
+| **3.8** | `print(f"ERROR: {error}", file=sys.stderr)` | …escribe el mensaje **por la salida de errores** |
+| **3.8** | `return 1` | …y termina con **código 1** (mal) |
+| **3.9** | `print(f"OK: …")` y `return 0` | Si no ha habido error, escribe el mensaje de éxito y termina con **código 0** (bien) |
+
+**Seguimiento con el fichero real:** `leer_reservas` devuelve 6000 reservas y 0 avisos → `calcular_kpis` calcula → `kpis["calidad"]` dice 6000 válidas, 0 descartadas, `[]` → `exportar_json` guarda → imprime `OK: 6000 reservas analizadas, 0 descartadas -> salida.json` → devuelve 0.
+
+| Os sale | Probablemente |
+|---|---|
+| `Traceback` rojo en vez de `ERROR: …` | El `except` no recoge ese tipo de error (3.8) |
+| `ERROR: …` pero el código de salida es 0 | Falta el `return 1` (3.8) |
+| `OK: …` pero no aparece `salida.json` | Falta `exportar_json(kpis, args.salida)` (3.7) |
+| `KeyError: 'calidad'` en una prueba | Falta añadir la clave `"calidad"` (3.6) |
+| La ocupación no cambia al cambiar `--capacidad` | Hay un `40` escrito a mano en lugar de `args.capacidad` (3.5) |
+| `IndentationError` | Falta o sobra un nivel: mirad la tabla de niveles |
+| `kpis.py: error: the following arguments are required…` | Habéis pulsado ▶ (Run) o habéis escrito `python kpis.py` sin los dos ficheros |
+
+### Paso 4 · Probar el programa entero
+
+**4.1** · `python kpis.py reservas_turisdata.csv salida.json --capacidad 40`
+
+✅ `OK: 6000 reservas analizadas, 0 descartadas -> salida.json`
+
+**4.2** · `salida.json` tiene que ser:
+
+```json
+{
+  "reservas_analizadas": 6000,
+  "ocupacion_proxy_pct": 42.0,
+  "ingreso_medio_por_reserva": 576.04,
+  "tasa_cancelacion_por_canal_pct": {
+    "empresa": 43.3,
+    "directo": 31.5,
+    "web_intermediaria": 53.9,
+    "agencia": 44.0
+  },
+  "calidad": {
+    "filas_validas": 6000,
+    "filas_descartadas": 0,
+    "avisos": []
+  }
+}
+```
+
+**4.3** · `python test_kpis.py` ✅ **`12 de 12 pruebas superadas`** (con `kpis_pandas.py` ausente, la prueba opcional se omite y cuenta como superada).
+
+| Os sale | Probablemente |
+|---|---|
+| Ocupación distinta de `42.0` | `ocupacion_proxy`: falta el `+ 1` en los días, se cuentan las canceladas, o la capacidad no es 40 |
+| `ingreso_medio_por_reserva` distinto de `576.04` | `ingreso_medio_por_reserva`: se incluyen las canceladas |
+| Una tasa distinta | `tasa_cancelacion_por_canal`: falta `round(..., 1)` o el `.get(canal, 0)` |
+| Menos de 12 pruebas | Mirad cuál falla (en rojo) y a qué función se refiere |
+
+**Comprobación cruzada.** La ocupación es inversamente proporcional a la capacidad. Con el CSV real:
 
 | Orden | `ocupacion_proxy_pct` |
 |---|---|
@@ -541,16 +690,56 @@ Tarjeta: [Misión 5](../1_Trabajar/tarjetas/tarjeta_5_salida.md). La salida espe
 | `python kpis.py reservas_turisdata.csv salida.json --capacidad 40` | `42.0` |
 | `python kpis.py reservas_turisdata.csv salida.json --capacidad 80` | `21.0` |
 
-Si al doblar la capacidad la ocupación no se queda en la mitad, la capacidad no está llegando a `ocupacion_proxy` (revisad cómo pasáis `args.capacidad`).
+Si al doblar la capacidad la ocupación no se queda en la mitad, la capacidad no está llegando a `ocupacion_proxy`: revisad cómo pasáis `args.capacidad` (3.5).
 
-**Código de salida.** Tras un error provocado a propósito (fichero que no existe, capacidad 0), el programa tiene que terminar con **código 1**, y con un fichero correcto, con **0**. Se ve con `echo $?` (Linux y Mac), `echo %errorlevel%` (cmd de Windows) o `$LASTEXITCODE` (PowerShell).
+### Paso 5 · Los tres errores a propósito
 
-| Os pasa | Probablemente |
+| Paso | Qué se ejecuta | ✅ Sale | Código de salida |
+|---|---|---|---|
+| **5.1** | `python kpis.py no_existe.csv salida.json` | `ERROR: No se encuentra el fichero: no_existe.csv` | `1` |
+| **5.6** | `python kpis.py sin_col.csv salida_prueba.json` (con `precio` en vez de `precio_noche` en la primera línea) | `ERROR: Faltan columnas obligatorias: ['precio_noche']` | `1` |
+| **5.10** | `python kpis.py con_error.csv salida_prueba.json` (con `abc` en la línea 5 y `0` noches en la línea 10) | `OK: 5998 reservas analizadas, 2 descartadas -> salida_prueba.json` | `0` |
+
+**Comprobaciones de que el CSV editado está guardado** (5.5 y 5.9):
+
+- `python -c "print('precio_noche' in open('sin_col.csv', encoding='utf8').readline())"` → `False`.
+- `python -c "l = open('con_error.csv', encoding='utf8').read().split('\n'); print(',total,abc,' in l[4], ',114,0,2,1,' in l[9])"` → `True True`.
+
+**5.11** · En `salida_prueba.json`, dentro de `"calidad"`:
+
+```
+"filas_validas": 5998,
+"filas_descartadas": 2,
+"avisos": [
+  "Fila 5 descartada: could not convert string to float: 'abc'",
+  "Fila 10 descartada: noches debe ser >= 1"
+]
+```
+
+(El texto del primer aviso lo pone Python y puede variar; lo que tiene que coincidir son los **números de fila** y **uno por cada fila mala**.)
+
+Otro caso: `python kpis.py reservas_turisdata.csv salida.json --capacidad 0` da ✅ `ERROR: La capacidad debe ser mayor que 0` y código `1`.
+
+**El código de salida se mira justo después** de ejecutar:
+
+- PowerShell: `echo $LASTEXITCODE`.
+- cmd: `echo %errorlevel%`.
+- Linux y Mac: `echo $?`.
+
+| Os sale | Probablemente |
 |---|---|
-| Sale `ERROR: …` pero el código de salida es 0 | `main` no devuelve 1 cuando captura el error (la plantilla ya hace `sys.exit(main())`: lo que devuelva `main` es el código) |
-| La ocupación no cambia al cambiar `--capacidad` | Hay un `40` escrito a mano en algún sitio en lugar de usar `args.capacidad` |
+| En 5.10, `Traceback` en lugar de `OK` | Falta el `try` / `except ValueError` dentro del `for` de `leer_reservas` (misión 4, paso 5.6) |
+| En 5.10, `OK: 6000 reservas…` | El CSV editado **no está guardado**, o los cambios no están en las líneas 5 y 10. Repetid la comprobación 5.9 |
+| En 5.6, `OK` en lugar de `ERROR` | El CSV editado **no está guardado**, o habéis cambiado otra palabra. Repetid la comprobación 5.5 |
+| `SyntaxError: invalid syntax` en la línea del `except` | Falta el `try:`, o el `except` no está **un nivel** a la derecha de `def` (mirad la tabla de niveles) |
 
-**Para explicárselo a vuestra pareja:** ¿por qué `main` recibe `argumentos=None` en vez de leer siempre lo que se escribe en la terminal?
+### Para explicárselo a vuestra pareja
+
+Elegid una:
+
+1. ¿Por qué `main` recibe `argumentos=None` en vez de leer siempre lo que se escribe en la terminal?
+2. ¿Por qué una fila mala termina con `OK` y código 0, y un fichero que no existe, con `ERROR` y código 1?
+3. ¿Para qué sirve el código de salida si el mensaje ya dice si ha ido bien o mal?
 
 ## Mensajes de error: qué significan
 

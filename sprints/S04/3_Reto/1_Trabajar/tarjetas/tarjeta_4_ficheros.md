@@ -9,7 +9,11 @@
 | 🧰 **Usáis** | 🌐 el navegador (curso y Taller) · 📄 `kpis.py` · 💻 la terminal (dentro de la carpeta del reto) |
 | 🏁 **Al terminar** | `7 de 8 pruebas superadas` con `python test_kpis.py 2` |
 
-**Esta tarjeta tiene dos partes:** [1 · Guía paso a paso](#1--guía-paso-a-paso) (solo lo que hay que hacer) y [2 · Explicaciones](#2--explicaciones) (el porqué de cada cosa, para cuando lo necesitéis). Si queréis, seguid solo la parte 1.
+**Esta tarjeta tiene dos partes:**
+
+- [1 · Guía paso a paso](#1--guía-paso-a-paso): solo lo que hay que hacer.
+- [2 · Explicaciones](#2--explicaciones): el porqué de cada cosa, para cuando lo necesitéis.
+- Si queréis, seguid solo la parte 1.
 
 ← [Volver al índice de misiones](../README.md)
 
@@ -17,9 +21,16 @@
 
 # 1 · Guía paso a paso
 
-**Qué vais a hacer:** dos funciones de `kpis.py`: 1.`_convertir_fila` convierte **una fila** del CSV. 2.`leer_reservas` lee **todo el fichero** usando la anterior.
+**Qué vais a hacer**
 
-**Cómo se sigue:** de arriba abajo, **un número cada vez**. Cada paso termina en ✅: lo que tiene que salir. Si no sale, no sigáis: mirad la parte 2.
+- `_convertir_fila`: convierte **una fila** del CSV.
+- `leer_reservas`: lee **todo el fichero**, usando la anterior.
+
+**Cómo se sigue**
+
+- De arriba abajo, **un número cada vez**.
+- Cada paso termina en ✅: lo que tiene que salir.
+- Si no sale, no sigáis: mirad la parte 2.
 
 ## Parte A · Aprender (50 min)
 
@@ -33,10 +44,20 @@
 
 Pilotos y copilotos **rotan cada 15 minutos**. Se trabaja en [`kpis.py`](../reto_herramientas/kpis.py).
 
-**Dos reglas que evitan perderse:**
+**Tres reglas que evitan perderse**
 
-1. **Los espacios del principio** (la sangría). Un **nivel** son 4 espacios, o una pulsación de **Tab**. Cada línea que acaba en `:` abre un nivel nuevo: la siguiente va **un nivel más a la derecha**. Al pulsar Intro después de una línea con `:`, VS Code pone **solo** el nivel nuevo. Si una línea queda de más a la derecha: **Shift+Tab**. Si de menos: **Tab**. Una línea nueva se escribe **alineada con la línea de arriba** que os digamos.
-2. **No pulséis el botón ▶ (Run) de VS Code.** Ejecuta `kpis.py` sin datos y da siempre `error: the following arguments are required: entrada, salida`. No es un fallo vuestro: probad **solo** con las líneas `python -c "..."` de la terminal.
+1. **Los espacios del principio (la sangría)**
+   - Un **nivel** son 4 espacios, o una pulsación de **Tab**.
+   - Una línea que acaba en `:` abre un nivel nuevo: la siguiente va **un nivel más a la derecha**.
+   - Si una línea queda de más a la derecha: **Shift+Tab**. De menos: **Tab**.
+   - Una línea nueva se escribe **alineada con la línea de arriba** que os digamos.
+2. **Guardar antes de probar**
+   - Pulsad **Ctrl+S**.
+   - Mirad que la pestaña de `kpis.py` **no tenga un punto ●** junto al nombre.
+   - Python lee el fichero **guardado**, no el que veis en pantalla.
+3. **No pulséis el botón ▶ (Run) de VS Code**
+   - Ejecuta `kpis.py` sin datos y da siempre `error: the following arguments are required: entrada, salida`.
+   - No es un fallo vuestro: probad **solo** con las líneas `python -c "..."` de la terminal.
 
 ### Paso 4 · `_convertir_fila` (15 min)
 
@@ -68,7 +89,10 @@ python -c "from kpis import _convertir_fila; print(_convertir_fila({'fecha_llega
 
 ✅ Sale: `{'fecha_llegada': datetime.date(2025, 1, 1), 'noches': 2, 'precio_noche': 100.0, 'canal': 'directo', 'cancelada': 0}`
 
-**Probad también el error:** repetid la línea cambiando `'noches': '2'` por `'noches': '0'`. ✅ Sale: `ValueError: noches debe ser >= 1`.
+**Probad también el error**
+
+- Repetid la línea cambiando `'noches': '2'` por `'noches': '0'`.
+- ✅ Sale: `ValueError: noches debe ser >= 1`.
 
 ### Paso 5 · `leer_reservas` (25 min)
 
@@ -90,7 +114,11 @@ python -c "from kpis import _convertir_fila; print(_convertir_fila({'fecha_llega
         # (5.8) error claro si no existe el fichero
 ```
 
-**Cada hueco se rellena con lo que dice su paso.** En los dibujos, cada `...` es lo que tenéis que escribir vosotros; **la sangría del dibujo es la buena**. Se borra el comentario `# (5.x)` y se escribe en su lugar, **alineado con `lector = …`** (3 niveles), salvo el 5.8.
+**Cómo se rellenan los huecos**
+
+- Cada hueco se rellena con lo que dice su paso.
+- En los dibujos, cada `...` es lo que tenéis que escribir vosotros. **La sangría del dibujo es la buena.**
+- Se borra el comentario `# (5.x)` y se escribe en su lugar, **alineado con `lector = …`** (3 niveles), salvo el 5.8.
 
 | # | Qué hacéis |
 |---|---|
@@ -112,9 +140,13 @@ python -c "from kpis import leer_reservas; reservas, avisos = leer_reservas('res
 
 ✅ Sale: `6000 0` (6000 reservas y ningún aviso).
 
-**5.11 · Crear `mini.csv`.** En VS Code, en la barra lateral izquierda (el **Explorador**), pulsad el icono de **«Nuevo archivo»** (una hoja con un +), escribid `mini.csv` y pulsad Intro: se abre un fichero vacío en la carpeta del reto. Pegad estas 4 líneas y guardad con **Ctrl+S**.
+**5.11 · Crear `mini.csv`**
 
-*(Si preferís el menú *Archivo → Nuevo archivo…*, elegid **Archivo de texto** — no «Archivo Python» ni «Jupyter Notebook» — y guardadlo como `mini.csv` en la carpeta del reto.)*
+- En VS Code, en la barra lateral izquierda (el **Explorador**), pulsad el icono de **«Nuevo archivo»** (una hoja con un +).
+- Escribid `mini.csv` y pulsad Intro: se abre un fichero vacío en la carpeta del reto.
+- Pegad estas 4 líneas y guardad con **Ctrl+S**.
+- Si usáis el menú *Archivo → Nuevo archivo…*, elegid **Archivo de texto** (no «Archivo Python» ni «Jupyter Notebook») y guardadlo como `mini.csv` en la carpeta del reto.
+
 
 ```
 fecha_llegada,noches,precio_noche,canal,cancelada
@@ -142,9 +174,15 @@ python -c "from kpis import leer_reservas; reservas, avisos = leer_reservas('min
 | **6.1** | En la terminal: `python test_kpis.py 2` |
 | **6.2** | Si una prueba sale en rojo, leed qué **debería salir**, comparadlo con lo que sale en la vuestra y corregid. |
 
-✅ Terminado cuando sale **`7 de 8 pruebas superadas`**. La que falla, `test_exportar_json_y_main`, es de la misión 5.
+- ✅ Terminado cuando sale **`7 de 8 pruebas superadas`**.
+- La que falla, `test_exportar_json_y_main`, es de la misión 5.
 
-> ⏰ **Señal de alarma a las 09:55.** Si a esa hora todavía no habéis empezado `leer_reservas`, **decídselo al docente**: la proyecta resuelta, **la copiáis y la explicáis con vuestras palabras** (línea a línea, en voz alta) y seguís con la misión 5. Es una ayuda legítima: la declaráis en el README («Uso de IA y límites»).
+> ⏰ **Señal de alarma a las 09:55**
+>
+> - Si a esa hora todavía no habéis empezado `leer_reservas`, **decídselo al docente**.
+> - El docente la proyecta resuelta; **la copiáis y la explicáis con vuestras palabras** (línea a línea, en voz alta).
+> - Seguís con la misión 5.
+> - Es una ayuda legítima: la declaráis en el README («Uso de IA y límites»).
 
 ## ✅ Misión terminada cuando
 
