@@ -1,6 +1,6 @@
 -- =====================================================================
 -- 05 · CRUD: INSERT, SELECT, UPDATE, DELETE   (TurisData Canarias)
--- Tiempo estimado: 20 min (los ejercicios marcados "reto" son opcionales)
+-- Tiempo estimado: 15 min sin los ejercicios marcados "reto" (que son opcionales)
 -- IMPORTANTE: NO modificamos las tablas originales. Trabajamos sobre una
 -- COPIA llamada reservas_practica. Así puedes equivocarte sin miedo.
 -- En DB Browser for SQLite, los cambios no quedan guardados en el archivo

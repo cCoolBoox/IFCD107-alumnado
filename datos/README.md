@@ -15,4 +15,4 @@ Los notebooks los descargan solos con la función `dato("archivo")`; no hace fal
 | `valoraciones_experiencias.csv`, `experiencias.csv` | 2.232 valoraciones (de los huéspedes 1 a 300) y catálogo de 25 experiencias | Sprint 9 |
 | `resenas.csv` | 1.500 reseñas en español con sentimiento | Sprint 12 |
 | `politica_alojamiento.md`, `preguntas_referencia.csv` | Corpus y preguntas del asistente RAG | Sprint 12 |
-| `informe_cliente.csv`, `informe_cliente.md` | Informe con errores estadísticos para auditar. **Ahora están en [`sprints/S02/3_Reto/`](../sprints/S02/3_Reto/)**, junto al resto del material del reto | Sprint 2 |
+| `informe_cliente.csv`, `informe_cliente.md` | Informe con errores estadísticos para auditar. **Ahora están en [`sprints/S02/3_Reto/1_Trabajar/plantillas/`](../sprints/S02/3_Reto/1_Trabajar/plantillas/)**, junto al resto del material del reto | Sprint 2 |

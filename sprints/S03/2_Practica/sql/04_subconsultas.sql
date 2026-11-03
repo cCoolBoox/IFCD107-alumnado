@@ -1,6 +1,6 @@
 -- =====================================================================
 -- 04 · Subconsultas y CTE   (TurisData Canarias · turisdata.db)
--- Tiempo estimado: 20 min (los ejercicios marcados "reto" son opcionales)
+-- Tiempo estimado: 15 min sin los ejercicios marcados "reto" (que son opcionales)
 -- Idea: una consulta dentro de otra. Sirve para comparar cada fila con un
 -- valor calculado (la media, el máximo...) o para trabajar por pasos.
 -- Esquema visual de tablas y campos: sprints/S03/2_Practica/esquema_turisdata/esquema_turisdata.md
@@ -15,7 +15,7 @@ LIMIT 5;
 -- ---------- IDEA 2: subconsulta con IN (devuelve una lista) ----------
 SELECT id_alojamiento, nombre
 FROM alojamientos
-WHERE id_alojamiento IN (SELECT id_alojamiento FROM reservas WHERE noches >= 20);
+WHERE id_alojamiento IN (SELECT id_alojamiento FROM reservas WHERE noches >= 12);
 
 -- ---------- IDEA 3: CTE con WITH (dar nombre a un paso intermedio) ----------
 WITH por_canal AS (

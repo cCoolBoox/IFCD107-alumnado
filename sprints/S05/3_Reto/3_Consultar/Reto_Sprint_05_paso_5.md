@@ -20,7 +20,7 @@
 | **Tamaño del efecto** | Cuánto cambia el resultado en las unidades de siempre (puntos de ocupación). Un p-valor pequeño dice que hay efecto, pero no si es grande o pequeño. |
 | **t de Welch** | Una prueba que compara las medias de dos grupos (aquí, días festivos y no festivos) y devuelve un p-valor. |
 | **`.loc[…]`** | Para elegir filas (y columnas) de una tabla por una condición o por su nombre. |
-| **`1e-30`** | Notación científica: un 1 precedido de 30 ceros tras la coma (0,000…001). Es un número minúsculo. |
+| **`1e-30`** | Notación científica: el 1 está en el lugar 30 después de la coma (0,000…001). Es un número minúsculo. |
 
 **Cómo se hace**
 

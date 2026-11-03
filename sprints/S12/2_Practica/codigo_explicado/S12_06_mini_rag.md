@@ -80,6 +80,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `append` | Añade un elemento al final de una lista. | 5, 13, 16 |
 | `argsort` | Devuelve las posiciones que ordenarían el array. | 19 |
 | `category` | Dice a qué categoría pertenece un carácter (por ejemplo, si es una tilde). | 3 |
+| `contains` | Marca los textos que contienen un trozo de texto o un patrón. | 14 |
 | `DataFrame` | Crea una tabla de pandas (filas y columnas). | 13 |
 | `dato` | Devuelve la ruta de un fichero de datos del curso (lo busca en las carpetas habituales y, si no está, lo descarga). | 1 |
 | `dict` | Crea un diccionario (parejas nombre: valor). | 16 |
@@ -99,7 +100,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `input` | Pide un dato al usuario por teclado. | 10 |
 | `iterrows` | Recorre la tabla fila a fila. | 5, 13 |
 | `join` | Une una lista de textos en uno solo con un separador. | 3, 7 |
-| `len` | Cuenta cuántos elementos tiene una lista, texto o tabla. | 1, 5, 13, 16, 18 |
+| `len` | Cuenta cuántos elementos tiene una lista, texto o tabla. | 1, 5, 13, 14, 16, 18 |
 | `loads` | Convierte texto JSON en datos de Python. | 9, 10 |
 | `loc` | Selecciona filas/columnas por su etiqueta o por una condición. | 13 |
 | `lower` | Pasa el texto a minúsculas. | 3, 13 |
@@ -117,6 +118,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `shape` | Tamaño de la tabla: (filas, columnas). | 3 |
 | `split` | Parte un texto en trozos por un separador. | 1 |
 | `startswith` | Comprueba si un texto empieza por algo. | 16 |
+| `str` | Da acceso a las operaciones de texto sobre una columna. | 14 |
 | `strip` | Quita espacios al principio y al final de un texto. | 9, 10 |
 | `sum` | Suma todos los valores. | 5, 13, 14, 16, 18 |
 | `TfidfVectorizer` | Convierte textos en números según la importancia de cada palabra (TF-IDF). | 3 |
@@ -394,31 +396,31 @@ print("Fallos:", res.loc[~res["acierto"], "pregunta"].tolist())
 
 ### Celda 14 · 7. Evaluar el asistente · 🏠
 
-**Qué hace:** Practica `sum`, `iloc` (sección «¿Y sin umbral? ¿Y con un generador que…»).
+**Qué hace:** Practica `sum`, `iloc`, `contains` (sección «¿Y sin umbral? ¿Y con un generador que…»).
 
 ```python
 res_sin_umbral = evaluar(umbral=0.0)
-print(f"Sin umbral  → aciertos {res_sin_umbral['acierto'].sum()}/20 | sin fuente {res_sin_umbral['sin_fuente'].sum()} | alucinaciones {res_sin_umbral['alucinacion'].sum()}")
-print("  Respuesta a «¿Tienen gimnasio?»:", res_sin_umbral.iloc[19]["respuesta"])
+print(f"Sin umbral  → aciertos {res_sin_umbral['acierto'].sum()}/{len(res_sin_umbral)} | sin fuente {res_sin_umbral['sin_fuente'].sum()} | alucinaciones {res_sin_umbral['alucinacion'].sum()}")
+print("  Respuesta a «¿Tienen gimnasio?»:", res_sin_umbral[res_sin_umbral["pregunta"].str.contains("gimnasio")].iloc[0]["respuesta"])
 
 def generar_inventor(prompt):
     return "Sí, sin problema. Está disponible de 6:00 a 22:00."
 generador_simulado = generar_inventor
 res_inventor = evaluar(umbral=0.15)
 generador_simulado = generar_simulado          # restauramos el simulador normal
-print(f"Generador que inventa → aciertos {res_inventor['acierto'].sum()}/20 | sin fuente {res_inventor['sin_fuente'].sum()} | alucinaciones {res_inventor['alucinacion'].sum()}")
+print(f"Generador que inventa → aciertos {res_inventor['acierto'].sum()}/{len(res_inventor)} | sin fuente {res_inventor['sin_fuente'].sum()} | alucinaciones {res_inventor['alucinacion'].sum()}")
 ```
 
 **Qué hace cada línea:**
 
 - `res_sin_umbral = evaluar(umbral=0.0)` → Guarda en `res_sin_umbral` el resultado. `evaluar`: función definida en el cuaderno.
-- `print(f"Sin umbral → aciertos {res_sin_umbral['acierto'].sum()}/20 | sin fu…` → `print`: muestra un valor por pantalla; `sum`: suma todos los valores.
-- `print(" Respuesta a «¿Tienen gimnasio?»:", res_sin_umbral.iloc[19]["respues…` → `print`: muestra un valor por pantalla; `iloc`: selecciona filas/columnas por su posición.
+- `print(f"Sin umbral → aciertos {res_sin_umbral['acierto'].sum()}/{len(res_si…` → `print`: muestra un valor por pantalla; `sum`: suma todos los valores; `len`: cuenta cuántos elementos tiene una lista, texto o tabla.
+- `print(" Respuesta a «¿Tienen gimnasio?»:", res_sin_umbral[res_sin_umbral["p…` → `print`: muestra un valor por pantalla; `iloc`: selecciona filas/columnas por su posición; `contains`: marca los textos que contienen un trozo de texto o un patrón.
 - `def generar_inventor(prompt):` → Define la función `generar_inventor`: Función definida en el cuaderno.
 - `generador_simulado = generar_inventor` → Guarda el valor en `generador_simulado`.
 - `res_inventor = evaluar(umbral=0.15)` → Guarda en `res_inventor` el resultado. `evaluar`: función definida en el cuaderno.
 - `generador_simulado = generar_simulado # restauramos el simulador normal` → Guarda el valor en `generador_simulado`.
-- `print(f"Generador que inventa → aciertos {res_inventor['acierto'].sum()}/20…` → `print`: muestra un valor por pantalla; `sum`: suma todos los valores.
+- `print(f"Generador que inventa → aciertos {res_inventor['acierto'].sum()}/{l…` → `print`: muestra un valor por pantalla; `sum`: suma todos los valores; `len`: cuenta cuántos elementos tiene una lista, texto o tabla.
 
 ### Celda 15 · 8. Seguridad: prompt injection · 🏠
 

@@ -1,6 +1,6 @@
 -- =====================================================================
 -- 02 · JOIN: combinar tablas   (TurisData Canarias · turisdata.db)
--- Tiempo estimado: 20 min (los ejercicios marcados "reto" son opcionales)
+-- Tiempo estimado: 15 min sin los ejercicios marcados "reto" (que son opcionales)
 -- Idea: en una base relacional cada dato vive en UNA tabla y se enlaza
 -- con claves. reservas.id_alojamiento apunta a alojamientos.id_alojamiento
 -- y reservas.id_cliente apunta a clientes.id_cliente.

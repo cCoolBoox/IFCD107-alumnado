@@ -15,7 +15,7 @@ Guardar las reservas de *TurisData Canarias* como **documentos**, consultarlas, 
 > Los datos son sintéticos. No subas datos reales de clientes a ningún servicio en la nube.
 
 ## Opción A · Cuaderno `S03_01_nosql_mongomock`
-1. Abre el cuaderno desde la tabla del `README` del sprint (insignia de Colab).
+1. Abre el cuaderno desde la tabla del `README` del sprint (el enlace «Abrir en Colab»).
 2. Ejecútalo de arriba abajo: verás cómo se construyen los documentos, el CRUD, las agregaciones y la comparación con SQL.
 3. Completa los 7 ejercicios: cada uno se autocorrige con un mensaje de ayuda.
 4. Para trabajarlo **en pareja y sin perderte**, usa la [guía autoguiada](guia_nosql_en_parejas.md); el [listado de ejercicios](listado_ejercicios_nosql.md) y el [solucionario](soluciones_nosql_paso_a_paso.md) están en la misma carpeta.

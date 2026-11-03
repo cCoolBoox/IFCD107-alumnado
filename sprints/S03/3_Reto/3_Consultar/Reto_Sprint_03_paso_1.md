@@ -68,7 +68,7 @@
 | Veis… | Qué significa | Qué hacer |
 |---|---|---|
 | `no such table: reservas` | La base abierta no es `turisdata.db`, o está vacía. | Mirad la pestaña *Estructura de la base de datos*: deben aparecer `alojamientos`, `clientes` y `reservas`. Si no, abrid otra vez el archivo; si sigue vacía, importad `turisdata.sql` como explica la [guía de SQL en parejas](../../2_Practica/sql/guia_sql_en_parejas.md). |
-| Se ejecutan todas las consultas del script y salen muchas pestañas | No seleccionasteis la consulta antes de pulsar `Ctrl + Intro`. | Seleccionad solo esas cinco líneas con el ratón y volved a ejecutar. |
+| Se ejecutan todas las consultas del script y salen muchas pestañas | No seleccionasteis la consulta antes de pulsar `Ctrl + Intro`. | Seleccionad solo esas líneas con el ratón y volved a ejecutar. |
 | No encontráis la lista de las 18 columnas | Está en el listado de pasos de AutoML y en el esquema de la base. | Abrid el [listado de pasos de AutoML](../../2_Practica/automl/listado_pasos_automl.md) (apartado «Qué datos usa»). |
 | No sabéis si una columna se conoce al reservar | Hay que razonarla, no adivinarla. | Preguntaos «¿la tendría el día que doy la alerta?»; si seguís sin saberlo, apuntad la duda en la hoja y preguntad al docente. |
 | Una columna no se conocería al reservar (no pasa con este archivo) | Es una fuga de datos. | En la celda de la partición del cuaderno (paso 3 del cuaderno), cambiad las dos líneas `.drop(columns=["id_reserva"])` por `.drop(columns=["id_reserva", "nombre_de_la_columna"])` y repetid desde esa celda, porque habrá que **volver a entrenar**. |

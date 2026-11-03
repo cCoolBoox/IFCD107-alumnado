@@ -46,7 +46,7 @@ Para ver a la vez un dato de `reservas` y uno de otra tabla hay que **unirlas co
 | Campo | Tipo | Qué es | Valores |
 |---|---|---|---|
 | `id_cliente` | número | **Clave**: identifica al cliente | 1 a 2500 |
-| `pais` | texto | País del cliente | `ES`, `UK`, `DE`, `IT`, `NL`, `Nordicos`, `otros` |
+| `pais` | texto | País del cliente | `ES`, `UK`, `DE`, `FR`, `IT`, `NL`, `Nordicos`, `otros` |
 | `email_hash` | texto | Código anónimo del correo (no es un email real) | 8 caracteres |
 | `cliente_desde` | texto | Fecha de alta | `2019-01-01` a `2024-06-22` |
 
@@ -66,7 +66,7 @@ Para ver a la vez un dato de `reservas` y uno de otra tabla hay que **unirlas co
 | `tipo_habitacion` | texto | Tipo de habitación | `estandar`, `superior`, `familiar`, `suite` |
 | `regimen` | texto | Régimen de comidas | `solo_alojamiento`, `desayuno`, `media_pension`, `todo_incluido` |
 | `canal` | texto | Por dónde se reservó | `directo`, `agencia`, `empresa`, `web_intermediaria` |
-| `pais_origen` | texto | País que figura **en la reserva**. **Puede estar vacío (`NULL`)**: 138 reservas | `ES`, `UK`, `DE`, `IT`, `NL`, `Nordicos`, `otros` |
+| `pais_origen` | texto | País que figura **en la reserva**. **Puede estar vacío (`NULL`)**: 138 reservas | `ES`, `UK`, `DE`, `FR`, `IT`, `NL`, `Nordicos`, `otros` |
 | `tarifa` | texto | Tipo de tarifa | `flexible`, `no_reembolsable` |
 | `deposito` | texto | Depósito pagado | `sin_deposito`, `parcial`, `total` |
 | `precio_noche` | decimal | Euros por noche | 52 a 249,35 |

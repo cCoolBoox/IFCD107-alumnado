@@ -1,6 +1,6 @@
 -- =====================================================================
 -- 03 · GROUP BY y agregaciones   (TurisData Canarias · turisdata.db)
--- Tiempo estimado: 25 min (los ejercicios marcados "reto" son opcionales)
+-- Tiempo estimado: 20 min sin los ejercicios marcados "reto" (que son opcionales)
 -- Idea: agrupar filas y resumirlas con COUNT, SUM, AVG, MIN, MAX.
 -- Truco útil: 'cancelada' vale 0/1, así que AVG(cancelada) es la
 -- proporción de cancelaciones y SUM(cancelada) su número.

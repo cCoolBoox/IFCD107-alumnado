@@ -76,7 +76,7 @@ Ingreso medio por reserva confirmada: 182.00 €
 
 | Qué pasa | Por qué | Qué hacer |
 |---|---|---|
-| `python` no se reconoce, o sale `Python 2…` | En algunos equipos el comando es otro | Probad `python3` y usadlo en todo el reto; si sigue sin funcionar, abrid **Anaconda Prompt** (ver la guía [Python en el ordenador del aula](../../../../material/8.%20Python_en_el_ordenador_del_aula.md)) |
+| `python` no se reconoce, o sale `Python 2…` | En algunos equipos el comando es otro | Probad `python3` y usadlo en todo el reto; si sigue sin funcionar, abrid **Anaconda Prompt** (ver la guía [Python en el ordenador del aula](../../../../../material/8.%20Python_en_el_ordenador_del_aula.md)) |
 | `No such file or directory` o `ModuleNotFoundError: reservas_demo` | La terminal está en otra carpeta | Abrid la terminal **dentro** de la carpeta descomprimida (`ls` o `dir` debe mostrar `demo_cliente.py`) |
 | No entendéis una línea | Es normal en el primer contacto | Subrayadla y preguntad al docente en el momento de los 5 minutos |
 | Seguís sin verlo | A veces pasa | 1) Preguntad al equipo; 2) después, al docente; 3) **cuando hayáis terminado o agotado las pistas**, contrastad con el [solucionario de la misión 0](../../3_Consultar/Solucionario_misiones.md) (se publica al acabar la clase el martes). Primero intentadlo: lo que copiéis, tenéis que saber explicarlo |

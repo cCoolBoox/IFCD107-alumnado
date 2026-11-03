@@ -1,6 +1,6 @@
 -- =====================================================================
 -- 06 · Modelado relacional, restricciones e índices   (TurisData Canarias)
--- Tiempo estimado: 25 min (los ejercicios marcados "reto" son opcionales)
+-- Tiempo estimado: 20 min sin los ejercicios marcados "reto" (que son opcionales)
 -- Idea: diseñar bien las tablas evita errores de datos antes de que ocurran.
 --  - Clave primaria (PRIMARY KEY): identifica cada fila, única y sin nulos.
 --  - Clave foránea (FOREIGN KEY): obliga a que la referencia exista.

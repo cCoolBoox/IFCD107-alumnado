@@ -27,7 +27,7 @@ Resultado: un DataFrame `diaria` con una columna `mes` de 1 a 12.
 
 - `diaria["ocupacion_pct"].describe()` da media, dispersión y extremos de golpe.
 - `diaria.groupby("mes")["ocupacion_pct"].mean()` calcula **una media por mes**; ordenadla para ver los meses de mayor y menor ocupación.
-- Dos gráficos como mínimo: un **diagrama de caja** por mes (`sns.boxplot` o `plt.boxplot`) y una **dispersión** temperatura-ocupación (`plt.scatter`). Poned título y ejes **en español**.
+- Dos gráficos como mínimo: un **diagrama de caja** por mes (`diaria.boxplot(column="ocupacion_pct", by="mes")`) y una **dispersión** temperatura-ocupación (`plt.scatter`). Poned título y ejes **en español**.
 - Debajo, en la celda de texto, 2–3 observaciones en vuestras palabras («en agosto la ocupación…»).
 
 ## 3 · Regresión lineal desde cero

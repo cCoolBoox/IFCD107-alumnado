@@ -1,6 +1,6 @@
 -- =====================================================================
 -- 01 · SELECT, WHERE, ORDER BY, LIMIT   (TurisData Canarias · turisdata.db)
--- Tiempo estimado: 20 min (los ejercicios marcados "reto" son opcionales)
+-- Tiempo estimado: 15 min sin los ejercicios marcados "reto" (que son opcionales)
 -- Cómo usarlo: abre turisdata.db en DB Browser for SQLite (o súbelo a un
 -- cliente SQLite en línea), pestaña "Ejecutar SQL". Selecciona UNA consulta
 -- y ejecútala (Ctrl+Intro). Cada consulta termina en punto y coma.

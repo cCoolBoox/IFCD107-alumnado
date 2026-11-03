@@ -13,7 +13,7 @@
     - Al final se suben a `sprint-05/` del repositorio del equipo (lista completa en «Antes de entregar»).
 - **Tiempo en clase:**
     - Planning: 10 min (día 1).
-    - Día 2: CRUD (paso 1) y reto, 45 min; entrega, review y retro, 40 min.
+    - Día 2: CRUD (paso 1, 25 min) y reto (45 min); entrega, review y retro, 40 min.
     - Los 35 min que faltan, en la consolidación y la 6.ª hora (subida hasta las 14:30); lo demás, a casa.
 
 ## Tres niveles: el equipo decide hasta dónde llega

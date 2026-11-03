@@ -2,7 +2,7 @@
 
 > **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb) · [descargar](../S05_06_crud_python.ipynb) · ⏱ en clase: 25 min · 🏫 3 celdas de código en clase · 🏠 3 en casa
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb) · [descargar](../S05_06_crud_python.ipynb) · ⏱ en clase: 25 min · 🏫 3 celdas de código en clase · 🏠 2 en casa
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 
@@ -27,9 +27,9 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | `ruta_bd` | `os.path.join(carpeta, "turisdata_copia.db")` | 1 |
 | `con` | `sqlite3.connect(ruta_bd)` | 2 |
 | `cur` | `con.execute("UPDATE alojamientos SET plazas = plazas + 2…` | 7 |
-| `docs` | `[dict(f) for f in con.execute("SELECT id_reserva AS _id,…` | 11 |
-| `cliente` | `mongomock.MongoClient()` | 11 |
-| `coleccion` | `cliente["turisdata"]["reservas_muestra"]` | 11 |
+| `docs` | `[dict(f) for f in con.execute("SELECT id_reserva AS _id,…` | 10 |
+| `cliente` | `mongomock.MongoClient()` | 10 |
+| `coleccion` | `cliente["turisdata"]["reservas_muestra"]` | 10 |
 
 ## 3. Palabras de código de este cuaderno
 
@@ -44,25 +44,25 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 
 | Palabra | Qué hace | Celdas |
 |---|---|---|
-| `close` | Cierra un fichero, una conexión o una figura. | 10, 11 |
+| `close` | Cierra un fichero, una conexión o una figura. | 10 |
 | `commit` | Confirma y guarda los cambios hechos en la base de datos. | 5, 7 |
-| `connect` | Abre la conexión con la base de datos. | 2, 11 |
+| `connect` | Abre la conexión con la base de datos. | 2, 10 |
 | `copy` | Hace una copia independiente (si cambias la copia, el original no cambia). | 1 |
-| `count_documents` | Cuenta los documentos que cumplen una condición. | 11 |
+| `count_documents` | Cuenta los documentos que cumplen una condición. | 10 |
 | `dato` | Devuelve la ruta de un fichero de datos del curso (lo busca en las carpetas habituales y, si no está, lo descarga). | 1 |
-| `dict` | Crea un diccionario (parejas nombre: valor). | 11 |
-| `execute` | Ejecuta una instrucción SQL. | 2, 5, 7, 11 |
+| `dict` | Crea un diccionario (parejas nombre: valor). | 10 |
+| `execute` | Ejecuta una instrucción SQL. | 2, 5, 7, 10 |
 | `fetchall` | Recupera todas las filas del resultado. | 2, 5 |
 | `fetchone` | Recupera una fila del resultado. | 2 |
-| `find_one` | Busca un documento en MongoDB. | 11 |
-| `find_spec` | Comprueba si una librería está instalada sin importarla. | 11 |
-| `insert_many` | Inserta varios documentos en MongoDB. | 11 |
+| `find_one` | Busca un documento en MongoDB. | 10 |
+| `find_spec` | Comprueba si una librería está instalada sin importarla. | 10 |
+| `insert_many` | Inserta varios documentos en MongoDB. | 10 |
 | `join` | Une una lista de textos en uno solo con un separador. | 1 |
 | `mkdtemp` | Crea una carpeta temporal que se borra sola al acabar. | 1 |
-| `MongoClient` | Abre la conexión con MongoDB (aquí, simulada con mongomock). | 11 |
-| `print` | Muestra un valor por pantalla. | 1, 2, 5, 7, 11 |
+| `MongoClient` | Abre la conexión con MongoDB (aquí, simulada con mongomock). | 10 |
+| `print` | Muestra un valor por pantalla. | 1, 2, 5, 7, 10 |
 | `read_sql_query` | Ejecuta una consulta SQL y devuelve el resultado como tabla. | 2 |
-| `run` | Ejecuta un comando del sistema (subprocess) y espera a que acabe. | 11 |
+| `run` | Ejecuta un comando del sistema (subprocess) y espera a que acabe. | 10 |
 
 ## 4. Celda a celda
 
@@ -174,21 +174,9 @@ Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 10 · 5 · Consultar la base para analizar (de SQL a p… · 🏠
+### Celda 10 · 6 · El mismo CRUD en MongoDB (`pymongo`) · 🏠
 
-**Qué hace:** Practica `close` (sección «Ejercicio 5 · Ocupación media por mes d…»).
-
-```python
-con.close()      # cerrar la conexión al terminar con SQLite
-```
-
-**Qué hace cada línea:**
-
-- `con.close() # cerrar la conexión al terminar con SQLite` → `close`: cierra un fichero, una conexión o una figura.
-
-### Celda 11 · 6 · El mismo CRUD en MongoDB (`pymongo`) · 🏠
-
-**Qué hace:** Practica `connect`, `close`, `MongoClient`, `insert_many` y más (sección «6 · El mismo CRUD en MongoDB (`pymongo`)»).
+**Qué hace:** Practica `close`, `connect`, `MongoClient`, `insert_many` y más (sección «6 · El mismo CRUD en MongoDB (`pymongo`)»).
 
 ```python
 import importlib.util
@@ -198,6 +186,7 @@ if importlib.util.find_spec("mongomock") is None:      # solo hace falta en Cola
     subprocess.run([sys.executable, "-m", "pip", "install", "-q", "pymongo", "mongomock"], check=True)
 import mongomock
 
+con.close()      # cerrar la conexión de SQLite que veníamos usando (y abrir otra solo para esta muestra)
 con = sqlite3.connect(ruta_bd)
 con.row_factory = sqlite3.Row
 docs = [dict(f) for f in con.execute("SELECT id_reserva AS _id, canal, noches, precio_noche, cancelada FROM reservas LIMIT 200")]
@@ -216,17 +205,17 @@ print(coleccion.count_documents({}), coleccion.find_one({}))
 - `import sys` → Trae `sys` para poder usarlo.
 - `if importlib.util.find_spec("mongomock") is None: # solo hace falta en Cola…` → Decide: ejecuta el bloque solo si se cumple la condición (y `elif`/`else` si no). Dentro del bloque: `run`: ejecuta un comando del sistema (subprocess) y espera a que acabe.
 - `import mongomock` → Trae `mongomock` para poder usarlo.
+- `con.close() # cerrar la conexión de SQLite que veníamos usando (y abrir otr…` → `close`: cierra un fichero, una conexión o una figura.
 - `con = sqlite3.connect(ruta_bd)` → Guarda en `con` el resultado. `connect`: abre la conexión con la base de datos.
 - `con.row_factory = sqlite3.Row` → Guarda el valor en `con.row_factory`.
 - `docs = [dict(f) for f in con.execute("SELECT id_reserva AS _id, canal, noch…` → Guarda en `docs` el resultado. `dict`: crea un diccionario (parejas nombre: valor); `execute`: ejecuta una instrucción SQL.
-- `con.close()` → `close`: cierra un fichero, una conexión o una figura.
-- … y 4 más con las mismas ideas.
+- … y 5 más con las mismas ideas.
 
-### Celda 12 · 6 · El mismo CRUD en MongoDB (`pymongo`) · 🏠 · ejercicio 6
+### Celda 11 · 6 · El mismo CRUD en MongoDB (`pymongo`) · 🏠 · ejercicio 6
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 
-### Celda 13 · 7 · Mini-reto integrador: «reservas por canal»… · 🏠 · ejercicio
+### Celda 12 · 7 · Mini-reto integrador: «reservas por canal»… · 🏠 · ejercicio
 
 Es un **ejercicio**: el enunciado y la pista están en el cuaderno, justo encima de la celda. Cuando funcione, la celda siguiente lo **comprueba sola** con un `assert`.
 

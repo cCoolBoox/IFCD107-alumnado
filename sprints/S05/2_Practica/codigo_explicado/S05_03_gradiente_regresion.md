@@ -251,7 +251,7 @@ plt.show()
 
 ```python
 plt.figure(figsize=(6.5, 3.8))
-for tasa in (0.005, 0.1, 0.9):
+for tasa in (0.005, 0.1, 1.2):
     _, hist = entrenar(X, y, tasa=tasa, epocas=60)
     plt.plot(hist, label=f"tasa = {tasa}")
 plt.yscale("log")
@@ -266,7 +266,7 @@ plt.show()
 **Qué hace cada línea:**
 
 - `plt.figure(figsize=(6.5, 3.8))` → `figure`: crea la figura (el lienzo) donde se dibuja.
-- `for tasa in (0.005, 0.1, 0.9):` → Repite el bloque de debajo para cada valor de `tasa` en `(0.005, 0.1, 0.9)`. Dentro del bloque: `entrenar`: descenso del gradiente para la regresión lineal. Devuelve (w, historial_de_mse). *(La escribís vosotros en un ejercicio.)*; `plot`: dibuja una línea (o puntos unidos).
+- `for tasa in (0.005, 0.1, 1.2):` → Repite el bloque de debajo para cada valor de `tasa` en `(0.005, 0.1, 1.2)`. Dentro del bloque: `entrenar`: descenso del gradiente para la regresión lineal. Devuelve (w, historial_de_mse). *(La escribís vosotros en un ejercicio.)*; `plot`: dibuja una línea (o puntos unidos).
 - `plt.yscale("log")` → `yscale`: cambia la escala del eje vertical (por ejemplo, logarítmica).
 - `plt.xlabel("Época")` → `xlabel`: pone el nombre del eje horizontal.
 - `plt.ylabel("MSE (escala logarítmica)")` → `ylabel`: pone el nombre del eje vertical.

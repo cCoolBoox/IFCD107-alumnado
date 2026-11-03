@@ -56,7 +56,7 @@
 
 **Qué vais a entregar:** un cuaderno, una base de datos y la respuesta al cliente.
 
-**Núcleo y extra.** Núcleo: la regresión desde cero y la respuesta al cliente con su medida de confianza. Extra: la comparación con una librería y el CRUD ampliado.
+**Niveles del reto.** 🟢 Mínimo: la regresión simple desde cero y la respuesta al cliente con una cifra y su intervalo. 🟡 Estándar: el modelo con control (festivo y mes), la comparación con `statsmodels` y el p-valor, el intervalo y el tamaño del efecto explicados con palabras. 🔴 Extra: explicar con el control por mes por qué correlación no es causalidad, comparar varias tasas de aprendizaje y cuidar los gráficos.
 
 Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S05/3_Reto/1_Trabajar/S05_demo_reto.html) (muestra lo que tendréis al final). Para trabajar: [reto en una página](3_Reto/1_Trabajar/Reto_Sprint_05_una_pagina.md). Para entregar: [qué se sube y rúbrica](3_Reto/2_Entregar/entrega_y_rubrica.md). Para consultar: [ficha del reto](3_Reto/3_Consultar/Reto_Sprint_05.md) (qué pide el cliente, ayudas y errores frecuentes) y [cada paso explicado](3_Reto/3_Consultar/).
 
