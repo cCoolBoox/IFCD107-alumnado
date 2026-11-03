@@ -83,14 +83,26 @@ Es lo normal. `NotImplementedError` significa «esto está **sin hacer**»: es l
 
 **Qué hace.** Recibe la lista de reservas y devuelve un diccionario con el porcentaje de canceladas de cada canal. Con 3 reservas de `web` y 1 cancelada: `{"web": 33.3}`. Sin reservas: `{}`.
 
-**Seguid un ejemplo con el dedo.** Cuatro reservas: `web` (no cancelada), `web` (cancelada), `directo` (no cancelada) y `web` (no cancelada). Al terminar el `for`, los dos diccionarios quedan así:
+**Seguid un ejemplo con el dedo.** Tenéis 4 reservas. Tapad la tabla con una hoja y destapadla **fila a fila**: cada fila es **una vuelta del `for`**.
 
-| Diccionario | Contenido | Cómo se llega a él |
-|---|---|---|
-| `total` | `{"web": 3, "directo": 1}` | cada reserva suma 1 a **su** canal, esté o no cancelada |
-| `canceladas` | `{"web": 1}` | solo suma 1 la reserva con `cancelada == 1`; **`directo` no aparece** |
+| Vuelta | Reserva (`canal`, `cancelada`) | `total` queda así | `canceladas` queda así |
+|---|---|---|---|
+| Al empezar | *(todavía ninguna)* | `{}` | `{}` |
+| 1 | `web`, no cancelada (0) | `{"web": 1}` | `{}` |
+| 2 | `web`, **cancelada (1)** | `{"web": 2}` | `{"web": 1}` |
+| 3 | `directo`, no cancelada (0) | `{"web": 2, "directo": 1}` | `{"web": 1}` |
+| 4 | `web`, no cancelada (0) | `{"web": 3, "directo": 1}` | `{"web": 1}` |
 
-Y el resultado: `web` → 100 × 1 ÷ 3 = **33.3** y `directo` → 100 × 0 ÷ 1 = **0.0**.
+Fijaos en dos cosas: **`total` sube en todas las vueltas** (esté cancelada o no) y **`canceladas` solo sube en la vuelta 2**, la única con `cancelada` = 1. Por eso `directo` **no aparece** en `canceladas`.
+
+**Después del `for`, el porcentaje de cada canal** (canceladas ÷ total × 100):
+
+| Canal | Canceladas | Total | Cuenta | Resultado |
+|---|---|---|---|---|
+| `web` | 1 | 3 | 100 × 1 ÷ 3 | **33.3** |
+| `directo` | 0 (no aparece → `0`) | 1 | 100 × 0 ÷ 1 | **0.0** |
+
+La función devuelve `{"web": 33.3, "directo": 0.0}`.
 
 **Qué tocáis en `kpis.py`.** Dejad el `def` y el texto entre comillas triples. **Borrad solo la línea `raise NotImplementedError(...)`** y escribid vuestras líneas en su lugar, con 4 espacios al principio. Terminad con `return`. Los pasos de la tabla son **los mismos `# Paso 1`, `# Paso 2`… que están como comentario dentro de cada función de `kpis.py`** (no los confundáis con los pasos 1 a 9 de la tarjeta).
 
