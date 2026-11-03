@@ -1,7 +1,7 @@
 # README Sprint S03 · Del dato al modelo en la nube
 
 **Pregunta guía:** ¿podemos tener un primer modelo funcionando, sin programar?  
-**Fechas:** 26–27/10 · **Horas:** 12 h (4 h teoría · 4 h práctica · 4 h proyecto)
+**Fechas:** 26–30/10 · **Horas:** 30 h (16 h teoría · 7 h práctica · 7 h proyecto)
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 

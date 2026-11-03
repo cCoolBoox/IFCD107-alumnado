@@ -12,23 +12,23 @@ Este temario sigue el orden de impartición de `distribucion_historico.md`: Bloq
 
 | Bloque | Código | Módulo / unidad | Horas | Fechas |
 |---|---|---|---|---|
-| A | M1a | Fundamentos de IA (conceptual) | 20 | 16–21/10 |
-| A | M6a | Bases de datos SQL/NoSQL | 4 | 21/10 |
-| A | M7 | Auto Machine Learning | 10 | 22–23/10 |
-| A | M8 | Responsible AI | 5 | 23–26/10 |
-| A | SS1 | Softskills: Scrum | 4 | 26–27/10 |
-| A | SS2 | Softskills: Design Thinking | 3 | 27/10 |
+| A | M1a | Fundamentos de IA (conceptual) | 20 | 20–23/10 |
+| A | M6a | Bases de datos SQL/NoSQL | 4 | 26–30/10 |
+| A | M7 | Auto Machine Learning | 10 | 26–30/10 |
+| A | M8 | Responsible AI | 5 | 20–21/10 |
+| A | SS1 | Softskills: Scrum | 4 | 16–19/10 |
+| A | SS2 | Softskills: Design Thinking | 3 | 16–19/10 |
 | B | M1b | Python + mates/estadística aplicadas | 22 | 3–5/11 |
 | B | M6b | CRUD desde Python | 1 | 5/11 |
 | B | M2 | Exploración del conjunto de datos | 5 | 6/11 |
 | B | M3 | Algoritmos de Machine Learning | 40 | 6–16/11 |
 | B | M4 | Redes Neuronales | 50 | 17–25/11 |
 | B | M5 | Visualización de resultados | 3 | 25/11 |
-| C | M9 | Caso práctico en IA (proyecto) | 60 | 25/11–14/12 |
+| C | M9 | Caso práctico en IA (proyecto) | 60 | 26/11–14/12 |
 | C | SS3 | Softskills: Storytelling | 3 | 11/12 |
 | | | **Total** (M9 60 h incluidas; SS3 dentro de las 230 h) | **230** | |
 
-> Nota de cómputo: M9 son 60 h de proyecto + 3 h de Storytelling (SS3) = 63 h del bloque C, ya contadas en el calendario.
+> Nota de cómputo: las horas de este índice son las del programa oficial por módulo (A 46 h · B 121 h · C 63 h, con M9 = 60 h de proyecto + 3 h de Storytelling). El calendario real reparte las 230 h por jornadas completas: **A 66 h · B 102 h · C 62 h** (ver [calendario_sprints.md](calendario_sprints.md)); el total y las unidades didácticas se mantienen.
 > El total de teoría (Bloques A y B, más SS3) es 170 h.
 
 **Convención de cada unidad:** contenidos → práctica (P) → producto evaluable (E).
@@ -108,8 +108,8 @@ Este temario sigue el orden de impartición de `distribucion_historico.md`: Bloq
 - Plataformas: SageMaker (Canvas/Autopilot), Vertex AI, Azure AutoML, H2O.
 - Principios de MLOps: ciclo, versionado, despliegue, monitorización, deriva de datos.
 
-### UD 7.2 · Datos en SageMaker (2 h)
-- Cuenta, IAM, costes y buenas prácticas de seguridad; almacenamiento en S3.
+### UD 7.2 · Datos para AutoML (2 h)
+- En esta edición se trabaja en Colab, sin cuenta de nube del alumnado. En una plataforma de nube (por ejemplo SageMaker) haría falta cuenta, IAM, control de costes y almacenamiento en S3.
 - Carga y tratamiento del dataset; visualización y calidad de datos.
 - **P:** cargar y explorar un dataset tabular.
 
@@ -164,7 +164,7 @@ Este temario sigue el orden de impartición de `distribucion_historico.md`: Bloq
 # BLOQUE B · PYTHON (121 h)
 
 ## M1b · Python + matemáticas y estadística aplicadas (22 h)
-**Objetivo:** dominar Python como herramienta para implementar conceptos de IA. El alumnado viene de Java: se apoyará en comparaciones Java ↔ Python.
+**Objetivo:** dominar Python como herramienta para implementar conceptos de IA. El programa oficial presupone Java; en esta edición se empieza desde cero, y las comparaciones con Java son solo una nota para quien lo conozca.
 
 ### UD 1b.1 · Puesta en marcha del entorno (2 h)
 - Instalación de Python, entornos virtuales, `pip`, Jupyter, VS Code; Git básico.
@@ -178,7 +178,7 @@ Este temario sigue el orden de impartición de `distribucion_historico.md`: Bloq
 
 ### UD 1b.4 · Módulos, ficheros, excepciones y POO (2 h)
 - Importación de módulos, lectura y escritura de ficheros (CSV, JSON).
-- Excepciones; clases y objetos (comparativa con Java).
+- Excepciones; clases y objetos.
 
 ### UD 1b.5 · NumPy (3 h)
 - Arrays, indexación, vectorización, *broadcasting*; álgebra lineal (`dot`, `matmul`, inversa, autovalores).

@@ -39,7 +39,7 @@
 | 0 | Arranque ágil | Scrum + Design Thinking | 12 | 3 | 2 | 7 | vie 16/10 | lun 19/10 |
 | 1 | Qué es la IA, cómo aprende y cómo usarla bien | M1a (UD 1–3) + M8 | 12 | 4 | 3 | 5 | mar 20/10 | mié 21/10 |
 | 2 | Las matemáticas y la estadística detrás | M1a (UD 4–6) | 12 | 5 | 4 | 3 | jue 22/10 | vie 23/10 |
-| 3 | Del dato al modelo en la nube | M6a + M7 | 12 | 4 | 4 | 4 | lun 26/10 | vie 30/10 (real; estaba previsto el mar 27/10) |
+| 3 | Del dato al modelo en la nube | M6a + M7 | 30 | 16 | 7 | 7 | lun 26/10 | vie 30/10 (real: 5 jornadas; estaba previsto en 12 h hasta el mar 27/10) |
 | **BLOQUE B · Python (102 h, bloque continuo)** |  |  |  |  |  |  |  |  |
 | 4 | Python para IA | M1b (UD 1–4) | 9 | 2 | 4 | 3 | mar 3/11 | mié 4/11 |
 | 5 | Matemáticas y estadística en código | M1b (UD 5–7) + M6b | 9 | 2 | 4 | 3 | mié 4/11 | jue 5/11 |
@@ -58,7 +58,7 @@
 | 17 | Proyecto · Storytelling, ensayos y defensa | M9 + Storytelling | 8 | 1 | 2 | 5 | vie 11/12 | lun 14/12 |
 | | **Total** | | **230** | **53** | **70** | **107** | | |
 
-*Cada sprint ocupa jornadas completas: empieza a las 08:30 de su primer día y termina a las 14:30 de su último, con la review y la retro en las últimas horas. No hay relevos a mitad de jornada. Días sin clase: lun 2/11, lun 7/12 y mar 8/12. Última sesión: lun 14/12, solo 2 h. El Sprint 0 ocupó 12 h (previstas 7): esas 5 h se recuperan recortando práctica y PBL en los Sprints 1, 3, 5, 10, 12 y 14. Las horas de cada sprint incluyen el *daily* de cada día y el descanso: son jornadas completas de 6 h. El trabajo programado minuto a minuto está en el README de cada sprint (en las jornadas de proyecto, 250 min al día).*
+*Cada sprint ocupa jornadas completas: empieza a las 08:30 de su primer día y termina a las 14:30 de su último, con la review y la retro en las últimas horas, salvo en las dos jornadas compartidas (mié 4/11 y mié 11/11), en las que un sprint acaba y el siguiente empieza. Días sin clase: lun 2/11, lun 7/12 y mar 8/12. Última sesión: lun 14/12, 2 h de defensas (08:30–10:30) más un cierre de unos 30 min. Las horas de cada sprint incluyen el *daily* de cada día y el descanso: son jornadas completas de 6 h. El trabajo programado minuto a minuto está en el README de cada sprint (en las jornadas de proyecto, 250 min al día).*
 
 Comprobaciones: Python continuo del 3/11 al 25/11 (Sprints 4–13) = 102 h; los Sprints 1–3 ocuparon 9 jornadas (54 h) en lugar de 6 (36 h), por lo que el bloque A suma 66 h; 66 + 102 + 62 = 230 h. Proyecto de cierre = 18 + 18 + 18 + 8 = 62 h (Sprints 14–17). Total = **230 h**. Los totales por módulo del cronograma oficial se desvían (M5 y M9, menos 1–2 h; M1a y M1b, ±2 h; **M3 y M4 pierden varias horas cada uno** al recuperar el retraso de los Sprints 1–3: se recorta el trabajo repetitivo, que pasa a casa, y la teoría de Redes se da en versión corta), pero el total y las unidades didácticas se mantienen.
 
@@ -94,7 +94,7 @@ Comprobaciones: Python continuo del 3/11 al 25/11 (Sprints 4–13) = 102 h; los 
 - **Entregable:** dictamen de auditoría + hoja de ejercicios.
 - **Evaluación:** test corto de M1a (conceptos, mates, estadística) el 23/10.
 
-## Sprint 3 · Del dato al modelo en la nube (12 h · 26–27/10)
+## Sprint 3 · Del dato al modelo en la nube (12 h previstas; ocupó 5 jornadas, 30 h · 26–30/10)
 **Pregunta guía:** ¿podemos tener un primer modelo funcionando, sin programar?
 
 - **Teoría (4 h):** M6a modelo relacional, SQL y CRUD (2 h); nociones de DBA y buenas prácticas (1 h); NoSQL (1 h); M7 introducción a AutoML y MLOps (1 h, T de UD 7.1).
@@ -103,10 +103,11 @@ Comprobaciones: Python continuo del 3/11 al 25/11 (Sprints 4–13) = 102 h; los 
 - **Entregable:** informe del mejor modelo + evidencia de la llamada al endpoint + informe de costes.
 - **Requisito:** Colab operativo (el alta se hace en clase el jueves 22/10). El AutoML se hace con AutoGluon en Colab (no hace falta cuenta de nube).
 
+- **Evaluación:** test del bloque M6–M8 el 27/10 (dentro del Sprint 3, que terminó el vie 30/10).
+
 ---
 
 # BLOQUE B · PYTHON (102 h continuas)
-- **Evaluación:** test del bloque M6–M8 el 27/10 (último día del Sprint 3).
 
 ## Sprint 4 · Python para IA (9 h · 3–4/11)
 **Pregunta guía:** ¿cómo automatizamos lo que hemos hecho a mano?

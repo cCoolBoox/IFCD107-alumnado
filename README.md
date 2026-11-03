@@ -51,18 +51,18 @@ El curso tiene **tres etapas**. La primera no usa Python: primero entiendes qué
 
 ```mermaid
 flowchart TD
-    subgraph A["🟦 ETAPA A · Entender (sin Python) · 46 h · Sprints 0-3"]
+    subgraph A["🟦 ETAPA A · Entender (sin Python) · 66 h · Sprints 0-3"]
         A1["Trabajar en equipo<br/>Scrum y Design Thinking"] --> A2["Qué es la IA,<br/>cómo aprende y cómo usarla bien"]
         A2 --> A3["Matemáticas y estadística<br/>que hay detrás"]
         A3 --> A4["Datos y AutoML:<br/>primer modelo sin programar"]
     end
-    subgraph B["🟩 ETAPA B · Construir (todo Python) · 121 h · Sprints 4-13"]
+    subgraph B["🟩 ETAPA B · Construir (todo Python) · 102 h · Sprints 4-13"]
         B1["Python para IA"] --> B2["Datos limpios<br/>y preparados"]
         B2 --> B3["Machine Learning<br/>regresión, árboles, clustering"]
         B3 --> B4["Redes neuronales<br/>imagen, texto, series"]
         B4 --> B5["Contar y visualizar<br/>los resultados"]
     end
-    subgraph C["🟧 ETAPA C · Demostrar · 63 h · Sprints 14-17"]
+    subgraph C["🟧 ETAPA C · Demostrar · 62 h · Sprints 14-17"]
         C1["Elegir reto<br/>y datos"] --> C2["Modelar<br/>y experimentar"]
         C2 --> C3["Evaluar, IA responsable<br/>y entregar"]
         C3 --> C4["Storytelling<br/>y defensa"]
@@ -153,7 +153,7 @@ gantt
     S17 Storytelling y defensa        :c17, 2026-12-11, 4d
 ```
 
-**Días sin clase:** 2/11, 7/12 y 8/12. **Última sesión:** 14/12, solo 2 h (defensas finales). Calendario con horas exactas: [`material/calendario_sprints.md`](material/calendario_sprints.md). **Calendario interactivo online** (marca el sprint en curso y enlaza los tests): <https://ccoolboox.github.io/IFCD107-alumnado/material/calendario_sprints.html>.
+**Días sin clase:** 2/11, 7/12 y 8/12. **Última sesión:** 14/12, 2 h de defensas finales (08:30–10:30) más un cierre de unos 30 min. Calendario con horas exactas: [`material/calendario_sprints.md`](material/calendario_sprints.md). **Calendario interactivo online** (marca el sprint en curso y enlaza los tests): <https://ccoolboox.github.io/IFCD107-alumnado/material/calendario_sprints.html>.
 
 ---
 
@@ -196,7 +196,7 @@ Cada sprint responde a **una pregunta del cliente** y termina en **un reto**.
 | **0** | 16–19/10 | ¿Cómo vamos a trabajar y con quién? | Constituir la consultora |
 | **1** | 20–21/10 | ¿Dónde puede ayudar la IA y qué riesgos tiene? | Auditoría de oportunidades de IA |
 | **2** | 22–23/10 | ¿En qué se apoyan los modelos y cuándo no fiarnos de un dato? | ¿Nos fiamos de este informe? |
-| **3** | 26–27/10 | ¿Podemos tener un primer modelo funcionando sin programar? | Primer modelo en producción |
+| **3** | 26–30/10 | ¿Podemos tener un primer modelo funcionando sin programar? | Primer modelo en producción |
 
 ### 🟩 Etapa B · Construir
 
@@ -338,7 +338,7 @@ Todo lo que usamos tiene un nivel gratuito. **Nunca subas datos personales ni cl
 4. Haz commits a menudo: todos los integrantes deben aparecer en el historial.
 5. Si algo no funciona, abre un *issue* (**Issues → New issue → 🆘 Tengo una duda o un problema**) o pregunta en clase.
 
-*Las soluciones no se publican.*
+*Las soluciones de los retos no se publican; las de los ejercicios de práctica se publican al terminar cada jornada.*
 
 ---
 📄 **Licencia:** material bajo [CC BY-NC-SA 4.0](LICENSE): puedes compartirlo y adaptarlo citando a Soultech Labs, sin uso comercial y con la misma licencia.

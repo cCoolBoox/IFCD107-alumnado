@@ -19,7 +19,7 @@ Los notebooks se abren en **Google Colab** con la insignia de la primera celda d
 | 0 | Arranque ágil | 16–19/10 | – | [S00](S00) |
 | 1 | Qué es la IA y cómo usarla bien | 20–21/10 | – | [S01](S01) |
 | 2 | Matemáticas y estadística | 22–23/10 | – | [S02](S02) |
-| 3 | Del dato al modelo | 26–27/10 | NoSQL | [S03](S03) |
+| 3 | Del dato al modelo | 26–30/10 | NoSQL | [S03](S03) |
 | 4 | Python para IA | 3–4/11 | 5 | [S04](S04) |
 | 5 | Matemáticas y estadística en código | 4–5/11 | 7 | [S05](S05) |
 | 6 | Datos listos para modelar | 6 y 9/11 | 4 | [S06](S06) |
