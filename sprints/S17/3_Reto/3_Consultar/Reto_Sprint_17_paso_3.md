@@ -51,7 +51,7 @@
 
     | Equipos | Turno | Cómo recortar el guion base |
     |---|---|---|
-    | 5 | 22 min | Añadid una diapositiva de resultados y una de errores; más tiempo para la demo |
+    | 5 | 22 min | Mismo guion de 12 diapositivas (el máximo): el tiempo extra va a la demo. Preparad, detrás de la 12, diapositivas de reserva con resultados y errores por si os preguntan |
     | 6 | 18 min | Guion base y 1 minuto de análisis de sesgos |
     | 7 | 15 min | Fusionad las diapositivas 4 y 5 en una; demo de 3 minutos |
     | 8 | 13 min | Solo las diapositivas 1, 2, 6, 8, 9, 11 y 12; el resto, a reserva |
