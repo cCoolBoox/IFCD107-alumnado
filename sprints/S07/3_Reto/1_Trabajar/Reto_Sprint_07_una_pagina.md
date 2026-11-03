@@ -51,4 +51,4 @@
 - **Archivos subidos en `sprint-07/`:** `informe_modelado.md` · `reto_S07.ipynb` · `README.md` · `autoevaluacion_nombre.md` (**uno por persona**) = 3 + N ficheros
 - [ ] Referencias presentes y sin fuga · [ ] Costes de FN y FP como hipótesis con razón · [ ] Umbral elegido sin mirar el test · [ ] Recomendación con cifras y límites
 - [ ] Cuaderno ejecutable de arriba abajo · [ ] README con `SEMILLA = 42`, versiones y uso de la IA · [ ] Revisión con la rúbrica anotada en el informe
-- [ ] [Autoevaluación y coevaluación](../2_Entregar/autoevaluacion_y_coevaluacion.md): **una por persona**, subida a `sprint-07/`
+- [ ] [Autoevaluación y coevaluación](../2_Entregar/autoevaluacion_y_coevaluacion.md): **una por persona**, subida a `sprint-07/` (la coevaluación se completa el jueves, en la *review*)

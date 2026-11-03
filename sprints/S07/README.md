@@ -43,7 +43,7 @@
 | ☐ | 📖 Teoría · k-NN y Naive Bayes: dos algoritmos más | [Presentación S07_05](1_Teoria/S07_05_presentacion_k-NN_y_Naive_Bayes.pdf) | 10 |
 | ☐ | 🎯 Reto · Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_07_una_pagina.md) | 40 |
 | ☐ | 📝 Test · **Test de M3 (parte 1)** | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | 25 |
-| ☐ | 🔔 Ceremonia · Entrega en `sprint-07/` y autoevaluación y coevaluación del Sprint 7 (la review y la retro se hacen junto con las del Sprint 8) | — | 15 |
+| ☐ | 🔔 Ceremonia · Entrega en `sprint-07/` y autoevaluación del Sprint 7 (la coevaluación, la review y la retro se hacen el jueves, junto con las del Sprint 8) | — | 15 |
 | ☐ | 🏠 **En casa** · k vecinos (k-NN) y Naive Bayes (cuaderno completo) | [Cuaderno S07_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_05_knn_naive_bayes.ipynb) · [Presentación S07_05](1_Teoria/S07_05_presentacion_k-NN_y_Naive_Bayes.pdf) | 40 (casa) |
 
 **En clase: 1 h 45 min.**

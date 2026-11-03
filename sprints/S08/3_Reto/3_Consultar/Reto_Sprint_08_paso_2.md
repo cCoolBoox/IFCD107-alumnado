@@ -11,6 +11,8 @@
 
 **En sencillo.** Un *leaderboard* es como la clasificación de una liga: todos juegan con las mismas reglas y los resultados se apuntan en una tabla. Aquí los jugadores son **modelos** y las reglas (los mismos datos, las mismas particiones de validación cruzada y la misma nota, el AUC) vienen ya hechas en una celda que **no se toca**. Vosotros metéis a los cuatro primeros: un modelo que no sabe nada (la referencia o *baseline*, para saber si los demás merecen la pena), una regresión logística, un árbol y un bosque. Cada uno se apunta con una sola orden, `registrar(evaluar_modelo(...))`: solo escribís cuál es, cómo se llama y qué nota de explicabilidad le dais. No hace falta saber cómo funciona cada modelo por dentro: los ajustes vienen dados.
 
+**Qué puede pasar.** Este paso se hace dentro de la práctica `S08_02` (30 minutos), que ya trae sus propios ejercicios, así que es probable que no os dé tiempo a todo. Registrad primero los cuatro modelos en `S08_06` y dejad para casa los ejercicios de `S08_02` que os falten. Si al empezar el paso 4 aún falta algo de esta tabla, completadlo antes de seguir (pedid ayuda al docente): sin la tabla no se pueden calcular las puntuaciones.
+
 **Palabras nuevas de este paso**
 
 | Palabra | Qué significa, en sencillo |
@@ -35,7 +37,7 @@
     Herramientas listas. Leaderboard en: leaderboard_S08.csv
     ```
 
-    Quiere decir que 4800 reservas se usan para entrenar y comparar, y 1200 quedan **apartadas** para el examen final del paso 4. Ojo: la celda de herramientas **borra `leaderboard_S08.csv` cada vez que se ejecuta** (por `REINICIAR = True`), así que la tabla empieza de cero.
+    Quiere decir que 4800 reservas se usan para entrenar y comparar, y 1200 quedan **apartadas** para el examen final del paso 4. Es un test **nuevo**: no es el de las prácticas `S08_01` a `S08_05` (otra partición), así que nadie lo ha visto. Ojo: la celda de herramientas **borra `leaderboard_S08.csv` cada vez que se ejecuta** (por `REINICIAR = True`), así que la tabla empieza de cero.
 
 3. **Ejercicio 1: el modelo de referencia y la logística.** Buscad la celda del apartado «3 · Registrar el baseline y el modelo lineal». Veréis una línea `# TODO`, tres puntos `...` y varias líneas con `assert`. **Borrad solo los tres puntos** y escribid ahí:
 
@@ -94,8 +96,8 @@
 
 **Qué deberíais ver.**
 - **Tras las celdas de preparación:** `Train: 4800 · Test (intacto hasta el final): 1200` y `Herramientas listas. Leaderboard en: leaderboard_S08.csv`.
-- **Tras el ejercicio 1:** una tabla de dos filas. `logistica` con AUC ≈ 0,758 (± 0,012) y `baseline` con AUC 0,5 y desviación 0.
-- **Tras el ejercicio 2:** el error `AssertionError: Deben estar el baseline, la logística y al menos cuatro modelos más`, y al escribir `lb`, una tabla ordenada por `auc_cv_media` con cuatro filas: `logistica` (≈ 0,758), `random_forest` (≈ 0,741), `arbol_podado` (≈ 0,716) y `baseline` (0,500). El bosque es el que más pesa: `tamano_kb` de unos 11 800 KB, frente a menos de 11 KB en los demás.
+- **Tras el ejercicio 1:** una tabla de dos filas. `logistica` con AUC ≈ 0,755 (± 0,014) y `baseline` con AUC 0,5 y desviación 0.
+- **Tras el ejercicio 2:** el error `AssertionError: Deben estar el baseline, la logística y al menos cuatro modelos más`, y al escribir `lb`, una tabla ordenada por `auc_cv_media` con cuatro filas: `logistica` (≈ 0,755), `random_forest` (≈ 0,737), `arbol_podado` (≈ 0,719) y `baseline` (0,500). El bosque es el que más pesa: `tamano_kb` de unos 11 800 KB, frente a menos de 11 KB en los demás.
 - **En el panel de archivos de Colab** (el icono de la carpeta 📁 de la izquierda; si no aparece, pulsad el icono de refrescar), el fichero `leaderboard_S08.csv`.
 
 Los AUC son los mismos en cada ejecución (con `SEMILLA = 42`) y los tiempos y tamaños pueden variar un poco de un ordenador a otro.

@@ -11,6 +11,8 @@
 
 **En sencillo.** Cada modelo tiene «botones de ajuste», como la temperatura y el tiempo de un horno. Girarlos a mano es lento y, sin querer, se hace trampa. Un **buscador** prueba combinaciones de botones y se queda con la mejor, pero **examinándose siempre con trozos del entrenamiento**: usar el test para elegir sería ver el examen antes de hacerlo. La **rejilla** prueba todas las combinaciones; la **aleatoria** prueba solo unas cuantas elegidas al azar. Antes, completáis la tabla con los dos modelos que faltan, *boosting* y SVM. No hace falta entender qué hace cada botón: los valores que se prueban vienen escritos más abajo (y explicados en el cuaderno [`S08_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_05_busqueda_hiperparametros.ipynb), que es la guía de este paso).
 
+**Qué puede pasar.** Este paso se hace dentro de la práctica `S08_03` (25 minutos) y con la guía de `S08_05`, que se hace en casa la tarde anterior (≈ 40 minutos). Si el tiempo aprieta, id por este orden: (1) *boosting* y SVM, con los que ya tenéis los 6 modelos del nivel mínimo; (2) la búsqueda en una familia; (3) la búsqueda en la segunda familia (nivel Estándar). Lo que falte se acaba en la consolidación (13:00–13:30), en la 6.ª hora o en casa. **No calculéis el test hasta tener la tabla definitiva**: el test se usa una sola vez y con el campeón ya elegido.
+
 **Palabras nuevas de este paso**
 
 | Palabra | Qué significa, en sencillo |
@@ -113,10 +115,10 @@
 6. **Leer el resultado con honestidad.** Comparad cada modelo ajustado con el de partida y mirad la desviación (la «±»): una mejora de milésimas, menor que la desviación, es **ruido**, no una mejora. Si no mejora, es un resultado válido y se cuenta en la *model card*. Si varias combinaciones quedan casi empatadas, elegid la más sencilla (la regla del «error estándar» del apartado 4 de `S08_05`). En el paso 4 añadiréis estos dos modelos al `catalogo`.
 
 **Qué deberíais ver.**
-- **Tras terminar el ejercicio 2:** seis filas, ordenadas por AUC: `logistica` (≈ 0,758), `lightgbm` (≈ 0,750), `random_forest` (≈ 0,741), `svm_rbf` (≈ 0,740), `arbol_podado` (≈ 0,716) y `baseline` (0,500). La SVM es la que más tarda por prueba (varios segundos; las demás, de uno a pocos segundos).
-- **Búsqueda 1:** `Bosque · mejor AUC: 0.7456` y, debajo, los ajustes ganadores: `clf__max_depth` 8, `clf__min_samples_leaf` 10 y `clf__n_estimators` 200. Las 8 combinaciones quedan entre 0,744 y 0,746: casi empatadas.
-- **Búsqueda 2:** `LightGBM · mejor AUC: 0.7526` y cuatro ajustes con decimales (aproximadamente `learning_rate` 0,092, `min_child_samples` 62, `num_leaves` 4 y `subsample` 0,889). Como son sorteos, pueden salir valores algo distintos si la versión de las librerías no es la misma.
-- **Al registrar los dos modelos ajustados:** `8 modelos de 6 familias` y una tabla de 8 filas, con `lightgbm_ajustado` (≈ 0,753) justo por encima de `lightgbm` (≈ 0,750) y `random_forest_ajustado` (≈ 0,746) sobre `random_forest` (≈ 0,741). Mejoras de milésimas: ruido, porque la desviación es de ± 0,013. Cada búsqueda tardó entre 15 y 40 segundos en un ordenador de prueba; en Colab puede tardar más.
+- **Tras terminar el ejercicio 2:** seis filas, ordenadas por AUC: `logistica` (≈ 0,755), `lightgbm` (≈ 0,745), `random_forest` (≈ 0,737), `svm_rbf` (≈ 0,735), `arbol_podado` (≈ 0,719) y `baseline` (0,500). La SVM es la que más tarda por prueba (varios segundos; las demás, de uno a pocos segundos).
+- **Búsqueda 1:** `Bosque · mejor AUC: 0.7435` y, debajo, los ajustes ganadores: `clf__max_depth` 8, `clf__min_samples_leaf` 10 y `clf__n_estimators` 100. Las 8 combinaciones quedan entre 0,741 y 0,744: casi empatadas.
+- **Búsqueda 2:** `LightGBM · mejor AUC: 0.747` y cuatro ajustes con decimales (aproximadamente `learning_rate` 0,092, `min_child_samples` 62, `num_leaves` 4 y `subsample` 0,889). Como son sorteos, pueden salir valores algo distintos si la versión de las librerías no es la misma.
+- **Al registrar los dos modelos ajustados:** `8 modelos de 6 familias` y una tabla de 8 filas, con `lightgbm_ajustado` (≈ 0,747) justo por encima de `lightgbm` (≈ 0,745) y `random_forest_ajustado` (≈ 0,744) sobre `random_forest` (≈ 0,737). Son mejoras de milésimas, menores que la desviación (± 0,014): no podemos asegurar que sean mejoras reales. Cada búsqueda tardó entre 15 y 40 segundos en un ordenador de prueba; en Colab puede tardar más.
 
 **Hecho cuando:** hay entre 6 y 8 modelos de al menos 4 familias, y la búsqueda está hecha en dos familias con validación cruzada sobre train.
 

@@ -24,6 +24,7 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | Variable | Se crea así | Celda |
 |---|---|---|
 | `SEMILLA` | `42` | 1 |
+| `SEMILLA_TEST` | `7` | 1 |
 | `RUTA_CSV` | `"leaderboard_S08.csv"` | 1 |
 | `REINICIAR` | `True` | 1 |
 | `df` | `pd.read_csv(dato("reservas_turisdata.csv"), parse_dates=[…` | 2 |
@@ -132,6 +133,7 @@ from scipy.stats import randint, loguniform, uniform   # generadores de valores 
 
 warnings.filterwarnings("ignore")
 SEMILLA = 42
+SEMILLA_TEST = 7                      # partición propia del reto: distinta de la de las prácticas S08_01 a S08_05 (test que no habéis visto)
 sns.set_theme(style="whitegrid")
 
 RUTA_CSV = "leaderboard_S08.csv"     # el leaderboard se guarda aquí (en la carpeta del notebook)
@@ -149,7 +151,7 @@ REINICIAR = True                      # True = empieza de cero al ejecutar todo;
 - `import matplotlib.pyplot as plt` → Trae `matplotlib.pyplot` (lo llamamos `plt`) para poder usarlo.
 - `import seaborn as sns` → Trae `seaborn` (lo llamamos `sns`) para poder usarlo.
 - `from sklearn.model_selection import train_test_split, StratifiedKFold, cros…` → Trae `train_test_split`, `StratifiedKFold`, `cross_validate`, `GridSearchCV`, `RandomizedSearchCV` de `sklearn.model_selection` para poder usarlo.
-- … y 17 más con las mismas ideas.
+- … y 18 más con las mismas ideas.
 
 ### Celda 2 · 1. Datos y partición · 🏫
 
@@ -162,7 +164,7 @@ columnas_num = ["antelacion_dias", "noches", "adultos", "ninos", "precio_noche",
                 "peticiones_especiales", "cliente_repetidor", "cancelaciones_previas", "temporada_alta"]
 columnas_cat = ["tipo_habitacion", "regimen", "canal", "pais_origen", "tarifa", "deposito"]
 X, y = df[columnas_num + columnas_cat], df["cancelada"]
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=SEMILLA, stratify=y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=SEMILLA_TEST, stratify=y)
 cv = StratifiedKFold(5, shuffle=True, random_state=SEMILLA)
 print(f"Train: {len(X_train)} · Test (intacto hasta el final): {len(X_test)}")
 ```

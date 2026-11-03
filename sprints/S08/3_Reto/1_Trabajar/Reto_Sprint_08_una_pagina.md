@@ -17,6 +17,8 @@
     - En clase: planning 10 min (día 1); pasos 4 y 5, 75 min; entrega, review y retro 35 min (día 2).
     - Los pasos 2 y 3 (55 min) se hacen dentro de las prácticas `S08_02` y `S08_03` del día 2.
     - Los 10 min que faltan, en la consolidación y la 6.ª hora del día 2 (subida hasta las 14:30); lo demás, a casa.
+    - Si las prácticas se alargan: registrad primero los modelos en `S08_06` (los ejercicios que falten, a casa). Para el paso 4 bastan 6 modelos.
+    - La búsqueda en dos familias (Estándar) puede esperar a la consolidación, la 6.ª hora o casa; el test se calcula al final, con la tabla definitiva.
 
 ## Tres niveles: el equipo decide hasta dónde llega
 

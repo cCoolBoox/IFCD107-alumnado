@@ -49,8 +49,8 @@
     |---|---|---|
     | 1. Resumen | Qué predice el modelo, para qué decisión y quién lo usa | «Calcula la probabilidad de que una reserva se cancele, para avisar al gerente de TurisData.» |
     | 2. Modelo campeón | Familia, hiperparámetros finales y versiones | «Regresión logística (familia lineal), `max_iter=1000`, variables escaladas. scikit-learn 1.9.1.» |
-    | 3. Por qué este campeón | Vuestros pesos, el resultado del campeón, el mejor rival y las líneas del paso 4 | «Pesos 50 / 30 / 20. `logistica`: AUC 0,758 ± 0,012, explicabilidad 4. Mejor rival, `arbol_podado`: pierde 0,042 de AUC, pero se explica mejor (5).» |
-    | 5. Rendimiento | AUC en validación cruzada (± desviación) y **AUC de test (una sola evaluación)** | «Validación cruzada 0,758 ± 0,012; test 0,746.» |
+    | 3. Por qué este campeón | Vuestros pesos, el resultado del campeón, el mejor rival y las líneas del paso 4 | «Pesos 50 / 30 / 20. `logistica`: AUC 0,755 ± 0,014, explicabilidad 4. Mejor rival, `arbol_podado`: pierde 0,035 de AUC, pero se explica mejor (5).» |
+    | 5. Rendimiento | AUC en validación cruzada (± desviación) y **AUC de test (una sola evaluación)** | «Validación cruzada 0,755 ± 0,014; test 0,762.» |
     | 6. Uso previsto y NO previsto | Para qué sirve y para qué **no** debe usarse | «No usar para denegar reservas ni para decidir sin revisión humana.» |
 
     Para el **nivel estándar**, completad también estos cinco (el apartado 3 lleva además vuestra tabla de sensibilidad del paso 4):
@@ -112,7 +112,7 @@
 **Hecho cuando:** otra persona podría ejecutar el cuaderno siguiendo solo el README y obtendría el mismo campeón, la sección «Revisión con la rúbrica» está rellena y los cuatro ficheros están en `sprint-08/`.
 
 **Después, 35 minutos de entrega, review y retro:**
-- **La autoevaluación.** Cada persona rellena la suya ([autoevaluación y coevaluación](../2_Entregar/autoevaluacion_y_coevaluacion.md)) y la sube a `sprint-08/`; la coevaluación va dentro del mismo fichero.
+- **La autoevaluación.** Cada persona rellena la suya ([autoevaluación y coevaluación](../2_Entregar/autoevaluacion_y_coevaluacion.md)) y la sube a `sprint-08/`; la coevaluación va dentro del mismo fichero y se completa en la *review*, que es conjunta con la del Sprint 7.
 - **La review (5 minutos por equipo).** Enseñad el leaderboard (la tabla o un gráfico), el campeón y **por qué no ganó otro**, y una frase sobre qué cambiaría la elección si el cliente valorara otra cosa.
 - **La retrospectiva.** ¿Nos sorprendió que un modelo sencillo compitiera con uno complejo? ¿Qué criterio pesó más en nuestra decisión? ¿Qué mediríamos en producción para saber que el modelo se degrada?
 
