@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Los cuadernos **«en clase»** (carpeta `2_Practica/en_clase/`) son la versión corta que se hace en el aula; los completos son para casa.
 
 ## Qué aprenderás
 
@@ -21,7 +21,7 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «¿La ocupación depende de esto?» | — | 10 |
 | ☐ | 📖 Teoría · NumPy: arrays, máscaras, vectorización y *broadcasting* | [Presentación S05_01](1_Teoria/S05_01_presentacion_NumPy_calcular_sin_bucles.pdf) | 25 |
-| ☐ | 💻 Práctica · Arrays, vectorización y *broadcasting* (los ejercicios marcados «en clase»; lo que falte, en la tutoría) | [Cuaderno S05_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_01_numpy.ipynb) | 15 |
+| ☐ | 💻 Práctica · Arrays y vectorización (cuaderno «en clase»: ejercicios 1 y 3; lo que falte, en la tutoría) | [Cuaderno S05_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_01_numpy_en_clase.ipynb) | 15 |
 | ☐ | 🏠 **En casa** · Álgebra lineal con NumPy: vectores, matrices y sistemas de ecuaciones (cuaderno completo) | [Cuaderno S05_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_02_algebra_lineal.ipynb) · [Presentación S05_02](1_Teoria/S05_02_presentacion_Algebra_lineal_con_NumPy.pdf) | 40 (casa) |
 
 **En clase: 50 min.**
@@ -34,10 +34,10 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · Descenso del gradiente y regresión desde cero (los ejercicios marcados «en clase») | [Cuaderno S05_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_03_gradiente_regresion.ipynb) · [Presentación S05_03](1_Teoria/S05_03_presentacion_Descenso_del_gradiente_y_regresion.pdf) | 40 |
+| ☐ | 💻 Práctica · Descenso del gradiente y regresión desde cero (cuaderno «en clase»: ejercicios 4 y 5) | [Cuaderno S05_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_03_gradiente_regresion_en_clase.ipynb) · [Presentación S05_03](1_Teoria/S05_03_presentacion_Descenso_del_gradiente_y_regresion.pdf) | 40 |
 | ☐ | 📖 Teoría · Estadística descriptiva, Monte Carlo e intervalos de confianza | [Presentación S05_04](1_Teoria/S05_04_presentacion_Estadistica_descriptiva_Monte_Carlo_e_IC.pdf) | 20 |
-| ☐ | 💻 Práctica · Descriptiva, Monte Carlo e intervalos de confianza (los ejercicios marcados «en clase») | [Cuaderno S05_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_04_estadistica_descriptiva_ic.ipynb) | 30 |
-| ☐ | 💻 Práctica · CRUD con `sqlite3` y `mongomock` (es también el paso 1 del reto: cargar los datos en una base) | [Cuaderno S05_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb) · [Presentación S05_06](1_Teoria/S05_06_presentacion_CRUD_desde_Python.pdf) | 25 |
+| ☐ | 💻 Práctica · Descriptiva e intervalos de confianza (cuaderno «en clase»: ejercicios 1 y 5) | [Cuaderno S05_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_04_estadistica_descriptiva_ic_en_clase.ipynb) | 30 |
+| ☐ | 💻 Práctica · CRUD con `sqlite3` (cuaderno «en clase»: ejercicios 1 y 3; el 3 es también el paso 1 del reto: cargar los datos en una base) | [Cuaderno S05_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_06_crud_python_en_clase.ipynb) · [Presentación S05_06](1_Teoria/S05_06_presentacion_CRUD_desde_Python.pdf) | 25 |
 | ☐ | 🎯 Reto · Cuaderno `S05_07`: mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6; lo que falte, en la consolidación y la 6.ª hora) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_05_una_pagina.md) | 45 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-05/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 4 y 5 | — | 40 |
 | ☐ | 🏠 **En casa** · Contrastes de hipótesis, correlación y causalidad (cuaderno completo) | [Cuaderno S05_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_05_contrastes_causalidad.ipynb) · [Presentación S05_05](1_Teoria/S05_05_presentacion_Contrastes_correlacion_y_causalidad.pdf) | 40 (casa) |
@@ -78,7 +78,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la versión corta («en clase»). Traen **todos** los ejercicios, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S05_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_01_numpy.ipynb) · [`S05_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_03_gradiente_regresion.ipynb) · [`S05_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_04_estadistica_descriptiva_ic.ipynb) · [`S05_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_numpy_gradiente_y_estadistica.md).
 
 ## Si te atascas
