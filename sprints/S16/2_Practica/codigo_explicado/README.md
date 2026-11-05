@@ -4,4 +4,4 @@ Cada cuaderno de este sprint tiene aquí su **código explicado**: el recorrido 
 
 | Cuaderno | Código explicado |
 |---|---|
-| [`S16_01_demostrador`](../S16_01_demostrador.ipynb) · Plantilla de demostrador | [S16_01_demostrador.md](S16_01_demostrador.md) |
+| [`S16_01_demostrador`](../para_casa/S16_01_demostrador.ipynb) · Plantilla de demostrador | [S16_01_demostrador.md](S16_01_demostrador.md) |

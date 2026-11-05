@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Los cuadernos **«en clase»** (carpeta `2_Practica/en_clase/`) son la parte que se hace en el aula; los completos (carpeta `2_Practica/para_casa/`) son para casa.
 
 ## Qué aprenderás
 
@@ -21,11 +21,11 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Precio y cancelación» y reparto de roles | — | 10 |
 | ☐ | 📖 Teoría · Regresión lineal y polinómica: coeficientes, residuos e interacciones | [Presentación S07_01](1_Teoria/S07_01_presentacion_Regresion_lineal_y_polinomica.pdf) | 15 |
-| ☐ | 💻 Práctica · Regresión lineal y polinómica (los ejercicios marcados «en clase») | [Cuaderno S07_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_01_regresion_lineal_polinomica.ipynb) | 40 |
+| ☐ | 💻 Práctica · Regresión lineal y polinómica (cuaderno «en clase») | [Cuaderno S07_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/en_clase/S07_01_regresion_lineal_polinomica_en_clase.ipynb) | 40 |
 | ☐ | 📖 Teoría · Regularización: Ridge y Lasso | [Presentación S07_02](1_Teoria/S07_02_presentacion_Regularizacion_Ridge_y_Lasso.pdf) | 10 |
-| ☐ | 💻 Práctica · Ridge y Lasso (los ejercicios marcados «en clase») | [Cuaderno S07_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_02_ridge_lasso.ipynb) | 35 |
+| ☐ | 💻 Práctica · Ridge y Lasso (cuaderno «en clase») | [Cuaderno S07_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/en_clase/S07_02_ridge_lasso_en_clase.ipynb) | 35 |
 | ☐ | 📖 Teoría · Regresión logística: probabilidades, odds y umbral | [Presentación S07_03](1_Teoria/S07_03_presentacion_Regresion_logistica.pdf) | 20 |
-| ☐ | 💻 Práctica · Regresión logística (los ejercicios marcados «en clase») | [Cuaderno S07_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_03_regresion_logistica.ipynb) | 45 |
+| ☐ | 💻 Práctica · Regresión logística (cuaderno «en clase») | [Cuaderno S07_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/en_clase/S07_03_regresion_logistica_en_clase.ipynb) | 45 |
 | ☐ | 🎯 Reto · Acordar las hipótesis de coste y hacer la regresión del precio (pasos 1–2) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_07_una_pagina.md) | 25 |
 
 **En clase: 3 h 20 min.**
@@ -39,12 +39,12 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · ROC, PR y datos desbalanceados (los ejercicios marcados «en clase») | [Cuaderno S07_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_04_roc_pr_desbalance.ipynb) · [Presentación S07_04](1_Teoria/S07_04_presentacion_Curvas_ROC_y_PR_y_clases_desbalanceadas.pdf) | 15 |
+| ☐ | 💻 Práctica · ROC, PR y datos desbalanceados (cuaderno «en clase») | [Cuaderno S07_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/en_clase/S07_04_roc_pr_desbalance_en_clase.ipynb) · [Presentación S07_04](1_Teoria/S07_04_presentacion_Curvas_ROC_y_PR_y_clases_desbalanceadas.pdf) | 15 |
 | ☐ | 📖 Teoría · k-NN y Naive Bayes: dos algoritmos más | [Presentación S07_05](1_Teoria/S07_05_presentacion_k-NN_y_Naive_Bayes.pdf) | 10 |
 | ☐ | 🎯 Reto · Clasificación de la cancelación, análisis de sensibilidad, informe y README (pasos 3–5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_07_una_pagina.md) | 40 |
 | ☐ | 📝 Test · **Test de M3 (parte 1)** | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S07/tests/test_M3_parte1.html) | 25 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-07/` y autoevaluación del Sprint 7 (la coevaluación, la review y la retro se hacen el jueves, junto con las del Sprint 8) | — | 15 |
-| ☐ | 🏠 **En casa** · k vecinos (k-NN) y Naive Bayes (cuaderno completo) | [Cuaderno S07_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_05_knn_naive_bayes.ipynb) · [Presentación S07_05](1_Teoria/S07_05_presentacion_k-NN_y_Naive_Bayes.pdf) | 40 (casa) |
+| ☐ | 🏠 **En casa** · k vecinos (k-NN) y Naive Bayes (cuaderno completo) | [Cuaderno S07_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_05_knn_naive_bayes.ipynb) · [Presentación S07_05](1_Teoria/S07_05_presentacion_k-NN_y_Naive_Bayes.pdf) | 40 (casa) |
 
 **En clase: 1 h 45 min.**
 
@@ -87,7 +87,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S07_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_01_regresion_lineal_polinomica.ipynb) · [`S07_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_02_ridge_lasso.ipynb) · [`S07_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_03_regresion_logistica.ipynb) · [`S07_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_04_roc_pr_desbalance.ipynb).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_regresion_y_clasificacion.md).
 
 ## Si te atascas

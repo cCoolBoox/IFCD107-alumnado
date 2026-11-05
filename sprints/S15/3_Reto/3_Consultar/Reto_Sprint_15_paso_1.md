@@ -28,7 +28,7 @@
 
 1. **Crear el cuaderno común (5 minutos).** Una persona (la responsable técnica) abre Colab, *Archivo → Cuaderno nuevo*, lo llama `03_modelos.ipynb` y pulsa **Compartir** (arriba a la derecha) para dar acceso de **editor** al resto. Subid también vuestro archivo de datos (panel 📁 de la izquierda). Todo el equipo trabaja en **este mismo cuaderno**: lo común arriba, y debajo una sección por persona con su nombre. **No editéis las celdas de otra persona.**
 
-2. **Semilla y versiones (10 minutos).** Si ya hicisteis [`S15_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb), copiad de allí estas celdas. En la primera celda de `03_modelos.ipynb` van las importaciones:
+2. **Semilla y versiones (10 minutos).** Si ya hicisteis [`S15_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/para_casa/S15_01_seguimiento_experimentos.ipynb), copiad de allí estas celdas. En la primera celda de `03_modelos.ipynb` van las importaciones:
 
     ```python
     import os, sys, time, json, random, hashlib

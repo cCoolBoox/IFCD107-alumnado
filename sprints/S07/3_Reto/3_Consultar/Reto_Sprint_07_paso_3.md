@@ -27,7 +27,7 @@
 
 **Cómo se hace**
 
-1. **Separar train y test y montar los modelos.** Primera celda de este paso. Como en [`S07_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_03_regresion_logistica.ipynb). Son 2 modelos (la referencia y la logística); el máximo es 3 por problema.
+1. **Separar train y test y montar los modelos.** Primera celda de este paso. Como en [`S07_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_03_regresion_logistica.ipynb). Son 2 modelos (la referencia y la logística); el máximo es 3 por problema.
 
     ```python
     from sklearn.model_selection import train_test_split, cross_val_predict, StratifiedKFold
@@ -152,7 +152,7 @@
     - `"{:,.0f}".format(x)`: escribe el número sin decimales y con separador de miles (Colab usa la coma: `156,484`).
     - `ConfusionMatrixDisplay.from_predictions(…)`: dibuja la matriz; el resto de líneas le ponen título y nombres.
 
-5. **Dibujar las curvas ROC y PR** (nivel estándar; para el mínimo basta la matriz). Celda nueva, con las funciones de [`S07_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_04_roc_pr_desbalance.ipynb):
+5. **Dibujar las curvas ROC y PR** (nivel estándar; para el mínimo basta la matriz). Celda nueva, con las funciones de [`S07_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_04_roc_pr_desbalance.ipynb):
 
     ```python
     proba_tonto = tonto.predict_proba(X_test)[:, 1]

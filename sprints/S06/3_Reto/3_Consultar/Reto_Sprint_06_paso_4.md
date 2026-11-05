@@ -95,7 +95,7 @@
     - `.mean()` y `.std()`: la media de las 5 notas y cuánto varían (desviación).
     - `scoring="roc_auc"` es la métrica del paso. Si preferís `"f1"` (equilibra aciertos y falsas alarmas entre las canceladas), cambiad solo esa palabra y decid cuál elegís y por qué.
 
-4. **Escribir la frase.** Va en el apartado 4 del informe, con vuestras cifras. Ejemplo con las de este fichero: «Nuestro modelo obtiene un AUC medio de 0,758 ± 0,025 frente a 0,500 del modelo tonto. Eso significa que ordena las reservas mucho mejor que el azar». Con `"f1"`: «Un F1 medio de 0,660 ± 0,029 frente a 0,000 del modelo tonto». Para el nivel extra, mirad la partición temporal en [`S06_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_04_metricas_validacion.ipynb) y la fuga en [`S06_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_03_preprocesado_pipeline.ipynb).
+4. **Escribir la frase.** Va en el apartado 4 del informe, con vuestras cifras. Ejemplo con las de este fichero: «Nuestro modelo obtiene un AUC medio de 0,758 ± 0,025 frente a 0,500 del modelo tonto. Eso significa que ordena las reservas mucho mejor que el azar». Con `"f1"`: «Un F1 medio de 0,660 ± 0,029 frente a 0,000 del modelo tonto». Para el nivel extra, mirad la partición temporal en [`S06_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/para_casa/S06_04_metricas_validacion.ipynb) y la fuga en [`S06_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/para_casa/S06_03_preprocesado_pipeline.ipynb).
 
 **Qué deberíais ver.** Aproximadamente estas cifras con el CSV del curso:
 

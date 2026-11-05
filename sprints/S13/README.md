@@ -40,7 +40,7 @@
 | Notebook | Tema | Tiempo | Colab |
 |---|---|---|---|
 | [`apuntes_comunicar_resultados.md`](1_Teoria/apuntes/apuntes_comunicar_resultados.md) · [PDF](pdf/apuntes_comunicar_resultados.pdf) · [ecofriendly](pdf/apuntes_comunicar_resultados_ecofriendly.pdf) | **Apuntes que complementan las diapositivas**: matriz de confusión, ROC/PR, importancia por permutación, umbral por coste y reglas para un informe visual de una página explicados con ejemplos | — | Antes del sprint y cuando tengas dudas |
-| `S13_01_visualizacion_resultados` | Matriz de confusión, ROC/PR, importancia, umbral y coste, buenas prácticas | 35 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb) |
+| `S13_01_visualizacion_resultados` | Matriz de confusión, ROC/PR, importancia, umbral y coste, buenas prácticas | 35 min | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/para_casa/S13_01_visualizacion_resultados.ipynb) |
 | `S13_02_plantilla_informe_visual` | Plantilla ejecutable del panel de una página (para el reto) | 35 min (dentro del reto) | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb) |
 
 Plantilla en esta carpeta: [`plantilla_informe_visual.md`](3_Reto/1_Trabajar/plantillas/plantilla_informe_visual.md) (texto del informe de una página).
@@ -55,7 +55,7 @@ Sigue los pasos **en este orden**: primero la teoría, después la práctica que
 | Nº | Tipo | Qué se hace | Tiempo |
 |---|---|---|---|
 | 1 | 📖 Teoría | [Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida)](1_Teoria/S13_01_presentacion_Visualizar_y_comunicar_resultados.pdf) | 10 min |
-| 2 | 💻 Práctica | [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb) | 35 min |
+| 2 | 💻 Práctica | [Matriz de confusión, ROC/PR, importancia, umbral y coste](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/para_casa/S13_01_visualizacion_resultados.ipynb) | 35 min |
 | 3 | 🎯 Reto | [Reto del Sprint 13](3_Reto/1_Trabajar/Reto_Sprint_13_una_pagina.md): elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el [cuaderno plantilla](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_02_plantilla_informe_visual.ipynb) y la [plantilla del informe](3_Reto/1_Trabajar/plantillas/plantilla_informe_visual.md) | 35 min |
 
 <!--orden:fin-->

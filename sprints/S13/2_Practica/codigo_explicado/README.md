@@ -4,5 +4,5 @@ Cada cuaderno de este sprint tiene aquí su **código explicado**: el recorrido 
 
 | Cuaderno | Código explicado |
 |---|---|
-| [`S13_01_visualizacion_resultados`](../S13_01_visualizacion_resultados.ipynb) · Contar lo que hace el modelo: visualización de resultados | [S13_01_visualizacion_resultados.md](S13_01_visualizacion_resultados.md) |
+| [`S13_01_visualizacion_resultados`](../para_casa/S13_01_visualizacion_resultados.ipynb) · Contar lo que hace el modelo: visualización de resultados | [S13_01_visualizacion_resultados.md](S13_01_visualizacion_resultados.md) |
 | [`S13_02_plantilla_informe_visual`](../S13_02_plantilla_informe_visual.ipynb) · Plantilla: informe visual de una página para dirección | [S13_02_plantilla_informe_visual.md](S13_02_plantilla_informe_visual.md) |

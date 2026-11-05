@@ -21,7 +21,7 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · **Planning del Sprint 16:** lee el README del Sprint 16 y reparte tareas | [README del Sprint 16](README.md) | 10 |
 | ☐ | 📖 Teoría · **Demostrador y documentación** | [Presentación S16_01](1_Teoria/S16_01_presentacion_Demostrador_y_documentacion.pdf) | 20 |
-| ☐ | 💻 Práctica · Práctica del demostrador (se ejecuta y se lee; los ejercicios, para casa) | [Cuaderno S16_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/S16_01_demostrador.ipynb) | 45 |
+| ☐ | 💻 Práctica · Práctica del demostrador (se ejecuta y se lee; los ejercicios, para casa) | [Cuaderno S16_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/en_clase/S16_01_demostrador_en_clase.ipynb) | 45 |
 | ☐ | 🎯 Reto · **Tutoría de sesgos y visualización** (franja por equipo) | — | 40 |
 | ☐ | 🎯 Reto · **Memoria técnica:** esqueleto y *model card* | [esqueleto](3_Reto/1_Trabajar/plantillas/plantilla_esqueleto_memoria_tecnica.md) | 85 |
 | ☐ | 🎯 Reto · **Subid de nivel:** completad la medición de sesgos por subgrupos y la visualización que la acompaña | — | 50 |
@@ -109,7 +109,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S16_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/para_casa/S16_01_demostrador.ipynb).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_demostrador_sesgos_y_memoria.md).
 
 ## Si te atascas

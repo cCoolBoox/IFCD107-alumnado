@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Los cuadernos **«en clase»** (carpeta `2_Practica/en_clase/`) son la parte que se hace en el aula; los completos (carpeta `2_Practica/para_casa/`) son para casa.
 
 ## Qué aprenderás
 
@@ -21,11 +21,11 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Escuchar al cliente» y reparto de las cinco áreas | — | 15 |
 | ☐ | 📖 Teoría · Series temporales: *baseline*, descomposición y SARIMAX | [Presentación S12_01](1_Teoria/S12_01_presentacion_Series_temporales.pdf) | 10 |
-| ☐ | 💻 Práctica · Series temporales: *baselines*, descomposición y SARIMAX (los ejercicios marcados «en clase») | [Cuaderno S12_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_01_series_temporales.ipynb) | 45 |
+| ☐ | 💻 Práctica · Series temporales: *baselines*, descomposición y SARIMAX (cuaderno «en clase») | [Cuaderno S12_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/en_clase/S12_01_series_temporales_en_clase.ipynb) | 45 |
 | ☐ | 📖 Teoría · RNN, LSTM y GRU: redes con memoria | [Presentación S12_02](1_Teoria/S12_02_presentacion_RNN_LSTM_y_GRU.pdf) | 10 |
-| ☐ | 💻 Práctica · RNN, LSTM y GRU frente al *baseline* (los ejercicios marcados «en clase») | [Cuaderno S12_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_02_redes_recurrentes.ipynb) | 45 |
+| ☐ | 💻 Práctica · RNN, LSTM y GRU frente al *baseline* (cuaderno «en clase») | [Cuaderno S12_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/en_clase/S12_02_redes_recurrentes_en_clase.ipynb) | 45 |
 | ☐ | 📖 Teoría · NLP clásico: limpiar, vectorizar y clasificar texto | [Presentación S12_03](1_Teoria/S12_03_presentacion_NLP_clasico.pdf) | 20 |
-| ☐ | 💻 Práctica · Reseñas: limpieza, TF-IDF, sentimiento y temas (los ejercicios marcados «en clase») | [Cuaderno S12_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_03_nlp_clasico.ipynb) | 55 |
+| ☐ | 💻 Práctica · Reseñas: limpieza, TF-IDF, sentimiento y temas (cuaderno «en clase») | [Cuaderno S12_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/en_clase/S12_03_nlp_clasico_en_clase.ipynb) | 55 |
 
 **En clase: 3 h 20 min.**
 
@@ -39,14 +39,14 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 📖 Teoría · Transformers, atención y LLM | [Presentación S12_05](1_Teoria/S12_05_presentacion_Transformers_y_atencion.pdf) | 15 |
-| ☐ | 💻 Práctica · Softmax, atención paso a paso y máscara causal (los ejercicios marcados «en clase») | [Cuaderno S12_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_05_transformers_atencion.ipynb) | 40 |
+| ☐ | 💻 Práctica · Softmax, atención paso a paso y máscara causal (cuaderno «en clase») | [Cuaderno S12_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/en_clase/S12_05_transformers_atencion_en_clase.ipynb) | 40 |
 | ☐ | 📖 Teoría · RAG: un asistente que cita su fuente | [Presentación S12_06](1_Teoria/S12_06_presentacion_Mini_RAG.pdf) | 10 |
-| ☐ | 💻 Práctica · Mini RAG: trocear la política, recuperar fragmentos y responder con umbral (los ejercicios marcados «en clase») | [Cuaderno S12_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_06_mini_rag.ipynb) | 45 |
+| ☐ | 💻 Práctica · Mini RAG: trocear la política, recuperar fragmentos y responder con umbral (cuaderno «en clase») | [Cuaderno S12_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/en_clase/S12_06_mini_rag_en_clase.ipynb) | 45 |
 | ☐ | 📖 Teoría · Autoencoders y modelos generativos (versión corta) | [Presentación S12_07](1_Teoria/S12_07_presentacion_Autoencoders_y_modelos_generativos.pdf) | 10 |
 | ☐ | 🎯 Reto · Reparto y plan (paso 1) y datos y modelos de las partes A (reseñas) y C (asistente) (paso 2) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_12_una_pagina.md) | 65 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 15 |
-| ☐ | 🏠 **En casa** · Embeddings: representar el significado con vectores, LSA (ampliación) | [Cuaderno S12_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_04_embeddings_lsa.ipynb) · [Presentación S12_04](1_Teoria/S12_04_presentacion_Embeddings_y_LSA.pdf) | 50 (casa) |
-| ☐ | 🏠 **En casa** · Autoencoders y modelos generativos, GAN y difusión (ampliación) | [Cuaderno S12_07](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/S12_07_autoencoder_generativos.ipynb) · [Presentación S12_07](1_Teoria/S12_07_presentacion_Autoencoders_y_modelos_generativos.pdf) | 50 (casa) |
+| ☐ | 🏠 **En casa** · Embeddings: representar el significado con vectores, LSA (ampliación) | [Cuaderno S12_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_04_embeddings_lsa.ipynb) · [Presentación S12_04](1_Teoria/S12_04_presentacion_Embeddings_y_LSA.pdf) | 50 (casa) |
+| ☐ | 🏠 **En casa** · Autoencoders y modelos generativos, GAN y difusión (ampliación) | [Cuaderno S12_07](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_07_autoencoder_generativos.ipynb) · [Presentación S12_07](1_Teoria/S12_07_presentacion_Autoencoders_y_modelos_generativos.pdf) | 50 (casa) |
 
 **En clase: 3 h 20 min.**
 
@@ -62,7 +62,7 @@
 | ☐ | 🎯 Reto · Parte B (ocupación), evaluación y seguridad del asistente y cierre (pasos 2–4) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_12_una_pagina.md) | 65 |
 | ☐ | 📝 Test · **Test de M4** (redes neuronales) | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/tests/test_M4.html) | 30 |
 | ☐ | 📖 Teoría · Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | [Presentación S13_01](../S13/1_Teoria/S13_01_presentacion_Visualizar_y_comunicar_resultados.pdf) | 10 |
-| ☐ | 💻 Práctica · Matriz de confusión, ROC/PR, importancia, umbral y coste | [Cuaderno S13_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/S13_01_visualizacion_resultados.ipynb) | 35 |
+| ☐ | 💻 Práctica · Matriz de confusión, ROC/PR, importancia, umbral y coste | [Cuaderno S13_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S13/2_Practica/en_clase/S13_01_visualizacion_resultados_en_clase.ipynb) | 35 |
 | ☐ | 🎯 Reto · Reto del Sprint 13: elegir el modelo y los costes → tres o cuatro gráficos → titular y viñetas. Usad el cuaderno plantilla y la plantilla del informe | [Reto del Sprint 13](../S13/3_Reto/1_Trabajar/Reto_Sprint_13_una_pagina.md) | 35 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-12/` (y el informe visual en `sprint-13/`), autoevaluación y coevaluación, review y retrospectiva | — | 25 |
 
@@ -115,7 +115,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S12_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_01_series_temporales.ipynb) · [`S12_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_02_redes_recurrentes.ipynb) · [`S12_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_03_nlp_clasico.ipynb) · [`S12_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_05_transformers_atencion.ipynb) · [`S12_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_06_mini_rag.ipynb).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_series_lenguaje_y_generativa.md).
 
 ## Si te atascas

@@ -92,7 +92,7 @@
     | `explicabilidad_1a5` | La nota que habéis puesto vosotros. |
     | `auc_test` | Vacía hasta el paso 4: el test se estrena una sola vez. |
 
-    Si queréis entender mejor un modelo, el cuaderno de [`S08_01` (árboles)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_01_arboles_decision.ipynb) y el de [`S08_02` (bosques)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_02_random_forest.ipynb) lo explican, pero no hace falta para este paso.
+    Si queréis entender mejor un modelo, el cuaderno de [`S08_01` (árboles)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_01_arboles_decision.ipynb) y el de [`S08_02` (bosques)](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_02_random_forest.ipynb) lo explican, pero no hace falta para este paso.
 
 **Qué deberíais ver.**
 - **Tras las celdas de preparación:** `Train: 4800 · Test (intacto hasta el final): 1200` y `Herramientas listas. Leaderboard en: leaderboard_S08.csv`.

@@ -139,7 +139,7 @@
 
     **Solo se mide en validación.** La prueba no se toca todavía.
 
-5. **Extra (opcional, necesita internet).** Con fotos reales en Colab podéis probar la rama de MobileNetV2 de la sección 7 del cuaderno (`USAR_INTERNET = True`, un `TAM` de 96 a 160 y `construir_mobilenet(N_CLASES, pesos="imagenet")`). El propio cuaderno avisa de que la descarga de pesos no está verificada en el taller. Si hay dudas, preguntad al docente. Pista de apoyo: el cuaderno de práctica [`S11_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_02_transfer_learning.ipynb) explica el *transfer learning* paso a paso.
+5. **Extra (opcional, necesita internet).** Con fotos reales en Colab podéis probar la rama de MobileNetV2 de la sección 7 del cuaderno (`USAR_INTERNET = True`, un `TAM` de 96 a 160 y `construir_mobilenet(N_CLASES, pesos="imagenet")`). El propio cuaderno avisa de que la descarga de pesos no está verificada en el taller. Si hay dudas, preguntad al docente. Pista de apoyo: el cuaderno de práctica [`S11_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/para_casa/S11_02_transfer_learning.ipynb) explica el *transfer learning* paso a paso.
 
 **Qué deberíais ver.**
 - **De la celda de la base:** `Base preentrenada lista: 23584 parámetros`. Ese número depende solo de la arquitectura, así que debe salir igual.

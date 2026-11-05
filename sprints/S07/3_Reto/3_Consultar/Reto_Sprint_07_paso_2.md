@@ -105,7 +105,7 @@
     - `lineal.coef_`: el extra en euros de cada columna; `pd.Series(…, index=Xp.columns)` les pone nombre.
     - `lineal.intercept_`: el precio base, cuando todo vale 0 (habitación estándar y temporada baja).
 
-5. **Decidir y escribir la frase.** Mirad la tabla: ¿la lineal gana a la referencia? ¿Compensa la mejora con interacciones? Si apenas mejora, quedaos con el modelo sencillo y decidlo en el informe. Otra mejora posible es la regularización Ridge o Lasso de [`S07_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_02_ridge_lasso.ipynb). Escribid la frase en euros con vuestras cifras: «nos equivocamos de media en X € por noche».
+5. **Decidir y escribir la frase.** Mirad la tabla: ¿la lineal gana a la referencia? ¿Compensa la mejora con interacciones? Si apenas mejora, quedaos con el modelo sencillo y decidlo en el informe. Otra mejora posible es la regularización Ridge o Lasso de [`S07_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_02_ridge_lasso.ipynb). Escribid la frase en euros con vuestras cifras: «nos equivocamos de media en X € por noche».
 
 **Qué deberíais ver.** Aproximadamente, con el CSV del curso:
 

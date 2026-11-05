@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Los cuadernos **«en clase»** (carpeta `2_Practica/en_clase/`) son la parte que se hace en el aula; los completos (carpeta `2_Practica/para_casa/`) son para casa.
 
 ## Qué aprenderás
 
@@ -21,9 +21,9 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Conocer al huésped» y reparto de roles | — | 10 |
 | ☐ | 📖 Teoría · Clustering: agrupar sin etiquetas con k-means, silueta, jerárquico y DBSCAN | [Presentación S09_01](1_Teoria/S09_01_presentacion_Clustering.pdf) | 20 |
-| ☐ | 💻 Práctica · Segmentar huéspedes: k-means, silueta, jerárquico y DBSCAN (los ejercicios marcados «en clase») | [Cuaderno S09_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_01_clustering.ipynb) | 45 |
+| ☐ | 💻 Práctica · Segmentar huéspedes: k-means, silueta, jerárquico y DBSCAN (cuaderno «en clase») | [Cuaderno S09_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/en_clase/S09_01_clustering_en_clase.ipynb) | 45 |
 | ☐ | 📖 Teoría · PCA: varianza explicada y mapa en 2D | [Presentación S09_02](1_Teoria/S09_02_presentacion_PCA.pdf) | 10 |
-| ☐ | 💻 Práctica · PCA: varianza explicada y mapa en 2D (los ejercicios marcados «en clase») | [Cuaderno S09_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_02_pca.ipynb) | 30 |
+| ☐ | 💻 Práctica · PCA: varianza explicada y mapa en 2D (cuaderno «en clase») | [Cuaderno S09_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/en_clase/S09_02_pca_en_clase.ipynb) | 30 |
 | ☐ | 🎯 Reto · Arrancar el reto: preparar datos, segmentar y elegir `k`, mapa PCA (pasos 1–3) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_09_una_pagina.md) | 45 |
 | ☐ | 📖 Teoría · Sistemas de recomendación | [Presentación S09_03](1_Teoria/S09_03_presentacion_Sistemas_de_recomendacion.pdf) | 25 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 15 |
@@ -39,9 +39,9 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · Recomendadores: popularidad, contenido, colaborativo y factorización (los ejercicios marcados «en clase») | [Cuaderno S09_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_03_recomendadores.ipynb) · [Presentación S09_03](1_Teoria/S09_03_presentacion_Sistemas_de_recomendacion.pdf) | 50 |
+| ☐ | 💻 Práctica · Recomendadores: popularidad, contenido, colaborativo y factorización (cuaderno «en clase») | [Cuaderno S09_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/en_clase/S09_03_recomendadores_en_clase.ipynb) · [Presentación S09_03](1_Teoria/S09_03_presentacion_Sistemas_de_recomendacion.pdf) | 50 |
 | ☐ | 📖 Teoría · Aprendizaje por refuerzo (visión conceptual) | [Presentación S09_04](1_Teoria/S09_04_presentacion_Aprendizaje_por_refuerzo.pdf) | 15 |
-| ☐ | 💻 Práctica · Q-learning en el hotel (demostración guiada) | [Cuaderno S09_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/S09_04_q_learning.ipynb) | 25 |
+| ☐ | 💻 Práctica · Q-learning en el hotel (demostración guiada) | [Cuaderno S09_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/en_clase/S09_04_q_learning_en_clase.ipynb) | 25 |
 | ☐ | 🎯 Reto · Recomendador, ficha de segmentos, IA responsable y ensayo (pasos 4–5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_09_una_pagina.md) | 50 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 20 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-09/`, autoevaluación y coevaluación, review (3 min por equipo) y retrospectiva | — | 40 |
@@ -82,7 +82,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S09_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/para_casa/S09_01_clustering.ipynb) · [`S09_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/para_casa/S09_02_pca.ipynb) · [`S09_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/para_casa/S09_03_recomendadores.ipynb) · [`S09_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S09/2_Practica/para_casa/S09_04_q_learning.ipynb).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_clustering_recomendadores_y_refuerzo.md).
 
 ## Si te atascas

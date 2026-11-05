@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Los cuadernos **«en clase»** (carpeta `2_Practica/en_clase/`) son la parte que se hace en el aula; los completos (carpeta `2_Practica/para_casa/`) son para casa.
 
 ## Qué aprenderás
 
@@ -20,7 +20,7 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 📖 Teoría · **Seguimiento de experimentos** | [Presentación S15_01](1_Teoria/S15_01_presentacion_Seguimiento_de_experimentos.pdf) | 20 |
-| ☐ | 💻 Práctica · Práctica de seguimiento de experimentos (los ejercicios marcados «en clase»; el resto, para casa) | [Cuaderno S15_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb) | 50 |
+| ☐ | 💻 Práctica · Práctica de seguimiento de experimentos (los ejercicios marcados «en clase»; el resto, para casa) | [Cuaderno S15_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/en_clase/S15_01_seguimiento_experimentos_en_clase.ipynb) | 50 |
 | ☐ | 🎯 Reto · **Proyecto:** modelo de referencia y primer modelo mejor. Anota todo en el registro de experimentos | [registro de experimentos](3_Reto/1_Trabajar/plantillas/registro_experimentos_plantilla.csv) | 130 |
 | ☐ | 🎯 Reto · **Subid de nivel:** más experimentos con otra semilla o una mejora razonada; el registro sigue limpio y completo | — | 50 |
 
@@ -98,7 +98,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S15_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/para_casa/S15_01_seguimiento_experimentos.ipynb).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_experimentos_y_reproducibilidad.md).
 
 ## Si te atascas

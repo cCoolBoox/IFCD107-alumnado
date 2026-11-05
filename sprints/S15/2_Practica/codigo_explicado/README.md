@@ -4,4 +4,4 @@ Cada cuaderno de este sprint tiene aquí su **código explicado**: el recorrido 
 
 | Cuaderno | Código explicado |
 |---|---|
-| [`S15_01_seguimiento_experimentos`](../S15_01_seguimiento_experimentos.ipynb) · Seguimiento de experimentos y reproducibilidad | [S15_01_seguimiento_experimentos.md](S15_01_seguimiento_experimentos.md) |
+| [`S15_01_seguimiento_experimentos`](../para_casa/S15_01_seguimiento_experimentos.ipynb) · Seguimiento de experimentos y reproducibilidad | [S15_01_seguimiento_experimentos.md](S15_01_seguimiento_experimentos.md) |

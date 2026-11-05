@@ -4,9 +4,9 @@ Cada cuaderno de este sprint tiene aquí su **código explicado**: el recorrido 
 
 | Cuaderno | Código explicado |
 |---|---|
-| [`S08_01_arboles_decision`](../S08_01_arboles_decision.ipynb) · Árboles de decisión: sobreajuste, poda e importancia | [S08_01_arboles_decision.md](S08_01_arboles_decision.md) |
-| [`S08_02_random_forest`](../S08_02_random_forest.ipynb) · Random Forest: la sabiduría de muchos árboles | [S08_02_random_forest.md](S08_02_random_forest.md) |
-| [`S08_03_boosting_xgboost_lightgbm`](../S08_03_boosting_xgboost_lightgbm.ipynb) · Boosting: Gradient Boosting, XGBoost y LightGBM | [S08_03_boosting_xgboost_lightgbm.md](S08_03_boosting_xgboost_lightgbm.md) |
-| [`S08_04_svm`](../S08_04_svm.ipynb) · Máquinas de vectores de soporte (SVM) | [S08_04_svm.md](S08_04_svm.md) |
-| [`S08_05_busqueda_hiperparametros`](../S08_05_busqueda_hiperparametros.ipynb) · Buscar buenos hiperparámetros: GridSearchCV y RandomizedSearchCV | [S08_05_busqueda_hiperparametros.md](S08_05_busqueda_hiperparametros.md) |
+| [`S08_01_arboles_decision`](../para_casa/S08_01_arboles_decision.ipynb) · Árboles de decisión: sobreajuste, poda e importancia | [S08_01_arboles_decision.md](S08_01_arboles_decision.md) |
+| [`S08_02_random_forest`](../para_casa/S08_02_random_forest.ipynb) · Random Forest: la sabiduría de muchos árboles | [S08_02_random_forest.md](S08_02_random_forest.md) |
+| [`S08_03_boosting_xgboost_lightgbm`](../para_casa/S08_03_boosting_xgboost_lightgbm.ipynb) · Boosting: Gradient Boosting, XGBoost y LightGBM | [S08_03_boosting_xgboost_lightgbm.md](S08_03_boosting_xgboost_lightgbm.md) |
+| [`S08_04_svm`](../para_casa/S08_04_svm.ipynb) · Máquinas de vectores de soporte (SVM) | [S08_04_svm.md](S08_04_svm.md) |
+| [`S08_05_busqueda_hiperparametros`](../para_casa/S08_05_busqueda_hiperparametros.ipynb) · Buscar buenos hiperparámetros: GridSearchCV y RandomizedSearchCV | [S08_05_busqueda_hiperparametros.md](S08_05_busqueda_hiperparametros.md) |
 | [`S08_06_leaderboard_plantilla`](../S08_06_leaderboard_plantilla.ipynb) · Plantilla del *leaderboard* interno («Duelo de modelos») | [S08_06_leaderboard_plantilla.md](S08_06_leaderboard_plantilla.md) |

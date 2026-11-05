@@ -2,7 +2,7 @@
 
 > **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. En clase solo se hace un **recorrido de 10 minutos** con el docente; el resto lo leéis vosotros, con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_03_regresion_logistica.ipynb) · [descargar](../S07_03_regresion_logistica.ipynb) · ⏱ en clase: 45 min · 🏫 4 celdas de código en clase · 🏠 2 en casa
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_03_regresion_logistica.ipynb) · [descargar](../para_casa/S07_03_regresion_logistica.ipynb) · ⏱ en clase: 45 min · 🏫 4 celdas de código en clase · 🏠 2 en casa
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 

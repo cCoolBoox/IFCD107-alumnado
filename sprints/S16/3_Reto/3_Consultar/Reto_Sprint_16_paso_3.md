@@ -115,7 +115,7 @@
     El resto de pasos no cambia: guardad el «antes», aplicad una sola medida, medid el «después» con la misma tabla y escribid la frase de lectura. Para el demostrador de estos tres tipos, mirad «Qué adaptar en vuestro proyecto» en `README_demostrador.md` (paso 4).
 
 7. **Si el sesgo no se puede arreglar (en el mismo tiempo).** Para **añadir datos**, decid cuántos casos del grupo faltan y cómo se conseguirían; si no hay forma, es una limitación. Para **limitar el uso**, escribidlo en el campo `limitaciones` del demostrador (paso 4) y en la model card. Esconderlo no es una opción.
-8. **Registro de experimentos (15 minutos).** Una fila nueva en `registro.csv` con la medida, el antes y después y la decisión. Si copiasteis `registrar` a `utilidades.py` en el Sprint 15 ([`S15_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/S15_01_seguimiento_experimentos.ipynb)), usadla; si no, añadid la fila a mano con las mismas 12 columnas:
+8. **Registro de experimentos (15 minutos).** Una fila nueva en `registro.csv` con la medida, el antes y después y la decisión. Si copiasteis `registrar` a `utilidades.py` en el Sprint 15 ([`S15_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S15/2_Practica/para_casa/S15_01_seguimiento_experimentos.ipynb)), usadla; si no, añadid la fila a mano con las mismas 12 columnas:
 
     ```python
     registrar("Ana", "RegresionLogistica+umbral_directo", UMBRALES, DATOS_HASH, SEMILLA, "recall_directo", 0.800, 0, 0,

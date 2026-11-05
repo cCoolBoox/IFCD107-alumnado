@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Los cuadernos **«en clase»** (carpeta `2_Practica/en_clase/`) son la parte que se hace en el aula; los completos (carpeta `2_Practica/para_casa/`) son para casa.
 
 ## Qué aprenderás
 
@@ -21,9 +21,9 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «¿Vale la pena la red?» y reparto de roles | — | 10 |
 | ☐ | 📖 Teoría · Una red neuronal desde cero: neurona, activación, error y gradiente | [Presentación S10_01](1_Teoria/S10_01_presentacion_Red_neuronal_desde_cero.pdf) | 20 |
-| ☐ | 💻 Práctica · Una red neuronal con solo NumPy (los ejercicios marcados «en clase») | [Cuaderno S10_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_01_red_desde_cero.ipynb) | 40 |
+| ☐ | 💻 Práctica · Una red neuronal con solo NumPy (cuaderno «en clase») | [Cuaderno S10_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/en_clase/S10_01_red_desde_cero_en_clase.ipynb) | 40 |
 | ☐ | 📖 Teoría · Redes densas con Keras: preparar los datos, Sequential, Dense y fit | [Presentación S10_02](1_Teoria/S10_02_presentacion_Redes_densas_con_Keras.pdf) | 25 |
-| ☐ | 💻 Práctica · MLP en Keras: clasificación y regresión (los ejercicios marcados «en clase») | [Cuaderno S10_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_02_mlp_keras.ipynb) | 60 |
+| ☐ | 💻 Práctica · MLP en Keras: clasificación y regresión (cuaderno «en clase») | [Cuaderno S10_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/en_clase/S10_02_mlp_keras_en_clase.ipynb) | 60 |
 | ☐ | 📖 Teoría · Entrenamiento y regularización: sobreajuste, L2, *dropout* y *callbacks* (diapositivas 2 a 5; la 11 es del reto) | [Presentación S10_03](1_Teoria/S10_03_presentacion_Entrenamiento_y_regularizacion.pdf) | 25 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 20 |
 
@@ -38,7 +38,7 @@
 
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
-| ☐ | 💻 Práctica · Sobreajuste, L2, *dropout*, parada temprana y *callbacks* (los ejercicios marcados «en clase») | [Cuaderno S10_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/S10_03_regularizacion.ipynb) · [Presentación S10_03](1_Teoria/S10_03_presentacion_Entrenamiento_y_regularizacion.pdf) | 55 |
+| ☐ | 💻 Práctica · Sobreajuste, L2, *dropout*, parada temprana y *callbacks* (cuaderno «en clase») | [Cuaderno S10_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/en_clase/S10_03_regularizacion_en_clase.ipynb) · [Presentación S10_03](1_Teoria/S10_03_presentacion_Entrenamiento_y_regularizacion.pdf) | 55 |
 | ☐ | 🎯 Reto · Esqueleto `S10_04`: elegir el problema y reproducir la referencia (paso 1) → primera red (2) → variantes (3) → diagnosticar el sobreajuste (4) → comparación justa (5) → informe y entrega (6); lo que falte, en la consolidación y la 6.ª hora | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_10_una_pagina.md) | 90 |
 | ☐ | 💻 Práctica · Terminad los cuadernos pendientes y poneos al día | — | 15 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-10/`, autoevaluación y coevaluación, review y retrospectiva | — | 40 |
@@ -79,7 +79,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S10_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/para_casa/S10_01_red_desde_cero.ipynb) · [`S10_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/para_casa/S10_02_mlp_keras.ipynb) · [`S10_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S10/2_Practica/para_casa/S10_03_regularizacion.ipynb).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_redes_neuronales.md).
 
 ## Si te atascas

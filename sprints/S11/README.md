@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Los cuadernos **«en clase»** (carpeta `2_Practica/en_clase/`) son la parte que se hace en el aula; los completos (carpeta `2_Practica/para_casa/`) son para casa.
 
 ## Qué aprenderás
 
@@ -21,9 +21,9 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Visión artificial para el cliente» y reparto de roles | — | 10 |
 | ☐ | 📖 Teoría · Redes convolucionales (CNN) | [Presentación S11_01](1_Teoria/S11_01_presentacion_Redes_convolucionales_CNN.pdf) | 25 |
-| ☐ | 💻 Práctica · Convolución, pooling, CNN y *data augmentation* (los ejercicios marcados «en clase») | [Cuaderno S11_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_01_cnn.ipynb) | 40 |
+| ☐ | 💻 Práctica · Convolución, pooling, CNN y *data augmentation* (cuaderno «en clase») | [Cuaderno S11_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/en_clase/S11_01_cnn_en_clase.ipynb) | 40 |
 | ☐ | 📖 Teoría · Transfer learning y fine-tuning | [Presentación S11_02](1_Teoria/S11_02_presentacion_Transfer_learning_y_fine_tuning.pdf) | 25 |
-| ☐ | 💻 Práctica · Transfer learning y fine-tuning (los ejercicios marcados «en clase») | [Cuaderno S11_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_02_transfer_learning.ipynb) | 75 |
+| ☐ | 💻 Práctica · Transfer learning y fine-tuning (cuaderno «en clase») | [Cuaderno S11_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/en_clase/S11_02_transfer_learning_en_clase.ipynb) | 75 |
 | ☐ | 🎯 Reto · Preparar los datos (paso 1) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_11_una_pagina.md) | 25 |
 
 **En clase: 3 h 20 min.**
@@ -39,7 +39,7 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 📖 Teoría · Detección de objetos y segmentación (versión corta) | [Presentación S11_03](1_Teoria/S11_03_presentacion_Deteccion_de_objetos_y_segmentacion.pdf) | 15 |
-| ☐ | 💻 Práctica · IoU y NMS con números pequeños (los ejercicios marcados «en clase»); el detector con OpenCV y la segmentación son para casa | [Cuaderno S11_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_03_deteccion_segmentacion.ipynb) | 35 |
+| ☐ | 💻 Práctica · IoU y NMS con números pequeños (cuaderno «en clase»); el detector con OpenCV y la segmentación son para casa | [Cuaderno S11_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/en_clase/S11_03_deteccion_segmentacion_en_clase.ipynb) | 35 |
 | ☐ | 💻 Práctica · Esqueleto del reto: dataset por carpetas y análisis de errores | [Cuaderno S11_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/S11_04_reto_vision_cliente.ipynb) | 40 |
 | ☐ | 🎯 Reto · Transfer learning y referencia (2) → evaluación y análisis de errores (3) → demostrador y umbral de confianza (4) → informe y presentación (5) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_11_una_pagina.md) | 80 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-11/`, autoevaluación y coevaluación, review y retrospectiva | — | 30 |
@@ -81,7 +81,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S11_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/para_casa/S11_01_cnn.ipynb) · [`S11_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/para_casa/S11_02_transfer_learning.ipynb) · [`S11_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S11/2_Practica/para_casa/S11_03_deteccion_segmentacion.ipynb).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_vision_por_computador.md).
 
 ## Si te atascas

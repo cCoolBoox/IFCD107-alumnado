@@ -26,7 +26,7 @@
 
 **Cómo se hace**
 
-1. **Escribir la función.** Celda nueva. Es la función del mini-reto de [`S06_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_02_limpieza.ipynb), ya montada y con una línea más (`mes_llegada`). Si vuestra tabla del paso 2 tiene un defecto que aquí no aparece, añadid una línea antes del `return`.
+1. **Escribir la función.** Celda nueva. Es la función del mini-reto de [`S06_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/para_casa/S06_02_limpieza.ipynb), ya montada y con una línea más (`mes_llegada`). Si vuestra tabla del paso 2 tiene un defecto que aquí no aparece, añadid una línea antes del `return`.
 
     ```python
     EQUIV_PAIS = {"es": "ES", "españa": "ES", "uk": "UK", "reino unido": "UK", "de": "DE",
@@ -123,7 +123,7 @@
 
     - `.min()` y `.max()`: la fecha más antigua y la más reciente; `.date()` quita las horas.
 
-4. **Elegir las columnas y separar *train* y *test*.** Para cada columna, una pregunta: «¿se conoce **al reservar**?». Quedan fuera `cancelada` (es `y`), `id_reserva` (un número de identificación no predice) y las dos fechas, que ya están resumidas en `antelacion_dias` y `mes_llegada`. Pista de cuaderno: [`S06_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/S06_03_preprocesado_pipeline.ipynb) (partición). Celda nueva:
+4. **Elegir las columnas y separar *train* y *test*.** Para cada columna, una pregunta: «¿se conoce **al reservar**?». Quedan fuera `cancelada` (es `y`), `id_reserva` (un número de identificación no predice) y las dos fechas, que ya están resumidas en `antelacion_dias` y `mes_llegada`. Pista de cuaderno: [`S06_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S06/2_Practica/para_casa/S06_03_preprocesado_pipeline.ipynb) (partición). Celda nueva:
 
     ```python
     columnas_num = ["antelacion_dias", "noches", "adultos", "ninos", "precio_noche",

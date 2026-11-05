@@ -26,7 +26,7 @@
 
 1. **Abrir el cuaderno.** En [Colab](https://colab.research.google.com), *Archivo → Nuevo cuaderno* y renombradlo `reto_S07`. Con *Compartir* (arriba a la derecha) dad acceso de editor al resto del equipo. Una persona escribe y las demás proponen. Cada bloque de código de abajo va en una **celda nueva** (*+ Código*) y se ejecuta con el botón ▶ o con Mayús + Intro, siempre de arriba abajo.
 
-2. **Preparar y cargar los datos.** Primera celda. Es la celda «Preparación» de [`S07_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/S07_01_regresion_lineal_polinomica.ipynb), junto con la carga del CSV:
+2. **Preparar y cargar los datos.** Primera celda. Es la celda «Preparación» de [`S07_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S07/2_Practica/para_casa/S07_01_regresion_lineal_polinomica.ipynb), junto con la carga del CSV:
 
     ```python
     import os, urllib.request

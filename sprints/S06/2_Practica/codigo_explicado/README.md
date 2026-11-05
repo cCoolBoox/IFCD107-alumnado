@@ -4,7 +4,7 @@ Cada cuaderno de este sprint tiene aquí su **código explicado**: el recorrido 
 
 | Cuaderno | Código explicado |
 |---|---|
-| [`S06_01_pandas_eda`](../S06_01_pandas_eda.ipynb) · Conocer los datos: pandas y exploración (EDA) | [S06_01_pandas_eda.md](S06_01_pandas_eda.md) |
-| [`S06_02_limpieza`](../S06_02_limpieza.ipynb) · Limpieza de datos: encontrar defectos y sus causas | [S06_02_limpieza.md](S06_02_limpieza.md) |
-| [`S06_03_preprocesado_pipeline`](../S06_03_preprocesado_pipeline.ipynb) · Preprocesado y *pipelines* reproducibles | [S06_03_preprocesado_pipeline.md](S06_03_preprocesado_pipeline.md) |
-| [`S06_04_metricas_validacion`](../S06_04_metricas_validacion.ipynb) · scikit-learn básico: métricas y validación | [S06_04_metricas_validacion.md](S06_04_metricas_validacion.md) |
+| [`S06_01_pandas_eda`](../para_casa/S06_01_pandas_eda.ipynb) · Conocer los datos: pandas y exploración (EDA) | [S06_01_pandas_eda.md](S06_01_pandas_eda.md) |
+| [`S06_02_limpieza`](../para_casa/S06_02_limpieza.ipynb) · Limpieza de datos: encontrar defectos y sus causas | [S06_02_limpieza.md](S06_02_limpieza.md) |
+| [`S06_03_preprocesado_pipeline`](../para_casa/S06_03_preprocesado_pipeline.ipynb) · Preprocesado y *pipelines* reproducibles | [S06_03_preprocesado_pipeline.md](S06_03_preprocesado_pipeline.md) |
+| [`S06_04_metricas_validacion`](../para_casa/S06_04_metricas_validacion.ipynb) · scikit-learn básico: métricas y validación | [S06_04_metricas_validacion.md](S06_04_metricas_validacion.md) |

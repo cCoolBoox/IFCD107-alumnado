@@ -5,7 +5,7 @@
 
 📄 **Para imprimir:** todos los documentos del sprint en PDF, a color y ecofriendly, están juntos en la carpeta [`pdf/`](pdf/) (descárgalos para que funcionen los enlaces).
 
-> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Si el tiempo aprieta, haz solo los ejercicios marcados «en clase»: el resto es para casa.
+> **Sigue el orden de arriba abajo y abre solo lo que pone en cada fila.** Los demás documentos del sprint son para consultar si te atascas (apartado «Si te atascas»). Los cuadernos **«en clase»** (carpeta `2_Practica/en_clase/`) son la parte que se hace en el aula; los completos (carpeta `2_Practica/para_casa/`) son para casa.
 
 ## Qué aprenderás
 
@@ -21,10 +21,10 @@
 |---|---|---|---|
 | ☐ | 🔔 Ceremonia · Planning del reto «Duelo de modelos» y pesos de los criterios (la «voz del cliente») | — | 10 |
 | ☐ | 📖 Teoría · Árboles de decisión: reglas, sobreajuste y poda | [Presentación S08_01](1_Teoria/S08_01_presentacion_Arboles_de_decision.pdf) | 25 |
-| ☐ | 💻 Práctica · Árbol de decisión: reglas, poda e importancia (los ejercicios marcados «en clase») | [Cuaderno S08_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_01_arboles_decision.ipynb) | 35 |
+| ☐ | 💻 Práctica · Árbol de decisión: reglas, poda e importancia (cuaderno «en clase») | [Cuaderno S08_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/en_clase/S08_01_arboles_decision_en_clase.ipynb) | 35 |
 | ☐ | 📖 Teoría · Random Forest: muchos árboles votan | [Presentación S08_02](1_Teoria/S08_02_presentacion_Random_Forest.pdf) | 15 |
 | ☐ | 📖 Teoría · *Boosting*: corregir los errores paso a paso | [Presentación S08_03](1_Teoria/S08_03_presentacion_Boosting.pdf) | 10 |
-| ☐ | 🏠 **En casa** · Buscar hiperparámetros con `GridSearchCV` y `RandomizedSearchCV`: **esta tarde**, para el paso 3 del reto de mañana (bastan sus secciones 2 y 3) | [Cuaderno S08_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_05_busqueda_hiperparametros.ipynb) · [Presentación S08_05](1_Teoria/S08_05_presentacion_Busqueda_de_hiperparametros.pdf) | 40 (casa) |
+| ☐ | 🏠 **En casa** · Buscar hiperparámetros con `GridSearchCV` y `RandomizedSearchCV`: **esta tarde**, para el paso 3 del reto de mañana (bastan sus secciones 2 y 3) | [Cuaderno S08_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_05_busqueda_hiperparametros.ipynb) · [Presentación S08_05](1_Teoria/S08_05_presentacion_Busqueda_de_hiperparametros.pdf) | 40 (casa) |
 
 **En clase: 1 h 35 min.**
 
@@ -39,12 +39,12 @@
 | ☐ | Qué haces | Abre | Min |
 |---|---|---|---|
 | ☐ | 📖 Teoría · Máquinas de vectores de soporte (SVM), versión corta | [Presentación S08_04](1_Teoria/S08_04_presentacion_Maquinas_de_vectores_de_soporte_SVM.pdf) | 10 |
-| ☐ | 💻 Práctica · Random Forest: bagging, OOB e importancia por permutación (los ejercicios marcados «en clase») | [Cuaderno S08_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_02_random_forest.ipynb) · [Presentación S08_02](1_Teoria/S08_02_presentacion_Random_Forest.pdf) | 30 |
-| ☐ | 💻 Práctica · Gradient Boosting, XGBoost y LightGBM (los ejercicios marcados «en clase») | [Cuaderno S08_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_03_boosting_xgboost_lightgbm.ipynb) · [Presentación S08_03](1_Teoria/S08_03_presentacion_Boosting.pdf) | 25 |
+| ☐ | 💻 Práctica · Random Forest: bagging, OOB e importancia por permutación (cuaderno «en clase») | [Cuaderno S08_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/en_clase/S08_02_random_forest_en_clase.ipynb) · [Presentación S08_02](1_Teoria/S08_02_presentacion_Random_Forest.pdf) | 30 |
+| ☐ | 💻 Práctica · Gradient Boosting, XGBoost y LightGBM (cuaderno «en clase») | [Cuaderno S08_03](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/en_clase/S08_03_boosting_xgboost_lightgbm_en_clase.ipynb) · [Presentación S08_03](1_Teoria/S08_03_presentacion_Boosting.pdf) | 25 |
 | ☐ | 🎯 Reto · *Leaderboard* (*baseline*, logística, árbol y bosque), búsqueda de hiperparámetros en dos familias, sensibilidad de los pesos, campeón, test **una sola vez**, ficha del modelo y README (pasos 4–5; los pasos 2–3 van dentro de las prácticas; lo que falte, en la consolidación y la 6.ª hora) | [Cuaderno S08_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_06_leaderboard_plantilla.ipynb) | 75 |
 | ☐ | 📝 Test · **Test de M3 (parte 2)** | [Abrir](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S08/tests/test_M3_parte2.html) | 25 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-08/`, autoevaluación del Sprint 8, y coevaluación, review y retrospectiva de los Sprints 7 y 8 | — | 35 |
-| ☐ | 🏠 **En casa** · Máquinas de vectores de soporte, SVM (cuaderno completo) | [Cuaderno S08_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/S08_04_svm.ipynb) · [Presentación S08_04](1_Teoria/S08_04_presentacion_Maquinas_de_vectores_de_soporte_SVM.pdf) | 40 (casa) |
+| ☐ | 🏠 **En casa** · Máquinas de vectores de soporte, SVM (cuaderno completo) | [Cuaderno S08_04](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_04_svm.ipynb) · [Presentación S08_04](1_Teoria/S08_04_presentacion_Maquinas_de_vectores_de_soporte_SVM.pdf) | 40 (casa) |
 
 **En clase: 3 h 20 min.**
 
@@ -85,7 +85,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los ejercicios de cada cuaderno que **no** se hacen en clase. Se autocorrigen, y debajo llevan una «Solución de referencia» plegada por si te quedas atascado.
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S08_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_01_arboles_decision.ipynb) · [`S08_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_02_random_forest.ipynb) · [`S08_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_03_boosting_xgboost_lightgbm.ipynb).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_arboles_ensembles_y_svm.md).
 
 ## Si te atascas

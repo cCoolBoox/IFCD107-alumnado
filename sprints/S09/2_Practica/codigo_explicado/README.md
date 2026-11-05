@@ -4,7 +4,7 @@ Cada cuaderno de este sprint tiene aquí su **código explicado**: el recorrido 
 
 | Cuaderno | Código explicado |
 |---|---|
-| [`S09_01_clustering`](../S09_01_clustering.ipynb) · Segmentar huéspedes con clustering | [S09_01_clustering.md](S09_01_clustering.md) |
-| [`S09_02_pca`](../S09_02_pca.ipynb) · Reducir dimensiones con PCA | [S09_02_pca.md](S09_02_pca.md) |
-| [`S09_03_recomendadores`](../S09_03_recomendadores.ipynb) · Recomendar experiencias a los huéspedes | [S09_03_recomendadores.md](S09_03_recomendadores.md) |
-| [`S09_04_q_learning`](../S09_04_q_learning.ipynb) · Aprendizaje por refuerzo: Q-learning en el hotel | [S09_04_q_learning.md](S09_04_q_learning.md) |
+| [`S09_01_clustering`](../para_casa/S09_01_clustering.ipynb) · Segmentar huéspedes con clustering | [S09_01_clustering.md](S09_01_clustering.md) |
+| [`S09_02_pca`](../para_casa/S09_02_pca.ipynb) · Reducir dimensiones con PCA | [S09_02_pca.md](S09_02_pca.md) |
+| [`S09_03_recomendadores`](../para_casa/S09_03_recomendadores.ipynb) · Recomendar experiencias a los huéspedes | [S09_03_recomendadores.md](S09_03_recomendadores.md) |
+| [`S09_04_q_learning`](../para_casa/S09_04_q_learning.ipynb) · Aprendizaje por refuerzo: Q-learning en el hotel | [S09_04_q_learning.md](S09_04_q_learning.md) |
