@@ -2,7 +2,7 @@
 
 > **Para qué sirve.** Es el cuaderno **explicado por escrito**: qué hace cada celda, qué significa cada palabra de código y qué hace cada línea. Es para leerlo con calma, **mientras o después de ejecutar** cada celda. No hace falta saber programar.
 >
-> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_02_algebra_lineal.ipynb) · [descargar](../S05_02_algebra_lineal.ipynb) · ⏱ en casa: 40 min · 🏠 6 celdas de código
+> **Cuaderno:** [abrir en Colab](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/para_casa/S05_02_algebra_lineal.ipynb) · [descargar](../para_casa/S05_02_algebra_lineal.ipynb) · ⏱ en casa: 40 min · 🏠 6 celdas de código
 >
 > **Cómo usarlo:** 1) ejecutad la celda; 2) buscad aquí el mismo número de celda; 3) leed qué hace cada línea; 4) cambiad una cosa y comprobad si pasa lo que esperabais (es la mejor manera de entender código).
 

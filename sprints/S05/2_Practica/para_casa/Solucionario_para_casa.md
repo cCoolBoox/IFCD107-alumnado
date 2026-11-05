@@ -2,7 +2,7 @@
 
 - Las soluciones de **todos los ejercicios** de los cuadernos completos `S05_01` a `S05_06`, con lo que tiene que salir.
 - Úsalo **después de intentarlo**: copiar sin entender no sirve para aprender.
-- Las soluciones de los cuadernos «en clase» están en [`en_clase/Solucionario_en_clase.md`](en_clase/Solucionario_en_clase.md).
+- Las soluciones de los cuadernos «en clase» están en [`../en_clase/Solucionario_en_clase.md`](../en_clase/Solucionario_en_clase.md).
 - El cuaderno del reto (`S05_07`) no se incluye: su solución se contrasta con la rúbrica del reto.
 
 ---

@@ -22,7 +22,7 @@
 | ☐ | 🔔 Ceremonia · Planning del reto «¿La ocupación depende de esto?» | — | 10 |
 | ☐ | 📖 Teoría · NumPy: arrays, máscaras, vectorización y *broadcasting* | [Presentación S05_01](1_Teoria/S05_01_presentacion_NumPy_calcular_sin_bucles.pdf) | 25 |
 | ☐ | 💻 Práctica · Arrays y vectorización (cuaderno «en clase»: ejercicios 1 y 3; lo que falte, en la tutoría) | [Cuaderno S05_01](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_01_numpy_en_clase.ipynb) | 15 |
-| ☐ | 🏠 **En casa** · Álgebra lineal con NumPy: vectores, matrices y sistemas de ecuaciones (cuaderno completo) | [Cuaderno S05_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_02_algebra_lineal.ipynb) · [Presentación S05_02](1_Teoria/S05_02_presentacion_Algebra_lineal_con_NumPy.pdf) | 40 (casa) |
+| ☐ | 🏠 **En casa** · Álgebra lineal con NumPy: vectores, matrices y sistemas de ecuaciones (cuaderno completo) | [Cuaderno S05_02](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/para_casa/S05_02_algebra_lineal.ipynb) · [Presentación S05_02](1_Teoria/S05_02_presentacion_Algebra_lineal_con_NumPy.pdf) | 40 (casa) |
 
 **En clase: 50 min.**
 
@@ -40,7 +40,7 @@
 | ☐ | 💻 Práctica · CRUD con `sqlite3` (cuaderno «en clase»: ejercicios 1 y 3; el 3 es también el paso 1 del reto: cargar los datos en una base) | [Cuaderno S05_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_06_crud_python_en_clase.ipynb) · [Presentación S05_06](1_Teoria/S05_06_presentacion_CRUD_desde_Python.pdf) | 25 |
 | ☐ | 🎯 Reto · Cuaderno `S05_07`: mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6; lo que falte, en la consolidación y la 6.ª hora) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_05_una_pagina.md) | 45 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-05/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 4 y 5 | — | 40 |
-| ☐ | 🏠 **En casa** · Contrastes de hipótesis, correlación y causalidad (cuaderno completo) | [Cuaderno S05_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_05_contrastes_causalidad.ipynb) · [Presentación S05_05](1_Teoria/S05_05_presentacion_Contrastes_correlacion_y_causalidad.pdf) · [Versión «en clase»](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_05_contrastes_causalidad_en_clase.ipynb) | 40 (casa) |
+| ☐ | 🏠 **En casa** · Contrastes de hipótesis, correlación y causalidad (cuaderno completo) | [Cuaderno S05_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/para_casa/S05_05_contrastes_causalidad.ipynb) · [Presentación S05_05](1_Teoria/S05_05_presentacion_Contrastes_correlacion_y_causalidad.pdf) · [Versión «en clase»](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_05_contrastes_causalidad_en_clase.ipynb) | 40 (casa) |
 
 **En clase: 3 h 20 min.**
 
@@ -78,8 +78,8 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 ## En casa (cuando puedas)
 
-- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la versión corta («en clase»). Traen **todos** los ejercicios, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S05_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_01_numpy.ipynb) · [`S05_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_03_gradiente_regresion.ipynb) · [`S05_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_04_estadistica_descriptiva_ic.ipynb) · [`S05_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb).
-- **Solucionarios** (para contrastar después de intentarlo): [cuadernos «en clase»](2_Practica/en_clase/Solucionario_en_clase.md) y [cuadernos completos](2_Practica/Solucionario_para_casa.md).
+- Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la versión corta («en clase»). Traen **todos** los ejercicios, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S05_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/para_casa/S05_01_numpy.ipynb) · [`S05_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/para_casa/S05_03_gradiente_regresion.ipynb) · [`S05_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/para_casa/S05_04_estadistica_descriptiva_ic.ipynb) · [`S05_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/para_casa/S05_06_crud_python.ipynb).
+- **Solucionarios** (para contrastar después de intentarlo): [cuadernos «en clase»](2_Practica/en_clase/Solucionario_en_clase.md) y [cuadernos completos](2_Practica/para_casa/Solucionario_para_casa.md).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_numpy_gradiente_y_estadistica.md).
 
 ## Si te atascas

@@ -3,7 +3,7 @@
 - Las soluciones de los ejercicios de los cinco cuadernos «en clase» (`S05_01`, `03`, `04`, `05` y `06`), con lo que tiene que salir.
 - Úsalo **después de intentarlo**: copiar sin entender no sirve para aprender.
 - Son las mismas soluciones que llevan los cuadernos en «🆘 Soluciones de referencia».
-- Las soluciones de los cuadernos completos («para casa») están en [`../Solucionario_para_casa.md`](../Solucionario_para_casa.md).
+- Las soluciones de los cuadernos completos («para casa») están en [`../para_casa/Solucionario_para_casa.md`](../para_casa/Solucionario_para_casa.md).
 
 ---
 
