@@ -48,7 +48,7 @@
 
     Qué hace cada parte:
 
-    - `gradiente_mse(X, y, w)` calcula el gradiente: `X @ w - y` es el error de cada día, y `2 / len(y) * X.T @ (…)` los resume en un número por peso. Basta con teclearla bien; la idea es la del cuaderno [`S05_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_03_gradiente_regresion.ipynb).
+    - `gradiente_mse(X, y, w)` calcula el gradiente: `X @ w - y` es el error de cada día, y `2 / len(y) * X.T @ (…)` los resume en un número por peso. Basta con teclearla bien; la idea es la del cuaderno [`S05_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_03_gradiente_regresion_en_clase.ipynb).
     - `w = np.zeros(X.shape[1])`: empieza con todos los pesos a cero (una recta plana). `X.shape[1]` es el número de columnas de `X`.
     - `historial = []`: una lista vacía donde se apuntará el error de cada vuelta.
     - `for _ in range(epocas):`: repite lo de debajo `epocas` veces. Lo que está **hacia dentro** (con sangría) es lo que se repite.

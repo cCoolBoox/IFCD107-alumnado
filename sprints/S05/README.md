@@ -40,7 +40,7 @@
 | ☐ | 💻 Práctica · CRUD con `sqlite3` (cuaderno «en clase»: ejercicios 1 y 3; el 3 es también el paso 1 del reto: cargar los datos en una base) | [Cuaderno S05_06](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_06_crud_python_en_clase.ipynb) · [Presentación S05_06](1_Teoria/S05_06_presentacion_CRUD_desde_Python.pdf) | 25 |
 | ☐ | 🎯 Reto · Cuaderno `S05_07`: mirar los datos → regresión desde cero → comparar con una librería → medir la seguridad del resultado → responder en 150 palabras (pasos 2–6; lo que falte, en la consolidación y la 6.ª hora) | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_05_una_pagina.md) | 45 |
 | ☐ | 🔔 Ceremonia · Entrega en `sprint-05/`, autoevaluación y coevaluación, y review y retrospectiva de los Sprints 4 y 5 | — | 40 |
-| ☐ | 🏠 **En casa** · Contrastes de hipótesis, correlación y causalidad (cuaderno completo) | [Cuaderno S05_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_05_contrastes_causalidad.ipynb) · [Presentación S05_05](1_Teoria/S05_05_presentacion_Contrastes_correlacion_y_causalidad.pdf) | 40 (casa) |
+| ☐ | 🏠 **En casa** · Contrastes de hipótesis, correlación y causalidad (cuaderno completo) | [Cuaderno S05_05](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_05_contrastes_causalidad.ipynb) · [Presentación S05_05](1_Teoria/S05_05_presentacion_Contrastes_correlacion_y_causalidad.pdf) · [Versión «en clase»](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_05_contrastes_causalidad_en_clase.ipynb) | 40 (casa) |
 
 **En clase: 3 h 20 min.**
 

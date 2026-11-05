@@ -50,7 +50,7 @@
     - `con.commit()`: confirma los cambios, como «guardar». Sin esta línea la base puede quedarse sin ellos.
     - `diaria = pd.read_sql_query("SELECT …", con)`: lanza la pregunta SQL y guarda la respuesta en `diaria`. `SELECT *` pide todas las columnas; `SUBSTR(fecha, 6, 2)` recorta de `2023-07-14` los caracteres 6 y 7 (`07`, el mes); `CAST(… AS INTEGER)` lo convierte en el número `7`; y `AS mes` pone nombre a la columna nueva.
 
-    Este paso es la práctica de CRUD (crear y leer datos en una base). Si ya hicisteis [`S05_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb), podéis copiar el código de ahí.
+    Este paso es la práctica de CRUD (crear y leer datos en una base). Si ya hicisteis [`S05_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_06_crud_python_en_clase.ipynb), podéis copiar el código de ahí.
 
 5. **Ejecutar y mirar.** Pulsad ▶. Si todo va bien, abajo aparece `Punto de control 1 superado`. Para ver los datos, añadid en una celda nueva `diaria.head()` (las cinco primeras filas) y `diaria.shape` (cuántas filas y columnas).
 
