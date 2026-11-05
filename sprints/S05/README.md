@@ -79,6 +79,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 ## En casa (cuando puedas)
 
 - Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la versión corta («en clase»). Traen **todos** los ejercicios, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S05_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_01_numpy.ipynb) · [`S05_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_03_gradiente_regresion.ipynb) · [`S05_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_04_estadistica_descriptiva_ic.ipynb) · [`S05_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/S05_06_crud_python.ipynb).
+- **Solucionarios** (para contrastar después de intentarlo): [cuadernos «en clase»](2_Practica/en_clase/Solucionario_en_clase.md) y [cuadernos completos](2_Practica/Solucionario_para_casa.md).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_numpy_gradiente_y_estadistica.md).
 
 ## Si te atascas
