@@ -52,7 +52,14 @@
 
     Este paso es la práctica de CRUD (crear y leer datos en una base). Si ya hicisteis [`S05_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S05/2_Practica/en_clase/S05_06_crud_python_en_clase.ipynb), podéis copiar el código de ahí.
 
-5. **Ejecutar y mirar.** Pulsad ▶. Si todo va bien, abajo aparece `Punto de control 1 superado`. Para ver los datos, añadid en una celda nueva `diaria.head()` (las cinco primeras filas) y `diaria.shape` (cuántas filas y columnas).
+5. **Ejecutar y mirar.** Pulsad ▶. Si todo va bien, abajo aparece `Punto de control 1 superado`. Para ver los datos, añadid una celda nueva con estas dos líneas (`diaria.shape` dice cuántas filas y columnas; `diaria.head()` muestra las cinco primeras filas):
+
+    ```python
+    print(diaria.shape)
+    diaria.head()
+    ```
+
+    **Ojo:** Colab solo enseña por sí mismo el resultado de la **última** línea de la celda. Por eso `diaria.shape` va dentro de `print(…)` y `diaria.head()` va al final. Si escribís las dos sin `print` en la misma celda, solo veréis una de ellas.
 
 **Qué deberíais ver.** El mensaje `Punto de control 1 superado`. Con `diaria.head()`, una tabla de seis columnas (`fecha`, `ocupacion_pct`, `temperatura_c`, `festivo`, `precio_medio` y `mes`) cuya primera fila es `2023-01-01`, 89.0, 18.1, 1, 97.43 y mes 1; con `diaria.shape`, `(1096, 6)`. Y en el panel de archivos de Colab (el icono de la carpeta 📁 de la izquierda; si no aparece, pulsad el icono de refrescar) el fichero `turisdata_reto.db`. Si falla, el mensaje del `assert` dice qué falta (el archivo, las 1096 filas, la columna `mes` o el índice).
 
