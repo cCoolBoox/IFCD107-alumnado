@@ -30,7 +30,7 @@
 **Cómo se hace**
 
 1. **Saber qué llega a las funciones.** `y` es lo que queremos predecir (la ocupación). `X` es una tabla de números con una **columna de unos** (para la constante de la recta) y las variables explicativas. `w` son los pesos: uno por columna de `X`. Con `X @ w` se calcula la predicción de todos los días de una vez.
-2. **Escribir las dos funciones.** En la celda del apartado «3 · Regresión lineal desde cero» (borrad los `...`):
+2. **Escribir las dos funciones.** En la celda del apartado «3 · Regresión lineal desde cero» (borrad los `...`). **Importante:** los `assert` y el `print` del final de la celda se quedan **al final**; todo el código de este paso (funciones, modelo simple y modelo con control) va **entre la línea `# TODO` y los `assert`**, nunca debajo de ellos, porque los `assert` comprueban lo que se ha calculado antes:
 
     ```python
     def gradiente_mse(X, y, w):
@@ -56,7 +56,7 @@
     - `historial.append(np.mean((X @ w - y) ** 2))`: calcula el error (MSE) actual y lo apunta en la lista.
     - `return w, historial`: devuelve los pesos finales y la lista de errores. **Sin `scikit-learn`**: el reto pide hacerlo a mano.
 
-3. **Modelo simple (solo temperatura).** En la misma celda, debajo de las funciones:
+3. **Modelo simple (solo temperatura).** En la misma celda, debajo de las funciones y **encima de los `assert`**:
 
     ```python
     y = diaria["ocupacion_pct"].to_numpy()
@@ -85,7 +85,7 @@
 
     Debajo, una línea de texto: ¿baja y se aplana? (entonces el modelo ha **convergido**: ya no mejora). Para ver mejor la bajada del principio, probad `plt.plot(historial[:100])`.
 
-5. **Modelo con control: temperatura, festivo y mes.** «Controlar» significa meter también el festivo y el mes, para ver qué pasa con la temperatura cuando ya se tiene en cuenta la época del año. En la celda del apartado 3, debajo de lo anterior:
+5. **Modelo con control: temperatura, festivo y mes.** «Controlar» significa meter también el festivo y el mes, para ver qué pasa con la temperatura cuando ya se tiene en cuenta la época del año. En la misma celda del apartado 3, debajo de lo anterior y **todavía encima de los `assert`**:
 
     ```python
     meses = pd.get_dummies(diaria["mes"], drop_first=True, dtype=float)
@@ -123,7 +123,7 @@ En el nivel mínimo, el punto de control dará error en las líneas del modelo c
 | El error crece sin parar, sale `nan` o `inf`, o números enormes | La tasa es demasiado grande (o no habéis estandarizado). Con la temperatura sin estandarizar y tasa 0,1 el error llega a cifras de más de 100 cifras. | Estandarizad la temperatura y usad tasa 0,1; si aun así se dispara, bajadla (0,05 o 0,01). |
 | `AssertionError: La pendiente simple debería ser ≈ -1.86 puntos/°C y tienes -6.037` | Habéis dejado la pendiente «en desviaciones»: falta deshacer la estandarización. | Dividid `w[1]` entre `t.std()`: `pendiente_simple = w[1] / t.std()`. |
 | `AssertionError` en el efecto con control (temperatura cerca de −1,86 o festivo raro) | Falta algún mes en el modelo, o se ha dividido entre la desviación equivocada. | Comprobad que `M` tiene 13 columnas (`M.shape`) y que cada coeficiente se divide entre **su** desviación. |
-| `NameError: name 'pendiente_simple' is not defined` (o `efecto_temp_control`, `efecto_festivo_control`) | El nombre no coincide con el del cuaderno. | Usad exactamente esos tres nombres. |
+| `NameError: name 'pendiente_simple' is not defined` (o `efecto_temp_control`, `efecto_festivo_control`) | Ese código está **debajo** de los `assert` (se ejecuta después de comprobarlo), falta en la celda, o el nombre no coincide con el del cuaderno. | Poned todo el código **encima** de los `assert` y usad exactamente esos tres nombres. |
 | `ValueError` que habla de `shapes` o `matmul` | Los tamaños no cuadran: `X` y `w` deben tener tantas columnas como pesos. | Mirad `X.shape` y `w.shape`: el segundo número de `X` debe ser el tamaño de `w`. |
 | La curva es una raya casi vertical y plana | Es normal: el error baja casi todo en las primeras vueltas. | Dibujad solo el principio: `plt.plot(historial[:100])`. |
 

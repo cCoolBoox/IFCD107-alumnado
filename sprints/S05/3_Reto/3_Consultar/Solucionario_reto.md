@@ -128,6 +128,8 @@ plt.show()
 - El mensaje `Punto de control 2 superado: simple -1.86 · con control: temp -0.09, festivo +9.11`.
 - Una curva de aprendizaje que **cae en picado y se aplana enseguida**.
 
+**Cómo queda la celda.** Los fragmentos 3.1, 3.2 y 3.4 van **juntos, en la misma celda del apartado 3**, entre la línea `# TODO` y los `assert` (que se quedan al final, sin moverlos). Si el código del modelo con control queda debajo de los `assert`, estos dan `NameError` porque aún no existe. La curva (3.3) va en la celda siguiente.
+
 ### 3.1 · Las dos funciones
 
 ```python
