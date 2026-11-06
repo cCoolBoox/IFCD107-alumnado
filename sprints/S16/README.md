@@ -110,6 +110,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 ## En casa (cuando puedas)
 
 - Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S16_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S16/2_Practica/para_casa/S16_01_demostrador.ipynb).
+- **Solucionarios** (para contrastar después de intentarlo): [cuadernos completos](2_Practica/para_casa/Solucionario_para_casa.md).
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_demostrador_sesgos_y_memoria.md).
 
 ## Si te atascas

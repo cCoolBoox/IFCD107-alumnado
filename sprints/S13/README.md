@@ -45,6 +45,8 @@
 
 Plantilla en esta carpeta: [`plantilla_informe_visual.md`](3_Reto/1_Trabajar/plantillas/plantilla_informe_visual.md) (texto del informe de una página).
 
+Solucionarios (para contrastar **después de intentarlo**): [cuaderno «en clase»](2_Practica/en_clase/Solucionario_en_clase.md) y [cuaderno completo](2_Practica/para_casa/Solucionario_para_casa.md).
+
 <!--orden:ini-->
 ## 🧭 Orden de trabajo del sprint
 
