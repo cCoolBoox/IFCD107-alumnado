@@ -92,6 +92,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_06.md).
 2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
+4. Cuando hayas terminado el paso (o agotado las pistas), contrasta con el [solucionario del reto](3_Reto/3_Consultar/Solucionario_reto.md).
 
 ## Todo el material, por carpetas
 
