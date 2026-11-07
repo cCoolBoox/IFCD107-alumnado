@@ -9,7 +9,7 @@
 
 ## S06_01 · Conocer los datos: pandas y exploración (EDA)
 
-### Ejercicio 1 · Cargar e inspeccionar
+### A5 · EJERCICIO 1 de 6 — Cargar la tabla
 
 > Carga `reservas_turisdata.csv` en un DataFrame llamado `df`
 > (con las dos fechas parseadas) y guarda en `n_filas` y `n_columnas` sus dimensiones.
@@ -27,7 +27,7 @@ n_filas = 6000
 n_columnas = 18
 ```
 
-### Ejercicio 2 · Filtrar y agrupar
+### A8 · EJERCICIO 2 de 6 — Tasa de cancelación por depósito
 
 > Calcula `tasa_por_deposito`: la tasa de cancelación (media de `cancelada`)
 > para cada valor de `deposito`, ordenada de mayor a menor.
@@ -46,7 +46,7 @@ tasa_por_deposito:
     total           0.2640
 ```
 
-### Ejercicio 3 · Unir tablas (`merge`)
+### A10 · EJERCICIO 3 de 6 — Unir con las temporadas
 
 > Une `df` con `temporadas` por `mes_llegada` (unión `left`, para no perder
 > reservas) y guarda el resultado en `df_temp`. Después calcula `tasa_por_temporada`.
@@ -66,7 +66,7 @@ tasa_por_temporada:
     baja    0.4384
 ```
 
-### Ejercicio 4 · Visualización exploratoria: el gráfico según el dato
+### A13 · EJERCICIO 4 de 6 — Mediana de precio por tipo de habitación
 
 > Calcula `mediana_por_tipo`: la mediana de `precio_noche` por `tipo_habitacion`.
 > Luego dibuja un gráfico de barras con ella (título y ejes en español) y responde en la
@@ -96,7 +96,7 @@ tipo_mas_caro = 'suite'
 
 Y además dibuja un gráfico.
 
-### Ejercicio 5 · Relaciones entre variables numéricas
+### A15 · EJERCICIO 5 de 6 — Variable más ligada a la cancelación
 
 > Usando la matriz `corr`, guarda en `var_mas_ligada` el nombre de la variable
 > (distinta de `cancelada`) con **mayor correlación absoluta** con `cancelada`.
@@ -111,7 +111,7 @@ var_mas_ligada = corr["cancelada"].drop("cancelada").abs().idxmax()
 var_mas_ligada = 'antelacion_dias'
 ```
 
-### Ejercicio 6 · Calidad del dato: primer chequeo
+### A17 · EJERCICIO 6 de 6 — Duplicados y nulos de país
 
 > Calcula `filas_duplicadas` (número de filas repetidas) y `pct_nulos_pais`
 > (porcentaje de nulos de `pais_origen`, redondeado a 1 decimal).
@@ -128,7 +128,7 @@ filas_duplicadas = 0
 pct_nulos_pais = 2.3
 ```
 
-### Mini-reto · tres hallazgos para el cliente
+### A18 · MINI-RETO — Tres hallazgos para el cliente
 
 > Escribe en la lista `hallazgos` **tres frases** (texto) que un gerente de hotel entendería,
 > apoyadas en lo que has visto (por ejemplo, sobre canales, depósitos, precios o temporada).

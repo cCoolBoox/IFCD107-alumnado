@@ -10,7 +10,7 @@
 
 ## S06_01 · Conocer los datos: pandas y exploración (EDA)
 
-### Ejercicio 1 · Cargar e inspeccionar
+### A5 · EJERCICIO 1 de 4 — Cargar la tabla
 
 > Carga `reservas_turisdata.csv` en un DataFrame llamado `df`
 > (con las dos fechas parseadas) y guarda en `n_filas` y `n_columnas` sus dimensiones.
@@ -28,7 +28,7 @@ n_filas = 6000
 n_columnas = 18
 ```
 
-### Ejercicio 2 · Filtrar y agrupar
+### A8 · EJERCICIO 2 de 4 — Tasa de cancelación por depósito
 
 > Calcula `tasa_por_deposito`: la tasa de cancelación (media de `cancelada`)
 > para cada valor de `deposito`, ordenada de mayor a menor.
@@ -47,7 +47,7 @@ tasa_por_deposito:
     total           0.2640
 ```
 
-### Ejercicio 3 · Unir tablas (`merge`)
+### A10 · EJERCICIO 3 de 4 — Unir con las temporadas
 
 > Une `df` con `temporadas` por `mes_llegada` (unión `left`, para no perder
 > reservas) y guarda el resultado en `df_temp`. Después calcula `tasa_por_temporada`.
@@ -67,7 +67,7 @@ tasa_por_temporada:
     baja    0.4384
 ```
 
-### Ejercicio 4 · Calidad del dato: primer chequeo
+### A12 · EJERCICIO 4 de 4 — Duplicados y nulos de país
 
 > Calcula `filas_duplicadas` (número de filas repetidas) y `pct_nulos_pais`
 > (porcentaje de nulos de `pais_origen`, redondeado a 1 decimal).
