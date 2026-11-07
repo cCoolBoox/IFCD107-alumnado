@@ -88,7 +88,7 @@ pct_nulos_pais = 2.3
 
 ## S06_02 · Limpieza de datos: encontrar defectos y sus causas
 
-### Ejercicio 1 · Diagnóstico inicial
+### A5 · EJERCICIO 1 de 4 — Quitar duplicados
 
 > Guarda en `n_duplicados` cuántas filas están repetidas y crea `d1`,
 > una copia de `crudo` **sin duplicados** y con el índice reiniciado.
@@ -105,7 +105,7 @@ n_duplicados = 45
 d1: tabla de 1500 filas y 18 columnas
 ```
 
-### Ejercicio 2 · Tipos incorrectos: números escritos como texto
+### A7 · EJERCICIO 2 de 4 — Precio como número
 
 > Crea `d2` (copia de `d1`) donde `precio_noche` sea numérico (float),
 > cambiando la coma por punto. Guarda en `nulos_precio` el número de nulos resultantes.
@@ -123,7 +123,7 @@ d2: tabla de 1500 filas y 18 columnas
 nulos_precio = 79
 ```
 
-### Ejercicio 3 · Fechas en formatos mezclados
+### A9 · EJERCICIO 3 de 4 — Fechas como fechas
 
 > Crea `d3` (copia de `d2`) con `fecha_reserva` y `fecha_llegada` como fechas
 > (`datetime64`). Para `fecha_reserva` combina los dos formatos (pista: `iso.fillna(espanol)`).
@@ -140,7 +140,7 @@ d3["fecha_llegada"] = pd.to_datetime(d3["fecha_llegada"], format="%Y-%m-%d")
 d3: tabla de 1500 filas y 18 columnas
 ```
 
-### Ejercicio 5 · Valores imposibles y *outliers*
+### A13 · EJERCICIO 4 de 4 — Valores imposibles a nulo
 
 > Crea `d5` (copia de `d4`) aplicando estas reglas de negocio, convirtiendo
 > en `np.nan` (no borrando filas) los valores que las incumplan:
