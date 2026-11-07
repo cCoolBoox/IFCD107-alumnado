@@ -67,7 +67,7 @@ tasa_por_temporada:
     baja    0.4384
 ```
 
-### Ejercicio 6 · Calidad del dato: primer chequeo
+### Ejercicio 4 · Calidad del dato: primer chequeo
 
 > Calcula `filas_duplicadas` (número de filas repetidas) y `pct_nulos_pais`
 > (porcentaje de nulos de `pais_origen`, redondeado a 1 decimal).
