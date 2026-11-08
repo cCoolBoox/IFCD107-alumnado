@@ -10,7 +10,7 @@
 
 ## S08_01 · Árboles de decisión: sobreajuste, poda e importancia
 
-### Ejercicio 1 · La idea: preguntas de sí/no encadenadas
+### A4 · EJERCICIO 1 de 4 — La variable de la raíz y el número de hojas
 
 > El árbol pequeño empieza preguntando por la variable que mejor separa. Guarda
 > en `variable_raiz` el **nombre** de esa variable (pista: `arbol_peq.tree_.feature[0]` es el índice
@@ -28,7 +28,7 @@ print("El árbol empieza preguntando por:", variable_raiz)
 El árbol empieza preguntando por: num__antelacion_dias
 ```
 
-### Ejercicio 2 · Sobreajuste: el árbol libre
+### A5 · EJERCICIO 2 de 4 — El árbol libre memoriza
 
 > Entrena `arbol_libre = DecisionTreeClassifier(random_state=SEMILLA)` (sin
 > límites) con train. Guarda `auc_train_libre` y `auc_test_libre` (AUC con `predict_proba`)
@@ -48,7 +48,7 @@ print(f"Árbol libre: {hojas_libre} hojas · AUC train {auc_train_libre:.3f} · 
 Árbol libre: 1206 hojas · AUC train 1.000 · AUC test 0.587
 ```
 
-### Ejercicio 3 · Poda: frenar el crecimiento
+### A7 · EJERCICIO 3 de 4 — Elegir la poda y medirla en test
 
 > Con las listas `hojas_min` y `auc_cv_hojas`, guarda en `mejor_min_hoja` el valor
 > con mejor AUC. Entrena `arbol_podado` con ese valor sobre train y guarda `auc_test_podado`
@@ -67,7 +67,7 @@ print(f"min_samples_leaf = {mejor_min_hoja} · AUC test: {auc_test_podado:.3f} (
 min_samples_leaf = 80 · AUC test: 0.716 (libre: 0.587) · hojas: 46
 ```
 
-### Ejercicio 4 · Importancia de variables
+### A9 · EJERCICIO 4 de 4 — Las tres variables más importantes
 
 > Guarda en `top3` la lista de los **nombres** de las 3 variables más importantes de
 > `arbol_podado` (usa la Series `importancias` ya ordenada) y en `suma_top3` cuánta importancia
@@ -85,7 +85,7 @@ print("Top 3:", top3, f"· acumulan {suma_top3:.0%} de la importancia")
 Top 3: ['num__antelacion_dias', 'cat__deposito_sin_deposito', 'cat__canal_directo'] · acumulan 70% de la importancia
 ```
 
-### Mini-reto · reglas para el gerente
+### A11 · MINI-RETO — Reglas para el gerente
 
 > Entrena `arbol_gerente = DecisionTreeClassifier(max_depth=3, min_samples_leaf=50, random_state=SEMILLA)`
 > con train. Después escribe en la lista `reglas` **tres frases** en lenguaje de negocio (con cifras
@@ -127,7 +127,7 @@ reglas = [
 
 ## S08_02 · Random Forest: la sabiduría de muchos árboles
 
-### Ejercicio 1 · La idea: bagging + variables al azar
+### A3 · EJERCICIO 1 de 3 — Bosque de 300 árboles frente a un árbol podado
 
 > Entrena `bosque = RandomForestClassifier(n_estimators=300, min_samples_leaf=5,
 > random_state=SEMILLA, n_jobs=2)` con train. Guarda `auc_test_bosque` (AUC en test con `predict_proba`) y
@@ -148,7 +148,7 @@ print(f"Árbol podado: {auc_test_arbol:.3f} · Bosque de 300 árboles: {auc_test
 Árbol podado: 0.716 · Bosque de 300 árboles: 0.734
 ```
 
-### Ejercicio 2 · Cuántos árboles y de qué tamaño
+### A5 · EJERCICIO 2 de 3 — Rendimientos decrecientes
 
 > Con la lista `oob_auc`, guarda en `mejora_5_a_400` cuánto sube el AUC OOB al pasar de 5 a
 > 400 árboles (`oob_auc[-1] - oob_auc[0]`) y en `mejora_100_a_400` lo que sube de 100 a 400 árboles.
@@ -166,7 +166,7 @@ print(f"5 → 400 árboles: +{mejora_5_a_400:.3f} · 100 → 400 árboles: {mejo
 5 → 400 árboles: +0.103 · 100 → 400 árboles: +0.005
 ```
 
-### Ejercicio 3 · Importancia de variables: dos formas de medirla
+### A7 · EJERCICIO 3 de 3 — La variable principal y las irrelevantes
 
 > Guarda en `variable_top` el nombre de la variable más importante según la permutación
 > (Series `imp_perm`, ya ordenada) y en `n_irrelevantes` cuántas variables tienen una importancia media
@@ -184,7 +184,7 @@ print(f"Variable más importante: {variable_top} · variables casi irrelevantes:
 Variable más importante: antelacion_dias · variables casi irrelevantes: 6
 ```
 
-### Mini-reto · ¿compensa el bosque frente a la regresión logística?
+### A9 · MINI-RETO — Duelo: árbol, bosque y regresión logística
 
 > Calcula con validación cruzada (5 folds, AUC, sobre **train**) el rendimiento de tres modelos y guárdalo
 > en `duelo` (DataFrame, filas `"arbol"`, `"bosque"` y `"logistica"`; columnas `auc_media` y `auc_desv`).
@@ -222,7 +222,7 @@ logistica      0.758     0.012
 
 ## S08_03 · Boosting: Gradient Boosting, XGBoost y LightGBM
 
-### Ejercicio 1 · Sobreajuste por exceso de árboles
+### A3 · EJERCICIO 1 de 3 — El mejor número de árboles y cuánto cae el AUC
 
 > Con la lista `auc_val_por_arbol`, guarda en `mejor_n_arboles` el número de árboles
 > (empezando a contar en 1) con mejor AUC de validación, y en `caida_final` cuánto ha caído el AUC de
@@ -240,7 +240,7 @@ print(f"Mejor nº de árboles: {mejor_n_arboles} · pérdida de AUC si seguimos 
 Mejor nº de árboles: 12 · pérdida de AUC si seguimos hasta 300: 0.039
 ```
 
-### Ejercicio 2 · Sobreajuste por exceso de árboles
+### A4 · EJERCICIO 2 de 3 — XGBoost con parada temprana
 
 > Entrena `modelo_xgb = xgb.XGBClassifier(n_estimators=1000, learning_rate=0.05, max_depth=3,
 > subsample=0.8, colsample_bytree=0.8, early_stopping_rounds=30, eval_metric="auc", random_state=SEMILLA, n_jobs=2)`
@@ -263,7 +263,7 @@ print(f"XGBoost paró en {arboles_xgb} árboles · AUC test = {auc_test_xgb:.3f}
 XGBoost paró en 69 árboles · AUC test = 0.745
 ```
 
-### Ejercicio 3 · LightGBM
+### A5 · EJERCICIO 3 de 3 — LightGBM con parada temprana
 
 > Entrena `modelo_lgb = lgb.LGBMClassifier(n_estimators=1000, learning_rate=0.05, num_leaves=8,
 > subsample=0.8, subsample_freq=1, colsample_bytree=0.8, random_state=SEMILLA, n_jobs=2, verbose=-1)` con
@@ -286,7 +286,7 @@ print(f"LightGBM paró en {arboles_lgb} árboles · AUC test = {auc_test_lgb:.3f
 LightGBM paró en 49 árboles · AUC test = 0.745
 ```
 
-### Mini-reto · comparativa de las tres implementaciones
+### A7 · MINI-RETO — Comparar sklearn, XGBoost y LightGBM
 
 > Crea `tabla`, un DataFrame con filas `"sklearn_gb"`, `"xgboost"` y `"lightgbm"` y columnas `auc_test`,
 > `arboles` y `segundos_ajuste` (tiempo de `fit` medido con `time.perf_counter()`). Para
@@ -333,7 +333,7 @@ lightgbm       0.745       49            2.234
 
 ## S08_04 · Máquinas de vectores de soporte (SVM)
 
-### Ejercicio 1 · La idea en dos dimensiones
+### A3 · EJERCICIO 1 de 4 — SVM lineal frente a SVM RBF en las dos lunas
 
 > Entrena en `Xm_train, ym_train` una SVM lineal (`svm_lineal = SVC(kernel="linear", C=1)`) y una
 > RBF (`svm_rbf = SVC(kernel="rbf", C=1, gamma=1)`). Guarda `acc_lineal` y `acc_rbf` (exactitud en
@@ -364,7 +364,7 @@ n_soporte_rbf = 91
 
 Y además dibuja un gráfico.
 
-### Ejercicio 2 · SVM con los datos de TurisData
+### A6 · EJERCICIO 2 de 4 — El AUC con y sin escalado
 
 > Crea `svm_rbf_res = Pipeline([("prep", prep_escalado()), ("svm", SVC(kernel="rbf", C=1))])` y
 > `svm_rbf_sin = Pipeline([("prep", prep_sin_escalar()), ("svm", SVC(kernel="rbf", C=1))])`. Ajústalos con train
@@ -384,7 +384,7 @@ print(f"AUC con escalado: {auc_con_escalado:.3f} · sin escalar: {auc_sin_escala
 AUC con escalado: 0.735 · sin escalar: 0.671
 ```
 
-### Ejercicio 3 · Ajustar `C` y `gamma` con validación cruzada
+### A8 · EJERCICIO 3 de 4 — Buscar los mejores C y gamma
 
 > Crea `busqueda = GridSearchCV(Pipeline([("prep", prep_escalado()), ("svm", SVC(kernel="rbf"))]),
 > rejilla, cv=cv, scoring="roc_auc")` y ajústala con `sub_X, sub_y`. Guarda `mejores_params`
@@ -415,7 +415,7 @@ Mejores parámetros: {'svm__C': 10, 'svm__gamma': 0.003} · AUC CV = 0.752
 
 Y además dibuja un gráfico.
 
-### Ejercicio 4 · El coste: las SVM no escalan con el número de filas
+### A10 · EJERCICIO 4 de 4 — Cuánto crece el tiempo con el número de filas
 
 > Mide en `segundos` el tiempo de ajuste de `SVC(kernel="rbf", C=1, gamma=0.01)` sobre los
 > datos ya preparados `Z` con `tamanos = [500, 1000, 2000, 4000]` (las primeras `n` filas de `Z`). Guarda
@@ -440,7 +440,7 @@ print("Segundos:", [round(s, 2) for s in segundos], f"· 4× filas → {factor_x
 Segundos: [0.02, 0.05, 0.19, 0.84] · 4× filas → 16.9× tiempo
 ```
 
-### Mini-reto · tres SVM frente a frente
+### A11 · MINI-RETO — Lineal, RBF por defecto y RBF ajustada
 
 > Crea `tabla_svm`, un DataFrame con filas `"lineal"`, `"rbf_defecto"` y `"rbf_ajustada"` y columnas
 > `auc_test`, `n_soporte` (nº de vectores de soporte) y `segundos_ajuste`. Usa `prep_escalado()`;
@@ -482,7 +482,7 @@ rbf_ajustada     0.744       3374            1.157
 
 ## S08_05 · Buscar buenos hiperparámetros: GridSearchCV y RandomizedSearchCV
 
-### Ejercicio 1 · `GridSearchCV` con un bosque aleatorio
+### A3 · EJERCICIO 1 de 4 — GridSearchCV con un bosque
 
 > Define un `Pipeline` `pipe_rf` con `prep` y `RandomForestClassifier(random_state=SEMILLA, n_jobs=2)`
 > (paso llamado `"rf"`) y una rejilla. En un `Pipeline`, los hiperparámetros de un paso se escriben `paso__nombre`
@@ -513,7 +513,7 @@ print("Mejores parámetros:", busqueda_grid.best_params_, f"· AUC CV = {mejor_a
 Mejores parámetros: {'rf__max_depth': 8, 'rf__min_samples_leaf': 40, 'rf__n_estimators': 100} · AUC CV = 0.747
 ```
 
-### Ejercicio 2 · `RandomizedSearchCV` con LightGBM
+### A4 · EJERCICIO 2 de 4 — RandomizedSearchCV con LightGBM
 
 > Crea `pipe_lgb` (`prep` + `lgb.LGBMClassifier(n_estimators=200, random_state=SEMILLA, n_jobs=2, verbose=-1)`,
 > paso `"lgb"`) y una búsqueda `busqueda_rand = RandomizedSearchCV(pipe_lgb, distribuciones, n_iter=25, cv=cv,
@@ -545,7 +545,7 @@ print("Mejores parámetros:", {k: round(v, 3) if isinstance(v, float) else v for
 Mejores parámetros: {'lgb__learning_rate': np.float64(0.019), 'lgb__min_child_samples': 199, 'lgb__num_leaves': 23, 'lgb__subsample': np.float64(0.755)}
 ```
 
-### Ejercicio 3 · Leer `cv_results_`: ¿hay un ganador claro?
+### A5 · EJERCICIO 3 de 4 — Configuraciones empatadas: la regla del «1 error estándar»
 
 > Con `resultados = pd.DataFrame(busqueda_rand.cv_results_)`, guarda en `top5` las 5 mejores
 > filas (columnas `param_lgb__num_leaves`, `param_lgb__learning_rate`, `mean_test_score`, `std_test_score`,
@@ -584,7 +584,7 @@ plt.show()
 
 Y además dibuja un gráfico.
 
-### Ejercicio 4 · La nota de la búsqueda es optimista
+### A7 · EJERCICIO 4 de 4 — La nota de la búsqueda frente al test
 
 > Con el mejor modelo de cada búsqueda (`busqueda_grid.best_estimator_` y
 > `busqueda_rand.best_estimator_`, ya reentrenados con todo train), guarda `auc_test_grid` y `auc_test_rand`
@@ -605,7 +605,7 @@ Rejilla + RF: AUC CV 0.747 → test 0.734
 Aleatorio + LightGBM: AUC CV 0.749 → test 0.740 (diferencia +0.009)
 ```
 
-### Mini-reto · informe de la búsqueda
+### A8 · MINI-RETO — Informe de la búsqueda
 
 > Completa el diccionario `informe` con estas claves (para el **mejor de los dos buscadores según su AUC en
 > validación**):

@@ -10,7 +10,7 @@
 
 ## S15_01 · Seguimiento de experimentos y reproducibilidad
 
-### Ejercicio 1 · Reproducibilidad: semillas y versiones
+### A2 · EJERCICIO 1 de 5 — Fijar las semillas
 
 > Escribe `fijar_semillas(semilla)` que fije la semilla de `random` y de `numpy` (`np.random.seed`),
 > guarde `PYTHONHASHSEED` en `os.environ` (como texto) y **devuelva** un generador
@@ -47,7 +47,7 @@ Ejercicio 1 correcto ✔
 }
 ```
 
-### Ejercicio 2 · El registro de experimentos: una fila por prueba
+### A4 · EJERCICIO 2 de 5 — Escribir una fila en el registro
 
 > Completa `registrar(...)`, que añade **una fila** al CSV `RUTA_REGISTRO`: si el archivo no existe, lo crea
 > con la cabecera; si existe, añade la fila sin repetir la cabecera. El `id` es el número de filas ya
@@ -85,7 +85,7 @@ print("Ejercicio 2 correcto ✔")
 Ejercicio 2 correcto ✔
 ```
 
-### Ejercicio 3 · Experimentos: baseline y modelos con validación cruzada
+### A6 · EJERCICIO 3 de 5 — Registrar bosque y gradient boosting y elegir candidato
 
 > Registra dos experimentos más con la función `experimento(nombre, estimador, hiperparametros)`:
 > un **bosque aleatorio** `RandomForestClassifier(n_estimators=200, min_samples_leaf=5, random_state=SEMILLA, n_jobs=2)`
@@ -120,7 +120,7 @@ Ejercicio 3 correcto ✔ — candidato provisional: RegresionLogistica
 
 Y además dibuja un gráfico.
 
-### Ejercicio 4 · Ajuste de hiperparámetros, también registrado
+### A8 · EJERCICIO 4 de 5 — Probar tres profundidades del bosque
 
 > Prueba un bosque aleatorio con `max_depth` = 3, 6 y 10 (resto de parámetros como antes), **registrando cada
 > prueba** con `experimento` y el nombre `f"RandomForest_prof{d}"`. Guarda en `resultados_prof` un diccionario
@@ -144,7 +144,7 @@ print("Ejercicio 4 correcto ✔ — mejor profundidad:", mejor_prof, {k: round(v
 Ejercicio 4 correcto ✔ — mejor profundidad: 6 {3: np.float64(0.742), 6: np.float64(0.745), 10: np.float64(0.742)}
 ```
 
-### Ejercicio 5 · Evaluar el candidato en el test, una sola vez
+### A10 · EJERCICIO 5 de 5 — Evaluar el candidato en el test una sola vez
 
 > Elige el candidato de la tabla (**solo con criterios de validación cruzada, sin fuga**): el
 > `RandomForest_prof{mejor_prof}` o el ganador del ejercicio 3, el que tenga mayor `valor_cv` entre las filas

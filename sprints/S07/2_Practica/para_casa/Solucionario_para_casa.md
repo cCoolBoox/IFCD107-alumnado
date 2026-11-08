@@ -9,7 +9,7 @@
 
 ## S07_01 · Regresión lineal y polinómica: predecir el precio por noche
 
-### Ejercicio 1 · La idea: una recta (o un plano) que se ajusta a los datos
+### A3 · EJERCICIO 1 de 4 — Ajustar la regresión lineal
 
 > Separa en `X_train, X_test, y_train, y_test` (20 % de test, `random_state=SEMILLA`),
 > ajusta una `LinearRegression` llamada `modelo_lin` y guarda en `r2_test` y `mae_test` sus
@@ -30,7 +30,7 @@ print(f"R² = {r2_test:.3f} · MAE = {mae_test:.2f} € · RMSE = {mean_squared_
 R² = 0.915 · MAE = 7.24 € · RMSE = 9.70 €
 ```
 
-### Ejercicio 2 · Interpretar los coeficientes
+### A5 · EJERCICIO 2 de 4 — Leer los coeficientes en euros
 
 > Consulta `modelo_lin.coef_` (van en el mismo orden que las columnas de `X`).
 > Guarda en `coefs` un `pd.Series` con los coeficientes y el nombre de columna como índice,
@@ -56,7 +56,7 @@ dtype: float64
 Ordenada en el origen (precio base de una estándar en temporada baja): 67.3 €
 ```
 
-### Ejercicio 3 · Residuos: ¿el modelo se equivoca de forma "sana"?
+### A8 · EJERCICIO 3 de 4 — Error de las interacciones en test
 
 > Calcula `mae_inter_test`: el MAE en test del modelo `con_interacciones`
 > ajustado con `X_train, y_train`. Guarda en `mejora_mae` cuántos euros mejora respecto a
@@ -75,7 +75,7 @@ mae_inter_test = 6.7576
 mejora_mae = 0.4812
 ```
 
-### Ejercicio 4 · Polinomios para captar curvas... y su peligro
+### A10 · EJERCICIO 4 de 4 — Polinomio sobre el mes o variable temporada_alta
 
 > Compara con validación cruzada (5 folds, `scoring="r2"`) sobre las habitaciones
 > estándar dos formas de usar la época del año y guarda las medias en:
@@ -95,7 +95,7 @@ print(f"Grado 2 sobre el mes: R² = {r2_grado2:.2f} · temporada_alta (1 columna
 Grado 2 sobre el mes: R² = 0.09 · temporada_alta (1 columna): R² = 0.65
 ```
 
-### Mini-reto · tarifa de referencia explicada al cliente
+### A11 · MINI-RETO — Función precio_recomendado
 
 > Con `modelo_lin` (o `con_interacciones`), prepara la función `precio_recomendado(tipo, alta)`
 > que devuelva el precio previsto (€) para un tipo de habitación (`"estandar"`, `"superior"`,
@@ -123,7 +123,7 @@ Estándar en baja: 67 € · Suite en alta: 191 €
 
 ## S07_02 · Regularización: Ridge y Lasso
 
-### Ejercicio 1 · El problema: muchas variables, pocos datos
+### A3 · EJERCICIO 1 de 3 — Medir la brecha de sobreajuste
 
 > Guarda en `r2_train_ols` y `r2_test_ols` los R² de `ols` en train y test,
 > y en `brecha_ols` su diferencia (train − test). ¿Es una brecha sana?
@@ -141,7 +141,7 @@ r2_train_ols = 1.0
 brecha_ols = 0.2842
 ```
 
-### Ejercicio 2 · Elegir `alpha` con validación cruzada
+### A5 · EJERCICIO 2 de 3 — Ridge con alpha elegido por validación cruzada
 
 > Crea `ridge` con `modelo_con(RidgeCV(alphas=np.logspace(-1, 4, 30)))` y ajústalo
 > con train. Guarda en `alpha_ridge` el alpha elegido (`ridge[-1].alpha_`) y en `r2_test_ridge`
@@ -160,7 +160,7 @@ print(f"Ridge: alpha = {alpha_ridge:.1f} · R² test = {r2_test_ridge:.3f}")
 Ridge: alpha = 25.9 · R² test = 0.728
 ```
 
-### Ejercicio 3 · Lasso (L1): seleccionar variables
+### A6 · EJERCICIO 3 de 3 — Lasso: seleccionar variables
 
 > Crea `lasso` con `modelo_con(LassoCV(cv=5, max_iter=50000, random_state=SEMILLA))`,
 > ajústalo con train y guarda en `r2_test_lasso` su R² en test y en `n_no_cero` cuántos
@@ -185,7 +185,7 @@ principales.round(2)
 Lasso: R² test = 0.887 · coeficientes distintos de cero: 27 de 665
 ```
 
-### Mini-reto · ¿cuántos datos hacen falta?
+### A9 · MINI-RETO — Curva de R² según el número de reservas
 
 > Repite el experimento con distintos tamaños de entrenamiento (`tamanos = [60, 120, 300, 1000]`)
 > y guarda en la tabla `curva` el R² en test de la regresión sin regularizar y de Lasso
@@ -218,7 +218,7 @@ curva
 
 ## S07_03 · Regresión logística: predecir cancelaciones
 
-### Ejercicio 1 · Entrenar el modelo
+### A3 · EJERCICIO 1 de 4 — Entrenar el modelo y obtener probabilidades
 
 > Crea `logit`, un `Pipeline` con el preprocesado que ves abajo (`prep`) y
 > `LogisticRegression(max_iter=1000)`. Ajústalo con train y guarda en `proba_test` la
@@ -234,7 +234,7 @@ logit = Pipeline([("prep", prep), ("clf", LogisticRegression(max_iter=1000))]).f
 proba_test = logit.predict_proba(X_test)[:, 1]
 ```
 
-### Ejercicio 2 · Interpretar: coeficientes y *odds ratios*
+### A5 · EJERCICIO 2 de 4 — Leer los odds ratio
 
 > A partir de `odds` (un `pd.Series` cuyo índice son los nombres de las
 > variables), guarda en `or_no_reembolsable` el odds ratio de `cat__tarifa_no_reembolsable`
@@ -256,7 +256,7 @@ Tarifa no reembolsable: los odds de cancelar se multiplican por 0.44
 Depósito total: los odds de cancelar se multiplican por 0.46
 ```
 
-### Ejercicio 3 · El umbral y la matriz de confusión
+### A7 · EJERCICIO 3 de 4 — Efecto de bajar el umbral
 
 > Usando `metricas_umbral`, calcula sobre test (`y_test`, `proba_test`) las
 > métricas con umbral 0,5 (`m05`) y con umbral 0,3 (`m03`). Guarda en `sube_recall` la
@@ -276,7 +276,7 @@ print(f"Con umbral 0,3 detectas {sube_recall*100:.0f} puntos más de las cancela
 Con umbral 0,3 detectas 26 puntos más de las cancelaciones, pero tu precisión baja 10 puntos.
 ```
 
-### Ejercicio 4 · Elegir el umbral según el coste
+### A9 · EJERCICIO 4 de 4 — Elegir el umbral de menor coste
 
 > Prueba los umbrales `umbrales = np.arange(0.05, 0.96, 0.05)` sobre
 > `proba_cv` / `y_train` con `coste_total` (pasándole `COSTE_FN` y `COSTE_FP`) y guarda en `mejor_umbral` el que
@@ -307,7 +307,7 @@ Umbral elegido: 0.25 · coste en test: 577 (con 0,5: 813)
 
 Y además dibuja un gráfico.
 
-### Mini-reto · tabla para el gerente
+### A11 · MINI-RETO — Tabla de umbrales para el gerente
 
 > Construye `tabla_umbrales`, un DataFrame con **tres filas** (umbrales 0,5, 0,3 y el
 > `mejor_umbral`) y las columnas `umbral`, `recall`, `precision` y `coste` medidas en **test**.
@@ -338,7 +338,7 @@ tabla_umbrales
 
 ## S07_04 · Curvas ROC y PR, y qué hacer con clases desbalanceadas
 
-### Ejercicio 1 · La paradoja de la exactitud
+### A2 · EJERCICIO 1 de 6 — El modelo inútil que acierta el 94 %
 
 > Entrena un `DummyClassifier(strategy="most_frequent")` con train. Guarda en
 > `acc_tonto` su exactitud en test y en `recall_tonto` su recall en test (`recall_score`).
@@ -358,7 +358,7 @@ print(f"Exactitud del modelo inútil: {acc_tonto:.1%} · recall: {recall_tonto:.
 Exactitud del modelo inútil: 94.0% · recall: 0%
 ```
 
-### Ejercicio 2 · Curva ROC y AUC
+### A4 · EJERCICIO 2 de 6 — Calcular la curva ROC y el AUC
 
 > Con `y_test` y `proba_base` calcula `fpr, tpr, _ = roc_curve(...)` y
 > `auc = roc_auc_score(...)`.
@@ -385,7 +385,7 @@ auc = 0.7737
 
 Y además dibuja un gráfico.
 
-### Ejercicio 3 · Curva precisión–recall (PR) y *average precision*
+### A6 · EJERCICIO 3 de 6 — Cuánto mejora la AP al azar
 
 > Guarda en `ap_base` la *average precision* de `proba_base`, y en `veces_mejor_que_azar`
 > cuántas veces mejor es que la prevalencia (`ap_base / prevalencia`).
@@ -402,7 +402,7 @@ print(f"AP = {ap_base:.2f}: el modelo es {veces_mejor_que_azar:.1f} veces mejor 
 AP = 0.24: el modelo es 4.0 veces mejor que el azar en precisión.
 ```
 
-### Ejercicio 4 · Tres remedios para el desbalance
+### A7 · EJERCICIO 4 de 6 — Pesos por clase
 
 > Crea `con_pesos = nuevo_modelo(class_weight="balanced")`, ajústalo con train y
 > guarda en `recall_base` y `recall_pesos` el recall en test (umbral 0,5) del modelo base y del
@@ -422,7 +422,7 @@ print(f"Recall: {recall_base:.0%} → {recall_pesos:.0%} · precisión del ponde
 Recall: 3% → 73% · precisión del ponderado: 14%
 ```
 
-### Ejercicio 5 · Submuestreo
+### A8 · EJERCICIO 5 de 6 — Submuestreo de la clase mayoritaria
 
 > Crea `X_sub, y_sub` a partir **solo de train**: todas las positivas y
 > una muestra aleatoria de negativas del **doble** de tamaño (`resample(..., replace=False,
@@ -452,7 +452,7 @@ y_sub:
     2068    1
 ```
 
-### Ejercicio 6 · Ajustar el umbral con la curva PR
+### A9 · EJERCICIO 6 de 6 — Umbral para detectar al menos el 70 %
 
 > El gerente pide **detectar al menos el 70 % de las cancelaciones** con la mayor
 > precisión posible. Con las probabilidades de validación cruzada de `base` sobre train (`proba_cv`),
@@ -476,7 +476,7 @@ print(f"Umbral {umbral_70:.3f}: recall en test {recall_test_70:.0%}, precisión 
 Umbral 0.048: recall en test 82%, precisión 12%
 ```
 
-### Mini-reto · comparativa de estrategias
+### A10 · MINI-RETO — Comparativa de las tres estrategias
 
 > Crea `comparativa`, un DataFrame con una fila por estrategia (`"base"`, `"pesos"`, `"submuestreo"`)
 > y las columnas `AUC`, `AP` (average precision, con probabilidades) y `recall` y `precision`
@@ -509,7 +509,7 @@ submuestreo  0.752  0.241   0.452      0.172
 
 ## S07_05 · k vecinos (k-NN) y Naive Bayes
 
-### Ejercicio 1 · k-NN: predecir mirando a los vecinos
+### A3 · EJERCICIO 1 de 4 — Cuánto pesa la antelación en la distancia
 
 > Guarda en `pct_antelacion_sin_escalar` y `pct_antelacion_escalada` el % de la
 > distancia que aporta `antelacion_dias` (de las Series `sin_escalar` y `escalado`, en tanto por
@@ -527,7 +527,7 @@ print(f"Sin escalar, la antelación decide el {pct_antelacion_sin_escalar:.0f} %
 Sin escalar, la antelación decide el 77 % de la distancia; escalada, el 11 %.
 ```
 
-### Ejercicio 2 · Elegir `k`
+### A4 · EJERCICIO 2 de 4 — Elegir k con validación cruzada
 
 > Para cada `k` de la lista `ks`, calcula el AUC medio en validación cruzada
 > (5 folds, `scoring="roc_auc"`) de un `Pipeline` con `prep_onehot()` y `KNeighborsClassifier(n_neighbors=k)`.
@@ -562,7 +562,7 @@ mejor_k = 201
 
 Y además dibuja un gráfico.
 
-### Ejercicio 3 · Naive Bayes: probabilidades multiplicadas
+### A5 · EJERCICIO 3 de 4 — Naive Bayes con variables numéricas (GaussianNB)
 
 > Crea `nb_gauss`, un `Pipeline` con `prep_onehot()` y `GaussianNB()`. Guarda en
 > `auc_nb_gauss` su AUC medio en validación cruzada (mismo `cv`).
@@ -578,7 +578,7 @@ auc_nb_gauss = cross_val_score(nb_gauss, X, y, cv=cv, scoring="roc_auc").mean()
 auc_nb_gauss = 0.719
 ```
 
-### Ejercicio 4 · Naive Bayes: probabilidades multiplicadas
+### A6 · EJERCICIO 4 de 4 — Naive Bayes con variables discretizadas (CategoricalNB)
 
 > `CategoricalNB` necesita números enteros. Crea `nb_cat`, un `Pipeline` con:
 > - las numéricas → imputar mediana y `KBinsDiscretizer(n_bins=5, encode="ordinal", strategy="quantile")`,
@@ -604,7 +604,7 @@ print(f"AUC GaussianNB: {auc_nb_gauss:.3f} · CategoricalNB: {auc_nb_cat:.3f}")
 AUC GaussianNB: 0.719 · CategoricalNB: 0.742
 ```
 
-### Mini-reto · ¿qué modelo para el equipo de reservas?
+### A7 · MINI-RETO — Comparar los cuatro modelos
 
 > Crea la tabla `tabla` con una fila por modelo (`"logistica"`, `"knn"`, `"nb_gauss"`, `"nb_cat"`) y
 > las columnas:

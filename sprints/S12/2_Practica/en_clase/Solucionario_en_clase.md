@@ -10,7 +10,7 @@
 
 ## S12_01 · Series temporales: baseline, descomposición y ARIMA/SARIMAX
 
-### Ejercicio 1 · Mirar la serie
+### A4 · EJERCICIO 1 de 3 — Día de más ocupación y mes de menos
 
 > ¿Qué día de la semana tiene más ocupación media y qué mes tiene menos?
 > Guarda el nombre del día en `dia_max` (texto, p. ej. `"sáb"`) y el número de mes en `mes_min` (entero de 1 a 12).
@@ -27,7 +27,7 @@ dia_max = 'sáb'
 mes_min = 9
 ```
 
-### Ejercicio 2 · Baselines: el rival que hay que batir
+### A7 · EJERCICIO 2 de 3 — Baseline: media de las últimas 4 semanas
 
 > Un tercer baseline: la **media de las últimas 4 semanas** para cada día de la semana
 > (más estable que copiar solo la última semana). Completa `pred_media4`: debe devolver 7 valores, uno por día,
@@ -49,7 +49,7 @@ print(f"MAE media 4 semanas: {mae_media4:.2f}")
 MAE media 4 semanas: 4.45
 ```
 
-### Ejercicio 4 · ARIMA y SARIMAX
+### A11 · EJERCICIO 3 de 3 — SARIMAX sin exógenas
 
 > Prueba una segunda especificación **sin** los festivos ni Fourier (solo `order=(1,0,1)`, `seasonal_order=(1,1,1,7)`)
 > y compara. Guarda su MAE en `mae_sin_exog`. Pista: `SARIMAX(entrenamiento, order=..., seasonal_order=...)`,
@@ -76,7 +76,7 @@ MAE SARIMAX sin exógenas: 3.93  |  con exógenas: 3.18
 
 ## S12_02 · Redes recurrentes (RNN, LSTM, GRU) para predecir la ocupación
 
-### Ejercicio 1 · Escalado SIN fuga
+### A4 · EJERCICIO 1 de 3 — Escalar sin fuga de datos
 
 > Crea `escalador = MinMaxScaler()`, ajústalo con la columna de ocupación de las primeras `n_ent` filas
 > y guarda en `ocup_esc` la ocupación de **toda** la serie transformada (array de una dimensión).
@@ -99,7 +99,7 @@ print("Matriz de variables:", matriz.shape)
 Matriz de variables: (1096, 6)
 ```
 
-### Ejercicio 2 · Ventanas deslizantes
+### A6 · EJERCICIO 2 de 3 — Crear las ventanas deslizantes
 
 > Completa `crear_ventanas(origenes)`, que recibe una lista de posiciones `t` y devuelve
 > `X` con forma `(n, 28, 6)` e `y` con forma `(n, 7)`.
@@ -126,7 +126,7 @@ print("Entrenamiento:", X_ent.shape, y_ent.shape, "| Prueba:", X_test.shape, y_t
 Entrenamiento: (971, 28, 6) (971, 7) | Prueba: (13, 28, 6) (13, 7)
 ```
 
-### Ejercicio 3 · Construir y entrenar las tres redes
+### A10 · EJERCICIO 3 de 3 — Entrenar SimpleRNN, LSTM y GRU
 
 > Entrena las tres redes en un diccionario `modelos` con claves `"SimpleRNN"`, `"LSTM"` y `"GRU"`,
 > donde cada valor es la tupla `(modelo, historial)` que devuelve `entrenar`. Después se calcula el MAE de cada una en `resultados`.
@@ -164,7 +164,7 @@ Y además dibuja un gráfico.
 
 ## S12_03 · NLP clásico: sentimiento y temas en las reseñas de TurisData
 
-### Ejercicio 1 · Limpieza y tokenización
+### A4 · EJERCICIO 1 de 4 — Limpiar un texto
 
 > Completa `limpiar(texto)`: pasa a minúsculas, cambia todo lo que no sean letras (incluidas tildes y ñ) o espacios por un espacio,
 > y colapsa espacios repetidos. Debe cumplir `limpiar("¡Qué BUENO!...  Sí") == "qué bueno sí"`.
@@ -192,7 +192,7 @@ resenas["limpio"] = resenas["texto"].apply(limpiar)
 ['limpieza', 'habitación', 'impecable']
 ```
 
-### Ejercicio 2 · Limpieza y tokenización
+### A6 · EJERCICIO 2 de 4 — Las 5 palabras más frecuentes
 
 > ¿Cuáles son las 5 palabras (tokens, ya sin palabras vacías) más frecuentes de todo el corpus?
 > Guarda en `top5` una lista de 5 tuplas `(palabra, veces)`. Pista: `collections.Counter` y `.most_common(5)`.
@@ -210,7 +210,7 @@ print(top5)
 [('semana', 504), ('desayuno', 391), ('todo', 382), ('habitación', 284), ('escapada', 256)]
 ```
 
-### Ejercicio 3 · Clasificar el sentimiento
+### A9 · EJERCICIO 3 de 4 — Regresión logística frente a Naive Bayes
 
 > Crea y entrena dos modelos y guarda su exactitud en prueba:
 > - `modelo_lr`: `TfidfVectorizer(preprocessor=limpiar)` + `LogisticRegression(max_iter=1000)` → `acc_lr`
@@ -251,7 +251,7 @@ weighted avg       0.99      0.99      0.99       375
 
 Y además dibuja un gráfico.
 
-### Ejercicio 4 · Los límites: negaciones
+### A13 · EJERCICIO 4 de 4 — ¿Falla con las negaciones?
 
 > Observa los resultados y escribe en `falla_negacion` (True/False) si el modelo trata igual las frases
 > "con negación" que las "sin negación" (es decir, ¿se equivoca con "no es impecable"?). Después, en `bigrama_util`, escribe
@@ -274,7 +274,7 @@ bigrama_util = 'Un bigrama junta dos palabras seguidas (p. ej. «no es»), así 
 
 ## S12_05 · Transformers y LLM: tokenización y atención paso a paso
 
-### Ejercicio 3 · Autoatención paso a paso (con números pequeños)
+### A6 · EJERCICIO 1 de 3 — Escribir softmax por filas
 
 > Escribe `softmax(m)` que aplique el softmax **por filas** a una matriz (resta el máximo de cada fila antes
 > de exponenciar, por estabilidad numérica).
@@ -300,7 +300,7 @@ Pesos de atención (cada fila suma 1):
  [0.09 0.73 0.18]]
 ```
 
-### Ejercicio 4 · Autoatención paso a paso (con números pequeños)
+### A8 · EJERCICIO 2 de 3 — La función de atención completa
 
 > Completa `atencion(X, Wq, Wk, Wv)` que devuelve `(salida, pesos)` siguiendo los 4 pasos.
 
@@ -334,7 +334,7 @@ Salida:
 
 Y además dibuja un gráfico.
 
-### Ejercicio 5 · Máscara causal: mirar solo hacia atrás
+### A10 · EJERCICIO 3 de 3 — Atención con máscara causal
 
 > Completa `atencion_causal(X, Wq, Wk, Wv)`: igual que `atencion`, pero antes del softmax
 > pon `-1e9` en las posiciones **por encima de la diagonal** (`np.triu(..., k=1)`).
@@ -364,7 +364,7 @@ print(pesos_c)
 
 ## S12_06 · Mini RAG: un asistente que responde con la política del alojamiento
 
-### Ejercicio 1 · La idea de RAG en 4 pasos
+### A3 · EJERCICIO 1 de 3 — Trocear la política en frases
 
 > Completa `trocear(texto)`: recorre las líneas, detecta las secciones (`## Título`), ignora líneas vacías y el título `# ...`,
 > quita los asteriscos `**` y separa cada línea en frases (`re.split(r"(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚ])", linea)`).
@@ -395,7 +395,7 @@ print(len(fragmentos), "fragmentos. Ejemplo:", fragmentos[3])
 25 fragmentos. Ejemplo: {'seccion': '1. Reservas y cancelaciones', 'texto': 'Si el cliente ha pagado un depósito parcial, se devuelve íntegro en las cancelaciones gratuitas.'}
 ```
 
-### Ejercicio 2 · Recuperar con TF-IDF
+### A5 · EJERCICIO 2 de 3 — Recuperar los fragmentos más parecidos
 
 > Completa `recuperar(pregunta, k=3)`: devuelve una lista de `(puntuación, fragmento)` con los `k` fragmentos más parecidos,
 > de mayor a menor puntuación.
@@ -418,7 +418,7 @@ _r = recuperar("¿A qué hora es el check-in?", 3)
 0.23 | 3. Mascotas | No se admiten mascotas en las suites.
 ```
 
-### Ejercicio 4 · El asistente completo
+### A11 · EJERCICIO 3 de 3 — El asistente completo con umbral
 
 > Completa `responder(pregunta, umbral=0.15, k=3)`. Devuelve un diccionario con: `"respuesta"` (texto),
 > `"fragmentos"` (lista de fragmentos usados) y `"puntuacion"` (la del mejor fragmento).

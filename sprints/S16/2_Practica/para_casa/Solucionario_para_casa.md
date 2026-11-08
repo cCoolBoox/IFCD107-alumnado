@@ -9,7 +9,7 @@
 
 ## S16_01 · Plantilla de demostrador
 
-### Ejercicio 1 · La lógica, separada de la interfaz
+### A5 · EJERCICIO 1 de 3 — Comprobar la coherencia entre campos
 
 > Las validaciones por campo no detectan **incoherencias entre campos**. Escribe `validar_coherencia(reserva)`
 > que devuelva una lista de errores (vacía si todo va bien) con estas dos reglas:
@@ -38,7 +38,7 @@ print("Ejercicio 1 correcto ✔")
 Ejercicio 1 correcto ✔
 ```
 
-### Ejercicio 2 · La lógica, separada de la interfaz
+### A6 · EJERCICIO 2 de 3 — Convertir la lista de errores en un mensaje
 
 > Escribe `mensaje_errores(errores)`: recibe una lista de errores y devuelve **un único texto** para mostrar
 > al usuario. Debe empezar por `"No se puede calcular todavía:"` y listar cada error en una línea que empiece
@@ -64,7 +64,7 @@ No se puede calcular todavía:
 - 'telepatia' no es un valor válido para 'canal'. Opciones: agencia, directo, empresa, web_intermediaria.
 ```
 
-### Ejercicio 3 · Pruebas de sentido común
+### A7 · EJERCICIO 3 de 3 — Dos reservas de comparación
 
 > Define dos reservas completas (diccionarios con los 11 campos, como `reserva_ejemplo`):
 > `reserva_riesgo_alto` (mucha antelación, sin depósito, tarifa flexible, canal `web_intermediaria`) y

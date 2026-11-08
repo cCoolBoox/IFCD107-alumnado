@@ -9,7 +9,7 @@
 
 ## S12_01 · Series temporales: baseline, descomposición y ARIMA/SARIMAX
 
-### Ejercicio 1 · Mirar la serie
+### A4 · EJERCICIO 1 de 4 — Día de más ocupación y mes de menos
 
 > ¿Qué día de la semana tiene más ocupación media y qué mes tiene menos?
 > Guarda el nombre del día en `dia_max` (texto, p. ej. `"sáb"`) y el número de mes en `mes_min` (entero de 1 a 12).
@@ -26,7 +26,7 @@ dia_max = 'sáb'
 mes_min = 9
 ```
 
-### Ejercicio 2 · Baselines: el rival que hay que batir
+### A7 · EJERCICIO 2 de 4 — Baseline: media de las últimas 4 semanas
 
 > Un tercer baseline: la **media de las últimas 4 semanas** para cada día de la semana
 > (más estable que copiar solo la última semana). Completa `pred_media4`: debe devolver 7 valores, uno por día,
@@ -48,7 +48,7 @@ print(f"MAE media 4 semanas: {mae_media4:.2f}")
 MAE media 4 semanas: 4.45
 ```
 
-### Ejercicio 3 · Descomposición: tendencia + estacionalidad + resto
+### A9 · EJERCICIO 3 de 4 — Amplitud semanal y resto
 
 > ¿Cuánta de la variación se explica por la estacionalidad semanal? Calcula en `amplitud_semanal`
 > la diferencia entre el mayor y el menor efecto estacional (`desc.seasonal.max() - desc.seasonal.min()`),
@@ -66,7 +66,7 @@ amplitud_semanal = 9.4
 resto_std = 3.6693
 ```
 
-### Ejercicio 4 · ARIMA y SARIMAX
+### A12 · EJERCICIO 4 de 4 — SARIMAX sin exógenas
 
 > Prueba una segunda especificación **sin** los festivos ni Fourier (solo `order=(1,0,1)`, `seasonal_order=(1,1,1,7)`)
 > y compara. Guarda su MAE en `mae_sin_exog`. Pista: `SARIMAX(entrenamiento, order=..., seasonal_order=...)`,
@@ -89,7 +89,7 @@ print(f"MAE SARIMAX sin exógenas: {mae_sin_exog:.2f}  |  con exógenas: {mae_sa
 MAE SARIMAX sin exógenas: 3.93  |  con exógenas: 3.18
 ```
 
-### Mini-reto integrador
+### A14 · MINI-RETO — El número de control para la dirección
 
 > La dirección pide un **número de control**: ¿cuánto mejora (en %) el mejor modelo respecto al mejor baseline?
 > Guarda en `mejor_baseline` el menor MAE entre los tres baselines y en `mejora_pct` el porcentaje de mejora
@@ -114,7 +114,7 @@ El modelo SARIMAX se equivoca de media 3.2 puntos de ocupación a 7 días, un 28
 
 ## S12_02 · Redes recurrentes (RNN, LSTM, GRU) para predecir la ocupación
 
-### Ejercicio 1 · Escalado SIN fuga
+### A4 · EJERCICIO 1 de 3 — Escalar sin fuga de datos
 
 > Crea `escalador = MinMaxScaler()`, ajústalo con la columna de ocupación de las primeras `n_ent` filas
 > y guarda en `ocup_esc` la ocupación de **toda** la serie transformada (array de una dimensión).
@@ -137,7 +137,7 @@ print("Matriz de variables:", matriz.shape)
 Matriz de variables: (1096, 6)
 ```
 
-### Ejercicio 2 · Ventanas deslizantes
+### A6 · EJERCICIO 2 de 3 — Crear las ventanas deslizantes
 
 > Completa `crear_ventanas(origenes)`, que recibe una lista de posiciones `t` y devuelve
 > `X` con forma `(n, 28, 6)` e `y` con forma `(n, 7)`.
@@ -164,7 +164,7 @@ print("Entrenamiento:", X_ent.shape, y_ent.shape, "| Prueba:", X_test.shape, y_t
 Entrenamiento: (971, 28, 6) (971, 7) | Prueba: (13, 28, 6) (13, 7)
 ```
 
-### Ejercicio 3 · Construir y entrenar las tres redes
+### A10 · EJERCICIO 3 de 3 — Entrenar SimpleRNN, LSTM y GRU
 
 > Entrena las tres redes en un diccionario `modelos` con claves `"SimpleRNN"`, `"LSTM"` y `"GRU"`,
 > donde cada valor es la tupla `(modelo, historial)` que devuelve `entrenar`. Después se calcula el MAE de cada una en `resultados`.
@@ -198,7 +198,7 @@ Baseline   MAE prueba: 4.46 puntos
 
 Y además dibuja un gráfico.
 
-### Mini-reto integrador
+### A13 · MINI-RETO — ¿Y si la ventana es demasiado corta?
 
 > Comprueba cuánto **empeora** una red si la ventana es demasiado corta. Entrena una **GRU** con ventana de 7 días
 > (en lugar de 28) y guarda su MAE en `mae_ventana7`.
@@ -231,7 +231,7 @@ GRU ventana 28: 3.28 | GRU ventana 7: 3.41
 
 ## S12_03 · NLP clásico: sentimiento y temas en las reseñas de TurisData
 
-### Ejercicio 1 · Limpieza y tokenización
+### A4 · EJERCICIO 1 de 5 — Limpiar un texto
 
 > Completa `limpiar(texto)`: pasa a minúsculas, cambia todo lo que no sean letras (incluidas tildes y ñ) o espacios por un espacio,
 > y colapsa espacios repetidos. Debe cumplir `limpiar("¡Qué BUENO!...  Sí") == "qué bueno sí"`.
@@ -259,7 +259,7 @@ resenas["limpio"] = resenas["texto"].apply(limpiar)
 ['limpieza', 'habitación', 'impecable']
 ```
 
-### Ejercicio 2 · Limpieza y tokenización
+### A6 · EJERCICIO 2 de 5 — Las 5 palabras más frecuentes
 
 > ¿Cuáles son las 5 palabras (tokens, ya sin palabras vacías) más frecuentes de todo el corpus?
 > Guarda en `top5` una lista de 5 tuplas `(palabra, veces)`. Pista: `collections.Counter` y `.most_common(5)`.
@@ -277,7 +277,7 @@ print(top5)
 [('semana', 504), ('desayuno', 391), ('todo', 382), ('habitación', 284), ('escapada', 256)]
 ```
 
-### Ejercicio 3 · Clasificar el sentimiento
+### A9 · EJERCICIO 3 de 5 — Regresión logística frente a Naive Bayes
 
 > Crea y entrena dos modelos y guarda su exactitud en prueba:
 > - `modelo_lr`: `TfidfVectorizer(preprocessor=limpiar)` + `LogisticRegression(max_iter=1000)` → `acc_lr`
@@ -318,7 +318,7 @@ weighted avg       0.99      0.99      0.99       375
 
 Y además dibuja un gráfico.
 
-### Ejercicio 4 · Los límites: negaciones
+### A13 · EJERCICIO 4 de 5 — ¿Falla con las negaciones?
 
 > Observa los resultados y escribe en `falla_negacion` (True/False) si el modelo trata igual las frases
 > "con negación" que las "sin negación" (es decir, ¿se equivoca con "no es impecable"?). Después, en `bigrama_util`, escribe
@@ -337,7 +337,7 @@ falla_negacion = True
 bigrama_util = 'Un bigrama junta dos palabras seguidas (p. ej. «no es»), así conserva parte del orden y de la negación.'
 ```
 
-### Ejercicio 5 · Temas por palabras clave
+### A15 · EJERCICIO 5 de 5 — El tema peor detectado
 
 > ¿Cuál es el tema con peor F1 (`tema_peor`, texto) y cuántas reseñas del corpus mencionan **realmente** el tema `precio`
 > (`n_precio`, entero, usando `temas_reales`)?
@@ -364,7 +364,7 @@ Tema peor: ruido | n precio: 455
 - Viajamos en familia. Demasiado caro para lo que ofrece. El personal fue borde. La zona es ruidosa y poco segura de noche. | real: ['personal', 'precio', 'ubicacion'] | detectado: ['personal', 'precio', 'ruido', 'ubicacion']
 ```
 
-### Mini-reto integrador · panel de quejas
+### A18 · MINI-RETO — Panel de quejas por tema
 
 > Construye `quejas`, una serie con el **número de reseñas negativas por tema** (usa `temas_detectados` y solo reseñas con `sentimiento == "negativo"`),
 > ordenada de mayor a menor. Dibuja un gráfico de barras y guarda en `queja_principal` el tema más frecuente.
@@ -385,7 +385,7 @@ plt.show()
 
 ## S12_04 · Embeddings: representar el significado con vectores (LSA)
 
-### Ejercicio 1 · Idea: de la bolsa de palabras al vector denso
+### A4 · EJERCICIO 1 de 3 — Reducir a 12 dimensiones con LSA
 
 > Reduce `M` a **12 dimensiones** con `TruncatedSVD(n_components=12, random_state=SEMILLA)`.
 > Guarda el modelo en `lsa` y los vectores de las reseñas en `Z` (forma `(1500, 12)`).
@@ -404,7 +404,7 @@ print("Forma de Z:", Z.shape, "| varianza explicada con 12 ejes:", round(var_exp
 Forma de Z: (1500, 12) | varianza explicada con 12 ejes: 0.438
 ```
 
-### Ejercicio 2 · Similitud del coseno
+### A7 · EJERCICIO 2 de 3 — Las reseñas más parecidas a una dada
 
 > Completa `parecidas(i, k=3)`: devuelve los índices de las `k` reseñas más parecidas (por coseno sobre `Z`)
 > a la reseña número `i`, **excluyendo la propia `i`**, de más a menos parecida.
@@ -431,7 +431,7 @@ Reseña 0: Escapada de fin de semana. La música del bar no nos dejó dormir. Vi
   ≈ Pasamos una semana aquí. Vistas al mar increíbles.
 ```
 
-### Ejercicio 3 · Embeddings como entrada de un clasificador
+### A10 · EJERCICIO 3 de 3 — LSA de 12 columnas frente a TF-IDF completo
 
 > Parte los datos en entrenamiento y prueba (ya hecho abajo). Ajusta `tfidf_e` y `lsa_e` **solo con `X_ent`**, entrena una
 > regresión logística sobre los vectores LSA de entrenamiento y guarda en `acc_lsa` la exactitud en prueba.
@@ -460,7 +460,7 @@ TF-IDF completo (105 columnas): 0.995
 LSA (12 columnas)                : 0.891
 ```
 
-### Mini-reto integrador · buscador semántico de reseñas
+### A11 · MINI-RETO — Buscador semántico de reseñas
 
 > Crea `buscar(consulta, k=3)`: convierte la consulta al espacio LSA (`tfidf.transform` y `lsa.transform`; usa `limpiar` como ya está en `tfidf`),
 > calcula el coseno con `Z` y devuelve los `k` textos más parecidos. Prueba con `"no me dejó dormir el ruido"`.
@@ -488,7 +488,7 @@ for h in hallazgos:
 
 ## S12_05 · Transformers y LLM: tokenización y atención paso a paso
 
-### Ejercicio 1 · Tokenización: cómo "lee" un LLM
+### A3 · EJERCICIO 1 de 6 — El par de letras más común
 
 > Comprueba que `contar_pares` funciona: calcula `pares` sobre las palabras del corpus troceadas en letras
 > (`[list(p) for p in corpus]`) y guarda en `par_mas_comun` el par más frecuente (una tupla de 2 letras).
@@ -541,7 +541,7 @@ limpiamos    → ['limpi', 'a', 'm', 'os']
 desayunamos  → ['desayuna', 'm', 'os']
 ```
 
-### Ejercicio 2 · Tokenización: cómo "lee" un LLM
+### A5 · EJERCICIO 2 de 6 — Razón de compresión del BPE
 
 > Cuenta cuántos tokens hay en total tras las 12 fusiones (`n_tokens_bpe`) y cuántas letras tenía el corpus (`n_letras`).
 > ¿Cuál es la **razón de compresión** (`n_letras / n_tokens_bpe`, redondeada a 2 decimales) en `compresion`?
@@ -559,7 +559,7 @@ print(f"{n_letras} letras → {n_tokens_bpe} tokens (compresión {compresion}x)"
 67 letras → 22 tokens (compresión 3.05x)
 ```
 
-### Ejercicio 3 · Autoatención paso a paso (con números pequeños)
+### A8 · EJERCICIO 3 de 6 — Escribir softmax por filas
 
 > Escribe `softmax(m)` que aplique el softmax **por filas** a una matriz (resta el máximo de cada fila antes
 > de exponenciar, por estabilidad numérica).
@@ -585,7 +585,7 @@ Pesos de atención (cada fila suma 1):
  [0.09 0.73 0.18]]
 ```
 
-### Ejercicio 4 · Autoatención paso a paso (con números pequeños)
+### A10 · EJERCICIO 4 de 6 — La función de atención completa
 
 > Completa `atencion(X, Wq, Wk, Wv)` que devuelve `(salida, pesos)` siguiendo los 4 pasos.
 
@@ -619,7 +619,7 @@ Salida:
 
 Y además dibuja un gráfico.
 
-### Ejercicio 5 · Máscara causal: mirar solo hacia atrás
+### A12 · EJERCICIO 5 de 6 — Atención con máscara causal
 
 > Completa `atencion_causal(X, Wq, Wk, Wv)`: igual que `atencion`, pero antes del softmax
 > pon `-1e9` en las posiciones **por encima de la diagonal** (`np.triu(..., k=1)`).
@@ -645,7 +645,7 @@ print(pesos_c)
  [0.09 0.73 0.18]]
 ```
 
-### Ejercicio 6 · Del cálculo a la generación: logits, softmax y temperatura
+### A14 · EJERCICIO 6 de 6 — Probabilidad máxima con T baja y alta
 
 > Calcula `prob_max_T03` (la probabilidad del token más probable con `T = 0.3`) y `prob_max_T25` (con `T = 2.5`).
 > ¿Cuál de las dos es mayor? Escribe la respuesta en `mas_seguro`: `"T baja"` o `"T alta"`.
@@ -663,7 +663,7 @@ print(round(prob_max_T03, 3), round(prob_max_T25, 3), mas_seguro)
 0.816 0.302 T baja
 ```
 
-### Mini-reto integrador · ¿de qué depende que un LLM "mire" bien?
+### A15 · MINI-RETO — Que «hotel» preste más atención a «limpio»
 
 > Con las mismas matrices Wq, Wk y Wv, modifica el embedding de "limpio" para que la palabra "hotel" le **preste más atención**.
 > Crea `X2` (una copia de `X` con la fila de "limpio", índice 2, cambiada) para que `pesos_nuevos[0, 2]` (cuánto mira "hotel" a "limpio") sea **mayor** que `pesos[0, 2]`
@@ -687,7 +687,7 @@ Antes: 0.446 | Ahora: 0.932
 
 ## S12_06 · Mini RAG: un asistente que responde con la política del alojamiento
 
-### Ejercicio 1 · La idea de RAG en 4 pasos
+### A3 · EJERCICIO 1 de 6 — Trocear la política en frases
 
 > Completa `trocear(texto)`: recorre las líneas, detecta las secciones (`## Título`), ignora líneas vacías y el título `# ...`,
 > quita los asteriscos `**` y separa cada línea en frases (`re.split(r"(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚ])", linea)`).
@@ -718,7 +718,7 @@ print(len(fragmentos), "fragmentos. Ejemplo:", fragmentos[3])
 25 fragmentos. Ejemplo: {'seccion': '1. Reservas y cancelaciones', 'texto': 'Si el cliente ha pagado un depósito parcial, se devuelve íntegro en las cancelaciones gratuitas.'}
 ```
 
-### Ejercicio 2 · Recuperar con TF-IDF
+### A5 · EJERCICIO 2 de 6 — Recuperar los fragmentos más parecidos
 
 > Completa `recuperar(pregunta, k=3)`: devuelve una lista de `(puntuación, fragmento)` con los `k` fragmentos más parecidos,
 > de mayor a menor puntuación.
@@ -741,7 +741,7 @@ _r = recuperar("¿A qué hora es el check-in?", 3)
 0.23 | 3. Mascotas | No se admiten mascotas en las suites.
 ```
 
-### Ejercicio 3 · Evaluar SOLO la recuperación
+### A7 · EJERCICIO 3 de 6 — Expandir la consulta con sinónimos
 
 > Completa `expandir(pregunta)`: añade al final de la pregunta las palabras del diccionario `SINONIMOS` cuya clave aparezca en ella
 > (sin tildes y en minúsculas). Después se guarda la nueva `recuperar_exp`, y se mide `h1_exp`.
@@ -770,7 +770,7 @@ print(f"Con expansión → 1.ª posición: {h1_exp:.0%} (antes {h1:.0%}) | entre
 Con expansión → 1.ª posición: 95% (antes 84%) | entre los 3 primeros: 100%
 ```
 
-### Ejercicio 4 · El asistente completo
+### A12 · EJERCICIO 4 de 6 — El asistente completo con umbral
 
 > Completa `responder(pregunta, umbral=0.15, k=3)`. Devuelve un diccionario con: `"respuesta"` (texto),
 > `"fragmentos"` (lista de fragmentos usados) y `"puntuacion"` (la del mejor fragmento).
@@ -795,7 +795,7 @@ print(demo["respuesta"], "| puntuación:", round(demo["puntuacion"], 2))
 No se admiten mascotas en las suites. [1] (Fuente: 3. Mascotas) | puntuación: 0.89
 ```
 
-### Ejercicio 5 · Evaluar el asistente
+### A13 · EJERCICIO 5 de 6 — Detectar una alucinación
 
 > Completa `es_alucinacion(respuesta, fragmentos, sin_respuesta)`. Pista para las cifras: `re.findall(r"\d+(?::\d+)?", texto)`.
 
@@ -841,7 +841,7 @@ Aciertos: 19/20 | sin fuente: 0 | alucinaciones: 0
 Fallos: ['¿A qué hora es el desayuno?']
 ```
 
-### Ejercicio 6 · Seguridad: prompt injection
+### A18 · EJERCICIO 6 de 6 — Un filtro de entradas sospechosas
 
 > Completa `es_seguro(texto)`: devuelve `False` si el texto contiene señales típicas de inyección
 > (por ejemplo «ignora las instrucciones», «olvida lo anterior», «system prompt», «eres ahora», «responde siempre que») y `True` en caso contrario.
@@ -867,7 +867,7 @@ print("Ataques que prosperan CON filtro:", sum(exitos_con_defensa), "de", len(ex
 Ataques que prosperan CON filtro: 0 de 3
 ```
 
-### Mini-reto integrador · ¿qué umbral elegimos?
+### A21 · MINI-RETO — ¿Qué umbral elegimos?
 
 > El umbral es una decisión de negocio: **alto** = el asistente dice "no consta" más a menudo (seguro, pero menos útil);
 > **bajo** = responde más (útil, pero arriesga alucinar). Evalúa los umbrales `[0.0, 0.1, 0.15, 0.3, 0.5]` y guarda en `tabla_umbral`
@@ -902,7 +902,7 @@ Umbral elegido: 0.1
 
 ## S12_07 · Autoencoders y modelos generativos (GAN y difusión)
 
-### Ejercicio 1 · Idea: comprimir y reconstruir
+### A3 · EJERCICIO 1 de 5 — Partir por orden temporal y escalar
 
 > Reserva el **último 20 %** de las semanas para prueba (orden temporal, sin barajar) y **escala** con `MinMaxScaler`
 > ajustado solo con las semanas de entrenamiento. Ya tienes `corte` (dónde acaba el entrenamiento). Guarda el escalador en `escalador` y las matrices ya escaladas (7 columnas) en `sem_ent` y `sem_test`.
@@ -921,7 +921,7 @@ print("Entrenamiento:", sem_ent.shape, "| prueba:", sem_test.shape)
 Entrenamiento: (124, 7) | prueba: (32, 7)
 ```
 
-### Ejercicio 2 · Construir y entrenar el autoencoder
+### A5 · EJERCICIO 2 de 5 — Entrenar el autoencoder
 
 > Entrena `ae` con `sem_ent` como **entrada y objetivo** (¡el mismo array dos veces!), 150 épocas, `batch_size=16`, `verbose=0`,
 > con el 15 % final como validación (`validation_split=0.15`). Guarda el historial en `historial`.
@@ -944,7 +944,7 @@ Error final de entrenamiento: 0.0076 | validación: 0.0095
 
 Y además dibuja un gráfico.
 
-### Ejercicio 3 · Detección de anomalías
+### A8 · EJERCICIO 3 de 5 — Error de reconstrucción y umbral
 
 > Completa `error_recons(modelo, X)`: devuelve un array con el error cuadrático medio de cada fila de `X`
 > (media de `(X - modelo.predict(X))**2` por filas). Calcula `umbral` (percentil 95 de los errores de `sem_ent`, `np.percentile`).
@@ -965,7 +965,7 @@ print(f"Umbral (percentil 95 en entrenamiento): {umbral:.4f}")
 Umbral (percentil 95 en entrenamiento): 0.0154
 ```
 
-### Ejercicio 4 · Detección de anomalías
+### A10 · EJERCICIO 4 de 5 — Anomalías detectadas y semanas reales marcadas
 
 > Calcula `n_detectadas` (cuántas de las 3 anomalías inyectadas superan el umbral) y `falsos_positivos`
 > (cuántas semanas **reales de prueba**, `err_test`, superan el umbral).
@@ -990,7 +990,7 @@ Anomalías detectadas: 3/3 | semanas reales marcadas: 3/32
 
 Y además dibuja un gráfico.
 
-### Mini-reto integrador · ¿qué semanas reales revisar?
+### A12 · MINI-RETO — ¿Qué semanas reales revisar?
 
 > Construye `revisar`: un DataFrame con las semanas de **prueba** cuyo error supera el umbral, con columnas `inicio_semana` (fecha) y `error`,
 > ordenado de mayor a menor error. Si no hay ninguna, queda vacío (es una buena noticia). Escribe en `interpretacion` (texto)
@@ -1013,7 +1013,7 @@ print(revisar.head())
 2    2025-08-31  0.015676
 ```
 
-### Ejercicio 5 · De comprensión
+### A13 · EJERCICIO 5 de 5 — Emparejar situaciones con la técnica adecuada
 
 > Asigna a `parejas` un diccionario que empareje cada situación con la técnica **más adecuada**
 > (`"autoencoder"`, `"gan"` o `"difusion"`):

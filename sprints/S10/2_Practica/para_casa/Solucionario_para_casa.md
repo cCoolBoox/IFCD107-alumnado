@@ -10,7 +10,7 @@
 
 ## S10_01 · Una red neuronal desde cero, solo con NumPy
 
-### Ejercicio 1 · La neurona: una suma ponderada y un "interruptor suave"
+### A3 · EJERCICIO 1 de 4 — La función neurona
 
 > Escribe la función `neurona(x, pesos, sesgo)` que devuelva la salida
 > de la neurona (suma ponderada + sesgo, pasada por `sigmoide`).
@@ -28,7 +28,7 @@ salida_ejemplo = neurona(np.array([1.5, 1.0]), np.array([0.8, 1.2]), -1.0)
 salida_ejemplo = 0.8022
 ```
 
-### Ejercicio 2 · Funciones de activación
+### A5 · EJERCICIO 2 de 4 — ReLU y su derivada
 
 > Define `relu(z)` (devuelve `z` si es positivo y 0 si no) y `relu_derivada(z)`
 > (vale 1 donde `z > 0` y 0 en el resto). La derivada nos dirá más adelante "por dónde
@@ -44,7 +44,7 @@ def relu_derivada(z):
 _prueba = np.array([-2.0, 0.0, 3.0])
 ```
 
-### Ejercicio 3 · Propagación hacia delante: de las entradas a la predicción
+### A8 · EJERCICIO 3 de 4 — Un paso de descenso de gradiente
 
 > Escribe `paso_gradiente(parametros, gradientes, tasa)`: recibe dos diccionarios con
 > las mismas claves (`"W1"`, `"b1"`, `"W2"`, `"b2"`) y devuelve un diccionario **nuevo** con cada
@@ -60,7 +60,7 @@ _g = {"W1": np.array([0.5, -1.0]), "b1": np.array([1.0])}
 _nuevo = paso_gradiente(_p, _g, 0.1)
 ```
 
-### Ejercicio 4 · Entrenamos y comparamos tamaños de capa oculta
+### A14 · EJERCICIO 4 de 4 — Exactitud de la red y mejora sobre el modelo lineal
 
 > Calcula en la variable `exactitud_val` la exactitud (proporción de aciertos) de la red de 8 neuronas
 > (`mejor`) sobre `X_val`/`y_val` usando su método `predecir`. Y en `mejora_sobre_lineal`
@@ -78,7 +78,7 @@ exactitud_val = 1.0
 mejora_sobre_lineal = 0.5056
 ```
 
-### Mini-reto integrador
+### A15 · MINI-RETO — Una red con tasa de aprendizaje 0.01
 
 > Entrena una red con **4 neuronas ocultas** y una **tasa de aprendizaje de 0.01** (muy pequeña) durante 1500 épocas,
 > guarda la red en `red_lenta` y su exactitud de validación en `exactitud_lenta`.
@@ -101,7 +101,7 @@ Exactitud con tasa 0.01: 0.606
 
 ## S10_02 · Tu primer MLP en Keras: cancelaciones y precio por noche
 
-### Ejercicio 1 · Preparar los datos para una red neuronal
+### A3 · EJERCICIO 1 de 5 — Columnas numéricas y categóricas
 
 > Define dos listas: `cols_num` (las columnas numéricas: `antelacion_dias`, `noches`, `adultos`, `ninos`,
 > `peticiones_especiales`, `cliente_repetidor`, `cancelaciones_previas`, `mes_llegada`) y `cols_cat`
@@ -121,7 +121,7 @@ cols_num: list de 8 elementos, ['antelacion_dias', 'noches', 'adultos', 'ninos',
 cols_cat: list de 6 elementos, ['tipo_habitacion', 'regimen', 'canal', 'pais_origen', 'tarifa', 'deposito']
 ```
 
-### Ejercicio 2 · Un MLP para clasificar cancelaciones
+### A5 · EJERCICIO 2 de 5 — Construir el MLP de clasificación
 
 > Escribe `construir_mlp_clasificacion(n_entradas, capas=(32, 16))` que devuelva un modelo
 > `keras.Sequential` con una capa `Input`, una capa `Dense` con `relu` por cada número de `capas`, y una
@@ -142,7 +142,7 @@ mlp_c = construir_mlp_clasificacion(Xc_ent.shape[1])
 mlp_c.summary()
 ```
 
-### Ejercicio 3 · Un MLP para clasificar cancelaciones
+### A8 · EJERCICIO 3 de 5 — ¿Gana el MLP a la regresión logística?
 
 > Guarda en `auc_mlp` el AUC del MLP en prueba y en `auc_log` el de la regresión logística
 > (a partir de `prob_mlp` y `prob_log`, con `roc_auc_score`). Después guarda en `mlp_gana` un booleano
@@ -163,7 +163,7 @@ print(f"AUC MLP = {auc_mlp:.3f} · AUC logística = {auc_log:.3f} · ¿gana la r
 AUC MLP = 0.727 · AUC logística = 0.746 · ¿gana la red por más de 0.02? False
 ```
 
-### Ejercicio 4 · Un MLP para predecir el precio por noche (regresión)
+### A10 · EJERCICIO 4 de 5 — Construir el MLP de regresión
 
 > Escribe `construir_mlp_regresion(n_entradas, capas=(32, 16))`: igual que el de clasificación pero con
 > salida `Dense(1)` **sin activación**, pérdida `"mse"` y métrica `"mae"`.
@@ -201,7 +201,7 @@ tabla_r: tabla de 3 filas y 2 columnas
 
 Y además dibuja un gráfico.
 
-### Ejercicio 5 · Un MLP para predecir el precio por noche (regresión)
+### A12 · EJERCICIO 5 de 5 — El error en euros y la mejora
 
 > Calcula en `mae_mlp_euros` el error medio absoluto **en euros** del MLP sobre el conjunto de prueba
 > (usa `pred_mlp`, que ya está en euros, e `yr_pru`). Calcula también `mejora_vs_media`: en qué fracción
@@ -230,7 +230,7 @@ lim: list de 2 elementos, [54.29, 244.3]
 
 Y además dibuja un gráfico.
 
-### Mini-reto integrador
+### A14 · MINI-RETO — Una red más ancha (128-64)
 
 > Construye un MLP de clasificación **más ancho** (`capas=(128, 64)`), entrénalo 15 épocas con `batch_size=64`
 > y guarda en `auc_ancho` su AUC en **validación** (la última época: `hist_ancho.history["val_auc"][-1]`).
@@ -256,7 +256,7 @@ AUC en validación de la red ancha: 0.724 · parámetros: 12929 frente a 1697
 
 ## S10_03 · Entrenar bien: sobreajuste, regularización y callbacks
 
-### Ejercicio 1 · Provocar y diagnosticar el sobreajuste
+### A5 · EJERCICIO 1 de 4 — Época óptima y brecha final
 
 > A partir de `h_base.history["val_loss"]` calcula:
 > - `epoca_optima`: la época (contando desde 1) en la que la pérdida de validación fue **mínima**;
@@ -278,7 +278,7 @@ print(f"Mejor época: {epoca_optima} de 60 · brecha final = {brecha_final:.2f}"
 Mejor época: 2 de 60 · brecha final = 2.11
 ```
 
-### Ejercicio 2 · Las herramientas de regularización
+### A6 · EJERCICIO 2 de 4 — Entrenar con dropout
 
 > Entrena con `entrenar(A_peq, y_peq, ...)` una red con **dropout de 0.4** y guarda el modelo en
 > `m_drop` y el historial en `h_drop`. Después comprueba en `n_dropout` cuántas capas `Dropout` tiene el modelo
@@ -320,7 +320,7 @@ resumen: tabla de 5 filas y 4 columnas
 
 Y además dibuja un gráfico.
 
-### Ejercicio 3 · Parada temprana y callbacks
+### A8 · EJERCICIO 3 de 4 — Parada temprana y reducción de la tasa
 
 > Crea la lista `mis_callbacks` con un `EarlyStopping` (monitoriza `val_loss`, `patience=8`,
 > `restore_best_weights=True`) y un `ReduceLROnPlateau` (monitoriza `val_loss`, `factor=0.5`, `patience=4`).
@@ -353,7 +353,7 @@ Entrenó 26 de 100 épocas posibles. Mejor pérdida de validación: 0.743
 
 Y además dibuja un gráfico.
 
-### Ejercicio 4 · Guardar y cargar un modelo
+### A11 · EJERCICIO 4 de 4 — Guardar y cargar el modelo
 
 > Guarda `m_es` en el archivo indicado por `ruta_modelo` con `m_es.save(...)`, cárgalo con
 > `keras.models.load_model(...)` en `m_cargado` y calcula en `prob_cargado` sus probabilidades sobre `A_val`.
@@ -380,7 +380,7 @@ shutil.rmtree(carpeta_tmp, ignore_errors=True)
 Modelo guardado y recargado correctamente: 525 KB
 ```
 
-### Mini-reto integrador · gana la red
+### A14 · MINI-RETO — Gana a la red entrenada a ciegas
 
 > Con el **entrenamiento completo** (`A_ent`, 3840 filas) parte de la red grande sin regularizar
 > (`capas=(256, 128)`, 40 épocas, lote 64) y consigue una **menor pérdida de validación del modelo final** combinando lo aprendido:

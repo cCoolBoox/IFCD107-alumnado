@@ -10,7 +10,7 @@
 
 ## S11_01 · Redes convolucionales (CNN): cómo "ve" una red
 
-### Ejercicio 1 · Una imagen es una matriz de números
+### A3 · EJERCICIO 1 de 4 — Preparar los datos para una red
 
 > Prepara los datos para una red: en `X` guarda las imágenes **normalizadas entre 0 y 1**
 > (divide entre 16) con forma `(n, 8, 8, 1)` (Keras espera un canal explícito). Después crea con
@@ -22,7 +22,7 @@ X = (imagenes / 16.0).astype("float32")[..., np.newaxis]
 X_ent, X_pru, y_ent, y_pru = train_test_split(X, etiquetas, test_size=0.25, random_state=SEMILLA, stratify=etiquetas)
 ```
 
-### Ejercicio 2 · Calcular el tamaño de salida
+### A5 · EJERCICIO 2 de 4 — Calcular el tamaño de salida
 
 > Para una entrada de `n` píxeles, filtro de `k`, relleno (*padding*) `p`
 > a cada lado y paso (*stride*) `s`, la salida mide `(n - k + 2p) / s + 1` (parte entera). Escribe
@@ -54,7 +54,7 @@ Tamaño de la salida: (12, 12) (14 - 3 + 1 = 12)
 
 Y además dibuja un gráfico.
 
-### Ejercicio 3 · Pooling: quedarse con lo importante
+### A7 · EJERCICIO 3 de 4 — Programar el max pooling
 
 > Escribe `max_pooling(mapa, t=2)` que divida un mapa 2D (con lados múltiplos de `t`) en bloques de
 > `t × t` y devuelva el máximo de cada bloque (salida de lado `alto // t`). Pista: recorre los bloques con dos bucles
@@ -76,7 +76,7 @@ plt.tight_layout(); plt.show()
 
 **Tiene que salir:** un gráfico.
 
-### Ejercicio 4 · Una CNN completa en Keras
+### A10 · EJERCICIO 4 de 4 — Construir la CNN
 
 > Escribe `construir_cnn(filtros=(16, 32))` que devuelva un modelo compilado con:
 > `Input(8,8,1)` → por cada valor de `filtros`: `Conv2D(f, 3, padding="same", activation="relu")` +
@@ -118,7 +118,7 @@ CNN: 6090 parámetros, exactitud 0.976
 
 Y además dibuja un gráfico.
 
-### Mini-reto integrador
+### A14 · MINI-RETO — CNN con aumento de datos
 
 > Construye `cnn_aug`: una CNN igual que `construir_cnn()` pero con las capas de `aumento`
 > **al principio** del modelo (usa `keras.Sequential([keras.layers.Input((8, 8, 1)), aumento, ...])` o añádelas con `add`).
@@ -151,7 +151,7 @@ Con dígitos desplazados → CNN normal: 0.264 · CNN con aumento: 0.651 · MLP:
 
 ## S11_02 · *Transfer learning* y *fine-tuning*
 
-### Ejercicio 1 · Congelar la base y entrenar solo una cabeza nueva
+### A7 · EJERCICIO 1 de 2 — Congelar una red
 
 > Escribe `congelar(modelo)` que ponga `trainable = False` en **todas** las capas del modelo dado
 > (es decir, `modelo.trainable = False`) y lo devuelva. Después crea `copia_base` (una copia independiente de
@@ -186,7 +186,7 @@ Parámetros totales: 35109 · entrenables (solo la cabeza): 11525
 Transfer learning (base congelada) → exactitud en prueba: 0.833
 ```
 
-### Ejercicio 2 · *Fine-tuning*: descongelar las últimas capas con cuidado
+### A9 · EJERCICIO 2 de 2 — Descongelar solo un bloque
 
 > Escribe `descongelar_bloque(base, n)` que ponga `trainable = True` **solo** en las capas de la base cuyo
 > nombre empieza por `f"bloque{n}"` (por ejemplo `bloque3_conv`) y devuelva el número de pesos entrenables resultantes
@@ -216,7 +216,7 @@ print(f"Tras fine-tuning del bloque 3 → exactitud en prueba: {acc_ft:.3f}")
 Tras fine-tuning del bloque 3 → exactitud en prueba: 0.830
 ```
 
-### Mini-reto integrador · ¿cuántas imágenes necesito?
+### A15 · MINI-RETO — ¿Cuántas fotos hay que etiquetar?
 
 > El cliente pregunta: *"¿Cuántas fotos por tipo de alojamiento tenemos que etiquetar?"* Responde con datos:
 > entrena la **CNN desde cero** y el **transfer learning con base congelada** con
@@ -248,7 +248,7 @@ plt.title("¿Cuántas imágenes hacen falta?"); plt.legend(); plt.show()
 
 ## S11_03 · Detección de objetos y segmentación
 
-### Ejercicio 1 · Cajas y la IoU (*Intersection over Union*)
+### A2 · EJERCICIO 1 de 5 — La IoU de dos cajas
 
 > Escribe `iou(a, b)` que reciba dos cajas `[x1, y1, x2, y2]` y devuelva su IoU (un número entre 0 y 1).
 > Cuidado con el caso en que no se solapan (la intersección vale 0, no negativa).
@@ -264,7 +264,7 @@ def iou(a, b):
     return inter / union if union > 0 else 0.0
 ```
 
-### Ejercicio 2 · NMS (*Non-Maximum Suppression*): quedarse con una caja por objeto
+### A3 · EJERCICIO 2 de 5 — NMS: quedarse con una caja por objeto
 
 > Escribe `nms(cajas, puntuaciones, umbral_iou=0.5)` que devuelva la **lista de índices** de las cajas que se
 > conservan, en orden de confianza decreciente. Usa tu función `iou`.
@@ -283,7 +283,7 @@ _cajas = [[10, 10, 50, 50], [12, 12, 52, 52], [100, 100, 140, 140], [11, 9, 49, 
 _punt = [0.9, 0.8, 0.7, 0.6]
 ```
 
-### Ejercicio 3 · Métricas: precisión, recall, AP y mAP con números
+### A4 · EJERCICIO 3 de 5 — El AP (average precision)
 
 > Escribe `average_precision(es_tp, n_reales)`: recibe una lista de 0/1 con las detecciones **ya ordenadas por
 > confianza decreciente** (1 = verdadero positivo) y el número de objetos reales `n_reales`, y devuelve el AP.
@@ -305,7 +305,7 @@ def average_precision(es_tp, n_reales):
     return float(np.sum((recall - recall_previo) * precision))
 ```
 
-### Ejercicio 4 · Un detector clásico con OpenCV sobre imágenes sintéticas
+### A9 · EJERCICIO 4 de 5 — El mAP según el umbral de IoU
 
 > Calcula el **mAP@[.5:.9]** simplificado del detector de color: la media del AP con umbrales de IoU
 > `0.5, 0.6, 0.7, 0.8, 0.9` (usa `evaluar_detector(detector_color, umbral_iou=u)["AP"]`). Guarda la media en `map_iou`
@@ -329,7 +329,7 @@ map_iou = 0.3632
 
 Y además dibuja un gráfico.
 
-### Ejercicio 5 · Segmentación
+### A10 · EJERCICIO 5 de 5 — IoU y Dice de máscaras
 
 > Escribe `iou_mascara(pred, real)` y `dice(pred, real)` para máscaras booleanas del mismo tamaño
 > (`True` = sombrilla). Devuelve 1.0 si ambas están vacías.
@@ -363,7 +363,7 @@ print("Segmentación por umbral de color: IoU media =", round(np.mean([a for a, 
 Segmentación por umbral de color: IoU media = 0.629 · Dice medio = 0.756
 ```
 
-### Mini-reto integrador · contar sombrillas y afinar el detector
+### A15 · MINI-RETO — Contador de sombrillas
 
 > El cliente quiere un **contador de sombrillas** por foto de la playa. Con 30 escenas nuevas (`semilla=500`):
 > 1. Calcula en `error_conteo` el error absoluto medio entre el número de cajas del `detector_color` y el número real.

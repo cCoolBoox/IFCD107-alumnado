@@ -11,7 +11,7 @@
 
 ## S13_01 · Contar lo que hace el modelo: visualización de resultados
 
-### Ejercicio 1 · Matriz de confusión: ¿en qué acierta y en qué falla?
+### A3 · EJERCICIO 1 de 5 — Matriz de confusión normalizada y recall
 
 > Calcula `cm` con `confusion_matrix(y_test, pred_lr, normalize="true")`, siendo `pred_lr` la predicción de
 > la logística con umbral 0,5 (`prob_lr >= 0.5`). Guarda en `recall_cancelaciones` la proporción de
@@ -39,7 +39,7 @@ Ejercicio 1 correcto ✔ — el modelo detecta el 62% de las cancelaciones
 
 Y además dibuja un gráfico.
 
-### Ejercicio 2 · Curvas ROC y precisión-exhaustividad (PR)
+### A5 · EJERCICIO 2 de 5 — AUC y precisión media de los dos modelos
 
 > Calcula `auc_lr` y `auc_rf` (`roc_auc_score`) y `ap_lr` y `ap_rf` (`average_precision_score`, el área
 > de la curva PR) para ambos modelos con las probabilidades `prob_lr` y `prob_rf`. Guarda en
@@ -75,7 +75,7 @@ Ejercicio 2 correcto ✔ — AUC logística 0.744 · bosque 0.733 → Regresión
 
 Y además dibuja un gráfico.
 
-### Ejercicio 3 · ¿Qué variables importan? Importancia por permutación
+### A7 · EJERCICIO 3 de 5 — Importancia por permutación
 
 > Calcula la importancia por permutación de `modelo_lr` sobre `X_test`/`y_test` con
 > `permutation_importance(..., scoring="roc_auc", n_repeats=5, random_state=SEMILLA)`.
@@ -104,7 +104,7 @@ Ejercicio 3 correcto ✔ — las 3 más importantes: ['antelacion_dias', 'deposi
 
 Y además dibuja un gráfico.
 
-### Ejercicio 4 · Elegir el umbral con el coste del negocio
+### A9 · EJERCICIO 4 de 5 — El umbral que minimiza el coste
 
 > Para cada umbral de `umbrales` (de 0,05 a 0,95), calcula el coste total con las probabilidades
 > `prob_lr`: `50 × falsos negativos + 30 × falsos positivos`. Guarda los costes en la lista `costes`, el
@@ -146,7 +146,7 @@ Ejercicio 4 correcto ✔ — umbral óptimo 0.35: ahorra 1.900 € frente al umb
 
 Y además dibuja un gráfico.
 
-### Ejercicio 5 · Buenas prácticas: de gráfico técnico a gráfico para dirección
+### A12 · EJERCICIO 5 de 5 — Gráfico para dirección: cancelación por depósito
 
 > Crea para dirección un gráfico de barras de la **tasa de cancelación (%) por tipo de `deposito`**
 > (`sin_deposito`, `parcial`, `total`). Cumple las reglas: figura `fig_dir` con un solo eje, barras desde 0,

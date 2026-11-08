@@ -10,7 +10,7 @@
 
 ## S08_01 · Árboles de decisión: sobreajuste, poda e importancia
 
-### Ejercicio 1 · La idea: preguntas de sí/no encadenadas
+### A4 · EJERCICIO 1 de 3 — La variable de la raíz y el número de hojas
 
 > El árbol pequeño empieza preguntando por la variable que mejor separa. Guarda
 > en `variable_raiz` el **nombre** de esa variable (pista: `arbol_peq.tree_.feature[0]` es el índice
@@ -28,7 +28,7 @@ print("El árbol empieza preguntando por:", variable_raiz)
 El árbol empieza preguntando por: num__antelacion_dias
 ```
 
-### Ejercicio 2 · Sobreajuste: el árbol libre
+### A5 · EJERCICIO 2 de 3 — El árbol libre memoriza
 
 > Entrena `arbol_libre = DecisionTreeClassifier(random_state=SEMILLA)` (sin
 > límites) con train. Guarda `auc_train_libre` y `auc_test_libre` (AUC con `predict_proba`)
@@ -48,7 +48,7 @@ print(f"Árbol libre: {hojas_libre} hojas · AUC train {auc_train_libre:.3f} · 
 Árbol libre: 1206 hojas · AUC train 1.000 · AUC test 0.587
 ```
 
-### Ejercicio 3 · Poda: frenar el crecimiento
+### A7 · EJERCICIO 3 de 3 — Elegir la poda y medirla en test
 
 > Con las listas `hojas_min` y `auc_cv_hojas`, guarda en `mejor_min_hoja` el valor
 > con mejor AUC. Entrena `arbol_podado` con ese valor sobre train y guarda `auc_test_podado`
@@ -71,7 +71,7 @@ min_samples_leaf = 80 · AUC test: 0.716 (libre: 0.587) · hojas: 46
 
 ## S08_02 · Random Forest: la sabiduría de muchos árboles
 
-### Ejercicio 1 · La idea: bagging + variables al azar
+### A3 · EJERCICIO 1 de 2 — Bosque de 300 árboles frente a un árbol podado
 
 > Entrena `bosque = RandomForestClassifier(n_estimators=300, min_samples_leaf=5,
 > random_state=SEMILLA, n_jobs=2)` con train. Guarda `auc_test_bosque` (AUC en test con `predict_proba`) y
@@ -92,7 +92,7 @@ print(f"Árbol podado: {auc_test_arbol:.3f} · Bosque de 300 árboles: {auc_test
 Árbol podado: 0.716 · Bosque de 300 árboles: 0.734
 ```
 
-### Ejercicio 2 · Cuántos árboles y de qué tamaño
+### A5 · EJERCICIO 2 de 2 — Rendimientos decrecientes
 
 > Con la lista `oob_auc`, guarda en `mejora_5_a_400` cuánto sube el AUC OOB al pasar de 5 a
 > 400 árboles (`oob_auc[-1] - oob_auc[0]`) y en `mejora_100_a_400` lo que sube de 100 a 400 árboles.
@@ -114,7 +114,7 @@ print(f"5 → 400 árboles: +{mejora_5_a_400:.3f} · 100 → 400 árboles: {mejo
 
 ## S08_03 · Boosting: Gradient Boosting, XGBoost y LightGBM
 
-### Ejercicio 1 · Sobreajuste por exceso de árboles
+### A3 · EJERCICIO 1 de 2 — El mejor número de árboles y cuánto cae el AUC
 
 > Con la lista `auc_val_por_arbol`, guarda en `mejor_n_arboles` el número de árboles
 > (empezando a contar en 1) con mejor AUC de validación, y en `caida_final` cuánto ha caído el AUC de
@@ -132,7 +132,7 @@ print(f"Mejor nº de árboles: {mejor_n_arboles} · pérdida de AUC si seguimos 
 Mejor nº de árboles: 12 · pérdida de AUC si seguimos hasta 300: 0.039
 ```
 
-### Ejercicio 2 · Sobreajuste por exceso de árboles
+### A4 · EJERCICIO 2 de 2 — XGBoost con parada temprana
 
 > Entrena `modelo_xgb = xgb.XGBClassifier(n_estimators=1000, learning_rate=0.05, max_depth=3,
 > subsample=0.8, colsample_bytree=0.8, early_stopping_rounds=30, eval_metric="auc", random_state=SEMILLA, n_jobs=2)`

@@ -10,7 +10,7 @@
 
 ## S11_01 · Redes convolucionales (CNN): cómo "ve" una red
 
-### Ejercicio 1 · Una imagen es una matriz de números
+### A3 · EJERCICIO 1 de 2 — Preparar los datos para una red
 
 > Prepara los datos para una red: en `X` guarda las imágenes **normalizadas entre 0 y 1**
 > (divide entre 16) con forma `(n, 8, 8, 1)` (Keras espera un canal explícito). Después crea con
@@ -22,7 +22,7 @@ X = (imagenes / 16.0).astype("float32")[..., np.newaxis]
 X_ent, X_pru, y_ent, y_pru = train_test_split(X, etiquetas, test_size=0.25, random_state=SEMILLA, stratify=etiquetas)
 ```
 
-### Ejercicio 2 · Calcular el tamaño de salida
+### A5 · EJERCICIO 2 de 2 — Calcular el tamaño de salida
 
 > Para una entrada de `n` píxeles, filtro de `k`, relleno (*padding*) `p`
 > a cada lado y paso (*stride*) `s`, la salida mide `(n - k + 2p) / s + 1` (parte entera). Escribe
@@ -58,7 +58,7 @@ Y además dibuja un gráfico.
 
 ## S11_02 · *Transfer learning* y *fine-tuning*
 
-### Ejercicio 1 · Congelar la base y entrenar solo una cabeza nueva
+### A7 · EJERCICIO 1 de 1 — Congelar una red
 
 > Escribe `congelar(modelo)` que ponga `trainable = False` en **todas** las capas del modelo dado
 > (es decir, `modelo.trainable = False`) y lo devuelva. Después crea `copia_base` (una copia independiente de
@@ -97,7 +97,7 @@ Transfer learning (base congelada) → exactitud en prueba: 0.833
 
 ## S11_03 · Detección de objetos y segmentación
 
-### Ejercicio 1 · Cajas y la IoU (*Intersection over Union*)
+### A2 · EJERCICIO 1 de 2 — La IoU de dos cajas
 
 > Escribe `iou(a, b)` que reciba dos cajas `[x1, y1, x2, y2]` y devuelva su IoU (un número entre 0 y 1).
 > Cuidado con el caso en que no se solapan (la intersección vale 0, no negativa).
@@ -113,7 +113,7 @@ def iou(a, b):
     return inter / union if union > 0 else 0.0
 ```
 
-### Ejercicio 2 · NMS (*Non-Maximum Suppression*): quedarse con una caja por objeto
+### A3 · EJERCICIO 2 de 2 — NMS: quedarse con una caja por objeto
 
 > Escribe `nms(cajas, puntuaciones, umbral_iou=0.5)` que devuelva la **lista de índices** de las cajas que se
 > conservan, en orden de confianza decreciente. Usa tu función `iou`.

@@ -10,7 +10,7 @@
 
 ## S15_01 · Seguimiento de experimentos y reproducibilidad
 
-### Ejercicio 1 · Reproducibilidad: semillas y versiones
+### A2 · EJERCICIO 1 de 3 — Fijar las semillas
 
 > Escribe `fijar_semillas(semilla)` que fije la semilla de `random` y de `numpy` (`np.random.seed`),
 > guarde `PYTHONHASHSEED` en `os.environ` (como texto) y **devuelva** un generador
@@ -47,7 +47,7 @@ Ejercicio 1 correcto ✔
 }
 ```
 
-### Ejercicio 2 · El registro de experimentos: una fila por prueba
+### A4 · EJERCICIO 2 de 3 — Escribir una fila en el registro
 
 > Completa `registrar(...)`, que añade **una fila** al CSV `RUTA_REGISTRO`: si el archivo no existe, lo crea
 > con la cabecera; si existe, añade la fila sin repetir la cabecera. El `id` es el número de filas ya
@@ -85,7 +85,7 @@ print("Ejercicio 2 correcto ✔")
 Ejercicio 2 correcto ✔
 ```
 
-### Ejercicio 3 · Experimentos: baseline y modelos con validación cruzada
+### A6 · EJERCICIO 3 de 3 — Registrar bosque y gradient boosting y elegir candidato
 
 > Registra dos experimentos más con la función `experimento(nombre, estimador, hiperparametros)`:
 > un **bosque aleatorio** `RandomForestClassifier(n_estimators=200, min_samples_leaf=5, random_state=SEMILLA, n_jobs=2)`

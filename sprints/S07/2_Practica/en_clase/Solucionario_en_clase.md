@@ -10,7 +10,7 @@
 
 ## S07_01 · Regresión lineal y polinómica: predecir el precio por noche
 
-### Ejercicio 1 · La idea: una recta (o un plano) que se ajusta a los datos
+### A3 · EJERCICIO 1 de 3 — Ajustar la regresión lineal
 
 > Separa en `X_train, X_test, y_train, y_test` (20 % de test, `random_state=SEMILLA`),
 > ajusta una `LinearRegression` llamada `modelo_lin` y guarda en `r2_test` y `mae_test` sus
@@ -31,7 +31,7 @@ print(f"R² = {r2_test:.3f} · MAE = {mae_test:.2f} € · RMSE = {mean_squared_
 R² = 0.915 · MAE = 7.24 € · RMSE = 9.70 €
 ```
 
-### Ejercicio 2 · Interpretar los coeficientes
+### A5 · EJERCICIO 2 de 3 — Leer los coeficientes en euros
 
 > Consulta `modelo_lin.coef_` (van en el mismo orden que las columnas de `X`).
 > Guarda en `coefs` un `pd.Series` con los coeficientes y el nombre de columna como índice,
@@ -57,7 +57,7 @@ dtype: float64
 Ordenada en el origen (precio base de una estándar en temporada baja): 67.3 €
 ```
 
-### Ejercicio 3 · Residuos: ¿el modelo se equivoca de forma "sana"?
+### A8 · EJERCICIO 3 de 3 — Error de las interacciones en test
 
 > Calcula `mae_inter_test`: el MAE en test del modelo `con_interacciones`
 > ajustado con `X_train, y_train`. Guarda en `mejora_mae` cuántos euros mejora respecto a
@@ -80,7 +80,7 @@ mejora_mae = 0.4812
 
 ## S07_02 · Regularización: Ridge y Lasso
 
-### Ejercicio 1 · El problema: muchas variables, pocos datos
+### A3 · EJERCICIO 1 de 3 — Medir la brecha de sobreajuste
 
 > Guarda en `r2_train_ols` y `r2_test_ols` los R² de `ols` en train y test,
 > y en `brecha_ols` su diferencia (train − test). ¿Es una brecha sana?
@@ -98,7 +98,7 @@ r2_train_ols = 1.0
 brecha_ols = 0.2842
 ```
 
-### Ejercicio 2 · Elegir `alpha` con validación cruzada
+### A5 · EJERCICIO 2 de 3 — Ridge con alpha elegido por validación cruzada
 
 > Crea `ridge` con `modelo_con(RidgeCV(alphas=np.logspace(-1, 4, 30)))` y ajústalo
 > con train. Guarda en `alpha_ridge` el alpha elegido (`ridge[-1].alpha_`) y en `r2_test_ridge`
@@ -117,7 +117,7 @@ print(f"Ridge: alpha = {alpha_ridge:.1f} · R² test = {r2_test_ridge:.3f}")
 Ridge: alpha = 25.9 · R² test = 0.728
 ```
 
-### Ejercicio 3 · Lasso (L1): seleccionar variables
+### A6 · EJERCICIO 3 de 3 — Lasso: seleccionar variables
 
 > Crea `lasso` con `modelo_con(LassoCV(cv=5, max_iter=50000, random_state=SEMILLA))`,
 > ajústalo con train y guarda en `r2_test_lasso` su R² en test y en `n_no_cero` cuántos
@@ -146,7 +146,7 @@ Lasso: R² test = 0.887 · coeficientes distintos de cero: 27 de 665
 
 ## S07_03 · Regresión logística: predecir cancelaciones
 
-### Ejercicio 1 · Entrenar el modelo
+### A3 · EJERCICIO 1 de 3 — Entrenar el modelo y obtener probabilidades
 
 > Crea `logit`, un `Pipeline` con el preprocesado que ves abajo (`prep`) y
 > `LogisticRegression(max_iter=1000)`. Ajústalo con train y guarda en `proba_test` la
@@ -162,7 +162,7 @@ logit = Pipeline([("prep", prep), ("clf", LogisticRegression(max_iter=1000))]).f
 proba_test = logit.predict_proba(X_test)[:, 1]
 ```
 
-### Ejercicio 2 · Interpretar: coeficientes y *odds ratios*
+### A5 · EJERCICIO 2 de 3 — Leer los odds ratio
 
 > A partir de `odds` (un `pd.Series` cuyo índice son los nombres de las
 > variables), guarda en `or_no_reembolsable` el odds ratio de `cat__tarifa_no_reembolsable`
@@ -184,7 +184,7 @@ Tarifa no reembolsable: los odds de cancelar se multiplican por 0.44
 Depósito total: los odds de cancelar se multiplican por 0.46
 ```
 
-### Ejercicio 3 · El umbral y la matriz de confusión
+### A7 · EJERCICIO 3 de 3 — Efecto de bajar el umbral
 
 > Usando `metricas_umbral`, calcula sobre test (`y_test`, `proba_test`) las
 > métricas con umbral 0,5 (`m05`) y con umbral 0,3 (`m03`). Guarda en `sube_recall` la
@@ -208,7 +208,7 @@ Con umbral 0,3 detectas 26 puntos más de las cancelaciones, pero tu precisión 
 
 ## S07_04 · Curvas ROC y PR, y qué hacer con clases desbalanceadas
 
-### Ejercicio 2 · Curva ROC y AUC
+### A3 · EJERCICIO 1 de 1 — Calcular la curva ROC y el AUC
 
 > Con `y_test` y `proba_base` calcula `fpr, tpr, _ = roc_curve(...)` y
 > `auc = roc_auc_score(...)`.

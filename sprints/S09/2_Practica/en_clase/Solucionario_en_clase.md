@@ -10,7 +10,7 @@
 
 ## S09_01 · Segmentar huéspedes con clustering
 
-### Ejercicio 1 · Escalar: que todas las variables "pesen" lo mismo
+### A5 · EJERCICIO 1 de 2 — La matriz X estandarizada
 
 > Crea la matriz `X` con **todas las variables menos `id_huesped`**, estandarizadas con
 > `StandardScaler` (usa `fit_transform`). `X` debe ser una matriz de 1200 filas y 7 columnas.
@@ -30,7 +30,7 @@ print("Ejercicio 1 correcto ✔")
 Ejercicio 1 correcto ✔
 ```
 
-### Ejercicio 2 · k-means: agrupar alrededor de centros
+### A7 · EJERCICIO 2 de 2 — ¿Cuántos grupos? La silueta de cada k
 
 > Calcula en el diccionario `siluetas` la silueta media (`silhouette_score(X, etiquetas)`)
 > de k-means para cada `k` de 2 a 8 (clave = `k`, valor = silueta). Después guarda en
@@ -67,7 +67,7 @@ Y además dibuja un gráfico.
 
 ## S09_02 · Reducir dimensiones con PCA
 
-### Ejercicio 1 · La idea de PCA
+### A3 · EJERCICIO 1 de 2 — La varianza acumulada y el 90 %
 
 > Calcula en `varianza_acum` la varianza explicada **acumulada** (usa `np.cumsum` sobre `varianza`)
 > y en `n_comp_90` el **número mínimo de componentes** que explican al menos el 90 % de la varianza.
@@ -97,7 +97,7 @@ Ejercicio 1 correcto ✔ — con 5 componentes conservamos el 90 % de la informa
 
 Y además dibuja un gráfico.
 
-### Ejercicio 2 · Ver a los huéspedes en 2D
+### A6 · EJERCICIO 2 de 2 — El mapa de huéspedes en 2D
 
 > Dibuja un diagrama de dispersión de `Z2` (columna 0 en el eje X, columna 1 en el eje Y) coloreando
 > cada punto según la variable `grupo` (el segmento de k-means). Guarda la figura en `fig2d`.
@@ -120,7 +120,7 @@ plt.show()
 
 ## S09_03 · Recomendar experiencias a los huéspedes
 
-### Ejercicio 1 · Recomendador por popularidad
+### A5 · EJERCICIO 1 de 3 — Popularidad: la media de cada experiencia
 
 > Calcula en `media_item` la nota media de cada experiencia **solo con la matriz de entrenamiento `R`**
 > (una `Series` de 25 valores). Después crea `P_pop`, una matriz de 300 × 25 en la que **todas las filas**
@@ -150,7 +150,7 @@ id_experiencia
 13               Astronomía en el Roque  3.77
 ```
 
-### Ejercicio 2 · Métrica de ranking: precision@k
+### A7 · EJERCICIO 2 de 3 — La función precision@k
 
 > Completa la función `precision_k(P, k=3)`. Para cada usuario de `relevantes`: (1) toma su fila de `P`,
 > (2) pon `-inf` en las experiencias que ya valoró en entrenamiento (fila de `M`), (3) quédate con las
@@ -182,7 +182,7 @@ Usuarios evaluables: 115
 Ejercicio 2 correcto ✔ — precision@3 popularidad = 0.125 · azar = 0.081
 ```
 
-### Ejercicio 3 · Recomendador basado en contenido
+### A9 · EJERCICIO 3 de 3 — El perfil de gustos de cada usuario
 
 > Calcula `perfil_usuario` (300 × 7): para cada usuario y categoría, la **suma de sus residuos en esa
 > categoría dividida entre (número de valoraciones en esa categoría + 3)**. El "+3" es prudencia: con pocas
@@ -210,7 +210,7 @@ RMSE contenido: 1.066 · precision@3: 0.13
 
 ## S09_04 · Aprendizaje por refuerzo: Q-learning en el hotel
 
-### Ejercicio 1 · La tabla Q y su regla de actualización
+### A3 · EJERCICIO 1 de 1 — La regla de actualización de Q
 
 > Escribe `actualizar_q(Q, s, a, r, s2, alpha, gamma)` que aplique la regla **modificando `Q` en su sitio**
 > (no hace falta devolver nada).

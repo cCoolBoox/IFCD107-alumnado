@@ -168,7 +168,7 @@ n_imposibles = 14
 
 ## S06_03 · Preprocesado y *pipelines* reproducibles
 
-### Ejercicio 2 · Escalado
+### A6 · EJERCICIO 1 de 3 — Escalar el precio con MinMaxScaler
 
 > Crea un `MinMaxScaler` llamado `esc_minmax`, ajústalo **solo con
 > `X_train[["precio_noche"]].dropna()`** y guarda en `precio_test_esc` el precio de test
@@ -187,7 +187,7 @@ precio_test_esc = esc_minmax.transform(X_test[["precio_noche"]].fillna(mediana_p
 mediana_precio = 93.65
 ```
 
-### Ejercicio 4 · `ColumnTransformer` y `Pipeline`: la receta completa
+### A8 · EJERCICIO 2 de 3 — Construir el ColumnTransformer
 
 > Construye `preprocesado` (un `ColumnTransformer`) con dos ramas:
 > `"num"` (imputador de mediana + `StandardScaler`) sobre `columnas_num`, y `"cat"`
@@ -210,7 +210,7 @@ print("Columnas tras el preprocesado:", matriz.shape[1])
 Columnas tras el preprocesado: 34
 ```
 
-### Ejercicio 5 · `ColumnTransformer` y `Pipeline`: la receta completa
+### A9 · EJERCICIO 3 de 3 — Pipeline con el modelo
 
 > Crea `modelo`, un `Pipeline` con los pasos `("prep", preprocesado)` y
 > `("clf", LogisticRegression(max_iter=1000, random_state=SEMILLA))`. Ajústalo con train y
@@ -234,7 +234,7 @@ Exactitud en test: 0.680  (referencia «siempre la clase mayoritaria»: 0.530)
 
 ## S06_04 · scikit-learn básico: métricas y validación
 
-### Ejercicio 1 · La API de scikit-learn y el *baseline*
+### A3 · EJERCICIO 1 de 3 — Regresión logística frente al baseline
 
 > Crea `logistica`, un `Pipeline` con `hacer_preprocesado()` y
 > `LogisticRegression(max_iter=1000)`. Ajústalo con train y guarda en `acc_logistica`
@@ -254,7 +254,7 @@ acc_logistica = 0.6717
 mejora = 0.1308
 ```
 
-### Ejercicio 4 · Sobreajuste y sesgo-varianza
+### A7 · EJERCICIO 2 de 3 — AUC con validación cruzada
 
 > Calcula `auc_cv`: el array de puntuaciones de validación cruzada de
 > `logistica` con `scoring="roc_auc"` y el mismo `cv` (5 folds). Guarda su media en `auc_medio`.
@@ -271,7 +271,7 @@ auc_cv: array de forma (5,), empieza por [0.7415 0.7442 0.7584 0.7543 0.7757]
 auc_medio = 0.7548
 ```
 
-### Ejercicio 5 · Fuga de datos (*data leakage*)
+### A9 · EJERCICIO 3 de 3 — Detectar las columnas con fuga
 
 > De la lista `candidatas`, indica en `columnas_con_fuga` (lista) cuáles **no
 > se conocerían en el momento de hacer la reserva** y por tanto provocarían fuga.

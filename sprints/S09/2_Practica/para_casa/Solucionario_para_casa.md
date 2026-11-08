@@ -10,7 +10,7 @@
 
 ## S09_01 · Segmentar huéspedes con clustering
 
-### Ejercicio 1 · Escalar: que todas las variables "pesen" lo mismo
+### A5 · EJERCICIO 1 de 5 — La matriz X estandarizada
 
 > Crea la matriz `X` con **todas las variables menos `id_huesped`**, estandarizadas con
 > `StandardScaler` (usa `fit_transform`). `X` debe ser una matriz de 1200 filas y 7 columnas.
@@ -30,7 +30,7 @@ print("Ejercicio 1 correcto ✔")
 Ejercicio 1 correcto ✔
 ```
 
-### Ejercicio 2 · k-means: agrupar alrededor de centros
+### A7 · EJERCICIO 2 de 5 — ¿Cuántos grupos? La silueta de cada k
 
 > Calcula en el diccionario `siluetas` la silueta media (`silhouette_score(X, etiquetas)`)
 > de k-means para cada `k` de 2 a 8 (clave = `k`, valor = silueta). Después guarda en
@@ -63,7 +63,7 @@ k con mejor silueta: 4
 
 Y además dibuja un gráfico.
 
-### Ejercicio 3 · Interpretar: ¿quién es cada grupo?
+### A11 · EJERCICIO 3 de 5 — Familias y aventureros
 
 > Guarda en `grupo_familias` el número del grupo con **mayor proporción de huéspedes que
 > viajan con niños** (media de `viaja_con_ninos` por grupo) y en `grupo_aventura` el
@@ -82,7 +82,7 @@ print("Ejercicio 3 correcto ✔")
 Ejercicio 3 correcto ✔
 ```
 
-### Ejercicio 4 · Clustering jerárquico: un árbol de parecidos
+### A13 · EJERCICIO 4 de 5 — Clustering jerárquico con 4 grupos
 
 > Aplica `AgglomerativeClustering` con `n_clusters=4` y `linkage="ward"` sobre **todos** los
 > huéspedes (`X`). Guarda las etiquetas en `etiquetas_jer` y su silueta en `silueta_jer`.
@@ -100,7 +100,7 @@ print(f"Silueta jerárquico = {silueta_jer:.3f} · k-means con k={k_mejor}: {sil
 Silueta jerárquico = 0.424 · k-means con k=4: 0.431
 ```
 
-### Ejercicio 5 · DBSCAN: grupos por densidad (y ruido)
+### A15 · EJERCICIO 5 de 5 — DBSCAN con eps = 1,0
 
 > Entrena DBSCAN con `eps=1.0` y `min_samples=10`. Guarda las etiquetas en `etiquetas_db`,
 > el número de grupos encontrados (sin contar el ruido) en `n_grupos_db` y cuántos huéspedes
@@ -120,7 +120,7 @@ print(f"DBSCAN: {n_grupos_db} grupos y {n_ruido} huéspedes atípicos")
 DBSCAN: 5 grupos y 149 huéspedes atípicos
 ```
 
-### Mini-reto integrador · ponle nombre a tus segmentos
+### A16 · MINI-RETO — Ponle nombre a tus segmentos
 
 > 1. Elige el método que te parezca mejor (k-means, jerárquico o DBSCAN) y justifícalo en una frase.
 > 2. Para cada grupo, escribe **un nombre**, **una descripción de una línea** y **una acción comercial**.
@@ -154,7 +154,7 @@ print(nombres_segmentos)
 
 ## S09_02 · Reducir dimensiones con PCA
 
-### Ejercicio 1 · La idea de PCA
+### A3 · EJERCICIO 1 de 4 — La varianza acumulada y el 90 %
 
 > Calcula en `varianza_acum` la varianza explicada **acumulada** (usa `np.cumsum` sobre `varianza`)
 > y en `n_comp_90` el **número mínimo de componentes** que explican al menos el 90 % de la varianza.
@@ -184,7 +184,7 @@ Ejercicio 1 correcto ✔ — con 5 componentes conservamos el 90 % de la informa
 
 Y además dibuja un gráfico.
 
-### Ejercicio 2 · Ver a los huéspedes en 2D
+### A6 · EJERCICIO 2 de 4 — El mapa de huéspedes en 2D
 
 > Dibuja un diagrama de dispersión de `Z2` (columna 0 en el eje X, columna 1 en el eje Y) coloreando
 > cada punto según la variable `grupo` (el segmento de k-means). Guarda la figura en `fig2d`.
@@ -203,7 +203,7 @@ plt.show()
 
 **Tiene que salir:** un gráfico.
 
-### Ejercicio 3 · ¿Qué significa cada componente? Las cargas
+### A9 · EJERCICIO 3 de 4 — Las variables opuestas a la edad
 
 > Guarda en `opuestas_a_edad` la lista de variables cuya carga en `PC1` tiene **signo contrario** a la
 > de `edad` (es decir, cuando la edad sube en el componente 1, ellas bajan). Usa el DataFrame `cargas`.
@@ -221,7 +221,7 @@ print("Ejercicio 3 correcto ✔ — el componente 1 opone «mayor, planificador,
 Ejercicio 3 correcto ✔ — el componente 1 opone «mayor, planificador, estancias largas» a «activo y viajero frecuente»
 ```
 
-### Ejercicio 4 · PCA como paso previo al clustering
+### A11 · EJERCICIO 4 de 4 — Agrupar con el 90 % de la varianza
 
 > Entrena `PCA(n_components=n_comp_90)` sobre `X`, guarda el resultado en `Z90` y agrupa `Z90` con
 > k-means (`k=4`, `n_init=10`, `random_state=SEMILLA`). Guarda las etiquetas en `grupo_pca90` y
@@ -245,7 +245,7 @@ Ejercicio 4 correcto ✔ — ARI = 1.00
 
 ## S09_03 · Recomendar experiencias a los huéspedes
 
-### Ejercicio 1 · Recomendador por popularidad
+### A5 · EJERCICIO 1 de 5 — Popularidad: la media de cada experiencia
 
 > Calcula en `media_item` la nota media de cada experiencia **solo con la matriz de entrenamiento `R`**
 > (una `Series` de 25 valores). Después crea `P_pop`, una matriz de 300 × 25 en la que **todas las filas**
@@ -275,7 +275,7 @@ id_experiencia
 13               Astronomía en el Roque  3.77
 ```
 
-### Ejercicio 2 · Métrica de ranking: precision@k
+### A7 · EJERCICIO 2 de 5 — La función precision@k
 
 > Completa la función `precision_k(P, k=3)`. Para cada usuario de `relevantes`: (1) toma su fila de `P`,
 > (2) pon `-inf` en las experiencias que ya valoró en entrenamiento (fila de `M`), (3) quédate con las
@@ -307,7 +307,7 @@ Usuarios evaluables: 115
 Ejercicio 2 correcto ✔ — precision@3 popularidad = 0.125 · azar = 0.081
 ```
 
-### Ejercicio 3 · Recomendador basado en contenido
+### A9 · EJERCICIO 3 de 5 — El perfil de gustos de cada usuario
 
 > Calcula `perfil_usuario` (300 × 7): para cada usuario y categoría, la **suma de sus residuos en esa
 > categoría dividida entre (número de valoraciones en esa categoría + 3)**. El "+3" es prudencia: con pocas
@@ -331,7 +331,7 @@ Ejercicio 3 correcto ✔
 RMSE contenido: 1.066 · precision@3: 0.13
 ```
 
-### Ejercicio 4 · Filtrado colaborativo: "la gente como tú también valoró…"
+### A11 · EJERCICIO 4 de 5 — Experiencias parecidas al Teide
 
 > Calcula `S`, la matriz 25 × 25 de similitud coseno entre experiencias a partir de las **columnas de `C`**
 > (`cosine_similarity(C.T)` ya está importado). Pon la diagonal a 0 (una experiencia no se ayuda a sí misma)
@@ -366,7 +366,7 @@ item-item: RMSE = 0.895 · precision@3 = 0.171
 user-user: RMSE = 0.865 · precision@3 = 0.148
 ```
 
-### Ejercicio 5 · Factorización de matrices: gustos ocultos
+### A14 · EJERCICIO 5 de 5 — La factorización y la tabla comparativa
 
 > Guarda en `P_mf` la matriz de `factorizar(R, k=3)` y calcula `rmse_mf` y `p_mf` (precision@3).
 > Después, en `mejor_rmse`, el nombre del método con menor RMSE de entre los que hay en el diccionario
@@ -400,7 +400,7 @@ Ejercicio 5 correcto ✔
 
 Y además dibuja un gráfico.
 
-### Mini-reto integrador · el recomendador de TurisData
+### A16 · MINI-RETO — La función recomendar
 
 > Escribe `recomendar(id_usuario, n=3, P=P_mf)` que devuelva un `DataFrame` con las `n` experiencias
 > **que el usuario aún no ha valorado** con mayor puntuación prevista, con las columnas `nombre`,
@@ -443,7 +443,7 @@ Usuario 2:
 
 ## S09_04 · Aprendizaje por refuerzo: Q-learning en el hotel
 
-### Ejercicio 1 · La tabla Q y su regla de actualización
+### A3 · EJERCICIO 1 de 4 — La regla de actualización de Q
 
 > Escribe `actualizar_q(Q, s, a, r, s2, alpha, gamma)` que aplique la regla **modificando `Q` en su sitio**
 > (no hace falta devolver nada).
@@ -465,7 +465,7 @@ print("Ejercicio 1 correcto ✔")
 Ejercicio 1 correcto ✔
 ```
 
-### Ejercicio 2 · Explorar o explotar: epsilon-greedy
+### A4 · EJERCICIO 2 de 4 — La función epsilon-greedy
 
 > Escribe `elegir_accion(Q, s, epsilon, rng)`: con probabilidad `epsilon` devuelve una acción aleatoria
 > (`rng.integers(4)`), y si no, la de mayor valor en `Q[s]` (`np.argmax`). Usa `rng.random()` para decidir.
@@ -488,7 +488,7 @@ print("Ejercicio 2 correcto ✔")
 Ejercicio 2 correcto ✔
 ```
 
-### Ejercicio 3 · Leer la política aprendida
+### A7 · EJERCICIO 3 de 4 — La política y el camino aprendido
 
 > Guarda en `politica` un vector de 20 acciones (la mejor en cada estado). Después escribe el `camino`
 > que sigue el agente **sin explorar** desde recepción: lista de estados visitados, empezando en 0, hasta
@@ -534,7 +534,7 @@ Ejercicio 3 correcto ✔ — camino de 7 pasos: [0, 1, 2, 3, 8, 13, 14, 19]
 
 Y además dibuja un gráfico.
 
-### Ejercicio 4 · Experimento: ¿qué pasa sin exploración?
+### A9 · EJERCICIO 4 de 4 — Con pasos gratis, ¿ayuda explorar?
 
 > Entrena dos agentes con `entrenar(..., coste_paso=0.0)`: uno con `epsilon=0.0` (nunca explora) y otro con
 > `epsilon=0.3`. Guarda sus recompensas por episodio en `rec_eps0` y `rec_eps03`. Calcula `media_final_eps0`

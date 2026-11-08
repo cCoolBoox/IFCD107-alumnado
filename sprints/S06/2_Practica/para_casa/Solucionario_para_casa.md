@@ -299,7 +299,7 @@ valores distintos de país      12        8
 
 ## S06_03 · Preprocesado y *pipelines* reproducibles
 
-### Ejercicio 1 · Separar entrenamiento y prueba
+### A4 · EJERCICIO 1 de 5 — Separar entrenamiento y prueba
 
 > Separa `X` e `y` en `X_train, X_test, y_train, y_test` con un 20 % para
 > prueba, `random_state=SEMILLA` y estratificando por `y`.
@@ -330,7 +330,7 @@ y_test:
 …
 ```
 
-### Ejercicio 2 · Escalado
+### A6 · EJERCICIO 2 de 5 — Escalar el precio con MinMaxScaler
 
 > Crea un `MinMaxScaler` llamado `esc_minmax`, ajústalo **solo con
 > `X_train[["precio_noche"]].dropna()`** y guarda en `precio_test_esc` el precio de test
@@ -349,7 +349,7 @@ precio_test_esc = esc_minmax.transform(X_test[["precio_noche"]].fillna(mediana_p
 mediana_precio = 93.65
 ```
 
-### Ejercicio 3 · Codificación de categóricas
+### A8 · EJERCICIO 3 de 5 — Codificar el depósito con orden
 
 > Codifica `deposito` con un `OrdinalEncoder` que respete el orden
 > `["sin_deposito", "parcial", "total"]`. Guarda el encoder en `ord_dep` y el resultado
@@ -360,7 +360,7 @@ ord_dep = OrdinalEncoder(categories=[["sin_deposito", "parcial", "total"]])
 dep_train_cod = ord_dep.fit_transform(X_train[["deposito"]])
 ```
 
-### Ejercicio 4 · `ColumnTransformer` y `Pipeline`: la receta completa
+### A9 · EJERCICIO 4 de 5 — Construir el ColumnTransformer
 
 > Construye `preprocesado` (un `ColumnTransformer`) con dos ramas:
 > `"num"` (imputador de mediana + `StandardScaler`) sobre `columnas_num`, y `"cat"`
@@ -383,7 +383,7 @@ print("Columnas tras el preprocesado:", matriz.shape[1])
 Columnas tras el preprocesado: 34
 ```
 
-### Ejercicio 5 · `ColumnTransformer` y `Pipeline`: la receta completa
+### A10 · EJERCICIO 5 de 5 — Pipeline con el modelo
 
 > Crea `modelo`, un `Pipeline` con los pasos `("prep", preprocesado)` y
 > `("clf", LogisticRegression(max_iter=1000, random_state=SEMILLA))`. Ajústalo con train y
@@ -403,7 +403,7 @@ print(f"Exactitud en test: {acc_test:.3f}  (referencia «siempre la clase mayori
 Exactitud en test: 0.680  (referencia «siempre la clase mayoritaria»: 0.530)
 ```
 
-### Mini-reto · comprueba que tu pipeline es reproducible
+### A13 · MINI-RETO — Pipeline reproducible
 
 > Un pipeline reproducible da **las mismas predicciones** si lo vuelves a ajustar con los
 > mismos datos. Crea `modelo2` (otra instancia del mismo pipeline usando `clone`), ajústalo
@@ -419,7 +419,7 @@ son_iguales = bool(np.array_equal(modelo.predict(X_test), modelo2.predict(X_test
 
 ## S06_04 · scikit-learn básico: métricas y validación
 
-### Ejercicio 1 · La API de scikit-learn y el *baseline*
+### A3 · EJERCICIO 1 de 6 — Regresión logística frente al baseline
 
 > Crea `logistica`, un `Pipeline` con `hacer_preprocesado()` y
 > `LogisticRegression(max_iter=1000)`. Ajústalo con train y guarda en `acc_logistica`
@@ -439,7 +439,7 @@ acc_logistica = 0.6717
 mejora = 0.1308
 ```
 
-### Ejercicio 2 · Métricas: ¿cómo de bueno es?
+### A5 · EJERCICIO 2 de 6 — Regresión del precio: MAE, RMSE y R²
 
 > Entrena una regresión lineal para predecir `precio_noche` usando solo
 > `tipo_habitacion` y `mes_llegada` (usa `hacer_preprocesado(num=["mes_llegada"], cat=["tipo_habitacion"])`).
@@ -465,7 +465,7 @@ rmse = 14.9267
 r2 = 0.7991
 ```
 
-### Ejercicio 3 · Sobreajuste y sesgo-varianza
+### A7 · EJERCICIO 3 de 6 — La mejor profundidad y la brecha
 
 > A partir de las listas `acc_te` y `profundidades`, guarda en `mejor_profundidad`
 > la profundidad con mejor exactitud en test, y en `brecha_maxima` la diferencia
@@ -483,7 +483,7 @@ print(f"Mejor profundidad en test: {mejor_profundidad} · brecha con profundidad
 Mejor profundidad en test: 4 · brecha con profundidad 20: 0.40
 ```
 
-### Ejercicio 4 · Sobreajuste y sesgo-varianza
+### A9 · EJERCICIO 4 de 6 — AUC con validación cruzada
 
 > Calcula `auc_cv`: el array de puntuaciones de validación cruzada de
 > `logistica` con `scoring="roc_auc"` y el mismo `cv` (5 folds). Guarda su media en `auc_medio`.
@@ -500,7 +500,7 @@ auc_cv: array de forma (5,), empieza por [0.7415 0.7442 0.7584 0.7543 0.7757]
 auc_medio = 0.7548
 ```
 
-### Ejercicio 5 · Fuga de datos (*data leakage*)
+### A11 · EJERCICIO 5 de 6 — Detectar las columnas con fuga
 
 > De la lista `candidatas`, indica en `columnas_con_fuga` (lista) cuáles **no
 > se conocerían en el momento de hacer la reserva** y por tanto provocarían fuga.
@@ -522,7 +522,7 @@ columnas_con_fuga = ["importe_devuelto", "fecha_cancelacion"]
 columnas_con_fuga: list de 2 elementos, ['importe_devuelto', 'fecha_cancelacion']
 ```
 
-### Ejercicio 6 · Partición temporal
+### A13 · EJERCICIO 6 de 6 — Validación cruzada temporal
 
 > Usa `TimeSeriesSplit(n_splits=4)` sobre `Xo`, `yo` (ya ordenados por fecha)
 > para calcular `auc_temporal`: array con la AUC ROC de cada corte (`scoring="roc_auc"`).
@@ -537,7 +537,7 @@ auc_temporal = cross_val_score(mod_t, Xo, yo, cv=TimeSeriesSplit(n_splits=4), sc
 auc_temporal: array de forma (4,), empieza por [0.7451 0.7497 0.7563 0.7322]
 ```
 
-### Mini-reto · tabla de resultados honesta
+### A15 · MINI-RETO — Tabla de resultados honesta
 
 > Crea `resultados`, un DataFrame con una fila por modelo (`"baseline"`, `"logistica"`) y las
 > columnas `auc_cv_media` y `auc_cv_desv` (validación cruzada de 5 folds sobre train, `roc_auc`).
