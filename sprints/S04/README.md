@@ -86,7 +86,7 @@
 Nada de esto es necesario para entregar el reto. Va **por orden de importancia**:
 
 1. **Asegurar lo de las misiones.** [Taller de bloques](https://www.curso.soultechlabs.io/taller/): los bloques que no hayas hecho y, si no te salió, repite la **kata** del día. Curso «Python desde cero» ([abrir](https://www.curso.soultechlabs.io/basico/)): los **pendientes de la ruta mínima ★** (`idx`, tuplas, `range`, `while`, funciones que llaman funciones, comprensiones, `lambda` y clases) y los proyectos «Agenda telefónica» y «Tablas de multiplicar». Para el **nivel B** de Python (escribir funciones cortas y leer un CSV con `try/except`) hay que llegar **antes del 17/11**. Al acabar cada día, **exporta tu progreso** (botón «Exportar mi progreso») y envía una captura del contador.
-2. **Repasar la teoría.** [Apuntes del sprint](1_Teoria/apuntes/apuntes_python_para_datos.md): explican paso a paso lo que usas en las misiones e incluyen el entorno con `venv` y `pip`, y Git.
+2. **Repasar la teoría.** [Introducción a Python](1_Teoria/S04_01_presentacion_Introduccion_a_Python.pdf) (presentación de 17 diapositivas, de las variables al `try/except`) y los [apuntes del sprint](1_Teoria/apuntes/apuntes_python_para_datos.md): explican paso a paso lo que usas en las misiones e incluyen el entorno con `venv` y `pip`, y Git.
 3. **Ampliar** (lo que el temario oficial incluye y no se trabaja en clase). Cuadernos de Colab [`S04_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_01_entorno_sintaxis.ipynb), [`S04_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_02_funciones_modulos.ipynb), [`S04_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_03_estructuras_datos.ipynb) y [`S04_04`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_04_ficheros_excepciones.ipynb); y [`S04_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S04/2_Practica/S04_05_poo_buenas_practicas.ipynb): clases y objetos, buenas prácticas y Git.
 
 ## Si te atascas
@@ -102,7 +102,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 
 | Carpeta | Qué hay |
 |---|---|
-| [`1_Teoria/`](1_Teoria/) | Los apuntes para repasar |
+| [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
 | [`3_Reto/`](3_Reto/) | `1_Trabajar` (tarjetas y plantilla) · `2_Entregar` (entrega, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y solucionario) |
 | [`4_Referencia/`](4_Referencia/) | Infografías del sprint |
