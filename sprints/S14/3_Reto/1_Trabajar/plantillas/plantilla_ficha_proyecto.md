@@ -38,6 +38,7 @@
 - **Partición de los datos:** ______ *(temporal si hay series)*
 
 ## 6. Modelos previstos (≥ 3, incluyendo redes neuronales / LLM según el brief)
+- **Enfoque elegido y por qué** *(mi dato · cuántos hay · ¿hay que explicar?; chuleta: «¿Qué enfoque uso?» del [Atlas](../../../../../material/6.%20Atlas_de_algoritmos.md))*: ______
 1. ______  2. ______  3. ______  4. *(neuronal / LLM-RAG)* ______
 
 ## 7. Demostrador previsto

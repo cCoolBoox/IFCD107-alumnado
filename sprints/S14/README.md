@@ -24,7 +24,8 @@
 | ☐ | 💻 Práctica · Taller de Design Thinking: empatía, «Cómo podríamos…», dos briefs candidatos y canvas borrador | — | 40 |
 | ☐ | 🎯 Reto · Elegir el brief (**antes del descanso**, hito del día) | [Elegir el brief](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md) | 15 |
 | ☐ | 🎯 Reto · Buscar y validar datos (licencia, tamaño, acceso; plan de datos: plantilla) | [plantilla](3_Reto/1_Trabajar/plantillas/plantilla_plan_datos_licencias.md) | 60 |
-| ☐ | 🎯 Reto · **Subid de nivel:** repasad la rúbrica del reto y mejorad el criterio más flojo (canvas, brief o plan de datos) | — | 50 |
+| ☐ | 🎯 Reto · Dinámica «¿Qué enfoque uso?»: clasificad 7 casos de TurisData y decidid el enfoque de vuestro brief (laboratorio del Diccionario visual) | [dinamica que enfoque uso](1_Teoria/actividades/dinamica_que_enfoque_uso.md) | 15 |
+| ☐ | 🎯 Reto · **Subid de nivel:** repasad la rúbrica del reto y mejorad el criterio más flojo (canvas, brief o plan de datos) | — | 35 |
 | ☐ | 🎯 Reto · Ficha del proyecto y entrega **antes de las 14:30** | [Reto en una página](3_Reto/1_Trabajar/Reto_Sprint_14_una_pagina.md) | 50 |
 
 **En clase: 4 h 10 min.**
