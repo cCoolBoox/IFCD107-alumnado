@@ -1,6 +1,6 @@
 # Solucionario del reto · Sprint 6 · «Datos sucios, cliente impaciente»
 
-> **Para contrastar y para entender**, no solo para copiar. El **código** de cada paso ya está en su [página del reto](Reto_Sprint_06_paso_2.md) (con «Qué hace cada línea»). Aquí está lo que **no** está allí: las cifras para comprobar y las respuestas de ejemplo de las partes que se escriben con palabras propias. Volver a la [ficha del reto](Reto_Sprint_06.md).
+> **Para contrastar y para entender**, no solo para copiar. El **código** de cada paso ya está en su [página del reto](../Reto_Sprint_06_paso_2.md) (con «Qué hace cada línea»). Aquí está lo que **no** está allí: las cifras para comprobar y las respuestas de ejemplo de las partes que se escriben con palabras propias. Volver a la [ficha del reto](../Reto_Sprint_06.md).
 
 ## Índice
 
@@ -11,6 +11,7 @@
 - [Paso 3 · Función de limpieza y partición](#paso-3--función-de-limpieza-y-partición)
 - [Paso 4 · Pipeline y baseline](#paso-4--pipeline-y-baseline)
 - [Paso 5 · Informe: respuestas de ejemplo](#paso-5--informe-respuestas-de-ejemplo)
+- [Entrega de referencia: los tres ficheros resueltos](#entrega-de-referencia-los-tres-ficheros-resueltos)
 
 ## Cómo usarlo
 
@@ -34,7 +35,7 @@
 
 ## Paso 1 · Planning y roles
 
-- No hay código ni respuesta única. Un reparto de ejemplo está en la [página del paso](Reto_Sprint_06_paso_1.md).
+- No hay código ni respuesta única. Un reparto de ejemplo está en la [página del paso](../Reto_Sprint_06_paso_1.md).
 - Lo que se revisa: que los roles no repiten respecto al sprint anterior, que hay **una persona responsable por tarjeta** y que el nivel está anotado.
 
 ## Paso 2 · Inventario de defectos: la tabla completa
@@ -61,7 +62,7 @@ Se piden **6 o más**. Estos son los **12** que tiene el fichero (el mínimo es 
 
 ## Paso 3 · Función de limpieza y partición
 
-- El código completo es el de la [página del paso](Reto_Sprint_06_paso_3.md). Lo que se comprueba:
+- El código completo es el de la [página del paso](../Reto_Sprint_06_paso_3.md). Lo que se comprueba:
   - `crudo.shape` sigue en `(1545, 18)` después de limpiar: la función **no toca** el original.
   - `limpia.shape` es `(1500, 19)`: 45 filas menos y una columna más (`mes_llegada`).
   - Antes y después: duplicados `45 → 0`, valores de `canal` `9 → 4`, de país `12 → 8`.
@@ -102,3 +103,16 @@ Se piden **6 o más**. Estos son los **12** que tiene el fichero (el mínimo es 
 - **Riesgo específico:** el país de origen entra en el modelo. En el fichero, por ejemplo, IT cancela un 60 % (77 reservas), NL un 37 % (75) y ES un 45 % (388): son pocas reservas por país y el modelo podría tratar peor a un grupo.
 - **Medidas:** no usar el modelo para denegar reservas ni para cobrar más por país; revisar la tasa de aviso por país; imputar el país ausente con la categoría más frecuente **solo con *train***.
 - **Qué se pidió a la IA y qué se revisó:** decirlo en una frase concreta (por ejemplo: «pedimos el diccionario de países; comprobamos con `value_counts()` que no dejaba valores nulos nuevos y añadimos `Reino Unido`»).
+
+## Entrega de referencia: los tres ficheros resueltos
+
+Son los tres ficheros que se suben a `sprint-06/`, ya hechos, con el nivel extra completo. Úsalos **después** de intentarlo, para contrastar, no para copiar.
+
+| Fichero | Qué es |
+|---|---|
+| [`informe_calidad.md`](informe_calidad.md) | Informe con los 7 apartados, 10 defectos, preguntas al cliente, IA responsable, extras y la revisión con la rúbrica |
+| [`reto_S06.ipynb`](reto_S06.ipynb) | Cuaderno completo: inventario, `limpiar_reservas`, partición, *pipeline*, *baseline*, IA responsable y extras. Se abre en Colab con *Archivo → Subir cuaderno* |
+| [`README.md`](README.md) | Cómo ejecutarlo, versiones, quién hizo qué y uso de la IA |
+
+- Las partes de «versiones», «quién hizo qué» y «uso de la IA» son **de ejemplo**: cada equipo cuenta lo que hizo de verdad.
+- Las cifras de control son las de la tabla de arriba: 1545 → 1500 filas y AUC 0,758 ± 0,025 frente a 0,500 del modelo tonto.
