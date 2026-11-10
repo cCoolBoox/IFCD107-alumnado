@@ -53,7 +53,7 @@ tipo_habitacion_suite       101.2
 tipo_habitacion_superior     28.4
 temporada_alta               22.4
 dtype: float64
-Ordenada en el origen (precio base de una estándar en temporada baja): 67.3 €
+Ordenada en el origen (lo que predice el modelo para una estándar en temporada baja): 67.3 €
 ```
 
 ### A8 · EJERCICIO 3 de 4 — Error de las interacciones en test
@@ -68,11 +68,10 @@ mae_inter_test = mean_absolute_error(y_test, con_interacciones.predict(X_test))
 mejora_mae = mae_test - mae_inter_test
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-mae_inter_test = 6.7576
-mejora_mae = 0.4812
+MAE sin interacciones: 7.24 € · con interacciones: 6.76 € · mejora: 0.48 €
 ```
 
 ### A10 · EJERCICIO 4 de 4 — Polinomio sobre el mes o variable temporada_alta
@@ -134,11 +133,10 @@ r2_test_ols = ols.score(X_test, y_test)
 brecha_ols = r2_train_ols - r2_test_ols
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-r2_train_ols = 1.0
-brecha_ols = 0.2842
+R² train = 1.000 · R² test = 0.716 · brecha = 0.284
 ```
 
 ### A5 · EJERCICIO 2 de 3 — Ridge con alpha elegido por validación cruzada
@@ -232,6 +230,12 @@ prep = ColumnTransformer([
 ])
 logit = Pipeline([("prep", prep), ("clf", LogisticRegression(max_iter=1000))]).fit(X_train, y_train)
 proba_test = logit.predict_proba(X_test)[:, 1]
+```
+
+**Tiene que salir:**
+
+```text
+1200 probabilidades, de 0.03 a 0.99 · media = 0.466
 ```
 
 ### A5 · EJERCICIO 2 de 4 — Leer los odds ratio
@@ -377,10 +381,10 @@ plt.legend(loc="lower right")
 plt.show()
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-auc = 0.7737
+AUC = 0.774
 ```
 
 Y además dibuja un gráfico.
@@ -437,19 +441,10 @@ y_sub = pd.Series([1] * len(pos_tr) + [0] * len(neg_sub), index=X_sub.index)
 con_submuestreo = nuevo_modelo().fit(X_sub, y_sub)
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-X_sub: tabla de 435 filas y 15 columnas
-y_sub:
-    24      1
-    2014    1
-    1389    1
-    1616    1
-    1089    1
-    41      1
-    1813    1
-    2068    1
+X_sub: 435 filas (145 positivas y 290 negativas) · recall con submuestreo: 45%
 ```
 
 ### A9 · EJERCICIO 6 de 6 — Umbral para detectar al menos el 70 %
@@ -552,12 +547,18 @@ plt.legend()
 plt.show()
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-ks: list de 8 elementos, [1, 5, 15, 31, 61, 101]
-auc_por_k: list de 8 elementos, [0.5848443621959879, 0.6451744563388256, 0.6895946033836353, 0.7074473958303531, 0.7218306741952256, 0.7319696264767561]
-mejor_k = 201
+k =   1 → AUC 0.585
+k =   5 → AUC 0.645
+k =  15 → AUC 0.690
+k =  31 → AUC 0.707
+k =  61 → AUC 0.722
+k = 101 → AUC 0.732
+k = 201 → AUC 0.740
+k = 401 → AUC 0.740
+Mejor k = 201
 ```
 
 Y además dibuja un gráfico.
@@ -572,10 +573,10 @@ nb_gauss = Pipeline([("prep", prep_onehot()), ("nb", GaussianNB())])
 auc_nb_gauss = cross_val_score(nb_gauss, X, y, cv=cv, scoring="roc_auc").mean()
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-auc_nb_gauss = 0.719
+AUC GaussianNB: 0.719
 ```
 
 ### A6 · EJERCICIO 4 de 4 — Naive Bayes con variables discretizadas (CategoricalNB)

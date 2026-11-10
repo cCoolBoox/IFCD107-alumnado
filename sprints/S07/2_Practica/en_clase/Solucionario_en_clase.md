@@ -54,7 +54,7 @@ tipo_habitacion_suite       101.2
 tipo_habitacion_superior     28.4
 temporada_alta               22.4
 dtype: float64
-Ordenada en el origen (precio base de una estándar en temporada baja): 67.3 €
+Ordenada en el origen (lo que predice el modelo para una estándar en temporada baja): 67.3 €
 ```
 
 ### A8 · EJERCICIO 3 de 3 — Error de las interacciones en test
@@ -69,11 +69,10 @@ mae_inter_test = mean_absolute_error(y_test, con_interacciones.predict(X_test))
 mejora_mae = mae_test - mae_inter_test
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-mae_inter_test = 6.7576
-mejora_mae = 0.4812
+MAE sin interacciones: 7.24 € · con interacciones: 6.76 € · mejora: 0.48 €
 ```
 
 ---
@@ -91,11 +90,10 @@ r2_test_ols = ols.score(X_test, y_test)
 brecha_ols = r2_train_ols - r2_test_ols
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-r2_train_ols = 1.0
-brecha_ols = 0.2842
+R² train = 1.000 · R² test = 0.716 · brecha = 0.284
 ```
 
 ### A5 · EJERCICIO 2 de 3 — Ridge con alpha elegido por validación cruzada
@@ -160,6 +158,12 @@ prep = ColumnTransformer([
 ])
 logit = Pipeline([("prep", prep), ("clf", LogisticRegression(max_iter=1000))]).fit(X_train, y_train)
 proba_test = logit.predict_proba(X_test)[:, 1]
+```
+
+**Tiene que salir:**
+
+```text
+1200 probabilidades, de 0.03 a 0.99 · media = 0.466
 ```
 
 ### A5 · EJERCICIO 2 de 3 — Leer los odds ratio
@@ -227,10 +231,10 @@ plt.legend(loc="lower right")
 plt.show()
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-auc = 0.7737
+AUC = 0.774
 ```
 
 Y además dibuja un gráfico.
