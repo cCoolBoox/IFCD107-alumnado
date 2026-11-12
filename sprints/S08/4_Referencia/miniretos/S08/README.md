@@ -63,4 +63,4 @@
 ## Y si queréis otra
 - Proponed una miniapp con **datos abiertos** (una tabla con una columna que predecir) y una pregunta cerrada. El docente os dice si encaja.
 - Otras ideas posibles: calidad de un vino, supervivencia en el Titanic, tipo de cubierta forestal o reconocimiento de gestos.
-- Más miniapps de los sprints anteriores: [S06](../../../../S06/3_Reto/1_Trabajar/miniretos/README.md) (datos sucios, fugas) y [S07](../../../../S07/3_Reto/1_Trabajar/miniretos/README.md) (fraude, abandono, precios).
+- Más miniapps de los sprints anteriores: [S06](../S06/README.md) (datos sucios, fugas) y [S07](../S07/README.md) (fraude, abandono, precios).

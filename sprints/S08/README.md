@@ -88,7 +88,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 - Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S08_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_01_arboles_decision.ipynb) · [`S08_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_02_random_forest.ipynb) · [`S08_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S08/2_Practica/para_casa/S08_03_boosting_xgboost_lightgbm.ipynb).
 - **Solucionarios** (para contrastar después de intentarlo): [cuadernos «en clase»](2_Practica/en_clase/Solucionario_en_clase.md) y [cuadernos completos](2_Practica/para_casa/Solucionario_para_casa.md).
 - 🧩 **Mini-reto opcional** (40–45 min, en equipo): [Tu IA de reglas contra el árbol](3_Reto/1_Trabajar/Mini_reto_IA_de_reglas.md). Creas una IA con tus propias reglas, la mides con el test una sola vez y la comparas con el árbol podado.
-- 🎒 **Bolsa de miniretos opcional** (40–60 min, en pareja o equipo): [elige una miniapp de IA](3_Reto/1_Trabajar/miniretos/README.md) — spam, tumor, diabetes, precio de vivienda, números a mano, zoo de fronteras, tramposos de un videojuego, incendios, triaje de urgencias o reconocer ropa. Otros datos, solo lo visto hasta S08.
+- 🎒 **Bolsa de miniretos opcional** (40–60 min, en pareja o equipo): [elige una miniapp de IA](4_Referencia/miniretos/S08/README.md) — spam, tumor, diabetes, precio de vivienda, números a mano, zoo de fronteras, tramposos de un videojuego, incendios, triaje de urgencias o reconocer ropa. Otros datos, solo lo visto hasta S08.
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_arboles_ensembles_y_svm.md).
 
 ## Si te atascas
@@ -107,7 +107,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
 | [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto, cada paso explicado y una entrega de ejemplo) |
-| [`4_Referencia/`](4_Referencia/) | Resultados de los cuadernos (presentación y documento) e infografías |
+| [`4_Referencia/`](4_Referencia/) | Resultados de los cuadernos (presentación y documento), infografías y las bolsas de miniretos de S06 a S08 |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).
 
