@@ -1,13 +1,42 @@
 # 🎒 Bolsa de miniretos · S08
 
-**Elige una miniapp de IA, constrúyela en 40–60 minutos y enséñasela a la clase.** Sin TurisData: otros datos, otras preguntas y solo lo que ya conocéis hasta el Sprint 8.
+## 🔟 El decálogo
+1. **No se puede usar IA** (ni chatbots ni asistentes de código): el código lo pegáis de la ficha y lo entendéis entre todos.
+2. **5 minutos para elegir** miniapp. Pasado ese tiempo, empieza el reloj.
+3. **55 minutos como máximo** para construirla. Si no llegáis a todo, enseñad lo que tengáis.
+4. **Un modelo tonto de referencia** (siempre la media o siempre la clase más común). Si no lo superáis, no habéis hecho nada.
+5. **Separad train y test antes de nada.** El examen (`test`) se mira **una sola vez**, al final, solo con el campeón.
+6. **Comparad al menos 4 modelos** con validación cruzada sobre `train`. Elegid el campeón por la tabla, no por intuición.
+7. **Mirad la métrica que importa, no solo el acierto:** recall, AP o el error en unidades reales (euros, personas…).
+8. **Probad vuestra app con 3 casos propios**, incluido uno «difícil».
+9. **Contad dónde falla** mirando ejemplos concretos.
+10. **Rotad el teclado:** en pareja o en trío, quien escribe cambia cada 10 minutos y todos sabéis explicar cada celda.
 
-- **Cuándo:** al cerrar S08, en casa o cuando acabéis antes. **Opcional**: no entra en la rúbrica del reto.
-- **Con quién:** en pareja o en equipo de tres. Un equipo puede hacer **dos** miniapps.
+## 📦 Qué entregar
+Una carpeta `sprint-08/miniretos/` en el repositorio de vuestro equipo con **dos archivos**:
+- **El cuaderno** de Colab, ejecutado y sin errores (*Archivo → Descargar → .ipynb*).
+- **Un `README.md`** con:
+  - La miniapp elegida y quién la hizo.
+  - La **tarjeta de cierre** (4 frases):
+    - **Mi app decide** ______ a partir de ______.
+    - **Acierta** ______ en el examen, frente a ______ del modelo tonto.
+    - **Falla cuando** ______.
+    - **No debe usarse para** ______.
+  - La **tabla de modelos** del duelo, con el campeón marcado.
+  - Los **3 casos** que probasteis con la app y **dónde falló**.
+- Es práctica extra: **no entra en la rúbrica**, pero se puede enseñar en la defensa final.
+
+## 🎤 Qué hacer en la demo (2 minutos por equipo)
+- Enseñad la app con **un caso que acierta** y **uno que falla**.
+- Decid en una frase **qué modelo ganó y por qué**.
+- Una pregunta de la clase y, después, la siguiente.
+
+## 🧰 Las miniapps
+**Elige una miniapp de IA y enséñasela a la clase.** Sin TurisData: otros datos, solo lo que ya conocéis hasta el Sprint 8 (árboles, bosques, boosting, SVM y búsqueda).
+
+- **Con quién:** en pareja o en equipo de tres.
 - **Dónde:** en Google Colab, con un cuaderno nuevo. Cada ficha trae las celdas para copiar y pegar, **una por paso**. No hay que instalar nada.
-- **Qué se ve al final:** un gráfico, una tabla de modelos y una **app** (una función que probáis con casos vuestros).
-
-## Las miniapps
+- **Qué se ve al final:** un gráfico, una tabla de modelos frente al modelo tonto y una **app** (una función que probáis con casos vuestros).
 
 | | Miniapp | Pregunta | Tipo | Nivel | Practica |
 |---|---|---|---|---|---|
@@ -22,43 +51,11 @@
 | 🚑 | [09 · Triaje de urgencias](09_Triaje_de_urgencias.md) | ¿Este paciente es urgente? | **Explicable frente a potente** | ⭐⭐⭐ | Árbol frente a bosque, recall exigido, grupos de edad |
 | 👕 | [10 · Reconocer prendas](10_Reconocer_prendas.md) | ¿Qué prenda de ropa es? | Clasificar **imágenes** | ⭐⭐ | SVM, k-NN, bosque, matriz de confusión |
 
-## Cómo elegir
-- **Quiero entender los modelos de un vistazo:** 🌸 el zoo de fronteras.
-- **Quiero algo visual y rápido:** ✍️ números a mano.
-- **Me interesa la salud:** 🎗️ tumor o 🩺 diabetes.
-- **Me interesa el lenguaje:** 📧 correo y spam.
-- **Me interesa el negocio:** 🏠 precio de vivienda.
-- **Me gustan los videojuegos:** 🎮 tramposos.
-- **Me interesa el medio ambiente y las emergencias:** 🔥 incendio forestal o 🚑 triaje.
-- **Quiero imágenes más reales que los números:** 👕 prendas de ropa.
-
-## Las 5 reglas (valen para todas)
-1. **Un modelo tonto de referencia** (siempre la media o siempre la clase más común). Si no lo superáis, no habéis hecho nada.
-2. **Separad train y test antes de nada.** El examen (`test`) se mira **una sola vez**, al final, solo con el campeón.
-3. **Comparad al menos 4 modelos** con validación cruzada sobre `train`. Elegid el campeón por la tabla, no por intuición.
-4. **Probad vuestra app con 3 casos propios**, incluido uno «difícil».
-5. **Contad dónde falla** mirando ejemplos concretos.
-
-## Tarjeta de cierre (4 frases, en la hoja compartida)
-- **Mi app decide** ______ a partir de ______.
-- **Acierta** ______ en el examen, frente a ______ del modelo tonto.
-- **Falla cuando** ______.
-- **No debe usarse para** ______.
-
-## La demo (2 minutos por equipo)
-- Enseñad la app con **un caso que acierta** y **uno que falla**.
-- Decid en una frase **qué modelo ganó y por qué**.
-- Una pregunta de la clase y, después, la siguiente.
-
 ## Qué datos hay detrás
 - **Dentro de scikit-learn** (no se descargan): flores, números a mano y tumores.
 - **Se descargan solas al ejecutar** desde OpenML: las fotos de ropa (Fashion-MNIST, muestra de 6 000).
 - **En el repositorio del curso** (`datos/`): `correos.csv`, `viviendas_tenerife.csv`, `tramposos_juego.csv`, `incendios_canarias.csv` y `triaje_urgencias.csv`, **inventados**, y `diabetes_pima.csv`, de un estudio real (Pima, dominio público).
 - Los datos de salud son **para aprender**: ninguna de estas miniapps diagnostica nada ni decide quién se atiende primero.
-
-## Para subirlo (opcional)
-- Descargad el cuaderno de Colab (*Archivo → Descargar → .ipynb*) y subidlo a `sprint-08/miniretos/` de vuestro repositorio, con la tarjeta de cierre en un `README.md`.
-- Es práctica extra: no se evalúa con la rúbrica, pero se puede enseñar en la defensa final o contarlo en el muro de ideas del proyecto de cierre.
 
 ## Y si queréis otra
 - Proponed una miniapp con **datos abiertos** (una tabla con una columna que predecir) y una pregunta cerrada. El docente os dice si encaja.

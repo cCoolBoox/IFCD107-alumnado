@@ -1,6 +1,6 @@
 # 💳 Miniapp 1 · ¿Esta compra es un fraude?
 
-⭐⭐⭐ · 60 min · **clases muy desiguales** · practica S07 (precisión engañosa, matriz de confusión, ROC y PR, umbral por coste)
+⭐⭐⭐ · 55 min · **clases muy desiguales** · practica S07 (precisión engañosa, matriz de confusión, ROC y PR, umbral por coste)
 
 ## Qué construyes
 - Un **detector de compras sospechosas** para un banco: de cada 100 compras, solo 1 o 2 son fraude.

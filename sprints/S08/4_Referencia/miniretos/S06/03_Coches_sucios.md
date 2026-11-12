@@ -1,6 +1,6 @@
 # 🚗 Miniapp 3 · ¿Cuánto vale este coche de segunda mano?
 
-⭐⭐⭐ · 70 min · **datos muy sucios** · practica S06 (limpieza, duplicados, `Pipeline`, línea base, validación cruzada)
+⭐⭐⭐ · 55 min · **datos muy sucios** · practica S06 (limpieza, duplicados, `Pipeline`, línea base, validación cruzada)
 
 ## Qué construyes
 - Un **tasador de coches** de segunda mano a partir de anuncios escritos a mano, con todos sus despistes.

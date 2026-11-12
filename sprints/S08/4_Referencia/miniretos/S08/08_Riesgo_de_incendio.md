@@ -1,6 +1,6 @@
 # 🔥 Miniapp 8 · ¿Hoy hay riesgo de incendio forestal?
 
-⭐⭐⭐ · 60 min · **suceso raro y semáforo de riesgo** · practica S07 (umbral, PR) y S08 (árbol con reglas, bosque, boosting, búsqueda de hiperparámetros)
+⭐⭐⭐ · 55 min · **suceso raro y semáforo de riesgo** · practica S07 (umbral, PR) y S08 (árbol con reglas, bosque, boosting, búsqueda de hiperparámetros)
 
 ## Qué construyes
 - Un **semáforo de riesgo de incendio** para una zona de las islas: verde, amarillo o rojo, según el tiempo y el terreno.

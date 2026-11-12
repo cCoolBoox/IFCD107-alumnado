@@ -1,6 +1,6 @@
 # 🚑 Miniapp 9 · ¿Este paciente es urgente?
 
-⭐⭐⭐ · 60 min · **explicable frente a potente** · practica S07 (umbral, recall, matriz de confusión) y S08 (árbol, bosque, boosting, elegir campeón)
+⭐⭐⭐ · 55 min · **explicable frente a potente** · practica S07 (umbral, recall, matriz de confusión) y S08 (árbol, bosque, boosting, elegir campeón)
 
 ## Qué construyes
 - Una **ayuda para ordenar la sala de espera** de urgencias: con los signos vitales del paciente, dice cuánto se parece a un caso urgente.
