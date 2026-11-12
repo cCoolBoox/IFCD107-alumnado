@@ -1,6 +1,6 @@
 # Datos del curso · TurisData Canarias
 
-Todos los datos son **sintéticos** (inventados para el curso): las relaciones que contienen **no son estadísticas reales** del turismo en Canarias.
+Los datos de TurisData son **sintéticos** (inventados para el curso): las relaciones que contienen **no son estadísticas reales** del turismo en Canarias. Los de las bolsas de miniretos son inventados salvo los marcados como reales (UCI, Pima, diamantes), que se citan con su licencia.
 Los notebooks los descargan solos con la función `dato("archivo")`; no hace falta que los subas a mano.
 
 | Archivo | Contenido | Se usa en |
@@ -14,6 +14,17 @@ Los notebooks los descargan solos con la función `dato("archivo")`; no hace fal
 | `correos.csv` | 1.500 correos en español inventados (`asunto`, `texto`, `es_spam`) | Bolsa de miniretos (S08) |
 | `viviendas_tenerife.csv` | 1.800 viviendas inventadas (`precio` y 10 variables) | Bolsa de miniretos (S08) |
 | `diabetes_pima.csv` | 768 mujeres del estudio Pima (UCI, dominio público); los ceros imposibles son datos que faltan | Bolsa de miniretos (S08) |
+| `aire_calidad.csv` | 9 357 horas de sensores de calidad del aire de una ciudad italiana (UCI, CC BY 4.0, tal cual: `;`, coma decimal y `-200` = sin dato) | Bolsa de miniretos (S06) |
+| `estudiantes_mates.csv` | 395 estudiantes de dos colegios de Portugal, nota de matemáticas (UCI, CC BY 4.0, tal cual: separado por `;`) | Bolsa de miniretos (S06) |
+| `coches_sucio.csv` | 1.245 anuncios de coches inventados y **muy sucios** (45 repetidos, formatos mezclados) | Bolsa de miniretos (S06) |
+| `bicis_horas.csv` | 17.379 horas de bicis compartidas de Washington D. C. (UCI, CC BY 4.0, tal cual) | Bolsa de miniretos (S06) |
+| `fraude_tarjeta.csv` | 20.000 compras inventadas con un 1,5 % de fraudes | Bolsa de miniretos (S07) |
+| `abandono_streaming.csv` | 5.000 clientes inventados de una plataforma de series (`abandona`) | Bolsa de miniretos (S07) |
+| `diamantes.csv` | Muestra al azar de 6.000 diamantes reales (conjunto `diamonds` de ggplot2) | Bolsa de miniretos (S07) |
+| `consumo_solar.csv` | 1.096 días de consumo eléctrico de una casa inventada con placas solares | Bolsa de miniretos (S07) |
+| `tramposos_juego.csv` | 4.000 jugadores inventados, 6 % de tramposos | Bolsa de miniretos (S08) |
+| `incendios_canarias.csv` | 5.000 zonas-día inventadas, 6 % con incendio | Bolsa de miniretos (S08) |
+| `triaje_urgencias.csv` | 4.000 pacientes inventados, 13 % urgentes | Bolsa de miniretos (S08) |
 | `huespedes.csv` | 1.200 huéspedes para segmentar | Sprint 9 |
 | `valoraciones_experiencias.csv`, `experiencias.csv` | 2.232 valoraciones (de los huéspedes 1 a 300) y catálogo de 25 experiencias | Sprint 9 |
 | `resenas.csv` | 1.500 reseñas en español con sentimiento | Sprint 12 |

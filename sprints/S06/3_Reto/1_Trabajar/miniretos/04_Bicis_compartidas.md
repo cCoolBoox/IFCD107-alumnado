@@ -1,0 +1,114 @@
+# 🚲 Miniapp 4 · ¿Cuántas bicis se alquilarán a las 8 de la mañana?
+
+⭐⭐ · 55 min · **datos reales con fechas** · practica S06 (columnas trampa, fuga, partición temporal, línea base)
+
+## Qué construyes
+- Un programa que **predice cuántas bicis se alquilan en una hora** del día, según la hora, el día y el tiempo.
+- Aprendes dos trampas a la vez: **una columna que ya contiene la respuesta** y **separar bien el pasado del futuro**.
+
+## Datos
+- `bicis_horas.csv`: **17 379 horas** del sistema de bicis compartidas de Washington D. C., de 2011 a 2012 (UCI, datos reales; licencia CC BY 4.0).
+- Objetivo: `cnt`, bicis alquiladas esa hora.
+- Columnas: `hr` (hora), `weekday`, `workingday`, `holiday`, `weathersit` (1 = despejado … 4 = tormenta), `temp`, `hum`, `windspeed`…
+- Sospechosas: `casual` y `registered` (bicis de cada tipo de usuario), `instant` (el número de fila) y `dteday` (la fecha).
+
+## Paso a paso
+
+1. **Carga y mira.** Fíjate en `casual + registered`.
+
+```python
+import warnings; warnings.filterwarnings("ignore")
+import pandas as pd, numpy as np, matplotlib.pyplot as plt
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.dummy import DummyRegressor
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error, r2_score
+
+URL = "https://raw.githubusercontent.com/cCoolBoox/IFCD107-alumnado/main/datos/bicis_horas.csv"
+df = pd.read_csv(URL, parse_dates=["dteday"])
+print(df.shape, "· huecos:", int(df.isna().sum().sum()), "· del", df["dteday"].min().date(), "al", df["dteday"].max().date())
+print("¿casual + registered = cnt en todas las filas?", bool((df["casual"] + df["registered"] == df["cnt"]).all()))
+df.groupby("hr")["cnt"].mean().plot(marker="o", title="Bicis alquiladas por hora del día"); plt.show()
+```
+
+2. **Descarta lo que no existirá cuando predigas.** Si mañana quieres predecir las 8:00, **aún no sabrás** cuántos son «casuales» y cuántos «registrados»: esas columnas **son la respuesta partida en dos**. `instant` es solo un contador.
+
+```python
+fuga = ["casual", "registered", "instant", "dteday", "cnt"]
+variables = [c for c in df.columns if c not in fuga]
+print("Entran:", variables)
+df = df.sort_values(["dteday", "hr"]).reset_index(drop=True)
+```
+
+3. **Separa por el calendario.** Entrena con el pasado (el 80 % más antiguo) y examina con el futuro.
+
+```python
+corte = int(len(df) * 0.8)
+tr, te = df.iloc[:corte], df.iloc[corte:]
+print("Entrena hasta", tr["dteday"].max().date(), "· examen desde", te["dteday"].min().date(), "·", len(te), "horas")
+y_tr, y_te = tr["cnt"], te["cnt"]
+```
+
+4. **El duelo.** Primero el tonto y después dos modelos, **con y sin la columna trampa**.
+
+```python
+def probar(cols):
+    modelos = {"Siempre la media (tonto)": DummyRegressor(),
+               "Regresión lineal": make_pipeline(StandardScaler(), LinearRegression()),
+               "Bosque": RandomForestRegressor(n_estimators=200, min_samples_leaf=3, random_state=42, n_jobs=2)}
+    filas = {}
+    for nombre, m in modelos.items():
+        p = m.fit(tr[cols], y_tr).predict(te[cols])
+        filas[nombre] = {"error medio (bicis)": mean_absolute_error(y_te, p), "R²": r2_score(y_te, p)}
+    return pd.DataFrame(filas).T.round(2)
+
+print("SIN trampa (lo honesto)")
+print(probar(variables))
+print("\nCON casual y registered (trampa)")
+print(probar(variables + ["casual", "registered"]))
+```
+
+5. **Mira dónde falla.** El error depende de la hora: ¿falla más en las horas punta?
+
+```python
+modelo = RandomForestRegressor(n_estimators=200, min_samples_leaf=3, random_state=42, n_jobs=2).fit(tr[variables], y_tr)
+te = te.assign(prediccion=modelo.predict(te[variables]))
+te["error"] = (te["prediccion"] - te["cnt"]).abs()
+te.groupby("hr")["error"].mean().plot(kind="bar", title="Error medio por hora"); plt.show()
+print("Hora con más error:", int(te.groupby("hr")["error"].mean().idxmax()), "h")
+```
+
+## Tu app
+- Una función que dice cuántas bicis esperar según la hora, el día y el tiempo.
+
+```python
+def bicis(hr, weekday, workingday, weathersit, temp_c, hum_pct, viento, mes=6, holiday=0):
+    fila = pd.DataFrame([{"season": (mes % 12) // 3 + 1, "yr": 1, "mnth": mes, "hr": hr, "holiday": holiday, "weekday": weekday,
+                          "workingday": workingday, "weathersit": weathersit, "temp": (temp_c + 8) / 47,
+                          "atemp": (temp_c + 8) / 47, "hum": hum_pct / 100, "windspeed": viento / 67}])
+    return round(float(modelo.predict(fila[variables])[0]))
+
+print(bicis(8, 2, 1, 1, 22, 50, 10), "bicis un martes laborable a las 8:00, soleado")
+print(bicis(8, 2, 1, 3, 12, 90, 25), "bicis ese mismo martes con lluvia")
+print(bicis(14, 6, 0, 1, 25, 45, 8), "bicis un sábado a las 14:00")
+```
+
+## Qué deberías ver
+- `casual + registered = cnt` en **todas** las filas: es la respuesta partida en dos.
+- Entrenas hasta el **7 de agosto de 2012** y examinas con las **3 476 horas** siguientes.
+- **Sin trampa**: tonto, error ≈ **175 bicis** (R² ≈ −0,1) · lineal **≈ 138** (R² ≈ 0,31) · bosque **≈ 46** (R² ≈ 0,90).
+- **Con trampa**: lineal **0,00** y bosque **≈ 2,5** (R² = 1,00). Es perfecto porque **no predice nada**, solo suma.
+- La lineal flojea porque la demanda por hora **no es una recta** (dos picos: ≈ 8 h y ≈ 17–18 h). El bosque lo capta.
+- El bosque falla más a las **17 h**, una hora punta.
+- App: ≈ **650** bicis un martes laborable soleado a las 8:00; ≈ **430** con lluvia; ≈ **580** un sábado a las 14:00.
+
+## Extra 🔴
+- Compara con una **separación al azar**: ¿sale mejor nota? ¿Por qué es engañosa?
+- Quita `yr`: ¿qué pasa con el examen? (El sistema **crece** de un año a otro.)
+- Prueba a predecir solo `registered` o solo `casual`: ¿cuál depende más de la hora?
+
+## Cuidado
+- Datos de **una ciudad y dos años**: no sirven para predecir las bicis de Santa Cruz.
+- El sistema crece con el tiempo: un modelo así se debe **reentrenar** cada cierto tiempo.

@@ -1,0 +1,1246 @@
+id_anuncio,marca,modelo,anio,km,combustible,potencia_cv,ciudad,precio
+1631,Hyundai,i20,2023,35474,diesel,85.0,santa cruz,9440
+1615,Hyundai,Tucson,2019,51729,diésel,150.0,La Laguna,15.890 €
+1581,Ford,Kuga,2009,211122,GASOLINA,150.0,Telde,2990
+1243,VOLKSWAGEN,Tiguan,2009,179187,diesel,150.0,Las Palmas,3.850 €
+1708,Seat,Arona,2017,83255,,110.0,S/C de Tenerife,1
+1675,Seat,Ibiza,2025,17856,gasolina,95.0,Telde,14.000 €
+1957,Renault,Captur,2019,54790,gasolina,100.0,santa cruz,"8.490,00 €"
+1374,Seat,León,2012,109055,Hibrido,130.0,Telde,5350
+1669,renault,Megane,2025,15.215 km,gasolina,115.0,Arona,18.420 €
+1057,Volkswagen,Golf,2.010,137943,GASOLINA,130.0,Arona,"3.930,00 €"
+1164,Kia,Ceed,2018,69208,diésel,120.0,Telde,8.770 €
+1227,Ford,Kuga,2021,28692,GASOLINA,150.0,santa cruz,19.060 €
+1565,Kia,Sportage,2014,83245,diesel,150.0,La Laguna,9.040 €
+1381,Peugeot,308,2008,283718,Híbrido,120.0,Santa Cruz,1.790 €
+1143,Toyota,Corolla,2009,164554,gasolina,140.0,Las Palmas,3240
+1264,Ford,Focus,2021,71685,Diesel,115.0,Arona,12.050 €
+1499,Peugeot,308,2010,179 mil,Gasolina,120.0,La Laguna,3.370 €
+1475,Renault,Clio,2016,137594,,90.0,Las Palmas,4440 eur
+2126,Ford,Kuga,2024,18150,gasolina,150.0,Telde,26.260 €
+1869,Volkswagen,Polo,2016,120.333 km,gasolina,95.0,La Laguna,4230
+1173,Seat,León,18,116644,gasolina,130.0,La Laguna,7.860 €
+1232,Kia,Ceed,2012,-1,GASOLINA,120.0,Arona,4.730 €
+1235,Toyota.,C-HR,2010,146768,gasolina,125.0,santa cruz,4760
+1516,Seat,Arona,2024,19893,diesel,110.0,las palmas,"14.780,00 €"
+1423,Volkswagen ,Tiguan,2023,40017,GASOLINA,150.0,Arona,26.660 €
+1744,Kia,Sportage,2023,51844,Gasolina,150.0,Las Palmas de GC,22520
+1888,Ford,Focus,2018,109660,gasolina,115.0,Las Palmas de GC,8100
+1421,Renault,Clio,2013,133823,Gasolina,90.0,Arona,"3.000,00 €"
+1880,Renault,Captur,2020,84.076 km,Gasolina,100.0,S/C de Tenerife,9.280 €
+1635,Seat,Ibiza,2022,51254,gasolina,95.0,Telde,10.060 €
+1311,Kia,Sportage,2017,66614,diésel,150.0,Santa Cruz,"11.020,00 €"
+1160,Ford ,Fiesta,2014,169973,gasolina,85.0,las palmas,2.860 €
+2141,Ford.,Kuga,2023,18385,Híbrido,150.0,Telde,26140
+1686,Peugeot,2008,2010,109438,GASOLINA,110.0,La Laguna,3.980 €
+2172,Renault,Clio,19,61079,GASOLINA,90.0,las palmas,a consultar
+1590,renault,Captur,2020,84662,Hibrido,100.0,Arona,"9.650,00 €"
+2075,Hyundai,Tucson,2012,202398,Gasolina,150.0,Telde,4430
+1239,Hyundai,Tucson,2011,109691,diésel,150.0,Arona,5.230 €
+2129,Ford,Kuga,2025,18 mil,GASOLINA,150.0,las palmas,26790
+2104,Kia,Ceed,2012,194 mil,GASOLINA,120.0,santa cruz,3.680 €
+1570,Renault.,Megane,2008,297913,Gasolina,115.0,La Laguna,1.530 €
+1314,Renault,Megane,2015,104086,GASOLINA,115.0,Telde,7030
+1229,Peugeot,2008,2019,92650,Híbrido,110.0,La Laguna,11030
+1597,ford,Focus,2016,73.219 km,diésel,115.0,S/C de Tenerife,7640
+2150,Hyundai,i20,2021,56988,gasolina,85.0,La Laguna,7650
+1674,Volkswagen,Golf,2024,35169,electrico,130.0,Telde,25250
+2146,Hyundai,i20,2018,95644,diésel,85.0,Santa Cruz,4740
+2066,Renault,Captur,2014,114715,Diesel,100.0,Arona,4470
+1710,Volkswagen,Polo,2021,70419,GASOLINA,95.0,La Laguna,9130
+1893,VOLKSWAGEN,Golf,2012,208920,GASOLINA,130.0,La Laguna,3.520 €
+1859,ford,Focus,2013,,GASOLINA,115.0,Santa Cruz,4240
+1080,Hyundai ,Tucson,2009,274518,Gasolina,150.0,Las Palmas,"2.670,00 €"
+2076,Toyota,Yaris,2020,78987,GASOLINA,100.0,Telde,8400
+1193,Toyota,Yaris,2020,100599,Hibrido,100.0,La Laguna,8.070 €
+1001,Kia,Ceed,23,26425,gasolina,,Arona,15.840 €
+1521,renault,Megane,2009,208.676 km,GASOLINA,115.0,La Laguna,2.290 €
+1031,ford,Focus,2015,,diesel,115.0,Las Palmas,a consultar
+1493,Seat,Ibiza,2022,58569,hibrido,95.0,Las Palmas,10400 eur
+1065,Ford,Kuga,2011,,diésel,150.0,Santa Cruz,5.470 €
+1620,Hyundai,Tucson,2013,174070,Hibrido,150.0,Telde,6.250 €
+1343,Hyundai,i20,2011,208593,gasolina,85.0,S/C de Tenerife,1740
+1180,Volkswagen,Polo,2.025,12811,Diésel,95.0,La Laguna,15990
+1263,Volkswagen,Polo,2008,287.714 km,Gasolina,95.0,santa cruz,1.500 €
+1019,ford,Focus,2020,92722km,diésel,115.0,La Laguna,10150
+1677,Toyota,Corolla,2018,114022,,140.0,La Laguna,"9.570,00 €"
+2092,Toyota,C-HR,2014,168.687 km,Gasolina,125.0,Telde,6180
+1306,Peugeot,2008,2018,91625,Gasolina,110.0,La Laguna,9670
+1573,Volkswagen,Golf,2017,130351,Gasolina,130.0,Las Palmas,7980 eur
+2178,KIA,Ceed,2024,36639,Diésel,120.0,La Laguna,18.030 €
+1119,Renault,Clio,2024,32774km,Diésel,90.0,Las Palmas de GC,9990
+2009,Hyundai,Tucson,2008,162168,hibrido,150.0,Arona,4370 eur
+1527,Volkswagen,Polo,2018,87511km,Gasolina,95.0,Telde,5570
+1846,Kia,Sportage,2021,60488,,150.0,Telde,17390
+1923,HYUNDAI,i20,2013,204970,GASOLINA,85.0,Telde,2520
+1687,Kia,Ceed,2009,273 mil,hibrido,120.0,Telde,1.800 €
+2031,seat,Ibiza,2024,11516,Gasolina,95.0,Arona,13.200 €
+1759,Ford,Focus,2017,101172,gasolina,115.0,Arona,7.470 €
+1937,Volkswagen,Tiguan,2012,107566,Gasolina,150.0,Las Palmas de GC,6900
+1488,Toyota,Yaris,2014,167 mil,Gasolina,100.0,santa cruz,"3.480,00 €"
+1247,Toyota,Corolla,2022,36241,,140.0,La Laguna,21.060 €
+1210,Seat,León,2015,172275,hibrido,130.0,santa cruz,6240 eur
+1985,PEUGEOT,308,2014,195.142 km,Diesel,120.0,Las Palmas,4.960 €
+1386,Toyota,Corolla,2009,202806,Gasolina,140.0,Telde,3130
+1387,Ford,Fiesta,2013,110 mil,GASOLINA,85.0,Telde,2740
+2181,Peugeot,2008,2025,12045,GASOLINA,110.0,Las Palmas de GC,23360
+1144,Seat,León,2008,298867,Diésel,130.0,Arona,1.510 €
+1350,HYUNDAI,Tucson,2024,29868,hibrido,150.0,Telde,29660
+1849,Toyota,Yaris,2009,276233,Gasolina,100.0,Las Palmas,1500
+2100,Hyundai,Tucson,2024,18392,Diésel,150.0,Arona,24740
+1081,Ford ,Fiesta,2015,122019,Gasolina,85.0,S/C de Tenerife,3.790 €
+1916,Kia,Sportage,2008,248 mil,gasolina,150.0,Arona,a consultar
+1660,Ford.,Focus,2021,70094,diesel,115.0,La Laguna,11.360 €
+2166,Seat.,Arona,2025,7845,Híbrido,110.0,Las Palmas de GC,"20.460,00 €"
+1198,Toyota,C-HR,2008,255 mil,gasolina,125.0,Arona,2480
+1107,PEUGEOT,208,2020,41.011 km,Gasolina,90.0,Telde,7.190 €
+1940,Hyundai ,Tucson,2014,171576,diésel,150.0,las palmas,"6.590,00 €"
+1760,Kia,Ceed,2022,49.929 km,Gasolina,120.0,La Laguna,13110
+1228,Seat,León,2020,92100,gasolina,130.0,Arona,10600
+1249,renault,Megane,2009,182663,gasolina,115.0,Arona,2.610 €
+2136,Renault,Megane,2023,41372,Eléctrico,115.0,La Laguna,19.860 €
+1654,Seat,Arona,2015,179005,diésel,110.0,Telde,3940
+2145,Hyundai.,i20,2.013,146092,Electrico,85.0,Las Palmas,3080
+1723,KIA,Sportage,2016,117748,gasolina,150.0,Telde,9100
+1391,Kia,Sportage,2020,74092,GASOLINA,150.0,S/C de Tenerife,17.190 €
+1447,Ford ,Kuga,2017,99288,Diésel,150.0,santa cruz,11.310 €
+2109,Toyota,Yaris,2022,54672,,100.0,Santa Cruz,11560
+1644,Volkswagen,Golf,2018,,gasolina,130.0,S/C de Tenerife,9.410 €
+1685,PEUGEOT,2008,2012,165308,Gasolina,110.0,S/C de Tenerife,3.910 €
+1266,Volkswagen,Tiguan,2020,,,150.0,santa cruz,17.140 €
+1121,Hyundai,Tucson,2018,97426,,150.0,santa cruz,10940
+1984,hyundai,i20,2021,39548,Gasolina,85.0,La Laguna,9450 eur
+1727,Renault,Megane,2021,65770,Diesel,115.0,Arona,11990
+1663,Kia,Sportage,,147206,GASOLINA,150.0,Las Palmas,4.100 €
+1378,hyundai,i20,2018,133504,Gasolina,85.0,Santa Cruz,4.910 €
+1803,Peugeot,208,2017,-1,Hibrido,90.0,La Laguna,6470
+1650,Peugeot.,208,2020,92670,Diésel,90.0,S/C de Tenerife,"7.820,00 €"
+1894,Volkswagen,Tiguan,2025,14.986 km,gasolina,150.0,La Laguna,31.050 €
+1301,Toyota.,C-HR,2020,66646,Hibrido,125.0,Telde,"16.150,00 €"
+1097,Ford,Fiesta,2022,57356km,diesel,85.0,santa cruz,7.890 €
+1072,Volkswagen.,Tiguan,2013,199884,hibrido,150.0,Telde,6440
+1610,KIA,Sportage,2017,66209,Diesel,150.0,Arona,12.920 €
+1953,Seat,León,2009,159977,gasolina,130.0,La Laguna,3.350 €
+1997,SEAT,León,2015,98856,Gasolina,130.0,Telde,6420
+1061,Volkswagen,Golf,2015,192356km,Híbrido,130.0,La Laguna,6.100 €
+1439,Volkswagen,Golf,2019,69588,GASOLINA,130.0,La Laguna,"12.430,00 €"
+1711,Ford,Kuga,2012,126753,,150.0,las palmas,6660 eur
+1069,volkswagen,Polo,2015,99559,Gasolina,95.0,Las Palmas de GC,4.320 €
+1123,HYUNDAI,Tucson,2013,128571,,150.0,Arona,7170
+1998,RENAULT,Clio,2017,120.669 km,,90.0,Telde,"4.510,00 €"
+1317,Renault,Captur,2011,242971,Diésel,100.0,Santa Cruz,1.810 €
+1954,Volkswagen,Polo,2014,90046km,Eléctrico,95.0,La Laguna,5.150 €
+1058,Peugeot,2008,,82942,diésel,110.0,La Laguna,7280
+1979,Renault,Captur,2011,218006,GASOLINA,100.0,Telde,2560
+1746,Kia,Ceed,2015,161279,diesel,120.0,La Laguna,5.270 €
+1526,Volkswagen,Polo,2019,69339,Diésel,95.0,Telde,7.190 €
+1157,Seat,Ibiza,2013,174588,GASOLINA,95.0,La Laguna,2.560 €
+1349,Seat,León,2024,30740,Eléctrico,130.0,Las Palmas,20200
+1794,Volkswagen,Polo,2012,,Hibrido,95.0,Arona,2440
+1198,Toyota,C-HR,2008,255 mil,gasolina,125.0,Arona,2480
+1498,HYUNDAI,Tucson,2019,114538,gasolina,150.0,santa cruz,12860
+1304,RENAULT,Clio,2022,69281,GASOLINA,90.0,Telde,8.080 €
+1376,seat,Ibiza,2011,183.112 km,gasolina,95.0,Las Palmas,2.340 €
+1085,Toyota,Yaris,2016,,Gasolina,100.0,Telde,"4.870,00 €"
+1150,TOYOTA,Corolla,2015,91725,hibrido,140.0,Las Palmas,9140
+1648,Seat,Arona,2015,167432,Diesel,110.0,las palmas,4430
+1472,PEUGEOT,208,2018,,gasolina,90.0,Arona,6.230 €
+1103,Renault,Captur,2.008,192 mil,Diesel,100.0,Arona,2.200 €
+2094,Ford ,Kuga,2009,235234,gasolina,150.0,La Laguna,3.060 €
+2065,Seat,Ibiza,,178 mil,Gasolina,95.0,santa cruz,3.380 €
+1321,Seat,Arona,2017,103.766 km,Diesel,110.0,las palmas,6090
+2079,Hyundai,i20,2019,69025,,85.0,La Laguna,5.890 €
+1873,peugeot,2008,2008,285.570 km,Electrico,110.0,Telde,1980
+1146,Volkswagen,Tiguan,2019,103066,gasolina,150.0,S/C de Tenerife,14860 eur
+1918,peugeot,208,2011,129065,GASOLINA,90.0,La Laguna,2840
+2072,Kia.,Sportage,2024,21565,gasolina,150.0,Telde,25.460 €
+2197,Seat,León,2008,284678,Diésel,130.0,La Laguna,1.500 €
+2120,Volkswagen,Tiguan,2022,53252,GASOLINA,150.0,Las Palmas,22630
+2043,Volkswagen,Tiguan,2020,71193km,Diesel,150.0,Telde,"18.170,00 €"
+1238,Volkswagen,Golf,2008,261686,GASOLINA,130.0,santa cruz,2.140 €
+1437,Volkswagen,Golf,2024,15885,gasolina,130.0,Arona,19.250 €
+1293,Renault,Megane,,155364,GASOLINA,115.0,Las Palmas,"3.750,00 €"
+1175,FORD,Kuga,2017,76 mil,Diésel,150.0,La Laguna,11120
+1456,Ford,Kuga,2010,172809,Diesel,150.0,las palmas,4200
+1352,Peugeot,308,2020,44260,hibrido,120.0,santa cruz,14950
+1003,Peugeot,208,2025,,hibrido,90.0,Santa Cruz,13.990 €
+1370,Toyota,Corolla,2011,186237,hibrido,140.0,Arona,4.690 €
+1959,Renault,Megane,2021,78.217 km,GASOLINA,115.0,Arona,11750 eur
+1095,Peugeot,308,2013,168281,Gasolina,120.0,Telde,4.170 €
+1450,Volkswagen,Golf,2011,196894,Diesel,130.0,las palmas,3.000 €
+1706,Toyota,C-HR,2025,13 mil,GASOLINA,125.0,La Laguna,26740
+1703,Ford,Fiesta,2023,24.129 km,Gasolina,85.0,Las Palmas de GC,10.340 €
+1656,VOLKSWAGEN,Polo,2021,54790,,95.0,S/C de Tenerife,8950
+1458,Renault,Captur,2025,14774,electrico,100.0,santa cruz,"20.270,00 €"
+1916,Kia,Sportage,2008,248 mil,gasolina,150.0,Arona,a consultar
+1216,Ford,Kuga,2018,55004,Gasolina,150.0,Arona,13460
+1730,Kia.,Sportage,2013,163504,gasolina,150.0,Santa Cruz,6870 eur
+1168,Volkswagen,Tiguan,2010,249.988 km,gasolina,150.0,La Laguna,3.800 €
+1927,Hyundai,Tucson,2024,16396,GASOLINA,150.0,Arona,27.930 €
+1984,hyundai,i20,2021,39548,Gasolina,85.0,La Laguna,9450 eur
+1147,Ford,Kuga,2010,156.993 km,Gasolina,150.0,Santa Cruz,5010
+2070,Ford,Kuga,2013,123206,diésel,150.0,Telde,6.540 €
+1201,volkswagen,Golf,2012,138679km,diesel,130.0,Arona,4520
+1593,Kia,Sportage,2024,25093,Diésel,150.0,La Laguna,24240
+1190,Ford,Kuga,2013,143237,GASOLINA,150.0,Telde,7.870 €
+2035,Ford,Focus,2023,24843,Diesel,115.0,Arona,14.080 €
+1838,Volkswagen ,Golf,2008,134704,hibrido,130.0,La Laguna,3330
+1073,Hyundai.,Tucson,2018,102 mil,Diésel,150.0,Santa Cruz,11100
+1514,Hyundai,i20,10,114555,gasolina,85.0,S/C de Tenerife,2520
+2189,Toyota,Corolla,2018,93788,gasolina,140.0,Telde,10.530 €
+2036,Hyundai,i20,2017,108166,Gasolina,85.0,Arona,3.830 €
+1808,Kia,Ceed,2016,95295,Eléctrico,120.0,La Laguna,8.810 €
+1137,SEAT,Arona,2020,85499,Diésel,110.0,Las Palmas,8110
+1614,Seat,León,19,64660km,electrico,130.0,Telde,13680 eur
+1425,Toyota,Yaris,2022,52447,Electrico,100.0,Las Palmas de GC,12.560 €
+1991,Toyota.,Yaris,2020,59491,Diésel,100.0,Santa Cruz,9.140 €
+1618,ford,Kuga,2014,167665,hibrido,150.0,S/C de Tenerife,7.080 €
+1091,Ford,Fiesta,2016,70 mil,GASOLINA,85.0,Santa Cruz,4.670 €
+1743,Renault,Captur,2012,134402,gasolina,100.0,Arona,3.530 €
+1416,ford,Focus,2013,129671,gasolina,115.0,La Laguna,4950
+1312,Peugeot,2008,2016,76624km,hibrido,110.0,Arona,9.530 €
+1316,RENAULT,Megane,2011,158.320 km,gasolina,115.0,Telde,3680
+1824,Seat ,Ibiza,2010,230.192 km,Gasolina,95.0,Arona,1650
+1554,renault,Clio,2011,171421,Hibrido,90.0,Telde,"2.430,00 €"
+1324,Peugeot,308,2016,99094,gasolina,120.0,las palmas,7.600 €
+2108,Renault,Clio,2024,30603,Híbrido,90.0,Telde,12.990 €
+1546,RENAULT,Clio,2019,46.379 km,GASOLINA,90.0,santa cruz,6.960 €
+1115,Toyota,C-HR,2019,105.964 km,hibrido,125.0,Arona,12230
+2095,Peugeot,308,2020,54 mil,Híbrido,120.0,las palmas,13420 eur
+1817,Volkswagen,Golf,2012,181350,Gasolina,130.0,Las Palmas,4110
+2139,Ford,Focus,20,90.720 km,GASOLINA,115.0,Telde,9.990 €
+1762,Kia,Ceed,2008,283 mil,Diesel,120.0,Las Palmas de GC,1510 eur
+2159,Kia,Ceed,2014,140.284 km,gasolina,120.0,Telde,5220
+2087,Renault,Clio,2011,247.843 km,Diesel,90.0,Santa Cruz,1500
+1078,Peugeot,208,2020,96674,diésel,90.0,La Laguna,6670
+1879,Volkswagen,Tiguan,2016,108890,Gasolina,,las palmas,10.370 €
+1027,Kia.,Ceed,2019,110817,GASOLINA,120.0,Arona,10120
+2007,Seat,Arona,2025,29194,diésel,110.0,Telde,"16.930,00 €"
+1549,Toyota,Corolla,2015,119537,electrico,140.0,Telde,9260
+1977,Kia,Sportage,2016,86361,Gasolina,150.0,Santa Cruz,10670
+1477,Volkswagen,Polo,2019,97165,Gasolina,95.0,Arona,6.240 €
+1717,Renault,Clio,2014,185007km,hibrido,90.0,Arona,2990
+2151,Kia.,Ceed,2016,168196,,120.0,S/C de Tenerife,5.990 €
+1885,Toyota,Corolla,2021,74859,diésel,140.0,santa cruz,13.650 €
+1980,Kia,Ceed,2015,107.095 km,gasolina,120.0,Las Palmas,5380 eur
+1665,PEUGEOT,208,2012,209353,Diesel,90.0,S/C de Tenerife,2040
+1949,VOLKSWAGEN,Tiguan,2015,135771,GASOLINA,150.0,santa cruz,10320 eur
+1131,Renault,Megane,2020,40030,Diésel,115.0,La Laguna,10650
+1357,Kia ,Sportage,2017,133182,gasolina,150.0,Las Palmas de GC,a consultar
+1042,Peugeot,208,2.025,20330,Gasolina,90.0,Arona,13.480 €
+1993,Renault,Megane,2018,65687,GASOLINA,115.0,Santa Cruz,9870
+1897,Seat,León,2008,270931,GASOLINA,130.0,Telde,1.560 €
+1552,Renault,Megane,2009,248367,diésel,115.0,Las Palmas,2100
+1109,Peugeot.,308,08,259.047 km,Diesel,120.0,La Laguna,1630
+1380,renault,Captur,2008,233039,Diésel,100.0,La Laguna,1.770 €
+1992,Renault,Clio,2023,41.268 km,Diésel,90.0,S/C de Tenerife,9080
+1596,Peugeot,2008,2024,24658,Gasolina,110.0,La Laguna,18780
+1668,Kia,Sportage,2008,303.293 km,Gasolina,150.0,santa cruz,1750 eur
+1339,Peugeot,208,2022,61046,GASOLINA,90.0,Arona,9240 eur
+1787,Toyota,Corolla,2020,71861,Hibrido,140.0,Arona,15650
+1006,HYUNDAI,i20,2021,34144,gasolina,85.0,Arona,7090 eur
+1197,Peugeot,308,2010,228.562 km,Diesel,120.0,Las Palmas de GC,2420
+1617,Hyundai,i20,2016,106747,hibrido,85.0,Telde,4740 eur
+1287,Ford,Focus,2015,104326km,GASOLINA,115.0,santa cruz,5.930 €
+1624,Peugeot,308,2012,159471,Gasolina,120.0,La Laguna,4200
+1389,Volkswagen,Golf,2013,177907,GASOLINA,130.0,las palmas,4460
+1975,Renault,Megane,2011,218956,diésel,115.0,Arona,2.500 €
+1804,Volkswagen,Golf,2015,164404km,Diésel,130.0,Telde,5.400 €
+1522,Toyota.,C-HR,2015,106.435 km,Diesel,125.0,Arona,7570
+1468,Renault,Clio,2014,173398,Gasolina,90.0,La Laguna,2.960 €
+1449,ford,Focus,2017,67491,gasolina,115.0,La Laguna,7460 eur
+1818,Volkswagen,Polo,2009,282869,gasolina,95.0,Telde,1500
+2011,Seat,León,2017,,Hibrido,130.0,Arona,8450 eur
+1303,Hyundai,Tucson,2022,65292,Diésel,150.0,S/C de Tenerife,19.770 €
+1563,Seat,Ibiza,2023,29568,Gasolina,95.0,Telde,10.780 €
+1763,Seat,Arona,2015,180.230 km,GASOLINA,110.0,Telde,4200 eur
+1290,Peugeot,308,2019,,Gasolina,120.0,Telde,9970 eur
+1822,Peugeot,308,2009,141844,hibrido,120.0,las palmas,3.780 €
+2091,Renault,Megane,2014,188470,hibrido,115.0,Arona,5.100 €
+1713,Kia,Sportage,,129573,Gasolina,150.0,Arona,9330
+1925,SEAT,Ibiza,2025,8.146 km,GASOLINA,95.0,La Laguna,13460
+2071,Hyundai,Tucson,2025,11866km,GASOLINA,150.0,Telde,28.620 €
+1670,Kia,Ceed,2011,240139,Híbrido,120.0,Arona,3.050 €
+1956,Hyundai,i20,2024,21761,hibrido,85.0,Santa Cruz,14.230 €
+1989,Hyundai,i20,2011,149469,electrico,85.0,Telde,2780
+1083,Kia,Ceed,2012,169300km,gasolina,120.0,Arona,3.910 €
+1288,Hyundai,Tucson,2019,58281,Gasolina,150.0,santa cruz,14140
+1637,Volkswagen ,Polo,2020,76237,Gasolina,95.0,La Laguna,7.920 €
+1548,Renault,Megane,2019,64587,GASOLINA,115.0,santa cruz,11100
+1004,SEAT,Ibiza,2.011,251252,Diésel,95.0,Telde,1550
+1051,Toyota,Yaris,2012,216937,Gasolina,100.0,Las Palmas,2760
+1440,Volkswagen,Golf,2020,55895,gasolina,130.0,La Laguna,13820
+2140,Volkswagen,Tiguan,2.013,129.877 km,diesel,150.0,Telde,7.010 €
+1805,Seat,León,2019,82.821 km,diésel,130.0,La Laguna,8170
+1362,PEUGEOT,2008,2023,39774,Electrico,110.0,las palmas,17620
+1126,Ford,Focus,2020,86408,diésel,115.0,La Laguna,10320 eur
+1619,TOYOTA,Yaris,2024,11.133 km,Diesel,100.0,Las Palmas,12800
+1139,Hyundai,i20,2023,31.257 km,GASOLINA,85.0,S/C de Tenerife,11.600 €
+1671,renault,Megane,2025,17367,Diesel,115.0,santa cruz,19.440 €
+1851,Kia,Ceed,2023,40.272 km,Gasolina,120.0,S/C de Tenerife,14500
+1323,Seat,León,2013,143014,Híbrido,130.0,las palmas,5.470 €
+2157,Peugeot,208,2020,46062,GASOLINA,90.0,Las Palmas,"8.310,00 €"
+1269,Hyundai,i20,2012,104225,GASOLINA,85.0,Telde,3000 eur
+1854,Renault,Megane,2013,124717km,GASOLINA,115.0,Las Palmas de GC,5.000 €
+1162,Toyota,C-HR,2011,119458,electrico,125.0,Telde,"7.030,00 €"
+1550,Peugeot,308,2025,12291,hibrido,120.0,La Laguna,26.170 €
+1255,Hyundai ,Tucson,2015,131.909 km,GASOLINA,150.0,La Laguna,7960
+1169,Ford,Kuga,2023,41861km,diésel,150.0,santa cruz,24030
+1566,Toyota,Yaris,2019,43713,Hibrido,100.0,Telde,7880
+1557,Kia,Ceed,2009,220303,gasolina,120.0,Arona,2160
+1600,Peugeot,308,,126822,diésel,120.0,Arona,6640
+1616,Renault,Megane,2024,23726,diesel,115.0,las palmas,14890
+1428,RENAULT,Megane,2024,23678,diesel,115.0,santa cruz,17690 eur
+1850,Volkswagen,Golf,2011,225332,Híbrido,130.0,La Laguna,3600
+1170,Seat,Ibiza,2023,51.295 km,Diésel,95.0,Arona,9.880 €
+1221,Seat.,León,2016,,GASOLINA,130.0,Arona,6.750 €
+1099,Toyota,Yaris,08,226.421 km,gasolina,100.0,santa cruz,1.950 €
+1891,Seat,León,2020,47275,hibrido,130.0,La Laguna,13630
+2177,Kia.,Sportage,2024,,Diésel,150.0,santa cruz,24270
+1820,Toyota,Yaris,2020,89633,Hibrido,100.0,Arona,9220
+1355,Kia,Ceed,2014,120727,,120.0,Arona,5.240 €
+1736,Renault.,Clio,2010,151965,diesel,90.0,Las Palmas,2150
+1132,Ford,Kuga,2025,24822,Hibrido,150.0,Telde,"32.740,00 €"
+1976,Seat,Ibiza,2022,44103,Gasolina,95.0,La Laguna,9.240 €
+1523,Peugeot,2008,2010,241920,GASOLINA,110.0,Arona,2320
+1007,HYUNDAI,Tucson,2021,63573,GASOLINA,150.0,santa cruz,"18.470,00 €"
+1206,Toyota,C-HR,2008,163086,Eléctrico,125.0,La Laguna,4.110 €
+2185,RENAULT,Captur,2012,177 mil,Gasolina,100.0,Arona,3130
+1487,Toyota.,Corolla,2012,206002,gasolina,140.0,Santa Cruz,4290 eur
+1204,Seat ,Ibiza,2014,94.110 km,,95.0,La Laguna,"3.600,00 €"
+1464,PEUGEOT,308,2013,,electrico,120.0,Las Palmas de GC,5.550 €
+1866,HYUNDAI,i20,2024,30372,Diésel,85.0,S/C de Tenerife,10670
+1328,Seat,Ibiza,2022,35995,Gasolina,95.0,Telde,"9.340,00 €"
+1871,Volkswagen,Polo,,142795,gasolina,95.0,Telde,2.970 €
+1905,Renault,Clio,2024,25614,Gasolina,90.0,Telde,"10.550,00 €"
+1807,Peugeot,308,2011,219355,diésel,120.0,La Laguna,"2.860,00 €"
+1028,Peugeot ,208,2016,80633,Gasolina,90.0,Arona,5.310 €
+1623,Peugeot ,208,2015,173378,Gasolina,90.0,Telde,3.560 €
+2052,renault,Clio,2013,197.362 km,Gasolina,90.0,S/C de Tenerife,2080
+2137,Toyota,Corolla,2022,59353,gasolina,140.0,Las Palmas de GC,16.710 €
+1587,Toyota,Yaris,2017,139214,Hibrido,100.0,Telde,5780
+1189,Peugeot,2008,2024,35130,Híbrido,110.0,Arona,19.490 €
+1108,Seat,León,2024,,Híbrido,130.0,Arona,20820
+1881,peugeot,208,2018,109616,gasolina,90.0,Telde,5810
+1741,Peugeot,308,2009,129788,gasolina,120.0,Telde,3050
+1883,Ford,Focus,2024,16584,gasolina,115.0,santa cruz,20780 eur
+1330,Kia,Ceed,2014,197863,diésel,120.0,Las Palmas,3000
+2153,Kia ,Ceed,2017,67086,Gasolina,120.0,Telde,8010
+1022,Toyota,Corolla,2019,60040km,Eléctrico,140.0,Arona,14.940 €
+1585,Kia ,Ceed,2019,115923,Diésel,120.0,Santa Cruz,6920 eur
+1636,Volkswagen,Polo,2018,96408,Diésel,95.0,Arona,5640
+2132,Volkswagen,Golf,2020,65535,Híbrido,130.0,Telde,13420
+1335,Renault,Megane,2011,161706,Diésel,115.0,Arona,3.690 €
+1205,Peugeot,208,2015,108005,Gasolina,90.0,Las Palmas de GC,4.030 €
+1093,Hyundai,Tucson,2019,96849,Híbrido,150.0,Las Palmas,14620 eur
+1809,Seat ,Arona,2012,178291,Diesel,110.0,La Laguna,"3.140,00 €"
+1224,PEUGEOT,2008,2014,172.355 km,Diesel,110.0,Arona,4.320 €
+1929,Hyundai,i20,2025,9 mil,hibrido,85.0,las palmas,14.490 €
+1588,Volkswagen,Tiguan,2010,121247km,Diesel,150.0,La Laguna,5.800 €
+1712,Kia,Ceed,2023,53765,gasolina,120.0,Las Palmas,14.890 €
+1411,ford,Kuga,2.009,200.764 km,diesel,150.0,S/C de Tenerife,3.770 €
+2020,Toyota,Yaris,2011,171157,gasolina,100.0,Arona,2590
+1768,hyundai,Tucson,2020,47385,Gasolina,150.0,Las Palmas de GC,17540
+2162,Kia,Ceed,2023,41489,gasolina,120.0,Arona,16.870 €
+1988,Hyundai,i20,,79690,,85.0,Telde,6310
+1592,PEUGEOT,208,2019,103903,gasolina,90.0,S/C de Tenerife,5910
+1480,Hyundai,Tucson,2011,231.658 km,Híbrido,150.0,santa cruz,3680
+2198,Ford,Kuga,2019,104409,gasolina,150.0,La Laguna,13.420 €
+1178,Seat ,León,2008,244.781 km,GASOLINA,130.0,santa cruz,1.710 €
+2039,Kia,Ceed,2012,185044,Gasolina,120.0,Arona,3600
+1070,kia,Ceed,2012,191017,diesel,120.0,Arona,2750
+1995,Seat,Arona,2015,158935,diésel,110.0,Las Palmas de GC,4490
+1448,Renault,Clio,2024,33106,GASOLINA,90.0,La Laguna,11.920 €
+1919,Kia,Ceed,2017,113385,hibrido,120.0,las palmas,8700
+1678,Peugeot,308,2016,120769,gasolina,120.0,Arona,6.280 €
+1852,Ford,Focus,2025,7991,gasolina,115.0,Telde,20060
+1128,Peugeot,208,2019,113702,GASOLINA,90.0,Arona,6.010 €
+1987,Ford,Focus,2018,112562,gasolina,115.0,Telde,7620
+1908,Seat,Ibiza,2023,49 mil,gasolina,95.0,Arona,10.240 €
+1048,Hyundai,Tucson,2010,126879km,diésel,150.0,Telde,4280 eur
+1664,Toyota.,Yaris,2013,112097,GASOLINA,100.0,Santa Cruz,a consultar
+1667,Seat,Ibiza,2024,21691,GASOLINA,95.0,Telde,11920
+1087,toyota,Yaris,2017,118829,diésel,100.0,las palmas,6.180 €
+1407,Toyota.,Corolla,2021,79515,Gasolina,140.0,S/C de Tenerife,14730
+1558,Toyota,C-HR,2013,180.371 km,gasolina,125.0,La Laguna,5.260 €
+1609,Renault,Clio,2013,203860,Gasolina,90.0,Arona,2.500 €
+1377,SEAT,Ibiza,2023,35594,Gasolina,95.0,La Laguna,11.350 €
+2159,Kia,Ceed,2014,140.284 km,gasolina,120.0,Telde,5220
+2135,Ford,Kuga,2011,194371,diesel,150.0,La Laguna,4200
+1505,Ford,Fiesta,2012,190820km,Gasolina,85.0,S/C de Tenerife,2100
+2098,Kia,Sportage,2012,124587,Hibrido,150.0,Arona,7610
+1130,TOYOTA,Corolla,2009,140424,Hibrido,140.0,Santa Cruz,4500
+2148,Toyota,Corolla,2017,137055,diésel,140.0,Santa Cruz,7420
+2127,Volkswagen ,Tiguan,2015,169416,Diesel,150.0,La Laguna,7.820 €
+1270,Renault,Clio,2019,,gasolina,90.0,las palmas,7.440 €
+1327,Renault,Megane,2012,158983,GASOLINA,115.0,La Laguna,3790
+1806,Volkswagen,Tiguan,2018,126370,gasolina,150.0,La Laguna,10600
+1835,Volkswagen,Polo,2019,115347,diésel,95.0,Las Palmas,6310
+1529,Seat,León,2011,157675,Gasolina,130.0,S/C de Tenerife,3890
+1415,volkswagen,Polo,2010,200924km,gasolina,95.0,Las Palmas de GC,a consultar
+2049,Kia,Sportage,2013,134193,Hibrido,150.0,santa cruz,8.750 €
+1920,Kia,Ceed,2009,248609,Híbrido,120.0,Las Palmas,2.000 €
+1718,Renault,Clio,2019,108717,Diésel,90.0,La Laguna,5.450 €
+1774,Ford,Focus,2011,254667,GASOLINA,115.0,Las Palmas,2.360 €
+1155,Volkswagen,Tiguan,2018,138427,Diésel,150.0,Las Palmas de GC,12.480 €
+2184,Kia,Ceed,2023,22157,Gasolina,120.0,Santa Cruz,15580
+1471,Toyota,Yaris,2024,22374,gasolina,100.0,Telde,15.880 €
+1591,Kia,Sportage,2021,60162,gasolina,150.0,Telde,16.740 €
+1469,Ford,Fiesta,2021,55281,Eléctrico,85.0,La Laguna,9.670 €
+1560,Seat,Arona,2019,51.805 km,,110.0,las palmas,11350
+1030,RENAULT,Captur,2023,41262,Gasolina,100.0,La Laguna,13.960 €
+2179,Volkswagen,Polo,2025,3711,GASOLINA,95.0,Las Palmas,15320
+1909,Seat,León,2024,36186,GASOLINA,130.0,Arona,15.310 €
+1542,VOLKSWAGEN,Polo,2018,114044,Diésel,95.0,Telde,5700
+2022,Hyundai,i20,2025,12931,hibrido,85.0,Arona,13420
+1194,Toyota,Yaris,2015,94404,Híbrido,100.0,las palmas,5770 eur
+1574,toyota,Corolla,2009,,,140.0,La Laguna,3490
+2111,Ford ,Focus,2012,152858,Electrico,115.0,Arona,4650
+2164,Kia,Sportage,2019,110288,Hibrido,150.0,las palmas,"14.070,00 €"
+2034,Hyundai,i20,2022,46.670 km,Diesel,85.0,santa cruz,"7.930,00 €"
+2096,Volkswagen ,Tiguan,2012,155.057 km,Diesel,150.0,S/C de Tenerife,6190
+2029,Kia,Sportage,2009,154021,diesel,150.0,La Laguna,4.090 €
+1179,Seat.,Ibiza,2016,85858,diesel,95.0,santa cruz,4380 eur
+1683,Toyota ,C-HR,2021,55369km,hibrido,125.0,La Laguna,17.730 €
+1537,HYUNDAI,i20,2024,13198,Diesel,85.0,Telde,10640
+2097,Volkswagen,Polo,2022,37.763 km,hibrido,95.0,Arona,11.430 €
+1700,Ford,Focus,2009,154286,Diésel,115.0,las palmas,"2.360,00 €"
+1010,HYUNDAI,Tucson,2020,71846,GASOLINA,150.0,Las Palmas,15.900 €
+1354,Hyundai,Tucson,2013,202420,Gasolina,150.0,las palmas,5140
+1067,Hyundai,i20,2012,162896,GASOLINA,85.0,Arona,2580
+1638,Volkswagen,Tiguan,2022,59906,diesel,150.0,La Laguna,"22.120,00 €"
+1209,Ford,Focus,2016,169237,Gasolina,115.0,Las Palmas de GC,5750 eur
+1145,Ford,Kuga,2008,155484,Gasolina,150.0,Arona,4.210 €
+1578,PEUGEOT,308,2018,67811,Gasolina,120.0,Telde,a consultar
+1749,Hyundai,i20,2014,181692,gasolina,85.0,las palmas,3.020 €
+1081,Ford ,Fiesta,2015,122019,Gasolina,85.0,S/C de Tenerife,3.790 €
+2006,Ford,Kuga,2018,73442,GASOLINA,150.0,Las Palmas de GC,13.020 €
+1915,Peugeot,308,2014,181015,GASOLINA,120.0,La Laguna,4390 eur
+2032,Ford,Focus,2023,18344,Diesel,115.0,Arona,13.700 €
+1092,Peugeot ,308,2010,219.324 km,Gasolina,120.0,Santa Cruz,2.510 €
+1540,RENAULT,Captur,2018,101920,hibrido,100.0,Telde,9230
+1214,Volkswagen.,Polo,2018,106383,Diésel,95.0,Arona,5.900 €
+1359,Hyundai,i20,2016,80587,Diesel,85.0,Telde,4150
+1562,Peugeot,208,2018,102113,Hibrido,90.0,Arona,5690
+1889,Peugeot,308,2009,192806,Diesel,120.0,Las Palmas,2.340 €
+1195,Seat,Ibiza,2012,150631,diesel,95.0,Arona,2430
+1296,Kia,Ceed,2023,32323km,GASOLINA,120.0,S/C de Tenerife,15770
+2085,Ford,Focus,16,145428,GASOLINA,115.0,Arona,"5.890,00 €"
+1827,Renault,Clio,2012,144257,diésel,90.0,Las Palmas de GC,2410
+1445,Renault ,Captur,2008,263769,gasolina,100.0,S/C de Tenerife,1620
+1742,Renault,Clio,2008,153171,Diesel,90.0,La Laguna,1820
+1478,Renault,Megane,2010,160.466 km,GASOLINA,115.0,S/C de Tenerife,3230
+1360,Renault ,Captur,2024,6066,Gasolina,100.0,La Laguna,16.540 €
+1777,Peugeot,2008,2012,-1,diesel,110.0,La Laguna,2700
+1819,Renault.,Megane,2015,138969,Eléctrico,115.0,Telde,6.540 €
+1812,Seat,León,2012,128368km,Híbrido,130.0,Santa Cruz,5320
+2131,Renault,Clio,2010,204082,diésel,90.0,Santa Cruz,1620
+1429,Seat,Arona,2012,180250,diesel,110.0,Telde,3030
+1385,toyota,Corolla,2016,162378km,gasolina,140.0,Las Palmas,"5.940,00 €"
+1188,Volkswagen,Golf,2009,122764,GASOLINA,130.0,Telde,4.140 €
+1800,Volkswagen,Golf,2009,184.337 km,Diésel,130.0,Santa Cruz,3210
+1506,volkswagen,Golf,2022,49.337 km,gasolina,130.0,La Laguna,15160
+1086,Hyundai,i20,2014,173.830 km,Gasolina,85.0,Telde,"3.070,00 €"
+1034,Peugeot,2008,2021,53.322 km,gasolina,110.0,Telde,14.850 €
+1199,Toyota,C-HR,2013,111.784 km,Diésel,125.0,La Laguna,"6.330,00 €"
+2113,Kia,Ceed,2018,72065,diésel,120.0,La Laguna,"8.400,00 €"
+1941,Kia,Ceed,2021,43087,diésel,120.0,Arona,11990
+2118,Peugeot,308,2012,222066,gasolina,120.0,Arona,3.290 €
+1347,Peugeot,208,2023,34528,,90.0,Arona,11370
+1782,Hyundai,Tucson,2023,45462,hibrido,150.0,Santa Cruz,23830
+1400,Toyota,Yaris,2017,141831,hibrido,100.0,Las Palmas de GC,"5.800,00 €"
+1045,kia,Ceed,2014,157697,Gasolina,120.0,La Laguna,4750
+1933,Renault,Captur,2016,120501,Electrico,100.0,Telde,a consultar
+2047,Hyundai,i20,2014,168392,GASOLINA,85.0,Telde,3.240 €
+1843,Seat,León,2013,99490,Hibrido,130.0,Arona,5920
+1116,Renault,Captur,2020,,gasolina,100.0,Arona,9.470 €
+2191,HYUNDAI,i20,2008,256087km,gasolina,85.0,las palmas,1.500 €
+1539,Kia,Sportage,2024,27962,gasolina,150.0,Arona,25.840 €
+1000,RENAULT,Megane,2015,130839,gasolina,115.0,las palmas,5.300 €
+1719,Hyundai,i20,2022,30151,Diésel,85.0,Las Palmas,9.660 €
+1796,Hyundai,Tucson,2025,,gasolina,150.0,S/C de Tenerife,9999999
+1944,KIA,Ceed,2013,,diesel,120.0,Telde,3370
+1509,Renault,Megane,17,78569,Eléctrico,115.0,La Laguna,9.140 €
+1756,peugeot,2008,2023,38.042 km,Diésel,110.0,S/C de Tenerife,16.790 €
+1955,Hyundai,Tucson,2021,40.728 km,,150.0,Arona,20470
+1958,Renault,Captur,2018,68273,hibrido,100.0,La Laguna,8.420 €
+1101,Renault,Megane,2011,115.880 km,diésel,115.0,La Laguna,1
+1745,Ford,Fiesta,2023,55626,gasolina,85.0,La Laguna,9.300 €
+1039,Ford ,Fiesta,2025,2749,electrico,85.0,Las Palmas,15.380 €
+1528,Kia,Sportage,2010,201127,Hibrido,150.0,Las Palmas de GC,4420
+1431,Kia,Sportage,2016,160994,diésel,150.0,La Laguna,8870
+1016,Toyota,C-HR,11,112937,gasolina,125.0,Arona,4970
+1780,Ford,Focus,2024,26463,Diesel,115.0,Telde,17.260 €
+1427,Renault,Captur,2016,62833,gasolina,100.0,Telde,6.650 €
+1452,Peugeot,208,2023,21413,gasolina,90.0,Santa Cruz,12880
+1861,Volkswagen,Tiguan,2022,46758,diesel,150.0,Telde,20370
+1148,Toyota.,C-HR,2009,166858,Diesel,125.0,S/C de Tenerife,3650 eur
+1502,Seat.,Arona,2013,146048,diesel,110.0,La Laguna,3800
+1177,Ford,Fiesta,2021,67119km,Diésel,85.0,Arona,6.590 €
+1136,Kia,Sportage,2010,137.095 km,Gasolina,150.0,Telde,5.170 €
+1336,Hyundai ,i20,2016,101907,GASOLINA,85.0,santa cruz,4430 eur
+2053,Toyota,Corolla,2022,,gasolina,140.0,La Laguna,17590
+1118,Renault.,Megane,2013,162591,Diesel,115.0,santa cruz,4.120 €
+1626,Renault,Megane,2011,235608,GASOLINA,115.0,Arona,2490
+1761,Ford,Focus,2021,48641,Diésel,115.0,Telde,12.500 €
+2155,Peugeot,308,2016,,GASOLINA,120.0,Telde,6080
+1829,Volkswagen,Golf,2009,204 mil,hibrido,130.0,S/C de Tenerife,2720
+1064,RENAULT,Clio,2025,1500,,90.0,Arona,12.960 €
+1769,Renault,Captur,2018,85494,diésel,100.0,Las Palmas,7.030 €
+1646,Seat,Arona,2010,260500,gasolina,110.0,La Laguna,2000
+1112,Renault,Megane,2017,98019,,115.0,Telde,"8.200,00 €"
+1192,Peugeot ,308,2008,239523,Gasolina,120.0,Arona,1.840 €
+2005,HYUNDAI,i20,2024,8392,Diésel,85.0,La Laguna,10850
+1393,Toyota,Corolla,2023,42411,Gasolina,140.0,Santa Cruz,19350
+1679,Renault,Megane,2009,149875,Gasolina,115.0,Arona,3010
+1583,Ford,Fiesta,2023,15135,GASOLINA,85.0,Santa Cruz,10.470 €
+1755,Toyota,C-HR,2014,119593,Hibrido,125.0,La Laguna,7180
+2106,Peugeot,208,2021,56022,Diésel,90.0,S/C de Tenerife,8630
+1785,SEAT,Ibiza,2020,64036km,Gasolina,95.0,Telde,"8.570,00 €"
+1903,Kia,Sportage,2022,44217,Gasolina,150.0,Arona,20400
+1041,Hyundai,Tucson,2023,31051,GASOLINA,150.0,La Laguna,22920
+1211,Volkswagen,Golf,20,93907,Híbrido,130.0,Arona,13850
+1186,Hyundai,i20,2025,17416,Diésel,85.0,La Laguna,11.090 €
+1124,Hyundai,Tucson,2018,113550,GASOLINA,150.0,Las Palmas de GC,12.110 €
+1358,Volkswagen,Polo,2025,1.831 km,gasolina,95.0,Arona,16460 eur
+1152,peugeot,2008,2012,155669,GASOLINA,110.0,S/C de Tenerife,4610
+1297,Renault,Captur,2015,144.112 km,,100.0,las palmas,3980
+1935,renault,Megane,2018,115704,gasolina,115.0,Telde,8390
+2083,Hyundai,i20,2009,266527,Diésel,85.0,las palmas,1500
+1246,HYUNDAI,Tucson,2012,211875,GASOLINA,150.0,Arona,4230
+1005,Seat,León,2010,237216,hibrido,130.0,La Laguna,a consultar
+1602,Hyundai,Tucson,2010,250515,diésel,150.0,La Laguna,a consultar
+1046,Volkswagen,Tiguan,2012,186.659 km,electrico,150.0,Arona,6.810 €
+1781,Ford,Focus,2023,36186,Hibrido,115.0,Telde,17920
+1465,Volkswagen,Golf,10,213625,,130.0,Telde,2810
+1410,Hyundai,Tucson,2.012,,GASOLINA,150.0,Las Palmas de GC,"3.920,00 €"
+2028,Volkswagen,Golf,2010,208055,Hibrido,130.0,S/C de Tenerife,3380
+1720,HYUNDAI,Tucson,08,178131,,150.0,Santa Cruz,"3.320,00 €"
+1698,renault,Clio,2009,126676,GASOLINA,90.0,Telde,2.030 €
+2186,Toyota,Corolla,2012,223.197 km,Diesel,140.0,Santa Cruz,3.520 €
+1753,Toyota,Corolla,2022,56960,gasolina,140.0,santa cruz,15.780 €
+2056,Seat,Arona,2022,33533,,110.0,Las Palmas de GC,12700
+1914,KIA,Ceed,2020,61593,GASOLINA,120.0,Telde,10.270 €
+1420,Peugeot,208,2025,17368,diesel,90.0,Arona,12.650 €
+1982,Toyota,Corolla,2021,58674,Diesel,140.0,Las Palmas,13840
+1946,renault,Megane,2014,94940,gasolina,115.0,Arona,5.970 €
+2015,Renault,Megane,2025,1500,Diésel,115.0,Telde,"20.620,00 €"
+1457,Peugeot,208,2021,75016,Diésel,90.0,santa cruz,a consultar
+1111,Peugeot,2008,2020,97559,Hibrido,110.0,las palmas,13770
+1740,Peugeot,2008,2008,152151,GASOLINA,110.0,Arona,3120
+1189,Peugeot,2008,2024,35130,Híbrido,110.0,Arona,19.490 €
+1586,Peugeot ,2008,2016,64.824 km,Hibrido,110.0,Arona,9050
+1874,Hyundai,i20,2020,90993,Gasolina,85.0,La Laguna,6410
+1102,Ford,Fiesta,2019,90.248 km,gasolina,85.0,Telde,5830
+1454,Volkswagen,Golf,2012,207.213 km,,130.0,Telde,3620 eur
+1999,Toyota,Corolla,2025,13133,diésel,140.0,La Laguna,26.370 €
+1877,Seat,León,2022,50.199 km,gasolina,130.0,Telde,13980
+2196,Toyota,Yaris,2018,55409,Gasolina,100.0,La Laguna,8.590 €
+1733,KIA,Ceed,2024,40730,hibrido,120.0,Las Palmas de GC,19170
+1943,renault,Megane,2010,231321,Gasolina,115.0,La Laguna,2.340 €
+1612,Seat,Ibiza,2023,26421,Diesel,95.0,La Laguna,9930
+1709,Peugeot,208,2021,74774,Gasolina,90.0,Telde,8.490 €
+1068,KIA,Sportage,2017,140.366 km,gasolina,150.0,Arona,10900
+2101,Peugeot ,2008,2015,115676,diesel,110.0,La Laguna,6250
+2163,HYUNDAI,i20,2022,35204,gasolina,85.0,Telde,"8.710,00 €"
+2114,Ford,Kuga,2021,45686,,150.0,S/C de Tenerife,21.130 €
+1934,Renault,Clio,2016,,gasolina,90.0,La Laguna,4230
+1633,Renault,Megane,2015,187649,gasolina,115.0,Arona,4500
+1252,Volkswagen,Polo,2010,125552,Híbrido,95.0,las palmas,2960
+1847,Hyundai,Tucson,2015,130532,diesel,150.0,Telde,8340 eur
+1931,Volkswagen,Tiguan,2012,180 mil,gasolina,150.0,Arona,5460
+1134,Seat,Ibiza,2014,101.777 km,Gasolina,95.0,S/C de Tenerife,3580
+1613,Renault,Clio,2021,64354,gasolina,90.0,Las Palmas de GC,6.760 €
+1455,Renault,Captur,2025,12.931 km,GASOLINA,100.0,Telde,18.650 €
+1692,Volkswagen,Tiguan,2010,173.691 km,Hibrido,150.0,Las Palmas de GC,4860
+1127,Kia,Sportage,2023,50613,GASOLINA,150.0,Las Palmas de GC,23.570 €
+2128,Seat,Ibiza,2013,174391,Eléctrico,95.0,Las Palmas,3.170 €
+1816,Hyundai,i20,2025,7412,GASOLINA,85.0,Las Palmas,13780
+1237,Peugeot,2008,2014,184.600 km,,110.0,Arona,4940
+2122,Ford,Kuga,2023,45942,Diesel,150.0,La Laguna,20690
+1783,Volkswagen,Golf,2009,197817,diésel,130.0,Telde,"2.810,00 €"
+2182,Seat.,León,2022,62090,Diésel,130.0,las palmas,14230
+1838,Volkswagen ,Golf,2008,134704,hibrido,130.0,La Laguna,3330
+1055,Peugeot,2008,2014,184087,gasolina,110.0,La Laguna,5.080 €
+1972,KIA,Ceed,2015,158768,Diesel,120.0,Santa Cruz,4790
+1105,Seat,León,2014,166.808 km,,130.0,La Laguna,4.730 €
+1163,Toyota,Yaris,2009,213398,Diesel,100.0,Telde,1.780 €
+1971,Ford,Fiesta,2016,81123,Diésel,85.0,Santa Cruz,3730
+1857,Ford ,Focus,2015,107934,gasolina,115.0,Telde,a consultar
+2012,Hyundai,i20,2009,156968,gasolina,85.0,Las Palmas,1930 eur
+2004,Ford,Fiesta,2009,205627,GASOLINA,85.0,Arona,1.500 €
+2018,Volkswagen,Polo,2019,122615,hibrido,95.0,Las Palmas,7490
+1751,volkswagen,Polo,2023,51961,Gasolina,95.0,Las Palmas,10.110 €
+1518,Ford,Focus,2019,59530,Gasolina,115.0,La Laguna,10260
+2089,Seat,Arona,2021,60262,GASOLINA,110.0,las palmas,9650
+1837,Toyota,Yaris,2018,128.593 km,diésel,100.0,Santa Cruz,5.370 €
+2173,Toyota,Yaris,2020,45207,Eléctrico,100.0,Las Palmas de GC,10710 eur
+1555,TOYOTA,Yaris,2011,201745,GASOLINA,100.0,Arona,2180 eur
+1543,Hyundai,i20,2011,235903,Híbrido,85.0,Telde,1.780 €
+1898,Renault,Megane,2018,66169,diésel,115.0,Arona,9850
+1603,Peugeot,208,2021,-1,diesel,90.0,S/C de Tenerife,8220
+1688,Peugeot,308,2015,85134,Gasolina,120.0,Telde,"6.530,00 €"
+1928,Volkswagen.,Golf,2012,182441,diésel,130.0,Arona,3620
+1406,volkswagen,Polo,2.018,89510,Gasolina,95.0,Arona,6290
+2074,Renault,Megane,2013,210817,Diesel,115.0,Arona,3.280 €
+1978,Ford,Focus,2022,66197,GASOLINA,115.0,Las Palmas de GC,12790
+1446,HYUNDAI,i20,2017,90.846 km,Diesel,85.0,Arona,4720
+1479,ford,Kuga,2022,38278,gasolina,150.0,La Laguna,23.020 €
+1825,Volkswagen,Polo,2014,180293,Híbrido,95.0,Arona,3710 eur
+1689,Renault,Megane,2010,141232,GASOLINA,115.0,La Laguna,3.350 €
+2090,Seat,León,2018,102.437 km,,130.0,La Laguna,10.200 €
+1261,Renault,Clio,2021,49953,diésel,90.0,S/C de Tenerife,8080
+1294,Volkswagen,Tiguan,2024,16409,Diesel,150.0,La Laguna,"29.460,00 €"
+1606,Volkswagen,Golf,2010,248 mil,diésel,130.0,las palmas,2720
+1904,HYUNDAI,Tucson,2025,11614,Gasolina,150.0,La Laguna,28160
+1639,Renault,Megane,2013,183537,Hibrido,115.0,Las Palmas de GC,4960
+1884,Peugeot,2008,2023,28777,gasolina,110.0,Las Palmas de GC,"15.640,00 €"
+1159,Volkswagen ,Tiguan,2013,97287,Hibrido,150.0,La Laguna,9050
+2093,VOLKSWAGEN,Polo,2011,172149,Diésel,95.0,La Laguna,2300 eur
+1333,RENAULT,Megane,22,47247,Diésel,115.0,Las Palmas,13410
+1279,Volkswagen,Polo,2008,295.372 km,Diésel,95.0,La Laguna,"1.500,00 €"
+1135,Peugeot,2008,2010,267112,Híbrido,110.0,las palmas,"2.430,00 €"
+1533,Toyota,C-HR,2016,69.240 km,Hibrido,125.0,Telde,11.100 €
+2051,Toyota,Corolla,2017,83 mil,Diésel,140.0,La Laguna,10.140 €
+1014,peugeot,208,2015,161810,Gasolina,90.0,Telde,3580
+2117,Volkswagen,Golf,2015,154216,diesel,130.0,La Laguna,6.180 €
+1392,Seat.,León,2014,173298,GASOLINA,130.0,Arona,1
+1422,Kia,Ceed,2019,104931,Electrico,120.0,Arona,10090 eur
+2059,Peugeot ,308,2010,161694,GASOLINA,120.0,santa cruz,a consultar
+2194,HYUNDAI,Tucson,2017,107.690 km,GASOLINA,150.0,Arona,10690
+2070,Ford,Kuga,2013,123206,diésel,150.0,Telde,6.540 €
+1792,Volkswagen,Polo,2014,167069,Gasolina,95.0,Arona,"3.590,00 €"
+1236,Volkswagen,Golf,2013,94756,Diésel,130.0,Arona,5810
+1466,FORD,Kuga,2013,201504,diésel,150.0,Arona,5230
+1291,Volkswagen,Golf,24,31300,Gasolina,130.0,La Laguna,20590
+1233,Peugeot,2008,2015,159854,diesel,110.0,La Laguna,5.660 €
+1911,Renault ,Clio,2015,138889,GASOLINA,90.0,La Laguna,3.380 €
+1409,peugeot,2008,2021,84.976 km,Diesel,110.0,Telde,10.270 €
+1537,HYUNDAI,i20,2024,13198,Diesel,85.0,Telde,10640
+1319,Peugeot,308,2011,209.087 km,diesel,120.0,S/C de Tenerife,2.870 €
+1960,Volkswagen,Golf,2025,10907,Gasolina,130.0,Las Palmas de GC,20730
+1870,Volkswagen,Golf,2019,111749,gasolina,130.0,Las Palmas de GC,10040
+1681,Toyota,C-HR,2022,40760,electrico,125.0,La Laguna,22.030 €
+1721,Peugeot,308,2018,88085,gasolina,120.0,Arona,9.190 €
+1682,Hyundai,i20,2013,207.573 km,Híbrido,85.0,santa cruz,2880 eur
+1059,PEUGEOT,208,2015,162637,GASOLINA,90.0,La Laguna,4030
+1969,Ford,Kuga,2009,,Diésel,150.0,Santa Cruz,4.300 €
+1664,Toyota.,Yaris,2013,112097,GASOLINA,100.0,Santa Cruz,a consultar
+1461,Volkswagen,Tiguan,2025,14.018 km,gasolina,150.0,Arona,32320
+2081,Toyota,Yaris,2024,14474,gasolina,100.0,santa cruz,13.690 €
+1534,Volkswagen,Tiguan,20,40947,Diesel,150.0,La Laguna,17.280 €
+1628,Renault,Clio,2012,131542,Gasolina,90.0,S/C de Tenerife,2920
+2027,Renault,Captur,2016,167709,Gasolina,100.0,La Laguna,a consultar
+1673,Seat,Ibiza,2021,50 mil,gasolina,95.0,Telde,7800
+2088,Seat,León,2010,224.423 km,Diésel,130.0,santa cruz,2.450 €
+1401,Volkswagen,Polo,2010,264395,gasolina,95.0,Arona,1.600 €
+2063,FORD,Focus,2009,191822,gasolina,115.0,La Laguna,2530
+1371,PEUGEOT,308,2023,53518,Diesel,120.0,La Laguna,"15.670,00 €"
+1399,Renault,Clio,2012,97511,Gasolina,90.0,La Laguna,"2.990,00 €"
+1649,Hyundai,Tucson,2024,28907,Diésel,150.0,Santa Cruz,24.650 €
+1950,Renault ,Clio,2008,298 mil,GASOLINA,90.0,Santa Cruz,1.500 €
+1895,Hyundai,i20,2015,127142,Gasolina,85.0,S/C de Tenerife,3.390 €
+1037,Hyundai,i20,2021,34241,GASOLINA,85.0,Arona,8910
+1589,Toyota,Yaris,2022,,GASOLINA,100.0,La Laguna,11140
+1715,Volkswagen,Polo,,2034,gasolina,95.0,las palmas,12.880 €
+1106,ford,Kuga,2012,97811,Diesel,150.0,La Laguna,7.100 €
+1322,Seat,Ibiza,2017,69157,Hibrido,95.0,La Laguna,5820
+1351,Volkswagen,Golf,2021,73997,Diésel,130.0,santa cruz,12390
+1356,Toyota,Yaris,2017,164.633 km,Diésel,100.0,Arona,4.690 €
+1251,Volkswagen,Golf,2020,53264,Diesel,130.0,Santa Cruz,12640
+1750,Peugeot,2008,2008,299917,GASOLINA,110.0,Las Palmas de GC,1.540 €
+1390,Ford,Focus,2009,153.805 km,Gasolina,115.0,Telde,3030
+1443,KIA,Ceed,2017,126345,gasolina,120.0,La Laguna,6960
+1842,Renault,Clio,2023,22706,diésel,90.0,La Laguna,8.670 €
+1215,Ford,Kuga,2016,93341,GASOLINA,150.0,Las Palmas,"10.700,00 €"
+1338,Peugeot,2008,2011,146578,gasolina,110.0,santa cruz,3570
+1056,Volkswagen,Polo,2025,7345,gasolina,95.0,Telde,14.260 €
+1632,TOYOTA,C-HR,2012,209459,diésel,125.0,Las Palmas de GC,3920
+1181,Toyota,C-HR,2019,79455,Diesel,125.0,La Laguna,14480
+1053,Volkswagen,Tiguan,2023,49971km,diesel,150.0,Arona,22.400 €
+1697,Renault,Captur,2013,159.140 km,diésel,100.0,S/C de Tenerife,"3.580,00 €"
+2158,Ford,Fiesta,,,hibrido,85.0,La Laguna,5630
+1346,volkswagen,Polo,2012,169297,GASOLINA,95.0,Arona,3.080 €
+1231,SEAT,Ibiza,2008,162.348 km,,95.0,Las Palmas,"1.730,00 €"
+1151,hyundai,Tucson,2013,132566,Híbrido,150.0,santa cruz,6840
+1500,Toyota,Yaris,2018,73331,Híbrido,100.0,Arona,8.470 €
+2170,Ford,Kuga,2022,28139,Diesel,150.0,Las Palmas de GC,"19.920,00 €"
+1230,hyundai,Tucson,2017,96.156 km,hibrido,150.0,Arona,12.810 €
+1524,Peugeot ,208,2011,189684,gasolina,90.0,La Laguna,2540
+1845,Renault ,Captur,2019,100540,Eléctrico,100.0,La Laguna,9.500 €
+1021,Seat,Arona,2017,70869,GASOLINA,110.0,Santa Cruz,6540
+1405,Kia.,Sportage,2011,256059,gasolina,150.0,La Laguna,3.200 €
+1257,Volkswagen,Polo,2008,143980,Gasolina,95.0,Arona,a consultar
+1388,Ford,Fiesta,,100067,gasolina,85.0,Telde,3120
+1525,FORD,Fiesta,2025,,GASOLINA,85.0,S/C de Tenerife,11.980 €
+1185,Peugeot,2008,2010,124848,gasolina,110.0,santa cruz,3710
+1043,Renault,Clio,2022,43327,Diésel,90.0,La Laguna,8.550 €
+1473,Peugeot.,208,2017,144225,gasolina,90.0,La Laguna,a consultar
+2199,Volkswagen,Polo,2011,158214,GASOLINA,95.0,Telde,2530
+1142,TOYOTA,Yaris,11,189668,GASOLINA,100.0,Arona,2410
+1856,Hyundai,Tucson,2021,75995,Gasolina,150.0,santa cruz,"15.500,00 €"
+2105,Volkswagen,Golf,2016,113130,diésel,130.0,Arona,6.890 €
+1811,Hyundai,i20,2015,,diesel,85.0,santa cruz,3.510 €
+1758,Hyundai,Tucson,12,104306,GASOLINA,150.0,Las Palmas,6290
+1747,Ford,Kuga,2018,102151,diésel,150.0,La Laguna,12.420 €
+1886,Ford,Kuga,2017,81905,gasolina,150.0,Las Palmas de GC,12.350 €
+1329,Seat,Arona,2015,159238,Híbrido,110.0,las palmas,4.660 €
+1512,KIA,Sportage,2017,-1,gasolina,150.0,Telde,10.400 €
+2008,Peugeot,2008,2019,73133,GASOLINA,110.0,Las Palmas de GC,10.200 €
+2119,hyundai,i20,,112.660 km,GASOLINA,85.0,santa cruz,5.170 €
+1579,PEUGEOT,208,2016,115709,Gasolina,90.0,Santa Cruz,"4.700,00 €"
+1831,Kia,Ceed,2009,212396,Diesel,120.0,Las Palmas de GC,2270
+1683,Toyota ,C-HR,2021,55369km,hibrido,125.0,La Laguna,17.730 €
+2077,Kia,Ceed,2017,112822,gasolina,120.0,Telde,8.100 €
+1855,Toyota,C-HR,2015,158.127 km,diesel,125.0,Las Palmas,6530
+1902,Kia,Ceed,2025,13480,gasolina,120.0,La Laguna,19.000 €
+2130,Volkswagen,Tiguan,2009,183087,Diesel,150.0,las palmas,3790
+1942,Peugeot,2008,2013,192065,Diesel,110.0,La Laguna,4.410 €
+1832,Hyundai ,Tucson,2019,59158,Electrico,150.0,S/C de Tenerife,"16.470,00 €"
+1986,TOYOTA,Corolla,2024,21360,diesel,140.0,La Laguna,"20.600,00 €"
+1726,Ford,Focus,2014,179057,gasolina,115.0,Telde,4150 eur
+2116,Volkswagen,Tiguan,2010,135972,diesel,150.0,Las Palmas de GC,"5.260,00 €"
+1643,Renault,Captur,2011,205268,Gasolina,100.0,Santa Cruz,2.670 €
+2092,Toyota,C-HR,2014,168.687 km,Gasolina,125.0,Telde,6180
+1283,VW,Golf,2022,66906,gasolina,130.0,Telde,14.300 €
+1645,kia,Sportage,2010,220890km,Gasolina,150.0,Santa Cruz,3.560 €
+1417,Hyundai,i20,2024,13925km,GASOLINA,85.0,Las Palmas de GC,11.960 €
+2054,kia,Ceed,2012,173551,gasolina,120.0,santa cruz,3.790 €
+1642,Seat,Arona,2020,90067,Diésel,110.0,Telde,8.670 €
+1778,seat,León,2017,145427,Diesel,130.0,Telde,6500
+1114,Toyota,Corolla,2018,77679,diésel,140.0,Arona,10850
+1853,hyundai,Tucson,2014,169 mil,Híbrido,150.0,La Laguna,7.040 €
+1289,Volkswagen ,Tiguan,2014,134.804 km,gasolina,150.0,S/C de Tenerife,"9.010,00 €"
+2112,TOYOTA,Yaris,2008,264.463 km,Gasolina,100.0,Las Palmas de GC,1.500 €
+2123,Hyundai,Tucson,2022,57624,Hibrido,150.0,Telde,20510
+1271,Hyundai,i20,2019,54208,GASOLINA,85.0,S/C de Tenerife,6070
+1752,Toyota,Yaris,2009,210153,gasolina,100.0,Santa Cruz,2100
+1313,Seat,Ibiza,2010,133499,hibrido,95.0,Arona,2.560 €
+1729,Kia,Sportage,2017,98885,gasolina,150.0,Telde,11.530 €
+1284,Toyota,Corolla,2016,96778,GASOLINA,140.0,La Laguna,9.160 €
+1129,Seat,Ibiza,2020,80652,gasolina,95.0,La Laguna,6.860 €
+1395,Toyota,C-HR,2011,192.074 km,Diesel,125.0,santa cruz,4230
+2133,HYUNDAI,i20,2015,147461,Gasolina,85.0,Santa Cruz,3510
+1326,Toyota,Corolla,2013,128913km,diésel,140.0,Las Palmas de GC,5.520 €
+1981,Peugeot,2008,2017,139386,hibrido,110.0,Telde,9150 eur
+1722,Volkswagen,Polo,2010,249855,diésel,95.0,Arona,1510
+1947,Seat,Ibiza,2015,97.013 km,gasolina,95.0,Arona,3.890 €
+2142,Renault,Megane,2013,127811,hibrido,115.0,Telde,5370
+1890,Ford,Fiesta,2025,12156km,gasolina,85.0,S/C de Tenerife,11490
+1040,Renault,Megane,2023,42.145 km,Diésel,115.0,Santa Cruz,15.200 €
+1306,Peugeot,2008,2018,91625,Gasolina,110.0,La Laguna,9670
+2078,Kia,Ceed,2021,71846,gasolina,120.0,Telde,13.030 €
+1373,Hyundai,Tucson,2020,96751km,Hibrido,150.0,Las Palmas,15410
+1716,seat,León,2015,121810,diésel,130.0,S/C de Tenerife,5.720 €
+1951,HYUNDAI,Tucson,2022,42925,gasolina,150.0,santa cruz,20060
+1495,Volkswagen,Polo,2017,137.347 km,Gasolina,95.0,La Laguna,a consultar
+1272,Volkswagen,Polo,2009,198.369 km,Gasolina,95.0,S/C de Tenerife,"1.900,00 €"
+1008,Peugeot,208,2018,82.865 km,GASOLINA,90.0,La Laguna,6.210 €
+1892,Hyundai,i20,2011,130641,GASOLINA,85.0,La Laguna,"2.440,00 €"
+1786,hyundai,Tucson,2022,44.153 km,Gasolina,150.0,las palmas,18810
+1652,Seat,Arona,2022,64489,Híbrido,110.0,La Laguna,"11.560,00 €"
+2000,SEAT,León,2010,,diesel,130.0,La Laguna,2.350 €
+1397,Seat.,Arona,2009,195553,Gasolina,110.0,La Laguna,2120
+1414,Volkswagen,Golf,2018,113733,Diésel,130.0,Arona,8.210 €
+1901,Hyundai,i20,2012,158782,GASOLINA,85.0,Arona,2650
+1641,Hyundai,i20,2019,115328,Diesel,85.0,Telde,5230 eur
+1973,Kia ,Ceed,2025,12731,gasolina,120.0,Arona,18990
+1504,Ford,Fiesta,2.009,118868,gasolina,85.0,Telde,2040
+1724,Peugeot ,308,2013,95.268 km,gasolina,120.0,Las Palmas de GC,5490
+1532,Toyota,Yaris,2014,85800,GASOLINA,100.0,Arona,5260
+2033,Renault,Megane,2013,217405,gasolina,115.0,Telde,3.470 €
+1784,Hyundai,i20,2017,150303,Hibrido,85.0,S/C de Tenerife,4.620 €
+1548,Renault,Megane,2019,64587,GASOLINA,115.0,santa cruz,11100
+2064,Ford,Fiesta,2016,91.296 km,diésel,85.0,Telde,4640
+1491,Kia,Ceed,2018,56652,Gasolina,120.0,La Laguna,"8.690,00 €"
+1079,Kia.,Ceed,2014,149447,diesel,120.0,Telde,4830
+1841,HYUNDAI,i20,2013,106480,Diesel,85.0,Telde,3.160 €
+1342,Toyota,C-HR,2022,46.907 km,diesel,125.0,las palmas,15.980 €
+1568,Peugeot,2008,2009,163949,GASOLINA,110.0,las palmas,2920
+1049,Renault,Captur,2017,115798,Gasolina,100.0,las palmas,7210
+1250,Hyundai,i20,2014,142569,Diesel,85.0,las palmas,2790
+2038,Toyota,Corolla,2023,21980,Diesel,140.0,La Laguna,20890
+1020,RENAULT,Megane,2015,125340,diesel,115.0,santa cruz,6.080 €
+1569,Volkswagen,Tiguan,2022,43 mil,diesel,150.0,santa cruz,18.190 €
+1868,Hyundai,Tucson,09,241.522 km,,150.0,La Laguna,2.950 €
+1135,Peugeot,2008,2010,267112,Híbrido,110.0,las palmas,"2.430,00 €"
+1536,Volkswagen,Golf,2014,153.571 km,Hibrido,130.0,Las Palmas,6.510 €
+1567,Hyundai,Tucson,2013,149216,Electrico,150.0,Arona,8490
+1653,Toyota,Yaris,2018,128.836 km,diésel,100.0,Arona,5460
+1696,volkswagen,Polo,2012,230202,Diesel,95.0,Las Palmas,2330
+2060,Hyundai ,Tucson,2014,153934,GASOLINA,150.0,Telde,7.100 €
+1481,Peugeot,2008,2012,170312,Diésel,110.0,Telde,3700
+1033,Toyota,Corolla,2020,73145,Diesel,140.0,Arona,12130 eur
+1962,Peugeot,308,2022,53.231 km,Diesel,120.0,Arona,14.480 €
+1382,Seat,León,2015,137138,Gasolina,130.0,Arona,6.370 €
+1025,Renault,Captur,2.016,87639,Gasolina,100.0,Arona,6.120 €
+1047,Hyundai,i20,2021,80.147 km,Diesel,85.0,santa cruz,7300
+2055,Toyota,Yaris,2015,103.232 km,Diesel,100.0,las palmas,"4.060,00 €"
+1174,Renault,Captur,2019,60203,hibrido,100.0,Las Palmas,10450
+1029,SEAT,Ibiza,2020,43692,Gasolina,95.0,Santa Cruz,8370
+1571,Peugeot,308,2020,41175,diésel,120.0,Santa Cruz,11030
+1153,Peugeot,308,2014,115094,diésel,120.0,santa cruz,5.170 €
+1790,Hyundai,i20,2021,73094,Hibrido,85.0,Telde,8.650 €
+2040,Hyundai,i20,2008,185515,Hibrido,85.0,S/C de Tenerife,1640 eur
+2045,Volkswagen,Golf,,95759,diesel,130.0,La Laguna,a consultar
+1161,Toyota,Yaris,2008,221803,diesel,100.0,Las Palmas de GC,1520
+1244,Seat,Ibiza,2022,43806,gasolina,95.0,Arona,10160
+1510,Hyundai,i20,2014,161.449 km,Gasolina,85.0,Telde,3590
+1158,Peugeot,308,2024,21266,GASOLINA,120.0,santa cruz,18.790 €
+1530,Hyundai,i20,2018,111679,gasolina,85.0,las palmas,5070
+2006,Ford,Kuga,2018,73442,GASOLINA,150.0,Las Palmas de GC,13.020 €
+1501,TOYOTA,Corolla,2019,69650,Diésel,140.0,Arona,11850
+1432,Renault,Captur,2021,77979,,100.0,S/C de Tenerife,11220
+2014,Hyundai,i20,2018,127232,gasolina,85.0,las palmas,5480
+2125,Volkswagen,Tiguan,2014,-1,gasolina,150.0,Las Palmas de GC,9.040 €
+1332,volkswagen,Polo,2020,,gasolina,95.0,Santa Cruz,7890
+1239,Hyundai,Tucson,2011,109691,diésel,150.0,Arona,5.230 €
+1779,Toyota ,Yaris,2011,248878,Híbrido,100.0,Las Palmas,1980
+1366,PEUGEOT,208,2025,,gasolina,90.0,Las Palmas de GC,13820
+2154,Toyota,Corolla,2019,79682km,,140.0,Telde,10.180 €
+1054,Renault,Captur,2024,22379,,100.0,Las Palmas,15.420 €
+1584,Peugeot,208,2021,,Gasolina,90.0,La Laguna,8900
+1766,Hyundai,i20,2024,26171,gasolina,85.0,La Laguna,10.190 €
+1680,Peugeot,2008,2025,14433,electrico,110.0,S/C de Tenerife,25.950 €
+1948,HYUNDAI,i20,2013,99488,Gasolina,85.0,Arona,3230
+1430,Toyota,Corolla,2011,,,140.0,Arona,4.690 €
+1815,Volkswagen,Tiguan,2011,123207,Diesel,150.0,Santa Cruz,6510
+1024,Kia,Ceed,2016,73617,gasolina,120.0,La Laguna,8330
+1298,Kia,Sportage,2013,153051,Híbrido,150.0,La Laguna,7.910 €
+1556,Ford,Kuga,2019,78682,Gasolina,150.0,Telde,14.170 €
+1575,Hyundai,Tucson,2023,19355,Diésel,150.0,Telde,20780
+1018,Ford,Kuga,2013,212.131 km,gasolina,150.0,La Laguna,5.400 €
+1572,seat,Arona,2020,98927,Gasolina,110.0,santa cruz,8.650 €
+1254,Hyundai,Tucson,2016,132461,Gasolina,150.0,S/C de Tenerife,7680
+1225,Renault,Megane,2019,76276,GASOLINA,115.0,Las Palmas,10990
+1599,Kia,Ceed,2016,93605,,120.0,S/C de Tenerife,"6.610,00 €"
+1921,Ford,Fiesta,2016,125345,diesel,85.0,La Laguna,3490
+1419,Renault,Megane,2022,39824,gasolina,115.0,Telde,14.110 €
+1896,TOYOTA,Corolla,2012,152164,,140.0,Arona,3660
+2062,Peugeot,308,2018,97065,,120.0,La Laguna,9230
+1222,Ford,Focus,2025,23971,diesel,115.0,La Laguna,21.140 €
+1990,PEUGEOT,308,2017,92145,diésel,120.0,Arona,8040
+1424,Ford,Focus,2016,116273,GASOLINA,115.0,Las Palmas de GC,"6.640,00 €"
+1218,Hyundai,Tucson,2022,61577,hibrido,150.0,Las Palmas,22640
+1307,VOLKSWAGEN,Polo,2021,51865,Diesel,95.0,Arona,9.870 €
+2103,Toyota,Corolla,2009,193227,gasolina,140.0,S/C de Tenerife,"3.110,00 €"
+2138,toyota,C-HR,2010,218970,Gasolina,125.0,Arona,3.570 €
+1171,Hyundai,Tucson,2025,4508,Diesel,150.0,S/C de Tenerife,27870 eur
+1442,Renault,Megane,2025,5689,Hibrido,115.0,Arona,24000
+1932,Renault,Captur,2020,79901,hibrido,100.0,Arona,9620
+1705,Peugeot,308,2019,106053,Gasolina,120.0,S/C de Tenerife,9160
+1770,HYUNDAI,Tucson,2012,128934,Eléctrico,150.0,santa cruz,7.310 €
+1286,Hyundai,i20,2024,35830,,85.0,Arona,11760
+1066,Toyota,Corolla,2015,80465,Hibrido,140.0,Arona,9999999
+1453,Peugeot,2008,2010,242856,gasolina,110.0,Arona,2.270 €
+1190,Ford,Kuga,2013,143237,GASOLINA,150.0,Telde,7.870 €
+1071,Renault,Captur,2010,124073,GASOLINA,100.0,S/C de Tenerife,3.440 €
+1930,Ford,Fiesta,2019,72.896 km,Diesel,85.0,Arona,6430
+1412,renault,Megane,2011,240143,diesel,115.0,las palmas,2350
+1082,Renault,Clio,2009,218.597 km,Electrico,90.0,La Laguna,1610
+1156,Seat,Ibiza,2010,124958,Electrico,95.0,santa cruz,2890
+2190,Hyundai,i20,2020,68463,diesel,85.0,Telde,6460
+1015,Volkswagen.,Golf,2020,99815,Hibrido,130.0,Las Palmas de GC,13910
+1801,FORD,Focus,2008,147246,Gasolina,115.0,Santa Cruz,"2.690,00 €"
+1265,Kia,Sportage,2020,96023,hibrido,150.0,Telde,17.730 €
+1535,Ford,Focus,2014,182513,GASOLINA,115.0,La Laguna,3950
+1867,Volkswagen,Golf,2.015,178828,diesel,130.0,Telde,"5.220,00 €"
+1451,Toyota,Corolla,2012,158203,GASOLINA,140.0,La Laguna,4.420 €
+1936,Seat,León,2016,148347,,130.0,Telde,7.060 €
+1863,seat,Arona,2021,78485,Híbrido,110.0,Santa Cruz,"12.150,00 €"
+1404,Hyundai.,Tucson,2009,178979,gasolina,150.0,Las Palmas,3.430 €
+2147,Kia,Ceed,2023,25727,Hibrido,120.0,Telde,17530
+1490,Seat.,Arona,2011,,Gasolina,110.0,S/C de Tenerife,3.100 €
+2110,Toyota ,Yaris,2022,47.341 km,gasolina,100.0,La Laguna,11590
+1541,Toyota.,Corolla,2017,108.163 km,Diesel,140.0,Las Palmas de GC,"9.090,00 €"
+1693,Peugeot ,2008,2014,112794,,110.0,Las Palmas,6830
+1739,Toyota,C-HR,,289.475 km,hibrido,125.0,las palmas,2270
+1364,Seat,Arona,2019,69286,gasolina,110.0,S/C de Tenerife,8.200 €
+1629,Kia,Ceed,2024,25507,Diesel,120.0,Telde,15810
+1459,Kia,Ceed,2025,,Diésel,120.0,Telde,18400
+1104,Hyundai,Tucson,2025,11398,Diésel,150.0,Las Palmas de GC,28.800 €
+1833,Volkswagen,Polo,2019,121936,GASOLINA,95.0,Las Palmas,6.550 €
+1268,Toyota,Corolla,2011,150992,gasolina,140.0,Santa Cruz,3870
+1608,Renault ,Megane,2010,232.062 km,diésel,115.0,La Laguna,2.540 €
+2152,peugeot,308,23,42595,Gasolina,120.0,las palmas,17730
+2013,Hyundai,Tucson,2020,49 mil,Gasolina,150.0,La Laguna,15.820 €
+2082,Ford,Fiesta,2009,176304,Gasolina,85.0,S/C de Tenerife,"1.800,00 €"
+1661,Hyundai,i20,2016,159495,gasolina,85.0,Telde,"3.940,00 €"
+1241,RENAULT,Captur,2018,86.547 km,gasolina,100.0,santa cruz,"7.470,00 €"
+1430,Toyota,Corolla,2011,,,140.0,Arona,4.690 €
+1814,Volkswagen,Golf,2022,48888,electrico,130.0,santa cruz,19630
+2160,Renault,Captur,2017,145307,gasolina,100.0,La Laguna,5.790 €
+1203,Hyundai.,i20,2012,101891km,gasolina,85.0,santa cruz,2.940 €
+2083,Hyundai,i20,2009,266527,Diésel,85.0,las palmas,1500
+1595,Seat,León,2016,164419,Hibrido,130.0,Las Palmas de GC,5640
+1630,Renault,Megane,2.018,92430km,Gasolina,115.0,La Laguna,9000
+1096,Volkswagen,Tiguan,2012,207218,GASOLINA,150.0,S/C de Tenerife,5.520 €
+1467,Toyota,Corolla,2016,157425,hibrido,140.0,Las Palmas de GC,7760
+1922,renault,Clio,2024,17236,diésel,90.0,Telde,"11.510,00 €"
+1492,Hyundai,i20,2012,167766km,Diesel,,Las Palmas,2370 eur
+1166,Kia,Sportage,2023,22656,gasolina,150.0,Las Palmas de GC,"23.890,00 €"
+1963,Volkswagen,Golf,2021,33968,,130.0,Arona,15060
+1701,KIA,Ceed,2017,73.516 km,Electrico,120.0,La Laguna,9970
+1694,Toyota.,Corolla,2013,,Diésel,140.0,Arona,4.890 €
+1009,Toyota,Yaris,2015,95.805 km,Diesel,100.0,santa cruz,4.920 €
+1604,Toyota,C-HR,2009,220817,gasolina,125.0,Telde,3050
+1878,toyota,Yaris,2012,235443,Gasolina,100.0,La Laguna,2080
+1315,Kia,Sportage,2009,233.555 km,Electrico,150.0,La Laguna,3.830 €
+1773,Seat,Arona,2015,186720,Gasolina,110.0,La Laguna,4280
+1361,Peugeot,208,2016,152.772 km,Gasolina,90.0,La Laguna,3.600 €
+1138,Volkswagen,Polo,2017,89228,,95.0,Telde,5.880 €
+1823,Seat,Arona,2013,221733,Diésel,110.0,Santa Cruz,2790
+1276,Seat,Arona,2021,76078,Gasolina,110.0,La Laguna,9.820 €
+1384,Hyundai,i20,2021,54.965 km,diésel,85.0,Las Palmas,7560
+1568,Peugeot,2008,2009,163949,GASOLINA,110.0,las palmas,2920
+2107,VOLKSWAGEN,Tiguan,2016,136384,diesel,150.0,Santa Cruz,9.410 €
+1772,Renault,Megane,2012,189705,Gasolina,115.0,Las Palmas,"3.630,00 €"
+1088,Peugeot,208,2022,51.768 km,diésel,90.0,La Laguna,9350
+1090,Ford.,Focus,2020,98315,GASOLINA,115.0,Telde,10810
+1765,Volkswagen,Golf,2011,133409,Hibrido,130.0,Telde,4.580 €
+1280,Renault,Captur,2019,111720,diésel,100.0,Las Palmas de GC,7390
+1882,Peugeot,2008,2025,10.456 km,gasolina,110.0,La Laguna,21660
+1651,HYUNDAI,i20,2020,38.816 km,Diésel,85.0,Las Palmas de GC,7620 eur
+1831,Kia,Ceed,2009,212396,Diesel,120.0,Las Palmas de GC,2270
+1460,Ford,Focus,2012,179399,Gasolina,115.0,las palmas,3.830 €
+1938,Renault,Captur,2018,129.763 km,hibrido,100.0,Arona,"7.370,00 €"
+1799,Seat,Arona,2025,2985,GASOLINA,110.0,Telde,19530 eur
+1300,Peugeot,308,2016,153783,Diésel,120.0,Arona,5.860 €
+1913,Kia,Sportage,2024,29092,GASOLINA,150.0,Santa Cruz,26030
+1202,Kia,Sportage,2012,120.185 km,Gasolina,150.0,La Laguna,6.060 €
+1402,Hyundai,i20,25,15501,GASOLINA,85.0,Santa Cruz,12200
+1340,Renault,Captur,2022,-1,Gasolina,100.0,La Laguna,11.410 €
+1365,Toyota,Corolla,2020,88 mil,Híbrido,140.0,S/C de Tenerife,13.920 €
+1023,Hyundai,i20,2009,203869,diésel,85.0,Telde,"1.550,00 €"
+1345,HYUNDAI,i20,2019,111903,GASOLINA,85.0,La Laguna,5520
+1676,Volkswagen,Tiguan,2014,155755,diesel,150.0,las palmas,"7.430,00 €"
+1283,VW,Golf,2022,66906,gasolina,130.0,Telde,14.300 €
+1334,Kia ,Sportage,2008,139892,gasolina,150.0,Telde,4300
+1310,Kia,Sportage,2008,299.785 km,Hibrido,150.0,S/C de Tenerife,2.350 €
+2183,Ford,Focus,2016,103099,gasolina,115.0,Telde,7500
+1640,Ford,Focus,2021,32125,diesel,115.0,Arona,12830
+1353,Peugeot ,2008,2020,98883km,hibrido,110.0,Telde,10460
+1735,PEUGEOT,208,2011,164693,Diésel,90.0,Las Palmas,2.050 €
+2146,Hyundai,i20,2018,95644,diésel,85.0,Santa Cruz,4740
+1240,Seat,Ibiza,2008,208736km,Diesel,95.0,Las Palmas,1500
+1666,Hyundai,i20,2011,159368,Gasolina,85.0,Telde,2190
+1318,FORD,Focus,2017,85719,Gasolina,115.0,S/C de Tenerife,9000 eur
+2067,Ford,Fiesta,2011,217793,gasolina,85.0,Telde,1.810 €
+1262,Renault,Clio,2019,66869,GASOLINA,90.0,Santa Cruz,6.170 €
+1098,Kia,Sportage,2010,224687,Diesel,150.0,Telde,3420
+1167,RENAULT,Captur,2020,63737,GASOLINA,100.0,Arona,9290
+1496,Peugeot,308,2019,85.754 km,diésel,120.0,las palmas,9.390 €
+1725,Renault,Clio,2015,110.315 km,Gasolina,90.0,S/C de Tenerife,4.280 €
+1275,Hyundai,Tucson,2023,23556,GASOLINA,150.0,las palmas,26990
+1089,Toyota,Corolla,2023,50945,,140.0,La Laguna,18380
+1714,Toyota,Corolla,2018,66492,electrico,140.0,La Laguna,13.010 €
+1515,Ford,Fiesta,2021,36468,diesel,85.0,Las Palmas,"7.760,00 €"
+2037,Ford ,Fiesta,2011,128267,diesel,85.0,S/C de Tenerife,2.250 €
+1331,Renault,Captur,2021,83.317 km,Gasolina,100.0,Arona,a consultar
+2099,Hyundai,Tucson,2010,130949,diesel,150.0,Telde,4.840 €
+1433,Toyota,Corolla,2009,282728,diesel,140.0,Las Palmas,2080
+2192,Peugeot,208,2011,240.655 km,Gasolina,90.0,S/C de Tenerife,1690
+2064,Ford,Fiesta,2016,91.296 km,diésel,85.0,Telde,4640
+1486,Volkswagen,Golf,2011,194.742 km,GASOLINA,130.0,Telde,3.930 €
+1658,Renault,Clio,2014,190551,Gasolina,90.0,La Laguna,2.740 €
+1965,Volkswagen,Tiguan,2008,210389,Diesel,150.0,La Laguna,3.560 €
+1531,Renault,Clio,2016,78709,Híbrido,90.0,La Laguna,5.420 €
+1840,Seat,Ibiza,2010,135613km,Gasolina,95.0,S/C de Tenerife,2410
+2073,Volkswagen ,Golf,2014,133376,Gasolina,130.0,La Laguna,5.850 €
+1260,Volkswagen,Tiguan,2011,249516,diesel,150.0,La Laguna,3360 eur
+1810,Peugeot,208,2011,149765,Diesel,90.0,Arona,2.550 €
+1305,Kia ,Ceed,2016,91705,Gasolina,120.0,Telde,6290
+1876,Ford,Fiesta,2009,272718,Híbrido,85.0,Las Palmas de GC,1500 eur
+2041,VOLKSWAGEN,Golf,2008,144970,Gasolina,130.0,Las Palmas de GC,3450
+1702,Hyundai,i20,2015,100265,Gasolina,85.0,La Laguna,3720
+1771,Hyundai,i20,2018,111569,hibrido,85.0,Las Palmas,5830
+2174,hyundai,i20,2010,-1,Gasolina,85.0,Arona,"1.500,00 €"
+1196,Seat,Arona,12,212699,diésel,110.0,Las Palmas,3140
+1140,Peugeot,308,2022,56308,GASOLINA,120.0,Las Palmas,16.450 €
+1594,Peugeot,2008,2024,33874,diésel,110.0,La Laguna,16340
+1122,Kia,Ceed,2013,95212,,120.0,Telde,5.250 €
+1494,Renault,Clio,2013,92181,GASOLINA,90.0,Telde,3030
+1821,Seat,León,2021,61750,Diesel,130.0,Las Palmas de GC,12010
+1110,Ford,Kuga,,235669,Gasolina,150.0,Las Palmas de GC,2620
+1084,Ford,Focus,2010,243088,diesel,115.0,Santa Cruz,2350
+2002,Toyota,Corolla,2015,121911,diésel,140.0,La Laguna,7.010 €
+1513,Seat,Arona,2013,143008,GASOLINA,110.0,Telde,3.760 €
+1691,peugeot,308,2022,35.532 km,,120.0,La Laguna,14790
+1482,Seat,Arona,,18451,gasolina,110.0,La Laguna,"18.890,00 €"
+2165,Ford,Focus,24,34852,gasolina,115.0,La Laguna,19050 eur
+1369,volkswagen,Golf,2018,74278,gasolina,130.0,las palmas,9.840 €
+1611,Seat,Arona,2017,143502,Diesel,110.0,las palmas,4.720 €
+1793,Volkswagen,Golf,2023,39053,Gasolina,130.0,las palmas,17.270 €
+1074,ford,Kuga,2020,104109,diesel,150.0,Telde,"14.370,00 €"
+2043,Volkswagen,Tiguan,2020,71193km,Diesel,150.0,Telde,"18.170,00 €"
+2061,Kia,Sportage,2008,257645,Electrico,150.0,La Laguna,2.950 €
+1926,Peugeot,208,2023,,Hibrido,90.0,Las Palmas,11.500 €
+1273,toyota,Corolla,2009,221 mil,Híbrido,140.0,S/C de Tenerife,2970
+1791,HYUNDAI,Tucson,2019,80412,electrico,150.0,Las Palmas,18.820 €
+1396,Volkswagen,Tiguan,2025,8741,Gasolina,150.0,Telde,30590
+1154,Hyundai,Tucson,2011,115958km,diésel,150.0,Telde,a consultar
+1484,Peugeot,2008,2013,117517,gasolina,110.0,La Laguna,4590
+1191,Ford,Fiesta,2011,232823,Diesel,85.0,Arona,1500 eur
+1797,Peugeot.,208,2018,125418,GASOLINA,90.0,S/C de Tenerife,5.770 €
+2193,peugeot,2008,2023,44635,Diesel,110.0,Arona,16310
+1187,Renault,Megane,2019,69177,GASOLINA,115.0,Telde,9.600 €
+1050,Kia,Sportage,2013,131149,Gasolina,150.0,Las Palmas,7070
+1038,Seat,Ibiza,14,154480,Híbrido,95.0,santa cruz,3270
+1961,Hyundai,i20,2021,66871,,85.0,Santa Cruz,6.880 €
+1418,RENAULT,Megane,2008,249.998 km,Diesel,115.0,Arona,1.770 €
+2168,PEUGEOT,308,2010,136966,Diesel,120.0,Telde,3.480 €
+1208,Peugeot ,2008,2022,40536,electrico,110.0,S/C de Tenerife,18230 eur
+1375,Kia,Sportage,2012,164881,diésel,150.0,S/C de Tenerife,4680
+1463,FORD,Kuga,2011,133479,GASOLINA,150.0,La Laguna,"5.810,00 €"
+1470,Peugeot ,308,,97504,GASOLINA,120.0,La Laguna,6.540 €
+1517,VOLKSWAGEN,Polo,2020,71296,gasolina,95.0,Telde,"8.380,00 €"
+1075,Toyota,Yaris,2024,14.837 km,Electrico,100.0,Arona,17300
+1910,Kia,Sportage,2015,105132,Gasolina,150.0,Arona,"9.930,00 €"
+1248,Renault,Captur,2019,86324,Gasolina,100.0,Telde,8.460 €
+1559,Renault,Captur,2025,,gasolina,100.0,Santa Cruz,18.290 €
+1302,Seat,León,2021,43.423 km,gasolina,130.0,Arona,13.090 €
+1582,Seat ,León,2011,123210,diésel,130.0,La Laguna,"3.580,00 €"
+1899,Renault,Megane,2018,88934,GASOLINA,115.0,Telde,8130
+2069,seat,León,21,77994,hibrido,130.0,S/C de Tenerife,15680
+1335,Renault,Megane,2011,161706,Diésel,115.0,Arona,3.690 €
+1737,Peugeot,208,2008,141988,GASOLINA,90.0,Santa Cruz,1830
+1798,Seat,Arona,2017,98811,Hibrido,110.0,Arona,7.160 €
+1011,Ford,Fiesta,2021,56115,Diesel,85.0,las palmas,7080
+2042,Volkswagen,Tiguan,2025,5288,Diésel,150.0,Arona,34890
+2154,Toyota,Corolla,2019,79682km,,140.0,Telde,10.180 €
+1485,Kia,Ceed,21,64369,hibrido,120.0,Telde,13.770 €
+1462,Volkswagen,Tiguan,2021,49843,GASOLINA,150.0,Las Palmas,19010
+1538,Hyundai,i20,2025,21248,Diésel,85.0,Telde,12.340 €
+1627,Peugeot,308,2009,205.316 km,gasolina,120.0,La Laguna,2.530 €
+1281,Hyundai,Tucson,2022,43436,diésel,150.0,santa cruz,18120
+1253,Renault,Megane,,-1,Gasolina,115.0,Telde,20430
+1983,Ford,Kuga,2021,,Gasolina,150.0,Telde,"18.030,00 €"
+1707,Ford,Fiesta,2025,12579km,Electrico,85.0,Las Palmas de GC,13920
+1065,Ford,Kuga,2011,,diésel,150.0,Santa Cruz,5.470 €
+2121,Hyundai,i20,2010,181376,GASOLINA,85.0,las palmas,"1.910,00 €"
+1223,Ford,Focus,2012,100143,,115.0,Arona,6250
+1577,Seat,Ibiza,2017,145467,,95.0,santa cruz,4460 eur
+1672,Hyundai,Tucson,2016,160230,Hibrido,150.0,Las Palmas de GC,9600
+1813,VOLKSWAGEN,Golf,2016,75810,GASOLINA,130.0,Arona,7.780 €
+1219,Peugeot,2008,2019,64730km,,110.0,santa cruz,13000
+1966,seat,Ibiza,2009,280.017 km,GASOLINA,95.0,La Laguna,1.500 €
+1708,Seat,Arona,2017,83255,,110.0,S/C de Tenerife,1
+1994,Kia,Sportage,2015,125.652 km,diésel,150.0,Santa Cruz,8.240 €
+1580,Volkswagen,Polo,2016,151195,Diésel,95.0,La Laguna,4.790 €
+1077,SEAT,Ibiza,2024,26253km,Hibrido,95.0,S/C de Tenerife,12.560 €
+1547,Kia.,Ceed,2019,43056,GASOLINA,120.0,Arona,10350
+1049,Renault,Captur,2017,115798,Gasolina,100.0,las palmas,7210
+1748,Renault.,Clio,2011,134063,diesel,90.0,Santa Cruz,2.190 €
+1826,Ford,Fiesta,2013,112998,Hibrido,85.0,Telde,3.400 €
+1125,Ford,Focus,2011,107549,GASOLINA,115.0,Arona,4250
+1757,Peugeot,308,2008,150.039 km,gasolina,120.0,Arona,2860
+1576,Toyota ,Yaris,2017,138913,gasolina,100.0,S/C de Tenerife,4.830 €
+1621,Ford,Focus,2021,33005,GASOLINA,115.0,Arona,13.170 €
+1767,Peugeot,2008,2024,15555,gasolina,110.0,La Laguna,19360
+1159,Volkswagen ,Tiguan,2013,97287,Hibrido,150.0,La Laguna,9050
+2030,Kia,Ceed,2011,126071km,diesel,120.0,Las Palmas de GC,4.040 €
+2124,Kia,Sportage,14,189454,diésel,150.0,Las Palmas,5400
+1802,Hyundai.,i20,,25.143 km,electrico,85.0,Las Palmas,14.840 €
+1844,Volkswagen,Tiguan,2022,34401,Diesel,150.0,Telde,20800
+2048,ford,Kuga,2022,,gasolina,150.0,Santa Cruz,19.140 €
+1220,Hyundai,i20,2024,23590,gasolina,85.0,S/C de Tenerife,11.640 €
+2068,Kia,Ceed,2019,104.394 km,hibrido,120.0,Telde,9580
+1259,Toyota.,Yaris,2011,127.801 km,Diesel,100.0,Arona,2780
+1282,Peugeot,2008,2013,99.044 km,gasolina,110.0,Arona,5.770 €
+1634,ford,Kuga,2008,144360,Diésel,150.0,La Laguna,4.020 €
+1474,hyundai,Tucson,2021,67715,diésel,150.0,Arona,16510 eur
+1455,Renault,Captur,2025,12.931 km,GASOLINA,100.0,Telde,18.650 €
+1320,Kia,Ceed,2009,248015,gasolina,120.0,Arona,2010
+1434,Seat ,León,2017,149045,Gasolina,130.0,Las Palmas de GC,"6.250,00 €"
+1636,Volkswagen,Polo,2018,96408,Diésel,95.0,Arona,5640
+1299,Toyota.,Yaris,2011,158001,Gasolina,100.0,las palmas,2.850 €
+1436,RENAULT,Megane,2015,84393,Gasolina,115.0,La Laguna,6.740 €
+2134,Kia,Ceed,2016,115199,GASOLINA,120.0,La Laguna,6.730 €
+1438,Seat,León,2010,176150,Hibrido,130.0,Arona,3.600 €
+1325,Renault.,Clio,2020,68522,Hibrido,90.0,Arona,8150
+1403,Renault,Megane,2023,42674,Diesel,115.0,S/C de Tenerife,15.270 €
+1564,Renault,Clio,2023,27146,Híbrido,90.0,Telde,12.520 €
+1292,Volkswagen,Golf,2014,162179,Diésel,130.0,Las Palmas de GC,a consultar
+1278,FORD,Fiesta,2012,165.885 km,Eléctrico,85.0,La Laguna,2.970 €
+1655,Hyundai ,Tucson,2022,41.237 km,diésel,150.0,Arona,"20.710,00 €"
+2080,Renault,Captur,15,162729,hibrido,100.0,La Laguna,5.090 €
+1732,Peugeot.,208,2023,37458km,diésel,90.0,La Laguna,10370
+1553,Toyota,Corolla,2023,18248km,Gasolina,140.0,Arona,18.610 €
+1094,Peugeot,208,2010,202889,diésel,90.0,Las Palmas de GC,1590
+2175,Peugeot,2008,2009,-1,Gasolina,110.0,Telde,2830
+1245,Seat,León,2024,38196,GASOLINA,130.0,Telde,18190
+1945,Renault,Clio,2013,142337,Diésel,90.0,las palmas,3050
+1775,Seat,Ibiza,2019,95265,Electrico,95.0,Telde,8750
+1426,Ford ,Focus,2017,114154,Gasolina,115.0,Arona,7290
+1149,Renault.,Clio,2015,64236,gasolina,90.0,La Laguna,4980
+1226,Volkswagen,Golf,2013,134.406 km,gasolina,130.0,La Laguna,5710
+1865,hyundai,Tucson,2019,101.249 km,gasolina,150.0,las palmas,14.880 €
+1967,Renault,Megane,2024,17 mil,hibrido,115.0,Las Palmas de GC,a consultar
+1900,Volkswagen,Tiguan,2010,118161km,gasolina,150.0,Arona,5.270 €
+1699,FORD,Fiesta,2009,140717,hibrido,85.0,Arona,2.210 €
+1601,Peugeot,308,2018,72916,diésel,120.0,S/C de Tenerife,9.180 €
+2058,Hyundai,Tucson,2011,141612,GASOLINA,150.0,Arona,5470
+1217,Renault,Captur,2013,179080,hibrido,100.0,Arona,4.300 €
+1817,Volkswagen,Golf,2012,181350,Gasolina,130.0,Las Palmas,4110
+1220,Hyundai,i20,2024,23590,gasolina,85.0,S/C de Tenerife,11.640 €
+1213,Hyundai,i20,2020,35141,Gasolina,85.0,Telde,7.880 €
+2156,FORD,Kuga,2020,51400,Gasolina,150.0,Telde,17450
+1907,Seat.,León,2015,135105,Electrico,130.0,La Laguna,6.550 €
+1394,TOYOTA,Yaris,2009,175.997 km,gasolina,100.0,La Laguna,2140
+1367,Ford,Fiesta,2011,159337,GASOLINA,85.0,Telde,2490
+1924,Volkswagen,Golf,2013,147636,,130.0,las palmas,5.060 €
+1012,Renault,Megane,2015,-1,Gasolina,115.0,las palmas,"5.880,00 €"
+2149,Kia,Sportage,2014,,Gasolina,150.0,La Laguna,7.810 €
+1234,renault,Captur,2017,114 mil,hibrido,100.0,Arona,7.960 €
+1695,Renault,Megane,2022,38047,GASOLINA,115.0,Santa Cruz,13360 eur
+2084,Hyundai,i20,2019,,diesel,85.0,Telde,"5.910,00 €"
+2167,Toyota,Corolla,2016,99 mil,electrico,140.0,Santa Cruz,10.810 €
+2102,Toyota,C-HR,2016,165465,GASOLINA,125.0,las palmas,7.610 €
+1063,Toyota,Yaris,2021,62211,Hibrido,100.0,La Laguna,10590
+1734,Toyota ,Yaris,2008,142.009 km,GASOLINA,100.0,santa cruz,2.140 €
+2023,Seat,León,25,6421,Diésel,130.0,S/C de Tenerife,21540
+1964,Peugeot,2008,2016,91104,gasolina,110.0,Telde,7.920 €
+1607,kia,Ceed,2013,174.835 km,Gasolina,120.0,Arona,4450
+1013,Peugeot,308,2024,26855,Gasolina,120.0,Telde,16.660 €
+1839,Renault.,Captur,2018,128443,Diésel,100.0,Arona,6.050 €
+1435,Volkswagen,Golf,2024,18025,electrico,130.0,santa cruz,26910
+1017,Hyundai,Tucson,2025,25796,Diesel,150.0,Las Palmas,26280
+1764,Ford,Fiesta,2014,140792,GASOLINA,85.0,Arona,2.960 €
+1348,Kia,Sportage,2009,252837,Hibrido,150.0,S/C de Tenerife,3.150 €
+1207,SEAT,Arona,2017,112.173 km,gasolina,110.0,Las Palmas de GC,"6.250,00 €"
+1341,Toyota,C-HR,2018,70.878 km,Híbrido,125.0,S/C de Tenerife,11.990 €
+1344,Ford,Kuga,2023,27913,Hibrido,150.0,Arona,26460
+2115,Toyota,Yaris,2021,75523,Gasolina,100.0,Telde,9160
+1211,Volkswagen,Golf,20,93907,Híbrido,130.0,Arona,13850
+1551,SEAT,Arona,2020,57842km,GASOLINA,110.0,La Laguna,8330 eur
+1598,Renault,Captur,2021,49878,diésel,100.0,las palmas,11.780 €
+1032,Volkswagen,Golf,2017,121859,diesel,130.0,Telde,8.490 €
+1372,Peugeot,2008,2019,114091,GASOLINA,110.0,Telde,8320
+1657,Ford,Focus,2023,28662,Diesel,115.0,Las Palmas de GC,14.230 €
+1172,Hyundai,Tucson,2018,65947,diesel,150.0,Arona,12.100 €
+2086,Peugeot,2008,2016,95329,Diesel,110.0,Telde,7.390 €
+1408,Hyundai,Tucson,2020,96293,diésel,150.0,Arona,13.330 €
+2050,Kia,Ceed,2014,121795,Diesel,120.0,santa cruz,5890
+2187,PEUGEOT,208,18,142003,Diésel,90.0,Telde,4930
+1200,Hyundai.,i20,2015,156.524 km,Diésel,85.0,Telde,3010
+1860,Ford,Fiesta,25,28767,diesel,85.0,La Laguna,11480
+2161,Toyota,C-HR,2015,165358,Gasolina,125.0,Las Palmas de GC,7820
+2144,Ford,Kuga,2013,184939,Diésel,150.0,Las Palmas,5.020 €
+2171,Peugeot,308,2024,37070,gasolina,120.0,Las Palmas de GC,16.450 €
+1489,Toyota,C-HR,2018,126996,GASOLINA,125.0,S/C de Tenerife,a consultar
+2169,Ford,Kuga,2018,74773,diesel,150.0,Santa Cruz,a consultar
+1212,Ford.,Focus,2017,91373,gasolina,115.0,Telde,7.170 €
+1133,ford,Kuga,2019,101154,Gasolina,150.0,Las Palmas,12.810 €
+1060,Seat,Ibiza,2024,23412,gasolina,95.0,santa cruz,14090 eur
+1690,Seat,León,2018,90.211 km,gasolina,130.0,Arona,8790 eur
+1026,Volkswagen,Golf,2021,54544,diésel,130.0,Arona,14.130 €
+1100,Renault,Megane,2010,257166,Hibrido,115.0,Arona,2.210 €
+1974,Hyundai.,Tucson,2012,,diesel,150.0,La Laguna,4.800 €
+1776,Renault,Clio,2025,14429,hibrido,90.0,La Laguna,14750 eur
+1788,Kia,Ceed,2023,54211km,gasolina,120.0,Arona,16.200 €
+1520,Hyundai,Tucson,2025,14876,Diésel,150.0,las palmas,29.960 €
+1363,Hyundai,i20,2010,184.829 km,Electrico,85.0,La Laguna,2600
+1309,Renault,Captur,13,145.117 km,GASOLINA,100.0,Arona,4.040 €
+1795,toyota,C-HR,2017,154273,diesel,125.0,La Laguna,7.650 €
+1828,HYUNDAI,i20,2015,136365,diésel,85.0,Arona,3220
+1544,Seat,León,2009,167009,Gasolina,130.0,Santa Cruz,2.720 €
+1939,Ford,Focus,2023,25681,GASOLINA,115.0,La Laguna,16.640 €
+1441,Peugeot,308,2014,175216,GASOLINA,120.0,Arona,4.970 €
+1647,Volkswagen,Polo,2.014,137307,Hibrido,95.0,las palmas,3.820 €
+2003,Hyundai ,Tucson,2.019,64338,Gasolina,150.0,Arona,16640
+1476,Seat,Arona,2024,16986,GASOLINA,110.0,La Laguna,16990
+2046,Renault,Clio,2014,90321,hibrido,90.0,La Laguna,"4.150,00 €"
+1062,Hyundai,i20,2013,139846,Gasolina,85.0,Arona,3.020 €
+1483,PEUGEOT,2008,2024,30604,GASOLINA,110.0,Las Palmas de GC,18.490 €
+2026,seat,León,2025,16755,hibrido,130.0,Arona,24450
+1052,Ford,Kuga,2014,90.502 km,Hibrido,150.0,Santa Cruz,9610
+1242,Ford,Fiesta,2016,109341,GASOLINA,85.0,Las Palmas,"4.400,00 €"
+1035,Hyundai,Tucson,2010,157 mil,GASOLINA,150.0,Arona,"4.490,00 €"
+1738,Toyota,Corolla,23,29700,GASOLINA,140.0,Arona,20460 eur
+1120,Hyundai,i20,2012,197288,gasolina,85.0,Las Palmas,2390
+1228,Seat,León,2020,92100,gasolina,130.0,Arona,10600
+2019,Seat,León,2015,129 mil,hibrido,130.0,Telde,6230
+1044,TOYOTA,Yaris,2012,220302,Hibrido,100.0,Telde,"2.400,00 €"
+1836,Toyota,Corolla,2010,160887,GASOLINA,140.0,La Laguna,3.780 €
+1076,Ford,Focus,2023,55300,gasolina,115.0,Las Palmas,16.140 €
+1368,Renault ,Clio,2011,196563,gasolina,90.0,S/C de Tenerife,1930
+1906,Renault,Captur,2023,46.608 km,diesel,100.0,La Laguna,13.590 €
+1267,Seat,Ibiza,2019,72277,diésel,95.0,santa cruz,6.520 €
+1728,RENAULT,Megane,2019,73944km,Gasolina,115.0,La Laguna,9.940 €
+1444,Toyota,Yaris,2022,48823,gasolina,100.0,Arona,10960
+1503,Seat,Ibiza,2008,242290,gasolina,95.0,La Laguna,1.500 €
+2057,Peugeot,2008,2022,53599,Electrico,110.0,Las Palmas,18330
+2033,Renault,Megane,2013,217405,gasolina,115.0,Telde,3.470 €
+1285,Volkswagen,Tiguan,2017,109546,gasolina,150.0,Arona,"11.600,00 €"
+1295,Volkswagen,Golf,2014,97.274 km,diésel,130.0,Telde,5.550 €
+1625,Ford,Fiesta,2023,27509,hibrido,85.0,S/C de Tenerife,9580
+1277,Volkswagen,Tiguan,2020,75757,GASOLINA,150.0,Arona,17.680 €
+2188,renault,Megane,2025,3882,GASOLINA,115.0,las palmas,22.390 €
+1484,Peugeot,2008,2013,117517,gasolina,110.0,La Laguna,4590
+1182,FORD,Kuga,13,109 mil,Electrico,150.0,Las Palmas,8.670 €
+1970,TOYOTA,Corolla,2016,108921,Gasolina,140.0,La Laguna,7.630 €
+1321,Seat,Arona,2017,103.766 km,Diesel,110.0,las palmas,6090
+1684,Renault,Captur,2010,263269km,Híbrido,100.0,Arona,2390 eur
+1581,Ford,Kuga,2009,211122,GASOLINA,150.0,Telde,2990
+1036,Renault,Megane,2009,213897,Diesel,115.0,La Laguna,2510
+2180,Peugeot ,308,2010,143178,diésel,120.0,Santa Cruz,3.360 €
+1002,volkswagen,Tiguan,2019,100649,Hibrido,150.0,Arona,16.510 €
+1754,volkswagen,Polo,2018,80650km,GASOLINA,95.0,La Laguna,6250
+1508,Ford,Fiesta,2022,38430,gasolina,85.0,Telde,8250
+1497,Renault,Clio,2017,89925,gasolina,90.0,Telde,4770
+1308,Volkswagen.,Polo,2021,52531,GASOLINA,95.0,Telde,9850 eur
+1141,Toyota,Corolla,2024,28108,diesel,140.0,Telde,"23.020,00 €"
+1864,Kia,Sportage,2025,11631,diesel,150.0,Arona,31.100 €
+1183,Volkswagen,Polo,2.012,235997,hibrido,95.0,Arona,2300
+1314,Renault,Megane,2015,104086,GASOLINA,115.0,Telde,7030
+2010,RENAULT,Clio,2010,178707,hibrido,90.0,Las Palmas,2100
+1912,Volkswagen ,Polo,2011,150059,GASOLINA,95.0,Las Palmas,2670
+1848,Ford,Focus,2012,221.571 km,Gasolina,115.0,Santa Cruz,3.130 €
+1511,Volkswagen,Tiguan,2025,13074,Hibrido,150.0,La Laguna,35.910 €
+1731,Peugeot.,2008,2013,198016,gasolina,110.0,S/C de Tenerife,4080
+1996,Renault,Clio,2011,250756,Diesel,90.0,Santa Cruz,1.610 €
+1887,KIA,Sportage,2009,222554,hibrido,150.0,La Laguna,3620
+1117,Ford,Kuga,2015,163934,gasolina,150.0,Arona,6980
+2025,Ford,Fiesta,2017,139253,GASOLINA,85.0,Arona,4010
+1113,Renault,Clio,2008,158971km,diésel,90.0,La Laguna,a consultar
+1545,Kia,Sportage,2015,114236,,150.0,La Laguna,8.720 €
+1165,Renault,Captur,2010,271200,gasolina,100.0,La Laguna,1750
+1184,Renault,Clio,2020,73314,Híbrido,90.0,La Laguna,7660
+1274,Toyota,Yaris,2012,136053,Gasolina,100.0,Las Palmas de GC,2.790 €
+2001,Renault,Megane,2014,105037,diesel,115.0,santa cruz,5230
+1704,Seat,Ibiza,2012,217796,Electrico,95.0,Las Palmas de GC,a consultar
+2024,Hyundai ,Tucson,2011,188195,GASOLINA,150.0,La Laguna,4.640 €
+1383,Kia,Sportage,2018,90056,gasolina,150.0,Arona,11.830 €
+1561,Kia,Sportage,2012,203578,Hibrido,150.0,La Laguna,"5.600,00 €"
+1862,seat,Arona,2023,44.527 km,hibrido,110.0,las palmas,13.380 €
+2044,Kia,Ceed,2009,255237,,120.0,Telde,2210
+1176,SEAT,Ibiza,2025,17937,Gasolina,95.0,Telde,14330
+1379,Ford,Fiesta,2012,214337,diésel,85.0,La Laguna,1910
+2195,Renault.,Captur,2019,51494,,100.0,Arona,8.920 €
+2016,Hyundai,Tucson,19,82.931 km,Híbrido,150.0,Santa Cruz,15040
+1519,Kia,Ceed,2024,14300,Diesel,120.0,La Laguna,18.430 €
+1830,HYUNDAI,Tucson,2015,133807,GASOLINA,150.0,Arona,7.340 €
+1507,HYUNDAI,i20,2018,67026,Gasolina,85.0,Arona,5610
+2176,Kia,Sportage,2016,137168,electrico,150.0,Santa Cruz,10.050 €
+1413,Volkswagen,Tiguan,2013,113007,diesel,150.0,Telde,7.580 €
+1622,Renault,Megane,2013,99.160 km,Gasolina,115.0,Santa Cruz,5560
+1872,Hyundai,Tucson,2008,189187,Diesel,150.0,Telde,2920
+1858,Seat,Ibiza,2015,188.907 km,diésel,95.0,Las Palmas de GC,"3.070,00 €"
+1641,Hyundai,i20,2019,115328,Diesel,85.0,Telde,5230 eur
+1258,renault,Megane,2010,133657,GASOLINA,115.0,Santa Cruz,4140 eur
+1834,Renault,Clio,2010,228723,Híbrido,90.0,S/C de Tenerife,1.770 €
+1662,TOYOTA,C-HR,2024,35.385 km,Hibrido,125.0,La Laguna,27.760 €
+1337,Hyundai ,i20,2016,79320,Gasolina,85.0,Arona,4.620 €
+1398,Seat,León,2016,175451,Hibrido,130.0,Las Palmas de GC,6170
+1605,Renault,Megane,2018,74900,Diesel,115.0,Telde,8330
+1480,Hyundai,Tucson,2011,231.658 km,Híbrido,150.0,santa cruz,3680
+2143,Ford,Focus,2011,172 mil,Gasolina,115.0,Las Palmas de GC,3000
+1917,Kia,Sportage,2010,136.951 km,hibrido,150.0,S/C de Tenerife,5450
+2017,Seat,Ibiza,2010,186077,Hibrido,95.0,Telde,2.230 €
+1875,toyota,C-HR,2011,141343,Diésel,125.0,Telde,"4.830,00 €"
+1659,Toyota,Corolla,2010,176.422 km,diésel,140.0,Arona,3790 eur
+2021,Volkswagen,Polo,2018,111511,gasolina,95.0,Telde,6330
+1789,Seat,León,2009,,gasolina,130.0,Las Palmas,a consultar
+1256,Seat,León,2017,130919,diésel,130.0,Arona,6.840 €
+1968,Hyundai,i20,2025,9781,Gasolina,85.0,La Laguna,12.600 €
+1952,Ford,Focus,2013,218599,hibrido,115.0,santa cruz,3.930 €

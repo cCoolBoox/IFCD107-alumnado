@@ -1,6 +1,6 @@
 # 🎒 Bolsa de miniretos · S08
 
-**Elige una miniapp de IA, constrúyela en 40–50 minutos y enséñasela a la clase.** Sin TurisData: otros datos, otras preguntas y solo lo que ya conocéis hasta el Sprint 8.
+**Elige una miniapp de IA, constrúyela en 40–60 minutos y enséñasela a la clase.** Sin TurisData: otros datos, otras preguntas y solo lo que ya conocéis hasta el Sprint 8.
 
 - **Cuándo:** al cerrar S08, en casa o cuando acabéis antes. **Opcional**: no entra en la rúbrica del reto.
 - **Con quién:** en pareja o en equipo de tres. Un equipo puede hacer **dos** miniapps.
@@ -17,6 +17,10 @@
 | 📧 | [02 · Correo y spam](02_Correo_spam.md) | ¿Spam o correo de verdad? | Clasificar **texto** | ⭐⭐ | Árbol con reglas, Naive Bayes, logística |
 | 🩺 | [04 · Diabetes](04_Diabetes.md) | ¿Riesgo de diabetes? | Clasificar con **datos que faltan** | ⭐⭐ | `Pipeline`, ROC, umbral |
 | 🏠 | [01 · Precio de vivienda](01_Precio_vivienda.md) | ¿Cuánto vale este piso en Tenerife? | **Regresión** | ⭐⭐ | Lineal frente a bosque y boosting |
+| 🎮 | [07 · Tramposos en un videojuego](07_Tramposos_en_un_videojuego.md) | ¿Este jugador hace trampas? | Clasificar con **umbral exigente** | ⭐⭐ | Precisión frente a recall; a veces gana el modelo sencillo |
+| 🔥 | [08 · Riesgo de incendio](08_Riesgo_de_incendio.md) | ¿Hoy hay riesgo de incendio forestal? | Suceso **raro** y semáforo | ⭐⭐⭐ | Reglas de un árbol, bosque, boosting, `RandomizedSearchCV` |
+| 🚑 | [09 · Triaje de urgencias](09_Triaje_de_urgencias.md) | ¿Este paciente es urgente? | **Explicable frente a potente** | ⭐⭐⭐ | Árbol frente a bosque, recall exigido, grupos de edad |
+| 👕 | [10 · Reconocer prendas](10_Reconocer_prendas.md) | ¿Qué prenda de ropa es? | Clasificar **imágenes** | ⭐⭐ | SVM, k-NN, bosque, matriz de confusión |
 
 ## Cómo elegir
 - **Quiero entender los modelos de un vistazo:** 🌸 el zoo de fronteras.
@@ -24,6 +28,9 @@
 - **Me interesa la salud:** 🎗️ tumor o 🩺 diabetes.
 - **Me interesa el lenguaje:** 📧 correo y spam.
 - **Me interesa el negocio:** 🏠 precio de vivienda.
+- **Me gustan los videojuegos:** 🎮 tramposos.
+- **Me interesa el medio ambiente y las emergencias:** 🔥 incendio forestal o 🚑 triaje.
+- **Quiero imágenes más reales que los números:** 👕 prendas de ropa.
 
 ## Las 5 reglas (valen para todas)
 1. **Un modelo tonto de referencia** (siempre la media o siempre la clase más común). Si no lo superáis, no habéis hecho nada.
@@ -45,8 +52,9 @@
 
 ## Qué datos hay detrás
 - **Dentro de scikit-learn** (no se descargan): flores, números a mano y tumores.
-- **En el repositorio del curso** (`datos/`): `correos.csv` y `viviendas_tenerife.csv`, **inventados**, y `diabetes_pima.csv`, de un estudio real (Pima, dominio público).
-- Los datos de salud son **para aprender**: ninguna de estas miniapps diagnostica nada.
+- **Se descargan solas al ejecutar** desde OpenML: las fotos de ropa (Fashion-MNIST, muestra de 6 000).
+- **En el repositorio del curso** (`datos/`): `correos.csv`, `viviendas_tenerife.csv`, `tramposos_juego.csv`, `incendios_canarias.csv` y `triaje_urgencias.csv`, **inventados**, y `diabetes_pima.csv`, de un estudio real (Pima, dominio público).
+- Los datos de salud son **para aprender**: ninguna de estas miniapps diagnostica nada ni decide quién se atiende primero.
 
 ## Para subirlo (opcional)
 - Descargad el cuaderno de Colab (*Archivo → Descargar → .ipynb*) y subidlo a `sprint-08/miniretos/` de vuestro repositorio, con la tarjeta de cierre en un `README.md`.
@@ -54,4 +62,5 @@
 
 ## Y si queréis otra
 - Proponed una miniapp con **datos abiertos** (una tabla con una columna que predecir) y una pregunta cerrada. El docente os dice si encaja.
-- Otras ideas posibles: fraude con tarjeta, calidad de un vino, supervivencia en el Titanic, precio de un coche de segunda mano.
+- Otras ideas posibles: calidad de un vino, supervivencia en el Titanic, tipo de cubierta forestal o reconocimiento de gestos.
+- Más miniapps de los sprints anteriores: [S06](../../../../S06/3_Reto/1_Trabajar/miniretos/README.md) (datos sucios, fugas) y [S07](../../../../S07/3_Reto/1_Trabajar/miniretos/README.md) (fraude, abandono, precios).
