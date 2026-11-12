@@ -1,0 +1,1801 @@
+zona,metros,habitaciones,banos,antiguedad,vista_mar,garaje,terraza,ascensor,estado,precio
+Sur costa,47,1,1,33,1,1,0,1,buen estado,267500
+Área metropolitana,97,2,1,28,0,0,1,1,buen estado,192500
+Sur costa,111,4,3,17,1,0,0,1,reformada,680000
+Área metropolitana,72,1,1,3,0,0,1,1,reformada,190500
+Área metropolitana,114,3,2,10,0,0,1,0,a reformar,193500
+Norte,117,4,2,28,0,0,0,0,a reformar,227500
+Área metropolitana,98,3,1,61,0,0,1,1,buen estado,162500
+Norte,63,1,1,39,0,1,1,0,buen estado,161000
+Norte,102,3,2,42,0,0,0,1,a reformar,177500
+Sur costa,113,3,1,5,1,1,0,0,reformada,728500
+Sur costa,84,4,3,30,0,0,0,1,buen estado,336000
+Área metropolitana,116,2,1,37,0,0,0,0,buen estado,190000
+Interior,84,4,3,17,0,0,0,0,buen estado,91500
+Sur costa,82,3,1,12,1,1,0,1,a reformar,374500
+Interior,98,4,2,24,0,0,1,1,buen estado,108000
+Este,107,4,2,42,0,0,0,1,buen estado,159500
+Norte,77,2,1,21,1,1,1,0,reformada,311500
+Sur costa,122,3,1,16,1,0,1,1,buen estado,612000
+Norte,77,2,1,29,1,0,0,0,a reformar,181000
+Norte,79,2,2,20,0,0,0,1,reformada,234000
+Interior,64,3,1,20,0,0,1,0,reformada,83500
+Sur costa,136,4,2,9,0,1,0,0,buen estado,590500
+Sur costa,108,5,2,15,0,0,0,0,buen estado,408500
+Interior,82,2,2,33,0,1,1,0,buen estado,87000
+Este,53,2,1,10,0,0,0,0,buen estado,117000
+Área metropolitana,81,2,1,12,1,0,0,1,buen estado,188500
+Sur costa,79,3,1,10,1,0,1,1,buen estado,439500
+Norte,68,3,2,22,0,1,0,0,buen estado,183000
+Interior,99,4,3,32,0,1,0,0,buen estado,107000
+Sur costa,106,3,1,35,1,1,0,1,buen estado,536000
+Norte,118,4,2,16,1,1,0,1,reformada,422000
+Sur costa,59,3,2,58,0,1,0,1,buen estado,235500
+Norte,57,2,2,65,1,0,0,1,buen estado,156000
+Sur costa,145,4,2,28,0,0,0,1,reformada,597500
+Interior,60,1,1,45,0,1,0,1,reformada,85000
+Sur costa,80,2,1,32,0,0,1,0,buen estado,281500
+Área metropolitana,65,4,3,14,0,1,1,1,reformada,193500
+Norte,104,2,1,4,0,0,0,1,buen estado,314000
+Norte,118,4,2,55,0,1,0,0,buen estado,273000
+Sur costa,113,4,2,28,1,0,1,1,reformada,647000
+Sur costa,114,4,3,11,1,0,0,1,buen estado,616500
+Área metropolitana,99,3,2,11,0,1,0,0,reformada,243000
+Área metropolitana,88,3,2,18,0,0,1,0,a reformar,156500
+Norte,58,2,1,52,0,0,1,0,buen estado,152000
+Área metropolitana,84,3,1,8,1,1,1,1,buen estado,216500
+Norte,61,1,1,17,0,1,1,0,reformada,198500
+Interior,116,3,2,18,0,1,1,0,buen estado,124000
+Norte,141,4,2,13,0,1,0,1,buen estado,340500
+Área metropolitana,50,1,1,19,0,1,0,0,a reformar,93500
+Norte,106,2,1,23,0,0,0,1,a reformar,201500
+Interior,77,4,2,15,0,1,1,1,reformada,125000
+Área metropolitana,67,2,1,19,0,0,1,0,buen estado,142000
+Norte,89,2,1,10,0,0,0,0,reformada,259500
+Área metropolitana,90,3,1,19,0,1,1,0,reformada,233500
+Norte,138,5,3,39,0,0,1,1,buen estado,242500
+Sur costa,68,2,1,42,0,1,1,0,buen estado,259000
+Norte,165,6,4,25,1,1,0,0,a reformar,380500
+Interior,51,2,1,12,0,0,0,1,buen estado,72000
+Norte,70,4,2,17,1,1,1,0,a reformar,181500
+Sur costa,56,1,1,31,0,1,0,1,buen estado,237500
+Sur costa,59,2,1,60,0,1,0,0,reformada,268500
+Interior,87,3,2,43,0,0,1,1,buen estado,85500
+Norte,84,2,1,26,0,0,0,0,buen estado,180000
+Sur costa,133,4,2,14,0,0,1,0,a reformar,363500
+Este,91,2,1,41,0,1,0,0,buen estado,145500
+Norte,46,1,1,17,0,0,1,1,buen estado,141500
+Área metropolitana,94,3,1,4,0,1,1,0,buen estado,222000
+Este,184,5,3,17,0,0,1,1,a reformar,256500
+Área metropolitana,64,3,2,38,0,1,0,0,reformada,146000
+Este,116,4,2,19,0,0,1,0,reformada,246500
+Área metropolitana,126,4,2,31,0,0,1,1,buen estado,238500
+Sur costa,74,2,1,52,0,0,1,1,reformada,318000
+Área metropolitana,121,3,1,28,0,0,0,0,buen estado,196000
+Norte,73,2,1,57,0,1,1,1,a reformar,124500
+Área metropolitana,53,1,1,8,0,1,1,1,a reformar,112500
+Norte,146,3,2,4,0,1,0,1,a reformar,274000
+Norte,100,3,2,26,0,1,1,0,reformada,282000
+Norte,66,2,1,13,0,1,0,0,a reformar,140000
+Área metropolitana,64,2,2,35,0,0,1,1,buen estado,126500
+Área metropolitana,125,2,1,11,1,1,0,1,buen estado,257500
+Norte,162,5,3,16,0,0,0,1,buen estado,395500
+Norte,146,4,3,6,1,0,1,0,buen estado,461500
+Sur costa,47,1,1,10,0,0,1,0,reformada,244000
+Norte,89,2,1,17,1,0,1,1,buen estado,331500
+Área metropolitana,87,3,1,20,0,0,0,0,buen estado,184000
+Interior,76,2,1,5,0,0,0,0,reformada,113000
+Sur costa,37,1,1,23,1,0,0,1,reformada,239000
+Área metropolitana,66,2,1,76,0,0,1,1,buen estado,130500
+Área metropolitana,120,5,2,19,0,1,0,1,buen estado,250000
+Norte,133,4,3,3,0,1,0,0,buen estado,349000
+Este,90,2,2,8,1,0,1,1,a reformar,163500
+Este,116,3,1,13,0,0,0,0,buen estado,181000
+Área metropolitana,139,5,3,28,0,1,1,0,buen estado,234000
+Norte,71,1,1,22,1,0,1,1,buen estado,240000
+Norte,125,4,1,18,1,1,1,1,buen estado,448000
+Norte,99,2,1,9,0,0,0,1,buen estado,267000
+Interior,67,3,1,20,0,0,0,1,reformada,94500
+Norte,41,3,2,10,1,0,1,1,a reformar,120000
+Norte,112,3,2,20,1,1,0,1,buen estado,336500
+Sur costa,53,3,1,27,1,0,1,1,buen estado,316000
+Sur costa,81,3,2,25,1,0,1,1,reformada,467500
+Sur costa,64,3,1,20,1,1,0,1,reformada,392000
+Área metropolitana,72,4,2,49,0,0,0,0,reformada,138000
+Sur costa,85,2,1,44,0,1,0,0,buen estado,339500
+Norte,172,5,3,3,0,0,1,0,buen estado,442500
+Sur costa,35,2,1,34,0,0,0,0,buen estado,155500
+Norte,58,1,1,60,1,0,0,0,buen estado,156500
+Área metropolitana,57,1,1,15,0,1,1,1,reformada,160500
+Este,91,3,2,80,0,1,0,1,buen estado,143500
+Sur costa,106,4,2,13,1,0,0,1,buen estado,572500
+Sur costa,83,3,3,24,1,0,1,1,buen estado,437500
+Área metropolitana,80,2,1,8,0,0,1,0,buen estado,163000
+Sur costa,72,2,1,34,0,1,0,0,reformada,355000
+Área metropolitana,81,2,2,8,0,0,1,0,buen estado,184000
+Sur costa,113,3,2,36,0,0,0,1,reformada,474500
+Este,50,3,2,7,0,0,0,1,buen estado,115500
+Este,94,3,2,15,0,0,1,0,a reformar,132000
+Área metropolitana,76,3,2,13,0,0,1,0,buen estado,173500
+Sur costa,62,3,3,29,1,1,0,0,a reformar,239500
+Área metropolitana,86,2,1,63,0,0,1,0,a reformar,107000
+Este,71,3,2,30,0,0,1,0,buen estado,118000
+Sur costa,78,4,2,11,0,1,0,1,buen estado,346000
+Interior,72,3,2,14,0,0,1,1,buen estado,91000
+Norte,141,3,1,45,1,1,0,0,a reformar,270500
+Interior,63,3,2,15,0,0,1,1,buen estado,82000
+Sur costa,99,3,1,71,1,0,1,1,reformada,598000
+Sur costa,96,2,1,21,0,0,1,1,buen estado,421000
+Sur costa,55,1,1,49,0,0,1,0,a reformar,171000
+Sur costa,72,3,1,35,0,0,1,1,buen estado,302000
+Sur costa,58,1,1,8,0,0,1,1,buen estado,284000
+Interior,71,2,1,10,0,1,0,1,reformada,97000
+Interior,113,5,3,38,0,1,1,0,buen estado,116500
+Área metropolitana,53,2,2,14,0,1,0,0,a reformar,98000
+Norte,50,1,2,7,0,1,0,1,buen estado,169500
+Sur costa,178,6,3,48,0,1,1,1,buen estado,600000
+Interior,71,2,1,32,0,1,0,0,buen estado,81500
+Sur costa,72,4,3,7,1,0,0,1,reformada,441500
+Norte,136,4,2,27,0,1,0,0,reformada,327000
+Área metropolitana,68,2,1,18,0,1,1,1,buen estado,144500
+Sur costa,85,1,1,9,1,0,0,0,a reformar,354000
+Interior,62,1,1,19,0,1,0,1,reformada,92500
+Área metropolitana,69,2,1,9,0,0,1,0,reformada,193500
+Sur costa,62,2,1,6,0,0,1,1,reformada,302500
+Norte,61,2,1,18,1,1,0,0,buen estado,218500
+Sur costa,69,3,2,75,1,1,0,0,buen estado,323000
+Área metropolitana,94,2,2,15,0,0,0,1,buen estado,192000
+Interior,97,2,1,28,0,1,1,0,a reformar,78500
+Este,127,3,2,2,1,0,0,1,buen estado,241500
+Área metropolitana,71,2,1,33,0,0,1,1,buen estado,158500
+Norte,51,2,1,14,0,0,0,1,buen estado,146000
+Este,104,3,1,15,0,1,1,0,buen estado,193000
+Interior,80,3,2,1,0,1,1,1,a reformar,101000
+Sur costa,86,2,1,34,0,0,0,0,buen estado,285000
+Área metropolitana,63,3,2,7,0,0,0,1,buen estado,154000
+Área metropolitana,84,4,2,31,0,1,0,1,buen estado,179500
+Norte,68,3,2,32,0,0,0,0,buen estado,156000
+Sur costa,104,4,2,30,0,1,1,0,a reformar,294500
+Área metropolitana,83,3,2,40,0,0,1,1,buen estado,184000
+Sur costa,76,1,1,26,0,0,0,1,buen estado,324000
+Norte,101,3,1,29,0,1,0,1,reformada,265000
+Área metropolitana,133,4,2,37,0,1,1,1,reformada,297500
+Este,111,3,2,68,0,0,0,1,a reformar,131500
+Este,106,3,3,22,1,1,0,0,buen estado,226000
+Este,88,3,1,30,1,0,1,1,a reformar,121500
+Área metropolitana,144,5,3,23,0,1,1,1,reformada,321000
+Sur costa,83,2,1,24,0,0,0,0,buen estado,327000
+Interior,106,3,1,8,0,0,0,0,buen estado,116000
+Área metropolitana,61,3,2,57,1,0,1,1,buen estado,129000
+Interior,161,4,2,15,0,1,1,1,buen estado,185500
+Área metropolitana,109,4,3,36,1,0,1,0,a reformar,155500
+Área metropolitana,72,5,2,26,0,1,0,1,buen estado,150500
+Este,48,2,1,37,0,1,0,1,reformada,108000
+Este,48,1,1,20,0,0,0,1,a reformar,77500
+Área metropolitana,79,1,2,13,0,1,0,1,buen estado,165000
+Sur costa,85,4,2,18,0,0,0,0,buen estado,366000
+Área metropolitana,87,1,1,11,0,1,1,1,buen estado,220500
+Área metropolitana,80,2,1,9,0,1,1,1,buen estado,181000
+Sur costa,78,1,1,30,0,0,1,1,buen estado,295500
+Área metropolitana,76,2,1,24,0,1,0,1,a reformar,133000
+Este,94,3,2,43,1,0,1,0,a reformar,129500
+Interior,60,2,2,28,0,0,0,1,reformada,73000
+Norte,135,5,4,29,1,0,0,1,reformada,476500
+Área metropolitana,72,2,2,70,0,0,1,1,reformada,144500
+Área metropolitana,72,2,1,9,0,1,0,1,buen estado,192500
+Sur costa,199,6,3,56,0,1,1,0,buen estado,659000
+Este,60,3,2,13,1,0,1,0,buen estado,119500
+Área metropolitana,108,3,1,13,0,0,0,1,buen estado,240000
+Norte,50,1,1,4,1,0,1,0,reformada,205500
+Área metropolitana,65,2,1,51,1,0,1,1,reformada,147500
+Interior,94,3,2,25,0,1,0,1,a reformar,83000
+Interior,119,4,3,17,0,0,0,1,buen estado,123500
+Este,64,2,1,25,0,1,0,0,buen estado,135500
+Área metropolitana,63,1,1,29,0,0,0,1,buen estado,131000
+Sur costa,109,4,2,8,0,0,1,0,buen estado,457500
+Norte,56,2,1,25,0,0,0,0,reformada,155000
+Este,84,2,1,31,1,1,0,0,buen estado,147500
+Sur costa,169,4,2,25,0,1,1,1,buen estado,649000
+Área metropolitana,54,1,1,49,0,0,0,0,buen estado,101000
+Norte,122,6,4,28,0,0,1,1,buen estado,319500
+Sur costa,82,1,1,13,0,1,1,0,a reformar,317500
+Este,136,3,1,36,1,1,0,1,buen estado,218500
+Sur costa,85,2,1,50,1,1,0,0,buen estado,393000
+Norte,75,1,1,15,0,0,1,1,buen estado,239500
+Sur costa,73,3,2,40,1,0,1,0,buen estado,357500
+Este,100,2,1,64,0,0,1,1,buen estado,158000
+Área metropolitana,36,1,1,17,0,1,0,0,buen estado,81500
+Área metropolitana,67,2,1,14,0,0,0,1,reformada,168000
+Área metropolitana,89,3,3,22,0,0,1,0,buen estado,187500
+Norte,97,2,1,21,0,1,1,0,a reformar,200500
+Área metropolitana,58,2,1,24,0,1,1,1,buen estado,129000
+Interior,88,2,2,29,0,1,0,1,a reformar,82000
+Sur costa,92,3,2,18,1,1,1,1,buen estado,527500
+Norte,109,2,1,70,0,1,1,1,buen estado,233500
+Norte,113,5,3,18,0,1,1,0,buen estado,266500
+Sur costa,72,3,1,38,1,1,0,0,buen estado,315000
+Este,212,6,4,16,0,0,1,1,reformada,377500
+Norte,87,4,2,14,0,1,1,0,buen estado,235000
+Área metropolitana,86,2,1,14,0,0,1,0,buen estado,194500
+Este,72,2,1,0,0,0,0,1,a reformar,124500
+Este,82,3,2,34,1,1,0,0,reformada,171500
+Norte,239,7,3,31,0,1,1,0,buen estado,587500
+Este,96,4,1,9,0,0,0,0,buen estado,186000
+Área metropolitana,49,1,1,12,0,0,1,0,buen estado,119000
+Norte,84,4,2,11,1,1,1,0,a reformar,226500
+Sur costa,64,2,1,22,0,0,1,1,reformada,321000
+Área metropolitana,50,2,1,11,0,0,1,1,buen estado,128000
+Sur costa,88,3,2,25,0,0,1,0,reformada,403500
+Norte,113,3,1,2,0,0,1,0,buen estado,291000
+Área metropolitana,107,3,2,80,0,0,1,1,a reformar,169500
+Interior,77,3,2,36,0,1,0,1,reformada,95500
+Interior,122,4,1,25,0,0,0,0,buen estado,110500
+Interior,72,2,1,17,0,1,1,0,buen estado,87500
+Sur costa,72,2,1,28,1,0,0,1,reformada,403500
+Área metropolitana,145,6,4,8,0,1,1,0,reformada,410000
+Norte,125,5,3,36,0,0,1,1,buen estado,292500
+Norte,75,2,1,32,0,1,1,1,reformada,203500
+Norte,106,4,2,2,1,1,0,1,buen estado,418000
+Área metropolitana,58,3,1,30,0,0,0,1,a reformar,96500
+Norte,86,3,2,15,0,0,1,1,a reformar,195000
+Sur costa,101,2,1,4,1,1,0,1,reformada,720000
+Área metropolitana,51,3,2,75,0,1,1,0,a reformar,86000
+Norte,84,3,1,21,0,1,1,0,buen estado,232500
+Interior,84,3,1,23,0,1,0,1,buen estado,101000
+Interior,155,5,3,28,0,0,1,1,a reformar,116500
+Sur costa,53,2,1,18,0,0,1,1,reformada,244500
+Sur costa,143,5,3,12,0,0,1,1,a reformar,521500
+Interior,189,6,3,7,0,0,1,1,a reformar,142000
+Área metropolitana,146,5,2,19,0,0,0,1,a reformar,195000
+Sur costa,118,3,2,23,0,0,0,0,reformada,512500
+Sur costa,54,1,1,62,1,0,0,0,buen estado,232500
+Sur costa,54,1,1,23,0,1,0,0,reformada,256500
+Área metropolitana,93,3,2,36,0,0,0,0,reformada,192500
+Norte,45,2,1,42,1,0,1,1,buen estado,141000
+Norte,80,3,1,6,0,1,1,1,a reformar,186000
+Este,175,4,2,54,1,0,0,0,buen estado,229000
+Sur costa,112,4,1,10,1,0,0,1,buen estado,549000
+Este,65,2,2,38,0,1,1,1,buen estado,122500
+Sur costa,110,4,3,4,1,0,0,1,buen estado,621000
+Área metropolitana,72,2,1,10,1,0,1,0,reformada,165000
+Sur costa,99,2,1,63,1,1,0,1,buen estado,463500
+Interior,100,3,2,24,0,0,1,1,buen estado,127000
+Norte,72,3,2,22,0,1,1,0,buen estado,186000
+Área metropolitana,135,4,2,23,0,1,1,1,buen estado,254500
+Norte,78,3,1,23,0,0,1,0,buen estado,199500
+Este,83,4,2,26,0,1,1,0,reformada,173500
+Norte,115,4,2,34,1,0,1,1,buen estado,323500
+Sur costa,97,3,3,29,1,0,1,0,buen estado,500500
+Norte,51,2,1,40,0,1,0,0,buen estado,137500
+Interior,154,5,3,58,0,1,0,0,buen estado,141000
+Norte,80,2,1,27,1,0,0,0,buen estado,259000
+Interior,101,3,1,7,0,1,0,0,reformada,156500
+Norte,34,2,1,4,1,0,1,1,buen estado,131500
+Área metropolitana,72,2,1,10,0,1,0,0,reformada,174500
+Sur costa,182,6,3,14,0,0,1,1,a reformar,539500
+Este,86,3,3,36,0,1,1,0,buen estado,162000
+Interior,130,3,2,8,0,0,0,1,buen estado,140500
+Área metropolitana,65,3,2,39,1,0,0,0,buen estado,123500
+Sur costa,109,3,2,8,0,0,1,0,a reformar,373500
+Área metropolitana,115,4,3,36,0,1,0,1,buen estado,229500
+Sur costa,104,3,2,19,1,1,1,0,reformada,704000
+Área metropolitana,68,3,3,11,0,1,0,1,reformada,193500
+Norte,143,4,2,18,0,0,0,0,reformada,378000
+Área metropolitana,191,6,5,27,0,0,0,1,buen estado,348500
+Norte,73,1,1,36,0,0,0,0,buen estado,150500
+Área metropolitana,78,2,1,33,0,0,1,1,reformada,174500
+Norte,68,4,2,48,1,1,0,0,buen estado,193000
+Sur costa,96,3,2,15,0,1,0,0,buen estado,361000
+Norte,108,2,1,36,0,1,0,0,a reformar,205000
+Norte,88,4,2,4,0,1,1,0,reformada,275000
+Área metropolitana,57,3,1,49,0,1,1,1,buen estado,118500
+Área metropolitana,80,3,1,9,0,1,1,0,buen estado,193000
+Norte,43,2,1,7,0,0,1,1,a reformar,111500
+Interior,88,4,2,36,0,0,1,1,buen estado,93000
+Sur costa,141,4,2,19,0,1,0,1,buen estado,522500
+Este,46,1,1,22,0,1,0,1,buen estado,87000
+Interior,87,3,2,10,0,1,1,1,a reformar,87500
+Sur costa,144,5,3,56,0,0,1,1,a reformar,370000
+Este,137,5,3,11,1,1,1,1,buen estado,263500
+Este,123,4,2,39,1,1,1,1,buen estado,195500
+Área metropolitana,47,3,3,54,0,0,0,1,buen estado,90500
+Norte,60,3,1,4,0,1,0,0,a reformar,139500
+Norte,119,4,2,23,1,1,1,0,reformada,464500
+Este,92,4,2,20,0,0,1,0,buen estado,157000
+Norte,96,4,3,28,0,0,0,1,reformada,256000
+Área metropolitana,102,4,2,29,1,0,1,0,buen estado,198000
+Este,102,5,3,4,0,1,0,0,buen estado,184000
+Este,69,2,1,7,0,0,0,0,buen estado,149500
+Área metropolitana,85,2,1,25,0,1,0,0,a reformar,139000
+Área metropolitana,113,4,2,21,1,0,0,1,reformada,263500
+Área metropolitana,89,3,2,47,0,0,0,0,reformada,189500
+Área metropolitana,48,2,1,56,0,0,1,0,reformada,101500
+Norte,38,1,1,33,0,0,1,1,buen estado,118000
+Norte,178,6,3,21,0,1,1,1,reformada,542500
+Interior,102,4,1,18,0,1,1,1,buen estado,120500
+Norte,91,3,2,2,1,1,1,0,reformada,361500
+Este,76,1,2,13,0,1,0,0,buen estado,145000
+Este,79,2,1,13,0,1,0,1,buen estado,139000
+Área metropolitana,62,3,2,8,0,1,1,0,buen estado,151500
+Este,101,3,2,28,1,0,1,1,buen estado,161500
+Área metropolitana,57,2,1,53,0,1,1,0,buen estado,110000
+Área metropolitana,46,2,1,51,0,1,1,0,buen estado,97500
+Área metropolitana,79,3,2,32,0,0,1,1,buen estado,176000
+Norte,69,2,1,17,1,0,1,1,a reformar,198000
+Norte,55,1,1,31,0,0,0,1,buen estado,147000
+Este,98,4,1,2,1,0,0,0,buen estado,180500
+Este,108,3,1,4,0,0,0,1,buen estado,184500
+Este,133,3,1,26,0,0,0,1,buen estado,214500
+Este,149,5,3,80,0,0,1,1,a reformar,181500
+Este,64,3,1,21,0,1,1,1,a reformar,96500
+Área metropolitana,44,1,1,30,0,0,0,0,reformada,93000
+Este,103,3,3,17,0,0,1,1,buen estado,192500
+Interior,69,1,1,37,0,0,0,0,reformada,75000
+Área metropolitana,114,3,1,49,0,0,0,1,reformada,204000
+Norte,77,3,2,20,1,0,1,0,a reformar,221000
+Este,79,3,2,17,0,0,0,1,a reformar,123500
+Sur costa,68,2,1,54,1,0,0,0,a reformar,251000
+Área metropolitana,159,6,4,21,0,1,1,1,reformada,405000
+Este,146,4,2,39,0,0,0,1,buen estado,199000
+Área metropolitana,56,1,1,32,0,0,0,0,a reformar,96000
+Interior,147,4,2,9,0,0,0,1,reformada,178500
+Este,81,2,2,24,0,0,1,1,buen estado,144500
+Norte,94,2,1,13,0,1,0,1,a reformar,206500
+Norte,58,2,1,8,0,0,0,1,buen estado,159000
+Área metropolitana,170,5,3,25,0,0,1,1,reformada,374000
+Sur costa,81,2,2,25,0,0,1,1,reformada,410500
+Sur costa,147,4,3,23,0,1,0,1,buen estado,546500
+Sur costa,52,1,1,18,0,1,1,0,buen estado,238000
+Área metropolitana,114,4,2,80,0,1,0,0,a reformar,165000
+Norte,81,2,1,37,1,1,0,0,buen estado,255500
+Interior,59,1,1,15,0,0,1,1,a reformar,56000
+Sur costa,104,3,1,23,0,0,0,1,buen estado,359000
+Sur costa,121,3,1,49,0,1,0,0,buen estado,434500
+Norte,253,7,4,5,0,1,1,1,reformada,723000
+Este,114,4,2,9,0,0,0,0,buen estado,214000
+Área metropolitana,113,3,2,20,0,1,0,1,reformada,261500
+Norte,97,3,2,11,0,0,1,1,buen estado,265000
+Sur costa,68,2,2,26,0,1,0,0,reformada,307000
+Interior,86,3,2,24,0,0,1,0,buen estado,88000
+Sur costa,81,3,2,5,1,1,0,0,reformada,564500
+Este,51,1,1,50,0,0,1,0,buen estado,91000
+Interior,53,1,1,9,0,0,0,0,reformada,77000
+Este,46,1,1,13,0,1,1,1,a reformar,88000
+Norte,66,2,1,33,1,0,1,0,buen estado,207000
+Norte,108,3,2,17,0,0,0,0,buen estado,255500
+Área metropolitana,95,2,1,20,0,1,1,1,buen estado,199500
+Norte,71,2,1,38,1,1,0,0,a reformar,153000
+Sur costa,104,2,1,21,0,0,0,1,reformada,497500
+Sur costa,44,1,1,18,0,1,1,1,a reformar,158500
+Norte,86,3,2,14,0,0,1,1,buen estado,219500
+Área metropolitana,81,3,2,21,0,0,0,0,a reformar,124000
+Sur costa,74,3,2,35,1,0,0,0,a reformar,280000
+Área metropolitana,62,2,1,39,0,0,1,1,reformada,149000
+Norte,134,4,1,5,1,1,1,0,reformada,498000
+Sur costa,117,3,2,31,0,1,0,1,buen estado,460500
+Este,202,6,3,6,0,1,1,1,reformada,429500
+Área metropolitana,44,2,1,53,0,1,0,1,buen estado,98000
+Sur costa,83,2,1,37,0,0,0,1,a reformar,242500
+Sur costa,73,3,1,15,0,1,1,1,buen estado,305000
+Este,102,2,1,32,0,0,1,1,a reformar,133500
+Este,119,3,1,19,0,1,1,1,buen estado,225500
+Área metropolitana,86,4,3,6,0,0,0,0,buen estado,177000
+Norte,101,3,1,25,0,0,1,0,buen estado,229000
+Sur costa,47,1,1,1,1,1,0,1,buen estado,279000
+Norte,91,3,1,30,1,1,0,1,buen estado,280000
+Sur costa,78,3,2,73,1,0,1,1,a reformar,267000
+Sur costa,92,1,1,8,0,0,0,1,a reformar,296500
+Área metropolitana,62,2,2,12,0,0,0,0,a reformar,98500
+Norte,58,1,1,15,1,0,1,1,buen estado,188000
+Sur costa,77,3,1,18,1,0,1,0,a reformar,357500
+Este,135,4,1,3,1,0,0,1,a reformar,190500
+Norte,73,1,1,1,0,0,0,1,reformada,218000
+Norte,84,4,3,23,0,1,1,1,buen estado,219000
+Área metropolitana,128,4,3,29,0,1,1,1,buen estado,259500
+Sur costa,129,4,3,3,0,0,1,1,a reformar,388500
+Norte,66,3,3,12,0,0,0,1,a reformar,126000
+Sur costa,112,3,1,17,1,0,0,0,reformada,662500
+Norte,84,3,2,35,1,1,1,1,buen estado,277500
+Este,87,3,1,7,1,0,1,0,a reformar,138000
+Área metropolitana,71,1,1,9,1,0,0,1,a reformar,137500
+Norte,65,2,1,59,1,1,1,1,buen estado,197500
+Área metropolitana,77,2,2,24,0,1,1,1,buen estado,185000
+Área metropolitana,135,3,2,36,0,1,1,0,a reformar,191500
+Sur costa,137,5,3,13,1,0,1,1,buen estado,736500
+Este,60,2,1,13,0,1,0,1,buen estado,116000
+Área metropolitana,201,7,4,4,0,0,1,1,reformada,476500
+Área metropolitana,51,2,1,46,0,0,1,0,reformada,109500
+Sur costa,65,2,1,23,1,1,1,0,buen estado,398500
+Sur costa,41,1,1,28,0,1,0,1,buen estado,173500
+Área metropolitana,118,3,1,15,0,0,0,1,a reformar,177500
+Norte,63,2,2,8,0,0,1,0,reformada,203000
+Área metropolitana,118,4,2,13,0,0,1,1,buen estado,272000
+Interior,68,2,1,4,0,1,1,1,buen estado,101500
+Interior,104,3,2,13,0,0,1,1,buen estado,116500
+Área metropolitana,76,3,1,32,0,1,0,1,reformada,174500
+Área metropolitana,46,2,1,38,0,0,0,1,buen estado,83000
+Área metropolitana,73,2,1,36,0,0,1,1,buen estado,149000
+Área metropolitana,127,4,3,18,1,1,0,0,reformada,346500
+Norte,106,4,2,29,0,0,1,1,reformada,289000
+Este,154,5,3,24,0,0,1,0,a reformar,203000
+Sur costa,78,2,2,5,1,0,1,1,reformada,489000
+Área metropolitana,93,3,2,6,0,1,1,1,reformada,239000
+Sur costa,76,3,2,20,0,1,1,1,buen estado,320000
+Este,130,4,2,29,0,1,0,1,buen estado,213500
+Área metropolitana,120,4,3,9,0,0,1,1,a reformar,211500
+Área metropolitana,61,2,1,55,0,0,1,1,reformada,134500
+Sur costa,85,2,1,9,1,1,1,1,buen estado,486500
+Norte,77,2,1,13,1,1,0,1,buen estado,341000
+Interior,102,4,2,29,0,1,0,0,a reformar,84500
+Área metropolitana,89,4,3,27,0,0,0,0,buen estado,153000
+Área metropolitana,70,2,2,37,0,1,0,0,buen estado,146500
+Norte,60,1,1,19,0,0,1,1,buen estado,175000
+Norte,97,4,2,5,0,1,0,1,buen estado,290000
+Sur costa,137,4,3,20,0,0,1,0,reformada,614000
+Área metropolitana,40,2,1,80,0,0,0,0,buen estado,72500
+Interior,62,2,1,43,0,1,0,1,buen estado,70500
+Área metropolitana,120,2,1,24,0,1,0,0,buen estado,256500
+Norte,85,3,2,14,0,0,0,1,buen estado,219500
+Área metropolitana,106,4,3,69,1,1,0,1,buen estado,197000
+Interior,67,2,2,47,0,0,1,1,buen estado,66500
+Área metropolitana,51,2,1,6,0,0,0,1,buen estado,125500
+Norte,61,3,2,7,1,0,0,0,buen estado,221500
+Sur costa,85,4,3,42,0,1,1,0,buen estado,334000
+Sur costa,50,3,2,42,0,1,1,0,a reformar,168500
+Norte,79,2,1,16,1,1,1,1,buen estado,275000
+Área metropolitana,94,4,2,5,0,1,1,0,buen estado,222500
+Interior,68,3,2,24,0,1,1,0,buen estado,85500
+Norte,76,2,1,28,0,0,0,1,buen estado,201500
+Área metropolitana,160,5,3,42,0,0,1,1,a reformar,230000
+Norte,56,1,1,13,0,0,0,0,buen estado,153500
+Sur costa,117,5,2,29,1,1,1,0,buen estado,540500
+Sur costa,78,3,1,17,0,1,0,1,buen estado,313000
+Área metropolitana,53,2,1,12,0,1,1,1,a reformar,98500
+Sur costa,160,5,2,24,1,1,1,1,a reformar,647500
+Área metropolitana,105,2,3,23,0,1,1,1,buen estado,191000
+Interior,132,4,3,44,0,0,1,0,reformada,132500
+Sur costa,74,3,1,19,1,0,0,1,reformada,450000
+Sur costa,167,6,3,45,0,1,1,1,a reformar,450500
+Sur costa,80,2,2,29,0,0,0,0,a reformar,234500
+Área metropolitana,188,6,4,47,1,1,0,1,buen estado,353000
+Sur costa,44,1,1,12,0,0,1,1,buen estado,213500
+Sur costa,59,2,1,22,0,1,1,1,reformada,316000
+Área metropolitana,79,2,1,15,0,0,0,0,buen estado,154500
+Sur costa,67,1,1,26,0,1,0,1,buen estado,271000
+Área metropolitana,100,2,1,31,0,1,0,1,reformada,217000
+Norte,49,1,1,7,1,1,1,0,buen estado,213000
+Sur costa,99,3,2,26,0,1,0,0,a reformar,302000
+Este,79,2,1,7,0,1,0,0,reformada,186500
+Área metropolitana,74,2,1,16,0,1,1,0,buen estado,167500
+Área metropolitana,123,5,4,3,0,0,1,1,reformada,307000
+Interior,136,5,3,15,0,0,0,1,buen estado,133500
+Interior,91,3,2,32,0,1,0,1,buen estado,105000
+Área metropolitana,52,2,2,18,0,1,1,1,reformada,141500
+Sur costa,99,3,2,22,0,1,1,1,buen estado,384000
+Área metropolitana,90,2,1,23,0,1,0,0,a reformar,146000
+Sur costa,98,5,3,7,1,1,0,0,buen estado,547000
+Sur costa,87,3,2,7,1,1,1,1,buen estado,513500
+Norte,48,2,1,17,0,1,1,0,buen estado,146000
+Este,131,4,2,17,1,1,1,1,buen estado,262500
+Sur costa,87,3,2,27,1,1,0,1,reformada,545500
+Este,59,1,1,40,0,1,0,0,buen estado,101000
+Este,67,2,1,41,0,0,0,1,buen estado,110500
+Norte,135,4,3,72,0,0,1,1,reformada,330500
+Sur costa,57,1,1,71,1,1,0,1,buen estado,289500
+Interior,120,4,2,29,0,1,1,1,a reformar,97500
+Interior,154,6,4,27,0,1,0,0,buen estado,158500
+Sur costa,97,3,2,12,0,1,1,1,buen estado,367000
+Área metropolitana,62,2,2,11,0,1,1,1,reformada,159500
+Sur costa,119,3,2,20,1,0,0,0,a reformar,437500
+Área metropolitana,146,6,3,6,1,0,0,1,buen estado,345000
+Interior,87,2,2,19,0,0,0,0,buen estado,106500
+Este,78,2,1,11,0,1,0,0,a reformar,124000
+Área metropolitana,97,4,1,10,0,1,0,1,buen estado,229000
+Norte,102,3,1,25,1,0,1,0,buen estado,306500
+Área metropolitana,97,4,2,12,0,0,0,0,buen estado,192000
+Sur costa,80,3,2,24,0,1,1,0,buen estado,328000
+Este,99,3,1,6,0,1,1,1,buen estado,166500
+Este,49,1,1,5,1,0,0,1,buen estado,107500
+Área metropolitana,96,3,3,55,0,1,0,0,a reformar,123500
+Área metropolitana,99,3,1,26,0,0,1,0,buen estado,189500
+Este,113,3,2,22,1,0,0,0,a reformar,149500
+Este,86,3,2,25,0,0,1,0,reformada,182500
+Norte,41,1,2,64,0,0,1,1,buen estado,104500
+Sur costa,87,3,1,59,1,1,1,0,a reformar,342500
+Sur costa,74,2,1,8,0,0,0,1,buen estado,339500
+Sur costa,48,2,1,26,0,0,0,1,a reformar,161500
+Área metropolitana,51,2,1,36,0,1,1,0,reformada,140000
+Norte,144,4,3,6,0,1,1,1,a reformar,304500
+Sur costa,134,5,2,80,1,0,0,0,buen estado,492500
+Área metropolitana,66,2,1,10,0,1,0,1,buen estado,159000
+Interior,71,2,1,37,0,1,1,1,buen estado,74500
+Área metropolitana,106,3,1,11,0,0,1,0,buen estado,217000
+Área metropolitana,65,4,2,14,0,0,1,0,buen estado,142500
+Interior,108,4,2,49,0,1,1,0,buen estado,113000
+Sur costa,129,4,2,20,1,1,0,0,buen estado,665500
+Área metropolitana,71,3,2,28,0,0,1,1,a reformar,122500
+Norte,87,2,2,53,0,1,0,1,buen estado,205000
+Norte,102,3,2,10,0,0,0,1,buen estado,259000
+Norte,96,4,2,3,0,1,1,0,buen estado,250500
+Norte,100,3,2,40,0,1,0,1,buen estado,210000
+Norte,110,3,2,32,1,0,1,1,buen estado,334000
+Este,71,3,1,6,0,0,1,0,buen estado,151500
+Norte,50,1,1,23,1,0,0,0,buen estado,158500
+Sur costa,197,5,2,12,1,0,1,0,a reformar,676500
+Sur costa,59,1,1,45,1,0,0,0,buen estado,273500
+Área metropolitana,73,2,1,40,0,1,1,0,buen estado,126000
+Sur costa,96,5,3,10,1,1,1,0,buen estado,540500
+Sur costa,92,3,1,10,0,1,0,0,reformada,462000
+Este,140,4,2,50,1,0,1,1,reformada,232500
+Norte,116,5,2,22,0,0,0,0,buen estado,270500
+Sur costa,107,5,3,25,1,0,1,1,a reformar,404500
+Norte,108,3,2,12,0,0,0,0,buen estado,270000
+Norte,137,5,3,28,1,0,0,0,a reformar,289500
+Este,84,3,1,8,0,0,1,0,buen estado,156500
+Este,77,2,1,8,0,0,1,0,buen estado,146500
+Área metropolitana,43,2,1,58,0,0,0,0,buen estado,97000
+Norte,53,2,2,61,1,1,0,1,buen estado,142000
+Interior,78,2,1,33,0,0,1,1,a reformar,65000
+Sur costa,90,4,3,17,1,0,0,0,buen estado,460000
+Área metropolitana,56,3,1,13,0,0,0,0,a reformar,95500
+Norte,98,3,1,16,0,1,0,0,buen estado,261500
+Este,66,3,1,24,0,1,1,1,a reformar,106000
+Sur costa,82,4,2,2,1,0,1,0,buen estado,454500
+Norte,80,2,1,24,0,0,0,1,buen estado,208500
+Sur costa,67,2,1,12,0,0,1,0,a reformar,247000
+Sur costa,106,4,3,45,1,1,1,1,buen estado,442500
+Este,81,3,1,8,0,1,1,1,reformada,189000
+Área metropolitana,143,4,2,26,0,0,0,1,buen estado,228500
+Norte,156,4,2,17,0,1,1,1,buen estado,398000
+Interior,107,4,2,6,0,0,0,0,a reformar,101500
+Este,66,2,1,2,0,0,1,1,a reformar,113000
+Interior,145,4,3,19,0,1,1,1,reformada,177000
+Área metropolitana,135,5,3,9,0,1,0,0,buen estado,275500
+Este,61,3,1,5,0,1,0,0,buen estado,125000
+Área metropolitana,77,3,2,18,0,1,0,1,reformada,199000
+Este,128,3,3,22,0,0,0,0,buen estado,201000
+Norte,126,4,2,18,0,1,0,1,a reformar,266500
+Área metropolitana,124,5,3,7,0,1,1,1,buen estado,253500
+Área metropolitana,133,3,1,9,0,1,1,1,a reformar,235000
+Sur costa,78,4,2,23,1,0,0,1,reformada,456000
+Norte,77,3,1,21,0,1,1,0,a reformar,164000
+Sur costa,177,6,3,12,1,0,0,1,buen estado,815000
+Sur costa,57,1,1,13,0,0,0,0,buen estado,238000
+Sur costa,62,2,1,15,0,0,0,0,buen estado,225500
+Este,79,3,1,41,1,1,1,1,buen estado,135500
+Sur costa,99,4,2,21,0,1,1,0,buen estado,446000
+Sur costa,87,2,1,25,1,1,1,1,buen estado,405500
+Área metropolitana,76,3,3,61,0,1,0,0,buen estado,129000
+Área metropolitana,145,5,3,7,0,0,1,0,reformada,339000
+Sur costa,121,4,3,37,1,0,1,1,reformada,696000
+Interior,45,1,1,10,0,1,1,1,buen estado,61500
+Sur costa,69,2,1,59,1,0,0,1,a reformar,233500
+Área metropolitana,84,3,1,12,0,0,1,1,buen estado,189000
+Interior,91,3,1,9,0,0,1,0,a reformar,83500
+Área metropolitana,97,2,1,15,0,0,1,1,buen estado,210000
+Sur costa,86,3,2,25,1,1,1,0,buen estado,490500
+Sur costa,113,4,3,79,0,1,1,0,a reformar,287000
+Área metropolitana,120,5,3,5,0,0,0,1,buen estado,247500
+Norte,147,4,2,18,1,0,1,1,buen estado,425500
+Sur costa,65,1,1,21,1,1,1,1,buen estado,374500
+Sur costa,99,2,1,25,0,1,1,0,a reformar,297500
+Sur costa,95,3,2,80,1,0,0,0,reformada,470500
+Norte,79,3,2,55,0,1,1,0,reformada,199500
+Área metropolitana,101,3,1,28,0,0,0,1,buen estado,206500
+Este,166,5,2,47,0,0,1,1,a reformar,184500
+Norte,46,1,1,5,1,1,0,1,buen estado,176000
+Norte,99,3,2,30,0,0,0,1,a reformar,199500
+Interior,122,4,1,9,0,1,0,0,buen estado,130500
+Área metropolitana,64,2,2,35,0,1,0,0,buen estado,131500
+Norte,94,3,2,27,0,1,0,1,buen estado,236000
+Norte,57,2,1,10,1,1,1,1,buen estado,229500
+Área metropolitana,108,3,1,15,0,0,1,0,buen estado,218500
+Área metropolitana,90,3,2,7,0,0,0,1,reformada,198000
+Área metropolitana,55,1,1,11,0,1,0,1,buen estado,134500
+Área metropolitana,134,6,3,33,0,0,1,0,buen estado,239500
+Este,86,1,2,29,0,1,0,0,reformada,164500
+Norte,98,4,2,32,0,0,1,1,buen estado,246500
+Sur costa,114,3,2,12,0,0,0,0,a reformar,382000
+Área metropolitana,101,3,2,20,0,1,0,0,reformada,243000
+Área metropolitana,75,2,1,68,0,1,1,1,reformada,171500
+Área metropolitana,130,3,2,41,0,1,0,0,buen estado,228000
+Este,85,2,2,33,0,0,0,1,a reformar,98500
+Interior,221,7,4,25,0,0,0,1,buen estado,231000
+Sur costa,96,3,2,4,0,1,1,1,buen estado,460500
+Norte,72,2,2,18,1,1,1,1,reformada,331000
+Este,77,1,1,36,0,1,1,1,buen estado,123500
+Área metropolitana,48,3,2,60,0,1,0,1,buen estado,90500
+Área metropolitana,41,1,1,18,0,1,0,1,buen estado,115500
+Este,90,3,1,22,0,1,0,1,reformada,164500
+Norte,83,2,1,27,0,1,1,1,a reformar,160000
+Área metropolitana,121,4,3,25,0,0,1,0,buen estado,207000
+Área metropolitana,80,2,1,20,0,0,1,1,buen estado,150000
+Norte,75,3,2,48,0,1,0,1,buen estado,182000
+Interior,44,2,1,18,0,1,1,0,reformada,68000
+Área metropolitana,42,2,1,21,1,0,1,1,reformada,132000
+Sur costa,46,2,1,37,1,1,0,1,a reformar,187000
+Norte,89,2,1,28,0,1,1,0,buen estado,240500
+Norte,270,7,5,14,0,1,0,1,a reformar,518500
+Este,144,6,4,80,0,0,1,1,buen estado,201500
+Área metropolitana,66,3,1,17,1,1,0,0,reformada,162500
+Área metropolitana,108,3,1,36,0,0,1,1,buen estado,215500
+Sur costa,64,2,2,43,1,0,0,1,buen estado,291500
+Sur costa,109,2,1,5,0,1,1,1,a reformar,407000
+Área metropolitana,66,2,1,30,0,0,0,1,buen estado,139500
+Interior,135,4,2,25,0,1,0,1,reformada,177000
+Sur costa,61,2,1,39,0,0,1,0,buen estado,238500
+Área metropolitana,85,2,1,30,0,0,1,0,buen estado,158000
+Área metropolitana,105,3,1,29,0,0,1,1,a reformar,163000
+Norte,89,3,2,18,1,0,0,1,a reformar,227500
+Sur costa,84,3,1,34,0,0,0,1,reformada,349500
+Sur costa,99,3,2,29,1,1,1,1,buen estado,529500
+Sur costa,138,5,2,15,1,1,0,0,buen estado,729000
+Interior,91,4,3,6,0,1,1,1,reformada,130000
+Área metropolitana,157,4,1,19,0,0,1,1,buen estado,295000
+Sur costa,79,3,3,13,0,0,1,1,a reformar,270000
+Área metropolitana,67,3,2,19,0,1,1,0,reformada,174000
+Norte,75,2,1,8,0,0,1,0,buen estado,202000
+Sur costa,104,4,1,45,1,1,1,1,reformada,517500
+Sur costa,52,2,1,20,0,0,0,1,buen estado,224500
+Área metropolitana,63,1,1,28,0,0,0,0,buen estado,128000
+Norte,82,3,2,15,1,1,1,0,reformada,280000
+Sur costa,105,4,2,34,1,0,0,0,buen estado,456500
+Sur costa,38,1,1,42,1,0,0,0,a reformar,157000
+Interior,118,5,3,10,0,0,1,1,buen estado,129500
+Sur costa,53,2,1,44,1,0,0,1,buen estado,237500
+Este,191,6,4,61,0,0,1,1,a reformar,199500
+Norte,77,3,2,14,0,1,0,1,buen estado,208500
+Sur costa,167,5,2,21,1,1,0,1,buen estado,867000
+Sur costa,94,3,2,8,0,0,0,1,a reformar,346000
+Norte,94,2,1,46,1,1,1,0,reformada,304000
+Este,127,4,2,24,1,0,0,0,buen estado,208500
+Este,102,4,2,37,1,1,1,0,buen estado,184500
+Este,63,1,1,7,0,0,0,1,reformada,146000
+Este,84,2,1,45,0,1,0,1,buen estado,159000
+Norte,80,2,2,9,1,1,0,1,reformada,341500
+Área metropolitana,53,1,1,13,0,0,0,1,buen estado,118500
+Área metropolitana,47,2,1,27,0,0,0,0,buen estado,97500
+Área metropolitana,101,2,2,46,0,0,1,0,buen estado,166000
+Norte,78,2,1,10,1,0,1,0,buen estado,277000
+Norte,141,4,2,40,0,0,0,0,reformada,313500
+Área metropolitana,81,2,1,9,0,0,1,1,reformada,189500
+Área metropolitana,57,2,1,30,0,1,0,1,buen estado,127500
+Este,93,3,2,43,0,1,0,1,buen estado,143000
+Sur costa,125,4,3,44,0,0,1,0,buen estado,411000
+Norte,79,2,1,41,0,1,0,1,a reformar,150000
+Norte,101,4,2,20,1,0,0,0,buen estado,290500
+Área metropolitana,129,3,2,11,0,1,0,1,buen estado,278500
+Norte,65,2,1,55,0,1,0,0,buen estado,145500
+Norte,66,1,1,48,0,0,0,1,buen estado,153500
+Área metropolitana,75,2,1,16,0,1,0,0,buen estado,175000
+Norte,79,4,3,17,0,1,0,0,a reformar,171500
+Área metropolitana,148,4,2,21,0,0,1,1,a reformar,242500
+Este,84,3,2,14,0,0,1,0,buen estado,148000
+Sur costa,127,4,1,44,0,0,0,0,buen estado,432500
+Este,90,3,2,27,0,1,1,0,buen estado,164500
+Área metropolitana,73,1,1,11,0,0,0,0,buen estado,167000
+Sur costa,95,4,2,42,0,0,0,0,buen estado,303000
+Norte,68,2,2,15,1,1,0,0,reformada,278000
+Interior,151,5,3,31,0,0,0,1,buen estado,149500
+Interior,91,2,1,51,0,0,0,1,a reformar,72500
+Norte,66,2,2,24,1,1,1,1,reformada,254500
+Interior,123,4,2,13,0,1,1,1,buen estado,159500
+Área metropolitana,82,3,2,17,0,1,0,0,buen estado,185500
+Área metropolitana,99,3,3,39,0,0,0,0,buen estado,172000
+Interior,82,3,1,16,0,1,1,0,buen estado,105000
+Área metropolitana,98,2,1,18,0,0,1,1,buen estado,211500
+Norte,106,3,1,33,0,0,1,0,a reformar,195000
+Área metropolitana,34,1,1,14,1,0,0,0,buen estado,89000
+Sur costa,44,1,1,18,0,1,0,0,a reformar,168000
+Área metropolitana,72,3,1,4,1,1,0,1,buen estado,184000
+Este,73,2,1,22,0,0,1,0,buen estado,161500
+Interior,68,3,1,19,0,0,0,1,reformada,97500
+Sur costa,141,5,3,46,1,1,1,0,buen estado,637000
+Sur costa,78,3,1,9,1,0,0,0,buen estado,412000
+Área metropolitana,100,3,1,32,0,1,1,1,reformada,252000
+Sur costa,81,3,2,23,0,0,0,1,reformada,369500
+Área metropolitana,93,3,1,12,0,0,0,0,a reformar,139000
+Área metropolitana,77,3,2,11,0,1,0,1,buen estado,175500
+Área metropolitana,106,2,1,15,0,0,0,0,reformada,269000
+Área metropolitana,58,3,2,27,0,1,0,1,buen estado,134500
+Sur costa,136,4,2,18,0,0,0,0,reformada,612500
+Área metropolitana,61,2,2,5,0,0,0,1,reformada,165000
+Norte,108,3,2,5,0,1,1,0,a reformar,239500
+Área metropolitana,104,3,1,27,0,1,0,1,buen estado,230000
+Área metropolitana,162,6,2,36,0,1,1,1,buen estado,290000
+Sur costa,80,4,2,6,0,0,1,0,a reformar,308500
+Área metropolitana,88,2,1,22,0,0,1,1,buen estado,168000
+Área metropolitana,49,2,1,28,0,0,1,1,buen estado,117000
+Norte,139,5,3,32,0,1,1,1,reformada,361500
+Norte,94,4,2,34,0,0,0,0,reformada,248500
+Área metropolitana,102,4,2,12,0,1,0,1,reformada,298500
+Norte,73,2,1,20,0,0,0,1,buen estado,191000
+Norte,112,4,3,38,0,1,0,1,buen estado,274500
+Norte,104,3,2,22,0,1,0,1,reformada,293500
+Este,76,3,2,20,0,0,0,1,reformada,151500
+Interior,114,4,2,16,0,1,0,0,buen estado,129500
+Interior,194,5,4,12,0,0,0,0,a reformar,135000
+Interior,37,2,1,28,0,0,1,1,buen estado,49000
+Área metropolitana,81,3,2,6,0,1,0,0,buen estado,186500
+Norte,141,5,3,49,0,0,0,1,buen estado,269500
+Norte,67,2,1,18,0,0,1,1,reformada,203000
+Este,91,3,2,12,0,0,0,1,a reformar,122500
+Área metropolitana,136,3,2,36,0,0,1,0,buen estado,232000
+Norte,138,5,3,64,1,0,1,1,buen estado,343000
+Área metropolitana,126,3,2,39,0,0,1,1,buen estado,209000
+Sur costa,64,3,2,13,1,1,1,0,buen estado,328500
+Interior,71,2,1,16,0,1,0,0,buen estado,86500
+Área metropolitana,131,4,2,27,0,1,0,0,reformada,282500
+Norte,84,2,2,32,0,0,0,1,reformada,210500
+Este,72,2,1,20,0,0,0,1,buen estado,131000
+Este,71,2,1,15,0,0,0,0,reformada,163500
+Área metropolitana,68,2,1,18,0,0,1,0,reformada,159000
+Este,42,1,1,7,0,0,0,1,buen estado,86000
+Área metropolitana,79,2,2,42,0,1,1,1,buen estado,168500
+Sur costa,103,2,1,19,0,1,0,0,reformada,451000
+Interior,166,3,2,31,0,1,0,1,a reformar,120500
+Sur costa,69,2,1,7,0,1,0,1,buen estado,333500
+Interior,58,1,1,9,0,1,1,0,buen estado,73500
+Sur costa,67,2,1,38,0,0,1,0,buen estado,271500
+Norte,67,1,1,16,0,0,0,0,buen estado,199000
+Sur costa,66,2,1,22,1,0,1,1,buen estado,366500
+Este,30,1,1,53,0,1,0,0,buen estado,55500
+Sur costa,101,3,1,25,0,0,1,0,a reformar,306500
+Interior,151,5,3,17,0,1,0,1,buen estado,163500
+Sur costa,76,2,2,7,1,1,1,1,a reformar,372500
+Norte,102,3,3,4,0,1,1,0,buen estado,283000
+Norte,316,7,4,63,0,0,1,0,buen estado,566500
+Área metropolitana,83,2,1,3,0,0,1,0,reformada,188500
+Norte,52,1,1,18,0,0,0,1,buen estado,146000
+Área metropolitana,137,5,3,12,1,1,0,0,a reformar,254500
+Este,73,4,1,50,0,1,1,1,buen estado,131000
+Este,105,3,2,14,0,0,0,0,a reformar,138500
+Área metropolitana,154,4,2,24,0,0,1,1,buen estado,281500
+Área metropolitana,141,5,2,22,0,0,1,1,buen estado,284500
+Norte,55,3,2,46,1,1,0,1,buen estado,171500
+Este,54,3,1,31,0,1,1,1,buen estado,106500
+Sur costa,105,3,1,47,0,1,0,0,buen estado,347000
+Área metropolitana,137,5,3,27,0,0,0,1,buen estado,255500
+Norte,65,3,1,10,1,1,1,1,reformada,296000
+Interior,46,2,1,14,1,1,0,0,a reformar,49500
+Área metropolitana,122,5,3,40,0,1,1,0,a reformar,157000
+Área metropolitana,86,2,1,10,0,0,0,0,reformada,212500
+Norte,76,2,2,18,0,0,1,0,buen estado,179000
+Área metropolitana,159,5,3,17,0,0,0,1,a reformar,237500
+Área metropolitana,100,4,2,24,0,1,1,1,buen estado,238500
+Norte,90,3,2,17,0,1,0,0,reformada,243500
+Este,112,4,2,35,0,1,0,0,reformada,199500
+Área metropolitana,107,3,3,44,0,1,1,1,buen estado,195000
+Sur costa,132,3,1,28,0,0,1,0,reformada,507500
+Interior,97,4,2,14,0,0,1,0,buen estado,98500
+Área metropolitana,90,3,1,11,0,1,0,0,a reformar,146000
+Interior,79,2,2,11,0,0,0,0,buen estado,91000
+Área metropolitana,125,4,2,7,0,0,1,0,reformada,318000
+Norte,144,4,3,25,0,0,1,0,buen estado,355000
+Área metropolitana,83,3,2,43,0,0,1,0,reformada,174000
+Área metropolitana,63,1,1,26,0,0,1,1,a reformar,98500
+Área metropolitana,154,5,3,7,0,1,0,0,reformada,393000
+Sur costa,56,2,1,19,0,0,0,1,buen estado,243000
+Interior,38,1,1,21,0,1,1,1,reformada,59500
+Interior,45,1,2,17,0,0,1,1,reformada,70000
+Sur costa,60,2,1,18,0,1,1,1,a reformar,213000
+Interior,101,4,2,6,0,1,0,0,a reformar,100000
+Interior,145,6,4,8,0,0,1,1,buen estado,170000
+Interior,78,3,2,33,0,0,0,0,buen estado,91000
+Norte,78,2,1,10,0,0,1,1,buen estado,236000
+Área metropolitana,99,2,1,28,0,1,0,1,buen estado,193000
+Interior,125,4,2,38,0,0,1,0,a reformar,95000
+Área metropolitana,104,2,1,11,0,0,1,1,reformada,274000
+Área metropolitana,48,2,1,13,0,1,0,0,buen estado,118500
+Sur costa,60,2,1,56,0,1,1,0,buen estado,205000
+Sur costa,167,5,2,19,0,0,0,0,buen estado,586500
+Este,60,2,1,29,0,1,0,0,reformada,127000
+Área metropolitana,64,1,1,16,1,1,0,1,reformada,168500
+Este,163,5,3,12,0,0,1,1,buen estado,292500
+Este,77,3,2,6,0,1,1,0,reformada,176000
+Norte,118,3,1,38,0,0,0,1,buen estado,290000
+Interior,135,3,1,11,0,0,0,0,reformada,167500
+Área metropolitana,110,3,2,15,0,0,0,1,buen estado,254000
+Norte,104,3,2,15,0,0,1,0,buen estado,280500
+Área metropolitana,44,1,1,49,0,1,0,1,reformada,103500
+Norte,61,2,1,17,0,0,1,0,reformada,197000
+Este,70,2,1,29,0,0,0,0,buen estado,106500
+Este,136,4,2,23,0,1,1,1,reformada,274000
+Norte,124,3,3,26,0,1,0,0,buen estado,300000
+Este,48,1,1,47,0,1,0,0,reformada,106000
+Interior,118,2,1,31,0,1,1,1,buen estado,126500
+Sur costa,127,4,2,22,0,1,0,0,a reformar,389000
+Área metropolitana,115,4,2,24,0,1,1,1,buen estado,244000
+Área metropolitana,51,2,1,14,0,0,1,1,a reformar,95500
+Área metropolitana,114,2,1,20,0,0,1,0,a reformar,176000
+Norte,158,5,3,15,1,0,0,1,a reformar,403500
+Sur costa,87,3,2,70,0,1,1,0,reformada,339000
+Interior,179,6,4,17,0,0,0,0,buen estado,179500
+Interior,111,3,2,30,0,1,0,1,buen estado,134500
+Norte,103,4,1,8,1,0,0,0,buen estado,376500
+Este,191,6,3,30,1,0,1,1,buen estado,301000
+Norte,98,3,2,22,1,0,0,1,a reformar,269500
+Norte,74,2,1,13,1,0,1,0,buen estado,272500
+Área metropolitana,96,4,3,29,0,1,0,1,reformada,205500
+Este,90,3,2,9,0,1,0,1,buen estado,183000
+Interior,98,4,2,6,0,1,0,0,buen estado,120500
+Interior,68,2,2,20,0,1,0,0,buen estado,76500
+Interior,99,3,1,18,0,1,0,1,buen estado,122500
+Este,84,2,1,1,0,0,1,0,buen estado,169500
+Área metropolitana,212,6,3,7,0,0,1,0,buen estado,446500
+Este,138,5,2,7,0,0,1,1,a reformar,174500
+Interior,133,4,1,18,0,0,1,0,buen estado,138000
+Interior,75,2,1,8,0,1,1,1,a reformar,74500
+Este,95,3,2,22,0,1,0,0,reformada,193500
+Norte,105,3,1,42,1,0,0,1,a reformar,243000
+Sur costa,49,2,1,8,1,1,0,0,reformada,326000
+Sur costa,105,4,3,29,1,0,0,1,reformada,543500
+Norte,98,2,2,53,1,0,1,1,a reformar,187500
+Interior,67,2,1,40,0,1,0,1,buen estado,71000
+Área metropolitana,81,1,1,48,0,0,1,0,buen estado,134500
+Norte,79,3,1,74,1,0,1,1,buen estado,221500
+Área metropolitana,56,1,1,11,0,0,0,1,buen estado,135500
+Este,81,2,1,19,0,1,0,1,reformada,177000
+Área metropolitana,102,3,1,25,0,0,1,1,buen estado,230500
+Interior,78,2,1,44,0,0,1,0,buen estado,75000
+Sur costa,119,3,3,80,0,0,0,1,reformada,470000
+Área metropolitana,51,1,1,42,0,0,0,0,buen estado,105000
+Sur costa,115,3,3,44,1,1,1,0,reformada,600000
+Área metropolitana,52,1,1,50,1,1,0,1,reformada,129500
+Área metropolitana,74,3,2,9,1,0,0,1,a reformar,141500
+Sur costa,128,5,3,7,1,1,1,0,buen estado,674000
+Interior,97,3,2,23,1,1,1,1,buen estado,130500
+Área metropolitana,124,4,1,23,0,0,0,0,buen estado,229000
+Sur costa,89,4,2,66,0,0,1,1,reformada,322500
+Área metropolitana,104,4,3,44,0,1,0,1,buen estado,189000
+Interior,75,2,1,18,0,0,1,1,buen estado,98500
+Área metropolitana,143,4,3,6,1,1,0,1,reformada,369000
+Interior,102,3,1,34,0,1,0,1,buen estado,91000
+Área metropolitana,130,4,2,35,0,1,1,1,reformada,277500
+Interior,78,2,2,33,0,0,1,0,a reformar,62000
+Sur costa,51,2,1,29,1,1,0,0,reformada,338500
+Este,63,2,1,10,0,0,0,1,buen estado,112500
+Este,69,3,2,12,1,1,1,1,buen estado,173500
+Sur costa,72,2,2,32,0,1,1,0,a reformar,207000
+Área metropolitana,125,4,2,2,0,1,1,1,buen estado,310000
+Norte,42,1,1,12,1,0,0,0,buen estado,132000
+Norte,92,3,1,11,1,0,1,1,buen estado,297500
+Área metropolitana,93,2,1,28,0,1,0,1,buen estado,179500
+Área metropolitana,172,6,4,32,0,1,0,0,a reformar,231000
+Área metropolitana,195,6,3,37,0,0,1,1,reformada,420000
+Este,78,3,2,6,0,0,0,1,a reformar,123000
+Norte,87,4,3,20,0,0,1,0,buen estado,206500
+Sur costa,74,2,2,3,0,0,1,0,buen estado,321500
+Este,81,3,1,41,0,1,1,1,buen estado,143000
+Este,65,2,1,7,0,1,1,0,buen estado,128000
+Este,108,4,2,7,0,0,0,0,reformada,233000
+Sur costa,67,2,1,13,0,0,0,0,buen estado,281500
+Área metropolitana,155,5,2,80,0,0,0,1,buen estado,265500
+Área metropolitana,55,2,2,17,0,1,1,1,buen estado,133000
+Norte,93,3,2,22,0,1,1,0,reformada,264500
+Interior,93,3,2,15,0,1,1,1,buen estado,111500
+Área metropolitana,43,1,1,12,1,1,0,1,reformada,124500
+Área metropolitana,87,3,3,21,0,0,0,0,a reformar,119000
+Este,99,2,1,35,0,1,0,1,buen estado,172000
+Este,83,2,2,72,0,0,1,0,a reformar,102000
+Norte,83,2,1,36,1,1,1,1,buen estado,263000
+Sur costa,80,2,2,13,0,1,1,1,buen estado,370500
+Norte,46,2,1,23,1,1,1,0,buen estado,165000
+Sur costa,64,3,1,13,0,0,1,1,reformada,310500
+Área metropolitana,90,3,1,6,0,0,1,0,buen estado,209000
+Norte,110,4,1,17,0,1,1,0,buen estado,341000
+Área metropolitana,120,5,2,46,0,0,1,1,a reformar,158500
+Norte,51,1,1,4,0,0,0,1,reformada,175500
+Área metropolitana,132,3,3,18,0,1,1,1,a reformar,212000
+Norte,65,3,2,34,1,0,1,1,buen estado,197500
+Área metropolitana,74,2,1,14,0,1,1,0,reformada,234000
+Área metropolitana,91,3,3,33,0,1,1,1,reformada,224500
+Este,58,2,1,12,0,1,0,1,reformada,139000
+Norte,104,3,1,9,0,0,1,0,buen estado,273000
+Área metropolitana,137,4,2,49,0,0,1,1,reformada,273000
+Interior,91,2,1,44,0,0,0,0,buen estado,86000
+Área metropolitana,47,2,2,10,0,0,1,0,reformada,120000
+Sur costa,110,4,2,19,0,0,0,1,buen estado,426500
+Área metropolitana,131,3,2,8,0,1,0,1,buen estado,281000
+Este,78,2,2,18,1,0,1,0,buen estado,141500
+Norte,99,3,2,41,1,1,0,1,buen estado,275000
+Norte,80,3,1,12,0,0,0,0,buen estado,232500
+Interior,95,5,3,12,0,0,1,1,reformada,128500
+Área metropolitana,89,3,2,25,1,1,0,1,reformada,200500
+Sur costa,85,3,2,22,0,0,0,1,buen estado,354000
+Norte,104,2,1,3,0,1,1,0,reformada,373000
+Área metropolitana,115,5,4,10,0,0,1,0,buen estado,223500
+Interior,53,1,1,23,0,0,0,1,reformada,73000
+Sur costa,73,1,1,28,0,1,1,0,buen estado,348500
+Este,98,4,2,27,0,1,0,1,buen estado,150500
+Norte,147,4,2,2,0,0,0,1,reformada,440000
+Este,31,1,1,27,0,1,1,0,buen estado,70000
+Norte,87,3,2,14,0,1,0,1,a reformar,202500
+Área metropolitana,74,2,1,59,0,1,0,1,reformada,156000
+Norte,74,2,2,20,1,1,0,0,buen estado,258500
+Interior,152,5,4,20,0,0,0,1,buen estado,155500
+Interior,101,3,2,33,0,0,1,1,buen estado,96000
+Área metropolitana,94,3,1,53,0,0,1,1,buen estado,171500
+Área metropolitana,58,1,1,18,1,0,1,1,buen estado,156500
+Área metropolitana,90,3,2,51,0,1,1,0,a reformar,136500
+Norte,76,3,2,20,1,0,0,0,buen estado,279000
+Norte,103,3,2,65,0,0,1,1,buen estado,196500
+Norte,73,1,1,7,0,1,0,1,reformada,231000
+Área metropolitana,120,4,1,9,0,0,1,0,reformada,286000
+Sur costa,84,2,1,31,1,0,0,1,buen estado,377500
+Interior,158,6,3,10,0,0,0,0,reformada,193500
+Área metropolitana,101,3,3,60,0,0,1,0,reformada,170500
+Este,65,2,1,12,0,0,0,1,buen estado,126500
+Este,206,7,4,13,0,0,0,1,buen estado,322500
+Área metropolitana,95,3,2,18,0,0,0,1,reformada,205500
+Área metropolitana,164,5,3,14,0,0,1,1,a reformar,257000
+Área metropolitana,69,2,1,32,0,0,0,0,a reformar,101000
+Área metropolitana,72,1,1,6,0,1,0,0,buen estado,152500
+Área metropolitana,57,2,1,51,0,0,0,0,reformada,117500
+Norte,181,5,3,14,0,0,0,0,reformada,527000
+Área metropolitana,68,1,1,5,0,0,1,0,buen estado,165500
+Interior,82,2,1,4,0,0,1,0,a reformar,78000
+Norte,94,3,3,31,0,0,0,1,reformada,257500
+Este,100,2,1,7,1,1,1,0,reformada,246500
+Norte,67,1,1,32,0,0,0,1,a reformar,135000
+Este,95,3,2,15,0,0,0,0,reformada,180500
+Sur costa,80,2,1,4,1,1,0,1,buen estado,449500
+Norte,114,4,2,16,0,1,0,1,reformada,359000
+Sur costa,144,5,2,28,1,0,0,1,reformada,736000
+Norte,129,5,3,37,0,1,0,0,a reformar,225500
+Área metropolitana,109,4,2,23,0,0,1,1,buen estado,247000
+Área metropolitana,203,6,3,28,0,1,1,1,buen estado,463000
+Norte,77,1,1,12,0,1,0,1,a reformar,163500
+Este,91,3,2,9,0,1,0,0,buen estado,178000
+Área metropolitana,55,2,2,12,0,1,0,1,a reformar,93000
+Área metropolitana,104,4,3,53,0,0,1,0,buen estado,172000
+Interior,92,3,2,4,1,0,1,1,a reformar,90500
+Norte,51,1,1,11,0,0,0,0,buen estado,142500
+Área metropolitana,77,3,2,36,0,0,1,1,buen estado,161000
+Sur costa,111,3,2,27,0,0,1,1,reformada,470000
+Interior,66,3,1,14,0,0,1,1,buen estado,86500
+Interior,78,3,2,46,0,0,1,1,a reformar,59500
+Norte,136,2,1,23,0,1,0,0,reformada,369500
+Área metropolitana,98,3,1,49,0,0,0,1,a reformar,118000
+Área metropolitana,98,2,1,22,1,0,0,0,buen estado,183500
+Interior,135,5,3,36,0,1,1,1,buen estado,123500
+Norte,145,4,2,7,1,0,0,0,reformada,560500
+Norte,171,5,2,69,0,1,1,0,buen estado,304000
+Norte,69,3,1,16,0,1,0,1,reformada,231000
+Sur costa,144,4,2,69,1,1,1,0,buen estado,564500
+Este,157,5,2,13,0,0,1,1,a reformar,263000
+Sur costa,107,3,1,44,1,1,0,0,buen estado,475000
+Interior,89,3,1,22,0,1,0,0,reformada,119500
+Este,103,3,1,6,0,1,1,1,a reformar,167000
+Sur costa,49,1,1,38,0,1,1,0,buen estado,204000
+Este,123,3,2,10,0,0,1,0,buen estado,227500
+Sur costa,61,2,1,32,1,0,1,1,buen estado,315000
+Norte,141,4,2,40,0,0,0,1,buen estado,307500
+Interior,38,1,1,12,0,1,1,1,buen estado,58500
+Sur costa,39,1,1,29,1,1,0,1,buen estado,208500
+Área metropolitana,106,4,3,53,0,0,1,0,reformada,199000
+Área metropolitana,50,2,2,7,0,1,1,1,a reformar,106000
+Norte,105,4,2,74,0,0,1,0,reformada,252000
+Norte,83,2,1,19,1,0,1,0,a reformar,250500
+Área metropolitana,76,2,2,20,0,1,0,0,a reformar,121000
+Sur costa,108,2,1,21,0,0,1,1,a reformar,369000
+Sur costa,45,1,1,47,0,1,1,0,reformada,194500
+Norte,113,3,2,65,1,0,1,1,buen estado,323500
+Este,71,2,1,13,0,1,1,0,a reformar,107000
+Área metropolitana,64,2,1,14,0,1,1,0,buen estado,148000
+Área metropolitana,67,2,1,14,0,1,0,1,buen estado,145000
+Sur costa,82,2,2,65,0,0,1,1,buen estado,309500
+Este,107,4,2,22,0,0,1,1,a reformar,149000
+Área metropolitana,76,2,1,20,0,0,1,1,a reformar,127500
+Norte,78,3,1,9,0,1,1,0,buen estado,232500
+Norte,88,3,2,31,0,0,1,1,buen estado,189000
+Norte,90,3,2,29,1,0,1,1,reformada,328000
+Norte,60,2,1,17,1,1,0,1,buen estado,212500
+Norte,105,3,1,28,0,1,0,1,reformada,304500
+Norte,107,4,2,18,0,1,0,1,buen estado,256000
+Sur costa,175,6,3,24,1,1,0,0,buen estado,799500
+Área metropolitana,64,2,1,24,0,1,1,1,a reformar,118000
+Área metropolitana,156,5,3,8,0,0,0,1,buen estado,290500
+Este,74,2,1,9,0,0,1,1,buen estado,152500
+Área metropolitana,130,3,2,17,0,0,0,1,buen estado,261500
+Sur costa,95,2,1,21,1,1,0,1,a reformar,356500
+Norte,88,3,2,26,1,0,0,1,buen estado,266500
+Este,67,1,1,13,0,0,0,1,buen estado,117000
+Área metropolitana,114,4,2,46,1,0,1,1,buen estado,217000
+Sur costa,76,2,1,27,0,1,1,0,buen estado,386000
+Interior,103,4,2,11,0,1,0,0,buen estado,122500
+Este,77,2,1,5,0,1,1,0,buen estado,161500
+Este,61,2,1,69,0,0,0,1,reformada,129500
+Área metropolitana,105,2,1,5,0,0,0,0,buen estado,193500
+Este,115,3,2,25,0,0,1,0,reformada,217500
+Este,96,4,2,7,0,1,1,0,a reformar,154500
+Área metropolitana,70,2,1,14,0,1,0,1,buen estado,159500
+Área metropolitana,150,5,2,7,0,1,1,1,reformada,355500
+Norte,61,2,1,38,0,0,0,0,reformada,146000
+Norte,96,3,2,12,1,1,1,0,buen estado,354500
+Área metropolitana,146,5,3,31,0,0,1,1,reformada,371000
+Sur costa,106,4,3,24,1,1,1,1,a reformar,398000
+Área metropolitana,111,3,1,40,0,1,0,1,buen estado,234000
+Área metropolitana,40,1,1,1,0,0,1,1,buen estado,104000
+Norte,55,2,1,27,0,0,1,1,buen estado,146000
+Norte,90,3,2,30,1,0,0,1,buen estado,313500
+Norte,42,2,1,34,0,0,1,1,buen estado,116500
+Área metropolitana,157,5,3,33,0,0,0,1,a reformar,225000
+Área metropolitana,132,4,1,27,0,1,0,0,a reformar,193500
+Norte,172,5,3,21,0,1,1,0,buen estado,416500
+Sur costa,203,6,3,34,1,0,0,0,reformada,926500
+Sur costa,81,2,1,9,0,0,1,1,buen estado,355500
+Sur costa,108,3,2,77,0,1,1,0,a reformar,297500
+Área metropolitana,138,5,3,9,0,0,1,1,buen estado,316000
+Área metropolitana,119,4,3,36,0,0,1,1,buen estado,189500
+Área metropolitana,150,5,3,16,0,0,0,0,a reformar,208500
+Área metropolitana,34,1,1,11,0,0,1,0,buen estado,89000
+Interior,108,3,2,19,0,1,1,0,buen estado,121000
+Área metropolitana,76,2,1,20,0,0,1,1,buen estado,172000
+Norte,111,6,4,29,1,1,1,0,buen estado,341500
+Norte,30,1,1,4,1,1,0,1,a reformar,96000
+Norte,131,4,3,22,0,0,0,1,reformada,339000
+Norte,140,3,2,4,1,0,0,0,buen estado,400000
+Norte,102,3,2,30,0,0,0,1,buen estado,221000
+Área metropolitana,75,1,1,23,0,0,1,1,buen estado,164000
+Norte,62,3,2,4,0,0,1,0,reformada,212500
+Interior,145,4,2,24,0,0,1,0,a reformar,111500
+Área metropolitana,116,3,1,51,0,1,0,0,buen estado,208000
+Sur costa,113,3,1,25,0,0,0,1,buen estado,388000
+Norte,59,2,2,15,0,0,1,0,buen estado,143000
+Sur costa,45,1,1,19,0,0,0,1,buen estado,197500
+Sur costa,83,4,4,18,0,0,1,0,buen estado,333000
+Sur costa,81,2,1,49,0,1,1,1,buen estado,267000
+Sur costa,51,1,1,14,1,0,0,0,buen estado,277500
+Interior,81,2,1,24,0,1,1,1,a reformar,78500
+Sur costa,41,1,1,12,0,1,0,1,reformada,226500
+Norte,149,5,2,10,1,1,0,1,buen estado,533500
+Sur costa,93,2,1,28,1,1,0,0,a reformar,369000
+Área metropolitana,68,1,1,47,0,0,1,1,reformada,137500
+Área metropolitana,43,1,1,53,0,1,1,1,a reformar,70500
+Sur costa,58,3,1,21,1,1,0,1,a reformar,255500
+Norte,79,1,1,28,0,0,0,0,buen estado,192500
+Área metropolitana,84,2,1,5,0,1,1,0,buen estado,178000
+Área metropolitana,107,3,1,13,0,1,1,1,reformada,288500
+Sur costa,144,4,2,23,0,0,0,0,reformada,566000
+Este,89,4,2,2,1,0,0,1,buen estado,176500
+Este,88,3,1,16,0,0,1,1,a reformar,128000
+Área metropolitana,119,2,1,15,0,0,0,0,a reformar,154500
+Área metropolitana,65,1,1,32,0,0,0,0,buen estado,123000
+Sur costa,84,4,1,28,0,0,1,1,buen estado,333000
+Sur costa,90,3,2,15,0,0,0,1,buen estado,413500
+Área metropolitana,47,1,1,71,0,1,0,0,buen estado,85000
+Norte,79,3,2,42,0,0,1,1,buen estado,198000
+Área metropolitana,84,2,2,19,0,0,0,1,reformada,217000
+Este,77,2,1,37,0,1,0,1,reformada,171000
+Área metropolitana,84,4,3,8,0,1,1,1,a reformar,139000
+Área metropolitana,115,3,2,24,0,0,0,0,buen estado,214500
+Sur costa,107,3,2,11,0,0,1,1,a reformar,344500
+Norte,91,4,2,22,1,1,0,0,buen estado,268000
+Área metropolitana,136,5,3,37,0,0,1,1,buen estado,239000
+Área metropolitana,71,2,1,5,0,0,0,0,reformada,183500
+Interior,187,7,4,23,0,1,0,0,reformada,212500
+Sur costa,49,2,1,17,0,1,1,1,buen estado,241000
+Norte,65,3,2,25,0,1,0,0,a reformar,132500
+Interior,133,5,3,18,0,0,0,1,reformada,167000
+Norte,158,6,3,27,0,0,1,1,reformada,447500
+Área metropolitana,210,7,5,56,0,0,0,0,buen estado,326500
+Este,152,4,2,9,0,0,0,1,reformada,271500
+Interior,88,3,2,8,0,1,1,1,buen estado,115500
+Norte,69,2,2,20,1,0,1,0,a reformar,184000
+Sur costa,88,3,2,25,0,0,0,1,buen estado,341500
+Área metropolitana,91,2,1,13,0,1,1,0,buen estado,207000
+Este,125,4,2,9,0,1,0,0,buen estado,220500
+Interior,83,2,1,34,0,0,0,1,buen estado,81000
+Este,121,4,2,31,1,1,1,1,buen estado,234500
+Sur costa,49,3,2,17,0,0,0,0,reformada,252000
+Sur costa,308,7,4,56,0,1,1,1,a reformar,770500
+Este,126,5,3,19,0,0,0,0,buen estado,182000
+Este,58,1,1,11,1,0,1,0,buen estado,131000
+Norte,166,5,3,18,0,1,0,1,buen estado,419500
+Área metropolitana,125,4,2,16,0,1,1,1,buen estado,272000
+Este,62,3,2,33,0,0,0,1,buen estado,107500
+Área metropolitana,168,4,2,33,0,0,1,1,buen estado,289000
+Este,72,4,3,9,1,0,0,0,reformada,155500
+Este,86,2,1,21,0,1,1,0,buen estado,158000
+Sur costa,95,2,1,9,0,1,1,0,buen estado,409500
+Área metropolitana,84,2,1,11,0,1,0,0,a reformar,162000
+Interior,193,6,2,42,0,0,0,0,buen estado,157500
+Interior,90,2,1,17,0,1,1,1,buen estado,123000
+Interior,63,2,1,10,0,1,1,0,reformada,97500
+Área metropolitana,108,4,1,1,0,0,1,1,buen estado,273000
+Norte,67,3,2,23,0,0,1,1,a reformar,142000
+Área metropolitana,97,5,3,18,0,1,1,1,reformada,288500
+Norte,211,6,3,16,1,1,1,0,buen estado,598500
+Sur costa,70,1,1,10,0,0,1,0,a reformar,254000
+Sur costa,111,4,3,6,0,0,1,0,buen estado,498000
+Este,62,3,2,30,0,0,0,0,reformada,121000
+Norte,200,7,4,18,1,0,0,1,buen estado,518000
+Sur costa,49,2,1,14,1,0,0,0,a reformar,204500
+Norte,55,2,2,19,1,0,1,0,buen estado,206000
+Área metropolitana,77,3,1,55,0,1,1,0,reformada,151500
+Área metropolitana,147,3,2,61,0,0,0,0,a reformar,182000
+Norte,144,5,3,21,0,1,0,1,a reformar,276500
+Sur costa,100,3,2,26,1,1,0,1,buen estado,616500
+Área metropolitana,128,3,1,18,0,1,0,0,a reformar,192000
+Norte,47,1,1,14,0,0,0,1,buen estado,130500
+Sur costa,83,4,2,80,0,1,1,0,a reformar,225500
+Sur costa,71,2,1,80,0,1,0,1,buen estado,252500
+Este,113,4,2,21,1,0,1,0,buen estado,222500
+Este,65,2,1,13,0,0,1,0,a reformar,103500
+Área metropolitana,116,2,1,3,0,1,0,0,reformada,256500
+Norte,98,3,2,5,0,1,0,0,buen estado,276000
+Norte,96,2,1,59,0,0,1,1,reformada,258500
+Área metropolitana,57,2,1,37,0,0,1,1,reformada,130500
+Área metropolitana,125,4,3,44,0,0,0,1,buen estado,198000
+Sur costa,106,3,1,24,1,0,1,0,reformada,637000
+Área metropolitana,90,2,2,7,0,0,1,1,buen estado,223000
+Norte,85,3,3,15,0,1,0,1,reformada,256000
+Sur costa,60,2,1,10,1,0,1,0,buen estado,335500
+Norte,56,2,1,25,0,0,1,0,a reformar,113000
+Interior,94,4,2,11,0,1,1,1,buen estado,125500
+Área metropolitana,95,2,1,17,0,1,0,1,buen estado,201000
+Área metropolitana,61,1,1,28,0,1,1,1,buen estado,130000
+Interior,71,1,1,41,0,0,1,1,buen estado,77500
+Área metropolitana,144,3,2,12,0,0,0,0,buen estado,320500
+Sur costa,76,2,1,9,0,0,1,1,buen estado,372000
+Área metropolitana,88,4,2,7,0,1,1,0,buen estado,229500
+Norte,124,3,2,7,1,1,0,1,a reformar,366000
+Área metropolitana,134,5,4,6,1,0,0,1,buen estado,293500
+Norte,72,3,3,22,0,0,1,0,buen estado,174500
+Sur costa,60,3,1,29,1,0,1,1,a reformar,283500
+Interior,117,4,2,21,0,0,0,1,a reformar,100000
+Sur costa,111,3,2,38,1,0,0,0,reformada,553000
+Este,99,4,2,4,1,1,0,1,buen estado,239000
+Este,58,2,1,80,0,0,1,1,buen estado,92500
+Interior,105,4,2,25,0,1,0,1,buen estado,116000
+Interior,99,2,1,34,0,0,0,1,buen estado,104500
+Este,129,4,2,57,0,0,1,0,buen estado,178000
+Interior,68,2,1,14,0,0,1,1,reformada,94000
+Área metropolitana,85,2,2,20,0,1,0,1,buen estado,187000
+Área metropolitana,97,3,2,10,0,0,0,0,reformada,246500
+Área metropolitana,128,5,3,16,0,0,0,0,a reformar,178000
+Norte,72,2,1,18,0,0,0,1,buen estado,172000
+Interior,76,2,1,17,0,1,0,0,buen estado,98000
+Sur costa,76,2,1,56,1,1,0,1,buen estado,346500
+Norte,68,2,1,56,0,1,0,0,buen estado,155000
+Interior,64,2,1,35,0,0,0,1,buen estado,60000
+Norte,138,5,3,19,0,0,0,1,a reformar,235500
+Este,64,2,2,6,0,0,0,1,a reformar,82500
+Área metropolitana,65,2,2,70,0,0,0,0,reformada,134000
+Norte,53,1,1,27,0,1,0,1,buen estado,137000
+Interior,74,2,2,47,0,1,0,1,buen estado,79000
+Sur costa,74,3,2,21,1,0,1,1,buen estado,407500
+Área metropolitana,90,2,1,11,0,0,1,1,buen estado,172500
+Norte,163,5,3,54,0,0,1,0,reformada,383500
+Sur costa,61,2,1,11,1,1,1,0,reformada,451000
+Norte,97,2,1,10,1,0,0,0,buen estado,291000
+Este,61,3,1,18,1,0,1,0,a reformar,106000
+Este,100,3,1,52,1,1,0,1,a reformar,111000
+Este,101,3,2,12,0,0,1,0,buen estado,196000
+Sur costa,120,4,2,13,0,0,0,0,buen estado,459000
+Norte,45,2,1,11,1,0,0,1,buen estado,156500
+Área metropolitana,109,4,3,27,0,0,0,1,reformada,237500
+Norte,91,3,2,22,0,1,0,0,reformada,244500
+Área metropolitana,80,2,1,39,0,1,1,0,buen estado,152000
+Sur costa,109,3,2,16,0,0,1,0,buen estado,414500
+Norte,87,3,2,13,0,1,0,0,buen estado,253500
+Este,64,1,1,15,0,1,0,1,a reformar,100000
+Sur costa,103,3,1,18,1,0,0,0,buen estado,525000
+Área metropolitana,73,2,1,18,0,1,1,0,buen estado,154500
+Norte,30,1,1,14,1,0,1,1,reformada,149000
+Interior,87,4,3,19,0,0,0,1,buen estado,94500
+Sur costa,88,2,1,25,1,0,0,1,buen estado,496500
+Sur costa,123,5,3,18,0,0,1,1,buen estado,474500
+Área metropolitana,66,2,1,20,0,1,0,1,buen estado,170500
+Norte,81,2,1,16,0,1,0,0,buen estado,215000
+Norte,66,1,1,6,1,1,1,1,a reformar,204000
+Área metropolitana,50,2,1,33,0,0,1,1,buen estado,102000
+Interior,59,2,1,14,0,0,1,0,a reformar,55000
+Interior,95,2,1,13,0,0,0,1,buen estado,118500
+Sur costa,47,1,1,66,0,0,0,1,reformada,211000
+Área metropolitana,132,4,2,55,0,1,0,0,a reformar,162500
+Área metropolitana,39,1,1,37,0,0,1,1,buen estado,87000
+Norte,125,5,3,9,0,0,1,1,reformada,380500
+Área metropolitana,89,3,2,15,0,0,0,1,reformada,239000
+Sur costa,111,5,4,19,0,1,0,0,a reformar,367000
+Área metropolitana,86,4,2,5,0,1,1,1,buen estado,182000
+Área metropolitana,71,2,1,38,0,0,1,1,reformada,171500
+Sur costa,97,3,2,20,1,0,0,1,buen estado,543000
+Área metropolitana,101,4,2,13,0,0,0,0,a reformar,161500
+Sur costa,75,2,2,10,1,1,0,0,reformada,466000
+Norte,126,4,2,13,0,1,0,1,buen estado,312000
+Este,76,3,2,12,0,1,0,0,a reformar,113000
+Sur costa,75,2,1,15,1,0,1,0,reformada,416000
+Área metropolitana,188,6,3,58,1,1,0,0,a reformar,226500
+Este,53,1,1,47,0,0,0,0,a reformar,71000
+Sur costa,86,3,2,21,0,0,1,1,buen estado,366500
+Norte,122,4,2,22,1,1,0,0,buen estado,380500
+Norte,39,1,1,4,0,1,0,1,buen estado,130000
+Área metropolitana,115,5,3,22,0,1,0,0,reformada,291500
+Área metropolitana,61,3,2,6,0,1,1,0,a reformar,112500
+Área metropolitana,61,1,1,18,0,0,1,0,buen estado,128000
+Este,135,5,4,37,1,0,0,0,a reformar,157000
+Área metropolitana,68,2,1,8,0,1,0,1,a reformar,127000
+Área metropolitana,77,2,1,28,0,1,0,0,buen estado,158000
+Norte,64,2,2,17,1,1,0,1,buen estado,232000
+Sur costa,90,4,2,21,1,0,0,1,a reformar,336500
+Área metropolitana,182,5,2,25,0,0,1,0,buen estado,355500
+Área metropolitana,103,4,2,23,0,0,1,1,buen estado,191500
+Norte,67,2,1,40,0,0,0,0,buen estado,156500
+Sur costa,97,4,2,10,1,0,0,1,buen estado,473500
+Área metropolitana,96,3,2,16,0,0,1,1,reformada,218000
+Sur costa,159,6,4,19,1,0,0,1,buen estado,713500
+Norte,124,4,2,39,0,0,1,0,reformada,294500
+Sur costa,48,1,1,22,1,0,1,1,buen estado,322000
+Área metropolitana,104,2,2,10,0,0,1,0,reformada,275000
+Área metropolitana,119,3,2,21,0,0,1,0,reformada,277500
+Interior,150,6,3,5,0,1,0,0,buen estado,156500
+Sur costa,102,3,1,15,0,0,0,1,buen estado,399500
+Este,113,3,2,13,0,0,0,0,a reformar,127000
+Norte,90,3,2,22,0,0,0,1,a reformar,174000
+Norte,47,2,1,15,0,0,0,0,buen estado,131500
+Área metropolitana,94,3,2,35,0,1,0,0,reformada,193000
+Área metropolitana,139,6,4,29,0,0,1,0,buen estado,230000
+Sur costa,100,2,1,13,0,1,1,0,buen estado,470000
+Norte,104,3,2,23,0,0,1,0,buen estado,232000
+Sur costa,96,3,2,26,1,1,1,0,buen estado,453500
+Este,117,3,2,37,0,0,0,1,a reformar,134500
+Sur costa,60,1,2,4,1,0,0,1,buen estado,345000
+Área metropolitana,59,2,2,12,0,1,0,1,buen estado,143000
+Sur costa,78,1,1,8,1,1,0,1,buen estado,499000
+Este,72,3,1,16,1,0,1,1,a reformar,116000
+Área metropolitana,57,2,1,23,0,1,0,0,buen estado,119000
+Este,85,3,2,11,1,1,0,0,buen estado,166500
+Sur costa,59,1,1,8,1,1,0,1,buen estado,379000
+Sur costa,70,3,3,9,1,1,0,1,reformada,487500
+Norte,95,4,2,8,0,1,0,0,reformada,283500
+Área metropolitana,96,4,2,15,0,0,0,0,buen estado,220000
+Este,128,5,3,14,0,0,1,0,buen estado,204500
+Norte,93,3,2,36,1,0,1,1,buen estado,265000
+Este,74,3,2,18,0,0,1,0,buen estado,145500
+Sur costa,101,3,2,13,0,1,1,0,buen estado,413000
+Norte,103,3,1,10,0,1,1,1,buen estado,297000
+Área metropolitana,102,4,3,36,0,1,1,1,buen estado,213000
+Área metropolitana,121,3,1,5,0,0,1,1,buen estado,260500
+Norte,64,2,1,26,1,1,1,0,buen estado,222000
+Sur costa,46,1,1,4,0,0,0,0,buen estado,222000
+Interior,85,4,3,15,0,0,1,1,a reformar,68500
+Área metropolitana,76,3,3,10,0,0,1,0,buen estado,187500
+Sur costa,135,4,2,19,1,0,0,1,reformada,759500
+Sur costa,81,2,1,80,1,1,1,1,a reformar,282500
+Norte,83,2,2,4,0,0,1,0,a reformar,169000
+Norte,82,4,2,21,0,1,0,0,buen estado,219000
+Norte,61,2,2,14,0,1,0,1,buen estado,177500
+Interior,122,5,3,14,0,1,1,1,reformada,163500
+Área metropolitana,48,2,1,47,0,1,1,1,a reformar,102000
+Este,87,1,1,1,0,0,1,0,reformada,231500
+Este,132,3,2,21,0,0,1,1,a reformar,184000
+Norte,82,3,1,17,0,1,1,1,buen estado,251000
+Norte,79,2,1,24,0,0,0,0,a reformar,149000
+Área metropolitana,63,3,2,1,0,1,0,0,buen estado,132000
+Norte,112,2,1,62,0,0,1,1,reformada,279000
+Área metropolitana,75,2,2,3,0,1,0,1,buen estado,177500
+Área metropolitana,95,3,1,25,0,1,1,1,reformada,242500
+Norte,207,7,4,10,0,0,0,1,a reformar,382500
+Área metropolitana,68,2,1,21,0,0,1,1,a reformar,128500
+Sur costa,148,5,3,3,1,1,0,1,buen estado,873500
+Este,180,6,4,17,0,1,0,1,a reformar,235000
+Norte,154,4,2,1,0,0,0,1,a reformar,303500
+Este,163,6,3,4,0,1,1,0,buen estado,301500
+Área metropolitana,125,5,3,20,0,0,1,0,a reformar,195500
+Sur costa,62,1,1,21,1,0,0,1,reformada,360500
+Norte,84,3,2,19,0,1,0,1,a reformar,177500
+Norte,93,4,2,24,1,1,0,0,buen estado,337000
+Interior,88,2,1,32,0,0,0,0,reformada,94500
+Área metropolitana,39,1,1,36,0,0,1,1,reformada,100500
+Sur costa,74,3,1,8,0,1,0,0,buen estado,353500
+Norte,50,2,1,10,1,0,0,0,a reformar,138500
+Este,81,2,1,8,0,0,0,1,buen estado,189500
+Interior,193,6,4,2,0,0,0,0,buen estado,198500
+Área metropolitana,99,4,2,60,0,1,1,0,buen estado,167000
+Este,107,5,2,22,0,1,1,1,buen estado,204500
+Norte,154,3,3,11,0,1,0,1,a reformar,282500
+Área metropolitana,107,3,2,16,0,1,0,0,buen estado,223000
+Norte,162,4,2,37,0,1,1,0,buen estado,374000
+Este,78,2,1,36,0,0,0,1,buen estado,116500
+Norte,105,3,1,2,0,1,0,1,buen estado,303000
+Área metropolitana,65,3,2,32,0,0,1,0,buen estado,130000
+Norte,126,4,2,29,0,1,0,1,reformada,365500
+Área metropolitana,85,4,3,28,0,0,0,1,buen estado,187000
+Área metropolitana,79,3,3,36,0,0,1,1,buen estado,153000
+Norte,148,4,2,4,0,0,1,1,buen estado,373500
+Área metropolitana,70,3,2,67,0,0,1,0,buen estado,128000
+Área metropolitana,107,4,2,36,0,0,0,0,reformada,236500
+Sur costa,73,2,2,49,0,0,0,1,buen estado,260500
+Área metropolitana,68,3,1,9,0,0,0,1,buen estado,161500
+Este,120,3,2,23,0,0,1,0,buen estado,214500
+Área metropolitana,61,2,1,19,0,1,1,1,reformada,164500
+Área metropolitana,163,7,4,13,0,1,0,0,buen estado,282000
+Sur costa,134,5,3,21,0,0,1,0,reformada,651000
+Sur costa,91,4,3,27,1,0,0,1,buen estado,407500
+Área metropolitana,49,2,1,27,0,0,1,1,buen estado,113000
+Área metropolitana,248,7,3,27,0,0,1,0,a reformar,320000
+Área metropolitana,123,4,2,5,0,0,0,1,buen estado,294000
+Interior,101,3,1,56,0,0,1,1,buen estado,100000
+Área metropolitana,92,2,1,6,1,1,1,0,buen estado,223500
+Área metropolitana,73,3,2,13,0,0,0,1,reformada,162000
+Este,144,5,2,14,0,1,1,1,buen estado,255500
+Norte,81,2,2,12,0,0,1,0,buen estado,218500
+Norte,87,2,2,12,1,1,1,0,buen estado,282500
+Norte,93,3,2,21,0,1,1,0,reformada,283500
+Este,63,1,1,45,0,1,1,1,a reformar,86000
+Norte,67,1,1,7,0,0,0,0,buen estado,169500
+Norte,104,3,2,21,0,0,1,0,buen estado,245000
+Área metropolitana,111,4,2,15,0,0,1,0,buen estado,249000
+Sur costa,79,2,1,12,0,1,0,0,buen estado,317000
+Área metropolitana,60,2,1,29,0,1,1,0,buen estado,137000
+Interior,42,1,1,19,0,0,1,0,reformada,61000
+Área metropolitana,83,4,3,26,0,1,1,0,buen estado,165000
+Interior,154,5,3,35,0,1,0,1,buen estado,150000
+Área metropolitana,102,3,2,31,0,1,1,0,buen estado,171000
+Norte,51,3,2,46,0,1,0,1,buen estado,122000
+Norte,101,3,2,25,0,0,1,1,buen estado,235000
+Este,40,2,1,38,0,1,0,1,buen estado,78000
+Sur costa,119,4,3,3,0,0,0,1,buen estado,489000
+Sur costa,120,3,3,26,1,1,1,0,buen estado,574500
+Área metropolitana,69,2,1,17,1,0,0,0,reformada,152000
+Norte,44,1,1,18,0,0,1,0,a reformar,100000
+Interior,52,1,1,33,0,0,0,0,buen estado,54000
+Área metropolitana,52,2,1,16,0,1,0,1,a reformar,102500
+Interior,118,4,2,54,0,1,1,0,buen estado,110500
+Interior,103,3,1,15,1,1,0,0,reformada,150500
+Norte,48,2,1,17,0,1,1,1,a reformar,114000
+Interior,104,2,2,2,0,1,0,0,a reformar,110500
+Este,127,4,3,34,0,1,0,0,a reformar,182000
+Área metropolitana,98,4,2,36,0,0,0,1,reformada,217000
+Norte,53,2,1,15,1,1,0,1,a reformar,151500
+Área metropolitana,77,2,1,26,1,0,0,0,reformada,173500
+Área metropolitana,113,3,1,39,0,0,0,1,buen estado,201000
+Este,129,5,3,57,0,1,0,1,buen estado,196000
+Sur costa,76,3,3,10,0,0,0,1,buen estado,352000
+Área metropolitana,87,2,1,36,0,0,1,0,a reformar,131500
+Área metropolitana,114,4,1,59,0,1,1,1,buen estado,198000
+Este,70,2,1,9,0,1,0,0,buen estado,139500
+Área metropolitana,66,3,2,28,0,0,0,1,buen estado,127000
+Área metropolitana,71,3,2,14,0,0,0,1,reformada,175500
+Norte,125,3,1,2,0,0,1,0,buen estado,316000
+Este,57,2,1,11,1,1,0,0,reformada,129000
+Sur costa,123,4,2,13,0,1,1,0,buen estado,491500
+Sur costa,103,3,2,5,0,0,1,0,reformada,522000
+Área metropolitana,103,2,1,47,0,0,1,0,reformada,207000
+Área metropolitana,51,1,1,10,0,0,1,0,buen estado,117500
+Norte,115,4,2,8,0,0,0,0,buen estado,294000
+Sur costa,123,3,2,19,0,0,0,1,buen estado,444000
+Norte,99,4,2,9,0,1,0,1,buen estado,282000
+Norte,102,4,2,7,0,1,1,0,buen estado,294500
+Norte,83,2,1,15,0,1,1,1,buen estado,231500
+Sur costa,219,7,4,31,1,1,1,1,buen estado,1118000
+Interior,96,4,2,15,0,1,1,1,a reformar,89000
+Norte,99,3,1,24,1,0,1,0,a reformar,221500
+Este,131,4,3,14,0,1,1,1,reformada,244000
+Este,104,2,1,62,1,1,0,1,buen estado,188500
+Norte,93,3,1,35,0,1,0,1,reformada,255500
+Área metropolitana,117,3,2,20,1,0,1,0,buen estado,220500
+Este,111,4,2,8,0,1,0,1,buen estado,188500
+Área metropolitana,101,3,2,27,0,0,1,1,buen estado,220000
+Norte,107,3,1,9,0,0,0,0,reformada,331000
+Interior,84,4,1,22,0,0,0,1,buen estado,108500
+Norte,137,6,4,17,1,1,0,1,reformada,515000
+Este,73,3,1,19,1,1,0,1,reformada,156000
+Norte,40,2,1,12,0,1,0,0,buen estado,122000
+Sur costa,103,3,2,62,0,0,1,1,buen estado,359000
+Sur costa,48,2,2,26,0,1,1,0,buen estado,207500
+Área metropolitana,78,3,2,20,0,1,0,0,reformada,183000
+Área metropolitana,69,2,1,80,1,0,1,0,buen estado,129500
+Norte,102,3,2,38,1,1,0,0,buen estado,306000
+Interior,81,3,1,31,1,0,1,1,buen estado,88500
+Sur costa,55,2,1,38,1,0,1,1,buen estado,285000
+Este,78,3,3,37,1,0,1,1,buen estado,127500
+Área metropolitana,195,6,3,35,0,0,1,0,reformada,374000
+Este,118,4,2,27,0,0,1,0,buen estado,193500
+Sur costa,72,3,2,34,0,0,1,1,buen estado,265000
+Área metropolitana,82,4,3,38,0,0,1,1,buen estado,158000
+Norte,99,3,2,36,1,1,0,0,buen estado,284000
+Este,88,3,2,8,0,1,0,0,buen estado,180500
+Norte,74,2,1,24,0,0,0,0,buen estado,179500
+Norte,72,3,2,8,1,1,1,0,reformada,282000
+Este,56,1,1,20,0,1,0,0,reformada,125000
+Norte,40,2,2,19,1,1,0,1,buen estado,142000
+Interior,92,3,3,48,1,0,0,1,buen estado,97000
+Área metropolitana,105,3,2,8,0,0,0,0,a reformar,179500
+Sur costa,122,5,3,23,1,1,1,0,reformada,754500
+Norte,120,4,3,8,0,1,1,1,reformada,375500
+Este,99,2,1,14,0,0,1,1,buen estado,181500
+Norte,289,7,4,27,0,0,1,1,buen estado,628000
+Interior,118,3,1,29,0,1,1,1,buen estado,125500
+Interior,77,2,2,4,0,1,1,1,reformada,117500
+Norte,91,3,1,24,1,1,1,1,buen estado,336500
+Sur costa,150,5,2,19,1,0,1,0,a reformar,608500
+Área metropolitana,92,5,2,11,0,0,1,1,reformada,247000
+Área metropolitana,79,3,2,26,0,1,0,1,a reformar,130000
+Este,93,4,2,14,0,1,0,1,a reformar,136000
+Este,151,4,2,23,0,1,1,0,buen estado,257000
+Área metropolitana,214,5,3,14,0,0,1,1,buen estado,446000
+Este,65,1,1,41,0,1,1,1,buen estado,117000
+Este,59,2,1,20,1,1,0,0,reformada,132000
+Área metropolitana,116,3,1,27,0,0,1,0,a reformar,160000
+Área metropolitana,107,4,2,26,1,1,1,1,a reformar,161500
+Norte,157,4,2,39,1,0,1,1,buen estado,432500
+Área metropolitana,106,4,2,23,0,1,0,1,reformada,231000
+Área metropolitana,46,1,1,34,0,0,0,0,a reformar,85000
+Norte,106,3,2,24,0,0,0,0,buen estado,225500
+Este,41,1,1,29,0,1,0,0,a reformar,71000
+Área metropolitana,138,5,2,4,0,1,0,1,reformada,311000
+Área metropolitana,76,4,2,11,0,1,0,0,buen estado,160500
+Sur costa,85,3,1,47,0,1,1,0,buen estado,312000
+Norte,56,1,1,20,0,0,0,0,buen estado,144000
+Este,81,2,1,13,0,1,1,1,buen estado,171500
+Norte,106,3,1,22,0,1,1,1,buen estado,261000
+Norte,123,3,2,27,0,0,0,1,reformada,302500
+Este,101,4,2,62,0,0,1,0,a reformar,115000
+Área metropolitana,52,1,1,3,0,0,1,1,a reformar,108500
+Sur costa,67,2,1,52,0,0,1,0,buen estado,244500
+Interior,97,4,2,8,0,0,0,0,buen estado,109500
+Norte,103,3,1,11,0,1,0,0,buen estado,274000
+Área metropolitana,224,7,4,14,0,1,0,1,reformada,458500
+Sur costa,79,3,2,26,1,1,1,1,a reformar,345000
+Área metropolitana,70,2,1,32,0,1,1,1,reformada,180500
+Área metropolitana,86,4,2,19,0,1,0,1,a reformar,140500
+Norte,80,3,1,12,0,0,0,1,reformada,237500
+Sur costa,167,5,3,29,0,0,1,1,reformada,672500
+Norte,87,2,2,22,0,0,1,1,buen estado,215500
+Área metropolitana,116,4,2,10,0,1,0,0,buen estado,253000
+Área metropolitana,129,5,3,5,0,0,0,1,buen estado,276000
+Norte,71,1,1,11,0,0,1,1,a reformar,167000
+Este,89,2,2,11,0,0,0,1,buen estado,155500
+Este,73,2,2,18,0,0,1,0,reformada,139000
+Área metropolitana,110,3,2,10,0,1,1,1,buen estado,219000
+Norte,278,7,3,62,0,1,0,0,buen estado,503000
+Este,116,4,3,8,0,0,1,1,buen estado,212000
+Norte,123,4,2,15,0,0,1,1,buen estado,268000
+Área metropolitana,90,2,1,56,0,0,1,1,buen estado,156000
+Norte,93,3,2,26,0,0,0,0,reformada,244500
+Sur costa,96,3,2,40,0,1,0,1,reformada,397500
+Interior,112,3,1,22,0,0,1,1,reformada,138000
+Este,130,4,2,18,1,1,1,0,buen estado,249500
+Sur costa,87,2,1,39,0,1,0,1,reformada,401000
+Este,83,4,2,7,0,0,0,1,buen estado,169500
+Sur costa,131,5,2,21,0,1,1,0,reformada,715500
+Sur costa,66,1,1,8,0,1,1,0,reformada,340500
+Área metropolitana,40,1,1,11,0,0,0,1,a reformar,74500
+Este,147,6,4,14,0,1,0,0,buen estado,265000
+Área metropolitana,117,3,2,5,0,0,1,1,a reformar,202000
+Área metropolitana,145,4,3,6,0,0,1,1,a reformar,248000
+Norte,81,3,2,15,1,1,1,1,buen estado,302500
+Norte,101,2,2,17,0,0,1,1,reformada,266500
+Sur costa,130,4,2,31,1,1,1,1,buen estado,625500
+Área metropolitana,77,2,2,10,0,1,0,0,buen estado,179500
+Área metropolitana,63,2,1,20,0,1,0,1,a reformar,120500
+Interior,89,3,2,52,0,0,0,1,buen estado,88000
+Área metropolitana,123,3,2,0,0,0,1,0,a reformar,203000
+Este,90,3,2,20,0,1,0,0,a reformar,127000
+Interior,168,6,3,11,0,1,0,1,reformada,221500
+Área metropolitana,56,2,1,10,0,0,1,1,reformada,138500
+Interior,50,2,2,24,0,1,1,1,buen estado,72500
+Norte,67,1,1,10,0,1,1,1,a reformar,150000
+Sur costa,117,4,2,43,1,1,1,0,buen estado,562500
+Norte,60,1,1,27,0,0,0,1,a reformar,140500
+Sur costa,105,3,1,32,0,1,1,0,reformada,513500
+Este,67,3,1,2,0,0,0,0,buen estado,123000
+Norte,107,3,1,36,1,0,1,0,a reformar,258500
+Sur costa,133,4,3,16,1,0,1,0,reformada,718000
+Norte,171,5,2,11,0,1,0,1,reformada,542000
+Norte,61,2,1,20,0,0,1,1,buen estado,168500
+Sur costa,132,4,2,45,1,0,1,1,reformada,580000
+Interior,51,2,1,6,0,1,0,0,buen estado,71500
+Interior,101,4,2,8,0,1,1,1,reformada,143500
+Norte,54,3,2,14,0,0,0,1,a reformar,120500
+Sur costa,100,3,2,9,1,0,0,1,buen estado,470500
+Área metropolitana,139,5,2,26,0,0,0,1,buen estado,267000
+Área metropolitana,94,2,1,13,0,0,0,0,reformada,236000
+Área metropolitana,30,2,1,21,0,0,0,0,buen estado,72500
+Este,75,4,2,14,0,1,0,0,buen estado,143500
+Norte,162,5,3,46,1,1,0,1,a reformar,330000
+Sur costa,65,2,1,11,0,1,0,0,a reformar,216500
+Sur costa,70,3,1,10,1,1,0,1,reformada,462500
+Interior,114,2,1,76,0,0,1,1,buen estado,102500
+Sur costa,120,4,3,54,1,0,0,1,buen estado,559500
+Norte,82,3,1,14,1,0,0,0,buen estado,270000
+Sur costa,136,3,1,63,1,0,1,1,a reformar,443500
+Este,104,3,2,9,1,1,0,0,buen estado,207500
+Área metropolitana,118,4,3,20,0,1,0,1,buen estado,222000
+Norte,70,3,2,33,0,1,1,0,reformada,196500
+Interior,59,1,1,31,0,0,1,1,a reformar,56000
+Norte,109,3,1,31,1,1,1,1,buen estado,358500
+Este,101,2,1,69,0,1,0,0,buen estado,126000
+Interior,76,2,1,9,0,0,0,0,buen estado,97000
+Interior,125,4,2,16,1,0,1,0,reformada,156000
+Área metropolitana,73,2,1,14,0,1,0,1,buen estado,158500
+Interior,49,2,1,14,0,1,1,1,reformada,81000
+Este,136,5,2,17,1,1,1,1,buen estado,205500
+Área metropolitana,208,7,3,4,0,0,0,0,buen estado,420000
+Sur costa,91,3,1,56,0,0,0,1,buen estado,286000
+Área metropolitana,58,2,1,15,0,0,0,1,buen estado,131000
+Sur costa,209,7,4,22,0,0,0,1,buen estado,722500
+Sur costa,67,2,1,16,0,1,0,1,a reformar,227000
+Norte,91,3,2,35,1,1,1,0,reformada,332000
+Interior,150,5,3,15,0,1,1,0,a reformar,133500
+Norte,74,2,1,63,0,0,0,1,reformada,204000
+Área metropolitana,92,4,1,21,0,1,1,0,buen estado,195000
+Sur costa,95,4,2,4,1,1,1,0,reformada,703000
+Sur costa,107,2,1,55,1,1,1,1,a reformar,406000
+Área metropolitana,128,4,2,7,0,0,1,0,reformada,321500
+Norte,63,1,1,8,0,1,0,1,buen estado,179500
+Norte,104,3,2,19,0,1,1,1,reformada,338000
+Interior,37,1,1,9,0,0,1,0,buen estado,54500
+Este,139,4,2,28,0,0,0,0,reformada,232000
+Norte,38,1,1,74,1,1,0,0,a reformar,94500
+Este,166,5,2,39,0,0,0,1,reformada,254000
+Área metropolitana,79,2,1,58,0,1,1,0,a reformar,118500
+Sur costa,108,3,2,55,1,1,0,0,buen estado,445000
+Sur costa,157,5,2,34,1,0,1,0,buen estado,631500
+Este,80,1,1,18,0,0,1,1,buen estado,159000
+Sur costa,76,3,2,8,0,0,1,1,reformada,441000
+Sur costa,63,2,1,41,1,1,1,0,buen estado,309500
+Área metropolitana,98,4,2,20,0,1,0,0,buen estado,199000
+Área metropolitana,136,4,2,26,0,0,1,1,buen estado,268000
+Norte,136,4,2,3,0,1,0,1,buen estado,389000
+Área metropolitana,166,4,2,12,0,0,1,0,a reformar,269500
+Norte,194,7,5,41,0,1,0,1,buen estado,354000
+Norte,38,1,1,6,0,1,1,0,a reformar,91500
+Sur costa,129,4,2,28,0,0,1,1,a reformar,355500
+Este,67,2,1,10,1,0,0,1,buen estado,134500
+Este,75,2,2,28,0,1,0,1,reformada,152500
+Este,89,3,2,34,0,0,0,1,buen estado,138500
+Sur costa,76,2,1,32,1,1,1,0,buen estado,413500
+Sur costa,81,2,1,40,1,0,0,0,buen estado,385500
+Norte,71,2,1,21,0,1,1,0,buen estado,211500
+Norte,72,2,1,10,0,0,0,1,a reformar,123500
+Este,113,5,3,20,0,1,1,0,a reformar,163000
+Área metropolitana,47,1,1,12,0,1,1,0,a reformar,89000
+Sur costa,76,3,1,30,0,1,0,1,buen estado,293500
+Norte,104,3,1,5,0,0,1,1,buen estado,341500
+Norte,53,2,1,14,0,0,1,0,a reformar,106500
+Interior,67,3,1,22,0,1,0,1,buen estado,70500
+Área metropolitana,76,3,2,36,0,0,0,1,reformada,177000
+Sur costa,82,3,2,20,0,0,1,1,buen estado,372000
+Área metropolitana,61,2,2,6,1,0,0,1,buen estado,160500
+Norte,75,2,2,27,0,0,0,1,reformada,210500
+Este,72,3,1,36,0,1,0,1,a reformar,100000
+Norte,84,4,2,16,1,0,0,1,a reformar,216500
+Área metropolitana,107,2,1,6,0,0,0,0,buen estado,217000
+Área metropolitana,54,2,1,44,0,1,0,0,buen estado,110500
+Este,74,2,1,11,0,0,1,1,a reformar,114500
+Norte,88,2,1,17,1,1,1,0,a reformar,256000
+Sur costa,111,3,3,19,0,0,1,1,reformada,504000
+Este,65,2,1,30,1,0,1,0,a reformar,89000
+Este,168,6,3,38,0,0,1,0,a reformar,191500
+Área metropolitana,117,3,2,22,0,1,1,0,buen estado,217000
+Norte,74,2,1,15,0,1,0,1,reformada,227500
+Área metropolitana,188,6,3,45,0,0,0,1,buen estado,307500
+Norte,112,4,3,41,1,1,0,0,reformada,384500
+Norte,120,4,2,25,0,1,1,1,buen estado,332500
+Sur costa,45,1,1,9,1,0,1,1,buen estado,259000
+Área metropolitana,71,3,2,26,0,1,1,1,buen estado,151500
+Área metropolitana,60,3,1,39,0,1,1,1,buen estado,119500
+Área metropolitana,69,3,1,28,0,0,0,1,buen estado,143500
+Norte,63,3,2,25,0,1,0,1,buen estado,167000
+Área metropolitana,99,4,1,2,0,0,0,0,buen estado,219500
+Área metropolitana,81,2,1,9,0,0,1,1,a reformar,160500
+Interior,95,4,3,9,0,0,0,0,buen estado,103500
+Interior,113,3,1,28,0,0,1,1,a reformar,103000
+Este,37,2,1,64,0,1,1,0,buen estado,59500
+Norte,99,3,2,11,0,1,0,1,buen estado,234500
+Área metropolitana,46,2,1,61,0,0,1,1,reformada,107000
+Área metropolitana,99,3,2,24,0,0,1,0,a reformar,158500
+Este,320,7,4,7,0,0,0,1,buen estado,546500
+Sur costa,55,2,1,22,1,0,1,1,buen estado,330500
+Este,100,3,2,21,1,1,1,0,buen estado,179000
+Área metropolitana,81,3,1,33,0,0,0,1,buen estado,166500
+Este,188,6,3,11,0,0,1,0,buen estado,334500
+Área metropolitana,66,2,1,25,0,1,1,0,a reformar,112500
+Área metropolitana,78,3,1,9,0,0,1,1,a reformar,124500
+Norte,60,2,1,10,0,0,1,1,reformada,207000
+Área metropolitana,78,1,1,20,0,1,1,0,reformada,197500
+Área metropolitana,99,2,2,5,0,0,0,0,buen estado,231500
+Área metropolitana,36,2,1,40,0,0,1,0,reformada,88500
+Este,87,2,1,21,0,0,1,1,buen estado,151000
+Sur costa,68,3,2,22,0,0,0,0,a reformar,198500
+Área metropolitana,120,3,2,31,0,1,0,0,buen estado,230000
+Sur costa,75,1,1,52,0,0,1,1,reformada,302000
+Norte,91,2,1,6,0,0,0,0,buen estado,224500
+Norte,125,5,3,11,1,0,0,0,buen estado,426500
+Norte,97,3,2,15,0,0,0,0,buen estado,217500
+Norte,119,5,3,19,0,1,0,1,a reformar,247000
+Interior,81,2,1,8,0,0,1,1,buen estado,97500
+Sur costa,100,2,1,12,1,0,0,0,buen estado,467500
+Área metropolitana,143,4,1,28,0,0,0,1,buen estado,261000
+Área metropolitana,134,5,3,40,0,1,0,1,buen estado,239500
+Área metropolitana,63,3,1,57,0,0,1,0,reformada,129500
+Norte,77,2,1,28,0,1,0,1,reformada,226500
+Área metropolitana,78,3,2,32,0,0,1,1,buen estado,155500
+Este,121,4,2,19,0,0,0,1,a reformar,171500
+Área metropolitana,45,2,1,40,0,1,0,1,reformada,103000
+Sur costa,98,3,1,12,1,1,1,1,reformada,686500
+Sur costa,84,3,2,13,0,1,0,0,a reformar,260000
+Área metropolitana,59,3,1,29,0,0,0,0,buen estado,124000
+Norte,197,7,4,28,0,1,0,1,buen estado,427000
+Área metropolitana,73,2,1,19,0,0,0,1,reformada,156000
+Área metropolitana,92,2,1,46,0,0,1,1,buen estado,184000
+Norte,93,2,1,29,0,0,0,1,buen estado,233000
+Área metropolitana,141,4,2,21,0,0,0,0,buen estado,258000
+Interior,59,3,1,19,0,0,1,0,buen estado,68000
+Norte,58,2,1,21,0,1,1,1,buen estado,165500
+Área metropolitana,202,7,3,23,0,0,0,0,buen estado,346000
+Sur costa,77,2,1,10,0,1,0,0,buen estado,367000
+Área metropolitana,127,3,2,6,0,1,1,1,reformada,315000
+Sur costa,101,2,2,4,1,1,0,1,buen estado,522500
+Este,71,2,1,24,0,0,1,1,a reformar,108000
+Este,77,3,1,25,0,1,0,1,buen estado,141500
+Área metropolitana,74,2,2,41,0,1,0,0,buen estado,142000
+Este,88,3,2,31,0,0,0,1,buen estado,139000
+Área metropolitana,81,3,1,63,0,0,0,0,reformada,166500
+Área metropolitana,114,3,2,24,0,0,1,1,a reformar,178000
+Área metropolitana,67,2,2,32,0,1,0,0,buen estado,121000
+Interior,133,3,1,5,0,1,0,0,buen estado,159000
+Sur costa,73,2,2,8,1,0,0,0,buen estado,427000
+Este,88,4,2,21,0,0,1,1,buen estado,152500
+Sur costa,83,3,2,23,0,0,1,0,buen estado,361000
+Área metropolitana,91,3,1,65,0,1,1,1,buen estado,162000
+Área metropolitana,49,1,1,29,0,0,1,1,reformada,124500
+Interior,80,2,1,4,0,1,1,1,reformada,115000
+Área metropolitana,82,3,1,34,0,0,0,0,a reformar,114000
+Área metropolitana,47,1,1,43,0,0,0,1,buen estado,91500
+Área metropolitana,80,3,1,46,1,0,0,0,reformada,168500
+Interior,113,2,1,23,0,0,0,1,buen estado,123000
+Área metropolitana,103,3,1,12,1,0,0,0,buen estado,188000
+Sur costa,82,3,3,30,1,0,0,0,buen estado,422000
+Norte,76,1,1,5,0,0,1,1,buen estado,232500
+Área metropolitana,91,2,1,44,0,0,1,0,buen estado,136000
+Área metropolitana,52,3,1,30,0,0,0,1,a reformar,93500
+Sur costa,97,2,1,40,1,1,1,0,buen estado,439000
+Norte,56,1,1,10,0,1,1,1,buen estado,183500
+Área metropolitana,96,3,1,8,0,1,0,1,a reformar,187000
+Sur costa,136,4,2,20,1,1,0,1,buen estado,573000
+Norte,58,1,1,10,0,0,1,0,a reformar,120500
+Área metropolitana,109,3,2,29,1,1,0,1,buen estado,223500
+Norte,122,3,2,12,0,0,0,1,buen estado,289000
+Sur costa,88,1,1,33,1,1,0,0,buen estado,485500
+Área metropolitana,100,3,2,32,0,1,1,1,reformada,213500
+Norte,38,1,1,15,1,0,0,0,a reformar,120500
+Norte,73,3,2,12,0,1,0,1,buen estado,211500
+Norte,116,4,3,16,0,1,1,1,a reformar,241500
+Norte,58,3,2,34,1,0,1,1,buen estado,184000
+Interior,93,3,2,30,0,1,1,0,buen estado,107500
+Norte,147,5,3,25,0,1,0,0,buen estado,362000
+Este,76,1,1,35,1,1,0,1,buen estado,124000
+Área metropolitana,89,2,1,10,0,0,0,1,buen estado,184000
+Interior,52,1,1,34,0,0,0,1,a reformar,56000
+Sur costa,33,1,2,48,0,0,1,0,buen estado,125500
+Norte,63,1,1,15,0,0,0,1,a reformar,143000
+Sur costa,86,3,3,19,1,1,1,1,buen estado,511500
+Área metropolitana,48,2,1,18,0,0,0,0,buen estado,112000
+Este,173,6,3,14,0,0,1,1,buen estado,289000
+Este,72,3,2,38,0,0,0,0,buen estado,118500
+Este,134,5,3,4,1,1,1,1,buen estado,290500
+Este,86,3,1,21,1,0,1,1,a reformar,111500
+Área metropolitana,93,4,2,37,1,1,0,1,buen estado,192000
+Área metropolitana,50,1,1,1,0,1,0,1,a reformar,107000
+Sur costa,96,4,3,60,0,1,0,0,a reformar,277000
+Área metropolitana,70,2,2,70,0,1,0,0,reformada,142500
+Norte,67,2,1,72,0,1,1,1,buen estado,163500
+Este,81,2,2,55,1,1,1,1,buen estado,144000
+Norte,143,5,3,17,0,1,0,0,buen estado,343000
+Norte,74,2,1,40,0,1,1,1,buen estado,206500
+Sur costa,130,5,3,16,0,1,0,1,reformada,612000
+Sur costa,57,1,1,18,0,1,1,0,reformada,315000
+Área metropolitana,117,4,2,6,0,1,0,0,buen estado,232000
+Área metropolitana,117,4,1,31,0,0,1,1,buen estado,228000
+Interior,127,4,3,19,0,1,0,1,buen estado,143000
+Sur costa,95,3,2,3,1,1,0,1,a reformar,463500
+Sur costa,119,5,3,33,1,0,0,1,reformada,709000
+Interior,71,2,1,16,0,0,0,1,reformada,101500
+Área metropolitana,155,6,2,13,0,1,0,0,reformada,356500
+Área metropolitana,66,1,1,15,1,0,1,0,buen estado,158500
+Norte,108,2,1,10,0,1,0,1,reformada,300500
+Área metropolitana,133,4,3,12,0,0,1,1,a reformar,177500
+Sur costa,86,2,2,21,1,0,0,1,buen estado,378500
+Norte,77,2,2,18,0,1,0,1,buen estado,192500
+Norte,100,3,2,10,0,1,0,0,reformada,350500
+Área metropolitana,140,4,3,26,0,1,1,0,buen estado,260000
+Norte,103,4,2,48,0,1,1,1,a reformar,206500
+Norte,74,3,1,49,0,0,1,0,reformada,188000
+Sur costa,91,3,2,20,0,0,1,1,buen estado,392500
+Norte,106,3,1,17,0,0,0,0,reformada,278500
+Área metropolitana,92,3,2,32,0,0,1,1,a reformar,135500
+Área metropolitana,86,4,2,35,0,0,1,0,reformada,232500
+Norte,88,1,1,21,0,1,1,0,reformada,263000
+Sur costa,92,4,2,14,0,1,0,0,buen estado,367500
+Área metropolitana,118,4,2,14,0,0,0,1,a reformar,178500
+Norte,80,4,3,15,0,0,1,0,buen estado,178500
+Norte,89,3,2,32,0,0,0,1,reformada,241500
+Área metropolitana,34,1,1,6,0,0,0,1,reformada,111500
+Interior,80,4,2,74,0,1,1,1,a reformar,69500
+Sur costa,121,3,2,26,0,1,0,1,reformada,524000
+Área metropolitana,57,3,2,80,0,1,0,0,buen estado,98000
+Este,69,2,1,17,0,0,0,1,a reformar,103500
+Sur costa,50,2,1,29,1,0,0,1,buen estado,262500
+Sur costa,113,4,3,27,0,0,0,1,buen estado,410000
+Norte,93,3,1,22,0,0,1,1,reformada,254500
+Área metropolitana,117,5,3,28,0,1,1,1,buen estado,258500
+Sur costa,102,3,1,33,1,1,1,0,buen estado,511000
+Área metropolitana,84,2,1,39,0,0,1,0,buen estado,172000
+Norte,81,2,1,1,0,0,1,1,a reformar,189000
+Este,75,3,2,6,0,0,1,0,buen estado,138500
+Interior,97,4,2,30,0,0,1,1,buen estado,116500
+Norte,69,1,1,37,1,0,0,1,reformada,229000
+Este,121,4,3,33,0,0,0,0,reformada,218500
+Área metropolitana,225,7,4,20,0,1,0,1,buen estado,393000
+Área metropolitana,89,3,1,20,0,1,1,1,a reformar,157000
+Sur costa,121,4,2,5,0,1,0,0,buen estado,478000
+Este,113,4,2,31,0,1,1,1,buen estado,228000
+Norte,133,5,3,14,0,0,1,0,reformada,406500
+Norte,165,5,3,17,1,0,1,1,a reformar,419000
+Sur costa,80,3,2,10,0,1,1,0,buen estado,366000
+Sur costa,66,1,1,15,1,0,0,1,reformada,412000
+Norte,229,7,4,15,1,1,1,1,reformada,887500
+Norte,76,2,2,10,0,0,0,0,a reformar,151500
+Interior,88,2,1,57,0,1,0,0,reformada,102000
+Norte,75,1,1,17,0,0,0,0,buen estado,208500
+Norte,88,2,1,40,0,1,0,1,a reformar,169500
+Norte,42,1,1,12,1,0,0,0,a reformar,125000
+Sur costa,84,2,1,42,0,0,0,0,buen estado,264000
+Este,153,4,1,37,1,1,0,0,a reformar,188500
+Sur costa,80,2,1,25,0,1,0,0,a reformar,267500
+Norte,60,2,1,63,0,1,1,1,buen estado,165500
+Este,109,3,2,18,0,0,0,1,buen estado,199500
+Sur costa,76,4,2,18,0,1,0,1,buen estado,313000
+Norte,59,2,1,32,1,1,0,1,buen estado,194500
+Interior,82,2,1,12,0,0,0,1,buen estado,91000
+Norte,98,3,2,22,0,0,1,1,buen estado,268000
+Norte,110,2,1,43,1,0,0,1,reformada,354000
+Norte,57,1,1,4,0,0,0,1,buen estado,168000
+Sur costa,66,1,1,10,0,1,0,0,a reformar,235000
+Este,99,3,2,6,0,1,0,1,buen estado,183500
+Norte,115,2,2,19,1,0,1,0,buen estado,360000
+Este,56,2,1,70,0,0,0,0,reformada,101500
+Este,45,1,1,44,0,0,0,0,a reformar,68500
+Área metropolitana,61,2,1,27,0,0,1,1,buen estado,147500
+Área metropolitana,83,2,1,21,0,0,0,0,buen estado,168500
+Este,81,2,2,25,0,0,0,1,buen estado,140000
+Sur costa,83,4,3,40,1,0,1,1,buen estado,403000
+Área metropolitana,74,2,1,31,1,0,1,1,reformada,176000
+Norte,65,2,2,53,1,0,1,1,reformada,233500
+Norte,68,2,1,25,0,1,1,0,reformada,210500
+Este,103,3,1,30,1,1,0,1,buen estado,195000
+Este,60,2,1,16,0,1,1,1,buen estado,133000
+Este,134,4,2,28,0,0,1,1,reformada,241000
+Norte,113,3,2,42,0,0,0,1,reformada,285000
+Norte,52,2,1,36,1,1,0,1,buen estado,185000
+Norte,96,4,2,21,1,1,0,0,a reformar,238500
+Área metropolitana,65,2,1,22,1,1,0,1,buen estado,151500
+Área metropolitana,96,4,2,30,0,0,0,0,buen estado,178500
+Este,53,3,1,14,0,0,1,0,buen estado,108500
+Este,88,2,1,69,0,0,1,1,buen estado,131000
+Norte,90,3,1,19,0,0,1,1,buen estado,237500
+Norte,72,2,1,51,0,0,0,1,a reformar,125500
+Norte,121,4,2,39,0,1,0,1,buen estado,264000
+Sur costa,108,4,2,20,1,0,1,0,reformada,557500
+Área metropolitana,152,4,3,8,0,1,0,0,reformada,370000
+Este,49,1,1,21,0,0,1,1,buen estado,97500
+Área metropolitana,157,5,3,8,0,0,0,0,buen estado,313000
+Área metropolitana,121,4,3,48,0,0,1,1,reformada,217000
+Norte,149,4,3,35,1,0,1,1,buen estado,422500
+Norte,194,7,4,24,1,0,0,0,buen estado,505500
+Interior,53,1,1,24,0,0,0,1,buen estado,64000
+Interior,117,5,3,10,0,1,0,1,reformada,179000
+Interior,202,6,3,4,0,1,0,0,reformada,221000
+Área metropolitana,71,1,1,75,0,1,1,1,buen estado,136500
+Este,207,7,4,18,0,0,1,0,buen estado,356500
+Sur costa,47,1,1,8,0,0,0,1,a reformar,182500
+Área metropolitana,110,4,3,16,0,0,0,1,buen estado,240500
+Este,106,4,2,63,0,0,0,1,a reformar,125500
+Norte,93,3,1,22,0,0,0,1,reformada,257500
+Área metropolitana,88,3,1,21,0,0,1,0,buen estado,218500
+Sur costa,78,2,1,55,0,0,0,0,a reformar,193000

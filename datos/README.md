@@ -11,6 +11,9 @@ Los notebooks los descargan solos con la función `dato("archivo")`; no hace fal
 | **Esquema de `turisdata.db`** | Tablas, campos y relaciones en una imagen: [`esquema_turisdata.md`](../sprints/S03/2_Practica/esquema_turisdata/esquema_turisdata.md) | Sprints 3 y 5 |
 | `turisdata.sql` | La misma base en **texto SQL**: se importa en DB Browser si `turisdata.db` no se abre bien | Sprints 3 y 5 |
 | `ocupacion_diaria.csv` | Serie diaria 2023–2025 de un alojamiento | Sprints 5 y 12 |
+| `correos.csv` | 1.500 correos en español inventados (`asunto`, `texto`, `es_spam`) | Bolsa de miniretos (S08) |
+| `viviendas_tenerife.csv` | 1.800 viviendas inventadas (`precio` y 10 variables) | Bolsa de miniretos (S08) |
+| `diabetes_pima.csv` | 768 mujeres del estudio Pima (UCI, dominio público); los ceros imposibles son datos que faltan | Bolsa de miniretos (S08) |
 | `huespedes.csv` | 1.200 huéspedes para segmentar | Sprint 9 |
 | `valoraciones_experiencias.csv`, `experiencias.csv` | 2.232 valoraciones (de los huéspedes 1 a 300) y catálogo de 25 experiencias | Sprint 9 |
 | `resenas.csv` | 1.500 reseñas en español con sentimiento | Sprint 12 |

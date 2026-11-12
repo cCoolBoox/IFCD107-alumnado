@@ -4,6 +4,8 @@
 
 Creáis **una IA de verdad**, pero con reglas escritas por vosotros: decidís todo y lo entendéis todo. Después, la medís igual que se mide cualquier modelo y la enfrentáis al **árbol de decisión podado** del sprint.
 
+> ¿Prefieres otros datos? Mira la [bolsa de miniretos](miniretos/README.md): spam, tumor, diabetes, precio de vivienda, números a mano y el zoo de fronteras.
+
 ## La pregunta del cliente
 - **¿Cancelará esta reserva?** (sí o no), con los datos de `reservas_turisdata.csv` que ya conocéis.
 
