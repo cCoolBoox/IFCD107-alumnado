@@ -117,6 +117,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 
 - Los **cuadernos completos** (🏠 para casa) de los que hiciste en clase la parte «en clase». Traen **todos** los ejercicios y el mini-reto, se autocorrigen y llevan una «Solución de referencia» plegada por si te quedas atascado: [`S12_01`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_01_series_temporales.ipynb) · [`S12_02`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_02_redes_recurrentes.ipynb) · [`S12_03`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_03_nlp_clasico.ipynb) · [`S12_05`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_05_transformers_atencion.ipynb) · [`S12_06`](https://colab.research.google.com/github/cCoolBoox/IFCD107-alumnado/blob/main/sprints/S12/2_Practica/para_casa/S12_06_mini_rag.ipynb).
 - **Solucionarios** (para contrastar después de intentarlo): [cuadernos «en clase»](2_Practica/en_clase/Solucionario_en_clase.md) y [cuadernos completos](2_Practica/para_casa/Solucionario_para_casa.md).
+- 🎒 **Bolsa de miniretos «Crea tu IA»** (opcional, 5 min para elegir + 55 de trabajo, en pareja o equipo, sin IA): [siete miniapps](4_Referencia/miniretos/README.md) con lo de redes, visión, texto, series y autoencoders de los sprints 10 a 12.
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_series_lenguaje_y_generativa.md).
 
 ## Si te atascas
@@ -134,7 +135,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
 | [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y cada paso explicado) |
-| [`4_Referencia/`](4_Referencia/) | Resultados de los cuadernos (presentación y documento) e infografías |
+| [`4_Referencia/`](4_Referencia/) | Resultados de los cuadernos (presentación y documento), infografías y la bolsa de miniretos «Crea tu IA» |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).
 

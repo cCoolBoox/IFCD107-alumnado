@@ -38,12 +38,12 @@ Una carpeta `sprint-06/miniretos/` en el repositorio de vuestro equipo con **dos
 - **Dónde:** en Google Colab, con un cuaderno nuevo. Cada ficha trae las celdas para copiar y pegar, **una por paso**. No hay que instalar nada.
 - **Qué se ve al final:** el inventario de problemas de los datos, una tabla de modelos frente al modelo tonto y una **app** (una función que probáis con casos vuestros).
 
-| | Miniapp | Pregunta | Datos | Nivel | Practica |
-|---|---|---|---|---|---|
-| 🌫️ | [01 · Calidad del aire](01_Calidad_del_aire.md) | ¿Cuánto benceno hay en el aire? | **Reales**: sensores, fechas, `-200` = «sin dato» | ⭐⭐ | Nulos, fechas, `Pipeline`, partición **temporal** |
-| 🎓 | [02 · Aprobar o suspender](02_Aprobar_o_suspender.md) | ¿Aprobará este estudiante? | **Reales**: 395 estudiantes | ⭐⭐ | `ColumnTransformer`, **fuga de datos** |
-| 🚗 | [03 · Coches sucios](03_Coches_sucios.md) | ¿Cuánto vale este coche de segunda mano? | Inventados, **muy sucios** | ⭐⭐⭐ | Limpieza, repetidos, línea base, euros |
-| 🚲 | [04 · Bicis compartidas](04_Bicis_compartidas.md) | ¿Cuántas bicis se alquilarán a las 8:00? | **Reales**: 17 379 horas | ⭐⭐ | Columna trampa, split por calendario |
+| | Miniapp | Pregunta | Datos | Lo que verás | Nivel | Practica |
+|---|---|---|---|---|---|---|
+| 🌫️ | [01 · Calidad del aire](01_Calidad_del_aire.md) | ¿Cuánto benceno hay en el aire? | **Reales**: sensores, fechas, `-200` = «sin dato» | Mezclar horas al azar **infla** la nota (R² 0,97 frente a 0,86 real); una columna casi idéntica al benceno da R² = 1,00 | ⭐⭐ | Nulos, fechas, `Pipeline`, partición **temporal** |
+| 🎓 | [02 · Aprobar o suspender](02_Aprobar_o_suspender.md) | ¿Aprobará este estudiante? | **Reales**: 395 estudiantes | Con `G1` ya se avisa a tiempo (AUC 0,92); `G2` sube la nota pero llega tarde | ⭐⭐ | `ColumnTransformer`, **fuga de datos** |
+| 🚗 | [03 · Coches sucios](03_Coches_sucios.md) | ¿Cuánto vale este coche de segunda mano? | Inventados, **muy sucios** | Limpiar 1 245 filas baja el error de ≈ 4 950 € a ≈ 800 € con bosque | ⭐⭐⭐ | Limpieza, repetidos, línea base, euros |
+| 🚲 | [04 · Bicis compartidas](04_Bicis_compartidas.md) | ¿Cuántas bicis se alquilarán a las 8:00? | **Reales**: 17 379 horas | Con `casual + registered` el error es 0: **trampa perfecta**; sin ella, el bosque (≈ 46) gana a la recta (≈ 138) | ⭐⭐ | Columna trampa, split por calendario |
 
 ## Qué datos hay detrás
 - **En el repositorio del curso** (`datos/`): `aire_calidad.csv`, `estudiantes_mates.csv` y `bicis_horas.csv`, **reales de UCI** (licencia CC BY 4.0, sin tocar), y `coches_sucio.csv`, **inventado**.

@@ -38,12 +38,12 @@ Una carpeta `sprint-07/miniretos/` en el repositorio de vuestro equipo con **dos
 - **Dónde:** en Google Colab, con un cuaderno nuevo. Cada ficha trae las celdas para copiar y pegar, **una por paso**. No hay que instalar nada.
 - **Qué se ve al final:** un gráfico, una tabla de modelos frente al modelo tonto y una **app** (una función que probáis con casos vuestros).
 
-| | Miniapp | Pregunta | Tipo | Nivel | Practica |
-|---|---|---|---|---|---|
-| 💳 | [01 · Fraude con tarjeta](01_Fraude_con_tarjeta.md) | ¿Esta compra es un fraude? | Clasificar con **clases muy desiguales** (1,5 %) | ⭐⭐⭐ | Precisión engañosa, ROC y PR, umbral por coste |
-| 🎬 | [02 · Abandono de suscripción](02_Abandono_de_suscripcion.md) | ¿Quién va a darse de baja? | Clasificar y **explicar** | ⭐⭐ | Logística, odds ratios, coste de campaña |
-| 💎 | [03 · Precio de diamantes](03_Precio_de_diamantes.md) | ¿Cuánto vale este diamante? | **Regresión** con datos reales | ⭐⭐ | Lineal, `log(precio)`, Ridge, variables de texto |
-| ⚡ | [04 · Factura de la luz](04_Factura_de_la_luz.md) | ¿Cuánta luz gastará mi casa? | Regresión **no lineal** | ⭐⭐ | Curva polinómica, sobreajuste, Ridge, kWh y euros |
+| | Miniapp | Pregunta | Tipo | Lo que verás | Nivel | Practica |
+|---|---|---|---|---|---|---|
+| 💳 | [01 · Fraude con tarjeta](01_Fraude_con_tarjeta.md) | ¿Esta compra es un fraude? | Clasificar con **clases muy desiguales** (1,5 %) | El que nunca avisa acierta el 98,5 %; el umbral por coste baja las pérdidas de ≈ 11 150 € a ≈ 3 200 € | ⭐⭐⭐ | Precisión engañosa, ROC y PR, umbral por coste |
+| 🎬 | [02 · Abandono de suscripción](02_Abandono_de_suscripcion.md) | ¿Quién va a darse de baja? | Clasificar y **explicar** | Problema **difícil** (AUC ≈ 0,73): contactar a todos pierde dinero, solo a los de riesgo gana | ⭐⭐ | Logística, odds ratios, coste de campaña |
+| 💎 | [03 · Precio de diamantes](03_Precio_de_diamantes.md) | ¿Cuánto vale este diamante? | **Regresión** con datos reales | Cambiar a **logaritmo** casi **divide el error por dos**; la recta empata con el bosque | ⭐⭐ | Lineal, `log(precio)`, Ridge, variables de texto |
+| ⚡ | [04 · Factura de la luz](04_Factura_de_la_luz.md) | ¿Cuánta luz gastará mi casa? | Regresión **no lineal** | La nube es una **U**: la curva de grado 2 (error 0,60 kWh) gana a la recta (1,17) y al bosque | ⭐⭐ | Curva polinómica, sobreajuste, Ridge, kWh y euros |
 
 ## Qué datos hay detrás
 - **En el repositorio del curso** (`datos/`): `fraude_tarjeta.csv`, `abandono_streaming.csv` y `consumo_solar.csv`, **inventados**, y `diamantes.csv`, una **muestra real** de 6 000 diamantes (conjunto `diamonds` de ggplot2).

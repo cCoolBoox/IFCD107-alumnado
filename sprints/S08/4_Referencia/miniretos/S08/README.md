@@ -32,24 +32,24 @@ Una carpeta `sprint-08/miniretos/` en el repositorio de vuestro equipo con **dos
 - Una pregunta de la clase y, después, la siguiente.
 
 ## 🧰 Las miniapps
-**Elige una miniapp de IA y enséñasela a la clase.** Sin TurisData: otros datos, solo lo que ya conocéis hasta el Sprint 8 (árboles, bosques, boosting, SVM y búsqueda).
+**Elige una miniapp de IA y enséñasela a la clase: cada una es *tu IA*, entrenada por ti.** Sin TurisData: otros datos, solo lo que ya conocéis hasta el Sprint 8 (árboles, bosques, boosting, SVM y búsqueda). Cuando lleguéis a redes, visión y lenguaje, hay otra bolsa en [S12 · «Crea tu IA»](../../../../S12/4_Referencia/miniretos/README.md).
 
 - **Con quién:** en pareja o en equipo de tres.
 - **Dónde:** en Google Colab, con un cuaderno nuevo. Cada ficha trae las celdas para copiar y pegar, **una por paso**. No hay que instalar nada.
 - **Qué se ve al final:** un gráfico, una tabla de modelos frente al modelo tonto y una **app** (una función que probáis con casos vuestros).
 
-| | Miniapp | Pregunta | Tipo | Nivel | Practica |
-|---|---|---|---|---|---|
-| 🌸 | [06 · El zoo de fronteras](06_Zoo_de_fronteras.md) | ¿Qué especie de flor es? | Clasificar y **dibujar** cómo decide cada modelo | ⭐ | Árbol, bosque, SVM, k-NN |
-| ✍️ | [05 · Números a mano](05_Digitos.md) | ¿Qué número es esta imagen? | Clasificar **imágenes** (0–9) | ⭐ | SVM (`gamma`), k-NN, bosque |
-| 🎗️ | [03 · Tumor](03_Tumor.md) | ¿Benigno o maligno? | Clasificar con **umbral** | ⭐ | Umbral, FN frente a FP, los 6 modelos |
-| 📧 | [02 · Correo y spam](02_Correo_spam.md) | ¿Spam o correo de verdad? | Clasificar **texto** | ⭐⭐ | Árbol con reglas, Naive Bayes, logística |
-| 🩺 | [04 · Diabetes](04_Diabetes.md) | ¿Riesgo de diabetes? | Clasificar con **datos que faltan** | ⭐⭐ | `Pipeline`, ROC, umbral |
-| 🏠 | [01 · Precio de vivienda](01_Precio_vivienda.md) | ¿Cuánto vale este piso en Tenerife? | **Regresión** | ⭐⭐ | Lineal frente a bosque y boosting |
-| 🎮 | [07 · Tramposos en un videojuego](07_Tramposos_en_un_videojuego.md) | ¿Este jugador hace trampas? | Clasificar con **umbral exigente** | ⭐⭐ | Precisión frente a recall; a veces gana el modelo sencillo |
-| 🔥 | [08 · Riesgo de incendio](08_Riesgo_de_incendio.md) | ¿Hoy hay riesgo de incendio forestal? | Suceso **raro** y semáforo | ⭐⭐⭐ | Reglas de un árbol, bosque, boosting, `RandomizedSearchCV` |
-| 🚑 | [09 · Triaje de urgencias](09_Triaje_de_urgencias.md) | ¿Este paciente es urgente? | **Explicable frente a potente** | ⭐⭐⭐ | Árbol frente a bosque, recall exigido, grupos de edad |
-| 👕 | [10 · Reconocer prendas](10_Reconocer_prendas.md) | ¿Qué prenda de ropa es? | Clasificar **imágenes** | ⭐⭐ | SVM, k-NN, bosque, matriz de confusión |
+| | Miniapp | Pregunta | Tipo | Lo que verás | Nivel | Practica |
+|---|---|---|---|---|---|---|
+| 🌸 | [06 · El zoo de fronteras](06_Zoo_de_fronteras.md) | ¿Qué especie de flor es? | Clasificar y **dibujar** cómo decide cada modelo | Siete mapas: **rectas, rectángulos y curvas**; todos aciertan ≈ 0,95 | ⭐ | Árbol, bosque, SVM, k-NN |
+| ✍️ | [05 · Números a mano](05_Digitos.md) | ¿Qué número es esta imagen? | Clasificar **imágenes** (0–9) | La SVM sube al 0,99 con `gamma = 0,001`, pero con `gamma = 0,1` cae al 0,11 | ⭐ | SVM (`gamma`), k-NN, bosque |
+| 🎗️ | [03 · Tumor](03_Tumor.md) | ¿Benigno o maligno? | Clasificar con **umbral** | Bajar el umbral de 0,5 a 0,2 cambia 9 malignos perdidos por 3 y detecta 41 de 42 | ⭐ | Umbral, FN frente a FP, los 6 modelos |
+| 📧 | [02 · Correo y spam](02_Correo_spam.md) | ¿Spam o correo de verdad? | Clasificar **texto** | Palabras + Naive Bayes ≈ 0,99; 4 spam se cuelan y 1 correo bueno va a la basura | ⭐⭐ | Árbol con reglas, Naive Bayes, logística |
+| 🩺 | [04 · Diabetes](04_Diabetes.md) | ¿Riesgo de diabetes? | Clasificar con **datos que faltan** | **Gana la logística** (AUC ≈ 0,84), la más fácil de explicar; con datos que faltan | ⭐⭐ | `Pipeline`, ROC, umbral |
+| 🏠 | [01 · Precio de vivienda](01_Precio_vivienda.md) | ¿Cuánto vale este piso en Tenerife? | **Regresión** | Boosting ≈ 18 000 € de error; falla sobre todo en casas grandes | ⭐⭐ | Lineal frente a bosque y boosting |
+| 🎮 | [07 · Tramposos en un videojuego](07_Tramposos_en_un_videojuego.md) | ¿Este jugador hace trampas? | Clasificar con **umbral exigente** | **Gana el modelo sencillo** (logística AUC 0,99); caza 33 de 59 tramposos sin sancionar a casi ningún inocente | ⭐⭐ | Precisión frente a recall; a veces gana el modelo sencillo |
+| 🔥 | [08 · Riesgo de incendio](08_Riesgo_de_incendio.md) | ¿Hoy hay riesgo de incendio forestal? | Suceso **raro** y semáforo | Precisión del tonto 94 %, pero el semáforo rojo junta el 48 % de incendios en el 7 % de las zonas | ⭐⭐⭐ | Reglas de un árbol, bosque, boosting, `RandomizedSearchCV` |
+| 🚑 | [09 · Triaje de urgencias](09_Triaje_de_urgencias.md) | ¿Este paciente es urgente? | **Explicable frente a potente** | El árbol se lee en voz alta, pero el bosque da menos falsas alarmas: **explicable frente a potente** | ⭐⭐⭐ | Árbol frente a bosque, recall exigido, grupos de edad |
+| 👕 | [10 · Reconocer prendas](10_Reconocer_prendas.md) | ¿Qué prenda de ropa es? | Clasificar **imágenes** | ≈ 0,85 de acierto; pantalón, bolso y botín ≈ 95 %, la camisa ≈ 59 % | ⭐⭐ | SVM, k-NN, bosque, matriz de confusión |
 
 ## Qué datos hay detrás
 - **Dentro de scikit-learn** (no se descargan): flores, números a mano y tumores.

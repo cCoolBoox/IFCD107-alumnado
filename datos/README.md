@@ -17,14 +17,17 @@ Los notebooks los descargan solos con la función `dato("archivo")`; no hace fal
 | `aire_calidad.csv` | 9 357 horas de sensores de calidad del aire de una ciudad italiana (UCI, CC BY 4.0, tal cual: `;`, coma decimal y `-200` = sin dato) | Bolsa de miniretos (S06) |
 | `estudiantes_mates.csv` | 395 estudiantes de dos colegios de Portugal, nota de matemáticas (UCI, CC BY 4.0, tal cual: separado por `;`) | Bolsa de miniretos (S06) |
 | `coches_sucio.csv` | 1.245 anuncios de coches inventados y **muy sucios** (45 repetidos, formatos mezclados) | Bolsa de miniretos (S06) |
-| `bicis_horas.csv` | 17.379 horas de bicis compartidas de Washington D. C. (UCI, CC BY 4.0, tal cual) | Bolsa de miniretos (S06) |
-| `fraude_tarjeta.csv` | 20.000 compras inventadas con un 1,5 % de fraudes | Bolsa de miniretos (S07) |
+| `bicis_horas.csv` | 17.379 horas de bicis compartidas de Washington D. C. (UCI, CC BY 4.0, tal cual) | Bolsa de miniretos (S06 y S12) |
+| `fraude_tarjeta.csv` | 20.000 compras inventadas con un 1,5 % de fraudes | Bolsa de miniretos (S07 y S12) |
 | `abandono_streaming.csv` | 5.000 clientes inventados de una plataforma de series (`abandona`) | Bolsa de miniretos (S07) |
 | `diamantes.csv` | Muestra al azar de 6.000 diamantes reales (conjunto `diamonds` de ggplot2) | Bolsa de miniretos (S07) |
 | `consumo_solar.csv` | 1.096 días de consumo eléctrico de una casa inventada con placas solares | Bolsa de miniretos (S07) |
 | `tramposos_juego.csv` | 4.000 jugadores inventados, 6 % de tramposos | Bolsa de miniretos (S08) |
 | `incendios_canarias.csv` | 5.000 zonas-día inventadas, 6 % con incendio | Bolsa de miniretos (S08) |
-| `triaje_urgencias.csv` | 4.000 pacientes inventados, 13 % urgentes | Bolsa de miniretos (S08) |
+| `triaje_urgencias.csv` | 4.000 pacientes inventados, 13 % urgentes | Bolsa de miniretos (S08 y S12) |
+| `mensajes_soporte.csv` | 2.600 mensajes inventados de clientes (con faltas y mensajes mezclados), 4 departamentos; objetivo `categoria` | Bolsa de miniretos (S12) |
+| `normas_biblioteca.md` | Reglamento inventado de una biblioteca municipal, 12 apartados | Bolsa de miniretos (S12) |
+| `preguntas_biblioteca.csv` | 28 preguntas sobre el reglamento (20 sí están, 8 no) con la respuesta esperada | Bolsa de miniretos (S12) |
 | `huespedes.csv` | 1.200 huéspedes para segmentar | Sprint 9 |
 | `valoraciones_experiencias.csv`, `experiencias.csv` | 2.232 valoraciones (de los huéspedes 1 a 300) y catálogo de 25 experiencias | Sprint 9 |
 | `resenas.csv` | 1.500 reseñas en español con sentimiento | Sprint 12 |
