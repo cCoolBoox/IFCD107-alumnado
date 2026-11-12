@@ -96,7 +96,7 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 1. Lee primero la parte «Si os atascáis» de la [ficha completa del reto](3_Reto/3_Consultar/Reto_Sprint_07.md).
 2. Mira el [código explicado](2_Practica/codigo_explicado/README.md) del cuaderno en el que estás.
 3. Pregunta a tu equipo y, después, al docente. Si usas IA, cuenta en el README qué te dijo y qué comprobaste.
-4. Cuando hayas terminado el paso (o agotado las pistas), contrasta con el [solucionario del reto](3_Reto/3_Consultar/Solucionario_reto.md).
+4. Cuando hayas terminado el paso (o agotado las pistas), contrasta con el [solucionario del reto](3_Reto/3_Consultar/Solucionario_reto.md) y, para ver cómo queda una entrega completa, con la [entrega de ejemplo](3_Reto/3_Consultar/Solucionario/README.md).
 
 ## Todo el material, por carpetas
 
@@ -106,7 +106,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 |---|---|
 | [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
-| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y cada paso explicado) |
+| [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto, cada paso explicado y una entrega de ejemplo) |
 | [`4_Referencia/`](4_Referencia/) | Resultados de los cuadernos (presentación y documento) e infografías |
 
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).

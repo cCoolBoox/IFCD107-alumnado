@@ -4,6 +4,7 @@
 >
 > - Volver al [README del sprint](../../README.md) · [ficha del reto](../3_Consultar/Reto_Sprint_07.md), para consultar.
 > - Vuestra hoja personal: [autoevaluación y coevaluación](autoevaluacion_y_coevaluacion.md).
+> - Para ver cómo queda todo lo que se sube, con cifras reales: la [entrega de ejemplo](../3_Consultar/Solucionario/README.md).
 > - Cómo subir a GitHub paso a paso, con capturas: [Cómo entregar en GitHub](../../../../material/5.%20Como_entregar_en_GitHub.md).
 
 Esta hoja responde a **dos preguntas distintas**, una tabla para cada una:

@@ -1,6 +1,6 @@
 # Solucionario del reto · Sprint 7 · «Precio y cancelación»
 
-> **Para contrastar y para entender**, no solo para copiar. El **código** de cada paso ya está en su [página del reto](Reto_Sprint_07_paso_2.md) (con «Qué hace cada línea»). Aquí están las cifras para comprobar y las respuestas de ejemplo de lo que se escribe con palabras propias. Volver a la [ficha del reto](Reto_Sprint_07.md).
+> **Para contrastar y para entender**, no solo para copiar. El **código** de cada paso ya está en su [página del reto](Reto_Sprint_07_paso_2.md) (con «Qué hace cada línea»). Aquí están las cifras para comprobar y las respuestas de ejemplo de lo que se escribe con palabras propias. **¿Cómo queda una entrega completa?** Mirad la [entrega de ejemplo](Solucionario/README.md): los ficheros que se suben a `sprint-07/`. Volver a la [ficha del reto](Reto_Sprint_07.md).
 
 ## Índice
 
