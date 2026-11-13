@@ -35,6 +35,7 @@ Una carpeta `sprint-08/miniretos/` en el repositorio de vuestro equipo con **dos
 **Elige una miniapp de IA y enséñasela a la clase: cada una es *tu IA*, entrenada por ti.** Sin TurisData: otros datos, solo lo que ya conocéis hasta el Sprint 8 (árboles, bosques, boosting, SVM y búsqueda). Cuando lleguéis a redes, visión y lenguaje, hay otra bolsa en [S12 · «Crea tu IA»](../../../../S12/4_Referencia/miniretos/README.md).
 
 - **Con quién:** en pareja o en equipo de tres.
+- **¿No sabes qué algoritmo elegir?** Mira el [flujograma de decisión](../Flujograma_que_algoritmo_uso.pdf) (se imprime en una hoja).
 - **Dónde:** en Google Colab, con un cuaderno nuevo. Cada ficha trae las celdas para copiar y pegar, **una por paso**. No hay que instalar nada.
 - **Qué se ve al final:** un gráfico, una tabla de modelos frente al modelo tonto y una **app** (una función que probáis con casos vuestros).
 

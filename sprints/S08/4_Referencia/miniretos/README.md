@@ -9,6 +9,7 @@
 | [S08](S08/README.md) | 🌸 flores · ✍️ números · 🎗️ tumor · 📧 spam · 🩺 diabetes · 🏠 vivienda · 🎮 tramposos · 🔥 incendio · 🚑 triaje · 👕 ropa | máx. 55 min | Árbol, bosque, boosting, SVM, k-NN, búsqueda |
 | [S12 · Crea tu IA](../../../S12/4_Referencia/miniretos/README.md) | 👕 ropa con CNN · 📷 qué ve una IA · 🚑 red contra bosque · 💬 mensajes · 📚 asistente de normas · 🚲 bicis de mañana · 🕵️ fraude sin verlo | máx. 55 min | Redes, CNN, transfer, texto, series, autoencoder |
 
+- 🧭 **¿Dudas con qué algoritmo usar?** Imprime el [flujograma de decisión](Flujograma_que_algoritmo_uso.pdf) (A4 horizontal, una página): eliges el problema y te lleva al algoritmo y a la miniapp donde practicarlo.
 - Cada bolsa empieza por su **decálogo** (sin IA, 5 minutos para elegir, 55 para construir), sigue con **qué entregar** (cuaderno + `README.md`) y **qué hacer en la demo** (2 minutos).
 - Cada ficha tiene código para Colab, **un paso por celda**, y «Qué deberías ver» con las cifras reales.
 - Los datos están en [`datos/`](../../../../datos/README.md).

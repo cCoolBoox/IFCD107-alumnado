@@ -35,6 +35,7 @@ Una carpeta `sprint-07/miniretos/` en el repositorio de vuestro equipo con **dos
 **Elige una miniapp de IA y enséñasela a la clase.** Sin TurisData: otros datos, solo lo que ya conocéis hasta el Sprint 7 (regresión, clasificación, umbral y métricas).
 
 - **Con quién:** en pareja o en equipo de tres.
+- **¿No sabes qué algoritmo elegir?** Mira el [flujograma de decisión](../Flujograma_que_algoritmo_uso.pdf) (se imprime en una hoja).
 - **Dónde:** en Google Colab, con un cuaderno nuevo. Cada ficha trae las celdas para copiar y pegar, **una por paso**. No hay que instalar nada.
 - **Qué se ve al final:** un gráfico, una tabla de modelos frente al modelo tonto y una **app** (una función que probáis con casos vuestros).
 

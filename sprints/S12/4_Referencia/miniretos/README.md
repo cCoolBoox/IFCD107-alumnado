@@ -36,6 +36,7 @@ Una carpeta `sprint-12/miniretos/` en el repositorio de vuestro equipo con **dos
 **Creáis una IA de verdad:** la entrenáis vosotros, la medís y la ponéis a prueba. Aquí se usa todo lo del bloque de redes (S10), visión (S11) y lenguaje, series y modelos generativos (S12).
 
 - **Con quién:** en pareja o en equipo de tres.
+- **¿No sabes qué algoritmo elegir?** Mira el [flujograma de decisión](../../../S08/4_Referencia/miniretos/Flujograma_que_algoritmo_uso.pdf) (se imprime en una hoja).
 - **Dónde:** en Google Colab, con un cuaderno nuevo. Cada ficha trae las celdas para copiar y pegar, **una por paso**. No hay que instalar nada.
 - **Qué se ve al final:** una curva o un gráfico, una tabla de modelos frente al de referencia y una **app** (una función que probáis con casos vuestros).
 
