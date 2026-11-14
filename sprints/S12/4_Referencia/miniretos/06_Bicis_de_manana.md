@@ -143,19 +143,74 @@ print(f"Si los últimos días fueran muy altos: {prevision([6500] * 14):.0f} bic
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
 > **Nota.** El tiempo de mañana explica una parte de la variación: con las **variables bien elegidas** la mejora es **real pero moderada (≈ 7–8 %)**, no «la mayor parte». Esa es la lectura correcta del Extra.
-- **Extra 1 · Añadir el tiempo de mañana (validación, recta con rezagos):**
+#### Extra 1 · Añadir el tiempo de mañana (validación, recta con rezagos)
+- **Qué hacer:**
+  1. Saca de `horas` el tiempo **del día que quieres predecir** (temperatura, humedad, viento, horas de mal tiempo, laborable, festivo), alineado con `y`.
+  2. Añádelo a los 14 días en la recta con rezagos y compara el error de validación con ir añadiendo variables.
+```python
+clima = horas.groupby("dteday").agg(temp=("temp", "mean"), hum=("hum", "mean"), viento=("windspeed", "mean"),
+                                    mal_tiempo=("weathersit", lambda s: (s >= 3).mean()),
+                                    laborable=("workingday", "max"), festivo=("holiday", "max")).reindex(dias.index)
+
+def recta_con(columnas):
+    extra = clima[columnas].values[V:] if columnas else np.zeros((len(y), 0))
+    Z = np.hstack([X / escala, extra])
+    r = Ridge(alpha=10).fit(Z[:a], y[:a] / escala)
+    return mean_absolute_error(y[a:v], r.predict(Z[a:v]) * escala)
+
+for nombre, columnas in (("solo los 14 días", []),
+                         ("+ temperatura", ["temp"]),
+                         ("+ temperatura, humedad, viento y mal tiempo", ["temp", "hum", "viento", "mal_tiempo"]),
+                         ("+ además laborable y festivo", ["temp", "hum", "viento", "mal_tiempo", "laborable", "festivo"])):
+    print(f"{nombre:45s} error en validación {recta_con(columnas):.0f} bicis")
+```
+- **Qué sale y por qué:**
   - Solo los **14 días**: **799**.
   - + temperatura: **838** (**peor**: por sí sola no aporta).
   - + temperatura, humedad, viento y proporción de horas de mal tiempo: **743** (**−7 %**).
   - + lo anterior y `laborable`/`festivo`: **733** (**−8 %**).
   - El orden de la tabla **sí cambia**: con tiempo y calendario, la recta ya **queda bien por encima** de «mañana = hoy» (871).
   - **Ojo:** el tiempo de mañana **es un dato del futuro**: en producción habría que usar la **previsión**, que se equivoca. Y el bosque **no mejora** (1 092 → 1 127): con ≈ 430 días **no tiene datos**.
-- **Extra 2 · Ventanas de 7 y 28 días (recta, validación):** **7 días: 857** · **14: 799** · **28: 774**. Ventana más larga ayuda **un poco** (el fin de semana pasado y la tendencia); y «mañana = hoy» sigue en 871–896.
-- **Extra 3 · LSTM y GRU más grande (validación, una sola semilla):**
+
+#### Extra 2 · Ventanas de 7 y 28 días (recta, validación)
+- **Qué hacer:**
+  1. Cambia `V` a 7 y a 28 y rehaz las ventanas, el reparto y la recta.
+  2. Compara con «mañana = hoy» de cada ventana.
+```python
+for V2 in (7, 14, 28):
+    X2 = np.array([serie[i:i + V2] for i in range(len(serie) - V2)]); y2 = serie[V2:]
+    a2, v2 = int(len(y2) * 0.6), int(len(y2) * 0.8)
+    esc2 = X2[:a2].mean()
+    r = Ridge(alpha=10).fit(X2[:a2] / esc2, y2[:a2] / esc2)
+    print(f"ventana de {V2:2d} días: recta {mean_absolute_error(y2[a2:v2], r.predict(X2[a2:v2] / esc2) * esc2):.0f} · mañana = hoy {mean_absolute_error(y2[a2:v2], X2[a2:v2, -1]):.0f}")
+```
+- **Qué sale y por qué:**
+  - **7 días: 857** · **14: 799** · **28: 774**. Ventana más larga ayuda **un poco** (el fin de semana pasado y la tendencia); y «mañana = hoy» sigue en 871–896.
+
+#### Extra 3 · LSTM y GRU más grande (validación, una sola semilla)
+- **Qué hacer:**
+  1. Cambia `keras.layers.GRU(16)` por `LSTM(16)` o `GRU(64)`, entrena y mira los pesos (`count_params()`) y el error de validación.
+  2. Con **una** semilla es orientativo: para decidir, usa la media de varias.
+```python
+def probar_capa(capa, semilla=0):
+    keras.utils.set_random_seed(semilla)
+    m = keras.Sequential([keras.layers.Input((V, 1)), capa, keras.layers.Dense(1)])
+    m.compile("adam", "mae")
+    m.fit((Xa / escala)[..., None], ya / escala, validation_data=((Xv / escala)[..., None], yv / escala), epochs=200, batch_size=32, verbose=0,
+          callbacks=[keras.callbacks.EarlyStopping(patience=20, restore_best_weights=True)])
+    return m
+
+for nombre, capa in (("GRU(16)", keras.layers.GRU(16)), ("LSTM(16)", keras.layers.LSTM(16)), ("GRU(64)", keras.layers.GRU(64))):
+    m = probar_capa(capa)
+    print(f"{nombre:9s} pesos {m.count_params():6,} · error en validación {mean_absolute_error(yv, predice(m, Xv)):.0f}")
+```
+- **Qué sale y por qué:**
   - **GRU(16):** 929 pesos · **1 106** (una semilla; media de 3 semillas en la ficha: 973).
   - **LSTM(16):** **1 169** pesos · **1 035**.
   - **GRU(64):** **12 929** pesos · **818**.
   - **GRU(64) casi alcanza a la recta (799)** con **≈ 14 veces más pesos**. Más memoria ayuda, pero **no supera a lo simple** con tan pocos días. Usa la **media de varias semillas**.
+
+#### Para cerrar
 - **Para comentar:** la lección es **ganar a lo simple antes de presumir de red**: el 1 % de ganancia en el examen (878 frente a 891) **no justifica** una GRU. Y **separar por fecha**: si mezclas los días, haces trampa.
 - **Tarjeta de ejemplo:**
   - Mi IA decide **cuántas bicis se alquilarán mañana** a partir de **los últimos 14 días**.

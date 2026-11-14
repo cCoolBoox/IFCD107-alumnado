@@ -141,18 +141,68 @@ print(revisa(60, 15, 8, 0, "gasolinera", 0, 24, 0))
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Cuello de botella de 1, 3, 6 y 14 (validación, AUC / AP):**
+#### Extra 1 · Cuello de botella de 1, 3, 6 y 14 (validación, AUC / AP)
+- **Qué hacer:**
+  1. Escribe una función que construya el autoencoder con el cuello de botella que quieras y mide AUC y AP en validación con `rareza`.
+  2. Prueba 1, 3, 6 y 14. Mira que las capas de 8 de alrededor siguen comprimiendo.
+```python
+def autoencoder(cuello, datos=normales, semilla=0):
+    keras.utils.set_random_seed(semilla)
+    n = datos.shape[1]
+    a = keras.Sequential([keras.layers.Input((n,)), keras.layers.Dense(8, activation="relu"), keras.layers.Dense(cuello, activation="relu"),
+                          keras.layers.Dense(8, activation="relu"), keras.layers.Dense(n)])
+    a.compile("adam", "mse")
+    Z = esc.transform(datos)
+    a.fit(Z, Z, epochs=100, batch_size=64, validation_split=0.15, verbose=0, callbacks=[keras.callbacks.EarlyStopping(patience=10, restore_best_weights=True)])
+    return a
+
+def notas_val(a):
+    r = ((a.predict(esc.transform(Xv), verbose=0) - esc.transform(Xv)) ** 2).mean(axis=1)
+    return round(roc_auc_score(yv, r), 3), round(average_precision_score(yv, r), 3)
+
+for cuello in (1, 3, 6, 14):
+    a = autoencoder(cuello)
+    print(f"cuello {cuello:2d} · pesos {a.count_params()} · AUC / AP en validación {notas_val(a)}")
+```
+- **Qué sale y por qué:**
   - **1:** 0,915 / 0,263 (271 pesos).
   - **3 (la ficha):** 0,923 / 0,232 (305 pesos).
   - **6:** 0,936 / 0,266 (356 pesos).
   - **14:** **0,938 / 0,294** (492 pesos).
   - **Casi no cambia** (≈ 0,92–0,94); con 46 fraudes en validación **las diferencias son ruido**. Y **«tan grande que copie todo» no ha empeorado el AUC**: en esta red las capas de **8** neuronas de alrededor ya comprimen 14 → 8, así que **no puede copiar de verdad**. Para ver el efecto hay que subir **también** esas capas (por ejemplo, a 32). Buen momento para decir que **un experimento que no sale como se esperaba también enseña**.
-- **Extra 2 · Con el 1 % de fraudes mezclados (118 casos):** AUC **0,929 / AP 0,264** frente a 0,923 / 0,232: **casi igual**. El autoencoder **apenas se «acostumbra»** porque 118 fraudes entre ≈ 12 000 normales **siguen siendo raros**. Con **más** fraudes mezclados sí perdería el efecto (lo raro dejaría de serlo).
-- **Extra 3 · Revisar el 1 %, 5 % y 10 % (examen, 77 fraudes):**
+
+#### Extra 2 · Con el 1 % de fraudes mezclados (118 casos)
+- **Qué hacer:**
+  1. Añade a `normales` un 1 % de fraudes de `Xa` (los que tienen `ya == 1`) y reentrena.
+  2. Compara AUC y AP con los del autoencoder limpio.
+```python
+fraudes_entrenamiento = Xa[ya == 1]
+k = int(0.01 * len(normales))
+mezcla = pd.concat([normales, fraudes_entrenamiento.iloc[:k]])
+print("fraudes añadidos:", min(k, len(fraudes_entrenamiento)), "de", len(mezcla), "compras")
+print("con el 1 % de fraudes dentro · AUC / AP en validación:", notas_val(autoencoder(3, mezcla)))
+```
+- **Qué sale y por qué:**
+  - AUC **0,929 / AP 0,264** frente a 0,923 / 0,232: **casi igual**. El autoencoder **apenas se «acostumbra»** porque 118 fraudes entre ≈ 12 000 normales **siguen siendo raros**. Con **más** fraudes mezclados sí perdería el efecto (lo raro dejaría de serlo).
+
+#### Extra 3 · Revisar el 1 %, 5 % y 10 % (examen, 77 fraudes)
+- **Qué hacer:**
+  1. Calcula la rareza de la validación y del examen y fija el umbral con **la validación** (el cuantil que deje pasar a una persona el 1 %, 5 % o 10 %).
+  2. Aplica ese umbral al examen y cuenta fraudes cazados y falsas alarmas.
+```python
+r_val, r_test = rareza(Xv), rareza(X_te)
+for porcentaje in (0.01, 0.05, 0.10):
+    umbral_p = np.quantile(r_val, 1 - porcentaje)
+    aviso_p = r_test >= umbral_p
+    print(f"revisas el {porcentaje:.0%}: cazas {int((aviso_p & (y_te.values == 1)).sum())} de {int(y_te.sum())} fraudes · falsas alarmas {int((aviso_p & (y_te.values == 0)).sum())}")
+```
+- **Qué sale y por qué:**
   - **1 %:** caza **15** (46 falsas alarmas).
   - **5 %:** caza **34 (44 %)** (209 falsas alarmas).
   - **10 %:** caza **42 (55 %)** (445 falsas alarmas).
   - Duplicar la revisión **no duplica los fraudes cazados**: cada euro de revisión **rinde menos**. El punto lo marca **lo que cuesta revisar**.
+
+#### Para cerrar
 - **Para comentar:** «**raro no es lo mismo que fraude**». El autoencoder (AUC 0,92) **gana a lo simple** (0,83) pero **queda lejos** de la logística que **sí vio fraudes** (0,98): **sin etiquetas, lo raro es una pista, no una prueba**.
 - **Tarjeta de ejemplo:**
   - Mi IA decide **qué compras revisar** a partir de **lo raras que son frente a las compras normales**.

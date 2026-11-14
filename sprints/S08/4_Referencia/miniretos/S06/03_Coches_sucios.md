@@ -149,13 +149,64 @@ print(tasar("Ford", "Kuga", 2010, 220000, "diésel", 150, "Arona"), "€")
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
 
-- **Extra 1 · Quitar `ciudad`:** bosque **808 €** (con ciudad 813) y Ridge **2 578 €** (igual). **No empeora** → se **descarta y se simplifica**.
-- **Extra 2 · `np.log(y)`:**
+#### Extra 1 · Quitar `ciudad`
+- **Qué hacer:**
+  1. Compara el error con y sin la columna `ciudad`: necesitas una versión de `con_modelo` que reciba la lista de columnas de texto.
+  2. Si el error no empeora, **descarta la columna** y simplifica.
+```python
+def con_modelo_sin(m, categoricas):
+    prep = ColumnTransformer([("num", SimpleImputer(strategy="median"), num),
+                              ("cat", Pipeline([("imp", SimpleImputer(strategy="most_frequent")), ("oh", OneHotEncoder(handle_unknown="ignore"))]), categoricas)])
+    return Pipeline([("prep", prep), ("modelo", m)])
+
+for nombre, m in {"Ridge": Ridge(alpha=1.0),
+                  "Bosque": RandomForestRegressor(n_estimators=300, min_samples_leaf=2, random_state=42, n_jobs=2)}.items():
+    con = -cross_val_score(con_modelo(m), X_tr, y_tr, cv=5, scoring="neg_mean_absolute_error").mean()
+    sin = -cross_val_score(con_modelo_sin(m, ["marca", "modelo", "combustible"]), X_tr, y_tr, cv=5, scoring="neg_mean_absolute_error").mean()
+    print(f"{nombre}: con ciudad {con:.0f} € · sin ciudad {sin:.0f} €")
+```
+- **Qué sale y por qué:**
+  - Bosque **808 €** (con ciudad 813) y Ridge **2 578 €** (igual). **No empeora** → se **descarta y se simplifica**.
+
+#### Extra 2 · `np.log(y)`
+- **Qué hacer:**
+  1. Envuelve el modelo en `TransformedTargetRegressor`: entrena con `np.log(precio)` y deshace con `np.exp`.
+  2. Compara el error **en euros** con y sin el logaritmo, para Ridge y para el bosque.
+```python
+from sklearn.compose import TransformedTargetRegressor
+
+for nombre, m in {"Ridge": Ridge(alpha=1.0),
+                  "Bosque": RandomForestRegressor(n_estimators=300, min_samples_leaf=2, random_state=42, n_jobs=2)}.items():
+    normal = -cross_val_score(con_modelo(m), X_tr, y_tr, cv=5, scoring="neg_mean_absolute_error").mean()
+    con_log = -cross_val_score(TransformedTargetRegressor(regressor=con_modelo(m), func=np.log, inverse_func=np.exp),
+                               X_tr, y_tr, cv=5, scoring="neg_mean_absolute_error").mean()
+    print(f"{nombre}: precio tal cual {normal:.0f} € · con log {con_log:.0f} €")
+```
+- **Qué sale y por qué:**
   - Ridge: **2 578 → 1 631 €** (baja un tercio): el precio crece en **porcentaje**, y el log lo vuelve recta.
   - Bosque: **813 → 823 €** (no cambia): los árboles no necesitan que el problema sea una recta.
   - Lección: **la transformación ayuda al modelo lineal, no al bosque.**
-- **Extra 3 · Los 5 mayores fallos (examen):** errores de **4 200 a 9 400 €**; destacan un **Seat Arona con el año desaparecido** (`NaN`; falla 9 380 €) y varios **eléctricos o de 2024**, de **los que el bosque ha visto pocos**. El error se concentra en coches **caros o raros**, no en los normales.
-- **Extra 4 · Diario de limpieza (🗣️).** Versión modelo (cifras de la ficha):
+
+#### Extra 3 · Los 5 mayores fallos (examen)
+- **Qué hacer:**
+  1. Calcula el error de cada coche del examen (`abs(p - y_te)`), ordénalo y quédate con los 5 mayores.
+  2. Mira sus columnas: ¿falta algún dato?, ¿son coches caros o raros?
+```python
+error = np.abs(p - y_te.values)
+peores = np.argsort(-error)[:5]
+print(pd.concat([X_te.iloc[peores].reset_index(drop=True),
+                 pd.DataFrame({"real": y_te.values[peores], "predicho": p[peores].round(-1), "error": error[peores].round(-1)})], axis=1).to_string())
+```
+- **Qué sale y por qué:**
+  - Errores de **4 200 a 9 400 €**; destacan un **Seat Arona con el año desaparecido** (`NaN`; falla 9 380 €) y varios **eléctricos o de 2024**, de **los que el bosque ha visto pocos**. El error se concentra en coches **caros o raros**, no en los normales.
+
+#### Extra 4 · Diario de limpieza (🗣️)
+- **Qué hacer:**
+  1. Escribe una línea por defecto con esta forma: **qué defecto · cuántas filas · qué decidiste**.
+  2. Saca los números de los `print` de las celdas de limpieza (repetidos, marcas, combustible, ciudades, km y precio, año, precios imposibles).
+  3. Termina con **la decisión que cambia el resultado** (el rango de precios 500–80 000 €).
+- **Qué sale y por qué:**
+  - Versión modelo (cifras de la ficha):
   - 45 anuncios **repetidos** (id distinto) → quitados: 1 245 → 1 200.
   - 41 escrituras de **marca** → 8 (`VW` → `Volkswagen`, quitar puntos, mayúsculas).
   - 13 formas de escribir el **combustible** → 4.
@@ -164,6 +215,8 @@ print(tasar("Ford", "Kuga", 2010, 220000, "diésel", 150, "Arona"), "€")
   - **Año** con punto de miles (`2.013`) o dos cifras (`19`) → 2013 y 2019.
   - **32 anuncios** con precio imposible (`1 €`, `9 999 999 €`) o «a consultar» → quitados: quedan 1 168.
   - **Decisión escrita:** el rango 500–80 000 € es una **elección**; cambiarla cambia el resultado.
+
+#### Para cerrar
 - **Tarjeta de ejemplo:**
   - Mi app decide **el precio de un coche de segunda mano** a partir de **marca, modelo, año, km, combustible y potencia**.
   - Antes de modelar tuve que **limpiar 45 repetidos, unificar 41 marcas en 8 y quitar 32 precios imposibles**.

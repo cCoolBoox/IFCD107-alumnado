@@ -143,15 +143,57 @@ print(paciente(52, 95, 130, 95, 37.0, 5, 0, 0, 0))
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
 
-- **Extra 1 · Otra red (validación, 3 semillas):**
+#### Extra 1 · Otra red (validación, 3 semillas)
+- **Qué hacer:**
+  1. Escribe una función que construya la red con las capas que quieras y entrénala con **3 semillas**.
+  2. Prueba 1 capa de 8, 2 capas (32-16) y 3 capas (64-32-16). Mira AUC, AP y pesos (`count_params()`).
+```python
+def red_capas(capas, semilla):
+    keras.utils.set_random_seed(semilla)
+    m = keras.Sequential([keras.layers.Input((Xa.shape[1],))] + [keras.layers.Dense(u, activation="relu") for u in capas] + [keras.layers.Dense(1, activation="sigmoid")])
+    m.compile("adam", "binary_crossentropy")
+    m.fit(Za, ya, validation_data=(Zv, yv), epochs=200, batch_size=64, verbose=0, callbacks=[keras.callbacks.EarlyStopping(patience=15, restore_best_weights=True)])
+    return m
+
+for nombre, capas in (("1 capa de 8", (8,)), ("2 capas 32-16", (32, 16)), ("3 capas 64-32-16", (64, 32, 16))):
+    auc, ap = [], []
+    for semilla in range(3):
+        m = red_capas(capas, semilla)
+        p = m.predict(Zv, verbose=0).ravel()
+        auc.append(roc_auc_score(yv, p)); ap.append(average_precision_score(yv, p))
+    print(f"{nombre:18s} AUC {np.mean(auc):.3f} ± {np.std(auc):.3f} · AP {np.mean(ap):.3f} · pesos {m.count_params()}")
+```
+- **Qué sale y por qué:**
   - **1 capa de 8 neuronas:** AUC **0,820** · AP 0,543 · **89 pesos**.
   - **2 capas (32-16):** AUC **0,824** · AP 0,564 · **865 pesos**.
   - **3 capas (64-32-16):** AUC **0,822** · AP 0,554 · **3 265 pesos**.
   - **No cambia nada.** 89 pesos hacen lo mismo que 3 265: **el problema no pide más red**.
-- **Extra 2 · Bosque con 3 semillas:** AUC **0,871 ± 0,003** · AP 0,615 ± 0,004. Varía **poco, incluso algo menos que la red** (± 0,006). Lo importante: la **diferencia bosque–red (≈ 0,05 de AUC)** es **mucho mayor** que cualquier variación entre semillas → **el bosque gana de verdad**, no por azar.
-- **Extra 3 · Cuándo usar la red en datos de tabla (🗣️).** Respuesta modelo:
+
+#### Extra 2 · Bosque con 3 semillas
+- **Qué hacer:**
+  1. Entrena el bosque con `random_state` 0, 1 y 2 y calcula AUC y AP en validación.
+  2. Compara la **variación entre semillas** con la **diferencia** entre bosque y red.
+```python
+auc, ap = [], []
+for semilla in range(3):
+    b = RandomForestClassifier(n_estimators=300, min_samples_leaf=5, random_state=semilla, n_jobs=2).fit(Xa, ya)
+    p = b.predict_proba(Xv)[:, 1]
+    auc.append(roc_auc_score(yv, p)); ap.append(average_precision_score(yv, p))
+print(f"Bosque: AUC {np.mean(auc):.3f} ± {np.std(auc):.4f} · AP {np.mean(ap):.3f} ± {np.std(ap):.4f}")
+```
+- **Qué sale y por qué:**
+  - AUC **0,871 ± 0,003** · AP 0,615 ± 0,004. Varía **poco, incluso algo menos que la red** (± 0,006). Lo importante: la **diferencia bosque–red (≈ 0,05 de AUC)** es **mucho mayor** que cualquier variación entre semillas → **el bosque gana de verdad**, no por azar.
+
+#### Extra 3 · Cuándo usar la red en datos de tabla (🗣️)
+- **Qué hacer:**
+  1. Escribe 3 líneas: **cuándo usarías la red** (muchos datos, tabla mezclada con imágenes o texto, aprender con datos nuevos) y **cuándo no** (pocos datos y columnas ordenadas).
+  2. Apóyate en tu tabla: ¿quién ganó y por cuánto?
+- **Qué sale y por qué:**
+  - Respuesta modelo:
   - **Sí:** muchísimos datos, o tabla **mezclada con imágenes/texto**, o si hay que **seguir aprendiendo** con datos nuevos.
   - **No:** pocos datos (miles) y columnas ordenadas: **el bosque o el boosting** ganan, entrenan en segundos y se explican algo mejor.
+
+#### Para cerrar
 - **Para comentar:** «una red no siempre gana» es el mensaje. Ahora **saben comprobarlo**.
 - **Tarjeta de ejemplo:**
   - Mi IA decide **si un paciente es urgente** a partir de **dolor, pulso, saturación y respiración**.

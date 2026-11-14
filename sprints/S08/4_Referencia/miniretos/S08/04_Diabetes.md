@@ -144,13 +144,52 @@ interact(riesgo, glucosa=(60, 200), imc=(18.0, 55.0), edad=(21, 80), embarazos=(
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Quitar `insulina` y `pliegue_piel`:** AUC **0,842** frente a **0,843**: **no empeora nada**, a pesar de ser las que más faltan (374 y 227 huecos). Se pueden **descartar** y simplificar la toma de datos.
-- **Extra 2 · Relleno con la media:** **0,843** (igual). Con **0 como relleno** baja a **0,832**: meter un valor **imposible** (insulina 0) distorsiona. Moraleja: **el valor de relleno debe ser verosímil**.
-- **Extra 3 · Por edad (examen, 154 mujeres, umbral 0,3):**
+#### Extra 1 · Quitar `insulina` y `pliegue_piel`
+- **Qué hacer:**
+  1. Define una función que calcule el AUC con validación cruzada para una lista de columnas y un tipo de relleno.
+  2. Compara con todas las columnas y sin `insulina` y `pliegue_piel`.
+```python
+from sklearn.model_selection import cross_val_score
+
+def auc_cv(columnas, relleno="median"):
+    modelo = make_pipeline(SimpleImputer(strategy=relleno), StandardScaler(), LogisticRegression(max_iter=1000))
+    return cross_val_score(modelo, X_train[columnas], y_train, cv=5, scoring="roc_auc").mean()
+
+todas = list(X.columns)
+print("con todas:", round(auc_cv(todas), 3), "· sin insulina y pliegue_piel:", round(auc_cv([c for c in todas if c not in ("insulina", "pliegue_piel")]), 3))
+```
+- **Qué sale y por qué:**
+  - AUC **0,842** frente a **0,843**: **no empeora nada**, a pesar de ser las que más faltan (374 y 227 huecos). Se pueden **descartar** y simplificar la toma de datos.
+
+#### Extra 2 · Relleno con la media
+- **Qué hacer:**
+  1. Cambia `strategy` del `SimpleImputer`: `"mean"` o `"constant"` (0).
+  2. Un valor de relleno **imposible** (insulina 0) debería notarse.
+```python
+for relleno in ("median", "mean", "constant"):
+    print(f"relleno {relleno:9s} AUC {auc_cv(todas, relleno):.3f}")
+```
+- **Qué sale y por qué:**
+  - **0,843** (igual). Con **0 como relleno** baja a **0,832**: meter un valor **imposible** (insulina 0) distorsiona. Moraleja: **el valor de relleno debe ser verosímil**.
+
+#### Extra 3 · Por edad (examen, 154 mujeres, umbral 0,3)
+- **Qué hacer:**
+  1. Reparte el examen en tramos de edad y, en cada uno, cuenta casos, detectados y falsas alarmas con tu umbral.
+```python
+pred = (proba >= UMBRAL).astype(int)
+real = y_test.values
+for desde, hasta in ((0, 30), (30, 45), (45, 100)):
+    grupo = ((X_test["edad"] >= desde) & (X_test["edad"] < hasta)).values
+    casos = grupo & (real == 1)
+    print(f"edad {desde}-{hasta}: {int(grupo.sum())} mujeres · casos {int(casos.sum())} · detectados {int((pred[casos] == 1).sum())} · falsas alarmas {int((grupo & (pred == 1) & (real == 0)).sum())}")
+```
+- **Qué sale y por qué:**
   - **Menores de 30:** 16 casos, **detecta 9** (56 %), 14 falsas alarmas.
   - **30 a 44:** 26 casos, detecta **22** (85 %), 6 falsas alarmas.
   - **45 o más:** 12 casos, detecta **12** (100 %), 9 falsas alarmas.
   - Lectura: **detecta peor en menores de 30** (9 de 16). Con 16 casos **no se puede concluir por qué**: es una pista para mirar más datos, no una conclusión.
+
+#### Para cerrar
 - **Para comentar:** la **logística gana o empata** y es la que mejor se explica. Una prueba de glucosa **vale más** que cualquier modelo: esta IA solo decide **a quién proponérsela primero**.
 - **Tarjeta de ejemplo:**
   - Mi app decide **a quién proponer una prueba de glucosa** a partir de **glucosa, IMC, edad y embarazos**.

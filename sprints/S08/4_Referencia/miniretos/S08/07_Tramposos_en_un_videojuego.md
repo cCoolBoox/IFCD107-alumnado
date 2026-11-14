@@ -130,13 +130,53 @@ print(jugador(50, 34, 200, 2.2, 600, 6, 200, 2))
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
 
-- **Extra 1 · Exigencia de precisión (examen, 59 tramposos):**
+#### Extra 1 · Exigencia de precisión (examen, 59 tramposos)
+- **Qué hacer:**
+  1. Define una función que elija el umbral con una precisión mínima y mida el examen. Pruébala con 90 %, 95 % y 99 %.
+  2. Apunta tramposos cazados e inocentes sancionados en cada una.
+```python
+def sancionar(precision_minima, columnas=None):
+    columnas = columnas or list(X.columns)
+    modelo = modelos[campeon_nombre]
+    p_cv = cross_val_predict(modelo, X_tr[columnas], y_tr, cv=cv, method="predict_proba")[:, 1]
+    precision, recall, umbrales = precision_recall_curve(y_tr, p_cv)
+    u = float(umbrales[np.where(precision[:-1] >= precision_minima)[0][0]])
+    p = modelo.fit(X_tr[columnas], y_tr).predict_proba(X_te[columnas])[:, 1]
+    vn, fp, fn, vp = confusion_matrix(y_te, p >= u).ravel()
+    print(f"precisión ≥ {precision_minima:.0%}: umbral {u:.2f} · cazas {vp} de {vp + fn} · inocentes sancionados {fp}")
+
+for exigencia in (0.90, 0.95, 0.99):
+    sancionar(exigencia)
+```
+- **Qué sale y por qué:**
   - **90 %:** umbral 0,65, caza **38** (4 inocentes sancionados por error).
   - **95 %:** umbral 0,77, caza **33** (2 inocentes).
   - **99 %:** umbral 0,92, caza **24** (1 inocente).
   - Más exigencia = **menos tramposos cazados** y menos errores. Es un **compromiso**, y lo decide la plataforma.
-- **Extra 2 · Quitar `reportes_recibidos`:** AUC **0,985** frente a **0,988** y caza **35 de 59** con 2 errores (con reportes: 33). **Casi igual**. ¿Fiarse de los reportes de otros jugadores? **No como prueba**: se pueden **usar en falso** (acoso, «reportes en grupo»). Mejor usarlos como **aviso para revisar**, no para sancionar.
-- **Extra 3 · Cómo se apelaría (🗣️).** Modelo: *«Se le enseña qué datos tenían más peso (precisión, reacción, reportes), se compara con jugadores de su nivel y una persona revisa partidas concretas. Hasta entonces: nada de expulsión automática.»*
+
+#### Extra 2 · Quitar `reportes_recibidos`
+- **Qué hacer:**
+  1. Llama a la misma función pasando todas las columnas **menos** `reportes_recibidos`.
+  2. Compara cazados y AUC. Después piensa: ¿quién puede inflar los reportes?
+```python
+from sklearn.model_selection import cross_val_score
+sin_reportes = [c for c in X.columns if c != "reportes_recibidos"]
+sancionar(0.95, sin_reportes)
+for nombre, columnas in (("con reportes", list(X.columns)), ("sin reportes", sin_reportes)):
+    auc = cross_val_score(modelos[campeon_nombre], X_tr[columnas], y_tr, cv=cv, scoring="roc_auc").mean()
+    print(f"{nombre}: AUC {auc:.3f}")
+```
+- **Qué sale y por qué:**
+  - AUC **0,985** frente a **0,988** y caza **35 de 59** con 2 errores (con reportes: 33). **Casi igual**. ¿Fiarse de los reportes de otros jugadores? **No como prueba**: se pueden **usar en falso** (acoso, «reportes en grupo»). Mejor usarlos como **aviso para revisar**, no para sancionar.
+
+#### Extra 3 · Cómo se apelaría (🗣️)
+- **Qué hacer:**
+  1. Escribe 3 líneas: **qué dato le enseñarías al jugador** (qué pesó más), **con quién lo compararías** y **quién revisa** antes de expulsar.
+  2. Apóyate en el gráfico «Qué mira el bosque» y en la probabilidad que da `jugador(...)`.
+- **Qué sale y por qué:**
+  - Modelo: *«Se le enseña qué datos tenían más peso (precisión, reacción, reportes), se compara con jugadores de su nivel y una persona revisa partidas concretas. Hasta entonces: nada de expulsión automática.»*
+
+#### Para cerrar
 - **Para comentar:** **gana el modelo sencillo** (logística: AUC 0,988, AP 0,90). Un **buen jugador** (600 horas) puede parecer tramposo: **vigilar, no sancionar**.
 - **Tarjeta de ejemplo:**
   - Mi app decide **a quién vigilar o proponer para sanción** a partir de **precisión, reacción, headshots y reportes**.

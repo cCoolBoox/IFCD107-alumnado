@@ -130,13 +130,50 @@ for i in range(6):
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Umbral 0,5 y 0,05 (examen, logística):**
+#### Extra 1 · Umbral 0,5 y 0,05 (examen, logística)
+- **Qué hacer:**
+  1. Calcula las probabilidades del examen con la logística y cambia el umbral a 0,5, 0,2 y 0,05.
+  2. Cuenta malignos que se escapan (FN) y falsas alarmas (FP) en cada uno.
+```python
+logistica = modelos["Logística"].fit(X_train, y_train)
+proba_t = logistica.predict_proba(X_test)[:, 1]
+for u in (0.5, 0.2, 0.05):
+    vn, fp, fn, vp = confusion_matrix(y_test, proba_t >= u).ravel()
+    print(f"umbral {u}: se escapan {fn} · falsas alarmas {fp}")
+```
+- **Qué sale y por qué:**
   - **0,5:** **3 malignos se escapan**, 1 falsa alarma.
   - **0,2:** se escapa **1**, 4 falsas alarmas (el de la ficha).
   - **0,05:** **0 se escapan**, 11 falsas alarmas (en `train` con validación cruzada: 1 se escapa y 49 falsas alarmas).
   - Un hospital **no elegiría 0,5**: no detectar un maligno es peor que repetir una prueba. Pero **bajar sin límite** llena la consulta de falsas alarmas. Se **decide con el médico**.
-- **Extra 2 · Solo `worst radius` y `worst concave points`:** acierto **0,949** y detecta **0,918** (con todas las medidas: ≈ 0,97 / 0,95). **Pierdes ≈ 2–3 puntos** a cambio de un modelo que se explica con **dos números**.
-- **Extra 3 · El maligno que se escapa:** se le asigna **0,06** de probabilidad. Sus medidas (`worst radius` 16,6; `worst concave points` 0,14) están **entre las de benignos (13,3 / 0,07) y malignos (20,5 / 0,18)**: **se parece a los benignos**. Un modelo **no puede ver lo que los datos no distinguen**.
+
+#### Extra 2 · Solo `worst radius` y `worst concave points`
+- **Qué hacer:**
+  1. Entrena con solo `worst radius` y `worst concave points` (quita el resto de columnas).
+  2. Compara acierto y recall con los de la logística con todas las medidas.
+```python
+dos = ["worst radius", "worst concave points"]
+r = cross_validate(make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000)), X_train[dos], y_train, cv=5, scoring=["accuracy", "recall"])
+print(f"solo 2 medidas: acierta {r['test_accuracy'].mean():.3f} · detecta {r['test_recall'].mean():.3f}")
+```
+- **Qué sale y por qué:**
+  - Acierto **0,949** y detecta **0,918** (con todas las medidas: ≈ 0,97 / 0,95). **Pierdes ≈ 2–3 puntos** a cambio de un modelo que se explica con **dos números**.
+
+#### Extra 3 · El maligno que se escapa
+- **Qué hacer:**
+  1. Busca los malignos del examen con probabilidad por debajo del umbral.
+  2. Compara sus medidas con la media de malignos y de benignos: ¿a quién se parecen?
+```python
+se_escapan = np.where((y_test.values == 1) & (proba_t < UMBRAL))[0]
+print("probabilidades de los que se escapan:", proba_t[se_escapan].round(2))
+print(pd.DataFrame({"se escapan": X_test.iloc[se_escapan][dos].mean(),
+                    "malignos": X_test[y_test.values == 1][dos].mean(),
+                    "benignos": X_test[y_test.values == 0][dos].mean()}).round(2))
+```
+- **Qué sale y por qué:**
+  - Se le asigna **0,06** de probabilidad. Sus medidas (`worst radius` 16,6; `worst concave points` 0,14) están **entre las de benignos (13,3 / 0,07) y malignos (20,5 / 0,18)**: **se parece a los benignos**. Un modelo **no puede ver lo que los datos no distinguen**.
+
+#### Para cerrar
 - **Para comentar:** «no diagnostica nada»: una persona experta mira antes un caso. Subrayar **recall alto = más falsas alarmas = gente asustada**.
 - **Tarjeta de ejemplo:**
   - Mi app decide **qué pacientes revisar primero** a partir de **30 medidas de las células**.

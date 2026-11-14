@@ -133,9 +133,48 @@ print(consumo(14, 3, 4, 0, 1), "· día fresco y nublado con teletrabajo")
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Grado 10 con y sin Ridge:** **0,83 kWh (R² −2,6)** sin Ridge y **0,58 kWh (R² 0,89)** con Ridge. Los coeficientes de la curva llegan a **≈ 25** sin Ridge y se quedan en **≈ 1,2** con él: **Ridge frena los coeficientes que se disparan** (castiga los valores grandes) y evita el sobreajuste.
-- **Extra 2 · `produccion_solar_kwh`:** error **0,60 → 0,60** (no mejora): ya está dentro de `horas_sol` (corr. **0,96**). Y **no tiene sentido** para predecir **mañana**: la producción de mañana **no se conoce hoy**; es la «trampa del futuro».
-- **Extra 3 · Días con > 25 kWh:** solo **4 días**, de **ola de calor** (34 °C de media frente a 21,8) y casi todos en **fin de semana** (80 %). El modelo los ve poco: son **extremos raros**.
+#### Extra 1 · Grado 10 con y sin Ridge
+- **Qué hacer:**
+  1. Evalúa la curva de **grado 10** con `LinearRegression` y con `Ridge(alpha=10)`.
+  2. Mira el **coeficiente más grande** de cada modelo ajustado: es lo que Ridge frena.
+```python
+print("grado 10 sin Ridge: error %.2f kWh · R² %.2f" % evaluar(con_curva(10, LinearRegression())))
+print("grado 10 con Ridge: error %.2f kWh · R² %.2f" % evaluar(con_curva(10, Ridge(alpha=10))))
+for nombre, modelo in (("sin Ridge", LinearRegression()), ("con Ridge", Ridge(alpha=10))):
+    ajustado = con_curva(10, modelo).fit(X_tr, y_tr)
+    print(nombre, "· coeficiente más grande:", round(float(np.abs(ajustado[1].coef_).max()), 1))
+```
+- **Qué sale y por qué:**
+  - **0,83 kWh (R² −2,6)** sin Ridge y **0,58 kWh (R² 0,89)** con Ridge. Los coeficientes de la curva llegan a **≈ 25** sin Ridge y se quedan en **≈ 1,2** con él: **Ridge frena los coeficientes que se disparan** (castiga los valores grandes) y evita el sobreajuste.
+
+#### Extra 2 · `produccion_solar_kwh`
+- **Qué hacer:**
+  1. Añade `produccion_solar_kwh` a las variables y repite la validación cruzada de la curva de grado 2.
+  2. Mira también su correlación con `horas_sol`, y pregúntate si **mañana** la conocerás.
+```python
+variables2 = variables + ["produccion_solar_kwh"]
+prep = ColumnTransformer([("temp", make_pipeline(StandardScaler(), PolynomialFeatures(2, include_bias=False), StandardScaler()), ["temp_media"])],
+                         remainder=StandardScaler())
+con_solar = Pipeline([("prep", prep), ("modelo", LinearRegression())])
+mae = -cross_val_score(con_solar, df.loc[X_tr.index, variables2], y_tr, cv=5, scoring="neg_mean_absolute_error").mean()
+print("con producción solar:", round(mae, 2), "kWh · sin ella:", evaluar(con_curva(2, LinearRegression()))[0], "kWh")
+print("correlación producción solar – horas de sol:", round(df["produccion_solar_kwh"].corr(df["horas_sol"]), 2))
+```
+- **Qué sale y por qué:**
+  - Error **0,60 → 0,60** (no mejora): ya está dentro de `horas_sol` (corr. **0,96**). Y **no tiene sentido** para predecir **mañana**: la producción de mañana **no se conoce hoy**; es la «trampa del futuro».
+
+#### Extra 3 · Días con > 25 kWh
+- **Qué hacer:**
+  1. Filtra los días con `consumo_kwh > 25` y compara sus medias con las de todos los días.
+```python
+altos = df[df["consumo_kwh"] > 25]
+print("días con más de 25 kWh:", len(altos))
+print(pd.DataFrame({"días > 25 kWh": altos[variables].mean(), "todos los días": df[variables].mean()}).round(1))
+```
+- **Qué sale y por qué:**
+  - Solo **4 días**, de **ola de calor** (34 °C de media frente a 21,8) y casi todos en **fin de semana** (80 %). El modelo los ve poco: son **extremos raros**.
+
+#### Para cerrar
 - **Para comentar:** el **grado 2** gana por ser **el más sencillo que da buen resultado**. La U (mínimo ≈ 20 °C) tiene sentido físico: calefacción en frío, aire acondicionado en calor.
 - **Tarjeta de ejemplo:**
   - Mi app decide **cuántos kWh gastará la casa mañana** a partir de **temperatura, horas de sol, personas, fin de semana y teletrabajo**.

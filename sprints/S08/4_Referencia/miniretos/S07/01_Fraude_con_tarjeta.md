@@ -139,11 +139,41 @@ print(revisar(120, 23, 60, 1, "juegos_online", 2, 6, 1))
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
 
-- **Extra 1 · Falsa alarma a 20 €:** el umbral óptimo **sube de 0,05 a 0,12**.
+#### Extra 1 · Falsa alarma a 20 €
+- **Qué hacer:**
+  1. Repite la búsqueda de umbral con `falsa_alarma=20` (el último parámetro de `coste`).
+  2. Compara el mejor umbral con el de 3 €. Después mira el examen con ese umbral.
+```python
+for falsa_alarma in (3, 20):
+    costes = [coste(y_tr.values, proba_cv, X_tr["importe"].values, u, falsa_alarma) for u in umbrales]
+    print(f"falsa alarma {falsa_alarma} € → mejor umbral {umbrales[int(np.argmin(costes))]:.2f} · coste {min(costes):,.0f} €")
+```
+- **Qué sale y por qué:**
+  - El umbral óptimo **sube de 0,05 a 0,12**.
   - ¿Por qué? Cada falsa alarma cuesta más → hay que **estar más seguro** antes de avisar.
   - En el examen con **umbral 0,12**: detecta **46 de 77** (con 70 falsas alarmas), coste **4 596 €** (con falsa alarma de 20 €), frente a **6 768 €** si se hubiera mantenido el 0,05.
-- **Extra 2 · Umbral 0,5 en el examen:** detecta solo **27 de 77** (50 escapan), con **7 falsas alarmas**, y pierde **≈ 5 090 €** frente a **≈ 3 200 €** con 0,05. Parece más «fino» (pocas falsas alarmas) y **sale más caro**.
-- **Extra 3 · Para un directivo (🗣️).** Respuesta modelo: *«Avisar de más cuesta unos euros de molestias; avisar de menos cuesta el fraude entero. Por eso el umbral no es 0,5: lo fijamos donde el coste total es menor, y lo revisamos cuando cambie lo que cuesta una falsa alarma.»*
+
+#### Extra 2 · Umbral 0,5 en el examen
+- **Qué hacer:**
+  1. Calcula la matriz de confusión del examen con el umbral 0,5 y con el tuyo.
+  2. Compara fraudes detectados, falsas alarmas y **pérdida en euros**.
+```python
+for u in (0.5, mejor):
+    vn, fp, fn, vp = confusion_matrix(y_te, proba >= u).ravel()
+    perdida = coste(y_te.values, proba, X_te["importe"].values, u)
+    print(f"umbral {u:.2f}: detecta {vp} de {vp + fn} · falsas alarmas {fp} · pérdida {perdida:,.0f} €")
+```
+- **Qué sale y por qué:**
+  - Detecta solo **27 de 77** (50 escapan), con **7 falsas alarmas**, y pierde **≈ 5 090 €** frente a **≈ 3 200 €** con 0,05. Parece más «fino» (pocas falsas alarmas) y **sale más caro**.
+
+#### Extra 3 · Para un directivo (🗣️)
+- **Qué hacer:**
+  1. Escribe 3 frases: **qué cuesta cada error** (fraude que se escapa / falsa alarma), **por qué el umbral no es 0,5** y **cuándo lo revisarías**.
+  2. Usa los euros de la celda del umbral, no palabras vagas.
+- **Qué sale y por qué:**
+  - Respuesta modelo: *«Avisar de más cuesta unos euros de molestias; avisar de menos cuesta el fraude entero. Por eso el umbral no es 0,5: lo fijamos donde el coste total es menor, y lo revisamos cuando cambie lo que cuesta una falsa alarma.»*
+
+#### Para cerrar
 - **Para comentar:** el «nunca avisa» acierta el 98,5 %: la **precisión engaña** cuando una clase es rara. Mirar **AUC, AP y matriz de confusión**.
 - **Tarjeta de ejemplo:**
   - Mi app decide **si avisar de una compra** a partir de **importe, distancia, hora, tarjeta y comercio**.

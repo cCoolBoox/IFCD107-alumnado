@@ -124,13 +124,61 @@ print(benceno(**{"PT08.S1(CO)": 1200, "T": 15, "hora": 8}), "µg/m³ con casi to
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Volver a meter `PT08.S2(NMHC)`:**
+#### Extra 1 · Volver a meter `PT08.S2(NMHC)`
+- **Qué hacer:**
+  1. Mide el examen **temporal** con una función que puedas repetir (el Extra 1 la define; los demás la reutilizan).
+  2. Añade `PT08.S2(NMHC)` a la lista de variables y ejecútala.
+```python
+def examen_temporal(columnas, relleno="median"):
+    y_examen = datos[objetivo].iloc[corte:]
+    for nombre, modelo in {"Lineal": LinearRegression(),
+                           "Bosque": RandomForestRegressor(n_estimators=200, min_samples_leaf=3, random_state=42, n_jobs=2)}.items():
+        m = make_pipeline(SimpleImputer(strategy=relleno), modelo).fit(datos[columnas].iloc[:corte], datos[objetivo].iloc[:corte])
+        p = m.predict(datos[columnas].iloc[corte:])
+        print(f"{nombre:7s} MAE {mean_absolute_error(y_examen, p):.2f} · R² {r2_score(y_examen, p):.2f}")
+
+print("Con PT08.S2(NMHC):")
+examen_temporal(variables + ["PT08.S2(NMHC)"])
+```
+- **Qué sale y por qué:**
   - Lineal **MAE 1,25 · R² 0,94** y bosque **MAE 0,01 · R² 1,00**.
   - ¿Te lo creerías? **No.** Es un sensor que mide casi lo mismo que el benceno (corr. 0,98): el modelo «copia» la respuesta. Hay que preguntar **«¿tendré ese dato cuando tenga que predecir?»** y **«¿mide lo mismo que la respuesta?»**.
-- **Extra 2 · Otro relleno (`mean` o valor fijo):** **no cambia nada** (lineal 1,97 · bosque 2,02, igual que con la mediana). Motivo: tras `dropna` en el objetivo, **no quedan huecos** en los sensores (0 de 8 991 filas). El `Pipeline` es un **seguro para mañana**, no para estos datos.
+
+#### Extra 2 · Otro relleno (`mean` o valor fijo)
+- **Qué hacer:**
+  1. Cambia `strategy` en el `SimpleImputer`: `"mean"` (media) o `"constant"` (un valor fijo, por defecto 0).
+  2. Antes, comprueba **cuántos huecos le llegan** al relleno: si no hay, cambiarlo no puede cambiar nada.
+```python
+print("huecos en las variables de entrada:", int(datos[variables].isna().sum().sum()))
+for relleno in ("median", "mean", "constant"):
+    print("relleno:", relleno)
+    examen_temporal(variables, relleno)
+```
+- **Qué sale y por qué:**
+  - **no cambia nada** (lineal 1,97 · bosque 2,02, igual que con la mediana). Motivo: tras `dropna` en el objetivo, **no quedan huecos** en los sensores (0 de 8 991 filas). El `Pipeline` es un **seguro para mañana**, no para estos datos.
   - Para comentar: es normal que un cambio **no tenga efecto**; saber **por qué** es lo importante.
-- **Extra 3 · Día de la semana:** lineal 1,93 · bosque 2,04 (frente a 1,97 · 2,02): **no mejora**: los sensores ya recogen el ciclo semanal del tráfico.
-- **Extra 4 · Quitar `hora`:** lineal 1,98 · bosque 2,09: **casi igual**: los sensores ya reflejan el ciclo del día. Una variable **redundante** se puede quitar y el modelo queda más simple.
+
+#### Extra 3 · Día de la semana
+- **Qué hacer:**
+  1. Crea la columna `dia_semana` a partir de `momento` y añádela a la lista de variables.
+  2. Compara con el examen temporal de siempre.
+```python
+datos["dia_semana"] = datos["momento"].dt.dayofweek      # 0 = lunes … 6 = domingo
+examen_temporal(variables + ["dia_semana"])
+```
+- **Qué sale y por qué:**
+  - Lineal 1,93 · bosque 2,04 (frente a 1,97 · 2,02): **no mejora**: los sensores ya recogen el ciclo semanal del tráfico.
+
+#### Extra 4 · Quitar `hora`
+- **Qué hacer:**
+  1. Quita `hora` de la lista de variables y repite el examen temporal.
+```python
+examen_temporal([v for v in variables if v != "hora"])
+```
+- **Qué sale y por qué:**
+  - Lineal 1,98 · bosque 2,09: **casi igual**: los sensores ya reflejan el ciclo del día. Una variable **redundante** se puede quitar y el modelo queda más simple.
+
+#### Para cerrar
 - **Para comentar:** el examen **al azar** sale mejor (MAE ≈ 0,8) por **vecindad de horas**; el temporal es el honesto. Un **sensor que falla en silencio** exige vigilar cuántos huecos llegan.
 - **Tarjeta de ejemplo:**
   - Mi app decide **cuántos µg/m³ de benceno hay** a partir de **8 sensores y la hora**.

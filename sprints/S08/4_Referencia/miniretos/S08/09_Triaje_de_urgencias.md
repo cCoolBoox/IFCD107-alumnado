@@ -138,13 +138,45 @@ prioridad(sala)
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
 
-- **Extra 1 · Recall 80 % y 95% (bosque, examen):**
+#### Extra 1 · Recall 80 % y 95% (bosque, examen)
+- **Qué hacer:**
+  1. Repite `umbral_para_recall` con objetivos de 80 %, 90 % y 95 % para el bosque.
+  2. Mira detectados y falsas alarmas del examen en cada uno.
+```python
+for objetivo in (0.80, 0.90, 0.95):
+    u, prec = umbral_para_recall(modelos["Bosque"], objetivo)
+    p = modelos["Bosque"].fit(X_tr, y_tr).predict_proba(X_te)[:, 1]
+    vn, fp, fn, vp = confusion_matrix(y_te, p >= u).ravel()
+    print(f"recall {objetivo:.0%}: {prec * 100:.0f} de cada 100 avisos son urgentes · detectas {vp} de {vp + fn} · falsas alarmas {fp}")
+```
+- **Qué sale y por qué:**
   - **80 %:** detecta **110 de 132**, con **127 falsas alarmas** (precisión en validación 44 de cada 100 avisos).
   - **90 %:** detecta 119 de 132, **364 falsas alarmas** (24 de cada 100).
   - **95 %:** detecta **127 de 132**, **654 falsas alarmas** (16 de cada 100).
   - Cada paso **cuesta cada vez más**: de 80 a 90 %, **+237 falsas alarmas** por 9 urgentes más; de 90 a 95 %, **+290 por 8 más**. El último urgente **cuesta caro**: una decisión **clínica**.
-- **Extra 2 · Por ambulancia (urgentes detectados, bosque al 90 %):** **en ambulancia 33 de 35 (94 %)**; **sin ambulancia 86 de 97 (89 %)**. Parecido, y de nuevo grupos pequeños.
-- **Extra 3 · Qué decirle a la enfermera (🗣️).** Modelo: *«El aviso sirve para decidir a quién mirar antes, no para dejar de mirar a nadie. Si el modelo dice "en cola" y tú ves algo raro, manda tu criterio. Y si el aviso falla, dilo.»*
+
+#### Extra 2 · Por ambulancia (urgentes detectados, bosque al 90 %)
+- **Qué hacer:**
+  1. Separa el examen por `llega_en_ambulancia` y mide, en cada grupo, cuántos urgentes detectas.
+```python
+final = modelos["Bosque"].fit(X_tr, y_tr)
+u, _ = umbral_para_recall(modelos["Bosque"], 0.90)
+aviso = final.predict_proba(X_te)[:, 1] >= u
+for valor, nombre in ((1, "llega en ambulancia"), (0, "no llega en ambulancia")):
+    grupo = X_te["llega_en_ambulancia"].values == valor
+    urgentes = grupo & (y_te.values == 1)
+    print(f"{nombre}: urgentes detectados {int((aviso & urgentes).sum())} de {int(urgentes.sum())}")
+```
+- **Qué sale y por qué:**
+  - **en ambulancia 33 de 35 (94 %)**; **sin ambulancia 86 de 97 (89 %)**. Parecido, y de nuevo grupos pequeños.
+
+#### Extra 3 · Qué decirle a la enfermera (🗣️)
+- **Qué hacer:**
+  1. Escribe 3 frases para la enfermera: **qué significa el aviso**, **qué no significa** (no sustituye mirar al paciente) y **qué hacer si no coinciden**.
+- **Qué sale y por qué:**
+  - Modelo: *«El aviso sirve para decidir a quién mirar antes, no para dejar de mirar a nadie. Si el modelo dice "en cola" y tú ves algo raro, manda tu criterio. Y si el aviso falla, dilo.»*
+
+#### Para cerrar
 - **Para comentar:** el **árbol** se explica en voz alta; el **bosque** avisa mejor (24 frente a 15 de cada 100 avisos son reales). **Explicable o potente** es la decisión, y no tiene respuesta única.
 - **Tarjeta de ejemplo:**
   - Mi app decide **a quién atender antes** a partir de **dolor, pulso, saturación y respiración**.

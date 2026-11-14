@@ -123,17 +123,61 @@ for i in range(4):
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
 
-- **Extra 1 · Quitar `failures` y `absences`:** AUC con CV **0,912** (sin ambas) · 0,912 (sin `failures`) · 0,915 (sin `absences`), frente a **0,916**. **Casi nada cambia:** quien manda es **G1** (coeficiente ≈ 3,4; el siguiente no pasa de 0,9).
+#### Extra 1 · Quitar `failures` y `absences`
+- **Qué hacer:**
+  1. Define una función que calcule el AUC con validación cruzada **solo con `train`** para una lista de columnas.
+  2. Quita `failures`, `absences` y las dos, y compara con el AUC de partida.
+  3. Mira los **pesos** de la logística ya entrenada: la variable con el coeficiente más grande (en valor absoluto) es la que más empuja.
+```python
+def auc_cv(columnas):
+    return cross_val_score(construir(columnas, LogisticRegression(max_iter=1000)),
+                           df.loc[train_idx, columnas], y[train_idx], cv=5, scoring="roc_auc").mean()
+
+print("con todas (sin G2):", round(auc_cv(cols), 3))
+print("sin failures:", round(auc_cv([c for c in cols if c != "failures"]), 3))
+print("sin absences:", round(auc_cv([c for c in cols if c != "absences"]), 3))
+print("sin las dos:", round(auc_cv([c for c in cols if c not in ("failures", "absences")]), 3))
+
+nombres = elegido.named_steps["prep"].get_feature_names_out()
+pesos = pd.Series(elegido.named_steps["modelo"].coef_[0], index=nombres)
+print(pesos.reindex(pesos.abs().sort_values(ascending=False).index).head(6).round(2))
+```
+- **Qué sale y por qué:**
+  - AUC con CV **0,912** (sin ambas) · 0,912 (sin `failures`) · 0,915 (sin `absences`), frente a **0,916**. **Casi nada cambia:** quien manda es **G1** (coeficiente ≈ 3,4; el siguiente no pasa de 0,9).
   - Pista de interpretación: el peso de una variable en un modelo **no es causa**.
-- **Extra 2 · Por sexo / colegio (examen de 79):**
+
+#### Extra 2 · Por sexo / colegio (examen de 79)
+- **Qué hacer:**
+  1. Separa los estudiantes del **examen** por `sex` y por `school`.
+  2. En cada grupo mira: nº de estudiantes, acierto y a cuántos suspensos avisa bien.
+  3. Con grupos de menos de ~20 personas, **no concluyas nada**: solo anota que hay que mirar más datos.
+```python
+pred = (proba >= 0.5).astype(int)
+real = y[test_idx].values
+for columna in ("sex", "school"):
+    for valor in sorted(df.loc[test_idx, columna].unique()):
+        grupo = (df.loc[test_idx, columna] == valor).values
+        suspensos = grupo & (real == 0)
+        print(columna, valor, "· estudiantes:", int(grupo.sum()), "· acierto:", round((pred[grupo] == real[grupo]).mean(), 2),
+              "· suspensos avisados:", int((pred[suspensos] == 0).sum()), "de", int(suspensos.sum()))
+```
+- **Qué sale y por qué:**
   - Sexo F (47): acierto 0,72 · AUC 0,86 · suspensos avisados **11 de 17**.
   - Sexo M (32): acierto 0,78 · AUC 0,88 · suspensos avisados **6 de 9**.
   - Colegio GP (71): AUC 0,86; MS (8): AUC 1,0 (solo 8 estudiantes: **no vale**).
   - Conclusión: **parecido** entre sexos; con 79 estudiantes **no se puede afirmar nada fino**. Lo importante es que **lo miren**.
-- **Extra 3 · ¿Cuándo es legítimo usar G2? (redacción 🗣️).** Respuesta modelo:
+
+#### Extra 3 · ¿Cuándo es legítimo usar G2? (redacción 🗣️)
+- **Qué hacer:**
+  1. Escribe 3 líneas con **tres preguntas**: ¿cuándo se emite el aviso?, ¿tendré `G2` en ese momento?, ¿para qué se usa el aviso?
+  2. Contesta cada una: si `G2` existe cuando se avisa y el aviso es para **ofrecer apoyo**, es legítimo; si no, es trampa.
+- **Qué sale y por qué:**
+  - Respuesta modelo:
   - **Legítimo:** cuando el aviso se emite **después de G2** y sirve para **ofrecer apoyo antes del examen final**, y si G2 estará disponible **también en producción**.
   - **Trampa:** usar G2 para «predecir» G3 y presumir de nota, o para una decisión que ocurre **antes** de G2 (no lo tendrás).
   - **Línea roja:** nunca para **etiquetar o decidir sobre una persona**.
+
+#### Para cerrar
 - **Para comentar:** AUC 0,70 (sin notas) → 0,92 (con G1) → 0,97 (con G2). Cada nota **sube la cifra, pero llega más tarde**. «Mejor modelo» ≠ «modelo útil».
 - **Tarjeta de ejemplo:**
   - Mi app decide **a quién ofrecer apoyo** a partir de **la 1.ª nota y datos del curso**.

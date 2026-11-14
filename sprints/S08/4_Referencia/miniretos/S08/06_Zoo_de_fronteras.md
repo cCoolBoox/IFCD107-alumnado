@@ -112,9 +112,44 @@ interact(flor, largo=(1.0, 7.0, 0.1), ancho=(0.1, 2.5, 0.1));
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · `gamma` de la SVM:** **0,5 y 2 → CV 0,971 / examen 0,933**; **50 → CV 0,886 / examen 0,867** (con 0,981 en `train`). A **50 empieza a memorizar**: sube en `train` y baja en validación y examen.
-- **Extra 2 · `max_depth`:** profundidad **1 → 2 rectángulos (CV 0,667)**; **2 → 3 (0,952)**; 3 → 5; 4 → 6; 5 y 6 → 7 (todos con CV 0,952). **A partir de profundidad 2 no mejora**: más rectángulos solo complican.
-- **Extra 3 · Las 4 medidas:** SVM con CV **0,971**, igual que con 2 medidas: **no mejora**, pero **no se puede dibujar**. Con 2 medidas ya hay casi todo lo que hace falta.
+#### Extra 1 · `gamma` de la SVM
+- **Qué hacer:**
+  1. Cambia `gamma` de la SVM curva a 0,5, 2 y 50.
+  2. Compara el acierto en **entrenamiento** y en **validación**: si el primero sube y el segundo baja, memoriza.
+```python
+for gamma in (0.5, 2, 50):
+    m = SVC(kernel="rbf", gamma=gamma, C=1)
+    validacion = cross_val_score(m, X_train, y_train, cv=5).mean()
+    print(f"gamma {gamma}: validación {validacion:.3f} · entrenamiento {m.fit(X_train, y_train).score(X_train, y_train):.3f}")
+```
+- **Qué sale y por qué:**
+  - **0,5 y 2 → validación 0,971**; **50 → validación 0,886** (con 0,981 en entrenamiento). A **50 empieza a memorizar**: sube en `train` y baja en validación y examen.
+
+#### Extra 2 · `max_depth`
+- **Qué hacer:**
+  1. Cambia `max_depth` del árbol de 1 a 6.
+  2. Cuenta las **hojas** (`get_n_leaves()`) = rectángulos, y mira la validación cruzada.
+```python
+for profundidad in range(1, 7):
+    arbol = DecisionTreeClassifier(max_depth=profundidad, random_state=42).fit(X_train, y_train)
+    cv = cross_val_score(DecisionTreeClassifier(max_depth=profundidad, random_state=42), X_train, y_train, cv=5).mean()
+    print(f"profundidad {profundidad}: {arbol.get_n_leaves()} rectángulos · validación {cv:.3f}")
+```
+- **Qué sale y por qué:**
+  - Profundidad **1 → 2 rectángulos (CV 0,667)**; **2 → 3 (0,952)**; 3 → 5; 4 → 6; 5 y 6 → 7 (todos con CV 0,952). **A partir de profundidad 2 no mejora**: más rectángulos solo complican.
+
+#### Extra 3 · Las 4 medidas
+- **Qué hacer:**
+  1. Vuelve a cargar las **4 medidas** (`iris.data`), separa igual y compara la SVM con la de 2 medidas.
+```python
+X4_train, X4_test, y4_train, y4_test = train_test_split(iris.data, iris.target, test_size=0.3, random_state=42, stratify=iris.target)
+print("4 medidas:", round(cross_val_score(SVC(kernel="rbf", gamma="scale"), X4_train, y4_train, cv=5).mean(), 3),
+      "· 2 medidas:", round(cross_val_score(SVC(kernel="rbf", gamma=2), X_train, y_train, cv=5).mean(), 3))
+```
+- **Qué sale y por qué:**
+  - SVM con CV **0,971**, igual que con 2 medidas: **no mejora**, pero **no se puede dibujar**. Con 2 medidas ya hay casi todo lo que hace falta.
+
+#### Para cerrar
 - **Para comentar:** «todos aciertan casi lo mismo, lo que cambia es **cómo** deciden»: rectas, rectángulos o curvas. Es la ficha ideal para empezar.
 - **Tarjeta de ejemplo:**
   - Mi app decide **la especie de la flor** a partir de **largo y ancho del pétalo**.

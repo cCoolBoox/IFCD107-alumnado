@@ -125,21 +125,58 @@ for frase in ["No me llega internet desde ayer y el router parpadea en rojo",
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · `ngram_range=(1, 3)` o `min_df=5`:**
+#### Extra 1 · `ngram_range=(1, 3)` o `min_df=5`
+- **Qué hacer:**
+  1. Cambia `ngram_range` y `min_df` en `tfidf(...)` y entrena otra logística.
+  2. Mira el acierto **y el tamaño del vocabulario**: ¿compensa complicarlo?
+```python
+for nombre, kw in (("pares, min_df=2", dict(ngram_range=(1, 2), min_df=2)),
+                     ("hasta tríos", dict(ngram_range=(1, 3), min_df=2)),
+                     ("pares, min_df=5", dict(ngram_range=(1, 2), min_df=5))):
+    m = make_pipeline(tfidf(**kw), LogisticRegression(max_iter=1000)).fit(Xa, ya)
+    print(f"{nombre:18s} acierto {accuracy_score(yv, m.predict(Xv)):.3f} · vocabulario {len(m[0].vocabulary_)}")
+```
+- **Qué sale y por qué:**
   - Pares (campeón): **0,858** con vocabulario de 1 564.
   - Hasta **tríos**: **0,877** pero vocabulario de **3 685** (más del doble).
   - `min_df=5`: **0,854** y vocabulario de **971**.
   - Con 520 mensajes de validación, la diferencia entre 0,858 y 0,877 son **unos 10 mensajes**: no es suficiente para decir que mejora. **Se complica más de lo que gana.**
-- **Extra 2 · `minimo` en `clasifica` (validación de 520 mensajes):**
+
+#### Extra 2 · `minimo` en `clasifica` (validación de 520 mensajes)
+- **Qué hacer:**
+  1. Calcula la seguridad de cada mensaje de validación (`predict_proba(...).max`).
+  2. Para cada `minimo`, cuenta cuántos pasan a una persona y el acierto del resto.
+```python
+proba_v = campeon.predict_proba(Xv)
+seguridad = proba_v.max(axis=1)
+predicho = campeon.classes_[proba_v.argmax(axis=1)]
+for minimo in (0.4, 0.6, 0.8):
+    seguro = seguridad >= minimo
+    print(f"minimo {minimo}: a una persona {int((~seguro).sum())} de {len(Xv)} · acierto del resto {accuracy_score(yv[seguro], predicho[seguro]):.3f}")
+```
+- **Qué sale y por qué:**
   - **0,4:** **0** mensajes para una persona; acierto del resto 0,858.
   - **0,6:** **117 (22 %)** a persona; acierto del resto **0,963**.
   - **0,8:** **245 (47 %)** a persona; acierto del resto **0,985**.
   - **Más seguridad = más trabajo humano.** Se decide el punto según **lo que cuesta una persona** frente a **lo que cuesta un error**.
-- **Extra 3 · Frases que engañan (probadas):**
+
+#### Extra 3 · Frases que engañan (probadas)
+- **Qué hacer:**
+  1. Escribe 5 mensajes que creas que van a engañar (dos temas, palabras de otro tema, sin contenido) y pásalos por `clasifica`.
+```python
+for frase in ["Quiero cancelar la línea y además me habéis cobrado de más",
+              "No tengo internet y quiero un duplicado de la factura",
+              "Buenas tardes",
+              "Mi vecino tiene fibra y yo no sé qué hacer"]:
+    print(frase, "\n   ", clasifica(frase))
+```
+- **Qué sale y por qué:**
   - «Quiero cancelar la línea y además me habéis cobrado de más» → **baja 54 %** (la otra mitad también era cierta).
   - «Mi vecino tiene fibra y yo no sé qué hacer» → **avería 63 %** (no tiene nada de avería).
   - «Buenas tardes» → **duda** (avería 35 %, contratar 29 %): bien, avisa a una persona.
   - Lo que engaña: **mensajes con dos temas**, **palabras de otro tema** y **mensajes sin contenido**.
+
+#### Para cerrar
 - **Para comentar:** las diferencias entre los cuatro modelos son **pequeñas**: **no hace falta lo más sofisticado**. Los errores son **ambigüedad del problema**, no «torpeza».
 - **Tarjeta de ejemplo:**
   - Mi IA decide **a qué departamento va un mensaje** a partir de **sus palabras y pares de palabras (TF-IDF)**.

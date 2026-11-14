@@ -125,12 +125,55 @@ print(cliente("estandar", 10, 8, 2, 1, 14, "paypal", 2))
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Éxito de la oferta al 20 %:** el umbral sube de 0,31 a **0,625** y solo se contacta a **28 clientes**; el beneficio cae de **+980 € a +24 €**. **Casi no compensa.** Contactar a todos pierde **−8 260 €**.
-- **Extra 2 · Umbral 0,5:** contacta a **64** clientes (**+448 €**) frente a **238** (**+980 €**): con 0,5 **dejas de llamar a 174 clientes** y pierdes más de la mitad del beneficio.
-- **Extra 3 · `series_mes` con odds ratio 1,13 (>1):** ¿más series, más bajas? **No: es colinealidad.**
+#### Extra 1 · Éxito de la oferta al 20 %
+- **Qué hacer:**
+  1. El umbral sale de `coste_oferta / (exito * valor)`: cambia `exito` a 0,20 y recalcula.
+  2. Mira a cuántos contactas y el beneficio.
+```python
+for exito_nuevo in (0.40, 0.20):
+    umbral_nuevo = coste_oferta / (exito_nuevo * valor)
+    contactar = proba >= umbral_nuevo
+    beneficio_nuevo = (contactar * (y_te.values * exito_nuevo * valor - coste_oferta)).sum()
+    print(f"éxito {exito_nuevo:.0%}: umbral {umbral_nuevo:.2f} · contactas a {int(contactar.sum())} · beneficio {beneficio_nuevo:.0f} €")
+```
+- **Qué sale y por qué:**
+  - El umbral sube de 0,31 a **0,625** y solo se contacta a **28 clientes**; el beneficio cae de **+980 € a +24 €**. **Casi no compensa.** Contactar a todos pierde **−8 260 €**.
+
+#### Extra 2 · Umbral 0,5
+- **Qué hacer:**
+  1. Calcula el beneficio con el umbral 0,5 y con el tuyo.
+  2. Cuenta cuántos clientes dejas de llamar.
+```python
+for u in (0.5, umbral):
+    print(f"umbral {u:.2f}: contactas a {int((proba >= u).sum())} clientes · beneficio {beneficio(proba >= u, y_te.values):.0f} €")
+```
+- **Qué sale y por qué:**
+  - Contacta a **64** clientes (**+448 €**) frente a **238** (**+980 €**): con 0,5 **dejas de llamar a 174 clientes** y pierdes más de la mitad del beneficio.
+
+#### Extra 3 · `series_mes` con odds ratio 1,13 (>1)
+- **Qué hacer:**
+  1. Mira `series_mes` **por separado**: media en quien se va y en quien se queda, y su correlación con `horas_mes`.
+  2. Repite la logística **sin `horas_mes`** y compara el odds ratio de `series_mes`.
+```python
+print(df.groupby("abandona")["series_mes"].mean().round(2))
+print("correlación series_mes – horas_mes:", round(df["series_mes"].corr(df["horas_mes"]), 2))
+
+def odds_series(quitar=None):
+    numericas = [c for c in num if c != quitar]
+    prep = ColumnTransformer([("n", StandardScaler(), numericas), ("c", OneHotEncoder(drop="first"), cat)])
+    m = Pipeline([("prep", prep), ("modelo", LogisticRegression(max_iter=1000))]).fit(X_tr.drop(columns=[quitar] if quitar else []), y_tr)
+    nombres = list(m[0].get_feature_names_out())
+    return float(np.exp(m[1].coef_[0][nombres.index("n__series_mes")]))
+
+print("odds ratio de series_mes · con horas_mes:", round(odds_series(), 2), "· sin horas_mes:", round(odds_series("horas_mes"), 2))
+```
+- **Qué sale y por qué:**
+  - ¿más series, más bajas? **No: es colinealidad.**
   - `series_mes` y `horas_mes` van casi pegadas (**corr. 0,89**). Solas, quien ve más series **se va menos** (corr. −0,17).
   - Si se **quita `horas_mes`**, `series_mes` pasa a **OR 0,68 (<1)**. Con las dos, el modelo reparte el efecto y puede salir «al revés».
   - Moraleja: **un coeficiente suelto no se lee solo**, y menos aún como causa.
+
+#### Para cerrar
 - **Para comentar:** problema **difícil** (AUC 0,72–0,74): una nota «baja» aquí **no es un fallo**. Aun así, con el umbral por coste sale **+980 €**.
 - **Tarjeta de ejemplo:**
   - Mi app decide **a quién ofrecer una oferta de retención** a partir de **días sin entrar, horas al mes, plan y pago**.

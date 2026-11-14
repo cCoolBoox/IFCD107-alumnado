@@ -127,9 +127,35 @@ interact(reconoce, i=(0, len(y_test) - 1));
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
 
-- **Extra 1 · `gamma` de la SVM (CV con 3 particiones):** **0,0001 → 0,641** (se queda corta) · **0,001 → 0,764** · **0,1 → 0,740** (memoriza) · el valor por defecto (`scale` ≈ 0,010) da ≈ 0,83. El óptimo está **en medio**: ni muy suave ni muy pegado a cada imagen.
-- **Extra 2 · Mitad de los datos (2 250 de las 4 500 de entrenamiento):** examen **0,826** frente a **0,851** con todos: **baja unos 2,5 puntos**. Con 6 000 imágenes ya estamos en la parte plana de la curva.
-- **Extra 3 · Qué confunde una persona (🗣️):** camisa, camiseta y jersey/abrigo, a primera vista. **Coincide con el modelo**: las prendas de arriba se parecen en silueta. Es un buen momento para decir que **la IA se equivoca donde se equivocan las personas** cuando solo ve una silueta pequeña.
+#### Extra 1 · `gamma` de la SVM (CV con 3 particiones)
+- **Qué hacer:**
+  1. Cambia `gamma` de la SVM a 0,0001, 0,001 y 0,1 y mira la validación cruzada (3 particiones).
+```python
+for gamma in (0.0001, 0.001, 0.1):
+    print(f"gamma {gamma}: acierto {cross_val_score(SVC(gamma=gamma, random_state=42), X_train, y_train, cv=3).mean():.3f}")
+```
+- **Qué sale y por qué:**
+  - **0,0001 → 0,641** (se queda corta) · **0,001 → 0,764** · **0,1 → 0,740** (memoriza) · el valor por defecto (`scale` ≈ 0,010) da ≈ 0,83. El óptimo está **en medio**: ni muy suave ni muy pegado a cada imagen.
+
+#### Extra 2 · Mitad de los datos (2 250 de las 4 500 de entrenamiento)
+- **Qué hacer:**
+  1. Entrena con solo la mitad de `X_train` y mira el acierto en el examen, **solo en esta comparación**.
+```python
+mitad = len(X_train) // 2
+print("con la mitad:", round(SVC(random_state=42).fit(X_train[:mitad], y_train[:mitad]).score(X_test, y_test), 3),
+      "· con todos:", round((pred == y_test).mean(), 3))
+```
+- **Qué sale y por qué:**
+  - Examen **0,826** frente a **0,851** con todos: **baja unos 2,5 puntos**. Con 6 000 imágenes ya estamos en la parte plana de la curva.
+
+#### Extra 3 · Qué confunde una persona (🗣️)
+- **Qué hacer:**
+  1. Antes de mirar la matriz, apunta qué tres prendas crees que se confunden.
+  2. Compara con la tabla de «las confusiones que más se repiten» de la ficha.
+- **Qué sale y por qué:**
+  - Camisa, camiseta y jersey/abrigo, a primera vista. **Coincide con el modelo**: las prendas de arriba se parecen en silueta. Es un buen momento para decir que **la IA se equivoca donde se equivocan las personas** cuando solo ve una silueta pequeña.
+
+#### Para cerrar
 - **Para comentar:** pantalón, bolso y botín: ≈ 95 %; la camisa solo ≈ 59 %. Por eso existen las **redes** (ver S12-01).
 - **Tarjeta de ejemplo:**
   - Mi app decide **qué prenda hay en la foto** a partir de **784 píxeles en gris**.

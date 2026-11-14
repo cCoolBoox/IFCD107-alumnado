@@ -130,10 +130,55 @@ print(tasar(2.0, "Ideal", "D", "IF"), "$ · dos quilates, el mejor color y purez
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Ridge `alpha`:** **0,001 → 413 $** · **1 → 417 $** · **100 → 567 $**. Solo se nota con `alpha` **alto**, y entonces **empeora**. Ridge sirve cuando hay **muchas variables correlacionadas** o **pocos datos**; aquí sobra.
-- **Extra 2 · `log_carat ** 2`:** **414 $** frente a 413: **no mejora**. En doble logaritmo la relación ya es casi recta.
-- **Extra 3 · Los 5 mayores fallos (examen):** todos son **piedras grandes (1 a 2,6 quilates) y caras** (de 12 500 a 18 400 $). El modelo se **pasa o se queda corto** en las **extremas**, donde hay pocas piedras (174 con ≥ 2 quilates de 4 497).
-- **Extra 4 · Dos quilates perfectos (33 800 $):** el **máximo** de `y_tr` es **18 779 $** y el mayor es de 3,01 quilates. El modelo log-log **extrapola la curva** más allá de lo visto: la fórmula crece sin freno. Un modelo **no sabe lo que no ha visto**: hay que **vigilar el rango**.
+#### Extra 1 · Ridge `alpha`
+- **Qué hacer:**
+  1. Cambia `alpha` en el Ridge del modelo log y log: 0,001, 1 y 100.
+  2. Mira el error en dólares con validación cruzada.
+```python
+for alpha in (0.001, 1, 100):
+    mae = -cross_val_score(construir(num_log, Ridge(alpha=alpha), log_precio=True), X_tr, y_tr, cv=5, scoring="neg_mean_absolute_error").mean()
+    print(f"alpha {alpha}: error medio {mae:.0f} $")
+```
+- **Qué sale y por qué:**
+  - **0,001 → 413 $** · **1 → 417 $** · **100 → 567 $**. Solo se nota con `alpha` **alto**, y entonces **empeora**. Ridge sirve cuando hay **muchas variables correlacionadas** o **pocos datos**; aquí sobra.
+
+#### Extra 2 · `log_carat
+- **Qué hacer:**
+  1. Crea la columna `log_carat2 = log_carat ** 2` y añádela a las numéricas del modelo log y log.
+  2. Compara con el error sin ella.
+```python
+X_tr2 = X_tr.assign(log_carat2=X_tr["log_carat"] ** 2)
+mae = -cross_val_score(construir(num_log + ["log_carat2"], LinearRegression(), log_precio=True), X_tr2, y_tr, cv=5, scoring="neg_mean_absolute_error").mean()
+mae_base = -cross_val_score(construir(num_log, LinearRegression(), log_precio=True), X_tr, y_tr, cv=5, scoring="neg_mean_absolute_error").mean()
+print(f"con log_carat²: {mae:.0f} $ · sin ella: {mae_base:.0f} $")
+```
+- **Qué sale y por qué:**
+  - 2`:** **414 $** frente a 413: **no mejora**. En doble logaritmo la relación ya es casi recta.
+
+#### Extra 3 · Los 5 mayores fallos (examen)
+- **Qué hacer:**
+  1. Ordena los errores del examen y quédate con los 5 mayores.
+  2. Mira sus columnas: ¿qué pesan?, ¿qué calidad tienen?
+```python
+error = np.abs(p - y_te.values)
+peores = np.argsort(-error)[:5]
+print(X_te.iloc[peores][["carat", "cut", "color", "clarity"]].assign(real=y_te.values[peores], predicho=p[peores].round(-1)))
+```
+- **Qué sale y por qué:**
+  - Todos son **piedras grandes (1 a 2,6 quilates) y caras** (de 12 500 a 18 400 $). El modelo se **pasa o se queda corto** en las **extremas**, donde hay pocas piedras (174 con ≥ 2 quilates de 4 497).
+
+#### Extra 4 · Dos quilates perfectos (33 800 $)
+- **Qué hacer:**
+  1. Mira el **máximo** de `y_tr` y cuántas piedras de 2 quilates o más hay en `train`.
+  2. Compara con lo que predijo la app: si es mucho mayor que cualquier precio visto, el modelo está **extrapolando**.
+```python
+print("precio máximo en y_tr:", y_tr.max(), "$ · peso máximo:", X_tr["carat"].max(), "quilates")
+print("piedras de 2 quilates o más en train:", int((X_tr["carat"] >= 2).sum()), "de", len(X_tr))
+```
+- **Qué sale y por qué:**
+  - El **máximo** de `y_tr` es **18 779 $** y el mayor es de 3,01 quilates. El modelo log-log **extrapola la curva** más allá de lo visto: la fórmula crece sin freno. Un modelo **no sabe lo que no ha visto**: hay que **vigilar el rango**.
+
+#### Para cerrar
 - **Para comentar:** **cambiar la forma del problema** (log) bajó el error casi a la mitad (737 → 426 $). Un lineal sencillo **empata o gana** al bosque.
 - **Tarjeta de ejemplo:**
   - Mi app decide **el precio de un diamante** a partir de **peso, color, pureza y corte**.

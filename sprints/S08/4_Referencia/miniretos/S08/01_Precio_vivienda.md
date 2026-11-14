@@ -129,12 +129,49 @@ interact(tasar, metros=(30, 300, 5), habitaciones=(1, 7), banos=(1, 5), antigued
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · `np.log(y)`:** la **recta** baja de **31 200 a 22 100 €** (la ficha del lineal) y el **boosting**, de 19 000 a **17 900 €**. Los precios suben en **porcentaje**, no en euros; el log convierte «% por metro» en una recta. La recta sigue **detrás del boosting**.
-- **Extra 2 · Ridge:** **31 200 €**, igual que la lineal sin Ridge. Hay pocas variables y muchos datos: no hay nada que frenar.
-- **Extra 3 · Valor de la vista al mar por zona:**
+#### Extra 1 · `np.log(y)`
+- **Qué hacer:**
+  1. Envuelve el modelo en `TransformedTargetRegressor` (entrena con `np.log(precio)`, deshace con `np.exp`).
+  2. Compara el error **en euros** de la recta y del boosting con y sin log.
+```python
+from sklearn.compose import TransformedTargetRegressor
+
+def mae_cv(m): return -cross_val_score(m, X_train, y_train, cv=5, scoring="neg_mean_absolute_error").mean()
+for nombre, base in (("Lineal", LinearRegression()), ("Boosting", HistGradientBoostingRegressor(random_state=42))):
+    con_log = TransformedTargetRegressor(regressor=base, func=np.log, inverse_func=np.exp)
+    print(f"{nombre}: precio tal cual {mae_cv(base):,.0f} € · con log {mae_cv(con_log):,.0f} €")
+```
+- **Qué sale y por qué:**
+  - La **recta** baja de **31 200 a 22 100 €** (la ficha del lineal) y el **boosting**, de 19 000 a **17 900 €**. Los precios suben en **porcentaje**, no en euros; el log convierte «% por metro» en una recta. La recta sigue **detrás del boosting**.
+
+#### Extra 2 · Ridge
+- **Qué hacer:**
+  1. Añade un `Ridge` (con las columnas escaladas) y compáralo con la recta normal.
+```python
+from sklearn.linear_model import Ridge
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+print(f"Ridge: {mae_cv(make_pipeline(StandardScaler(), Ridge(alpha=1.0))):,.0f} € · Lineal: {mae_cv(LinearRegression()):,.0f} €")
+```
+- **Qué sale y por qué:**
+  - **31 200 €**, igual que la lineal sin Ridge. Hay pocas variables y muchos datos: no hay nada que frenar.
+
+#### Extra 3 · Valor de la vista al mar por zona
+- **Qué hacer:**
+  1. Pregunta a la tasadora por el **mismo piso** con y sin vista en cada zona y resta.
+  2. Compáralo con la diferencia de **medianas** de los datos: mezcla otras cosas (metros, estado).
+```python
+for zona in ["Sur costa", "Área metropolitana", "Norte", "Este", "Interior"]:
+    print(f"{zona:20s} la vista añade {tasar(zona=zona, vista_mar=1) - tasar(zona=zona, vista_mar=0):+,} €")
+medianas = df.groupby(["zona", "vista_mar"])["precio"].median().unstack()
+print((medianas[1] - medianas[0]).round(-2).rename("diferencia de medianas (€)"))
+```
+- **Qué sale y por qué:**
   - Mediana con vista menos sin vista: **Sur costa +117 000 €** · **Norte +40 000 €** · **Este +20 000 €** · Interior −4 200 € · Área metropolitana −2 500 €.
   - Con el modelo (piso tipo de 90 m²): **Sur costa +92 000 €** · **Norte +67 000 €** · Este +1 000 € · Interior +3 000 € · Metropolitana −5 000 €.
   - Lectura: **la vista solo vale dinero en el sur y el norte** (donde hay mar de verdad). Las diferencias de medianas mezclan **otras cosas** (metros, estado): el modelo, que las mantiene fijas, lo aísla mejor.
+
+#### Para cerrar
 - **Para comentar:** los mayores fallos son **casas grandes (> 180 m²)**: pocas y vistas poco. Un piso de 500 m² recibe un precio **poco fiable**.
 - **Tarjeta de ejemplo:**
   - Mi app decide **el precio de un piso en Tenerife** a partir de **metros, zona, estado, vista y garaje**.

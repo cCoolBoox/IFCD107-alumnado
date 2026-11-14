@@ -122,9 +122,46 @@ mi_app(flor)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
 
 > Esta ficha **depende de tus fotos**: no hay cifra única; lo importante es **lo que observas**.
-- **Extra 1 · Fotos difíciles (🗣️):** lo habitual: se equivoca más con **objeto a medias, de noche, con otra cosa delante, girado o borroso**; lo grave es que **lo dice con mucha seguridad** (la ficha: flor borrosa → `fig` con 0,71). Anota **la probabilidad**, no solo el nombre.
-- **Extra 2 · Dos objetos muy parecidos (🗣️):** con pocas fotos, el modelo propio **acierta menos** y la **probabilidad se reparte** entre las dos clases. Lo bueno de comprobarlo: ven que **la IA aprende lo que se le enseña**, incluido el **fondo** y la **luz** (si todas las fotos de una taza están sobre la mesa, puede aprender «mesa»).
-- **Extra 3 · 5, 10 y 15 fotos por objeto (🗣️):** lo habitual es que **con 5 ya acierte bastante** (el transfer learning ya sabe mirar) y que **las ganancias se aplanen hacia las 10–15**. Si alguno ve que **con 5 falla**, que revise **fondo y luz**.
+#### Extra 1 · Fotos difíciles (🗣️)
+- **Qué hacer:**
+  1. Usa `variantes()` (paso 2) con **tu propia foto** (aquí, `templo` como ejemplo) o cambia la foto por otra difícil: objeto a medias, de noche, con algo delante.
+  2. Apunta **qué dice** y **con qué seguridad**: lo grave es equivocarse con mucha.
+```python
+for cambio, imagen in variantes(templo).items():      # cambia templo por tu foto
+    print(f"{cambio:18s}", que_ves(imagen, top=1))
+```
+- **Qué sale y por qué:**
+  - Lo habitual: se equivoca más con **objeto a medias, de noche, con otra cosa delante, girado o borroso**; lo grave es que **lo dice con mucha seguridad** (la ficha: flor borrosa → `fig` con 0,71). Anota **la probabilidad**, no solo el nombre.
+
+#### Extra 2 · Dos objetos muy parecidos (🗣️)
+- **Qué hacer:**
+  1. Crea `fotos/objeto_a/` y `fotos/objeto_b/` con **dos objetos muy parecidos** (dos tazas de colores distintos) y ejecuta el paso 4.
+  2. Mira el acierto con validación cruzada y las probabilidades de `mi_app(foto)`: si se reparten entre las dos clases, está dudando.
+```python
+if "tuyo" in globals():
+    mi_app(flor)          # cambia flor por una foto tuya de las dos clases
+else:
+    print("Primero crea las carpetas fotos/objeto_a y fotos/objeto_b con tus fotos y ejecuta el paso 4.")
+```
+- **Qué sale y por qué:**
+  - Con pocas fotos, el modelo propio **acierta menos** y la **probabilidad se reparte** entre las dos clases. Lo bueno de comprobarlo: ven que **la IA aprende lo que se le enseña**, incluido el **fondo** y la **luz** (si todas las fotos de una taza están sobre la mesa, puede aprender «mesa»).
+
+#### Extra 3 · 5, 10 y 15 fotos por objeto (🗣️)
+- **Qué hacer:**
+  1. Con tus carpetas ya hechas, entrena con las **5**, **10** y **15** primeras fotos de cada objeto y compara el acierto.
+```python
+if len(clases) >= 2:
+    for n in (5, 10, 15):
+        idx = np.concatenate([np.where(etiquetas == c)[0][:n] for c in clases])
+        acierto_n = cross_val_score(LogisticRegression(max_iter=2000), Fotos[idx], etiquetas[idx], cv=min(5, n)).mean()
+        print(f"{n} fotos por objeto → acierto {acierto_n:.2f}")
+else:
+    print("Primero crea las carpetas de fotos (paso 4).")
+```
+- **Qué sale y por qué:**
+  - Lo habitual es que **con 5 ya acierte bastante** (el transfer learning ya sabe mirar) y que **las ganancias se aplanen hacia las 10–15**. Si alguno ve que **con 5 falla**, que revise **fondo y luz**.
+
+#### Para cerrar
 - **Para comentar:** la red general **solo conoce 1 000 cosas** (ImageNet). Y **«sin personas reconocibles»** es una regla de privacidad, no un adorno.
 - **Tarjeta de ejemplo (formato libre, rellena con los tuyos):**
   - Mi IA decide **si la foto es de X o de Y** a partir de **15 fotos propias por objeto**.

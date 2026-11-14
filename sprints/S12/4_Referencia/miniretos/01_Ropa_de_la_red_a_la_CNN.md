@@ -169,15 +169,76 @@ interact(reconoce, i=(0, len(y_te) - 1));
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Más capas o más filtros:**
+#### Extra 1 · Más capas o más filtros
+- **Qué hacer:**
+  1. Escribe funciones que construyan la red densa con las capas que quieras y la CNN con los filtros que quieras (con `count_params()` ves los pesos).
+  2. Prueba una **tercera capa** (128-64-32) y una CNN con **32 y 64 filtros**.
+```python
+def red_densa_capas(capas, semilla=0, X1=Xa, y1=ya):
+    keras.utils.set_random_seed(semilla)
+    bloques = [c for u in capas for c in (keras.layers.Dense(u, activation="relu"), keras.layers.Dropout(0.3))]
+    m = keras.Sequential([keras.layers.Input((784,))] + bloques + [keras.layers.Dense(10, activation="softmax")])
+    m.compile("adam", "sparse_categorical_crossentropy", metrics=["accuracy"])
+    m.fit(X1, y1, validation_data=(Xv, yv), epochs=60, batch_size=64, verbose=0,
+          callbacks=[keras.callbacks.EarlyStopping(patience=6, restore_best_weights=True)])
+    return m
+
+def crear_cnn(f1=16, f2=32, parada=True, X1=Xa, y1=ya):
+    keras.utils.set_random_seed(0)
+    c = keras.Sequential([keras.layers.Input((28, 28, 1)),
+                          keras.layers.Conv2D(f1, 3, activation="relu"), keras.layers.MaxPooling2D(),
+                          keras.layers.Conv2D(f2, 3, activation="relu"), keras.layers.MaxPooling2D(),
+                          keras.layers.Flatten(), keras.layers.Dropout(0.3),
+                          keras.layers.Dense(64, activation="relu"), keras.layers.Dense(10, activation="softmax")])
+    c.compile("adam", "sparse_categorical_crossentropy", metrics=["accuracy"])
+    callbacks = [keras.callbacks.EarlyStopping(patience=5, restore_best_weights=True)] if parada else []
+    h = c.fit(X1.reshape(-1, 28, 28, 1), y1, validation_data=(Xv.reshape(-1, 28, 28, 1), yv), epochs=40, batch_size=64, verbose=0, callbacks=callbacks)
+    return c, h
+
+for capas in ((128, 64), (128, 64, 32)):
+    m = red_densa_capas(capas)
+    print("red densa", capas, "· validación", round(m.evaluate(Xv, yv, verbose=0)[1], 3), "· pesos", m.count_params())
+c, _ = crear_cnn(32, 64)
+print("CNN 32/64 filtros · validación", round(c.evaluate(Xv.reshape(-1, 28, 28, 1), yv, verbose=0)[1], 3), "· pesos", c.count_params())
+```
+- **Qué sale y por qué:**
   - **Tercera capa** (128-64-32): validación **0,841** (una semilla) frente a **0,856** de la de dos capas. **No mejora**, y suma ≈ 1 800 pesos (111 146 frente a 109 386).
   - **CNN con 32 y 64 filtros**: **0,859** (igual) y **121 930 pesos** (más del doble que los ≈ 57 000 de la original).
   - Más grande **no** es mejor con 6 000 imágenes.
-- **Extra 2 · Solo 2 000 imágenes de entrenamiento (validación):** SVM **0,815** · red densa **0,815** · CNN **0,819** · **transfer learning 0,847**. **El transfer aguanta mejor** con pocos datos: ya llega «aprendido» de ImageNet (con 6 000: 0,845 · 0,856 · 0,859 · 0,853). Esa es la razón de usarlo.
-- **Extra 3 · CNN con y sin `EarlyStopping`:**
+
+#### Extra 2 · Solo 2 000 imágenes de entrenamiento (validación)
+- **Qué hacer:**
+  1. Recorta el entrenamiento a las **2 000 primeras imágenes** (`Xa[:2000]`).
+  2. Repite los cuatro escalones (SVM, red densa, CNN y transfer con las características `Fa[:2000]`) y compara con la tabla de 6 000.
+```python
+n = 2000
+Xs, ys = Xa[:n], ya[:n]
+print("SVM:         ", round(SVC(random_state=42).fit(Xs, ys).score(Xv, yv), 3))
+print("Red densa:   ", round(red_densa_capas((128, 64), X1=Xs, y1=ys).evaluate(Xv, yv, verbose=0)[1], 3))
+c, _ = crear_cnn(X1=Xs, y1=ys)
+print("CNN:         ", round(c.evaluate(Xv.reshape(-1, 28, 28, 1), yv, verbose=0)[1], 3))
+print("Transfer:    ", round(LogisticRegression(max_iter=2000).fit(Fa[:n], ys).score(Fv, yv), 3))
+```
+- **Qué sale y por qué:**
+  - SVM **0,815** · red densa **0,815** · CNN **0,819** · **transfer learning 0,847**. **El transfer aguanta mejor** con pocos datos: ya llega «aprendido» de ImageNet (con 6 000: 0,845 · 0,856 · 0,859 · 0,853). Esa es la razón de usarlo.
+
+#### Extra 3 · CNN con y sin `EarlyStopping`
+- **Qué hacer:**
+  1. Entrena la CNN con `parada=False` (40 épocas, sin `EarlyStopping`) y dibuja la curva de entrenamiento y de validación.
+  2. Mira en qué época está la mejor validación y qué pasa con el entrenamiento.
+```python
+c, h = crear_cnn(parada=False)
+plt.plot(h.history["accuracy"], label="entrenamiento"); plt.plot(h.history["val_accuracy"], label="validación")
+plt.xlabel("época"); plt.legend(); plt.show()
+val = h.history["val_accuracy"]
+print("mejor validación:", round(max(val), 3), "en la época", int(np.argmax(val)) + 1, "· al final:", round(val[-1], 3), "· entrenamiento al final:", round(h.history["accuracy"][-1], 3))
+```
+- **Qué sale y por qué:**
   - Con parada temprana: paró en la época ≈ 23, validación **0,859**.
   - Sin parada (40 épocas): al final **0,859**, la mejor **0,871 en la época 33**, y la precisión en entrenamiento llega a **0,92**: la red **sigue aprendiendo del entrenamiento** mientras la validación se **estanca y oscila**.
   - Para comentar: el 0,871 frente al 0,859 es **ruido** (con 1 500 imágenes, el margen es de ≈ ±0,9 puntos). La **parada temprana** no es para ganar nota, es para **no seguir gastando y no memorizar**.
+
+#### Para cerrar
 - **Para comentar:** los cuatro escalones quedan a menos de 2 puntos: **más red no es más acierto** con pocos datos. Pero **sí hay diferencia con el dropout** en la red densa.
 - **Tarjeta de ejemplo:**
   - Mi IA decide **qué prenda hay en la foto** a partir de **784 píxeles**.

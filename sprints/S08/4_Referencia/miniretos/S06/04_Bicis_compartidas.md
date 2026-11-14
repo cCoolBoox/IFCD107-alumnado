@@ -116,12 +116,49 @@ print(bicis(14, 6, 0, 1, 25, 45, 8), "bicis un sábado a las 14:00")
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Separación al azar:** bosque **MAE 25 · R² 0,94**, frente a **46 · 0,90** del temporal. Sale mejor por **engañosa**: examina horas pegadas a las que vio (9:00 con 8:00 y 10:00 en el entrenamiento) → **fuga de vecindad**.
-- **Extra 2 · Quitar `yr`:** el bosque pasa de **46 a 86 bicis de error (R² 0,69)**. El sistema **crece de 2011 a 2012**: sin saber el año, el modelo no sabe que hay más bicis. Pero **`yr` no se puede extrapolar** a 2027 → motivo para **reentrenar**.
-- **Extra 3 · `registered` y `casual`:**
+#### Extra 1 · Separación al azar
+- **Qué hacer:**
+  1. Separa **al azar** con `train_test_split` y entrena el mismo bosque.
+  2. Compara con el temporal. Sale mejor al azar: pregúntate **por qué** (horas pegadas a las que ya vio).
+```python
+from sklearn.model_selection import train_test_split
+Xa, Xb, ya, yb = train_test_split(df[variables], df["cnt"], test_size=0.2, random_state=42)   # al azar
+def bosque(): return RandomForestRegressor(n_estimators=200, min_samples_leaf=3, random_state=42, n_jobs=2)
+p_azar = bosque().fit(Xa, ya).predict(Xb)
+p_temporal = bosque().fit(tr[variables], y_tr).predict(te[variables])
+print("al azar:   ", round(mean_absolute_error(yb, p_azar), 1), "bicis · R²", round(r2_score(yb, p_azar), 2))
+print("temporal:  ", round(mean_absolute_error(y_te, p_temporal), 1), "bicis · R²", round(r2_score(y_te, p_temporal), 2))
+```
+- **Qué sale y por qué:**
+  - Bosque **MAE 25 · R² 0,94**, frente a **46 · 0,90** del temporal. Sale mejor por **engañosa**: examina horas pegadas a las que vio (9:00 con 8:00 y 10:00 en el entrenamiento) → **fuga de vecindad**.
+
+#### Extra 2 · Quitar `yr`
+- **Qué hacer:**
+  1. Quita `yr` de la lista de variables y repite el examen temporal con el bosque.
+```python
+sin_yr = [c for c in variables if c != "yr"]
+p = bosque().fit(tr[sin_yr], y_tr).predict(te[sin_yr])
+print("sin yr:", round(mean_absolute_error(y_te, p), 1), "bicis · R²", round(r2_score(y_te, p), 2))
+```
+- **Qué sale y por qué:**
+  - El bosque pasa de **46 a 86 bicis de error (R² 0,69)**. El sistema **crece de 2011 a 2012**: sin saber el año, el modelo no sabe que hay más bicis. Pero **`yr` no se puede extrapolar** a 2027 → motivo para **reentrenar**.
+
+#### Extra 3 · `registered` y `casual`
+- **Qué hacer:**
+  1. Cambia el objetivo `cnt` por `registered` y luego por `casual` (siguen siendo variables prohibidas como entrada).
+  2. Compara el error con la media de cada una y mira cuándo tienen su pico.
+```python
+for objetivo_nuevo in ("registered", "casual"):
+    p = bosque().fit(tr[variables], tr[objetivo_nuevo]).predict(te[variables])
+    por_hora = df.groupby("hr")[objetivo_nuevo].mean()
+    print(f"{objetivo_nuevo}: error {mean_absolute_error(te[objetivo_nuevo], p):.1f} · media {te[objetivo_nuevo].mean():.1f} · horas pico {list(por_hora.sort_values(ascending=False).index[:3])}")
+```
+- **Qué sale y por qué:**
   - `registered`: MAE **42** sobre una media de 207 (R² 0,88).
   - `casual`: MAE **12** sobre una media de 42 (R² 0,85).
   - Los `registered` tienen picos a las **8 h y 17–18 h** (ir y volver del trabajo) y **bajan en fin de semana** (×0,74); los `casual` se concentran a las **14–15 h** y **se multiplican por 2,25 en fin de semana**. Los `registered` se predicen algo mejor (error del 20 % de la media frente al 28 % en `casual`).
+
+#### Para cerrar
 - **Para comentar:** la trampa de columnas (`casual + registered = cnt`) es la más fácil de **no ver**: errores de 0,00 son una **pista**, no un éxito.
 - **Tarjeta de ejemplo:**
   - Mi app decide **cuántas bicis se alquilan en una hora** a partir de **hora, día, tiempo y temporada**.

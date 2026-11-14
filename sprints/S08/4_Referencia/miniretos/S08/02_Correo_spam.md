@@ -138,14 +138,52 @@ print(es_spam("URGENTE: hay un taller gratis para familias el jueves"))
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
 
-- **Extra 1 · Umbral 0,8:** **no cambia nada** (4 spam se cuelan y 1 correo bueno va a la basura, igual que con 0,5). Las probabilidades de la logística de palabras son **muy extremas** (cerca de 0 o de 1): subir el listón no mueve a nadie.
+#### Extra 1 · Umbral 0,8
+- **Qué hacer:**
+  1. Calcula las probabilidades del examen y cuenta errores con el umbral 0,5 y con 0,8.
+  2. Si no cambia nada, mira cómo reparte probabilidades el modelo.
+```python
+proba_t = campeon.predict_proba(T_test)[:, 1]
+for u in (0.5, 0.8):
+    vn, fp, fn, vp = confusion_matrix(y_test, proba_t >= u).ravel()
+    print(f"umbral {u}: spam que se cuelan {fn} · correos buenos a la basura {fp}")
+```
+- **Qué sale y por qué:**
+  - **no cambia nada** (4 spam se cuelan y 1 correo bueno va a la basura, igual que con 0,5). Las probabilidades de la logística de palabras son **muy extremas** (cerca de 0 o de 1): subir el listón no mueve a nadie.
   - Para comentar: «subir el umbral» **no siempre funciona**; depende de **cómo reparte el modelo sus probabilidades**.
-- **Extra 2 · Tres pistas nuevas** (`!!`/`¡¡`, «euros», `.xyz`): el árbol sigue en **0,922** y **no las usa** (importancia 0). Con profundidad 3, el árbol ya tiene bastante con `enlaces` y `exclamaciones` y **no necesita** las nuevas.
+
+#### Extra 2 · Tres pistas nuevas
+- **Qué hacer:**
+  1. Escribe una función que cuente tus 3 pistas nuevas (por ejemplo `!!`, «euros» y `.xyz`), añádelas a las pistas de `train` y entrena otro árbol.
+  2. Mira `feature_importances_`: si valen 0, el árbol no las usa.
+```python
+def pistas_nuevas(t):
+    return pd.DataFrame({"dobles": t.str.count("!!|¡¡"), "euros": t.str.lower().str.count("euros"), "xyz": t.str.count(r"\.xyz")})
+
+P2 = pd.concat([P_train.reset_index(drop=True), pistas_nuevas(T_train).reset_index(drop=True)], axis=1)
+arbol2 = DecisionTreeClassifier(max_depth=3, random_state=42).fit(P2, y_train.values)
+print(pd.Series(arbol2.feature_importances_, index=P2.columns).round(2))
+print("acierto con validación cruzada:", round(cross_val_score(DecisionTreeClassifier(max_depth=3, random_state=42), P2, y_train.values, cv=5).mean(), 3))
+```
+- **Qué sale y por qué:**
+  - (`!!`/`¡¡`, «euros», `.xyz`): el árbol sigue en **0,922** y **no las usa** (importancia 0). Con profundidad 3, el árbol ya tiene bastante con `enlaces` y `exclamaciones` y **no necesita** las nuevas.
   - Para comentar: una pista es útil por **lo que aporta además de las demás**, no por tener sentido.
-- **Extra 3 · Errores del examen (5):**
+
+#### Extra 3 · Errores del examen (5)
+- **Qué hacer:**
+  1. Busca los correos del examen donde `pred != y_test` y léelos.
+  2. Anota qué tienen en común (¿palabras de oferta en un correo bueno? ¿lenguaje normal en un spam?).
+```python
+pred = campeon.predict(T_test)
+for i in np.where(pred != y_test.values)[0]:
+    print("real:", "spam" if y_test.iloc[i] else "normal", "|", T_test.iloc[i][:120])
+```
+- **Qué sale y por qué:**
   - **4 spam disfrazados de correo normal**: «Cumpleaños de mamá… es una sorpresa», «Cita confirmada…» (dos veces) y «OFERTA para empleados». **Suena a mensaje real.**
   - **1 correo bueno** con **lenguaje de oferta** («Oferta exclusiva… 80 % de descuento»: boletín legítimo de tienda).
   - Lo que tienen en común: **el modelo juzga las palabras, no la intención**. La conducta del remitente es lo que cuenta, y no está en los datos.
+
+#### Para cerrar
 - **Para comentar:** no borrar correos solo por lo que diga el modelo: **carpeta de spam revisable**.
 - **Tarjeta de ejemplo:**
   - Mi app decide **si un correo es spam** a partir de **sus palabras (TF-IDF + logística)**.

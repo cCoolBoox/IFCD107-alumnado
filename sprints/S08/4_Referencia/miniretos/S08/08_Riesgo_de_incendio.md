@@ -126,13 +126,48 @@ print(semaforo("La Palma", 900, 1, 30, 30, 20, 25, 0), "· un día intermedio")
 ## 🔑 Solucionario (Extra)
 > Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
 
-- **Extra 1 · Cortes al 15 % y 35 % (examen, 1 250 zonas, 75 incendios):**
+#### Extra 1 · Cortes al 15 % y 35 % (examen, 1 250 zonas, 75 incendios)
+- **Qué hacer:**
+  1. Cambia los dos cortes de `pd.cut` a 0,15 y 0,35 y cuenta zonas e incendios por color.
+  2. Compara con los cortes de la ficha (0,10 y 0,25).
+```python
+for corte_amarillo, corte_rojo in ((0.10, 0.25), (0.15, 0.35)):
+    color = pd.cut(proba, [-0.01, corte_amarillo, corte_rojo, 1.0], labels=["verde", "amarillo", "rojo"])
+    print(f"cortes {corte_amarillo} y {corte_rojo}")
+    print(pd.DataFrame({"color": color, "incendio": y_te.values}).groupby("color", observed=False).agg(zonas=("incendio", "size"), incendios=("incendio", "sum")))
+```
+- **Qué sale y por qué:**
   - 🔴 **58 zonas** con **34 incendios** (59 %); 🟡 54 zonas con **16**; 🟢 1 138 zonas con **25** incendios.
   - Con los cortes de la ficha (10 % y 25 %): 🔴 91 zonas con 44 incendios.
   - Con cortes **más altos** hay menos zonas en rojo (58 frente a 91): el rojo cubre **menos incendios (34 frente a 44)** y el amarillo recoge más (16 frente a 7). En verde apenas cambia (25 frente a 24).
   - **¿Qué cuesta más?** Un incendio en verde es **mucho más grave** que un falso rojo (que cuesta una patrulla). Por eso se prefieren **cortes más bajos**. Es una decisión de **emergencias**, no del modelo.
-- **Extra 2 · `permutation_importance` (sobre `train`, AP):** **humedad 0,41** · **temperatura 0,24** · días sin lluvia 0,18 · viento 0,14 · zona pinar 0,06 · calima 0,03 · isla y altitud ≈ 0,01. **Manda la humedad.** Coincide con el árbol, que empezaba por humedad.
-- **Extra 3 · Curva precisión–recall (🗣️ con dibujo):** la curva del boosting está **muy por encima de la línea horizontal del 6 %** (lo que daría el tonto) en la parte izquierda, y **cae al subir el recall**: cuanto más incendios quieres cubrir, **más falsos rojos**. Con AP ≈ 0,49 frente a 0,06 del tonto: **×8**.
+
+#### Extra 2 · `permutation_importance` (sobre `train`, AP)
+- **Qué hacer:**
+  1. Usa `permutation_importance` con `scoring="average_precision"` sobre `train`.
+  2. Ordena de mayor a menor.
+```python
+from sklearn.inspection import permutation_importance
+r = permutation_importance(campeon, X_tr, y_tr, scoring="average_precision", n_repeats=5, random_state=42, n_jobs=2)
+print(pd.Series(r.importances_mean, index=X_tr.columns).sort_values(ascending=False).round(3))
+```
+- **Qué sale y por qué:**
+  - **humedad 0,41** · **temperatura 0,24** · días sin lluvia 0,18 · viento 0,14 · zona pinar 0,06 · calima 0,03 · isla y altitud ≈ 0,01. **Manda la humedad.** Coincide con el árbol, que empezaba por humedad.
+
+#### Extra 3 · Curva precisión–recall (🗣️ con dibujo)
+- **Qué hacer:**
+  1. Dibuja la curva precisión–recall con `PrecisionRecallDisplay`.
+  2. Añade una línea horizontal en la tasa de incendios (lo que haría el modelo tonto).
+```python
+from sklearn.metrics import PrecisionRecallDisplay
+PrecisionRecallDisplay.from_predictions(y_te, proba)
+plt.axhline(y_te.mean(), color="gray", linestyle="--", label=f"el tonto ({y_te.mean():.0%})")
+plt.legend(); plt.show()
+```
+- **Qué sale y por qué:**
+  - La curva del boosting está **muy por encima de la línea horizontal del 6 %** (lo que daría el tonto) en la parte izquierda, y **cae al subir el recall**: cuanto más incendios quieres cubrir, **más falsos rojos**. Con AP ≈ 0,49 frente a 0,06 del tonto: **×8**.
+
+#### Para cerrar
 - **Para comentar:** el problema es **difícil** (cada incendio pesa mucho en la nota) y se explica con **semáforo, no con un sí/no**.
 - **Tarjeta de ejemplo:**
   - Mi app decide **el color del semáforo de riesgo** a partir de **humedad, temperatura, días sin lluvia y viento**.
