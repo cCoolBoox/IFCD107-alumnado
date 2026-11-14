@@ -127,7 +127,7 @@ print(f"Si los últimos días fueran muy altos: {prevision([6500] * 14):.0f} bic
 - **La red GRU pierde contra una recta con rezagos y contra «mañana = hoy».** Con ≈ 430 días para entrenar y una serie tan marcada por el tiempo que hace, una red recurrente no tiene datos para aprender más que lo simple.
 - Examen con el campeón (recta): **≈ 878 bicis de error** frente a ≈ 891 de «mañana = hoy», con ≈ 5 900 bicis de media al día. **La ganancia sobre lo tonto es mínima** (≈ 1 %).
 - App: con los últimos 14 días reales la previsión es ≈ 2 400 bicis; con 14 días a 1 500 da ≈ 1 700, y con 14 días a 6 500 da ≈ 6 300.
-- Lección: la mayor parte de la variación diaria depende del **tiempo de mañana**, que los 14 días no contienen (mira el Extra).
+- Lección: parte de la variación diaria depende del **tiempo de mañana** y de si es laborable, que los 14 días no contienen (mira el Extra: ayuda, pero no lo arregla todo).
 
 ## Extra 🔴
 - Añade como entrada **el tiempo de mañana** (temperatura, lluvia): el modelo sabe algo que los 14 días no cuentan. ¿Cambia el orden de la tabla?
