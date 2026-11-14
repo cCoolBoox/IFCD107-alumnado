@@ -119,3 +119,24 @@ for i in range(4):
 ## Cuidado
 - **No se pueden tomar decisiones sobre una persona con esto.** Un modelo así solo serviría para ofrecer **apoyo** a quien lo necesite, nunca para etiquetar a nadie.
 - 395 estudiantes de dos colegios no representan a todos.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
+
+- **Extra 1 · Quitar `failures` y `absences`:** AUC con CV **0,912** (sin ambas) · 0,912 (sin `failures`) · 0,915 (sin `absences`), frente a **0,916**. **Casi nada cambia:** quien manda es **G1** (coeficiente ≈ 3,4; el siguiente no pasa de 0,9).
+  - Pista de interpretación: el peso de una variable en un modelo **no es causa**.
+- **Extra 2 · Por sexo / colegio (examen de 79):**
+  - Sexo F (47): acierto 0,72 · AUC 0,86 · suspensos avisados **11 de 17**.
+  - Sexo M (32): acierto 0,78 · AUC 0,88 · suspensos avisados **6 de 9**.
+  - Colegio GP (71): AUC 0,86; MS (8): AUC 1,0 (solo 8 estudiantes: **no vale**).
+  - Conclusión: **parecido** entre sexos; con 79 estudiantes **no se puede afirmar nada fino**. Lo importante es que **lo miren**.
+- **Extra 3 · ¿Cuándo es legítimo usar G2? (redacción 🗣️).** Respuesta modelo:
+  - **Legítimo:** cuando el aviso se emite **después de G2** y sirve para **ofrecer apoyo antes del examen final**, y si G2 estará disponible **también en producción**.
+  - **Trampa:** usar G2 para «predecir» G3 y presumir de nota, o para una decisión que ocurre **antes** de G2 (no lo tendrás).
+  - **Línea roja:** nunca para **etiquetar o decidir sobre una persona**.
+- **Para comentar:** AUC 0,70 (sin notas) → 0,92 (con G1) → 0,97 (con G2). Cada nota **sube la cifra, pero llega más tarde**. «Mejor modelo» ≠ «modelo útil».
+- **Tarjeta de ejemplo:**
+  - Mi app decide **a quién ofrecer apoyo** a partir de **la 1.ª nota y datos del curso**.
+  - Antes de modelar tuve que **separar `G2`, que llega tarde, y preparar números y texto con un `ColumnTransformer`**.
+  - Acierta **AUC ≈ 0,87** en el examen, frente a **0,50** del modelo tonto.
+  - No debe usarse para **decidir sobre una persona**: solo para ofrecer apoyo.

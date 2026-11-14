@@ -138,3 +138,27 @@ print(f"Si los últimos días fueran muy altos: {prevision([6500] * 14):.0f} bic
 - **Si mezclas los días al separar, haces trampa**: la red vería «el futuro» en el entrenamiento y el resultado sería falso.
 - Es **una ciudad y dos años**: no sirve para predecir ninguna otra ciudad ni los próximos años.
 - Las predicciones de series **fallan en los cambios bruscos** (tormenta, huelga, evento): nadie ve venir lo que los datos no cuentan.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+> **Nota.** El tiempo de mañana explica una parte de la variación: con las **variables bien elegidas** la mejora es **real pero moderada (≈ 7–8 %)**, no «la mayor parte». Esa es la lectura correcta del Extra.
+- **Extra 1 · Añadir el tiempo de mañana (validación, recta con rezagos):**
+  - Solo los **14 días**: **799**.
+  - + temperatura: **838** (**peor**: por sí sola no aporta).
+  - + temperatura, humedad, viento y proporción de horas de mal tiempo: **743** (**−7 %**).
+  - + lo anterior y `laborable`/`festivo`: **733** (**−8 %**).
+  - El orden de la tabla **sí cambia**: con tiempo y calendario, la recta ya **queda bien por encima** de «mañana = hoy» (871).
+  - **Ojo:** el tiempo de mañana **es un dato del futuro**: en producción habría que usar la **previsión**, que se equivoca. Y el bosque **no mejora** (1 092 → 1 127): con ≈ 430 días **no tiene datos**.
+- **Extra 2 · Ventanas de 7 y 28 días (recta, validación):** **7 días: 857** · **14: 799** · **28: 774**. Ventana más larga ayuda **un poco** (el fin de semana pasado y la tendencia); y «mañana = hoy» sigue en 871–896.
+- **Extra 3 · LSTM y GRU más grande (validación, una sola semilla):**
+  - **GRU(16):** 929 pesos · **1 106** (una semilla; media de 3 semillas en la ficha: 973).
+  - **LSTM(16):** **1 169** pesos · **1 035**.
+  - **GRU(64):** **12 929** pesos · **818**.
+  - **GRU(64) casi alcanza a la recta (799)** con **≈ 14 veces más pesos**. Más memoria ayuda, pero **no supera a lo simple** con tan pocos días. Usa la **media de varias semillas**.
+- **Para comentar:** la lección es **ganar a lo simple antes de presumir de red**: el 1 % de ganancia en el examen (878 frente a 891) **no justifica** una GRU. Y **separar por fecha**: si mezclas los días, haces trampa.
+- **Tarjeta de ejemplo:**
+  - Mi IA decide **cuántas bicis se alquilarán mañana** a partir de **los últimos 14 días**.
+  - Se equivoca **≈ 878 bicis** (el día medio tiene ≈ 5 900), frente a **≈ 891** de «mañana = hoy»: **la ganancia es de ≈ 1 %**.
+  - Falla cuando **hay cambios bruscos** (tormenta, huelga, evento) o **el tiempo de mañana es raro**.
+  - No debe usarse para **otra ciudad ni otros años**; y **la GRU perdió** (≈ 973 frente a ≈ 800 de la recta).

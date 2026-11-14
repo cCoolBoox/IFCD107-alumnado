@@ -121,3 +121,19 @@ print(cliente("estandar", 10, 8, 2, 1, 14, "paypal", 2))
 ## Cuidado
 - Los coeficientes dicen **qué se parece a qué**, no **qué causa qué**: dar de baja a quien no entra no evita que se vaya.
 - Los datos son **inventados**; el modelo no vale para una plataforma real.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Éxito de la oferta al 20 %:** el umbral sube de 0,31 a **0,625** y solo se contacta a **28 clientes**; el beneficio cae de **+980 € a +24 €**. **Casi no compensa.** Contactar a todos pierde **−8 260 €**.
+- **Extra 2 · Umbral 0,5:** contacta a **64** clientes (**+448 €**) frente a **238** (**+980 €**): con 0,5 **dejas de llamar a 174 clientes** y pierdes más de la mitad del beneficio.
+- **Extra 3 · `series_mes` con odds ratio 1,13 (>1):** ¿más series, más bajas? **No: es colinealidad.**
+  - `series_mes` y `horas_mes` van casi pegadas (**corr. 0,89**). Solas, quien ve más series **se va menos** (corr. −0,17).
+  - Si se **quita `horas_mes`**, `series_mes` pasa a **OR 0,68 (<1)**. Con las dos, el modelo reparte el efecto y puede salir «al revés».
+  - Moraleja: **un coeficiente suelto no se lee solo**, y menos aún como causa.
+- **Para comentar:** problema **difícil** (AUC 0,72–0,74): una nota «baja» aquí **no es un fallo**. Aun así, con el umbral por coste sale **+980 €**.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **a quién ofrecer una oferta de retención** a partir de **días sin entrar, horas al mes, plan y pago**.
+  - Antes de modelar tuve que **calcular el umbral con el coste (0,31) en vez de usar 0,5**.
+  - Gana **+980 €** en el examen contactando a 238 clientes, frente a **0 €** sin hacer nada y **−4 020 €** contactando a todos.
+  - No debe usarse para **afirmar que una variable *causa* la baja**.

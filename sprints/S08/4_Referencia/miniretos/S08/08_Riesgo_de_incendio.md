@@ -122,3 +122,20 @@ print(semaforo("La Palma", 900, 1, 30, 30, 20, 25, 0), "· un día intermedio")
 ## Cuidado
 - Un suceso raro hace que **cada incendio pese mucho** en la nota: con 5 000 zonas, la nota oscila.
 - Los datos son **inventados**: para un riesgo real hay que usar datos de los servicios de emergencias y la previsión meteorológica.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
+
+- **Extra 1 · Cortes al 15 % y 35 % (examen, 1 250 zonas, 75 incendios):**
+  - 🔴 **58 zonas** con **34 incendios** (59 %); 🟡 54 zonas con **16**; 🟢 1 138 zonas con **25** incendios.
+  - Con los cortes de la ficha (10 % y 25 %): 🔴 91 zonas con 44 incendios.
+  - Con cortes **más altos** hay menos zonas en rojo (58 frente a 91): el rojo cubre **menos incendios (34 frente a 44)** y el amarillo recoge más (16 frente a 7). En verde apenas cambia (25 frente a 24).
+  - **¿Qué cuesta más?** Un incendio en verde es **mucho más grave** que un falso rojo (que cuesta una patrulla). Por eso se prefieren **cortes más bajos**. Es una decisión de **emergencias**, no del modelo.
+- **Extra 2 · `permutation_importance` (sobre `train`, AP):** **humedad 0,41** · **temperatura 0,24** · días sin lluvia 0,18 · viento 0,14 · zona pinar 0,06 · calima 0,03 · isla y altitud ≈ 0,01. **Manda la humedad.** Coincide con el árbol, que empezaba por humedad.
+- **Extra 3 · Curva precisión–recall (🗣️ con dibujo):** la curva del boosting está **muy por encima de la línea horizontal del 6 %** (lo que daría el tonto) en la parte izquierda, y **cae al subir el recall**: cuanto más incendios quieres cubrir, **más falsos rojos**. Con AP ≈ 0,49 frente a 0,06 del tonto: **×8**.
+- **Para comentar:** el problema es **difícil** (cada incendio pesa mucho en la nota) y se explica con **semáforo, no con un sí/no**.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **el color del semáforo de riesgo** a partir de **humedad, temperatura, días sin lluvia y viento**.
+  - Antes de modelar tuve que **olvidar la precisión global (94 % del tonto) y usar la AP**.
+  - Con **el 7 % de las zonas en rojo cubre el 59 % de los incendios**, frente a **≈ 7 %** que cubriría un reparto al azar.
+  - No debe usarse para **decidir evacuaciones**: son datos inventados.

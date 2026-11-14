@@ -125,3 +125,19 @@ interact(tasar, metros=(30, 300, 5), habitaciones=(1, 7), banos=(1, 5), antigued
 ## Cuidado
 - **No es una tasación oficial**: los datos son inventados y no hay calles, fechas ni estado real de la casa.
 - Un piso muy distinto de los que ha visto (por ejemplo, de 500 m²) recibe un precio poco fiable.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · `np.log(y)`:** la **recta** baja de **31 200 a 22 100 €** (la ficha del lineal) y el **boosting**, de 19 000 a **17 900 €**. Los precios suben en **porcentaje**, no en euros; el log convierte «% por metro» en una recta. La recta sigue **detrás del boosting**.
+- **Extra 2 · Ridge:** **31 200 €**, igual que la lineal sin Ridge. Hay pocas variables y muchos datos: no hay nada que frenar.
+- **Extra 3 · Valor de la vista al mar por zona:**
+  - Mediana con vista menos sin vista: **Sur costa +117 000 €** · **Norte +40 000 €** · **Este +20 000 €** · Interior −4 200 € · Área metropolitana −2 500 €.
+  - Con el modelo (piso tipo de 90 m²): **Sur costa +92 000 €** · **Norte +67 000 €** · Este +1 000 € · Interior +3 000 € · Metropolitana −5 000 €.
+  - Lectura: **la vista solo vale dinero en el sur y el norte** (donde hay mar de verdad). Las diferencias de medianas mezclan **otras cosas** (metros, estado): el modelo, que las mantiene fijas, lo aísla mejor.
+- **Para comentar:** los mayores fallos son **casas grandes (> 180 m²)**: pocas y vistas poco. Un piso de 500 m² recibe un precio **poco fiable**.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **el precio de un piso en Tenerife** a partir de **metros, zona, estado, vista y garaje**.
+  - Antes de modelar tuve que **convertir zona y estado en columnas de 0 y 1**.
+  - Acierta **±18 000 €** (boosting) en el examen, frente a **±104 600 €** del modelo tonto.
+  - No debe usarse para **tasaciones oficiales ni para casas muy grandes**.

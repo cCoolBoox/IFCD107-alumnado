@@ -145,3 +145,27 @@ print(tasar("Ford", "Kuga", 2010, 220000, "diésel", 150, "Arona"), "€")
 ## Cuidado
 - Los datos son **inventados**: el tasador no vale para comprar un coche de verdad.
 - Quitar anuncios «imposibles» es una decisión. **Escríbela**, porque cambia el resultado.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
+
+- **Extra 1 · Quitar `ciudad`:** bosque **808 €** (con ciudad 813) y Ridge **2 578 €** (igual). **No empeora** → se **descarta y se simplifica**.
+- **Extra 2 · `np.log(y)`:**
+  - Ridge: **2 578 → 1 631 €** (baja un tercio): el precio crece en **porcentaje**, y el log lo vuelve recta.
+  - Bosque: **813 → 823 €** (no cambia): los árboles no necesitan que el problema sea una recta.
+  - Lección: **la transformación ayuda al modelo lineal, no al bosque.**
+- **Extra 3 · Los 5 mayores fallos (examen):** errores de **4 200 a 9 400 €**; destacan un **Seat Arona con el año desaparecido** (`NaN`; falla 9 380 €) y varios **eléctricos o de 2024**, de **los que el bosque ha visto pocos**. El error se concentra en coches **caros o raros**, no en los normales.
+- **Extra 4 · Diario de limpieza (🗣️).** Versión modelo (cifras de la ficha):
+  - 45 anuncios **repetidos** (id distinto) → quitados: 1 245 → 1 200.
+  - 41 escrituras de **marca** → 8 (`VW` → `Volkswagen`, quitar puntos, mayúsculas).
+  - 13 formas de escribir el **combustible** → 4.
+  - **Ciudades** con abreviaturas → 5.
+  - **km y precio** con `km`, `€`, `mil`, `eur` → números.
+  - **Año** con punto de miles (`2.013`) o dos cifras (`19`) → 2013 y 2019.
+  - **32 anuncios** con precio imposible (`1 €`, `9 999 999 €`) o «a consultar» → quitados: quedan 1 168.
+  - **Decisión escrita:** el rango 500–80 000 € es una **elección**; cambiarla cambia el resultado.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **el precio de un coche de segunda mano** a partir de **marca, modelo, año, km, combustible y potencia**.
+  - Antes de modelar tuve que **limpiar 45 repetidos, unificar 41 marcas en 8 y quitar 32 precios imposibles**.
+  - Acierta **±940 €** en el examen, frente a **±4 950 €** del modelo tonto.
+  - No debe usarse para **tasar un coche real**: los datos son inventados.

@@ -157,3 +157,24 @@ for q in ["¿Cuántos libros puedo sacar?", "¿Puedo entrar con mi perro?", "¿C
 - Este asistente **no entiende** el reglamento: busca palabras parecidas. Puede devolver un fragmento que **suena igual pero contesta otra cosa**.
 - Un asistente que **siempre responde** es peor que uno que a veces calla. En un reglamento, una respuesta inventada puede causar un problema real.
 - Con 28 preguntas el resultado es **orientativo**: añade más preguntas antes de fiarte de un número.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Cambiar el troceado (acierto@1, buscador campeón):**
+  - **Líneas** (la ficha, 33 fragmentos): **0,80**.
+  - **Frases** (33, ya coincide casi con las líneas): **0,80** (@3: 0,90).
+  - **Apartados enteros** (12): **0,85** (@3: 1,00).
+  - Parece que «mejora» con trozos grandes, pero es **trampa de medida**: el trozo grande **contiene** la respuesta más fácil (la métrica comprueba que la respuesta esté dentro), pero devuelve un **párrafo largo** donde hay que buscar. **El acierto sube y la utilidad baja.**
+- **Extra 2 · Añadir una norma nueva:** añadiendo «Préstamo de juegos de mesa… 3 días…» a `normas_biblioteca.md`, la pregunta «¿Cuántos días puedo llevarme un juego de mesa?» **la encuentra a la primera** (parecido **0,53**), **sin reentrenar nada**. Es la gran ventaja de buscar en un texto en vez de **hacer entrenar** un modelo: **actualizas el documento y ya**.
+- **Extra 3 · Sinónimos:**
+  - «¿Puedo sacar **cine**?» → **falla en los cuatro buscadores** (el reglamento dice «películas», no «cine»). Peor: el LSA da **0,73 de parecido** pero a la norma de **los retrasos** (por «sacar»): se equivoca con seguridad.
+  - «¿Puedo llevarme una **película** a casa?» → palabras exactas **falla** (el texto tiene «películas»); **raíces, raíces sin vacías y LSA aciertan** (0,48 · 0,62 · 0,96).
+  - «¿Puedo coger una película prestada?» → raíces **0,28**, sin vacías **0,38**, LSA **0,64** pero a «Estos préstamos no se renuevan» (equivocado).
+  - Conclusión: **ningún buscador entiende sinónimos de verdad**; las raíces y el LSA **ayudan con variantes de la misma palabra**, no con palabras distintas.
+- **Para comentar:** «**Buscar palabras parecidas no es entender**» (el ejemplo de «sacar» y «mañana»). Y un asistente que **siempre responde** es peor que uno que a veces calla: sin umbral 0,64; con umbral ≈ 0,4, **0,86**.
+- **Tarjeta de ejemplo:**
+  - Mi IA decide **qué norma contesta a la pregunta** (o «no lo sé») a partir de **el parecido de palabras con 33 fragmentos**.
+  - Se equivoca **en el 14 % de las preguntas del examen** (acierta 0,86 con umbral), frente al **36 %** si siempre respondiera (acierta 0,64).
+  - Falla cuando **la pregunta usa un sinónimo o una palabra que sale en otra norma** («sacar», «mañana»).
+  - No debe usarse para **dar respuestas oficiales sin citar el apartado**.

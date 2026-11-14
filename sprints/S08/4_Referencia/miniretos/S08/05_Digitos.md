@@ -119,3 +119,16 @@ interact(reconoce, i=(0, len(y_test) - 1));
 
 ## Cuidado
 - Estas imágenes son **muy pequeñas y limpias**: con fotos de un móvil, el modelo no funcionaría sin más trabajo (por eso se usan redes neuronales).
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
+
+- **Extra 1 · Dos números más confundidos:** con solo **≈ 4 errores** de 450 los pares cambian de una partición a otra; en esta salen **8 → 1 (2 veces)**, 5 → 9 y 9 → 7. Son números que, **escritos a mano con 8 × 8 píxeles**, comparten trazos (el 8 con el 1 y el 9). **No hay un par «oficial»**: mira tu propia matriz.
+- **Extra 2 · k-NN:** **k = 1 → 0,991** · k = 3 → 0,988 · **k = 15 → 0,972**. Con pocos vecinos se pega a lo que **más se parece** (los dígitos limpios lo permiten); con 15 mira a **demasiados vecinos** y se mezcla con otras clases. Es el mismo equilibrio memorizar/generalizar del `gamma`.
+- **Extra 3 · Su propio número (🗣️):** depende del dibujo. Si lo dibujan con **valores de 0 a 16 y centrado**, suele acertar; si lo **desplazan o lo inclinan**, falla. Es la lección: el modelo conoce **imágenes iguales a las que vio**.
+- **Para comentar:** `gamma` 0,1 → acierto 0,11: **memoriza** y deja de acertar. Con fotos de móvil haría falta una red (S11/S12).
+- **Tarjeta de ejemplo:**
+  - Mi app decide **qué número hay en la imagen** a partir de **64 píxeles**.
+  - Antes de modelar tuve que **ajustar `gamma` de la SVM (0,001; con 0,1 memoriza)**.
+  - Acierta **≈ 0,99** en el examen, frente a **0,10** del modelo tonto.
+  - No debe usarse para **fotos reales de móvil**: son imágenes muy pequeñas y limpias.

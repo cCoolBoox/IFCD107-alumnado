@@ -120,3 +120,20 @@ print(benceno(**{"PT08.S1(CO)": 1200, "T": 15, "hora": 8}), "µg/m³ con casi to
 ## Cuidado
 - Son datos de **un sitio y un año**: no sirven para estimar el aire de Tenerife hoy.
 - Un sensor que se estropea en silencio es un riesgo: hay que **vigilar** cuántos huecos llegan.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Volver a meter `PT08.S2(NMHC)`:**
+  - Lineal **MAE 1,25 · R² 0,94** y bosque **MAE 0,01 · R² 1,00**.
+  - ¿Te lo creerías? **No.** Es un sensor que mide casi lo mismo que el benceno (corr. 0,98): el modelo «copia» la respuesta. Hay que preguntar **«¿tendré ese dato cuando tenga que predecir?»** y **«¿mide lo mismo que la respuesta?»**.
+- **Extra 2 · Otro relleno (`mean` o valor fijo):** **no cambia nada** (lineal 1,97 · bosque 2,02, igual que con la mediana). Motivo: tras `dropna` en el objetivo, **no quedan huecos** en los sensores (0 de 8 991 filas). El `Pipeline` es un **seguro para mañana**, no para estos datos.
+  - Para comentar: es normal que un cambio **no tenga efecto**; saber **por qué** es lo importante.
+- **Extra 3 · Día de la semana:** lineal 1,93 · bosque 2,04 (frente a 1,97 · 2,02): **no mejora**: los sensores ya recogen el ciclo semanal del tráfico.
+- **Extra 4 · Quitar `hora`:** lineal 1,98 · bosque 2,09: **casi igual**: los sensores ya reflejan el ciclo del día. Una variable **redundante** se puede quitar y el modelo queda más simple.
+- **Para comentar:** el examen **al azar** sale mejor (MAE ≈ 0,8) por **vecindad de horas**; el temporal es el honesto. Un **sensor que falla en silencio** exige vigilar cuántos huecos llegan.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **cuántos µg/m³ de benceno hay** a partir de **8 sensores y la hora**.
+  - Antes de modelar tuve que **tratar el −200 como hueco y quitar la columna que casi copiaba el benceno**.
+  - Acierta **±2 µg/m³** en el examen temporal, frente a **≈ 6** del modelo tonto (siempre la media).
+  - No debe usarse para **avisos de salud ni para otro lugar u otro año**.

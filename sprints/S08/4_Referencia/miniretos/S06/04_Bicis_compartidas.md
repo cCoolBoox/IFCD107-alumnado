@@ -112,3 +112,19 @@ print(bicis(14, 6, 0, 1, 25, 45, 8), "bicis un sábado a las 14:00")
 ## Cuidado
 - Datos de **una ciudad y dos años**: no sirven para predecir las bicis de Santa Cruz.
 - El sistema crece con el tiempo: un modelo así se debe **reentrenar** cada cierto tiempo.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Separación al azar:** bosque **MAE 25 · R² 0,94**, frente a **46 · 0,90** del temporal. Sale mejor por **engañosa**: examina horas pegadas a las que vio (9:00 con 8:00 y 10:00 en el entrenamiento) → **fuga de vecindad**.
+- **Extra 2 · Quitar `yr`:** el bosque pasa de **46 a 86 bicis de error (R² 0,69)**. El sistema **crece de 2011 a 2012**: sin saber el año, el modelo no sabe que hay más bicis. Pero **`yr` no se puede extrapolar** a 2027 → motivo para **reentrenar**.
+- **Extra 3 · `registered` y `casual`:**
+  - `registered`: MAE **42** sobre una media de 207 (R² 0,88).
+  - `casual`: MAE **12** sobre una media de 42 (R² 0,85).
+  - Los `registered` tienen picos a las **8 h y 17–18 h** (ir y volver del trabajo) y **bajan en fin de semana** (×0,74); los `casual` se concentran a las **14–15 h** y **se multiplican por 2,25 en fin de semana**. Los `registered` se predicen algo mejor (error del 20 % de la media frente al 28 % en `casual`).
+- **Para comentar:** la trampa de columnas (`casual + registered = cnt`) es la más fácil de **no ver**: errores de 0,00 son una **pista**, no un éxito.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **cuántas bicis se alquilan en una hora** a partir de **hora, día, tiempo y temporada**.
+  - Antes de modelar tuve que **quitar `casual` y `registered`, que suman la respuesta, y separar por fecha**.
+  - Acierta **±46 bicis** en el examen, frente a **±175** del modelo tonto.
+  - No debe usarse para **otra ciudad ni para años futuros sin reentrenar**.

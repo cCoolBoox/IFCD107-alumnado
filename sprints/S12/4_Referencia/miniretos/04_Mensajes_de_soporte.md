@@ -121,3 +121,28 @@ for frase in ["No me llega internet desde ayer y el router parpadea en rojo",
 ## Cuidado
 - Los mensajes son **inventados**: con mensajes reales habría que revisar privacidad y datos personales.
 - Si un mensaje habla de dos cosas a la vez, **la red no es tonta, el problema es ambiguo**. Prueba la frase de «baja + factura»: elige una con un 72 %, pero **la otra mitad del mensaje también era cierta**.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · `ngram_range=(1, 3)` o `min_df=5`:**
+  - Pares (campeón): **0,858** con vocabulario de 1 564.
+  - Hasta **tríos**: **0,877** pero vocabulario de **3 685** (más del doble).
+  - `min_df=5`: **0,854** y vocabulario de **971**.
+  - Con 520 mensajes de validación, la diferencia entre 0,858 y 0,877 son **unos 10 mensajes**: no es suficiente para decir que mejora. **Se complica más de lo que gana.**
+- **Extra 2 · `minimo` en `clasifica` (validación de 520 mensajes):**
+  - **0,4:** **0** mensajes para una persona; acierto del resto 0,858.
+  - **0,6:** **117 (22 %)** a persona; acierto del resto **0,963**.
+  - **0,8:** **245 (47 %)** a persona; acierto del resto **0,985**.
+  - **Más seguridad = más trabajo humano.** Se decide el punto según **lo que cuesta una persona** frente a **lo que cuesta un error**.
+- **Extra 3 · Frases que engañan (probadas):**
+  - «Quiero cancelar la línea y además me habéis cobrado de más» → **baja 54 %** (la otra mitad también era cierta).
+  - «Mi vecino tiene fibra y yo no sé qué hacer» → **avería 63 %** (no tiene nada de avería).
+  - «Buenas tardes» → **duda** (avería 35 %, contratar 29 %): bien, avisa a una persona.
+  - Lo que engaña: **mensajes con dos temas**, **palabras de otro tema** y **mensajes sin contenido**.
+- **Para comentar:** las diferencias entre los cuatro modelos son **pequeñas**: **no hace falta lo más sofisticado**. Los errores son **ambigüedad del problema**, no «torpeza».
+- **Tarjeta de ejemplo:**
+  - Mi IA decide **a qué departamento va un mensaje** a partir de **sus palabras y pares de palabras (TF-IDF)**.
+  - Se equivoca **≈ 12 de cada 100 mensajes** (acierto 0,88), frente al **74 %** de error del modelo tonto (acierta 0,26).
+  - Falla cuando **el mensaje mezcla dos temas** (baja + factura).
+  - No debe usarse para **cerrar una consulta sin que lo mire una persona** cuando la seguridad es baja.

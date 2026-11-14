@@ -140,3 +140,20 @@ interact(riesgo, glucosa=(60, 200), imc=(18.0, 55.0), edad=(21, 80), embarazos=(
 ## Cuidado
 - **No es un diagnóstico.** Son datos de ejemplo de un solo grupo de mujeres: no sirven para otras personas.
 - Una prueba de glucosa de verdad vale más que cualquier modelo. Esta IA solo ayudaría a **decidir a quién proponérsela primero**.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Quitar `insulina` y `pliegue_piel`:** AUC **0,842** frente a **0,843**: **no empeora nada**, a pesar de ser las que más faltan (374 y 227 huecos). Se pueden **descartar** y simplificar la toma de datos.
+- **Extra 2 · Relleno con la media:** **0,843** (igual). Con **0 como relleno** baja a **0,832**: meter un valor **imposible** (insulina 0) distorsiona. Moraleja: **el valor de relleno debe ser verosímil**.
+- **Extra 3 · Por edad (examen, 154 mujeres, umbral 0,3):**
+  - **Menores de 30:** 16 casos, **detecta 9** (56 %), 14 falsas alarmas.
+  - **30 a 44:** 26 casos, detecta **22** (85 %), 6 falsas alarmas.
+  - **45 o más:** 12 casos, detecta **12** (100 %), 9 falsas alarmas.
+  - Lectura: **detecta peor en menores de 30** (9 de 16). Con 16 casos **no se puede concluir por qué**: es una pista para mirar más datos, no una conclusión.
+- **Para comentar:** la **logística gana o empata** y es la que mejor se explica. Una prueba de glucosa **vale más** que cualquier modelo: esta IA solo decide **a quién proponérsela primero**.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **a quién proponer una prueba de glucosa** a partir de **glucosa, IMC, edad y embarazos**.
+  - Antes de modelar tuve que **tratar los 0 como datos que faltan y rellenarlos con la mediana dentro del `Pipeline`**.
+  - Acierta **AUC ≈ 0,81** en el examen (43 de 54 casos detectados), frente a **0,50** del modelo tonto.
+  - No debe usarse para **diagnosticar ni para otras personas**: datos de un solo grupo de mujeres.

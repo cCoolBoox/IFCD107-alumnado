@@ -129,3 +129,16 @@ print(consumo(14, 3, 4, 0, 1), "· día fresco y nublado con teletrabajo")
 ## Cuidado
 - Una curva que se ajusta de maravilla a los datos de `train` puede **hacerlo fatal** en datos nuevos: por eso se mira la validación cruzada.
 - Los datos son **inventados**: no sirven para estimar tu factura real.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Grado 10 con y sin Ridge:** **0,83 kWh (R² −2,6)** sin Ridge y **0,58 kWh (R² 0,89)** con Ridge. Los coeficientes de la curva llegan a **≈ 25** sin Ridge y se quedan en **≈ 1,2** con él: **Ridge frena los coeficientes que se disparan** (castiga los valores grandes) y evita el sobreajuste.
+- **Extra 2 · `produccion_solar_kwh`:** error **0,60 → 0,60** (no mejora): ya está dentro de `horas_sol` (corr. **0,96**). Y **no tiene sentido** para predecir **mañana**: la producción de mañana **no se conoce hoy**; es la «trampa del futuro».
+- **Extra 3 · Días con > 25 kWh:** solo **4 días**, de **ola de calor** (34 °C de media frente a 21,8) y casi todos en **fin de semana** (80 %). El modelo los ve poco: son **extremos raros**.
+- **Para comentar:** el **grado 2** gana por ser **el más sencillo que da buen resultado**. La U (mínimo ≈ 20 °C) tiene sentido físico: calefacción en frío, aire acondicionado en calor.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **cuántos kWh gastará la casa mañana** a partir de **temperatura, horas de sol, personas, fin de semana y teletrabajo**.
+  - Antes de modelar tuve que **darme cuenta de que la relación con la temperatura es una U** y usar una curva de grado 2.
+  - Acierta **±0,60 kWh (≈ 0,11 €/día)**, frente a **±1,53 kWh** del modelo tonto.
+  - No debe usarse para **estimar mi factura real**: los datos son inventados y los extremos son raros.

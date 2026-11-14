@@ -108,3 +108,16 @@ interact(flor, largo=(1.0, 7.0, 0.1), ancho=(0.1, 2.5, 0.1));
 
 ## Cuidado
 - Con 150 flores y 2 medidas, **todos los modelos aciertan casi lo mismo**: la diferencia es **cómo** deciden. Con datos más difíciles (como en las otras miniapps), sí hay un campeón claro.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · `gamma` de la SVM:** **0,5 y 2 → CV 0,971 / examen 0,933**; **50 → CV 0,886 / examen 0,867** (con 0,981 en `train`). A **50 empieza a memorizar**: sube en `train` y baja en validación y examen.
+- **Extra 2 · `max_depth`:** profundidad **1 → 2 rectángulos (CV 0,667)**; **2 → 3 (0,952)**; 3 → 5; 4 → 6; 5 y 6 → 7 (todos con CV 0,952). **A partir de profundidad 2 no mejora**: más rectángulos solo complican.
+- **Extra 3 · Las 4 medidas:** SVM con CV **0,971**, igual que con 2 medidas: **no mejora**, pero **no se puede dibujar**. Con 2 medidas ya hay casi todo lo que hace falta.
+- **Para comentar:** «todos aciertan casi lo mismo, lo que cambia es **cómo** deciden»: rectas, rectángulos o curvas. Es la ficha ideal para empezar.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **la especie de la flor** a partir de **largo y ancho del pétalo**.
+  - Antes de modelar tuve que **dibujar la frontera de cada modelo para ver cómo decide**.
+  - Acierta **≈ 0,93** en el examen (3 errores de 45 flores), frente a **0,33** del modelo tonto.
+  - No debe usarse para **otras plantas**: son 150 flores de tres especies.

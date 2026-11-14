@@ -117,3 +117,17 @@ mi_app(flor)
 ## Cuidado
 - La red general **solo conoce 1 000 cosas** de ImageNet: si tu objeto no está, te dirá algo parecido con mucha seguridad.
 - Sube solo **fotos tuyas o libres**, sin personas reconocibles: no son datos para compartir.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
+
+> Esta ficha **depende de tus fotos**: no hay cifra única; lo importante es **lo que observas**.
+- **Extra 1 · Fotos difíciles (🗣️):** lo habitual: se equivoca más con **objeto a medias, de noche, con otra cosa delante, girado o borroso**; lo grave es que **lo dice con mucha seguridad** (la ficha: flor borrosa → `fig` con 0,71). Anota **la probabilidad**, no solo el nombre.
+- **Extra 2 · Dos objetos muy parecidos (🗣️):** con pocas fotos, el modelo propio **acierta menos** y la **probabilidad se reparte** entre las dos clases. Lo bueno de comprobarlo: ven que **la IA aprende lo que se le enseña**, incluido el **fondo** y la **luz** (si todas las fotos de una taza están sobre la mesa, puede aprender «mesa»).
+- **Extra 3 · 5, 10 y 15 fotos por objeto (🗣️):** lo habitual es que **con 5 ya acierte bastante** (el transfer learning ya sabe mirar) y que **las ganancias se aplanen hacia las 10–15**. Si alguno ve que **con 5 falla**, que revise **fondo y luz**.
+- **Para comentar:** la red general **solo conoce 1 000 cosas** (ImageNet). Y **«sin personas reconocibles»** es una regla de privacidad, no un adorno.
+- **Tarjeta de ejemplo (formato libre, rellena con los tuyos):**
+  - Mi IA decide **si la foto es de X o de Y** a partir de **15 fotos propias por objeto**.
+  - Se equivoca **N de M fotos de prueba**, frente al **50 %** del modelo tonto.
+  - Falla cuando **el objeto sale a medias, con poca luz o sobre otro fondo**.
+  - No debe usarse para **reconocer personas**.

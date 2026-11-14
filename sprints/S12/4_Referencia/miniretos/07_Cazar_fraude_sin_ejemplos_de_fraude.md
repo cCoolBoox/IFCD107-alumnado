@@ -137,3 +137,25 @@ print(revisa(60, 15, 8, 0, "gasolinera", 0, 24, 0))
 - **Raro no es lo mismo que fraude.** El autoencoder marca como sospechosa una compra legítima muy grande o muy lejana.
 - Si tienes ejemplos etiquetados de fraude, **un modelo supervisado casi siempre cazará más**. El autoencoder vale cuando **no los tienes** o aparecen fraudes de un tipo nuevo.
 - Los datos son inventados: con compras reales habría que cuidar la privacidad.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Cuello de botella de 1, 3, 6 y 14 (validación, AUC / AP):**
+  - **1:** 0,915 / 0,263 (271 pesos).
+  - **3 (la ficha):** 0,923 / 0,232 (305 pesos).
+  - **6:** 0,936 / 0,266 (356 pesos).
+  - **14:** **0,938 / 0,294** (492 pesos).
+  - **Casi no cambia** (≈ 0,92–0,94); con 46 fraudes en validación **las diferencias son ruido**. Y **«tan grande que copie todo» no ha empeorado el AUC**: en esta red las capas de **8** neuronas de alrededor ya comprimen 14 → 8, así que **no puede copiar de verdad**. Para ver el efecto hay que subir **también** esas capas (por ejemplo, a 32). Buen momento para decir que **un experimento que no sale como se esperaba también enseña**.
+- **Extra 2 · Con el 1 % de fraudes mezclados (118 casos):** AUC **0,929 / AP 0,264** frente a 0,923 / 0,232: **casi igual**. El autoencoder **apenas se «acostumbra»** porque 118 fraudes entre ≈ 12 000 normales **siguen siendo raros**. Con **más** fraudes mezclados sí perdería el efecto (lo raro dejaría de serlo).
+- **Extra 3 · Revisar el 1 %, 5 % y 10 % (examen, 77 fraudes):**
+  - **1 %:** caza **15** (46 falsas alarmas).
+  - **5 %:** caza **34 (44 %)** (209 falsas alarmas).
+  - **10 %:** caza **42 (55 %)** (445 falsas alarmas).
+  - Duplicar la revisión **no duplica los fraudes cazados**: cada euro de revisión **rinde menos**. El punto lo marca **lo que cuesta revisar**.
+- **Para comentar:** «**raro no es lo mismo que fraude**». El autoencoder (AUC 0,92) **gana a lo simple** (0,83) pero **queda lejos** de la logística que **sí vio fraudes** (0,98): **sin etiquetas, lo raro es una pista, no una prueba**.
+- **Tarjeta de ejemplo:**
+  - Mi IA decide **qué compras revisar** a partir de **lo raras que son frente a las compras normales**.
+  - Se equivoca **cazando 34 de 77 fraudes (44 %)** con el 5 % de revisiones y **209 falsas alarmas**, frente a **≈ 4 de 77 (5 %)** que cazaría una revisión al azar.
+  - Falla cuando **una compra legítima es muy grande o muy lejana**, o **aparece un fraude que se parece a una compra normal**.
+  - No debe usarse para **bloquear una tarjeta**: solo para decidir **qué revisa una persona**; si hay ejemplos etiquetados, un modelo supervisado caza más.

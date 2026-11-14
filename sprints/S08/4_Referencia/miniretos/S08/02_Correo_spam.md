@@ -134,3 +134,21 @@ print(es_spam("URGENTE: hay un taller gratis para familias el jueves"))
 ## Cuidado
 - **No borrar correos solo por lo que diga el modelo**: mejor mandarlos a una carpeta de spam que se pueda revisar.
 - Un modelo entrenado con estos correos no sabe nada de estafas nuevas: hay que **reentrenarlo** cuando cambian.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Umbral 0,8:** **no cambia nada** (4 spam se cuelan y 1 correo bueno va a la basura, igual que con 0,5). Las probabilidades de la logística de palabras son **muy extremas** (cerca de 0 o de 1): subir el listón no mueve a nadie.
+  - Para comentar: «subir el umbral» **no siempre funciona**; depende de **cómo reparte el modelo sus probabilidades**.
+- **Extra 2 · Tres pistas nuevas** (`!!`/`¡¡`, «euros», `.xyz`): el árbol sigue en **0,922** y **no las usa** (importancia 0). Con profundidad 3, el árbol ya tiene bastante con `enlaces` y `exclamaciones` y **no necesita** las nuevas.
+  - Para comentar: una pista es útil por **lo que aporta además de las demás**, no por tener sentido.
+- **Extra 3 · Errores del examen (5):**
+  - **4 spam disfrazados de correo normal**: «Cumpleaños de mamá… es una sorpresa», «Cita confirmada…» (dos veces) y «OFERTA para empleados». **Suena a mensaje real.**
+  - **1 correo bueno** con **lenguaje de oferta** («Oferta exclusiva… 80 % de descuento»: boletín legítimo de tienda).
+  - Lo que tienen en común: **el modelo juzga las palabras, no la intención**. La conducta del remitente es lo que cuenta, y no está en los datos.
+- **Para comentar:** no borrar correos solo por lo que diga el modelo: **carpeta de spam revisable**.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **si un correo es spam** a partir de **sus palabras (TF-IDF + logística)**.
+  - Antes de modelar tuve que **separar los datos y comparar con las pistas hechas a mano (árbol y bosque)**.
+  - Acierta **0,98** en el examen, frente a **0,58** del modelo tonto.
+  - No debe usarse para **borrar correos automáticamente**: debe ir a una carpeta que se pueda revisar.

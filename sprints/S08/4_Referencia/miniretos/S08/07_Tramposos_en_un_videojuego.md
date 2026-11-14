@@ -126,3 +126,20 @@ print(jugador(50, 34, 200, 2.2, 600, 6, 200, 2))
 - Sancionar es una decisión **sobre una persona**: el modelo avisa y **una persona revisa** antes de expulsar.
 - Un buen jugador puede parecer tramposo (mucha puntería, muchas horas): mira a quién falla.
 - Los datos son **inventados**.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
+
+- **Extra 1 · Exigencia de precisión (examen, 59 tramposos):**
+  - **90 %:** umbral 0,65, caza **38** (4 inocentes sancionados por error).
+  - **95 %:** umbral 0,77, caza **33** (2 inocentes).
+  - **99 %:** umbral 0,92, caza **24** (1 inocente).
+  - Más exigencia = **menos tramposos cazados** y menos errores. Es un **compromiso**, y lo decide la plataforma.
+- **Extra 2 · Quitar `reportes_recibidos`:** AUC **0,985** frente a **0,988** y caza **35 de 59** con 2 errores (con reportes: 33). **Casi igual**. ¿Fiarse de los reportes de otros jugadores? **No como prueba**: se pueden **usar en falso** (acoso, «reportes en grupo»). Mejor usarlos como **aviso para revisar**, no para sancionar.
+- **Extra 3 · Cómo se apelaría (🗣️).** Modelo: *«Se le enseña qué datos tenían más peso (precisión, reacción, reportes), se compara con jugadores de su nivel y una persona revisa partidas concretas. Hasta entonces: nada de expulsión automática.»*
+- **Para comentar:** **gana el modelo sencillo** (logística: AUC 0,988, AP 0,90). Un **buen jugador** (600 horas) puede parecer tramposo: **vigilar, no sancionar**.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **a quién vigilar o proponer para sanción** a partir de **precisión, reacción, headshots y reportes**.
+  - Antes de modelar tuve que **elegir un umbral exigente (precisión ≥ 95 %, umbral 0,77)** porque sancionar a un inocente es grave.
+  - Caza **33 de 59** tramposos y sanciona por error a **2 de 941** inocentes, frente a **0** del modelo tonto.
+  - No debe usarse para **expulsar sin que una persona revise**.

@@ -135,3 +135,18 @@ print(revisar(120, 23, 60, 1, "juegos_online", 2, 6, 1))
 ## Cuidado
 - Los datos son **inventados**; un banco real tiene muchos más datos y fraudes que **cambian de forma** cada mes.
 - Con pocos fraudes en el examen, **la nota oscila mucho**: no te fíes de una cifra con decimales.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
+
+- **Extra 1 · Falsa alarma a 20 €:** el umbral óptimo **sube de 0,05 a 0,12**.
+  - ¿Por qué? Cada falsa alarma cuesta más → hay que **estar más seguro** antes de avisar.
+  - En el examen con **umbral 0,12**: detecta **46 de 77** (con 70 falsas alarmas), coste **4 596 €** (con falsa alarma de 20 €), frente a **6 768 €** si se hubiera mantenido el 0,05.
+- **Extra 2 · Umbral 0,5 en el examen:** detecta solo **27 de 77** (50 escapan), con **7 falsas alarmas**, y pierde **≈ 5 090 €** frente a **≈ 3 200 €** con 0,05. Parece más «fino» (pocas falsas alarmas) y **sale más caro**.
+- **Extra 3 · Para un directivo (🗣️).** Respuesta modelo: *«Avisar de más cuesta unos euros de molestias; avisar de menos cuesta el fraude entero. Por eso el umbral no es 0,5: lo fijamos donde el coste total es menor, y lo revisamos cuando cambie lo que cuesta una falsa alarma.»*
+- **Para comentar:** el «nunca avisa» acierta el 98,5 %: la **precisión engaña** cuando una clase es rara. Mirar **AUC, AP y matriz de confusión**.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **si avisar de una compra** a partir de **importe, distancia, hora, tarjeta y comercio**.
+  - Antes de modelar tuve que **olvidarme de la precisión y fijar el umbral por coste (0,05, no 0,50)**.
+  - Acierta **52 de 77 fraudes** en el examen, frente a **0 del modelo tonto**.
+  - No debe usarse para **bloquear una tarjeta sin que lo revise una persona**.

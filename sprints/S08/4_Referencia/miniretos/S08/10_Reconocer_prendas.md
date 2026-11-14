@@ -123,3 +123,16 @@ interact(reconoce, i=(0, len(y_test) - 1));
 ## Cuidado
 - Son fotos **pequeñas, centradas y en blanco y negro** de una sola tienda: con la foto de un armario, el modelo no sirve sin más trabajo (por eso existen las redes neuronales).
 - Tu cifra puede variar unas centésimas según la muestra que salga.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
+
+- **Extra 1 · `gamma` de la SVM (CV con 3 particiones):** **0,0001 → 0,641** (se queda corta) · **0,001 → 0,764** · **0,1 → 0,740** (memoriza) · el valor por defecto (`scale` ≈ 0,010) da ≈ 0,83. El óptimo está **en medio**: ni muy suave ni muy pegado a cada imagen.
+- **Extra 2 · Mitad de los datos (2 250 de las 4 500 de entrenamiento):** examen **0,826** frente a **0,851** con todos: **baja unos 2,5 puntos**. Con 6 000 imágenes ya estamos en la parte plana de la curva.
+- **Extra 3 · Qué confunde una persona (🗣️):** camisa, camiseta y jersey/abrigo, a primera vista. **Coincide con el modelo**: las prendas de arriba se parecen en silueta. Es un buen momento para decir que **la IA se equivoca donde se equivocan las personas** cuando solo ve una silueta pequeña.
+- **Para comentar:** pantalón, bolso y botín: ≈ 95 %; la camisa solo ≈ 59 %. Por eso existen las **redes** (ver S12-01).
+- **Tarjeta de ejemplo:**
+  - Mi app decide **qué prenda hay en la foto** a partir de **784 píxeles en gris**.
+  - Antes de modelar tuve que **escalar los píxeles (0 a 1) y comparar cinco modelos**.
+  - Acierta **0,85** en el examen (≈ 220 errores de 1 500), frente a **0,10** del modelo tonto.
+  - No debe usarse para **fotos de un armario real**: son fotos pequeñas, centradas y en gris.

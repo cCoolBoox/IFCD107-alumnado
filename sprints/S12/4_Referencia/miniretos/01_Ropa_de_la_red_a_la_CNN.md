@@ -165,3 +165,22 @@ interact(reconoce, i=(0, len(y_te) - 1));
 ## Cuidado
 - Las redes **dependen de la semilla**: no presentes una sola ejecución como «la» nota.
 - Son fotos pequeñas, centradas y de una sola tienda: con la foto de un armario, el modelo no sirve sin más trabajo.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Más capas o más filtros:**
+  - **Tercera capa** (128-64-32): validación **0,841** (una semilla) frente a **0,856** de la de dos capas. **No mejora**, y suma ≈ 1 800 pesos (111 146 frente a 109 386).
+  - **CNN con 32 y 64 filtros**: **0,859** (igual) y **121 930 pesos** (más del doble que los ≈ 57 000 de la original).
+  - Más grande **no** es mejor con 6 000 imágenes.
+- **Extra 2 · Solo 2 000 imágenes de entrenamiento (validación):** SVM **0,815** · red densa **0,815** · CNN **0,819** · **transfer learning 0,847**. **El transfer aguanta mejor** con pocos datos: ya llega «aprendido» de ImageNet (con 6 000: 0,845 · 0,856 · 0,859 · 0,853). Esa es la razón de usarlo.
+- **Extra 3 · CNN con y sin `EarlyStopping`:**
+  - Con parada temprana: paró en la época ≈ 23, validación **0,859**.
+  - Sin parada (40 épocas): al final **0,859**, la mejor **0,871 en la época 33**, y la precisión en entrenamiento llega a **0,92**: la red **sigue aprendiendo del entrenamiento** mientras la validación se **estanca y oscila**.
+  - Para comentar: el 0,871 frente al 0,859 es **ruido** (con 1 500 imágenes, el margen es de ≈ ±0,9 puntos). La **parada temprana** no es para ganar nota, es para **no seguir gastando y no memorizar**.
+- **Para comentar:** los cuatro escalones quedan a menos de 2 puntos: **más red no es más acierto** con pocos datos. Pero **sí hay diferencia con el dropout** en la red densa.
+- **Tarjeta de ejemplo:**
+  - Mi IA decide **qué prenda hay en la foto** a partir de **784 píxeles**.
+  - Se equivoca **≈ 370 de 2 500 (15 %)**, frente al **90 %** de error del modelo tonto; entre SVM, red y CNN hay **menos de 2 puntos**.
+  - Falla cuando **hay camisas, camisetas, jerséis o abrigos** (se parecen en silueta).
+  - No debe usarse para **fotos de un armario real**.

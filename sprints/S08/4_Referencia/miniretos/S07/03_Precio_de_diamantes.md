@@ -126,3 +126,17 @@ print(tasar(2.0, "Ideal", "D", "IF"), "$ · dos quilates, el mejor color y purez
 ## Cuidado
 - Es una muestra de **un conjunto concreto** de diamantes y de **precios en dólares** de hace años: no vale para tasar una joya real.
 - Si un modelo con log(precio) predice mal los precios caros, **mira el error en dólares**, no solo el R².
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Ridge `alpha`:** **0,001 → 413 $** · **1 → 417 $** · **100 → 567 $**. Solo se nota con `alpha` **alto**, y entonces **empeora**. Ridge sirve cuando hay **muchas variables correlacionadas** o **pocos datos**; aquí sobra.
+- **Extra 2 · `log_carat ** 2`:** **414 $** frente a 413: **no mejora**. En doble logaritmo la relación ya es casi recta.
+- **Extra 3 · Los 5 mayores fallos (examen):** todos son **piedras grandes (1 a 2,6 quilates) y caras** (de 12 500 a 18 400 $). El modelo se **pasa o se queda corto** en las **extremas**, donde hay pocas piedras (174 con ≥ 2 quilates de 4 497).
+- **Extra 4 · Dos quilates perfectos (33 800 $):** el **máximo** de `y_tr` es **18 779 $** y el mayor es de 3,01 quilates. El modelo log-log **extrapola la curva** más allá de lo visto: la fórmula crece sin freno. Un modelo **no sabe lo que no ha visto**: hay que **vigilar el rango**.
+- **Para comentar:** **cambiar la forma del problema** (log) bajó el error casi a la mitad (737 → 426 $). Un lineal sencillo **empata o gana** al bosque.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **el precio de un diamante** a partir de **peso, color, pureza y corte**.
+  - Antes de modelar tuve que **pasar precio y peso a logaritmo y quitar 4 piedras con medida 0**.
+  - Acierta **±381 $** en el examen, frente a **±3 010 $** del modelo tonto.
+  - No debe usarse para **tasar piedras fuera del rango visto (≥ 2 quilates)** ni joyas reales.

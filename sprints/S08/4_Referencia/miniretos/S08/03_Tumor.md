@@ -126,3 +126,20 @@ for i in range(6):
 ## Cuidado
 - **Esto no diagnostica nada.** Son datos de ejemplo para aprender. Una IA así solo sería un **apoyo** para que una persona experta mire antes un caso.
 - Un recall alto sale a costa de falsas alarmas: personas asustadas y pruebas de más. Hay que **decidir con el médico**, no solo con el modelo.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**.
+
+- **Extra 1 · Umbral 0,5 y 0,05 (examen, logística):**
+  - **0,5:** **3 malignos se escapan**, 1 falsa alarma.
+  - **0,2:** se escapa **1**, 4 falsas alarmas (el de la ficha).
+  - **0,05:** **0 se escapan**, 11 falsas alarmas (en `train` con validación cruzada: 1 se escapa y 49 falsas alarmas).
+  - Un hospital **no elegiría 0,5**: no detectar un maligno es peor que repetir una prueba. Pero **bajar sin límite** llena la consulta de falsas alarmas. Se **decide con el médico**.
+- **Extra 2 · Solo `worst radius` y `worst concave points`:** acierto **0,949** y detecta **0,918** (con todas las medidas: ≈ 0,97 / 0,95). **Pierdes ≈ 2–3 puntos** a cambio de un modelo que se explica con **dos números**.
+- **Extra 3 · El maligno que se escapa:** se le asigna **0,06** de probabilidad. Sus medidas (`worst radius` 16,6; `worst concave points` 0,14) están **entre las de benignos (13,3 / 0,07) y malignos (20,5 / 0,18)**: **se parece a los benignos**. Un modelo **no puede ver lo que los datos no distinguen**.
+- **Para comentar:** «no diagnostica nada»: una persona experta mira antes un caso. Subrayar **recall alto = más falsas alarmas = gente asustada**.
+- **Tarjeta de ejemplo:**
+  - Mi app decide **qué pacientes revisar primero** a partir de **30 medidas de las células**.
+  - Antes de modelar tuve que **escoger el umbral (0,2) pensando en que un maligno que se escapa es peor que una falsa alarma**.
+  - Detecta **41 de 42 malignos** en el examen, frente a **0** del modelo tonto.
+  - No debe usarse para **diagnosticar**: solo como apoyo a una persona experta.

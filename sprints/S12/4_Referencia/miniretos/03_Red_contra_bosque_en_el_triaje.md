@@ -139,3 +139,22 @@ print(paciente(52, 95, 130, 95, 37.0, 5, 0, 0, 0))
 ## Cuidado
 - Esto **no es una herramienta médica**: en urgencias, una persona decide siempre.
 - La red **cambia un poco cada vez** que se entrena: da siempre la media de varias semillas, no un único número.
+
+## 🔑 Solucionario (Extra)
+> Míralo **después** de intentarlo. Las cifras salen de ejecutar la ficha tal cual y pueden variar un poco (librerías, semilla): lo que cuenta es la **conclusión**. 🗣️ = respuesta de redacción u opinión: no hay cifra única.
+
+- **Extra 1 · Otra red (validación, 3 semillas):**
+  - **1 capa de 8 neuronas:** AUC **0,820** · AP 0,543 · **89 pesos**.
+  - **2 capas (32-16):** AUC **0,824** · AP 0,564 · **865 pesos**.
+  - **3 capas (64-32-16):** AUC **0,822** · AP 0,554 · **3 265 pesos**.
+  - **No cambia nada.** 89 pesos hacen lo mismo que 3 265: **el problema no pide más red**.
+- **Extra 2 · Bosque con 3 semillas:** AUC **0,871 ± 0,003** · AP 0,615 ± 0,004. Varía **poco, incluso algo menos que la red** (± 0,006). Lo importante: la **diferencia bosque–red (≈ 0,05 de AUC)** es **mucho mayor** que cualquier variación entre semillas → **el bosque gana de verdad**, no por azar.
+- **Extra 3 · Cuándo usar la red en datos de tabla (🗣️).** Respuesta modelo:
+  - **Sí:** muchísimos datos, o tabla **mezclada con imágenes/texto**, o si hay que **seguir aprendiendo** con datos nuevos.
+  - **No:** pocos datos (miles) y columnas ordenadas: **el bosque o el boosting** ganan, entrenan en segundos y se explican algo mejor.
+- **Para comentar:** «una red no siempre gana» es el mensaje. Ahora **saben comprobarlo**.
+- **Tarjeta de ejemplo:**
+  - Mi IA decide **si un paciente es urgente** a partir de **dolor, pulso, saturación y respiración**.
+  - Para detectar el **90 %** de los urgentes da **≈ 320 falsas alarmas** de 868 no urgentes en el examen.
+  - Falla cuando **hay síntomas poco habituales**; y **la red pierde frente al bosque (AUC 0,82 frente a 0,87)**.
+  - No debe usarse para **decidir sin una persona**.
