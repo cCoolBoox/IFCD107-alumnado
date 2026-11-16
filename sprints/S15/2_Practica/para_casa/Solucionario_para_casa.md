@@ -28,7 +28,6 @@ rng = fijar_semillas(SEMILLA)
 a = (random.random(), np.random.rand(), rng.random())
 rng = fijar_semillas(SEMILLA)
 b = (random.random(), np.random.rand(), rng.random())
-print("Ejercicio 1 correcto ✔")
 
 # Ficha del entorno: cópiala en la memoria técnica y en el README del equipo
 ENTORNO = {"python": sys.version.split()[0], "numpy": np.__version__, "pandas": pd.__version__, "scikit-learn": sklearn.__version__}
@@ -38,7 +37,7 @@ print(json.dumps(ENTORNO, indent=2))
 **Tiene que salir:**
 
 ```text
-Ejercicio 1 correcto ✔
+Con la misma semilla sale la misma secuencia: True → [0.6394, 0.3745, 0.774]
 {
   "python": "3.13.18",
   "numpy": "2.5.3",
@@ -76,13 +75,12 @@ id1 = registrar("prueba", "ModeloDePrueba", {"a": 1}, "abc123", 42, "AUC", 0.5, 
 id2 = registrar("prueba", "ModeloDePrueba", {"a": 2}, "abc123", 42, "AUC", 0.6, 0.01, 0.1)
 tabla_prueba = pd.read_csv(RUTA_REGISTRO)
 os.remove(RUTA_REGISTRO)              # borramos las filas de prueba
-print("Ejercicio 2 correcto ✔")
 ```
 
 **Tiene que salir:**
 
 ```text
-Ejercicio 2 correcto ✔
+id de las dos filas de prueba: 1 y 2 · el CSV tenía 2 filas y 12 columnas
 ```
 
 ### A6 · EJERCICIO 3 de 5 — Registrar bosque y gradient boosting y elegir candidato
@@ -100,7 +98,7 @@ experimento("HistGradientBoosting", HistGradientBoostingClassifier(random_state=
 tabla = pd.read_csv(RUTA_REGISTRO)
 candidato = tabla.loc[tabla["valor_cv"].idxmax(), "modelo"]
 
-print("Ejercicio 3 correcto ✔ — candidato provisional:", candidato)
+print("candidato provisional:", candidato)
 tabla[["id", "modelo", "hiperparametros", "valor_cv", "desv_cv", "tiempo_s"]]
 
 fig, ax = plt.subplots(figsize=(7, 3.5))
@@ -115,7 +113,7 @@ plt.tight_layout(); plt.show()
 **Tiene que salir:**
 
 ```text
-Ejercicio 3 correcto ✔ — candidato provisional: RegresionLogistica
+candidato provisional: RegresionLogistica
 ```
 
 Y además dibuja un gráfico.
@@ -135,13 +133,13 @@ for d in (3, 6, 10):
     resultados_prof[d] = media
 mejor_prof = max(resultados_prof, key=resultados_prof.get)
 
-print("Ejercicio 4 correcto ✔ — mejor profundidad:", mejor_prof, {k: round(v, 3) for k, v in resultados_prof.items()})
+print("mejor profundidad:", mejor_prof, {k: round(v, 3) for k, v in resultados_prof.items()})
 ```
 
 **Tiene que salir:**
 
 ```text
-Ejercicio 4 correcto ✔ — mejor profundidad: 6 {3: np.float64(0.742), 6: np.float64(0.745), 10: np.float64(0.742)}
+mejor profundidad: 6 {3: np.float64(0.742), 6: np.float64(0.745), 10: np.float64(0.742)}
 ```
 
 ### A10 · EJERCICIO 5 de 5 — Evaluar el candidato en el test una sola vez
@@ -167,12 +165,12 @@ final = crear_pipeline(estimador, X_ent.columns).fit(X_ent, y_ent)
 auc_test = roc_auc_score(y_test, final.predict_proba(X_test)[:, 1])
 auc_cv_candidato = fila["valor_cv"]
 
-print(f"Ejercicio 5 correcto ✔ — candidato: {fila['modelo']} · AUC validación {auc_cv_candidato:.3f} · AUC test {auc_test:.3f}")
+print(f"candidato: {fila['modelo']} · AUC validación {auc_cv_candidato:.3f} · AUC test {auc_test:.3f}")
 ```
 
 **Tiene que salir:**
 
 ```text
-Ejercicio 5 correcto ✔ — candidato: RegresionLogistica · AUC validación 0.755 · AUC test 0.745
+candidato: RegresionLogistica · AUC validación 0.755 · AUC test 0.745
 ```
 

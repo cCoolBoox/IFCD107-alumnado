@@ -22,6 +22,12 @@ X = (imagenes / 16.0).astype("float32")[..., np.newaxis]
 X_ent, X_pru, y_ent, y_pru = train_test_split(X, etiquetas, test_size=0.25, random_state=SEMILLA, stratify=etiquetas)
 ```
 
+**Tiene que salir:**
+
+```text
+X: (1797, 8, 8, 1) · valores entre 0.0 y 1.0 · 1347 imágenes de entrenamiento y 450 de prueba
+```
+
 ### A5 · EJERCICIO 2 de 4 — Calcular el tamaño de salida
 
 > Para una entrada de `n` píxeles, filtro de `k`, relleno (*padding*) `p`
@@ -49,6 +55,7 @@ print("Tamaño de la salida:", convolucion2d(prueba, filtro_vertical).shape, "(1
 **Tiene que salir:**
 
 ```text
+8 con filtro 3 → 6 · con relleno 1 → 8 · 224 con filtro 7, relleno 3 y paso 2 → 112
 Tamaño de la salida: (12, 12) (14 - 3 + 1 = 12)
 ```
 
@@ -74,7 +81,13 @@ ejes[1].imshow(max_pooling(np.abs(salida_conv)), cmap="gray"); ejes[1].set_title
 plt.tight_layout(); plt.show()
 ```
 
-**Tiene que salir:** un gráfico.
+**Tiene que salir:**
+
+```text
+max_pooling de la matriz de prueba: [[4, 1], [9, 8]]
+```
+
+Y además dibuja un gráfico.
 
 ### A10 · EJERCICIO 4 de 4 — Construir la CNN
 
@@ -112,6 +125,7 @@ print(f"CNN: {cnn.count_params()} parámetros, exactitud {acc_cnn:.3f}")
 **Tiene que salir:**
 
 ```text
+CNN: 6090 parámetros · salida (None, 10)
 MLP: 4810 parámetros, exactitud 0.964
 CNN: 6090 parámetros, exactitud 0.976
 ```
@@ -182,6 +196,7 @@ print(f"Transfer learning (base congelada) → exactitud en prueba: {acc_transfe
 **Tiene que salir:**
 
 ```text
+Copia: 0 pesos entrenables y 6 congelados · base original: 6 entrenables
 Parámetros totales: 35109 · entrenables (solo la cabeza): 11525
 Transfer learning (base congelada) → exactitud en prueba: 0.833
 ```
@@ -213,6 +228,7 @@ print(f"Tras fine-tuning del bloque 3 → exactitud en prueba: {acc_ft:.3f}")
 **Tiene que salir:**
 
 ```text
+Con el bloque 3 abierto: 2 pesos entrenables · con el bloque 2: 2
 Tras fine-tuning del bloque 3 → exactitud en prueba: 0.830
 ```
 
@@ -264,6 +280,12 @@ def iou(a, b):
     return inter / union if union > 0 else 0.0
 ```
 
+**Tiene que salir:**
+
+```text
+IoU de [0,0,10,10] y [5,5,15,15] = 0.143
+```
+
 ### A3 · EJERCICIO 2 de 5 — NMS: quedarse con una caja por objeto
 
 > Escribe `nms(cajas, puntuaciones, umbral_iou=0.5)` que devuelva la **lista de índices** de las cajas que se
@@ -281,6 +303,12 @@ def nms(cajas, puntuaciones, umbral_iou=0.5):
 
 _cajas = [[10, 10, 50, 50], [12, 12, 52, 52], [100, 100, 140, 140], [11, 9, 49, 51]]
 _punt = [0.9, 0.8, 0.7, 0.6]
+```
+
+**Tiene que salir:**
+
+```text
+Cajas conservadas: [0, 2] · con umbral 0.99: [0, 1, 2, 3]
 ```
 
 ### A4 · EJERCICIO 3 de 5 — El AP (average precision)
@@ -305,6 +333,12 @@ def average_precision(es_tp, n_reales):
     return float(np.sum((recall - recall_previo) * precision))
 ```
 
+**Tiene que salir:**
+
+```text
+AP de la tabla del enunciado = 0.6875
+```
+
 ### A9 · EJERCICIO 4 de 5 — El mAP según el umbral de IoU
 
 > Calcula el **mAP@[.5:.9]** simplificado del detector de color: la media del AP con umbrales de IoU
@@ -320,11 +354,10 @@ plt.plot(umbrales, ap_por_umbral, "o-"); plt.xlabel("umbral de IoU exigido"); pl
 plt.title(f"Detector de color: AP según el umbral de IoU (media = {map_iou:.2f})"); plt.ylim(0, 1.02); plt.show()
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-ap_por_umbral: list de 5 elementos, [0.5365371508049828, 0.5085113065064644, 0.47706314294414587, 0.29002944715918677, 0.003652170016356344]
-map_iou = 0.3632
+AP por umbral: [0.54, 0.51, 0.48, 0.29, 0.0] · mAP = 0.36
 ```
 
 Y además dibuja un gráfico.
@@ -360,6 +393,7 @@ print("Segmentación por umbral de color: IoU media =", round(np.mean([a for a, 
 **Tiene que salir:**
 
 ```text
+IoU = 0.33 · Dice = 0.50
 Segmentación por umbral de color: IoU media = 0.629 · Dice medio = 0.756
 ```
 

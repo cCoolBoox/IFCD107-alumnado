@@ -28,7 +28,6 @@ rng = fijar_semillas(SEMILLA)
 a = (random.random(), np.random.rand(), rng.random())
 rng = fijar_semillas(SEMILLA)
 b = (random.random(), np.random.rand(), rng.random())
-print("Ejercicio 1 correcto ✔")
 
 # Ficha del entorno: cópiala en la memoria técnica y en el README del equipo
 ENTORNO = {"python": sys.version.split()[0], "numpy": np.__version__, "pandas": pd.__version__, "scikit-learn": sklearn.__version__}
@@ -38,7 +37,7 @@ print(json.dumps(ENTORNO, indent=2))
 **Tiene que salir:**
 
 ```text
-Ejercicio 1 correcto ✔
+Con la misma semilla sale la misma secuencia: True → [0.6394, 0.3745, 0.774]
 {
   "python": "3.13.18",
   "numpy": "2.5.3",
@@ -76,13 +75,12 @@ id1 = registrar("prueba", "ModeloDePrueba", {"a": 1}, "abc123", 42, "AUC", 0.5, 
 id2 = registrar("prueba", "ModeloDePrueba", {"a": 2}, "abc123", 42, "AUC", 0.6, 0.01, 0.1)
 tabla_prueba = pd.read_csv(RUTA_REGISTRO)
 os.remove(RUTA_REGISTRO)              # borramos las filas de prueba
-print("Ejercicio 2 correcto ✔")
 ```
 
 **Tiene que salir:**
 
 ```text
-Ejercicio 2 correcto ✔
+id de las dos filas de prueba: 1 y 2 · el CSV tenía 2 filas y 12 columnas
 ```
 
 ### A6 · EJERCICIO 3 de 3 — Registrar bosque y gradient boosting y elegir candidato
@@ -100,7 +98,7 @@ experimento("HistGradientBoosting", HistGradientBoostingClassifier(random_state=
 tabla = pd.read_csv(RUTA_REGISTRO)
 candidato = tabla.loc[tabla["valor_cv"].idxmax(), "modelo"]
 
-print("Ejercicio 3 correcto ✔ — candidato provisional:", candidato)
+print("candidato provisional:", candidato)
 tabla[["id", "modelo", "hiperparametros", "valor_cv", "desv_cv", "tiempo_s"]]
 
 fig, ax = plt.subplots(figsize=(7, 3.5))
@@ -115,7 +113,7 @@ plt.tight_layout(); plt.show()
 **Tiene que salir:**
 
 ```text
-Ejercicio 3 correcto ✔ — candidato provisional: RegresionLogistica
+candidato provisional: RegresionLogistica
 ```
 
 Y además dibuja un gráfico.

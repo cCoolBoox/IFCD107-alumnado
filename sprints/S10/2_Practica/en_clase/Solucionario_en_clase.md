@@ -22,10 +22,10 @@ def neurona(x, pesos, sesgo):
 salida_ejemplo = neurona(np.array([1.5, 1.0]), np.array([0.8, 1.2]), -1.0)
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-salida_ejemplo = 0.8022
+neurona([1.5, 1.0], pesos [0.8, 1.2], sesgo -1.0) = 0.802
 ```
 
 ### A5 · EJERCICIO 2 de 3 — ReLU y su derivada
@@ -44,6 +44,12 @@ def relu_derivada(z):
 _prueba = np.array([-2.0, 0.0, 3.0])
 ```
 
+**Tiene que salir:**
+
+```text
+relu([-2, 0, 3]) = [0.0, 0.0, 3.0] · derivada = [0.0, 0.0, 1.0]
+```
+
 ### A8 · EJERCICIO 3 de 3 — Un paso de descenso de gradiente
 
 > Escribe `paso_gradiente(parametros, gradientes, tasa)`: recibe dos diccionarios con
@@ -58,6 +64,12 @@ def paso_gradiente(parametros, gradientes, tasa):
 _p = {"W1": np.array([1.0, 2.0]), "b1": np.array([0.5])}
 _g = {"W1": np.array([0.5, -1.0]), "b1": np.array([1.0])}
 _nuevo = paso_gradiente(_p, _g, 0.1)
+```
+
+**Tiene que salir:**
+
+```text
+W1: [1.0, 2.0] → [0.95, 2.1] · b1: [0.5] → [0.4]
 ```
 
 ---
@@ -77,11 +89,10 @@ cols_num = ["antelacion_dias", "noches", "adultos", "ninos", "peticiones_especia
 cols_cat = ["tipo_habitacion", "regimen", "canal", "pais_origen", "tarifa", "deposito"]
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-cols_num: list de 8 elementos, ['antelacion_dias', 'noches', 'adultos', 'ninos', 'peticiones_especiales', 'cliente_repetidor']
-cols_cat: list de 6 elementos, ['tipo_habitacion', 'regimen', 'canal', 'pais_origen', 'tarifa', 'deposito']
+8 numéricas y 6 categóricas: 14 variables de entrada
 ```
 
 ### A5 · EJERCICIO 2 de 3 — Construir el MLP de clasificación
@@ -103,6 +114,12 @@ def construir_mlp_clasificacion(n_entradas, capas=(32, 16)):
 
 mlp_c = construir_mlp_clasificacion(Xc_ent.shape[1])
 mlp_c.summary()
+```
+
+**Tiene que salir:**
+
+```text
+mlp_c: 3 capas Dense y 1697 parámetros
 ```
 
 ### A8 · EJERCICIO 3 de 3 — ¿Gana el MLP a la regresión logística?
@@ -185,11 +202,10 @@ resumen = pd.DataFrame({
 resumen
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-n_dropout = 2
-resumen: tabla de 5 filas y 4 columnas
+Capas Dropout: 2 · épocas entrenadas: 60
 ```
 
 Y además dibuja un gráfico.

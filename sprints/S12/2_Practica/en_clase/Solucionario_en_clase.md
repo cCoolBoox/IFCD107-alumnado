@@ -20,11 +20,10 @@ dia_max = por_dia.idxmax()
 mes_min = int(por_mes.idxmin())
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-dia_max = 'sáb'
-mes_min = 9
+Día de más ocupación: sáb · mes de menos ocupación: 9
 ```
 
 ### A7 · EJERCICIO 2 de 3 — Baseline: media de las últimas 4 semanas
@@ -96,6 +95,7 @@ print("Matriz de variables:", matriz.shape)
 **Tiene que salir:**
 
 ```text
+Entrenamiento escalado entre 0.00 y 1.00 · toda la serie entre 0.00 y 1.00
 Matriz de variables: (1096, 6)
 ```
 
@@ -189,6 +189,7 @@ resenas["limpio"] = resenas["texto"].apply(limpiar)
 **Tiene que salir:**
 
 ```text
+'qué bueno sí' · 'precio ok'
 ['limpieza', 'habitación', 'impecable']
 ```
 
@@ -263,11 +264,11 @@ falla_negacion = modelo_lr.predict([pruebas[1]])[0] == "positivo"
 bigrama_util = "Un bigrama junta dos palabras seguidas (p. ej. «no es»), así conserva parte del orden y de la negación."
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-falla_negacion = True
-bigrama_util = 'Un bigrama junta dos palabras seguidas (p. ej. «no es»), así conserva parte del orden y de la negación.'
+¿El modelo falla con la negación? True
+Tu explicación: Un bigrama junta dos palabras seguidas (p. ej. «no es»), así conserva parte del orden y de la negación.
 ```
 
 ---
@@ -294,6 +295,7 @@ print("Pesos de atención (cada fila suma 1):\n", pesos)
 **Tiene que salir:**
 
 ```text
+softmax([[1, 2, 3], [0, 0, 0]]) = [[0.09, 0.24, 0.67], [0.33, 0.33, 0.33]]
 Pesos de atención (cada fila suma 1):
  [[0.11 0.45 0.45]
  [0.05 0.89 0.05]

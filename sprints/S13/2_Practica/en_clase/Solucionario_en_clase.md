@@ -21,7 +21,7 @@ pred_lr = (prob_lr >= 0.5).astype(int)
 cm = confusion_matrix(y_test, pred_lr, normalize="true")
 recall_cancelaciones = cm[1, 1]
 
-print(f"Ejercicio 1 correcto ✔ — el modelo detecta el {recall_cancelaciones:.0%} de las cancelaciones")
+print(f"el modelo detecta el {recall_cancelaciones:.0%} de las cancelaciones")
 
 fig, ax = plt.subplots(figsize=(4.5, 4))
 ConfusionMatrixDisplay(cm, display_labels=["No cancela", "Cancela"]).plot(ax=ax, cmap="Blues", values_format=".0%", colorbar=False)
@@ -33,7 +33,7 @@ plt.tight_layout(); plt.show()
 **Tiene que salir:**
 
 ```text
-Ejercicio 1 correcto ✔ — el modelo detecta el 62% de las cancelaciones
+el modelo detecta el 62% de las cancelaciones
 ```
 
 Y además dibuja un gráfico.
@@ -49,7 +49,7 @@ auc_lr, auc_rf = roc_auc_score(y_test, prob_lr), roc_auc_score(y_test, prob_rf)
 ap_lr, ap_rf = average_precision_score(y_test, prob_lr), average_precision_score(y_test, prob_rf)
 mejor_modelo = "Regresión logística" if auc_lr >= auc_rf else "Bosque aleatorio"
 
-print(f"Ejercicio 2 correcto ✔ — AUC logística {auc_lr:.3f} · bosque {auc_rf:.3f} → {mejor_modelo}")
+print(f"AUC logística {auc_lr:.3f} · bosque {auc_rf:.3f} → {mejor_modelo}")
 
 fig, ax = plt.subplots(1, 2, figsize=(11, 4.2))
 for nombre, prob, color in (("Regresión logística", prob_lr, "tab:blue"), ("Bosque aleatorio", prob_rf, "tab:orange")):
@@ -69,7 +69,7 @@ plt.tight_layout(); plt.show()
 **Tiene que salir:**
 
 ```text
-Ejercicio 2 correcto ✔ — AUC logística 0.744 · bosque 0.733 → Regresión logística
+AUC logística 0.744 · bosque 0.733 → Regresión logística
 ```
 
 Y además dibuja un gráfico.
@@ -86,7 +86,7 @@ res = permutation_importance(modelo_lr, X_test, y_test, scoring="roc_auc", n_rep
 importancias = pd.Series(res.importances_mean, index=X_test.columns).sort_values(ascending=False)
 top3 = importancias.index[:3].tolist()
 
-print("Ejercicio 3 correcto ✔ — las 3 más importantes:", top3)
+print("las 3 más importantes:", top3)
 
 fig, ax = plt.subplots(figsize=(7, 4))
 importancias.head(8)[::-1].plot.barh(ax=ax, color="tab:blue")
@@ -98,7 +98,7 @@ plt.tight_layout(); plt.show()
 **Tiene que salir:**
 
 ```text
-Ejercicio 3 correcto ✔ — las 3 más importantes: ['antelacion_dias', 'deposito', 'canal']
+las 3 más importantes: ['antelacion_dias', 'deposito', 'canal']
 ```
 
 Y además dibuja un gráfico.
@@ -124,7 +124,7 @@ umbral_optimo = umbrales[int(np.argmin(costes))]
 coste_minimo = min(costes)
 coste_05 = coste_total(prob_lr, 0.5)
 
-print(f"Ejercicio 4 correcto ✔ — umbral óptimo {umbral_optimo:.2f}: ahorra {euros(coste_05 - coste_minimo)} frente al umbral 0,5 en esta muestra")
+print(f"umbral óptimo {umbral_optimo:.2f}: ahorra {euros(coste_05 - coste_minimo)} frente al umbral 0,5 en esta muestra")
 
 fig, ax = plt.subplots(figsize=(7, 3.8))
 ax.plot(umbrales, costes, color="tab:blue")
@@ -140,7 +140,7 @@ plt.tight_layout(); plt.show()
 **Tiene que salir:**
 
 ```text
-Ejercicio 4 correcto ✔ — umbral óptimo 0.35: ahorra 1.900 € frente al umbral 0,5 en esta muestra
+umbral óptimo 0.35: ahorra 1.900 € frente al umbral 0,5 en esta muestra
 ```
 
 Y además dibuja un gráfico.

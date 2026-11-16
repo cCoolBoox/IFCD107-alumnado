@@ -22,10 +22,10 @@ def neurona(x, pesos, sesgo):
 salida_ejemplo = neurona(np.array([1.5, 1.0]), np.array([0.8, 1.2]), -1.0)
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-salida_ejemplo = 0.8022
+neurona([1.5, 1.0], pesos [0.8, 1.2], sesgo -1.0) = 0.802
 ```
 
 ### A5 · EJERCICIO 2 de 4 — ReLU y su derivada
@@ -44,6 +44,12 @@ def relu_derivada(z):
 _prueba = np.array([-2.0, 0.0, 3.0])
 ```
 
+**Tiene que salir:**
+
+```text
+relu([-2, 0, 3]) = [0.0, 0.0, 3.0] · derivada = [0.0, 0.0, 1.0]
+```
+
 ### A8 · EJERCICIO 3 de 4 — Un paso de descenso de gradiente
 
 > Escribe `paso_gradiente(parametros, gradientes, tasa)`: recibe dos diccionarios con
@@ -60,6 +66,12 @@ _g = {"W1": np.array([0.5, -1.0]), "b1": np.array([1.0])}
 _nuevo = paso_gradiente(_p, _g, 0.1)
 ```
 
+**Tiene que salir:**
+
+```text
+W1: [1.0, 2.0] → [0.95, 2.1] · b1: [0.5] → [0.4]
+```
+
 ### A14 · EJERCICIO 4 de 4 — Exactitud de la red y mejora sobre el modelo lineal
 
 > Calcula en la variable `exactitud_val` la exactitud (proporción de aciertos) de la red de 8 neuronas
@@ -71,11 +83,10 @@ exactitud_val = (mejor.predecir(X_val) == y_val).mean()
 mejora_sobre_lineal = exactitud_val - lineal.score(X_val, y_val)
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-exactitud_val = 1.0
-mejora_sobre_lineal = 0.5056
+Exactitud de la red en validación: 100.0% · modelo lineal: 49.4% · mejora: 51 puntos
 ```
 
 ### A15 · MINI-RETO — Una red con tasa de aprendizaje 0.01
@@ -114,11 +125,10 @@ cols_num = ["antelacion_dias", "noches", "adultos", "ninos", "peticiones_especia
 cols_cat = ["tipo_habitacion", "regimen", "canal", "pais_origen", "tarifa", "deposito"]
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-cols_num: list de 8 elementos, ['antelacion_dias', 'noches', 'adultos', 'ninos', 'peticiones_especiales', 'cliente_repetidor']
-cols_cat: list de 6 elementos, ['tipo_habitacion', 'regimen', 'canal', 'pais_origen', 'tarifa', 'deposito']
+8 numéricas y 6 categóricas: 14 variables de entrada
 ```
 
 ### A5 · EJERCICIO 2 de 5 — Construir el MLP de clasificación
@@ -140,6 +150,12 @@ def construir_mlp_clasificacion(n_entradas, capas=(32, 16)):
 
 mlp_c = construir_mlp_clasificacion(Xc_ent.shape[1])
 mlp_c.summary()
+```
+
+**Tiene que salir:**
+
+```text
+mlp_c: 3 capas Dense y 1697 parámetros
 ```
 
 ### A8 · EJERCICIO 3 de 5 — ¿Gana el MLP a la regresión logística?
@@ -193,10 +209,10 @@ tabla_r = pd.DataFrame({
 tabla_r
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-tabla_r: tabla de 3 filas y 2 columnas
+mlp_r: 3 capas Dense · MAE de validación al acabar (escala estandarizada): 0.33
 ```
 
 Y además dibuja un gráfico.
@@ -220,12 +236,10 @@ plt.xlabel("precio real (€/noche)"); plt.ylabel("precio predicho (€/noche)")
 plt.title("MLP de precio: real frente a predicho"); plt.legend(); plt.show()
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-mae_mlp_euros = 11.814
-mejora_vs_media = 0.5371
-lim: list de 2 elementos, [54.29, 244.3]
+MAE del MLP: 11.81 € · MAE de la referencia (la media): 25.52 € · mejora: 54%
 ```
 
 Y además dibuja un gráfico.
@@ -311,11 +325,10 @@ resumen = pd.DataFrame({
 resumen
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-n_dropout = 2
-resumen: tabla de 5 filas y 4 columnas
+Capas Dropout: 2 · épocas entrenadas: 60
 ```
 
 Y además dibuja un gráfico.

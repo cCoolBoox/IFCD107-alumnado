@@ -29,13 +29,13 @@ def validar_coherencia(reserva):
     return errores
 
 err = validar_coherencia({**reserva_ejemplo, "noches": 20, "precio_noche": 400.0})
-print("Ejercicio 1 correcto ✔")
 ```
 
 **Tiene que salir:**
 
 ```text
-Ejercicio 1 correcto ✔
+Reserva de ejemplo: []
+Con 20 noches a 400 €: ['El importe total supera los 5000 €: revisa las noches y el precio.']
 ```
 
 ### A6 · EJERCICIO 2 de 3 — Convertir la lista de errores en un mensaje
@@ -51,14 +51,12 @@ def mensaje_errores(errores):
     return "No se puede calcular todavía:\n" + "\n".join(f"- {e}" for e in errores)
 
 m = mensaje_errores(["A", "B"])
-print("Ejercicio 2 correcto ✔")
 print(mensaje_errores(logica.validar_reserva({**reserva_ejemplo, "noches": -3, "canal": "telepatia"}, meta_cargado)))
 ```
 
 **Tiene que salir:**
 
 ```text
-Ejercicio 2 correcto ✔
 No se puede calcular todavía:
 - 'noches' debe estar entre 1 y 30 (has escrito -3).
 - 'telepatia' no es un valor válido para 'canal'. Opciones: agencia, directo, empresa, web_intermediaria.
@@ -77,7 +75,7 @@ reserva_riesgo_bajo = {**reserva_ejemplo, "antelacion_dias": 7, "deposito": "tot
 p_alto = logica.predecir_reserva(reserva_riesgo_alto, modelo_cargado, meta_cargado)["probabilidad"]
 p_bajo = logica.predecir_reserva(reserva_riesgo_bajo, modelo_cargado, meta_cargado)["probabilidad"]
 
-print(f"Ejercicio 3 correcto ✔ — riesgo alto {p_alto:.0%} · riesgo bajo {p_bajo:.0%}")
+print(f"riesgo alto {p_alto:.0%} · riesgo bajo {p_bajo:.0%}")
 
 # Estas pruebas se guardarían tal cual en tests/test_logica.py (se ejecutan con:  pytest -q)
 def test_reserva_valida_devuelve_probabilidad():
@@ -103,7 +101,7 @@ for prueba in (test_reserva_valida_devuelve_probabilidad, test_entrada_invalida_
 **Tiene que salir:**
 
 ```text
-Ejercicio 3 correcto ✔ — riesgo alto 95% · riesgo bajo 4%
+riesgo alto 95% · riesgo bajo 4%
 OK  test_reserva_valida_devuelve_probabilidad
 OK  test_entrada_invalida_no_rompe
 OK  test_falta_un_campo

@@ -269,7 +269,7 @@ print(experiencias.set_index("id_experiencia").loc[top.index, "nombre"].to_frame
 
 ```text
 RMSE popularidad = 1.029
-nombre  nota
+                                 nombre  nota
 id_experiencia
 11                     Parque Timanfaya  4.43
 22                   Visita a Garachico  4.21

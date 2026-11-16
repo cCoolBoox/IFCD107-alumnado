@@ -19,11 +19,10 @@ dia_max = por_dia.idxmax()
 mes_min = int(por_mes.idxmin())
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-dia_max = 'sáb'
-mes_min = 9
+Día de más ocupación: sáb · mes de menos ocupación: 9
 ```
 
 ### A7 · EJERCICIO 2 de 4 — Baseline: media de las últimas 4 semanas
@@ -59,11 +58,10 @@ amplitud_semanal = round(float(desc.seasonal.max() - desc.seasonal.min()), 1)
 resto_std = float(desc.resid.dropna().std())
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-amplitud_semanal = 9.4
-resto_std = 3.6693
+Amplitud semanal: 9.4 puntos · desviación del resto: 3.67 (la de la serie: 9.61)
 ```
 
 ### A12 · EJERCICIO 4 de 4 — SARIMAX sin exógenas
@@ -134,6 +132,7 @@ print("Matriz de variables:", matriz.shape)
 **Tiene que salir:**
 
 ```text
+Entrenamiento escalado entre 0.00 y 1.00 · toda la serie entre 0.00 y 1.00
 Matriz de variables: (1096, 6)
 ```
 
@@ -256,6 +255,7 @@ resenas["limpio"] = resenas["texto"].apply(limpiar)
 **Tiene que salir:**
 
 ```text
+'qué bueno sí' · 'precio ok'
 ['limpieza', 'habitación', 'impecable']
 ```
 
@@ -330,11 +330,11 @@ falla_negacion = modelo_lr.predict([pruebas[1]])[0] == "positivo"
 bigrama_util = "Un bigrama junta dos palabras seguidas (p. ej. «no es»), así conserva parte del orden y de la negación."
 ```
 
-**Valores que tienen que salir:**
+**Tiene que salir:**
 
 ```text
-falla_negacion = True
-bigrama_util = 'Un bigrama junta dos palabras seguidas (p. ej. «no es»), así conserva parte del orden y de la negación.'
+¿El modelo falla con la negación? True
+Tu explicación: Un bigrama junta dos palabras seguidas (p. ej. «no es»), así conserva parte del orden y de la negación.
 ```
 
 ### A15 · EJERCICIO 5 de 5 — El tema peor detectado
@@ -579,6 +579,7 @@ print("Pesos de atención (cada fila suma 1):\n", pesos)
 **Tiene que salir:**
 
 ```text
+softmax([[1, 2, 3], [0, 0, 0]]) = [[0.09, 0.24, 0.67], [0.33, 0.33, 0.33]]
 Pesos de atención (cada fila suma 1):
  [[0.11 0.45 0.45]
  [0.05 0.89 0.05]
@@ -837,6 +838,8 @@ print("Fallos:", res.loc[~res["acierto"], "pregunta"].tolist())
 **Tiene que salir:**
 
 ```text
+«Abre de 9:00 a 22:00» (contexto: 20:00) → alucinación: True
+«Abre de 9:00 a 20:00» → alucinación: False
 Aciertos: 19/20 | sin fuente: 0 | alucinaciones: 0
 Fallos: ['¿A qué hora es el desayuno?']
 ```
@@ -864,6 +867,8 @@ print("Ataques que prosperan CON filtro:", sum(exitos_con_defensa), "de", len(ex
 **Tiene que salir:**
 
 ```text
+Fragmentos legítimos bloqueados: 0 de 25
+«Ignora las instrucciones anteriores…» es seguro: False
 Ataques que prosperan CON filtro: 0 de 3
 ```
 
@@ -1025,5 +1030,13 @@ print(revisar.head())
 parejas = {"detectar semanas raras de ocupación": "autoencoder",
            "generar la foto de una terraza a partir de un texto": "difusion",
            "aprender a engañar a un discriminador con imágenes falsas": "gan"}
+```
+
+**Tiene que salir:**
+
+```text
+detectar semanas raras de ocupación → autoencoder
+generar la foto de una terraza a partir de un texto → difusion
+aprender a engañar a un discriminador con imágenes falsas → gan
 ```
 

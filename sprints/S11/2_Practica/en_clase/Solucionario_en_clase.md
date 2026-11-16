@@ -22,6 +22,12 @@ X = (imagenes / 16.0).astype("float32")[..., np.newaxis]
 X_ent, X_pru, y_ent, y_pru = train_test_split(X, etiquetas, test_size=0.25, random_state=SEMILLA, stratify=etiquetas)
 ```
 
+**Tiene que salir:**
+
+```text
+X: (1797, 8, 8, 1) · valores entre 0.0 y 1.0 · 1347 imágenes de entrenamiento y 450 de prueba
+```
+
 ### A5 · EJERCICIO 2 de 2 — Calcular el tamaño de salida
 
 > Para una entrada de `n` píxeles, filtro de `k`, relleno (*padding*) `p`
@@ -49,6 +55,7 @@ print("Tamaño de la salida:", convolucion2d(prueba, filtro_vertical).shape, "(1
 **Tiene que salir:**
 
 ```text
+8 con filtro 3 → 6 · con relleno 1 → 8 · 224 con filtro 7, relleno 3 y paso 2 → 112
 Tamaño de la salida: (12, 12) (14 - 3 + 1 = 12)
 ```
 
@@ -89,6 +96,7 @@ print(f"Transfer learning (base congelada) → exactitud en prueba: {acc_transfe
 **Tiene que salir:**
 
 ```text
+Copia: 0 pesos entrenables y 6 congelados · base original: 6 entrenables
 Parámetros totales: 35109 · entrenables (solo la cabeza): 11525
 Transfer learning (base congelada) → exactitud en prueba: 0.833
 ```
@@ -113,6 +121,12 @@ def iou(a, b):
     return inter / union if union > 0 else 0.0
 ```
 
+**Tiene que salir:**
+
+```text
+IoU de [0,0,10,10] y [5,5,15,15] = 0.143
+```
+
 ### A3 · EJERCICIO 2 de 2 — NMS: quedarse con una caja por objeto
 
 > Escribe `nms(cajas, puntuaciones, umbral_iou=0.5)` que devuelva la **lista de índices** de las cajas que se
@@ -130,5 +144,11 @@ def nms(cajas, puntuaciones, umbral_iou=0.5):
 
 _cajas = [[10, 10, 50, 50], [12, 12, 52, 52], [100, 100, 140, 140], [11, 9, 49, 51]]
 _punt = [0.9, 0.8, 0.7, 0.6]
+```
+
+**Tiene que salir:**
+
+```text
+Cajas conservadas: [0, 2] · con umbral 0.99: [0, 1, 2, 3]
 ```
 
