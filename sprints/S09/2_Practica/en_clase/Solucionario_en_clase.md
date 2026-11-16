@@ -20,14 +20,12 @@
 ```python
 variables = [c for c in huespedes.columns if c not in ("id_huesped", "grupo")]   # "grupo" aparece más abajo; así puedes repetir esta celda
 X = StandardScaler().fit_transform(huespedes[variables])
-
-print("Ejercicio 1 correcto ✔")
 ```
 
 **Tiene que salir:**
 
 ```text
-Ejercicio 1 correcto ✔
+X: 1200 huéspedes × 7 variables · media 0.00 · desviación 1.00
 ```
 
 ### A7 · EJERCICIO 2 de 2 — ¿Cuántos grupos? La silueta de cada k
@@ -76,7 +74,7 @@ Y además dibuja un gráfico.
 varianza_acum = np.cumsum(varianza)
 n_comp_90 = int(np.argmax(varianza_acum >= 0.90)) + 1
 
-print("Ejercicio 1 correcto ✔ — con", n_comp_90, "componentes conservamos el 90 % de la información")
+print("con", n_comp_90, "componentes conservamos el 90 % de la información")
 
 fig, ax = plt.subplots(1, 2, figsize=(10, 3.5))
 ax[0].bar(range(1, 8), varianza)
@@ -92,7 +90,7 @@ plt.tight_layout(); plt.show()
 **Tiene que salir:**
 
 ```text
-Ejercicio 1 correcto ✔ — con 5 componentes conservamos el 90 % de la información
+con 5 componentes conservamos el 90 % de la información
 ```
 
 Y además dibuja un gráfico.
@@ -114,7 +112,13 @@ ax.legend(*sc.legend_elements(), title="Segmento")
 plt.show()
 ```
 
-**Tiene que salir:** un gráfico.
+**Tiene que salir:**
+
+```text
+Mapa en 2D: 2 componentes conservan el 68.7% de la información
+```
+
+Y además dibuja un gráfico.
 
 ---
 
@@ -131,7 +135,7 @@ media_item = R.mean()
 P_pop = np.tile(media_item.values, (300, 1))
 rmse_pop = evaluar_rmse(P_pop)
 
-print(f"Ejercicio 1 correcto ✔ — RMSE popularidad = {rmse_pop:.3f}")
+print(f"RMSE popularidad = {rmse_pop:.3f}")
 
 top = media_item.sort_values(ascending=False).head(5)
 print(experiencias.set_index("id_experiencia").loc[top.index, "nombre"].to_frame().assign(nota=top.round(2)))
@@ -140,8 +144,8 @@ print(experiencias.set_index("id_experiencia").loc[top.index, "nombre"].to_frame
 **Tiene que salir:**
 
 ```text
-Ejercicio 1 correcto ✔ — RMSE popularidad = 1.029
-                                 nombre  nota
+RMSE popularidad = 1.029
+nombre  nota
 id_experiencia
 11                     Parque Timanfaya  4.43
 22                   Visita a Garachico  4.21
@@ -172,14 +176,14 @@ def precision_k(P, k=3):
 
 p_pop = precision_k(P_pop)
 azar = precision_k(np.random.default_rng(SEMILLA).random((300, 25)))
-print(f"Ejercicio 2 correcto ✔ — precision@3 popularidad = {p_pop:.3f} · azar = {azar:.3f}")
+print(f"precision@3 popularidad = {p_pop:.3f} · azar = {azar:.3f}")
 ```
 
 **Tiene que salir:**
 
 ```text
 Usuarios evaluables: 115
-Ejercicio 2 correcto ✔ — precision@3 popularidad = 0.125 · azar = 0.081
+precision@3 popularidad = 0.125 · azar = 0.081
 ```
 
 ### A9 · EJERCICIO 3 de 3 — El perfil de gustos de cada usuario
@@ -192,8 +196,6 @@ Ejercicio 2 correcto ✔ — precision@3 popularidad = 0.125 · azar = 0.081
 ```python
 perfil_usuario = (C @ F) / (M.astype(float) @ F + 3)
 
-print("Ejercicio 3 correcto ✔")
-
 # Predicción por contenido: nota media de la experiencia + afinidad del usuario con su categoría
 P_cont = media_item_v[None, :] + perfil_usuario @ F.T
 print("RMSE contenido:", round(evaluar_rmse(P_cont), 3), "· precision@3:", round(precision_k(P_cont), 3))
@@ -202,7 +204,8 @@ print("RMSE contenido:", round(evaluar_rmse(P_cont), 3), "· precision@3:", roun
 **Tiene que salir:**
 
 ```text
-Ejercicio 3 correcto ✔
+perfil_usuario: 300 usuarios × 7 categorías
+Perfil del usuario 2: {'aventura': -0.18, 'bienestar': 0.0, 'cultura': 0.0, 'familia': -0.17, 'gastronomia': 0.17, 'mar': 0.34, 'naturaleza': -0.26}
 RMSE contenido: 1.066 · precision@3: 0.13
 ```
 
@@ -223,12 +226,11 @@ def actualizar_q(Q, s, a, r, s2, alpha, gamma):
 Qprueba = np.zeros((20, 4))
 Qprueba[5, 3] = 4.0
 actualizar_q(Qprueba, s=0, a=3, r=-1.0, s2=5, alpha=0.5, gamma=0.9)
-print("Ejercicio 1 correcto ✔")
 ```
 
 **Tiene que salir:**
 
 ```text
-Ejercicio 1 correcto ✔
+Q[0,3] pasa de 0 a 1.3
 ```
 
