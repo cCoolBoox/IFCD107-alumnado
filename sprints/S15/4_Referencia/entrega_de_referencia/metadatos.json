@@ -1,0 +1,36 @@
+{
+  "modelo": "HGB_prof6",
+  "tarea": "bicis alquiladas en cada hora de mañana, con lo conocido a las 23:00 de hoy",
+  "entrenado": "2026-12-03",
+  "semilla": 42,
+  "datos_hash": "95d6bcad",
+  "metrica": "MAE (bicis/hora)",
+  "valor_validacion": 42.19,
+  "valor_cv": [
+    40.56,
+    6.84
+  ],
+  "valor_test": 44.01,
+  "variables": [
+    "hr",
+    "weekday",
+    "mnth",
+    "holiday",
+    "workingday",
+    "lag_24",
+    "lag_168",
+    "media4sem",
+    "nivel_7d",
+    "weathersit",
+    "temp",
+    "atemp",
+    "hum",
+    "windspeed"
+  ],
+  "versiones": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1"
+  }
+}

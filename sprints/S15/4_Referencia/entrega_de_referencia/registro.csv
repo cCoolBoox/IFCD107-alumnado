@@ -1,0 +1,19 @@
+id,fecha,responsable,modelo,hiperparametros,datos_hash,semilla,metrica,valor_cv,desv_cv,tiempo_s,notas
+1,2026-12-01,Marta,Baseline_semana_pasada,"{""columna"": ""lag_168""}",95d6bcad,42,MAE (bicis/hora),59.2219,9.1843,0.02,"val sep-oct 69.5 · baseline del Sprint 14, repetido"
+2,2026-12-01,Marta,Baseline_media_4_semanas,"{""columna"": ""media4sem""}",95d6bcad,42,MAE (bicis/hora),49.6778,8.1525,0.02,val sep-oct 57.6 · segundo baseline
+3,2026-12-01,Marta,HGB_sin_clima,"{""learning_rate"": 0.05, ""max_iter"": 300}",95d6bcad,42,MAE (bicis/hora),67.2365,19.7999,3.58,val sep-oct 63.9 · sin las 5 variables de clima
+4,2026-12-01,Marta,HGB_con_clima,"{""learning_rate"": 0.05, ""max_iter"": 300}",95d6bcad,42,MAE (bicis/hora),40.8496,6.7353,3.37,val sep-oct 42.7
+5,2026-12-02,Persona B,RedNeuronal_MLP_semilla42,"{""hidden_layer_sizes"": [64, 32], ""max_iter"": 200, ""semilla_red"": 42}",95d6bcad,42,MAE (bicis/hora),67.1796,20.4275,39.55,"val sep-oct 57.3 · código generado con IA, revisado a mano; el objetivo se escala para que la red aprenda"
+6,2026-12-02,Persona B,RedNeuronal_MLP_semilla43,"{""hidden_layer_sizes"": [64, 32], ""max_iter"": 200, ""semilla_red"": 43}",95d6bcad,42,MAE (bicis/hora),70.3763,14.661,36.22,"val sep-oct 70.2 · código generado con IA, revisado a mano; el objetivo se escala para que la red aprenda"
+7,2026-12-02,Persona B,RedNeuronal_MLP_semilla44,"{""hidden_layer_sizes"": [64, 32], ""max_iter"": 200, ""semilla_red"": 44}",95d6bcad,42,MAE (bicis/hora),66.8975,14.1218,41.81,"val sep-oct 74.3 · código generado con IA, revisado a mano; el objetivo se escala para que la red aprenda"
+8,2026-12-02,Persona B,HGB_KFold_barajado,"{""learning_rate"": 0.05, ""max_iter"": 300, ""validacion"": ""KFold(5, shuffle=True)""}",95d6bcad,42,MAE (bicis/hora),26.7021,0.893,4.1,NO CANDIDATO · ALARMA: código generado con IA que baraja las horas; sale demasiado bien (ve el futuro de la misma semana)
+9,2026-12-02,Persona C,HGB_prof3,"{""learning_rate"": 0.05, ""max_depth"": 3, ""max_iter"": 300}",95d6bcad,42,MAE (bicis/hora),43.3148,6.4152,1.22,val sep-oct 45.6 · ajuste de profundidad
+10,2026-12-02,Persona C,HGB_prof6,"{""learning_rate"": 0.05, ""max_depth"": 6, ""max_iter"": 300}",95d6bcad,42,MAE (bicis/hora),40.5557,6.845,3.09,val sep-oct 42.2 · ajuste de profundidad
+11,2026-12-02,Persona C,HGB_iter150,"{""learning_rate"": 0.05, ""max_iter"": 150}",95d6bcad,42,MAE (bicis/hora),41.2243,6.7055,2.01,val sep-oct 44.2 · ajuste de número de árboles
+12,2026-12-02,Persona C,HGB_iter600,"{""learning_rate"": 0.05, ""max_iter"": 600}",95d6bcad,42,MAE (bicis/hora),40.9254,7.0334,6.7,val sep-oct 42.3 · ajuste de número de árboles
+13,2026-12-02,Persona C,HGB_ConFuga,"{""extra"": ""registered"", ""learning_rate"": 0.05, ""max_iter"": 300}",95d6bcad,42,MAE (bicis/hora),17.03,5.8679,3.31,val sep-oct 15.9 · NO CANDIDATO · ALARMA: MAE sospechosamente bajo (fuga: registered se conoce después de la hora)
+14,2026-12-03,Persona C,HGB_clima_con_error,"{""learning_rate"": 0.05, ""max_depth"": 6, ""max_iter"": 300, ""ruido_clima"": 0.1}",95d6bcad,42,MAE (bicis/hora),43.3549,7.5493,3.07,val sep-oct 46.0 · NO CANDIDATO · el modelo de profundidad 6 con un 10 % de error en el clima: mide el riesgo R-01 (H13)
+15,2026-12-02,Persona D,Ridge,"{""alpha"": 1.0}",95d6bcad,42,MAE (bicis/hora),49.6837,6.4283,0.18,"val sep-oct 53.9 · regresión lineal con regularización; hr, día y mes como categorías"
+16,2026-12-02,Persona D,RandomForest,"{""min_samples_leaf"": 5, ""n_estimators"": 200}",95d6bcad,42,MAE (bicis/hora),43.047,7.6124,25.17,val sep-oct 48.3
+17,2026-12-02,Persona D,RandomForest_hoja20,"{""min_samples_leaf"": 20, ""n_estimators"": 200}",95d6bcad,42,MAE (bicis/hora),44.2715,7.343,18.66,val sep-oct 50.5 · ajuste: hojas más grandes
+18,2026-12-03,Persona D,HGB_con_clima,"{""learning_rate"": 0.05, ""max_iter"": 300}",95d6bcad,42,MAE (bicis/hora),40.8496,6.7353,3.37,val sep-oct 42.7 · repetición de la prueba de Marta: sale igual
