@@ -95,7 +95,7 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 
 | Carpeta | Qué hay |
 |---|---|
-| [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint y los apuntes para repasar |
+| [`1_Teoria/`](1_Teoria/) | Las presentaciones del sprint, los apuntes para repasar y las [actividades](1_Teoria/actividades/README.md) para entender las redes |
 | [`2_Practica/`](2_Practica/) | Los cuadernos (Colab) y su explicación línea a línea en `codigo_explicado/` |
 | [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y cada paso explicado) |
 | [`4_Referencia/`](4_Referencia/) | Resultados de los cuadernos (presentación y documento) e infografías |

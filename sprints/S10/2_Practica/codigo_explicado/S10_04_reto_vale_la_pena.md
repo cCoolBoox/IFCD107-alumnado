@@ -19,6 +19,27 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | 4 | 3. La referencia: boosting de árboles | Practica `time`, `HistGradientBoostingClassifier`, `fit`, `predict_proba` y más (sección… |
 | 5 | 4. El MLP, con las buenas prácticas del… | Practica `Sequential`, `add`, `compile`, `set_random_seed` y más (sección «4. El MLP, con… |
 
+## ¿De dónde sale cada valor?
+
+Cada número de este reto es una decisión. Aquí está de dónde sale y cuánto pesa. Las cifras son **medidas** con este mismo cuaderno (reservas del curso, validación de 960 casos, 3 semillas por configuración); cuando un valor es solo «habitual», se dice. La cifra que se compara es el AUC de validación.
+
+| Valor | De dónde sale | Qué se midió |
+|---|---|---|
+| Reparto 3 840 / 960 / 1 200 | 20 % para la **prueba** (1 200, intocable hasta el final) y, del resto, 20 % para **validación** (960) | Con 960 casos, el propio AUC de validación tiene un error típico de **≈0,016** (fórmula de Hanley-McNeil). Diferencias de 0,005 entre configuraciones no sirven para declarar ganador (comparando sobre los mismos casos la diferencia es algo más precisa, pero no tanto) |
+| 3 semillas y media de las 3 | Una sola semilla puede dar un resultado casualmente bueno o malo | Las tres semillas del cuaderno dan, con los pesos finales, 0,745 · 0,746 · 0,743: la variación entre semillas es de unas **0,003** (el cuaderno imprime además el máximo de cada entrenamiento: 0,747 · 0,749 · 0,748, que es otra medida) |
+| `capas=(64, 32)` | Tamaño habitual: ni diminuto ni enorme | (8,) → 0,746 · (16,) → 0,748 · **(64, 32) → 0,744** · (128, 64) → 0,743. Todo cabe en ±0,003: **con estos datos el tamaño de la red no importa**; se elige uno mediano por costumbre |
+| `l2=0.003` | Valor de partida habitual del curso | 0 → 0,745 (se para a las 15 épocas) · 0,0003 → 0,745 · **0,003 → 0,744 (36 épocas)** · 0,03 → 0,749. L2 cambia sobre todo **cuánto tarda en pararse**; el 0,03 sale 0,004 mejor, y es un buen experimento para quien quiera comprobarlo |
+| `Dropout 0.3` | Valor de partida habitual | 0 → 0,743 · 0,1 → 0,743 · **0,3 → 0,744** · 0,5 → 0,746. Con estas reservas no se nota; se deja por costumbre |
+| `tasa=1e-3` (Adam) | Valor por defecto de Adam | 1e-4 → 0,743 (llega a las 40 épocas sin pararse) · **1e-3 → 0,744 (36)** · 1e-2 → 0,747 (16 épocas). Una tasa mayor llega antes al mismo sitio; la elegida es la más tranquila |
+| `epochs=40` con `EarlyStopping(patience=6)` | 40 es un límite holgado; la parada la decide la validación | Con la configuración elegida se para a las 35–37 épocas, por debajo del límite. Con tasa 1e-4 sí llega a 40: ahí el límite sí corta |
+| `patience=6` | Ni se rinde pronto ni sigue de más | patience 2 → 0,745 (27 épocas) · **6 → 0,744 (36)** · 12 → 0,744 (40). El AUC es el mismo; cambia solo el tiempo |
+| Boosting `max_iter=200, learning_rate=0.05, max_depth=4` | Combinación típica de partida | **Esa combinación saca 0,734, y no es la mejor.** Con profundidad 2 sale 0,746 (≈ el MLP); con 400 iteraciones 0,723; con profundidad 8 0,723; con tasa 0,2 0,703; con tasa 0,01 0,736. Mensaje: **un boosting sin ajustar puede perder contra un MLP que sí está ajustado** |
+| Regresión: MLP `(32, 16)`, 40 épocas, `patience=6` | Red pequeña para un problema más sencillo (predecir el precio) | No se ha barrido aquí |
+
+**Qué cambia en la conclusión del reto.** El veredicto «MLP, Boosting o Empate» debe leerse sabiendo que el boosting del cuaderno no está en su mejor ajuste: en validación, bajar la profundidad lo iguala al MLP. Si el intervalo de confianza de la diferencia contiene el 0, **«Empate» es la respuesta correcta**, no un fracaso.
+
+**Cuidado con hacer trampa sin querer**: estos barridos se hicieron en **validación**. Si ajustas el boosting mirando la prueba, la prueba deja de medir algo honesto.
+
 ## 2. Qué guarda cada variable
 
 | Variable | Se crea así | Celda |

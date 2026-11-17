@@ -19,6 +19,27 @@ El docente ejecuta **estas celdas con todo el grupo** y las comenta en voz alta.
 | 3 | 1. El dataset: una carpeta por clase | Practica `join`, `isdir` (sección «1. El dataset: una carpeta por clase»). |
 | 5 | 1. El dataset: una carpeta por clase | Practica `image_dataset_from_directory`, `subplots`, `zip`, `suptitle` y más (sección «Ca… |
 
+## ¿De dónde sale cada valor?
+
+Cada número de este reto es una decisión. Aquí está de dónde sale y cuánto pesa. Las cifras son **medidas** con este mismo cuaderno (dibujos sintéticos); cuando un valor es solo «habitual», se dice.
+
+| Valor | De dónde sale | Qué se midió |
+|---|---|---|
+| 60 imágenes por clase (300 en total) | Lo bastante pequeño para entrenar en segundos y lo bastante grande para que haya una prueba con sentido | El reparto 60 / 20 / 20 deja **60 imágenes de prueba**: cada una pesa 1,7 puntos, así que un resultado puede moverse ±5 puntos solo por azar. Es una prueba de humo, no una estadística |
+| `ruido=40` y `prop_ambiguas=0.12` | Imitan datos reales: fotos con ruido y un 12 % con etiqueta dudosa | De los 15 errores de la prueba, **14 eran etiquetas ambiguas**: el techo realista del modelo está por debajo del 100 % |
+| `TAM = 48` | Tamaño mínimo en el que aún se distinguen las 5 clases dibujadas | Con fotos reales harían falta 96–224 píxeles; 48 es una elección de **coste** |
+| `validation_split=0.4` y mitad y mitad | 60 % entrenar, 20 % validar (elegir el umbral) y 20 % probar (medir al final) | La prueba **no se toca** para decidir nada: si eliges el umbral mirando la prueba, el resultado final deja de ser honesto |
+| 8 formas × 400 = 3 200 imágenes, 12 épocas (preentrenar la base) | Tarea auxiliar fácil con datos baratos de generar | En S11_02 se midió que, con 6 imágenes por clase, la base preentrenada sube la exactitud de 0,85 a 0,92; con 24 por clase, la ventaja desaparece |
+| `Dropout 0.3` en la cabeza | Valor de partida habitual | En S11_02: sin dropout 0,834 · 0,2 → 0,829 · 0,5 → 0,818. Con tan pocos datos no ayuda; se deja por costumbre |
+| 30 épocas (cabeza) · 25 (fine-tuning) · 40 (desde cero) | Más épocas a la red que parte de cero, porque tiene todo por aprender | No se han barrido aquí; en S11_01 una CNN pequeña seguía mejorando algo hasta las 60 épocas |
+| Fine-tuning del bloque 3 con tasa `1e-4` | Último bloque (el más específico) y tasa diez veces menor que la de la cabeza | En S11_02: todas las combinaciones de bloque y tasa quedan entre 0,83 y 0,85. Con estos datos sintéticos, el fine-tuning **no mejora más que el ruido** |
+| Umbral de confianza `0.7` | Se elige mirando la tabla de **validación** | Umbral 0 → decide el 100 % y acierta el 88 % · 0,5 → 95 % y 90 % · **0,7 → 87 % y 92 %** · 0,9 → 63 % y 92 % · 0,95 → 40 % y 96 %. De 0,7 a 0,9 no se gana exactitud y se pierden 23 puntos de cobertura; de 0,9 a 0,95 se ganan 4 puntos de exactitud pero se pierde un tercio de las fotos |
+| MobileNetV2 con `alpha=0.35` y 96×96 | La versión más pequeña de la red, para que quepa en un ordenador de clase o Colab gratis | Es una decisión de **coste**; sin internet no se pueden comprobar sus pesos de ImageNet |
+
+**El umbral es una decisión de negocio.** La tabla de validación es lo que hay que enseñar al cliente: «con 0,7 la máquina decide 9 de cada 10 fotos y acierta 9 de cada 10 de esas; el resto lo revisa una persona». Si revisar a mano es caro, se baja el umbral; si un error es caro, se sube.
+
+**Cuidado con el resultado de la prueba**: con 60 imágenes, el 77 % de aciertos en las aceptadas puede ser peor que el 92 % de la validación solo por el tamaño de la muestra. Se informa de las dos cifras y del tamaño de cada conjunto.
+
 ## 2. Qué guarda cada variable
 
 | Variable | Se crea así | Celda |
