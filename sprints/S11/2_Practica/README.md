@@ -6,6 +6,7 @@ Hay **dos tipos de cuaderno**:
 - 🏠 **Para casa** — carpeta [`para_casa/`](para_casa/): el cuaderno completo, con **todos** los ejercicios (también los de clase) y el mini-reto. Sirven para repasar y para lo que no dé tiempo en clase.
 - 🎯 **Reto** — `S11_04_reto_vision_cliente.ipynb`, aquí mismo: es el esqueleto del reto.
 - 🧪 **Reto exprés en equipo** — carpeta [`reto_expres/`](reto_expres/): infografía con las instrucciones y un cuaderno plantilla para elegir un problema de imágenes, entrenar una red, ver dónde se equivoca y presentarlo (100 min, equipos de 4).
+- 🖼️ **Mini-retos con fotos de ImageNet** — carpeta [`imagenet/`](imagenet/): un cuaderno de Colab con fotos reales (10 clases de ImageNet) y 6 retos cortos: qué ve una red ya entrenada, CNN desde cero, transfer learning, cuántas fotos hacen falta, dónde se equivoca y tu propia foto. Extra, opcional.
 - 📝 **Solucionarios** (para contrastar **después de intentarlo**): [`en_clase/Solucionario_en_clase.md`](en_clase/Solucionario_en_clase.md) y [`para_casa/Solucionario_para_casa.md`](para_casa/Solucionario_para_casa.md).
 
 Cada cuaderno «en clase» lleva el mismo nombre que el completo, con `_en_clase` al final. Ábrelos en Colab desde el [README del sprint](../README.md). Si necesitas ayuda con un cuaderno completo, mira su explicación en `codigo_explicado/`.
