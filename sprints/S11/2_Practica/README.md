@@ -5,7 +5,7 @@ Hay **dos tipos de cuaderno**:
 - 🏫 **En clase** — carpeta [`en_clase/`](en_clase/): la parte del cuaderno que se hace en el aula (teoría y ejercicios 🏫, hasta la línea «A partir de aquí, en casa»). Es la que se hace **en el aula**, con la persona que enseña al lado.
 - 🏠 **Para casa** — carpeta [`para_casa/`](para_casa/): el cuaderno completo, con **todos** los ejercicios (también los de clase) y el mini-reto. Sirven para repasar y para lo que no dé tiempo en clase.
 - 🎯 **Reto** — `S11_04_reto_vision_cliente.ipynb`, aquí mismo: es el esqueleto del reto.
-- 🧪 **Reto exprés en equipo** — carpeta [`reto_expres/`](reto_expres/): infografía con las instrucciones y un cuaderno plantilla para elegir un problema de imágenes, entrenar una red, ver dónde se equivoca y presentarlo (100 min, equipos de 4).
+- 🧪 **Reto exprés en equipo** — carpeta [`reto_expres/`](reto_expres/): infografía con las instrucciones y un cuaderno plantilla para elegir un problema de imágenes, entrenar una red, ver dónde se equivoca y presentarlo (100 min, equipos de 4). Para contrastar después de intentarlo: [`Solucion_reto_expres_extendida.md`](reto_expres/Solucion_reto_expres_extendida.md) (solución celda a celda y qué hacer si hay sobreajuste).
 - 🖼️ **Mini-retos con fotos de ImageNet** — carpeta [`imagenet/`](imagenet/): un cuaderno de Colab con fotos reales (10 clases de ImageNet) y 6 retos cortos: qué ve una red ya entrenada, CNN desde cero, transfer learning, cuántas fotos hacen falta, dónde se equivoca y tu propia foto. Extra, opcional.
 - 📝 **Solucionarios** (para contrastar **después de intentarlo**): [`en_clase/Solucionario_en_clase.md`](en_clase/Solucionario_en_clase.md) y [`para_casa/Solucionario_para_casa.md`](para_casa/Solucionario_para_casa.md).
 
