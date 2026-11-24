@@ -4,11 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Taller de workflows · IFCD107</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f5fb;--card:#fff;--ink:#1c1b2e;--mut:#615f7a;--line:#dedbee;--ac:#4a3fd1;--ac2:#e9e6fb;--ok:#14733f;--okbg:#e4f5ea;--ko:#a3262a;--kobg:#fbe8e8;--mv:#8a5a00;--mvbg:#fff1d6;--mvl:#e0b25a}
-@media (prefers-color-scheme:dark){:root{--bg:#14132a;--card:#1e1d3a;--ink:#eeedfa;--mut:#a9a7c6;--line:#37355e;--ac:#9a92ff;--ac2:#2b2958;--ok:#6fdc9a;--okbg:#17382a;--ko:#ff9a9d;--kobg:#3d1f26;--mv:#ffd37a;--mvbg:#3a3418;--mvl:#7a6a28}}
+/* TEMA ÚNICO de los juegos y del panel (IFCD107). Cambiad aquí colores y tipografías y regenerad:
+     python3 herramientas/juegos_comun/regenerar_todo.py
+   Identidad: la de las infografías y demos del curso (tinta azulada, óxido, verde azulado, crema). */
+:root{
+  --bg:#F5F1E8; --card:#FFFFFF; --ink:#1D2433; --mut:#566073; --line:#D9D2C0;
+  --ac:#C23B1F; --ac2:#F7DDD4;                 /* acento (botones, enlaces, pieza activa) y su fondo suave */
+  --ok:#1B7F4B; --okbg:#D9F0E3;                /* acierto */
+  --ko:#B42318; --kobg:#FBE0DC;                /* fallo */
+  --mv:#8A5A00; --mvbg:#F6E7C4; --mvl:#D9B85A; /* aviso / «casi» */
+  --hint:#F6E7C4; --hintl:#D9B85A;             /* pistas */
+  --sky:#DCE6F5; --blue:#3D5F96;               /* apoyo (tablas, etiquetas neutras) */
+  --f-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#12161F; --card:#1B2230; --ink:#F1ECE0; --mut:#A3ADC0; --line:#2E3748;
+    --ac:#F08A6C; --ac2:#3A2620;
+    --ok:#6FD3A0; --okbg:#173226; --ko:#FF8D78; --kobg:#3A1E1A;
+    --mv:#E9C46A; --mvbg:#3A2F14; --mvl:#7A6A28; --hint:#3A2F14; --hintl:#7A6A28;
+    --sky:#1F2C44; --blue:#8FB0E6;
+  }
+}
+h1,h2,h3{font-family:var(--f-display)}
+code,pre,.mono{font-family:var(--f-mono)}
+
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--f-body)}
 main{max-width:860px;margin:0 auto;padding:20px 16px 56px}
 h1{font-size:1.7rem;margin:.2em 0 .1em}h2{font-size:1.2rem;margin:.9em 0 .3em}
 .sub{color:var(--mut);margin:0 0 16px}.mut{color:var(--mut)}

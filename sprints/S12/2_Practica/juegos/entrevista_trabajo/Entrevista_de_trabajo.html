@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrevista de trabajo · IFCD107</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* TEMA ÚNICO de los juegos y del panel (IFCD107). Cambiad aquí colores y tipografías y regenerad:
+     python3 herramientas/juegos_comun/regenerar_todo.py
+   Identidad: la de las infografías y demos del curso (tinta azulada, óxido, verde azulado, crema). */
+:root{
+  --bg:#F5F1E8; --card:#FFFFFF; --ink:#1D2433; --mut:#566073; --line:#D9D2C0;
+  --ac:#C23B1F; --ac2:#F7DDD4;                 /* acento (botones, enlaces, pieza activa) y su fondo suave */
+  --ok:#1B7F4B; --okbg:#D9F0E3;                /* acierto */
+  --ko:#B42318; --kobg:#FBE0DC;                /* fallo */
+  --mv:#8A5A00; --mvbg:#F6E7C4; --mvl:#D9B85A; /* aviso / «casi» */
+  --hint:#F6E7C4; --hintl:#D9B85A;             /* pistas */
+  --sky:#DCE6F5; --blue:#3D5F96;               /* apoyo (tablas, etiquetas neutras) */
+  --f-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#12161F; --card:#1B2230; --ink:#F1ECE0; --mut:#A3ADC0; --line:#2E3748;
+    --ac:#F08A6C; --ac2:#3A2620;
+    --ok:#6FD3A0; --okbg:#173226; --ko:#FF8D78; --kobg:#3A1E1A;
+    --mv:#E9C46A; --mvbg:#3A2F14; --mvl:#7A6A28; --hint:#3A2F14; --hintl:#7A6A28;
+    --sky:#1F2C44; --blue:#8FB0E6;
+  }
+}
+h1,h2,h3{font-family:var(--f-display)}
+code,pre,.mono{font-family:var(--f-mono)}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--f-body)}
+main{max-width:860px;margin:0 auto;padding:20px 16px 56px}
+h1{font-size:1.7rem;margin:.2em 0 .1em}h2{font-size:1.15rem;margin:1em 0 .3em}
+.sub,.mut{color:var(--mut)}.sub{margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+input[type=text]{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);min-width:0;flex:1 1 220px}
+button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 14px}
+button:hover:not(:disabled){border-color:var(--ac)}button:disabled{opacity:.45;cursor:not-allowed}
+button.pri{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+button:focus-visible,input:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.room{text-align:left;display:flex;flex-direction:column;gap:2px;padding:12px;min-height:92px;margin:0}
+.room .ic{font-size:1.6rem;line-height:1}.room b{font-size:1rem}.room small{color:var(--mut)}
+.room.done{border-color:var(--ok);background:var(--okbg)}.room .w{font-weight:700;color:var(--ok)}
+.pts{font-weight:700}
+.sit{border-left:4px solid var(--ac);padding-left:12px}
+.alerta{background:var(--kobg);border:1px solid var(--ko);border-radius:10px;padding:8px 12px;margin:10px 0}
+.code{display:grid;gap:4px;margin:8px 0}
+.ln{display:grid;grid-template-columns:30px 1fr;gap:8px;text-align:left;font-family:var(--f-mono);font-size:.9rem;padding:8px 10px;border-radius:8px;width:100%}
+.ln .n{color:var(--mut)}
+.ln.ko{background:var(--kobg);border-color:var(--ko)}.ln.ok{background:var(--okbg);border-color:var(--ok)}
+.ln .why{display:block;font-family:var(--f-body);color:var(--mut);margin-top:3px}
+.opts{display:grid;gap:10px;margin:10px 0}
+.opt{display:flex;gap:12px;text-align:left;align-items:flex-start;padding:12px 14px;width:100%}
+.opt .l{flex:none;width:30px;height:30px;border-radius:50%;background:var(--ac2);color:var(--ac);display:grid;place-items:center;font-weight:700}
+.opt .t{flex:1}.opt .why{display:block;margin-top:6px;font-size:.93rem;color:var(--mut)}
+.opt.ko{background:var(--kobg);border-color:var(--ko);cursor:default}.opt.ko .l{background:var(--ko);color:#fff}
+.opt.ok{background:var(--okbg);border-color:var(--ok);cursor:default}.opt.ok .l{background:var(--ok);color:var(--bg)}
+.hint{background:var(--hint);border:1px solid var(--hintl);border-radius:10px;padding:8px 12px;margin:8px 0}
+.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin-top:12px}
+.big{font-size:1.5rem;font-weight:800;text-align:center;padding:10px;color:var(--ok)}
+.ficha li{margin:6px 0}
+@media print{button,input{display:none}.card{break-inside:avoid}}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.chip{border-radius:99px;padding:6px 14px;font-size:.93rem}
+.chip[aria-pressed=true]{background:var(--ac);border-color:var(--ac);color:#fff}
+.tarj{border:2px solid var(--ac);border-radius:18px;padding:20px;background:var(--card);margin:12px 0}
+.tarj .cat{font-family:var(--f-mono);font-size:.82rem;color:var(--ac);text-transform:uppercase;letter-spacing:.04em}
+.tarj .q{font-size:1.35rem;font-weight:700;margin:.4em 0;font-family:var(--f-display);line-height:1.3}
+.crono{display:flex;gap:10px;align-items:center;margin:10px 0}
+.crono .t{font-family:var(--f-mono);font-size:1.6rem;font-weight:700;min-width:3.2ch}
+.crono .b{flex:1;height:12px;border-radius:99px;background:var(--line);overflow:hidden}
+.crono .b i{display:block;height:100%;background:var(--ac);width:100%}
+.crono.fin .t{color:var(--ko)}
+.clave{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:var(--okbg);border-left:4px solid var(--ok)}
+.clave ol{margin:.3em 0 0;padding-left:1.2em}.clave li{margin:4px 0}
+.nota{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.nota button{min-width:56px;font-weight:700}
+.todas{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:12px 0}
+.todas .tarj{margin:0;break-inside:avoid;padding:12px}
+.todas .tarj .q{font-size:1rem}
+@media (max-width:620px){.todas{grid-template-columns:1fr}}
+@media print{.noprint{display:none!important}.todas{gap:8px}.tarj{border:1px solid #000}}
+
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+
+const $app = document.getElementById("app");
+const el = (tag, attrs = {}, ...kids) => {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) { if (v === null || v === false) continue; if (k === "class") n.className = v; else if (k.startsWith("on")) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v); }
+  for (const c of kids.flat()) if (c != null && c !== false) n.append(c.nodeType ? c : document.createTextNode(c));
+  return n;
+};
+
+const B64 = "eyJjYXRzIjogWyJQcm9ibGVtYSB5IGRhdG9zIiwgIk1vZGVsb3MiLCAiTWVkaXIgeSB2YWxpZGFyIiwgIkNvbnRhciBhbCBjbGllbnRlIiwgIkNhc29zIGRlIHRyYWJham8iXSwgInRhcmpldGFzIjogW3siaWQiOiAidDAxIiwgImNhdCI6ICJQcm9ibGVtYSB5IGRhdG9zIiwgInByZWd1bnRhIjogIlVuIGNsaWVudGUgZGljZTogwqtxdWllcm8gSUEgcGFyYSB2ZW5kZXIgbcOhc8K7LiDCv1F1w6kgbGUgcHJlZ3VudMOhaXMgYW50ZXMgZGUgdG9jYXIgbmluZ8O6biBkYXRvPyIsICJwdW50b3MiOiBbIlF1w6kgZGVjaXNpw7NuIHZhIGEgY2FtYmlhciB5IHF1acOpbiBsYSB0b21hLiIsICJRdcOpIGRhdG9zIGhheSwgZGVzZGUgY3XDoW5kbyB5IHNpIGVzdGFyw6FuIGRpc3BvbmlibGVzIGN1YW5kbyBoYWdhIGZhbHRhLiIsICJDw7NtbyBzZSBtZWRpcsOhIHF1ZSBoYSBzZXJ2aWRvIHkgY29udHJhIHF1w6kgcml2YWwgc2ltcGxlLiJdfSwgeyJpZCI6ICJ0MDIiLCAiY2F0IjogIlByb2JsZW1hIHkgZGF0b3MiLCAicHJlZ3VudGEiOiAiwr9Dw7NtbyBzYWLDqWlzIHNpIHVuIHByb2JsZW1hIGVzIGRlIGNsYXNpZmljYWNpw7NuLCBkZSByZWdyZXNpw7NuIG8gZGUgYWdydXBhY2nDs24/IiwgInB1bnRvcyI6IFsiQ2xhc2lmaWNhY2nDs246IGhheSBxdWUgZWxlZ2lyIHVuYSBjYXRlZ29yw61hIChzw60vbm8sIHRpcG8pLiIsICJSZWdyZXNpw7NuOiBoYXkgcXVlIHByZWRlY2lyIHVuYSBjaWZyYS4iLCAiQWdydXBhcjogbm8gaGF5IGV0aXF1ZXRhIHkgc2UgYnVzY2FuIGdydXBvcyBwYXJlY2lkb3MuIl19LCB7ImlkIjogInQwMyIsICJjYXQiOiAiUHJvYmxlbWEgeSBkYXRvcyIsICJwcmVndW50YSI6ICJPcyBkYW4gdW5hIHRhYmxhIGNvbiBsYSBjb2x1bW5hIMKrZmVjaGFfZGVfYmFqYcK7IHBhcmEgcHJlZGVjaXIgcXVpw6luIHNlIGRhcsOhIGRlIGJhamEuIMK/UXXDqSBkZWPDrXM/IiwgInB1bnRvcyI6IFsiRXNhIGNvbHVtbmEgc29sbyBzZSBjb25vY2UgZGVzcHXDqXM6IGVzIHVuYSBjb2x1bW5hIGNoaXZhdGEgKGZ1Z2EpLiIsICJTZSBxdWl0YSBhbnRlcyBkZSBlbnRyZW5hci4iLCAiU2kgc2UgZGVqYSwgZWwgbW9kZWxvIHZlIGxhIHJlc3B1ZXN0YSB5IGVuIGxhIHZpZGEgcmVhbCByZW5kaXLDoSBtdWNobyBtZW5vcy4iXX0sIHsiaWQiOiAidDA0IiwgImNhdCI6ICJQcm9ibGVtYSB5IGRhdG9zIiwgInByZWd1bnRhIjogIkVsIDk5ICUgZGUgbGFzIG9wZXJhY2lvbmVzIG5vIHNvbiBmcmF1ZGUuIMK/UXXDqSBjdWlkYWRvIHRlbsOpaXM/IiwgInB1bnRvcyI6IFsiTGEgZXhhY3RpdHVkIGVuZ2HDsWE6IGRlY2lyIHNpZW1wcmUgwqtub8K7IHlhIGFjaWVydGEgZWwgOTkgJS4iLCAiU2UgbWlyYSByZWNhbGwsIGZhbHNhcyBhbGFybWFzIHkgbWF0cml6IGRlIGNvbmZ1c2nDs24uIiwgIlNlIGlndWFsYSBlbCByZXBhcnRvIHNvbG8gZGVudHJvIGRlbCBlbnRyZW5hbWllbnRvIHkgc2UgZWxpZ2UgZWwgdW1icmFsIGNvbiBlbCBjb3N0ZS4iXX0sIHsiaWQiOiAidDA1IiwgImNhdCI6ICJNb2RlbG9zIiwgInByZWd1bnRhIjogIsK/Q3XDoW5kbyB1c2Fyw61haXMgdW4gw6FyYm9sIG8gdW4gYm9zcXVlIGVuIHZleiBkZSB1bmEgcmVncmVzacOzbj8iLCAicHVudG9zIjogWyJUYWJsYXMgY29uIHJlbGFjaW9uZXMgcXVlIG5vIHNvbiB1bmEgcmVjdGEgeSBjb2x1bW5hcyBkZSBkaXN0aW50byB0aXBvLiIsICJFbCDDoXJib2wgc2UgZXhwbGljYSBjb24gcmVnbGFzOyBlbCBib3NxdWUgZXMgbcOhcyByb2J1c3RvLiIsICJTaWVtcHJlIGNvbnRyYSB1biByaXZhbCBzaW1wbGUgeSB2YWxpZGFuZG8uIl19LCB7ImlkIjogInQwNiIsICJjYXQiOiAiTW9kZWxvcyIsICJwcmVndW50YSI6ICLCv1BvciBxdcOpIGhheSBxdWUgZXNjYWxhciBhbnRlcyBkZSB1c2FyIEtOTiBvIHVuYSByZWQ/IiwgInB1bnRvcyI6IFsiTGFzIGRpc3RhbmNpYXMgeSBsb3MgcGVzb3MgZGVwZW5kZW4gZGUgbGEgZXNjYWxhIGRlIGNhZGEgY29sdW1uYS4iLCAiU2luIGVzY2FsYXIsIGxhIGNvbHVtbmEgZGUgbWF5b3IgZXNjYWxhIG1hbmRhLiIsICJFbCBlc2NhbGFkbyBzZSBhanVzdGEgc29sbyBjb24gZWwgZW50cmVuYW1pZW50byB5IHNlIGFwbGljYSBhIGxvIGRlbcOhcy4iXX0sIHsiaWQiOiAidDA3IiwgImNhdCI6ICJNb2RlbG9zIiwgInByZWd1bnRhIjogIsK/UXXDqSBlcyBlbCBzb2JyZWFqdXN0ZSB5IGPDs21vIHNlIGRldGVjdGE/IiwgInB1bnRvcyI6IFsiRWwgbW9kZWxvIG1lbW9yaXphIGVsIGVudHJlbmFtaWVudG8geSBmYWxsYSBjb24gZGF0b3MgbnVldm9zLiIsICJTZSB2ZSBjdWFuZG8gZW50cmVuYW1pZW50byBtZWpvcmEgeSB2YWxpZGFjacOzbiBlbXBlb3JhIChsYXMgY3VydmFzIHNlIHNlcGFyYW4pLiIsICJTZSBsaW1pdGEgY29uIG1vZGVsb3MgbcOhcyBzaW1wbGVzLCBwYXJhZGEgdGVtcHJhbmEsIG3DoXMgZGF0b3MgbyByZWd1bGFyaXphY2nDs24uIl19LCB7ImlkIjogInQwOCIsICJjYXQiOiAiTW9kZWxvcyIsICJwcmVndW50YSI6ICLCv0N1w6FuZG8gY29tcGVuc2EgdW5hIHJlZCBuZXVyb25hbCB5IGN1w6FuZG8gYmFzdGEgdW4gbW9kZWxvIHNpbXBsZT8iLCAicHVudG9zIjogWyJJbcOhZ2VuZXMsIHRleHRvIHkgc2VyaWVzIGxhcmdhcyBzdWVsZW4gcGVkaXIgcmVkZXMuIiwgIkVuIHRhYmxhcyBwZXF1ZcOxYXMgbGEgcmVkIHN1ZWxlIGdhbmFyIHBvY286IHNlIHZpbyBlbiBsb3MgZHVlbG9zLiIsICJTZSBjb21wYXJhIHNpZW1wcmUgY29uIHVuIHJpdmFsIHkgc2UgbWlyYSBlbCBjb3N0ZSB5IGVsIHRpZW1wby4iXX0sIHsiaWQiOiAidDA5IiwgImNhdCI6ICJNb2RlbG9zIiwgInByZWd1bnRhIjogIlVuIHZpdmVybyB0aWVuZSBwb2NhcyBmb3RvcyBwcm9waWFzIGRlIHBsYWdhcy4gwr9RdcOpIHByb3BvbsOpaXM/IiwgInB1bnRvcyI6IFsiVHJhbnNmZXIgbGVhcm5pbmc6IHJldXRpbGl6YXIgdW5hIHJlZCB5YSBlbnRyZW5hZGEuIiwgIkF1bWVudG8gZGUgZGF0b3Mgc29sbyBlbiBlbCBlbnRyZW5hbWllbnRvLiIsICJTZXBhcmFyIGFudGVzIGRlIGF1bWVudGFyIHkgcmV2aXNhciBsYSBtYXRyaXogZGUgY29uZnVzacOzbiBwb3IgcGxhZ2EuIl19LCB7ImlkIjogInQxMCIsICJjYXQiOiAiTW9kZWxvcyIsICJwcmVndW50YSI6ICLCv1F1w6kgaGFjZSB1biByZWNvbWVuZGFkb3IgeSBxdcOpIHByb2JsZW1hIHRpZW5lIGNvbiB1biBjbGllbnRlIG51ZXZvPyIsICJwdW50b3MiOiBbIlN1Z2llcmUgcHJvZHVjdG9zIHNlZ8O6biBjbGllbnRlcyBvIHByb2R1Y3RvcyBwYXJlY2lkb3MuIiwgIkFycmFucXVlIGVuIGZyw61vOiBzaW4gaGlzdG9yaWFsIG5vIGhheSBwYXJlY2lkb3MuIiwgIlNlIGFycmVnbGEgcHJlZ3VudGFuZG8gcHJlZmVyZW5jaWFzIG8gZW1wZXphbmRvIHBvciBsbyBtw6FzIHBvcHVsYXIuIl19LCB7ImlkIjogInQxMSIsICJjYXQiOiAiTW9kZWxvcyIsICJwcmVndW50YSI6ICJFeHBsaWNhZCBhIHVuIGNsaWVudGUgcXXDqSBlcyBSQUcgeSBwb3IgcXXDqSBoYWNlIGZhbHRhIHVuIMKrbm8gY29uc3RhwrsuIiwgInB1bnRvcyI6IFsiQnVzY2EgZW4gdnVlc3Ryb3MgZG9jdW1lbnRvcyB5IHJlc3BvbmRlIGNvbiBlbGxvcy4iLCAiU2luIHVuIHVtYnJhbCBkZSBwYXJlY2lkbywgaW52ZW50YSBjdWFuZG8gbm8gc2FiZS4iLCAiRWwgdW1icmFsIHNlIGVsaWdlIGNvbXBhcmFuZG8gZWwgY29zdGUgZGUgaW52ZW50YXIgY29uIGVsIGRlIGNhbGxhci4iXX0sIHsiaWQiOiAidDEyIiwgImNhdCI6ICJNZWRpciB5IHZhbGlkYXIiLCAicHJlZ3VudGEiOiAiwr9QYXJhIHF1w6kgc2lydmVuIGVudHJlbmFtaWVudG8sIHZhbGlkYWNpw7NuIHkgcHJ1ZWJhPyIsICJwdW50b3MiOiBbIkVudHJlbmFtaWVudG86IHBhcmEgYXByZW5kZXIuIiwgIlZhbGlkYWNpw7NuOiBwYXJhIGVsZWdpciBlbnRyZSBjYW5kaWRhdGFzLiIsICJQcnVlYmE6IHBhcmEgbWVkaXIgdW5hIHNvbGEgdmV6IGFsIGZpbmFsLCBzaW4gdG9jYXIgbmFkYSBkZXNwdcOpcy4iXX0sIHsiaWQiOiAidDEzIiwgImNhdCI6ICJNZWRpciB5IHZhbGlkYXIiLCAicHJlZ3VudGEiOiAiVnVlc3RybyBtb2RlbG8gc2FjYSAwLjk1IGVuIGxhIHBydWViYSB5IDAuNzAgeWEgZW4gcHJvZHVjY2nDs24uIMK/UXXDqSByZXZpc8OhaXM/IiwgInB1bnRvcyI6IFsiRnVnYXM6IGNvbHVtbmFzIGNoaXZhdGEsIGVzY2FsYWRvIG8gdm9jYWJ1bGFyaW8gY29uIHRvZG9zIGxvcyBkYXRvcywgc2VyaWVzIGJhcmFqYWRhcy4iLCAiU2kgbG9zIGRhdG9zIGRlIHByb2R1Y2Npw7NuIHNlIHBhcmVjZW4gYSBsb3MgZGUgZW50cmVuYW1pZW50by4iLCAiU2kgbGEgcHJ1ZWJhIHNlIHVzw7MgcGFyYSBlbGVnaXIgZWwgbW9kZWxvLiJdfSwgeyJpZCI6ICJ0MTQiLCAiY2F0IjogIk1lZGlyIHkgdmFsaWRhciIsICJwcmVndW50YSI6ICLCv1F1w6kgZXMgZWwgcml2YWwgc2ltcGxlIHkgcG9yIHF1w6kgc2llbXByZSBzZSBwaWRlPyIsICJwdW50b3MiOiBbIkVzIGxhIHJlZ2xhIG8gZWwgbW9kZWxvIG3DoXMgc2VuY2lsbG8gKHJlcGV0aXIgbGEgc2VtYW5hIHBhc2FkYSwgZGVjaXIgc2llbXByZSDCq25vwrspLiIsICJTaSBlbCBtb2RlbG8gbm8gbG8gc3VwZXJhIGNvbiBjbGFyaWRhZCwgbm8gY29tcGVuc2EuIiwgIkhheSBxdWUgZWxlZ2lyIGVsIHJpdmFsIG3DoXMgZHVybywgbm8gZWwgbcOhcyBmw6FjaWwgZGUgYmF0aXIuIl19LCB7ImlkIjogInQxNSIsICJjYXQiOiAiTWVkaXIgeSB2YWxpZGFyIiwgInByZWd1bnRhIjogIkV4cGxpY2FkIHJlY2FsbCB5IHByZWNpc2nDs24gY29uIHVuIGVqZW1wbG8gZGUgZnJhdWRlLiIsICJwdW50b3MiOiBbIlJlY2FsbDogZGUgbG9zIGZyYXVkZXMgcmVhbGVzLCBjdcOhbnRvcyBkZXRlY3RhLiIsICJQcmVjaXNpw7NuOiBkZSBsb3MgYXZpc29zIHF1ZSBkYSwgY3XDoW50b3MgZXJhbiBmcmF1ZGUuIiwgIkhheSB1biBjb21wcm9taXNvIHkgbG8gZGVjaWRlIGVsIHVtYnJhbCBzZWfDum4gZWwgY29zdGUgZGUgY2FkYSBlcnJvci4iXX0sIHsiaWQiOiAidDE2IiwgImNhdCI6ICJNZWRpciB5IHZhbGlkYXIiLCAicHJlZ3VudGEiOiAiwr9RdcOpIG1pZGUgZWwgQVVDIHkgcXXDqSBubyBtaWRlPyIsICJwdW50b3MiOiBbIk1pZGUgc2kgZWwgbW9kZWxvIG9yZGVuYSBiaWVuOiBwb3NpdGl2b3MgcG9yIGVuY2ltYSBkZSBuZWdhdGl2b3MuIiwgIk5vIGVzIGVsIHBvcmNlbnRhamUgZGUgYWNpZXJ0b3MuIiwgIk5vIGZpamEgZWwgdW1icmFsOiBlc28gc2UgZWxpZ2UgYXBhcnRlIGNvbiBlbCBjb3N0ZS4iXX0sIHsiaWQiOiAidDE3IiwgImNhdCI6ICJNZWRpciB5IHZhbGlkYXIiLCAicHJlZ3VudGEiOiAiRW4gdW5hIHNlcmllIHRlbXBvcmFsLCDCv2PDs21vIHNlcGFyw6FpcyBsb3MgZGF0b3MgeSBwb3IgcXXDqT8iLCAicHVudG9zIjogWyJQb3IgZmVjaGFzOiBsbyBhbnRpZ3VvIGVudHJlbmEgeSBsbyDDumx0aW1vIHBydWViYS4iLCAiQmFyYWphciBtZXRlIGVsIGZ1dHVybyBlbiBlbCBlbnRyZW5hbWllbnRvLiIsICJFbCByaXZhbCBuYXR1cmFsIGVzIHJlcGV0aXIgbGEgc2VtYW5hIHBhc2FkYS4iXX0sIHsiaWQiOiAidDE4IiwgImNhdCI6ICJDb250YXIgYWwgY2xpZW50ZSIsICJwcmVndW50YSI6ICJUZW7DqWlzIHF1ZSByZXN1bWlyIGxvcyByZXN1bHRhZG9zIGVuIHVuYSBmcmFzZSBwYXJhIGVsIGNsaWVudGUuIMK/UXXDqSBsbGV2YT8iLCAicHVudG9zIjogWyJVbmEgY2lmcmEgZGUgbGEgcHJ1ZWJhLCBubyBkZSBsYSB2YWxpZGFjacOzbi4iLCAiTGEgY29tcGFyYWNpw7NuIGNvbiBlbCByaXZhbCBzaW1wbGUuIiwgIlVuIGzDrW1pdGU6IGxhIHBlb3IgY2xhc2UsIGVsIHRhbWHDsW8gZGUgbGEgcHJ1ZWJhIG8gZWwgY29zdGUuIl19LCB7ImlkIjogInQxOSIsICJjYXQiOiAiQ29udGFyIGFsIGNsaWVudGUiLCAicHJlZ3VudGEiOiAiRWwgY2xpZW50ZSBwcmVndW50YTogwqvCv2N1w6FudG8gdmFtb3MgYSBhaG9ycmFyP8K7LiDCv0PDs21vIHJlc3BvbmTDqWlzPyIsICJwdW50b3MiOiBbIkFob3JybyA9IGNvc3RlIHNpbiBlbCBtb2RlbG8g4oiSIGNvc3RlIGNvbiBlbCBtb2RlbG8sIG1lZGlkbyBlbiBsYSBwcnVlYmEuIiwgIkRlY8OtcyBjdcOhbnRvcyBjYXNvcyB0ZW7DrWEgbGEgcHJ1ZWJhLiIsICJObyBwcm9tZXTDqWlzIGxvIG1pc21vIGVuIHByb2R1Y2Npw7NuIHNpbiB2aWdpbGFybG8uIl19LCB7ImlkIjogInQyMCIsICJjYXQiOiAiQ29udGFyIGFsIGNsaWVudGUiLCAicHJlZ3VudGEiOiAiRWwgbW9kZWxvIHNpbXBsZSBjYXNpIGlndWFsYSBhIGxhIHJlZC4gwr9RdcOpIGxlIGRlY8OtcyBhbCBjbGllbnRlPyIsICJwdW50b3MiOiBbIlNlIGRpY2UgY29uIGNsYXJpZGFkOiBsYSBnYW5hbmNpYSBlcyBwZXF1ZcOxYS4iLCAiU2kgZXMgbcOhcyBmw6FjaWwgZGUgZXhwbGljYXIgeSBtYW50ZW5lciwgc2UgcmVjb21pZW5kYSBsbyBzaW1wbGUuIiwgIkxhIHJlZCBzZSByZXNlcnZhIHBhcmEgY3VhbmRvIGhheWEgdW4gbW90aXZvIGNsYXJvIChjb3N0ZSBkZSBlcnJvcmVzLCBkYXRvcyBudWV2b3MpLiJdfSwgeyJpZCI6ICJ0MjEiLCAiY2F0IjogIkNhc29zIGRlIHRyYWJham8iLCAicHJlZ3VudGEiOiAiVnVlc3RybyBtb2RlbG8gZmFsbGEgY29uIHVuIHRpcG8gZGUgY2xpZW50ZS4gwr9Dw7NtbyBsbyBjb250w6FpcyB5IHF1w6kgaGFjw6lpcz8iLCAicHVudG9zIjogWyJTZSBtaWRlIHBvciBncnVwbywgbm8gc29sbyBsYSBtZWRpYTogc2UgY3VlbnRhIGxhIHBlb3IgY2xhc2UuIiwgIlNlIGF2aXNhIGRlbCBsw61taXRlIHkgbm8gc2UgZGVzcGxpZWdhIHNpbiB2aWdpbGFybG8uIiwgIlNlIHJlY29nZW4gbcOhcyBkYXRvcyBkZSBlc2UgZ3J1cG8gbyBzZSBhw7FhZGUgcmV2aXNpw7NuIGh1bWFuYS4iXX0sIHsiaWQiOiAidDIyIiwgImNhdCI6ICJDYXNvcyBkZSB0cmFiYWpvIiwgInByZWd1bnRhIjogIlVuIGNvbXBhw7Flcm8gb3MgcGFzYSB1biBjdWFkZXJubyBxdWUgwqtmdW5jaW9uYcK7LiDCv0PDs21vIGNvbXByb2LDoWlzIHF1ZSBlcyBmaWFibGU/IiwgInB1bnRvcyI6IFsiRMOzbmRlIHNlIHNlcGFyYW4gbG9zIGRhdG9zIHkgcXXDqSBzZSBhanVzdGEgYW50ZXMgZGUgc2VwYXJhci4iLCAiQ29uIHF1w6kgc2UgZWxpZ2nDsyBlbCBtb2RlbG8geSBjdcOhbnRhcyB2ZWNlcyBzZSBtaXLDsyBsYSBwcnVlYmEuIiwgIlF1w6kgcml2YWwgeSBxdcOpIG3DqXRyaWNhIGhheSwgeSBzaSBlbCByZXN1bHRhZG8gc2UgcmVwaXRlIGFsIGVqZWN1dGFybG8gZGUgbnVldm8uIl19XX0=";
+const D = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(B64), c => c.charCodeAt(0))));
+const KEY = "ifcd107_entrevista_v1";
+let S = {equipo: "", hechas: {}, seg: 90, cats: D.cats.slice()};
+try { const g = localStorage.getItem(KEY); if (g) S = Object.assign(S, JSON.parse(g)); } catch (e) {}
+const guardar = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
+const total = () => Object.values(S.hechas).reduce((a, n) => a + n, 0);
+const N = D.tarjetas.length, MAX = N * 3;
+let cur = null, timer = null;
+const parar = () => { if (timer) clearInterval(timer); timer = null; };
+
+function portada() {
+  parar(); cur = null; document.title = "Entrevista de trabajo · IFCD107";
+  const hechas = Object.keys(S.hechas).length;
+  const nom = el("input", {type: "text", maxlength: "40", placeholder: "Nombre del equipo", "aria-label": "Nombre del equipo", value: S.equipo});
+  nom.addEventListener("input", () => { S.equipo = nom.value; guardar(); });
+  const chips = D.cats.map(c => { const b = el("button", {class: "chip", "aria-pressed": S.cats.includes(c) ? "true" : "false"}, c); b.addEventListener("click", () => { S.cats = S.cats.includes(c) ? S.cats.filter(x => x !== c) : [...S.cats, c]; guardar(); portada(); }); return b; });
+  const tiempos = [60, 90, 120].map(s => { const b = el("button", {class: "chip", "aria-pressed": S.seg === s ? "true" : "false"}, s + " s"); b.addEventListener("click", () => { S.seg = s; guardar(); portada(); }); return b; });
+  const disponibles = D.tarjetas.filter(t => S.cats.includes(t.cat) && S.hechas[t.id] === undefined);
+  $app.replaceChildren(
+    el("h1", {}, "🎤 Entrevista de trabajo"),
+    el("p", {class: "sub"}, "Os sentáis ante una entrevista de empleo en TurisData. Sale una pregunta al azar, tenéis un tiempo para responder en voz alta y después se destapan los 3 puntos clave: cada uno que hayáis nombrado vale 1 punto."),
+    el("div", {class: "card"}, el("div", {class: "bar"}, nom, el("span", {class: "pts"}, "Puntos: " + total() + " / " + MAX + " · " + hechas + "/" + N)),
+      el("h2", {}, "Temas"), el("div", {class: "chips"}, chips), el("h2", {}, "Tiempo por respuesta"), el("div", {class: "chips"}, tiempos),
+      el("p", {class: "mut", style: "margin:.6em 0 0"}, "Mejor en grupo: una persona responde, otra hace de entrevistadora y lee los puntos clave; después se cambian los papeles.")),
+    el("div", {class: "row"}, el("button", {class: "pri", disabled: disponibles.length ? null : "", onclick: sacar}, disponibles.length ? "🎲 Sacar una tarjeta (" + disponibles.length + " sin responder)" : "No quedan tarjetas con esos temas"),
+      el("button", {onclick: todas}, "🖨️ Ver e imprimir todas las tarjetas")),
+    hechas ? el("div", {class: "row"}, el("button", {onclick: final}, "Ver resumen")) : "",
+    el("div", {class: "row"}, el("span", {class: "mut"}, "El progreso se guarda en este navegador."),
+      el("button", {onclick: () => { if (confirm("¿Borrar el progreso y empezar de cero?")) { S.hechas = {}; guardar(); portada(); } }}, "Empezar de cero")));
+  window.scrollTo(0, 0);
+}
+
+function sacar() {
+  const libres = D.tarjetas.filter(t => S.cats.includes(t.cat) && S.hechas[t.id] === undefined);
+  if (!libres.length) return;
+  const t = libres[Math.floor(Math.random() * libres.length)];
+  cur = {t, resta: S.seg, claves: false}; tarjeta();
+}
+
+function tarjeta() {
+  parar();
+  const t = cur.t;
+  const tiempo = el("span", {class: "t", "aria-live": "off"}, ""), barra = el("i"), crono = el("div", {class: "crono"}, tiempo, el("div", {class: "b"}, barra));
+  const pintar = () => { tiempo.textContent = Math.floor(cur.resta / 60) + ":" + String(cur.resta % 60).padStart(2, "0"); barra.style.width = (100 * cur.resta / S.seg) + "%"; crono.classList.toggle("fin", cur.resta === 0); };
+  const ini = el("button", {onclick: () => { if (timer) { parar(); ini.textContent = "▶ Seguir"; } else { ini.textContent = "⏸ Pausa"; timer = setInterval(() => { if (cur.resta > 0) cur.resta--; pintar(); if (cur.resta === 0) { parar(); ini.textContent = "⏱ Tiempo agotado"; ini.disabled = true; } }, 1000); } }}, "▶ Empezar a contar");
+  pintar();
+  const claves = el("div", {class: "clave", hidden: ""}, el("b", {}, "Puntos clave"), el("ol", {}, t.puntos.map(p => el("li", {}, p))));
+  const nota = el("div", {hidden: ""}, el("p", {style: "margin:.8em 0 .2em"}, "¿Cuántos puntos clave habéis nombrado?"), el("div", {class: "nota"}, [0, 1, 2, 3].map(n => el("button", {class: n === 3 ? "pri" : "", onclick: () => { S.hechas[t.id] = n; guardar(); cierre(n); }}, n + (n === 1 ? " punto" : " puntos")))));
+  const ver = el("button", {class: "pri", onclick: () => { parar(); claves.hidden = false; nota.hidden = false; ver.disabled = true; ini.disabled = true; }}, "👁 Ver los puntos clave");
+  $app.replaceChildren(
+    el("div", {class: "bar"}, el("button", {onclick: () => { if (confirm("¿Salir de la tarjeta?")) portada(); }}, "◀ Tarjetas"), el("span", {class: "pts"}, "Puntos: " + total())),
+    el("div", {class: "tarj"}, el("div", {class: "cat"}, t.cat), el("p", {class: "q"}, t.pregunta), crono, el("div", {class: "row", style: "margin-top:0"}, ini, ver), claves, nota));
+  window.scrollTo(0, 0);
+}
+
+function cierre(n) {
+  parar();
+  const t = cur.t, quedan = D.tarjetas.filter(x => S.cats.includes(x.cat) && S.hechas[x.id] === undefined).length;
+  $app.replaceChildren(
+    el("h1", {}, n === 3 ? "✅ Entrevista superada" : n >= 1 ? "🙂 Casi: " + n + " de 3" : "📚 A repasar"),
+    el("div", {class: "card"}, el("div", {class: "big"}, n + " / 3 puntos"), el("p", {class: "q mut", style: "margin:0"}, t.pregunta)),
+    el("div", {class: "clave"}, el("b", {}, "Puntos clave"), el("ol", {}, t.puntos.map(p => el("li", {}, p)))),
+    el("div", {class: "row"}, el("button", {onclick: portada}, "Tarjetas"), quedan ? el("button", {class: "pri", onclick: sacar}, "🎲 Otra tarjeta (" + quedan + ")") : el("button", {class: "pri", onclick: final}, "🏁 Ver el resumen")));
+  window.scrollTo(0, 0);
+}
+
+function todas() {
+  parar();
+  $app.replaceChildren(
+    el("div", {class: "bar noprint"}, el("button", {onclick: portada}, "◀ Tarjetas"), el("button", {class: "pri", onclick: () => window.print()}, "Imprimir o guardar PDF")),
+    el("h1", {}, "Tarjetas de entrevista"), el("p", {class: "sub noprint"}, "Para jugar sin pantalla: se recortan, una persona lee la pregunta y otra comprueba los puntos clave."),
+    el("div", {class: "todas"}, D.tarjetas.map(t => el("div", {class: "tarj"}, el("div", {class: "cat"}, t.cat), el("p", {class: "q"}, t.pregunta), el("div", {class: "clave", style: "margin:0"}, el("ol", {style: "margin:0"}, t.puntos.map(p => el("li", {}, p))))))));
+  window.scrollTo(0, 0);
+}
+
+function final() {
+  parar();
+  const t = total(), hechas = Object.keys(S.hechas).length;
+  const flojas = D.tarjetas.filter(x => S.hechas[x.id] !== undefined && S.hechas[x.id] < 2);
+  $app.replaceChildren(
+    el("h1", {}, "🏁 Resumen de entrevistas"),
+    el("p", {class: "sub"}, (S.equipo ? S.equipo + " · " : "") + t + " puntos en " + hechas + " tarjetas (máximo " + hechas * 3 + ")."),
+    flojas.length ? el("div", {class: "card"}, el("h2", {style: "margin-top:0"}, "Para repasar antes de una entrevista de verdad"), el("ul", {}, flojas.map(x => el("li", {}, x.pregunta)))) : el("div", {class: "card"}, "No hay tarjetas flojas: nombrasteis casi todos los puntos clave."),
+    el("div", {class: "row"}, el("button", {onclick: portada}, "◀ Tarjetas"), el("button", {class: "pri", onclick: () => window.print()}, "Imprimir o guardar PDF")));
+  window.scrollTo(0, 0);
+}
+portada();
+
+</script>
+</body>
+</html>
