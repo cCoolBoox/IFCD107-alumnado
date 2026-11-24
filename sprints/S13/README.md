@@ -30,7 +30,8 @@
 | [Resumen del sprint en una página](4_Referencia/infografias/S13_00_resumen_del_sprint.png) | Lámina con la pregunta guía, qué aprenderás, cómo se reparte el sprint (teoría, práctica y reto) y dónde estás en el curso | — | Antes del planning |
 | [El reto paso a paso](4_Referencia/infografias/S13_03_reto_paso_a_paso.png) · [PDF con enlaces](pdf/S13_03_reto_paso_a_paso.pdf) | Los pasos del reto con su día y minutos, el material de cada paso, los errores frecuentes y el uso de la IA | — | Durante el reto |
 | [Esquema del contenido y su relación con el reto](4_Referencia/infografias/S13_07_esquema_contenido_y_reto.png) | Qué presentación prepara cada pieza del entregable, con el material que se reutiliza después | — | Antes del planning y como guía durante el reto |
-| [Infografías del sprint](4_Referencia/infografias/) | 4 láminas ilustradas | — | Antes del planning y durante el reto |
+| [Conceptos clave de S12 y S13](4_Referencia/infografias/S13_08_conceptos_clave_s12_s13.png) | Lámina con los 18 conceptos de los dos sprints (tiempo, texto y RAG, crear, contar), cada uno con una cifra real y un «ojo con» | — | Repaso antes del reto |
+| [Infografías del sprint](4_Referencia/infografias/) | 5 láminas ilustradas | — | Antes del planning y durante el reto |
 | [Cómo se trabaja un reto](../../material/4.%20Como_se_trabaja_un_reto.md) | El método de trabajo de todos los retos | — | Antes del primer reto |
 | [`S13_01_presentacion_Visualizar_y_comunicar_resultados.pdf`](1_Teoria/S13_01_presentacion_Visualizar_y_comunicar_resultados.pdf) | Visualizar y comunicar resultados (Sprint 13, integrado; versión rápida) | 10 min | Teoría · dentro de la última jornada del S12 |
 | [`guia_cuantos_sprints_tiene_el_proyecto.md`](3_Reto/1_Trabajar/plantillas/guia_cuantos_sprints_tiene_el_proyecto.md) | ¿Cuántos sprints tiene el proyecto? Capacidad, tallas y qué cabe en los Sprints 14–17 | 25–30 min | Al cerrar el 25/11 o antes del planning del 26/11 |
