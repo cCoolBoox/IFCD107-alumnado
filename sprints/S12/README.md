@@ -137,6 +137,8 @@ Las carpetas están **numeradas en el orden en que las usas**. Cada documento es
 | [`3_Reto/`](3_Reto/) | `1_Trabajar` (reto en una página, plantillas y datos) · `2_Entregar` (qué se sube, rúbrica y autoevaluación) · `3_Consultar` (ficha del reto y cada paso explicado) |
 | [`4_Referencia/`](4_Referencia/) | Resultados de los cuadernos (presentación y documento), infografías y la bolsa de miniretos «Crea tu IA» |
 
+🎮 **Juegos del curso** (en el navegador, en equipo): [abrir el panel](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/2_Practica/juegos/).
+
 Cómo se trabaja un reto, en todos los sprints: [método de trabajo](../../material/4.%20Como_se_trabaja_un_reto.md).
 
 ## Temario oficial de este sprint

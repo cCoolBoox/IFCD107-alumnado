@@ -1,6 +1,8 @@
 # 🎮 Juegos del curso
 
-Abre [`index.html`](index.html) con el navegador: es el **panel** que enlaza todos los juegos y los retos exprés.
+▶ **[Abrir el panel online](https://ccoolboox.github.io/IFCD107-alumnado/sprints/S12/2_Practica/juegos/)**: enlaza todos los juegos y los retos exprés. Funciona en el navegador, también desde el móvil.
+
+> En GitHub un archivo `.html` solo se ve como código: usad el enlace de arriba. Para jugar sin conexión, descargad la carpeta `juegos/` completa y abrid `index.html`.
 
 | Juego | Para qué sirve | Carpeta |
 |---|---|---|
@@ -15,5 +17,5 @@ Abre [`index.html`](index.html) con el navegador: es el **panel** que enlaza tod
 | 📺 Duelo en directo | Concurso para **proyectar** en clase (lo dirige el docente) | [`duelo_en_directo/`](duelo_en_directo/) |
 
 - No necesitan internet ni instalar nada. Se pueden jugar desde el móvil.
-- Si los abrís desde GitHub, **descargad la carpeta completa** (los enlaces del panel son relativos).
+- Sin conexión: descargad la carpeta `juegos/` completa (los enlaces del panel son relativos) y abrid `index.html`.
 - El progreso se guarda en vuestro navegador.
