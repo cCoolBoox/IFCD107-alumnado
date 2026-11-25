@@ -19,3 +19,4 @@
 - No necesitan internet ni instalar nada. Se pueden jugar desde el móvil.
 - Sin conexión: descargad la carpeta `juegos/` completa (los enlaces del panel son relativos) y abrid `index.html`.
 - El progreso se guarda en vuestro navegador.
+- 🎓 Para cerrar el curso: [**Nueve juegos, nueve enseñanzas**](../../../../material/9.%20Nueve_juegos_nueve_ensenanzas.md).
