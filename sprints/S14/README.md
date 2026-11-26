@@ -98,7 +98,8 @@ Antes de empezar, probad la [demo interactiva](https://ccoolboox.github.io/IFCD1
 ## En casa (cuando puedas)
 
 - Si quieres repasar la teoría con calma: [apuntes del sprint](1_Teoria/apuntes/apuntes_formular_un_proyecto_de_ia.md).
-- El proyecto entero de un vistazo (14 diapositivas): [presentación del proyecto final](1_Teoria/S14_proyecto_presentacion_El_proyecto_final_de_principio_a_fin.pdf).
+- El proyecto explicado fácil, en diapositivas (qué se hace cada día y cuándo decidir): [presentación](1_Teoria/S14_proyecto_presentacion_El_proyecto_explicado_facil.pdf).
+- El proyecto entero con requisitos y rúbrica (14 diapositivas): [presentación del proyecto final](1_Teoria/S14_proyecto_presentacion_El_proyecto_final_de_principio_a_fin.pdf).
 - El proyecto explicado fácil, con qué haremos cada día y cuándo decidir: [El proyecto explicado fácil](../../proyecto-final/El_proyecto_explicado_facil.md).
 
 ## Si te atascas
